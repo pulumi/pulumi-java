@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class KeyVaultAndSecretReferenceResponse {
+/**
+ * Url pointing to a key or secret in KeyVault
+ */
     private final String secretUrl;
+/**
+ * Resource id of the KeyVault containing the key or secret
+ */
     private final SourceVaultResponse sourceVault;
 
     @OutputCustomType.Constructor({"secretUrl","sourceVault"})
@@ -21,9 +27,15 @@ public final class KeyVaultAndSecretReferenceResponse {
         this.sourceVault = Objects.requireNonNull(sourceVault);
     }
 
+/**
+ * Url pointing to a key or secret in KeyVault
+ */
     public String getSecretUrl() {
         return this.secretUrl;
     }
+/**
+ * Resource id of the KeyVault containing the key or secret
+ */
     public SourceVaultResponse getSourceVault() {
         return this.sourceVault;
     }

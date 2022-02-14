@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListIotDpsResourceKeysForKeyNameArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListIotDpsResourceKeysForKeyNameArgs Empty = new ListIotDpsResourceKeysForKeyNameArgs();
 
+    /**
+     * Logical key name to get key-values for.
+     */
     @InputImport(name="keyName", required=true)
     private final String keyName;
 
@@ -19,6 +25,9 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends io.pulumi.resour
         return this.keyName;
     }
 
+    /**
+     * Name of the provisioning service.
+     */
     @InputImport(name="provisioningServiceName", required=true)
     private final String provisioningServiceName;
 
@@ -26,6 +35,9 @@ public final class ListIotDpsResourceKeysForKeyNameArgs extends io.pulumi.resour
         return this.provisioningServiceName;
     }
 
+    /**
+     * The name of the resource group that contains the provisioning service.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

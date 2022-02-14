@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class LightHouseAuthorizationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LightHouseAuthorizationArgs Empty = new LightHouseAuthorizationArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="principalId", required=true)
     private final Input<String> principalId;
 
@@ -20,6 +26,9 @@ public final class LightHouseAuthorizationArgs extends io.pulumi.resources.Resou
         return this.principalId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="roleDefinitionId", required=true)
     private final Input<String> roleDefinitionId;
 

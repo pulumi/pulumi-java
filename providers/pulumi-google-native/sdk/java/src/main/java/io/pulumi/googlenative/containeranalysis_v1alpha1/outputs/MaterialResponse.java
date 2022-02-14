@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MaterialResponse {
+/**
+ * digest is a map from a hash algorithm (e.g. sha256) to the value in the material
+ */
     private final Map<String,String> digest;
+/**
+ * uri is the uri of the material
+ */
     private final String uri;
 
     @OutputCustomType.Constructor({"digest","uri"})
@@ -21,9 +27,15 @@ public final class MaterialResponse {
         this.uri = Objects.requireNonNull(uri);
     }
 
+/**
+ * digest is a map from a hash algorithm (e.g. sha256) to the value in the material
+ */
     public Map<String,String> getDigest() {
         return this.digest;
     }
+/**
+ * uri is the uri of the material
+ */
     public String getUri() {
         return this.uri;
     }

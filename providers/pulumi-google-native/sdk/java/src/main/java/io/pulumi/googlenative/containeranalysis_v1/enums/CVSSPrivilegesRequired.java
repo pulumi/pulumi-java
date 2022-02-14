@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum CVSSPrivilegesRequired {
+/**
+ * 
+ */
         PrivilegesRequiredUnspecified("PRIVILEGES_REQUIRED_UNSPECIFIED"),
+/**
+ * 
+ */
         PrivilegesRequiredNone("PRIVILEGES_REQUIRED_NONE"),
+/**
+ * 
+ */
         PrivilegesRequiredLow("PRIVILEGES_REQUIRED_LOW"),
+/**
+ * 
+ */
         PrivilegesRequiredHigh("PRIVILEGES_REQUIRED_HIGH");
 
         private final String value;

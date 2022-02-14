@@ -20,10 +20,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Job configuration
+ */
 public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobConfigArgs Empty = new JobConfigArgs();
 
+    /**
+     * List of ad breaks. Specifies where to insert ad break tags in the output manifests.
+     */
     @InputImport(name="adBreaks")
     private final @Nullable Input<List<AdBreakArgs>> adBreaks;
 
@@ -31,6 +37,9 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.adBreaks == null ? Input.empty() : this.adBreaks;
     }
 
+    /**
+     * List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.
+     */
     @InputImport(name="editList")
     private final @Nullable Input<List<EditAtomArgs>> editList;
 
@@ -38,6 +47,9 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.editList == null ? Input.empty() : this.editList;
     }
 
+    /**
+     * List of elementary streams.
+     */
     @InputImport(name="elementaryStreams")
     private final @Nullable Input<List<ElementaryStreamArgs>> elementaryStreams;
 
@@ -45,6 +57,9 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.elementaryStreams == null ? Input.empty() : this.elementaryStreams;
     }
 
+    /**
+     * List of input assets stored in Cloud Storage.
+     */
     @InputImport(name="inputs")
     private final @Nullable Input<List<InputArgs>> inputs;
 
@@ -52,6 +67,9 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.inputs == null ? Input.empty() : this.inputs;
     }
 
+    /**
+     * List of output manifests.
+     */
     @InputImport(name="manifests")
     private final @Nullable Input<List<ManifestArgs>> manifests;
 
@@ -59,6 +77,9 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.manifests == null ? Input.empty() : this.manifests;
     }
 
+    /**
+     * List of multiplexing settings for output streams.
+     */
     @InputImport(name="muxStreams")
     private final @Nullable Input<List<MuxStreamArgs>> muxStreams;
 
@@ -66,6 +87,9 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.muxStreams == null ? Input.empty() : this.muxStreams;
     }
 
+    /**
+     * Output configuration.
+     */
     @InputImport(name="output")
     private final @Nullable Input<OutputArgs> output;
 
@@ -73,6 +97,9 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.output == null ? Input.empty() : this.output;
     }
 
+    /**
+     * List of overlays on the output video, in descending Z-order.
+     */
     @InputImport(name="overlays")
     private final @Nullable Input<List<OverlayArgs>> overlays;
 
@@ -80,6 +107,9 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.overlays == null ? Input.empty() : this.overlays;
     }
 
+    /**
+     * Destination on Pub/Sub.
+     */
     @InputImport(name="pubsubDestination")
     private final @Nullable Input<PubsubDestinationArgs> pubsubDestination;
 
@@ -87,6 +117,9 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.pubsubDestination == null ? Input.empty() : this.pubsubDestination;
     }
 
+    /**
+     * List of output sprite sheets.
+     */
     @InputImport(name="spriteSheets")
     private final @Nullable Input<List<SpriteSheetArgs>> spriteSheets;
 

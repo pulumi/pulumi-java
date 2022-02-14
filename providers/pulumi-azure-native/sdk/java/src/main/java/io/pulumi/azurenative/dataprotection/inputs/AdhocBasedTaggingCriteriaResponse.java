@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Adhoc backup tagging criteria
+ */
 public final class AdhocBasedTaggingCriteriaResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AdhocBasedTaggingCriteriaResponse Empty = new AdhocBasedTaggingCriteriaResponse();
 
+    /**
+     * Retention tag information
+     */
     @InputImport(name="tagInfo")
     private final @Nullable RetentionTagResponse tagInfo;
 

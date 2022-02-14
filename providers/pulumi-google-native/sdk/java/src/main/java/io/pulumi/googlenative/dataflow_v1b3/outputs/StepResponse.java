@@ -10,8 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StepResponse {
+/**
+ * The kind of step in the Cloud Dataflow job.
+ */
     private final String kind;
+/**
+ * The name that identifies the step. This must be unique for each step with respect to all other steps in the Cloud Dataflow job.
+ */
     private final String name;
+/**
+ * Named properties associated with the step. Each kind of predefined step has its own required set of properties. Must be provided on Create. Only retrieved with JOB_VIEW_ALL.
+ */
     private final Map<String,String> properties;
 
     @OutputCustomType.Constructor({"kind","name","properties"})
@@ -24,12 +33,21 @@ public final class StepResponse {
         this.properties = Objects.requireNonNull(properties);
     }
 
+/**
+ * The kind of step in the Cloud Dataflow job.
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * The name that identifies the step. This must be unique for each step with respect to all other steps in the Cloud Dataflow job.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Named properties associated with the step. Each kind of predefined step has its own required set of properties. Must be provided on Create. Only retrieved with JOB_VIEW_ALL.
+ */
     public Map<String,String> getProperties() {
         return this.properties;
     }

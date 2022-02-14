@@ -11,8 +11,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ObjectMetricSource {
+/**
+ * 
+ */
     private final CrossVersionObjectReference describedObject;
+/**
+ * metric identifies the target metric by name and selector
+ */
     private final MetricIdentifier metric;
+/**
+ * target specifies the target value for the given metric
+ */
     private final MetricTarget target;
 
     @OutputCustomType.Constructor({"describedObject","metric","target"})
@@ -25,12 +34,21 @@ public final class ObjectMetricSource {
         this.target = Objects.requireNonNull(target);
     }
 
+/**
+ * 
+ */
     public CrossVersionObjectReference getDescribedObject() {
         return this.describedObject;
     }
+/**
+ * metric identifies the target metric by name and selector
+ */
     public MetricIdentifier getMetric() {
         return this.metric;
     }
+/**
+ * target specifies the target value for the given metric
+ */
     public MetricTarget getTarget() {
         return this.target;
     }

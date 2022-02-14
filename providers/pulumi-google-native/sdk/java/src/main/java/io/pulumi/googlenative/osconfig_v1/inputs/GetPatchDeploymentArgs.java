@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetPatchDeploymentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPatchDeploymentArgs Empty = new GetPatchDeploymentArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="patchDeploymentId", required=true)
     private final String patchDeploymentId;
 
@@ -21,6 +27,9 @@ public final class GetPatchDeploymentArgs extends io.pulumi.resources.InvokeArgs
         return this.patchDeploymentId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

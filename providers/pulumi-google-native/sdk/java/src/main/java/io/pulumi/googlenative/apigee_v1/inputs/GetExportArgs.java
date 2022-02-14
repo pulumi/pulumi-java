@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetExportArgs Empty = new GetExportArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="environmentId", required=true)
     private final String environmentId;
 
@@ -19,6 +25,9 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
         return this.environmentId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="exportId", required=true)
     private final String exportId;
 
@@ -26,6 +35,9 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
         return this.exportId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 

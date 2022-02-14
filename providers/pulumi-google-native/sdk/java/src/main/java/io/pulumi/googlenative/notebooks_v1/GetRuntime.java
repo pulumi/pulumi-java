@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRuntime {
+/**
+ * Gets details of a single Runtime. The location must be a regional endpoint rather than zonal.
+ */
     public static CompletableFuture<GetRuntimeResult> invokeAsync(GetRuntimeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:notebooks/v1:getRuntime", TypeShape.of(GetRuntimeResult.class), args == null ? GetRuntimeArgs.Empty : args, Utilities.withVersion(options));
     }

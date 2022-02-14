@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CustomProfileResponse {
+/**
+ * Path for metadata configuration.
+ */
     private final @Nullable String metadataConfigurationPath;
 
     @OutputCustomType.Constructor({"metadataConfigurationPath"})
@@ -18,6 +21,9 @@ public final class CustomProfileResponse {
         this.metadataConfigurationPath = metadataConfigurationPath;
     }
 
+/**
+ * Path for metadata configuration.
+ */
     public Optional<String> getMetadataConfigurationPath() {
         return Optional.ofNullable(this.metadataConfigurationPath);
     }

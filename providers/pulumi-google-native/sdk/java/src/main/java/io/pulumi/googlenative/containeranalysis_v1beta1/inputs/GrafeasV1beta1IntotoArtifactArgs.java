@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GrafeasV1beta1IntotoArtifactArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GrafeasV1beta1IntotoArtifactArgs Empty = new GrafeasV1beta1IntotoArtifactArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="hashes")
     private final @Nullable Input<ArtifactHashesArgs> hashes;
 
@@ -22,6 +28,9 @@ public final class GrafeasV1beta1IntotoArtifactArgs extends io.pulumi.resources.
         return this.hashes == null ? Input.empty() : this.hashes;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="resourceUri")
     private final @Nullable Input<String> resourceUri;
 

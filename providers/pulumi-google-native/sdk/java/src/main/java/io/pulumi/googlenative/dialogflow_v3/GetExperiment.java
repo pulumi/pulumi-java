@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExperiment {
+/**
+ * Retrieves the specified Experiment.
+ */
     public static CompletableFuture<GetExperimentResult> invokeAsync(GetExperimentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getExperiment", TypeShape.of(GetExperimentResult.class), args == null ? GetExperimentArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of the storage account.
+ */
     @EnumType
     public enum StorageAccountType {
+/**
+ * The primary storage account for the Media Services account.
+ */
         Primary("Primary"),
+/**
+ * A secondary storage account for the Media Services account.
+ */
         Secondary("Secondary");
 
         private final String value;

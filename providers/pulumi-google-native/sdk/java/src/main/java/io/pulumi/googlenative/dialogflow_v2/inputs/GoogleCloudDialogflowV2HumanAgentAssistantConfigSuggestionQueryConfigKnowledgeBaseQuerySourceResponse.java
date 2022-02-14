@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Knowledge base source settings. Supported features: ARTICLE_SUGGESTION, FAQ.
+ */
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse Empty = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse();
 
+    /**
+     * Knowledge bases to query. Format: `projects//locations//knowledgeBases/`. Currently, at most 5 knowledge bases are supported.
+     */
     @InputImport(name="knowledgeBases", required=true)
     private final List<String> knowledgeBases;
 

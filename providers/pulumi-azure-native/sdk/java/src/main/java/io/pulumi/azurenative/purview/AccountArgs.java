@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccountArgs Empty = new AccountArgs();
 
+    /**
+     * The name of the account.
+     */
     @InputImport(name="accountName")
     private final @Nullable Input<String> accountName;
 
@@ -25,6 +31,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName == null ? Input.empty() : this.accountName;
     }
 
+    /**
+     * Identity Info on the tracked resource
+     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityArgs> identity;
 
@@ -32,6 +41,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * Gets or sets the location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -39,6 +51,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Gets or sets the managed resource group name
+     */
     @InputImport(name="managedResourceGroupName")
     private final @Nullable Input<String> managedResourceGroupName;
 
@@ -46,6 +61,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedResourceGroupName == null ? Input.empty() : this.managedResourceGroupName;
     }
 
+    /**
+     * Gets or sets the public network access.
+     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
@@ -53,6 +71,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -60,6 +81,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Tags on the azure resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

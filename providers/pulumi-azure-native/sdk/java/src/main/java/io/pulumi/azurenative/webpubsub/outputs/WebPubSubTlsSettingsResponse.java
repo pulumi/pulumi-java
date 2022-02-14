@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WebPubSubTlsSettingsResponse {
+/**
+ * Request client certificate during TLS handshake if enabled
+ */
     private final @Nullable Boolean clientCertEnabled;
 
     @OutputCustomType.Constructor({"clientCertEnabled"})
@@ -18,6 +21,9 @@ public final class WebPubSubTlsSettingsResponse {
         this.clientCertEnabled = clientCertEnabled;
     }
 
+/**
+ * Request client certificate during TLS handshake if enabled
+ */
     public Optional<Boolean> getClientCertEnabled() {
         return Optional.ofNullable(this.clientCertEnabled);
     }

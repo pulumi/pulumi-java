@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourceAnnotationResponse {
+/**
+ * A description of the annotation record.
+ */
     private final String label;
 
     @OutputCustomType.Constructor({"label"})
@@ -16,6 +19,9 @@ public final class ResourceAnnotationResponse {
         this.label = Objects.requireNonNull(label);
     }
 
+/**
+ * A description of the annotation record.
+ */
     public String getLabel() {
         return this.label;
     }

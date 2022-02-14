@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DeviceDetailsResponse {
+/**
+ * Management Resource Id
+ */
     private final String managementResourceId;
+/**
+ * Management Resource Tenant ID
+ */
     private final String managementResourceTenantId;
+/**
+ * device serial number
+ */
     private final String serialNumber;
 
     @OutputCustomType.Constructor({"managementResourceId","managementResourceTenantId","serialNumber"})
@@ -23,12 +32,21 @@ public final class DeviceDetailsResponse {
         this.serialNumber = Objects.requireNonNull(serialNumber);
     }
 
+/**
+ * Management Resource Id
+ */
     public String getManagementResourceId() {
         return this.managementResourceId;
     }
+/**
+ * Management Resource Tenant ID
+ */
     public String getManagementResourceTenantId() {
         return this.managementResourceTenantId;
     }
+/**
+ * device serial number
+ */
     public String getSerialNumber() {
         return this.serialNumber;
     }

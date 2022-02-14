@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualRouterArgs Empty = new VirtualRouterArgs();
 
+    /**
+     * The Gateway on which VirtualRouter is hosted.
+     */
     @InputImport(name="hostedGateway")
     private final @Nullable Input<SubResourceArgs> hostedGateway;
 
@@ -25,6 +31,9 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostedGateway == null ? Input.empty() : this.hostedGateway;
     }
 
+    /**
+     * The Subnet on which VirtualRouter is hosted.
+     */
     @InputImport(name="hostedSubnet")
     private final @Nullable Input<SubResourceArgs> hostedSubnet;
 
@@ -32,6 +41,9 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostedSubnet == null ? Input.empty() : this.hostedSubnet;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -39,6 +51,9 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -46,6 +61,9 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -53,6 +71,9 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -60,6 +81,9 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * VirtualRouter ASN.
+     */
     @InputImport(name="virtualRouterAsn")
     private final @Nullable Input<Double> virtualRouterAsn;
 
@@ -67,6 +91,9 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.virtualRouterAsn == null ? Input.empty() : this.virtualRouterAsn;
     }
 
+    /**
+     * VirtualRouter IPs.
+     */
     @InputImport(name="virtualRouterIps")
     private final @Nullable Input<List<String>> virtualRouterIps;
 
@@ -74,6 +101,9 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.virtualRouterIps == null ? Input.empty() : this.virtualRouterIps;
     }
 
+    /**
+     * The name of the Virtual Router.
+     */
     @InputImport(name="virtualRouterName")
     private final @Nullable Input<String> virtualRouterName;
 

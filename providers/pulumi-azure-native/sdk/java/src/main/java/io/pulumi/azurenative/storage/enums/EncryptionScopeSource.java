@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The provider for the encryption scope. Possible values (case-insensitive):  Microsoft.Storage, Microsoft.KeyVault.
+ */
     @EnumType
     public enum EncryptionScopeSource {
+/**
+ * 
+ */
         Microsoft_Storage("Microsoft.Storage"),
+/**
+ * 
+ */
         Microsoft_KeyVault("Microsoft.KeyVault");
 
         private final String value;

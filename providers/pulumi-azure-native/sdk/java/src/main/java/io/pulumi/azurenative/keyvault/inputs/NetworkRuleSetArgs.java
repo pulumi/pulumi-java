@@ -16,10 +16,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A set of rules governing the network accessibility of a vault.
+ */
 public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkRuleSetArgs Empty = new NetworkRuleSetArgs();
 
+    /**
+     * Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.
+     */
     @InputImport(name="bypass")
     private final @Nullable Input<Either<String,NetworkRuleBypassOptions>> bypass;
 
@@ -27,6 +33,9 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.bypass == null ? Input.empty() : this.bypass;
     }
 
+    /**
+     * The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
+     */
     @InputImport(name="defaultAction")
     private final @Nullable Input<Either<String,NetworkRuleAction>> defaultAction;
 
@@ -34,6 +43,9 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultAction == null ? Input.empty() : this.defaultAction;
     }
 
+    /**
+     * The list of IP address rules.
+     */
     @InputImport(name="ipRules")
     private final @Nullable Input<List<IPRuleArgs>> ipRules;
 
@@ -41,6 +53,9 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipRules == null ? Input.empty() : this.ipRules;
     }
 
+    /**
+     * The list of virtual network rules.
+     */
     @InputImport(name="virtualNetworkRules")
     private final @Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
 

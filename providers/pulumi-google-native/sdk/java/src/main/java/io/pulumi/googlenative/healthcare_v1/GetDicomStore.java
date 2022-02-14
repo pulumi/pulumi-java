@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDicomStore {
+/**
+ * Gets the specified DICOM store.
+ */
     public static CompletableFuture<GetDicomStoreResult> invokeAsync(GetDicomStoreArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1:getDicomStore", TypeShape.of(GetDicomStoreResult.class), args == null ? GetDicomStoreArgs.Empty : args, Utilities.withVersion(options));
     }

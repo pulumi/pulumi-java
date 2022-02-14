@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2BigQueryFieldResponse {
+/**
+ * Designated field in the BigQuery table.
+ */
     private final GooglePrivacyDlpV2FieldIdResponse field;
+/**
+ * Source table of the field.
+ */
     private final GooglePrivacyDlpV2BigQueryTableResponse table;
 
     @OutputCustomType.Constructor({"field","table"})
@@ -21,9 +27,15 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse {
         this.table = Objects.requireNonNull(table);
     }
 
+/**
+ * Designated field in the BigQuery table.
+ */
     public GooglePrivacyDlpV2FieldIdResponse getField() {
         return this.field;
     }
+/**
+ * Source table of the field.
+ */
     public GooglePrivacyDlpV2BigQueryTableResponse getTable() {
         return this.table;
     }

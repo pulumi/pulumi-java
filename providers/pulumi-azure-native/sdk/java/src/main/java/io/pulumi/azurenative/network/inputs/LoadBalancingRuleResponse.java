@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A load balancing rule for a load balancer.
+ */
 public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LoadBalancingRuleResponse Empty = new LoadBalancingRuleResponse();
 
+    /**
+     * A reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend IPs.
+     */
     @InputImport(name="backendAddressPool")
     private final @Nullable SubResourceResponse backendAddressPool;
 
@@ -24,6 +30,9 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
         return this.backendAddressPool == null ? Optional.empty() : Optional.ofNullable(this.backendAddressPool);
     }
 
+    /**
+     * The port used for internal connections on the endpoint. Acceptable values are between 0 and 65535. Note that value 0 enables "Any Port".
+     */
     @InputImport(name="backendPort")
     private final @Nullable Integer backendPort;
 
@@ -31,6 +40,9 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
         return this.backendPort == null ? Optional.empty() : Optional.ofNullable(this.backendPort);
     }
 
+    /**
+     * Configures SNAT for the VMs in the backend pool to use the publicIP address specified in the frontend of the load balancing rule.
+     */
     @InputImport(name="disableOutboundSnat")
     private final @Nullable Boolean disableOutboundSnat;
 
@@ -38,6 +50,9 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
         return this.disableOutboundSnat == null ? Optional.empty() : Optional.ofNullable(this.disableOutboundSnat);
     }
 
+    /**
+     * Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
+     */
     @InputImport(name="enableFloatingIP")
     private final @Nullable Boolean enableFloatingIP;
 
@@ -45,6 +60,9 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
         return this.enableFloatingIP == null ? Optional.empty() : Optional.ofNullable(this.enableFloatingIP);
     }
 
+    /**
+     * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
+     */
     @InputImport(name="enableTcpReset")
     private final @Nullable Boolean enableTcpReset;
 
@@ -52,6 +70,9 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
         return this.enableTcpReset == null ? Optional.empty() : Optional.ofNullable(this.enableTcpReset);
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -59,6 +80,9 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
         return this.etag;
     }
 
+    /**
+     * A reference to frontend IP addresses.
+     */
     @InputImport(name="frontendIPConfiguration")
     private final @Nullable SubResourceResponse frontendIPConfiguration;
 
@@ -66,6 +90,9 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
         return this.frontendIPConfiguration == null ? Optional.empty() : Optional.ofNullable(this.frontendIPConfiguration);
     }
 
+    /**
+     * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 0 and 65534. Note that value 0 enables "Any Port".
+     */
     @InputImport(name="frontendPort", required=true)
     private final Integer frontendPort;
 
@@ -73,6 +100,9 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
         return this.frontendPort;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -80,6 +110,9 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
+     */
     @InputImport(name="idleTimeoutInMinutes")
     private final @Nullable Integer idleTimeoutInMinutes;
 
@@ -87,6 +120,9 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
         return this.idleTimeoutInMinutes == null ? Optional.empty() : Optional.ofNullable(this.idleTimeoutInMinutes);
     }
 
+    /**
+     * The load distribution policy for this rule.
+     */
     @InputImport(name="loadDistribution")
     private final @Nullable String loadDistribution;
 
@@ -94,6 +130,9 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
         return this.loadDistribution == null ? Optional.empty() : Optional.ofNullable(this.loadDistribution);
     }
 
+    /**
+     * The name of the resource that is unique within the set of load balancing rules used by the load balancer. This name can be used to access the resource.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -101,6 +140,9 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The reference to the load balancer probe used by the load balancing rule.
+     */
     @InputImport(name="probe")
     private final @Nullable SubResourceResponse probe;
 
@@ -108,6 +150,9 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
         return this.probe == null ? Optional.empty() : Optional.ofNullable(this.probe);
     }
 
+    /**
+     * The reference to the transport protocol used by the load balancing rule.
+     */
     @InputImport(name="protocol", required=true)
     private final String protocol;
 
@@ -115,6 +160,9 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
         return this.protocol;
     }
 
+    /**
+     * The provisioning state of the load balancing rule resource.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -122,6 +170,9 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
         return this.provisioningState;
     }
 
+    /**
+     * Type of the resource.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

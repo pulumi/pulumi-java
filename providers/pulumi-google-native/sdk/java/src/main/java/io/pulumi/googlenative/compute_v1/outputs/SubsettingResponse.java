@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SubsettingResponse {
+/**
+ * 
+ */
     private final String policy;
 
     @OutputCustomType.Constructor({"policy"})
@@ -16,6 +19,9 @@ public final class SubsettingResponse {
         this.policy = Objects.requireNonNull(policy);
     }
 
+/**
+ * 
+ */
     public String getPolicy() {
         return this.policy;
     }

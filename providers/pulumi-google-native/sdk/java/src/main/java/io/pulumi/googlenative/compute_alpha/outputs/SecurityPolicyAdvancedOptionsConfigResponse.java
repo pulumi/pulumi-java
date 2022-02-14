@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SecurityPolicyAdvancedOptionsConfigResponse {
+/**
+ * 
+ */
     private final String jsonParsing;
+/**
+ * 
+ */
     private final String logLevel;
 
     @OutputCustomType.Constructor({"jsonParsing","logLevel"})
@@ -20,9 +26,15 @@ public final class SecurityPolicyAdvancedOptionsConfigResponse {
         this.logLevel = Objects.requireNonNull(logLevel);
     }
 
+/**
+ * 
+ */
     public String getJsonParsing() {
         return this.jsonParsing;
     }
+/**
+ * 
+ */
     public String getLogLevel() {
         return this.logLevel;
     }

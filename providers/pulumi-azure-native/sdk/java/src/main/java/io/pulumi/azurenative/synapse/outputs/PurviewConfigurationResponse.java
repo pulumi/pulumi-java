@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PurviewConfigurationResponse {
+/**
+ * Purview Resource ID
+ */
     private final @Nullable String purviewResourceId;
 
     @OutputCustomType.Constructor({"purviewResourceId"})
@@ -18,6 +21,9 @@ public final class PurviewConfigurationResponse {
         this.purviewResourceId = purviewResourceId;
     }
 
+/**
+ * Purview Resource ID
+ */
     public Optional<String> getPurviewResourceId() {
         return Optional.ofNullable(this.purviewResourceId);
     }

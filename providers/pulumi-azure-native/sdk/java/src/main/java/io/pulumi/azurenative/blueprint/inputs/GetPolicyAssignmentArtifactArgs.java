@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetPolicyAssignmentArtifactArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPolicyAssignmentArtifactArgs Empty = new GetPolicyAssignmentArtifactArgs();
 
+    /**
+     * Name of the blueprint artifact.
+     */
     @InputImport(name="artifactName", required=true)
     private final String artifactName;
 
@@ -19,6 +25,9 @@ public final class GetPolicyAssignmentArtifactArgs extends io.pulumi.resources.I
         return this.artifactName;
     }
 
+    /**
+     * Name of the blueprint definition.
+     */
     @InputImport(name="blueprintName", required=true)
     private final String blueprintName;
 
@@ -26,6 +35,9 @@ public final class GetPolicyAssignmentArtifactArgs extends io.pulumi.resources.I
         return this.blueprintName;
     }
 
+    /**
+     * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
+     */
     @InputImport(name="resourceScope", required=true)
     private final String resourceScope;
 

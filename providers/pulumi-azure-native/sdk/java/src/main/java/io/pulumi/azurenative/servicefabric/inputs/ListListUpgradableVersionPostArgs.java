@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListListUpgradableVersionPostArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListListUpgradableVersionPostArgs Empty = new ListListUpgradableVersionPostArgs();
 
+    /**
+     * The name of the cluster resource.
+     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -19,6 +25,9 @@ public final class ListListUpgradableVersionPostArgs extends io.pulumi.resources
         return this.clusterName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class ListListUpgradableVersionPostArgs extends io.pulumi.resources
         return this.resourceGroupName;
     }
 
+    /**
+     * The target code version.
+     */
     @InputImport(name="targetVersion", required=true)
     private final String targetVersion;
 

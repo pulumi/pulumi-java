@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The input protocol for the live event. This is specified at creation time and cannot be updated.
+ */
     @EnumType
     public enum LiveEventInputProtocol {
+/**
+ * Smooth Streaming input will be sent by the contribution encoder to the live event.
+ */
         FragmentedMP4("FragmentedMP4"),
+/**
+ * RTMP input will be sent by the contribution encoder to the live event.
+ */
         RTMP("RTMP");
 
         private final String value;

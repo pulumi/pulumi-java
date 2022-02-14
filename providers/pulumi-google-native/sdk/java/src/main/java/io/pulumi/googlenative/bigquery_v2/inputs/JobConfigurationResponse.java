@@ -14,10 +14,16 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class JobConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JobConfigurationResponse Empty = new JobConfigurationResponse();
 
+    /**
+     * [Pick one] Copies a table.
+     */
     @InputImport(name="copy", required=true)
     private final JobConfigurationTableCopyResponse copy;
 
@@ -25,6 +31,9 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
         return this.copy;
     }
 
+    /**
+     * [Optional] If set, don't actually run this job. A valid query will return a mostly empty response with some processing statistics, while an invalid query will return the same error it would if it wasn't a dry run. Behavior of non-query jobs is undefined.
+     */
     @InputImport(name="dryRun", required=true)
     private final Boolean dryRun;
 
@@ -32,6 +41,9 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
         return this.dryRun;
     }
 
+    /**
+     * [Pick one] Configures an extract job.
+     */
     @InputImport(name="extract", required=true)
     private final JobConfigurationExtractResponse extract;
 
@@ -39,6 +51,9 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
         return this.extract;
     }
 
+    /**
+     * [Optional] Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
+     */
     @InputImport(name="jobTimeoutMs", required=true)
     private final String jobTimeoutMs;
 
@@ -46,6 +61,9 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
         return this.jobTimeoutMs;
     }
 
+    /**
+     * The type of the job. Can be QUERY, LOAD, EXTRACT, COPY or UNKNOWN.
+     */
     @InputImport(name="jobType", required=true)
     private final String jobType;
 
@@ -53,6 +71,9 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
         return this.jobType;
     }
 
+    /**
+     * The labels associated with this job. You can use these to organize and group your jobs. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International characters are allowed. Label values are optional. Label keys must start with a letter and each label in the list must have a different key.
+     */
     @InputImport(name="labels", required=true)
     private final Map<String,String> labels;
 
@@ -60,6 +81,9 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
         return this.labels;
     }
 
+    /**
+     * [Pick one] Configures a load job.
+     */
     @InputImport(name="load", required=true)
     private final JobConfigurationLoadResponse load;
 
@@ -67,6 +91,9 @@ public final class JobConfigurationResponse extends io.pulumi.resources.InvokeAr
         return this.load;
     }
 
+    /**
+     * [Pick one] Configures a query job.
+     */
     @InputImport(name="query", required=true)
     private final JobConfigurationQueryResponse query;
 

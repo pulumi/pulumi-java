@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Class to specify properties of content key
+ */
 public final class StreamingPolicyContentKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StreamingPolicyContentKeyResponse Empty = new StreamingPolicyContentKeyResponse();
 
+    /**
+     * Label can be used to specify Content Key when creating a Streaming Locator
+     */
     @InputImport(name="label")
     private final @Nullable String label;
 
@@ -23,6 +29,9 @@ public final class StreamingPolicyContentKeyResponse extends io.pulumi.resources
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
     }
 
+    /**
+     * Policy used by Content Key
+     */
     @InputImport(name="policyName")
     private final @Nullable String policyName;
 
@@ -30,6 +39,9 @@ public final class StreamingPolicyContentKeyResponse extends io.pulumi.resources
         return this.policyName == null ? Optional.empty() : Optional.ofNullable(this.policyName);
     }
 
+    /**
+     * Tracks which use this content key
+     */
     @InputImport(name="tracks")
     private final @Nullable List<TrackSelectionResponse> tracks;
 

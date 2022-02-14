@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class NatAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NatAddressArgs Empty = new NatAddressArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="instanceId", required=true)
     private final Input<String> instanceId;
 
@@ -21,6 +27,9 @@ public final class NatAddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceId;
     }
 
+    /**
+     * Resource ID of the NAT address.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -28,6 +37,9 @@ public final class NatAddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 

@@ -10,10 +10,16 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * The credential used by Deployment Manager and TypeProvider. Only one of the options is permitted.
+ */
 public final class CredentialResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CredentialResponse Empty = new CredentialResponse();
 
+    /**
+     * Basic Auth Credential, only used by TypeProvider.
+     */
     @InputImport(name="basicAuth", required=true)
     private final BasicAuthResponse basicAuth;
 
@@ -21,6 +27,9 @@ public final class CredentialResponse extends io.pulumi.resources.InvokeArgs {
         return this.basicAuth;
     }
 
+    /**
+     * Service Account Credential, only used by Deployment.
+     */
     @InputImport(name="serviceAccount", required=true)
     private final ServiceAccountResponse serviceAccount;
 
@@ -28,6 +37,9 @@ public final class CredentialResponse extends io.pulumi.resources.InvokeArgs {
         return this.serviceAccount;
     }
 
+    /**
+     * Specify to use the project default credential, only supported by Deployment.
+     */
     @InputImport(name="useProjectDefault", required=true)
     private final Boolean useProjectDefault;
 

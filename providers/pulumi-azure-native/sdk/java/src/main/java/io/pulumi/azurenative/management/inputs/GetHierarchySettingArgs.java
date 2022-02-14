@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetHierarchySettingArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetHierarchySettingArgs Empty = new GetHierarchySettingArgs();
 
+    /**
+     * Management Group ID.
+     */
     @InputImport(name="groupId", required=true)
     private final String groupId;
 

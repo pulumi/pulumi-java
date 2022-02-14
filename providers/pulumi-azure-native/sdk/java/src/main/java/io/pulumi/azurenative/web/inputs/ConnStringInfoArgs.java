@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Database connection string information.
+ */
 public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnStringInfoArgs Empty = new ConnStringInfoArgs();
 
+    /**
+     * Connection string value.
+     */
     @InputImport(name="connectionString")
     private final @Nullable Input<String> connectionString;
 
@@ -22,6 +28,9 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectionString == null ? Input.empty() : this.connectionString;
     }
 
+    /**
+     * Name of connection string.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +38,9 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Type of database.
+     */
     @InputImport(name="type")
     private final @Nullable Input<ConnectionStringType> type;
 

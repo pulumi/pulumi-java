@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Base class for all triggers that support one to many model for trigger to pipeline.
+ */
 public final class MultiplePipelineTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MultiplePipelineTriggerArgs Empty = new MultiplePipelineTriggerArgs();
 
+    /**
+     * List of tags that can be used for describing the trigger.
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -24,6 +30,9 @@ public final class MultiplePipelineTriggerArgs extends io.pulumi.resources.Resou
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * Trigger description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +40,9 @@ public final class MultiplePipelineTriggerArgs extends io.pulumi.resources.Resou
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Pipelines that need to be started.
+     */
     @InputImport(name="pipelines")
     private final @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines;
 
@@ -38,6 +50,10 @@ public final class MultiplePipelineTriggerArgs extends io.pulumi.resources.Resou
         return this.pipelines == null ? Input.empty() : this.pipelines;
     }
 
+    /**
+     * Trigger type.
+Expected value is 'MultiplePipelineTrigger'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

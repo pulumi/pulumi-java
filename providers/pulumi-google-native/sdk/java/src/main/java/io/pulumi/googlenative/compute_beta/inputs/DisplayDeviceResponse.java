@@ -8,10 +8,16 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * A set of Display Device options
+ */
 public final class DisplayDeviceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DisplayDeviceResponse Empty = new DisplayDeviceResponse();
 
+    /**
+     * Defines whether the instance has Display enabled.
+     */
     @InputImport(name="enableDisplay", required=true)
     private final Boolean enableDisplay;
 

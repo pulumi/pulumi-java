@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines a service unit.
+ */
 public final class ServiceUnitResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceUnitResponse Empty = new ServiceUnitResponse();
 
+    /**
+     * The artifacts for the service unit.
+     */
     @InputImport(name="artifacts")
     private final @Nullable ServiceUnitArtifactsResponse artifacts;
 
@@ -24,6 +30,9 @@ public final class ServiceUnitResponse extends io.pulumi.resources.InvokeArgs {
         return this.artifacts == null ? Optional.empty() : Optional.ofNullable(this.artifacts);
     }
 
+    /**
+     * Describes the type of ARM deployment to be performed on the resource.
+     */
     @InputImport(name="deploymentMode", required=true)
     private final String deploymentMode;
 
@@ -31,6 +40,9 @@ public final class ServiceUnitResponse extends io.pulumi.resources.InvokeArgs {
         return this.deploymentMode;
     }
 
+    /**
+     * Name of the service unit.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -38,6 +50,9 @@ public final class ServiceUnitResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Detailed step information, if present.
+     */
     @InputImport(name="steps")
     private final @Nullable List<RolloutStepResponse> steps;
 
@@ -45,6 +60,9 @@ public final class ServiceUnitResponse extends io.pulumi.resources.InvokeArgs {
         return this.steps == null ? List.of() : this.steps;
     }
 
+    /**
+     * The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
+     */
     @InputImport(name="targetResourceGroup", required=true)
     private final String targetResourceGroup;
 

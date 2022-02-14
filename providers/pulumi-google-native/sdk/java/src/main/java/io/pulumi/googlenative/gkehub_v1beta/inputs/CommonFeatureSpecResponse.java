@@ -9,10 +9,16 @@ import io.pulumi.googlenative.gkehub_v1beta.inputs.MultiClusterIngressFeatureSpe
 import java.util.Objects;
 
 
+/**
+ * CommonFeatureSpec contains Hub-wide configuration information
+ */
 public final class CommonFeatureSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CommonFeatureSpecResponse Empty = new CommonFeatureSpecResponse();
 
+    /**
+     * Appdevexperience specific spec.
+     */
     @InputImport(name="appdevexperience", required=true)
     private final AppDevExperienceFeatureSpecResponse appdevexperience;
 
@@ -20,6 +26,9 @@ public final class CommonFeatureSpecResponse extends io.pulumi.resources.InvokeA
         return this.appdevexperience;
     }
 
+    /**
+     * Multicluster Ingress-specific spec.
+     */
     @InputImport(name="multiclusteringress", required=true)
     private final MultiClusterIngressFeatureSpecResponse multiclusteringress;
 

@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKnowledgeBase {
+/**
+ * Retrieves the specified knowledge base. Note: The `projects.agent.knowledgeBases` resource is deprecated; only use `projects.knowledgeBases`.
+ */
     public static CompletableFuture<GetKnowledgeBaseResult> invokeAsync(GetKnowledgeBaseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2beta1:getKnowledgeBase", TypeShape.of(GetKnowledgeBaseResult.class), args == null ? GetKnowledgeBaseArgs.Empty : args, Utilities.withVersion(options));
     }

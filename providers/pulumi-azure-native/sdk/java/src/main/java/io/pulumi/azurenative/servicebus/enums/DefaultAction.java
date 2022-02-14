@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Default Action for Network Rule Set
+ */
     @EnumType
     public enum DefaultAction {
+/**
+ * 
+ */
         Allow("Allow"),
+/**
+ * 
+ */
         Deny("Deny");
 
         private final String value;

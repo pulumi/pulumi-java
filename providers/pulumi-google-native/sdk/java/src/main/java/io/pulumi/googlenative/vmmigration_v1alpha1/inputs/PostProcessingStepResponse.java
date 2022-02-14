@@ -6,6 +6,9 @@ package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 import java.util.Objects;
 
 
+/**
+ * PostProcessingStep contains specific step details.
+ */
 public final class PostProcessingStepResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PostProcessingStepResponse Empty = new PostProcessingStepResponse();

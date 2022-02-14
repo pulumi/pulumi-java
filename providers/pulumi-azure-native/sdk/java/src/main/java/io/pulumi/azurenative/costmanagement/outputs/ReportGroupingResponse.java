@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ReportGroupingResponse {
+/**
+ * The name of the column to group.
+ */
     private final String name;
+/**
+ * Has type of the column to group.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"name","type"})
@@ -20,9 +26,15 @@ public final class ReportGroupingResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The name of the column to group.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Has type of the column to group.
+ */
     public String getType() {
         return this.type;
     }

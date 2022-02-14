@@ -13,16 +13,49 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetWebAppSourceControlResult {
+/**
+ * Name of branch to use for deployment.
+ */
     private final @Nullable String branch;
+/**
+ * <code>true</code> to enable deployment rollback; otherwise, <code>false</code>.
+ */
     private final @Nullable Boolean deploymentRollbackEnabled;
+/**
+ * If GitHub Action is selected, than the associated configuration.
+ */
     private final @Nullable GitHubActionConfigurationResponse gitHubActionConfiguration;
+/**
+ * Resource Id.
+ */
     private final String id;
+/**
+ * <code>true</code> if this is deployed via GitHub action.
+ */
     private final @Nullable Boolean isGitHubAction;
+/**
+ * <code>true</code> to limit to manual integration; <code>false</code> to enable continuous integration (which configures webhooks into online repos like GitHub).
+ */
     private final @Nullable Boolean isManualIntegration;
+/**
+ * <code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.
+ */
     private final @Nullable Boolean isMercurial;
+/**
+ * Kind of resource.
+ */
     private final @Nullable String kind;
+/**
+ * Resource Name.
+ */
     private final String name;
+/**
+ * Repository or source control URL.
+ */
     private final @Nullable String repoUrl;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"branch","deploymentRollbackEnabled","gitHubActionConfiguration","id","isGitHubAction","isManualIntegration","isMercurial","kind","name","repoUrl","type"})
@@ -51,36 +84,69 @@ public final class GetWebAppSourceControlResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Name of branch to use for deployment.
+ */
     public Optional<String> getBranch() {
         return Optional.ofNullable(this.branch);
     }
+/**
+ * <code>true</code> to enable deployment rollback; otherwise, <code>false</code>.
+ */
     public Optional<Boolean> getDeploymentRollbackEnabled() {
         return Optional.ofNullable(this.deploymentRollbackEnabled);
     }
+/**
+ * If GitHub Action is selected, than the associated configuration.
+ */
     public Optional<GitHubActionConfigurationResponse> getGitHubActionConfiguration() {
         return Optional.ofNullable(this.gitHubActionConfiguration);
     }
+/**
+ * Resource Id.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * <code>true</code> if this is deployed via GitHub action.
+ */
     public Optional<Boolean> getIsGitHubAction() {
         return Optional.ofNullable(this.isGitHubAction);
     }
+/**
+ * <code>true</code> to limit to manual integration; <code>false</code> to enable continuous integration (which configures webhooks into online repos like GitHub).
+ */
     public Optional<Boolean> getIsManualIntegration() {
         return Optional.ofNullable(this.isManualIntegration);
     }
+/**
+ * <code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.
+ */
     public Optional<Boolean> getIsMercurial() {
         return Optional.ofNullable(this.isMercurial);
     }
+/**
+ * Kind of resource.
+ */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
+/**
+ * Resource Name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Repository or source control URL.
+ */
     public Optional<String> getRepoUrl() {
         return Optional.ofNullable(this.repoUrl);
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

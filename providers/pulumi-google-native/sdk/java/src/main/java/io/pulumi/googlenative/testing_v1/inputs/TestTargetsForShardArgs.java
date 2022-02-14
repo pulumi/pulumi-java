@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Test targets for a shard.
+ */
 public final class TestTargetsForShardArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TestTargetsForShardArgs Empty = new TestTargetsForShardArgs();
 
+    /**
+     * Group of packages, classes, and/or test methods to be run for each shard. The targets need to be specified in AndroidJUnitRunner argument format. For example, "package com.my.packages" "class com.my.package.MyClass". The number of shard_test_targets must be greater than 0.
+     */
     @InputImport(name="testTargets")
     private final @Nullable Input<List<String>> testTargets;
 

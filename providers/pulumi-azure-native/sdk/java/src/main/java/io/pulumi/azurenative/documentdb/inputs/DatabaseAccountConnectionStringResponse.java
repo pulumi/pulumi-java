@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Connection string for the Cosmos DB account
+ */
 public final class DatabaseAccountConnectionStringResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatabaseAccountConnectionStringResponse Empty = new DatabaseAccountConnectionStringResponse();
 
+    /**
+     * Value of the connection string
+     */
     @InputImport(name="connectionString", required=true)
     private final String connectionString;
 
@@ -19,6 +25,9 @@ public final class DatabaseAccountConnectionStringResponse extends io.pulumi.res
         return this.connectionString;
     }
 
+    /**
+     * Description of the connection string
+     */
     @InputImport(name="description", required=true)
     private final String description;
 

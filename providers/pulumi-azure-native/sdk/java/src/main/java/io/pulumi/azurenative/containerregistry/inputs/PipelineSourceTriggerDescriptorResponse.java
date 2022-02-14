@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PipelineSourceTriggerDescriptorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PipelineSourceTriggerDescriptorResponse Empty = new PipelineSourceTriggerDescriptorResponse();
 
+    /**
+     * The timestamp when the source update happened.
+     */
     @InputImport(name="timestamp")
     private final @Nullable String timestamp;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetActiveSessionsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetActiveSessionsArgs Empty = new GetActiveSessionsArgs();
 
+    /**
+     * The name of the Bastion Host.
+     */
     @InputImport(name="bastionHostName", required=true)
     private final String bastionHostName;
 
@@ -19,6 +25,9 @@ public final class GetActiveSessionsArgs extends io.pulumi.resources.InvokeArgs 
         return this.bastionHostName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

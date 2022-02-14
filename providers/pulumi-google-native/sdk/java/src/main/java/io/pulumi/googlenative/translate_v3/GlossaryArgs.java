@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GlossaryArgs Empty = new GlossaryArgs();
 
+    /**
+     * Provides examples to build the glossary from. Total glossary must not exceed 10M Unicode codepoints.
+     */
     @InputImport(name="inputConfig", required=true)
     private final Input<GlossaryInputConfigArgs> inputConfig;
 
@@ -24,6 +30,9 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
         return this.inputConfig;
     }
 
+    /**
+     * Used with equivalent term set glossaries.
+     */
     @InputImport(name="languageCodesSet")
     private final @Nullable Input<LanguageCodesSetArgs> languageCodesSet;
 
@@ -31,6 +40,9 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
         return this.languageCodesSet == null ? Input.empty() : this.languageCodesSet;
     }
 
+    /**
+     * Used with unidirectional glossaries.
+     */
     @InputImport(name="languagePair")
     private final @Nullable Input<LanguageCodePairArgs> languagePair;
 
@@ -38,6 +50,9 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
         return this.languagePair == null ? Input.empty() : this.languagePair;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -45,6 +60,9 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource name of the glossary. Glossary names have the form `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +70,9 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

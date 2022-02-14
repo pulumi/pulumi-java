@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTableServiceProperties {
+/**
+ * The properties of a storage account’s Table service.
+API Version: 2021-02-01.
+ *
+ * The properties of a storage account’s Table service.
+ */
     public static CompletableFuture<GetTableServicePropertiesResult> invokeAsync(GetTableServicePropertiesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getTableServiceProperties", TypeShape.of(GetTableServicePropertiesResult.class), args == null ? GetTableServicePropertiesArgs.Empty : args, Utilities.withVersion(options));
     }

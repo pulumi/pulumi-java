@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2TimePartConfigResponse {
+/**
+ * The part of the time to keep.
+ */
     private final String partToExtract;
 
     @OutputCustomType.Constructor({"partToExtract"})
@@ -16,6 +19,9 @@ public final class GooglePrivacyDlpV2TimePartConfigResponse {
         this.partToExtract = Objects.requireNonNull(partToExtract);
     }
 
+/**
+ * The part of the time to keep.
+ */
     public String getPartToExtract() {
         return this.partToExtract;
     }

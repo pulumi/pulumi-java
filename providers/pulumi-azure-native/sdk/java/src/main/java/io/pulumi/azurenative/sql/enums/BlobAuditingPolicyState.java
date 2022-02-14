@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Specifies the state of the audit. If state is Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.
+ */
     @EnumType
     public enum BlobAuditingPolicyState {
+/**
+ * 
+ */
         Enabled("Enabled"),
+/**
+ * 
+ */
         Disabled("Disabled");
 
         private final String value;

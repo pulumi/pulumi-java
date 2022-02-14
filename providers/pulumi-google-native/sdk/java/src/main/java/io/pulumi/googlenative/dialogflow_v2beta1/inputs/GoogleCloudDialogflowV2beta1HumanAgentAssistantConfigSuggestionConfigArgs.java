@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Detail human agent assistant config.
+ */
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs Empty = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigArgs();
 
+    /**
+     * Configuration of different suggestion features. One feature can have only one config.
+     */
     @InputImport(name="featureConfigs")
     private final @Nullable Input<List<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigArgs>> featureConfigs;
 
@@ -23,6 +29,9 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
         return this.featureConfigs == null ? Input.empty() : this.featureConfigs;
     }
 
+    /**
+     * If `group_suggestion_responses` is false, and there are multiple `feature_configs` in `event based suggestion` or StreamingAnalyzeContent, we will try to deliver suggestions to customers as soon as we get new suggestion. Different type of suggestions based on the same context will be in separate Pub/Sub event or `StreamingAnalyzeContentResponse`. If `group_suggestion_responses` set to true. All the suggestions to the same participant based on the same context will be grouped into a single Pub/Sub event or StreamingAnalyzeContentResponse.
+     */
     @InputImport(name="groupSuggestionResponses")
     private final @Nullable Input<Boolean> groupSuggestionResponses;
 

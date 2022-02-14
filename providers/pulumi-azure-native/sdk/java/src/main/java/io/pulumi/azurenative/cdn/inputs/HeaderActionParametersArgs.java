@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the parameters for the request header action.
+ */
 public final class HeaderActionParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HeaderActionParametersArgs Empty = new HeaderActionParametersArgs();
 
+    /**
+     * Action to perform
+     */
     @InputImport(name="headerAction", required=true)
     private final Input<Either<String,HeaderAction>> headerAction;
 
@@ -23,6 +29,9 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
         return this.headerAction;
     }
 
+    /**
+     * Name of the header to modify
+     */
     @InputImport(name="headerName", required=true)
     private final Input<String> headerName;
 
@@ -30,6 +39,9 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
         return this.headerName;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 
@@ -37,6 +49,9 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
         return this.odataType;
     }
 
+    /**
+     * Value for the specified action
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

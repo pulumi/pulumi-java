@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Database specific information for PostgreSQL to Azure Database for PostgreSQL migration task inputs
+ */
 public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs Empty = new MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs();
 
+    /**
+     * Migration settings which tune the migration behavior
+     */
     @InputImport(name="migrationSetting")
     private final @Nullable Input<Map<String,String>> migrationSetting;
 
@@ -22,6 +28,9 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
         return this.migrationSetting == null ? Input.empty() : this.migrationSetting;
     }
 
+    /**
+     * Name of the database
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +38,9 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Source settings to tune source endpoint migration behavior
+     */
     @InputImport(name="sourceSetting")
     private final @Nullable Input<Map<String,String>> sourceSetting;
 
@@ -36,6 +48,9 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
         return this.sourceSetting == null ? Input.empty() : this.sourceSetting;
     }
 
+    /**
+     * Name of target database. Note: Target database will be truncated before starting migration.
+     */
     @InputImport(name="targetDatabaseName")
     private final @Nullable Input<String> targetDatabaseName;
 
@@ -43,6 +58,9 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputArgs ex
         return this.targetDatabaseName == null ? Input.empty() : this.targetDatabaseName;
     }
 
+    /**
+     * Target settings to tune target endpoint migration behavior
+     */
     @InputImport(name="targetSetting")
     private final @Nullable Input<Map<String,String>> targetSetting;
 

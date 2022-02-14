@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AllowedFlexVolume {
+/**
+ * driver is the name of the Flexvolume driver.
+ */
     private final String driver;
 
     @OutputCustomType.Constructor({"driver"})
@@ -16,6 +19,9 @@ public final class AllowedFlexVolume {
         this.driver = Objects.requireNonNull(driver);
     }
 
+/**
+ * driver is the name of the Flexvolume driver.
+ */
     public String getDriver() {
         return this.driver;
     }

@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Workspace type.
+ */
     @EnumType
     public enum AdditionalWorkspaceType {
+/**
+ * 
+ */
         Sentinel("Sentinel");
 
         private final String value;

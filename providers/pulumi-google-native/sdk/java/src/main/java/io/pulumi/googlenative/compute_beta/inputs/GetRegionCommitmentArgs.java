@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetRegionCommitmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRegionCommitmentArgs Empty = new GetRegionCommitmentArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="commitment", required=true)
     private final String commitment;
 
@@ -21,6 +27,9 @@ public final class GetRegionCommitmentArgs extends io.pulumi.resources.InvokeArg
         return this.commitment;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -28,6 +37,9 @@ public final class GetRegionCommitmentArgs extends io.pulumi.resources.InvokeArg
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="region", required=true)
     private final String region;
 

@@ -12,24 +12,81 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TaskRunnerSettingsResponse {
+/**
+ * Whether to also send taskrunner log info to stderr.
+ */
     private final Boolean alsologtostderr;
+/**
+ * The location on the worker for task-specific subdirectories.
+ */
     private final String baseTaskDir;
+/**
+ * The base URL for the taskrunner to use when accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value is "http://www.googleapis.com/"
+ */
     private final String baseUrl;
+/**
+ * The file to store preprocessing commands in.
+ */
     private final String commandlinesFileName;
+/**
+ * Whether to continue taskrunner if an exception is hit.
+ */
     private final Boolean continueOnException;
+/**
+ * The API version of endpoint, e.g. "v1b3"
+ */
     private final String dataflowApiVersion;
+/**
+ * The command to launch the worker harness.
+ */
     private final String harnessCommand;
+/**
+ * The suggested backend language.
+ */
     private final String languageHint;
+/**
+ * The directory on the VM to store logs.
+ */
     private final String logDir;
+/**
+ * Whether to send taskrunner log info to Google Compute Engine VM serial console.
+ */
     private final Boolean logToSerialconsole;
+/**
+ * Indicates where to put logs. If this is not specified, the logs will not be uploaded. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+ */
     private final String logUploadLocation;
+/**
+ * The OAuth2 scopes to be requested by the taskrunner in order to access the Cloud Dataflow API.
+ */
     private final List<String> oauthScopes;
+/**
+ * The settings to pass to the parallel worker harness.
+ */
     private final WorkerSettingsResponse parallelWorkerSettings;
+/**
+ * The streaming worker main class name.
+ */
     private final String streamingWorkerMainClass;
+/**
+ * The UNIX group ID on the worker VM to use for tasks launched by taskrunner; e.g. "wheel".
+ */
     private final String taskGroup;
+/**
+ * The UNIX user ID on the worker VM to use for tasks launched by taskrunner; e.g. "root".
+ */
     private final String taskUser;
+/**
+ * The prefix of the resources the taskrunner should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+ */
     private final String tempStoragePrefix;
+/**
+ * The ID string of the VM.
+ */
     private final String vmId;
+/**
+ * The file to store the workflow in.
+ */
     private final String workflowFileName;
 
     @OutputCustomType.Constructor({"alsologtostderr","baseTaskDir","baseUrl","commandlinesFileName","continueOnException","dataflowApiVersion","harnessCommand","languageHint","logDir","logToSerialconsole","logUploadLocation","oauthScopes","parallelWorkerSettings","streamingWorkerMainClass","taskGroup","taskUser","tempStoragePrefix","vmId","workflowFileName"})
@@ -74,60 +131,117 @@ public final class TaskRunnerSettingsResponse {
         this.workflowFileName = Objects.requireNonNull(workflowFileName);
     }
 
+/**
+ * Whether to also send taskrunner log info to stderr.
+ */
     public Boolean getAlsologtostderr() {
         return this.alsologtostderr;
     }
+/**
+ * The location on the worker for task-specific subdirectories.
+ */
     public String getBaseTaskDir() {
         return this.baseTaskDir;
     }
+/**
+ * The base URL for the taskrunner to use when accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value is "http://www.googleapis.com/"
+ */
     public String getBaseUrl() {
         return this.baseUrl;
     }
+/**
+ * The file to store preprocessing commands in.
+ */
     public String getCommandlinesFileName() {
         return this.commandlinesFileName;
     }
+/**
+ * Whether to continue taskrunner if an exception is hit.
+ */
     public Boolean getContinueOnException() {
         return this.continueOnException;
     }
+/**
+ * The API version of endpoint, e.g. "v1b3"
+ */
     public String getDataflowApiVersion() {
         return this.dataflowApiVersion;
     }
+/**
+ * The command to launch the worker harness.
+ */
     public String getHarnessCommand() {
         return this.harnessCommand;
     }
+/**
+ * The suggested backend language.
+ */
     public String getLanguageHint() {
         return this.languageHint;
     }
+/**
+ * The directory on the VM to store logs.
+ */
     public String getLogDir() {
         return this.logDir;
     }
+/**
+ * Whether to send taskrunner log info to Google Compute Engine VM serial console.
+ */
     public Boolean getLogToSerialconsole() {
         return this.logToSerialconsole;
     }
+/**
+ * Indicates where to put logs. If this is not specified, the logs will not be uploaded. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+ */
     public String getLogUploadLocation() {
         return this.logUploadLocation;
     }
+/**
+ * The OAuth2 scopes to be requested by the taskrunner in order to access the Cloud Dataflow API.
+ */
     public List<String> getOauthScopes() {
         return this.oauthScopes;
     }
+/**
+ * The settings to pass to the parallel worker harness.
+ */
     public WorkerSettingsResponse getParallelWorkerSettings() {
         return this.parallelWorkerSettings;
     }
+/**
+ * The streaming worker main class name.
+ */
     public String getStreamingWorkerMainClass() {
         return this.streamingWorkerMainClass;
     }
+/**
+ * The UNIX group ID on the worker VM to use for tasks launched by taskrunner; e.g. "wheel".
+ */
     public String getTaskGroup() {
         return this.taskGroup;
     }
+/**
+ * The UNIX user ID on the worker VM to use for tasks launched by taskrunner; e.g. "root".
+ */
     public String getTaskUser() {
         return this.taskUser;
     }
+/**
+ * The prefix of the resources the taskrunner should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+ */
     public String getTempStoragePrefix() {
         return this.tempStoragePrefix;
     }
+/**
+ * The ID string of the VM.
+ */
     public String getVmId() {
         return this.vmId;
     }
+/**
+ * The file to store the workflow in.
+ */
     public String getWorkflowFileName() {
         return this.workflowFileName;
     }

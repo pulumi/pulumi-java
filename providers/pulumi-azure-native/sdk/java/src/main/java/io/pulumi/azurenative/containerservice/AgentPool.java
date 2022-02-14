@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.containerservice;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.containerservice.AgentPoolArgs;
 import io.pulumi.azurenative.containerservice.outputs.AgentPoolUpgradeSettingsResponse;
 import io.pulumi.azurenative.containerservice.outputs.KubeletConfigResponse;
 import io.pulumi.azurenative.containerservice.outputs.LinuxOSConfigResponse;
@@ -22,225 +21,1771 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Agent Pool.
+API Version: 2021-03-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create Agent Pool with EncryptionAtHost enabled
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var agentPool = new AzureNative.ContainerService.AgentPool("agentPool", new AzureNative.ContainerService.AgentPoolArgs
+        {
+            AgentPoolName = "agentpool1",
+            Count = 3,
+            EnableEncryptionAtHost = true,
+            OrchestratorVersion = "",
+            OsType = "Linux",
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            VmSize = "Standard_DS2_v2",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerservice.NewAgentPool(ctx, "agentPool", &containerservice.AgentPoolArgs{
+			AgentPoolName:          pulumi.String("agentpool1"),
+			Count:                  pulumi.Int(3),
+			EnableEncryptionAtHost: pulumi.Bool(true),
+			OrchestratorVersion:    pulumi.String(""),
+			OsType:                 pulumi.String("Linux"),
+			ResourceGroupName:      pulumi.String("rg1"),
+			ResourceName:           pulumi.String("clustername1"),
+			VmSize:                 pulumi.String("Standard_DS2_v2"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const agentPool = new azure_native.containerservice.AgentPool("agentPool", {
+    agentPoolName: "agentpool1",
+    count: 3,
+    enableEncryptionAtHost: true,
+    orchestratorVersion: "",
+    osType: "Linux",
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    vmSize: "Standard_DS2_v2",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+agent_pool = azure_native.containerservice.AgentPool("agentPool",
+    agent_pool_name="agentpool1",
+    count=3,
+    enable_encryption_at_host=True,
+    orchestrator_version="",
+    os_type="Linux",
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    vm_size="Standard_DS2_v2")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create Agent Pool with Ephemeral OS Disk
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var agentPool = new AzureNative.ContainerService.AgentPool("agentPool", new AzureNative.ContainerService.AgentPoolArgs
+        {
+            AgentPoolName = "agentpool1",
+            Count = 3,
+            OrchestratorVersion = "",
+            OsDiskSizeGB = 64,
+            OsDiskType = "Ephemeral",
+            OsType = "Linux",
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            VmSize = "Standard_DS2_v2",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerservice.NewAgentPool(ctx, "agentPool", &containerservice.AgentPoolArgs{
+			AgentPoolName:       pulumi.String("agentpool1"),
+			Count:               pulumi.Int(3),
+			OrchestratorVersion: pulumi.String(""),
+			OsDiskSizeGB:        pulumi.Int(64),
+			OsDiskType:          pulumi.String("Ephemeral"),
+			OsType:              pulumi.String("Linux"),
+			ResourceGroupName:   pulumi.String("rg1"),
+			ResourceName:        pulumi.String("clustername1"),
+			VmSize:              pulumi.String("Standard_DS2_v2"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const agentPool = new azure_native.containerservice.AgentPool("agentPool", {
+    agentPoolName: "agentpool1",
+    count: 3,
+    orchestratorVersion: "",
+    osDiskSizeGB: 64,
+    osDiskType: "Ephemeral",
+    osType: "Linux",
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    vmSize: "Standard_DS2_v2",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+agent_pool = azure_native.containerservice.AgentPool("agentPool",
+    agent_pool_name="agentpool1",
+    count=3,
+    orchestrator_version="",
+    os_disk_size_gb=64,
+    os_disk_type="Ephemeral",
+    os_type="Linux",
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    vm_size="Standard_DS2_v2")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create Agent Pool with FIPS enabled OS
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var agentPool = new AzureNative.ContainerService.AgentPool("agentPool", new AzureNative.ContainerService.AgentPoolArgs
+        {
+            AgentPoolName = "agentpool1",
+            Count = 3,
+            EnableFIPS = true,
+            OrchestratorVersion = "",
+            OsType = "Linux",
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            VmSize = "Standard_DS2_v2",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerservice.NewAgentPool(ctx, "agentPool", &containerservice.AgentPoolArgs{
+			AgentPoolName:       pulumi.String("agentpool1"),
+			Count:               pulumi.Int(3),
+			EnableFIPS:          pulumi.Bool(true),
+			OrchestratorVersion: pulumi.String(""),
+			OsType:              pulumi.String("Linux"),
+			ResourceGroupName:   pulumi.String("rg1"),
+			ResourceName:        pulumi.String("clustername1"),
+			VmSize:              pulumi.String("Standard_DS2_v2"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const agentPool = new azure_native.containerservice.AgentPool("agentPool", {
+    agentPoolName: "agentpool1",
+    count: 3,
+    enableFIPS: true,
+    orchestratorVersion: "",
+    osType: "Linux",
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    vmSize: "Standard_DS2_v2",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+agent_pool = azure_native.containerservice.AgentPool("agentPool",
+    agent_pool_name="agentpool1",
+    count=3,
+    enable_fips=True,
+    orchestrator_version="",
+    os_type="Linux",
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    vm_size="Standard_DS2_v2")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create Agent Pool with GPUMIG
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var agentPool = new AzureNative.ContainerService.AgentPool("agentPool", new AzureNative.ContainerService.AgentPoolArgs
+        {
+            AgentPoolName = "agentpool1",
+            Count = 3,
+            GpuInstanceProfile = "MIG2g",
+            KubeletConfig = new AzureNative.ContainerService.Inputs.KubeletConfigArgs
+            {
+                AllowedUnsafeSysctls = 
+                {
+                    "kernel.msg*",
+                    "net.core.somaxconn",
+                },
+                CpuCfsQuota = true,
+                CpuCfsQuotaPeriod = "200ms",
+                CpuManagerPolicy = "static",
+                FailSwapOn = false,
+                ImageGcHighThreshold = 90,
+                ImageGcLowThreshold = 70,
+                TopologyManagerPolicy = "best-effort",
+            },
+            LinuxOSConfig = new AzureNative.ContainerService.Inputs.LinuxOSConfigArgs
+            {
+                SwapFileSizeMB = 1500,
+                Sysctls = new AzureNative.ContainerService.Inputs.SysctlConfigArgs
+                {
+                    KernelThreadsMax = 99999,
+                    NetCoreWmemDefault = 12345,
+                    NetIpv4IpLocalPortRange = "20000 60000",
+                    NetIpv4TcpTwReuse = true,
+                },
+                TransparentHugePageDefrag = "madvise",
+                TransparentHugePageEnabled = "always",
+            },
+            OrchestratorVersion = "",
+            OsType = "Linux",
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            VmSize = "Standard_ND96asr_v4",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerservice.NewAgentPool(ctx, "agentPool", &containerservice.AgentPoolArgs{
+			AgentPoolName:      pulumi.String("agentpool1"),
+			Count:              pulumi.Int(3),
+			GpuInstanceProfile: pulumi.String("MIG2g"),
+			KubeletConfig: &containerservice.KubeletConfigArgs{
+				AllowedUnsafeSysctls: pulumi.StringArray{
+					pulumi.String("kernel.msg*"),
+					pulumi.String("net.core.somaxconn"),
+				},
+				CpuCfsQuota:           pulumi.Bool(true),
+				CpuCfsQuotaPeriod:     pulumi.String("200ms"),
+				CpuManagerPolicy:      pulumi.String("static"),
+				FailSwapOn:            pulumi.Bool(false),
+				ImageGcHighThreshold:  pulumi.Int(90),
+				ImageGcLowThreshold:   pulumi.Int(70),
+				TopologyManagerPolicy: pulumi.String("best-effort"),
+			},
+			LinuxOSConfig: &containerservice.LinuxOSConfigArgs{
+				SwapFileSizeMB: pulumi.Int(1500),
+				Sysctls: &containerservice.SysctlConfigArgs{
+					KernelThreadsMax:        pulumi.Int(99999),
+					NetCoreWmemDefault:      pulumi.Int(12345),
+					NetIpv4IpLocalPortRange: pulumi.String("20000 60000"),
+					NetIpv4TcpTwReuse:       pulumi.Bool(true),
+				},
+				TransparentHugePageDefrag:  pulumi.String("madvise"),
+				TransparentHugePageEnabled: pulumi.String("always"),
+			},
+			OrchestratorVersion: pulumi.String(""),
+			OsType:              pulumi.String("Linux"),
+			ResourceGroupName:   pulumi.String("rg1"),
+			ResourceName:        pulumi.String("clustername1"),
+			VmSize:              pulumi.String("Standard_ND96asr_v4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const agentPool = new azure_native.containerservice.AgentPool("agentPool", {
+    agentPoolName: "agentpool1",
+    count: 3,
+    gpuInstanceProfile: "MIG2g",
+    kubeletConfig: {
+        allowedUnsafeSysctls: [
+            "kernel.msg*",
+            "net.core.somaxconn",
+        ],
+        cpuCfsQuota: true,
+        cpuCfsQuotaPeriod: "200ms",
+        cpuManagerPolicy: "static",
+        failSwapOn: false,
+        imageGcHighThreshold: 90,
+        imageGcLowThreshold: 70,
+        topologyManagerPolicy: "best-effort",
+    },
+    linuxOSConfig: {
+        swapFileSizeMB: 1500,
+        sysctls: {
+            kernelThreadsMax: 99999,
+            netCoreWmemDefault: 12345,
+            netIpv4IpLocalPortRange: "20000 60000",
+            netIpv4TcpTwReuse: true,
+        },
+        transparentHugePageDefrag: "madvise",
+        transparentHugePageEnabled: "always",
+    },
+    orchestratorVersion: "",
+    osType: "Linux",
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    vmSize: "Standard_ND96asr_v4",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+agent_pool = azure_native.containerservice.AgentPool("agentPool",
+    agent_pool_name="agentpool1",
+    count=3,
+    gpu_instance_profile="MIG2g",
+    kubelet_config=azure_native.containerservice.KubeletConfigArgs(
+        allowed_unsafe_sysctls=[
+            "kernel.msg*",
+            "net.core.somaxconn",
+        ],
+        cpu_cfs_quota=True,
+        cpu_cfs_quota_period="200ms",
+        cpu_manager_policy="static",
+        fail_swap_on=False,
+        image_gc_high_threshold=90,
+        image_gc_low_threshold=70,
+        topology_manager_policy="best-effort",
+    ),
+    linux_os_config=azure_native.containerservice.LinuxOSConfigArgs(
+        swap_file_size_mb=1500,
+        sysctls=azure_native.containerservice.SysctlConfigArgs(
+            kernel_threads_max=99999,
+            net_core_wmem_default=12345,
+            net_ipv4_ip_local_port_range="20000 60000",
+            net_ipv4_tcp_tw_reuse=True,
+        ),
+        transparent_huge_page_defrag="madvise",
+        transparent_huge_page_enabled="always",
+    ),
+    orchestrator_version="",
+    os_type="Linux",
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    vm_size="Standard_ND96asr_v4")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create Agent Pool with KubeletConfig and LinuxOSConfig
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var agentPool = new AzureNative.ContainerService.AgentPool("agentPool", new AzureNative.ContainerService.AgentPoolArgs
+        {
+            AgentPoolName = "agentpool1",
+            Count = 3,
+            KubeletConfig = new AzureNative.ContainerService.Inputs.KubeletConfigArgs
+            {
+                AllowedUnsafeSysctls = 
+                {
+                    "kernel.msg*",
+                    "net.core.somaxconn",
+                },
+                CpuCfsQuota = true,
+                CpuCfsQuotaPeriod = "200ms",
+                CpuManagerPolicy = "static",
+                FailSwapOn = false,
+                ImageGcHighThreshold = 90,
+                ImageGcLowThreshold = 70,
+                TopologyManagerPolicy = "best-effort",
+            },
+            LinuxOSConfig = new AzureNative.ContainerService.Inputs.LinuxOSConfigArgs
+            {
+                SwapFileSizeMB = 1500,
+                Sysctls = new AzureNative.ContainerService.Inputs.SysctlConfigArgs
+                {
+                    KernelThreadsMax = 99999,
+                    NetCoreWmemDefault = 12345,
+                    NetIpv4IpLocalPortRange = "20000 60000",
+                    NetIpv4TcpTwReuse = true,
+                },
+                TransparentHugePageDefrag = "madvise",
+                TransparentHugePageEnabled = "always",
+            },
+            OrchestratorVersion = "",
+            OsType = "Linux",
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            VmSize = "Standard_DS2_v2",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerservice.NewAgentPool(ctx, "agentPool", &containerservice.AgentPoolArgs{
+			AgentPoolName: pulumi.String("agentpool1"),
+			Count:         pulumi.Int(3),
+			KubeletConfig: &containerservice.KubeletConfigArgs{
+				AllowedUnsafeSysctls: pulumi.StringArray{
+					pulumi.String("kernel.msg*"),
+					pulumi.String("net.core.somaxconn"),
+				},
+				CpuCfsQuota:           pulumi.Bool(true),
+				CpuCfsQuotaPeriod:     pulumi.String("200ms"),
+				CpuManagerPolicy:      pulumi.String("static"),
+				FailSwapOn:            pulumi.Bool(false),
+				ImageGcHighThreshold:  pulumi.Int(90),
+				ImageGcLowThreshold:   pulumi.Int(70),
+				TopologyManagerPolicy: pulumi.String("best-effort"),
+			},
+			LinuxOSConfig: &containerservice.LinuxOSConfigArgs{
+				SwapFileSizeMB: pulumi.Int(1500),
+				Sysctls: &containerservice.SysctlConfigArgs{
+					KernelThreadsMax:        pulumi.Int(99999),
+					NetCoreWmemDefault:      pulumi.Int(12345),
+					NetIpv4IpLocalPortRange: pulumi.String("20000 60000"),
+					NetIpv4TcpTwReuse:       pulumi.Bool(true),
+				},
+				TransparentHugePageDefrag:  pulumi.String("madvise"),
+				TransparentHugePageEnabled: pulumi.String("always"),
+			},
+			OrchestratorVersion: pulumi.String(""),
+			OsType:              pulumi.String("Linux"),
+			ResourceGroupName:   pulumi.String("rg1"),
+			ResourceName:        pulumi.String("clustername1"),
+			VmSize:              pulumi.String("Standard_DS2_v2"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const agentPool = new azure_native.containerservice.AgentPool("agentPool", {
+    agentPoolName: "agentpool1",
+    count: 3,
+    kubeletConfig: {
+        allowedUnsafeSysctls: [
+            "kernel.msg*",
+            "net.core.somaxconn",
+        ],
+        cpuCfsQuota: true,
+        cpuCfsQuotaPeriod: "200ms",
+        cpuManagerPolicy: "static",
+        failSwapOn: false,
+        imageGcHighThreshold: 90,
+        imageGcLowThreshold: 70,
+        topologyManagerPolicy: "best-effort",
+    },
+    linuxOSConfig: {
+        swapFileSizeMB: 1500,
+        sysctls: {
+            kernelThreadsMax: 99999,
+            netCoreWmemDefault: 12345,
+            netIpv4IpLocalPortRange: "20000 60000",
+            netIpv4TcpTwReuse: true,
+        },
+        transparentHugePageDefrag: "madvise",
+        transparentHugePageEnabled: "always",
+    },
+    orchestratorVersion: "",
+    osType: "Linux",
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    vmSize: "Standard_DS2_v2",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+agent_pool = azure_native.containerservice.AgentPool("agentPool",
+    agent_pool_name="agentpool1",
+    count=3,
+    kubelet_config=azure_native.containerservice.KubeletConfigArgs(
+        allowed_unsafe_sysctls=[
+            "kernel.msg*",
+            "net.core.somaxconn",
+        ],
+        cpu_cfs_quota=True,
+        cpu_cfs_quota_period="200ms",
+        cpu_manager_policy="static",
+        fail_swap_on=False,
+        image_gc_high_threshold=90,
+        image_gc_low_threshold=70,
+        topology_manager_policy="best-effort",
+    ),
+    linux_os_config=azure_native.containerservice.LinuxOSConfigArgs(
+        swap_file_size_mb=1500,
+        sysctls=azure_native.containerservice.SysctlConfigArgs(
+            kernel_threads_max=99999,
+            net_core_wmem_default=12345,
+            net_ipv4_ip_local_port_range="20000 60000",
+            net_ipv4_tcp_tw_reuse=True,
+        ),
+        transparent_huge_page_defrag="madvise",
+        transparent_huge_page_enabled="always",
+    ),
+    orchestrator_version="",
+    os_type="Linux",
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    vm_size="Standard_DS2_v2")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create Agent Pool with OSSKU
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var agentPool = new AzureNative.ContainerService.AgentPool("agentPool", new AzureNative.ContainerService.AgentPoolArgs
+        {
+            AgentPoolName = "agentpool1",
+            Count = 3,
+            KubeletConfig = new AzureNative.ContainerService.Inputs.KubeletConfigArgs
+            {
+                AllowedUnsafeSysctls = 
+                {
+                    "kernel.msg*",
+                    "net.core.somaxconn",
+                },
+                CpuCfsQuota = true,
+                CpuCfsQuotaPeriod = "200ms",
+                CpuManagerPolicy = "static",
+                FailSwapOn = false,
+                ImageGcHighThreshold = 90,
+                ImageGcLowThreshold = 70,
+                TopologyManagerPolicy = "best-effort",
+            },
+            LinuxOSConfig = new AzureNative.ContainerService.Inputs.LinuxOSConfigArgs
+            {
+                SwapFileSizeMB = 1500,
+                Sysctls = new AzureNative.ContainerService.Inputs.SysctlConfigArgs
+                {
+                    KernelThreadsMax = 99999,
+                    NetCoreWmemDefault = 12345,
+                    NetIpv4IpLocalPortRange = "20000 60000",
+                    NetIpv4TcpTwReuse = true,
+                },
+                TransparentHugePageDefrag = "madvise",
+                TransparentHugePageEnabled = "always",
+            },
+            OrchestratorVersion = "",
+            OsSKU = "CBLMariner",
+            OsType = "Linux",
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            VmSize = "Standard_DS2_v2",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerservice.NewAgentPool(ctx, "agentPool", &containerservice.AgentPoolArgs{
+			AgentPoolName: pulumi.String("agentpool1"),
+			Count:         pulumi.Int(3),
+			KubeletConfig: &containerservice.KubeletConfigArgs{
+				AllowedUnsafeSysctls: pulumi.StringArray{
+					pulumi.String("kernel.msg*"),
+					pulumi.String("net.core.somaxconn"),
+				},
+				CpuCfsQuota:           pulumi.Bool(true),
+				CpuCfsQuotaPeriod:     pulumi.String("200ms"),
+				CpuManagerPolicy:      pulumi.String("static"),
+				FailSwapOn:            pulumi.Bool(false),
+				ImageGcHighThreshold:  pulumi.Int(90),
+				ImageGcLowThreshold:   pulumi.Int(70),
+				TopologyManagerPolicy: pulumi.String("best-effort"),
+			},
+			LinuxOSConfig: &containerservice.LinuxOSConfigArgs{
+				SwapFileSizeMB: pulumi.Int(1500),
+				Sysctls: &containerservice.SysctlConfigArgs{
+					KernelThreadsMax:        pulumi.Int(99999),
+					NetCoreWmemDefault:      pulumi.Int(12345),
+					NetIpv4IpLocalPortRange: pulumi.String("20000 60000"),
+					NetIpv4TcpTwReuse:       pulumi.Bool(true),
+				},
+				TransparentHugePageDefrag:  pulumi.String("madvise"),
+				TransparentHugePageEnabled: pulumi.String("always"),
+			},
+			OrchestratorVersion: pulumi.String(""),
+			OsSKU:               pulumi.String("CBLMariner"),
+			OsType:              pulumi.String("Linux"),
+			ResourceGroupName:   pulumi.String("rg1"),
+			ResourceName:        pulumi.String("clustername1"),
+			VmSize:              pulumi.String("Standard_DS2_v2"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const agentPool = new azure_native.containerservice.AgentPool("agentPool", {
+    agentPoolName: "agentpool1",
+    count: 3,
+    kubeletConfig: {
+        allowedUnsafeSysctls: [
+            "kernel.msg*",
+            "net.core.somaxconn",
+        ],
+        cpuCfsQuota: true,
+        cpuCfsQuotaPeriod: "200ms",
+        cpuManagerPolicy: "static",
+        failSwapOn: false,
+        imageGcHighThreshold: 90,
+        imageGcLowThreshold: 70,
+        topologyManagerPolicy: "best-effort",
+    },
+    linuxOSConfig: {
+        swapFileSizeMB: 1500,
+        sysctls: {
+            kernelThreadsMax: 99999,
+            netCoreWmemDefault: 12345,
+            netIpv4IpLocalPortRange: "20000 60000",
+            netIpv4TcpTwReuse: true,
+        },
+        transparentHugePageDefrag: "madvise",
+        transparentHugePageEnabled: "always",
+    },
+    orchestratorVersion: "",
+    osSKU: "CBLMariner",
+    osType: "Linux",
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    vmSize: "Standard_DS2_v2",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+agent_pool = azure_native.containerservice.AgentPool("agentPool",
+    agent_pool_name="agentpool1",
+    count=3,
+    kubelet_config=azure_native.containerservice.KubeletConfigArgs(
+        allowed_unsafe_sysctls=[
+            "kernel.msg*",
+            "net.core.somaxconn",
+        ],
+        cpu_cfs_quota=True,
+        cpu_cfs_quota_period="200ms",
+        cpu_manager_policy="static",
+        fail_swap_on=False,
+        image_gc_high_threshold=90,
+        image_gc_low_threshold=70,
+        topology_manager_policy="best-effort",
+    ),
+    linux_os_config=azure_native.containerservice.LinuxOSConfigArgs(
+        swap_file_size_mb=1500,
+        sysctls=azure_native.containerservice.SysctlConfigArgs(
+            kernel_threads_max=99999,
+            net_core_wmem_default=12345,
+            net_ipv4_ip_local_port_range="20000 60000",
+            net_ipv4_tcp_tw_reuse=True,
+        ),
+        transparent_huge_page_defrag="madvise",
+        transparent_huge_page_enabled="always",
+    ),
+    orchestrator_version="",
+    os_sku="CBLMariner",
+    os_type="Linux",
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    vm_size="Standard_DS2_v2")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create Agent Pool with PPG
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var agentPool = new AzureNative.ContainerService.AgentPool("agentPool", new AzureNative.ContainerService.AgentPoolArgs
+        {
+            AgentPoolName = "agentpool1",
+            Count = 3,
+            OrchestratorVersion = "",
+            OsType = "Linux",
+            ProximityPlacementGroupID = "/subscriptions/subid1/resourcegroups/rg1/providers//Microsoft.Compute/proximityPlacementGroups/ppg1",
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            VmSize = "Standard_DS2_v2",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerservice.NewAgentPool(ctx, "agentPool", &containerservice.AgentPoolArgs{
+			AgentPoolName:             pulumi.String("agentpool1"),
+			Count:                     pulumi.Int(3),
+			OrchestratorVersion:       pulumi.String(""),
+			OsType:                    pulumi.String("Linux"),
+			ProximityPlacementGroupID: pulumi.String("/subscriptions/subid1/resourcegroups/rg1/providers//Microsoft.Compute/proximityPlacementGroups/ppg1"),
+			ResourceGroupName:         pulumi.String("rg1"),
+			ResourceName:              pulumi.String("clustername1"),
+			VmSize:                    pulumi.String("Standard_DS2_v2"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const agentPool = new azure_native.containerservice.AgentPool("agentPool", {
+    agentPoolName: "agentpool1",
+    count: 3,
+    orchestratorVersion: "",
+    osType: "Linux",
+    proximityPlacementGroupID: "/subscriptions/subid1/resourcegroups/rg1/providers//Microsoft.Compute/proximityPlacementGroups/ppg1",
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    vmSize: "Standard_DS2_v2",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+agent_pool = azure_native.containerservice.AgentPool("agentPool",
+    agent_pool_name="agentpool1",
+    count=3,
+    orchestrator_version="",
+    os_type="Linux",
+    proximity_placement_group_id="/subscriptions/subid1/resourcegroups/rg1/providers//Microsoft.Compute/proximityPlacementGroups/ppg1",
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    vm_size="Standard_DS2_v2")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create Spot Agent Pool
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var agentPool = new AzureNative.ContainerService.AgentPool("agentPool", new AzureNative.ContainerService.AgentPoolArgs
+        {
+            AgentPoolName = "agentpool1",
+            Count = 3,
+            NodeLabels = 
+            {
+                { "key1", "val1" },
+            },
+            NodeTaints = 
+            {
+                "Key1=Value1:NoSchedule",
+            },
+            OrchestratorVersion = "",
+            OsType = "Linux",
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            ScaleSetEvictionPolicy = "Delete",
+            ScaleSetPriority = "Spot",
+            Tags = 
+            {
+                { "name1", "val1" },
+            },
+            VmSize = "Standard_DS1_v2",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerservice.NewAgentPool(ctx, "agentPool", &containerservice.AgentPoolArgs{
+			AgentPoolName: pulumi.String("agentpool1"),
+			Count:         pulumi.Int(3),
+			NodeLabels: pulumi.StringMap{
+				"key1": pulumi.String("val1"),
+			},
+			NodeTaints: pulumi.StringArray{
+				pulumi.String("Key1=Value1:NoSchedule"),
+			},
+			OrchestratorVersion:    pulumi.String(""),
+			OsType:                 pulumi.String("Linux"),
+			ResourceGroupName:      pulumi.String("rg1"),
+			ResourceName:           pulumi.String("clustername1"),
+			ScaleSetEvictionPolicy: pulumi.String("Delete"),
+			ScaleSetPriority:       pulumi.String("Spot"),
+			Tags: pulumi.StringMap{
+				"name1": pulumi.String("val1"),
+			},
+			VmSize: pulumi.String("Standard_DS1_v2"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const agentPool = new azure_native.containerservice.AgentPool("agentPool", {
+    agentPoolName: "agentpool1",
+    count: 3,
+    nodeLabels: {
+        key1: "val1",
+    },
+    nodeTaints: ["Key1=Value1:NoSchedule"],
+    orchestratorVersion: "",
+    osType: "Linux",
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    scaleSetEvictionPolicy: "Delete",
+    scaleSetPriority: "Spot",
+    tags: {
+        name1: "val1",
+    },
+    vmSize: "Standard_DS1_v2",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+agent_pool = azure_native.containerservice.AgentPool("agentPool",
+    agent_pool_name="agentpool1",
+    count=3,
+    node_labels={
+        "key1": "val1",
+    },
+    node_taints=["Key1=Value1:NoSchedule"],
+    orchestrator_version="",
+    os_type="Linux",
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    scale_set_eviction_policy="Delete",
+    scale_set_priority="Spot",
+    tags={
+        "name1": "val1",
+    },
+    vm_size="Standard_DS1_v2")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create/Update Agent Pool
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var agentPool = new AzureNative.ContainerService.AgentPool("agentPool", new AzureNative.ContainerService.AgentPoolArgs
+        {
+            AgentPoolName = "agentpool1",
+            Count = 3,
+            Mode = "User",
+            NodeLabels = 
+            {
+                { "key1", "val1" },
+            },
+            NodeTaints = 
+            {
+                "Key1=Value1:NoSchedule",
+            },
+            OrchestratorVersion = "",
+            OsType = "Linux",
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            ScaleSetEvictionPolicy = "Delete",
+            ScaleSetPriority = "Spot",
+            Tags = 
+            {
+                { "name1", "val1" },
+            },
+            VmSize = "Standard_DS1_v2",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerservice.NewAgentPool(ctx, "agentPool", &containerservice.AgentPoolArgs{
+			AgentPoolName: pulumi.String("agentpool1"),
+			Count:         pulumi.Int(3),
+			Mode:          pulumi.String("User"),
+			NodeLabels: pulumi.StringMap{
+				"key1": pulumi.String("val1"),
+			},
+			NodeTaints: pulumi.StringArray{
+				pulumi.String("Key1=Value1:NoSchedule"),
+			},
+			OrchestratorVersion:    pulumi.String(""),
+			OsType:                 pulumi.String("Linux"),
+			ResourceGroupName:      pulumi.String("rg1"),
+			ResourceName:           pulumi.String("clustername1"),
+			ScaleSetEvictionPolicy: pulumi.String("Delete"),
+			ScaleSetPriority:       pulumi.String("Spot"),
+			Tags: pulumi.StringMap{
+				"name1": pulumi.String("val1"),
+			},
+			VmSize: pulumi.String("Standard_DS1_v2"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const agentPool = new azure_native.containerservice.AgentPool("agentPool", {
+    agentPoolName: "agentpool1",
+    count: 3,
+    mode: "User",
+    nodeLabels: {
+        key1: "val1",
+    },
+    nodeTaints: ["Key1=Value1:NoSchedule"],
+    orchestratorVersion: "",
+    osType: "Linux",
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    scaleSetEvictionPolicy: "Delete",
+    scaleSetPriority: "Spot",
+    tags: {
+        name1: "val1",
+    },
+    vmSize: "Standard_DS1_v2",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+agent_pool = azure_native.containerservice.AgentPool("agentPool",
+    agent_pool_name="agentpool1",
+    count=3,
+    mode="User",
+    node_labels={
+        "key1": "val1",
+    },
+    node_taints=["Key1=Value1:NoSchedule"],
+    orchestrator_version="",
+    os_type="Linux",
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    scale_set_eviction_policy="Delete",
+    scale_set_priority="Spot",
+    tags={
+        "name1": "val1",
+    },
+    vm_size="Standard_DS1_v2")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Update Agent Pool
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var agentPool = new AzureNative.ContainerService.AgentPool("agentPool", new AzureNative.ContainerService.AgentPoolArgs
+        {
+            AgentPoolName = "agentpool1",
+            Count = 3,
+            EnableAutoScaling = true,
+            MaxCount = 2,
+            MinCount = 2,
+            NodeTaints = 
+            {
+                "Key1=Value1:NoSchedule",
+            },
+            OrchestratorVersion = "",
+            OsType = "Linux",
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            ScaleSetEvictionPolicy = "Delete",
+            ScaleSetPriority = "Spot",
+            VmSize = "Standard_DS1_v2",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	containerservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/containerservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerservice.NewAgentPool(ctx, "agentPool", &containerservice.AgentPoolArgs{
+			AgentPoolName:     pulumi.String("agentpool1"),
+			Count:             pulumi.Int(3),
+			EnableAutoScaling: pulumi.Bool(true),
+			MaxCount:          pulumi.Int(2),
+			MinCount:          pulumi.Int(2),
+			NodeTaints: pulumi.StringArray{
+				pulumi.String("Key1=Value1:NoSchedule"),
+			},
+			OrchestratorVersion:    pulumi.String(""),
+			OsType:                 pulumi.String("Linux"),
+			ResourceGroupName:      pulumi.String("rg1"),
+			ResourceName:           pulumi.String("clustername1"),
+			ScaleSetEvictionPolicy: pulumi.String("Delete"),
+			ScaleSetPriority:       pulumi.String("Spot"),
+			VmSize:                 pulumi.String("Standard_DS1_v2"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const agentPool = new azure_native.containerservice.AgentPool("agentPool", {
+    agentPoolName: "agentpool1",
+    count: 3,
+    enableAutoScaling: true,
+    maxCount: 2,
+    minCount: 2,
+    nodeTaints: ["Key1=Value1:NoSchedule"],
+    orchestratorVersion: "",
+    osType: "Linux",
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    scaleSetEvictionPolicy: "Delete",
+    scaleSetPriority: "Spot",
+    vmSize: "Standard_DS1_v2",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+agent_pool = azure_native.containerservice.AgentPool("agentPool",
+    agent_pool_name="agentpool1",
+    count=3,
+    enable_auto_scaling=True,
+    max_count=2,
+    min_count=2,
+    node_taints=["Key1=Value1:NoSchedule"],
+    orchestrator_version="",
+    os_type="Linux",
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    scale_set_eviction_policy="Delete",
+    scale_set_priority="Spot",
+    vm_size="Standard_DS1_v2")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:containerservice:AgentPool agentpool1 /subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1/agentPools/agentpool1 
+```
+
+ */
 @ResourceType(type="azure-native:containerservice:AgentPool")
 public class AgentPool extends io.pulumi.resources.CustomResource {
+    /**
+     * Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.
+     */
     @OutputExport(name="availabilityZones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> availabilityZones;
 
+    /**
+     * @return Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.
+     */
     public Output</* @Nullable */ List<String>> getAvailabilityZones() {
         return this.availabilityZones;
     }
+    /**
+     * Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.
+     */
     @OutputExport(name="count", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> count;
 
+    /**
+     * @return Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.
+     */
     public Output</* @Nullable */ Integer> getCount() {
         return this.count;
     }
+    /**
+     * Whether to enable auto-scaler
+     */
     @OutputExport(name="enableAutoScaling", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableAutoScaling;
 
+    /**
+     * @return Whether to enable auto-scaler
+     */
     public Output</* @Nullable */ Boolean> getEnableAutoScaling() {
         return this.enableAutoScaling;
     }
+    /**
+     * Whether to enable EncryptionAtHost
+     */
     @OutputExport(name="enableEncryptionAtHost", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableEncryptionAtHost;
 
+    /**
+     * @return Whether to enable EncryptionAtHost
+     */
     public Output</* @Nullable */ Boolean> getEnableEncryptionAtHost() {
         return this.enableEncryptionAtHost;
     }
+    /**
+     * Whether to use FIPS enabled OS
+     */
     @OutputExport(name="enableFIPS", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableFIPS;
 
+    /**
+     * @return Whether to use FIPS enabled OS
+     */
     public Output</* @Nullable */ Boolean> getEnableFIPS() {
         return this.enableFIPS;
     }
+    /**
+     * Enable public IP for nodes
+     */
     @OutputExport(name="enableNodePublicIP", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableNodePublicIP;
 
+    /**
+     * @return Enable public IP for nodes
+     */
     public Output</* @Nullable */ Boolean> getEnableNodePublicIP() {
         return this.enableNodePublicIP;
     }
+    /**
+     * GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
+     */
     @OutputExport(name="gpuInstanceProfile", type=String.class, parameters={})
     private Output</* @Nullable */ String> gpuInstanceProfile;
 
+    /**
+     * @return GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
+     */
     public Output</* @Nullable */ String> getGpuInstanceProfile() {
         return this.gpuInstanceProfile;
     }
+    /**
+     * KubeletConfig specifies the configuration of kubelet on agent nodes.
+     */
     @OutputExport(name="kubeletConfig", type=KubeletConfigResponse.class, parameters={})
     private Output</* @Nullable */ KubeletConfigResponse> kubeletConfig;
 
+    /**
+     * @return KubeletConfig specifies the configuration of kubelet on agent nodes.
+     */
     public Output</* @Nullable */ KubeletConfigResponse> getKubeletConfig() {
         return this.kubeletConfig;
     }
+    /**
+     * KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.
+     */
     @OutputExport(name="kubeletDiskType", type=String.class, parameters={})
     private Output</* @Nullable */ String> kubeletDiskType;
 
+    /**
+     * @return KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.
+     */
     public Output</* @Nullable */ String> getKubeletDiskType() {
         return this.kubeletDiskType;
     }
+    /**
+     * LinuxOSConfig specifies the OS configuration of linux agent nodes.
+     */
     @OutputExport(name="linuxOSConfig", type=LinuxOSConfigResponse.class, parameters={})
     private Output</* @Nullable */ LinuxOSConfigResponse> linuxOSConfig;
 
+    /**
+     * @return LinuxOSConfig specifies the OS configuration of linux agent nodes.
+     */
     public Output</* @Nullable */ LinuxOSConfigResponse> getLinuxOSConfig() {
         return this.linuxOSConfig;
     }
+    /**
+     * Maximum number of nodes for auto-scaling
+     */
     @OutputExport(name="maxCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxCount;
 
+    /**
+     * @return Maximum number of nodes for auto-scaling
+     */
     public Output</* @Nullable */ Integer> getMaxCount() {
         return this.maxCount;
     }
+    /**
+     * Maximum number of pods that can run on a node.
+     */
     @OutputExport(name="maxPods", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxPods;
 
+    /**
+     * @return Maximum number of pods that can run on a node.
+     */
     public Output</* @Nullable */ Integer> getMaxPods() {
         return this.maxPods;
     }
+    /**
+     * Minimum number of nodes for auto-scaling
+     */
     @OutputExport(name="minCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minCount;
 
+    /**
+     * @return Minimum number of nodes for auto-scaling
+     */
     public Output</* @Nullable */ Integer> getMinCount() {
         return this.minCount;
     }
+    /**
+     * AgentPoolMode represents mode of an agent pool
+     */
     @OutputExport(name="mode", type=String.class, parameters={})
     private Output</* @Nullable */ String> mode;
 
+    /**
+     * @return AgentPoolMode represents mode of an agent pool
+     */
     public Output</* @Nullable */ String> getMode() {
         return this.mode;
     }
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Version of node image
+     */
     @OutputExport(name="nodeImageVersion", type=String.class, parameters={})
     private Output<String> nodeImageVersion;
 
+    /**
+     * @return Version of node image
+     */
     public Output<String> getNodeImageVersion() {
         return this.nodeImageVersion;
     }
+    /**
+     * Agent pool node labels to be persisted across all nodes in agent pool.
+     */
     @OutputExport(name="nodeLabels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> nodeLabels;
 
+    /**
+     * @return Agent pool node labels to be persisted across all nodes in agent pool.
+     */
     public Output</* @Nullable */ Map<String,String>> getNodeLabels() {
         return this.nodeLabels;
     }
+    /**
+     * Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.
+     */
     @OutputExport(name="nodePublicIPPrefixID", type=String.class, parameters={})
     private Output</* @Nullable */ String> nodePublicIPPrefixID;
 
+    /**
+     * @return Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.
+     */
     public Output</* @Nullable */ String> getNodePublicIPPrefixID() {
         return this.nodePublicIPPrefixID;
     }
+    /**
+     * Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
+     */
     @OutputExport(name="nodeTaints", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> nodeTaints;
 
+    /**
+     * @return Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
+     */
     public Output</* @Nullable */ List<String>> getNodeTaints() {
         return this.nodeTaints;
     }
+    /**
+     * Version of orchestrator specified when creating the managed cluster.
+     */
     @OutputExport(name="orchestratorVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> orchestratorVersion;
 
+    /**
+     * @return Version of orchestrator specified when creating the managed cluster.
+     */
     public Output</* @Nullable */ String> getOrchestratorVersion() {
         return this.orchestratorVersion;
     }
+    /**
+     * OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
+     */
     @OutputExport(name="osDiskSizeGB", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> osDiskSizeGB;
 
+    /**
+     * @return OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
+     */
     public Output</* @Nullable */ Integer> getOsDiskSizeGB() {
         return this.osDiskSizeGB;
     }
+    /**
+     * OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.
+     */
     @OutputExport(name="osDiskType", type=String.class, parameters={})
     private Output</* @Nullable */ String> osDiskType;
 
+    /**
+     * @return OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.
+     */
     public Output</* @Nullable */ String> getOsDiskType() {
         return this.osDiskType;
     }
+    /**
+     * OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
+     */
     @OutputExport(name="osSKU", type=String.class, parameters={})
     private Output</* @Nullable */ String> osSKU;
 
+    /**
+     * @return OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
+     */
     public Output</* @Nullable */ String> getOsSKU() {
         return this.osSKU;
     }
+    /**
+     * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+     */
     @OutputExport(name="osType", type=String.class, parameters={})
     private Output</* @Nullable */ String> osType;
 
+    /**
+     * @return OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+     */
     public Output</* @Nullable */ String> getOsType() {
         return this.osType;
     }
+    /**
+     * Pod SubnetID specifies the VNet's subnet identifier for pods.
+     */
     @OutputExport(name="podSubnetID", type=String.class, parameters={})
     private Output</* @Nullable */ String> podSubnetID;
 
+    /**
+     * @return Pod SubnetID specifies the VNet's subnet identifier for pods.
+     */
     public Output</* @Nullable */ String> getPodSubnetID() {
         return this.podSubnetID;
     }
+    /**
+     * Describes whether the Agent Pool is Running or Stopped
+     */
     @OutputExport(name="powerState", type=PowerStateResponse.class, parameters={})
     private Output<PowerStateResponse> powerState;
 
+    /**
+     * @return Describes whether the Agent Pool is Running or Stopped
+     */
     public Output<PowerStateResponse> getPowerState() {
         return this.powerState;
     }
+    /**
+     * The current deployment or provisioning state, which only appears in the response.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The current deployment or provisioning state, which only appears in the response.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The ID for Proximity Placement Group.
+     */
     @OutputExport(name="proximityPlacementGroupID", type=String.class, parameters={})
     private Output</* @Nullable */ String> proximityPlacementGroupID;
 
+    /**
+     * @return The ID for Proximity Placement Group.
+     */
     public Output</* @Nullable */ String> getProximityPlacementGroupID() {
         return this.proximityPlacementGroupID;
     }
+    /**
+     * ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
+     */
     @OutputExport(name="scaleSetEvictionPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> scaleSetEvictionPolicy;
 
+    /**
+     * @return ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
+     */
     public Output</* @Nullable */ String> getScaleSetEvictionPolicy() {
         return this.scaleSetEvictionPolicy;
     }
+    /**
+     * ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
+     */
     @OutputExport(name="scaleSetPriority", type=String.class, parameters={})
     private Output</* @Nullable */ String> scaleSetPriority;
 
+    /**
+     * @return ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
+     */
     public Output</* @Nullable */ String> getScaleSetPriority() {
         return this.scaleSetPriority;
     }
+    /**
+     * SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.
+     */
     @OutputExport(name="spotMaxPrice", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> spotMaxPrice;
 
+    /**
+     * @return SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.
+     */
     public Output</* @Nullable */ Double> getSpotMaxPrice() {
         return this.spotMaxPrice;
     }
+    /**
+     * Agent pool tags to be persisted on the agent pool virtual machine scale set.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Agent pool tags to be persisted on the agent pool virtual machine scale set.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * AgentPoolType represents types of an agent pool
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return AgentPoolType represents types of an agent pool
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Settings for upgrading the agentpool
+     */
     @OutputExport(name="upgradeSettings", type=AgentPoolUpgradeSettingsResponse.class, parameters={})
     private Output</* @Nullable */ AgentPoolUpgradeSettingsResponse> upgradeSettings;
 
+    /**
+     * @return Settings for upgrading the agentpool
+     */
     public Output</* @Nullable */ AgentPoolUpgradeSettingsResponse> getUpgradeSettings() {
         return this.upgradeSettings;
     }
+    /**
+     * Size of agent VMs.
+     */
     @OutputExport(name="vmSize", type=String.class, parameters={})
     private Output</* @Nullable */ String> vmSize;
 
+    /**
+     * @return Size of agent VMs.
+     */
     public Output</* @Nullable */ String> getVmSize() {
         return this.vmSize;
     }
+    /**
+     * VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods
+     */
     @OutputExport(name="vnetSubnetID", type=String.class, parameters={})
     private Output</* @Nullable */ String> vnetSubnetID;
 
+    /**
+     * @return VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods
+     */
     public Output</* @Nullable */ String> getVnetSubnetID() {
         return this.vnetSubnetID;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AgentPool(String name, AgentPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:containerservice:AgentPool", name, args == null ? AgentPoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -281,6 +1826,14 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AgentPool get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AgentPool(name, id, options);
     }

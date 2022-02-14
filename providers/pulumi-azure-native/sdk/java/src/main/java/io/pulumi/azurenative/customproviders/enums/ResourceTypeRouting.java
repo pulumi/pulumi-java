@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The routing types that are supported for resource requests.
+ */
     @EnumType
     public enum ResourceTypeRouting {
+/**
+ * 
+ */
         Proxy("Proxy"),
+/**
+ * 
+ */
         Proxy_Cache("Proxy,Cache");
 
         private final String value;

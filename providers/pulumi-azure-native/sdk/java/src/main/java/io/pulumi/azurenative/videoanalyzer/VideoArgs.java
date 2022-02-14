@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VideoArgs Empty = new VideoArgs();
 
+    /**
+     * The Azure Video Analyzer account name.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -21,6 +27,9 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * Optional video description provided by the user. Value can be up to 2048 characters long.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -28,6 +37,9 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -35,6 +47,9 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Optional video title provided by the user. Value can be up to 256 characters long.
+     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 
@@ -42,6 +57,9 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
         return this.title == null ? Input.empty() : this.title;
     }
 
+    /**
+     * The name of the video to create or update.
+     */
     @InputImport(name="videoName")
     private final @Nullable Input<String> videoName;
 

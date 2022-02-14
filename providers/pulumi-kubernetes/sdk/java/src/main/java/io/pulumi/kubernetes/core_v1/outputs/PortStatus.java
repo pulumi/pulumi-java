@@ -12,8 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PortStatus {
+/**
+ * Error is to record the problem with the service port The format of the error shall comply with the following rules: - built-in error values shall be specified in this file and those shall use
+  CamelCase names
+- cloud provider specific error values must have names that comply with the
+  format foo.example.com/CamelCase.
+ */
     private final @Nullable String error;
+/**
+ * Port is the port number of the service port of which status is recorded here
+ */
     private final Integer port;
+/**
+ * Protocol is the protocol of the service port of which status is recorded here The supported values are: "TCP", "UDP", "SCTP"
+
+Possible enum values:
+ - `"SCTP"` is the SCTP protocol.
+ - `"TCP"` is the TCP protocol.
+ - `"UDP"` is the UDP protocol.
+ */
     private final String protocol;
 
     @OutputCustomType.Constructor({"error","port","protocol"})
@@ -26,12 +43,29 @@ public final class PortStatus {
         this.protocol = Objects.requireNonNull(protocol);
     }
 
+/**
+ * Error is to record the problem with the service port The format of the error shall comply with the following rules: - built-in error values shall be specified in this file and those shall use
+  CamelCase names
+- cloud provider specific error values must have names that comply with the
+  format foo.example.com/CamelCase.
+ */
     public Optional<String> getError() {
         return Optional.ofNullable(this.error);
     }
+/**
+ * Port is the port number of the service port of which status is recorded here
+ */
     public Integer getPort() {
         return this.port;
     }
+/**
+ * Protocol is the protocol of the service port of which status is recorded here The supported values are: "TCP", "UDP", "SCTP"
+
+Possible enum values:
+ - `"SCTP"` is the SCTP protocol.
+ - `"TCP"` is the TCP protocol.
+ - `"UDP"` is the UDP protocol.
+ */
     public String getProtocol() {
         return this.protocol;
     }

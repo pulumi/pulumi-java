@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * MachineKey of an app.
+ */
 public final class SiteMachineKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SiteMachineKeyResponse Empty = new SiteMachineKeyResponse();
 
+    /**
+     * Algorithm used for decryption.
+     */
     @InputImport(name="decryption")
     private final @Nullable String decryption;
 
@@ -21,6 +27,9 @@ public final class SiteMachineKeyResponse extends io.pulumi.resources.InvokeArgs
         return this.decryption == null ? Optional.empty() : Optional.ofNullable(this.decryption);
     }
 
+    /**
+     * Decryption key.
+     */
     @InputImport(name="decryptionKey")
     private final @Nullable String decryptionKey;
 
@@ -28,6 +37,9 @@ public final class SiteMachineKeyResponse extends io.pulumi.resources.InvokeArgs
         return this.decryptionKey == null ? Optional.empty() : Optional.ofNullable(this.decryptionKey);
     }
 
+    /**
+     * MachineKey validation.
+     */
     @InputImport(name="validation")
     private final @Nullable String validation;
 
@@ -35,6 +47,9 @@ public final class SiteMachineKeyResponse extends io.pulumi.resources.InvokeArgs
         return this.validation == null ? Optional.empty() : Optional.ofNullable(this.validation);
     }
 
+    /**
+     * Validation key.
+     */
     @InputImport(name="validationKey")
     private final @Nullable String validationKey;
 

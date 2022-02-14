@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAppliance {
+/**
+ * Appliances definition.
+API Version: 2021-10-31-preview.
+ *
+ * Appliances definition.
+ */
     public static CompletableFuture<GetApplianceResult> invokeAsync(GetApplianceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resourceconnector:getAppliance", TypeShape.of(GetApplianceResult.class), args == null ? GetApplianceArgs.Empty : args, Utilities.withVersion(options));
     }

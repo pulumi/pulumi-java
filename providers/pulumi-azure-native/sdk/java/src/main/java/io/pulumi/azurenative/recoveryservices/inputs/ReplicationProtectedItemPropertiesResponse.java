@@ -22,10 +22,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Replication protected item custom data details.
+ */
 public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReplicationProtectedItemPropertiesResponse Empty = new ReplicationProtectedItemPropertiesResponse();
 
+    /**
+     * The Current active location of the PE.
+     */
     @InputImport(name="activeLocation")
     private final @Nullable String activeLocation;
 
@@ -33,6 +39,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.activeLocation == null ? Optional.empty() : Optional.ofNullable(this.activeLocation);
     }
 
+    /**
+     * The allowed operations on the Replication protected item.
+     */
     @InputImport(name="allowedOperations")
     private final @Nullable List<String> allowedOperations;
 
@@ -40,6 +49,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.allowedOperations == null ? List.of() : this.allowedOperations;
     }
 
+    /**
+     * The current scenario.
+     */
     @InputImport(name="currentScenario")
     private final @Nullable CurrentScenarioDetailsResponse currentScenario;
 
@@ -47,6 +59,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.currentScenario == null ? Optional.empty() : Optional.ofNullable(this.currentScenario);
     }
 
+    /**
+     * The consolidated failover health for the VM.
+     */
     @InputImport(name="failoverHealth")
     private final @Nullable String failoverHealth;
 
@@ -54,6 +69,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.failoverHealth == null ? Optional.empty() : Optional.ofNullable(this.failoverHealth);
     }
 
+    /**
+     * The recovery point ARM Id to which the Vm was failed over.
+     */
     @InputImport(name="failoverRecoveryPointId")
     private final @Nullable String failoverRecoveryPointId;
 
@@ -61,6 +79,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.failoverRecoveryPointId == null ? Optional.empty() : Optional.ofNullable(this.failoverRecoveryPointId);
     }
 
+    /**
+     * The name.
+     */
     @InputImport(name="friendlyName")
     private final @Nullable String friendlyName;
 
@@ -68,6 +89,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
+    /**
+     * List of health errors.
+     */
     @InputImport(name="healthErrors")
     private final @Nullable List<HealthErrorResponse> healthErrors;
 
@@ -75,6 +99,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.healthErrors == null ? List.of() : this.healthErrors;
     }
 
+    /**
+     * The Last successful failover time.
+     */
     @InputImport(name="lastSuccessfulFailoverTime")
     private final @Nullable String lastSuccessfulFailoverTime;
 
@@ -82,6 +109,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.lastSuccessfulFailoverTime == null ? Optional.empty() : Optional.ofNullable(this.lastSuccessfulFailoverTime);
     }
 
+    /**
+     * The Last successful test failover time.
+     */
     @InputImport(name="lastSuccessfulTestFailoverTime")
     private final @Nullable String lastSuccessfulTestFailoverTime;
 
@@ -89,6 +119,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.lastSuccessfulTestFailoverTime == null ? Optional.empty() : Optional.ofNullable(this.lastSuccessfulTestFailoverTime);
     }
 
+    /**
+     * The name of Policy governing this PE.
+     */
     @InputImport(name="policyFriendlyName")
     private final @Nullable String policyFriendlyName;
 
@@ -96,6 +129,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.policyFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.policyFriendlyName);
     }
 
+    /**
+     * The ID of Policy governing this PE.
+     */
     @InputImport(name="policyId")
     private final @Nullable String policyId;
 
@@ -103,6 +139,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
     }
 
+    /**
+     * The friendly name of the primary fabric.
+     */
     @InputImport(name="primaryFabricFriendlyName")
     private final @Nullable String primaryFabricFriendlyName;
 
@@ -110,6 +149,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.primaryFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.primaryFabricFriendlyName);
     }
 
+    /**
+     * The fabric provider of the primary fabric.
+     */
     @InputImport(name="primaryFabricProvider")
     private final @Nullable String primaryFabricProvider;
 
@@ -117,6 +159,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.primaryFabricProvider == null ? Optional.empty() : Optional.ofNullable(this.primaryFabricProvider);
     }
 
+    /**
+     * The name of primary protection container friendly name.
+     */
     @InputImport(name="primaryProtectionContainerFriendlyName")
     private final @Nullable String primaryProtectionContainerFriendlyName;
 
@@ -124,6 +169,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.primaryProtectionContainerFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.primaryProtectionContainerFriendlyName);
     }
 
+    /**
+     * The protected item ARM Id.
+     */
     @InputImport(name="protectableItemId")
     private final @Nullable String protectableItemId;
 
@@ -131,6 +179,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.protectableItemId == null ? Optional.empty() : Optional.ofNullable(this.protectableItemId);
     }
 
+    /**
+     * The type of protected item type.
+     */
     @InputImport(name="protectedItemType")
     private final @Nullable String protectedItemType;
 
@@ -138,6 +189,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.protectedItemType == null ? Optional.empty() : Optional.ofNullable(this.protectedItemType);
     }
 
+    /**
+     * The protection status.
+     */
     @InputImport(name="protectionState")
     private final @Nullable String protectionState;
 
@@ -145,6 +199,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.protectionState == null ? Optional.empty() : Optional.ofNullable(this.protectionState);
     }
 
+    /**
+     * The protection state description.
+     */
     @InputImport(name="protectionStateDescription")
     private final @Nullable String protectionStateDescription;
 
@@ -152,6 +209,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.protectionStateDescription == null ? Optional.empty() : Optional.ofNullable(this.protectionStateDescription);
     }
 
+    /**
+     * The Replication provider custom settings.
+     */
     @InputImport(name="providerSpecificDetails")
     private final @Nullable Object providerSpecificDetails;
 
@@ -159,6 +219,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.providerSpecificDetails == null ? null : this.providerSpecificDetails;
     }
 
+    /**
+     * The recovery container Id.
+     */
     @InputImport(name="recoveryContainerId")
     private final @Nullable String recoveryContainerId;
 
@@ -166,6 +229,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.recoveryContainerId == null ? Optional.empty() : Optional.ofNullable(this.recoveryContainerId);
     }
 
+    /**
+     * The friendly name of recovery fabric.
+     */
     @InputImport(name="recoveryFabricFriendlyName")
     private final @Nullable String recoveryFabricFriendlyName;
 
@@ -173,6 +239,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.recoveryFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricFriendlyName);
     }
 
+    /**
+     * The Arm Id of recovery fabric.
+     */
     @InputImport(name="recoveryFabricId")
     private final @Nullable String recoveryFabricId;
 
@@ -180,6 +249,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.recoveryFabricId == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricId);
     }
 
+    /**
+     * The name of recovery container friendly name.
+     */
     @InputImport(name="recoveryProtectionContainerFriendlyName")
     private final @Nullable String recoveryProtectionContainerFriendlyName;
 
@@ -187,6 +259,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.recoveryProtectionContainerFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.recoveryProtectionContainerFriendlyName);
     }
 
+    /**
+     * The recovery provider ARM Id.
+     */
     @InputImport(name="recoveryServicesProviderId")
     private final @Nullable String recoveryServicesProviderId;
 
@@ -194,6 +269,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.recoveryServicesProviderId == null ? Optional.empty() : Optional.ofNullable(this.recoveryServicesProviderId);
     }
 
+    /**
+     * The consolidated protection health for the VM taking any issues with SRS as well as all the replication units associated with the VM's replication group into account. This is a string representation of the ProtectionHealth enumeration.
+     */
     @InputImport(name="replicationHealth")
     private final @Nullable String replicationHealth;
 
@@ -201,6 +279,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.replicationHealth == null ? Optional.empty() : Optional.ofNullable(this.replicationHealth);
     }
 
+    /**
+     * The Test failover state.
+     */
     @InputImport(name="testFailoverState")
     private final @Nullable String testFailoverState;
 
@@ -208,6 +289,9 @@ public final class ReplicationProtectedItemPropertiesResponse extends io.pulumi.
         return this.testFailoverState == null ? Optional.empty() : Optional.ofNullable(this.testFailoverState);
     }
 
+    /**
+     * The Test failover state description.
+     */
     @InputImport(name="testFailoverStateDescription")
     private final @Nullable String testFailoverStateDescription;
 

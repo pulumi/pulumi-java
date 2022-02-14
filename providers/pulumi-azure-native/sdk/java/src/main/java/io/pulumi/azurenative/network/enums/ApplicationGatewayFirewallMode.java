@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Web application firewall mode.
+ */
     @EnumType
     public enum ApplicationGatewayFirewallMode {
+/**
+ * 
+ */
         Detection("Detection"),
+/**
+ * 
+ */
         Prevention("Prevention");
 
         private final String value;

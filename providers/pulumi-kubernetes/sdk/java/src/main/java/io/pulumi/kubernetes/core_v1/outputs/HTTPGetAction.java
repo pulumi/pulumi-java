@@ -15,10 +15,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HTTPGetAction {
+/**
+ * Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.
+ */
     private final @Nullable String host;
+/**
+ * Custom headers to set in the request. HTTP allows repeated headers.
+ */
     private final @Nullable List<HTTPHeader> httpHeaders;
+/**
+ * Path to access on the HTTP server.
+ */
     private final @Nullable String path;
+/**
+ * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
+ */
     private final Either<Integer,String> port;
+/**
+ * Scheme to use for connecting to the host. Defaults to HTTP.
+
+Possible enum values:
+ - `"HTTP"` means that the scheme used will be http://
+ - `"HTTPS"` means that the scheme used will be https://
+ */
     private final @Nullable String scheme;
 
     @OutputCustomType.Constructor({"host","httpHeaders","path","port","scheme"})
@@ -35,18 +54,37 @@ public final class HTTPGetAction {
         this.scheme = scheme;
     }
 
+/**
+ * Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.
+ */
     public Optional<String> getHost() {
         return Optional.ofNullable(this.host);
     }
+/**
+ * Custom headers to set in the request. HTTP allows repeated headers.
+ */
     public List<HTTPHeader> getHttpHeaders() {
         return this.httpHeaders == null ? List.of() : this.httpHeaders;
     }
+/**
+ * Path to access on the HTTP server.
+ */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
+/**
+ * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
+ */
     public Either<Integer,String> getPort() {
         return this.port;
     }
+/**
+ * Scheme to use for connecting to the host. Defaults to HTTP.
+
+Possible enum values:
+ - `"HTTP"` means that the scheme used will be http://
+ - `"HTTPS"` means that the scheme used will be https://
+ */
     public Optional<String> getScheme() {
         return Optional.ofNullable(this.scheme);
     }

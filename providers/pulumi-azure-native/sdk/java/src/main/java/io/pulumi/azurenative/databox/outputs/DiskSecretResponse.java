@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DiskSecretResponse {
+/**
+ * Bit Locker key of the disk which can be used to unlock the disk to copy data.
+ */
     private final String bitLockerKey;
+/**
+ * Serial number of the assigned disk.
+ */
     private final String diskSerialNumber;
 
     @OutputCustomType.Constructor({"bitLockerKey","diskSerialNumber"})
@@ -20,9 +26,15 @@ public final class DiskSecretResponse {
         this.diskSerialNumber = Objects.requireNonNull(diskSerialNumber);
     }
 
+/**
+ * Bit Locker key of the disk which can be used to unlock the disk to copy data.
+ */
     public String getBitLockerKey() {
         return this.bitLockerKey;
     }
+/**
+ * Serial number of the assigned disk.
+ */
     public String getDiskSerialNumber() {
         return this.diskSerialNumber;
     }

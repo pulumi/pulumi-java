@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A collection of read-only information about the state of the connection to the private remote resource.
+ */
 public final class PrivateLinkConnectionStateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateLinkConnectionStateResponse Empty = new PrivateLinkConnectionStateResponse();
 
+    /**
+     * A message indicating if changes on the service provider require any updates on the consumer.
+     */
     @InputImport(name="actionsRequired", required=true)
     private final String actionsRequired;
 
@@ -19,6 +25,9 @@ public final class PrivateLinkConnectionStateResponse extends io.pulumi.resource
         return this.actionsRequired;
     }
 
+    /**
+     * The reason for approval/rejection of the connection.
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -26,6 +35,9 @@ public final class PrivateLinkConnectionStateResponse extends io.pulumi.resource
         return this.description;
     }
 
+    /**
+     * Indicates whether the connection has been Approved/Rejected/Removed by the owner of the remote resource/service.
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

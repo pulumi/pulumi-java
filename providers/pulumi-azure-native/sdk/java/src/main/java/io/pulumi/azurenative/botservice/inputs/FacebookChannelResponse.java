@@ -11,10 +11,17 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Facebook channel definition
+ */
 public final class FacebookChannelResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FacebookChannelResponse Empty = new FacebookChannelResponse();
 
+    /**
+     * The channel name
+Expected value is 'FacebookChannel'.
+     */
     @InputImport(name="channelName", required=true)
     private final String channelName;
 
@@ -22,6 +29,9 @@ public final class FacebookChannelResponse extends io.pulumi.resources.InvokeArg
         return this.channelName;
     }
 
+    /**
+     * Entity Tag of the resource
+     */
     @InputImport(name="etag")
     private final @Nullable String etag;
 
@@ -29,6 +39,9 @@ public final class FacebookChannelResponse extends io.pulumi.resources.InvokeArg
         return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
     }
 
+    /**
+     * Specifies the location of the resource.
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -36,6 +49,9 @@ public final class FacebookChannelResponse extends io.pulumi.resources.InvokeArg
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * The set of properties specific to bot facebook channel
+     */
     @InputImport(name="properties")
     private final @Nullable FacebookChannelPropertiesResponse properties;
 
@@ -43,6 +59,9 @@ public final class FacebookChannelResponse extends io.pulumi.resources.InvokeArg
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
     }
 
+    /**
+     * Provisioning state of the resource
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

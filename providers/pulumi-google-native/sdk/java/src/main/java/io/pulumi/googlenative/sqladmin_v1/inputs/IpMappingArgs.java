@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Database instance IP Mapping.
+ */
 public final class IpMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IpMappingArgs Empty = new IpMappingArgs();
 
+    /**
+     * The IP address assigned.
+     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<String> ipAddress;
 
@@ -22,6 +28,9 @@ public final class IpMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
+    /**
+     * The due time for this IP to be retired in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`. This field is only available when the IP is scheduled to be retired.
+     */
     @InputImport(name="timeToRetire")
     private final @Nullable Input<String> timeToRetire;
 
@@ -29,6 +38,9 @@ public final class IpMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.timeToRetire == null ? Input.empty() : this.timeToRetire;
     }
 
+    /**
+     * The type of this IP address. A `PRIMARY` address is a public address that can accept incoming connections. A `PRIVATE` address is a private address that can accept incoming connections. An `OUTGOING` address is the source address of connections originating from the instance, if supported.
+     */
     @InputImport(name="type")
     private final @Nullable Input<IpMappingType> type;
 

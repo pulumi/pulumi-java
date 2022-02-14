@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * AgentJob level output for the task that validates connection to SQL Server and also validates source server requirements
+ */
 public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse Empty = new ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse();
 
+    /**
+     * Result identifier
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -21,6 +27,9 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
         return this.id;
     }
 
+    /**
+     * The state of the original AgentJob.
+     */
     @InputImport(name="isEnabled", required=true)
     private final Boolean isEnabled;
 
@@ -28,6 +37,9 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
         return this.isEnabled;
     }
 
+    /**
+     * The type of AgentJob.
+     */
     @InputImport(name="jobCategory", required=true)
     private final String jobCategory;
 
@@ -35,6 +47,9 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
         return this.jobCategory;
     }
 
+    /**
+     * The owner of the AgentJob
+     */
     @InputImport(name="jobOwner", required=true)
     private final String jobOwner;
 
@@ -42,6 +57,9 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
         return this.jobOwner;
     }
 
+    /**
+     * UTC Date and time when the AgentJob was last executed.
+     */
     @InputImport(name="lastExecutedOn", required=true)
     private final String lastExecutedOn;
 
@@ -49,6 +67,9 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
         return this.lastExecutedOn;
     }
 
+    /**
+     * Information about eligibility of agent job for migration.
+     */
     @InputImport(name="migrationEligibility", required=true)
     private final MigrationEligibilityInfoResponse migrationEligibility;
 
@@ -56,6 +77,9 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
         return this.migrationEligibility;
     }
 
+    /**
+     * AgentJob name
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -63,6 +87,10 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
         return this.name;
     }
 
+    /**
+     * Type of result - database level or task level
+Expected value is 'AgentJobLevelOutput'.
+     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 

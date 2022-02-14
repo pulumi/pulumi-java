@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppSyncFunctionTriggers {
+/**
+ * Function secrets.
+API Version: 2020-12-01.
+ *
+ * Function secrets.
+ */
     public static CompletableFuture<ListWebAppSyncFunctionTriggersResult> invokeAsync(ListWebAppSyncFunctionTriggersArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppSyncFunctionTriggers", TypeShape.of(ListWebAppSyncFunctionTriggersResult.class), args == null ? ListWebAppSyncFunctionTriggersArgs.Empty : args, Utilities.withVersion(options));
     }

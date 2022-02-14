@@ -10,9 +10,26 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UniformInt64RangePartitionSchemeDescriptionResponse {
+/**
+ * The number of partitions.
+ */
     private final Integer count;
+/**
+ * String indicating the upper bound of the partition key range that
+should be split between the partition ‘count’
+
+ */
     private final String highKey;
+/**
+ * String indicating the lower bound of the partition key range that
+should be split between the partition ‘count’
+
+ */
     private final String lowKey;
+/**
+ * Enumerates the ways that a service can be partitioned.
+Expected value is 'UniformInt64Range'.
+ */
     private final String partitionScheme;
 
     @OutputCustomType.Constructor({"count","highKey","lowKey","partitionScheme"})
@@ -27,15 +44,32 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse {
         this.partitionScheme = Objects.requireNonNull(partitionScheme);
     }
 
+/**
+ * The number of partitions.
+ */
     public Integer getCount() {
         return this.count;
     }
+/**
+ * String indicating the upper bound of the partition key range that
+should be split between the partition ‘count’
+
+ */
     public String getHighKey() {
         return this.highKey;
     }
+/**
+ * String indicating the lower bound of the partition key range that
+should be split between the partition ‘count’
+
+ */
     public String getLowKey() {
         return this.lowKey;
     }
+/**
+ * Enumerates the ways that a service can be partitioned.
+Expected value is 'UniformInt64Range'.
+ */
     public String getPartitionScheme() {
         return this.partitionScheme;
     }

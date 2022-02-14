@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Database specific information for SQL to Azure SQL DB sync migration task inputs
+ */
 public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateSqlServerSqlDbSyncDatabaseInputResponse Empty = new MigrateSqlServerSqlDbSyncDatabaseInputResponse();
 
+    /**
+     * Unique identifier for database
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -22,6 +28,9 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Migration settings which tune the migration behavior
+     */
     @InputImport(name="migrationSetting")
     private final @Nullable Map<String,String> migrationSetting;
 
@@ -29,6 +38,9 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
         return this.migrationSetting == null ? Map.of() : this.migrationSetting;
     }
 
+    /**
+     * Name of database
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -36,6 +48,9 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Schema name to be migrated
+     */
     @InputImport(name="schemaName")
     private final @Nullable String schemaName;
 
@@ -43,6 +58,9 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
         return this.schemaName == null ? Optional.empty() : Optional.ofNullable(this.schemaName);
     }
 
+    /**
+     * Source settings to tune source endpoint migration behavior
+     */
     @InputImport(name="sourceSetting")
     private final @Nullable Map<String,String> sourceSetting;
 
@@ -50,6 +68,9 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
         return this.sourceSetting == null ? Map.of() : this.sourceSetting;
     }
 
+    /**
+     * Mapping of source to target tables
+     */
     @InputImport(name="tableMap")
     private final @Nullable Map<String,String> tableMap;
 
@@ -57,6 +78,9 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
         return this.tableMap == null ? Map.of() : this.tableMap;
     }
 
+    /**
+     * Target database name
+     */
     @InputImport(name="targetDatabaseName")
     private final @Nullable String targetDatabaseName;
 
@@ -64,6 +88,9 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends io.pul
         return this.targetDatabaseName == null ? Optional.empty() : Optional.ofNullable(this.targetDatabaseName);
     }
 
+    /**
+     * Target settings to tune target endpoint migration behavior
+     */
     @InputImport(name="targetSetting")
     private final @Nullable Map<String,String> targetSetting;
 

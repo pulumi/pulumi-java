@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RulesEngineArgs Empty = new RulesEngineArgs();
 
+    /**
+     * Name of the Front Door which is globally unique.
+     */
     @InputImport(name="frontDoorName", required=true)
     private final Input<String> frontDoorName;
 
@@ -23,6 +29,9 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
         return this.frontDoorName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -30,6 +39,9 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * A list of rules that define a particular Rules Engine Configuration.
+     */
     @InputImport(name="rules")
     private final @Nullable Input<List<RulesEngineRuleArgs>> rules;
 
@@ -37,6 +49,9 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
         return this.rules == null ? Input.empty() : this.rules;
     }
 
+    /**
+     * Name of the Rules Engine which is unique within the Front Door.
+     */
     @InputImport(name="rulesEngineName")
     private final @Nullable Input<String> rulesEngineName;
 

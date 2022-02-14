@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MonitorArgs Empty = new MonitorArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityPropertiesArgs> identity;
 
@@ -24,6 +30,9 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -31,6 +40,9 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Monitor resource name
+     */
     @InputImport(name="monitorName")
     private final @Nullable Input<String> monitorName;
 
@@ -38,6 +50,9 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
         return this.monitorName == null ? Input.empty() : this.monitorName;
     }
 
+    /**
+     * Properties specific to the monitor resource.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<MonitorPropertiesArgs> properties;
 
@@ -45,6 +60,9 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -52,6 +70,9 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReadWriteDatabaseArgs Empty = new ReadWriteDatabaseArgs();
 
+    /**
+     * The name of the Kusto cluster.
+     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -21,6 +27,9 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
         return this.clusterName;
     }
 
+    /**
+     * The name of the database in the Kusto cluster.
+     */
     @InputImport(name="databaseName")
     private final @Nullable Input<String> databaseName;
 
@@ -28,6 +37,9 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
         return this.databaseName == null ? Input.empty() : this.databaseName;
     }
 
+    /**
+     * The time the data should be kept in cache for fast queries in TimeSpan.
+     */
     @InputImport(name="hotCachePeriod")
     private final @Nullable Input<String> hotCachePeriod;
 
@@ -35,6 +47,10 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
         return this.hotCachePeriod == null ? Input.empty() : this.hotCachePeriod;
     }
 
+    /**
+     * Kind of the database
+Expected value is 'ReadWrite'.
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -42,6 +58,9 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
         return this.kind;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -49,6 +68,9 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group containing the Kusto cluster.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -56,6 +78,9 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
         return this.resourceGroupName;
     }
 
+    /**
+     * The time the data should be kept before it stops being accessible to queries in TimeSpan.
+     */
     @InputImport(name="softDeletePeriod")
     private final @Nullable Input<String> softDeletePeriod;
 

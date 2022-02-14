@@ -12,10 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WorkspaceFeaturesResponse {
+/**
+ * Dedicated LA cluster resourceId that is linked to the workspaces.
+ */
     private final @Nullable String clusterResourceId;
+/**
+ * Disable Non-AAD based Auth.
+ */
     private final @Nullable Boolean disableLocalAuth;
+/**
+ * Flag that indicate if data should be exported.
+ */
     private final @Nullable Boolean enableDataExport;
+/**
+ * Flag that indicate which permission to use - resource or workspace or both.
+ */
     private final @Nullable Boolean enableLogAccessUsingOnlyResourcePermissions;
+/**
+ * Flag that describes if we want to remove the data after 30 days.
+ */
     private final @Nullable Boolean immediatePurgeDataOn30Days;
 
     @OutputCustomType.Constructor({"clusterResourceId","disableLocalAuth","enableDataExport","enableLogAccessUsingOnlyResourcePermissions","immediatePurgeDataOn30Days"})
@@ -32,18 +47,33 @@ public final class WorkspaceFeaturesResponse {
         this.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
     }
 
+/**
+ * Dedicated LA cluster resourceId that is linked to the workspaces.
+ */
     public Optional<String> getClusterResourceId() {
         return Optional.ofNullable(this.clusterResourceId);
     }
+/**
+ * Disable Non-AAD based Auth.
+ */
     public Optional<Boolean> getDisableLocalAuth() {
         return Optional.ofNullable(this.disableLocalAuth);
     }
+/**
+ * Flag that indicate if data should be exported.
+ */
     public Optional<Boolean> getEnableDataExport() {
         return Optional.ofNullable(this.enableDataExport);
     }
+/**
+ * Flag that indicate which permission to use - resource or workspace or both.
+ */
     public Optional<Boolean> getEnableLogAccessUsingOnlyResourcePermissions() {
         return Optional.ofNullable(this.enableLogAccessUsingOnlyResourcePermissions);
     }
+/**
+ * Flag that describes if we want to remove the data after 30 days.
+ */
     public Optional<Boolean> getImmediatePurgeDataOn30Days() {
         return Optional.ofNullable(this.immediatePurgeDataOn30Days);
     }

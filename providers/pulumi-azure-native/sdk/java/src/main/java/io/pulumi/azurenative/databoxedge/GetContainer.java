@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetContainer {
+/**
+ * Represents a container on the  Data Box Edge/Gateway device.
+API Version: 2020-12-01.
+ *
+ * Represents a container on the  Data Box Edge/Gateway device.
+ */
     public static CompletableFuture<GetContainerResult> invokeAsync(GetContainerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getContainer", TypeShape.of(GetContainerResult.class), args == null ? GetContainerArgs.Empty : args, Utilities.withVersion(options));
     }

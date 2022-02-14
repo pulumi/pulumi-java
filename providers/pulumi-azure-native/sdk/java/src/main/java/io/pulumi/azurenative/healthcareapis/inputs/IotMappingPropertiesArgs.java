@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The mapping content.
+ */
 public final class IotMappingPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IotMappingPropertiesArgs Empty = new IotMappingPropertiesArgs();
 
+    /**
+     * The mapping.
+     */
     @InputImport(name="content")
     private final @Nullable Input<Object> content;
 

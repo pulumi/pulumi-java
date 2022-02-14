@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReplicationMigrationItem {
+/**
+ * Migration item.
+API Version: 2018-07-10.
+ *
+ * Migration item.
+ */
     public static CompletableFuture<GetReplicationMigrationItemResult> invokeAsync(GetReplicationMigrationItemArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getReplicationMigrationItem", TypeShape.of(GetReplicationMigrationItemResult.class), args == null ? GetReplicationMigrationItemArgs.Empty : args, Utilities.withVersion(options));
     }

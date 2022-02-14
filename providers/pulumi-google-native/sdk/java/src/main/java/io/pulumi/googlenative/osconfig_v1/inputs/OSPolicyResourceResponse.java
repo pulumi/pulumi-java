@@ -11,10 +11,16 @@ import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceRepositoryResou
 import java.util.Objects;
 
 
+/**
+ * An OS policy resource is used to define the desired state configuration and provides a specific functionality like installing/removing packages, executing a script etc. The system ensures that resources are always in their desired state by taking necessary actions if they have drifted from their desired state.
+ */
 public final class OSPolicyResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OSPolicyResourceResponse Empty = new OSPolicyResourceResponse();
 
+    /**
+     * Exec resource
+     */
     @InputImport(name="exec", required=true)
     private final OSPolicyResourceExecResourceResponse exec;
 
@@ -22,6 +28,9 @@ public final class OSPolicyResourceResponse extends io.pulumi.resources.InvokeAr
         return this.exec;
     }
 
+    /**
+     * File resource
+     */
     @InputImport(name="file", required=true)
     private final OSPolicyResourceFileResourceResponse file;
 
@@ -29,6 +38,9 @@ public final class OSPolicyResourceResponse extends io.pulumi.resources.InvokeAr
         return this.file;
     }
 
+    /**
+     * Package resource
+     */
     @InputImport(name="pkg", required=true)
     private final OSPolicyResourcePackageResourceResponse pkg;
 
@@ -36,6 +48,9 @@ public final class OSPolicyResourceResponse extends io.pulumi.resources.InvokeAr
         return this.pkg;
     }
 
+    /**
+     * Package repository resource
+     */
     @InputImport(name="repository", required=true)
     private final OSPolicyResourceRepositoryResourceResponse repository;
 

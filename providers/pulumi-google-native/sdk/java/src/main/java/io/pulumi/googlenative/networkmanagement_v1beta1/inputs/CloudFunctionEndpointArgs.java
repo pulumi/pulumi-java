@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Wrapper for cloud function attributes.
+ */
 public final class CloudFunctionEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CloudFunctionEndpointArgs Empty = new CloudFunctionEndpointArgs();
 
+    /**
+     * A [Cloud function](https://cloud.google.com/functions) name.
+     */
     @InputImport(name="uri")
     private final @Nullable Input<String> uri;
 

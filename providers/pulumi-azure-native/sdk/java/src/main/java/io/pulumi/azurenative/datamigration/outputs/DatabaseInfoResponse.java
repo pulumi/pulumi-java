@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DatabaseInfoResponse {
+/**
+ * Name of the database
+ */
     private final String sourceDatabaseName;
 
     @OutputCustomType.Constructor({"sourceDatabaseName"})
@@ -16,6 +19,9 @@ public final class DatabaseInfoResponse {
         this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
     }
 
+/**
+ * Name of the database
+ */
     public String getSourceDatabaseName() {
         return this.sourceDatabaseName;
     }

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Service properties payload
+ */
 public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterResourcePropertiesArgs Empty = new ClusterResourcePropertiesArgs();
 
+    /**
+     * Network profile of the Service
+     */
     @InputImport(name="networkProfile")
     private final @Nullable Input<NetworkProfileArgs> networkProfile;
 

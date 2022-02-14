@@ -23,21 +23,70 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AmazonS3DatasetResponse {
+/**
+ * List of tags that can be used for describing the Dataset.
+ */
     private final @Nullable List<Object> annotations;
+/**
+ * The name of the Amazon S3 bucket. Type: string (or Expression with resultType string).
+ */
     private final Object bucketName;
+/**
+ * The data compression method used for the Amazon S3 object.
+ */
     private final @Nullable DatasetCompressionResponse compression;
+/**
+ * Dataset description.
+ */
     private final @Nullable String description;
+/**
+ * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+ */
     private final @Nullable DatasetResponseFolder folder;
+/**
+ * The format of files.
+ */
     private final @Nullable Object format;
+/**
+ * The key of the Amazon S3 object. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object key;
+/**
+ * Linked service reference.
+ */
     private final LinkedServiceReferenceResponse linkedServiceName;
+/**
+ * The end of S3 object's modified datetime. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object modifiedDatetimeEnd;
+/**
+ * The start of S3 object's modified datetime. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object modifiedDatetimeStart;
+/**
+ * Parameters for dataset.
+ */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+/**
+ * The prefix filter for the S3 object name. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object prefix;
+/**
+ * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+ */
     private final @Nullable Object schema;
+/**
+ * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+ */
     private final @Nullable Object structure;
+/**
+ * Type of dataset.
+Expected value is 'AmazonS3Object'.
+ */
     private final String type;
+/**
+ * The version for the S3 object. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object version;
 
     @OutputCustomType.Constructor({"annotations","bucketName","compression","description","folder","format","key","linkedServiceName","modifiedDatetimeEnd","modifiedDatetimeStart","parameters","prefix","schema","structure","type","version"})
@@ -76,51 +125,100 @@ public final class AmazonS3DatasetResponse {
         this.version = version;
     }
 
+/**
+ * List of tags that can be used for describing the Dataset.
+ */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
+/**
+ * The name of the Amazon S3 bucket. Type: string (or Expression with resultType string).
+ */
     public Object getBucketName() {
         return this.bucketName;
     }
+/**
+ * The data compression method used for the Amazon S3 object.
+ */
     public Optional<DatasetCompressionResponse> getCompression() {
         return Optional.ofNullable(this.compression);
     }
+/**
+ * Dataset description.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+ */
     public Optional<DatasetResponseFolder> getFolder() {
         return Optional.ofNullable(this.folder);
     }
+/**
+ * The format of files.
+ */
     public Optional<Object> getFormat() {
         return Optional.ofNullable(this.format);
     }
+/**
+ * The key of the Amazon S3 object. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getKey() {
         return Optional.ofNullable(this.key);
     }
+/**
+ * Linked service reference.
+ */
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
     }
+/**
+ * The end of S3 object's modified datetime. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getModifiedDatetimeEnd() {
         return Optional.ofNullable(this.modifiedDatetimeEnd);
     }
+/**
+ * The start of S3 object's modified datetime. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getModifiedDatetimeStart() {
         return Optional.ofNullable(this.modifiedDatetimeStart);
     }
+/**
+ * Parameters for dataset.
+ */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+/**
+ * The prefix filter for the S3 object name. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getPrefix() {
         return Optional.ofNullable(this.prefix);
     }
+/**
+ * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+ */
     public Optional<Object> getSchema() {
         return Optional.ofNullable(this.schema);
     }
+/**
+ * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+ */
     public Optional<Object> getStructure() {
         return Optional.ofNullable(this.structure);
     }
+/**
+ * Type of dataset.
+Expected value is 'AmazonS3Object'.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * The version for the S3 object. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getVersion() {
         return Optional.ofNullable(this.version);
     }

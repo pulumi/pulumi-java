@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The Value.
+ */
 public final class WorkspaceCustomStringParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkspaceCustomStringParameterResponse Empty = new WorkspaceCustomStringParameterResponse();
 
+    /**
+     * The type of variable that this is
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -19,6 +25,9 @@ public final class WorkspaceCustomStringParameterResponse extends io.pulumi.reso
         return this.type;
     }
 
+    /**
+     * The value which should be used for this field.
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

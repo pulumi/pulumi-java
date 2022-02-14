@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The routing types that are supported for action requests.
+ */
     @EnumType
     public enum ActionRouting {
+/**
+ * 
+ */
         Proxy("Proxy");
 
         private final String value;

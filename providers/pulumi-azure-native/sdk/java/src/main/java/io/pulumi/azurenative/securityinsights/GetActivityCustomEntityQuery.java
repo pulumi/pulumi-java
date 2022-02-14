@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetActivityCustomEntityQuery {
+/**
+ * Represents Activity entity query.
+API Version: 2021-03-01-preview.
+ *
+ * Represents Activity entity query.
+ */
     public static CompletableFuture<GetActivityCustomEntityQueryResult> invokeAsync(GetActivityCustomEntityQueryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getActivityCustomEntityQuery", TypeShape.of(GetActivityCustomEntityQueryResult.class), args == null ? GetActivityCustomEntityQueryArgs.Empty : args, Utilities.withVersion(options));
     }

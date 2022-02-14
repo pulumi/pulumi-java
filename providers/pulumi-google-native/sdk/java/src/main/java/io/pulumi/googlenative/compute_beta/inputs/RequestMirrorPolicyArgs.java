@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A policy that specifies how requests intended for the route's backends are shadowed to a separate mirrored backend service. The load balancer doesn't wait for responses from the shadow service. Before sending traffic to the shadow service, the host or authority header is suffixed with -shadow.
+ */
 public final class RequestMirrorPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RequestMirrorPolicyArgs Empty = new RequestMirrorPolicyArgs();
 
+    /**
+     * The full or partial URL to the BackendService resource being mirrored to.
+     */
     @InputImport(name="backendService")
     private final @Nullable Input<String> backendService;
 

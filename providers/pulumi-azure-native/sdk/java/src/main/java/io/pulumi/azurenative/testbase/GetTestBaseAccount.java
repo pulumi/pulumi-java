@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTestBaseAccount {
+/**
+ * The Test Base Account resource.
+API Version: 2020-12-16-preview.
+ *
+ * The Test Base Account resource.
+ */
     public static CompletableFuture<GetTestBaseAccountResult> invokeAsync(GetTestBaseAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getTestBaseAccount", TypeShape.of(GetTestBaseAccountResult.class), args == null ? GetTestBaseAccountArgs.Empty : args, Utilities.withVersion(options));
     }

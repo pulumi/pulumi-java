@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A TrackSelection to select audio tracks.
+ */
 public final class AudioTrackDescriptorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AudioTrackDescriptorResponse Empty = new AudioTrackDescriptorResponse();
 
+    /**
+     * Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+     */
     @InputImport(name="channelMapping")
     private final @Nullable String channelMapping;
 
@@ -21,6 +27,10 @@ public final class AudioTrackDescriptorResponse extends io.pulumi.resources.Invo
         return this.channelMapping == null ? Optional.empty() : Optional.ofNullable(this.channelMapping);
     }
 
+    /**
+     * The discriminator for derived types.
+Expected value is '#Microsoft.Media.AudioTrackDescriptor'.
+     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 

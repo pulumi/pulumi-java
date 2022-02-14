@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Executes an artifact or local file.
+ */
 public final class SoftwareRecipeStepExecFileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SoftwareRecipeStepExecFileArgs Empty = new SoftwareRecipeStepExecFileArgs();
 
+    /**
+     * Defaults to [0]. A list of possible return values that the program can return to indicate a success.
+     */
     @InputImport(name="allowedExitCodes")
     private final @Nullable Input<List<Integer>> allowedExitCodes;
 
@@ -23,6 +29,9 @@ public final class SoftwareRecipeStepExecFileArgs extends io.pulumi.resources.Re
         return this.allowedExitCodes == null ? Input.empty() : this.allowedExitCodes;
     }
 
+    /**
+     * Arguments to be passed to the provided executable.
+     */
     @InputImport(name="args")
     private final @Nullable Input<List<String>> args;
 
@@ -30,6 +39,9 @@ public final class SoftwareRecipeStepExecFileArgs extends io.pulumi.resources.Re
         return this.args == null ? Input.empty() : this.args;
     }
 
+    /**
+     * The id of the relevant artifact in the recipe.
+     */
     @InputImport(name="artifactId")
     private final @Nullable Input<String> artifactId;
 
@@ -37,6 +49,9 @@ public final class SoftwareRecipeStepExecFileArgs extends io.pulumi.resources.Re
         return this.artifactId == null ? Input.empty() : this.artifactId;
     }
 
+    /**
+     * The absolute path of the file on the local filesystem.
+     */
     @InputImport(name="localPath")
     private final @Nullable Input<String> localPath;
 

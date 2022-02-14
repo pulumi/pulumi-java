@@ -8,10 +8,16 @@ import java.lang.Double;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse Empty = new GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse();
 
+    /**
+     * Must be specified if type is `DOUBLE`. Maximum value of the parameter.
+     */
     @InputImport(name="maxValue", required=true)
     private final Double maxValue;
 
@@ -19,6 +25,9 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecRespo
         return this.maxValue;
     }
 
+    /**
+     * Must be specified if type is `DOUBLE`. Minimum value of the parameter.
+     */
     @InputImport(name="minValue", required=true)
     private final Double minValue;
 

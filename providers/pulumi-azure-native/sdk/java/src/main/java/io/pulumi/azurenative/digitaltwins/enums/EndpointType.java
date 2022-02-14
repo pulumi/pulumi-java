@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of Digital Twins endpoint
+ */
     @EnumType
     public enum EndpointType {
+/**
+ * 
+ */
         EventHub("EventHub"),
+/**
+ * 
+ */
         EventGrid("EventGrid"),
+/**
+ * 
+ */
         ServiceBus("ServiceBus");
 
         private final String value;

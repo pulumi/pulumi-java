@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSshPublicKey {
+/**
+ * Retrieves an SSH public key.
+ */
     public static CompletableFuture<GetSshPublicKeyResult> invokeAsync(GetSshPublicKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:oslogin/v1beta:getSshPublicKey", TypeShape.of(GetSshPublicKeyResult.class), args == null ? GetSshPublicKeyArgs.Empty : args, Utilities.withVersion(options));
     }

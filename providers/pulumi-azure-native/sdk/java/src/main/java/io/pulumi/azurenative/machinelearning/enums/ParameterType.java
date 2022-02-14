@@ -8,19 +8,58 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Graph parameter's type.
+ */
     @EnumType
     public enum ParameterType {
+/**
+ * 
+ */
         String("String"),
+/**
+ * 
+ */
         Int("Int"),
+/**
+ * 
+ */
         Float("Float"),
+/**
+ * 
+ */
         Enumerated("Enumerated"),
+/**
+ * 
+ */
         Script("Script"),
+/**
+ * 
+ */
         Mode("Mode"),
+/**
+ * 
+ */
         Credential("Credential"),
+/**
+ * 
+ */
         Boolean("Boolean"),
+/**
+ * 
+ */
         Double("Double"),
+/**
+ * 
+ */
         ColumnPicker("ColumnPicker"),
+/**
+ * 
+ */
         ParameterRange("ParameterRange"),
+/**
+ * 
+ */
         DataGatewayName("DataGatewayName");
 
         private final String value;

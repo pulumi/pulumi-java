@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Linked service reference type.
+ */
 public final class LinkedServiceReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LinkedServiceReferenceArgs Empty = new LinkedServiceReferenceArgs();
 
+    /**
+     * Arguments for LinkedService.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,Object>> parameters;
 
@@ -23,6 +29,9 @@ public final class LinkedServiceReferenceArgs extends io.pulumi.resources.Resour
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Reference LinkedService name.
+     */
     @InputImport(name="referenceName", required=true)
     private final Input<String> referenceName;
 
@@ -30,6 +39,9 @@ public final class LinkedServiceReferenceArgs extends io.pulumi.resources.Resour
         return this.referenceName;
     }
 
+    /**
+     * Linked service reference type.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

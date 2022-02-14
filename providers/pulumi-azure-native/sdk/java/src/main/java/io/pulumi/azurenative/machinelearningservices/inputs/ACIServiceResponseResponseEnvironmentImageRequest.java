@@ -15,10 +15,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Environment, models and assets used for inferencing.
+ */
 public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.pulumi.resources.InvokeArgs {
 
     public static final ACIServiceResponseResponseEnvironmentImageRequest Empty = new ACIServiceResponseResponseEnvironmentImageRequest();
 
+    /**
+     * The list of assets.
+     */
     @InputImport(name="assets")
     private final @Nullable List<ImageAssetResponse> assets;
 
@@ -26,6 +32,9 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
         return this.assets == null ? List.of() : this.assets;
     }
 
+    /**
+     * The name of the driver file.
+     */
     @InputImport(name="driverProgram")
     private final @Nullable String driverProgram;
 
@@ -33,6 +42,9 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
         return this.driverProgram == null ? Optional.empty() : Optional.ofNullable(this.driverProgram);
     }
 
+    /**
+     * The details of the AZURE ML environment.
+     */
     @InputImport(name="environment")
     private final @Nullable EnvironmentImageResponseResponseEnvironment environment;
 
@@ -40,6 +52,9 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
         return this.environment == null ? Optional.empty() : Optional.ofNullable(this.environment);
     }
 
+    /**
+     * The unique identifying details of the AZURE ML environment.
+     */
     @InputImport(name="environmentReference")
     private final @Nullable EnvironmentImageResponseResponseEnvironmentReference environmentReference;
 
@@ -47,6 +62,9 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
         return this.environmentReference == null ? Optional.empty() : Optional.ofNullable(this.environmentReference);
     }
 
+    /**
+     * The list of model Ids.
+     */
     @InputImport(name="modelIds")
     private final @Nullable List<String> modelIds;
 
@@ -54,6 +72,9 @@ public final class ACIServiceResponseResponseEnvironmentImageRequest extends io.
         return this.modelIds == null ? List.of() : this.modelIds;
     }
 
+    /**
+     * The list of models.
+     */
     @InputImport(name="models")
     private final @Nullable List<ModelResponse> models;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBuildpackBinding {
+/**
+ * Buildpack Binding Resource object
+API Version: 2022-01-01-preview.
+ *
+ * Buildpack Binding Resource object
+ */
     public static CompletableFuture<GetBuildpackBindingResult> invokeAsync(GetBuildpackBindingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getBuildpackBinding", TypeShape.of(GetBuildpackBindingResult.class), args == null ? GetBuildpackBindingArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).
+ */
     @EnumType
     public enum InstancePoolLicenseType {
+/**
+ * 
+ */
         LicenseIncluded("LicenseIncluded"),
+/**
+ * 
+ */
         BasePrice("BasePrice");
 
         private final String value;

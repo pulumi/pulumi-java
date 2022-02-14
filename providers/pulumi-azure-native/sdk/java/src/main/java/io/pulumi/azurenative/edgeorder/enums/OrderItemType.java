@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Order item type.
+ */
     @EnumType
     public enum OrderItemType {
+/**
+ * Purchase OrderItem.
+ */
         Purchase("Purchase"),
+/**
+ * Rental OrderItem.
+ */
         Rental("Rental");
 
         private final String value;

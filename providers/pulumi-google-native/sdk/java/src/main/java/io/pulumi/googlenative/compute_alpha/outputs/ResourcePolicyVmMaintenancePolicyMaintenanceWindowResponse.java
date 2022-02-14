@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse {
+/**
+ * 
+ */
     private final ResourcePolicyDailyCycleResponse dailyMaintenanceWindow;
 
     @OutputCustomType.Constructor({"dailyMaintenanceWindow"})
@@ -16,6 +19,9 @@ public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse {
         this.dailyMaintenanceWindow = Objects.requireNonNull(dailyMaintenanceWindow);
     }
 
+/**
+ * 
+ */
     public ResourcePolicyDailyCycleResponse getDailyMaintenanceWindow() {
         return this.dailyMaintenanceWindow;
     }

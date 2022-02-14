@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Step Id and outcome of each individual step that was run as a group with other steps with the same configuration.
+ */
 public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IndividualOutcomeArgs Empty = new IndividualOutcomeArgs();
 
+    /**
+     * Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
+     */
     @InputImport(name="multistepNumber")
     private final @Nullable Input<Integer> multistepNumber;
 
@@ -24,6 +30,9 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
         return this.multistepNumber == null ? Input.empty() : this.multistepNumber;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="outcomeSummary")
     private final @Nullable Input<IndividualOutcomeOutcomeSummary> outcomeSummary;
 
@@ -31,6 +40,9 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
         return this.outcomeSummary == null ? Input.empty() : this.outcomeSummary;
     }
 
+    /**
+     * How long it took for this step to run.
+     */
     @InputImport(name="runDuration")
     private final @Nullable Input<DurationArgs> runDuration;
 
@@ -38,6 +50,9 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
         return this.runDuration == null ? Input.empty() : this.runDuration;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="stepId")
     private final @Nullable Input<String> stepId;
 

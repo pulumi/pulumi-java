@@ -13,16 +13,49 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagedNetworkGroupResponse {
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     private final String etag;
+/**
+ * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     private final String id;
+/**
+ * Responsibility role under which this Managed Network Group will be created
+ */
     private final @Nullable String kind;
+/**
+ * The geo-location where the resource lives
+ */
     private final @Nullable String location;
+/**
+ * The collection of management groups covered by the Managed Network
+ */
     private final @Nullable List<ResourceIdResponse> managementGroups;
+/**
+ * The name of the resource
+ */
     private final String name;
+/**
+ * Provisioning state of the ManagedNetwork resource.
+ */
     private final String provisioningState;
+/**
+ * The collection of  subnets covered by the Managed Network
+ */
     private final @Nullable List<ResourceIdResponse> subnets;
+/**
+ * The collection of subscriptions covered by the Managed Network
+ */
     private final @Nullable List<ResourceIdResponse> subscriptions;
+/**
+ * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+ */
     private final String type;
+/**
+ * The collection of virtual nets covered by the Managed Network
+ */
     private final @Nullable List<ResourceIdResponse> virtualNetworks;
 
     @OutputCustomType.Constructor({"etag","id","kind","location","managementGroups","name","provisioningState","subnets","subscriptions","type","virtualNetworks"})
@@ -51,36 +84,69 @@ public final class ManagedNetworkGroupResponse {
         this.virtualNetworks = virtualNetworks;
     }
 
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Responsibility role under which this Managed Network Group will be created
+ */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
+/**
+ * The geo-location where the resource lives
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * The collection of management groups covered by the Managed Network
+ */
     public List<ResourceIdResponse> getManagementGroups() {
         return this.managementGroups == null ? List.of() : this.managementGroups;
     }
+/**
+ * The name of the resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Provisioning state of the ManagedNetwork resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * The collection of  subnets covered by the Managed Network
+ */
     public List<ResourceIdResponse> getSubnets() {
         return this.subnets == null ? List.of() : this.subnets;
     }
+/**
+ * The collection of subscriptions covered by the Managed Network
+ */
     public List<ResourceIdResponse> getSubscriptions() {
         return this.subscriptions == null ? List.of() : this.subscriptions;
     }
+/**
+ * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * The collection of virtual nets covered by the Managed Network
+ */
     public List<ResourceIdResponse> getVirtualNetworks() {
         return this.virtualNetworks == null ? List.of() : this.virtualNetworks;
     }

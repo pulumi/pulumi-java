@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApiDeploymentParameterMetadataSetResponse {
+/**
+ * The package content link parameter.
+ */
     private final @Nullable ApiDeploymentParameterMetadataResponse packageContentLink;
+/**
+ * The package content link parameter.
+ */
     private final @Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString;
 
     @OutputCustomType.Constructor({"packageContentLink","redisCacheConnectionString"})
@@ -22,9 +28,15 @@ public final class ApiDeploymentParameterMetadataSetResponse {
         this.redisCacheConnectionString = redisCacheConnectionString;
     }
 
+/**
+ * The package content link parameter.
+ */
     public Optional<ApiDeploymentParameterMetadataResponse> getPackageContentLink() {
         return Optional.ofNullable(this.packageContentLink);
     }
+/**
+ * The package content link parameter.
+ */
     public Optional<ApiDeploymentParameterMetadataResponse> getRedisCacheConnectionString() {
         return Optional.ofNullable(this.redisCacheConnectionString);
     }

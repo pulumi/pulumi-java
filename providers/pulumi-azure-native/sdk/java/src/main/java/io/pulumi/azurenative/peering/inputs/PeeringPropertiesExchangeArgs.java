@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties that define an exchange peering.
+ */
 public final class PeeringPropertiesExchangeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PeeringPropertiesExchangeArgs Empty = new PeeringPropertiesExchangeArgs();
 
+    /**
+     * The set of connections that constitute an exchange peering.
+     */
     @InputImport(name="connections")
     private final @Nullable Input<List<ExchangeConnectionArgs>> connections;
 
@@ -23,6 +29,9 @@ public final class PeeringPropertiesExchangeArgs extends io.pulumi.resources.Res
         return this.connections == null ? Input.empty() : this.connections;
     }
 
+    /**
+     * The reference of the peer ASN.
+     */
     @InputImport(name="peerAsn")
     private final @Nullable Input<SubResourceArgs> peerAsn;
 

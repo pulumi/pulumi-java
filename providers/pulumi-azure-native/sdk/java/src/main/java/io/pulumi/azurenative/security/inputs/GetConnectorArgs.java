@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetConnectorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConnectorArgs Empty = new GetConnectorArgs();
 
+    /**
+     * Name of the cloud account connector
+     */
     @InputImport(name="connectorName", required=true)
     private final String connectorName;
 

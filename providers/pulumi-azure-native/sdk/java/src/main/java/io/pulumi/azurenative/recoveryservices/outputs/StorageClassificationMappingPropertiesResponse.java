@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StorageClassificationMappingPropertiesResponse {
+/**
+ * Target storage object Id.
+ */
     private final @Nullable String targetStorageClassificationId;
 
     @OutputCustomType.Constructor({"targetStorageClassificationId"})
@@ -18,6 +21,9 @@ public final class StorageClassificationMappingPropertiesResponse {
         this.targetStorageClassificationId = targetStorageClassificationId;
     }
 
+/**
+ * Target storage object Id.
+ */
     public Optional<String> getTargetStorageClassificationId() {
         return Optional.ofNullable(this.targetStorageClassificationId);
     }

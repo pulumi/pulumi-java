@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AppBundleResponse {
+/**
+ * .aab file representing the app bundle under test.
+ */
     private final FileReferenceResponse bundleLocation;
 
     @OutputCustomType.Constructor({"bundleLocation"})
@@ -16,6 +19,9 @@ public final class AppBundleResponse {
         this.bundleLocation = Objects.requireNonNull(bundleLocation);
     }
 
+/**
+ * .aab file representing the app bundle under test.
+ */
     public FileReferenceResponse getBundleLocation() {
         return this.bundleLocation;
     }

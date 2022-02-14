@@ -16,10 +16,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationArgs Empty = new ApplicationArgs();
 
+    /**
+     * The fully qualified path of managed application definition Id.
+     */
     @InputImport(name="applicationDefinitionId")
     private final @Nullable Input<String> applicationDefinitionId;
 
@@ -27,6 +33,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationDefinitionId == null ? Input.empty() : this.applicationDefinitionId;
     }
 
+    /**
+     * The name of the managed application.
+     */
     @InputImport(name="applicationName")
     private final @Nullable Input<String> applicationName;
 
@@ -34,6 +43,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationName == null ? Input.empty() : this.applicationName;
     }
 
+    /**
+     * The identity of the resource.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityArgs> identity;
 
@@ -41,6 +53,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * The managed application Jit access policy.
+     */
     @InputImport(name="jitAccessPolicy")
     private final @Nullable Input<ApplicationJitAccessPolicyArgs> jitAccessPolicy;
 
@@ -48,6 +63,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.jitAccessPolicy == null ? Input.empty() : this.jitAccessPolicy;
     }
 
+    /**
+     * The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog.
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -55,6 +73,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
+    /**
+     * Resource location
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -62,6 +83,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * ID of the resource that manages this resource.
+     */
     @InputImport(name="managedBy")
     private final @Nullable Input<String> managedBy;
 
@@ -69,6 +93,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedBy == null ? Input.empty() : this.managedBy;
     }
 
+    /**
+     * The managed resource group Id.
+     */
     @InputImport(name="managedResourceGroupId")
     private final @Nullable Input<String> managedResourceGroupId;
 
@@ -76,6 +103,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedResourceGroupId == null ? Input.empty() : this.managedResourceGroupId;
     }
 
+    /**
+     * Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Object> parameters;
 
@@ -83,6 +113,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * The plan information.
+     */
     @InputImport(name="plan")
     private final @Nullable Input<PlanArgs> plan;
 
@@ -90,6 +123,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.plan == null ? Input.empty() : this.plan;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -97,6 +133,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The SKU of the resource.
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -104,6 +143,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Resource tags
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

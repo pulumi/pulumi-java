@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of threshold
+ */
     @EnumType
     public enum ThresholdType {
+/**
+ * 
+ */
         Actual("Actual");
 
         private final String value;

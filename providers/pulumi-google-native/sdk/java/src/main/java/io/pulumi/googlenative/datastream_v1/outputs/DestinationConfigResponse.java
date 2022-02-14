@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DestinationConfigResponse {
+/**
+ * Destination connection profile resource. Format: `projects/{project}/locations/{location}/connectionProfiles/{name}`
+ */
     private final String destinationConnectionProfile;
+/**
+ * A configuration for how data should be loaded to Cloud Storage.
+ */
     private final GcsDestinationConfigResponse gcsDestinationConfig;
 
     @OutputCustomType.Constructor({"destinationConnectionProfile","gcsDestinationConfig"})
@@ -21,9 +27,15 @@ public final class DestinationConfigResponse {
         this.gcsDestinationConfig = Objects.requireNonNull(gcsDestinationConfig);
     }
 
+/**
+ * Destination connection profile resource. Format: `projects/{project}/locations/{location}/connectionProfiles/{name}`
+ */
     public String getDestinationConnectionProfile() {
         return this.destinationConnectionProfile;
     }
+/**
+ * A configuration for how data should be loaded to Cloud Storage.
+ */
     public GcsDestinationConfigResponse getGcsDestinationConfig() {
         return this.gcsDestinationConfig;
     }

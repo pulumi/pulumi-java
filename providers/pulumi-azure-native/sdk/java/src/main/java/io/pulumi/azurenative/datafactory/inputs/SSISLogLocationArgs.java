@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SSIS package execution log location
+ */
 public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SSISLogLocationArgs Empty = new SSISLogLocationArgs();
 
+    /**
+     * The package execution log access credential.
+     */
     @InputImport(name="accessCredential")
     private final @Nullable Input<SSISAccessCredentialArgs> accessCredential;
 
@@ -25,6 +31,9 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
         return this.accessCredential == null ? Input.empty() : this.accessCredential;
     }
 
+    /**
+     * The SSIS package execution log path. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="logPath", required=true)
     private final Input<Object> logPath;
 
@@ -32,6 +41,9 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
         return this.logPath;
     }
 
+    /**
+     * Specifies the interval to refresh log. The default interval is 5 minutes. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="logRefreshInterval")
     private final @Nullable Input<Object> logRefreshInterval;
 
@@ -39,6 +51,9 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
         return this.logRefreshInterval == null ? Input.empty() : this.logRefreshInterval;
     }
 
+    /**
+     * The type of SSIS log location.
+     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,SsisLogLocationType>> type;
 

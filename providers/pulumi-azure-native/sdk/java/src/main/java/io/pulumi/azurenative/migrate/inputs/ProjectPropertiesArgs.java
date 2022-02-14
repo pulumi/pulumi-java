@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of a project.
+ */
 public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProjectPropertiesArgs Empty = new ProjectPropertiesArgs();
 
+    /**
+     * Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.
+     */
     @InputImport(name="assessmentSolutionId")
     private final @Nullable Input<String> assessmentSolutionId;
 
@@ -23,6 +29,9 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.assessmentSolutionId == null ? Input.empty() : this.assessmentSolutionId;
     }
 
+    /**
+     * The ARM id of the storage account used for interactions when public access is disabled.
+     */
     @InputImport(name="customerStorageAccountArmId")
     private final @Nullable Input<String> customerStorageAccountArmId;
 
@@ -30,6 +39,9 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.customerStorageAccountArmId == null ? Input.empty() : this.customerStorageAccountArmId;
     }
 
+    /**
+     * The ARM id of service map workspace created by customer.
+     */
     @InputImport(name="customerWorkspaceId")
     private final @Nullable Input<String> customerWorkspaceId;
 
@@ -37,6 +49,9 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.customerWorkspaceId == null ? Input.empty() : this.customerWorkspaceId;
     }
 
+    /**
+     * Location of service map workspace created by customer.
+     */
     @InputImport(name="customerWorkspaceLocation")
     private final @Nullable Input<String> customerWorkspaceLocation;
 
@@ -44,6 +59,9 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.customerWorkspaceLocation == null ? Input.empty() : this.customerWorkspaceLocation;
     }
 
+    /**
+     * Assessment project status.
+     */
     @InputImport(name="projectStatus")
     private final @Nullable Input<Either<String,ProjectStatus>> projectStatus;
 
@@ -51,6 +69,9 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
         return this.projectStatus == null ? Input.empty() : this.projectStatus;
     }
 
+    /**
+     * This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
+     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<String> publicNetworkAccess;
 

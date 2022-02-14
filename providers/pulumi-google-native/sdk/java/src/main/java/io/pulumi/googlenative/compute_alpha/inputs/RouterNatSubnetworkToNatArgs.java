@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the IP ranges that want to use NAT for a subnetwork.
+ */
 public final class RouterNatSubnetworkToNatArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RouterNatSubnetworkToNatArgs Empty = new RouterNatSubnetworkToNatArgs();
 
+    /**
+     * URL for the subnetwork resource that will use NAT.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -23,6 +29,9 @@ public final class RouterNatSubnetworkToNatArgs extends io.pulumi.resources.Reso
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A list of the secondary ranges of the Subnetwork that are allowed to use NAT. This can be populated only if "LIST_OF_SECONDARY_IP_RANGES" is one of the values in source_ip_ranges_to_nat.
+     */
     @InputImport(name="secondaryIpRangeNames")
     private final @Nullable Input<List<String>> secondaryIpRangeNames;
 
@@ -30,6 +39,9 @@ public final class RouterNatSubnetworkToNatArgs extends io.pulumi.resources.Reso
         return this.secondaryIpRangeNames == null ? Input.empty() : this.secondaryIpRangeNames;
     }
 
+    /**
+     * Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: ["PRIMARY_IP_RANGE", "LIST_OF_SECONDARY_IP_RANGES"] Default: [ALL_IP_RANGES]
+     */
     @InputImport(name="sourceIpRangesToNat")
     private final @Nullable Input<List<RouterNatSubnetworkToNatSourceIpRangesToNatItem>> sourceIpRangesToNat;
 

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A scope selector represents the AND of the selectors represented by the scoped-resource selector requirements.
+ */
 public final class ScopeSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScopeSelectorArgs Empty = new ScopeSelectorArgs();
 
+    /**
+     * A list of scope selector requirements by scope of the resources.
+     */
     @InputImport(name="matchExpressions")
     private final @Nullable Input<List<ScopedResourceSelectorRequirementArgs>> matchExpressions;
 

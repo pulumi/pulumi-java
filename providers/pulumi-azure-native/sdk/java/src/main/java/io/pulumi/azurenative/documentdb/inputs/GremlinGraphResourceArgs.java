@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Cosmos DB Gremlin graph resource object
+ */
 public final class GremlinGraphResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GremlinGraphResourceArgs Empty = new GremlinGraphResourceArgs();
 
+    /**
+     * The conflict resolution policy for the graph.
+     */
     @InputImport(name="conflictResolutionPolicy")
     private final @Nullable Input<ConflictResolutionPolicyArgs> conflictResolutionPolicy;
 
@@ -26,6 +32,9 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
         return this.conflictResolutionPolicy == null ? Input.empty() : this.conflictResolutionPolicy;
     }
 
+    /**
+     * Default time to live
+     */
     @InputImport(name="defaultTtl")
     private final @Nullable Input<Integer> defaultTtl;
 
@@ -33,6 +42,9 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
         return this.defaultTtl == null ? Input.empty() : this.defaultTtl;
     }
 
+    /**
+     * Name of the Cosmos DB Gremlin graph
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -40,6 +52,9 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
         return this.id;
     }
 
+    /**
+     * The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the graph
+     */
     @InputImport(name="indexingPolicy")
     private final @Nullable Input<IndexingPolicyArgs> indexingPolicy;
 
@@ -47,6 +62,9 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
         return this.indexingPolicy == null ? Input.empty() : this.indexingPolicy;
     }
 
+    /**
+     * The configuration of the partition key to be used for partitioning data into multiple partitions
+     */
     @InputImport(name="partitionKey")
     private final @Nullable Input<ContainerPartitionKeyArgs> partitionKey;
 
@@ -54,6 +72,9 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
         return this.partitionKey == null ? Input.empty() : this.partitionKey;
     }
 
+    /**
+     * The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.
+     */
     @InputImport(name="uniqueKeyPolicy")
     private final @Nullable Input<UniqueKeyPolicyArgs> uniqueKeyPolicy;
 

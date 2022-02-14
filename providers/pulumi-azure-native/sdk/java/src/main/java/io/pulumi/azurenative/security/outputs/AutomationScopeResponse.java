@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutomationScopeResponse {
+/**
+ * The resources scope description.
+ */
     private final @Nullable String description;
+/**
+ * The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).
+ */
     private final @Nullable String scopePath;
 
     @OutputCustomType.Constructor({"description","scopePath"})
@@ -22,9 +28,15 @@ public final class AutomationScopeResponse {
         this.scopePath = scopePath;
     }
 
+/**
+ * The resources scope description.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * The resources scope path. Can be the subscription on which the automation is defined on or a resource group under that subscription (fully qualified Azure resource IDs).
+ */
     public Optional<String> getScopePath() {
         return Optional.ofNullable(this.scopePath);
     }

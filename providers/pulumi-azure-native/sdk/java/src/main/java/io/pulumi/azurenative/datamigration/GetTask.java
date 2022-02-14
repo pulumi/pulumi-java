@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTask {
+/**
+ * A task resource
+API Version: 2018-04-19.
+ *
+ * A task resource
+ */
     public static CompletableFuture<GetTaskResult> invokeAsync(GetTaskArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datamigration:getTask", TypeShape.of(GetTaskResult.class), args == null ? GetTaskArgs.Empty : args, Utilities.withVersion(options));
     }

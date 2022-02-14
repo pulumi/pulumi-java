@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class MachineResponseIdentity extends io.pulumi.resources.InvokeArgs {
 
     public static final MachineResponseIdentity Empty = new MachineResponseIdentity();
 
+    /**
+     * The identity's principal id.
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -21,6 +27,9 @@ public final class MachineResponseIdentity extends io.pulumi.resources.InvokeArg
         return this.principalId;
     }
 
+    /**
+     * The identity's tenant id.
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -28,6 +37,9 @@ public final class MachineResponseIdentity extends io.pulumi.resources.InvokeArg
         return this.tenantId;
     }
 
+    /**
+     * The identity type.
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

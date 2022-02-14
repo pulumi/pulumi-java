@@ -8,13 +8,34 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Common characters to not transform when masking. Useful to avoid removing punctuation.
+ */
     @EnumType
     public enum GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore {
+/**
+ * Unused.
+ */
         CommonCharsToIgnoreUnspecified("COMMON_CHARS_TO_IGNORE_UNSPECIFIED"),
+/**
+ * 0-9
+ */
         Numeric("NUMERIC"),
+/**
+ * A-Z
+ */
         AlphaUpperCase("ALPHA_UPPER_CASE"),
+/**
+ * a-z
+ */
         AlphaLowerCase("ALPHA_LOWER_CASE"),
+/**
+ * US Punctuation, one of !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+ */
         Punctuation("PUNCTUATION"),
+/**
+ * Whitespace character, one of [ \t\n\x0B\f\r]
+ */
         Whitespace("WHITESPACE");
 
         private final String value;

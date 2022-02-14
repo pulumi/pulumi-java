@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Effective Virtual Network
+ */
 public final class EffectiveVirtualNetworkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EffectiveVirtualNetworkResponse Empty = new EffectiveVirtualNetworkResponse();
 
+    /**
+     * Effective vnet Id.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -21,6 +27,9 @@ public final class EffectiveVirtualNetworkResponse extends io.pulumi.resources.I
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Location of vnet.
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -28,6 +37,9 @@ public final class EffectiveVirtualNetworkResponse extends io.pulumi.resources.I
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * Membership Type.
+     */
     @InputImport(name="membershipType")
     private final @Nullable String membershipType;
 

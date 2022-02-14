@@ -12,10 +12,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetCaPoolResult {
+/**
+ * Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.
+ */
     private final IssuancePolicyResponse issuancePolicy;
+/**
+ * Optional. Labels with user-defined metadata.
+ */
     private final Map<String,String> labels;
+/**
+ * The resource name for this CaPool in the format `projects//{@literal /}locations//{@literal /}caPools/*`.
+ */
     private final String name;
+/**
+ * Optional. The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
+ */
     private final PublishingOptionsResponse publishingOptions;
+/**
+ * Immutable. The Tier of this CaPool.
+ */
     private final String tier;
 
     @OutputCustomType.Constructor({"issuancePolicy","labels","name","publishingOptions","tier"})
@@ -32,18 +47,33 @@ public final class GetCaPoolResult {
         this.tier = Objects.requireNonNull(tier);
     }
 
+/**
+ * Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.
+ */
     public IssuancePolicyResponse getIssuancePolicy() {
         return this.issuancePolicy;
     }
+/**
+ * Optional. Labels with user-defined metadata.
+ */
     public Map<String,String> getLabels() {
         return this.labels;
     }
+/**
+ * The resource name for this CaPool in the format `projects//{@literal /}locations//{@literal /}caPools/*`.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Optional. The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.
+ */
     public PublishingOptionsResponse getPublishingOptions() {
         return this.publishingOptions;
     }
+/**
+ * Immutable. The Tier of this CaPool.
+ */
     public String getTier() {
         return this.tier;
     }

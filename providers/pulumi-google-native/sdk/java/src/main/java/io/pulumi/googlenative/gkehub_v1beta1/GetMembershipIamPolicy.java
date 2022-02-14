@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMembershipIamPolicy {
+/**
+ * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+ */
     public static CompletableFuture<GetMembershipIamPolicyResult> invokeAsync(GetMembershipIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gkehub/v1beta1:getMembershipIamPolicy", TypeShape.of(GetMembershipIamPolicyResult.class), args == null ? GetMembershipIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

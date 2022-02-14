@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ListNetworkManagerDeploymentStatusArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListNetworkManagerDeploymentStatusArgs Empty = new ListNetworkManagerDeploymentStatusArgs();
 
+    /**
+     * List of deployment types.
+     */
     @InputImport(name="deploymentTypes")
     private final @Nullable List<Either<String,ConfigurationType>> deploymentTypes;
 
@@ -24,6 +30,9 @@ public final class ListNetworkManagerDeploymentStatusArgs extends io.pulumi.reso
         return this.deploymentTypes == null ? List.of() : this.deploymentTypes;
     }
 
+    /**
+     * The name of the network manager.
+     */
     @InputImport(name="networkManagerName", required=true)
     private final String networkManagerName;
 
@@ -31,6 +40,9 @@ public final class ListNetworkManagerDeploymentStatusArgs extends io.pulumi.reso
         return this.networkManagerName;
     }
 
+    /**
+     * List of locations.
+     */
     @InputImport(name="regions")
     private final @Nullable List<String> regions;
 
@@ -38,6 +50,9 @@ public final class ListNetworkManagerDeploymentStatusArgs extends io.pulumi.reso
         return this.regions == null ? List.of() : this.regions;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -45,6 +60,9 @@ public final class ListNetworkManagerDeploymentStatusArgs extends io.pulumi.reso
         return this.resourceGroupName;
     }
 
+    /**
+     * Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
+     */
     @InputImport(name="skipToken")
     private final @Nullable String skipToken;
 

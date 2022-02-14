@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration detail for datastore
+ */
 public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudApigeeV1DatastoreConfigArgs Empty = new GoogleCloudApigeeV1DatastoreConfigArgs();
 
+    /**
+     * Name of the Cloud Storage bucket. Required for `gcs` target_type.
+     */
     @InputImport(name="bucketName")
     private final @Nullable Input<String> bucketName;
 
@@ -21,6 +27,9 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
         return this.bucketName == null ? Input.empty() : this.bucketName;
     }
 
+    /**
+     * BigQuery dataset name Required for `bigquery` target_type.
+     */
     @InputImport(name="datasetName")
     private final @Nullable Input<String> datasetName;
 
@@ -28,6 +37,9 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
         return this.datasetName == null ? Input.empty() : this.datasetName;
     }
 
+    /**
+     * Path of Cloud Storage bucket Required for `gcs` target_type.
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -35,6 +47,9 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
         return this.path == null ? Input.empty() : this.path;
     }
 
+    /**
+     * GCP project in which the datastore exists
+     */
     @InputImport(name="project", required=true)
     private final Input<String> project;
 
@@ -42,6 +57,9 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
         return this.project;
     }
 
+    /**
+     * Prefix of BigQuery table Required for `bigquery` target_type.
+     */
     @InputImport(name="tablePrefix")
     private final @Nullable Input<String> tablePrefix;
 

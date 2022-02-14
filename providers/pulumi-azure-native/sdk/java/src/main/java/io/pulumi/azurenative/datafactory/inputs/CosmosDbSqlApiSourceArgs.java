@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity Azure CosmosDB (SQL API) Collection source.
+ */
 public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CosmosDbSqlApiSourceArgs Empty = new CosmosDbSqlApiSourceArgs();
 
+    /**
+     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+     */
     @InputImport(name="additionalColumns")
     private final @Nullable Input<Object> additionalColumns;
 
@@ -22,6 +28,9 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
         return this.additionalColumns == null ? Input.empty() : this.additionalColumns;
     }
 
+    /**
+     * Whether detect primitive values as datetime values. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="detectDatetime")
     private final @Nullable Input<Object> detectDatetime;
 
@@ -29,6 +38,9 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
         return this.detectDatetime == null ? Input.empty() : this.detectDatetime;
     }
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -36,6 +48,9 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
+    /**
+     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -43,6 +58,9 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
+    /**
+     * Page size of the result. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="pageSize")
     private final @Nullable Input<Object> pageSize;
 
@@ -50,6 +68,9 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
         return this.pageSize == null ? Input.empty() : this.pageSize;
     }
 
+    /**
+     * Preferred regions. Type: array of strings (or Expression with resultType array of strings).
+     */
     @InputImport(name="preferredRegions")
     private final @Nullable Input<Object> preferredRegions;
 
@@ -57,6 +78,9 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
         return this.preferredRegions == null ? Input.empty() : this.preferredRegions;
     }
 
+    /**
+     * SQL API query. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="query")
     private final @Nullable Input<Object> query;
 
@@ -64,6 +88,9 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
         return this.query == null ? Input.empty() : this.query;
     }
 
+    /**
+     * Source retry count. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="sourceRetryCount")
     private final @Nullable Input<Object> sourceRetryCount;
 
@@ -71,6 +98,9 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
         return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
     }
 
+    /**
+     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="sourceRetryWait")
     private final @Nullable Input<Object> sourceRetryWait;
 
@@ -78,6 +108,10 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
         return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
     }
 
+    /**
+     * Copy source type.
+Expected value is 'CosmosDbSqlApiSource'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

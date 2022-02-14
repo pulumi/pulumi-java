@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Specifies authentication type being used for connecting to the storage account.
+ */
     @EnumType
     public enum AuthenticationType {
+/**
+ * 
+ */
         KeyBased("keyBased"),
+/**
+ * 
+ */
         IdentityBased("identityBased");
 
         private final String value;

@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NameValuePairResponse {
+/**
+ * Pair name.
+ */
     private final @Nullable String name;
+/**
+ * Pair value.
+ */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -22,9 +28,15 @@ public final class NameValuePairResponse {
         this.value = value;
     }
 
+/**
+ * Pair name.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * Pair value.
+ */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

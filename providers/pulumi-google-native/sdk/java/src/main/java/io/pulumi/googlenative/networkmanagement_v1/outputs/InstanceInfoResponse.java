@@ -10,13 +10,37 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class InstanceInfoResponse {
+/**
+ * Name of a Compute Engine instance.
+ */
     private final String displayName;
+/**
+ * External IP address of the network interface.
+ */
     private final String externalIp;
+/**
+ * Name of the network interface of a Compute Engine instance.
+ */
     private final String $interface;
+/**
+ * Internal IP address of the network interface.
+ */
     private final String internalIp;
+/**
+ * Network tags configured on the instance.
+ */
     private final List<String> networkTags;
+/**
+ * URI of a Compute Engine network.
+ */
     private final String networkUri;
+/**
+ * Service account authorized for the instance.
+ */
     private final String serviceAccount;
+/**
+ * URI of a Compute Engine instance.
+ */
     private final String uri;
 
     @OutputCustomType.Constructor({"displayName","externalIp","$interface","internalIp","networkTags","networkUri","serviceAccount","uri"})
@@ -39,27 +63,51 @@ public final class InstanceInfoResponse {
         this.uri = Objects.requireNonNull(uri);
     }
 
+/**
+ * Name of a Compute Engine instance.
+ */
     public String getDisplayName() {
         return this.displayName;
     }
+/**
+ * External IP address of the network interface.
+ */
     public String getExternalIp() {
         return this.externalIp;
     }
+/**
+ * Name of the network interface of a Compute Engine instance.
+ */
     public String get$interface() {
         return this.$interface;
     }
+/**
+ * Internal IP address of the network interface.
+ */
     public String getInternalIp() {
         return this.internalIp;
     }
+/**
+ * Network tags configured on the instance.
+ */
     public List<String> getNetworkTags() {
         return this.networkTags;
     }
+/**
+ * URI of a Compute Engine network.
+ */
     public String getNetworkUri() {
         return this.networkUri;
     }
+/**
+ * Service account authorized for the instance.
+ */
     public String getServiceAccount() {
         return this.serviceAccount;
     }
+/**
+ * URI of a Compute Engine instance.
+ */
     public String getUri() {
         return this.uri;
     }

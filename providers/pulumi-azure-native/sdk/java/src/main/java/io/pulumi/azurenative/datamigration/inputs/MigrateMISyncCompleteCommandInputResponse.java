@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Input for command that completes online migration for an Azure SQL Database Managed Instance.
+ */
 public final class MigrateMISyncCompleteCommandInputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateMISyncCompleteCommandInputResponse Empty = new MigrateMISyncCompleteCommandInputResponse();
 
+    /**
+     * Name of managed instance database
+     */
     @InputImport(name="sourceDatabaseName", required=true)
     private final String sourceDatabaseName;
 

@@ -9,10 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class JobStatistics3Response {
+/**
+ * The number of bad records encountered. Note that if the job has failed because of more bad records encountered than the maximum allowed in the load job configuration, then this number can be less than the total number of bad records present in the input data.
+ */
     private final String badRecords;
+/**
+ * Number of bytes of source data in a load job.
+ */
     private final String inputFileBytes;
+/**
+ * Number of source files in a load job.
+ */
     private final String inputFiles;
+/**
+ * Size of the loaded data in bytes. Note that while a load job is in the running state, this value may change.
+ */
     private final String outputBytes;
+/**
+ * Number of rows imported in a load job. Note that while an import job is in the running state, this value may change.
+ */
     private final String outputRows;
 
     @OutputCustomType.Constructor({"badRecords","inputFileBytes","inputFiles","outputBytes","outputRows"})
@@ -29,18 +44,33 @@ public final class JobStatistics3Response {
         this.outputRows = Objects.requireNonNull(outputRows);
     }
 
+/**
+ * The number of bad records encountered. Note that if the job has failed because of more bad records encountered than the maximum allowed in the load job configuration, then this number can be less than the total number of bad records present in the input data.
+ */
     public String getBadRecords() {
         return this.badRecords;
     }
+/**
+ * Number of bytes of source data in a load job.
+ */
     public String getInputFileBytes() {
         return this.inputFileBytes;
     }
+/**
+ * Number of source files in a load job.
+ */
     public String getInputFiles() {
         return this.inputFiles;
     }
+/**
+ * Size of the loaded data in bytes. Note that while a load job is in the running state, this value may change.
+ */
     public String getOutputBytes() {
         return this.outputBytes;
     }
+/**
+ * Number of rows imported in a load job. Note that while an import job is in the running state, this value may change.
+ */
     public String getOutputRows() {
         return this.outputRows;
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A rule governing the accessibility of a managed hsm pool from a specific virtual network.
+ */
 public final class MHSMVirtualNetworkRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MHSMVirtualNetworkRuleResponse Empty = new MHSMVirtualNetworkRuleResponse();
 
+    /**
+     * Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

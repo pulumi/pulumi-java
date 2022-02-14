@@ -8,10 +8,16 @@ import io.pulumi.googlenative.run_v1alpha1.inputs.InstanceSpecResponse;
 import java.util.Objects;
 
 
+/**
+ * InstanceTemplateSpec describes the data an instance should have when created from a template.
+ */
 public final class InstanceTemplateSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InstanceTemplateSpecResponse Empty = new InstanceTemplateSpecResponse();
 
+    /**
+     * Optional. Specification of the desired behavior of the instance. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status +optional
+     */
     @InputImport(name="spec", required=true)
     private final InstanceSpecResponse spec;
 

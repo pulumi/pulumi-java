@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Backend Address Pool of an application gateway.
+ */
 public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayBackendAddressPoolResponse Empty = new ApplicationGatewayBackendAddressPoolResponse();
 
+    /**
+     * Backend addresses.
+     */
     @InputImport(name="backendAddresses")
     private final @Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses;
 
@@ -24,6 +30,9 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
         return this.backendAddresses == null ? List.of() : this.backendAddresses;
     }
 
+    /**
+     * Collection of references to IPs defined in network interfaces.
+     */
     @InputImport(name="backendIPConfigurations", required=true)
     private final List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations;
 
@@ -31,6 +40,9 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
         return this.backendIPConfigurations;
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -38,6 +50,9 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -45,6 +60,9 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Name of the backend address pool that is unique within an Application Gateway.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -52,6 +70,9 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The provisioning state of the backend address pool resource.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -59,6 +80,9 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
         return this.provisioningState;
     }
 
+    /**
+     * Type of the resource.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

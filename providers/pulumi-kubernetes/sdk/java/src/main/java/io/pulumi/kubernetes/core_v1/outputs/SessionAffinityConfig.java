@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SessionAffinityConfig {
+/**
+ * clientIP contains the configurations of Client IP based session affinity.
+ */
     private final @Nullable ClientIPConfig clientIP;
 
     @OutputCustomType.Constructor({"clientIP"})
@@ -18,6 +21,9 @@ public final class SessionAffinityConfig {
         this.clientIP = clientIP;
     }
 
+/**
+ * clientIP contains the configurations of Client IP based session affinity.
+ */
     public Optional<ClientIPConfig> getClientIP() {
         return Optional.ofNullable(this.clientIP);
     }

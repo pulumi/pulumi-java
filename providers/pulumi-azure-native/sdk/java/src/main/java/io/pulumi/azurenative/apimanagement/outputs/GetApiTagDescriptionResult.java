@@ -11,13 +11,37 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetApiTagDescriptionResult {
+/**
+ * Description of the Tag.
+ */
     private final @Nullable String description;
+/**
+ * Tag name.
+ */
     private final @Nullable String displayName;
+/**
+ * Description of the external resources describing the tag.
+ */
     private final @Nullable String externalDocsDescription;
+/**
+ * Absolute URL of external resources describing the tag.
+ */
     private final @Nullable String externalDocsUrl;
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * Identifier of the tag in the form of /tags/{tagId}
+ */
     private final @Nullable String tagId;
+/**
+ * Resource type for API Management resource.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"description","displayName","externalDocsDescription","externalDocsUrl","id","name","tagId","type"})
@@ -40,27 +64,51 @@ public final class GetApiTagDescriptionResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Description of the Tag.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * Tag name.
+ */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+/**
+ * Description of the external resources describing the tag.
+ */
     public Optional<String> getExternalDocsDescription() {
         return Optional.ofNullable(this.externalDocsDescription);
     }
+/**
+ * Absolute URL of external resources describing the tag.
+ */
     public Optional<String> getExternalDocsUrl() {
         return Optional.ofNullable(this.externalDocsUrl);
     }
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Identifier of the tag in the form of /tags/{tagId}
+ */
     public Optional<String> getTagId() {
         return Optional.ofNullable(this.tagId);
     }
+/**
+ * Resource type for API Management resource.
+ */
     public String getType() {
         return this.type;
     }

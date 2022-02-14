@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Input only. Options for job processing.
+ */
 public final class ProcessingOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProcessingOptionsArgs Empty = new ProcessingOptionsArgs();
 
+    /**
+     * Optional. If set to `true`, the service does not attempt to resolve a more precise address for the job.
+     */
     @InputImport(name="disableStreetAddressResolution")
     private final @Nullable Input<Boolean> disableStreetAddressResolution;
 
@@ -22,6 +28,9 @@ public final class ProcessingOptionsArgs extends io.pulumi.resources.ResourceArg
         return this.disableStreetAddressResolution == null ? Input.empty() : this.disableStreetAddressResolution;
     }
 
+    /**
+     * Optional. Option for job HTML content sanitization. Applied fields are: * description * applicationInfo.instruction * incentives * qualifications * responsibilities HTML tags in these fields may be stripped if sanitiazation is not disabled. Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.
+     */
     @InputImport(name="htmlSanitization")
     private final @Nullable Input<ProcessingOptionsHtmlSanitization> htmlSanitization;
 

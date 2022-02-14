@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceRecordSetArgs Empty = new ResourceRecordSetArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="clientOperationId")
     private final @Nullable Input<String> clientOperationId;
 
@@ -24,6 +30,9 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
         return this.clientOperationId == null ? Input.empty() : this.clientOperationId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -31,6 +40,9 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="managedZone", required=true)
     private final Input<String> managedZone;
 
@@ -38,6 +50,9 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
         return this.managedZone;
     }
 
+    /**
+     * For example, www.example.com.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -45,6 +60,9 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -52,6 +70,9 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.
+     */
     @InputImport(name="routingPolicy")
     private final @Nullable Input<RRSetRoutingPolicyArgs> routingPolicy;
 
@@ -59,6 +80,9 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
         return this.routingPolicy == null ? Input.empty() : this.routingPolicy;
     }
 
+    /**
+     * As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
+     */
     @InputImport(name="rrdatas")
     private final @Nullable Input<List<String>> rrdatas;
 
@@ -66,6 +90,9 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
         return this.rrdatas == null ? Input.empty() : this.rrdatas;
     }
 
+    /**
+     * As defined in RFC 4034 (section 3.2).
+     */
     @InputImport(name="signatureRrdatas")
     private final @Nullable Input<List<String>> signatureRrdatas;
 
@@ -73,6 +100,9 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
         return this.signatureRrdatas == null ? Input.empty() : this.signatureRrdatas;
     }
 
+    /**
+     * Number of seconds that this ResourceRecordSet can be cached by resolvers.
+     */
     @InputImport(name="ttl")
     private final @Nullable Input<Integer> ttl;
 
@@ -80,6 +110,9 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
         return this.ttl == null ? Input.empty() : this.ttl;
     }
 
+    /**
+     * The identifier of a supported record type. See the list of Supported DNS record types.
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

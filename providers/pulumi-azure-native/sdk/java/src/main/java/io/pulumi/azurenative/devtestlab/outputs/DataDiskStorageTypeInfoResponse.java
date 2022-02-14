@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DataDiskStorageTypeInfoResponse {
+/**
+ * Disk Lun
+ */
     private final @Nullable String lun;
+/**
+ * Disk Storage Type
+ */
     private final @Nullable String storageType;
 
     @OutputCustomType.Constructor({"lun","storageType"})
@@ -22,9 +28,15 @@ public final class DataDiskStorageTypeInfoResponse {
         this.storageType = storageType;
     }
 
+/**
+ * Disk Lun
+ */
     public Optional<String> getLun() {
         return Optional.ofNullable(this.lun);
     }
+/**
+ * Disk Storage Type
+ */
     public Optional<String> getStorageType() {
         return Optional.ofNullable(this.storageType);
     }

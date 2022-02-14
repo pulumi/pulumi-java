@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The image response message.
+ */
 public final class GoogleCloudDialogflowV2IntentMessageImageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageImageResponse Empty = new GoogleCloudDialogflowV2IntentMessageImageResponse();
 
+    /**
+     * Optional. A text description of the image to be used for accessibility, e.g., screen readers.
+     */
     @InputImport(name="accessibilityText", required=true)
     private final String accessibilityText;
 
@@ -19,6 +25,9 @@ public final class GoogleCloudDialogflowV2IntentMessageImageResponse extends io.
         return this.accessibilityText;
     }
 
+    /**
+     * Optional. The public URI to an image file.
+     */
     @InputImport(name="imageUri", required=true)
     private final String imageUri;
 

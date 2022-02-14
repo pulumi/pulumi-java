@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration of the automation rule condition
+ */
 public final class AutomationRulePropertyValuesConditionResponseConditionProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final AutomationRulePropertyValuesConditionResponseConditionProperties Empty = new AutomationRulePropertyValuesConditionResponseConditionProperties();
 
+    /**
+     * The operator to use for evaluation the condition
+     */
     @InputImport(name="operator")
     private final @Nullable String operator;
 
@@ -22,6 +28,9 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
         return this.operator == null ? Optional.empty() : Optional.ofNullable(this.operator);
     }
 
+    /**
+     * The property to evaluate
+     */
     @InputImport(name="propertyName")
     private final @Nullable String propertyName;
 
@@ -29,6 +38,9 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
         return this.propertyName == null ? Optional.empty() : Optional.ofNullable(this.propertyName);
     }
 
+    /**
+     * The values to use for evaluating the condition
+     */
     @InputImport(name="propertyValues")
     private final @Nullable List<String> propertyValues;
 

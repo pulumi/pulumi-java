@@ -14,6 +14,12 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: PolicyAssignmentArtifact, RoleAssignmentArtifact, TemplateArtifact. */
 public class GetArtifact {
+/**
+ * Represents a blueprint artifact.
+API Version: 2018-11-01-preview.
+ *
+ * Represents a blueprint artifact.
+ */
     public static CompletableFuture<GetArtifactResult> invokeAsync(GetArtifactArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blueprint:getArtifact", TypeShape.of(GetArtifactResult.class), args == null ? GetArtifactArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,16 +10,50 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetADLSGen1FileDataSetResult {
+/**
+ * The ADLS account name.
+ */
     private final String accountName;
+/**
+ * Unique id for identifying a data set resource
+ */
     private final String dataSetId;
+/**
+ * The file name in the ADLS account.
+ */
     private final String fileName;
+/**
+ * The folder path within the ADLS account.
+ */
     private final String folderPath;
+/**
+ * The resource id of the azure resource
+ */
     private final String id;
+/**
+ * Kind of data set.
+Expected value is 'AdlsGen1File'.
+ */
     private final String kind;
+/**
+ * Name of the azure resource
+ */
     private final String name;
+/**
+ * Resource group of ADLS account.
+ */
     private final String resourceGroup;
+/**
+ * Subscription id of ADLS account.
+ */
     private final String subscriptionId;
+/**
+ * System Data of the Azure resource.
+ */
     private final SystemDataResponse systemData;
+/**
+ * Type of the azure resource
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"accountName","dataSetId","fileName","folderPath","id","kind","name","resourceGroup","subscriptionId","systemData","type"})
@@ -48,36 +82,70 @@ public final class GetADLSGen1FileDataSetResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The ADLS account name.
+ */
     public String getAccountName() {
         return this.accountName;
     }
+/**
+ * Unique id for identifying a data set resource
+ */
     public String getDataSetId() {
         return this.dataSetId;
     }
+/**
+ * The file name in the ADLS account.
+ */
     public String getFileName() {
         return this.fileName;
     }
+/**
+ * The folder path within the ADLS account.
+ */
     public String getFolderPath() {
         return this.folderPath;
     }
+/**
+ * The resource id of the azure resource
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Kind of data set.
+Expected value is 'AdlsGen1File'.
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * Name of the azure resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Resource group of ADLS account.
+ */
     public String getResourceGroup() {
         return this.resourceGroup;
     }
+/**
+ * Subscription id of ADLS account.
+ */
     public String getSubscriptionId() {
         return this.subscriptionId;
     }
+/**
+ * System Data of the Azure resource.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * Type of the azure resource
+ */
     public String getType() {
         return this.type;
     }

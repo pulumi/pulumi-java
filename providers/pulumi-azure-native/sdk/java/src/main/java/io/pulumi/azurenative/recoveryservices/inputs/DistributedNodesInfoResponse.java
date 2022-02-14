@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * This is used to represent the various nodes of the distributed container.
+ */
 public final class DistributedNodesInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DistributedNodesInfoResponse Empty = new DistributedNodesInfoResponse();
 
+    /**
+     * Error Details if the Status is non-success.
+     */
     @InputImport(name="errorDetail")
     private final @Nullable ErrorDetailResponse errorDetail;
 
@@ -22,6 +28,9 @@ public final class DistributedNodesInfoResponse extends io.pulumi.resources.Invo
         return this.errorDetail == null ? Optional.empty() : Optional.ofNullable(this.errorDetail);
     }
 
+    /**
+     * Name of the node under a distributed container.
+     */
     @InputImport(name="nodeName")
     private final @Nullable String nodeName;
 
@@ -29,6 +38,10 @@ public final class DistributedNodesInfoResponse extends io.pulumi.resources.Invo
         return this.nodeName == null ? Optional.empty() : Optional.ofNullable(this.nodeName);
     }
 
+    /**
+     * Status of this Node.
+Failed | Succeeded
+     */
     @InputImport(name="status")
     private final @Nullable String status;
 

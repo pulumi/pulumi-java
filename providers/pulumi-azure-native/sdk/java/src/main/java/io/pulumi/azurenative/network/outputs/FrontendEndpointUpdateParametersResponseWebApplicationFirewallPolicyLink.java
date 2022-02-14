@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink {
+/**
+ * Resource ID.
+ */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -18,6 +21,9 @@ public final class FrontendEndpointUpdateParametersResponseWebApplicationFirewal
         this.id = id;
     }
 
+/**
+ * Resource ID.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

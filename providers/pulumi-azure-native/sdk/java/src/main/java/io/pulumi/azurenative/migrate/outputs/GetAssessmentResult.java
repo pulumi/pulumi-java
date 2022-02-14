@@ -12,10 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAssessmentResult {
+/**
+ * For optimistic concurrency control.
+ */
     private final @Nullable String eTag;
+/**
+ * Path reference to this assessment. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/groups/{groupName}/assessment/{assessmentName}
+ */
     private final String id;
+/**
+ * Unique name of an assessment.
+ */
     private final String name;
+/**
+ * Properties of the assessment.
+ */
     private final AssessmentPropertiesResponse properties;
+/**
+ * Type of the object = [Microsoft.Migrate/assessmentProjects/groups/assessments].
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"eTag","id","name","properties","type"})
@@ -32,18 +47,33 @@ public final class GetAssessmentResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * For optimistic concurrency control.
+ */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
+/**
+ * Path reference to this assessment. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/groups/{groupName}/assessment/{assessmentName}
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Unique name of an assessment.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Properties of the assessment.
+ */
     public AssessmentPropertiesResponse getProperties() {
         return this.properties;
     }
+/**
+ * Type of the object = [Microsoft.Migrate/assessmentProjects/groups/assessments].
+ */
     public String getType() {
         return this.type;
     }

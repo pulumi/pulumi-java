@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of the key property.
+ */
     @EnumType
     public enum ReferenceDataKeyPropertyType {
+/**
+ * 
+ */
         String("String"),
+/**
+ * 
+ */
         Double("Double"),
+/**
+ * 
+ */
         Bool("Bool"),
+/**
+ * 
+ */
         DateTime("DateTime");
 
         private final String value;

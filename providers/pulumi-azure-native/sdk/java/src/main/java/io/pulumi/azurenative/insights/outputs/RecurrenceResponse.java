@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RecurrenceResponse {
+/**
+ * the recurrence frequency. How often the schedule profile should take effect. This value must be Week, meaning each week will have the same set of profiles. For example, to set a daily schedule, set **schedule** to every day of the week. The frequency property specifies that the schedule is repeated weekly.
+ */
     private final String frequency;
+/**
+ * the scheduling constraints for when the profile begins.
+ */
     private final RecurrentScheduleResponse schedule;
 
     @OutputCustomType.Constructor({"frequency","schedule"})
@@ -21,9 +27,15 @@ public final class RecurrenceResponse {
         this.schedule = Objects.requireNonNull(schedule);
     }
 
+/**
+ * the recurrence frequency. How often the schedule profile should take effect. This value must be Week, meaning each week will have the same set of profiles. For example, to set a daily schedule, set **schedule** to every day of the week. The frequency property specifies that the schedule is repeated weekly.
+ */
     public String getFrequency() {
         return this.frequency;
     }
+/**
+ * the scheduling constraints for when the profile begins.
+ */
     public RecurrentScheduleResponse getSchedule() {
         return this.schedule;
     }

@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StackTraceResponse {
+/**
+ * An array of stack elements.
+ */
     private final List<StackTraceElementResponse> elements;
 
     @OutputCustomType.Constructor({"elements"})
@@ -17,6 +20,9 @@ public final class StackTraceResponse {
         this.elements = Objects.requireNonNull(elements);
     }
 
+/**
+ * An array of stack elements.
+ */
     public List<StackTraceElementResponse> getElements() {
         return this.elements;
     }

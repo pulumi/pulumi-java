@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Immutable. Determines the version of both the default parser to be used when `schema` is not given, as well as the schematized parser used when `schema` is specified. This field is immutable after HL7v2 store creation.
+ */
     @EnumType
     public enum ParserConfigVersion {
+/**
+ * Unspecified parser version, equivalent to V1.
+ */
         ParserVersionUnspecified("PARSER_VERSION_UNSPECIFIED"),
+/**
+ * The `parsed_data` includes every given non-empty message field except the Field Separator (MSH-1) field. As a result, the parsed MSH segment starts with the MSH-2 field and the field numbers are off-by-one with respect to the HL7 standard.
+ */
         V1("V1"),
+/**
+ * The `parsed_data` includes every given non-empty message field.
+ */
         V2("V2");
 
         private final String value;

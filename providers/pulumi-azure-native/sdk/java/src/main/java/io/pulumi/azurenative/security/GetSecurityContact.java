@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecurityContact {
+/**
+ * Contact details and configurations for notifications coming from Azure Security Center.
+API Version: 2020-01-01-preview.
+ *
+ * Contact details and configurations for notifications coming from Azure Security Center.
+ */
     public static CompletableFuture<GetSecurityContactResult> invokeAsync(GetSecurityContactArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getSecurityContact", TypeShape.of(GetSecurityContactResult.class), args == null ? GetSecurityContactArgs.Empty : args, Utilities.withVersion(options));
     }

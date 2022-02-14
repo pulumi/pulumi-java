@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.automation;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.automation.CredentialArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -14,45 +13,190 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Definition of the credential.
+API Version: 2019-06-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create a credential
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var credential = new AzureNative.Automation.Credential("credential", new AzureNative.Automation.CredentialArgs
+        {
+            AutomationAccountName = "myAutomationAccount18",
+            CredentialName = "myCredential",
+            Description = "my description goes here",
+            Name = "myCredential",
+            Password = "<password>",
+            ResourceGroupName = "rg",
+            UserName = "mylingaiah",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := automation.NewCredential(ctx, "credential", &automation.CredentialArgs{
+			AutomationAccountName: pulumi.String("myAutomationAccount18"),
+			CredentialName:        pulumi.String("myCredential"),
+			Description:           pulumi.String("my description goes here"),
+			Name:                  pulumi.String("myCredential"),
+			Password:              pulumi.String("<password>"),
+			ResourceGroupName:     pulumi.String("rg"),
+			UserName:              pulumi.String("mylingaiah"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const credential = new azure_native.automation.Credential("credential", {
+    automationAccountName: "myAutomationAccount18",
+    credentialName: "myCredential",
+    description: "my description goes here",
+    name: "myCredential",
+    password: "<password>",
+    resourceGroupName: "rg",
+    userName: "mylingaiah",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+credential = azure_native.automation.Credential("credential",
+    automation_account_name="myAutomationAccount18",
+    credential_name="myCredential",
+    description="my description goes here",
+    name="myCredential",
+    password="<password>",
+    resource_group_name="rg",
+    user_name="mylingaiah")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:automation:Credential myCredential /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount18/credentials/myCredential 
+```
+
+ */
 @ResourceType(type="azure-native:automation:Credential")
 public class Credential extends io.pulumi.resources.CustomResource {
+    /**
+     * Gets the creation time.
+     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
+    /**
+     * @return Gets the creation time.
+     */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
+    /**
+     * Gets or sets the description.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Gets or sets the description.
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Gets the last modified time.
+     */
     @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
+    /**
+     * @return Gets the last modified time.
+     */
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The type of the resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Gets the user name of the credential.
+     */
     @OutputExport(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
+    /**
+     * @return Gets the user name of the credential.
+     */
     public Output<String> getUserName() {
         return this.userName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Credential(String name, CredentialArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:automation:Credential", name, args == null ? CredentialArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -73,6 +217,14 @@ public class Credential extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Credential get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Credential(name, id, options);
     }

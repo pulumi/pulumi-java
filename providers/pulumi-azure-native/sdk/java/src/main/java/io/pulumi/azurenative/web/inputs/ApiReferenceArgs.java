@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiReferenceArgs Empty = new ApiReferenceArgs();
 
+    /**
+     * Brand color
+     */
     @InputImport(name="brandColor")
     private final @Nullable Input<String> brandColor;
 
@@ -22,6 +28,9 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.brandColor == null ? Input.empty() : this.brandColor;
     }
 
+    /**
+     * The custom API description
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +38,9 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The display name
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -36,6 +48,9 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The icon URI
+     */
     @InputImport(name="iconUri")
     private final @Nullable Input<String> iconUri;
 
@@ -43,6 +58,9 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.iconUri == null ? Input.empty() : this.iconUri;
     }
 
+    /**
+     * Resource reference id
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -50,6 +68,9 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The name of the API
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -57,6 +78,9 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The JSON representation of the swagger
+     */
     @InputImport(name="swagger")
     private final @Nullable Input<Object> swagger;
 
@@ -64,6 +88,9 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.swagger == null ? Input.empty() : this.swagger;
     }
 
+    /**
+     * Resource reference type
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

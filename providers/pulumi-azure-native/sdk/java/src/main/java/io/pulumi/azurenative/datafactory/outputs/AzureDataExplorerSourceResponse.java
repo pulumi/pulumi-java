@@ -12,14 +12,42 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureDataExplorerSourceResponse {
+/**
+ * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+ */
     private final @Nullable Object additionalColumns;
+/**
+ * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+ */
     private final @Nullable Object disableMetricsCollection;
+/**
+ * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+ */
     private final @Nullable Object maxConcurrentConnections;
+/**
+ * The name of the Boolean option that controls whether truncation is applied to result-sets that go beyond a certain row-count limit.
+ */
     private final @Nullable Object noTruncation;
+/**
+ * Database query. Should be a Kusto Query Language (KQL) query. Type: string (or Expression with resultType string).
+ */
     private final Object query;
+/**
+ * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9]))..
+ */
     private final @Nullable Object queryTimeout;
+/**
+ * Source retry count. Type: integer (or Expression with resultType integer).
+ */
     private final @Nullable Object sourceRetryCount;
+/**
+ * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+ */
     private final @Nullable Object sourceRetryWait;
+/**
+ * Copy source type.
+Expected value is 'AzureDataExplorerSource'.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"additionalColumns","disableMetricsCollection","maxConcurrentConnections","noTruncation","query","queryTimeout","sourceRetryCount","sourceRetryWait","type"})
@@ -44,30 +72,58 @@ public final class AzureDataExplorerSourceResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+ */
     public Optional<Object> getAdditionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
+/**
+ * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+ */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
+/**
+ * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+ */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
+/**
+ * The name of the Boolean option that controls whether truncation is applied to result-sets that go beyond a certain row-count limit.
+ */
     public Optional<Object> getNoTruncation() {
         return Optional.ofNullable(this.noTruncation);
     }
+/**
+ * Database query. Should be a Kusto Query Language (KQL) query. Type: string (or Expression with resultType string).
+ */
     public Object getQuery() {
         return this.query;
     }
+/**
+ * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9]))..
+ */
     public Optional<Object> getQueryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
+/**
+ * Source retry count. Type: integer (or Expression with resultType integer).
+ */
     public Optional<Object> getSourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
+/**
+ * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+ */
     public Optional<Object> getSourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
+/**
+ * Copy source type.
+Expected value is 'AzureDataExplorerSource'.
+ */
     public String getType() {
         return this.type;
     }

@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecretArgs Empty = new SecretArgs();
 
+    /**
+     * object which contains secret parameters
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Object> parameters;
 
@@ -25,6 +31,9 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Name of the CDN profile which is unique within the resource group.
+     */
     @InputImport(name="profileName", required=true)
     private final Input<String> profileName;
 
@@ -32,6 +41,9 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.profileName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -39,6 +51,9 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the Secret under the profile.
+     */
     @InputImport(name="secretName")
     private final @Nullable Input<String> secretName;
 

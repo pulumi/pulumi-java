@@ -8,15 +8,42 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of compute
+ */
     @EnumType
     public enum ComputeType {
+/**
+ * 
+ */
         AKS("AKS"),
+/**
+ * 
+ */
         AmlCompute("AmlCompute"),
+/**
+ * 
+ */
         ComputeInstance("ComputeInstance"),
+/**
+ * 
+ */
         DataFactory("DataFactory"),
+/**
+ * 
+ */
         VirtualMachine("VirtualMachine"),
+/**
+ * 
+ */
         HDInsight("HDInsight"),
+/**
+ * 
+ */
         Databricks("Databricks"),
+/**
+ * 
+ */
         DataLakeAnalytics("DataLakeAnalytics");
 
         private final String value;

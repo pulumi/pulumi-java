@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AllowedKeyTypeResponse {
+/**
+ * Represents an allowed Elliptic Curve key type.
+ */
     private final EcKeyTypeResponse ellipticCurve;
+/**
+ * Represents an allowed RSA key type.
+ */
     private final RsaKeyTypeResponse rsa;
 
     @OutputCustomType.Constructor({"ellipticCurve","rsa"})
@@ -21,9 +27,15 @@ public final class AllowedKeyTypeResponse {
         this.rsa = Objects.requireNonNull(rsa);
     }
 
+/**
+ * Represents an allowed Elliptic Curve key type.
+ */
     public EcKeyTypeResponse getEllipticCurve() {
         return this.ellipticCurve;
     }
+/**
+ * Represents an allowed RSA key type.
+ */
     public RsaKeyTypeResponse getRsa() {
         return this.rsa;
     }

@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterArgs Empty = new ClusterArgs();
 
+    /**
+     * The cluster's billing type.
+     */
     @InputImport(name="billingType")
     private final @Nullable Input<Either<String,BillingType>> billingType;
 
@@ -28,6 +34,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.billingType == null ? Input.empty() : this.billingType;
     }
 
+    /**
+     * The name of the Log Analytics cluster.
+     */
     @InputImport(name="clusterName")
     private final @Nullable Input<String> clusterName;
 
@@ -35,6 +44,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterName == null ? Input.empty() : this.clusterName;
     }
 
+    /**
+     * The identity of the resource.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityArgs> identity;
 
@@ -42,6 +54,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is 'true' if region supports Availability Zones.
+     */
     @InputImport(name="isAvailabilityZonesEnabled")
     private final @Nullable Input<Boolean> isAvailabilityZonesEnabled;
 
@@ -49,6 +64,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.isAvailabilityZonesEnabled == null ? Input.empty() : this.isAvailabilityZonesEnabled;
     }
 
+    /**
+     * Configures whether cluster will use double encryption. This Property can not be modified after cluster creation. Default value is 'true'
+     */
     @InputImport(name="isDoubleEncryptionEnabled")
     private final @Nullable Input<Boolean> isDoubleEncryptionEnabled;
 
@@ -56,6 +74,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.isDoubleEncryptionEnabled == null ? Input.empty() : this.isDoubleEncryptionEnabled;
     }
 
+    /**
+     * The associated key properties.
+     */
     @InputImport(name="keyVaultProperties")
     private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
 
@@ -63,6 +84,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyVaultProperties == null ? Input.empty() : this.keyVaultProperties;
     }
 
+    /**
+     * The geo-location where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -70,6 +94,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -77,6 +104,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The sku properties.
+     */
     @InputImport(name="sku")
     private final @Nullable Input<ClusterSkuArgs> sku;
 
@@ -84,6 +114,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

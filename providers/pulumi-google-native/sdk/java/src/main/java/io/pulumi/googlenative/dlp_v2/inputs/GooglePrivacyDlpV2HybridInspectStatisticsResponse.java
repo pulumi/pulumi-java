@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Statistics related to processing hybrid inspect requests.
+ */
 public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2HybridInspectStatisticsResponse Empty = new GooglePrivacyDlpV2HybridInspectStatisticsResponse();
 
+    /**
+     * The number of hybrid inspection requests aborted because the job ran out of quota or was ended before they could be processed.
+     */
     @InputImport(name="abortedCount", required=true)
     private final String abortedCount;
 
@@ -19,6 +25,9 @@ public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse extends io.
         return this.abortedCount;
     }
 
+    /**
+     * The number of hybrid requests currently being processed. Only populated when called via method `getDlpJob`. A burst of traffic may cause hybrid inspect requests to be enqueued. Processing will take place as quickly as possible, but resource limitations may impact how long a request is enqueued for.
+     */
     @InputImport(name="pendingCount", required=true)
     private final String pendingCount;
 
@@ -26,6 +35,9 @@ public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse extends io.
         return this.pendingCount;
     }
 
+    /**
+     * The number of hybrid inspection requests processed within this job.
+     */
     @InputImport(name="processedCount", required=true)
     private final String processedCount;
 

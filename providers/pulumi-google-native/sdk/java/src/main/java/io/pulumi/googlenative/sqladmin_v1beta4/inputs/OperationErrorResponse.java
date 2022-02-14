@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Database instance operation error.
+ */
 public final class OperationErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OperationErrorResponse Empty = new OperationErrorResponse();
 
+    /**
+     * Identifies the specific error that occurred.
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -19,6 +25,9 @@ public final class OperationErrorResponse extends io.pulumi.resources.InvokeArgs
         return this.code;
     }
 
+    /**
+     * This is always `sql#operationError`.
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -26,6 +35,9 @@ public final class OperationErrorResponse extends io.pulumi.resources.InvokeArgs
         return this.kind;
     }
 
+    /**
+     * Additional information about the error encountered.
+     */
     @InputImport(name="message", required=true)
     private final String message;
 

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Encryption key type to be used for the encryption service. 'Account' key type implies that an account-scoped encryption key will be used. 'Service' key type implies that a default service key is used.
+ */
     @EnumType
     public enum KeyType {
+/**
+ * 
+ */
         Service("Service"),
+/**
+ * 
+ */
         Account("Account");
 
         private final String value;

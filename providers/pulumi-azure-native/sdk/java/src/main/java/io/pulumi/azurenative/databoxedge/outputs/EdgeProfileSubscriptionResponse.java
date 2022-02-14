@@ -13,15 +13,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EdgeProfileSubscriptionResponse {
+/**
+ * ARM ID of the subscription
+ */
     private final @Nullable String id;
+/**
+ * 
+ */
     private final @Nullable String locationPlacementId;
+/**
+ * 
+ */
     private final @Nullable String quotaId;
+/**
+ * 
+ */
     private final @Nullable List<SubscriptionRegisteredFeaturesResponse> registeredFeatures;
+/**
+ * 
+ */
     private final @Nullable String registrationDate;
+/**
+ * Edge Subscription Registration ID
+ */
     private final @Nullable String registrationId;
+/**
+ * 
+ */
     private final @Nullable String serializedDetails;
+/**
+ * 
+ */
     private final @Nullable String state;
+/**
+ * 
+ */
     private final @Nullable String subscriptionId;
+/**
+ * 
+ */
     private final @Nullable String tenantId;
 
     @OutputCustomType.Constructor({"id","locationPlacementId","quotaId","registeredFeatures","registrationDate","registrationId","serializedDetails","state","subscriptionId","tenantId"})
@@ -48,33 +78,63 @@ public final class EdgeProfileSubscriptionResponse {
         this.tenantId = tenantId;
     }
 
+/**
+ * ARM ID of the subscription
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * 
+ */
     public Optional<String> getLocationPlacementId() {
         return Optional.ofNullable(this.locationPlacementId);
     }
+/**
+ * 
+ */
     public Optional<String> getQuotaId() {
         return Optional.ofNullable(this.quotaId);
     }
+/**
+ * 
+ */
     public List<SubscriptionRegisteredFeaturesResponse> getRegisteredFeatures() {
         return this.registeredFeatures == null ? List.of() : this.registeredFeatures;
     }
+/**
+ * 
+ */
     public Optional<String> getRegistrationDate() {
         return Optional.ofNullable(this.registrationDate);
     }
+/**
+ * Edge Subscription Registration ID
+ */
     public Optional<String> getRegistrationId() {
         return Optional.ofNullable(this.registrationId);
     }
+/**
+ * 
+ */
     public Optional<String> getSerializedDetails() {
         return Optional.ofNullable(this.serializedDetails);
     }
+/**
+ * 
+ */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
+/**
+ * 
+ */
     public Optional<String> getSubscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
+/**
+ * 
+ */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }

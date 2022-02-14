@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * EventHandler template item settings.
+ */
 public final class EventHandlerTemplateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EventHandlerTemplateResponse Empty = new EventHandlerTemplateResponse();
 
+    /**
+     * Gets or sets the auth settings for an event handler. If not set, no auth is used.
+     */
     @InputImport(name="auth")
     private final @Nullable UpstreamAuthSettingsResponse auth;
 
@@ -22,6 +28,12 @@ public final class EventHandlerTemplateResponse extends io.pulumi.resources.Invo
         return this.auth == null ? Optional.empty() : Optional.ofNullable(this.auth);
     }
 
+    /**
+     * Gets ot sets the system event pattern.
+There are 2 kind of patterns supported:
+    1. The single event name, for example, "connect", it matches "connect"
+    2. Combine multiple events with ",", for example "connect,disconnected", it matches event "connect" and "disconnected"
+     */
     @InputImport(name="systemEventPattern")
     private final @Nullable String systemEventPattern;
 
@@ -29,6 +41,10 @@ public final class EventHandlerTemplateResponse extends io.pulumi.resources.Invo
         return this.systemEventPattern == null ? Optional.empty() : Optional.ofNullable(this.systemEventPattern);
     }
 
+    /**
+     * Gets or sets the EventHandler URL template. You can use a predefined parameter {hub} and {event} inside the template, the value of the EventHandler URL is dynamically calculated when the client request comes in.
+For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host part can't contains parameters.
+     */
     @InputImport(name="urlTemplate", required=true)
     private final String urlTemplate;
 
@@ -36,6 +52,13 @@ public final class EventHandlerTemplateResponse extends io.pulumi.resources.Invo
         return this.urlTemplate;
     }
 
+    /**
+     * Gets or sets the matching pattern for event names.
+There are 3 kind of patterns supported:
+    1. "*", it to matches any event name
+    2. Combine multiple events with ",", for example "event1,event2", it matches event "event1" and "event2"
+    3. The single event name, for example, "event1", it matches "event1"
+     */
     @InputImport(name="userEventPattern")
     private final @Nullable String userEventPattern;
 

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Commitment for a particular license resource.
+ */
 public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LicenseResourceCommitmentArgs Empty = new LicenseResourceCommitmentArgs();
 
+    /**
+     * The number of licenses purchased.
+     */
     @InputImport(name="amount")
     private final @Nullable Input<String> amount;
 
@@ -21,6 +27,9 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
         return this.amount == null ? Input.empty() : this.amount;
     }
 
+    /**
+     * Specifies the core range of the instance for which this license applies.
+     */
     @InputImport(name="coresPerLicense")
     private final @Nullable Input<String> coresPerLicense;
 
@@ -28,6 +37,9 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
         return this.coresPerLicense == null ? Input.empty() : this.coresPerLicense;
     }
 
+    /**
+     * Any applicable license URI.
+     */
     @InputImport(name="license")
     private final @Nullable Input<String> license;
 

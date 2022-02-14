@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Backup Instance
+ */
 public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackupInstanceArgs Empty = new BackupInstanceArgs();
 
+    /**
+     * Gets or sets the data source information.
+     */
     @InputImport(name="dataSourceInfo", required=true)
     private final Input<DatasourceArgs> dataSourceInfo;
 
@@ -24,6 +30,9 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataSourceInfo;
     }
 
+    /**
+     * Gets or sets the data source set information.
+     */
     @InputImport(name="dataSourceSetInfo")
     private final @Nullable Input<DatasourceSetArgs> dataSourceSetInfo;
 
@@ -31,6 +40,9 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataSourceSetInfo == null ? Input.empty() : this.dataSourceSetInfo;
     }
 
+    /**
+     * Gets or sets the Backup Instance friendly name.
+     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -38,6 +50,9 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="objectType", required=true)
     private final Input<String> objectType;
 
@@ -45,6 +60,9 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.objectType;
     }
 
+    /**
+     * Gets or sets the policy information.
+     */
     @InputImport(name="policyInfo", required=true)
     private final Input<PolicyInfoArgs> policyInfo;
 

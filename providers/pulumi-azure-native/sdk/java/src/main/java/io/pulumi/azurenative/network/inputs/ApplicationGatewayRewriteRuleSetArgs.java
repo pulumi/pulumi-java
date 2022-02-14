@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Rewrite rule set of an application gateway.
+ */
 public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationGatewayRewriteRuleSetArgs Empty = new ApplicationGatewayRewriteRuleSetArgs();
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -23,6 +29,9 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Name of the rewrite rule set that is unique within an Application Gateway.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -30,6 +39,9 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Rewrite rules in the rewrite rule set.
+     */
     @InputImport(name="rewriteRules")
     private final @Nullable Input<List<ApplicationGatewayRewriteRuleArgs>> rewriteRules;
 

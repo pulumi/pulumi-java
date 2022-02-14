@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InputDataBindingResponse {
+/**
+ * ARM resource ID of the registered dataVersion.
+ */
     private final @Nullable String dataId;
+/**
+ * Mechanism for accessing the data artifact.
+ */
     private final @Nullable String mode;
+/**
+ * Location of data inside the container process.
+ */
     private final @Nullable String pathOnCompute;
 
     @OutputCustomType.Constructor({"dataId","mode","pathOnCompute"})
@@ -25,12 +34,21 @@ public final class InputDataBindingResponse {
         this.pathOnCompute = pathOnCompute;
     }
 
+/**
+ * ARM resource ID of the registered dataVersion.
+ */
     public Optional<String> getDataId() {
         return Optional.ofNullable(this.dataId);
     }
+/**
+ * Mechanism for accessing the data artifact.
+ */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
+/**
+ * Location of data inside the container process.
+ */
     public Optional<String> getPathOnCompute() {
         return Optional.ofNullable(this.pathOnCompute);
     }

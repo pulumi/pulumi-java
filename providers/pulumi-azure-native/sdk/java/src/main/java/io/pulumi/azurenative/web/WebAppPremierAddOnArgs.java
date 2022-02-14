@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebAppPremierAddOnArgs Empty = new WebAppPremierAddOnArgs();
 
+    /**
+     * Kind of resource.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -22,6 +28,9 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Resource Location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -29,6 +38,9 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Premier add on Marketplace offer.
+     */
     @InputImport(name="marketplaceOffer")
     private final @Nullable Input<String> marketplaceOffer;
 
@@ -36,6 +48,9 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
         return this.marketplaceOffer == null ? Input.empty() : this.marketplaceOffer;
     }
 
+    /**
+     * Premier add on Marketplace publisher.
+     */
     @InputImport(name="marketplacePublisher")
     private final @Nullable Input<String> marketplacePublisher;
 
@@ -43,6 +58,9 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
         return this.marketplacePublisher == null ? Input.empty() : this.marketplacePublisher;
     }
 
+    /**
+     * Name of the app.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -50,6 +68,9 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
         return this.name;
     }
 
+    /**
+     * Add-on name.
+     */
     @InputImport(name="premierAddOnName")
     private final @Nullable Input<String> premierAddOnName;
 
@@ -57,6 +78,9 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
         return this.premierAddOnName == null ? Input.empty() : this.premierAddOnName;
     }
 
+    /**
+     * Premier add on Product.
+     */
     @InputImport(name="product")
     private final @Nullable Input<String> product;
 
@@ -64,6 +88,9 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
         return this.product == null ? Input.empty() : this.product;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -71,6 +98,9 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
+    /**
+     * Premier add on SKU.
+     */
     @InputImport(name="sku")
     private final @Nullable Input<String> sku;
 
@@ -78,6 +108,9 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -85,6 +118,9 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Premier add on Vendor.
+     */
     @InputImport(name="vendor")
     private final @Nullable Input<String> vendor;
 

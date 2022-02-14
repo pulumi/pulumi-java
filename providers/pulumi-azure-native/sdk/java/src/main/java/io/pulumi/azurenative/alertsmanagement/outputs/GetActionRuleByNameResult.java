@@ -15,11 +15,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetActionRuleByNameResult {
+/**
+ * Azure resource Id
+ */
     private final String id;
+/**
+ * Resource location
+ */
     private final String location;
+/**
+ * Azure resource name
+ */
     private final String name;
+/**
+ * action rule properties
+ */
     private final Object properties;
+/**
+ * Resource tags
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Azure resource type
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","location","name","properties","tags","type"})
@@ -38,21 +56,39 @@ public final class GetActionRuleByNameResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Azure resource Id
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource location
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * Azure resource name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * action rule properties
+ */
     public Object getProperties() {
         return this.properties;
     }
+/**
+ * Resource tags
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Azure resource type
+ */
     public String getType() {
         return this.type;
     }

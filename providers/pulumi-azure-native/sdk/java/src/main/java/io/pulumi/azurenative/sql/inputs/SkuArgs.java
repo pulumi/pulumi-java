@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An ARM Resource SKU.
+ */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 
+    /**
+     * Capacity of the particular SKU.
+     */
     @InputImport(name="capacity")
     private final @Nullable Input<Integer> capacity;
 
@@ -22,6 +28,9 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
+    /**
+     * If the service has different generations of hardware, for the same SKU, then that can be captured here.
+     */
     @InputImport(name="family")
     private final @Nullable Input<String> family;
 
@@ -29,6 +38,9 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.family == null ? Input.empty() : this.family;
     }
 
+    /**
+     * The name of the SKU, typically, a letter + Number code, e.g. P3.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -36,6 +48,9 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * Size of the particular SKU
+     */
     @InputImport(name="size")
     private final @Nullable Input<String> size;
 
@@ -43,6 +58,9 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.size == null ? Input.empty() : this.size;
     }
 
+    /**
+     * The tier or edition of the particular SKU, e.g. Basic, Premium.
+     */
     @InputImport(name="tier")
     private final @Nullable Input<String> tier;
 

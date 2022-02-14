@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubscriptionArgs Empty = new SubscriptionArgs();
 
+    /**
+     * The approximate amount of time (on a best-effort basis) Pub/Sub waits for the subscriber to acknowledge receipt before resending the message. In the interval after the message is delivered and before it is acknowledged, it is considered to be *outstanding*. During that time period, the message will not be redelivered (on a best-effort basis). For pull subscriptions, this value is used as the initial value for the ack deadline. To override this value for a given message, call `ModifyAckDeadline` with the corresponding `ack_id` if using non-streaming pull or send the `ack_id` in a `StreamingModifyAckDeadlineRequest` if using streaming pull. The minimum custom deadline you can specify is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the message.
+     */
     @InputImport(name="ackDeadlineSeconds")
     private final @Nullable Input<Integer> ackDeadlineSeconds;
 
@@ -28,6 +34,9 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.ackDeadlineSeconds == null ? Input.empty() : this.ackDeadlineSeconds;
     }
 
+    /**
+     * A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscriptions's parent project (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on this subscription.
+     */
     @InputImport(name="deadLetterPolicy")
     private final @Nullable Input<DeadLetterPolicyArgs> deadLetterPolicy;
 
@@ -35,6 +44,9 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.deadLetterPolicy == null ? Input.empty() : this.deadLetterPolicy;
     }
 
+    /**
+     * Indicates whether the subscription is detached from its topic. Detached subscriptions don't receive messages from their topic and don't retain any backlog. `Pull` and `StreamingPull` requests will return FAILED_PRECONDITION. If the subscription is a push subscription, pushes to the endpoint will not be made.
+     */
     @InputImport(name="detached")
     private final @Nullable Input<Boolean> detached;
 
@@ -42,6 +54,9 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.detached == null ? Input.empty() : this.detached;
     }
 
+    /**
+     * If true, messages published with the same `ordering_key` in `PubsubMessage` will be delivered to the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they may be delivered in any order.
+     */
     @InputImport(name="enableMessageOrdering")
     private final @Nullable Input<Boolean> enableMessageOrdering;
 
@@ -49,6 +64,9 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableMessageOrdering == null ? Input.empty() : this.enableMessageOrdering;
     }
 
+    /**
+     * A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as long as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the subscription. If `expiration_policy` is not set, a *default policy* with `ttl` of 31 days will be used. The minimum allowed value for `expiration_policy.ttl` is 1 day. If `expiration_policy` is set, but `expiration_policy.ttl` is not set, the subscription never expires.
+     */
     @InputImport(name="expirationPolicy")
     private final @Nullable Input<ExpirationPolicyArgs> expirationPolicy;
 
@@ -56,6 +74,9 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.expirationPolicy == null ? Input.empty() : this.expirationPolicy;
     }
 
+    /**
+     * An expression written in the Pub/Sub [filter language](https://cloud.google.com/pubsub/docs/filtering). If non-empty, then only `PubsubMessage`s whose `attributes` field matches the filter are delivered on this subscription. If empty, then no messages are filtered out.
+     */
     @InputImport(name="filter")
     private final @Nullable Input<String> filter;
 
@@ -63,6 +84,9 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.filter == null ? Input.empty() : this.filter;
     }
 
+    /**
+     * See Creating and managing labels.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -70,6 +94,9 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If `retain_acked_messages` is true, then this also configures the retention of acknowledged messages, and thus configures how far back in time a `Seek` can be done. Defaults to 7 days. Cannot be more than 7 days or less than 10 minutes.
+     */
     @InputImport(name="messageRetentionDuration")
     private final @Nullable Input<String> messageRetentionDuration;
 
@@ -77,6 +104,9 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.messageRetentionDuration == null ? Input.empty() : this.messageRetentionDuration;
     }
 
+    /**
+     * The name of the subscription. It must have the format `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must start with a letter, and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters in length, and it must not start with `"goog"`.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -84,6 +114,9 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -91,6 +124,9 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * If push delivery is used with this subscription, this field is used to configure it. At most one of `pushConfig` and `bigQueryConfig` can be set. If both are empty, then the subscriber will pull and ack messages using API methods.
+     */
     @InputImport(name="pushConfig")
     private final @Nullable Input<PushConfigArgs> pushConfig;
 
@@ -98,6 +134,9 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.pushConfig == null ? Input.empty() : this.pushConfig;
     }
 
+    /**
+     * Indicates whether to retain acknowledged messages. If true, then messages are not expunged from the subscription's backlog, even if they are acknowledged, until they fall out of the `message_retention_duration` window. This must be true if you would like to [`Seek` to a timestamp] (https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) in the past to replay previously-acknowledged messages.
+     */
     @InputImport(name="retainAckedMessages")
     private final @Nullable Input<Boolean> retainAckedMessages;
 
@@ -105,6 +144,9 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.retainAckedMessages == null ? Input.empty() : this.retainAckedMessages;
     }
 
+    /**
+     * A policy that specifies how Pub/Sub retries message delivery for this subscription. If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message.
+     */
     @InputImport(name="retryPolicy")
     private final @Nullable Input<RetryPolicyArgs> retryPolicy;
 
@@ -112,6 +154,9 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.retryPolicy == null ? Input.empty() : this.retryPolicy;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="subscriptionId", required=true)
     private final Input<String> subscriptionId;
 
@@ -119,6 +164,9 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
         return this.subscriptionId;
     }
 
+    /**
+     * The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-topic_` if the topic has been deleted.
+     */
     @InputImport(name="topic", required=true)
     private final Input<String> topic;
 

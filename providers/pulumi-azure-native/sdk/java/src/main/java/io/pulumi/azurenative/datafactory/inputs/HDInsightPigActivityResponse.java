@@ -17,10 +17,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * HDInsight Pig activity type.
+ */
 public final class HDInsightPigActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HDInsightPigActivityResponse Empty = new HDInsightPigActivityResponse();
 
+    /**
+     * User specified arguments to HDInsightActivity. Type: array (or Expression with resultType array).
+     */
     @InputImport(name="arguments")
     private final @Nullable Object arguments;
 
@@ -28,6 +34,9 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
         return this.arguments == null ? Optional.empty() : Optional.ofNullable(this.arguments);
     }
 
+    /**
+     * Allows user to specify defines for Pig job request.
+     */
     @InputImport(name="defines")
     private final @Nullable Map<String,Object> defines;
 
@@ -35,6 +44,9 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
         return this.defines == null ? Map.of() : this.defines;
     }
 
+    /**
+     * Activity depends on condition.
+     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -42,6 +54,9 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -49,6 +64,9 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Debug info option.
+     */
     @InputImport(name="getDebugInfo")
     private final @Nullable String getDebugInfo;
 
@@ -56,6 +74,9 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
         return this.getDebugInfo == null ? Optional.empty() : Optional.ofNullable(this.getDebugInfo);
     }
 
+    /**
+     * Linked service reference.
+     */
     @InputImport(name="linkedServiceName")
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
@@ -63,6 +84,9 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
+    /**
+     * Activity name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -70,6 +94,9 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
         return this.name;
     }
 
+    /**
+     * Activity policy.
+     */
     @InputImport(name="policy")
     private final @Nullable ActivityPolicyResponse policy;
 
@@ -77,6 +104,9 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
+    /**
+     * Script linked service reference.
+     */
     @InputImport(name="scriptLinkedService")
     private final @Nullable LinkedServiceReferenceResponse scriptLinkedService;
 
@@ -84,6 +114,9 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
         return this.scriptLinkedService == null ? Optional.empty() : Optional.ofNullable(this.scriptLinkedService);
     }
 
+    /**
+     * Script path. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="scriptPath")
     private final @Nullable Object scriptPath;
 
@@ -91,6 +124,9 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
         return this.scriptPath == null ? Optional.empty() : Optional.ofNullable(this.scriptPath);
     }
 
+    /**
+     * Storage linked service references.
+     */
     @InputImport(name="storageLinkedServices")
     private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
 
@@ -98,6 +134,10 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
         return this.storageLinkedServices == null ? List.of() : this.storageLinkedServices;
     }
 
+    /**
+     * Type of activity.
+Expected value is 'HDInsightPig'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -105,6 +145,9 @@ public final class HDInsightPigActivityResponse extends io.pulumi.resources.Invo
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

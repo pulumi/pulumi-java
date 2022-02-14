@@ -13,14 +13,41 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RecurringScheduleResponse {
+/**
+ * Optional. The end time at which a recurring patch deployment schedule is no longer active.
+ */
     private final String endTime;
+/**
+ * The frequency unit of this recurring schedule.
+ */
     private final String frequency;
+/**
+ * The time the last patch job ran successfully.
+ */
     private final String lastExecuteTime;
+/**
+ * Schedule with monthly executions.
+ */
     private final MonthlyScheduleResponse monthly;
+/**
+ * The time the next patch job is scheduled to run.
+ */
     private final String nextExecuteTime;
+/**
+ * Optional. The time that the recurring schedule becomes effective. Defaults to `create_time` of the patch deployment.
+ */
     private final String startTime;
+/**
+ * Time of the day to run a recurring deployment.
+ */
     private final TimeOfDayResponse timeOfDay;
+/**
+ * Defines the time zone that `time_of_day` is relative to. The rules for daylight saving time are determined by the chosen time zone.
+ */
     private final TimeZoneResponse timeZone;
+/**
+ * Schedule with weekly executions.
+ */
     private final WeeklyScheduleResponse weekly;
 
     @OutputCustomType.Constructor({"endTime","frequency","lastExecuteTime","monthly","nextExecuteTime","startTime","timeOfDay","timeZone","weekly"})
@@ -45,30 +72,57 @@ public final class RecurringScheduleResponse {
         this.weekly = Objects.requireNonNull(weekly);
     }
 
+/**
+ * Optional. The end time at which a recurring patch deployment schedule is no longer active.
+ */
     public String getEndTime() {
         return this.endTime;
     }
+/**
+ * The frequency unit of this recurring schedule.
+ */
     public String getFrequency() {
         return this.frequency;
     }
+/**
+ * The time the last patch job ran successfully.
+ */
     public String getLastExecuteTime() {
         return this.lastExecuteTime;
     }
+/**
+ * Schedule with monthly executions.
+ */
     public MonthlyScheduleResponse getMonthly() {
         return this.monthly;
     }
+/**
+ * The time the next patch job is scheduled to run.
+ */
     public String getNextExecuteTime() {
         return this.nextExecuteTime;
     }
+/**
+ * Optional. The time that the recurring schedule becomes effective. Defaults to `create_time` of the patch deployment.
+ */
     public String getStartTime() {
         return this.startTime;
     }
+/**
+ * Time of the day to run a recurring deployment.
+ */
     public TimeOfDayResponse getTimeOfDay() {
         return this.timeOfDay;
     }
+/**
+ * Defines the time zone that `time_of_day` is relative to. The rules for daylight saving time are determined by the chosen time zone.
+ */
     public TimeZoneResponse getTimeZone() {
         return this.timeZone;
     }
+/**
+ * Schedule with weekly executions.
+ */
     public WeeklyScheduleResponse getWeekly() {
         return this.weekly;
     }

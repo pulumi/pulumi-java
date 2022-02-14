@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetSearchApplicationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSearchApplicationArgs Empty = new GetSearchApplicationArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="debugOptionsEnableDebugging")
     private final @Nullable String debugOptionsEnableDebugging;
 
@@ -21,6 +27,9 @@ public final class GetSearchApplicationArgs extends io.pulumi.resources.InvokeAr
         return this.debugOptionsEnableDebugging == null ? Optional.empty() : Optional.ofNullable(this.debugOptionsEnableDebugging);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="searchapplicationId", required=true)
     private final String searchapplicationId;
 

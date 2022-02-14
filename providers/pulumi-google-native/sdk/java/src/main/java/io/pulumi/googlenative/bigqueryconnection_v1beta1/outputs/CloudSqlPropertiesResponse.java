@@ -10,9 +10,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CloudSqlPropertiesResponse {
+/**
+ * Input only. Cloud SQL credential.
+ */
     private final CloudSqlCredentialResponse credential;
+/**
+ * Database name.
+ */
     private final String database;
+/**
+ * Cloud SQL instance ID in the form `project:location:instance`.
+ */
     private final String instanceId;
+/**
+ * Type of the Cloud SQL database.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"credential","database","instanceId","type"})
@@ -27,15 +39,27 @@ public final class CloudSqlPropertiesResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Input only. Cloud SQL credential.
+ */
     public CloudSqlCredentialResponse getCredential() {
         return this.credential;
     }
+/**
+ * Database name.
+ */
     public String getDatabase() {
         return this.database;
     }
+/**
+ * Cloud SQL instance ID in the form `project:location:instance`.
+ */
     public String getInstanceId() {
         return this.instanceId;
     }
+/**
+ * Type of the Cloud SQL database.
+ */
     public String getType() {
         return this.type;
     }

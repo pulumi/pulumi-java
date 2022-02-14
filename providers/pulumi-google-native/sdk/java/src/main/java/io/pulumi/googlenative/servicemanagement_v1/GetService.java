@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetService {
+/**
+ * Gets a managed service. Authentication is required unless the service is public.
+ */
     public static CompletableFuture<GetServiceResult> invokeAsync(GetServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:servicemanagement/v1:getService", TypeShape.of(GetServiceResult.class), args == null ? GetServiceArgs.Empty : args, Utilities.withVersion(options));
     }

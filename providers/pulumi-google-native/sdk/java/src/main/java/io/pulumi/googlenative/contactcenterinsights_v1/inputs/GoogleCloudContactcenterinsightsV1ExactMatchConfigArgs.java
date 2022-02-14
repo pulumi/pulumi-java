@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Exact match configuration.
+ */
 public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs Empty = new GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs();
 
+    /**
+     * Whether to consider case sensitivity when performing an exact match.
+     */
     @InputImport(name="caseSensitive")
     private final @Nullable Input<Boolean> caseSensitive;
 

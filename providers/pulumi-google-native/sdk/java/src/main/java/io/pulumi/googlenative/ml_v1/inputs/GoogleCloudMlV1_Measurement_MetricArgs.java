@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A message representing a metric in the measurement.
+ */
 public final class GoogleCloudMlV1_Measurement_MetricArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudMlV1_Measurement_MetricArgs Empty = new GoogleCloudMlV1_Measurement_MetricArgs();
 
+    /**
+     * Metric name.
+     */
     @InputImport(name="metric", required=true)
     private final Input<String> metric;
 
@@ -21,6 +27,9 @@ public final class GoogleCloudMlV1_Measurement_MetricArgs extends io.pulumi.reso
         return this.metric;
     }
 
+    /**
+     * The value for this metric.
+     */
     @InputImport(name="value", required=true)
     private final Input<Double> value;
 

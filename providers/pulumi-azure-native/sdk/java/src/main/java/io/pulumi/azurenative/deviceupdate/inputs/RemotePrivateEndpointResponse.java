@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Remote private endpoint details.
+ */
 public final class RemotePrivateEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RemotePrivateEndpointResponse Empty = new RemotePrivateEndpointResponse();
 
+    /**
+     * List of connection details.
+     */
     @InputImport(name="connectionDetails")
     private final @Nullable List<ConnectionDetailsResponse> connectionDetails;
 
@@ -25,6 +31,9 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
         return this.connectionDetails == null ? List.of() : this.connectionDetails;
     }
 
+    /**
+     * Remote endpoint resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -32,6 +41,9 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * List of private link service connections that need manual approval.
+     */
     @InputImport(name="manualPrivateLinkServiceConnections")
     private final @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
 
@@ -39,6 +51,9 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
         return this.manualPrivateLinkServiceConnections == null ? List.of() : this.manualPrivateLinkServiceConnections;
     }
 
+    /**
+     * List of automatically approved private link service connections.
+     */
     @InputImport(name="privateLinkServiceConnections")
     private final @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections;
 
@@ -46,6 +61,9 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
         return this.privateLinkServiceConnections == null ? List.of() : this.privateLinkServiceConnections;
     }
 
+    /**
+     * List of private link service proxies.
+     */
     @InputImport(name="privateLinkServiceProxies")
     private final @Nullable List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies;
 
@@ -53,6 +71,9 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
         return this.privateLinkServiceProxies == null ? List.of() : this.privateLinkServiceProxies;
     }
 
+    /**
+     * Virtual network traffic tag.
+     */
     @InputImport(name="vnetTrafficTag", required=true)
     private final String vnetTrafficTag;
 

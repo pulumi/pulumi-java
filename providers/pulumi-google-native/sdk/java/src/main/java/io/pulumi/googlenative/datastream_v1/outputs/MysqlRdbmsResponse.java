@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MysqlRdbmsResponse {
+/**
+ * Mysql databases on the server
+ */
     private final List<MysqlDatabaseResponse> mysqlDatabases;
 
     @OutputCustomType.Constructor({"mysqlDatabases"})
@@ -17,6 +20,9 @@ public final class MysqlRdbmsResponse {
         this.mysqlDatabases = Objects.requireNonNull(mysqlDatabases);
     }
 
+/**
+ * Mysql databases on the server
+ */
     public List<MysqlDatabaseResponse> getMysqlDatabases() {
         return this.mysqlDatabases;
     }

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * API OAuth2 Authentication settings details.
+ */
 public final class OAuth2AuthenticationSettingsContractArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OAuth2AuthenticationSettingsContractArgs Empty = new OAuth2AuthenticationSettingsContractArgs();
 
+    /**
+     * OAuth authorization server identifier.
+     */
     @InputImport(name="authorizationServerId")
     private final @Nullable Input<String> authorizationServerId;
 
@@ -21,6 +27,9 @@ public final class OAuth2AuthenticationSettingsContractArgs extends io.pulumi.re
         return this.authorizationServerId == null ? Input.empty() : this.authorizationServerId;
     }
 
+    /**
+     * operations scope.
+     */
     @InputImport(name="scope")
     private final @Nullable Input<String> scope;
 

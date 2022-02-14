@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of a task step.
+ */
 public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FileTaskStepResponse Empty = new FileTaskStepResponse();
 
+    /**
+     * List of base image dependencies for a step.
+     */
     @InputImport(name="baseImageDependencies", required=true)
     private final List<BaseImageDependencyResponse> baseImageDependencies;
 
@@ -24,6 +30,9 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
         return this.baseImageDependencies;
     }
 
+    /**
+     * The token (git PAT or SAS token of storage account blob) associated with the context for a step.
+     */
     @InputImport(name="contextAccessToken")
     private final @Nullable String contextAccessToken;
 
@@ -31,6 +40,9 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
         return this.contextAccessToken == null ? Optional.empty() : Optional.ofNullable(this.contextAccessToken);
     }
 
+    /**
+     * The URL(absolute or relative) of the source context for the task step.
+     */
     @InputImport(name="contextPath")
     private final @Nullable String contextPath;
 
@@ -38,6 +50,9 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
         return this.contextPath == null ? Optional.empty() : Optional.ofNullable(this.contextPath);
     }
 
+    /**
+     * The task template/definition file path relative to the source context.
+     */
     @InputImport(name="taskFilePath", required=true)
     private final String taskFilePath;
 
@@ -45,6 +60,10 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
         return this.taskFilePath;
     }
 
+    /**
+     * The type of the step.
+Expected value is 'FileTask'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -52,6 +71,9 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
         return this.type;
     }
 
+    /**
+     * The collection of overridable values that can be passed when running a task.
+     */
     @InputImport(name="values")
     private final @Nullable List<SetValueResponse> values;
 
@@ -59,6 +81,9 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
         return this.values == null ? List.of() : this.values;
     }
 
+    /**
+     * The task values/parameters file path relative to the source context.
+     */
     @InputImport(name="valuesFilePath")
     private final @Nullable String valuesFilePath;
 

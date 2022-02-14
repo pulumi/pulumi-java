@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IoTRoleArgs Empty = new IoTRoleArgs();
 
+    /**
+     * Resource allocation
+     */
     @InputImport(name="computeResource")
     private final @Nullable Input<ComputeResourceArgs> computeResource;
 
@@ -29,6 +35,9 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.computeResource == null ? Input.empty() : this.computeResource;
     }
 
+    /**
+     * The device name.
+     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -36,6 +45,9 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceName;
     }
 
+    /**
+     * Host OS supported by the IoT role.
+     */
     @InputImport(name="hostPlatform", required=true)
     private final Input<Either<String,PlatformType>> hostPlatform;
 
@@ -43,6 +55,9 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostPlatform;
     }
 
+    /**
+     * IoT device metadata to which data box edge device needs to be connected.
+     */
     @InputImport(name="ioTDeviceDetails", required=true)
     private final Input<IoTDeviceInfoArgs> ioTDeviceDetails;
 
@@ -50,6 +65,9 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.ioTDeviceDetails;
     }
 
+    /**
+     * Iot edge agent details to download the agent and bootstrap iot runtime.
+     */
     @InputImport(name="ioTEdgeAgentInfo")
     private final @Nullable Input<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo;
 
@@ -57,6 +75,9 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.ioTEdgeAgentInfo == null ? Input.empty() : this.ioTEdgeAgentInfo;
     }
 
+    /**
+     * IoT edge device to which the IoT role needs to be configured.
+     */
     @InputImport(name="ioTEdgeDeviceDetails", required=true)
     private final Input<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
 
@@ -64,6 +85,10 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.ioTEdgeDeviceDetails;
     }
 
+    /**
+     * Role type.
+Expected value is 'IOT'.
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -71,6 +96,9 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
+    /**
+     * The role name.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -78,6 +106,9 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -85,6 +116,9 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Role status.
+     */
     @InputImport(name="roleStatus", required=true)
     private final Input<Either<String,RoleStatus>> roleStatus;
 
@@ -92,6 +126,9 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleStatus;
     }
 
+    /**
+     * Mount points of shares in role(s).
+     */
     @InputImport(name="shareMappings")
     private final @Nullable Input<List<MountPointMapArgs>> shareMappings;
 

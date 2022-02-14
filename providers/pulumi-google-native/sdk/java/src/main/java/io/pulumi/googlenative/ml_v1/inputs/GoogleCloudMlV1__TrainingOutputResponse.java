@@ -14,10 +14,16 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Represents results of a training job. Output only.
+ */
 public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudMlV1__TrainingOutputResponse Empty = new GoogleCloudMlV1__TrainingOutputResponse();
 
+    /**
+     * Details related to built-in algorithms jobs. Only set for built-in algorithms jobs.
+     */
     @InputImport(name="builtInAlgorithmOutput", required=true)
     private final GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput;
 
@@ -25,6 +31,9 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
         return this.builtInAlgorithmOutput;
     }
 
+    /**
+     * The number of hyperparameter tuning trials that completed successfully. Only set for hyperparameter tuning jobs.
+     */
     @InputImport(name="completedTrialCount", required=true)
     private final String completedTrialCount;
 
@@ -32,6 +41,9 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
         return this.completedTrialCount;
     }
 
+    /**
+     * The amount of ML units consumed by the job.
+     */
     @InputImport(name="consumedMLUnits", required=true)
     private final Double consumedMLUnits;
 
@@ -39,6 +51,9 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
         return this.consumedMLUnits;
     }
 
+    /**
+     * The TensorFlow summary tag name used for optimizing hyperparameter tuning trials. See [`HyperparameterSpec.hyperparameterMetricTag`](#HyperparameterSpec.FIELDS.hyperparameter_metric_tag) for more information. Only set for hyperparameter tuning jobs.
+     */
     @InputImport(name="hyperparameterMetricTag", required=true)
     private final String hyperparameterMetricTag;
 
@@ -46,6 +61,9 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
         return this.hyperparameterMetricTag;
     }
 
+    /**
+     * Whether this job is a built-in Algorithm job.
+     */
     @InputImport(name="isBuiltInAlgorithmJob", required=true)
     private final Boolean isBuiltInAlgorithmJob;
 
@@ -53,6 +71,9 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
         return this.isBuiltInAlgorithmJob;
     }
 
+    /**
+     * Whether this job is a hyperparameter tuning job.
+     */
     @InputImport(name="isHyperparameterTuningJob", required=true)
     private final Boolean isHyperparameterTuningJob;
 
@@ -60,6 +81,9 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
         return this.isHyperparameterTuningJob;
     }
 
+    /**
+     * Results for individual Hyperparameter trials. Only set for hyperparameter tuning jobs.
+     */
     @InputImport(name="trials", required=true)
     private final List<GoogleCloudMlV1__HyperparameterOutputResponse> trials;
 
@@ -67,6 +91,9 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
         return this.trials;
     }
 
+    /**
+     * URIs for accessing [interactive shells](https://cloud.google.com/ai-platform/training/docs/monitor-debug-interactive-shell) (one URI for each training node). Only available if training_input.enable_web_access is `true`. The keys are names of each node in the training job; for example, `master-replica-0` for the master node, `worker-replica-0` for the first worker, and `ps-replica-0` for the first parameter server. The values are the URIs for each node's interactive shell.
+     */
     @InputImport(name="webAccessUris", required=true)
     private final Map<String,String> webAccessUris;
 

@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Detailed error information of any failure.
+ */
 public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CloudErrorBodyResponse Empty = new CloudErrorBodyResponse();
 
+    /**
+     * Error code string.
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -22,6 +28,9 @@ public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs
         return this.code;
     }
 
+    /**
+     * More detailed error information.
+     */
     @InputImport(name="details")
     private final @Nullable List<CloudErrorBodyResponse> details;
 
@@ -29,6 +38,9 @@ public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs
         return this.details == null ? List.of() : this.details;
     }
 
+    /**
+     * Descriptive error information.
+     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -36,6 +48,9 @@ public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs
         return this.message;
     }
 
+    /**
+     * Error target
+     */
     @InputImport(name="target")
     private final @Nullable String target;
 

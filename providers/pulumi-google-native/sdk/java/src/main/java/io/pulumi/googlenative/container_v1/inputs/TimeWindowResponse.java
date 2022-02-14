@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Represents an arbitrary window of time.
+ */
 public final class TimeWindowResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TimeWindowResponse Empty = new TimeWindowResponse();
 
+    /**
+     * The time that the window ends. The end time should take place after the start time.
+     */
     @InputImport(name="endTime", required=true)
     private final String endTime;
 
@@ -20,6 +26,9 @@ public final class TimeWindowResponse extends io.pulumi.resources.InvokeArgs {
         return this.endTime;
     }
 
+    /**
+     * MaintenanceExclusionOptions provides maintenance exclusion related options.
+     */
     @InputImport(name="maintenanceExclusionOptions", required=true)
     private final MaintenanceExclusionOptionsResponse maintenanceExclusionOptions;
 
@@ -27,6 +36,9 @@ public final class TimeWindowResponse extends io.pulumi.resources.InvokeArgs {
         return this.maintenanceExclusionOptions;
     }
 
+    /**
+     * The time that the window first starts.
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 

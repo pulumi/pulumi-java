@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetWebPubSubHubArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWebPubSubHubArgs Empty = new GetWebPubSubHubArgs();
 
+    /**
+     * The hub name.
+     */
     @InputImport(name="hubName", required=true)
     private final String hubName;
 
@@ -19,6 +25,9 @@ public final class GetWebPubSubHubArgs extends io.pulumi.resources.InvokeArgs {
         return this.hubName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetWebPubSubHubArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the resource.
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

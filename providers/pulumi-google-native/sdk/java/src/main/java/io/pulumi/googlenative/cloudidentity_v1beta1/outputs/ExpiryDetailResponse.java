@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ExpiryDetailResponse {
+/**
+ * The time at which the `MembershipRole` will expire.
+ */
     private final String expireTime;
 
     @OutputCustomType.Constructor({"expireTime"})
@@ -16,6 +19,9 @@ public final class ExpiryDetailResponse {
         this.expireTime = Objects.requireNonNull(expireTime);
     }
 
+/**
+ * The time at which the `MembershipRole` will expire.
+ */
     public String getExpireTime() {
         return this.expireTime;
     }

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * RelationshipOccurrence represents an SPDX Relationship section: https://spdx.github.io/spdx-spec/7-relationships-between-SPDX-elements/
+ */
 public final class RelationshipOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RelationshipOccurrenceArgs Empty = new RelationshipOccurrenceArgs();
 
+    /**
+     * A place for the SPDX file creator to record any general comments about the relationship
+     */
     @InputImport(name="comment")
     private final @Nullable Input<String> comment;
 
@@ -21,6 +27,9 @@ public final class RelationshipOccurrenceArgs extends io.pulumi.resources.Resour
         return this.comment == null ? Input.empty() : this.comment;
     }
 
+    /**
+     * Also referred to as SPDXRef-A The source SPDX element (file, package, etc)
+     */
     @InputImport(name="source")
     private final @Nullable Input<String> source;
 
@@ -28,6 +37,9 @@ public final class RelationshipOccurrenceArgs extends io.pulumi.resources.Resour
         return this.source == null ? Input.empty() : this.source;
     }
 
+    /**
+     * Also referred to as SPDXRef-B The target SPDC element (file, package, etc) In cases where there are "known unknowns", the use of the keyword NOASSERTION can be used The keywords NONE can be used to indicate that an SPDX element (package/file/snippet) has no other elements connected by some relationship to it
+     */
     @InputImport(name="target")
     private final @Nullable Input<String> target;
 

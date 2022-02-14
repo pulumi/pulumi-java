@@ -11,8 +11,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudMlV1__MeasurementResponse {
+/**
+ * Time that the trial has been running at the point of this measurement.
+ */
     private final String elapsedTime;
+/**
+ * Provides a list of metrics that act as inputs into the objective function.
+ */
     private final List<GoogleCloudMlV1_Measurement_MetricResponse> metrics;
+/**
+ * The number of steps a machine learning model has been trained for. Must be non-negative.
+ */
     private final String stepCount;
 
     @OutputCustomType.Constructor({"elapsedTime","metrics","stepCount"})
@@ -25,12 +34,21 @@ public final class GoogleCloudMlV1__MeasurementResponse {
         this.stepCount = Objects.requireNonNull(stepCount);
     }
 
+/**
+ * Time that the trial has been running at the point of this measurement.
+ */
     public String getElapsedTime() {
         return this.elapsedTime;
     }
+/**
+ * Provides a list of metrics that act as inputs into the objective function.
+ */
     public List<GoogleCloudMlV1_Measurement_MetricResponse> getMetrics() {
         return this.metrics;
     }
+/**
+ * The number of steps a machine learning model has been trained for. Must be non-negative.
+ */
     public String getStepCount() {
         return this.stepCount;
     }

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.logic;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.logic.IntegrationAccountArgs;
 import io.pulumi.azurenative.logic.outputs.IntegrationAccountSkuResponse;
 import io.pulumi.azurenative.logic.outputs.ResourceReferenceResponse;
 import io.pulumi.core.Alias;
@@ -17,51 +16,199 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The integration account.
+API Version: 2019-05-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create or update an integration account
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var integrationAccount = new AzureNative.Logic.IntegrationAccount("integrationAccount", new AzureNative.Logic.IntegrationAccountArgs
+        {
+            IntegrationAccountName = "testIntegrationAccount",
+            Location = "westus",
+            ResourceGroupName = "testResourceGroup",
+            Sku = new AzureNative.Logic.Inputs.IntegrationAccountSkuArgs
+            {
+                Name = "Standard",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	logic "github.com/pulumi/pulumi-azure-native/sdk/go/azure/logic"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := logic.NewIntegrationAccount(ctx, "integrationAccount", &logic.IntegrationAccountArgs{
+			IntegrationAccountName: pulumi.String("testIntegrationAccount"),
+			Location:               pulumi.String("westus"),
+			ResourceGroupName:      pulumi.String("testResourceGroup"),
+			Sku: &logic.IntegrationAccountSkuArgs{
+				Name: pulumi.String("Standard"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const integrationAccount = new azure_native.logic.IntegrationAccount("integrationAccount", {
+    integrationAccountName: "testIntegrationAccount",
+    location: "westus",
+    resourceGroupName: "testResourceGroup",
+    sku: {
+        name: "Standard",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+integration_account = azure_native.logic.IntegrationAccount("integrationAccount",
+    integration_account_name="testIntegrationAccount",
+    location="westus",
+    resource_group_name="testResourceGroup",
+    sku=azure_native.logic.IntegrationAccountSkuArgs(
+        name="Standard",
+    ))
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:logic:IntegrationAccount testIntegrationAccount /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/testIntegrationAccount 
+```
+
+ */
 @ResourceType(type="azure-native:logic:IntegrationAccount")
 public class IntegrationAccount extends io.pulumi.resources.CustomResource {
+    /**
+     * The integration service environment.
+     */
     @OutputExport(name="integrationServiceEnvironment", type=ResourceReferenceResponse.class, parameters={})
     private Output</* @Nullable */ ResourceReferenceResponse> integrationServiceEnvironment;
 
+    /**
+     * @return The integration service environment.
+     */
     public Output</* @Nullable */ ResourceReferenceResponse> getIntegrationServiceEnvironment() {
         return this.integrationServiceEnvironment;
     }
+    /**
+     * The resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The resource location.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Gets the resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Gets the resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The sku.
+     */
     @OutputExport(name="sku", type=IntegrationAccountSkuResponse.class, parameters={})
     private Output</* @Nullable */ IntegrationAccountSkuResponse> sku;
 
+    /**
+     * @return The sku.
+     */
     public Output</* @Nullable */ IntegrationAccountSkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * The workflow state.
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
+    /**
+     * @return The workflow state.
+     */
     public Output</* @Nullable */ String> getState() {
         return this.state;
     }
+    /**
+     * The resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Gets the resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Gets the resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public IntegrationAccount(String name, IntegrationAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:logic:IntegrationAccount", name, args == null ? IntegrationAccountArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -83,6 +230,14 @@ public class IntegrationAccount extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static IntegrationAccount get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IntegrationAccount(name, id, options);
     }

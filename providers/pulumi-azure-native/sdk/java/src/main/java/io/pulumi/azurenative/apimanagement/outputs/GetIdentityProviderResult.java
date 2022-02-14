@@ -12,17 +12,53 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetIdentityProviderResult {
+/**
+ * List of Allowed Tenants when configuring Azure Active Directory login.
+ */
     private final @Nullable List<String> allowedTenants;
+/**
+ * OpenID Connect discovery endpoint hostname for AAD or AAD B2C.
+ */
     private final @Nullable String authority;
+/**
+ * Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
+ */
     private final String clientId;
+/**
+ * Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+ */
     private final @Nullable String clientSecret;
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * Password Reset Policy Name. Only applies to AAD B2C Identity Provider.
+ */
     private final @Nullable String passwordResetPolicyName;
+/**
+ * Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.
+ */
     private final @Nullable String profileEditingPolicyName;
+/**
+ * Signin Policy Name. Only applies to AAD B2C Identity Provider.
+ */
     private final @Nullable String signinPolicyName;
+/**
+ * The TenantId to use instead of Common when logging into Active Directory
+ */
     private final @Nullable String signinTenant;
+/**
+ * Signup Policy Name. Only applies to AAD B2C Identity Provider.
+ */
     private final @Nullable String signupPolicyName;
+/**
+ * Resource type for API Management resource.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"allowedTenants","authority","clientId","clientSecret","id","name","passwordResetPolicyName","profileEditingPolicyName","signinPolicyName","signinTenant","signupPolicyName","type"})
@@ -53,39 +89,75 @@ public final class GetIdentityProviderResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * List of Allowed Tenants when configuring Azure Active Directory login.
+ */
     public List<String> getAllowedTenants() {
         return this.allowedTenants == null ? List.of() : this.allowedTenants;
     }
+/**
+ * OpenID Connect discovery endpoint hostname for AAD or AAD B2C.
+ */
     public Optional<String> getAuthority() {
         return Optional.ofNullable(this.authority);
     }
+/**
+ * Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
+ */
     public String getClientId() {
         return this.clientId;
     }
+/**
+ * Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+ */
     public Optional<String> getClientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Password Reset Policy Name. Only applies to AAD B2C Identity Provider.
+ */
     public Optional<String> getPasswordResetPolicyName() {
         return Optional.ofNullable(this.passwordResetPolicyName);
     }
+/**
+ * Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.
+ */
     public Optional<String> getProfileEditingPolicyName() {
         return Optional.ofNullable(this.profileEditingPolicyName);
     }
+/**
+ * Signin Policy Name. Only applies to AAD B2C Identity Provider.
+ */
     public Optional<String> getSigninPolicyName() {
         return Optional.ofNullable(this.signinPolicyName);
     }
+/**
+ * The TenantId to use instead of Common when logging into Active Directory
+ */
     public Optional<String> getSigninTenant() {
         return Optional.ofNullable(this.signinTenant);
     }
+/**
+ * Signup Policy Name. Only applies to AAD B2C Identity Provider.
+ */
     public Optional<String> getSignupPolicyName() {
         return Optional.ofNullable(this.signupPolicyName);
     }
+/**
+ * Resource type for API Management resource.
+ */
     public String getType() {
         return this.type;
     }

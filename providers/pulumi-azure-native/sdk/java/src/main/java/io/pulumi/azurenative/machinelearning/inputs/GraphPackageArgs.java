@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the graph of modules making up the machine learning solution.
+ */
 public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GraphPackageArgs Empty = new GraphPackageArgs();
 
+    /**
+     * The list of edges making up the graph.
+     */
     @InputImport(name="edges")
     private final @Nullable Input<List<GraphEdgeArgs>> edges;
 
@@ -26,6 +32,9 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.edges == null ? Input.empty() : this.edges;
     }
 
+    /**
+     * The collection of global parameters for the graph, given as a global parameter name to GraphParameter map. Each parameter here has a 1:1 match with the global parameters values map declared at the WebServiceProperties level.
+     */
     @InputImport(name="graphParameters")
     private final @Nullable Input<Map<String,GraphParameterArgs>> graphParameters;
 
@@ -33,6 +42,9 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.graphParameters == null ? Input.empty() : this.graphParameters;
     }
 
+    /**
+     * The set of nodes making up the graph, provided as a nodeId to GraphNode map
+     */
     @InputImport(name="nodes")
     private final @Nullable Input<Map<String,GraphNodeArgs>> nodes;
 

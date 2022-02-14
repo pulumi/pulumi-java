@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ZoneArgs Empty = new ZoneArgs();
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -25,6 +31,9 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.
+     */
     @InputImport(name="registrationVirtualNetworks")
     private final @Nullable Input<List<SubResourceArgs>> registrationVirtualNetworks;
 
@@ -32,6 +41,9 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.registrationVirtualNetworks == null ? Input.empty() : this.registrationVirtualNetworks;
     }
 
+    /**
+     * A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.
+     */
     @InputImport(name="resolutionVirtualNetworks")
     private final @Nullable Input<List<SubResourceArgs>> resolutionVirtualNetworks;
 
@@ -39,6 +51,9 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.resolutionVirtualNetworks == null ? Input.empty() : this.resolutionVirtualNetworks;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -46,6 +61,9 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -53,6 +71,9 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The name of the DNS zone (without a terminating dot).
+     */
     @InputImport(name="zoneName")
     private final @Nullable Input<String> zoneName;
 
@@ -60,6 +81,9 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.zoneName == null ? Input.empty() : this.zoneName;
     }
 
+    /**
+     * The type of this DNS zone (Public or Private).
+     */
     @InputImport(name="zoneType")
     private final @Nullable Input<ZoneType> zoneType;
 

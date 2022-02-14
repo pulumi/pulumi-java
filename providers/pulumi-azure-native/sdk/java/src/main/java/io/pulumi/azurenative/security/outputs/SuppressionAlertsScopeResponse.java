@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SuppressionAlertsScopeResponse {
+/**
+ * All the conditions inside need to be true in order to suppress the alert
+ */
     private final List<ScopeElementResponse> allOf;
 
     @OutputCustomType.Constructor({"allOf"})
@@ -17,6 +20,9 @@ public final class SuppressionAlertsScopeResponse {
         this.allOf = Objects.requireNonNull(allOf);
     }
 
+/**
+ * All the conditions inside need to be true in order to suppress the alert
+ */
     public List<ScopeElementResponse> getAllOf() {
         return this.allOf;
     }

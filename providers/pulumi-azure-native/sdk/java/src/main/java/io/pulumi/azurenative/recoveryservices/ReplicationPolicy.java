@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.recoveryservices.ReplicationPolicyArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.PolicyPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,33 +14,172 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Protection profile details.
+API Version: 2018-07-10.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Creates the policy.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var replicationPolicy = new AzureNative.RecoveryServices.ReplicationPolicy("replicationPolicy", new AzureNative.RecoveryServices.ReplicationPolicyArgs
+        {
+            PolicyName = "protectionprofile1",
+            Properties = new AzureNative.RecoveryServices.Inputs.CreatePolicyInputPropertiesArgs
+            {
+                ProviderSpecificInput = new AzureNative.RecoveryServices.Inputs.HyperVReplicaAzurePolicyInputArgs
+                {
+                    InstanceType = "HyperVReplicaAzure",
+                },
+            },
+            ResourceGroupName = "resourceGroupPS1",
+            ResourceName = "vault1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewReplicationPolicy(ctx, "replicationPolicy", &recoveryservices.ReplicationPolicyArgs{
+			PolicyName: pulumi.String("protectionprofile1"),
+			Properties: &recoveryservices.CreatePolicyInputPropertiesArgs{
+				ProviderSpecificInput: recoveryservices.HyperVReplicaAzurePolicyInput{
+					InstanceType: "HyperVReplicaAzure",
+				},
+			},
+			ResourceGroupName: pulumi.String("resourceGroupPS1"),
+			ResourceName:      pulumi.String("vault1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const replicationPolicy = new azure_native.recoveryservices.ReplicationPolicy("replicationPolicy", {
+    policyName: "protectionprofile1",
+    properties: {
+        providerSpecificInput: {
+            instanceType: "HyperVReplicaAzure",
+        },
+    },
+    resourceGroupName: "resourceGroupPS1",
+    resourceName: "vault1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+replication_policy = azure_native.recoveryservices.ReplicationPolicy("replicationPolicy",
+    policy_name="protectionprofile1",
+    properties=azure_native.recoveryservices.CreatePolicyInputPropertiesArgs(
+        provider_specific_input=azure_native.recoveryservices.HyperVReplicaAzurePolicyInputArgs(
+            instance_type="HyperVReplicaAzure",
+        ),
+    ),
+    resource_group_name="resourceGroupPS1",
+    resource_name="vault1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:recoveryservices:ReplicationPolicy protectionprofile1 /Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1 
+```
+
+ */
 @ResourceType(type="azure-native:recoveryservices:ReplicationPolicy")
 public class ReplicationPolicy extends io.pulumi.resources.CustomResource {
+    /**
+     * Resource Location
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource Location
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource Name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource Name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The custom data.
+     */
     @OutputExport(name="properties", type=PolicyPropertiesResponse.class, parameters={})
     private Output<PolicyPropertiesResponse> properties;
 
+    /**
+     * @return The custom data.
+     */
     public Output<PolicyPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Resource Type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource Type
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ReplicationPolicy(String name, ReplicationPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:recoveryservices:ReplicationPolicy", name, args == null ? ReplicationPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -71,6 +209,14 @@ public class ReplicationPolicy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ReplicationPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ReplicationPolicy(name, id, options);
     }

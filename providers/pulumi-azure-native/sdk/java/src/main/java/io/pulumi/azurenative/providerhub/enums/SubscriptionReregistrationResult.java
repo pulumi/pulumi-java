@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum SubscriptionReregistrationResult {
+/**
+ * 
+ */
         NotApplicable("NotApplicable"),
+/**
+ * 
+ */
         ConditionalUpdate("ConditionalUpdate"),
+/**
+ * 
+ */
         ForcedUpdate("ForcedUpdate"),
+/**
+ * 
+ */
         Failed("Failed");
 
         private final String value;

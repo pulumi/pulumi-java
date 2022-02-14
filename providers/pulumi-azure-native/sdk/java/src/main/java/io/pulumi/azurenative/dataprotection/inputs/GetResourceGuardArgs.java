@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetResourceGuardArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetResourceGuardArgs Empty = new GetResourceGuardArgs();
 
+    /**
+     * The name of the resource group where the backup vault is present.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class GetResourceGuardArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of ResourceGuard
+     */
     @InputImport(name="resourceGuardsName", required=true)
     private final String resourceGuardsName;
 

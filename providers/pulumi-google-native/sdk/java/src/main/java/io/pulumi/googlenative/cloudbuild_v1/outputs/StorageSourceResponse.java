@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StorageSourceResponse {
+/**
+ * Google Cloud Storage bucket containing the source (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+ */
     private final String bucket;
+/**
+ * Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.
+ */
     private final String generation;
+/**
+ * Google Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped archive file (`.tar.gz`) containing source to build.
+ */
     private final String object;
 
     @OutputCustomType.Constructor({"bucket","generation","object"})
@@ -23,12 +32,21 @@ public final class StorageSourceResponse {
         this.object = Objects.requireNonNull(object);
     }
 
+/**
+ * Google Cloud Storage bucket containing the source (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
+ */
     public String getBucket() {
         return this.bucket;
     }
+/**
+ * Google Cloud Storage generation for the object. If the generation is omitted, the latest generation will be used.
+ */
     public String getGeneration() {
         return this.generation;
     }
+/**
+ * Google Cloud Storage object containing the source. This object must be a zipped (`.zip`) or gzipped archive file (`.tar.gz`) containing source to build.
+ */
     public String getObject() {
         return this.object;
     }

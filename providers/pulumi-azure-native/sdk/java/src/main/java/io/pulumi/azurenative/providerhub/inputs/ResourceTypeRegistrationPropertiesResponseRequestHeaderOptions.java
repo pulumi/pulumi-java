@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions Empty = new ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions();
 
+    /**
+     * 
+     */
     @InputImport(name="optInHeaders")
     private final @Nullable String optInHeaders;
 

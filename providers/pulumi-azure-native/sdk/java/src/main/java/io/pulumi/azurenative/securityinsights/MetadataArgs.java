@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetadataArgs Empty = new MetadataArgs();
 
+    /**
+     * The creator of the content item.
+     */
     @InputImport(name="author")
     private final @Nullable Input<MetadataAuthorArgs> author;
 
@@ -29,6 +35,9 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
         return this.author == null ? Input.empty() : this.author;
     }
 
+    /**
+     * Categories for the solution content item
+     */
     @InputImport(name="categories")
     private final @Nullable Input<MetadataCategoriesArgs> categories;
 
@@ -36,6 +45,9 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
         return this.categories == null ? Input.empty() : this.categories;
     }
 
+    /**
+     * Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name
+     */
     @InputImport(name="contentId")
     private final @Nullable Input<String> contentId;
 
@@ -43,6 +55,9 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentId == null ? Input.empty() : this.contentId;
     }
 
+    /**
+     * Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex formats.
+     */
     @InputImport(name="dependencies")
     private final @Nullable Input<MetadataDependenciesArgs> dependencies;
 
@@ -50,6 +65,9 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
         return this.dependencies == null ? Input.empty() : this.dependencies;
     }
 
+    /**
+     * first publish date solution content item
+     */
     @InputImport(name="firstPublishDate")
     private final @Nullable Input<String> firstPublishDate;
 
@@ -57,6 +75,9 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
         return this.firstPublishDate == null ? Input.empty() : this.firstPublishDate;
     }
 
+    /**
+     * The kind of content the metadata is for.
+     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,Kind>> kind;
 
@@ -64,6 +85,9 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
+    /**
+     * last publish date for the solution content item
+     */
     @InputImport(name="lastPublishDate")
     private final @Nullable Input<String> lastPublishDate;
 
@@ -71,6 +95,9 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastPublishDate == null ? Input.empty() : this.lastPublishDate;
     }
 
+    /**
+     * The Metadata name.
+     */
     @InputImport(name="metadataName")
     private final @Nullable Input<String> metadataName;
 
@@ -78,6 +105,9 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadataName == null ? Input.empty() : this.metadataName;
     }
 
+    /**
+     * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
     private final Input<String> operationalInsightsResourceProvider;
 
@@ -85,6 +115,9 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
         return this.operationalInsightsResourceProvider;
     }
 
+    /**
+     * Full parent resource ID of the content item the metadata is for.  This is the full resource ID including the scope (subscription and resource group)
+     */
     @InputImport(name="parentId", required=true)
     private final Input<String> parentId;
 
@@ -92,6 +125,9 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
         return this.parentId;
     }
 
+    /**
+     * Providers for the solution content item
+     */
     @InputImport(name="providers")
     private final @Nullable Input<List<String>> providers;
 
@@ -99,6 +135,9 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
         return this.providers == null ? Input.empty() : this.providers;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -106,6 +145,9 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Source of the content.  This is where/how it was created.
+     */
     @InputImport(name="source")
     private final @Nullable Input<MetadataSourceArgs> source;
 
@@ -113,6 +155,9 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
         return this.source == null ? Input.empty() : this.source;
     }
 
+    /**
+     * Support information for the metadata - type, name, contact information
+     */
     @InputImport(name="support")
     private final @Nullable Input<MetadataSupportArgs> support;
 
@@ -120,6 +165,9 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
         return this.support == null ? Input.empty() : this.support;
     }
 
+    /**
+     * Version of the content.  Default and recommended format is numeric (e.g. 1, 1.0, 1.0.0, 1.0.0.0), following ARM template best practices.  Can also be any string, but then we cannot guarantee any version checks
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 
@@ -127,6 +175,9 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
         return this.version == null ? Input.empty() : this.version;
     }
 
+    /**
+     * The name of the workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

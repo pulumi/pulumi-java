@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Protection status details
+ */
 public final class ProtectionStatusDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProtectionStatusDetailsResponse Empty = new ProtectionStatusDetailsResponse();
 
+    /**
+     * Specifies the protection status error of the resource
+     */
     @InputImport(name="errorDetails")
     private final @Nullable UserFacingErrorResponse errorDetails;
 
@@ -22,6 +28,9 @@ public final class ProtectionStatusDetailsResponse extends io.pulumi.resources.I
         return this.errorDetails == null ? Optional.empty() : Optional.ofNullable(this.errorDetails);
     }
 
+    /**
+     * Specifies the protection status of the resource
+     */
     @InputImport(name="status")
     private final @Nullable String status;
 

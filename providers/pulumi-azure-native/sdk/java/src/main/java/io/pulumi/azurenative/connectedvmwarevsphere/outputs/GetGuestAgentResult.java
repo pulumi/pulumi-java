@@ -16,17 +16,53 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetGuestAgentResult {
+/**
+ * Username / Password Credentials to provision guest agent.
+ */
     private final @Nullable GuestCredentialResponse credentials;
+/**
+ * Gets the name of the corresponding resource in Kubernetes.
+ */
     private final String customResourceName;
+/**
+ * HTTP Proxy configuration for the VM.
+ */
     private final @Nullable HttpProxyConfigurationResponse httpProxyConfig;
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     private final String id;
+/**
+ * The name of the resource
+ */
     private final String name;
+/**
+ * Gets or sets the guest agent provisioning action.
+ */
     private final @Nullable String provisioningAction;
+/**
+ * Gets or sets the provisioning state.
+ */
     private final String provisioningState;
+/**
+ * Gets or sets the guest agent status.
+ */
     private final String status;
+/**
+ * The resource status information.
+ */
     private final List<ResourceStatusResponse> statuses;
+/**
+ * The system data.
+ */
     private final SystemDataResponse systemData;
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     private final String type;
+/**
+ * Gets or sets a unique identifier for this resource.
+ */
     private final String uuid;
 
     @OutputCustomType.Constructor({"credentials","customResourceName","httpProxyConfig","id","name","provisioningAction","provisioningState","status","statuses","systemData","type","uuid"})
@@ -57,39 +93,75 @@ public final class GetGuestAgentResult {
         this.uuid = Objects.requireNonNull(uuid);
     }
 
+/**
+ * Username / Password Credentials to provision guest agent.
+ */
     public Optional<GuestCredentialResponse> getCredentials() {
         return Optional.ofNullable(this.credentials);
     }
+/**
+ * Gets the name of the corresponding resource in Kubernetes.
+ */
     public String getCustomResourceName() {
         return this.customResourceName;
     }
+/**
+ * HTTP Proxy configuration for the VM.
+ */
     public Optional<HttpProxyConfigurationResponse> getHttpProxyConfig() {
         return Optional.ofNullable(this.httpProxyConfig);
     }
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The name of the resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Gets or sets the guest agent provisioning action.
+ */
     public Optional<String> getProvisioningAction() {
         return Optional.ofNullable(this.provisioningAction);
     }
+/**
+ * Gets or sets the provisioning state.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Gets or sets the guest agent status.
+ */
     public String getStatus() {
         return this.status;
     }
+/**
+ * The resource status information.
+ */
     public List<ResourceStatusResponse> getStatuses() {
         return this.statuses;
     }
+/**
+ * The system data.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Gets or sets a unique identifier for this resource.
+ */
     public String getUuid() {
         return this.uuid;
     }

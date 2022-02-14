@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPrivateEndpointConnectionArgs Empty = new GetPrivateEndpointConnectionArgs();
 
+    /**
+     * The name of the configuration store.
+     */
     @InputImport(name="configStoreName", required=true)
     private final String configStoreName;
 
@@ -19,6 +25,9 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
         return this.configStoreName;
     }
 
+    /**
+     * Private endpoint connection name
+     */
     @InputImport(name="privateEndpointConnectionName", required=true)
     private final String privateEndpointConnectionName;
 
@@ -26,6 +35,9 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
         return this.privateEndpointConnectionName;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

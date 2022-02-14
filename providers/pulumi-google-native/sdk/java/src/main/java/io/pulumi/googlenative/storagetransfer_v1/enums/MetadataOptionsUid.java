@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Specifies how each file's UID attribute should be handled by the transfer. If unspecified, the default behavior is the same as UID_SKIP when the source is a POSIX file system.
+ */
     @EnumType
     public enum MetadataOptionsUid {
+/**
+ * UID behavior is unspecified.
+ */
         UidUnspecified("UID_UNSPECIFIED"),
+/**
+ * Skip UID during a transfer job.
+ */
         UidSkip("UID_SKIP"),
+/**
+ * Preserve UID during a transfer job.
+ */
         UidNumber("UID_NUMBER");
 
         private final String value;

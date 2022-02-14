@@ -9,11 +9,29 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class X509CertificateDetailsResponse {
+/**
+ * The time the certificate becomes invalid.
+ */
     private final String expiryTime;
+/**
+ * The entity that signed the certificate.
+ */
     private final String issuer;
+/**
+ * The type of public key in the certificate.
+ */
     private final String publicKeyType;
+/**
+ * The algorithm used to sign the certificate.
+ */
     private final String signatureAlgorithm;
+/**
+ * The time the certificate becomes valid.
+ */
     private final String startTime;
+/**
+ * The entity the certificate and public key belong to.
+ */
     private final String subject;
 
     @OutputCustomType.Constructor({"expiryTime","issuer","publicKeyType","signatureAlgorithm","startTime","subject"})
@@ -32,21 +50,39 @@ public final class X509CertificateDetailsResponse {
         this.subject = Objects.requireNonNull(subject);
     }
 
+/**
+ * The time the certificate becomes invalid.
+ */
     public String getExpiryTime() {
         return this.expiryTime;
     }
+/**
+ * The entity that signed the certificate.
+ */
     public String getIssuer() {
         return this.issuer;
     }
+/**
+ * The type of public key in the certificate.
+ */
     public String getPublicKeyType() {
         return this.publicKeyType;
     }
+/**
+ * The algorithm used to sign the certificate.
+ */
     public String getSignatureAlgorithm() {
         return this.signatureAlgorithm;
     }
+/**
+ * The time the certificate becomes valid.
+ */
     public String getStartTime() {
         return this.startTime;
     }
+/**
+ * The entity the certificate and public key belong to.
+ */
     public String getSubject() {
         return this.subject;
     }

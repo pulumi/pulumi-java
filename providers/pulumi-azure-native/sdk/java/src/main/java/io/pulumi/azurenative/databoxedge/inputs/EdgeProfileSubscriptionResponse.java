@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Subscription details for the Edge Profile
+ */
 public final class EdgeProfileSubscriptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EdgeProfileSubscriptionResponse Empty = new EdgeProfileSubscriptionResponse();
 
+    /**
+     * ARM ID of the subscription
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -23,6 +29,9 @@ public final class EdgeProfileSubscriptionResponse extends io.pulumi.resources.I
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="locationPlacementId")
     private final @Nullable String locationPlacementId;
 
@@ -30,6 +39,9 @@ public final class EdgeProfileSubscriptionResponse extends io.pulumi.resources.I
         return this.locationPlacementId == null ? Optional.empty() : Optional.ofNullable(this.locationPlacementId);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="quotaId")
     private final @Nullable String quotaId;
 
@@ -37,6 +49,9 @@ public final class EdgeProfileSubscriptionResponse extends io.pulumi.resources.I
         return this.quotaId == null ? Optional.empty() : Optional.ofNullable(this.quotaId);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="registeredFeatures")
     private final @Nullable List<SubscriptionRegisteredFeaturesResponse> registeredFeatures;
 
@@ -44,6 +59,9 @@ public final class EdgeProfileSubscriptionResponse extends io.pulumi.resources.I
         return this.registeredFeatures == null ? List.of() : this.registeredFeatures;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="registrationDate")
     private final @Nullable String registrationDate;
 
@@ -51,6 +69,9 @@ public final class EdgeProfileSubscriptionResponse extends io.pulumi.resources.I
         return this.registrationDate == null ? Optional.empty() : Optional.ofNullable(this.registrationDate);
     }
 
+    /**
+     * Edge Subscription Registration ID
+     */
     @InputImport(name="registrationId")
     private final @Nullable String registrationId;
 
@@ -58,6 +79,9 @@ public final class EdgeProfileSubscriptionResponse extends io.pulumi.resources.I
         return this.registrationId == null ? Optional.empty() : Optional.ofNullable(this.registrationId);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="serializedDetails")
     private final @Nullable String serializedDetails;
 
@@ -65,6 +89,9 @@ public final class EdgeProfileSubscriptionResponse extends io.pulumi.resources.I
         return this.serializedDetails == null ? Optional.empty() : Optional.ofNullable(this.serializedDetails);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable String state;
 
@@ -72,6 +99,9 @@ public final class EdgeProfileSubscriptionResponse extends io.pulumi.resources.I
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="subscriptionId")
     private final @Nullable String subscriptionId;
 
@@ -79,6 +109,9 @@ public final class EdgeProfileSubscriptionResponse extends io.pulumi.resources.I
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="tenantId")
     private final @Nullable String tenantId;
 

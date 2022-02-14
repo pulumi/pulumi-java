@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ListIntegrationAccountMapContentCallbackUrlArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListIntegrationAccountMapContentCallbackUrlArgs Empty = new ListIntegrationAccountMapContentCallbackUrlArgs();
 
+    /**
+     * The integration account name.
+     */
     @InputImport(name="integrationAccountName", required=true)
     private final String integrationAccountName;
 
@@ -23,6 +29,9 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends io.pu
         return this.integrationAccountName;
     }
 
+    /**
+     * The key type.
+     */
     @InputImport(name="keyType")
     private final @Nullable Either<String,KeyType> keyType;
 
@@ -30,6 +39,9 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends io.pu
         return this.keyType == null ? null : this.keyType;
     }
 
+    /**
+     * The integration account map name.
+     */
     @InputImport(name="mapName", required=true)
     private final String mapName;
 
@@ -37,6 +49,9 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends io.pu
         return this.mapName;
     }
 
+    /**
+     * The expiry time.
+     */
     @InputImport(name="notAfter")
     private final @Nullable String notAfter;
 
@@ -44,6 +59,9 @@ public final class ListIntegrationAccountMapContentCallbackUrlArgs extends io.pu
         return this.notAfter == null ? Optional.empty() : Optional.ofNullable(this.notAfter);
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

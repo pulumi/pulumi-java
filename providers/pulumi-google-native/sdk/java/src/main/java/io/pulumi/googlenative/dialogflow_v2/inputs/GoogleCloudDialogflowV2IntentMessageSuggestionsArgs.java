@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The collection of suggestions.
+ */
 public final class GoogleCloudDialogflowV2IntentMessageSuggestionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageSuggestionsArgs Empty = new GoogleCloudDialogflowV2IntentMessageSuggestionsArgs();
 
+    /**
+     * The list of suggested replies.
+     */
     @InputImport(name="suggestions", required=true)
     private final Input<List<GoogleCloudDialogflowV2IntentMessageSuggestionArgs>> suggestions;
 

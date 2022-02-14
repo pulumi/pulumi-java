@@ -12,10 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagementGroupChildInfoResponse {
+/**
+ * The list of children.
+ */
     private final @Nullable List<ManagementGroupChildInfoResponse> children;
+/**
+ * The friendly name of the child resource.
+ */
     private final @Nullable String displayName;
+/**
+ * The fully qualified ID for the child resource (management group or subscription).  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+ */
     private final @Nullable String id;
+/**
+ * The name of the child entity.
+ */
     private final @Nullable String name;
+/**
+ * The fully qualified resource type which includes provider namespace (e.g. Microsoft.Management/managementGroups)
+ */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"children","displayName","id","name","type"})
@@ -32,18 +47,33 @@ public final class ManagementGroupChildInfoResponse {
         this.type = type;
     }
 
+/**
+ * The list of children.
+ */
     public List<ManagementGroupChildInfoResponse> getChildren() {
         return this.children == null ? List.of() : this.children;
     }
+/**
+ * The friendly name of the child resource.
+ */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+/**
+ * The fully qualified ID for the child resource (management group or subscription).  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * The name of the child entity.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * The fully qualified resource type which includes provider namespace (e.g. Microsoft.Management/managementGroups)
+ */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

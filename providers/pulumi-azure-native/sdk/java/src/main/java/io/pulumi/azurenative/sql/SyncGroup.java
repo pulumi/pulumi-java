@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.sql.SyncGroupArgs;
 import io.pulumi.azurenative.sql.outputs.SkuResponse;
 import io.pulumi.azurenative.sql.outputs.SyncGroupSchemaResponse;
 import io.pulumi.core.Alias;
@@ -18,93 +17,388 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An Azure SQL Database sync group.
+API Version: 2020-11-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create a sync group
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var syncGroup = new AzureNative.Sql.SyncGroup("syncGroup", new AzureNative.Sql.SyncGroupArgs
+        {
+            ConflictResolutionPolicy = "HubWin",
+            DatabaseName = "syncgroupcrud-4328",
+            HubDatabaseUserName = "hubUser",
+            Interval = -1,
+            ResourceGroupName = "syncgroupcrud-65440",
+            ServerName = "syncgroupcrud-8475",
+            SyncDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+            SyncGroupName = "syncgroupcrud-3187",
+            UsePrivateLinkConnection = true,
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewSyncGroup(ctx, "syncGroup", &sql.SyncGroupArgs{
+			ConflictResolutionPolicy: pulumi.String("HubWin"),
+			DatabaseName:             pulumi.String("syncgroupcrud-4328"),
+			HubDatabaseUserName:      pulumi.String("hubUser"),
+			Interval:                 -1,
+			ResourceGroupName:        pulumi.String("syncgroupcrud-65440"),
+			ServerName:               pulumi.String("syncgroupcrud-8475"),
+			SyncDatabaseId:           pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328"),
+			SyncGroupName:            pulumi.String("syncgroupcrud-3187"),
+			UsePrivateLinkConnection: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const syncGroup = new azure_native.sql.SyncGroup("syncGroup", {
+    conflictResolutionPolicy: "HubWin",
+    databaseName: "syncgroupcrud-4328",
+    hubDatabaseUserName: "hubUser",
+    interval: -1,
+    resourceGroupName: "syncgroupcrud-65440",
+    serverName: "syncgroupcrud-8475",
+    syncDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+    syncGroupName: "syncgroupcrud-3187",
+    usePrivateLinkConnection: true,
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+sync_group = azure_native.sql.SyncGroup("syncGroup",
+    conflict_resolution_policy="HubWin",
+    database_name="syncgroupcrud-4328",
+    hub_database_user_name="hubUser",
+    interval=-1,
+    resource_group_name="syncgroupcrud-65440",
+    server_name="syncgroupcrud-8475",
+    sync_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+    sync_group_name="syncgroupcrud-3187",
+    use_private_link_connection=True)
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Update a sync group
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var syncGroup = new AzureNative.Sql.SyncGroup("syncGroup", new AzureNative.Sql.SyncGroupArgs
+        {
+            ConflictResolutionPolicy = "HubWin",
+            DatabaseName = "syncgroupcrud-4328",
+            HubDatabaseUserName = "hubUser",
+            Interval = -1,
+            ResourceGroupName = "syncgroupcrud-65440",
+            ServerName = "syncgroupcrud-8475",
+            SyncDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+            SyncGroupName = "syncgroupcrud-3187",
+            UsePrivateLinkConnection = true,
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewSyncGroup(ctx, "syncGroup", &sql.SyncGroupArgs{
+			ConflictResolutionPolicy: pulumi.String("HubWin"),
+			DatabaseName:             pulumi.String("syncgroupcrud-4328"),
+			HubDatabaseUserName:      pulumi.String("hubUser"),
+			Interval:                 -1,
+			ResourceGroupName:        pulumi.String("syncgroupcrud-65440"),
+			ServerName:               pulumi.String("syncgroupcrud-8475"),
+			SyncDatabaseId:           pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328"),
+			SyncGroupName:            pulumi.String("syncgroupcrud-3187"),
+			UsePrivateLinkConnection: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const syncGroup = new azure_native.sql.SyncGroup("syncGroup", {
+    conflictResolutionPolicy: "HubWin",
+    databaseName: "syncgroupcrud-4328",
+    hubDatabaseUserName: "hubUser",
+    interval: -1,
+    resourceGroupName: "syncgroupcrud-65440",
+    serverName: "syncgroupcrud-8475",
+    syncDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+    syncGroupName: "syncgroupcrud-3187",
+    usePrivateLinkConnection: true,
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+sync_group = azure_native.sql.SyncGroup("syncGroup",
+    conflict_resolution_policy="HubWin",
+    database_name="syncgroupcrud-4328",
+    hub_database_user_name="hubUser",
+    interval=-1,
+    resource_group_name="syncgroupcrud-65440",
+    server_name="syncgroupcrud-8475",
+    sync_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
+    sync_group_name="syncgroupcrud-3187",
+    use_private_link_connection=True)
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:sql:SyncGroup syncgroupcrud-3187 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-3521/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328/syncGroups/syncgroupcrud-3187 
+```
+
+ */
 @ResourceType(type="azure-native:sql:SyncGroup")
 public class SyncGroup extends io.pulumi.resources.CustomResource {
+    /**
+     * Conflict logging retention period.
+     */
     @OutputExport(name="conflictLoggingRetentionInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> conflictLoggingRetentionInDays;
 
+    /**
+     * @return Conflict logging retention period.
+     */
     public Output</* @Nullable */ Integer> getConflictLoggingRetentionInDays() {
         return this.conflictLoggingRetentionInDays;
     }
+    /**
+     * Conflict resolution policy of the sync group.
+     */
     @OutputExport(name="conflictResolutionPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> conflictResolutionPolicy;
 
+    /**
+     * @return Conflict resolution policy of the sync group.
+     */
     public Output</* @Nullable */ String> getConflictResolutionPolicy() {
         return this.conflictResolutionPolicy;
     }
+    /**
+     * If conflict logging is enabled.
+     */
     @OutputExport(name="enableConflictLogging", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableConflictLogging;
 
+    /**
+     * @return If conflict logging is enabled.
+     */
     public Output</* @Nullable */ Boolean> getEnableConflictLogging() {
         return this.enableConflictLogging;
     }
+    /**
+     * User name for the sync group hub database credential.
+     */
     @OutputExport(name="hubDatabaseUserName", type=String.class, parameters={})
     private Output</* @Nullable */ String> hubDatabaseUserName;
 
+    /**
+     * @return User name for the sync group hub database credential.
+     */
     public Output</* @Nullable */ String> getHubDatabaseUserName() {
         return this.hubDatabaseUserName;
     }
+    /**
+     * Sync interval of the sync group.
+     */
     @OutputExport(name="interval", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> interval;
 
+    /**
+     * @return Sync interval of the sync group.
+     */
     public Output</* @Nullable */ Integer> getInterval() {
         return this.interval;
     }
+    /**
+     * Last sync time of the sync group.
+     */
     @OutputExport(name="lastSyncTime", type=String.class, parameters={})
     private Output<String> lastSyncTime;
 
+    /**
+     * @return Last sync time of the sync group.
+     */
     public Output<String> getLastSyncTime() {
         return this.lastSyncTime;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Private endpoint name of the sync group if use private link connection is enabled.
+     */
     @OutputExport(name="privateEndpointName", type=String.class, parameters={})
     private Output<String> privateEndpointName;
 
+    /**
+     * @return Private endpoint name of the sync group if use private link connection is enabled.
+     */
     public Output<String> getPrivateEndpointName() {
         return this.privateEndpointName;
     }
+    /**
+     * Sync schema of the sync group.
+     */
     @OutputExport(name="schema", type=SyncGroupSchemaResponse.class, parameters={})
     private Output</* @Nullable */ SyncGroupSchemaResponse> schema;
 
+    /**
+     * @return Sync schema of the sync group.
+     */
     public Output</* @Nullable */ SyncGroupSchemaResponse> getSchema() {
         return this.schema;
     }
+    /**
+     * The name and capacity of the SKU.
+     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
+    /**
+     * @return The name and capacity of the SKU.
+     */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * ARM resource id of the sync database in the sync group.
+     */
     @OutputExport(name="syncDatabaseId", type=String.class, parameters={})
     private Output</* @Nullable */ String> syncDatabaseId;
 
+    /**
+     * @return ARM resource id of the sync database in the sync group.
+     */
     public Output</* @Nullable */ String> getSyncDatabaseId() {
         return this.syncDatabaseId;
     }
+    /**
+     * Sync state of the sync group.
+     */
     @OutputExport(name="syncState", type=String.class, parameters={})
     private Output<String> syncState;
 
+    /**
+     * @return Sync state of the sync group.
+     */
     public Output<String> getSyncState() {
         return this.syncState;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * If use private link connection is enabled.
+     */
     @OutputExport(name="usePrivateLinkConnection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> usePrivateLinkConnection;
 
+    /**
+     * @return If use private link connection is enabled.
+     */
     public Output</* @Nullable */ Boolean> getUsePrivateLinkConnection() {
         return this.usePrivateLinkConnection;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SyncGroup(String name, SyncGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:SyncGroup", name, args == null ? SyncGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -130,6 +424,14 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SyncGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SyncGroup(name, id, options);
     }

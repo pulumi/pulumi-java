@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetSubAccountTagRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSubAccountTagRuleArgs Empty = new GetSubAccountTagRuleArgs();
 
+    /**
+     * Monitor resource name
+     */
     @InputImport(name="monitorName", required=true)
     private final String monitorName;
 
@@ -19,6 +25,9 @@ public final class GetSubAccountTagRuleArgs extends io.pulumi.resources.InvokeAr
         return this.monitorName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetSubAccountTagRuleArgs extends io.pulumi.resources.InvokeAr
         return this.resourceGroupName;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="ruleSetName", required=true)
     private final String ruleSetName;
 
@@ -33,6 +45,9 @@ public final class GetSubAccountTagRuleArgs extends io.pulumi.resources.InvokeAr
         return this.ruleSetName;
     }
 
+    /**
+     * Sub Account resource name
+     */
     @InputImport(name="subAccountName", required=true)
     private final String subAccountName;
 

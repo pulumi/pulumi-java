@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrganization {
+/**
+ * Gets the profile for an Apigee organization. See [Understanding organizations](https://cloud.google.com/apigee/docs/api-platform/fundamentals/organization-structure).
+ */
     public static CompletableFuture<GetOrganizationResult> invokeAsync(GetOrganizationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getOrganization", TypeShape.of(GetOrganizationResult.class), args == null ? GetOrganizationArgs.Empty : args, Utilities.withVersion(options));
     }

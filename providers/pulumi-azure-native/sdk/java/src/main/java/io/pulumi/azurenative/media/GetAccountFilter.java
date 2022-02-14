@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccountFilter {
+/**
+ * An Account Filter.
+API Version: 2020-05-01.
+ *
+ * An Account Filter.
+ */
     public static CompletableFuture<GetAccountFilterResult> invokeAsync(GetAccountFilterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getAccountFilter", TypeShape.of(GetAccountFilterResult.class), args == null ? GetAccountFilterArgs.Empty : args, Utilities.withVersion(options));
     }

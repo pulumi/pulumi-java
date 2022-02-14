@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ScaleRuleResponse {
+/**
+ * the trigger that results in a scaling action.
+ */
     private final MetricTriggerResponse metricTrigger;
+/**
+ * the parameters for the scaling action.
+ */
     private final ScaleActionResponse scaleAction;
 
     @OutputCustomType.Constructor({"metricTrigger","scaleAction"})
@@ -21,9 +27,15 @@ public final class ScaleRuleResponse {
         this.scaleAction = Objects.requireNonNull(scaleAction);
     }
 
+/**
+ * the trigger that results in a scaling action.
+ */
     public MetricTriggerResponse getMetricTrigger() {
         return this.metricTrigger;
     }
+/**
+ * the parameters for the scaling action.
+ */
     public ScaleActionResponse getScaleAction() {
         return this.scaleAction;
     }

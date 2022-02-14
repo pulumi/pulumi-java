@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VpnGatewayArgs Empty = new VpnGatewayArgs();
 
+    /**
+     * Local network gateway's BGP speaker settings.
+     */
     @InputImport(name="bgpSettings")
     private final @Nullable Input<BgpSettingsArgs> bgpSettings;
 
@@ -29,6 +35,9 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.bgpSettings == null ? Input.empty() : this.bgpSettings;
     }
 
+    /**
+     * List of all vpn connections to the gateway.
+     */
     @InputImport(name="connections")
     private final @Nullable Input<List<VpnConnectionArgs>> connections;
 
@@ -36,6 +45,9 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.connections == null ? Input.empty() : this.connections;
     }
 
+    /**
+     * The name of the gateway.
+     */
     @InputImport(name="gatewayName")
     private final @Nullable Input<String> gatewayName;
 
@@ -43,6 +55,9 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.gatewayName == null ? Input.empty() : this.gatewayName;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -50,6 +65,9 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Enable Routing Preference property for the Public IP Interface of the VpnGateway.
+     */
     @InputImport(name="isRoutingPreferenceInternet")
     private final @Nullable Input<Boolean> isRoutingPreferenceInternet;
 
@@ -57,6 +75,9 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.isRoutingPreferenceInternet == null ? Input.empty() : this.isRoutingPreferenceInternet;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -64,6 +85,9 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * List of all the nat Rules associated with the gateway.
+     */
     @InputImport(name="natRules")
     private final @Nullable Input<List<VpnGatewayNatRuleArgs>> natRules;
 
@@ -71,6 +95,9 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.natRules == null ? Input.empty() : this.natRules;
     }
 
+    /**
+     * The resource group name of the VpnGateway.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -78,6 +105,9 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -85,6 +115,9 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The VirtualHub to which the gateway belongs.
+     */
     @InputImport(name="virtualHub")
     private final @Nullable Input<SubResourceArgs> virtualHub;
 
@@ -92,6 +125,9 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.virtualHub == null ? Input.empty() : this.virtualHub;
     }
 
+    /**
+     * The scale unit for this vpn gateway.
+     */
     @InputImport(name="vpnGatewayScaleUnit")
     private final @Nullable Input<Integer> vpnGatewayScaleUnit;
 

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetTemplateSpecArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTemplateSpecArgs Empty = new GetTemplateSpecArgs();
 
+    /**
+     * Allows for expansion of additional Template Spec details in the response. Optional.
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +27,9 @@ public final class GetTemplateSpecArgs extends io.pulumi.resources.InvokeArgs {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -28,6 +37,9 @@ public final class GetTemplateSpecArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the Template Spec.
+     */
     @InputImport(name="templateSpecName", required=true)
     private final String templateSpecName;
 

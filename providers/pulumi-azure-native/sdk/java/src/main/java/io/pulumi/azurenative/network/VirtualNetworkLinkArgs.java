@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualNetworkLinkArgs Empty = new VirtualNetworkLinkArgs();
 
+    /**
+     * The Azure Region where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -24,6 +30,9 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the Private DNS zone (without a terminating dot).
+     */
     @InputImport(name="privateZoneName", required=true)
     private final Input<String> privateZoneName;
 
@@ -31,6 +40,9 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
         return this.privateZoneName;
     }
 
+    /**
+     * Is auto-registration of virtual machine records in the virtual network in the Private DNS zone enabled?
+     */
     @InputImport(name="registrationEnabled")
     private final @Nullable Input<Boolean> registrationEnabled;
 
@@ -38,6 +50,9 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
         return this.registrationEnabled == null ? Input.empty() : this.registrationEnabled;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -45,6 +60,9 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -52,6 +70,9 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The reference of the virtual network.
+     */
     @InputImport(name="virtualNetwork")
     private final @Nullable Input<SubResourceArgs> virtualNetwork;
 
@@ -59,6 +80,9 @@ public final class VirtualNetworkLinkArgs extends io.pulumi.resources.ResourceAr
         return this.virtualNetwork == null ? Input.empty() : this.virtualNetwork;
     }
 
+    /**
+     * The name of the virtual network link.
+     */
     @InputImport(name="virtualNetworkLinkName")
     private final @Nullable Input<String> virtualNetworkLinkName;
 

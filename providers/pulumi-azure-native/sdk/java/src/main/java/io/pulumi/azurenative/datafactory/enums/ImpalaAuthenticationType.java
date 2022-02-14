@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The authentication type to use.
+ */
     @EnumType
     public enum ImpalaAuthenticationType {
+/**
+ * 
+ */
         Anonymous("Anonymous"),
+/**
+ * 
+ */
         SASLUsername("SASLUsername"),
+/**
+ * 
+ */
         UsernameAndPassword("UsernameAndPassword");
 
         private final String value;

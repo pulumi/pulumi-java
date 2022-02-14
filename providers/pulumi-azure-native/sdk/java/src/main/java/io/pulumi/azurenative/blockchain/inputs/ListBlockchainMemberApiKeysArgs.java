@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListBlockchainMemberApiKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListBlockchainMemberApiKeysArgs Empty = new ListBlockchainMemberApiKeysArgs();
 
+    /**
+     * Blockchain member name.
+     */
     @InputImport(name="blockchainMemberName", required=true)
     private final String blockchainMemberName;
 
@@ -19,6 +25,9 @@ public final class ListBlockchainMemberApiKeysArgs extends io.pulumi.resources.I
         return this.blockchainMemberName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

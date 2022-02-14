@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ServiceTreeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceTreeInfoResponse Empty = new ServiceTreeInfoResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="componentId")
     private final @Nullable String componentId;
 
@@ -21,6 +27,9 @@ public final class ServiceTreeInfoResponse extends io.pulumi.resources.InvokeArg
         return this.componentId == null ? Optional.empty() : Optional.ofNullable(this.componentId);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="serviceId")
     private final @Nullable String serviceId;
 

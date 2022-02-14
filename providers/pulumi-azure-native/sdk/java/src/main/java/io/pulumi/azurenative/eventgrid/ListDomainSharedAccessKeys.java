@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListDomainSharedAccessKeys {
+/**
+ * Shared access keys of the Domain.
+API Version: 2020-06-01.
+ *
+ * Shared access keys of the Domain.
+ */
     public static CompletableFuture<ListDomainSharedAccessKeysResult> invokeAsync(ListDomainSharedAccessKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:listDomainSharedAccessKeys", TypeShape.of(ListDomainSharedAccessKeysResult.class), args == null ? ListDomainSharedAccessKeysArgs.Empty : args, Utilities.withVersion(options));
     }

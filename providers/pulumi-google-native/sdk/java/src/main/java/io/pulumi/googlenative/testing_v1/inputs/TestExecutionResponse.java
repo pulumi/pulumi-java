@@ -13,10 +13,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A single test executed in a single environment.
+ */
 public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TestExecutionResponse Empty = new TestExecutionResponse();
 
+    /**
+     * How the host machine(s) are configured.
+     */
     @InputImport(name="environment", required=true)
     private final EnvironmentResponse environment;
 
@@ -24,6 +30,9 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
         return this.environment;
     }
 
+    /**
+     * Id of the containing TestMatrix.
+     */
     @InputImport(name="matrixId", required=true)
     private final String matrixId;
 
@@ -31,6 +40,9 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
         return this.matrixId;
     }
 
+    /**
+     * The cloud project that owns the test execution.
+     */
     @InputImport(name="project", required=true)
     private final String project;
 
@@ -38,6 +50,9 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
         return this.project;
     }
 
+    /**
+     * Details about the shard.
+     */
     @InputImport(name="shard", required=true)
     private final ShardResponse shard;
 
@@ -45,6 +60,9 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
         return this.shard;
     }
 
+    /**
+     * Indicates the current progress of the test execution (e.g., FINISHED).
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -52,6 +70,9 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
         return this.state;
     }
 
+    /**
+     * Additional details about the running test.
+     */
     @InputImport(name="testDetails", required=true)
     private final TestDetailsResponse testDetails;
 
@@ -59,6 +80,9 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
         return this.testDetails;
     }
 
+    /**
+     * How to run the test.
+     */
     @InputImport(name="testSpecification", required=true)
     private final TestSpecificationResponse testSpecification;
 
@@ -66,6 +90,9 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
         return this.testSpecification;
     }
 
+    /**
+     * The time this test execution was initially created.
+     */
     @InputImport(name="timestamp", required=true)
     private final String timestamp;
 
@@ -73,6 +100,9 @@ public final class TestExecutionResponse extends io.pulumi.resources.InvokeArgs 
         return this.timestamp;
     }
 
+    /**
+     * Where the results for this execution are written.
+     */
     @InputImport(name="toolResultsStep", required=true)
     private final ToolResultsStepResponse toolResultsStep;
 

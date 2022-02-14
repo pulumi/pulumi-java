@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class InstantRPAdditionalDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstantRPAdditionalDetailsArgs Empty = new InstantRPAdditionalDetailsArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="azureBackupRGNamePrefix")
     private final @Nullable Input<String> azureBackupRGNamePrefix;
 
@@ -21,6 +27,9 @@ public final class InstantRPAdditionalDetailsArgs extends io.pulumi.resources.Re
         return this.azureBackupRGNamePrefix == null ? Input.empty() : this.azureBackupRGNamePrefix;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="azureBackupRGNameSuffix")
     private final @Nullable Input<String> azureBackupRGNameSuffix;
 

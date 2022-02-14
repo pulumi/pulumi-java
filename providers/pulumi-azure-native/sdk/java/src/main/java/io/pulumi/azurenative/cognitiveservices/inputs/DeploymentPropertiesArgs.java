@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of Cognitive Services account deployment.
+ */
 public final class DeploymentPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeploymentPropertiesArgs Empty = new DeploymentPropertiesArgs();
 
+    /**
+     * Properties of Cognitive Services account deployment model.
+     */
     @InputImport(name="model")
     private final @Nullable Input<DeploymentModelArgs> model;
 
@@ -22,6 +28,9 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
         return this.model == null ? Input.empty() : this.model;
     }
 
+    /**
+     * Properties of Cognitive Services account deployment model.
+     */
     @InputImport(name="scaleSettings")
     private final @Nullable Input<DeploymentScaleSettingsArgs> scaleSettings;
 

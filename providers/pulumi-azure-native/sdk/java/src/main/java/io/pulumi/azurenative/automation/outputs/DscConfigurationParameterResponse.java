@@ -13,9 +13,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DscConfigurationParameterResponse {
+/**
+ * Gets or sets the default value of parameter.
+ */
     private final @Nullable String defaultValue;
+/**
+ * Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
+ */
     private final @Nullable Boolean isMandatory;
+/**
+ * Get or sets the position of the parameter.
+ */
     private final @Nullable Integer position;
+/**
+ * Gets or sets the type of the parameter.
+ */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"defaultValue","isMandatory","position","type"})
@@ -30,15 +42,27 @@ public final class DscConfigurationParameterResponse {
         this.type = type;
     }
 
+/**
+ * Gets or sets the default value of parameter.
+ */
     public Optional<String> getDefaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
+/**
+ * Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
+ */
     public Optional<Boolean> getIsMandatory() {
         return Optional.ofNullable(this.isMandatory);
     }
+/**
+ * Get or sets the position of the parameter.
+ */
     public Optional<Integer> getPosition() {
         return Optional.ofNullable(this.position);
     }
+/**
+ * Gets or sets the type of the parameter.
+ */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

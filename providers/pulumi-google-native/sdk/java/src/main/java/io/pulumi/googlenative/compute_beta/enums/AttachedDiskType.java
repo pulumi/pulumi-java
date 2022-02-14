@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.
+ */
     @EnumType
     public enum AttachedDiskType {
+/**
+ * 
+ */
         Persistent("PERSISTENT"),
+/**
+ * 
+ */
         Scratch("SCRATCH");
 
         private final String value;

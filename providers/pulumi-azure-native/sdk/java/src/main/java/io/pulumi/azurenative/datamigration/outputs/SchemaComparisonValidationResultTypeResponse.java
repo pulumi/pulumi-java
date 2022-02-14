@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SchemaComparisonValidationResultTypeResponse {
+/**
+ * Name of the object that has the difference
+ */
     private final String objectName;
+/**
+ * Type of the object that has the difference. e.g (Table/View/StoredProcedure)
+ */
     private final String objectType;
+/**
+ * Update action type with respect to target
+ */
     private final String updateAction;
 
     @OutputCustomType.Constructor({"objectName","objectType","updateAction"})
@@ -23,12 +32,21 @@ public final class SchemaComparisonValidationResultTypeResponse {
         this.updateAction = Objects.requireNonNull(updateAction);
     }
 
+/**
+ * Name of the object that has the difference
+ */
     public String getObjectName() {
         return this.objectName;
     }
+/**
+ * Type of the object that has the difference. e.g (Table/View/StoredProcedure)
+ */
     public String getObjectType() {
         return this.objectType;
     }
+/**
+ * Update action type with respect to target
+ */
     public String getUpdateAction() {
         return this.updateAction;
     }

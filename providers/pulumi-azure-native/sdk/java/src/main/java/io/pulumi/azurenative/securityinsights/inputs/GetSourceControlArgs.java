@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetSourceControlArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSourceControlArgs Empty = new GetSourceControlArgs();
 
+    /**
+     * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
     private final String operationalInsightsResourceProvider;
 
@@ -19,6 +25,9 @@ public final class GetSourceControlArgs extends io.pulumi.resources.InvokeArgs {
         return this.operationalInsightsResourceProvider;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetSourceControlArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Source control Id
+     */
     @InputImport(name="sourceControlId", required=true)
     private final String sourceControlId;
 
@@ -33,6 +45,9 @@ public final class GetSourceControlArgs extends io.pulumi.resources.InvokeArgs {
         return this.sourceControlId;
     }
 
+    /**
+     * The name of the workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

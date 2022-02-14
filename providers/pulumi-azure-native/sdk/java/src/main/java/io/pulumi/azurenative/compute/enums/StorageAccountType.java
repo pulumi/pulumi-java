@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Specifies the storage account type to be used to store the image. This property is not updatable.
+ */
     @EnumType
     public enum StorageAccountType {
+/**
+ * 
+ */
         Standard_LRS("Standard_LRS"),
+/**
+ * 
+ */
         Standard_ZRS("Standard_ZRS"),
+/**
+ * 
+ */
         Premium_LRS("Premium_LRS");
 
         private final String value;

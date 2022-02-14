@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The IP address range in the CIDR scheme.
+ */
 public final class IPRangeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IPRangeArgs Empty = new IPRangeArgs();
 
+    /**
+     * The IP address.
+     */
     @InputImport(name="address")
     private final @Nullable Input<String> address;
 
@@ -22,6 +28,9 @@ public final class IPRangeArgs extends io.pulumi.resources.ResourceArgs {
         return this.address == null ? Input.empty() : this.address;
     }
 
+    /**
+     * The friendly name for the IP address range.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +38,9 @@ public final class IPRangeArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The subnet mask prefix length (see CIDR notation).
+     */
     @InputImport(name="subnetPrefixLength")
     private final @Nullable Input<Integer> subnetPrefixLength;
 

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GatewayCertificateAuthorityArgs Empty = new GatewayCertificateAuthorityArgs();
 
+    /**
+     * Identifier of the certificate entity. Must be unique in the current API Management service instance.
+     */
     @InputImport(name="certificateId")
     private final @Nullable Input<String> certificateId;
 
@@ -22,6 +28,9 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
         return this.certificateId == null ? Input.empty() : this.certificateId;
     }
 
+    /**
+     * Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'
+     */
     @InputImport(name="gatewayId", required=true)
     private final Input<String> gatewayId;
 
@@ -29,6 +38,9 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
         return this.gatewayId;
     }
 
+    /**
+     * Determines whether certificate authority is trusted.
+     */
     @InputImport(name="isTrusted")
     private final @Nullable Input<Boolean> isTrusted;
 
@@ -36,6 +48,9 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
         return this.isTrusted == null ? Input.empty() : this.isTrusted;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +58,9 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

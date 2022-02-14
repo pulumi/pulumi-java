@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VirtualMachineScaleSetVMProtectionPolicyResponse {
+/**
+ * Indicates that the virtual machine scale set VM shouldn't be considered for deletion during a scale-in operation.
+ */
     private final @Nullable Boolean protectFromScaleIn;
+/**
+ * Indicates that model updates or actions (including scale-in) initiated on the virtual machine scale set should not be applied to the virtual machine scale set VM.
+ */
     private final @Nullable Boolean protectFromScaleSetActions;
 
     @OutputCustomType.Constructor({"protectFromScaleIn","protectFromScaleSetActions"})
@@ -22,9 +28,15 @@ public final class VirtualMachineScaleSetVMProtectionPolicyResponse {
         this.protectFromScaleSetActions = protectFromScaleSetActions;
     }
 
+/**
+ * Indicates that the virtual machine scale set VM shouldn't be considered for deletion during a scale-in operation.
+ */
     public Optional<Boolean> getProtectFromScaleIn() {
         return Optional.ofNullable(this.protectFromScaleIn);
     }
+/**
+ * Indicates that model updates or actions (including scale-in) initiated on the virtual machine scale set should not be applied to the virtual machine scale set VM.
+ */
     public Optional<Boolean> getProtectFromScaleSetActions() {
         return Optional.ofNullable(this.protectFromScaleSetActions);
     }

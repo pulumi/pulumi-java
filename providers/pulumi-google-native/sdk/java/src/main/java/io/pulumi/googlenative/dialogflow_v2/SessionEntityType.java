@@ -8,33 +8,60 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.dialogflow_v2.SessionEntityTypeArgs;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2EntityTypeEntityResponse;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a session entity type. If the specified session entity type already exists, overrides the session entity type. This method doesn't work with Google Assistant integration. Contact Dialogflow support if you need to use session entities with Google Assistant integration.
+Auto-naming is currently not supported for this resource.
+ */
 @ResourceType(type="google-native:dialogflow/v2:SessionEntityType")
 public class SessionEntityType extends io.pulumi.resources.CustomResource {
+    /**
+     * The collection of entities associated with this session entity type.
+     */
     @OutputExport(name="entities", type=List.class, parameters={GoogleCloudDialogflowV2EntityTypeEntityResponse.class})
     private Output<List<GoogleCloudDialogflowV2EntityTypeEntityResponse>> entities;
 
+    /**
+     * @return The collection of entities associated with this session entity type.
+     */
     public Output<List<GoogleCloudDialogflowV2EntityTypeEntityResponse>> getEntities() {
         return this.entities;
     }
+    /**
+     * Indicates whether the additional data should override or supplement the custom entity type definition.
+     */
     @OutputExport(name="entityOverrideMode", type=String.class, parameters={})
     private Output<String> entityOverrideMode;
 
+    /**
+     * @return Indicates whether the additional data should override or supplement the custom entity type definition.
+     */
     public Output<String> getEntityOverrideMode() {
         return this.entityOverrideMode;
     }
+    /**
+     * The unique identifier of this session entity type. Format: `projects//agent/sessions//entityTypes/`, or `projects//agent/environments//users//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default 'draft' environment. If `User ID` is not specified, we assume default '-' user. `` must be the display name of an existing entity type in the same agent that will be overridden or supplemented.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The unique identifier of this session entity type. Format: `projects//agent/sessions//entityTypes/`, or `projects//agent/environments//users//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default 'draft' environment. If `User ID` is not specified, we assume default '-' user. `` must be the display name of an existing entity type in the same agent that will be overridden or supplemented.
+     */
     public Output<String> getName() {
         return this.name;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SessionEntityType(String name, SessionEntityTypeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:dialogflow/v2:SessionEntityType", name, args == null ? SessionEntityTypeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -50,6 +77,14 @@ public class SessionEntityType extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SessionEntityType get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SessionEntityType(name, id, options);
     }

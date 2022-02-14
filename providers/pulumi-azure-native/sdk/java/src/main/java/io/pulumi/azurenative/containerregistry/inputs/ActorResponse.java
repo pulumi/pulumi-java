@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The agent that initiated the event. For most situations, this could be from the authorization context of the request.
+ */
 public final class ActorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ActorResponse Empty = new ActorResponse();
 
+    /**
+     * The subject or username associated with the request context that generated the event.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

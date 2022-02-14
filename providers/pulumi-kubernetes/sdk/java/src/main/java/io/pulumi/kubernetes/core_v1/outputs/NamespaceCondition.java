@@ -11,10 +11,32 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NamespaceCondition {
+/**
+ * 
+ */
     private final @Nullable String lastTransitionTime;
+/**
+ * 
+ */
     private final @Nullable String message;
+/**
+ * 
+ */
     private final @Nullable String reason;
+/**
+ * Status of the condition, one of True, False, Unknown.
+ */
     private final String status;
+/**
+ * Type of namespace controller condition.
+
+Possible enum values:
+ - `"NamespaceContentRemaining"` contains information about resources remaining in a namespace.
+ - `"NamespaceDeletionContentFailure"` contains information about namespace deleter errors during deletion of resources.
+ - `"NamespaceDeletionDiscoveryFailure"` contains information about namespace deleter errors during resource discovery.
+ - `"NamespaceDeletionGroupVersionParsingFailure"` contains information about namespace deleter errors parsing GV for legacy types.
+ - `"NamespaceFinalizersRemaining"` contains information about which finalizers are on resources remaining in a namespace.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"lastTransitionTime","message","reason","status","type"})
@@ -31,18 +53,40 @@ public final class NamespaceCondition {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * 
+ */
     public Optional<String> getLastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
+/**
+ * 
+ */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
+/**
+ * 
+ */
     public Optional<String> getReason() {
         return Optional.ofNullable(this.reason);
     }
+/**
+ * Status of the condition, one of True, False, Unknown.
+ */
     public String getStatus() {
         return this.status;
     }
+/**
+ * Type of namespace controller condition.
+
+Possible enum values:
+ - `"NamespaceContentRemaining"` contains information about resources remaining in a namespace.
+ - `"NamespaceDeletionContentFailure"` contains information about namespace deleter errors during deletion of resources.
+ - `"NamespaceDeletionDiscoveryFailure"` contains information about namespace deleter errors during resource discovery.
+ - `"NamespaceDeletionGroupVersionParsingFailure"` contains information about namespace deleter errors parsing GV for legacy types.
+ - `"NamespaceFinalizersRemaining"` contains information about which finalizers are on resources remaining in a namespace.
+ */
     public String getType() {
         return this.type;
     }

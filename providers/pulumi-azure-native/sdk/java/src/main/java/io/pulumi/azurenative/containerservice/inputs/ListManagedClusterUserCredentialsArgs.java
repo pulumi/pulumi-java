@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListManagedClusterUserCredentialsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListManagedClusterUserCredentialsArgs Empty = new ListManagedClusterUserCredentialsArgs();
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class ListManagedClusterUserCredentialsArgs extends io.pulumi.resou
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the managed cluster resource.
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

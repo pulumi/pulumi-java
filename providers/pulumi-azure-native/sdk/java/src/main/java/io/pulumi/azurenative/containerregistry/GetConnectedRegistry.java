@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnectedRegistry {
+/**
+ * An object that represents a connected registry for a container registry.
+API Version: 2020-11-01-preview.
+ *
+ * An object that represents a connected registry for a container registry.
+ */
     public static CompletableFuture<GetConnectedRegistryResult> invokeAsync(GetConnectedRegistryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getConnectedRegistry", TypeShape.of(GetConnectedRegistryResult.class), args == null ? GetConnectedRegistryArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,10 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HelmReleaseSettingsArgs {
+/**
+ * The backend storage driver for Helm. Values are: configmap, secret, memory, sql.
+ */
     private final @Nullable Input<String> driver;
+/**
+ * The path to the helm plugins directory.
+ */
     private final @Nullable Input<String> pluginsPath;
+/**
+ * The path to the registry config file.
+ */
     private final @Nullable Input<String> registryConfigPath;
+/**
+ * The path to the file containing cached repository indexes.
+ */
     private final @Nullable Input<String> repositoryCache;
+/**
+ * The path to the file containing repository names and URLs.
+ */
     private final @Nullable Input<String> repositoryConfigPath;
 
     @OutputCustomType.Constructor({"driver","pluginsPath","registryConfigPath","repositoryCache","repositoryConfigPath"})
@@ -31,18 +46,33 @@ public final class HelmReleaseSettingsArgs {
         this.repositoryConfigPath = repositoryConfigPath;
     }
 
+/**
+ * The backend storage driver for Helm. Values are: configmap, secret, memory, sql.
+ */
     public @Nullable Input<String> getDriver() {
         return this.driver;
     }
+/**
+ * The path to the helm plugins directory.
+ */
     public @Nullable Input<String> getPluginsPath() {
         return this.pluginsPath;
     }
+/**
+ * The path to the registry config file.
+ */
     public @Nullable Input<String> getRegistryConfigPath() {
         return this.registryConfigPath;
     }
+/**
+ * The path to the file containing cached repository indexes.
+ */
     public @Nullable Input<String> getRepositoryCache() {
         return this.repositoryCache;
     }
+/**
+ * The path to the file containing repository names and URLs.
+ */
     public @Nullable Input<String> getRepositoryConfigPath() {
         return this.repositoryConfigPath;
     }

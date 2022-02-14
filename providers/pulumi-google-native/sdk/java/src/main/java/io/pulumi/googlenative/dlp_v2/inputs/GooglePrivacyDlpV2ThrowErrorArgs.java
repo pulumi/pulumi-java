@@ -6,6 +6,9 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 import java.util.Objects;
 
 
+/**
+ * Throw an error and fail the request when a transformation error occurs.
+ */
 public final class GooglePrivacyDlpV2ThrowErrorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2ThrowErrorArgs Empty = new GooglePrivacyDlpV2ThrowErrorArgs();

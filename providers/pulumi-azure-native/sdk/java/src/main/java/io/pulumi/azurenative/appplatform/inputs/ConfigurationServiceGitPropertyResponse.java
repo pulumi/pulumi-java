@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Property of git environment.
+ */
 public final class ConfigurationServiceGitPropertyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfigurationServiceGitPropertyResponse Empty = new ConfigurationServiceGitPropertyResponse();
 
+    /**
+     * Repositories of Application Configuration Service git property.
+     */
     @InputImport(name="repositories")
     private final @Nullable List<ConfigurationServiceGitRepositoryResponse> repositories;
 

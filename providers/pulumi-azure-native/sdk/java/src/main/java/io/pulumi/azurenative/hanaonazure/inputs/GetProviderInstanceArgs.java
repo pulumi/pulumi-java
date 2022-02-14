@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetProviderInstanceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetProviderInstanceArgs Empty = new GetProviderInstanceArgs();
 
+    /**
+     * Name of the provider instance.
+     */
     @InputImport(name="providerInstanceName", required=true)
     private final String providerInstanceName;
 
@@ -19,6 +25,9 @@ public final class GetProviderInstanceArgs extends io.pulumi.resources.InvokeArg
         return this.providerInstanceName;
     }
 
+    /**
+     * Name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetProviderInstanceArgs extends io.pulumi.resources.InvokeArg
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the SAP monitor resource.
+     */
     @InputImport(name="sapMonitorName", required=true)
     private final String sapMonitorName;
 

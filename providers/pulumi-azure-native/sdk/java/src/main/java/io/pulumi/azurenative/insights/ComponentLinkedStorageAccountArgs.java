@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ComponentLinkedStorageAccountArgs Empty = new ComponentLinkedStorageAccountArgs();
 
+    /**
+     * Linked storage account resource ID
+     */
     @InputImport(name="linkedStorageAccount")
     private final @Nullable Input<String> linkedStorageAccount;
 
@@ -21,6 +27,9 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
         return this.linkedStorageAccount == null ? Input.empty() : this.linkedStorageAccount;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -28,6 +37,9 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Application Insights component resource.
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 
@@ -35,6 +47,9 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
         return this.resourceName;
     }
 
+    /**
+     * The type of the Application Insights component data source for the linked storage account.
+     */
     @InputImport(name="storageType")
     private final @Nullable Input<String> storageType;
 

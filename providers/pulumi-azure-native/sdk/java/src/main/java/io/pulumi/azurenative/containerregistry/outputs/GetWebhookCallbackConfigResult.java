@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetWebhookCallbackConfigResult {
+/**
+ * Custom headers that will be added to the webhook notifications.
+ */
     private final @Nullable Map<String,String> customHeaders;
+/**
+ * The service URI for the webhook to post notifications.
+ */
     private final String serviceUri;
 
     @OutputCustomType.Constructor({"customHeaders","serviceUri"})
@@ -22,9 +28,15 @@ public final class GetWebhookCallbackConfigResult {
         this.serviceUri = Objects.requireNonNull(serviceUri);
     }
 
+/**
+ * Custom headers that will be added to the webhook notifications.
+ */
     public Map<String,String> getCustomHeaders() {
         return this.customHeaders == null ? Map.of() : this.customHeaders;
     }
+/**
+ * The service URI for the webhook to post notifications.
+ */
     public String getServiceUri() {
         return this.serviceUri;
     }

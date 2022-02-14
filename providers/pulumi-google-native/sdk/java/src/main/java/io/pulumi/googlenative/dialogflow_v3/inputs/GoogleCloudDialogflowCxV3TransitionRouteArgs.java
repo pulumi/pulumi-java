@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A transition route specifies a intent that can be matched and/or a data condition that can be evaluated during a session. When a specified transition is matched, the following actions are taken in order: * If there is a `trigger_fulfillment` associated with the transition, it will be called. * If there is a `target_page` associated with the transition, the session will transition into the specified page. * If there is a `target_flow` associated with the transition, the session will transition into the specified flow.
+ */
 public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3TransitionRouteArgs Empty = new GoogleCloudDialogflowCxV3TransitionRouteArgs();
 
+    /**
+     * The condition to evaluate against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition). At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
+     */
     @InputImport(name="condition")
     private final @Nullable Input<String> condition;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * The unique identifier of an Intent. Format: `projects//locations//agents//intents/`. Indicates that the transition can only happen when the given intent is matched. At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
+     */
     @InputImport(name="intent")
     private final @Nullable Input<String> intent;
 
@@ -29,6 +38,9 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
         return this.intent == null ? Input.empty() : this.intent;
     }
 
+    /**
+     * The target flow to transition to. Format: `projects//locations//agents//flows/`.
+     */
     @InputImport(name="targetFlow")
     private final @Nullable Input<String> targetFlow;
 
@@ -36,6 +48,9 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
         return this.targetFlow == null ? Input.empty() : this.targetFlow;
     }
 
+    /**
+     * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
+     */
     @InputImport(name="targetPage")
     private final @Nullable Input<String> targetPage;
 
@@ -43,6 +58,9 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
         return this.targetPage == null ? Input.empty() : this.targetPage;
     }
 
+    /**
+     * The fulfillment to call when the condition is satisfied. At least one of `trigger_fulfillment` and `target` must be specified. When both are defined, `trigger_fulfillment` is executed first.
+     */
     @InputImport(name="triggerFulfillment")
     private final @Nullable Input<GoogleCloudDialogflowCxV3FulfillmentArgs> triggerFulfillment;
 

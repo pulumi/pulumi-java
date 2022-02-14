@@ -12,9 +12,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ViewDefinitionResponse {
+/**
+ * [Required] A query that BigQuery executes when the view is referenced.
+ */
     private final String query;
+/**
+ * True if the column names are explicitly specified. For example by using the 'CREATE VIEW v(c1, c2) AS ...' syntax. Can only be set using BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-reference/
+ */
     private final Boolean useExplicitColumnNames;
+/**
+ * Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set to false, the view will use BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-reference/ Queries and views that reference this view must use the same flag value.
+ */
     private final Boolean useLegacySql;
+/**
+ * Describes user-defined function resources used in the query.
+ */
     private final List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources;
 
     @OutputCustomType.Constructor({"query","useExplicitColumnNames","useLegacySql","userDefinedFunctionResources"})
@@ -29,15 +41,27 @@ public final class ViewDefinitionResponse {
         this.userDefinedFunctionResources = Objects.requireNonNull(userDefinedFunctionResources);
     }
 
+/**
+ * [Required] A query that BigQuery executes when the view is referenced.
+ */
     public String getQuery() {
         return this.query;
     }
+/**
+ * True if the column names are explicitly specified. For example by using the 'CREATE VIEW v(c1, c2) AS ...' syntax. Can only be set using BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-reference/
+ */
     public Boolean getUseExplicitColumnNames() {
         return this.useExplicitColumnNames;
     }
+/**
+ * Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set to false, the view will use BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-reference/ Queries and views that reference this view must use the same flag value.
+ */
     public Boolean getUseLegacySql() {
         return this.useLegacySql;
     }
+/**
+ * Describes user-defined function resources used in the query.
+ */
     public List<UserDefinedFunctionResourceResponse> getUserDefinedFunctionResources() {
         return this.userDefinedFunctionResources;
     }

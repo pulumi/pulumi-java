@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Connection properties specific to the Cloud SQL.
+ */
 public final class CloudSqlPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CloudSqlPropertiesResponse Empty = new CloudSqlPropertiesResponse();
 
+    /**
+     * Input only. Cloud SQL credential.
+     */
     @InputImport(name="credential", required=true)
     private final CloudSqlCredentialResponse credential;
 
@@ -20,6 +26,9 @@ public final class CloudSqlPropertiesResponse extends io.pulumi.resources.Invoke
         return this.credential;
     }
 
+    /**
+     * Database name.
+     */
     @InputImport(name="database", required=true)
     private final String database;
 
@@ -27,6 +36,9 @@ public final class CloudSqlPropertiesResponse extends io.pulumi.resources.Invoke
         return this.database;
     }
 
+    /**
+     * Cloud SQL instance ID in the form `project:location:instance`.
+     */
     @InputImport(name="instanceId", required=true)
     private final String instanceId;
 
@@ -34,6 +46,9 @@ public final class CloudSqlPropertiesResponse extends io.pulumi.resources.Invoke
         return this.instanceId;
     }
 
+    /**
+     * Type of the Cloud SQL database.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

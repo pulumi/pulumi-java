@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Access protocol to be used by the share.
+ */
     @EnumType
     public enum ShareAccessProtocol {
+/**
+ * 
+ */
         SMB("SMB"),
+/**
+ * 
+ */
         NFS("NFS");
 
         private final String value;

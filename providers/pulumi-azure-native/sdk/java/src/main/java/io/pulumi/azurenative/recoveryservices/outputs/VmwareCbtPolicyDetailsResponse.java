@@ -12,9 +12,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VmwareCbtPolicyDetailsResponse {
+/**
+ * The app consistent snapshot frequency in minutes.
+ */
     private final @Nullable Integer appConsistentFrequencyInMinutes;
+/**
+ * The crash consistent snapshot frequency in minutes.
+ */
     private final @Nullable Integer crashConsistentFrequencyInMinutes;
+/**
+ * Gets the class type. Overridden in derived classes.
+Expected value is 'VMwareCbt'.
+ */
     private final String instanceType;
+/**
+ * The duration in minutes until which the recovery points need to be stored.
+ */
     private final @Nullable Integer recoveryPointHistoryInMinutes;
 
     @OutputCustomType.Constructor({"appConsistentFrequencyInMinutes","crashConsistentFrequencyInMinutes","instanceType","recoveryPointHistoryInMinutes"})
@@ -29,15 +42,28 @@ public final class VmwareCbtPolicyDetailsResponse {
         this.recoveryPointHistoryInMinutes = recoveryPointHistoryInMinutes;
     }
 
+/**
+ * The app consistent snapshot frequency in minutes.
+ */
     public Optional<Integer> getAppConsistentFrequencyInMinutes() {
         return Optional.ofNullable(this.appConsistentFrequencyInMinutes);
     }
+/**
+ * The crash consistent snapshot frequency in minutes.
+ */
     public Optional<Integer> getCrashConsistentFrequencyInMinutes() {
         return Optional.ofNullable(this.crashConsistentFrequencyInMinutes);
     }
+/**
+ * Gets the class type. Overridden in derived classes.
+Expected value is 'VMwareCbt'.
+ */
     public String getInstanceType() {
         return this.instanceType;
     }
+/**
+ * The duration in minutes until which the recovery points need to be stored.
+ */
     public Optional<Integer> getRecoveryPointHistoryInMinutes() {
         return Optional.ofNullable(this.recoveryPointHistoryInMinutes);
     }

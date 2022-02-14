@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of a time series database connection to Azure Data Explorer with data being sent via an EventHub.
+ */
 public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureDataExplorerConnectionPropertiesResponse Empty = new AzureDataExplorerConnectionPropertiesResponse();
 
+    /**
+     * The name of the Azure Data Explorer database.
+     */
     @InputImport(name="adxDatabaseName", required=true)
     private final String adxDatabaseName;
 
@@ -21,6 +27,9 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
         return this.adxDatabaseName;
     }
 
+    /**
+     * The URI of the Azure Data Explorer endpoint.
+     */
     @InputImport(name="adxEndpointUri", required=true)
     private final String adxEndpointUri;
 
@@ -28,6 +37,9 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
         return this.adxEndpointUri;
     }
 
+    /**
+     * The resource ID of the Azure Data Explorer cluster.
+     */
     @InputImport(name="adxResourceId", required=true)
     private final String adxResourceId;
 
@@ -35,6 +47,9 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
         return this.adxResourceId;
     }
 
+    /**
+     * The name of the Azure Data Explorer table.
+     */
     @InputImport(name="adxTableName")
     private final @Nullable String adxTableName;
 
@@ -42,6 +57,10 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
         return this.adxTableName == null ? Optional.empty() : Optional.ofNullable(this.adxTableName);
     }
 
+    /**
+     * The type of time series connection resource.
+Expected value is 'AzureDataExplorer'.
+     */
     @InputImport(name="connectionType", required=true)
     private final String connectionType;
 
@@ -49,6 +68,9 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
         return this.connectionType;
     }
 
+    /**
+     * The EventHub consumer group to use when ADX reads from EventHub. Defaults to $Default.
+     */
     @InputImport(name="eventHubConsumerGroup")
     private final @Nullable String eventHubConsumerGroup;
 
@@ -56,6 +78,9 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
         return this.eventHubConsumerGroup == null ? Optional.empty() : Optional.ofNullable(this.eventHubConsumerGroup);
     }
 
+    /**
+     * The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://
+     */
     @InputImport(name="eventHubEndpointUri", required=true)
     private final String eventHubEndpointUri;
 
@@ -63,6 +88,9 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
         return this.eventHubEndpointUri;
     }
 
+    /**
+     * The EventHub name in the EventHub namespace for identity-based authentication.
+     */
     @InputImport(name="eventHubEntityPath", required=true)
     private final String eventHubEntityPath;
 
@@ -70,6 +98,9 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
         return this.eventHubEntityPath;
     }
 
+    /**
+     * The resource ID of the EventHub namespace.
+     */
     @InputImport(name="eventHubNamespaceResourceId", required=true)
     private final String eventHubNamespaceResourceId;
 
@@ -77,6 +108,9 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
         return this.eventHubNamespaceResourceId;
     }
 
+    /**
+     * The provisioning state.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

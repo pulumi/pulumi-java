@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class V2ServerKeyRestrictionsResponse {
+/**
+ * A list of the caller IP addresses that are allowed to make API calls with this key.
+ */
     private final List<String> allowedIps;
 
     @OutputCustomType.Constructor({"allowedIps"})
@@ -17,6 +20,9 @@ public final class V2ServerKeyRestrictionsResponse {
         this.allowedIps = Objects.requireNonNull(allowedIps);
     }
 
+/**
+ * A list of the caller IP addresses that are allowed to make API calls with this key.
+ */
     public List<String> getAllowedIps() {
         return this.allowedIps;
     }

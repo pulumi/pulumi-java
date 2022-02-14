@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MigratingVmArgs Empty = new MigratingVmArgs();
 
+    /**
+     * Details of the target VM in Compute Engine.
+     */
     @InputImport(name="computeEngineTargetDefaults")
     private final @Nullable Input<ComputeEngineTargetDefaultsArgs> computeEngineTargetDefaults;
 
@@ -24,6 +30,9 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
         return this.computeEngineTargetDefaults == null ? Input.empty() : this.computeEngineTargetDefaults;
     }
 
+    /**
+     * The description attached to the migrating VM by the user.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +40,9 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The display name attached to the MigratingVm by the user.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -38,6 +50,9 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The labels of the migrating VM.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -45,6 +60,9 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -52,6 +70,9 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="migratingVmId", required=true)
     private final Input<String> migratingVmId;
 
@@ -59,6 +80,9 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
         return this.migratingVmId;
     }
 
+    /**
+     * The replication schedule policy.
+     */
     @InputImport(name="policy")
     private final @Nullable Input<SchedulePolicyArgs> policy;
 
@@ -66,6 +90,9 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
         return this.policy == null ? Input.empty() : this.policy;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -73,6 +100,9 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -80,6 +110,9 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="sourceId", required=true)
     private final Input<String> sourceId;
 
@@ -87,6 +120,9 @@ public final class MigratingVmArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceId;
     }
 
+    /**
+     * The unique ID of the VM in the source. The VM's name in vSphere can be changed, so this is not the VM's name but rather its moRef id. This id is of the form vm-.
+     */
     @InputImport(name="sourceVmId")
     private final @Nullable Input<String> sourceVmId;
 

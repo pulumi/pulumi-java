@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelResponse Empty = new MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelResponse();
 
+    /**
+     * Migration end time
+     */
     @InputImport(name="endedOn", required=true)
     private final String endedOn;
 
@@ -19,6 +25,9 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelRespon
         return this.endedOn;
     }
 
+    /**
+     * Result identifier
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -26,6 +35,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelRespon
         return this.id;
     }
 
+    /**
+     * Result type
+Expected value is 'MigrationLevelOutput'.
+     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 
@@ -33,6 +46,9 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelRespon
         return this.resultType;
     }
 
+    /**
+     * Source server name
+     */
     @InputImport(name="sourceServer", required=true)
     private final String sourceServer;
 
@@ -40,6 +56,9 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelRespon
         return this.sourceServer;
     }
 
+    /**
+     * Source server version
+     */
     @InputImport(name="sourceServerVersion", required=true)
     private final String sourceServerVersion;
 
@@ -47,6 +66,9 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelRespon
         return this.sourceServerVersion;
     }
 
+    /**
+     * Migration start time
+     */
     @InputImport(name="startedOn", required=true)
     private final String startedOn;
 
@@ -54,6 +76,9 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelRespon
         return this.startedOn;
     }
 
+    /**
+     * Target server name
+     */
     @InputImport(name="targetServer", required=true)
     private final String targetServer;
 
@@ -61,6 +86,9 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputMigrationLevelRespon
         return this.targetServer;
     }
 
+    /**
+     * Target server version
+     */
     @InputImport(name="targetServerVersion", required=true)
     private final String targetServerVersion;
 

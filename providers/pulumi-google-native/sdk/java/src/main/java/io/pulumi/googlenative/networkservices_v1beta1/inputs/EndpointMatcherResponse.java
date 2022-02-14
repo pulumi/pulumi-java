@@ -8,10 +8,16 @@ import io.pulumi.googlenative.networkservices_v1beta1.inputs.MetadataLabelMatche
 import java.util.Objects;
 
 
+/**
+ * A definition of a matcher that selects endpoints to which the policies should be applied.
+ */
 public final class EndpointMatcherResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EndpointMatcherResponse Empty = new EndpointMatcherResponse();
 
+    /**
+     * The matcher is based on node metadata presented by xDS clients.
+     */
     @InputImport(name="metadataLabelMatcher", required=true)
     private final MetadataLabelMatcherResponse metadataLabelMatcher;
 

@@ -4,7 +4,6 @@
 package io.pulumi.kubernetes.core_v1.outputs;
 
 import io.pulumi.core.internal.annotations.OutputCustomType;
-import io.pulumi.kubernetes.core_v1.outputs.PodDNSConfigOption;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -12,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PodDNSConfig {
+/**
+ * A list of DNS name server IP addresses. This will be appended to the base nameservers generated from DNSPolicy. Duplicated nameservers will be removed.
+ */
     private final @Nullable List<String> nameservers;
+/**
+ * A list of DNS resolver options. This will be merged with the base options generated from DNSPolicy. Duplicated entries will be removed. Resolution options given in Options will override those that appear in the base DNSPolicy.
+ */
     private final @Nullable List<PodDNSConfigOption> options;
+/**
+ * A list of DNS search domains for host-name lookup. This will be appended to the base search paths generated from DNSPolicy. Duplicated search paths will be removed.
+ */
     private final @Nullable List<String> searches;
 
     @OutputCustomType.Constructor({"nameservers","options","searches"})
@@ -26,12 +34,21 @@ public final class PodDNSConfig {
         this.searches = searches;
     }
 
+/**
+ * A list of DNS name server IP addresses. This will be appended to the base nameservers generated from DNSPolicy. Duplicated nameservers will be removed.
+ */
     public List<String> getNameservers() {
         return this.nameservers == null ? List.of() : this.nameservers;
     }
+/**
+ * A list of DNS resolver options. This will be merged with the base options generated from DNSPolicy. Duplicated entries will be removed. Resolution options given in Options will override those that appear in the base DNSPolicy.
+ */
     public List<PodDNSConfigOption> getOptions() {
         return this.options == null ? List.of() : this.options;
     }
+/**
+ * A list of DNS search domains for host-name lookup. This will be appended to the base search paths generated from DNSPolicy. Duplicated search paths will be removed.
+ */
     public List<String> getSearches() {
         return this.searches == null ? List.of() : this.searches;
     }

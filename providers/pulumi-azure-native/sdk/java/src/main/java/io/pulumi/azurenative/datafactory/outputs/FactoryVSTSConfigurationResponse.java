@@ -11,13 +11,38 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FactoryVSTSConfigurationResponse {
+/**
+ * Account name.
+ */
     private final String accountName;
+/**
+ * Collaboration branch.
+ */
     private final String collaborationBranch;
+/**
+ * Last commit id.
+ */
     private final @Nullable String lastCommitId;
+/**
+ * VSTS project name.
+ */
     private final String projectName;
+/**
+ * Repository name.
+ */
     private final String repositoryName;
+/**
+ * Root folder.
+ */
     private final String rootFolder;
+/**
+ * VSTS tenant id.
+ */
     private final @Nullable String tenantId;
+/**
+ * Type of repo configuration.
+Expected value is 'FactoryVSTSConfiguration'.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"accountName","collaborationBranch","lastCommitId","projectName","repositoryName","rootFolder","tenantId","type"})
@@ -40,27 +65,52 @@ public final class FactoryVSTSConfigurationResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Account name.
+ */
     public String getAccountName() {
         return this.accountName;
     }
+/**
+ * Collaboration branch.
+ */
     public String getCollaborationBranch() {
         return this.collaborationBranch;
     }
+/**
+ * Last commit id.
+ */
     public Optional<String> getLastCommitId() {
         return Optional.ofNullable(this.lastCommitId);
     }
+/**
+ * VSTS project name.
+ */
     public String getProjectName() {
         return this.projectName;
     }
+/**
+ * Repository name.
+ */
     public String getRepositoryName() {
         return this.repositoryName;
     }
+/**
+ * Root folder.
+ */
     public String getRootFolder() {
         return this.rootFolder;
     }
+/**
+ * VSTS tenant id.
+ */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
+/**
+ * Type of repo configuration.
+Expected value is 'FactoryVSTSConfiguration'.
+ */
     public String getType() {
         return this.type;
     }

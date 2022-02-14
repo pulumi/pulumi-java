@@ -11,10 +11,16 @@ import java.lang.Object;
 import java.util.Objects;
 
 
+/**
+ * SSIS access credential.
+ */
 public final class SSISAccessCredentialResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SSISAccessCredentialResponse Empty = new SSISAccessCredentialResponse();
 
+    /**
+     * Domain for windows authentication.
+     */
     @InputImport(name="domain", required=true)
     private final Object domain;
 
@@ -22,6 +28,9 @@ public final class SSISAccessCredentialResponse extends io.pulumi.resources.Invo
         return this.domain;
     }
 
+    /**
+     * Password for windows authentication.
+     */
     @InputImport(name="password", required=true)
     private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
@@ -29,6 +38,9 @@ public final class SSISAccessCredentialResponse extends io.pulumi.resources.Invo
         return this.password;
     }
 
+    /**
+     * UseName for windows authentication.
+     */
     @InputImport(name="userName", required=true)
     private final Object userName;
 

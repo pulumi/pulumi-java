@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The set of data plane operations permitted through this Role Definition.
+ */
 public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PermissionArgs Empty = new PermissionArgs();
 
+    /**
+     * An array of data actions that are allowed.
+     */
     @InputImport(name="dataActions")
     private final @Nullable Input<List<String>> dataActions;
 
@@ -22,6 +28,9 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataActions == null ? Input.empty() : this.dataActions;
     }
 
+    /**
+     * An array of data actions that are denied.
+     */
     @InputImport(name="notDataActions")
     private final @Nullable Input<List<String>> notDataActions;
 

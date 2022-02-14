@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Determines how resource identity is resolved on the destination.
+ */
     @EnumType
     public enum IotIdentityResolutionType {
+/**
+ * 
+ */
         Create("Create"),
+/**
+ * 
+ */
         Lookup("Lookup");
 
         private final String value;

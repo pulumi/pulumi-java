@@ -20,10 +20,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RouteArgs Empty = new RouteArgs();
 
+    /**
+     * compression settings.
+     */
     @InputImport(name="compressionSettings")
     private final @Nullable Input<CompressionSettingsArgs> compressionSettings;
 
@@ -31,6 +37,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.compressionSettings == null ? Input.empty() : this.compressionSettings;
     }
 
+    /**
+     * Domains referenced by this endpoint.
+     */
     @InputImport(name="customDomains")
     private final @Nullable Input<List<ResourceReferenceArgs>> customDomains;
 
@@ -38,6 +47,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.customDomains == null ? Input.empty() : this.customDomains;
     }
 
+    /**
+     * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
+     */
     @InputImport(name="enabledState")
     private final @Nullable Input<Either<String,EnabledState>> enabledState;
 
@@ -45,6 +57,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabledState == null ? Input.empty() : this.enabledState;
     }
 
+    /**
+     * Name of the endpoint under the profile which is unique globally.
+     */
     @InputImport(name="endpointName", required=true)
     private final Input<String> endpointName;
 
@@ -52,6 +67,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpointName;
     }
 
+    /**
+     * Protocol this rule will use when forwarding traffic to backends.
+     */
     @InputImport(name="forwardingProtocol")
     private final @Nullable Input<Either<String,ForwardingProtocol>> forwardingProtocol;
 
@@ -59,6 +77,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.forwardingProtocol == null ? Input.empty() : this.forwardingProtocol;
     }
 
+    /**
+     * Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.
+     */
     @InputImport(name="httpsRedirect")
     private final @Nullable Input<Either<String,HttpsRedirect>> httpsRedirect;
 
@@ -66,6 +87,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.httpsRedirect == null ? Input.empty() : this.httpsRedirect;
     }
 
+    /**
+     * whether this route will be linked to the default endpoint domain.
+     */
     @InputImport(name="linkToDefaultDomain")
     private final @Nullable Input<Either<String,LinkToDefaultDomain>> linkToDefaultDomain;
 
@@ -73,6 +97,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkToDefaultDomain == null ? Input.empty() : this.linkToDefaultDomain;
     }
 
+    /**
+     * A reference to the origin group.
+     */
     @InputImport(name="originGroup", required=true)
     private final Input<ResourceReferenceArgs> originGroup;
 
@@ -80,6 +107,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.originGroup;
     }
 
+    /**
+     * A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
+     */
     @InputImport(name="originPath")
     private final @Nullable Input<String> originPath;
 
@@ -87,6 +117,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.originPath == null ? Input.empty() : this.originPath;
     }
 
+    /**
+     * The route patterns of the rule.
+     */
     @InputImport(name="patternsToMatch")
     private final @Nullable Input<List<String>> patternsToMatch;
 
@@ -94,6 +127,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.patternsToMatch == null ? Input.empty() : this.patternsToMatch;
     }
 
+    /**
+     * Name of the CDN profile which is unique within the resource group.
+     */
     @InputImport(name="profileName", required=true)
     private final Input<String> profileName;
 
@@ -101,6 +137,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.profileName;
     }
 
+    /**
+     * Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
+     */
     @InputImport(name="queryStringCachingBehavior")
     private final @Nullable Input<AfdQueryStringCachingBehavior> queryStringCachingBehavior;
 
@@ -108,6 +147,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.queryStringCachingBehavior == null ? Input.empty() : this.queryStringCachingBehavior;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -115,6 +157,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the routing rule.
+     */
     @InputImport(name="routeName")
     private final @Nullable Input<String> routeName;
 
@@ -122,6 +167,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.routeName == null ? Input.empty() : this.routeName;
     }
 
+    /**
+     * rule sets referenced by this endpoint.
+     */
     @InputImport(name="ruleSets")
     private final @Nullable Input<List<ResourceReferenceArgs>> ruleSets;
 
@@ -129,6 +177,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
         return this.ruleSets == null ? Input.empty() : this.ruleSets;
     }
 
+    /**
+     * List of supported protocols for this route.
+     */
     @InputImport(name="supportedProtocols")
     private final @Nullable Input<List<Either<String,AFDEndpointProtocols>>> supportedProtocols;
 

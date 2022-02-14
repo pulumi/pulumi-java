@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConfigMapEnvSource {
+/**
+ * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+ */
     private final @Nullable String name;
+/**
+ * Specify whether the ConfigMap must be defined
+ */
     private final @Nullable Boolean optional;
 
     @OutputCustomType.Constructor({"name","optional"})
@@ -23,9 +29,15 @@ public final class ConfigMapEnvSource {
         this.optional = optional;
     }
 
+/**
+ * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * Specify whether the ConfigMap must be defined
+ */
     public Optional<Boolean> getOptional() {
         return Optional.ofNullable(this.optional);
     }

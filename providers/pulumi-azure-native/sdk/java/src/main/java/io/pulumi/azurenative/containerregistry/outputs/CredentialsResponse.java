@@ -14,7 +14,15 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CredentialsResponse {
+/**
+ * Describes the credential parameters for accessing other custom registries. The key
+for the dictionary item will be the registry login server (myregistry.azurecr.io) and
+the value of the item will be the registry credentials for accessing the registry.
+ */
     private final @Nullable Map<String,CustomRegistryCredentialsResponse> customRegistries;
+/**
+ * Describes the credential parameters for accessing the source registry.
+ */
     private final @Nullable SourceRegistryCredentialsResponse sourceRegistry;
 
     @OutputCustomType.Constructor({"customRegistries","sourceRegistry"})
@@ -25,9 +33,17 @@ public final class CredentialsResponse {
         this.sourceRegistry = sourceRegistry;
     }
 
+/**
+ * Describes the credential parameters for accessing other custom registries. The key
+for the dictionary item will be the registry login server (myregistry.azurecr.io) and
+the value of the item will be the registry credentials for accessing the registry.
+ */
     public Map<String,CustomRegistryCredentialsResponse> getCustomRegistries() {
         return this.customRegistries == null ? Map.of() : this.customRegistries;
     }
+/**
+ * Describes the credential parameters for accessing the source registry.
+ */
     public Optional<SourceRegistryCredentialsResponse> getSourceRegistry() {
         return Optional.ofNullable(this.sourceRegistry);
     }

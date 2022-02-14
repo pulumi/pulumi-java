@@ -9,10 +9,16 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Result of an instance attempt.
+ */
 public final class InstanceAttemptResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InstanceAttemptResultResponse Empty = new InstanceAttemptResultResponse();
 
+    /**
+     * Optional. The exit code of this attempt. This may be unset if the container was unable to exit cleanly with a code due to some other failure. See status field for possible failure details.
+     */
     @InputImport(name="exitCode", required=true)
     private final Integer exitCode;
 
@@ -20,6 +26,9 @@ public final class InstanceAttemptResultResponse extends io.pulumi.resources.Inv
         return this.exitCode;
     }
 
+    /**
+     * Optional. The status of this attempt. If the status code is OK, then the attempt succeeded.
+     */
     @InputImport(name="status", required=true)
     private final GoogleRpcStatusResponse status;
 

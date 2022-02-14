@@ -14,14 +14,41 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetEmailTemplateResult {
+/**
+ * Email Template Body. This should be a valid XDocument
+ */
     private final String body;
+/**
+ * Description of the Email Template.
+ */
     private final @Nullable String description;
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Whether the template is the default template provided by Api Management or has been edited.
+ */
     private final Boolean isDefault;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * Email Template Parameter values.
+ */
     private final @Nullable List<EmailTemplateParametersContractPropertiesResponse> parameters;
+/**
+ * Subject of the Template.
+ */
     private final String subject;
+/**
+ * Title of the Template.
+ */
     private final @Nullable String title;
+/**
+ * Resource type for API Management resource.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"body","description","id","isDefault","name","parameters","subject","title","type"})
@@ -46,30 +73,57 @@ public final class GetEmailTemplateResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Email Template Body. This should be a valid XDocument
+ */
     public String getBody() {
         return this.body;
     }
+/**
+ * Description of the Email Template.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Whether the template is the default template provided by Api Management or has been edited.
+ */
     public Boolean getIsDefault() {
         return this.isDefault;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Email Template Parameter values.
+ */
     public List<EmailTemplateParametersContractPropertiesResponse> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }
+/**
+ * Subject of the Template.
+ */
     public String getSubject() {
         return this.subject;
     }
+/**
+ * Title of the Template.
+ */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }
+/**
+ * Resource type for API Management resource.
+ */
     public String getType() {
         return this.type;
     }

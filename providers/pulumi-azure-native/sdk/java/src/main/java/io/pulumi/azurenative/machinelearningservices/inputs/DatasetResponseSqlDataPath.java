@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Sql Query/Table/Stored Procedure details.
+ */
 public final class DatasetResponseSqlDataPath extends io.pulumi.resources.InvokeArgs {
 
     public static final DatasetResponseSqlDataPath Empty = new DatasetResponseSqlDataPath();
 
+    /**
+     * SQL query timeout. Unit in seconds.
+     */
     @InputImport(name="queryTimeout", required=true)
     private final Double queryTimeout;
 
@@ -20,6 +26,9 @@ public final class DatasetResponseSqlDataPath extends io.pulumi.resources.Invoke
         return this.queryTimeout;
     }
 
+    /**
+     * SQL query
+     */
     @InputImport(name="sqlQuery", required=true)
     private final String sqlQuery;
 
@@ -27,6 +36,9 @@ public final class DatasetResponseSqlDataPath extends io.pulumi.resources.Invoke
         return this.sqlQuery;
     }
 
+    /**
+     * SQL storedProcedure name
+     */
     @InputImport(name="sqlStoredProcedureName", required=true)
     private final String sqlStoredProcedureName;
 
@@ -34,6 +46,9 @@ public final class DatasetResponseSqlDataPath extends io.pulumi.resources.Invoke
         return this.sqlStoredProcedureName;
     }
 
+    /**
+     * SQL table name
+     */
     @InputImport(name="sqlTableName", required=true)
     private final String sqlTableName;
 

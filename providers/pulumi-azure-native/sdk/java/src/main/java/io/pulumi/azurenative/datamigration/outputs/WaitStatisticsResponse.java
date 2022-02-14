@@ -10,8 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WaitStatisticsResponse {
+/**
+ * Total no. of waits
+ */
     private final Double waitCount;
+/**
+ * Total wait time in millisecond(s)
+ */
     private final Double waitTimeMs;
+/**
+ * Type of the Wait
+ */
     private final String waitType;
 
     @OutputCustomType.Constructor({"waitCount","waitTimeMs","waitType"})
@@ -24,12 +33,21 @@ public final class WaitStatisticsResponse {
         this.waitType = Objects.requireNonNull(waitType);
     }
 
+/**
+ * Total no. of waits
+ */
     public Double getWaitCount() {
         return this.waitCount;
     }
+/**
+ * Total wait time in millisecond(s)
+ */
     public Double getWaitTimeMs() {
         return this.waitTimeMs;
     }
+/**
+ * Type of the Wait
+ */
     public String getWaitType() {
         return this.waitType;
     }

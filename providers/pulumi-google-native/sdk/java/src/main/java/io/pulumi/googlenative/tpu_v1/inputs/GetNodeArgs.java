@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetNodeArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNodeArgs Empty = new GetNodeArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -21,6 +27,9 @@ public final class GetNodeArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="nodeId", required=true)
     private final String nodeId;
 
@@ -28,6 +37,9 @@ public final class GetNodeArgs extends io.pulumi.resources.InvokeArgs {
         return this.nodeId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

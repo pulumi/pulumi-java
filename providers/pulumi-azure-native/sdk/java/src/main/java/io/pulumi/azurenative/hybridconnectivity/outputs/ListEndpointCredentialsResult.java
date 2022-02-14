@@ -12,10 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListEndpointCredentialsResult {
+/**
+ * Access key for hybrid connection.
+ */
     private final String accessKey;
+/**
+ * The expiration of access key in unix time.
+ */
     private final @Nullable Double expiresOn;
+/**
+ * Azure Relay hybrid connection name for the resource.
+ */
     private final String hybridConnectionName;
+/**
+ * The namespace name.
+ */
     private final String namespaceName;
+/**
+ * The suffix domain name of relay namespace.
+ */
     private final String namespaceNameSuffix;
 
     @OutputCustomType.Constructor({"accessKey","expiresOn","hybridConnectionName","namespaceName","namespaceNameSuffix"})
@@ -32,18 +47,33 @@ public final class ListEndpointCredentialsResult {
         this.namespaceNameSuffix = Objects.requireNonNull(namespaceNameSuffix);
     }
 
+/**
+ * Access key for hybrid connection.
+ */
     public String getAccessKey() {
         return this.accessKey;
     }
+/**
+ * The expiration of access key in unix time.
+ */
     public Optional<Double> getExpiresOn() {
         return Optional.ofNullable(this.expiresOn);
     }
+/**
+ * Azure Relay hybrid connection name for the resource.
+ */
     public String getHybridConnectionName() {
         return this.hybridConnectionName;
     }
+/**
+ * The namespace name.
+ */
     public String getNamespaceName() {
         return this.namespaceName;
     }
+/**
+ * The suffix domain name of relay namespace.
+ */
     public String getNamespaceNameSuffix() {
         return this.namespaceNameSuffix;
     }

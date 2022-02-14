@@ -8,10 +8,16 @@ import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationResponse;
 import java.util.Objects;
 
 
+/**
+ * Testing timing break down to know phases.
+ */
 public final class TestTimingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TestTimingResponse Empty = new TestTimingResponse();
 
+    /**
+     * How long it took to run the test process. - In response: present if previously set. - In create/update request: optional
+     */
     @InputImport(name="testProcessDuration", required=true)
     private final DurationResponse testProcessDuration;
 

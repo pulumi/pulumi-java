@@ -10,8 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RuntimeInfoResponse {
+/**
+ * A URI pointing to the location of the diagnostics tarball.
+ */
     private final String diagnosticOutputUri;
+/**
+ * Map of remote access endpoints (such as web interfaces and APIs) to their URIs.
+ */
     private final Map<String,String> endpoints;
+/**
+ * A URI pointing to the location of the stdout and stderr of the workload.
+ */
     private final String outputUri;
 
     @OutputCustomType.Constructor({"diagnosticOutputUri","endpoints","outputUri"})
@@ -24,12 +33,21 @@ public final class RuntimeInfoResponse {
         this.outputUri = Objects.requireNonNull(outputUri);
     }
 
+/**
+ * A URI pointing to the location of the diagnostics tarball.
+ */
     public String getDiagnosticOutputUri() {
         return this.diagnosticOutputUri;
     }
+/**
+ * Map of remote access endpoints (such as web interfaces and APIs) to their URIs.
+ */
     public Map<String,String> getEndpoints() {
         return this.endpoints;
     }
+/**
+ * A URI pointing to the location of the stdout and stderr of the workload.
+ */
     public String getOutputUri() {
         return this.outputUri;
     }

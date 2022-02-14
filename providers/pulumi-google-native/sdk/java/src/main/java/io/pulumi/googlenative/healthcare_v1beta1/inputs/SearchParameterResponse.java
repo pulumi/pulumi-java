@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Contains the versioned name and the URL for one SearchParameter.
+ */
 public final class SearchParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SearchParameterResponse Empty = new SearchParameterResponse();
 
+    /**
+     * The canonical url of the search parameter resource.
+     */
     @InputImport(name="canonicalUrl", required=true)
     private final String canonicalUrl;
 
@@ -19,6 +25,9 @@ public final class SearchParameterResponse extends io.pulumi.resources.InvokeArg
         return this.canonicalUrl;
     }
 
+    /**
+     * The versioned name of the search parameter resource. The format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter/{resource-id}/_history/{version-id} For fhir stores with disable_resource_versioning=true, the format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter/{resource-id}/
+     */
     @InputImport(name="parameter", required=true)
     private final String parameter;
 

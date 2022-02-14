@@ -15,11 +15,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SubjectAccessReviewSpec {
+/**
+ * Extra corresponds to the user.Info.GetExtra() method from the authenticator.  Since that is input to the authorizer it needs a reflection here.
+ */
     private final @Nullable Map<String,List<String>> extra;
+/**
+ * Groups is the groups you're testing for.
+ */
     private final @Nullable List<String> groups;
+/**
+ * NonResourceAttributes describes information for a non-resource access request
+ */
     private final @Nullable NonResourceAttributes nonResourceAttributes;
+/**
+ * ResourceAuthorizationAttributes describes information for a resource access request
+ */
     private final @Nullable ResourceAttributes resourceAttributes;
+/**
+ * UID information about the requesting user.
+ */
     private final @Nullable String uid;
+/**
+ * User is the user you're testing for. If you specify "User" but not "Groups", then is it interpreted as "What if User were not a member of any groups
+ */
     private final @Nullable String user;
 
     @OutputCustomType.Constructor({"extra","groups","nonResourceAttributes","resourceAttributes","uid","user"})
@@ -38,21 +56,39 @@ public final class SubjectAccessReviewSpec {
         this.user = user;
     }
 
+/**
+ * Extra corresponds to the user.Info.GetExtra() method from the authenticator.  Since that is input to the authorizer it needs a reflection here.
+ */
     public Map<String,List<String>> getExtra() {
         return this.extra == null ? Map.of() : this.extra;
     }
+/**
+ * Groups is the groups you're testing for.
+ */
     public List<String> getGroups() {
         return this.groups == null ? List.of() : this.groups;
     }
+/**
+ * NonResourceAttributes describes information for a non-resource access request
+ */
     public Optional<NonResourceAttributes> getNonResourceAttributes() {
         return Optional.ofNullable(this.nonResourceAttributes);
     }
+/**
+ * ResourceAuthorizationAttributes describes information for a resource access request
+ */
     public Optional<ResourceAttributes> getResourceAttributes() {
         return Optional.ofNullable(this.resourceAttributes);
     }
+/**
+ * UID information about the requesting user.
+ */
     public Optional<String> getUid() {
         return Optional.ofNullable(this.uid);
     }
+/**
+ * User is the user you're testing for. If you specify "User" but not "Groups", then is it interpreted as "What if User were not a member of any groups
+ */
     public Optional<String> getUser() {
         return Optional.ofNullable(this.user);
     }

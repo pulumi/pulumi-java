@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class DmlStatisticsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DmlStatisticsResponse Empty = new DmlStatisticsResponse();
 
+    /**
+     * Number of deleted Rows. populated by DML DELETE, MERGE and TRUNCATE statements.
+     */
     @InputImport(name="deletedRowCount", required=true)
     private final String deletedRowCount;
 
@@ -19,6 +25,9 @@ public final class DmlStatisticsResponse extends io.pulumi.resources.InvokeArgs 
         return this.deletedRowCount;
     }
 
+    /**
+     * Number of inserted Rows. Populated by DML INSERT and MERGE statements.
+     */
     @InputImport(name="insertedRowCount", required=true)
     private final String insertedRowCount;
 
@@ -26,6 +35,9 @@ public final class DmlStatisticsResponse extends io.pulumi.resources.InvokeArgs 
         return this.insertedRowCount;
     }
 
+    /**
+     * Number of updated Rows. Populated by DML UPDATE and MERGE statements.
+     */
     @InputImport(name="updatedRowCount", required=true)
     private final String updatedRowCount;
 

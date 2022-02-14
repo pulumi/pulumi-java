@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ControllerDetailsResponse {
+/**
+ * controller arm resource id
+ */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -18,6 +21,9 @@ public final class ControllerDetailsResponse {
         this.id = id;
     }
 
+/**
+ * controller arm resource id
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

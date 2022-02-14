@@ -21,19 +21,61 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetOpenShiftClusterResult {
+/**
+ * The cluster API server profile.
+ */
     private final @Nullable APIServerProfileResponse apiserverProfile;
+/**
+ * The cluster profile.
+ */
     private final @Nullable ClusterProfileResponse clusterProfile;
+/**
+ * The console profile.
+ */
     private final @Nullable ConsoleProfileResponse consoleProfile;
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     private final String id;
+/**
+ * The cluster ingress profiles.
+ */
     private final @Nullable List<IngressProfileResponse> ingressProfiles;
+/**
+ * The geo-location where the resource lives
+ */
     private final String location;
+/**
+ * The cluster master profile.
+ */
     private final @Nullable MasterProfileResponse masterProfile;
+/**
+ * The name of the resource
+ */
     private final String name;
+/**
+ * The cluster network profile.
+ */
     private final @Nullable NetworkProfileResponse networkProfile;
+/**
+ * The cluster provisioning state (immutable).
+ */
     private final @Nullable String provisioningState;
+/**
+ * The cluster service principal profile.
+ */
     private final @Nullable ServicePrincipalProfileResponse servicePrincipalProfile;
+/**
+ * Resource tags.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     private final String type;
+/**
+ * The cluster worker profiles.
+ */
     private final @Nullable List<WorkerProfileResponse> workerProfiles;
 
     @OutputCustomType.Constructor({"apiserverProfile","clusterProfile","consoleProfile","id","ingressProfiles","location","masterProfile","name","networkProfile","provisioningState","servicePrincipalProfile","tags","type","workerProfiles"})
@@ -68,45 +110,87 @@ public final class GetOpenShiftClusterResult {
         this.workerProfiles = workerProfiles;
     }
 
+/**
+ * The cluster API server profile.
+ */
     public Optional<APIServerProfileResponse> getApiserverProfile() {
         return Optional.ofNullable(this.apiserverProfile);
     }
+/**
+ * The cluster profile.
+ */
     public Optional<ClusterProfileResponse> getClusterProfile() {
         return Optional.ofNullable(this.clusterProfile);
     }
+/**
+ * The console profile.
+ */
     public Optional<ConsoleProfileResponse> getConsoleProfile() {
         return Optional.ofNullable(this.consoleProfile);
     }
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The cluster ingress profiles.
+ */
     public List<IngressProfileResponse> getIngressProfiles() {
         return this.ingressProfiles == null ? List.of() : this.ingressProfiles;
     }
+/**
+ * The geo-location where the resource lives
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * The cluster master profile.
+ */
     public Optional<MasterProfileResponse> getMasterProfile() {
         return Optional.ofNullable(this.masterProfile);
     }
+/**
+ * The name of the resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The cluster network profile.
+ */
     public Optional<NetworkProfileResponse> getNetworkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
+/**
+ * The cluster provisioning state (immutable).
+ */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
+/**
+ * The cluster service principal profile.
+ */
     public Optional<ServicePrincipalProfileResponse> getServicePrincipalProfile() {
         return Optional.ofNullable(this.servicePrincipalProfile);
     }
+/**
+ * Resource tags.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * The cluster worker profiles.
+ */
     public List<WorkerProfileResponse> getWorkerProfiles() {
         return this.workerProfiles == null ? List.of() : this.workerProfiles;
     }

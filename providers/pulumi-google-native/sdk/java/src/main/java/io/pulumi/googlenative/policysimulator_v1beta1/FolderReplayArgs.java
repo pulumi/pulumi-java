@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class FolderReplayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FolderReplayArgs Empty = new FolderReplayArgs();
 
+    /**
+     * The configuration used for the `Replay`.
+     */
     @InputImport(name="config", required=true)
     private final Input<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config;
 
@@ -22,6 +28,9 @@ public final class FolderReplayArgs extends io.pulumi.resources.ResourceArgs {
         return this.config;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="folderId", required=true)
     private final Input<String> folderId;
 
@@ -29,6 +38,9 @@ public final class FolderReplayArgs extends io.pulumi.resources.ResourceArgs {
         return this.folderId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 

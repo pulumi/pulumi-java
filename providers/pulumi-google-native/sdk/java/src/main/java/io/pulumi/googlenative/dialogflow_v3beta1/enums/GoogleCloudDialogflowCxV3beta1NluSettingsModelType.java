@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Indicates the type of NLU model.
+ */
     @EnumType
     public enum GoogleCloudDialogflowCxV3beta1NluSettingsModelType {
+/**
+ * Not specified. `MODEL_TYPE_STANDARD` will be used.
+ */
         ModelTypeUnspecified("MODEL_TYPE_UNSPECIFIED"),
+/**
+ * Use standard NLU model.
+ */
         ModelTypeStandard("MODEL_TYPE_STANDARD"),
+/**
+ * Use advanced NLU model.
+ */
         ModelTypeAdvanced("MODEL_TYPE_ADVANCED");
 
         private final String value;

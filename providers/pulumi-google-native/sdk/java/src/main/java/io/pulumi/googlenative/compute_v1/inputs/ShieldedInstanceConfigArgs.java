@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A set of Shielded Instance options.
+ */
 public final class ShieldedInstanceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ShieldedInstanceConfigArgs Empty = new ShieldedInstanceConfigArgs();
 
+    /**
+     * Defines whether the instance has integrity monitoring enabled. Enabled by default.
+     */
     @InputImport(name="enableIntegrityMonitoring")
     private final @Nullable Input<Boolean> enableIntegrityMonitoring;
 
@@ -21,6 +27,9 @@ public final class ShieldedInstanceConfigArgs extends io.pulumi.resources.Resour
         return this.enableIntegrityMonitoring == null ? Input.empty() : this.enableIntegrityMonitoring;
     }
 
+    /**
+     * Defines whether the instance has Secure Boot enabled. Disabled by default.
+     */
     @InputImport(name="enableSecureBoot")
     private final @Nullable Input<Boolean> enableSecureBoot;
 
@@ -28,6 +37,9 @@ public final class ShieldedInstanceConfigArgs extends io.pulumi.resources.Resour
         return this.enableSecureBoot == null ? Input.empty() : this.enableSecureBoot;
     }
 
+    /**
+     * Defines whether the instance has the vTPM enabled. Enabled by default.
+     */
     @InputImport(name="enableVtpm")
     private final @Nullable Input<Boolean> enableVtpm;
 

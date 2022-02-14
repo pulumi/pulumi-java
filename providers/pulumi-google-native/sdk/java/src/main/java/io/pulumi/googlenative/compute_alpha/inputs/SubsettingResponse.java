@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Subsetting configuration for this BackendService. Currently this is applicable only for Internal TCP/UDP load balancing, Internal HTTP(S) load balancing and Traffic Director.
+ */
 public final class SubsettingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubsettingResponse Empty = new SubsettingResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="policy", required=true)
     private final String policy;
 
@@ -20,6 +26,9 @@ public final class SubsettingResponse extends io.pulumi.resources.InvokeArgs {
         return this.policy;
     }
 
+    /**
+     * The number of backends per backend group assigned to each proxy instance or each service mesh client. An input parameter to the `CONSISTENT_HASH_SUBSETTING` algorithm. Can only be set if `policy` is set to `CONSISTENT_HASH_SUBSETTING`. Can only be set if load balancing scheme is `INTERNAL_MANAGED` or `INTERNAL_SELF_MANAGED`. `subset_size` is optional for Internal HTTP(S) load balancing and required for Traffic Director. If you do not provide this value, Cloud Load Balancing will calculate it dynamically to optimize the number of proxies/clients visible to each backend and vice versa. Must be greater than 0. If `subset_size` is larger than the number of backends/endpoints, then subsetting is disabled.
+     */
     @InputImport(name="subsetSize", required=true)
     private final Integer subsetSize;
 

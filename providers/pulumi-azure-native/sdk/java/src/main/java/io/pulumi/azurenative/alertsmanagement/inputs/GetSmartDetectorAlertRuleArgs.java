@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetSmartDetectorAlertRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSmartDetectorAlertRuleArgs Empty = new GetSmartDetectorAlertRuleArgs();
 
+    /**
+     * The name of the alert rule.
+     */
     @InputImport(name="alertRuleName", required=true)
     private final String alertRuleName;
 
@@ -22,6 +28,9 @@ public final class GetSmartDetectorAlertRuleArgs extends io.pulumi.resources.Inv
         return this.alertRuleName;
     }
 
+    /**
+     * Indicates if Smart Detector should be expanded.
+     */
     @InputImport(name="expandDetector")
     private final @Nullable Boolean expandDetector;
 
@@ -29,6 +38,9 @@ public final class GetSmartDetectorAlertRuleArgs extends io.pulumi.resources.Inv
         return this.expandDetector == null ? Optional.empty() : Optional.ofNullable(this.expandDetector);
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of Auth token.
+ */
     @EnumType
     public enum TokenType {
+/**
+ * 
+ */
         PAT("PAT"),
+/**
+ * 
+ */
         OAuth("OAuth");
 
         private final String value;

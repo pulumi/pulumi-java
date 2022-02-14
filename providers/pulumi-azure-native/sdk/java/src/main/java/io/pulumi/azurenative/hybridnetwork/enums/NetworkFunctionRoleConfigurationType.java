@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Role type.
+ */
     @EnumType
     public enum NetworkFunctionRoleConfigurationType {
+/**
+ * 
+ */
         Unknown("Unknown"),
+/**
+ * 
+ */
         VirtualMachine("VirtualMachine");
 
         private final String value;

@@ -11,8 +11,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ScheduledSourceSynchronizationSettingResponse {
+/**
+ * Kind of synchronization setting on share.
+Expected value is 'ScheduleBased'.
+ */
     private final String kind;
+/**
+ * Recurrence Interval
+ */
     private final @Nullable String recurrenceInterval;
+/**
+ * Synchronization time
+ */
     private final @Nullable String synchronizationTime;
 
     @OutputCustomType.Constructor({"kind","recurrenceInterval","synchronizationTime"})
@@ -25,12 +35,22 @@ public final class ScheduledSourceSynchronizationSettingResponse {
         this.synchronizationTime = synchronizationTime;
     }
 
+/**
+ * Kind of synchronization setting on share.
+Expected value is 'ScheduleBased'.
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * Recurrence Interval
+ */
     public Optional<String> getRecurrenceInterval() {
         return Optional.ofNullable(this.recurrenceInterval);
     }
+/**
+ * Synchronization time
+ */
     public Optional<String> getSynchronizationTime() {
         return Optional.ofNullable(this.synchronizationTime);
     }

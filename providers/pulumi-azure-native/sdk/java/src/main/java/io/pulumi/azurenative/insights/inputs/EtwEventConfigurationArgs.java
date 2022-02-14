@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class EtwEventConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EtwEventConfigurationArgs Empty = new EtwEventConfigurationArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="filter")
     private final @Nullable Input<String> filter;
 
@@ -22,6 +28,9 @@ public final class EtwEventConfigurationArgs extends io.pulumi.resources.Resourc
         return this.filter == null ? Input.empty() : this.filter;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Input<Integer> id;
 
@@ -29,6 +38,9 @@ public final class EtwEventConfigurationArgs extends io.pulumi.resources.Resourc
         return this.id;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

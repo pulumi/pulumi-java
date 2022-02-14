@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules.
+ */
     @EnumType
     public enum SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility {
+/**
+ * 
+ */
         Premium("PREMIUM"),
+/**
+ * 
+ */
         Standard("STANDARD");
 
         private final String value;

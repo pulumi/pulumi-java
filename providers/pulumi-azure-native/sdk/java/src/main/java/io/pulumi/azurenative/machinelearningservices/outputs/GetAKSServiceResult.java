@@ -19,14 +19,41 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAKSServiceResult {
+/**
+ * Specifies the resource ID.
+ */
     private final String id;
+/**
+ * The identity of the resource.
+ */
     private final @Nullable IdentityResponse identity;
+/**
+ * Specifies the location of the resource.
+ */
     private final @Nullable String location;
+/**
+ * Specifies the name of the resource.
+ */
     private final String name;
+/**
+ * Service properties
+ */
     private final Object properties;
+/**
+ * The sku of the workspace.
+ */
     private final @Nullable SkuResponse sku;
+/**
+ * Read only system data
+ */
     private final SystemDataResponse systemData;
+/**
+ * Contains resource tags defined as key/value pairs.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Specifies the type of the resource.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","identity","location","name","properties","sku","systemData","tags","type"})
@@ -51,30 +78,57 @@ public final class GetAKSServiceResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Specifies the resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The identity of the resource.
+ */
     public Optional<IdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
+/**
+ * Specifies the location of the resource.
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * Specifies the name of the resource.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Service properties
+ */
     public Object getProperties() {
         return this.properties;
     }
+/**
+ * The sku of the workspace.
+ */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
+/**
+ * Read only system data
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * Contains resource tags defined as key/value pairs.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Specifies the type of the resource.
+ */
     public String getType() {
         return this.type;
     }

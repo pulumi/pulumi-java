@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The details of the InMage agent.
+ */
 public final class InMageAgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InMageAgentDetailsResponse Empty = new InMageAgentDetailsResponse();
 
+    /**
+     * Agent expiry date.
+     */
     @InputImport(name="agentExpiryDate")
     private final @Nullable String agentExpiryDate;
 
@@ -21,6 +27,9 @@ public final class InMageAgentDetailsResponse extends io.pulumi.resources.Invoke
         return this.agentExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.agentExpiryDate);
     }
 
+    /**
+     * A value indicating whether installed agent needs to be updated.
+     */
     @InputImport(name="agentUpdateStatus")
     private final @Nullable String agentUpdateStatus;
 
@@ -28,6 +37,9 @@ public final class InMageAgentDetailsResponse extends io.pulumi.resources.Invoke
         return this.agentUpdateStatus == null ? Optional.empty() : Optional.ofNullable(this.agentUpdateStatus);
     }
 
+    /**
+     * The agent version.
+     */
     @InputImport(name="agentVersion")
     private final @Nullable String agentVersion;
 
@@ -35,6 +47,9 @@ public final class InMageAgentDetailsResponse extends io.pulumi.resources.Invoke
         return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
     }
 
+    /**
+     * A value indicating whether reboot is required after update is applied.
+     */
     @InputImport(name="postUpdateRebootStatus")
     private final @Nullable String postUpdateRebootStatus;
 

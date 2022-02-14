@@ -10,10 +10,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetDataSetMappingResult {
+/**
+ * The resource id of the azure resource
+ */
     private final String id;
+/**
+ * Kind of data set mapping.
+ */
     private final String kind;
+/**
+ * Name of the azure resource
+ */
     private final String name;
+/**
+ * System Data of the Azure resource.
+ */
     private final SystemDataResponse systemData;
+/**
+ * Type of the azure resource
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","kind","name","systemData","type"})
@@ -30,18 +45,33 @@ public final class GetDataSetMappingResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The resource id of the azure resource
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Kind of data set mapping.
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * Name of the azure resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * System Data of the Azure resource.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * Type of the azure resource
+ */
     public String getType() {
         return this.type;
     }

@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OnErrorDeploymentExtendedResponse {
+/**
+ * The deployment to be used on error case.
+ */
     private final @Nullable String deploymentName;
+/**
+ * The state of the provisioning for the on error deployment.
+ */
     private final String provisioningState;
+/**
+ * The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.
+ */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"deploymentName","provisioningState","type"})
@@ -25,12 +34,21 @@ public final class OnErrorDeploymentExtendedResponse {
         this.type = type;
     }
 
+/**
+ * The deployment to be used on error case.
+ */
     public Optional<String> getDeploymentName() {
         return Optional.ofNullable(this.deploymentName);
     }
+/**
+ * The state of the provisioning for the on error deployment.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.
+ */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

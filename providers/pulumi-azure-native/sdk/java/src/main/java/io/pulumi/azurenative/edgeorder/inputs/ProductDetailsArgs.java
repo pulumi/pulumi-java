@@ -9,10 +9,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Represents product details
+ */
 public final class ProductDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProductDetailsArgs Empty = new ProductDetailsArgs();
 
+    /**
+     * Hierarchy of the product which uniquely identifies the product
+     */
     @InputImport(name="hierarchyInformation", required=true)
     private final Input<HierarchyInformationArgs> hierarchyInformation;
 

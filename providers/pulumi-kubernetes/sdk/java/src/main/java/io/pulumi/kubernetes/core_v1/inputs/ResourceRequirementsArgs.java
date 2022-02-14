@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ResourceRequirements describes the compute resource requirements.
+ */
 public final class ResourceRequirementsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceRequirementsArgs Empty = new ResourceRequirementsArgs();
 
+    /**
+     * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
+     */
     @InputImport(name="limits")
     private final @Nullable Input<Map<String,String>> limits;
 
@@ -22,6 +28,9 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
         return this.limits == null ? Input.empty() : this.limits;
     }
 
+    /**
+     * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
+     */
     @InputImport(name="requests")
     private final @Nullable Input<Map<String,String>> requests;
 

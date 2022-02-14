@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Specifies how each object's ACLs should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as ACL_DESTINATION_BUCKET_DEFAULT.
+ */
     @EnumType
     public enum MetadataOptionsAcl {
+/**
+ * ACL behavior is unspecified.
+ */
         AclUnspecified("ACL_UNSPECIFIED"),
+/**
+ * Use the destination bucket's default object ACLS, if applicable.
+ */
         AclDestinationBucketDefault("ACL_DESTINATION_BUCKET_DEFAULT"),
+/**
+ * Preserve the object's original ACLs. This requires the service account to have `storage.objects.getIamPolicy` permission for the source object. [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) must not be enabled on either the source or destination buckets.
+ */
         AclPreserve("ACL_PRESERVE");
 
         private final String value;

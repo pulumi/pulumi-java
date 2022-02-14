@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The compression method used on a dataset.
+ */
 public final class DatasetCompressionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatasetCompressionResponse Empty = new DatasetCompressionResponse();
 
+    /**
+     * The dataset compression level. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="level")
     private final @Nullable Object level;
 
@@ -21,6 +27,9 @@ public final class DatasetCompressionResponse extends io.pulumi.resources.Invoke
         return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
     }
 
+    /**
+     * Type of dataset compression. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="type", required=true)
     private final Object type;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The SKU of a container registry.
+ */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuResponse Empty = new SkuResponse();
 
+    /**
+     * The SKU name of the container registry. Required for registry creation.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The SKU tier based on the SKU name.
+     */
     @InputImport(name="tier", required=true)
     private final String tier;
 

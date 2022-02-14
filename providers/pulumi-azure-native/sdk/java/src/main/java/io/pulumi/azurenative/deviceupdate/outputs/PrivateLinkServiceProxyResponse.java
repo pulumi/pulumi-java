@@ -5,7 +5,6 @@ package io.pulumi.azurenative.deviceupdate.outputs;
 
 import io.pulumi.azurenative.deviceupdate.outputs.GroupConnectivityInformationResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.azurenative.deviceupdate.outputs.PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
@@ -15,9 +14,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PrivateLinkServiceProxyResponse {
+/**
+ * Group connectivity information.
+ */
     private final @Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation;
+/**
+ * NRP resource ID.
+ */
     private final @Nullable String id;
+/**
+ * Remote private endpoint connection details.
+ */
     private final @Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection;
+/**
+ * Remote private link service connection state
+ */
     private final @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState;
 
     @OutputCustomType.Constructor({"groupConnectivityInformation","id","remotePrivateEndpointConnection","remotePrivateLinkServiceConnectionState"})
@@ -32,15 +43,27 @@ public final class PrivateLinkServiceProxyResponse {
         this.remotePrivateLinkServiceConnectionState = remotePrivateLinkServiceConnectionState;
     }
 
+/**
+ * Group connectivity information.
+ */
     public List<GroupConnectivityInformationResponse> getGroupConnectivityInformation() {
         return this.groupConnectivityInformation == null ? List.of() : this.groupConnectivityInformation;
     }
+/**
+ * NRP resource ID.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * Remote private endpoint connection details.
+ */
     public Optional<PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection> getRemotePrivateEndpointConnection() {
         return Optional.ofNullable(this.remotePrivateEndpointConnection);
     }
+/**
+ * Remote private link service connection state
+ */
     public Optional<PrivateLinkServiceConnectionStateResponse> getRemotePrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.remotePrivateLinkServiceConnectionState);
     }

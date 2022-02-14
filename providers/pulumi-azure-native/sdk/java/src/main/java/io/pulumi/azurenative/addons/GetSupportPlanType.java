@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSupportPlanType {
+/**
+ * The status of the Canonical support plan.
+API Version: 2018-03-01.
+ *
+ * The status of the Canonical support plan.
+ */
     public static CompletableFuture<GetSupportPlanTypeResult> invokeAsync(GetSupportPlanTypeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:addons:getSupportPlanType", TypeShape.of(GetSupportPlanTypeResult.class), args == null ? GetSupportPlanTypeArgs.Empty : args, Utilities.withVersion(options));
     }

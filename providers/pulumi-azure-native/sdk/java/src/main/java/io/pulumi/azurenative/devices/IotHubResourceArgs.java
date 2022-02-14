@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IotHubResourceArgs Empty = new IotHubResourceArgs();
 
+    /**
+     * The resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -24,6 +30,9 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * IotHub properties
+     */
     @InputImport(name="properties")
     private final @Nullable Input<IotHubPropertiesArgs> properties;
 
@@ -31,6 +40,9 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group that contains the IoT hub.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -38,6 +50,9 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the IoT hub.
+     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -45,6 +60,9 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
+    /**
+     * IotHub SKU info
+     */
     @InputImport(name="sku", required=true)
     private final Input<IotHubSkuInfoArgs> sku;
 
@@ -52,6 +70,9 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku;
     }
 
+    /**
+     * The resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResponsePolicyNetworkResponse {
+/**
+ * 
+ */
     private final String kind;
+/**
+ * The fully qualified URL of the VPC network to bind to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+ */
     private final String networkUrl;
 
     @OutputCustomType.Constructor({"kind","networkUrl"})
@@ -20,9 +26,15 @@ public final class ResponsePolicyNetworkResponse {
         this.networkUrl = Objects.requireNonNull(networkUrl);
     }
 
+/**
+ * 
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * The fully qualified URL of the VPC network to bind to. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
+ */
     public String getNetworkUrl() {
         return this.networkUrl;
     }

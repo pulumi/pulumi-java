@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Customized setup scripts
+ */
 public final class ScriptsToExecuteResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScriptsToExecuteResponse Empty = new ScriptsToExecuteResponse();
 
+    /**
+     * Script that's run only once during provision of the compute.
+     */
     @InputImport(name="creationScript")
     private final @Nullable ScriptReferenceResponse creationScript;
 
@@ -21,6 +27,9 @@ public final class ScriptsToExecuteResponse extends io.pulumi.resources.InvokeAr
         return this.creationScript == null ? Optional.empty() : Optional.ofNullable(this.creationScript);
     }
 
+    /**
+     * Script that's run every time the machine starts.
+     */
     @InputImport(name="startupScript")
     private final @Nullable ScriptReferenceResponse startupScript;
 

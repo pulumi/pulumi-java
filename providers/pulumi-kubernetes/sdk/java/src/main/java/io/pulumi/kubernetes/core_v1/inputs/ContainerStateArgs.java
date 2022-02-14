@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ContainerState holds a possible state of container. Only one of its members may be specified. If none of them is specified, the default one is ContainerStateWaiting.
+ */
 public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerStateArgs Empty = new ContainerStateArgs();
 
+    /**
+     * Details about a running container
+     */
     @InputImport(name="running")
     private final @Nullable Input<ContainerStateRunningArgs> running;
 
@@ -23,6 +29,9 @@ public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
         return this.running == null ? Input.empty() : this.running;
     }
 
+    /**
+     * Details about a terminated container
+     */
     @InputImport(name="terminated")
     private final @Nullable Input<ContainerStateTerminatedArgs> terminated;
 
@@ -30,6 +39,9 @@ public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
         return this.terminated == null ? Input.empty() : this.terminated;
     }
 
+    /**
+     * Details about a waiting container
+     */
     @InputImport(name="waiting")
     private final @Nullable Input<ContainerStateWaitingArgs> waiting;
 

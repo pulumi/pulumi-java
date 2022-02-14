@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWorkflowAccessKeySecretKeys {
+/**
+ * 
+API Version: 2015-02-01-preview.
+ */
     public static CompletableFuture<ListWorkflowAccessKeySecretKeysResult> invokeAsync(ListWorkflowAccessKeySecretKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listWorkflowAccessKeySecretKeys", TypeShape.of(ListWorkflowAccessKeySecretKeysResult.class), args == null ? ListWorkflowAccessKeySecretKeysArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.CustomIPPrefixArgs;
 import io.pulumi.azurenative.network.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
@@ -17,81 +16,250 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Custom IP prefix resource.
+API Version: 2020-11-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create custom IP prefix allocation method
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var customIPPrefix = new AzureNative.Network.CustomIPPrefix("customIPPrefix", new AzureNative.Network.CustomIPPrefixArgs
+        {
+            Cidr = "0.0.0.0/24",
+            CustomIpPrefixName = "test-customipprefix",
+            Location = "westus",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewCustomIPPrefix(ctx, "customIPPrefix", &network.CustomIPPrefixArgs{
+			Cidr:               pulumi.String("0.0.0.0/24"),
+			CustomIpPrefixName: pulumi.String("test-customipprefix"),
+			Location:           pulumi.String("westus"),
+			ResourceGroupName:  pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const customIPPrefix = new azure_native.network.CustomIPPrefix("customIPPrefix", {
+    cidr: "0.0.0.0/24",
+    customIpPrefixName: "test-customipprefix",
+    location: "westus",
+    resourceGroupName: "rg1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+custom_ip_prefix = azure_native.network.CustomIPPrefix("customIPPrefix",
+    cidr="0.0.0.0/24",
+    custom_ip_prefix_name="test-customipprefix",
+    location="westus",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:CustomIPPrefix test-customipprefix /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/customIpPrefixes/test-customipprefix 
+```
+
+ */
 @ResourceType(type="azure-native:network:CustomIPPrefix")
 public class CustomIPPrefix extends io.pulumi.resources.CustomResource {
+    /**
+     * The prefix range in CIDR notation. Should include the start address and the prefix length.
+     */
     @OutputExport(name="cidr", type=String.class, parameters={})
     private Output</* @Nullable */ String> cidr;
 
+    /**
+     * @return The prefix range in CIDR notation. Should include the start address and the prefix length.
+     */
     public Output</* @Nullable */ String> getCidr() {
         return this.cidr;
     }
+    /**
+     * The commissioned state of the Custom IP Prefix.
+     */
     @OutputExport(name="commissionedState", type=String.class, parameters={})
     private Output</* @Nullable */ String> commissionedState;
 
+    /**
+     * @return The commissioned state of the Custom IP Prefix.
+     */
     public Output</* @Nullable */ String> getCommissionedState() {
         return this.commissionedState;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The extended location of the custom IP prefix.
+     */
     @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
+    /**
+     * @return The extended location of the custom IP prefix.
+     */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
+    /**
+     * Resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the custom IP prefix resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the custom IP prefix resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The list of all referenced PublicIpPrefixes.
+     */
     @OutputExport(name="publicIpPrefixes", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> publicIpPrefixes;
 
+    /**
+     * @return The list of all referenced PublicIpPrefixes.
+     */
     public Output<List<SubResourceResponse>> getPublicIpPrefixes() {
         return this.publicIpPrefixes;
     }
+    /**
+     * The resource GUID property of the custom IP prefix resource.
+     */
     @OutputExport(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
+    /**
+     * @return The resource GUID property of the custom IP prefix resource.
+     */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * A list of availability zones denoting the IP allocated for the resource needs to come from.
+     */
     @OutputExport(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
+    /**
+     * @return A list of availability zones denoting the IP allocated for the resource needs to come from.
+     */
     public Output</* @Nullable */ List<String>> getZones() {
         return this.zones;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public CustomIPPrefix(String name, CustomIPPrefixArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:CustomIPPrefix", name, args == null ? CustomIPPrefixArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -116,6 +284,14 @@ public class CustomIPPrefix extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static CustomIPPrefix get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CustomIPPrefix(name, id, options);
     }

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SecurityPolicyDdosProtectionConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityPolicyDdosProtectionConfigArgs Empty = new SecurityPolicyDdosProtectionConfigArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="ddosProtection")
     private final @Nullable Input<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection;
 

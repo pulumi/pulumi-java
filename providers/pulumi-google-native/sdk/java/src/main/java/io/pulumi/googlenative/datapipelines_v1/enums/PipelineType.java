@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Required. The type of the pipeline. This field affects the scheduling of the pipeline and the type of metrics to show for the pipeline.
+ */
     @EnumType
     public enum PipelineType {
+/**
+ * The pipeline type isn't specified.
+ */
         PipelineTypeUnspecified("PIPELINE_TYPE_UNSPECIFIED"),
+/**
+ * A batch pipeline. It runs jobs on a specific schedule, and each job will automatically terminate once execution is finished.
+ */
         PipelineTypeBatch("PIPELINE_TYPE_BATCH"),
+/**
+ * A streaming pipeline. The underlying job is continuously running until it is manually terminated by the user. This type of pipeline doesn't have a schedule to run on, and the linked job gets created when the pipeline is created.
+ */
         PipelineTypeStreaming("PIPELINE_TYPE_STREAMING");
 
         private final String value;

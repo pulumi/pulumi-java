@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListFirewallPolicyIdpsSignaturesFilterValueResult {
+/**
+ * Describes the possible values
+ */
     private final @Nullable List<String> filterValues;
 
     @OutputCustomType.Constructor({"filterValues"})
@@ -18,6 +21,9 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueResult {
         this.filterValues = filterValues;
     }
 
+/**
+ * Describes the possible values
+ */
     public List<String> getFilterValues() {
         return this.filterValues == null ? List.of() : this.filterValues;
     }

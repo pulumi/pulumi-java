@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details to transfer all data.
+ */
 public final class TransferAllDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TransferAllDetailsArgs Empty = new TransferAllDetailsArgs();
 
+    /**
+     * Type of the account of data
+     */
     @InputImport(name="dataAccountType", required=true)
     private final Input<Either<String,DataAccountType>> dataAccountType;
 
@@ -24,6 +30,9 @@ public final class TransferAllDetailsArgs extends io.pulumi.resources.ResourceAr
         return this.dataAccountType;
     }
 
+    /**
+     * To indicate if all Azure blobs have to be transferred
+     */
     @InputImport(name="transferAllBlobs")
     private final @Nullable Input<Boolean> transferAllBlobs;
 
@@ -31,6 +40,9 @@ public final class TransferAllDetailsArgs extends io.pulumi.resources.ResourceAr
         return this.transferAllBlobs == null ? Input.empty() : this.transferAllBlobs;
     }
 
+    /**
+     * To indicate if all Azure Files have to be transferred
+     */
     @InputImport(name="transferAllFiles")
     private final @Nullable Input<Boolean> transferAllFiles;
 

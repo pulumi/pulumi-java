@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetAttachedDatabaseConfigurationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAttachedDatabaseConfigurationArgs Empty = new GetAttachedDatabaseConfigurationArgs();
 
+    /**
+     * The name of the attached database configuration.
+     */
     @InputImport(name="attachedDatabaseConfigurationName", required=true)
     private final String attachedDatabaseConfigurationName;
 
@@ -19,6 +25,9 @@ public final class GetAttachedDatabaseConfigurationArgs extends io.pulumi.resour
         return this.attachedDatabaseConfigurationName;
     }
 
+    /**
+     * The name of the Kusto cluster.
+     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -26,6 +35,9 @@ public final class GetAttachedDatabaseConfigurationArgs extends io.pulumi.resour
         return this.clusterName;
     }
 
+    /**
+     * The name of the resource group containing the Kusto cluster.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

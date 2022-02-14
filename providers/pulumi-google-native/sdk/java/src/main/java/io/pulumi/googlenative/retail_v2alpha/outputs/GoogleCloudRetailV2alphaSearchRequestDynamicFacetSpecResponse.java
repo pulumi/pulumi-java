@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse {
+/**
+ * Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it's unset.
+ */
     private final String mode;
 
     @OutputCustomType.Constructor({"mode"})
@@ -16,6 +19,9 @@ public final class GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse
         this.mode = Objects.requireNonNull(mode);
     }
 
+/**
+ * Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it's unset.
+ */
     public String getMode() {
         return this.mode;
     }

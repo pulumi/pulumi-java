@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntegrationAccountBatchConfiguration {
+/**
+ * The batch configuration resource definition.
+API Version: 2019-05-01.
+ *
+ * The batch configuration resource definition.
+ */
     public static CompletableFuture<GetIntegrationAccountBatchConfigurationResult> invokeAsync(GetIntegrationAccountBatchConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountBatchConfiguration", TypeShape.of(GetIntegrationAccountBatchConfigurationResult.class), args == null ? GetIntegrationAccountBatchConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

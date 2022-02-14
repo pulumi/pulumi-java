@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The kubernetes to scuba connection configuration
+ */
 public final class DefenderForContainersAwsOfferingResponseKubernetesScubaReader extends io.pulumi.resources.InvokeArgs {
 
     public static final DefenderForContainersAwsOfferingResponseKubernetesScubaReader Empty = new DefenderForContainersAwsOfferingResponseKubernetesScubaReader();
 
+    /**
+     * The cloud role ARN in AWS for this feature
+     */
     @InputImport(name="cloudRoleArn")
     private final @Nullable String cloudRoleArn;
 

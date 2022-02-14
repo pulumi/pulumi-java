@@ -13,7 +13,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetEntityInsightsResult {
+/**
+ * The metadata from the get insights operation results.
+ */
     private final @Nullable GetInsightsResultsMetadataResponse metaData;
+/**
+ * The insights result values.
+ */
     private final @Nullable List<EntityInsightItemResponse> value;
 
     @OutputCustomType.Constructor({"metaData","value"})
@@ -24,9 +30,15 @@ public final class GetEntityInsightsResult {
         this.value = value;
     }
 
+/**
+ * The metadata from the get insights operation results.
+ */
     public Optional<GetInsightsResultsMetadataResponse> getMetaData() {
         return Optional.ofNullable(this.metaData);
     }
+/**
+ * The insights result values.
+ */
     public List<EntityInsightItemResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

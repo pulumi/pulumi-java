@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Statistics regarding a specific InfoType.
+ */
 public final class GooglePrivacyDlpV2InfoTypeStatsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2InfoTypeStatsResponse Empty = new GooglePrivacyDlpV2InfoTypeStatsResponse();
 
+    /**
+     * Number of findings for this infoType.
+     */
     @InputImport(name="count", required=true)
     private final String count;
 
@@ -20,6 +26,9 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse extends io.pulumi.res
         return this.count;
     }
 
+    /**
+     * The type of finding this stat is for.
+     */
     @InputImport(name="infoType", required=true)
     private final GooglePrivacyDlpV2InfoTypeResponse infoType;
 

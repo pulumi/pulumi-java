@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.
+ */
 public final class ProxyServerPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProxyServerPropertiesResponse Empty = new ProxyServerPropertiesResponse();
 
+    /**
+     * Proxy server IP
+     */
     @InputImport(name="ip")
     private final @Nullable String ip;
 
@@ -21,6 +27,9 @@ public final class ProxyServerPropertiesResponse extends io.pulumi.resources.Inv
         return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);
     }
 
+    /**
+     * Proxy server port
+     */
     @InputImport(name="port")
     private final @Nullable String port;
 

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Set workload type to optimize storage for SQL Server.
+ */
 public final class SqlWorkloadTypeUpdateSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SqlWorkloadTypeUpdateSettingsResponse Empty = new SqlWorkloadTypeUpdateSettingsResponse();
 
+    /**
+     * SQL Server workload type.
+     */
     @InputImport(name="sqlWorkloadType")
     private final @Nullable String sqlWorkloadType;
 

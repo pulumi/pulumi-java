@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Deployment dependency information.
+ */
 public final class BasicDependencyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BasicDependencyResponse Empty = new BasicDependencyResponse();
 
+    /**
+     * The ID of the dependency.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -21,6 +27,9 @@ public final class BasicDependencyResponse extends io.pulumi.resources.InvokeArg
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The dependency resource name.
+     */
     @InputImport(name="resourceName")
     private final @Nullable String resourceName;
 
@@ -28,6 +37,9 @@ public final class BasicDependencyResponse extends io.pulumi.resources.InvokeArg
         return this.resourceName == null ? Optional.empty() : Optional.ofNullable(this.resourceName);
     }
 
+    /**
+     * The dependency resource type.
+     */
     @InputImport(name="resourceType")
     private final @Nullable String resourceType;
 

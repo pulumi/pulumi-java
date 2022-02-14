@@ -9,7 +9,6 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
-import io.pulumi.kubernetes.certificates.k8s.io_v1beta1.CertificateSigningRequestArgs;
 import io.pulumi.kubernetes.certificates.k8s.io_v1beta1.outputs.CertificateSigningRequestSpec;
 import io.pulumi.kubernetes.certificates.k8s.io_v1beta1.outputs.CertificateSigningRequestStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -17,39 +16,75 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Describes a certificate signing request
+ */
 @ResourceType(type="kubernetes:certificates.k8s.io/v1beta1:CertificateSigningRequest")
 public class CertificateSigningRequest extends io.pulumi.resources.CustomResource {
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     */
     @OutputExport(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
+    /**
+     * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * 
+     */
     @OutputExport(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     public Output</* @Nullable */ ObjectMeta> getMetadata() {
         return this.metadata;
     }
+    /**
+     * The certificate request itself and any additional information.
+     */
     @OutputExport(name="spec", type=CertificateSigningRequestSpec.class, parameters={})
     private Output</* @Nullable */ CertificateSigningRequestSpec> spec;
 
+    /**
+     * @return The certificate request itself and any additional information.
+     */
     public Output</* @Nullable */ CertificateSigningRequestSpec> getSpec() {
         return this.spec;
     }
+    /**
+     * Derived information about the request.
+     */
     @OutputExport(name="status", type=CertificateSigningRequestStatus.class, parameters={})
     private Output</* @Nullable */ CertificateSigningRequestStatus> status;
 
+    /**
+     * @return Derived information about the request.
+     */
     public Output</* @Nullable */ CertificateSigningRequestStatus> getStatus() {
         return this.status;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public CertificateSigningRequest(String name, @Nullable CertificateSigningRequestArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("kubernetes:certificates.k8s.io/v1beta1:CertificateSigningRequest", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -76,6 +111,14 @@ public class CertificateSigningRequest extends io.pulumi.resources.CustomResourc
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static CertificateSigningRequest get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CertificateSigningRequest(name, id, options);
     }

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The system service type
+ */
     @EnumType
     public enum SystemServiceType {
+/**
+ * 
+ */
         None("None"),
+/**
+ * 
+ */
         ScoringFrontEnd("ScoringFrontEnd"),
+/**
+ * 
+ */
         BatchFrontEnd("BatchFrontEnd");
 
         private final String value;

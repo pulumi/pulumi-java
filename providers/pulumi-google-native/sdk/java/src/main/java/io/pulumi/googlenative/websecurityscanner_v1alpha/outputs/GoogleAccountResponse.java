@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleAccountResponse {
+/**
+ * Input only. The password of the Google account. The credential is stored encrypted and not returned in any response nor included in audit logs.
+ */
     private final String password;
+/**
+ * The user name of the Google account.
+ */
     private final String username;
 
     @OutputCustomType.Constructor({"password","username"})
@@ -20,9 +26,15 @@ public final class GoogleAccountResponse {
         this.username = Objects.requireNonNull(username);
     }
 
+/**
+ * Input only. The password of the Google account. The credential is stored encrypted and not returned in any response nor included in audit logs.
+ */
     public String getPassword() {
         return this.password;
     }
+/**
+ * The user name of the Google account.
+ */
     public String getUsername() {
         return this.username;
     }

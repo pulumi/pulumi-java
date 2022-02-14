@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The eligibility result of device, as a failover target device.
+ */
 public final class TargetEligibilityResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TargetEligibilityResultResponse Empty = new TargetEligibilityResultResponse();
 
+    /**
+     * The eligibility status of device, as a failover target device.
+     */
     @InputImport(name="eligibilityStatus")
     private final @Nullable String eligibilityStatus;
 
@@ -23,6 +29,9 @@ public final class TargetEligibilityResultResponse extends io.pulumi.resources.I
         return this.eligibilityStatus == null ? Optional.empty() : Optional.ofNullable(this.eligibilityStatus);
     }
 
+    /**
+     * The list of error messages, if a device does not qualify as a failover target device.
+     */
     @InputImport(name="messages")
     private final @Nullable List<TargetEligibilityErrorMessageResponse> messages;
 

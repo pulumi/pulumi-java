@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * configuration of a horizontal pod autoscaler.
+ */
 public final class HorizontalPodAutoscalerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HorizontalPodAutoscalerArgs Empty = new HorizontalPodAutoscalerArgs();
 
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -24,6 +30,9 @@ public final class HorizontalPodAutoscalerArgs extends io.pulumi.resources.Resou
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -31,6 +40,9 @@ public final class HorizontalPodAutoscalerArgs extends io.pulumi.resources.Resou
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<ObjectMetaArgs> metadata;
 
@@ -38,6 +50,9 @@ public final class HorizontalPodAutoscalerArgs extends io.pulumi.resources.Resou
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * behaviour of autoscaler. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status.
+     */
     @InputImport(name="spec")
     private final @Nullable Input<HorizontalPodAutoscalerSpecArgs> spec;
 
@@ -45,6 +60,9 @@ public final class HorizontalPodAutoscalerArgs extends io.pulumi.resources.Resou
         return this.spec == null ? Input.empty() : this.spec;
     }
 
+    /**
+     * current information about the autoscaler.
+     */
     @InputImport(name="status")
     private final @Nullable Input<HorizontalPodAutoscalerStatusArgs> status;
 

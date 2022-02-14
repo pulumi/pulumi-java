@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetSqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSqlResourceSqlRoleAssignmentArgs Empty = new GetSqlResourceSqlRoleAssignmentArgs();
 
+    /**
+     * Cosmos DB database account name.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetSqlResourceSqlRoleAssignmentArgs extends io.pulumi.resourc
         return this.accountName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetSqlResourceSqlRoleAssignmentArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * The GUID for the Role Assignment.
+     */
     @InputImport(name="roleAssignmentId", required=true)
     private final String roleAssignmentId;
 

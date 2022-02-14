@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NetworkPerformanceConfigResponse {
+/**
+ * 
+ */
     private final String externalIpEgressBandwidthTier;
+/**
+ * 
+ */
     private final String totalEgressBandwidthTier;
 
     @OutputCustomType.Constructor({"externalIpEgressBandwidthTier","totalEgressBandwidthTier"})
@@ -20,9 +26,15 @@ public final class NetworkPerformanceConfigResponse {
         this.totalEgressBandwidthTier = Objects.requireNonNull(totalEgressBandwidthTier);
     }
 
+/**
+ * 
+ */
     public String getExternalIpEgressBandwidthTier() {
         return this.externalIpEgressBandwidthTier;
     }
+/**
+ * 
+ */
     public String getTotalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;
     }

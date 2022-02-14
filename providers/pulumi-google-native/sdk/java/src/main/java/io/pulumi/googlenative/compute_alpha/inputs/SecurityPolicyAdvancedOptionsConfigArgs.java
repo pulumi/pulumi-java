@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SecurityPolicyAdvancedOptionsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityPolicyAdvancedOptionsConfigArgs Empty = new SecurityPolicyAdvancedOptionsConfigArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="jsonParsing")
     private final @Nullable Input<SecurityPolicyAdvancedOptionsConfigJsonParsing> jsonParsing;
 
@@ -22,6 +28,9 @@ public final class SecurityPolicyAdvancedOptionsConfigArgs extends io.pulumi.res
         return this.jsonParsing == null ? Input.empty() : this.jsonParsing;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="logLevel")
     private final @Nullable Input<SecurityPolicyAdvancedOptionsConfigLogLevel> logLevel;
 

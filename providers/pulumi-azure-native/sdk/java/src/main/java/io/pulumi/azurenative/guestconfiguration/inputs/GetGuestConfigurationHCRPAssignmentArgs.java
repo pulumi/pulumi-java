@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetGuestConfigurationHCRPAssignmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGuestConfigurationHCRPAssignmentArgs Empty = new GetGuestConfigurationHCRPAssignmentArgs();
 
+    /**
+     * The guest configuration assignment name.
+     */
     @InputImport(name="guestConfigurationAssignmentName", required=true)
     private final String guestConfigurationAssignmentName;
 
@@ -19,6 +25,9 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends io.pulumi.res
         return this.guestConfigurationAssignmentName;
     }
 
+    /**
+     * The name of the ARC machine.
+     */
     @InputImport(name="machineName", required=true)
     private final String machineName;
 
@@ -26,6 +35,9 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends io.pulumi.res
         return this.machineName;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

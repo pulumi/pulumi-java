@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * VM-Host placement policy properties
+ */
 public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VmHostPlacementPolicyPropertiesResponse Empty = new VmHostPlacementPolicyPropertiesResponse();
 
+    /**
+     * placement policy affinity type
+     */
     @InputImport(name="affinityType", required=true)
     private final String affinityType;
 
@@ -22,6 +28,9 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
         return this.affinityType;
     }
 
+    /**
+     * Display name of the placement policy
+     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -29,6 +38,9 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * Host members list
+     */
     @InputImport(name="hostMembers", required=true)
     private final List<String> hostMembers;
 
@@ -36,6 +48,9 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
         return this.hostMembers;
     }
 
+    /**
+     * The provisioning state
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -43,6 +58,9 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
         return this.provisioningState;
     }
 
+    /**
+     * Whether the placement policy is enabled or disabled
+     */
     @InputImport(name="state")
     private final @Nullable String state;
 
@@ -50,6 +68,10 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
+    /**
+     * placement policy type
+Expected value is 'VmHost'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -57,6 +79,9 @@ public final class VmHostPlacementPolicyPropertiesResponse extends io.pulumi.res
         return this.type;
     }
 
+    /**
+     * Virtual machine members list
+     */
     @InputImport(name="vmMembers", required=true)
     private final List<String> vmMembers;
 

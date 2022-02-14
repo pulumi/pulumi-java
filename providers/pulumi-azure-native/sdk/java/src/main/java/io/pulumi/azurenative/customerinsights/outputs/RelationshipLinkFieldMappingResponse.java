@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RelationshipLinkFieldMappingResponse {
+/**
+ * The field name on the Interaction Type.
+ */
     private final String interactionFieldName;
+/**
+ * Link type.
+ */
     private final @Nullable String linkType;
+/**
+ * The field name on the Relationship metadata.
+ */
     private final String relationshipFieldName;
 
     @OutputCustomType.Constructor({"interactionFieldName","linkType","relationshipFieldName"})
@@ -25,12 +34,21 @@ public final class RelationshipLinkFieldMappingResponse {
         this.relationshipFieldName = Objects.requireNonNull(relationshipFieldName);
     }
 
+/**
+ * The field name on the Interaction Type.
+ */
     public String getInteractionFieldName() {
         return this.interactionFieldName;
     }
+/**
+ * Link type.
+ */
     public Optional<String> getLinkType() {
         return Optional.ofNullable(this.linkType);
     }
+/**
+ * The field name on the Relationship metadata.
+ */
     public String getRelationshipFieldName() {
         return this.relationshipFieldName;
     }

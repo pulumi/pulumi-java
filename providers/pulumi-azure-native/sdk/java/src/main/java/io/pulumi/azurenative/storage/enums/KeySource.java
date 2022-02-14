@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault
+ */
     @EnumType
     public enum KeySource {
+/**
+ * 
+ */
         Microsoft_Storage("Microsoft.Storage"),
+/**
+ * 
+ */
         Microsoft_Keyvault("Microsoft.Keyvault");
 
         private final String value;

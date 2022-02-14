@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InterconnectArgs Empty = new InterconnectArgs();
 
+    /**
+     * Administrative status of the interconnect. When this is set to true, the Interconnect is functional and can carry traffic. When set to false, no packets can be carried over the interconnect and no BGP routes are exchanged over it. By default, the status is set to true.
+     */
     @InputImport(name="adminEnabled")
     private final @Nullable Input<Boolean> adminEnabled;
 
@@ -26,6 +32,9 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
         return this.adminEnabled == null ? Input.empty() : this.adminEnabled;
     }
 
+    /**
+     * Customer name, to put in the Letter of Authorization as the party authorized to request a crossconnect.
+     */
     @InputImport(name="customerName")
     private final @Nullable Input<String> customerName;
 
@@ -33,6 +42,9 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
         return this.customerName == null ? Input.empty() : this.customerName;
     }
 
+    /**
+     * An optional description of this resource. Provide this property when you create the resource.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -40,6 +52,9 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Type of interconnect, which can take one of the following values: - PARTNER: A partner-managed interconnection shared between customers though a partner. - DEDICATED: A dedicated physical interconnection with the customer. Note that a value IT_PRIVATE has been deprecated in favor of DEDICATED.
+     */
     @InputImport(name="interconnectType")
     private final @Nullable Input<InterconnectInterconnectType> interconnectType;
 
@@ -47,6 +62,9 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
         return this.interconnectType == null ? Input.empty() : this.interconnectType;
     }
 
+    /**
+     * Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -54,6 +72,9 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Type of link requested, which can take one of the following values: - LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics - LINK_TYPE_ETHERNET_100G_LR: A 100G Ethernet with LR optics. Note that this field indicates the speed of each of the links in the bundle, not the speed of the entire bundle.
+     */
     @InputImport(name="linkType")
     private final @Nullable Input<InterconnectLinkType> linkType;
 
@@ -61,6 +82,9 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkType == null ? Input.empty() : this.linkType;
     }
 
+    /**
+     * URL of the InterconnectLocation object that represents where this connection is to be provisioned.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -68,6 +92,9 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -75,6 +102,9 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Email address to contact the customer NOC for operations and maintenance notifications regarding this Interconnect. If specified, this will be used for notifications in addition to all other forms described, such as Stackdriver logs alerting and Cloud Notifications.
+     */
     @InputImport(name="nocContactEmail")
     private final @Nullable Input<String> nocContactEmail;
 
@@ -82,6 +112,9 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
         return this.nocContactEmail == null ? Input.empty() : this.nocContactEmail;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -89,6 +122,9 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -96,6 +132,9 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * Target number of physical links in the link bundle, as requested by the customer.
+     */
     @InputImport(name="requestedLinkCount")
     private final @Nullable Input<Integer> requestedLinkCount;
 

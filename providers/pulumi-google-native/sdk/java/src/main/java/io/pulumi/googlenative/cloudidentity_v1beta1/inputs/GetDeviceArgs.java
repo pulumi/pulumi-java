@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDeviceArgs Empty = new GetDeviceArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="deviceId", required=true)
     private final String deviceId;
 

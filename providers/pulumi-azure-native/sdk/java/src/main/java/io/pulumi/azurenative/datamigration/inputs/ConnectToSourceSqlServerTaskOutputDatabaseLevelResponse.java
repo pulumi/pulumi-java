@@ -11,10 +11,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Database level output for the task that validates connection to SQL Server and also validates source server requirements
+ */
 public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse Empty = new ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse();
 
+    /**
+     * SQL Server compatibility level of database
+     */
     @InputImport(name="compatibilityLevel", required=true)
     private final String compatibilityLevel;
 
@@ -22,6 +28,9 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
         return this.compatibilityLevel;
     }
 
+    /**
+     * The list of database files
+     */
     @InputImport(name="databaseFiles", required=true)
     private final List<DatabaseFileInfoResponse> databaseFiles;
 
@@ -29,6 +38,9 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
         return this.databaseFiles;
     }
 
+    /**
+     * State of the database
+     */
     @InputImport(name="databaseState", required=true)
     private final String databaseState;
 
@@ -36,6 +48,9 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
         return this.databaseState;
     }
 
+    /**
+     * Result identifier
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -43,6 +58,9 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
         return this.id;
     }
 
+    /**
+     * Database name
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -50,6 +68,10 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
         return this.name;
     }
 
+    /**
+     * Type of result - database level or task level
+Expected value is 'DatabaseLevelOutput'.
+     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 
@@ -57,6 +79,9 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
         return this.resultType;
     }
 
+    /**
+     * Size of the file in megabytes
+     */
     @InputImport(name="sizeMB", required=true)
     private final Double sizeMB;
 

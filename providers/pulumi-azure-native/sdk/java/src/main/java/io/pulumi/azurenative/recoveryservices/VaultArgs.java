@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VaultArgs Empty = new VaultArgs();
 
+    /**
+     * Identity for the resource.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityDataArgs> identity;
 
@@ -25,6 +31,9 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -32,6 +41,9 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Properties of the vault.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<VaultPropertiesArgs> properties;
 
@@ -39,6 +51,9 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group where the recovery services vault is present.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -46,6 +61,9 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Identifies the unique system identifier for each Azure resource.
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -53,6 +71,9 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -60,6 +81,9 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The name of the recovery services vault.
+     */
     @InputImport(name="vaultName")
     private final @Nullable Input<String> vaultName;
 

@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UserAccountCredentialsResponse {
+/**
+ * Name of the administrator user account which can be used to SSH to nodes.
+ */
     private final String adminUserName;
+/**
+ * Password of the administrator user account.
+ */
     private final @Nullable String adminUserPassword;
+/**
+ * SSH public key of the administrator user account.
+ */
     private final @Nullable String adminUserSshPublicKey;
 
     @OutputCustomType.Constructor({"adminUserName","adminUserPassword","adminUserSshPublicKey"})
@@ -25,12 +34,21 @@ public final class UserAccountCredentialsResponse {
         this.adminUserSshPublicKey = adminUserSshPublicKey;
     }
 
+/**
+ * Name of the administrator user account which can be used to SSH to nodes.
+ */
     public String getAdminUserName() {
         return this.adminUserName;
     }
+/**
+ * Password of the administrator user account.
+ */
     public Optional<String> getAdminUserPassword() {
         return Optional.ofNullable(this.adminUserPassword);
     }
+/**
+ * SSH public key of the administrator user account.
+ */
     public Optional<String> getAdminUserSshPublicKey() {
         return Optional.ofNullable(this.adminUserSshPublicKey);
     }

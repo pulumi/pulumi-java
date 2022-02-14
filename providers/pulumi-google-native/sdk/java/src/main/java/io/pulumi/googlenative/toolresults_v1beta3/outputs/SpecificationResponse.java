@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SpecificationResponse {
+/**
+ * An Android mobile test execution specification.
+ */
     private final AndroidTestResponse androidTest;
+/**
+ * An iOS mobile test execution specification.
+ */
     private final IosTestResponse iosTest;
 
     @OutputCustomType.Constructor({"androidTest","iosTest"})
@@ -21,9 +27,15 @@ public final class SpecificationResponse {
         this.iosTest = Objects.requireNonNull(iosTest);
     }
 
+/**
+ * An Android mobile test execution specification.
+ */
     public AndroidTestResponse getAndroidTest() {
         return this.androidTest;
     }
+/**
+ * An iOS mobile test execution specification.
+ */
     public IosTestResponse getIosTest() {
         return this.iosTest;
     }

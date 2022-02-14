@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class WebAppApplicationSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebAppApplicationSettingsArgs Empty = new WebAppApplicationSettingsArgs();
 
+    /**
+     * Kind of resource.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -22,6 +28,9 @@ public final class WebAppApplicationSettingsArgs extends io.pulumi.resources.Res
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the app.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -29,6 +38,9 @@ public final class WebAppApplicationSettingsArgs extends io.pulumi.resources.Res
         return this.name;
     }
 
+    /**
+     * Settings.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -36,6 +48,9 @@ public final class WebAppApplicationSettingsArgs extends io.pulumi.resources.Res
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

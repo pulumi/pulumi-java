@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SecurityPolicyRuleHttpHeaderActionResponse {
+/**
+ * The list of request headers to add or overwrite if they're already present.
+ */
     private final List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds;
 
     @OutputCustomType.Constructor({"requestHeadersToAdds"})
@@ -17,6 +20,9 @@ public final class SecurityPolicyRuleHttpHeaderActionResponse {
         this.requestHeadersToAdds = Objects.requireNonNull(requestHeadersToAdds);
     }
 
+/**
+ * The list of request headers to add or overwrite if they're already present.
+ */
     public List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> getRequestHeadersToAdds() {
         return this.requestHeadersToAdds;
     }

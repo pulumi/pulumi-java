@@ -8,13 +8,34 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Specifies the forwarding rule type. For more information about forwarding rules, refer to Forwarding rule concepts.
+ */
     @EnumType
     public enum GlobalForwardingRuleLoadBalancingScheme {
+/**
+ * 
+ */
         External("EXTERNAL"),
+/**
+ * 
+ */
         ExternalManaged("EXTERNAL_MANAGED"),
+/**
+ * 
+ */
         Internal("INTERNAL"),
+/**
+ * 
+ */
         InternalManaged("INTERNAL_MANAGED"),
+/**
+ * 
+ */
         InternalSelfManaged("INTERNAL_SELF_MANAGED"),
+/**
+ * 
+ */
         Invalid("INVALID");
 
         private final String value;

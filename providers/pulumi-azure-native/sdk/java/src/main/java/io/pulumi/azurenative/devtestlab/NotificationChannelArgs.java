@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class NotificationChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NotificationChannelArgs Empty = new NotificationChannelArgs();
 
+    /**
+     * Description of notification.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -24,6 +30,9 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
+     */
     @InputImport(name="emailRecipient")
     private final @Nullable Input<String> emailRecipient;
 
@@ -31,6 +40,9 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
         return this.emailRecipient == null ? Input.empty() : this.emailRecipient;
     }
 
+    /**
+     * The list of event for which this notification is enabled.
+     */
     @InputImport(name="events")
     private final @Nullable Input<List<EventArgs>> events;
 
@@ -38,6 +50,9 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
         return this.events == null ? Input.empty() : this.events;
     }
 
+    /**
+     * The name of the lab.
+     */
     @InputImport(name="labName", required=true)
     private final Input<String> labName;
 
@@ -45,6 +60,9 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
         return this.labName;
     }
 
+    /**
+     * The location of the resource.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -52,6 +70,9 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the notification channel.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -59,6 +80,9 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The locale to use when sending a notification (fallback for unsupported languages is EN).
+     */
     @InputImport(name="notificationLocale")
     private final @Nullable Input<String> notificationLocale;
 
@@ -66,6 +90,9 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
         return this.notificationLocale == null ? Input.empty() : this.notificationLocale;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -73,6 +100,9 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
+    /**
+     * The tags of the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -80,6 +110,9 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The webhook URL to send notifications to.
+     */
     @InputImport(name="webHookUrl")
     private final @Nullable Input<String> webHookUrl;
 

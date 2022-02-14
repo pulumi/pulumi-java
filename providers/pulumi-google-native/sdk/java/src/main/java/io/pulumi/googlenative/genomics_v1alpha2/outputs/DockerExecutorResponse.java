@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DockerExecutorResponse {
+/**
+ * The command or newline delimited script to run. The command string will be executed within a bash shell. If the command exits with a non-zero exit code, output parameter de-localization will be skipped and the pipeline operation's `error` field will be populated. Maximum command string length is 16384.
+ */
     private final String cmd;
+/**
+ * Image name from either Docker Hub or Google Container Registry. Users that run pipelines must have READ access to the image.
+ */
     private final String imageName;
 
     @OutputCustomType.Constructor({"cmd","imageName"})
@@ -20,9 +26,15 @@ public final class DockerExecutorResponse {
         this.imageName = Objects.requireNonNull(imageName);
     }
 
+/**
+ * The command or newline delimited script to run. The command string will be executed within a bash shell. If the command exits with a non-zero exit code, output parameter de-localization will be skipped and the pipeline operation's `error` field will be populated. Maximum command string length is 16384.
+ */
     public String getCmd() {
         return this.cmd;
     }
+/**
+ * Image name from either Docker Hub or Google Container Registry. Users that run pipelines must have READ access to the image.
+ */
     public String getImageName() {
         return this.imageName;
     }

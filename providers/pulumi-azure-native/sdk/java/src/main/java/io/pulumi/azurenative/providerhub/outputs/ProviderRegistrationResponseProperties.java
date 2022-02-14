@@ -22,20 +22,65 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ProviderRegistrationResponseProperties {
+/**
+ * 
+ */
     private final @Nullable List<ResourceProviderCapabilitiesResponse> capabilities;
+/**
+ * 
+ */
     private final @Nullable ResourceProviderManifestPropertiesResponseFeaturesRule featuresRule;
+/**
+ * 
+ */
     private final @Nullable ResourceProviderManifestPropertiesResponseManagement management;
+/**
+ * 
+ */
     private final @Nullable Object metadata;
+/**
+ * 
+ */
     private final @Nullable String namespace;
+/**
+ * 
+ */
     private final @Nullable ResourceProviderManifestPropertiesResponseProviderAuthentication providerAuthentication;
+/**
+ * 
+ */
     private final @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations;
+/**
+ * 
+ */
     private final @Nullable ProviderRegistrationPropertiesResponseProviderHubMetadata providerHubMetadata;
+/**
+ * 
+ */
     private final @Nullable String providerType;
+/**
+ * 
+ */
     private final @Nullable String providerVersion;
+/**
+ * 
+ */
     private final @Nullable String provisioningState;
+/**
+ * 
+ */
     private final @Nullable ResourceProviderManifestPropertiesResponseRequestHeaderOptions requestHeaderOptions;
+/**
+ * 
+ */
     private final @Nullable List<String> requiredFeatures;
+/**
+ * 
+ */
     private final @Nullable ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications;
+/**
+ * 
+ */
     private final @Nullable ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions;
 
     @OutputCustomType.Constructor({"capabilities","featuresRule","management","metadata","namespace","providerAuthentication","providerAuthorizations","providerHubMetadata","providerType","providerVersion","provisioningState","requestHeaderOptions","requiredFeatures","subscriptionLifecycleNotificationSpecifications","templateDeploymentOptions"})
@@ -72,48 +117,93 @@ public final class ProviderRegistrationResponseProperties {
         this.templateDeploymentOptions = templateDeploymentOptions;
     }
 
+/**
+ * 
+ */
     public List<ResourceProviderCapabilitiesResponse> getCapabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
+/**
+ * 
+ */
     public Optional<ResourceProviderManifestPropertiesResponseFeaturesRule> getFeaturesRule() {
         return Optional.ofNullable(this.featuresRule);
     }
+/**
+ * 
+ */
     public Optional<ResourceProviderManifestPropertiesResponseManagement> getManagement() {
         return Optional.ofNullable(this.management);
     }
+/**
+ * 
+ */
     public Optional<Object> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
+/**
+ * 
+ */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
+/**
+ * 
+ */
     public Optional<ResourceProviderManifestPropertiesResponseProviderAuthentication> getProviderAuthentication() {
         return Optional.ofNullable(this.providerAuthentication);
     }
+/**
+ * 
+ */
     public List<ResourceProviderAuthorizationResponse> getProviderAuthorizations() {
         return this.providerAuthorizations == null ? List.of() : this.providerAuthorizations;
     }
+/**
+ * 
+ */
     public Optional<ProviderRegistrationPropertiesResponseProviderHubMetadata> getProviderHubMetadata() {
         return Optional.ofNullable(this.providerHubMetadata);
     }
+/**
+ * 
+ */
     public Optional<String> getProviderType() {
         return Optional.ofNullable(this.providerType);
     }
+/**
+ * 
+ */
     public Optional<String> getProviderVersion() {
         return Optional.ofNullable(this.providerVersion);
     }
+/**
+ * 
+ */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
+/**
+ * 
+ */
     public Optional<ResourceProviderManifestPropertiesResponseRequestHeaderOptions> getRequestHeaderOptions() {
         return Optional.ofNullable(this.requestHeaderOptions);
     }
+/**
+ * 
+ */
     public List<String> getRequiredFeatures() {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }
+/**
+ * 
+ */
     public Optional<ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications> getSubscriptionLifecycleNotificationSpecifications() {
         return Optional.ofNullable(this.subscriptionLifecycleNotificationSpecifications);
     }
+/**
+ * 
+ */
     public Optional<ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions> getTemplateDeploymentOptions() {
         return Optional.ofNullable(this.templateDeploymentOptions);
     }

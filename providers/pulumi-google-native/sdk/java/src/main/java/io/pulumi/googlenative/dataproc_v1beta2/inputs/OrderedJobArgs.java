@@ -21,10 +21,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A job executed by the workflow.
+ */
 public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OrderedJobArgs Empty = new OrderedJobArgs();
 
+    /**
+     * Optional. Job is a Hadoop job.
+     */
     @InputImport(name="hadoopJob")
     private final @Nullable Input<HadoopJobArgs> hadoopJob;
 
@@ -32,6 +38,9 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.hadoopJob == null ? Input.empty() : this.hadoopJob;
     }
 
+    /**
+     * Optional. Job is a Hive job.
+     */
     @InputImport(name="hiveJob")
     private final @Nullable Input<HiveJobArgs> hiveJob;
 
@@ -39,6 +48,9 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.hiveJob == null ? Input.empty() : this.hiveJob;
     }
 
+    /**
+     * Optional. The labels to associate with this job.Label keys must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}{0,62}Label values must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}\p{N}_-{0,63}No more than 32 labels can be associated with a given job.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -46,6 +58,9 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Optional. Job is a Pig job.
+     */
     @InputImport(name="pigJob")
     private final @Nullable Input<PigJobArgs> pigJob;
 
@@ -53,6 +68,9 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.pigJob == null ? Input.empty() : this.pigJob;
     }
 
+    /**
+     * Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.
+     */
     @InputImport(name="prerequisiteStepIds")
     private final @Nullable Input<List<String>> prerequisiteStepIds;
 
@@ -60,6 +78,9 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.prerequisiteStepIds == null ? Input.empty() : this.prerequisiteStepIds;
     }
 
+    /**
+     * Optional. Job is a Presto job.
+     */
     @InputImport(name="prestoJob")
     private final @Nullable Input<PrestoJobArgs> prestoJob;
 
@@ -67,6 +88,9 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.prestoJob == null ? Input.empty() : this.prestoJob;
     }
 
+    /**
+     * Optional. Job is a PySpark job.
+     */
     @InputImport(name="pysparkJob")
     private final @Nullable Input<PySparkJobArgs> pysparkJob;
 
@@ -74,6 +98,9 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.pysparkJob == null ? Input.empty() : this.pysparkJob;
     }
 
+    /**
+     * Optional. Job scheduling configuration.
+     */
     @InputImport(name="scheduling")
     private final @Nullable Input<JobSchedulingArgs> scheduling;
 
@@ -81,6 +108,9 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.scheduling == null ? Input.empty() : this.scheduling;
     }
 
+    /**
+     * Optional. Job is a Spark job.
+     */
     @InputImport(name="sparkJob")
     private final @Nullable Input<SparkJobArgs> sparkJob;
 
@@ -88,6 +118,9 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.sparkJob == null ? Input.empty() : this.sparkJob;
     }
 
+    /**
+     * Optional. Job is a SparkR job.
+     */
     @InputImport(name="sparkRJob")
     private final @Nullable Input<SparkRJobArgs> sparkRJob;
 
@@ -95,6 +128,9 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.sparkRJob == null ? Input.empty() : this.sparkRJob;
     }
 
+    /**
+     * Optional. Job is a SparkSql job.
+     */
     @InputImport(name="sparkSqlJob")
     private final @Nullable Input<SparkSqlJobArgs> sparkSqlJob;
 
@@ -102,6 +138,9 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.sparkSqlJob == null ? Input.empty() : this.sparkSqlJob;
     }
 
+    /**
+     * The step id. The id must be unique among all jobs within the template.The step id is used as prefix for job id, as job goog-dataproc-workflow-step-id label, and in prerequisiteStepIds field from other steps.The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
+     */
     @InputImport(name="stepId", required=true)
     private final Input<String> stepId;
 

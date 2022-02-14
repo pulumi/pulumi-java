@@ -15,22 +15,73 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ComputeEngineTargetDefaultsResponse {
+/**
+ * Additional licenses to assign to the VM.
+ */
     private final List<String> additionalLicenses;
+/**
+ * The OS license returned from the adaptation module report.
+ */
     private final AppliedLicenseResponse appliedLicense;
+/**
+ * The VM Boot Option, as set in the source vm.
+ */
     private final String bootOption;
+/**
+ * Compute instance scheduling information (if empty default is used).
+ */
     private final ComputeSchedulingResponse computeScheduling;
+/**
+ * The disk type to use in the VM.
+ */
     private final String diskType;
+/**
+ * A map of labels to associate with the VM.
+ */
     private final Map<String,String> labels;
+/**
+ * The license type to use in OS adaptation.
+ */
     private final String licenseType;
+/**
+ * The machine type to create the VM with.
+ */
     private final String machineType;
+/**
+ * The machine type series to create the VM with.
+ */
     private final String machineTypeSeries;
+/**
+ * The metadata key/value pairs to assign to the VM.
+ */
     private final Map<String,String> metadata;
+/**
+ * List of NICs connected to this VM.
+ */
     private final List<NetworkInterfaceResponse> networkInterfaces;
+/**
+ * A map of network tags to associate with the VM.
+ */
     private final List<String> networkTags;
+/**
+ * Defines whether the instance has Secure Boot enabled. This can be set to true only if the vm boot option is EFI.
+ */
     private final Boolean secureBoot;
+/**
+ * The service account to associate the VM with.
+ */
     private final String serviceAccount;
+/**
+ * The full path of the resource of type TargetProject which represents the Compute Engine project in which to create this VM.
+ */
     private final String targetProject;
+/**
+ * The name of the VM to create.
+ */
     private final String vmName;
+/**
+ * The zone in which to create the VM.
+ */
     private final String zone;
 
     @OutputCustomType.Constructor({"additionalLicenses","appliedLicense","bootOption","computeScheduling","diskType","labels","licenseType","machineType","machineTypeSeries","metadata","networkInterfaces","networkTags","secureBoot","serviceAccount","targetProject","vmName","zone"})
@@ -71,54 +122,105 @@ public final class ComputeEngineTargetDefaultsResponse {
         this.zone = Objects.requireNonNull(zone);
     }
 
+/**
+ * Additional licenses to assign to the VM.
+ */
     public List<String> getAdditionalLicenses() {
         return this.additionalLicenses;
     }
+/**
+ * The OS license returned from the adaptation module report.
+ */
     public AppliedLicenseResponse getAppliedLicense() {
         return this.appliedLicense;
     }
+/**
+ * The VM Boot Option, as set in the source vm.
+ */
     public String getBootOption() {
         return this.bootOption;
     }
+/**
+ * Compute instance scheduling information (if empty default is used).
+ */
     public ComputeSchedulingResponse getComputeScheduling() {
         return this.computeScheduling;
     }
+/**
+ * The disk type to use in the VM.
+ */
     public String getDiskType() {
         return this.diskType;
     }
+/**
+ * A map of labels to associate with the VM.
+ */
     public Map<String,String> getLabels() {
         return this.labels;
     }
+/**
+ * The license type to use in OS adaptation.
+ */
     public String getLicenseType() {
         return this.licenseType;
     }
+/**
+ * The machine type to create the VM with.
+ */
     public String getMachineType() {
         return this.machineType;
     }
+/**
+ * The machine type series to create the VM with.
+ */
     public String getMachineTypeSeries() {
         return this.machineTypeSeries;
     }
+/**
+ * The metadata key/value pairs to assign to the VM.
+ */
     public Map<String,String> getMetadata() {
         return this.metadata;
     }
+/**
+ * List of NICs connected to this VM.
+ */
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
         return this.networkInterfaces;
     }
+/**
+ * A map of network tags to associate with the VM.
+ */
     public List<String> getNetworkTags() {
         return this.networkTags;
     }
+/**
+ * Defines whether the instance has Secure Boot enabled. This can be set to true only if the vm boot option is EFI.
+ */
     public Boolean getSecureBoot() {
         return this.secureBoot;
     }
+/**
+ * The service account to associate the VM with.
+ */
     public String getServiceAccount() {
         return this.serviceAccount;
     }
+/**
+ * The full path of the resource of type TargetProject which represents the Compute Engine project in which to create this VM.
+ */
     public String getTargetProject() {
         return this.targetProject;
     }
+/**
+ * The name of the VM to create.
+ */
     public String getVmName() {
         return this.vmName;
     }
+/**
+ * The zone in which to create the VM.
+ */
     public String getZone() {
         return this.zone;
     }

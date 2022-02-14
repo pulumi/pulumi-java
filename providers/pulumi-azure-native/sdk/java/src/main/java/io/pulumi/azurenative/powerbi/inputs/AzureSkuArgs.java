@@ -12,10 +12,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureSkuArgs Empty = new AzureSkuArgs();
 
+    /**
+     * SKU name
+     */
     @InputImport(name="name", required=true)
     private final Input<Either<String,AzureSkuName>> name;
 
@@ -23,6 +29,9 @@ public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * SKU tier
+     */
     @InputImport(name="tier", required=true)
     private final Input<Either<String,AzureSkuTier>> tier;
 

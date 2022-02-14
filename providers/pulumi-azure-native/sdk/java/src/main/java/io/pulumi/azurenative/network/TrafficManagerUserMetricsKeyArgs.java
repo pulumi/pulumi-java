@@ -6,6 +6,9 @@ package io.pulumi.azurenative.network;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class TrafficManagerUserMetricsKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TrafficManagerUserMetricsKeyArgs Empty = new TrafficManagerUserMetricsKeyArgs();

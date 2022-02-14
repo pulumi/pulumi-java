@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetManagementConfigurationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetManagementConfigurationArgs Empty = new GetManagementConfigurationArgs();
 
+    /**
+     * User Management Configuration Name.
+     */
     @InputImport(name="managementConfigurationName", required=true)
     private final String managementConfigurationName;
 
@@ -19,6 +25,9 @@ public final class GetManagementConfigurationArgs extends io.pulumi.resources.In
         return this.managementConfigurationName;
     }
 
+    /**
+     * The name of the resource group to get. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageQueueMessageArgs Empty = new StorageQueueMessageArgs();
 
+    /**
+     * Gets or sets the message.
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -21,6 +27,9 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
         return this.message == null ? Input.empty() : this.message;
     }
 
+    /**
+     * Gets or sets the queue name.
+     */
     @InputImport(name="queueName")
     private final @Nullable Input<String> queueName;
 
@@ -28,6 +37,9 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
         return this.queueName == null ? Input.empty() : this.queueName;
     }
 
+    /**
+     * Gets or sets the SAS key.
+     */
     @InputImport(name="sasToken")
     private final @Nullable Input<String> sasToken;
 
@@ -35,6 +47,9 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
         return this.sasToken == null ? Input.empty() : this.sasToken;
     }
 
+    /**
+     * Gets or sets the storage account name.
+     */
     @InputImport(name="storageAccount")
     private final @Nullable Input<String> storageAccount;
 

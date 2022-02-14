@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHybridConnectionAuthorizationRule {
+/**
+ * Description of a namespace authorization rule.
+API Version: 2017-04-01.
+ *
+ * Description of a namespace authorization rule.
+ */
     public static CompletableFuture<GetHybridConnectionAuthorizationRuleResult> invokeAsync(GetHybridConnectionAuthorizationRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:relay:getHybridConnectionAuthorizationRule", TypeShape.of(GetHybridConnectionAuthorizationRuleResult.class), args == null ? GetHybridConnectionAuthorizationRuleArgs.Empty : args, Utilities.withVersion(options));
     }

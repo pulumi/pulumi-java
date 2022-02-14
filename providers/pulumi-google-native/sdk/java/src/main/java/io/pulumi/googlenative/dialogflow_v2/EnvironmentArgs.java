@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentArgs Empty = new EnvironmentArgs();
 
+    /**
+     * Optional. The agent version loaded into this environment. Supported formats: - `projects//agent/versions/` - `projects//locations//agent/versions/`
+     */
     @InputImport(name="agentVersion")
     private final @Nullable Input<String> agentVersion;
 
@@ -23,6 +29,9 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentVersion == null ? Input.empty() : this.agentVersion;
     }
 
+    /**
+     * Optional. The developer-provided description for this environment. The maximum length is 500 characters. If exceeded, the request is rejected.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -30,6 +39,9 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="environmentId", required=true)
     private final Input<String> environmentId;
 
@@ -37,6 +49,9 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentId;
     }
 
+    /**
+     * Optional. The fulfillment settings to use for this environment.
+     */
     @InputImport(name="fulfillment")
     private final @Nullable Input<GoogleCloudDialogflowV2FulfillmentArgs> fulfillment;
 
@@ -44,6 +59,9 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.fulfillment == null ? Input.empty() : this.fulfillment;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -51,6 +69,9 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -58,6 +79,9 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Optional. Text to speech settings for this environment.
+     */
     @InputImport(name="textToSpeechSettings")
     private final @Nullable Input<GoogleCloudDialogflowV2TextToSpeechSettingsArgs> textToSpeechSettings;
 

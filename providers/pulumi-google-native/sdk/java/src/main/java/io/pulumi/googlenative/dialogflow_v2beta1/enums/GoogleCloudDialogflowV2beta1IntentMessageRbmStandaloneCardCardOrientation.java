@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Required. Orientation of the card.
+ */
     @EnumType
     public enum GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientation {
+/**
+ * Not specified.
+ */
         CardOrientationUnspecified("CARD_ORIENTATION_UNSPECIFIED"),
+/**
+ * Horizontal layout.
+ */
         Horizontal("HORIZONTAL"),
+/**
+ * Vertical layout.
+ */
         Vertical("VERTICAL");
 
         private final String value;

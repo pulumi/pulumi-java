@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines an object for the byproducts field in in-toto links. The suggested fields are "stderr", "stdout", and "return-value".
+ */
 public final class ByProductsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ByProductsArgs Empty = new ByProductsArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="customValues")
     private final @Nullable Input<Map<String,String>> customValues;
 

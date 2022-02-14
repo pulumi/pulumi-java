@@ -11,10 +11,16 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Root config message for HL7v2 schema. This contains a schema structure of groups and segments, and filters that determine which messages to apply the schema structure to.
+ */
 public final class Hl7SchemaConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final Hl7SchemaConfigResponse Empty = new Hl7SchemaConfigResponse();
 
+    /**
+     * Map from each HL7v2 message type and trigger event pair, such as ADT_A04, to its schema configuration root group.
+     */
     @InputImport(name="messageSchemaConfigs", required=true)
     private final Map<String,String> messageSchemaConfigs;
 
@@ -22,6 +28,9 @@ public final class Hl7SchemaConfigResponse extends io.pulumi.resources.InvokeArg
         return this.messageSchemaConfigs;
     }
 
+    /**
+     * Each VersionSource is tested and only if they all match is the schema used for the message.
+     */
     @InputImport(name="version", required=true)
     private final List<VersionSourceResponse> version;
 

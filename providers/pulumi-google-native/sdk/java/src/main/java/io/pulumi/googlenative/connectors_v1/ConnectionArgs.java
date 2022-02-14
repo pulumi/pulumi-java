@@ -16,10 +16,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionArgs Empty = new ConnectionArgs();
 
+    /**
+     * Optional. Configuration for establishing the connection's authentication with an external system.
+     */
     @InputImport(name="authConfig")
     private final @Nullable Input<AuthConfigArgs> authConfig;
 
@@ -27,6 +33,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.authConfig == null ? Input.empty() : this.authConfig;
     }
 
+    /**
+     * Optional. Configuration for configuring the connection with an external system.
+     */
     @InputImport(name="configVariables")
     private final @Nullable Input<List<ConfigVariableArgs>> configVariables;
 
@@ -34,6 +43,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.configVariables == null ? Input.empty() : this.configVariables;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="connectionId", required=true)
     private final Input<String> connectionId;
 
@@ -41,6 +53,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectionId;
     }
 
+    /**
+     * Connector version on which the connection is created. The format is: projects//{@literal /}locations/global/providers//{@literal /}connectors//{@literal /}versions/*
+     */
     @InputImport(name="connectorVersion", required=true)
     private final Input<String> connectorVersion;
 
@@ -48,6 +63,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectorVersion;
     }
 
+    /**
+     * Optional. Description of the resource.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -55,6 +73,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -62,6 +83,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -69,6 +93,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Optional. Configuration that indicates whether or not the Connection can be edited.
+     */
     @InputImport(name="lockConfig")
     private final @Nullable Input<LockConfigArgs> lockConfig;
 
@@ -76,6 +103,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.lockConfig == null ? Input.empty() : this.lockConfig;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -83,6 +113,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Optional. Service account needed for runtime plane to access GCP resources.
+     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<String> serviceAccount;
 
@@ -90,6 +123,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
+    /**
+     * Optional. Suspended indicates if a user has suspended a connection or not.
+     */
     @InputImport(name="suspended")
     private final @Nullable Input<Boolean> suspended;
 

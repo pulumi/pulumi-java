@@ -17,15 +17,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDedicatedHostGroupResult {
+/**
+ * A list of references to all dedicated hosts in the dedicated host group.
+ */
     private final List<SubResourceReadOnlyResponse> hosts;
+/**
+ * Resource Id
+ */
     private final String id;
+/**
+ * The dedicated host group instance view, which has the list of instance view of the dedicated hosts under the dedicated host group.
+ */
     private final DedicatedHostGroupInstanceViewResponse instanceView;
+/**
+ * Resource location
+ */
     private final String location;
+/**
+ * Resource name
+ */
     private final String name;
+/**
+ * Number of fault domains that the host group can span.
+ */
     private final Integer platformFaultDomainCount;
+/**
+ * Specifies whether virtual machines or virtual machine scale sets can be placed automatically on the dedicated host group. Automatic placement means resources are allocated on dedicated hosts, that are chosen by Azure, under the dedicated host group. The value is defaulted to 'false' when not provided. <br><br>Minimum api-version: 2020-06-01.
+ */
     private final @Nullable Boolean supportAutomaticPlacement;
+/**
+ * Resource tags
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Resource type
+ */
     private final String type;
+/**
+ * Availability Zone to use for this host group. Only single zone is supported. The zone can be assigned only during creation. If not provided, the group supports all zones in the region. If provided, enforces each host in the group to be in the same zone.
+ */
     private final @Nullable List<String> zones;
 
     @OutputCustomType.Constructor({"hosts","id","instanceView","location","name","platformFaultDomainCount","supportAutomaticPlacement","tags","type","zones"})
@@ -52,33 +82,63 @@ public final class GetDedicatedHostGroupResult {
         this.zones = zones;
     }
 
+/**
+ * A list of references to all dedicated hosts in the dedicated host group.
+ */
     public List<SubResourceReadOnlyResponse> getHosts() {
         return this.hosts;
     }
+/**
+ * Resource Id
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The dedicated host group instance view, which has the list of instance view of the dedicated hosts under the dedicated host group.
+ */
     public DedicatedHostGroupInstanceViewResponse getInstanceView() {
         return this.instanceView;
     }
+/**
+ * Resource location
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * Resource name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Number of fault domains that the host group can span.
+ */
     public Integer getPlatformFaultDomainCount() {
         return this.platformFaultDomainCount;
     }
+/**
+ * Specifies whether virtual machines or virtual machine scale sets can be placed automatically on the dedicated host group. Automatic placement means resources are allocated on dedicated hosts, that are chosen by Azure, under the dedicated host group. The value is defaulted to 'false' when not provided. <br><br>Minimum api-version: 2020-06-01.
+ */
     public Optional<Boolean> getSupportAutomaticPlacement() {
         return Optional.ofNullable(this.supportAutomaticPlacement);
     }
+/**
+ * Resource tags
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Resource type
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Availability Zone to use for this host group. Only single zone is supported. The zone can be assigned only during creation. If not provided, the group supports all zones in the region. If provided, enforces each host in the group to be in the same zone.
+ */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }

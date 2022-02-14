@@ -11,12 +11,33 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HealthCheckResponse {
+/**
+ * Interval between health checks.
+ */
     private final String checkInterval;
+/**
+ * Whether to explicitly disable health checks for this instance.
+ */
     private final Boolean disableHealthCheck;
+/**
+ * Number of consecutive successful health checks required before receiving traffic.
+ */
     private final Integer healthyThreshold;
+/**
+ * Host header to send when performing an HTTP health check. Example: "myapp.appspot.com"
+ */
     private final String host;
+/**
+ * Number of consecutive failed health checks required before an instance is restarted.
+ */
     private final Integer restartThreshold;
+/**
+ * Time before the health check is considered failed.
+ */
     private final String timeout;
+/**
+ * Number of consecutive failed health checks required before removing traffic.
+ */
     private final Integer unhealthyThreshold;
 
     @OutputCustomType.Constructor({"checkInterval","disableHealthCheck","healthyThreshold","host","restartThreshold","timeout","unhealthyThreshold"})
@@ -37,24 +58,45 @@ public final class HealthCheckResponse {
         this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
     }
 
+/**
+ * Interval between health checks.
+ */
     public String getCheckInterval() {
         return this.checkInterval;
     }
+/**
+ * Whether to explicitly disable health checks for this instance.
+ */
     public Boolean getDisableHealthCheck() {
         return this.disableHealthCheck;
     }
+/**
+ * Number of consecutive successful health checks required before receiving traffic.
+ */
     public Integer getHealthyThreshold() {
         return this.healthyThreshold;
     }
+/**
+ * Host header to send when performing an HTTP health check. Example: "myapp.appspot.com"
+ */
     public String getHost() {
         return this.host;
     }
+/**
+ * Number of consecutive failed health checks required before an instance is restarted.
+ */
     public Integer getRestartThreshold() {
         return this.restartThreshold;
     }
+/**
+ * Time before the health check is considered failed.
+ */
     public String getTimeout() {
         return this.timeout;
     }
+/**
+ * Number of consecutive failed health checks required before removing traffic.
+ */
     public Integer getUnhealthyThreshold() {
         return this.unhealthyThreshold;
     }

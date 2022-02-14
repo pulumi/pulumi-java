@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetVirtualHubIpConfigurationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVirtualHubIpConfigurationArgs Empty = new GetVirtualHubIpConfigurationArgs();
 
+    /**
+     * The name of the ipconfig.
+     */
     @InputImport(name="ipConfigName", required=true)
     private final String ipConfigName;
 
@@ -19,6 +25,9 @@ public final class GetVirtualHubIpConfigurationArgs extends io.pulumi.resources.
         return this.ipConfigName;
     }
 
+    /**
+     * The resource group name of the VirtualHub.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetVirtualHubIpConfigurationArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the VirtualHub.
+     */
     @InputImport(name="virtualHubName", required=true)
     private final String virtualHubName;
 

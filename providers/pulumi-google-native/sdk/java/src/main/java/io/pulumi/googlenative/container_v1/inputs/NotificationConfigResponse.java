@@ -8,10 +8,16 @@ import io.pulumi.googlenative.container_v1.inputs.PubSubResponse;
 import java.util.Objects;
 
 
+/**
+ * NotificationConfig is the configuration of notifications.
+ */
 public final class NotificationConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NotificationConfigResponse Empty = new NotificationConfigResponse();
 
+    /**
+     * Notification config for Pub/Sub.
+     */
     @InputImport(name="pubsub", required=true)
     private final PubSubResponse pubsub;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A content string and a MIME type that describes the content string's format.
+ */
 public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DocumentationResponse Empty = new DocumentationResponse();
 
+    /**
+     * The text of the documentation, interpreted according to mime_type. The content may not exceed 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8 format, whichever is smaller.
+     */
     @InputImport(name="content", required=true)
     private final String content;
 
@@ -19,6 +25,9 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
         return this.content;
     }
 
+    /**
+     * The format of the content field. Presently, only the value "text/markdown" is supported. See Markdown (https://en.wikipedia.org/wiki/Markdown) for more information.
+     */
     @InputImport(name="mimeType", required=true)
     private final String mimeType;
 

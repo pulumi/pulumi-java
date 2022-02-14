@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OutputResponse {
+/**
+ * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.
+ */
     private final String uri;
 
     @OutputCustomType.Constructor({"uri"})
@@ -16,6 +19,9 @@ public final class OutputResponse {
         this.uri = Objects.requireNonNull(uri);
     }
 
+/**
+ * URI for the output file(s). For example, `gs://my-bucket/outputs/`. If empty the value is populated from `Job.output_uri`.
+ */
     public String getUri() {
         return this.uri;
     }

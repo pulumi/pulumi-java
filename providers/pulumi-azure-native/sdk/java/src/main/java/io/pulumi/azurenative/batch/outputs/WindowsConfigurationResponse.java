@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WindowsConfigurationResponse {
+/**
+ * If omitted, the default value is true.
+ */
     private final @Nullable Boolean enableAutomaticUpdates;
 
     @OutputCustomType.Constructor({"enableAutomaticUpdates"})
@@ -18,6 +21,9 @@ public final class WindowsConfigurationResponse {
         this.enableAutomaticUpdates = enableAutomaticUpdates;
     }
 
+/**
+ * If omitted, the default value is true.
+ */
     public Optional<Boolean> getEnableAutomaticUpdates() {
         return Optional.ofNullable(this.enableAutomaticUpdates);
     }

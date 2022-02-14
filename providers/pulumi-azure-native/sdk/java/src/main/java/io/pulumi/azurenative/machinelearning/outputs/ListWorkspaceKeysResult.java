@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListWorkspaceKeysResult {
+/**
+ * Primary authorization key for this workspace.
+ */
     private final @Nullable String primaryToken;
+/**
+ * Secondary authorization key for this workspace.
+ */
     private final @Nullable String secondaryToken;
 
     @OutputCustomType.Constructor({"primaryToken","secondaryToken"})
@@ -22,9 +28,15 @@ public final class ListWorkspaceKeysResult {
         this.secondaryToken = secondaryToken;
     }
 
+/**
+ * Primary authorization key for this workspace.
+ */
     public Optional<String> getPrimaryToken() {
         return Optional.ofNullable(this.primaryToken);
     }
+/**
+ * Secondary authorization key for this workspace.
+ */
     public Optional<String> getSecondaryToken() {
         return Optional.ofNullable(this.secondaryToken);
     }

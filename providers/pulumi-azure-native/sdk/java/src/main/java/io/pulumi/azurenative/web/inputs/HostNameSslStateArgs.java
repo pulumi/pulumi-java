@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SSL-enabled hostname.
+ */
 public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HostNameSslStateArgs Empty = new HostNameSslStateArgs();
 
+    /**
+     * Indicates whether the hostname is a standard or repository hostname.
+     */
     @InputImport(name="hostType")
     private final @Nullable Input<HostType> hostType;
 
@@ -24,6 +30,9 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
         return this.hostType == null ? Input.empty() : this.hostType;
     }
 
+    /**
+     * Hostname.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -31,6 +40,9 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * SSL type.
+     */
     @InputImport(name="sslState")
     private final @Nullable Input<SslState> sslState;
 
@@ -38,6 +50,9 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
         return this.sslState == null ? Input.empty() : this.sslState;
     }
 
+    /**
+     * SSL certificate thumbprint.
+     */
     @InputImport(name="thumbprint")
     private final @Nullable Input<String> thumbprint;
 
@@ -45,6 +60,9 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
         return this.thumbprint == null ? Input.empty() : this.thumbprint;
     }
 
+    /**
+     * Set to <code>true</code> to update existing hostname.
+     */
     @InputImport(name="toUpdate")
     private final @Nullable Input<Boolean> toUpdate;
 
@@ -52,6 +70,9 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
         return this.toUpdate == null ? Input.empty() : this.toUpdate;
     }
 
+    /**
+     * Virtual IP address assigned to the hostname if IP based SSL is enabled.
+     */
     @InputImport(name="virtualIP")
     private final @Nullable Input<String> virtualIP;
 

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Gets or sets the retry strategy to be used.
+ */
     @EnumType
     public enum RetryType {
+/**
+ * 
+ */
         None("None"),
+/**
+ * 
+ */
         Fixed("Fixed");
 
         private final String value;

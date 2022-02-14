@@ -20,10 +20,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CacheArgs Empty = new CacheArgs();
 
+    /**
+     * Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.
+     */
     @InputImport(name="cacheName")
     private final @Nullable Input<String> cacheName;
 
@@ -31,6 +37,9 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
         return this.cacheName == null ? Input.empty() : this.cacheName;
     }
 
+    /**
+     * The size of this Cache, in GB.
+     */
     @InputImport(name="cacheSizeGB")
     private final @Nullable Input<Integer> cacheSizeGB;
 
@@ -38,6 +47,9 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
         return this.cacheSizeGB == null ? Input.empty() : this.cacheSizeGB;
     }
 
+    /**
+     * Specifies Directory Services settings of the cache.
+     */
     @InputImport(name="directoryServicesSettings")
     private final @Nullable Input<CacheDirectorySettingsArgs> directoryServicesSettings;
 
@@ -45,6 +57,9 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
         return this.directoryServicesSettings == null ? Input.empty() : this.directoryServicesSettings;
     }
 
+    /**
+     * Specifies encryption settings of the cache.
+     */
     @InputImport(name="encryptionSettings")
     private final @Nullable Input<CacheEncryptionSettingsArgs> encryptionSettings;
 
@@ -52,6 +67,9 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryptionSettings == null ? Input.empty() : this.encryptionSettings;
     }
 
+    /**
+     * The identity of the cache, if configured.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<CacheIdentityArgs> identity;
 
@@ -59,6 +77,9 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * Region name string.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -66,6 +87,9 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Specifies network settings of the cache.
+     */
     @InputImport(name="networkSettings")
     private final @Nullable Input<CacheNetworkSettingsArgs> networkSettings;
 
@@ -73,6 +97,9 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkSettings == null ? Input.empty() : this.networkSettings;
     }
 
+    /**
+     * ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<Either<String,ProvisioningStateType>> provisioningState;
 
@@ -80,6 +107,9 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
+    /**
+     * Target resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -87,6 +117,9 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Specifies security settings of the cache.
+     */
     @InputImport(name="securitySettings")
     private final @Nullable Input<CacheSecuritySettingsArgs> securitySettings;
 
@@ -94,6 +127,9 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
         return this.securitySettings == null ? Input.empty() : this.securitySettings;
     }
 
+    /**
+     * SKU for the Cache.
+     */
     @InputImport(name="sku")
     private final @Nullable Input<CacheSkuArgs> sku;
 
@@ -101,6 +137,9 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Subnet used for the Cache.
+     */
     @InputImport(name="subnet")
     private final @Nullable Input<String> subnet;
 
@@ -108,6 +147,9 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
         return this.subnet == null ? Input.empty() : this.subnet;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

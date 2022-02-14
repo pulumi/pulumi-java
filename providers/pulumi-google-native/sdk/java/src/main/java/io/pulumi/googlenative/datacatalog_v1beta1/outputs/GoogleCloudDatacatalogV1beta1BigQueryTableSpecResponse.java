@@ -11,8 +11,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse {
+/**
+ * The table source type.
+ */
     private final String tableSourceType;
+/**
+ * Spec of a BigQuery table. This field should only be populated if `table_source_type` is `BIGQUERY_TABLE`.
+ */
     private final GoogleCloudDatacatalogV1beta1TableSpecResponse tableSpec;
+/**
+ * Table view specification. This field should only be populated if `table_source_type` is `BIGQUERY_VIEW`.
+ */
     private final GoogleCloudDatacatalogV1beta1ViewSpecResponse viewSpec;
 
     @OutputCustomType.Constructor({"tableSourceType","tableSpec","viewSpec"})
@@ -25,12 +34,21 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse {
         this.viewSpec = Objects.requireNonNull(viewSpec);
     }
 
+/**
+ * The table source type.
+ */
     public String getTableSourceType() {
         return this.tableSourceType;
     }
+/**
+ * Spec of a BigQuery table. This field should only be populated if `table_source_type` is `BIGQUERY_TABLE`.
+ */
     public GoogleCloudDatacatalogV1beta1TableSpecResponse getTableSpec() {
         return this.tableSpec;
     }
+/**
+ * Table view specification. This field should only be populated if `table_source_type` is `BIGQUERY_VIEW`.
+ */
     public GoogleCloudDatacatalogV1beta1ViewSpecResponse getViewSpec() {
         return this.viewSpec;
     }

@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Results for schema comparison between the source and target
+ */
 public final class SchemaComparisonValidationResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SchemaComparisonValidationResultResponse Empty = new SchemaComparisonValidationResultResponse();
 
+    /**
+     * List of schema differences between the source and target databases
+     */
     @InputImport(name="schemaDifferences", required=true)
     private final SchemaComparisonValidationResultTypeResponse schemaDifferences;
 
@@ -25,6 +31,9 @@ public final class SchemaComparisonValidationResultResponse extends io.pulumi.re
         return this.schemaDifferences;
     }
 
+    /**
+     * Count of source database objects
+     */
     @InputImport(name="sourceDatabaseObjectCount")
     private final @Nullable Map<String,Double> sourceDatabaseObjectCount;
 
@@ -32,6 +41,9 @@ public final class SchemaComparisonValidationResultResponse extends io.pulumi.re
         return this.sourceDatabaseObjectCount == null ? Map.of() : this.sourceDatabaseObjectCount;
     }
 
+    /**
+     * Count of target database objects
+     */
     @InputImport(name="targetDatabaseObjectCount")
     private final @Nullable Map<String,Double> targetDatabaseObjectCount;
 
@@ -39,6 +51,9 @@ public final class SchemaComparisonValidationResultResponse extends io.pulumi.re
         return this.targetDatabaseObjectCount == null ? Map.of() : this.targetDatabaseObjectCount;
     }
 
+    /**
+     * List of errors that happened while performing schema compare validation
+     */
     @InputImport(name="validationErrors", required=true)
     private final ValidationErrorResponse validationErrors;
 

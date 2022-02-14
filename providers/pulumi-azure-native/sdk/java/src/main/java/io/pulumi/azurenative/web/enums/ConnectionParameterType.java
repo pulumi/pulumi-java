@@ -8,16 +8,46 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Type of the parameter
+ */
     @EnumType
     public enum ConnectionParameterType {
+/**
+ * 
+ */
         String("string"),
+/**
+ * 
+ */
         Securestring("securestring"),
+/**
+ * 
+ */
         Secureobject("secureobject"),
+/**
+ * 
+ */
         $Int("int"),
+/**
+ * 
+ */
         Bool("bool"),
+/**
+ * 
+ */
         Object("object"),
+/**
+ * 
+ */
         Array("array"),
+/**
+ * 
+ */
         OauthSetting("oauthSetting"),
+/**
+ * 
+ */
         Connection("connection");
 
         private final String value;

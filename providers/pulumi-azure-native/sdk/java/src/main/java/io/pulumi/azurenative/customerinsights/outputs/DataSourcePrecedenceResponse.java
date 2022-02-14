@@ -12,11 +12,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DataSourcePrecedenceResponse {
+/**
+ * The data source reference id.
+ */
     private final String dataSourceReferenceId;
+/**
+ * The data source type.
+ */
     private final String dataSourceType;
+/**
+ * The data source ID.
+ */
     private final Integer id;
+/**
+ * The data source name
+ */
     private final String name;
+/**
+ * the precedence value.
+ */
     private final @Nullable Integer precedence;
+/**
+ * The data source status.
+ */
     private final String status;
 
     @OutputCustomType.Constructor({"dataSourceReferenceId","dataSourceType","id","name","precedence","status"})
@@ -35,21 +53,39 @@ public final class DataSourcePrecedenceResponse {
         this.status = Objects.requireNonNull(status);
     }
 
+/**
+ * The data source reference id.
+ */
     public String getDataSourceReferenceId() {
         return this.dataSourceReferenceId;
     }
+/**
+ * The data source type.
+ */
     public String getDataSourceType() {
         return this.dataSourceType;
     }
+/**
+ * The data source ID.
+ */
     public Integer getId() {
         return this.id;
     }
+/**
+ * The data source name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * the precedence value.
+ */
     public Optional<Integer> getPrecedence() {
         return Optional.ofNullable(this.precedence);
     }
+/**
+ * The data source status.
+ */
     public String getStatus() {
         return this.status;
     }

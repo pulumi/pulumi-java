@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * PolicyRule holds information that describes a policy rule, but does not contain information about who the rule applies to or which namespace the rule applies to.
+ */
 public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PolicyRuleArgs Empty = new PolicyRuleArgs();
 
+    /**
+     * APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups are specified, any action requested against one of the enumerated resources in any API group will be allowed.
+     */
     @InputImport(name="apiGroups")
     private final @Nullable Input<List<String>> apiGroups;
 
@@ -22,6 +28,9 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiGroups == null ? Input.empty() : this.apiGroups;
     }
 
+    /**
+     * NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path Since non-resource URLs are not namespaced, this field is only applicable for ClusterRoles referenced from a ClusterRoleBinding. Rules can either apply to API resources (such as "pods" or "secrets") or non-resource URL paths (such as "/api"),  but not both.
+     */
     @InputImport(name="nonResourceURLs")
     private final @Nullable Input<List<String>> nonResourceURLs;
 
@@ -29,6 +38,9 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.nonResourceURLs == null ? Input.empty() : this.nonResourceURLs;
     }
 
+    /**
+     * ResourceNames is an optional white list of names that the rule applies to.  An empty set means that everything is allowed.
+     */
     @InputImport(name="resourceNames")
     private final @Nullable Input<List<String>> resourceNames;
 
@@ -36,6 +48,9 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceNames == null ? Input.empty() : this.resourceNames;
     }
 
+    /**
+     * Resources is a list of resources this rule applies to.  '*' represents all resources in the specified apiGroups. '/{@literal /}foo' represents the subresource 'foo' for all resources in the specified apiGroups.
+     */
     @InputImport(name="resources")
     private final @Nullable Input<List<String>> resources;
 
@@ -43,6 +58,9 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.resources == null ? Input.empty() : this.resources;
     }
 
+    /**
+     * Verbs is a list of Verbs that apply to ALL the ResourceKinds and AttributeRestrictions contained in this rule.  VerbAll represents all kinds.
+     */
     @InputImport(name="verbs", required=true)
     private final Input<List<String>> verbs;
 

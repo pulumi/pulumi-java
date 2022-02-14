@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Holds the available configuration options for an Azure ML web service endpoint.
+ */
 public final class RealtimeConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RealtimeConfigurationResponse Empty = new RealtimeConfigurationResponse();
 
+    /**
+     * Specifies the maximum concurrent calls that can be made to the web service. Minimum value: 4, Maximum value: 200.
+     */
     @InputImport(name="maxConcurrentCalls")
     private final @Nullable Integer maxConcurrentCalls;
 

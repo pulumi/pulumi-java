@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * TransferOptions define the actions to be performed on objects in a transfer.
+ */
 public final class TransferOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TransferOptionsArgs Empty = new TransferOptionsArgs();
 
+    /**
+     * Whether objects should be deleted from the source after they are transferred to the sink. **Note:** This option and delete_objects_unique_in_sink are mutually exclusive.
+     */
     @InputImport(name="deleteObjectsFromSourceAfterTransfer")
     private final @Nullable Input<Boolean> deleteObjectsFromSourceAfterTransfer;
 
@@ -22,6 +28,9 @@ public final class TransferOptionsArgs extends io.pulumi.resources.ResourceArgs 
         return this.deleteObjectsFromSourceAfterTransfer == null ? Input.empty() : this.deleteObjectsFromSourceAfterTransfer;
     }
 
+    /**
+     * Whether objects that exist only in the sink should be deleted. **Note:** This option and delete_objects_from_source_after_transfer are mutually exclusive.
+     */
     @InputImport(name="deleteObjectsUniqueInSink")
     private final @Nullable Input<Boolean> deleteObjectsUniqueInSink;
 
@@ -29,6 +38,9 @@ public final class TransferOptionsArgs extends io.pulumi.resources.ResourceArgs 
         return this.deleteObjectsUniqueInSink == null ? Input.empty() : this.deleteObjectsUniqueInSink;
     }
 
+    /**
+     * Represents the selected metadata options for a transfer job.
+     */
     @InputImport(name="metadataOptions")
     private final @Nullable Input<MetadataOptionsArgs> metadataOptions;
 
@@ -36,6 +48,9 @@ public final class TransferOptionsArgs extends io.pulumi.resources.ResourceArgs 
         return this.metadataOptions == null ? Input.empty() : this.metadataOptions;
     }
 
+    /**
+     * When to overwrite objects that already exist in the sink. The default is that only objects that are different from the source are ovewritten. If true, all objects in the sink whose name matches an object in the source are overwritten with the source object.
+     */
     @InputImport(name="overwriteObjectsAlreadyExistingInSink")
     private final @Nullable Input<Boolean> overwriteObjectsAlreadyExistingInSink;
 

@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies the peering configuration.
+ */
 public final class ExpressRouteCircuitPeeringConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExpressRouteCircuitPeeringConfigResponse Empty = new ExpressRouteCircuitPeeringConfigResponse();
 
+    /**
+     * The communities of bgp peering. Specified for microsoft peering.
+     */
     @InputImport(name="advertisedCommunities")
     private final @Nullable List<String> advertisedCommunities;
 
@@ -23,6 +29,9 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends io.pulumi.re
         return this.advertisedCommunities == null ? List.of() : this.advertisedCommunities;
     }
 
+    /**
+     * The reference to AdvertisedPublicPrefixes.
+     */
     @InputImport(name="advertisedPublicPrefixes")
     private final @Nullable List<String> advertisedPublicPrefixes;
 
@@ -30,6 +39,9 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends io.pulumi.re
         return this.advertisedPublicPrefixes == null ? List.of() : this.advertisedPublicPrefixes;
     }
 
+    /**
+     * The advertised public prefix state of the Peering resource.
+     */
     @InputImport(name="advertisedPublicPrefixesState", required=true)
     private final String advertisedPublicPrefixesState;
 
@@ -37,6 +49,9 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends io.pulumi.re
         return this.advertisedPublicPrefixesState;
     }
 
+    /**
+     * The CustomerASN of the peering.
+     */
     @InputImport(name="customerASN")
     private final @Nullable Integer customerASN;
 
@@ -44,6 +59,9 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends io.pulumi.re
         return this.customerASN == null ? Optional.empty() : Optional.ofNullable(this.customerASN);
     }
 
+    /**
+     * The legacy mode of the peering.
+     */
     @InputImport(name="legacyMode")
     private final @Nullable Integer legacyMode;
 
@@ -51,6 +69,9 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends io.pulumi.re
         return this.legacyMode == null ? Optional.empty() : Optional.ofNullable(this.legacyMode);
     }
 
+    /**
+     * The RoutingRegistryName of the configuration.
+     */
     @InputImport(name="routingRegistryName")
     private final @Nullable String routingRegistryName;
 

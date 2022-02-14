@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LogAnalyticsConfigurationResponse {
+/**
+ * 
+ */
     private final @Nullable String customerId;
 
     @OutputCustomType.Constructor({"customerId"})
@@ -18,6 +21,9 @@ public final class LogAnalyticsConfigurationResponse {
         this.customerId = customerId;
     }
 
+/**
+ * 
+ */
     public Optional<String> getCustomerId() {
         return Optional.ofNullable(this.customerId);
     }

@@ -8,7 +8,6 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.dialogflow_v3.TestCaseArgs;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3ConversationTurnResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3TestCaseResultResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3TestConfigResponse;
@@ -16,57 +15,116 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a test case for the given agent.
+Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+on Google Cloud even though it will be deleted from Pulumi state.
+ */
 @ResourceType(type="google-native:dialogflow/v3:TestCase")
 public class TestCase extends io.pulumi.resources.CustomResource {
+    /**
+     * When the test was created.
+     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
+    /**
+     * @return When the test was created.
+     */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
+    /**
+     * The human-readable name of the test case, unique within the agent. Limit of 200 characters.
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return The human-readable name of the test case, unique within the agent. Limit of 200 characters.
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The latest test result.
+     */
     @OutputExport(name="lastTestResult", type=GoogleCloudDialogflowCxV3TestCaseResultResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3TestCaseResultResponse> lastTestResult;
 
+    /**
+     * @return The latest test result.
+     */
     public Output<GoogleCloudDialogflowCxV3TestCaseResultResponse> getLastTestResult() {
         return this.lastTestResult;
     }
+    /**
+     * The unique identifier of the test case. TestCases.CreateTestCase will populate the name automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The unique identifier of the test case. TestCases.CreateTestCase will populate the name automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Additional freeform notes about the test case. Limit of 400 characters.
+     */
     @OutputExport(name="notes", type=String.class, parameters={})
     private Output<String> notes;
 
+    /**
+     * @return Additional freeform notes about the test case. Limit of 400 characters.
+     */
     public Output<String> getNotes() {
         return this.notes;
     }
+    /**
+     * Tags are short descriptions that users may apply to test cases for organizational and filtering purposes. Each tag should start with "#" and has a limit of 30 characters.
+     */
     @OutputExport(name="tags", type=List.class, parameters={String.class})
     private Output<List<String>> tags;
 
+    /**
+     * @return Tags are short descriptions that users may apply to test cases for organizational and filtering purposes. Each tag should start with "#" and has a limit of 30 characters.
+     */
     public Output<List<String>> getTags() {
         return this.tags;
     }
+    /**
+     * The conversation turns uttered when the test case was created, in chronological order. These include the canonical set of agent utterances that should occur when the agent is working properly.
+     */
     @OutputExport(name="testCaseConversationTurns", type=List.class, parameters={GoogleCloudDialogflowCxV3ConversationTurnResponse.class})
     private Output<List<GoogleCloudDialogflowCxV3ConversationTurnResponse>> testCaseConversationTurns;
 
+    /**
+     * @return The conversation turns uttered when the test case was created, in chronological order. These include the canonical set of agent utterances that should occur when the agent is working properly.
+     */
     public Output<List<GoogleCloudDialogflowCxV3ConversationTurnResponse>> getTestCaseConversationTurns() {
         return this.testCaseConversationTurns;
     }
+    /**
+     * Config for the test case.
+     */
     @OutputExport(name="testConfig", type=GoogleCloudDialogflowCxV3TestConfigResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3TestConfigResponse> testConfig;
 
+    /**
+     * @return Config for the test case.
+     */
     public Output<GoogleCloudDialogflowCxV3TestConfigResponse> getTestConfig() {
         return this.testConfig;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public TestCase(String name, TestCaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:dialogflow/v3:TestCase", name, args == null ? TestCaseArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -82,6 +140,14 @@ public class TestCase extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static TestCase get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TestCase(name, id, options);
     }

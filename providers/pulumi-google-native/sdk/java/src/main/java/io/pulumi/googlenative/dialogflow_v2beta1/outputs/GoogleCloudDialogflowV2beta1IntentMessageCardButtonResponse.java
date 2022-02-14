@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse {
+/**
+ * Optional. The text to send back to the Dialogflow API or a URI to open.
+ */
     private final String postback;
+/**
+ * Optional. The text to show on the button.
+ */
     private final String text;
 
     @OutputCustomType.Constructor({"postback","text"})
@@ -20,9 +26,15 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse {
         this.text = Objects.requireNonNull(text);
     }
 
+/**
+ * Optional. The text to send back to the Dialogflow API or a URI to open.
+ */
     public String getPostback() {
         return this.postback;
     }
+/**
+ * Optional. The text to show on the button.
+ */
     public String getText() {
         return this.text;
     }

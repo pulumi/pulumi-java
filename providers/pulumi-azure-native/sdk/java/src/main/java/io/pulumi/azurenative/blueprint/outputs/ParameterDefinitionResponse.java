@@ -13,11 +13,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ParameterDefinitionResponse {
+/**
+ * Array of allowed values for this parameter.
+ */
     private final @Nullable List<Object> allowedValues;
+/**
+ * Default Value for this parameter.
+ */
     private final @Nullable Object defaultValue;
+/**
+ * Description of this parameter/resourceGroup.
+ */
     private final @Nullable String description;
+/**
+ * DisplayName of this parameter/resourceGroup.
+ */
     private final @Nullable String displayName;
+/**
+ * StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
+ */
     private final @Nullable String strongType;
+/**
+ * Allowed data types for Resource Manager template parameters.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"allowedValues","defaultValue","description","displayName","strongType","type"})
@@ -36,21 +54,39 @@ public final class ParameterDefinitionResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Array of allowed values for this parameter.
+ */
     public List<Object> getAllowedValues() {
         return this.allowedValues == null ? List.of() : this.allowedValues;
     }
+/**
+ * Default Value for this parameter.
+ */
     public Optional<Object> getDefaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
+/**
+ * Description of this parameter/resourceGroup.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * DisplayName of this parameter/resourceGroup.
+ */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+/**
+ * StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
+ */
     public Optional<String> getStrongType() {
         return Optional.ofNullable(this.strongType);
     }
+/**
+ * Allowed data types for Resource Manager template parameters.
+ */
     public String getType() {
         return this.type;
     }

@@ -15,10 +15,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The origin group for CDN content which is added when creating a CDN endpoint. Traffic is sent to the origins within the origin group based on origin health.
+ */
 public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeepCreatedOriginGroupResponse Empty = new DeepCreatedOriginGroupResponse();
 
+    /**
+     * Health probe settings to the origin that is used to determine the health of the origin.
+     */
     @InputImport(name="healthProbeSettings")
     private final @Nullable HealthProbeParametersResponse healthProbeSettings;
 
@@ -26,6 +32,9 @@ public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.In
         return this.healthProbeSettings == null ? Optional.empty() : Optional.ofNullable(this.healthProbeSettings);
     }
 
+    /**
+     * Origin group name which must be unique within the endpoint.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -33,6 +42,9 @@ public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.In
         return this.name;
     }
 
+    /**
+     * The source of the content being delivered via CDN within given origin group.
+     */
     @InputImport(name="origins", required=true)
     private final List<ResourceReferenceResponse> origins;
 
@@ -40,6 +52,9 @@ public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.In
         return this.origins;
     }
 
+    /**
+     * The JSON object that contains the properties to determine origin health using real requests/responses.This property is currently not supported.
+     */
     @InputImport(name="responseBasedOriginErrorDetectionSettings")
     private final @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings;
 
@@ -47,6 +62,9 @@ public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.In
         return this.responseBasedOriginErrorDetectionSettings == null ? Optional.empty() : Optional.ofNullable(this.responseBasedOriginErrorDetectionSettings);
     }
 
+    /**
+     * Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+     */
     @InputImport(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
     private final @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 

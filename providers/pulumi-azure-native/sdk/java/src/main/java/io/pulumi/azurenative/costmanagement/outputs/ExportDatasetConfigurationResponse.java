@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExportDatasetConfigurationResponse {
+/**
+ * Array of column names to be included in the export. If not provided then the export will include all available columns. The available columns can vary by customer channel (see examples).
+ */
     private final @Nullable List<String> columns;
 
     @OutputCustomType.Constructor({"columns"})
@@ -18,6 +21,9 @@ public final class ExportDatasetConfigurationResponse {
         this.columns = columns;
     }
 
+/**
+ * Array of column names to be included in the export. If not provided then the export will include all available columns. The available columns can vary by customer channel (see examples).
+ */
     public List<String> getColumns() {
         return this.columns == null ? List.of() : this.columns;
     }

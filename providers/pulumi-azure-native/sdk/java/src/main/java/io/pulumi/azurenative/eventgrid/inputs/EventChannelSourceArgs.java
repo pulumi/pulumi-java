@@ -10,10 +10,17 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of the source of an event channel.
+ */
 public final class EventChannelSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EventChannelSourceArgs Empty = new EventChannelSourceArgs();
 
+    /**
+     * The identifier of the resource that's the source of the events.
+This represents a unique resource in the partner's resource model.
+     */
     @InputImport(name="source")
     private final @Nullable Input<String> source;
 

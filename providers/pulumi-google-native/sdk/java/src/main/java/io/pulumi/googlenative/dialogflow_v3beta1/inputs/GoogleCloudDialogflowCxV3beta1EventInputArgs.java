@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents the event to trigger.
+ */
 public final class GoogleCloudDialogflowCxV3beta1EventInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1EventInputArgs Empty = new GoogleCloudDialogflowCxV3beta1EventInputArgs();
 
+    /**
+     * Name of the event.
+     */
     @InputImport(name="event")
     private final @Nullable Input<String> event;
 

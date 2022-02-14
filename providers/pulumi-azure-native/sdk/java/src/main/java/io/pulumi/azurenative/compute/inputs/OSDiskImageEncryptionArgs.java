@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains encryption settings for an OS disk image.
+ */
 public final class OSDiskImageEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OSDiskImageEncryptionArgs Empty = new OSDiskImageEncryptionArgs();
 
+    /**
+     * A relative URI containing the resource ID of the disk encryption set.
+     */
     @InputImport(name="diskEncryptionSetId")
     private final @Nullable Input<String> diskEncryptionSetId;
 

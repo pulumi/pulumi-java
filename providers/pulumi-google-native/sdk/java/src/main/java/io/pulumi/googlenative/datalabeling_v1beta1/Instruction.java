@@ -8,63 +8,120 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.datalabeling_v1beta1.InstructionArgs;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1PdfInstructionResponse;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Creates an instruction for how data should be labeled.
+Auto-naming is currently not supported for this resource.
+ */
 @ResourceType(type="google-native:datalabeling/v1beta1:Instruction")
 public class Instruction extends io.pulumi.resources.CustomResource {
+    /**
+     * The names of any related resources that are blocking changes to the instruction.
+     */
     @OutputExport(name="blockingResources", type=List.class, parameters={String.class})
     private Output<List<String>> blockingResources;
 
+    /**
+     * @return The names of any related resources that are blocking changes to the instruction.
+     */
     public Output<List<String>> getBlockingResources() {
         return this.blockingResources;
     }
+    /**
+     * Creation time of instruction.
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return Creation time of instruction.
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * The data type of this instruction.
+     */
     @OutputExport(name="dataType", type=String.class, parameters={})
     private Output<String> dataType;
 
+    /**
+     * @return The data type of this instruction.
+     */
     public Output<String> getDataType() {
         return this.dataType;
     }
+    /**
+     * Optional. User-provided description of the instruction. The description can be up to 10000 characters long.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output<String> description;
 
+    /**
+     * @return Optional. User-provided description of the instruction. The description can be up to 10000 characters long.
+     */
     public Output<String> getDescription() {
         return this.description;
     }
+    /**
+     * The display name of the instruction. Maximum of 64 characters.
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return The display name of the instruction. Maximum of 64 characters.
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Instruction resource name, format: projects/{project_id}/instructions/{instruction_id}
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Instruction resource name, format: projects/{project_id}/instructions/{instruction_id}
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Instruction from a PDF document. The PDF should be in a Cloud Storage bucket.
+     */
     @OutputExport(name="pdfInstruction", type=GoogleCloudDatalabelingV1beta1PdfInstructionResponse.class, parameters={})
     private Output<GoogleCloudDatalabelingV1beta1PdfInstructionResponse> pdfInstruction;
 
+    /**
+     * @return Instruction from a PDF document. The PDF should be in a Cloud Storage bucket.
+     */
     public Output<GoogleCloudDatalabelingV1beta1PdfInstructionResponse> getPdfInstruction() {
         return this.pdfInstruction;
     }
+    /**
+     * Last update time of instruction.
+     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
+    /**
+     * @return Last update time of instruction.
+     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Instruction(String name, InstructionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:datalabeling/v1beta1:Instruction", name, args == null ? InstructionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -80,6 +137,14 @@ public class Instruction extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Instruction get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Instruction(name, id, options);
     }

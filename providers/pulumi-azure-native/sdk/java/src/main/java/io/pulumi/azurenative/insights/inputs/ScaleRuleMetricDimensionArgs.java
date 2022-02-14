@@ -12,10 +12,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Specifies an auto scale rule metric dimension.
+ */
 public final class ScaleRuleMetricDimensionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScaleRuleMetricDimensionArgs Empty = new ScaleRuleMetricDimensionArgs();
 
+    /**
+     * Name of the dimension.
+     */
     @InputImport(name="dimensionName", required=true)
     private final Input<String> dimensionName;
 
@@ -23,6 +29,9 @@ public final class ScaleRuleMetricDimensionArgs extends io.pulumi.resources.Reso
         return this.dimensionName;
     }
 
+    /**
+     * the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the values. 'NotEquals' being not equal to all of the values
+     */
     @InputImport(name="operator", required=true)
     private final Input<Either<String,ScaleRuleMetricDimensionOperationType>> operator;
 
@@ -30,6 +39,9 @@ public final class ScaleRuleMetricDimensionArgs extends io.pulumi.resources.Reso
         return this.operator;
     }
 
+    /**
+     * list of dimension values. For example: ["App1","App2"].
+     */
     @InputImport(name="values", required=true)
     private final Input<List<String>> values;
 

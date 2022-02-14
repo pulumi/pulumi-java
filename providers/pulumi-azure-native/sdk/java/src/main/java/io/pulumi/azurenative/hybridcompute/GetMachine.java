@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMachine {
+/**
+ * Describes a hybrid machine.
+API Version: 2020-08-02.
+ *
+ * Describes a hybrid machine.
+ */
     public static CompletableFuture<GetMachineResult> invokeAsync(GetMachineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridcompute:getMachine", TypeShape.of(GetMachineResult.class), args == null ? GetMachineArgs.Empty : args, Utilities.withVersion(options));
     }

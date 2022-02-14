@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAADDataConnector {
+/**
+ * Represents AAD (Azure Active Directory) data connector.
+API Version: 2020-01-01.
+ *
+ * Represents AAD (Azure Active Directory) data connector.
+ */
     public static CompletableFuture<GetAADDataConnectorResult> invokeAsync(GetAADDataConnectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAADDataConnector", TypeShape.of(GetAADDataConnectorResult.class), args == null ? GetAADDataConnectorArgs.Empty : args, Utilities.withVersion(options));
     }

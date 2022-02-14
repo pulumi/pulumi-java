@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Ingress transport protocol
+ */
     @EnumType
     public enum IngressTransportMethod {
+/**
+ * 
+ */
         Auto("auto"),
+/**
+ * 
+ */
         Http("http"),
+/**
+ * 
+ */
         Http2("http2");
 
         private final String value;

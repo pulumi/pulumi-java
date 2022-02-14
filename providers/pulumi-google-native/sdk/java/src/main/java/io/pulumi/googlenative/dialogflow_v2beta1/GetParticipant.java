@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetParticipant {
+/**
+ * Retrieves a conversation participant.
+ */
     public static CompletableFuture<GetParticipantResult> invokeAsync(GetParticipantArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2beta1:getParticipant", TypeShape.of(GetParticipantResult.class), args == null ? GetParticipantArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RecommendedActionImplementationInfoResponse {
+/**
+ * Gets the method in which this recommended action can be manually implemented. e.g., TSql, AzurePowerShell.
+ */
     private final String method;
+/**
+ * Gets the manual implementation script. e.g., T-SQL script that could be executed on the database.
+ */
     private final String script;
 
     @OutputCustomType.Constructor({"method","script"})
@@ -20,9 +26,15 @@ public final class RecommendedActionImplementationInfoResponse {
         this.script = Objects.requireNonNull(script);
     }
 
+/**
+ * Gets the method in which this recommended action can be manually implemented. e.g., TSql, AzurePowerShell.
+ */
     public String getMethod() {
         return this.method;
     }
+/**
+ * Gets the manual implementation script. e.g., T-SQL script that could be executed on the database.
+ */
     public String getScript() {
         return this.script;
     }

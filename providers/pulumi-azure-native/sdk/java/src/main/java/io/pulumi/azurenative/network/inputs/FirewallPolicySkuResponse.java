@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * SKU of Firewall policy.
+ */
 public final class FirewallPolicySkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FirewallPolicySkuResponse Empty = new FirewallPolicySkuResponse();
 
+    /**
+     * Tier of Firewall Policy.
+     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

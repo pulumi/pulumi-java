@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'
+ */
     @EnumType
     public enum HostCaching {
+/**
+ * 
+ */
         None("None"),
+/**
+ * 
+ */
         ReadOnly("ReadOnly"),
+/**
+ * 
+ */
         ReadWrite("ReadWrite");
 
         private final String value;

@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDatacatalogV1EntryOverviewResponse {
+/**
+ * Entry overview with support for rich text. The overview must only contain Unicode characters, and should be formatted using HTML. The maximum length is 10 MiB as this value holds HTML descriptions including encoded images. The maximum length of the text without images is 100 KiB.
+ */
     private final String overview;
 
     @OutputCustomType.Constructor({"overview"})
@@ -16,6 +19,9 @@ public final class GoogleCloudDatacatalogV1EntryOverviewResponse {
         this.overview = Objects.requireNonNull(overview);
     }
 
+/**
+ * Entry overview with support for rich text. The overview must only contain Unicode characters, and should be formatted using HTML. The maximum length is 10 MiB as this value holds HTML descriptions including encoded images. The maximum length of the text without images is 100 KiB.
+ */
     public String getOverview() {
         return this.overview;
     }

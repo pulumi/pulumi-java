@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * VolumeMount describes a mounting of a Volume within a container.
+ */
 public final class GoogleCloudRunOpV2VolumeMountResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRunOpV2VolumeMountResponse Empty = new GoogleCloudRunOpV2VolumeMountResponse();
 
+    /**
+     * Path within the container at which the volume should be mounted. Must not contain ':'. For Cloud SQL volumes, it can be left empty, or must otherwise be `/cloudsql`. All instances defined in the Volume will be available as `/cloudsql/[instance]`. For more information on Cloud SQL volumes, visit https://cloud.google.com/sql/docs/mysql/connect-run
+     */
     @InputImport(name="mountPath", required=true)
     private final String mountPath;
 
@@ -19,6 +25,9 @@ public final class GoogleCloudRunOpV2VolumeMountResponse extends io.pulumi.resou
         return this.mountPath;
     }
 
+    /**
+     * This must match the Name of a Volume.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

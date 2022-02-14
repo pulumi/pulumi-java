@@ -19,16 +19,50 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MagentoLinkedServiceResponse {
+/**
+ * The access token from Magento.
+ */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
+/**
+ * List of tags that can be used for describing the linked service.
+ */
     private final @Nullable List<Object> annotations;
+/**
+ * The integration runtime reference.
+ */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+/**
+ * Linked service description.
+ */
     private final @Nullable String description;
+/**
+ * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object encryptedCredential;
+/**
+ * The URL of the Magento instance. (i.e. 192.168.222.110/magento3)
+ */
     private final Object host;
+/**
+ * Parameters for linked service.
+ */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+/**
+ * Type of linked service.
+Expected value is 'Magento'.
+ */
     private final String type;
+/**
+ * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+ */
     private final @Nullable Object useEncryptedEndpoints;
+/**
+ * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+ */
     private final @Nullable Object useHostVerification;
+/**
+ * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+ */
     private final @Nullable Object usePeerVerification;
 
     @OutputCustomType.Constructor({"accessToken","annotations","connectVia","description","encryptedCredential","host","parameters","type","useEncryptedEndpoints","useHostVerification","usePeerVerification"})
@@ -57,36 +91,70 @@ public final class MagentoLinkedServiceResponse {
         this.usePeerVerification = usePeerVerification;
     }
 
+/**
+ * The access token from Magento.
+ */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getAccessToken() {
         return Optional.ofNullable(this.accessToken);
     }
+/**
+ * List of tags that can be used for describing the linked service.
+ */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
+/**
+ * The integration runtime reference.
+ */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
+/**
+ * Linked service description.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
+/**
+ * The URL of the Magento instance. (i.e. 192.168.222.110/magento3)
+ */
     public Object getHost() {
         return this.host;
     }
+/**
+ * Parameters for linked service.
+ */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+/**
+ * Type of linked service.
+Expected value is 'Magento'.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+ */
     public Optional<Object> getUseEncryptedEndpoints() {
         return Optional.ofNullable(this.useEncryptedEndpoints);
     }
+/**
+ * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+ */
     public Optional<Object> getUseHostVerification() {
         return Optional.ofNullable(this.useHostVerification);
     }
+/**
+ * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+ */
     public Optional<Object> getUsePeerVerification() {
         return Optional.ofNullable(this.usePeerVerification);
     }

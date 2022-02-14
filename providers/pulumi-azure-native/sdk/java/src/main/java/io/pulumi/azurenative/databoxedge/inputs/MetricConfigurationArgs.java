@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Metric configuration.
+ */
 public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetricConfigurationArgs Empty = new MetricConfigurationArgs();
 
+    /**
+     * Host name for the IoT hub associated to the device.
+     */
     @InputImport(name="counterSets", required=true)
     private final Input<List<MetricCounterSetArgs>> counterSets;
 
@@ -23,6 +29,9 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.counterSets;
     }
 
+    /**
+     * The MDM account to which the counters should be pushed.
+     */
     @InputImport(name="mdmAccount")
     private final @Nullable Input<String> mdmAccount;
 
@@ -30,6 +39,9 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.mdmAccount == null ? Input.empty() : this.mdmAccount;
     }
 
+    /**
+     * The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified
+     */
     @InputImport(name="metricNameSpace")
     private final @Nullable Input<String> metricNameSpace;
 
@@ -37,6 +49,9 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.metricNameSpace == null ? Input.empty() : this.metricNameSpace;
     }
 
+    /**
+     * The Resource ID on which the metrics should be pushed.
+     */
     @InputImport(name="resourceId", required=true)
     private final Input<String> resourceId;
 

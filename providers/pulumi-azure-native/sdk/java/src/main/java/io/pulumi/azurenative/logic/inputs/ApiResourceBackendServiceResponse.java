@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The API backend service.
+ */
 public final class ApiResourceBackendServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiResourceBackendServiceResponse Empty = new ApiResourceBackendServiceResponse();
 
+    /**
+     * The service URL.
+     */
     @InputImport(name="serviceUrl")
     private final @Nullable String serviceUrl;
 

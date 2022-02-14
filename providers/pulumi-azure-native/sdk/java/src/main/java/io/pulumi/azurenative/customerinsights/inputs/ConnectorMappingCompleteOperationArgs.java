@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The complete operation.
+ */
 public final class ConnectorMappingCompleteOperationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectorMappingCompleteOperationArgs Empty = new ConnectorMappingCompleteOperationArgs();
 
+    /**
+     * The type of completion operation.
+     */
     @InputImport(name="completionOperationType")
     private final @Nullable Input<CompletionOperationTypes> completionOperationType;
 
@@ -22,6 +28,9 @@ public final class ConnectorMappingCompleteOperationArgs extends io.pulumi.resou
         return this.completionOperationType == null ? Input.empty() : this.completionOperationType;
     }
 
+    /**
+     * The destination folder where files will be moved to once the import is done.
+     */
     @InputImport(name="destinationFolder")
     private final @Nullable Input<String> destinationFolder;
 

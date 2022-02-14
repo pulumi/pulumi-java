@@ -12,11 +12,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ReportableExceptionResponse {
+/**
+ * Actionable steps for this exception
+ */
     private final @Nullable String actionableMessage;
+/**
+ * The path to the file where exception occurred
+ */
     private final String filePath;
+/**
+ * Coded numerical value that is assigned to a specific exception
+ */
     private final Integer hResult;
+/**
+ * The line number where exception occurred
+ */
     private final String lineNumber;
+/**
+ * Error message
+ */
     private final String message;
+/**
+ * Stack trace
+ */
     private final String stackTrace;
 
     @OutputCustomType.Constructor({"actionableMessage","filePath","hResult","lineNumber","message","stackTrace"})
@@ -35,21 +53,39 @@ public final class ReportableExceptionResponse {
         this.stackTrace = Objects.requireNonNull(stackTrace);
     }
 
+/**
+ * Actionable steps for this exception
+ */
     public Optional<String> getActionableMessage() {
         return Optional.ofNullable(this.actionableMessage);
     }
+/**
+ * The path to the file where exception occurred
+ */
     public String getFilePath() {
         return this.filePath;
     }
+/**
+ * Coded numerical value that is assigned to a specific exception
+ */
     public Integer getHResult() {
         return this.hResult;
     }
+/**
+ * The line number where exception occurred
+ */
     public String getLineNumber() {
         return this.lineNumber;
     }
+/**
+ * Error message
+ */
     public String getMessage() {
         return this.message;
     }
+/**
+ * Stack trace
+ */
     public String getStackTrace() {
         return this.stackTrace;
     }

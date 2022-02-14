@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An excluded entity phrase that should not be matched.
+ */
 public final class GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse Empty = new GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse();
 
+    /**
+     * The word or phrase to be excluded.
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

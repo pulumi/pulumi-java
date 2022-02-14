@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssociationArgs Empty = new AssociationArgs();
 
+    /**
+     * The name of the association.
+     */
     @InputImport(name="associationName")
     private final @Nullable Input<String> associationName;
 
@@ -21,6 +27,9 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
         return this.associationName == null ? Input.empty() : this.associationName;
     }
 
+    /**
+     * The scope of the association. The scope can be any valid REST resource instance. For example, use '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/Microsoft.Compute/virtualMachines/{vm-name}' for a virtual machine resource.
+     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 
@@ -28,6 +37,9 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
         return this.scope;
     }
 
+    /**
+     * The REST resource instance of the target resource for this association.
+     */
     @InputImport(name="targetResourceId")
     private final @Nullable Input<String> targetResourceId;
 

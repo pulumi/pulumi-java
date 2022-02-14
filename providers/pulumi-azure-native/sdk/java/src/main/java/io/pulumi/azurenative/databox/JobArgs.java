@@ -21,10 +21,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobArgs Empty = new JobArgs();
 
+    /**
+     * Delivery Info of Job.
+     */
     @InputImport(name="deliveryInfo")
     private final @Nullable Input<JobDeliveryInfoArgs> deliveryInfo;
 
@@ -32,6 +38,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.deliveryInfo == null ? Input.empty() : this.deliveryInfo;
     }
 
+    /**
+     * Delivery type of Job.
+     */
     @InputImport(name="deliveryType")
     private final @Nullable Input<Either<String,JobDeliveryType>> deliveryType;
 
@@ -39,6 +48,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.deliveryType == null ? Input.empty() : this.deliveryType;
     }
 
+    /**
+     * Details of a job run. This field will only be sent for expand details filter.
+     */
     @InputImport(name="details")
     private final @Nullable Input<Object> details;
 
@@ -46,6 +58,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.details == null ? Input.empty() : this.details;
     }
 
+    /**
+     * Msi identity of the resource
+     */
     @InputImport(name="identity")
     private final @Nullable Input<ResourceIdentityArgs> identity;
 
@@ -53,6 +68,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+     */
     @InputImport(name="jobName")
     private final @Nullable Input<String> jobName;
 
@@ -60,6 +78,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobName == null ? Input.empty() : this.jobName;
     }
 
+    /**
+     * The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -67,6 +88,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The Resource Group Name
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -74,6 +98,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The sku type.
+     */
     @InputImport(name="sku", required=true)
     private final Input<SkuArgs> sku;
 
@@ -81,6 +108,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku;
     }
 
+    /**
+     * The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -88,6 +118,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Type of the data transfer.
+     */
     @InputImport(name="transferType", required=true)
     private final Input<Either<String,TransferType>> transferType;
 

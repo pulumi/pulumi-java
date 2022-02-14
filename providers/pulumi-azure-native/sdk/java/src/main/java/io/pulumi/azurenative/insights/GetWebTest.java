@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebTest {
+/**
+ * An Application Insights web test definition.
+API Version: 2015-05-01.
+ *
+ * An Application Insights web test definition.
+ */
     public static CompletableFuture<GetWebTestResult> invokeAsync(GetWebTestArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getWebTest", TypeShape.of(GetWebTestResult.class), args == null ? GetWebTestArgs.Empty : args, Utilities.withVersion(options));
     }

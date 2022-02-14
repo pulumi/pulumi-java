@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum Protocol {
+/**
+ * 
+ */
         Http("http"),
+/**
+ * 
+ */
         Https("https");
 
         private final String value;

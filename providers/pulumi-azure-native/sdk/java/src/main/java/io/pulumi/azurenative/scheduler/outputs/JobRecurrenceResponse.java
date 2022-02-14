@@ -13,10 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobRecurrenceResponse {
+/**
+ * Gets or sets the maximum number of times that the job should run.
+ */
     private final @Nullable Integer count;
+/**
+ * Gets or sets the time at which the job will complete.
+ */
     private final @Nullable String endTime;
+/**
+ * Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
+ */
     private final @Nullable String frequency;
+/**
+ * Gets or sets the interval between retries.
+ */
     private final @Nullable Integer interval;
+/**
+ * 
+ */
     private final @Nullable JobRecurrenceScheduleResponse schedule;
 
     @OutputCustomType.Constructor({"count","endTime","frequency","interval","schedule"})
@@ -33,18 +48,33 @@ public final class JobRecurrenceResponse {
         this.schedule = schedule;
     }
 
+/**
+ * Gets or sets the maximum number of times that the job should run.
+ */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
+/**
+ * Gets or sets the time at which the job will complete.
+ */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
+/**
+ * Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
+ */
     public Optional<String> getFrequency() {
         return Optional.ofNullable(this.frequency);
     }
+/**
+ * Gets or sets the interval between retries.
+ */
     public Optional<Integer> getInterval() {
         return Optional.ofNullable(this.interval);
     }
+/**
+ * 
+ */
     public Optional<JobRecurrenceScheduleResponse> getSchedule() {
         return Optional.ofNullable(this.schedule);
     }

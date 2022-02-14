@@ -12,12 +12,33 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MethodResponse {
+/**
+ * The simple name of this method.
+ */
     private final String name;
+/**
+ * Any metadata attached to the method.
+ */
     private final List<OptionResponse> options;
+/**
+ * If true, the request is streamed.
+ */
     private final Boolean requestStreaming;
+/**
+ * A URL of the input message type.
+ */
     private final String requestTypeUrl;
+/**
+ * If true, the response is streamed.
+ */
     private final Boolean responseStreaming;
+/**
+ * The URL of the output message type.
+ */
     private final String responseTypeUrl;
+/**
+ * The source syntax of this method.
+ */
     private final String syntax;
 
     @OutputCustomType.Constructor({"name","options","requestStreaming","requestTypeUrl","responseStreaming","responseTypeUrl","syntax"})
@@ -38,24 +59,45 @@ public final class MethodResponse {
         this.syntax = Objects.requireNonNull(syntax);
     }
 
+/**
+ * The simple name of this method.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Any metadata attached to the method.
+ */
     public List<OptionResponse> getOptions() {
         return this.options;
     }
+/**
+ * If true, the request is streamed.
+ */
     public Boolean getRequestStreaming() {
         return this.requestStreaming;
     }
+/**
+ * A URL of the input message type.
+ */
     public String getRequestTypeUrl() {
         return this.requestTypeUrl;
     }
+/**
+ * If true, the response is streamed.
+ */
     public Boolean getResponseStreaming() {
         return this.responseStreaming;
     }
+/**
+ * The URL of the output message type.
+ */
     public String getResponseTypeUrl() {
         return this.responseTypeUrl;
     }
+/**
+ * The source syntax of this method.
+ */
     public String getSyntax() {
         return this.syntax;
     }

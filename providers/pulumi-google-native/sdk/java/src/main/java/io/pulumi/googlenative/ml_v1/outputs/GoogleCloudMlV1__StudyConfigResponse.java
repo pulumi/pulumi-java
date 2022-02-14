@@ -13,9 +13,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudMlV1__StudyConfigResponse {
+/**
+ * The search algorithm specified for the study.
+ */
     private final String algorithm;
+/**
+ * Configuration for automated stopping of unpromising Trials.
+ */
     private final GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig;
+/**
+ * Metric specs for the study.
+ */
     private final List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics;
+/**
+ * The set of parameters to tune.
+ */
     private final List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters;
 
     @OutputCustomType.Constructor({"algorithm","automatedStoppingConfig","metrics","parameters"})
@@ -30,15 +42,27 @@ public final class GoogleCloudMlV1__StudyConfigResponse {
         this.parameters = Objects.requireNonNull(parameters);
     }
 
+/**
+ * The search algorithm specified for the study.
+ */
     public String getAlgorithm() {
         return this.algorithm;
     }
+/**
+ * Configuration for automated stopping of unpromising Trials.
+ */
     public GoogleCloudMlV1__AutomatedStoppingConfigResponse getAutomatedStoppingConfig() {
         return this.automatedStoppingConfig;
     }
+/**
+ * Metric specs for the study.
+ */
     public List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> getMetrics() {
         return this.metrics;
     }
+/**
+ * The set of parameters to tune.
+ */
     public List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> getParameters() {
         return this.parameters;
     }

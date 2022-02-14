@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Represents a Goo package repository. These is added to a repo file that is stored at C:/ProgramData/GooGet/repos/google_osconfig.repo.
+ */
 public final class GooRepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooRepositoryArgs Empty = new GooRepositoryArgs();
 
+    /**
+     * The name of the repository.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -20,6 +26,9 @@ public final class GooRepositoryArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * The url of the repository.
+     */
     @InputImport(name="url", required=true)
     private final Input<String> url;
 

@@ -13,10 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ActivityPolicyResponse {
+/**
+ * Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
+ */
     private final @Nullable Object retry;
+/**
+ * Interval between each retry attempt (in seconds). The default is 30 sec.
+ */
     private final @Nullable Integer retryIntervalInSeconds;
+/**
+ * When set to true, Input from activity is considered as secure and will not be logged to monitoring.
+ */
     private final @Nullable Boolean secureInput;
+/**
+ * When set to true, Output from activity is considered as secure and will not be logged to monitoring.
+ */
     private final @Nullable Boolean secureOutput;
+/**
+ * Specifies the timeout for the activity to run. The default timeout is 7 days. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+ */
     private final @Nullable Object timeout;
 
     @OutputCustomType.Constructor({"retry","retryIntervalInSeconds","secureInput","secureOutput","timeout"})
@@ -33,18 +48,33 @@ public final class ActivityPolicyResponse {
         this.timeout = timeout;
     }
 
+/**
+ * Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
+ */
     public Optional<Object> getRetry() {
         return Optional.ofNullable(this.retry);
     }
+/**
+ * Interval between each retry attempt (in seconds). The default is 30 sec.
+ */
     public Optional<Integer> getRetryIntervalInSeconds() {
         return Optional.ofNullable(this.retryIntervalInSeconds);
     }
+/**
+ * When set to true, Input from activity is considered as secure and will not be logged to monitoring.
+ */
     public Optional<Boolean> getSecureInput() {
         return Optional.ofNullable(this.secureInput);
     }
+/**
+ * When set to true, Output from activity is considered as secure and will not be logged to monitoring.
+ */
     public Optional<Boolean> getSecureOutput() {
         return Optional.ofNullable(this.secureOutput);
     }
+/**
+ * Specifies the timeout for the activity to run. The default timeout is 7 days. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+ */
     public Optional<Object> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }

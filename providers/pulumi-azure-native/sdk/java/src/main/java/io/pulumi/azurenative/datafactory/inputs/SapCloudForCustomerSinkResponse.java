@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity SAP Cloud for Customer sink.
+ */
 public final class SapCloudForCustomerSinkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SapCloudForCustomerSinkResponse Empty = new SapCloudForCustomerSinkResponse();
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -22,6 +28,9 @@ public final class SapCloudForCustomerSinkResponse extends io.pulumi.resources.I
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
+    /**
+     * The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:05:00. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="httpRequestTimeout")
     private final @Nullable Object httpRequestTimeout;
 
@@ -29,6 +38,9 @@ public final class SapCloudForCustomerSinkResponse extends io.pulumi.resources.I
         return this.httpRequestTimeout == null ? Optional.empty() : Optional.ofNullable(this.httpRequestTimeout);
     }
 
+    /**
+     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -36,6 +48,9 @@ public final class SapCloudForCustomerSinkResponse extends io.pulumi.resources.I
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
+    /**
+     * Sink retry count. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="sinkRetryCount")
     private final @Nullable Object sinkRetryCount;
 
@@ -43,6 +58,9 @@ public final class SapCloudForCustomerSinkResponse extends io.pulumi.resources.I
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
     }
 
+    /**
+     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="sinkRetryWait")
     private final @Nullable Object sinkRetryWait;
 
@@ -50,6 +68,10 @@ public final class SapCloudForCustomerSinkResponse extends io.pulumi.resources.I
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
     }
 
+    /**
+     * Copy sink type.
+Expected value is 'SapCloudForCustomerSink'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -57,6 +79,9 @@ public final class SapCloudForCustomerSinkResponse extends io.pulumi.resources.I
         return this.type;
     }
 
+    /**
+     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     */
     @InputImport(name="writeBatchSize")
     private final @Nullable Object writeBatchSize;
 
@@ -64,6 +89,9 @@ public final class SapCloudForCustomerSinkResponse extends io.pulumi.resources.I
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
     }
 
+    /**
+     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="writeBatchTimeout")
     private final @Nullable Object writeBatchTimeout;
 
@@ -71,6 +99,9 @@ public final class SapCloudForCustomerSinkResponse extends io.pulumi.resources.I
         return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
     }
 
+    /**
+     * The write behavior for the operation. Default is 'Insert'.
+     */
     @InputImport(name="writeBehavior")
     private final @Nullable String writeBehavior;
 

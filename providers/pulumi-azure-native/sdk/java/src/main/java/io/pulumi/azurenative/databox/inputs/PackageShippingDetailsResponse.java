@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Shipping details.
+ */
 public final class PackageShippingDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PackageShippingDetailsResponse Empty = new PackageShippingDetailsResponse();
 
+    /**
+     * Name of the carrier.
+     */
     @InputImport(name="carrierName", required=true)
     private final String carrierName;
 
@@ -19,6 +25,9 @@ public final class PackageShippingDetailsResponse extends io.pulumi.resources.In
         return this.carrierName;
     }
 
+    /**
+     * Tracking Id of shipment.
+     */
     @InputImport(name="trackingId", required=true)
     private final String trackingId;
 
@@ -26,6 +35,9 @@ public final class PackageShippingDetailsResponse extends io.pulumi.resources.In
         return this.trackingId;
     }
 
+    /**
+     * Url where shipment can be tracked.
+     */
     @InputImport(name="trackingUrl", required=true)
     private final String trackingUrl;
 

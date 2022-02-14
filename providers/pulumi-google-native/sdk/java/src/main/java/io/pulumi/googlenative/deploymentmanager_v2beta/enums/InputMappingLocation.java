@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The location where this mapping applies.
+ */
     @EnumType
     public enum InputMappingLocation {
+/**
+ * 
+ */
         Unknown("UNKNOWN"),
+/**
+ * 
+ */
         Path("PATH"),
+/**
+ * 
+ */
         Query("QUERY"),
+/**
+ * 
+ */
         Body("BODY"),
+/**
+ * 
+ */
         Header("HEADER");
 
         private final String value;

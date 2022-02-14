@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VaultSecretGroupResponse {
+/**
+ * The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
+ */
     private final SubResourceResponse sourceVault;
+/**
+ * The list of key vault references in SourceVault which contain certificates.
+ */
     private final List<VaultCertificateResponse> vaultCertificates;
 
     @OutputCustomType.Constructor({"sourceVault","vaultCertificates"})
@@ -22,9 +28,15 @@ public final class VaultSecretGroupResponse {
         this.vaultCertificates = Objects.requireNonNull(vaultCertificates);
     }
 
+/**
+ * The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
+ */
     public SubResourceResponse getSourceVault() {
         return this.sourceVault;
     }
+/**
+ * The list of key vault references in SourceVault which contain certificates.
+ */
     public List<VaultCertificateResponse> getVaultCertificates() {
         return this.vaultCertificates;
     }

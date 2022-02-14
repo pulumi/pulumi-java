@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The network manager effective connectivity configuration
+ */
 public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EffectiveConnectivityConfigurationResponse Empty = new EffectiveConnectivityConfigurationResponse();
 
+    /**
+     * Groups for configuration
+     */
     @InputImport(name="appliesToGroups")
     private final @Nullable List<ConnectivityGroupItemResponse> appliesToGroups;
 
@@ -25,6 +31,9 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
         return this.appliesToGroups == null ? List.of() : this.appliesToGroups;
     }
 
+    /**
+     * Effective configuration groups.
+     */
     @InputImport(name="configurationGroups")
     private final @Nullable List<ConfigurationGroupResponse> configurationGroups;
 
@@ -32,6 +41,9 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
         return this.configurationGroups == null ? List.of() : this.configurationGroups;
     }
 
+    /**
+     * Connectivity topology type.
+     */
     @InputImport(name="connectivityTopology", required=true)
     private final String connectivityTopology;
 
@@ -39,6 +51,9 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
         return this.connectivityTopology;
     }
 
+    /**
+     * Flag if need to remove current existing peerings.
+     */
     @InputImport(name="deleteExistingPeering")
     private final @Nullable String deleteExistingPeering;
 
@@ -46,6 +61,9 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
         return this.deleteExistingPeering == null ? Optional.empty() : Optional.ofNullable(this.deleteExistingPeering);
     }
 
+    /**
+     * A description of the connectivity configuration.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -53,6 +71,9 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * A friendly name for the resource.
+     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -60,6 +81,9 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * List of hubItems
+     */
     @InputImport(name="hubs")
     private final @Nullable List<HubResponse> hubs;
 
@@ -67,6 +91,9 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
         return this.hubs == null ? List.of() : this.hubs;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -74,6 +101,9 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Flag if global mesh is supported.
+     */
     @InputImport(name="isGlobal")
     private final @Nullable String isGlobal;
 
@@ -81,6 +111,9 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
         return this.isGlobal == null ? Optional.empty() : Optional.ofNullable(this.isGlobal);
     }
 
+    /**
+     * The provisioning state of the connectivity configuration resource.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

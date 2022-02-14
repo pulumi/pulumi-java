@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The protocol associated with the port.
+ */
     @EnumType
     public enum ContainerGroupNetworkProtocol {
+/**
+ * 
+ */
         TCP("TCP"),
+/**
+ * 
+ */
         UDP("UDP");
 
         private final String value;

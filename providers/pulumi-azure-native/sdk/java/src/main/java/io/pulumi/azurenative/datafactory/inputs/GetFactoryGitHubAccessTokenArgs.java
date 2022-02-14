@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFactoryGitHubAccessTokenArgs Empty = new GetFactoryGitHubAccessTokenArgs();
 
+    /**
+     * The factory name.
+     */
     @InputImport(name="factoryName", required=true)
     private final String factoryName;
 
@@ -22,6 +28,9 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
         return this.factoryName;
     }
 
+    /**
+     * GitHub access code.
+     */
     @InputImport(name="gitHubAccessCode", required=true)
     private final String gitHubAccessCode;
 
@@ -29,6 +38,9 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
         return this.gitHubAccessCode;
     }
 
+    /**
+     * GitHub access token base URL.
+     */
     @InputImport(name="gitHubAccessTokenBaseUrl", required=true)
     private final String gitHubAccessTokenBaseUrl;
 
@@ -36,6 +48,9 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
         return this.gitHubAccessTokenBaseUrl;
     }
 
+    /**
+     * GitHub application client ID.
+     */
     @InputImport(name="gitHubClientId")
     private final @Nullable String gitHubClientId;
 
@@ -43,6 +58,9 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
         return this.gitHubClientId == null ? Optional.empty() : Optional.ofNullable(this.gitHubClientId);
     }
 
+    /**
+     * GitHub bring your own app client secret information.
+     */
     @InputImport(name="gitHubClientSecret")
     private final @Nullable GitHubClientSecret gitHubClientSecret;
 
@@ -50,6 +68,9 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
         return this.gitHubClientSecret == null ? Optional.empty() : Optional.ofNullable(this.gitHubClientSecret);
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

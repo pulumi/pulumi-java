@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MetadataManagementActivityResponse {
+/**
+ * The latest metadata exports of the metastore service.
+ */
     private final List<MetadataExportResponse> metadataExports;
+/**
+ * The latest restores of the metastore service.
+ */
     private final List<RestoreResponse> restores;
 
     @OutputCustomType.Constructor({"metadataExports","restores"})
@@ -22,9 +28,15 @@ public final class MetadataManagementActivityResponse {
         this.restores = Objects.requireNonNull(restores);
     }
 
+/**
+ * The latest metadata exports of the metastore service.
+ */
     public List<MetadataExportResponse> getMetadataExports() {
         return this.metadataExports;
     }
+/**
+ * The latest restores of the metastore service.
+ */
     public List<RestoreResponse> getRestores() {
         return this.restores;
     }

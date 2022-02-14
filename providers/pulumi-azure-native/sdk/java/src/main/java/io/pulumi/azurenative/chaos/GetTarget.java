@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTarget {
+/**
+ * Model that represents a Target resource.
+API Version: 2021-09-15-preview.
+ *
+ * Model that represents a Target resource.
+ */
     public static CompletableFuture<GetTargetResult> invokeAsync(GetTargetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:chaos:getTarget", TypeShape.of(GetTargetResult.class), args == null ? GetTargetArgs.Empty : args, Utilities.withVersion(options));
     }

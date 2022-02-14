@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The unique identifying details of the AZURE ML environment.
+ */
 public final class EnvironmentImageRequestEnvironmentReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentImageRequestEnvironmentReferenceArgs Empty = new EnvironmentImageRequestEnvironmentReferenceArgs();
 
+    /**
+     * Name of the environment.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +27,9 @@ public final class EnvironmentImageRequestEnvironmentReferenceArgs extends io.pu
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Version of the environment.
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

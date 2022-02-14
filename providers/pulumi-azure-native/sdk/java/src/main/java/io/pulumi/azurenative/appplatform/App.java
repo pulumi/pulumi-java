@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.appplatform.AppArgs;
 import io.pulumi.azurenative.appplatform.outputs.AppResourcePropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.ManagedIdentityPropertiesResponse;
 import io.pulumi.core.Alias;
@@ -16,39 +15,225 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * App resource payload
+API Version: 2020-07-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Apps_CreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var app = new AzureNative.AppPlatform.App("app", new AzureNative.AppPlatform.AppArgs
+        {
+            AppName = "myapp",
+            Location = "eastus",
+            Properties = new AzureNative.AppPlatform.Inputs.AppResourcePropertiesArgs
+            {
+                ActiveDeploymentName = "mydeployment1",
+                Fqdn = "myapp.mydomain.com",
+                HttpsOnly = false,
+                PersistentDisk = new AzureNative.AppPlatform.Inputs.PersistentDiskArgs
+                {
+                    MountPath = "/mypersistentdisk",
+                    SizeInGB = 2,
+                },
+                Public = true,
+                TemporaryDisk = new AzureNative.AppPlatform.Inputs.TemporaryDiskArgs
+                {
+                    MountPath = "/mytemporarydisk",
+                    SizeInGB = 2,
+                },
+            },
+            ResourceGroupName = "myResourceGroup",
+            ServiceName = "myservice",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	appplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appplatform"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := appplatform.NewApp(ctx, "app", &appplatform.AppArgs{
+			AppName:  pulumi.String("myapp"),
+			Location: pulumi.String("eastus"),
+			Properties: &appplatform.AppResourcePropertiesArgs{
+				ActiveDeploymentName: pulumi.String("mydeployment1"),
+				Fqdn:                 pulumi.String("myapp.mydomain.com"),
+				HttpsOnly:            pulumi.Bool(false),
+				PersistentDisk: &appplatform.PersistentDiskArgs{
+					MountPath: pulumi.String("/mypersistentdisk"),
+					SizeInGB:  pulumi.Int(2),
+				},
+				Public: pulumi.Bool(true),
+				TemporaryDisk: &appplatform.TemporaryDiskArgs{
+					MountPath: pulumi.String("/mytemporarydisk"),
+					SizeInGB:  pulumi.Int(2),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			ServiceName:       pulumi.String("myservice"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const app = new azure_native.appplatform.App("app", {
+    appName: "myapp",
+    location: "eastus",
+    properties: {
+        activeDeploymentName: "mydeployment1",
+        fqdn: "myapp.mydomain.com",
+        httpsOnly: false,
+        persistentDisk: {
+            mountPath: "/mypersistentdisk",
+            sizeInGB: 2,
+        },
+        "public": true,
+        temporaryDisk: {
+            mountPath: "/mytemporarydisk",
+            sizeInGB: 2,
+        },
+    },
+    resourceGroupName: "myResourceGroup",
+    serviceName: "myservice",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+app = azure_native.appplatform.App("app",
+    app_name="myapp",
+    location="eastus",
+    properties=azure_native.appplatform.AppResourcePropertiesArgs(
+        active_deployment_name="mydeployment1",
+        fqdn="myapp.mydomain.com",
+        https_only=False,
+        persistent_disk=azure_native.appplatform.PersistentDiskArgs(
+            mount_path="/mypersistentdisk",
+            size_in_gb=2,
+        ),
+        public=True,
+        temporary_disk=azure_native.appplatform.TemporaryDiskArgs(
+            mount_path="/mytemporarydisk",
+            size_in_gb=2,
+        ),
+    ),
+    resource_group_name="myResourceGroup",
+    service_name="myservice")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:appplatform:App myapp /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myapp 
+```
+
+ */
 @ResourceType(type="azure-native:appplatform:App")
 public class App extends io.pulumi.resources.CustomResource {
+    /**
+     * The Managed Identity type of the app resource
+     */
     @OutputExport(name="identity", type=ManagedIdentityPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ ManagedIdentityPropertiesResponse> identity;
 
+    /**
+     * @return The Managed Identity type of the app resource
+     */
     public Output</* @Nullable */ ManagedIdentityPropertiesResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * The GEO location of the application, always the same with its parent resource
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The GEO location of the application, always the same with its parent resource
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Properties of the App resource
+     */
     @OutputExport(name="properties", type=AppResourcePropertiesResponse.class, parameters={})
     private Output<AppResourcePropertiesResponse> properties;
 
+    /**
+     * @return Properties of the App resource
+     */
     public Output<AppResourcePropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * The type of the resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public App(String name, AppArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:appplatform:App", name, args == null ? AppArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -72,6 +257,14 @@ public class App extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static App get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new App(name, id, options);
     }

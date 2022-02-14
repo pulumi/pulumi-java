@@ -11,10 +11,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Server Endpoint sync status
+ */
 public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServerEndpointSyncStatusResponse Empty = new ServerEndpointSyncStatusResponse();
 
+    /**
+     * Combined Health Status.
+     */
     @InputImport(name="combinedHealth", required=true)
     private final String combinedHealth;
 
@@ -22,6 +28,9 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
         return this.combinedHealth;
     }
 
+    /**
+     * Download sync activity
+     */
     @InputImport(name="downloadActivity", required=true)
     private final ServerEndpointSyncActivityStatusResponse downloadActivity;
 
@@ -29,6 +38,9 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
         return this.downloadActivity;
     }
 
+    /**
+     * Download Health Status.
+     */
     @InputImport(name="downloadHealth", required=true)
     private final String downloadHealth;
 
@@ -36,6 +48,9 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
         return this.downloadHealth;
     }
 
+    /**
+     * Download Status
+     */
     @InputImport(name="downloadStatus", required=true)
     private final ServerEndpointSyncSessionStatusResponse downloadStatus;
 
@@ -43,6 +58,9 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
         return this.downloadStatus;
     }
 
+    /**
+     * Last Updated Timestamp
+     */
     @InputImport(name="lastUpdatedTimestamp", required=true)
     private final String lastUpdatedTimestamp;
 
@@ -50,6 +68,9 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
         return this.lastUpdatedTimestamp;
     }
 
+    /**
+     * Offline Data Transfer State
+     */
     @InputImport(name="offlineDataTransferStatus", required=true)
     private final String offlineDataTransferStatus;
 
@@ -57,6 +78,9 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
         return this.offlineDataTransferStatus;
     }
 
+    /**
+     * Sync activity
+     */
     @InputImport(name="syncActivity", required=true)
     private final String syncActivity;
 
@@ -64,6 +88,9 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
         return this.syncActivity;
     }
 
+    /**
+     * Total count of persistent files not syncing (combined upload + download).
+     */
     @InputImport(name="totalPersistentFilesNotSyncingCount", required=true)
     private final Double totalPersistentFilesNotSyncingCount;
 
@@ -71,6 +98,9 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
         return this.totalPersistentFilesNotSyncingCount;
     }
 
+    /**
+     * Upload sync activity
+     */
     @InputImport(name="uploadActivity", required=true)
     private final ServerEndpointSyncActivityStatusResponse uploadActivity;
 
@@ -78,6 +108,9 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
         return this.uploadActivity;
     }
 
+    /**
+     * Upload Health Status.
+     */
     @InputImport(name="uploadHealth", required=true)
     private final String uploadHealth;
 
@@ -85,6 +118,9 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
         return this.uploadHealth;
     }
 
+    /**
+     * Upload Status
+     */
     @InputImport(name="uploadStatus", required=true)
     private final ServerEndpointSyncSessionStatusResponse uploadStatus;
 

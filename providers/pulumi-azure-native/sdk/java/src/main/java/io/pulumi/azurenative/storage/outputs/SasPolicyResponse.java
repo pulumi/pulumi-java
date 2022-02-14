@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SasPolicyResponse {
+/**
+ * The SAS expiration action. Can only be Log.
+ */
     private final String expirationAction;
+/**
+ * The SAS expiration period, DD.HH:MM:SS.
+ */
     private final String sasExpirationPeriod;
 
     @OutputCustomType.Constructor({"expirationAction","sasExpirationPeriod"})
@@ -20,9 +26,15 @@ public final class SasPolicyResponse {
         this.sasExpirationPeriod = Objects.requireNonNull(sasExpirationPeriod);
     }
 
+/**
+ * The SAS expiration action. Can only be Log.
+ */
     public String getExpirationAction() {
         return this.expirationAction;
     }
+/**
+ * The SAS expiration period, DD.HH:MM:SS.
+ */
     public String getSasExpirationPeriod() {
         return this.sasExpirationPeriod;
     }

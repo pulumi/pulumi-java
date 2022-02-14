@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Segment settings for `ts`, `fmp4` and `vtt`.
+ */
 public final class SegmentSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SegmentSettingsArgs Empty = new SegmentSettingsArgs();
 
+    /**
+     * Create an individual segment file. The default is `false`.
+     */
     @InputImport(name="individualSegments", required=true)
     private final Input<Boolean> individualSegments;
 
@@ -22,6 +28,9 @@ public final class SegmentSettingsArgs extends io.pulumi.resources.ResourceArgs 
         return this.individualSegments;
     }
 
+    /**
+     * Duration of the segments in seconds. The default is `6.0s`. Note that `segmentDuration` must be greater than or equal to [`gopDuration`](#videostream), and `segmentDuration` must be divisible by [`gopDuration`](#videostream).
+     */
     @InputImport(name="segmentDuration")
     private final @Nullable Input<String> segmentDuration;
 

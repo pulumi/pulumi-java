@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.
+ */
     @EnumType
     public enum FavoriteType {
+/**
+ * 
+ */
         Shared("shared"),
+/**
+ * 
+ */
         User("user");
 
         private final String value;

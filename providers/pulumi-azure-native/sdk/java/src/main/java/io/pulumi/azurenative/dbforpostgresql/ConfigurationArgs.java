@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfigurationArgs Empty = new ConfigurationArgs();
 
+    /**
+     * The name of the server configuration.
+     */
     @InputImport(name="configurationName")
     private final @Nullable Input<String> configurationName;
 
@@ -21,6 +27,9 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
         return this.configurationName == null ? Input.empty() : this.configurationName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -28,6 +37,9 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -35,6 +47,9 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
         return this.serverName;
     }
 
+    /**
+     * Source of the configuration.
+     */
     @InputImport(name="source")
     private final @Nullable Input<String> source;
 
@@ -42,6 +57,9 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
         return this.source == null ? Input.empty() : this.source;
     }
 
+    /**
+     * Value of the configuration.
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

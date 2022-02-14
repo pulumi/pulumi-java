@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Default value.
+ */
 public final class DWCopyCommandDefaultValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DWCopyCommandDefaultValueArgs Empty = new DWCopyCommandDefaultValueArgs();
 
+    /**
+     * Column name. Type: object (or Expression with resultType string).
+     */
     @InputImport(name="columnName")
     private final @Nullable Input<Object> columnName;
 
@@ -21,6 +27,9 @@ public final class DWCopyCommandDefaultValueArgs extends io.pulumi.resources.Res
         return this.columnName == null ? Input.empty() : this.columnName;
     }
 
+    /**
+     * The default value of the column. Type: object (or Expression with resultType string).
+     */
     @InputImport(name="defaultValue")
     private final @Nullable Input<Object> defaultValue;
 

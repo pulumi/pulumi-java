@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a host path mapped into a pod. Host path volumes do not support ownership management or SELinux relabeling.
+ */
 public final class HostPathVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HostPathVolumeSourceArgs Empty = new HostPathVolumeSourceArgs();
 
+    /**
+     * Path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+     */
     @InputImport(name="path", required=true)
     private final Input<String> path;
 
@@ -21,6 +27,9 @@ public final class HostPathVolumeSourceArgs extends io.pulumi.resources.Resource
         return this.path;
     }
 
+    /**
+     * Type for HostPath Volume Defaults to "" More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Application gateway BackendHealthHttp settings.
+ */
 public final class ApplicationGatewayBackendHealthHttpSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayBackendHealthHttpSettingsResponse Empty = new ApplicationGatewayBackendHealthHttpSettingsResponse();
 
+    /**
+     * Reference to an ApplicationGatewayBackendHttpSettings resource.
+     */
     @InputImport(name="backendHttpSettings")
     private final @Nullable ApplicationGatewayBackendHttpSettingsResponse backendHttpSettings;
 
@@ -23,6 +29,9 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse extends i
         return this.backendHttpSettings == null ? Optional.empty() : Optional.ofNullable(this.backendHttpSettings);
     }
 
+    /**
+     * List of ApplicationGatewayBackendHealthServer resources.
+     */
     @InputImport(name="servers")
     private final @Nullable List<ApplicationGatewayBackendHealthServerResponse> servers;
 

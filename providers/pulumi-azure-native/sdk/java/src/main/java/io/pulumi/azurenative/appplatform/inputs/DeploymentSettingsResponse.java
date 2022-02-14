@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Deployment settings payload
+ */
 public final class DeploymentSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeploymentSettingsResponse Empty = new DeploymentSettingsResponse();
 
+    /**
+     * Required CPU, basic tier should be 1, standard tier should be in range (1, 4)
+     */
     @InputImport(name="cpu")
     private final @Nullable Integer cpu;
 
@@ -23,6 +29,9 @@ public final class DeploymentSettingsResponse extends io.pulumi.resources.Invoke
         return this.cpu == null ? Optional.empty() : Optional.ofNullable(this.cpu);
     }
 
+    /**
+     * Collection of environment variables
+     */
     @InputImport(name="environmentVariables")
     private final @Nullable Map<String,String> environmentVariables;
 
@@ -30,6 +39,9 @@ public final class DeploymentSettingsResponse extends io.pulumi.resources.Invoke
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
 
+    /**
+     * JVM parameter
+     */
     @InputImport(name="jvmOptions")
     private final @Nullable String jvmOptions;
 
@@ -37,6 +49,9 @@ public final class DeploymentSettingsResponse extends io.pulumi.resources.Invoke
         return this.jvmOptions == null ? Optional.empty() : Optional.ofNullable(this.jvmOptions);
     }
 
+    /**
+     * Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8)
+     */
     @InputImport(name="memoryInGB")
     private final @Nullable Integer memoryInGB;
 
@@ -44,6 +59,9 @@ public final class DeploymentSettingsResponse extends io.pulumi.resources.Invoke
         return this.memoryInGB == null ? Optional.empty() : Optional.ofNullable(this.memoryInGB);
     }
 
+    /**
+     * The path to the .NET executable relative to zip root
+     */
     @InputImport(name="netCoreMainEntryPath")
     private final @Nullable String netCoreMainEntryPath;
 
@@ -51,6 +69,9 @@ public final class DeploymentSettingsResponse extends io.pulumi.resources.Invoke
         return this.netCoreMainEntryPath == null ? Optional.empty() : Optional.ofNullable(this.netCoreMainEntryPath);
     }
 
+    /**
+     * Runtime version
+     */
     @InputImport(name="runtimeVersion")
     private final @Nullable String runtimeVersion;
 

@@ -12,13 +12,37 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TestSuiteOverviewResponse {
+/**
+ * Elapsed time of test suite.
+ */
     private final DurationResponse elapsedTime;
+/**
+ * Number of test cases in error, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
+ */
     private final Integer errorCount;
+/**
+ * Number of failed test cases, typically set by the service by parsing the xml_source. May also be set by the user. - In create/response: always set - In update request: never
+ */
     private final Integer failureCount;
+/**
+ * Number of flaky test cases, set by the service by rolling up flaky test attempts. Present only for rollup test suite overview at environment level. A step cannot have flaky test cases.
+ */
     private final Integer flakyCount;
+/**
+ * The name of the test suite. - In create/response: always set - In update request: never
+ */
     private final String name;
+/**
+ * Number of test cases not run, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
+ */
     private final Integer skippedCount;
+/**
+ * Number of test cases, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
+ */
     private final Integer totalCount;
+/**
+ * If this test suite was parsed from XML, this is the URI where the original XML file is stored. Note: Multiple test suites can share the same xml_source Returns INVALID_ARGUMENT if the uri format is not supported. - In create/response: optional - In update request: never
+ */
     private final FileReferenceResponse xmlSource;
 
     @OutputCustomType.Constructor({"elapsedTime","errorCount","failureCount","flakyCount","name","skippedCount","totalCount","xmlSource"})
@@ -41,27 +65,51 @@ public final class TestSuiteOverviewResponse {
         this.xmlSource = Objects.requireNonNull(xmlSource);
     }
 
+/**
+ * Elapsed time of test suite.
+ */
     public DurationResponse getElapsedTime() {
         return this.elapsedTime;
     }
+/**
+ * Number of test cases in error, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
+ */
     public Integer getErrorCount() {
         return this.errorCount;
     }
+/**
+ * Number of failed test cases, typically set by the service by parsing the xml_source. May also be set by the user. - In create/response: always set - In update request: never
+ */
     public Integer getFailureCount() {
         return this.failureCount;
     }
+/**
+ * Number of flaky test cases, set by the service by rolling up flaky test attempts. Present only for rollup test suite overview at environment level. A step cannot have flaky test cases.
+ */
     public Integer getFlakyCount() {
         return this.flakyCount;
     }
+/**
+ * The name of the test suite. - In create/response: always set - In update request: never
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Number of test cases not run, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
+ */
     public Integer getSkippedCount() {
         return this.skippedCount;
     }
+/**
+ * Number of test cases, typically set by the service by parsing the xml_source. - In create/response: always set - In update request: never
+ */
     public Integer getTotalCount() {
         return this.totalCount;
     }
+/**
+ * If this test suite was parsed from XML, this is the URI where the original XML file is stored. Note: Multiple test suites can share the same xml_source Returns INVALID_ARGUMENT if the uri format is not supported. - In create/response: optional - In update request: never
+ */
     public FileReferenceResponse getXmlSource() {
         return this.xmlSource;
     }

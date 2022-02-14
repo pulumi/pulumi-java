@@ -20,10 +20,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a single parameter to optimize.
+ */
 public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudMlV1_StudyConfig_ParameterSpecArgs Empty = new GoogleCloudMlV1_StudyConfig_ParameterSpecArgs();
 
+    /**
+     * The value spec for a 'CATEGORICAL' parameter.
+     */
     @InputImport(name="categoricalValueSpec")
     private final @Nullable Input<GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecArgs> categoricalValueSpec;
 
@@ -31,6 +37,9 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
         return this.categoricalValueSpec == null ? Input.empty() : this.categoricalValueSpec;
     }
 
+    /**
+     * A child node is active if the parameter's value matches the child node's matching_parent_values. If two items in child_parameter_specs have the same name, they must have disjoint matching_parent_values.
+     */
     @InputImport(name="childParameterSpecs")
     private final @Nullable Input<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> childParameterSpecs;
 
@@ -38,6 +47,9 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
         return this.childParameterSpecs == null ? Input.empty() : this.childParameterSpecs;
     }
 
+    /**
+     * The value spec for a 'DISCRETE' parameter.
+     */
     @InputImport(name="discreteValueSpec")
     private final @Nullable Input<GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArgs> discreteValueSpec;
 
@@ -45,6 +57,9 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
         return this.discreteValueSpec == null ? Input.empty() : this.discreteValueSpec;
     }
 
+    /**
+     * The value spec for a 'DOUBLE' parameter.
+     */
     @InputImport(name="doubleValueSpec")
     private final @Nullable Input<GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs> doubleValueSpec;
 
@@ -52,6 +67,9 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
         return this.doubleValueSpec == null ? Input.empty() : this.doubleValueSpec;
     }
 
+    /**
+     * The value spec for an 'INTEGER' parameter.
+     */
     @InputImport(name="integerValueSpec")
     private final @Nullable Input<GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs> integerValueSpec;
 
@@ -59,6 +77,9 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
         return this.integerValueSpec == null ? Input.empty() : this.integerValueSpec;
     }
 
+    /**
+     * The parameter name must be unique amongst all ParameterSpecs.
+     */
     @InputImport(name="parameter", required=true)
     private final Input<String> parameter;
 
@@ -66,6 +87,9 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
         return this.parameter;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="parentCategoricalValues")
     private final @Nullable Input<GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecArgs> parentCategoricalValues;
 
@@ -73,6 +97,9 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
         return this.parentCategoricalValues == null ? Input.empty() : this.parentCategoricalValues;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="parentDiscreteValues")
     private final @Nullable Input<GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecArgs> parentDiscreteValues;
 
@@ -80,6 +107,9 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
         return this.parentDiscreteValues == null ? Input.empty() : this.parentDiscreteValues;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="parentIntValues")
     private final @Nullable Input<GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs> parentIntValues;
 
@@ -87,6 +117,9 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
         return this.parentIntValues == null ? Input.empty() : this.parentIntValues;
     }
 
+    /**
+     * How the parameter should be scaled. Leave unset for categorical parameters.
+     */
     @InputImport(name="scaleType")
     private final @Nullable Input<GoogleCloudMlV1_StudyConfig_ParameterSpecScaleType> scaleType;
 
@@ -94,6 +127,9 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
         return this.scaleType == null ? Input.empty() : this.scaleType;
     }
 
+    /**
+     * The type of the parameter.
+     */
     @InputImport(name="type", required=true)
     private final Input<GoogleCloudMlV1_StudyConfig_ParameterSpecType> type;
 

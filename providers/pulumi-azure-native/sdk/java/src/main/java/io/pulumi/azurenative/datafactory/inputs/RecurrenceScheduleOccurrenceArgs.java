@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The recurrence schedule occurrence.
+ */
 public final class RecurrenceScheduleOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RecurrenceScheduleOccurrenceArgs Empty = new RecurrenceScheduleOccurrenceArgs();
 
+    /**
+     * The day of the week.
+     */
     @InputImport(name="day")
     private final @Nullable Input<DayOfWeek> day;
 
@@ -22,6 +28,9 @@ public final class RecurrenceScheduleOccurrenceArgs extends io.pulumi.resources.
         return this.day == null ? Input.empty() : this.day;
     }
 
+    /**
+     * The occurrence.
+     */
     @InputImport(name="occurrence")
     private final @Nullable Input<Integer> occurrence;
 

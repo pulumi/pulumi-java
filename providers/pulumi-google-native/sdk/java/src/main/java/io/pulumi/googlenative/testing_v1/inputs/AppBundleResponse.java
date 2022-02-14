@@ -8,10 +8,16 @@ import io.pulumi.googlenative.testing_v1.inputs.FileReferenceResponse;
 import java.util.Objects;
 
 
+/**
+ * An Android App Bundle file format, containing a BundleConfig.pb file, a base module directory, zero or more dynamic feature module directories. See https://developer.android.com/guide/app-bundle/build for guidance on building App Bundles.
+ */
 public final class AppBundleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AppBundleResponse Empty = new AppBundleResponse();
 
+    /**
+     * .aab file representing the app bundle under test.
+     */
     @InputImport(name="bundleLocation", required=true)
     private final FileReferenceResponse bundleLocation;
 

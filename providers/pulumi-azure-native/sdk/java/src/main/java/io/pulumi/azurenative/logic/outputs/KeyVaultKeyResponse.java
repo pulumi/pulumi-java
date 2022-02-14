@@ -3,7 +3,6 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.azurenative.logic.outputs.KeyVaultKeyResponseAttributes;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
@@ -12,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class KeyVaultKeyResponse {
+/**
+ * The key attributes.
+ */
     private final @Nullable KeyVaultKeyResponseAttributes attributes;
+/**
+ * The key id.
+ */
     private final @Nullable String kid;
 
     @OutputCustomType.Constructor({"attributes","kid"})
@@ -23,9 +28,15 @@ public final class KeyVaultKeyResponse {
         this.kid = kid;
     }
 
+/**
+ * The key attributes.
+ */
     public Optional<KeyVaultKeyResponseAttributes> getAttributes() {
         return Optional.ofNullable(this.attributes);
     }
+/**
+ * The key id.
+ */
     public Optional<String> getKid() {
         return Optional.ofNullable(this.kid);
     }

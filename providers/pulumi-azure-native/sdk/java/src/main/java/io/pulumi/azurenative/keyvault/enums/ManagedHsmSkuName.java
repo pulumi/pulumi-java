@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * SKU of the managed HSM Pool
+ */
     @EnumType
     public enum ManagedHsmSkuName {
+/**
+ * 
+ */
         Standard_B1("Standard_B1"),
+/**
+ * 
+ */
         Custom_B32("Custom_B32");
 
         private final String value;

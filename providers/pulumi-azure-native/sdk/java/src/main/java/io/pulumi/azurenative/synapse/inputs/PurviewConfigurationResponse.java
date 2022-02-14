@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Purview Configuration
+ */
 public final class PurviewConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PurviewConfigurationResponse Empty = new PurviewConfigurationResponse();
 
+    /**
+     * Purview Resource ID
+     */
     @InputImport(name="purviewResourceId")
     private final @Nullable String purviewResourceId;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetTrustedIdProviderArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTrustedIdProviderArgs Empty = new GetTrustedIdProviderArgs();
 
+    /**
+     * The name of the Data Lake Store account.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetTrustedIdProviderArgs extends io.pulumi.resources.InvokeAr
         return this.accountName;
     }
 
+    /**
+     * The name of the Azure resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetTrustedIdProviderArgs extends io.pulumi.resources.InvokeAr
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the trusted identity provider to retrieve.
+     */
     @InputImport(name="trustedIdProviderName", required=true)
     private final String trustedIdProviderName;
 

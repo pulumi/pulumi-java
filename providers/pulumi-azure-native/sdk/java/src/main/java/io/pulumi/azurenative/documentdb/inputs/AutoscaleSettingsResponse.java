@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AutoscaleSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutoscaleSettingsResponse Empty = new AutoscaleSettingsResponse();
 
+    /**
+     * Represents maximum throughput, the resource can scale up to.
+     */
     @InputImport(name="maxThroughput")
     private final @Nullable Integer maxThroughput;
 

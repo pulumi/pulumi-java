@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Command describes a step performed as part of the build pipeline.
+ */
 public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CommandResponse Empty = new CommandResponse();
 
+    /**
+     * Command-line arguments used when executing this command.
+     */
     @InputImport(name="args", required=true)
     private final List<String> args;
 
@@ -20,6 +26,9 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
         return this.args;
     }
 
+    /**
+     * Working directory (relative to project source root) used when running this command.
+     */
     @InputImport(name="dir", required=true)
     private final String dir;
 
@@ -27,6 +36,9 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
         return this.dir;
     }
 
+    /**
+     * Environment variables set before running this command.
+     */
     @InputImport(name="env", required=true)
     private final List<String> env;
 
@@ -34,6 +46,9 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
         return this.env;
     }
 
+    /**
+     * Name of the command, as presented on the command line, or if the command is packaged as a Docker container, as presented to `docker pull`.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -41,6 +56,9 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The ID(s) of the command(s) that this command depends on.
+     */
     @InputImport(name="waitFor", required=true)
     private final List<String> waitFor;
 

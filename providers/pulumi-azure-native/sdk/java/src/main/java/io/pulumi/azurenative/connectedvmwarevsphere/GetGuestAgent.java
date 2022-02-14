@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGuestAgent {
+/**
+ * Defines the GuestAgent.
+API Version: 2020-10-01-preview.
+ *
+ * Defines the GuestAgent.
+ */
     public static CompletableFuture<GetGuestAgentResult> invokeAsync(GetGuestAgentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getGuestAgent", TypeShape.of(GetGuestAgentResult.class), args == null ? GetGuestAgentArgs.Empty : args, Utilities.withVersion(options));
     }

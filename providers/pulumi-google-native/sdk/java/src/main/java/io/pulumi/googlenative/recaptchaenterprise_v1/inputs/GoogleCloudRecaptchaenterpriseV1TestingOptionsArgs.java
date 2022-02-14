@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Options for user acceptance testing.
+ */
 public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs Empty = new GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs();
 
+    /**
+     * For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
+     */
     @InputImport(name="testingChallenge")
     private final @Nullable Input<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends io
         return this.testingChallenge == null ? Input.empty() : this.testingChallenge;
     }
 
+    /**
+     * All assessments for this Key will return this score. Must be between 0 (likely not legitimate) and 1 (likely legitimate) inclusive.
+     */
     @InputImport(name="testingScore")
     private final @Nullable Input<Double> testingScore;
 

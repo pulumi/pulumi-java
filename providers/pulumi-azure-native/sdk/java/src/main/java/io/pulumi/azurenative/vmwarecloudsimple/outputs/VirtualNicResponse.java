@@ -15,13 +15,37 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VirtualNicResponse {
+/**
+ * guest OS customization for nic
+ */
     private final @Nullable GuestOSNICCustomizationResponse customization;
+/**
+ * NIC ip address
+ */
     private final @Nullable List<String> ipAddresses;
+/**
+ * NIC MAC address
+ */
     private final @Nullable String macAddress;
+/**
+ * Virtual Network
+ */
     private final VirtualNetworkResponse network;
+/**
+ * NIC type
+ */
     private final String nicType;
+/**
+ * Is NIC powered on/off on boot
+ */
     private final @Nullable Boolean powerOnBoot;
+/**
+ * NIC id
+ */
     private final @Nullable String virtualNicId;
+/**
+ * NIC name
+ */
     private final String virtualNicName;
 
     @OutputCustomType.Constructor({"customization","ipAddresses","macAddress","network","nicType","powerOnBoot","virtualNicId","virtualNicName"})
@@ -44,27 +68,51 @@ public final class VirtualNicResponse {
         this.virtualNicName = Objects.requireNonNull(virtualNicName);
     }
 
+/**
+ * guest OS customization for nic
+ */
     public Optional<GuestOSNICCustomizationResponse> getCustomization() {
         return Optional.ofNullable(this.customization);
     }
+/**
+ * NIC ip address
+ */
     public List<String> getIpAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
+/**
+ * NIC MAC address
+ */
     public Optional<String> getMacAddress() {
         return Optional.ofNullable(this.macAddress);
     }
+/**
+ * Virtual Network
+ */
     public VirtualNetworkResponse getNetwork() {
         return this.network;
     }
+/**
+ * NIC type
+ */
     public String getNicType() {
         return this.nicType;
     }
+/**
+ * Is NIC powered on/off on boot
+ */
     public Optional<Boolean> getPowerOnBoot() {
         return Optional.ofNullable(this.powerOnBoot);
     }
+/**
+ * NIC id
+ */
     public Optional<String> getVirtualNicId() {
         return Optional.ofNullable(this.virtualNicId);
     }
+/**
+ * NIC name
+ */
     public String getVirtualNicName() {
         return this.virtualNicName;
     }

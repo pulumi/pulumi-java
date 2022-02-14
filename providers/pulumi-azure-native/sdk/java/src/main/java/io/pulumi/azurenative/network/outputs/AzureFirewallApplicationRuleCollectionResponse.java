@@ -15,12 +15,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureFirewallApplicationRuleCollectionResponse {
+/**
+ * The action type of a rule collection.
+ */
     private final @Nullable AzureFirewallRCActionResponse action;
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     private final String etag;
+/**
+ * Resource ID.
+ */
     private final @Nullable String id;
+/**
+ * The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
+ */
     private final @Nullable String name;
+/**
+ * Priority of the application rule collection resource.
+ */
     private final @Nullable Integer priority;
+/**
+ * The provisioning state of the application rule collection resource.
+ */
     private final String provisioningState;
+/**
+ * Collection of rules used by a application rule collection.
+ */
     private final @Nullable List<AzureFirewallApplicationRuleResponse> rules;
 
     @OutputCustomType.Constructor({"action","etag","id","name","priority","provisioningState","rules"})
@@ -41,24 +62,45 @@ public final class AzureFirewallApplicationRuleCollectionResponse {
         this.rules = rules;
     }
 
+/**
+ * The action type of a rule collection.
+ */
     public Optional<AzureFirewallRCActionResponse> getAction() {
         return Optional.ofNullable(this.action);
     }
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * Resource ID.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * Priority of the application rule collection resource.
+ */
     public Optional<Integer> getPriority() {
         return Optional.ofNullable(this.priority);
     }
+/**
+ * The provisioning state of the application rule collection resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Collection of rules used by a application rule collection.
+ */
     public List<AzureFirewallApplicationRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }

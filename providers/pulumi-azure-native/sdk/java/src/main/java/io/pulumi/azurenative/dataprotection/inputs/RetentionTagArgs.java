@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Retention tag
+ */
 public final class RetentionTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RetentionTagArgs Empty = new RetentionTagArgs();
 
+    /**
+     * Retention Tag Name to relate it to retention rule.
+     */
     @InputImport(name="tagName", required=true)
     private final Input<String> tagName;
 

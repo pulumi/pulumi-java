@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSyncMember {
+/**
+ * An Azure SQL Database sync member.
+API Version: 2020-11-01-preview.
+ *
+ * An Azure SQL Database sync member.
+ */
     public static CompletableFuture<GetSyncMemberResult> invokeAsync(GetSyncMemberArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getSyncMember", TypeShape.of(GetSyncMemberResult.class), args == null ? GetSyncMemberArgs.Empty : args, Utilities.withVersion(options));
     }

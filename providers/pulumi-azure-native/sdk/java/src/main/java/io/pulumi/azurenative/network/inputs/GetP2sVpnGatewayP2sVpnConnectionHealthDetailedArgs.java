@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs Empty = new GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs();
 
+    /**
+     * The name of the P2SVpnGateway.
+     */
     @InputImport(name="gatewayName", required=true)
     private final String gatewayName;
 
@@ -22,6 +28,9 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends io
         return this.gatewayName;
     }
 
+    /**
+     * The sas-url to download the P2S Vpn connection health detail.
+     */
     @InputImport(name="outputBlobSasUrl")
     private final @Nullable String outputBlobSasUrl;
 
@@ -29,6 +38,9 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends io
         return this.outputBlobSasUrl == null ? Optional.empty() : Optional.ofNullable(this.outputBlobSasUrl);
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -36,6 +48,9 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends io
         return this.resourceGroupName;
     }
 
+    /**
+     * The list of p2s vpn user names whose p2s vpn connection detailed health to retrieve for.
+     */
     @InputImport(name="vpnUserNamesFilter")
     private final @Nullable List<String> vpnUserNamesFilter;
 

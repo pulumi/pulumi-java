@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagerDevicePublicEncryptionKey {
+/**
+ * The public key.
+API Version: 2017-06-01.
+ *
+ * The public key.
+ */
     public static CompletableFuture<GetManagerDevicePublicEncryptionKeyResult> invokeAsync(GetManagerDevicePublicEncryptionKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storsimple:getManagerDevicePublicEncryptionKey", TypeShape.of(GetManagerDevicePublicEncryptionKeyResult.class), args == null ? GetManagerDevicePublicEncryptionKeyArgs.Empty : args, Utilities.withVersion(options));
     }

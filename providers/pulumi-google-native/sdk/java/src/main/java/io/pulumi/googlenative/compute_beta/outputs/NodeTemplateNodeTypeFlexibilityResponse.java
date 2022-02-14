@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NodeTemplateNodeTypeFlexibilityResponse {
+/**
+ * 
+ */
     private final String cpus;
+/**
+ * 
+ */
     private final String localSsd;
+/**
+ * 
+ */
     private final String memory;
 
     @OutputCustomType.Constructor({"cpus","localSsd","memory"})
@@ -23,12 +32,21 @@ public final class NodeTemplateNodeTypeFlexibilityResponse {
         this.memory = Objects.requireNonNull(memory);
     }
 
+/**
+ * 
+ */
     public String getCpus() {
         return this.cpus;
     }
+/**
+ * 
+ */
     public String getLocalSsd() {
         return this.localSsd;
     }
+/**
+ * 
+ */
     public String getMemory() {
         return this.memory;
     }

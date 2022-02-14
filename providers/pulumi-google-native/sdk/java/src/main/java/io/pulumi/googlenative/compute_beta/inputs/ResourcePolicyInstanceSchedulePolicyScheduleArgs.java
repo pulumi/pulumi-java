@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Schedule for an instance operation.
+ */
 public final class ResourcePolicyInstanceSchedulePolicyScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourcePolicyInstanceSchedulePolicyScheduleArgs Empty = new ResourcePolicyInstanceSchedulePolicyScheduleArgs();
 
+    /**
+     * Specifies the frequency for the operation, using the unix-cron format.
+     */
     @InputImport(name="schedule")
     private final @Nullable Input<String> schedule;
 

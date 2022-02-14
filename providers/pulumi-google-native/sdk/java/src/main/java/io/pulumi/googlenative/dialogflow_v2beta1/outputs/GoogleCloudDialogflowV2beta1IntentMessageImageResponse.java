@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageImageResponse {
+/**
+ * A text description of the image to be used for accessibility, e.g., screen readers. Required if image_uri is set for CarouselSelect.
+ */
     private final String accessibilityText;
+/**
+ * Optional. The public URI to an image file.
+ */
     private final String imageUri;
 
     @OutputCustomType.Constructor({"accessibilityText","imageUri"})
@@ -20,9 +26,15 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageResponse {
         this.imageUri = Objects.requireNonNull(imageUri);
     }
 
+/**
+ * A text description of the image to be used for accessibility, e.g., screen readers. Required if image_uri is set for CarouselSelect.
+ */
     public String getAccessibilityText() {
         return this.accessibilityText;
     }
+/**
+ * Optional. The public URI to an image file.
+ */
     public String getImageUri() {
         return this.imageUri;
     }

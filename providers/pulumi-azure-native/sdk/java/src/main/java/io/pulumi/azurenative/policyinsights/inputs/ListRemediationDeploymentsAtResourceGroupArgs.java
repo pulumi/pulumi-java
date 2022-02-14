@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ListRemediationDeploymentsAtResourceGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListRemediationDeploymentsAtResourceGroupArgs Empty = new ListRemediationDeploymentsAtResourceGroupArgs();
 
+    /**
+     * The name of the remediation.
+     */
     @InputImport(name="remediationName", required=true)
     private final String remediationName;
 
@@ -22,6 +28,9 @@ public final class ListRemediationDeploymentsAtResourceGroupArgs extends io.pulu
         return this.remediationName;
     }
 
+    /**
+     * Resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -29,6 +38,9 @@ public final class ListRemediationDeploymentsAtResourceGroupArgs extends io.pulu
         return this.resourceGroupName;
     }
 
+    /**
+     * Maximum number of records to return.
+     */
     @InputImport(name="top")
     private final @Nullable Integer top;
 

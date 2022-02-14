@@ -6,6 +6,9 @@ package io.pulumi.random;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProviderArgs Empty = new ProviderArgs();

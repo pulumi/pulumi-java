@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Represents the intent to trigger programmatically rather than as a result of natural language processing.
+ */
 public final class GoogleCloudDialogflowCxV3IntentInputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3IntentInputResponse Empty = new GoogleCloudDialogflowCxV3IntentInputResponse();
 
+    /**
+     * The unique identifier of the intent. Format: `projects//locations//agents//intents/`.
+     */
     @InputImport(name="intent", required=true)
     private final String intent;
 

@@ -11,10 +11,16 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * A Dataproc job for running Apache Hadoop MapReduce (https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html) jobs on Apache Hadoop YARN (https://hadoop.apache.org/docs/r2.7.1/hadoop-yarn/hadoop-yarn-site/YARN.html).
+ */
 public final class HadoopJobResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HadoopJobResponse Empty = new HadoopJobResponse();
 
+    /**
+     * Optional. HCFS URIs of archives to be extracted in the working directory of Hadoop drivers and tasks. Supported file types: .jar, .tar, .tar.gz, .tgz, or .zip.
+     */
     @InputImport(name="archiveUris", required=true)
     private final List<String> archiveUris;
 
@@ -22,6 +28,9 @@ public final class HadoopJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.archiveUris;
     }
 
+    /**
+     * Optional. The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
+     */
     @InputImport(name="args", required=true)
     private final List<String> args;
 
@@ -29,6 +38,9 @@ public final class HadoopJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.args;
     }
 
+    /**
+     * Optional. HCFS (Hadoop Compatible Filesystem) URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
+     */
     @InputImport(name="fileUris", required=true)
     private final List<String> fileUris;
 
@@ -36,6 +48,9 @@ public final class HadoopJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.fileUris;
     }
 
+    /**
+     * Optional. Jar file URIs to add to the CLASSPATHs of the Hadoop driver and tasks.
+     */
     @InputImport(name="jarFileUris", required=true)
     private final List<String> jarFileUris;
 
@@ -43,6 +58,9 @@ public final class HadoopJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.jarFileUris;
     }
 
+    /**
+     * Optional. The runtime log config for job execution.
+     */
     @InputImport(name="loggingConfig", required=true)
     private final LoggingConfigResponse loggingConfig;
 
@@ -50,6 +68,9 @@ public final class HadoopJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.loggingConfig;
     }
 
+    /**
+     * The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in jar_file_uris.
+     */
     @InputImport(name="mainClass", required=true)
     private final String mainClass;
 
@@ -57,6 +78,9 @@ public final class HadoopJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.mainClass;
     }
 
+    /**
+     * The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'
+     */
     @InputImport(name="mainJarFileUri", required=true)
     private final String mainJarFileUri;
 
@@ -64,6 +88,9 @@ public final class HadoopJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.mainJarFileUri;
     }
 
+    /**
+     * Optional. A mapping of property names to values, used to configure Hadoop. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site and classes in user code.
+     */
     @InputImport(name="properties", required=true)
     private final Map<String,String> properties;
 

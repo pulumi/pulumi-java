@@ -9,8 +9,18 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ContentKeyPolicyRsaTokenKeyResponse {
+/**
+ * The RSA Parameter exponent
+ */
     private final String exponent;
+/**
+ * The RSA Parameter modulus
+ */
     private final String modulus;
+/**
+ * The discriminator for derived types.
+Expected value is '#Microsoft.Media.ContentKeyPolicyRsaTokenKey'.
+ */
     private final String odataType;
 
     @OutputCustomType.Constructor({"exponent","modulus","odataType"})
@@ -23,12 +33,22 @@ public final class ContentKeyPolicyRsaTokenKeyResponse {
         this.odataType = Objects.requireNonNull(odataType);
     }
 
+/**
+ * The RSA Parameter exponent
+ */
     public String getExponent() {
         return this.exponent;
     }
+/**
+ * The RSA Parameter modulus
+ */
     public String getModulus() {
         return this.modulus;
     }
+/**
+ * The discriminator for derived types.
+Expected value is '#Microsoft.Media.ContentKeyPolicyRsaTokenKey'.
+ */
     public String getOdataType() {
         return this.odataType;
     }

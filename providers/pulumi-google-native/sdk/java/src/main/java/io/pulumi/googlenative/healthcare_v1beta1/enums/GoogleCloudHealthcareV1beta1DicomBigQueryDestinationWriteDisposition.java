@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Determines whether the existing table in the destination is to be overwritten or appended to. If a write_disposition is specified, the `force` parameter is ignored.
+ */
     @EnumType
     public enum GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition {
+/**
+ * Default behavior is the same as WRITE_EMPTY.
+ */
         WriteDispositionUnspecified("WRITE_DISPOSITION_UNSPECIFIED"),
+/**
+ * Only export data if the destination table is empty.
+ */
         WriteEmpty("WRITE_EMPTY"),
+/**
+ * Erase all existing data in a table before writing the instances.
+ */
         WriteTruncate("WRITE_TRUNCATE"),
+/**
+ * Append data to the existing table.
+ */
         WriteAppend("WRITE_APPEND");
 
         private final String value;

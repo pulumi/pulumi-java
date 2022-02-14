@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * InstanceTemplateSpec describes the data an instance should have when created from a template.
+ */
 public final class InstanceTemplateSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceTemplateSpecArgs Empty = new InstanceTemplateSpecArgs();
 
+    /**
+     * Optional. Specification of the desired behavior of the instance. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status +optional
+     */
     @InputImport(name="spec")
     private final @Nullable Input<InstanceSpecArgs> spec;
 

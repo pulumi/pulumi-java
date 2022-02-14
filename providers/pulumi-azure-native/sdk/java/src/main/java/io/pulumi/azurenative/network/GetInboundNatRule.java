@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInboundNatRule {
+/**
+ * Inbound NAT rule of the load balancer.
+API Version: 2020-11-01.
+ *
+ * Inbound NAT rule of the load balancer.
+ */
     public static CompletableFuture<GetInboundNatRuleResult> invokeAsync(GetInboundNatRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getInboundNatRule", TypeShape.of(GetInboundNatRuleResult.class), args == null ? GetInboundNatRuleArgs.Empty : args, Utilities.withVersion(options));
     }

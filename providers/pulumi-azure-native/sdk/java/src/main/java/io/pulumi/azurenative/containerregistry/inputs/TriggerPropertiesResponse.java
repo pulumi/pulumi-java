@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of a trigger.
+ */
 public final class TriggerPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TriggerPropertiesResponse Empty = new TriggerPropertiesResponse();
 
+    /**
+     * The trigger based on base image dependencies.
+     */
     @InputImport(name="baseImageTrigger")
     private final @Nullable BaseImageTriggerResponse baseImageTrigger;
 
@@ -24,6 +30,9 @@ public final class TriggerPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.baseImageTrigger == null ? Optional.empty() : Optional.ofNullable(this.baseImageTrigger);
     }
 
+    /**
+     * The collection of triggers based on source code repository.
+     */
     @InputImport(name="sourceTriggers")
     private final @Nullable List<SourceTriggerResponse> sourceTriggers;
 
@@ -31,6 +40,9 @@ public final class TriggerPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.sourceTriggers == null ? List.of() : this.sourceTriggers;
     }
 
+    /**
+     * The collection of timer triggers.
+     */
     @InputImport(name="timerTriggers")
     private final @Nullable List<TimerTriggerResponse> timerTriggers;
 

@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * This activity suspends pipeline execution for the specified interval.
+ */
 public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WaitActivityResponse Empty = new WaitActivityResponse();
 
+    /**
+     * Activity depends on condition.
+     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -25,6 +31,9 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -32,6 +41,9 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Activity name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -39,6 +51,10 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * Type of activity.
+Expected value is 'Wait'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -46,6 +62,9 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 
@@ -53,6 +72,9 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
 
+    /**
+     * Duration in seconds.
+     */
     @InputImport(name="waitTimeInSeconds", required=true)
     private final Object waitTimeInSeconds;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGraphResourceGraph {
+/**
+ * An Azure Cosmos DB Graph resource.
+API Version: 2021-07-01-preview.
+ *
+ * An Azure Cosmos DB Graph resource.
+ */
     public static CompletableFuture<GetGraphResourceGraphResult> invokeAsync(GetGraphResourceGraphArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getGraphResourceGraph", TypeShape.of(GetGraphResourceGraphResult.class), args == null ? GetGraphResourceGraphArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -15,7 +15,14 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JsonReadSettingsResponse {
+/**
+ * Compression settings.
+ */
     private final @Nullable Object compressionProperties;
+/**
+ * The read setting type.
+Expected value is 'JsonReadSettings'.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"compressionProperties","type"})
@@ -26,9 +33,16 @@ public final class JsonReadSettingsResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Compression settings.
+ */
     public Optional<Object> getCompressionProperties() {
         return Optional.ofNullable(this.compressionProperties);
     }
+/**
+ * The read setting type.
+Expected value is 'JsonReadSettings'.
+ */
     public String getType() {
         return this.type;
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetVirtualHubArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVirtualHubArgs Empty = new GetVirtualHubArgs();
 
+    /**
+     * The resource group name of the VirtualHub.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class GetVirtualHubArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the VirtualHub.
+     */
     @InputImport(name="virtualHubName", required=true)
     private final String virtualHubName;
 

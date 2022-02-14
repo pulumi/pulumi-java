@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The rule type of the rule.
+ */
     @EnumType
     public enum RouteFilterRuleType {
+/**
+ * 
+ */
         Community("Community");
 
         private final String value;

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegistrationAssignment {
+/**
+ * Registration assignment.
+API Version: 2019-09-01.
+ *
+ * Registration assignment.
+ */
     public static CompletableFuture<GetRegistrationAssignmentResult> invokeAsync(GetRegistrationAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:managedservices:getRegistrationAssignment", TypeShape.of(GetRegistrationAssignmentResult.class), args == null ? GetRegistrationAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

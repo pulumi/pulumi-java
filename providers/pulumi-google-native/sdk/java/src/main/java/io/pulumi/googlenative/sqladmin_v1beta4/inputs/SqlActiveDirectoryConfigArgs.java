@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Active Directory configuration, relevant only for Cloud SQL for SQL Server.
+ */
 public final class SqlActiveDirectoryConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlActiveDirectoryConfigArgs Empty = new SqlActiveDirectoryConfigArgs();
 
+    /**
+     * The name of the domain (e.g., mydomain.com).
+     */
     @InputImport(name="domain")
     private final @Nullable Input<String> domain;
 
@@ -21,6 +27,9 @@ public final class SqlActiveDirectoryConfigArgs extends io.pulumi.resources.Reso
         return this.domain == null ? Input.empty() : this.domain;
     }
 
+    /**
+     * This is always sql#activeDirectoryConfig.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 

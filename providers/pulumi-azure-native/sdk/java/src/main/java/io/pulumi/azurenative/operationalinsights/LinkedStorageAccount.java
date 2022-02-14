@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.operationalinsights;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.operationalinsights.LinkedStorageAccountArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -14,33 +13,167 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Linked storage accounts top level resource container.
+API Version: 2020-08-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### LinkedStorageAccountsCreate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var linkedStorageAccount = new AzureNative.OperationalInsights.LinkedStorageAccount("linkedStorageAccount", new AzureNative.OperationalInsights.LinkedStorageAccountArgs
+        {
+            DataSourceType = "CustomLogs",
+            ResourceGroupName = "mms-eus",
+            StorageAccountIds = 
+            {
+                "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageA",
+                "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageB",
+            },
+            WorkspaceName = "testLinkStorageAccountsWS",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	operationalinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/operationalinsights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := operationalinsights.NewLinkedStorageAccount(ctx, "linkedStorageAccount", &operationalinsights.LinkedStorageAccountArgs{
+			DataSourceType:    pulumi.String("CustomLogs"),
+			ResourceGroupName: pulumi.String("mms-eus"),
+			StorageAccountIds: pulumi.StringArray{
+				pulumi.String("/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageA"),
+				pulumi.String("/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageB"),
+			},
+			WorkspaceName: pulumi.String("testLinkStorageAccountsWS"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const linkedStorageAccount = new azure_native.operationalinsights.LinkedStorageAccount("linkedStorageAccount", {
+    dataSourceType: "CustomLogs",
+    resourceGroupName: "mms-eus",
+    storageAccountIds: [
+        "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageA",
+        "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageB",
+    ],
+    workspaceName: "testLinkStorageAccountsWS",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+linked_storage_account = azure_native.operationalinsights.LinkedStorageAccount("linkedStorageAccount",
+    data_source_type="CustomLogs",
+    resource_group_name="mms-eus",
+    storage_account_ids=[
+        "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageA",
+        "/subscriptions/00000000-0000-0000-0000-00000000000/resourceGroups/mms-eus/providers/Microsoft.Storage/storageAccounts/testStorageB",
+    ],
+    workspace_name="testLinkStorageAccountsWS")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:operationalinsights:LinkedStorageAccount CustomLogs /subscriptions/00000000-0000-0000-0000-00000000000/resourcegroups/mms-eus/providers/microsoft.operationalinsights/workspaces/testLinkStorageAccountsWS/linkedStorageAccounts/CustomLogs 
+```
+
+ */
 @ResourceType(type="azure-native:operationalinsights:LinkedStorageAccount")
 public class LinkedStorageAccount extends io.pulumi.resources.CustomResource {
+    /**
+     * Linked storage accounts type.
+     */
     @OutputExport(name="dataSourceType", type=String.class, parameters={})
     private Output<String> dataSourceType;
 
+    /**
+     * @return Linked storage accounts type.
+     */
     public Output<String> getDataSourceType() {
         return this.dataSourceType;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Linked storage accounts resources ids.
+     */
     @OutputExport(name="storageAccountIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> storageAccountIds;
 
+    /**
+     * @return Linked storage accounts resources ids.
+     */
     public Output</* @Nullable */ List<String>> getStorageAccountIds() {
         return this.storageAccountIds;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public LinkedStorageAccount(String name, LinkedStorageAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:operationalinsights:LinkedStorageAccount", name, args == null ? LinkedStorageAccountArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -61,6 +194,14 @@ public class LinkedStorageAccount extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static LinkedStorageAccount get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LinkedStorageAccount(name, id, options);
     }

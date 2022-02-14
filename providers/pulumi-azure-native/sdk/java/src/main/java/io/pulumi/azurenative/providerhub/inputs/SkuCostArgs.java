@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SkuCostArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuCostArgs Empty = new SkuCostArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="extendedUnit")
     private final @Nullable Input<String> extendedUnit;
 
@@ -22,6 +28,9 @@ public final class SkuCostArgs extends io.pulumi.resources.ResourceArgs {
         return this.extendedUnit == null ? Input.empty() : this.extendedUnit;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="meterId", required=true)
     private final Input<String> meterId;
 
@@ -29,6 +38,9 @@ public final class SkuCostArgs extends io.pulumi.resources.ResourceArgs {
         return this.meterId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="quantity")
     private final @Nullable Input<Integer> quantity;
 

@@ -9,11 +9,29 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourceStatusResponse {
+/**
+ * The last update time for this condition.
+ */
     private final String lastUpdatedAt;
+/**
+ * A human readable message indicating details about the status.
+ */
     private final String message;
+/**
+ * The reason for the condition's status.
+ */
     private final String reason;
+/**
+ * Severity with which to treat failures of this type of condition.
+ */
     private final String severity;
+/**
+ * Status of the condition.
+ */
     private final String status;
+/**
+ * The type of the condition.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"lastUpdatedAt","message","reason","severity","status","type"})
@@ -32,21 +50,39 @@ public final class ResourceStatusResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The last update time for this condition.
+ */
     public String getLastUpdatedAt() {
         return this.lastUpdatedAt;
     }
+/**
+ * A human readable message indicating details about the status.
+ */
     public String getMessage() {
         return this.message;
     }
+/**
+ * The reason for the condition's status.
+ */
     public String getReason() {
         return this.reason;
     }
+/**
+ * Severity with which to treat failures of this type of condition.
+ */
     public String getSeverity() {
         return this.severity;
     }
+/**
+ * Status of the condition.
+ */
     public String getStatus() {
         return this.status;
     }
+/**
+ * The type of the condition.
+ */
     public String getType() {
         return this.type;
     }

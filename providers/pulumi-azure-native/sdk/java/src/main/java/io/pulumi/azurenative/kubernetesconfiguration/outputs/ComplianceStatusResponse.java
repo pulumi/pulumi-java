@@ -11,9 +11,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ComplianceStatusResponse {
+/**
+ * The compliance state of the configuration.
+ */
     private final String complianceState;
+/**
+ * Datetime the configuration was last applied.
+ */
     private final @Nullable String lastConfigApplied;
+/**
+ * Message from when the configuration was applied.
+ */
     private final @Nullable String message;
+/**
+ * Level of the message.
+ */
     private final @Nullable String messageLevel;
 
     @OutputCustomType.Constructor({"complianceState","lastConfigApplied","message","messageLevel"})
@@ -28,15 +40,27 @@ public final class ComplianceStatusResponse {
         this.messageLevel = messageLevel;
     }
 
+/**
+ * The compliance state of the configuration.
+ */
     public String getComplianceState() {
         return this.complianceState;
     }
+/**
+ * Datetime the configuration was last applied.
+ */
     public Optional<String> getLastConfigApplied() {
         return Optional.ofNullable(this.lastConfigApplied);
     }
+/**
+ * Message from when the configuration was applied.
+ */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
+/**
+ * Level of the message.
+ */
     public Optional<String> getMessageLevel() {
         return Optional.ofNullable(this.messageLevel);
     }

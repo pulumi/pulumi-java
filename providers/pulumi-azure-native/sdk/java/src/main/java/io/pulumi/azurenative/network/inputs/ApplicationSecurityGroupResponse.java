@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An application security group in a resource group.
+ */
 public final class ApplicationSecurityGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationSecurityGroupResponse Empty = new ApplicationSecurityGroupResponse();
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -22,6 +28,9 @@ public final class ApplicationSecurityGroupResponse extends io.pulumi.resources.
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -29,6 +38,9 @@ public final class ApplicationSecurityGroupResponse extends io.pulumi.resources.
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -36,6 +48,9 @@ public final class ApplicationSecurityGroupResponse extends io.pulumi.resources.
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * Resource name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -43,6 +58,9 @@ public final class ApplicationSecurityGroupResponse extends io.pulumi.resources.
         return this.name;
     }
 
+    /**
+     * The provisioning state of the application security group resource.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -50,6 +68,9 @@ public final class ApplicationSecurityGroupResponse extends io.pulumi.resources.
         return this.provisioningState;
     }
 
+    /**
+     * The resource GUID property of the application security group resource. It uniquely identifies a resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.
+     */
     @InputImport(name="resourceGuid", required=true)
     private final String resourceGuid;
 
@@ -57,6 +78,9 @@ public final class ApplicationSecurityGroupResponse extends io.pulumi.resources.
         return this.resourceGuid;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 
@@ -64,6 +88,9 @@ public final class ApplicationSecurityGroupResponse extends io.pulumi.resources.
         return this.tags == null ? Map.of() : this.tags;
     }
 
+    /**
+     * Resource type.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

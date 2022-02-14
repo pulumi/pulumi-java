@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Restriction on Datasource.
+ */
 public final class DataSourceRestrictionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataSourceRestrictionResponse Empty = new DataSourceRestrictionResponse();
 
+    /**
+     * Filter options restricting the results. If multiple filters are present, they are grouped by object type before joining. Filters with the same object type are joined conjunctively, then the resulting expressions are joined disjunctively. The maximum number of elements is 20. NOTE: Suggest API supports only few filters at the moment: "objecttype", "type" and "mimetype". For now, schema specific filters cannot be used to filter suggestions.
+     */
     @InputImport(name="filterOptions", required=true)
     private final List<FilterOptionsResponse> filterOptions;
 
@@ -21,6 +27,9 @@ public final class DataSourceRestrictionResponse extends io.pulumi.resources.Inv
         return this.filterOptions;
     }
 
+    /**
+     * The source of restriction.
+     */
     @InputImport(name="source", required=true)
     private final SourceResponse source;
 

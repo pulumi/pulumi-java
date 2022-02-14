@@ -3,7 +3,6 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.azurenative.providerhub.outputs.ResourceTypeEndpointResponseFeaturesRule;
 import io.pulumi.azurenative.providerhub.outputs.ResourceTypeExtensionResponse;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.Boolean;
@@ -15,12 +14,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceTypeEndpointResponse {
+/**
+ * 
+ */
     private final @Nullable List<String> apiVersions;
+/**
+ * 
+ */
     private final @Nullable Boolean enabled;
+/**
+ * 
+ */
     private final @Nullable List<ResourceTypeExtensionResponse> extensions;
+/**
+ * 
+ */
     private final @Nullable ResourceTypeEndpointResponseFeaturesRule featuresRule;
+/**
+ * 
+ */
     private final @Nullable List<String> locations;
+/**
+ * 
+ */
     private final @Nullable List<String> requiredFeatures;
+/**
+ * 
+ */
     private final @Nullable String timeout;
 
     @OutputCustomType.Constructor({"apiVersions","enabled","extensions","featuresRule","locations","requiredFeatures","timeout"})
@@ -41,24 +61,45 @@ public final class ResourceTypeEndpointResponse {
         this.timeout = timeout;
     }
 
+/**
+ * 
+ */
     public List<String> getApiVersions() {
         return this.apiVersions == null ? List.of() : this.apiVersions;
     }
+/**
+ * 
+ */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
+/**
+ * 
+ */
     public List<ResourceTypeExtensionResponse> getExtensions() {
         return this.extensions == null ? List.of() : this.extensions;
     }
+/**
+ * 
+ */
     public Optional<ResourceTypeEndpointResponseFeaturesRule> getFeaturesRule() {
         return Optional.ofNullable(this.featuresRule);
     }
+/**
+ * 
+ */
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }
+/**
+ * 
+ */
     public List<String> getRequiredFeatures() {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }
+/**
+ * 
+ */
     public Optional<String> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }

@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The current state of the Service. Output only.
+ */
 public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceStatusArgs Empty = new ServiceStatusArgs();
 
+    /**
+     * From RouteStatus. Similar to url, information on where the service is available on HTTP.
+     */
     @InputImport(name="address")
     private final @Nullable Input<AddressableArgs> address;
 
@@ -26,6 +32,9 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.address == null ? Input.empty() : this.address;
     }
 
+    /**
+     * Conditions communicates information about ongoing/complete reconciliation processes that bring the "spec" inline with the observed state of the world. Service-specific conditions include: * "ConfigurationsReady": true when the underlying Configuration is ready. * "RoutesReady": true when the underlying Route is ready. * "Ready": true when both the underlying Route and Configuration are ready.
+     */
     @InputImport(name="conditions")
     private final @Nullable Input<List<GoogleCloudRunV1ConditionArgs>> conditions;
 
@@ -33,6 +42,9 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.conditions == null ? Input.empty() : this.conditions;
     }
 
+    /**
+     * From ConfigurationStatus. LatestCreatedRevisionName is the last revision that was created from this Service's Configuration. It might not be ready yet, for that use LatestReadyRevisionName.
+     */
     @InputImport(name="latestCreatedRevisionName")
     private final @Nullable Input<String> latestCreatedRevisionName;
 
@@ -40,6 +52,9 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.latestCreatedRevisionName == null ? Input.empty() : this.latestCreatedRevisionName;
     }
 
+    /**
+     * From ConfigurationStatus. LatestReadyRevisionName holds the name of the latest Revision stamped out from this Service's Configuration that has had its "Ready" condition become "True".
+     */
     @InputImport(name="latestReadyRevisionName")
     private final @Nullable Input<String> latestReadyRevisionName;
 
@@ -47,6 +62,9 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.latestReadyRevisionName == null ? Input.empty() : this.latestReadyRevisionName;
     }
 
+    /**
+     * ObservedGeneration is the 'Generation' of the Route that was last processed by the controller. Clients polling for completed reconciliation should poll until observedGeneration = metadata.generation and the Ready condition's status is True or False.
+     */
     @InputImport(name="observedGeneration")
     private final @Nullable Input<Integer> observedGeneration;
 
@@ -54,6 +72,9 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
     }
 
+    /**
+     * From RouteStatus. Traffic holds the configured traffic distribution. These entries will always contain RevisionName references. When ConfigurationName appears in the spec, this will hold the LatestReadyRevisionName that we last observed.
+     */
     @InputImport(name="traffic")
     private final @Nullable Input<List<TrafficTargetArgs>> traffic;
 
@@ -61,6 +82,9 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
         return this.traffic == null ? Input.empty() : this.traffic;
     }
 
+    /**
+     * From RouteStatus. URL holds the url that will distribute traffic over the provided traffic targets. It generally has the form https://{route-hash}-{project-hash}-{cluster-level-suffix}.a.run.app
+     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

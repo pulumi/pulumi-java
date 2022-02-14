@@ -11,10 +11,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class PipelineSourceTriggerPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PipelineSourceTriggerPropertiesArgs Empty = new PipelineSourceTriggerPropertiesArgs();
 
+    /**
+     * The current status of the source trigger.
+     */
     @InputImport(name="status", required=true)
     private final Input<Either<String,TriggerStatus>> status;
 

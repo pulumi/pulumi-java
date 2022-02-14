@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The live event input.
+ */
 public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LiveEventInputArgs Empty = new LiveEventInputArgs();
 
+    /**
+     * Access control for live event input.
+     */
     @InputImport(name="accessControl")
     private final @Nullable Input<LiveEventInputAccessControlArgs> accessControl;
 
@@ -26,6 +32,9 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessControl == null ? Input.empty() : this.accessControl;
     }
 
+    /**
+     * A UUID in string form to uniquely identify the stream. This can be specified at creation time but cannot be updated. If omitted, the service will generate a unique value.
+     */
     @InputImport(name="accessToken")
     private final @Nullable Input<String> accessToken;
 
@@ -33,6 +42,9 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessToken == null ? Input.empty() : this.accessToken;
     }
 
+    /**
+     * The input endpoints for the live event.
+     */
     @InputImport(name="endpoints")
     private final @Nullable Input<List<LiveEventEndpointArgs>> endpoints;
 
@@ -40,6 +52,9 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpoints == null ? Input.empty() : this.endpoints;
     }
 
+    /**
+     * ISO 8601 time duration of the key frame interval duration of the input. This value sets the EXT-X-TARGETDURATION property in the HLS output. For example, use PT2S to indicate 2 seconds. Leave the value empty for encoding live events.
+     */
     @InputImport(name="keyFrameIntervalDuration")
     private final @Nullable Input<String> keyFrameIntervalDuration;
 
@@ -47,6 +62,9 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyFrameIntervalDuration == null ? Input.empty() : this.keyFrameIntervalDuration;
     }
 
+    /**
+     * The input protocol for the live event. This is specified at creation time and cannot be updated.
+     */
     @InputImport(name="streamingProtocol", required=true)
     private final Input<Either<String,LiveEventInputProtocol>> streamingProtocol;
 

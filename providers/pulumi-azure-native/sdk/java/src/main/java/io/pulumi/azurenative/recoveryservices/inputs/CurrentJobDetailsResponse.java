@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Current job details of the migration item.
+ */
 public final class CurrentJobDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CurrentJobDetailsResponse Empty = new CurrentJobDetailsResponse();
 
+    /**
+     * The ARM Id of the job being executed.
+     */
     @InputImport(name="jobId")
     private final @Nullable String jobId;
 
@@ -21,6 +27,9 @@ public final class CurrentJobDetailsResponse extends io.pulumi.resources.InvokeA
         return this.jobId == null ? Optional.empty() : Optional.ofNullable(this.jobId);
     }
 
+    /**
+     * The job name.
+     */
     @InputImport(name="jobName")
     private final @Nullable String jobName;
 
@@ -28,6 +37,9 @@ public final class CurrentJobDetailsResponse extends io.pulumi.resources.InvokeA
         return this.jobName == null ? Optional.empty() : Optional.ofNullable(this.jobName);
     }
 
+    /**
+     * The start time of the job.
+     */
     @InputImport(name="startTime")
     private final @Nullable String startTime;
 

@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RunbookDraftArgs Empty = new RunbookDraftArgs();
 
+    /**
+     * Gets or sets the creation time of the runbook draft.
+     */
     @InputImport(name="creationTime")
     private final @Nullable Input<String> creationTime;
 
@@ -26,6 +32,9 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
         return this.creationTime == null ? Input.empty() : this.creationTime;
     }
 
+    /**
+     * Gets or sets the draft runbook content link.
+     */
     @InputImport(name="draftContentLink")
     private final @Nullable Input<ContentLinkArgs> draftContentLink;
 
@@ -33,6 +42,9 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
         return this.draftContentLink == null ? Input.empty() : this.draftContentLink;
     }
 
+    /**
+     * Gets or sets whether runbook is in edit mode.
+     */
     @InputImport(name="inEdit")
     private final @Nullable Input<Boolean> inEdit;
 
@@ -40,6 +52,9 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
         return this.inEdit == null ? Input.empty() : this.inEdit;
     }
 
+    /**
+     * Gets or sets the last modified time of the runbook draft.
+     */
     @InputImport(name="lastModifiedTime")
     private final @Nullable Input<String> lastModifiedTime;
 
@@ -47,6 +62,9 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastModifiedTime == null ? Input.empty() : this.lastModifiedTime;
     }
 
+    /**
+     * Gets or sets the runbook output types.
+     */
     @InputImport(name="outputTypes")
     private final @Nullable Input<List<String>> outputTypes;
 
@@ -54,6 +72,9 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
         return this.outputTypes == null ? Input.empty() : this.outputTypes;
     }
 
+    /**
+     * Gets or sets the runbook draft parameters.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,RunbookParameterArgs>> parameters;
 

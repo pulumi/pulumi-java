@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A node-attached disk resource. Next ID: 8;
+ */
 public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AttachedDiskResponse Empty = new AttachedDiskResponse();
 
+    /**
+     * The mode in which to attach this disk. If not specified, the default is READ_WRITE mode. Only applicable to data_disks.
+     */
     @InputImport(name="mode", required=true)
     private final String mode;
 
@@ -19,6 +25,9 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
         return this.mode;
     }
 
+    /**
+     * Specifies the full path to an existing disk. For example: "projects/my-project/zones/us-central1-c/disks/my-disk".
+     */
     @InputImport(name="sourceDisk", required=true)
     private final String sourceDisk;
 

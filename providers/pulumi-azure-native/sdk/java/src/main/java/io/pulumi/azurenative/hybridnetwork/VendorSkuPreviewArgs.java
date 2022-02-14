@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VendorSkuPreviewArgs Empty = new VendorSkuPreviewArgs();
 
+    /**
+     * Preview subscription ID.
+     */
     @InputImport(name="previewSubscription")
     private final @Nullable Input<String> previewSubscription;
 
@@ -21,6 +27,9 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
         return this.previewSubscription == null ? Input.empty() : this.previewSubscription;
     }
 
+    /**
+     * The name of the vendor sku.
+     */
     @InputImport(name="skuName", required=true)
     private final Input<String> skuName;
 
@@ -28,6 +37,9 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
         return this.skuName;
     }
 
+    /**
+     * The name of the vendor.
+     */
     @InputImport(name="vendorName", required=true)
     private final Input<String> vendorName;
 

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An email receiver.
+ */
 public final class EmailReceiverArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EmailReceiverArgs Empty = new EmailReceiverArgs();
 
+    /**
+     * The email address of this receiver.
+     */
     @InputImport(name="emailAddress", required=true)
     private final Input<String> emailAddress;
 
@@ -22,6 +28,9 @@ public final class EmailReceiverArgs extends io.pulumi.resources.ResourceArgs {
         return this.emailAddress;
     }
 
+    /**
+     * The name of the email receiver. Names must be unique across all receivers within an action group.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -29,6 +38,9 @@ public final class EmailReceiverArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * Indicates whether to use common alert schema.
+     */
     @InputImport(name="useCommonAlertSchema")
     private final @Nullable Input<Boolean> useCommonAlertSchema;
 

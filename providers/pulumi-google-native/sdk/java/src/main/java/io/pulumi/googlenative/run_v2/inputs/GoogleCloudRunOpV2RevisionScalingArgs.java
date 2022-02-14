@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings for revision-level scaling settings.
+ */
 public final class GoogleCloudRunOpV2RevisionScalingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudRunOpV2RevisionScalingArgs Empty = new GoogleCloudRunOpV2RevisionScalingArgs();
 
+    /**
+     * Maximum number of serving instances that this resource should have.
+     */
     @InputImport(name="maxInstanceCount")
     private final @Nullable Input<Integer> maxInstanceCount;
 
@@ -21,6 +27,9 @@ public final class GoogleCloudRunOpV2RevisionScalingArgs extends io.pulumi.resou
         return this.maxInstanceCount == null ? Input.empty() : this.maxInstanceCount;
     }
 
+    /**
+     * Minimum number of serving instances that this resource should have.
+     */
     @InputImport(name="minInstanceCount")
     private final @Nullable Input<Integer> minInstanceCount;
 

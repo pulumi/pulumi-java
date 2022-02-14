@@ -12,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationGatewayUrlConfigurationResponse {
+/**
+ * Url path which user has provided for url rewrite. Null means no path will be updated. Default value is null.
+ */
     private final @Nullable String modifiedPath;
+/**
+ * Query string which user has provided for url rewrite. Null means no query string will be updated. Default value is null.
+ */
     private final @Nullable String modifiedQueryString;
+/**
+ * If set as true, it will re-evaluate the url path map provided in path based request routing rules using modified path. Default value is false.
+ */
     private final @Nullable Boolean reroute;
 
     @OutputCustomType.Constructor({"modifiedPath","modifiedQueryString","reroute"})
@@ -26,12 +35,21 @@ public final class ApplicationGatewayUrlConfigurationResponse {
         this.reroute = reroute;
     }
 
+/**
+ * Url path which user has provided for url rewrite. Null means no path will be updated. Default value is null.
+ */
     public Optional<String> getModifiedPath() {
         return Optional.ofNullable(this.modifiedPath);
     }
+/**
+ * Query string which user has provided for url rewrite. Null means no query string will be updated. Default value is null.
+ */
     public Optional<String> getModifiedQueryString() {
         return Optional.ofNullable(this.modifiedQueryString);
     }
+/**
+ * If set as true, it will re-evaluate the url path map provided in path based request routing rules using modified path. Default value is false.
+ */
     public Optional<Boolean> getReroute() {
         return Optional.ofNullable(this.reroute);
     }

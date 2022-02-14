@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The Map account key to use for signing.
+ */
     @EnumType
     public enum SigningKey {
+/**
+ * 
+ */
         PrimaryKey("primaryKey"),
+/**
+ * 
+ */
         SecondaryKey("secondaryKey");
 
         private final String value;

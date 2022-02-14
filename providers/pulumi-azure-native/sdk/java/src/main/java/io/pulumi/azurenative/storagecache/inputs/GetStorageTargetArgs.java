@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetStorageTargetArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetStorageTargetArgs Empty = new GetStorageTargetArgs();
 
+    /**
+     * Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.
+     */
     @InputImport(name="cacheName", required=true)
     private final String cacheName;
 
@@ -19,6 +25,9 @@ public final class GetStorageTargetArgs extends io.pulumi.resources.InvokeArgs {
         return this.cacheName;
     }
 
+    /**
+     * Target resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetStorageTargetArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of Storage Target.
+     */
     @InputImport(name="storageTargetName", required=true)
     private final String storageTargetName;
 

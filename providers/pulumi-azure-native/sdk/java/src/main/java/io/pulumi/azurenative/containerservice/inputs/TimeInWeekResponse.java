@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Time in a week.
+ */
 public final class TimeInWeekResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TimeInWeekResponse Empty = new TimeInWeekResponse();
 
+    /**
+     * A day in a week.
+     */
     @InputImport(name="day")
     private final @Nullable String day;
 
@@ -23,6 +29,9 @@ public final class TimeInWeekResponse extends io.pulumi.resources.InvokeArgs {
         return this.day == null ? Optional.empty() : Optional.ofNullable(this.day);
     }
 
+    /**
+     * hour slots in a day.
+     */
     @InputImport(name="hourSlots")
     private final @Nullable List<Integer> hourSlots;
 

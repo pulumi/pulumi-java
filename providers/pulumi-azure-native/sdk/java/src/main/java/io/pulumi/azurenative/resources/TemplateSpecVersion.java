@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.resources;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.resources.TemplateSpecVersionArgs;
 import io.pulumi.azurenative.resources.outputs.LinkedTemplateArtifactResponse;
 import io.pulumi.azurenative.resources.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
@@ -18,69 +17,257 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Template Spec Version object.
+API Version: 2021-05-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### TemplateSpecVersionsCreateUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var templateSpecVersion = new AzureNative.Resources.TemplateSpecVersion("templateSpecVersion", new AzureNative.Resources.TemplateSpecVersionArgs
+        {
+            Description = "This is version v1.0 of our template content",
+            Location = "eastus",
+            MainTemplate = 
+            {
+                { "$schema", "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#" },
+                { "contentVersion", "1.0.0.0" },
+                { "parameters",  },
+                { "resources", {} },
+            },
+            ResourceGroupName = "templateSpecRG",
+            TemplateSpecName = "simpleTemplateSpec",
+            TemplateSpecVersion = "v1.0",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	"fmt"
+
+	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := resources.NewTemplateSpecVersion(ctx, "templateSpecVersion", &resources.TemplateSpecVersionArgs{
+			Description: pulumi.String("This is version v1.0 of our template content"),
+			Location:    pulumi.String("eastus"),
+			MainTemplate: pulumi.Any{
+				Fmt.Sprintf("%v%v", "$", "schema"): "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+				ContentVersion:                     "1.0.0.0",
+				Parameters:                         nil,
+				Resources:                          []interface{}{},
+			},
+			ResourceGroupName:   pulumi.String("templateSpecRG"),
+			TemplateSpecName:    pulumi.String("simpleTemplateSpec"),
+			TemplateSpecVersion: pulumi.String("v1.0"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const templateSpecVersion = new azure_native.resources.TemplateSpecVersion("templateSpecVersion", {
+    description: "This is version v1.0 of our template content",
+    location: "eastus",
+    mainTemplate: {
+        `$schema`: "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+        contentVersion: "1.0.0.0",
+        parameters: {},
+        resources: [],
+    },
+    resourceGroupName: "templateSpecRG",
+    templateSpecName: "simpleTemplateSpec",
+    templateSpecVersion: "v1.0",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+template_spec_version = azure_native.resources.TemplateSpecVersion("templateSpecVersion",
+    description="This is version v1.0 of our template content",
+    location="eastus",
+    main_template={
+        "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+        "contentVersion": "1.0.0.0",
+        "parameters": {},
+        "resources": [],
+    },
+    resource_group_name="templateSpecRG",
+    template_spec_name="simpleTemplateSpec",
+    template_spec_version="v1.0")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:resources:TemplateSpecVersion v1.0 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/templateSpecRG/providers/Microsoft.Resources/templateSpecs/simpleTemplateSpec/versions/v1.0 
+```
+
+ */
 @ResourceType(type="azure-native:resources:TemplateSpecVersion")
 public class TemplateSpecVersion extends io.pulumi.resources.CustomResource {
+    /**
+     * Template Spec version description.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Template Spec version description.
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * An array of linked template artifacts.
+     */
     @OutputExport(name="linkedTemplates", type=List.class, parameters={LinkedTemplateArtifactResponse.class})
     private Output</* @Nullable */ List<LinkedTemplateArtifactResponse>> linkedTemplates;
 
+    /**
+     * @return An array of linked template artifacts.
+     */
     public Output</* @Nullable */ List<LinkedTemplateArtifactResponse>> getLinkedTemplates() {
         return this.linkedTemplates;
     }
+    /**
+     * The location of the Template Spec Version. It must match the location of the parent Template Spec.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The location of the Template Spec Version. It must match the location of the parent Template Spec.
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The main Azure Resource Manager template content.
+     */
     @OutputExport(name="mainTemplate", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> mainTemplate;
 
+    /**
+     * @return The main Azure Resource Manager template content.
+     */
     public Output</* @Nullable */ Object> getMainTemplate() {
         return this.mainTemplate;
     }
+    /**
+     * The version metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
+     */
     @OutputExport(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
+    /**
+     * @return The version metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
+     */
     public Output</* @Nullable */ Object> getMetadata() {
         return this.metadata;
     }
+    /**
+     * Name of this resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of this resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Type of this resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of this resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The Azure Resource Manager template UI definition content.
+     */
     @OutputExport(name="uiFormDefinition", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> uiFormDefinition;
 
+    /**
+     * @return The Azure Resource Manager template UI definition content.
+     */
     public Output</* @Nullable */ Object> getUiFormDefinition() {
         return this.uiFormDefinition;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public TemplateSpecVersion(String name, TemplateSpecVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:resources:TemplateSpecVersion", name, args == null ? TemplateSpecVersionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -101,6 +288,14 @@ public class TemplateSpecVersion extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static TemplateSpecVersion get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TemplateSpecVersion(name, id, options);
     }

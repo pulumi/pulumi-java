@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Linked server Id
+ */
 public final class RedisLinkedServerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RedisLinkedServerResponse Empty = new RedisLinkedServerResponse();
 
+    /**
+     * Linked server Id.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

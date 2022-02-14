@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetSavedSearchArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSavedSearchArgs Empty = new GetSavedSearchArgs();
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class GetSavedSearchArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The id of the saved search.
+     */
     @InputImport(name="savedSearchId", required=true)
     private final String savedSearchId;
 
@@ -26,6 +35,9 @@ public final class GetSavedSearchArgs extends io.pulumi.resources.InvokeArgs {
         return this.savedSearchId;
     }
 
+    /**
+     * The name of the workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

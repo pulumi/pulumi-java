@@ -17,10 +17,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Firewall Policy Filter Rule.
+ */
 public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FirewallPolicyFilterRuleResponse Empty = new FirewallPolicyFilterRuleResponse();
 
+    /**
+     * The action type of a Filter rule.
+     */
     @InputImport(name="action")
     private final @Nullable FirewallPolicyFilterRuleActionResponse action;
 
@@ -28,6 +34,9 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
+    /**
+     * The name of the rule.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -35,6 +44,9 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Priority of the Firewall Policy Rule resource.
+     */
     @InputImport(name="priority")
     private final @Nullable Integer priority;
 
@@ -42,6 +54,9 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
+    /**
+     * Collection of rule conditions used by a rule.
+     */
     @InputImport(name="ruleConditions")
     private final @Nullable List<Object> ruleConditions;
 
@@ -49,6 +64,10 @@ public final class FirewallPolicyFilterRuleResponse extends io.pulumi.resources.
         return this.ruleConditions == null ? List.of() : this.ruleConditions;
     }
 
+    /**
+     * The type of the rule.
+Expected value is 'FirewallPolicyFilterRule'.
+     */
     @InputImport(name="ruleType", required=true)
     private final String ruleType;
 

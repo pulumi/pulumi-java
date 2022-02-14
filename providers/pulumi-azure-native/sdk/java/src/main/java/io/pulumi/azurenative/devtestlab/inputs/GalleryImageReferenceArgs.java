@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The reference information for an Azure Marketplace image.
+ */
 public final class GalleryImageReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GalleryImageReferenceArgs Empty = new GalleryImageReferenceArgs();
 
+    /**
+     * The offer of the gallery image.
+     */
     @InputImport(name="offer")
     private final @Nullable Input<String> offer;
 
@@ -21,6 +27,9 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
         return this.offer == null ? Input.empty() : this.offer;
     }
 
+    /**
+     * The OS type of the gallery image.
+     */
     @InputImport(name="osType")
     private final @Nullable Input<String> osType;
 
@@ -28,6 +37,9 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
         return this.osType == null ? Input.empty() : this.osType;
     }
 
+    /**
+     * The publisher of the gallery image.
+     */
     @InputImport(name="publisher")
     private final @Nullable Input<String> publisher;
 
@@ -35,6 +47,9 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
         return this.publisher == null ? Input.empty() : this.publisher;
     }
 
+    /**
+     * The SKU of the gallery image.
+     */
     @InputImport(name="sku")
     private final @Nullable Input<String> sku;
 
@@ -42,6 +57,9 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * The version of the gallery image.
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

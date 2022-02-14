@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProjectArgs Empty = new ProjectArgs();
 
+    /**
+     * For optimistic concurrency control.
+     */
     @InputImport(name="eTag")
     private final @Nullable Input<String> eTag;
 
@@ -23,6 +29,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.eTag == null ? Input.empty() : this.eTag;
     }
 
+    /**
+     * Azure location in which project is created.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -30,6 +39,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of the Azure Migrate project.
+     */
     @InputImport(name="projectName")
     private final @Nullable Input<String> projectName;
 
@@ -37,6 +49,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.projectName == null ? Input.empty() : this.projectName;
     }
 
+    /**
+     * Properties of the project.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<ProjectPropertiesArgs> properties;
 
@@ -44,6 +59,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Name of the Azure Resource Group that project is part of.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -51,6 +69,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Tags provided by Azure Tagging service.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Object> tags;
 

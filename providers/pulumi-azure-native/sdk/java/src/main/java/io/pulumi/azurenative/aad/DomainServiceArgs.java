@@ -19,10 +19,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainServiceArgs Empty = new DomainServiceArgs();
 
+    /**
+     * Domain Configuration Type
+     */
     @InputImport(name="domainConfigurationType")
     private final @Nullable Input<String> domainConfigurationType;
 
@@ -30,6 +36,9 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainConfigurationType == null ? Input.empty() : this.domainConfigurationType;
     }
 
+    /**
+     * The name of the Azure domain that the user would like to deploy Domain Services to.
+     */
     @InputImport(name="domainName")
     private final @Nullable Input<String> domainName;
 
@@ -37,6 +46,9 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainName == null ? Input.empty() : this.domainName;
     }
 
+    /**
+     * DomainSecurity Settings
+     */
     @InputImport(name="domainSecuritySettings")
     private final @Nullable Input<DomainSecuritySettingsArgs> domainSecuritySettings;
 
@@ -44,6 +56,9 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainSecuritySettings == null ? Input.empty() : this.domainSecuritySettings;
     }
 
+    /**
+     * The name of the domain service.
+     */
     @InputImport(name="domainServiceName")
     private final @Nullable Input<String> domainServiceName;
 
@@ -51,6 +66,9 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainServiceName == null ? Input.empty() : this.domainServiceName;
     }
 
+    /**
+     * Enabled or Disabled flag to turn on Group-based filtered sync
+     */
     @InputImport(name="filteredSync")
     private final @Nullable Input<Either<String,FilteredSync>> filteredSync;
 
@@ -58,6 +76,9 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.filteredSync == null ? Input.empty() : this.filteredSync;
     }
 
+    /**
+     * Secure LDAP Settings
+     */
     @InputImport(name="ldapsSettings")
     private final @Nullable Input<LdapsSettingsArgs> ldapsSettings;
 
@@ -65,6 +86,9 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.ldapsSettings == null ? Input.empty() : this.ldapsSettings;
     }
 
+    /**
+     * Resource location
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -72,6 +96,9 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Notification Settings
+     */
     @InputImport(name="notificationSettings")
     private final @Nullable Input<NotificationSettingsArgs> notificationSettings;
 
@@ -79,6 +106,9 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.notificationSettings == null ? Input.empty() : this.notificationSettings;
     }
 
+    /**
+     * List of ReplicaSets
+     */
     @InputImport(name="replicaSets")
     private final @Nullable Input<List<ReplicaSetArgs>> replicaSets;
 
@@ -86,6 +116,9 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.replicaSets == null ? Input.empty() : this.replicaSets;
     }
 
+    /**
+     * Resource Forest Settings
+     */
     @InputImport(name="resourceForestSettings")
     private final @Nullable Input<ResourceForestSettingsArgs> resourceForestSettings;
 
@@ -93,6 +126,9 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceForestSettings == null ? Input.empty() : this.resourceForestSettings;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -100,6 +136,9 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Sku Type
+     */
     @InputImport(name="sku")
     private final @Nullable Input<String> sku;
 
@@ -107,6 +146,9 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Resource tags
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

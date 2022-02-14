@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Encoding of a text stream. For example, closed captions or subtitles.
+ */
 public final class TextStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TextStreamArgs Empty = new TextStreamArgs();
 
+    /**
+     * The codec for this text stream. The default is `webvtt`. Supported text codecs: - `srt` - `ttml` - `cea608` - `cea708` - `webvtt`
+     */
     @InputImport(name="codec")
     private final @Nullable Input<String> codec;
 
@@ -23,6 +29,9 @@ public final class TextStreamArgs extends io.pulumi.resources.ResourceArgs {
         return this.codec == null ? Input.empty() : this.codec;
     }
 
+    /**
+     * The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
+     */
     @InputImport(name="mapping")
     private final @Nullable Input<List<TextMappingArgs>> mapping;
 

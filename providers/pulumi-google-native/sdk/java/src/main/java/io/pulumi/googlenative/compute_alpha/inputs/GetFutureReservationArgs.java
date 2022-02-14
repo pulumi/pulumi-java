@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetFutureReservationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFutureReservationArgs Empty = new GetFutureReservationArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="futureReservation", required=true)
     private final String futureReservation;
 
@@ -21,6 +27,9 @@ public final class GetFutureReservationArgs extends io.pulumi.resources.InvokeAr
         return this.futureReservation;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -28,6 +37,9 @@ public final class GetFutureReservationArgs extends io.pulumi.resources.InvokeAr
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="zone", required=true)
     private final String zone;
 

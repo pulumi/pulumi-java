@@ -18,10 +18,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure File Storage linked service.
+ */
 public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureFileStorageLinkedServiceResponse Empty = new AzureFileStorageLinkedServiceResponse();
 
+    /**
+     * The Azure key vault secret reference of accountKey in connection string.
+     */
     @InputImport(name="accountKey")
     private final @Nullable AzureKeyVaultSecretReferenceResponse accountKey;
 
@@ -29,6 +35,9 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
         return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
     }
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -36,6 +45,9 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -43,6 +55,9 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
+    /**
+     * The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
+     */
     @InputImport(name="connectionString")
     private final @Nullable Object connectionString;
 
@@ -50,6 +65,9 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -57,6 +75,9 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -64,6 +85,9 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
+    /**
+     * The azure file share name. It is required when auth with accountKey/sasToken. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="fileShare")
     private final @Nullable Object fileShare;
 
@@ -71,6 +95,9 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
         return this.fileShare == null ? Optional.empty() : Optional.ofNullable(this.fileShare);
     }
 
+    /**
+     * Host name of the server. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="host")
     private final @Nullable Object host;
 
@@ -78,6 +105,9 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
         return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -85,6 +115,9 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * Password to logon the server.
+     */
     @InputImport(name="password")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
@@ -92,6 +125,9 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
         return this.password == null ? null : this.password;
     }
 
+    /**
+     * The Azure key vault secret reference of sasToken in sas uri.
+     */
     @InputImport(name="sasToken")
     private final @Nullable AzureKeyVaultSecretReferenceResponse sasToken;
 
@@ -99,6 +135,9 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
         return this.sasToken == null ? Optional.empty() : Optional.ofNullable(this.sasToken);
     }
 
+    /**
+     * SAS URI of the Azure File resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
+     */
     @InputImport(name="sasUri")
     private final @Nullable Object sasUri;
 
@@ -106,6 +145,9 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
         return this.sasUri == null ? Optional.empty() : Optional.ofNullable(this.sasUri);
     }
 
+    /**
+     * The azure file share snapshot version. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="snapshot")
     private final @Nullable Object snapshot;
 
@@ -113,6 +155,10 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
         return this.snapshot == null ? Optional.empty() : Optional.ofNullable(this.snapshot);
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'AzureFileStorage'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -120,6 +166,9 @@ public final class AzureFileStorageLinkedServiceResponse extends io.pulumi.resou
         return this.type;
     }
 
+    /**
+     * User ID to logon the server. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="userId")
     private final @Nullable Object userId;
 

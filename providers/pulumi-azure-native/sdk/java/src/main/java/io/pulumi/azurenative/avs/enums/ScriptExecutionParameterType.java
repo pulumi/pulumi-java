@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of execution parameter
+ */
     @EnumType
     public enum ScriptExecutionParameterType {
+/**
+ * 
+ */
         Value("Value"),
+/**
+ * 
+ */
         SecureValue("SecureValue"),
+/**
+ * 
+ */
         Credential("Credential");
 
         private final String value;

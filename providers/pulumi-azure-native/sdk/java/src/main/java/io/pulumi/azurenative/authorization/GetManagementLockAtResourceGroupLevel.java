@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagementLockAtResourceGroupLevel {
+/**
+ * The lock information.
+API Version: 2017-04-01.
+ *
+ * The lock information.
+ */
     public static CompletableFuture<GetManagementLockAtResourceGroupLevelResult> invokeAsync(GetManagementLockAtResourceGroupLevelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getManagementLockAtResourceGroupLevel", TypeShape.of(GetManagementLockAtResourceGroupLevelResult.class), args == null ? GetManagementLockAtResourceGroupLevelArgs.Empty : args, Utilities.withVersion(options));
     }

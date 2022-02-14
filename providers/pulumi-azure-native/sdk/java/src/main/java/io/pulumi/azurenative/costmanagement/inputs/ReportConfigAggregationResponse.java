@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The aggregation expression to be used in the report.
+ */
 public final class ReportConfigAggregationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReportConfigAggregationResponse Empty = new ReportConfigAggregationResponse();
 
+    /**
+     * The name of the aggregation function to use.
+     */
     @InputImport(name="function", required=true)
     private final String function;
 
@@ -19,6 +25,9 @@ public final class ReportConfigAggregationResponse extends io.pulumi.resources.I
         return this.function;
     }
 
+    /**
+     * The name of the column to aggregate.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

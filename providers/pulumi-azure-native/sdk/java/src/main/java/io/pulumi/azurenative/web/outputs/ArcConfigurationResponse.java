@@ -12,11 +12,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ArcConfigurationResponse {
+/**
+ * 
+ */
     private final @Nullable String artifactStorageAccessMode;
+/**
+ * 
+ */
     private final @Nullable String artifactStorageClassName;
+/**
+ * 
+ */
     private final @Nullable String artifactStorageMountPath;
+/**
+ * 
+ */
     private final @Nullable String artifactStorageNodeName;
+/**
+ * 
+ */
     private final @Nullable String artifactsStorageType;
+/**
+ * 
+ */
     private final @Nullable FrontEndConfigurationResponse frontEndServiceConfiguration;
 
     @OutputCustomType.Constructor({"artifactStorageAccessMode","artifactStorageClassName","artifactStorageMountPath","artifactStorageNodeName","artifactsStorageType","frontEndServiceConfiguration"})
@@ -35,21 +53,39 @@ public final class ArcConfigurationResponse {
         this.frontEndServiceConfiguration = frontEndServiceConfiguration;
     }
 
+/**
+ * 
+ */
     public Optional<String> getArtifactStorageAccessMode() {
         return Optional.ofNullable(this.artifactStorageAccessMode);
     }
+/**
+ * 
+ */
     public Optional<String> getArtifactStorageClassName() {
         return Optional.ofNullable(this.artifactStorageClassName);
     }
+/**
+ * 
+ */
     public Optional<String> getArtifactStorageMountPath() {
         return Optional.ofNullable(this.artifactStorageMountPath);
     }
+/**
+ * 
+ */
     public Optional<String> getArtifactStorageNodeName() {
         return Optional.ofNullable(this.artifactStorageNodeName);
     }
+/**
+ * 
+ */
     public Optional<String> getArtifactsStorageType() {
         return Optional.ofNullable(this.artifactsStorageType);
     }
+/**
+ * 
+ */
     public Optional<FrontEndConfigurationResponse> getFrontEndServiceConfiguration() {
         return Optional.ofNullable(this.frontEndServiceConfiguration);
     }

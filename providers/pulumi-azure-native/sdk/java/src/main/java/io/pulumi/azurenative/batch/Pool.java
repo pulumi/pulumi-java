@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.batch;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.batch.PoolArgs;
 import io.pulumi.azurenative.batch.outputs.ApplicationPackageReferenceResponse;
 import io.pulumi.azurenative.batch.outputs.AutoScaleRunResponse;
 import io.pulumi.azurenative.batch.outputs.BatchPoolIdentityResponse;
@@ -28,183 +27,2249 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Contains information about a pool.
+API Version: 2021-01-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### CreatePool - Custom Image
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new AzureNative.Batch.Pool("pool", new AzureNative.Batch.PoolArgs
+        {
+            AccountName = "sampleacct",
+            DeploymentConfiguration = new AzureNative.Batch.Inputs.DeploymentConfigurationArgs
+            {
+                VirtualMachineConfiguration = new AzureNative.Batch.Inputs.VirtualMachineConfigurationArgs
+                {
+                    ImageReference = new AzureNative.Batch.Inputs.ImageReferenceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
+                    },
+                    NodeAgentSkuId = "batch.node.ubuntu 18.04",
+                },
+            },
+            PoolName = "testpool",
+            ResourceGroupName = "default-azurebatch-japaneast",
+            VmSize = "STANDARD_D4",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
+			AccountName: pulumi.String("sampleacct"),
+			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
+				VirtualMachineConfiguration: &batch.VirtualMachineConfigurationArgs{
+					ImageReference: &batch.ImageReferenceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1"),
+					},
+					NodeAgentSkuId: pulumi.String("batch.node.ubuntu 18.04"),
+				},
+			},
+			PoolName:          pulumi.String("testpool"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+			VmSize:            pulumi.String("STANDARD_D4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const pool = new azure_native.batch.Pool("pool", {
+    accountName: "sampleacct",
+    deploymentConfiguration: {
+        virtualMachineConfiguration: {
+            imageReference: {
+                id: "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
+            },
+            nodeAgentSkuId: "batch.node.ubuntu 18.04",
+        },
+    },
+    poolName: "testpool",
+    resourceGroupName: "default-azurebatch-japaneast",
+    vmSize: "STANDARD_D4",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+pool = azure_native.batch.Pool("pool",
+    account_name="sampleacct",
+    deployment_configuration=azure_native.batch.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_native.batch.VirtualMachineConfigurationArgs(
+            image_reference=azure_native.batch.ImageReferenceArgs(
+                id="/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
+            ),
+            node_agent_sku_id="batch.node.ubuntu 18.04",
+        ),
+    ),
+    pool_name="testpool",
+    resource_group_name="default-azurebatch-japaneast",
+    vm_size="STANDARD_D4")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### CreatePool - Full CloudServiceConfiguration
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new AzureNative.Batch.Pool("pool", new AzureNative.Batch.PoolArgs
+        {
+            AccountName = "sampleacct",
+            ApplicationLicenses = 
+            {
+                "app-license0",
+                "app-license1",
+            },
+            ApplicationPackages = 
+            {
+                new AzureNative.Batch.Inputs.ApplicationPackageReferenceArgs
+                {
+                    Id = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/applications/app_1234",
+                    Version = "asdf",
+                },
+            },
+            Certificates = 
+            {
+                new AzureNative.Batch.Inputs.CertificateReferenceArgs
+                {
+                    Id = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/certificates/sha1-1234567",
+                    StoreLocation = "LocalMachine",
+                    StoreName = "MY",
+                    Visibility = 
+                    {
+                        "RemoteUser",
+                    },
+                },
+            },
+            DeploymentConfiguration = new AzureNative.Batch.Inputs.DeploymentConfigurationArgs
+            {
+                CloudServiceConfiguration = new AzureNative.Batch.Inputs.CloudServiceConfigurationArgs
+                {
+                    OsFamily = "4",
+                    OsVersion = "WA-GUEST-OS-4.45_201708-01",
+                },
+            },
+            DisplayName = "my-pool-name",
+            InterNodeCommunication = "Enabled",
+            Metadata = 
+            {
+                new AzureNative.Batch.Inputs.MetadataItemArgs
+                {
+                    Name = "metadata-1",
+                    Value = "value-1",
+                },
+                new AzureNative.Batch.Inputs.MetadataItemArgs
+                {
+                    Name = "metadata-2",
+                    Value = "value-2",
+                },
+            },
+            NetworkConfiguration = new AzureNative.Batch.Inputs.NetworkConfigurationArgs
+            {
+                PublicIPAddressConfiguration = new AzureNative.Batch.Inputs.PublicIPAddressConfigurationArgs
+                {
+                    IpAddressIds = 
+                    {
+                        "/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135",
+                        "/subscriptions/subid2/resourceGroups/rg24/providers/Microsoft.Network/publicIPAddresses/ip268",
+                    },
+                    Provision = "UserManaged",
+                },
+                SubnetId = "/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
+            },
+            PoolName = "testpool",
+            ResourceGroupName = "default-azurebatch-japaneast",
+            ScaleSettings = new AzureNative.Batch.Inputs.ScaleSettingsArgs
+            {
+                FixedScale = new AzureNative.Batch.Inputs.FixedScaleSettingsArgs
+                {
+                    NodeDeallocationOption = "TaskCompletion",
+                    ResizeTimeout = "PT8M",
+                    TargetDedicatedNodes = 6,
+                    TargetLowPriorityNodes = 28,
+                },
+            },
+            StartTask = new AzureNative.Batch.Inputs.StartTaskArgs
+            {
+                CommandLine = "cmd /c SET",
+                EnvironmentSettings = 
+                {
+                    new AzureNative.Batch.Inputs.EnvironmentSettingArgs
+                    {
+                        Name = "MYSET",
+                        Value = "1234",
+                    },
+                },
+                MaxTaskRetryCount = 6,
+                ResourceFiles = 
+                {
+                    new AzureNative.Batch.Inputs.ResourceFileArgs
+                    {
+                        FileMode = "777",
+                        FilePath = "c:\\temp\\gohere",
+                        HttpUrl = "https://testaccount.blob.core.windows.net/example-blob-file",
+                    },
+                },
+                UserIdentity = new AzureNative.Batch.Inputs.UserIdentityArgs
+                {
+                    AutoUser = new AzureNative.Batch.Inputs.AutoUserSpecificationArgs
+                    {
+                        ElevationLevel = "Admin",
+                        Scope = "Pool",
+                    },
+                },
+                WaitForSuccess = true,
+            },
+            TaskSchedulingPolicy = new AzureNative.Batch.Inputs.TaskSchedulingPolicyArgs
+            {
+                NodeFillType = "Pack",
+            },
+            TaskSlotsPerNode = 13,
+            UserAccounts = 
+            {
+                new AzureNative.Batch.Inputs.UserAccountArgs
+                {
+                    ElevationLevel = "Admin",
+                    LinuxUserConfiguration = new AzureNative.Batch.Inputs.LinuxUserConfigurationArgs
+                    {
+                        Gid = 4567,
+                        SshPrivateKey = "sshprivatekeyvalue",
+                        Uid = 1234,
+                    },
+                    Name = "username1",
+                    Password = "<ExamplePassword>",
+                },
+            },
+            VmSize = "STANDARD_D4",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
+			AccountName: pulumi.String("sampleacct"),
+			ApplicationLicenses: pulumi.StringArray{
+				pulumi.String("app-license0"),
+				pulumi.String("app-license1"),
+			},
+			ApplicationPackages: []batch.ApplicationPackageReferenceArgs{
+				&batch.ApplicationPackageReferenceArgs{
+					Id:      pulumi.String("/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/applications/app_1234"),
+					Version: pulumi.String("asdf"),
+				},
+			},
+			Certificates: []batch.CertificateReferenceArgs{
+				&batch.CertificateReferenceArgs{
+					Id:            pulumi.String("/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/certificates/sha1-1234567"),
+					StoreLocation: "LocalMachine",
+					StoreName:     pulumi.String("MY"),
+					Visibility: batch.CertificateVisibilityArray{
+						"RemoteUser",
+					},
+				},
+			},
+			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
+				CloudServiceConfiguration: &batch.CloudServiceConfigurationArgs{
+					OsFamily:  pulumi.String("4"),
+					OsVersion: pulumi.String("WA-GUEST-OS-4.45_201708-01"),
+				},
+			},
+			DisplayName:            pulumi.String("my-pool-name"),
+			InterNodeCommunication: "Enabled",
+			Metadata: []batch.MetadataItemArgs{
+				&batch.MetadataItemArgs{
+					Name:  pulumi.String("metadata-1"),
+					Value: pulumi.String("value-1"),
+				},
+				&batch.MetadataItemArgs{
+					Name:  pulumi.String("metadata-2"),
+					Value: pulumi.String("value-2"),
+				},
+			},
+			NetworkConfiguration: &batch.NetworkConfigurationArgs{
+				PublicIPAddressConfiguration: &batch.PublicIPAddressConfigurationArgs{
+					IpAddressIds: pulumi.StringArray{
+						pulumi.String("/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135"),
+						pulumi.String("/subscriptions/subid2/resourceGroups/rg24/providers/Microsoft.Network/publicIPAddresses/ip268"),
+					},
+					Provision: "UserManaged",
+				},
+				SubnetId: pulumi.String("/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123"),
+			},
+			PoolName:          pulumi.String("testpool"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+			ScaleSettings: &batch.ScaleSettingsArgs{
+				FixedScale: &batch.FixedScaleSettingsArgs{
+					NodeDeallocationOption: "TaskCompletion",
+					ResizeTimeout:          pulumi.String("PT8M"),
+					TargetDedicatedNodes:   pulumi.Int(6),
+					TargetLowPriorityNodes: pulumi.Int(28),
+				},
+			},
+			StartTask: &batch.StartTaskArgs{
+				CommandLine: pulumi.String("cmd /c SET"),
+				EnvironmentSettings: batch.EnvironmentSettingArray{
+					&batch.EnvironmentSettingArgs{
+						Name:  pulumi.String("MYSET"),
+						Value: pulumi.String("1234"),
+					},
+				},
+				MaxTaskRetryCount: pulumi.Int(6),
+				ResourceFiles: batch.ResourceFileArray{
+					&batch.ResourceFileArgs{
+						FileMode: pulumi.String("777"),
+						FilePath: pulumi.String("c:\\temp\\gohere"),
+						HttpUrl:  pulumi.String("https://testaccount.blob.core.windows.net/example-blob-file"),
+					},
+				},
+				UserIdentity: &batch.UserIdentityArgs{
+					AutoUser: &batch.AutoUserSpecificationArgs{
+						ElevationLevel: "Admin",
+						Scope:          "Pool",
+					},
+				},
+				WaitForSuccess: pulumi.Bool(true),
+			},
+			TaskSchedulingPolicy: &batch.TaskSchedulingPolicyArgs{
+				NodeFillType: "Pack",
+			},
+			TaskSlotsPerNode: pulumi.Int(13),
+			UserAccounts: []batch.UserAccountArgs{
+				&batch.UserAccountArgs{
+					ElevationLevel: "Admin",
+					LinuxUserConfiguration: &batch.LinuxUserConfigurationArgs{
+						Gid:           pulumi.Int(4567),
+						SshPrivateKey: pulumi.String("sshprivatekeyvalue"),
+						Uid:           pulumi.Int(1234),
+					},
+					Name:     pulumi.String("username1"),
+					Password: pulumi.String("<ExamplePassword>"),
+				},
+			},
+			VmSize: pulumi.String("STANDARD_D4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const pool = new azure_native.batch.Pool("pool", {
+    accountName: "sampleacct",
+    applicationLicenses: [
+        "app-license0",
+        "app-license1",
+    ],
+    applicationPackages: [{
+        id: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/applications/app_1234",
+        version: "asdf",
+    }],
+    certificates: [{
+        id: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/certificates/sha1-1234567",
+        storeLocation: "LocalMachine",
+        storeName: "MY",
+        visibility: ["RemoteUser"],
+    }],
+    deploymentConfiguration: {
+        cloudServiceConfiguration: {
+            osFamily: "4",
+            osVersion: "WA-GUEST-OS-4.45_201708-01",
+        },
+    },
+    displayName: "my-pool-name",
+    interNodeCommunication: "Enabled",
+    metadata: [
+        {
+            name: "metadata-1",
+            value: "value-1",
+        },
+        {
+            name: "metadata-2",
+            value: "value-2",
+        },
+    ],
+    networkConfiguration: {
+        publicIPAddressConfiguration: {
+            ipAddressIds: [
+                "/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135",
+                "/subscriptions/subid2/resourceGroups/rg24/providers/Microsoft.Network/publicIPAddresses/ip268",
+            ],
+            provision: "UserManaged",
+        },
+        subnetId: "/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
+    },
+    poolName: "testpool",
+    resourceGroupName: "default-azurebatch-japaneast",
+    scaleSettings: {
+        fixedScale: {
+            nodeDeallocationOption: "TaskCompletion",
+            resizeTimeout: "PT8M",
+            targetDedicatedNodes: 6,
+            targetLowPriorityNodes: 28,
+        },
+    },
+    startTask: {
+        commandLine: "cmd /c SET",
+        environmentSettings: [{
+            name: "MYSET",
+            value: "1234",
+        }],
+        maxTaskRetryCount: 6,
+        resourceFiles: [{
+            fileMode: "777",
+            filePath: "c:\\temp\\gohere",
+            httpUrl: "https://testaccount.blob.core.windows.net/example-blob-file",
+        }],
+        userIdentity: {
+            autoUser: {
+                elevationLevel: "Admin",
+                scope: "Pool",
+            },
+        },
+        waitForSuccess: true,
+    },
+    taskSchedulingPolicy: {
+        nodeFillType: "Pack",
+    },
+    taskSlotsPerNode: 13,
+    userAccounts: [{
+        elevationLevel: "Admin",
+        linuxUserConfiguration: {
+            gid: 4567,
+            sshPrivateKey: "sshprivatekeyvalue",
+            uid: 1234,
+        },
+        name: "username1",
+        password: "<ExamplePassword>",
+    }],
+    vmSize: "STANDARD_D4",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+pool = azure_native.batch.Pool("pool",
+    account_name="sampleacct",
+    application_licenses=[
+        "app-license0",
+        "app-license1",
+    ],
+    application_packages=[azure_native.batch.ApplicationPackageReferenceArgs(
+        id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/applications/app_1234",
+        version="asdf",
+    )],
+    certificates=[azure_native.batch.CertificateReferenceArgs(
+        id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool/certificates/sha1-1234567",
+        store_location="LocalMachine",
+        store_name="MY",
+        visibility=["RemoteUser"],
+    )],
+    deployment_configuration=azure_native.batch.DeploymentConfigurationArgs(
+        cloud_service_configuration=azure_native.batch.CloudServiceConfigurationArgs(
+            os_family="4",
+            os_version="WA-GUEST-OS-4.45_201708-01",
+        ),
+    ),
+    display_name="my-pool-name",
+    inter_node_communication="Enabled",
+    metadata=[
+        azure_native.batch.MetadataItemArgs(
+            name="metadata-1",
+            value="value-1",
+        ),
+        azure_native.batch.MetadataItemArgs(
+            name="metadata-2",
+            value="value-2",
+        ),
+    ],
+    network_configuration=azure_native.batch.NetworkConfigurationArgs(
+        public_ip_address_configuration=azure_native.batch.PublicIPAddressConfigurationArgs(
+            ip_address_ids=[
+                "/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135",
+                "/subscriptions/subid2/resourceGroups/rg24/providers/Microsoft.Network/publicIPAddresses/ip268",
+            ],
+            provision="UserManaged",
+        ),
+        subnet_id="/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
+    ),
+    pool_name="testpool",
+    resource_group_name="default-azurebatch-japaneast",
+    scale_settings=azure_native.batch.ScaleSettingsArgs(
+        fixed_scale=azure_native.batch.FixedScaleSettingsArgs(
+            node_deallocation_option="TaskCompletion",
+            resize_timeout="PT8M",
+            target_dedicated_nodes=6,
+            target_low_priority_nodes=28,
+        ),
+    ),
+    start_task=azure_native.batch.StartTaskArgs(
+        command_line="cmd /c SET",
+        environment_settings=[azure_native.batch.EnvironmentSettingArgs(
+            name="MYSET",
+            value="1234",
+        )],
+        max_task_retry_count=6,
+        resource_files=[azure_native.batch.ResourceFileArgs(
+            file_mode="777",
+            file_path="c:\\temp\\gohere",
+            http_url="https://testaccount.blob.core.windows.net/example-blob-file",
+        )],
+        user_identity=azure_native.batch.UserIdentityArgs(
+            auto_user=azure_native.batch.AutoUserSpecificationArgs(
+                elevation_level="Admin",
+                scope="Pool",
+            ),
+        ),
+        wait_for_success=True,
+    ),
+    task_scheduling_policy=azure_native.batch.TaskSchedulingPolicyArgs(
+        node_fill_type="Pack",
+    ),
+    task_slots_per_node=13,
+    user_accounts=[azure_native.batch.UserAccountArgs(
+        elevation_level="Admin",
+        linux_user_configuration=azure_native.batch.LinuxUserConfigurationArgs(
+            gid=4567,
+            ssh_private_key="sshprivatekeyvalue",
+            uid=1234,
+        ),
+        name="username1",
+        password="<ExamplePassword>",
+    )],
+    vm_size="STANDARD_D4")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### CreatePool - Full VirtualMachineConfiguration
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new AzureNative.Batch.Pool("pool", new AzureNative.Batch.PoolArgs
+        {
+            AccountName = "sampleacct",
+            DeploymentConfiguration = new AzureNative.Batch.Inputs.DeploymentConfigurationArgs
+            {
+                VirtualMachineConfiguration = new AzureNative.Batch.Inputs.VirtualMachineConfigurationArgs
+                {
+                    DataDisks = 
+                    {
+                        new AzureNative.Batch.Inputs.DataDiskArgs
+                        {
+                            Caching = "ReadWrite",
+                            DiskSizeGB = 30,
+                            Lun = 0,
+                            StorageAccountType = "Premium_LRS",
+                        },
+                        new AzureNative.Batch.Inputs.DataDiskArgs
+                        {
+                            Caching = "None",
+                            DiskSizeGB = 200,
+                            Lun = 1,
+                            StorageAccountType = "Standard_LRS",
+                        },
+                    },
+                    DiskEncryptionConfiguration = new AzureNative.Batch.Inputs.DiskEncryptionConfigurationArgs
+                    {
+                        Targets = 
+                        {
+                            "OsDisk",
+                            "TemporaryDisk",
+                        },
+                    },
+                    ImageReference = new AzureNative.Batch.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "WindowsServer",
+                        Publisher = "MicrosoftWindowsServer",
+                        Sku = "2016-Datacenter-SmallDisk",
+                        Version = "latest",
+                    },
+                    LicenseType = "Windows_Server",
+                    NodeAgentSkuId = "batch.node.windows amd64",
+                    NodePlacementConfiguration = new AzureNative.Batch.Inputs.NodePlacementConfigurationArgs
+                    {
+                        Policy = "Zonal",
+                    },
+                    WindowsConfiguration = new AzureNative.Batch.Inputs.WindowsConfigurationArgs
+                    {
+                        EnableAutomaticUpdates = false,
+                    },
+                },
+            },
+            NetworkConfiguration = new AzureNative.Batch.Inputs.NetworkConfigurationArgs
+            {
+                EndpointConfiguration = new AzureNative.Batch.Inputs.PoolEndpointConfigurationArgs
+                {
+                    InboundNatPools = 
+                    {
+                        new AzureNative.Batch.Inputs.InboundNatPoolArgs
+                        {
+                            BackendPort = 12001,
+                            FrontendPortRangeEnd = 15100,
+                            FrontendPortRangeStart = 15000,
+                            Name = "testnat",
+                            NetworkSecurityGroupRules = 
+                            {
+                                new AzureNative.Batch.Inputs.NetworkSecurityGroupRuleArgs
+                                {
+                                    Access = "Allow",
+                                    Priority = 150,
+                                    SourceAddressPrefix = "192.100.12.45",
+                                    SourcePortRanges = 
+                                    {
+                                        "1",
+                                        "2",
+                                    },
+                                },
+                                new AzureNative.Batch.Inputs.NetworkSecurityGroupRuleArgs
+                                {
+                                    Access = "Deny",
+                                    Priority = 3500,
+                                    SourceAddressPrefix = "*",
+                                    SourcePortRanges = 
+                                    {
+                                        "*",
+                                    },
+                                },
+                            },
+                            Protocol = "TCP",
+                        },
+                    },
+                },
+            },
+            PoolName = "testpool",
+            ResourceGroupName = "default-azurebatch-japaneast",
+            ScaleSettings = new AzureNative.Batch.Inputs.ScaleSettingsArgs
+            {
+                AutoScale = new AzureNative.Batch.Inputs.AutoScaleSettingsArgs
+                {
+                    EvaluationInterval = "PT5M",
+                    Formula = "$TargetDedicatedNodes=1",
+                },
+            },
+            VmSize = "STANDARD_D4",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	"fmt"
+
+	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
+			AccountName: pulumi.String("sampleacct"),
+			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
+				VirtualMachineConfiguration: &batch.VirtualMachineConfigurationArgs{
+					DataDisks: batch.DataDiskArray{
+						&batch.DataDiskArgs{
+							Caching:            "ReadWrite",
+							DiskSizeGB:         pulumi.Int(30),
+							Lun:                pulumi.Int(0),
+							StorageAccountType: "Premium_LRS",
+						},
+						&batch.DataDiskArgs{
+							Caching:            "None",
+							DiskSizeGB:         pulumi.Int(200),
+							Lun:                pulumi.Int(1),
+							StorageAccountType: "Standard_LRS",
+						},
+					},
+					DiskEncryptionConfiguration: &batch.DiskEncryptionConfigurationArgs{
+						Targets: batch.DiskEncryptionTargetArray{
+							"OsDisk",
+							"TemporaryDisk",
+						},
+					},
+					ImageReference: &batch.ImageReferenceArgs{
+						Offer:     pulumi.String("WindowsServer"),
+						Publisher: pulumi.String("MicrosoftWindowsServer"),
+						Sku:       pulumi.String("2016-Datacenter-SmallDisk"),
+						Version:   pulumi.String("latest"),
+					},
+					LicenseType:    pulumi.String("Windows_Server"),
+					NodeAgentSkuId: pulumi.String("batch.node.windows amd64"),
+					NodePlacementConfiguration: &batch.NodePlacementConfigurationArgs{
+						Policy: "Zonal",
+					},
+					WindowsConfiguration: &batch.WindowsConfigurationArgs{
+						EnableAutomaticUpdates: pulumi.Bool(false),
+					},
+				},
+			},
+			NetworkConfiguration: &batch.NetworkConfigurationArgs{
+				EndpointConfiguration: &batch.PoolEndpointConfigurationArgs{
+					InboundNatPools: batch.InboundNatPoolArray{
+						&batch.InboundNatPoolArgs{
+							BackendPort:            pulumi.Int(12001),
+							FrontendPortRangeEnd:   pulumi.Int(15100),
+							FrontendPortRangeStart: pulumi.Int(15000),
+							Name:                   pulumi.String("testnat"),
+							NetworkSecurityGroupRules: batch.NetworkSecurityGroupRuleArray{
+								&batch.NetworkSecurityGroupRuleArgs{
+									Access:              "Allow",
+									Priority:            pulumi.Int(150),
+									SourceAddressPrefix: pulumi.String("192.100.12.45"),
+									SourcePortRanges: pulumi.StringArray{
+										pulumi.String("1"),
+										pulumi.String("2"),
+									},
+								},
+								&batch.NetworkSecurityGroupRuleArgs{
+									Access:              "Deny",
+									Priority:            pulumi.Int(3500),
+									SourceAddressPrefix: pulumi.String("*"),
+									SourcePortRanges: pulumi.StringArray{
+										pulumi.String("*"),
+									},
+								},
+							},
+							Protocol: "TCP",
+						},
+					},
+				},
+			},
+			PoolName:          pulumi.String("testpool"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+			ScaleSettings: &batch.ScaleSettingsArgs{
+				AutoScale: &batch.AutoScaleSettingsArgs{
+					EvaluationInterval: pulumi.String("PT5M"),
+					Formula:            pulumi.String(fmt.Sprintf("%v%v", "$", "TargetDedicatedNodes=1")),
+				},
+			},
+			VmSize: pulumi.String("STANDARD_D4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const pool = new azure_native.batch.Pool("pool", {
+    accountName: "sampleacct",
+    deploymentConfiguration: {
+        virtualMachineConfiguration: {
+            dataDisks: [
+                {
+                    caching: "ReadWrite",
+                    diskSizeGB: 30,
+                    lun: 0,
+                    storageAccountType: "Premium_LRS",
+                },
+                {
+                    caching: "None",
+                    diskSizeGB: 200,
+                    lun: 1,
+                    storageAccountType: "Standard_LRS",
+                },
+            ],
+            diskEncryptionConfiguration: {
+                targets: [
+                    "OsDisk",
+                    "TemporaryDisk",
+                ],
+            },
+            imageReference: {
+                offer: "WindowsServer",
+                publisher: "MicrosoftWindowsServer",
+                sku: "2016-Datacenter-SmallDisk",
+                version: "latest",
+            },
+            licenseType: "Windows_Server",
+            nodeAgentSkuId: "batch.node.windows amd64",
+            nodePlacementConfiguration: {
+                policy: "Zonal",
+            },
+            windowsConfiguration: {
+                enableAutomaticUpdates: false,
+            },
+        },
+    },
+    networkConfiguration: {
+        endpointConfiguration: {
+            inboundNatPools: [{
+                backendPort: 12001,
+                frontendPortRangeEnd: 15100,
+                frontendPortRangeStart: 15000,
+                name: "testnat",
+                networkSecurityGroupRules: [
+                    {
+                        access: "Allow",
+                        priority: 150,
+                        sourceAddressPrefix: "192.100.12.45",
+                        sourcePortRanges: [
+                            "1",
+                            "2",
+                        ],
+                    },
+                    {
+                        access: "Deny",
+                        priority: 3500,
+                        sourceAddressPrefix: "*",
+                        sourcePortRanges: ["*"],
+                    },
+                ],
+                protocol: "TCP",
+            }],
+        },
+    },
+    poolName: "testpool",
+    resourceGroupName: "default-azurebatch-japaneast",
+    scaleSettings: {
+        autoScale: {
+            evaluationInterval: "PT5M",
+            formula: `$TargetDedicatedNodes=1`,
+        },
+    },
+    vmSize: "STANDARD_D4",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+pool = azure_native.batch.Pool("pool",
+    account_name="sampleacct",
+    deployment_configuration=azure_native.batch.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_native.batch.VirtualMachineConfigurationArgs(
+            data_disks=[
+                azure_native.batch.DataDiskArgs(
+                    caching="ReadWrite",
+                    disk_size_gb=30,
+                    lun=0,
+                    storage_account_type="Premium_LRS",
+                ),
+                azure_native.batch.DataDiskArgs(
+                    caching="None",
+                    disk_size_gb=200,
+                    lun=1,
+                    storage_account_type="Standard_LRS",
+                ),
+            ],
+            disk_encryption_configuration=azure_native.batch.DiskEncryptionConfigurationArgs(
+                targets=[
+                    "OsDisk",
+                    "TemporaryDisk",
+                ],
+            ),
+            image_reference=azure_native.batch.ImageReferenceArgs(
+                offer="WindowsServer",
+                publisher="MicrosoftWindowsServer",
+                sku="2016-Datacenter-SmallDisk",
+                version="latest",
+            ),
+            license_type="Windows_Server",
+            node_agent_sku_id="batch.node.windows amd64",
+            node_placement_configuration=azure_native.batch.NodePlacementConfigurationArgs(
+                policy="Zonal",
+            ),
+            windows_configuration=azure_native.batch.WindowsConfigurationArgs(
+                enable_automatic_updates=False,
+            ),
+        ),
+    ),
+    network_configuration=azure_native.batch.NetworkConfigurationArgs(
+        endpoint_configuration=azure_native.batch.PoolEndpointConfigurationArgs(
+            inbound_nat_pools=[azure_native.batch.InboundNatPoolArgs(
+                backend_port=12001,
+                frontend_port_range_end=15100,
+                frontend_port_range_start=15000,
+                name="testnat",
+                network_security_group_rules=[
+                    azure_native.batch.NetworkSecurityGroupRuleArgs(
+                        access="Allow",
+                        priority=150,
+                        source_address_prefix="192.100.12.45",
+                        source_port_ranges=[
+                            "1",
+                            "2",
+                        ],
+                    ),
+                    azure_native.batch.NetworkSecurityGroupRuleArgs(
+                        access="Deny",
+                        priority=3500,
+                        source_address_prefix="*",
+                        source_port_ranges=["*"],
+                    ),
+                ],
+                protocol="TCP",
+            )],
+        ),
+    ),
+    pool_name="testpool",
+    resource_group_name="default-azurebatch-japaneast",
+    scale_settings=azure_native.batch.ScaleSettingsArgs(
+        auto_scale=azure_native.batch.AutoScaleSettingsArgs(
+            evaluation_interval="PT5M",
+            formula="$TargetDedicatedNodes=1",
+        ),
+    ),
+    vm_size="STANDARD_D4")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### CreatePool - Minimal CloudServiceConfiguration
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new AzureNative.Batch.Pool("pool", new AzureNative.Batch.PoolArgs
+        {
+            AccountName = "sampleacct",
+            DeploymentConfiguration = new AzureNative.Batch.Inputs.DeploymentConfigurationArgs
+            {
+                CloudServiceConfiguration = new AzureNative.Batch.Inputs.CloudServiceConfigurationArgs
+                {
+                    OsFamily = "5",
+                },
+            },
+            PoolName = "testpool",
+            ResourceGroupName = "default-azurebatch-japaneast",
+            ScaleSettings = new AzureNative.Batch.Inputs.ScaleSettingsArgs
+            {
+                FixedScale = new AzureNative.Batch.Inputs.FixedScaleSettingsArgs
+                {
+                    TargetDedicatedNodes = 3,
+                },
+            },
+            VmSize = "STANDARD_D4",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
+			AccountName: pulumi.String("sampleacct"),
+			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
+				CloudServiceConfiguration: &batch.CloudServiceConfigurationArgs{
+					OsFamily: pulumi.String("5"),
+				},
+			},
+			PoolName:          pulumi.String("testpool"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+			ScaleSettings: &batch.ScaleSettingsArgs{
+				FixedScale: &batch.FixedScaleSettingsArgs{
+					TargetDedicatedNodes: pulumi.Int(3),
+				},
+			},
+			VmSize: pulumi.String("STANDARD_D4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const pool = new azure_native.batch.Pool("pool", {
+    accountName: "sampleacct",
+    deploymentConfiguration: {
+        cloudServiceConfiguration: {
+            osFamily: "5",
+        },
+    },
+    poolName: "testpool",
+    resourceGroupName: "default-azurebatch-japaneast",
+    scaleSettings: {
+        fixedScale: {
+            targetDedicatedNodes: 3,
+        },
+    },
+    vmSize: "STANDARD_D4",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+pool = azure_native.batch.Pool("pool",
+    account_name="sampleacct",
+    deployment_configuration=azure_native.batch.DeploymentConfigurationArgs(
+        cloud_service_configuration=azure_native.batch.CloudServiceConfigurationArgs(
+            os_family="5",
+        ),
+    ),
+    pool_name="testpool",
+    resource_group_name="default-azurebatch-japaneast",
+    scale_settings=azure_native.batch.ScaleSettingsArgs(
+        fixed_scale=azure_native.batch.FixedScaleSettingsArgs(
+            target_dedicated_nodes=3,
+        ),
+    ),
+    vm_size="STANDARD_D4")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### CreatePool - Minimal VirtualMachineConfiguration
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new AzureNative.Batch.Pool("pool", new AzureNative.Batch.PoolArgs
+        {
+            AccountName = "sampleacct",
+            DeploymentConfiguration = new AzureNative.Batch.Inputs.DeploymentConfigurationArgs
+            {
+                VirtualMachineConfiguration = new AzureNative.Batch.Inputs.VirtualMachineConfigurationArgs
+                {
+                    ImageReference = new AzureNative.Batch.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "UbuntuServer",
+                        Publisher = "Canonical",
+                        Sku = "18.04-LTS",
+                        Version = "latest",
+                    },
+                    NodeAgentSkuId = "batch.node.ubuntu 18.04",
+                },
+            },
+            PoolName = "testpool",
+            ResourceGroupName = "default-azurebatch-japaneast",
+            ScaleSettings = new AzureNative.Batch.Inputs.ScaleSettingsArgs
+            {
+                AutoScale = new AzureNative.Batch.Inputs.AutoScaleSettingsArgs
+                {
+                    EvaluationInterval = "PT5M",
+                    Formula = "$TargetDedicatedNodes=1",
+                },
+            },
+            VmSize = "STANDARD_D4",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	"fmt"
+
+	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
+			AccountName: pulumi.String("sampleacct"),
+			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
+				VirtualMachineConfiguration: &batch.VirtualMachineConfigurationArgs{
+					ImageReference: &batch.ImageReferenceArgs{
+						Offer:     pulumi.String("UbuntuServer"),
+						Publisher: pulumi.String("Canonical"),
+						Sku:       pulumi.String("18.04-LTS"),
+						Version:   pulumi.String("latest"),
+					},
+					NodeAgentSkuId: pulumi.String("batch.node.ubuntu 18.04"),
+				},
+			},
+			PoolName:          pulumi.String("testpool"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+			ScaleSettings: &batch.ScaleSettingsArgs{
+				AutoScale: &batch.AutoScaleSettingsArgs{
+					EvaluationInterval: pulumi.String("PT5M"),
+					Formula:            pulumi.String(fmt.Sprintf("%v%v", "$", "TargetDedicatedNodes=1")),
+				},
+			},
+			VmSize: pulumi.String("STANDARD_D4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const pool = new azure_native.batch.Pool("pool", {
+    accountName: "sampleacct",
+    deploymentConfiguration: {
+        virtualMachineConfiguration: {
+            imageReference: {
+                offer: "UbuntuServer",
+                publisher: "Canonical",
+                sku: "18.04-LTS",
+                version: "latest",
+            },
+            nodeAgentSkuId: "batch.node.ubuntu 18.04",
+        },
+    },
+    poolName: "testpool",
+    resourceGroupName: "default-azurebatch-japaneast",
+    scaleSettings: {
+        autoScale: {
+            evaluationInterval: "PT5M",
+            formula: `$TargetDedicatedNodes=1`,
+        },
+    },
+    vmSize: "STANDARD_D4",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+pool = azure_native.batch.Pool("pool",
+    account_name="sampleacct",
+    deployment_configuration=azure_native.batch.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_native.batch.VirtualMachineConfigurationArgs(
+            image_reference=azure_native.batch.ImageReferenceArgs(
+                offer="UbuntuServer",
+                publisher="Canonical",
+                sku="18.04-LTS",
+                version="latest",
+            ),
+            node_agent_sku_id="batch.node.ubuntu 18.04",
+        ),
+    ),
+    pool_name="testpool",
+    resource_group_name="default-azurebatch-japaneast",
+    scale_settings=azure_native.batch.ScaleSettingsArgs(
+        auto_scale=azure_native.batch.AutoScaleSettingsArgs(
+            evaluation_interval="PT5M",
+            formula="$TargetDedicatedNodes=1",
+        ),
+    ),
+    vm_size="STANDARD_D4")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### CreatePool - No public IP
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new AzureNative.Batch.Pool("pool", new AzureNative.Batch.PoolArgs
+        {
+            AccountName = "sampleacct",
+            DeploymentConfiguration = new AzureNative.Batch.Inputs.DeploymentConfigurationArgs
+            {
+                VirtualMachineConfiguration = new AzureNative.Batch.Inputs.VirtualMachineConfigurationArgs
+                {
+                    ImageReference = new AzureNative.Batch.Inputs.ImageReferenceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
+                    },
+                    NodeAgentSkuId = "batch.node.ubuntu 18.04",
+                },
+            },
+            NetworkConfiguration = new AzureNative.Batch.Inputs.NetworkConfigurationArgs
+            {
+                PublicIPAddressConfiguration = new AzureNative.Batch.Inputs.PublicIPAddressConfigurationArgs
+                {
+                    Provision = "NoPublicIPAddresses",
+                },
+                SubnetId = "/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
+            },
+            PoolName = "testpool",
+            ResourceGroupName = "default-azurebatch-japaneast",
+            VmSize = "STANDARD_D4",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
+			AccountName: pulumi.String("sampleacct"),
+			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
+				VirtualMachineConfiguration: &batch.VirtualMachineConfigurationArgs{
+					ImageReference: &batch.ImageReferenceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1"),
+					},
+					NodeAgentSkuId: pulumi.String("batch.node.ubuntu 18.04"),
+				},
+			},
+			NetworkConfiguration: &batch.NetworkConfigurationArgs{
+				PublicIPAddressConfiguration: &batch.PublicIPAddressConfigurationArgs{
+					Provision: "NoPublicIPAddresses",
+				},
+				SubnetId: pulumi.String("/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123"),
+			},
+			PoolName:          pulumi.String("testpool"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+			VmSize:            pulumi.String("STANDARD_D4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const pool = new azure_native.batch.Pool("pool", {
+    accountName: "sampleacct",
+    deploymentConfiguration: {
+        virtualMachineConfiguration: {
+            imageReference: {
+                id: "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
+            },
+            nodeAgentSkuId: "batch.node.ubuntu 18.04",
+        },
+    },
+    networkConfiguration: {
+        publicIPAddressConfiguration: {
+            provision: "NoPublicIPAddresses",
+        },
+        subnetId: "/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
+    },
+    poolName: "testpool",
+    resourceGroupName: "default-azurebatch-japaneast",
+    vmSize: "STANDARD_D4",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+pool = azure_native.batch.Pool("pool",
+    account_name="sampleacct",
+    deployment_configuration=azure_native.batch.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_native.batch.VirtualMachineConfigurationArgs(
+            image_reference=azure_native.batch.ImageReferenceArgs(
+                id="/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
+            ),
+            node_agent_sku_id="batch.node.ubuntu 18.04",
+        ),
+    ),
+    network_configuration=azure_native.batch.NetworkConfigurationArgs(
+        public_ip_address_configuration=azure_native.batch.PublicIPAddressConfigurationArgs(
+            provision="NoPublicIPAddresses",
+        ),
+        subnet_id="/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
+    ),
+    pool_name="testpool",
+    resource_group_name="default-azurebatch-japaneast",
+    vm_size="STANDARD_D4")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### CreatePool - Public IPs
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new AzureNative.Batch.Pool("pool", new AzureNative.Batch.PoolArgs
+        {
+            AccountName = "sampleacct",
+            DeploymentConfiguration = new AzureNative.Batch.Inputs.DeploymentConfigurationArgs
+            {
+                VirtualMachineConfiguration = new AzureNative.Batch.Inputs.VirtualMachineConfigurationArgs
+                {
+                    ImageReference = new AzureNative.Batch.Inputs.ImageReferenceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
+                    },
+                    NodeAgentSkuId = "batch.node.ubuntu 18.04",
+                },
+            },
+            NetworkConfiguration = new AzureNative.Batch.Inputs.NetworkConfigurationArgs
+            {
+                PublicIPAddressConfiguration = new AzureNative.Batch.Inputs.PublicIPAddressConfigurationArgs
+                {
+                    IpAddressIds = 
+                    {
+                        "/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135",
+                    },
+                    Provision = "UserManaged",
+                },
+                SubnetId = "/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
+            },
+            PoolName = "testpool",
+            ResourceGroupName = "default-azurebatch-japaneast",
+            VmSize = "STANDARD_D4",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
+			AccountName: pulumi.String("sampleacct"),
+			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
+				VirtualMachineConfiguration: &batch.VirtualMachineConfigurationArgs{
+					ImageReference: &batch.ImageReferenceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1"),
+					},
+					NodeAgentSkuId: pulumi.String("batch.node.ubuntu 18.04"),
+				},
+			},
+			NetworkConfiguration: &batch.NetworkConfigurationArgs{
+				PublicIPAddressConfiguration: &batch.PublicIPAddressConfigurationArgs{
+					IpAddressIds: pulumi.StringArray{
+						pulumi.String("/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135"),
+					},
+					Provision: "UserManaged",
+				},
+				SubnetId: pulumi.String("/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123"),
+			},
+			PoolName:          pulumi.String("testpool"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+			VmSize:            pulumi.String("STANDARD_D4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const pool = new azure_native.batch.Pool("pool", {
+    accountName: "sampleacct",
+    deploymentConfiguration: {
+        virtualMachineConfiguration: {
+            imageReference: {
+                id: "/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
+            },
+            nodeAgentSkuId: "batch.node.ubuntu 18.04",
+        },
+    },
+    networkConfiguration: {
+        publicIPAddressConfiguration: {
+            ipAddressIds: ["/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135"],
+            provision: "UserManaged",
+        },
+        subnetId: "/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
+    },
+    poolName: "testpool",
+    resourceGroupName: "default-azurebatch-japaneast",
+    vmSize: "STANDARD_D4",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+pool = azure_native.batch.Pool("pool",
+    account_name="sampleacct",
+    deployment_configuration=azure_native.batch.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_native.batch.VirtualMachineConfigurationArgs(
+            image_reference=azure_native.batch.ImageReferenceArgs(
+                id="/subscriptions/subid/resourceGroups/networking-group/providers/Microsoft.Compute/galleries/testgallery/images/testimagedef/versions/0.0.1",
+            ),
+            node_agent_sku_id="batch.node.ubuntu 18.04",
+        ),
+    ),
+    network_configuration=azure_native.batch.NetworkConfigurationArgs(
+        public_ip_address_configuration=azure_native.batch.PublicIPAddressConfigurationArgs(
+            ip_address_ids=["/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135"],
+            provision="UserManaged",
+        ),
+        subnet_id="/subscriptions/subid/resourceGroups/rg1234/providers/Microsoft.Network/virtualNetworks/network1234/subnets/subnet123",
+    ),
+    pool_name="testpool",
+    resource_group_name="default-azurebatch-japaneast",
+    vm_size="STANDARD_D4")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### CreatePool - UserAssignedIdentities
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new AzureNative.Batch.Pool("pool", new AzureNative.Batch.PoolArgs
+        {
+            AccountName = "sampleacct",
+            DeploymentConfiguration = new AzureNative.Batch.Inputs.DeploymentConfigurationArgs
+            {
+                VirtualMachineConfiguration = new AzureNative.Batch.Inputs.VirtualMachineConfigurationArgs
+                {
+                    ImageReference = new AzureNative.Batch.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "UbuntuServer",
+                        Publisher = "Canonical",
+                        Sku = "18.04-LTS",
+                        Version = "latest",
+                    },
+                    NodeAgentSkuId = "batch.node.ubuntu 18.04",
+                },
+            },
+            Identity = new AzureNative.Batch.Inputs.BatchPoolIdentityArgs
+            {
+                Type = "UserAssigned",
+                UserAssignedIdentities = 
+                {
+                    { "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1",  },
+                    { "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2",  },
+                },
+            },
+            PoolName = "testpool",
+            ResourceGroupName = "default-azurebatch-japaneast",
+            ScaleSettings = new AzureNative.Batch.Inputs.ScaleSettingsArgs
+            {
+                AutoScale = new AzureNative.Batch.Inputs.AutoScaleSettingsArgs
+                {
+                    EvaluationInterval = "PT5M",
+                    Formula = "$TargetDedicatedNodes=1",
+                },
+            },
+            VmSize = "STANDARD_D4",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	"fmt"
+
+	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
+			AccountName: pulumi.String("sampleacct"),
+			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
+				VirtualMachineConfiguration: &batch.VirtualMachineConfigurationArgs{
+					ImageReference: &batch.ImageReferenceArgs{
+						Offer:     pulumi.String("UbuntuServer"),
+						Publisher: pulumi.String("Canonical"),
+						Sku:       pulumi.String("18.04-LTS"),
+						Version:   pulumi.String("latest"),
+					},
+					NodeAgentSkuId: pulumi.String("batch.node.ubuntu 18.04"),
+				},
+			},
+			Identity: &batch.BatchPoolIdentityArgs{
+				Type: "UserAssigned",
+				UserAssignedIdentities: pulumi.AnyMap{
+					"/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": nil,
+					"/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2": nil,
+				},
+			},
+			PoolName:          pulumi.String("testpool"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+			ScaleSettings: &batch.ScaleSettingsArgs{
+				AutoScale: &batch.AutoScaleSettingsArgs{
+					EvaluationInterval: pulumi.String("PT5M"),
+					Formula:            pulumi.String(fmt.Sprintf("%v%v", "$", "TargetDedicatedNodes=1")),
+				},
+			},
+			VmSize: pulumi.String("STANDARD_D4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const pool = new azure_native.batch.Pool("pool", {
+    accountName: "sampleacct",
+    deploymentConfiguration: {
+        virtualMachineConfiguration: {
+            imageReference: {
+                offer: "UbuntuServer",
+                publisher: "Canonical",
+                sku: "18.04-LTS",
+                version: "latest",
+            },
+            nodeAgentSkuId: "batch.node.ubuntu 18.04",
+        },
+    },
+    identity: {
+        type: "UserAssigned",
+        userAssignedIdentities: {
+            "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": {},
+            "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2": {},
+        },
+    },
+    poolName: "testpool",
+    resourceGroupName: "default-azurebatch-japaneast",
+    scaleSettings: {
+        autoScale: {
+            evaluationInterval: "PT5M",
+            formula: `$TargetDedicatedNodes=1`,
+        },
+    },
+    vmSize: "STANDARD_D4",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+pool = azure_native.batch.Pool("pool",
+    account_name="sampleacct",
+    deployment_configuration=azure_native.batch.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_native.batch.VirtualMachineConfigurationArgs(
+            image_reference=azure_native.batch.ImageReferenceArgs(
+                offer="UbuntuServer",
+                publisher="Canonical",
+                sku="18.04-LTS",
+                version="latest",
+            ),
+            node_agent_sku_id="batch.node.ubuntu 18.04",
+        ),
+    ),
+    identity=azure_native.batch.BatchPoolIdentityArgs(
+        type="UserAssigned",
+        user_assigned_identities={
+            "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": {},
+            "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2": {},
+        },
+    ),
+    pool_name="testpool",
+    resource_group_name="default-azurebatch-japaneast",
+    scale_settings=azure_native.batch.ScaleSettingsArgs(
+        auto_scale=azure_native.batch.AutoScaleSettingsArgs(
+            evaluation_interval="PT5M",
+            formula="$TargetDedicatedNodes=1",
+        ),
+    ),
+    vm_size="STANDARD_D4")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### CreatePool - VirtualMachineConfiguration Extensions
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new AzureNative.Batch.Pool("pool", new AzureNative.Batch.PoolArgs
+        {
+            AccountName = "sampleacct",
+            DeploymentConfiguration = new AzureNative.Batch.Inputs.DeploymentConfigurationArgs
+            {
+                VirtualMachineConfiguration = new AzureNative.Batch.Inputs.VirtualMachineConfigurationArgs
+                {
+                    Extensions = 
+                    {
+                        new AzureNative.Batch.Inputs.VMExtensionArgs
+                        {
+                            AutoUpgradeMinorVersion = true,
+                            Name = "batchextension1",
+                            ProtectedSettings = 
+                            {
+                                { "protectedSettingsKey", "protectedSettingsValue" },
+                            },
+                            Publisher = "Microsoft.Azure.Security.Monitoring",
+                            Settings = 
+                            {
+                                { "settingsKey", "settingsValue" },
+                            },
+                            Type = "SecurityMonitoringForLinux",
+                            TypeHandlerVersion = "1.0",
+                        },
+                    },
+                    ImageReference = new AzureNative.Batch.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "UbuntuServer",
+                        Publisher = "Canonical",
+                        Sku = "16.04.0-LTS",
+                    },
+                    NodeAgentSkuId = "batch.node.ubuntu 16.04",
+                },
+            },
+            PoolName = "testpool",
+            ResourceGroupName = "default-azurebatch-japaneast",
+            ScaleSettings = new AzureNative.Batch.Inputs.ScaleSettingsArgs
+            {
+                AutoScale = new AzureNative.Batch.Inputs.AutoScaleSettingsArgs
+                {
+                    EvaluationInterval = "PT5M",
+                    Formula = "$TargetDedicatedNodes=1",
+                },
+            },
+            VmSize = "STANDARD_D4",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	"fmt"
+
+	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
+			AccountName: pulumi.String("sampleacct"),
+			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
+				VirtualMachineConfiguration: &batch.VirtualMachineConfigurationArgs{
+					Extensions: batch.VMExtensionArray{
+						&batch.VMExtensionArgs{
+							AutoUpgradeMinorVersion: pulumi.Bool(true),
+							Name:                    pulumi.String("batchextension1"),
+							ProtectedSettings: pulumi.Any{
+								ProtectedSettingsKey: "protectedSettingsValue",
+							},
+							Publisher: pulumi.String("Microsoft.Azure.Security.Monitoring"),
+							Settings: pulumi.Any{
+								SettingsKey: "settingsValue",
+							},
+							Type:               pulumi.String("SecurityMonitoringForLinux"),
+							TypeHandlerVersion: pulumi.String("1.0"),
+						},
+					},
+					ImageReference: &batch.ImageReferenceArgs{
+						Offer:     pulumi.String("UbuntuServer"),
+						Publisher: pulumi.String("Canonical"),
+						Sku:       pulumi.String("16.04.0-LTS"),
+					},
+					NodeAgentSkuId: pulumi.String("batch.node.ubuntu 16.04"),
+				},
+			},
+			PoolName:          pulumi.String("testpool"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+			ScaleSettings: &batch.ScaleSettingsArgs{
+				AutoScale: &batch.AutoScaleSettingsArgs{
+					EvaluationInterval: pulumi.String("PT5M"),
+					Formula:            pulumi.String(fmt.Sprintf("%v%v", "$", "TargetDedicatedNodes=1")),
+				},
+			},
+			VmSize: pulumi.String("STANDARD_D4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const pool = new azure_native.batch.Pool("pool", {
+    accountName: "sampleacct",
+    deploymentConfiguration: {
+        virtualMachineConfiguration: {
+            extensions: [{
+                autoUpgradeMinorVersion: true,
+                name: "batchextension1",
+                protectedSettings: {
+                    protectedSettingsKey: "protectedSettingsValue",
+                },
+                publisher: "Microsoft.Azure.Security.Monitoring",
+                settings: {
+                    settingsKey: "settingsValue",
+                },
+                type: "SecurityMonitoringForLinux",
+                typeHandlerVersion: "1.0",
+            }],
+            imageReference: {
+                offer: "UbuntuServer",
+                publisher: "Canonical",
+                sku: "16.04.0-LTS",
+            },
+            nodeAgentSkuId: "batch.node.ubuntu 16.04",
+        },
+    },
+    poolName: "testpool",
+    resourceGroupName: "default-azurebatch-japaneast",
+    scaleSettings: {
+        autoScale: {
+            evaluationInterval: "PT5M",
+            formula: `$TargetDedicatedNodes=1`,
+        },
+    },
+    vmSize: "STANDARD_D4",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+pool = azure_native.batch.Pool("pool",
+    account_name="sampleacct",
+    deployment_configuration=azure_native.batch.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_native.batch.VirtualMachineConfigurationArgs(
+            extensions=[azure_native.batch.VMExtensionArgs(
+                auto_upgrade_minor_version=True,
+                name="batchextension1",
+                protected_settings={
+                    "protectedSettingsKey": "protectedSettingsValue",
+                },
+                publisher="Microsoft.Azure.Security.Monitoring",
+                settings={
+                    "settingsKey": "settingsValue",
+                },
+                type="SecurityMonitoringForLinux",
+                type_handler_version="1.0",
+            )],
+            image_reference=azure_native.batch.ImageReferenceArgs(
+                offer="UbuntuServer",
+                publisher="Canonical",
+                sku="16.04.0-LTS",
+            ),
+            node_agent_sku_id="batch.node.ubuntu 16.04",
+        ),
+    ),
+    pool_name="testpool",
+    resource_group_name="default-azurebatch-japaneast",
+    scale_settings=azure_native.batch.ScaleSettingsArgs(
+        auto_scale=azure_native.batch.AutoScaleSettingsArgs(
+            evaluation_interval="PT5M",
+            formula="$TargetDedicatedNodes=1",
+        ),
+    ),
+    vm_size="STANDARD_D4")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:batch:Pool testpool /subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/sampleacct/pools/testpool 
+```
+
+ */
 @ResourceType(type="azure-native:batch:Pool")
 public class Pool extends io.pulumi.resources.CustomResource {
+    /**
+     * 
+     */
     @OutputExport(name="allocationState", type=String.class, parameters={})
     private Output<String> allocationState;
 
     public Output<String> getAllocationState() {
         return this.allocationState;
     }
+    /**
+     * 
+     */
     @OutputExport(name="allocationStateTransitionTime", type=String.class, parameters={})
     private Output<String> allocationStateTransitionTime;
 
     public Output<String> getAllocationStateTransitionTime() {
         return this.allocationStateTransitionTime;
     }
+    /**
+     * The list of application licenses must be a subset of available Batch service application licenses. If a license is requested which is not supported, pool creation will fail.
+     */
     @OutputExport(name="applicationLicenses", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> applicationLicenses;
 
+    /**
+     * @return The list of application licenses must be a subset of available Batch service application licenses. If a license is requested which is not supported, pool creation will fail.
+     */
     public Output</* @Nullable */ List<String>> getApplicationLicenses() {
         return this.applicationLicenses;
     }
+    /**
+     * Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. There is a maximum of 10 application package references on any given pool.
+     */
     @OutputExport(name="applicationPackages", type=List.class, parameters={ApplicationPackageReferenceResponse.class})
     private Output</* @Nullable */ List<ApplicationPackageReferenceResponse>> applicationPackages;
 
+    /**
+     * @return Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. There is a maximum of 10 application package references on any given pool.
+     */
     public Output</* @Nullable */ List<ApplicationPackageReferenceResponse>> getApplicationPackages() {
         return this.applicationPackages;
     }
+    /**
+     * This property is set only if the pool automatically scales, i.e. autoScaleSettings are used.
+     */
     @OutputExport(name="autoScaleRun", type=AutoScaleRunResponse.class, parameters={})
     private Output<AutoScaleRunResponse> autoScaleRun;
 
+    /**
+     * @return This property is set only if the pool automatically scales, i.e. autoScaleSettings are used.
+     */
     public Output<AutoScaleRunResponse> getAutoScaleRun() {
         return this.autoScaleRun;
     }
+    /**
+     * For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
+     */
     @OutputExport(name="certificates", type=List.class, parameters={CertificateReferenceResponse.class})
     private Output</* @Nullable */ List<CertificateReferenceResponse>> certificates;
 
+    /**
+     * @return For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
+     */
     public Output</* @Nullable */ List<CertificateReferenceResponse>> getCertificates() {
         return this.certificates;
     }
+    /**
+     * 
+     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
+    /**
+     * 
+     */
     @OutputExport(name="currentDedicatedNodes", type=Integer.class, parameters={})
     private Output<Integer> currentDedicatedNodes;
 
     public Output<Integer> getCurrentDedicatedNodes() {
         return this.currentDedicatedNodes;
     }
+    /**
+     * 
+     */
     @OutputExport(name="currentLowPriorityNodes", type=Integer.class, parameters={})
     private Output<Integer> currentLowPriorityNodes;
 
     public Output<Integer> getCurrentLowPriorityNodes() {
         return this.currentLowPriorityNodes;
     }
+    /**
+     * Using CloudServiceConfiguration specifies that the nodes should be creating using Azure Cloud Services (PaaS), while VirtualMachineConfiguration uses Azure Virtual Machines (IaaS).
+     */
     @OutputExport(name="deploymentConfiguration", type=DeploymentConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ DeploymentConfigurationResponse> deploymentConfiguration;
 
+    /**
+     * @return Using CloudServiceConfiguration specifies that the nodes should be creating using Azure Cloud Services (PaaS), while VirtualMachineConfiguration uses Azure Virtual Machines (IaaS).
+     */
     public Output</* @Nullable */ DeploymentConfigurationResponse> getDeploymentConfiguration() {
         return this.deploymentConfiguration;
     }
+    /**
+     * The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
+    /**
+     * @return The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.
+     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The ETag of the resource, used for concurrency statements.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return The ETag of the resource, used for concurrency statements.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The type of identity used for the Batch Pool.
+     */
     @OutputExport(name="identity", type=BatchPoolIdentityResponse.class, parameters={})
     private Output</* @Nullable */ BatchPoolIdentityResponse> identity;
 
+    /**
+     * @return The type of identity used for the Batch Pool.
+     */
     public Output</* @Nullable */ BatchPoolIdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to 'Disabled'.
+     */
     @OutputExport(name="interNodeCommunication", type=String.class, parameters={})
     private Output</* @Nullable */ String> interNodeCommunication;
 
+    /**
+     * @return This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to 'Disabled'.
+     */
     public Output</* @Nullable */ String> getInterNodeCommunication() {
         return this.interNodeCommunication;
     }
+    /**
+     * This is the last time at which the pool level data, such as the targetDedicatedNodes or autoScaleSettings, changed. It does not factor in node-level changes such as a compute node changing state.
+     */
     @OutputExport(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
+    /**
+     * @return This is the last time at which the pool level data, such as the targetDedicatedNodes or autoScaleSettings, changed. It does not factor in node-level changes such as a compute node changing state.
+     */
     public Output<String> getLastModified() {
         return this.lastModified;
     }
+    /**
+     * The Batch service does not assign any meaning to metadata; it is solely for the use of user code.
+     */
     @OutputExport(name="metadata", type=List.class, parameters={MetadataItemResponse.class})
     private Output</* @Nullable */ List<MetadataItemResponse>> metadata;
 
+    /**
+     * @return The Batch service does not assign any meaning to metadata; it is solely for the use of user code.
+     */
     public Output</* @Nullable */ List<MetadataItemResponse>> getMetadata() {
         return this.metadata;
     }
+    /**
+     * This supports Azure Files, NFS, CIFS/SMB, and Blobfuse.
+     */
     @OutputExport(name="mountConfiguration", type=List.class, parameters={MountConfigurationResponse.class})
     private Output</* @Nullable */ List<MountConfigurationResponse>> mountConfiguration;
 
+    /**
+     * @return This supports Azure Files, NFS, CIFS/SMB, and Blobfuse.
+     */
     public Output</* @Nullable */ List<MountConfigurationResponse>> getMountConfiguration() {
         return this.mountConfiguration;
     }
+    /**
+     * The name of the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The network configuration for a pool.
+     */
     @OutputExport(name="networkConfiguration", type=NetworkConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ NetworkConfigurationResponse> networkConfiguration;
 
+    /**
+     * @return The network configuration for a pool.
+     */
     public Output</* @Nullable */ NetworkConfigurationResponse> getNetworkConfiguration() {
         return this.networkConfiguration;
     }
+    /**
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * 
+     */
     @OutputExport(name="provisioningStateTransitionTime", type=String.class, parameters={})
     private Output<String> provisioningStateTransitionTime;
 
     public Output<String> getProvisioningStateTransitionTime() {
         return this.provisioningStateTransitionTime;
     }
+    /**
+     * Describes either the current operation (if the pool AllocationState is Resizing) or the previously completed operation (if the AllocationState is Steady).
+     */
     @OutputExport(name="resizeOperationStatus", type=ResizeOperationStatusResponse.class, parameters={})
     private Output<ResizeOperationStatusResponse> resizeOperationStatus;
 
+    /**
+     * @return Describes either the current operation (if the pool AllocationState is Resizing) or the previously completed operation (if the AllocationState is Steady).
+     */
     public Output<ResizeOperationStatusResponse> getResizeOperationStatus() {
         return this.resizeOperationStatus;
     }
+    /**
+     * Defines the desired size of the pool. This can either be 'fixedScale' where the requested targetDedicatedNodes is specified, or 'autoScale' which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.
+     */
     @OutputExport(name="scaleSettings", type=ScaleSettingsResponse.class, parameters={})
     private Output</* @Nullable */ ScaleSettingsResponse> scaleSettings;
 
+    /**
+     * @return Defines the desired size of the pool. This can either be 'fixedScale' where the requested targetDedicatedNodes is specified, or 'autoScale' which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.
+     */
     public Output</* @Nullable */ ScaleSettingsResponse> getScaleSettings() {
         return this.scaleSettings;
     }
+    /**
+     * In an PATCH (update) operation, this property can be set to an empty object to remove the start task from the pool.
+     */
     @OutputExport(name="startTask", type=StartTaskResponse.class, parameters={})
     private Output</* @Nullable */ StartTaskResponse> startTask;
 
+    /**
+     * @return In an PATCH (update) operation, this property can be set to an empty object to remove the start task from the pool.
+     */
     public Output</* @Nullable */ StartTaskResponse> getStartTask() {
         return this.startTask;
     }
+    /**
+     * If not specified, the default is spread.
+     */
     @OutputExport(name="taskSchedulingPolicy", type=TaskSchedulingPolicyResponse.class, parameters={})
     private Output</* @Nullable */ TaskSchedulingPolicyResponse> taskSchedulingPolicy;
 
+    /**
+     * @return If not specified, the default is spread.
+     */
     public Output</* @Nullable */ TaskSchedulingPolicyResponse> getTaskSchedulingPolicy() {
         return this.taskSchedulingPolicy;
     }
+    /**
+     * The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.
+     */
     @OutputExport(name="taskSlotsPerNode", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> taskSlotsPerNode;
 
+    /**
+     * @return The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.
+     */
     public Output</* @Nullable */ Integer> getTaskSlotsPerNode() {
         return this.taskSlotsPerNode;
     }
+    /**
+     * The type of the resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * 
+     */
     @OutputExport(name="userAccounts", type=List.class, parameters={UserAccountResponse.class})
     private Output</* @Nullable */ List<UserAccountResponse>> userAccounts;
 
     public Output</* @Nullable */ List<UserAccountResponse>> getUserAccounts() {
         return this.userAccounts;
     }
+    /**
+     * For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/). Batch supports all Cloud Services VM sizes except ExtraSmall. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/) or Sizes for Virtual Machines (Windows) (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).
+     */
     @OutputExport(name="vmSize", type=String.class, parameters={})
     private Output</* @Nullable */ String> vmSize;
 
+    /**
+     * @return For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/). Batch supports all Cloud Services VM sizes except ExtraSmall. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/) or Sizes for Virtual Machines (Windows) (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).
+     */
     public Output</* @Nullable */ String> getVmSize() {
         return this.vmSize;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Pool(String name, PoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:batch:Pool", name, args == null ? PoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -231,6 +2296,14 @@ public class Pool extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Pool get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Pool(name, id, options);
     }

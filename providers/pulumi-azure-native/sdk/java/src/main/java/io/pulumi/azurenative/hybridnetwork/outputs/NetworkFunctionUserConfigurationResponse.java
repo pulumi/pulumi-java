@@ -3,7 +3,6 @@
 
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
-import io.pulumi.azurenative.hybridnetwork.outputs.NetworkFunctionUserConfigurationResponseOsProfile;
 import io.pulumi.azurenative.hybridnetwork.outputs.NetworkInterfaceResponse;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.Object;
@@ -15,9 +14,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NetworkFunctionUserConfigurationResponse {
+/**
+ * The network interface configuration.
+ */
     private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
+/**
+ * Specifies the operating system settings for the role instance.
+ */
     private final @Nullable NetworkFunctionUserConfigurationResponseOsProfile osProfile;
+/**
+ * The name of the network function role.
+ */
     private final @Nullable String roleName;
+/**
+ * The user data parameters from the customer.
+ */
     private final @Nullable Object userDataParameters;
 
     @OutputCustomType.Constructor({"networkInterfaces","osProfile","roleName","userDataParameters"})
@@ -32,15 +43,27 @@ public final class NetworkFunctionUserConfigurationResponse {
         this.userDataParameters = userDataParameters;
     }
 
+/**
+ * The network interface configuration.
+ */
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }
+/**
+ * Specifies the operating system settings for the role instance.
+ */
     public Optional<NetworkFunctionUserConfigurationResponseOsProfile> getOsProfile() {
         return Optional.ofNullable(this.osProfile);
     }
+/**
+ * The name of the network function role.
+ */
     public Optional<String> getRoleName() {
         return Optional.ofNullable(this.roleName);
     }
+/**
+ * The user data parameters from the customer.
+ */
     public Optional<Object> getUserDataParameters() {
         return Optional.ofNullable(this.userDataParameters);
     }

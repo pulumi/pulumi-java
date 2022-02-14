@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetManagementLockAtResourceGroupLevelArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetManagementLockAtResourceGroupLevelArgs Empty = new GetManagementLockAtResourceGroupLevelArgs();
 
+    /**
+     * The name of the lock to get.
+     */
     @InputImport(name="lockName", required=true)
     private final String lockName;
 
@@ -19,6 +25,9 @@ public final class GetManagementLockAtResourceGroupLevelArgs extends io.pulumi.r
         return this.lockName;
     }
 
+    /**
+     * The name of the locked resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the dependency of the move resource.
+ */
 public final class MoveResourceDependencyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MoveResourceDependencyResponse Empty = new MoveResourceDependencyResponse();
 
+    /**
+     * Defines the properties for automatic resolution.
+     */
     @InputImport(name="automaticResolution")
     private final @Nullable AutomaticResolutionPropertiesResponse automaticResolution;
 
@@ -23,6 +29,9 @@ public final class MoveResourceDependencyResponse extends io.pulumi.resources.In
         return this.automaticResolution == null ? Optional.empty() : Optional.ofNullable(this.automaticResolution);
     }
 
+    /**
+     * Defines the dependency type.
+     */
     @InputImport(name="dependencyType")
     private final @Nullable String dependencyType;
 
@@ -30,6 +39,9 @@ public final class MoveResourceDependencyResponse extends io.pulumi.resources.In
         return this.dependencyType == null ? Optional.empty() : Optional.ofNullable(this.dependencyType);
     }
 
+    /**
+     * Gets the source ARM ID of the dependent resource.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -37,6 +49,9 @@ public final class MoveResourceDependencyResponse extends io.pulumi.resources.In
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Gets or sets a value indicating whether the dependency is optional.
+     */
     @InputImport(name="isOptional")
     private final @Nullable String isOptional;
 
@@ -44,6 +59,9 @@ public final class MoveResourceDependencyResponse extends io.pulumi.resources.In
         return this.isOptional == null ? Optional.empty() : Optional.ofNullable(this.isOptional);
     }
 
+    /**
+     * Defines the properties for manual resolution.
+     */
     @InputImport(name="manualResolution")
     private final @Nullable ManualResolutionPropertiesResponse manualResolution;
 
@@ -51,6 +69,9 @@ public final class MoveResourceDependencyResponse extends io.pulumi.resources.In
         return this.manualResolution == null ? Optional.empty() : Optional.ofNullable(this.manualResolution);
     }
 
+    /**
+     * Gets the dependency resolution status.
+     */
     @InputImport(name="resolutionStatus")
     private final @Nullable String resolutionStatus;
 
@@ -58,6 +79,9 @@ public final class MoveResourceDependencyResponse extends io.pulumi.resources.In
         return this.resolutionStatus == null ? Optional.empty() : Optional.ofNullable(this.resolutionStatus);
     }
 
+    /**
+     * Defines the resolution type.
+     */
     @InputImport(name="resolutionType")
     private final @Nullable String resolutionType;
 

@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information about the guest configuration assignment.
+ */
 public final class AssignmentInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AssignmentInfoResponse Empty = new AssignmentInfoResponse();
 
+    /**
+     * Information about the configuration.
+     */
     @InputImport(name="configuration")
     private final @Nullable ConfigurationInfoResponse configuration;
 
@@ -22,6 +28,9 @@ public final class AssignmentInfoResponse extends io.pulumi.resources.InvokeArgs
         return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
     }
 
+    /**
+     * Name of the guest configuration assignment.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

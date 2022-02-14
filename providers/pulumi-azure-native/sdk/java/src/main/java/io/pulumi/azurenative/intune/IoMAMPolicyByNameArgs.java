@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IoMAMPolicyByNameArgs Empty = new IoMAMPolicyByNameArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="accessRecheckOfflineTimeout")
     private final @Nullable Input<String> accessRecheckOfflineTimeout;
 
@@ -23,6 +29,9 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.accessRecheckOfflineTimeout == null ? Input.empty() : this.accessRecheckOfflineTimeout;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="accessRecheckOnlineTimeout")
     private final @Nullable Input<String> accessRecheckOnlineTimeout;
 
@@ -30,6 +39,9 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.accessRecheckOnlineTimeout == null ? Input.empty() : this.accessRecheckOnlineTimeout;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="appSharingFromLevel")
     private final @Nullable Input<String> appSharingFromLevel;
 
@@ -37,6 +49,9 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.appSharingFromLevel == null ? Input.empty() : this.appSharingFromLevel;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="appSharingToLevel")
     private final @Nullable Input<String> appSharingToLevel;
 
@@ -44,6 +59,9 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.appSharingToLevel == null ? Input.empty() : this.appSharingToLevel;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="authentication")
     private final @Nullable Input<String> authentication;
 
@@ -51,6 +69,9 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.authentication == null ? Input.empty() : this.authentication;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="clipboardSharingLevel")
     private final @Nullable Input<String> clipboardSharingLevel;
 
@@ -58,6 +79,9 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.clipboardSharingLevel == null ? Input.empty() : this.clipboardSharingLevel;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="dataBackup")
     private final @Nullable Input<String> dataBackup;
 
@@ -65,6 +89,9 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.dataBackup == null ? Input.empty() : this.dataBackup;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -72,6 +99,9 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="deviceCompliance")
     private final @Nullable Input<String> deviceCompliance;
 
@@ -79,6 +109,9 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.deviceCompliance == null ? Input.empty() : this.deviceCompliance;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="fileEncryptionLevel")
     private final @Nullable Input<String> fileEncryptionLevel;
 
@@ -86,6 +119,9 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.fileEncryptionLevel == null ? Input.empty() : this.fileEncryptionLevel;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="fileSharingSaveAs")
     private final @Nullable Input<String> fileSharingSaveAs;
 
@@ -93,6 +129,9 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.fileSharingSaveAs == null ? Input.empty() : this.fileSharingSaveAs;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="friendlyName", required=true)
     private final Input<String> friendlyName;
 
@@ -100,6 +139,9 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.friendlyName;
     }
 
+    /**
+     * Location hostName for the tenant
+     */
     @InputImport(name="hostName", required=true)
     private final Input<String> hostName;
 
@@ -107,6 +149,9 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.hostName;
     }
 
+    /**
+     * Resource Location
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -114,6 +159,9 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="managedBrowser")
     private final @Nullable Input<String> managedBrowser;
 
@@ -121,6 +169,9 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.managedBrowser == null ? Input.empty() : this.managedBrowser;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="offlineWipeTimeout")
     private final @Nullable Input<String> offlineWipeTimeout;
 
@@ -128,6 +179,9 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.offlineWipeTimeout == null ? Input.empty() : this.offlineWipeTimeout;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="pin")
     private final @Nullable Input<String> pin;
 
@@ -135,6 +189,9 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.pin == null ? Input.empty() : this.pin;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="pinNumRetry")
     private final @Nullable Input<Integer> pinNumRetry;
 
@@ -142,6 +199,9 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.pinNumRetry == null ? Input.empty() : this.pinNumRetry;
     }
 
+    /**
+     * Unique name for the policy
+     */
     @InputImport(name="policyName")
     private final @Nullable Input<String> policyName;
 
@@ -149,6 +209,9 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.policyName == null ? Input.empty() : this.policyName;
     }
 
+    /**
+     * Resource Tags
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -156,6 +219,9 @@ public final class IoMAMPolicyByNameArgs extends io.pulumi.resources.ResourceArg
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="touchId")
     private final @Nullable Input<String> touchId;
 

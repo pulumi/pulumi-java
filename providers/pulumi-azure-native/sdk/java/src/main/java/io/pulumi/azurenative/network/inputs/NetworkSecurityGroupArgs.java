@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * NetworkSecurityGroup resource.
+ */
 public final class NetworkSecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkSecurityGroupArgs Empty = new NetworkSecurityGroupArgs();
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -24,6 +30,9 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -31,6 +40,9 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * A collection of security rules of the network security group.
+     */
     @InputImport(name="securityRules")
     private final @Nullable Input<List<SecurityRuleArgs>> securityRules;
 
@@ -38,6 +50,9 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
         return this.securityRules == null ? Input.empty() : this.securityRules;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

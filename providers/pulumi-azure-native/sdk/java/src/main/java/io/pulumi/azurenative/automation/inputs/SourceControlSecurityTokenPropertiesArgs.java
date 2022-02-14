@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SourceControlSecurityTokenPropertiesArgs Empty = new SourceControlSecurityTokenPropertiesArgs();
 
+    /**
+     * The access token.
+     */
     @InputImport(name="accessToken")
     private final @Nullable Input<String> accessToken;
 
@@ -23,6 +29,9 @@ public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.re
         return this.accessToken == null ? Input.empty() : this.accessToken;
     }
 
+    /**
+     * The refresh token.
+     */
     @InputImport(name="refreshToken")
     private final @Nullable Input<String> refreshToken;
 
@@ -30,6 +39,9 @@ public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.re
         return this.refreshToken == null ? Input.empty() : this.refreshToken;
     }
 
+    /**
+     * The token type. Must be either PersonalAccessToken or Oauth.
+     */
     @InputImport(name="tokenType")
     private final @Nullable Input<Either<String,TokenType>> tokenType;
 

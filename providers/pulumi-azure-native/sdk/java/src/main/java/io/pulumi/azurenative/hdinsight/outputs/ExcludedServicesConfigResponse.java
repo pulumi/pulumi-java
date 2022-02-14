@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExcludedServicesConfigResponse {
+/**
+ * The config id of excluded services.
+ */
     private final @Nullable String excludedServicesConfigId;
+/**
+ * The list of excluded services.
+ */
     private final @Nullable String excludedServicesList;
 
     @OutputCustomType.Constructor({"excludedServicesConfigId","excludedServicesList"})
@@ -22,9 +28,15 @@ public final class ExcludedServicesConfigResponse {
         this.excludedServicesList = excludedServicesList;
     }
 
+/**
+ * The config id of excluded services.
+ */
     public Optional<String> getExcludedServicesConfigId() {
         return Optional.ofNullable(this.excludedServicesConfigId);
     }
+/**
+ * The list of excluded services.
+ */
     public Optional<String> getExcludedServicesList() {
         return Optional.ofNullable(this.excludedServicesList);
     }

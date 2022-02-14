@@ -8,10 +8,17 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Managed Certificate used for https
+ */
 public final class ManagedCertificateParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedCertificateParametersResponse Empty = new ManagedCertificateParametersResponse();
 
+    /**
+     * The type of the Secret to create.
+Expected value is 'ManagedCertificate'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTemplateArtifact {
+/**
+ * Blueprint artifact that deploys a Resource Manager template.
+API Version: 2018-11-01-preview.
+ *
+ * Blueprint artifact that deploys a Resource Manager template.
+ */
     public static CompletableFuture<GetTemplateArtifactResult> invokeAsync(GetTemplateArtifactArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blueprint:getTemplateArtifact", TypeShape.of(GetTemplateArtifactResult.class), args == null ? GetTemplateArtifactArgs.Empty : args, Utilities.withVersion(options));
     }

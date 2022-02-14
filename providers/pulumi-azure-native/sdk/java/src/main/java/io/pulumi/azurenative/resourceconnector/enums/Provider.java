@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Information about the connected appliance.
+ */
     @EnumType
     public enum Provider {
+/**
+ * 
+ */
         VMWare("VMWare"),
+/**
+ * 
+ */
         HCI("HCI"),
+/**
+ * 
+ */
         SCVMM("SCVMM");
 
         private final String value;

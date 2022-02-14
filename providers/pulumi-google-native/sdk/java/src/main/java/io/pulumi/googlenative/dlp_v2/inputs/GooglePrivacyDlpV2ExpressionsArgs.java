@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An expression, consisting or an operator and conditions.
+ */
 public final class GooglePrivacyDlpV2ExpressionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2ExpressionsArgs Empty = new GooglePrivacyDlpV2ExpressionsArgs();
 
+    /**
+     * Conditions to apply to the expression.
+     */
     @InputImport(name="conditions")
     private final @Nullable Input<GooglePrivacyDlpV2ConditionsArgs> conditions;
 
@@ -22,6 +28,9 @@ public final class GooglePrivacyDlpV2ExpressionsArgs extends io.pulumi.resources
         return this.conditions == null ? Input.empty() : this.conditions;
     }
 
+    /**
+     * The operator to apply to the result of conditions. Default and currently only supported value is `AND`.
+     */
     @InputImport(name="logicalOperator")
     private final @Nullable Input<GooglePrivacyDlpV2ExpressionsLogicalOperator> logicalOperator;
 

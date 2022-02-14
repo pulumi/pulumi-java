@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserInfoArgs Empty = new UserInfoArgs();
 
+    /**
+     * Email of the user used by Logz for contacting them if needed
+     */
     @InputImport(name="emailAddress")
     private final @Nullable Input<String> emailAddress;
 
@@ -21,6 +27,9 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.emailAddress == null ? Input.empty() : this.emailAddress;
     }
 
+    /**
+     * First Name of the user
+     */
     @InputImport(name="firstName")
     private final @Nullable Input<String> firstName;
 
@@ -28,6 +37,9 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.firstName == null ? Input.empty() : this.firstName;
     }
 
+    /**
+     * Last Name of the user
+     */
     @InputImport(name="lastName")
     private final @Nullable Input<String> lastName;
 
@@ -35,6 +47,9 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastName == null ? Input.empty() : this.lastName;
     }
 
+    /**
+     * Phone number of the user used by Logz for contacting them if needed
+     */
     @InputImport(name="phoneNumber")
     private final @Nullable Input<String> phoneNumber;
 

@@ -11,10 +11,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Server endpoint cloud tiering status object.
+ */
 public final class CloudTieringFilesNotTieringResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CloudTieringFilesNotTieringResponse Empty = new CloudTieringFilesNotTieringResponse();
 
+    /**
+     * Array of tiering errors
+     */
     @InputImport(name="errors", required=true)
     private final List<FilesNotTieringErrorResponse> errors;
 
@@ -22,6 +28,9 @@ public final class CloudTieringFilesNotTieringResponse extends io.pulumi.resourc
         return this.errors;
     }
 
+    /**
+     * Last updated timestamp
+     */
     @InputImport(name="lastUpdatedTimestamp", required=true)
     private final String lastUpdatedTimestamp;
 
@@ -29,6 +38,9 @@ public final class CloudTieringFilesNotTieringResponse extends io.pulumi.resourc
         return this.lastUpdatedTimestamp;
     }
 
+    /**
+     * Last cloud tiering result (HResult)
+     */
     @InputImport(name="totalFileCount", required=true)
     private final Double totalFileCount;
 

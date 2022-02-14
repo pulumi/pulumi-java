@@ -11,10 +11,16 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * A `Version` is a configuration and a collection of static files which determine how a site is displayed.
+ */
 public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VersionResponse Empty = new VersionResponse();
 
+    /**
+     * The configuration for the behavior of the site. This configuration exists in the [`firebase.json`](https://firebase.google.com/docs/cli/#the_firebasejson_file) file.
+     */
     @InputImport(name="config", required=true)
     private final ServingConfigResponse config;
 
@@ -22,6 +28,9 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.config;
     }
 
+    /**
+     * The time at which the version was created.
+     */
     @InputImport(name="createTime", required=true)
     private final String createTime;
 
@@ -29,6 +38,9 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.createTime;
     }
 
+    /**
+     * Identifies the user who created the version.
+     */
     @InputImport(name="createUser", required=true)
     private final ActingUserResponse createUser;
 
@@ -36,6 +48,9 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.createUser;
     }
 
+    /**
+     * The time at which the version was `DELETED`.
+     */
     @InputImport(name="deleteTime", required=true)
     private final String deleteTime;
 
@@ -43,6 +58,9 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.deleteTime;
     }
 
+    /**
+     * Identifies the user who `DELETED` the version.
+     */
     @InputImport(name="deleteUser", required=true)
     private final ActingUserResponse deleteUser;
 
@@ -50,6 +68,9 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.deleteUser;
     }
 
+    /**
+     * The total number of files associated with the version. This value is calculated after a version is `FINALIZED`.
+     */
     @InputImport(name="fileCount", required=true)
     private final String fileCount;
 
@@ -57,6 +78,9 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.fileCount;
     }
 
+    /**
+     * The time at which the version was `FINALIZED`.
+     */
     @InputImport(name="finalizeTime", required=true)
     private final String finalizeTime;
 
@@ -64,6 +88,9 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.finalizeTime;
     }
 
+    /**
+     * Identifies the user who `FINALIZED` the version.
+     */
     @InputImport(name="finalizeUser", required=true)
     private final ActingUserResponse finalizeUser;
 
@@ -71,6 +98,9 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.finalizeUser;
     }
 
+    /**
+     * The labels used for extra metadata and/or filtering.
+     */
     @InputImport(name="labels", required=true)
     private final Map<String,String> labels;
 
@@ -78,6 +108,9 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.labels;
     }
 
+    /**
+     * The fully-qualified resource name for the version, in the format: sites/ SITE_ID/versions/VERSION_ID This name is provided in the response body when you call [`CreateVersion`](sites.versions/create).
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -85,6 +118,9 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The deploy status of the version. For a successful deploy, call [`CreateVersion`](sites.versions/create) to make a new version (`CREATED` status), [upload all desired files](sites.versions/populateFiles) to the version, then [update](sites.versions/patch) the version to the `FINALIZED` status. Note that if you leave the version in the `CREATED` state for more than 12 hours, the system will automatically mark the version as `ABANDONED`. You can also change the status of a version to `DELETED` by calling [`DeleteVersion`](sites.versions/delete).
+     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -92,6 +128,9 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.status;
     }
 
+    /**
+     * The total stored bytesize of the version. This value is calculated after a version is `FINALIZED`.
+     */
     @InputImport(name="versionBytes", required=true)
     private final String versionBytes;
 

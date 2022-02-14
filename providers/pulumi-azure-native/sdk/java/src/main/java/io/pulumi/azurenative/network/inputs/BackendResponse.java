@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Backend address of a frontDoor load balancer.
+ */
 public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BackendResponse Empty = new BackendResponse();
 
+    /**
+     * Location of the backend (IP address or FQDN)
+     */
     @InputImport(name="address")
     private final @Nullable String address;
 
@@ -22,6 +28,9 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
     }
 
+    /**
+     * The value to use as the host header sent to the backend. If blank or unspecified, this defaults to the incoming host.
+     */
     @InputImport(name="backendHostHeader")
     private final @Nullable String backendHostHeader;
 
@@ -29,6 +38,9 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.backendHostHeader == null ? Optional.empty() : Optional.ofNullable(this.backendHostHeader);
     }
 
+    /**
+     * Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'
+     */
     @InputImport(name="enabledState")
     private final @Nullable String enabledState;
 
@@ -36,6 +48,9 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
     }
 
+    /**
+     * The HTTP TCP port number. Must be between 1 and 65535.
+     */
     @InputImport(name="httpPort")
     private final @Nullable Integer httpPort;
 
@@ -43,6 +58,9 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.httpPort == null ? Optional.empty() : Optional.ofNullable(this.httpPort);
     }
 
+    /**
+     * The HTTPS TCP port number. Must be between 1 and 65535.
+     */
     @InputImport(name="httpsPort")
     private final @Nullable Integer httpsPort;
 
@@ -50,6 +68,9 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.httpsPort == null ? Optional.empty() : Optional.ofNullable(this.httpsPort);
     }
 
+    /**
+     * Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
+     */
     @InputImport(name="priority")
     private final @Nullable Integer priority;
 
@@ -57,6 +78,9 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
+    /**
+     * The Approval status for the connection to the Private Link
+     */
     @InputImport(name="privateEndpointStatus", required=true)
     private final String privateEndpointStatus;
 
@@ -64,6 +88,9 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.privateEndpointStatus;
     }
 
+    /**
+     * The Alias of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
+     */
     @InputImport(name="privateLinkAlias")
     private final @Nullable String privateLinkAlias;
 
@@ -71,6 +98,9 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.privateLinkAlias == null ? Optional.empty() : Optional.ofNullable(this.privateLinkAlias);
     }
 
+    /**
+     * A custom message to be included in the approval request to connect to the Private Link
+     */
     @InputImport(name="privateLinkApprovalMessage")
     private final @Nullable String privateLinkApprovalMessage;
 
@@ -78,6 +108,9 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.privateLinkApprovalMessage == null ? Optional.empty() : Optional.ofNullable(this.privateLinkApprovalMessage);
     }
 
+    /**
+     * The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
+     */
     @InputImport(name="privateLinkLocation")
     private final @Nullable String privateLinkLocation;
 
@@ -85,6 +118,9 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.privateLinkLocation == null ? Optional.empty() : Optional.ofNullable(this.privateLinkLocation);
     }
 
+    /**
+     * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
+     */
     @InputImport(name="privateLinkResourceId")
     private final @Nullable String privateLinkResourceId;
 
@@ -92,6 +128,9 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
         return this.privateLinkResourceId == null ? Optional.empty() : Optional.ofNullable(this.privateLinkResourceId);
     }
 
+    /**
+     * Weight of this endpoint for load balancing purposes.
+     */
     @InputImport(name="weight")
     private final @Nullable Integer weight;
 

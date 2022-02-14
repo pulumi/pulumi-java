@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * AcceleratorConfig represents a Hardware Accelerator request.
+ */
 public final class AcceleratorConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AcceleratorConfigResponse Empty = new AcceleratorConfigResponse();
 
+    /**
+     * The number of the accelerator cards exposed to an instance.
+     */
     @InputImport(name="acceleratorCount", required=true)
     private final String acceleratorCount;
 
@@ -19,6 +25,9 @@ public final class AcceleratorConfigResponse extends io.pulumi.resources.InvokeA
         return this.acceleratorCount;
     }
 
+    /**
+     * The accelerator type resource name. List of supported accelerators [here](https://cloud.google.com/compute/docs/gpus)
+     */
     @InputImport(name="acceleratorType", required=true)
     private final String acceleratorType;
 
@@ -26,6 +35,9 @@ public final class AcceleratorConfigResponse extends io.pulumi.resources.InvokeA
         return this.acceleratorType;
     }
 
+    /**
+     * Size of partitions to create on the GPU. Valid values are described in the NVIDIA [mig user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
+     */
     @InputImport(name="gpuPartitionSize", required=true)
     private final String gpuPartitionSize;
 

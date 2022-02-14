@@ -13,11 +13,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetManagementLockAtResourceGroupLevelResult {
+/**
+ * The resource ID of the lock.
+ */
     private final String id;
+/**
+ * The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.
+ */
     private final String level;
+/**
+ * The name of the lock.
+ */
     private final String name;
+/**
+ * Notes about the lock. Maximum of 512 characters.
+ */
     private final @Nullable String notes;
+/**
+ * The owners of the lock.
+ */
     private final @Nullable List<ManagementLockOwnerResponse> owners;
+/**
+ * The resource type of the lock - Microsoft.Authorization/locks.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","level","name","notes","owners","type"})
@@ -36,21 +54,39 @@ public final class GetManagementLockAtResourceGroupLevelResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The resource ID of the lock.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.
+ */
     public String getLevel() {
         return this.level;
     }
+/**
+ * The name of the lock.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Notes about the lock. Maximum of 512 characters.
+ */
     public Optional<String> getNotes() {
         return Optional.ofNullable(this.notes);
     }
+/**
+ * The owners of the lock.
+ */
     public List<ManagementLockOwnerResponse> getOwners() {
         return this.owners == null ? List.of() : this.owners;
     }
+/**
+ * The resource type of the lock - Microsoft.Authorization/locks.
+ */
     public String getType() {
         return this.type;
     }

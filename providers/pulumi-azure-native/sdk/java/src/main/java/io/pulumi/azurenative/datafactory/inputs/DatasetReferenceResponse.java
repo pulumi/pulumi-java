@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Dataset reference type.
+ */
 public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatasetReferenceResponse Empty = new DatasetReferenceResponse();
 
+    /**
+     * Arguments for dataset.
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,Object> parameters;
 
@@ -23,6 +29,9 @@ public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeAr
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * Reference dataset name.
+     */
     @InputImport(name="referenceName", required=true)
     private final String referenceName;
 
@@ -30,6 +39,9 @@ public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeAr
         return this.referenceName;
     }
 
+    /**
+     * Dataset reference type.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

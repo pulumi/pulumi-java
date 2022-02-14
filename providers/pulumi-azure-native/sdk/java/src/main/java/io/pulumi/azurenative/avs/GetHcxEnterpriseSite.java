@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHcxEnterpriseSite {
+/**
+ * An HCX Enterprise Site resource
+API Version: 2020-03-20.
+ *
+ * An HCX Enterprise Site resource
+ */
     public static CompletableFuture<GetHcxEnterpriseSiteResult> invokeAsync(GetHcxEnterpriseSiteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getHcxEnterpriseSite", TypeShape.of(GetHcxEnterpriseSiteResult.class), args == null ? GetHcxEnterpriseSiteArgs.Empty : args, Utilities.withVersion(options));
     }

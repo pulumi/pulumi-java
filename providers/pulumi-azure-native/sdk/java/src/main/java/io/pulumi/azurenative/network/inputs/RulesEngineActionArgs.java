@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * One or more actions that will execute, modifying the request and/or response.
+ */
 public final class RulesEngineActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RulesEngineActionArgs Empty = new RulesEngineActionArgs();
 
+    /**
+     * A list of header actions to apply from the request from AFD to the origin.
+     */
     @InputImport(name="requestHeaderActions")
     private final @Nullable Input<List<HeaderActionArgs>> requestHeaderActions;
 
@@ -25,6 +31,9 @@ public final class RulesEngineActionArgs extends io.pulumi.resources.ResourceArg
         return this.requestHeaderActions == null ? Input.empty() : this.requestHeaderActions;
     }
 
+    /**
+     * A list of header actions to apply from the response from AFD to the client.
+     */
     @InputImport(name="responseHeaderActions")
     private final @Nullable Input<List<HeaderActionArgs>> responseHeaderActions;
 
@@ -32,6 +41,9 @@ public final class RulesEngineActionArgs extends io.pulumi.resources.ResourceArg
         return this.responseHeaderActions == null ? Input.empty() : this.responseHeaderActions;
     }
 
+    /**
+     * Override the route configuration.
+     */
     @InputImport(name="routeConfigurationOverride")
     private final @Nullable Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride;
 

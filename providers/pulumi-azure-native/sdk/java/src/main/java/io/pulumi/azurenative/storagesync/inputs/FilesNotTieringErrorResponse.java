@@ -9,10 +9,16 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Files not tiering error object
+ */
 public final class FilesNotTieringErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FilesNotTieringErrorResponse Empty = new FilesNotTieringErrorResponse();
 
+    /**
+     * Error code (HResult)
+     */
     @InputImport(name="errorCode", required=true)
     private final Integer errorCode;
 
@@ -20,6 +26,9 @@ public final class FilesNotTieringErrorResponse extends io.pulumi.resources.Invo
         return this.errorCode;
     }
 
+    /**
+     * Count of files with this error
+     */
     @InputImport(name="fileCount", required=true)
     private final Double fileCount;
 

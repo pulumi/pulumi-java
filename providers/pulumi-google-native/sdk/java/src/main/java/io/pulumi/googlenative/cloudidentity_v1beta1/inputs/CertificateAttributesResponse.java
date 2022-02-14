@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Stores information about a certificate.
+ */
 public final class CertificateAttributesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CertificateAttributesResponse Empty = new CertificateAttributesResponse();
 
+    /**
+     * The X.509 extension for CertificateTemplate.
+     */
     @InputImport(name="certificateTemplate", required=true)
     private final CertificateTemplateResponse certificateTemplate;
 
@@ -20,6 +26,9 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
         return this.certificateTemplate;
     }
 
+    /**
+     * The encoded certificate fingerprint.
+     */
     @InputImport(name="fingerprint", required=true)
     private final String fingerprint;
 
@@ -27,6 +36,9 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
         return this.fingerprint;
     }
 
+    /**
+     * The name of the issuer of this certificate.
+     */
     @InputImport(name="issuer", required=true)
     private final String issuer;
 
@@ -34,6 +46,9 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
         return this.issuer;
     }
 
+    /**
+     * Serial number of the certificate, Example: "123456789".
+     */
     @InputImport(name="serialNumber", required=true)
     private final String serialNumber;
 
@@ -41,6 +56,9 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
         return this.serialNumber;
     }
 
+    /**
+     * The subject name of this certificate.
+     */
     @InputImport(name="subject", required=true)
     private final String subject;
 
@@ -48,6 +66,9 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
         return this.subject;
     }
 
+    /**
+     * The certificate thumbprint.
+     */
     @InputImport(name="thumbprint", required=true)
     private final String thumbprint;
 
@@ -55,6 +76,9 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
         return this.thumbprint;
     }
 
+    /**
+     * Validation state of this certificate.
+     */
     @InputImport(name="validationState", required=true)
     private final String validationState;
 
@@ -62,6 +86,9 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
         return this.validationState;
     }
 
+    /**
+     * Certificate not valid at or after this timestamp.
+     */
     @InputImport(name="validityExpirationTime", required=true)
     private final String validityExpirationTime;
 
@@ -69,6 +96,9 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
         return this.validityExpirationTime;
     }
 
+    /**
+     * Certificate not valid before this timestamp.
+     */
     @InputImport(name="validityStartTime", required=true)
     private final String validityStartTime;
 

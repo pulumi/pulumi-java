@@ -12,10 +12,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FaceDetectorPresetResponse {
+/**
+ * Blur type
+ */
     private final @Nullable String blurType;
+/**
+ * Dictionary containing key value pairs for parameters not exposed in the preset itself
+ */
     private final @Nullable Map<String,String> experimentalOptions;
+/**
+ * This mode provides the ability to choose between the following settings: 1) Analyze - For detection only.This mode generates a metadata JSON file marking appearances of faces throughout the video.Where possible, appearances of the same person are assigned the same ID. 2) Combined - Additionally redacts(blurs) detected faces. 3) Redact - This enables a 2-pass process, allowing for selective redaction of a subset of detected faces.It takes in the metadata file from a prior analyze pass, along with the source video, and a user-selected subset of IDs that require redaction.
+ */
     private final @Nullable String mode;
+/**
+ * The discriminator for derived types.
+Expected value is '#Microsoft.Media.FaceDetectorPreset'.
+ */
     private final String odataType;
+/**
+ * Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.
+ */
     private final @Nullable String resolution;
 
     @OutputCustomType.Constructor({"blurType","experimentalOptions","mode","odataType","resolution"})
@@ -32,18 +48,34 @@ public final class FaceDetectorPresetResponse {
         this.resolution = resolution;
     }
 
+/**
+ * Blur type
+ */
     public Optional<String> getBlurType() {
         return Optional.ofNullable(this.blurType);
     }
+/**
+ * Dictionary containing key value pairs for parameters not exposed in the preset itself
+ */
     public Map<String,String> getExperimentalOptions() {
         return this.experimentalOptions == null ? Map.of() : this.experimentalOptions;
     }
+/**
+ * This mode provides the ability to choose between the following settings: 1) Analyze - For detection only.This mode generates a metadata JSON file marking appearances of faces throughout the video.Where possible, appearances of the same person are assigned the same ID. 2) Combined - Additionally redacts(blurs) detected faces. 3) Redact - This enables a 2-pass process, allowing for selective redaction of a subset of detected faces.It takes in the metadata file from a prior analyze pass, along with the source video, and a user-selected subset of IDs that require redaction.
+ */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
+/**
+ * The discriminator for derived types.
+Expected value is '#Microsoft.Media.FaceDetectorPreset'.
+ */
     public String getOdataType() {
         return this.odataType;
     }
+/**
+ * Specifies the maximum resolution at which your video is analyzed. The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed. Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio. It will only resize if the video is of higher resolution. For example, a 1920x1080 input would be scaled to 640x360 before processing. Switching to "StandardDefinition" will reduce the time it takes to process high resolution video. It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details). However, faces that end up being too small in the resized video may not be detected.
+ */
     public Optional<String> getResolution() {
         return Optional.ofNullable(this.resolution);
     }

@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServerEndpointRecallErrorResponse {
+/**
+ * Count of occurences of the error
+ */
     private final Double count;
+/**
+ * Error code (HResult)
+ */
     private final Integer errorCode;
 
     @OutputCustomType.Constructor({"count","errorCode"})
@@ -21,9 +27,15 @@ public final class ServerEndpointRecallErrorResponse {
         this.errorCode = Objects.requireNonNull(errorCode);
     }
 
+/**
+ * Count of occurences of the error
+ */
     public Double getCount() {
         return this.count;
     }
+/**
+ * Error code (HResult)
+ */
     public Integer getErrorCode() {
         return this.errorCode;
     }

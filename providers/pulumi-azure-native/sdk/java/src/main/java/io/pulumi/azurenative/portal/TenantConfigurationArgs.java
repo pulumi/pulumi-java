@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TenantConfigurationArgs Empty = new TenantConfigurationArgs();
 
+    /**
+     * The configuration name. Value must be 'default'
+     */
     @InputImport(name="configurationName")
     private final @Nullable Input<String> configurationName;
 
@@ -22,6 +28,9 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
         return this.configurationName == null ? Input.empty() : this.configurationName;
     }
 
+    /**
+     * When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
+     */
     @InputImport(name="enforcePrivateMarkdownStorage")
     private final @Nullable Input<Boolean> enforcePrivateMarkdownStorage;
 

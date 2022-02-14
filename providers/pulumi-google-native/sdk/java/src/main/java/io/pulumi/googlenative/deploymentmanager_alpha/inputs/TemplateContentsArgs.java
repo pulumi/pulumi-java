@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Files that make up the template contents of a template type.
+ */
 public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TemplateContentsArgs Empty = new TemplateContentsArgs();
 
+    /**
+     * Import files referenced by the main template.
+     */
     @InputImport(name="imports")
     private final @Nullable Input<List<ImportFileArgs>> imports;
 
@@ -24,6 +30,9 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
         return this.imports == null ? Input.empty() : this.imports;
     }
 
+    /**
+     * Which interpreter (python or jinja) should be used during expansion.
+     */
     @InputImport(name="interpreter")
     private final @Nullable Input<TemplateContentsInterpreter> interpreter;
 
@@ -31,6 +40,9 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
         return this.interpreter == null ? Input.empty() : this.interpreter;
     }
 
+    /**
+     * The filename of the mainTemplate
+     */
     @InputImport(name="mainTemplate")
     private final @Nullable Input<String> mainTemplate;
 
@@ -38,6 +50,9 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
         return this.mainTemplate == null ? Input.empty() : this.mainTemplate;
     }
 
+    /**
+     * The contents of the template schema.
+     */
     @InputImport(name="schema")
     private final @Nullable Input<String> schema;
 
@@ -45,6 +60,9 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
         return this.schema == null ? Input.empty() : this.schema;
     }
 
+    /**
+     * The contents of the main template file.
+     */
     @InputImport(name="template")
     private final @Nullable Input<String> template;
 

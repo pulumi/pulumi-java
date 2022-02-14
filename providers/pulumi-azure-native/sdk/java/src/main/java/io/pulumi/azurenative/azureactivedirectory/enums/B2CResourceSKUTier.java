@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The tier of the tenant.
+ */
     @EnumType
     public enum B2CResourceSKUTier {
+/**
+ * The SKU tier used for all Azure AD B2C tenants.
+ */
         A0("A0");
 
         private final String value;

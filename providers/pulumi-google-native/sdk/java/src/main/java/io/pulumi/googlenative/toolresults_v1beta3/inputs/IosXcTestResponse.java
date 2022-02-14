@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A test of an iOS application that uses the XCTest framework.
+ */
 public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IosXcTestResponse Empty = new IosXcTestResponse();
 
+    /**
+     * Bundle ID of the app.
+     */
     @InputImport(name="bundleId", required=true)
     private final String bundleId;
 
@@ -19,6 +25,9 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
         return this.bundleId;
     }
 
+    /**
+     * Xcode version that the test was run with.
+     */
     @InputImport(name="xcodeVersion", required=true)
     private final String xcodeVersion;
 

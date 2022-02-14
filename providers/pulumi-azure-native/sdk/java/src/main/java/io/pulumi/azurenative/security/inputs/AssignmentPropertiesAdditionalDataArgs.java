@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Additional data about the assignment
+ */
 public final class AssignmentPropertiesAdditionalDataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssignmentPropertiesAdditionalDataArgs Empty = new AssignmentPropertiesAdditionalDataArgs();
 
+    /**
+     * Exemption category of this assignment
+     */
     @InputImport(name="exemptionCategory")
     private final @Nullable Input<String> exemptionCategory;
 

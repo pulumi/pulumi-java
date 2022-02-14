@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The error management.
+ */
 public final class ConnectorMappingErrorManagementResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectorMappingErrorManagementResponse Empty = new ConnectorMappingErrorManagementResponse();
 
+    /**
+     * The error limit allowed while importing data.
+     */
     @InputImport(name="errorLimit")
     private final @Nullable Integer errorLimit;
 
@@ -22,6 +28,9 @@ public final class ConnectorMappingErrorManagementResponse extends io.pulumi.res
         return this.errorLimit == null ? Optional.empty() : Optional.ofNullable(this.errorLimit);
     }
 
+    /**
+     * The type of error management to use for the mapping.
+     */
     @InputImport(name="errorManagementType", required=true)
     private final String errorManagementType;
 

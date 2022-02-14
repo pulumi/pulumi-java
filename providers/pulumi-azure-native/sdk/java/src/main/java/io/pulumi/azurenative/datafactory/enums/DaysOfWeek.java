@@ -8,14 +8,38 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum DaysOfWeek {
+/**
+ * 
+ */
         Sunday("Sunday"),
+/**
+ * 
+ */
         Monday("Monday"),
+/**
+ * 
+ */
         Tuesday("Tuesday"),
+/**
+ * 
+ */
         Wednesday("Wednesday"),
+/**
+ * 
+ */
         Thursday("Thursday"),
+/**
+ * 
+ */
         Friday("Friday"),
+/**
+ * 
+ */
         Saturday("Saturday");
 
         private final String value;

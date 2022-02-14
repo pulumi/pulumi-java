@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MetadataSourceResponse {
+/**
+ * Source type of the content
+ */
     private final String kind;
+/**
+ * Name of the content source.  The repo name, solution name, LA workspace name etc.
+ */
     private final @Nullable String name;
+/**
+ * ID of the content source.  The solution ID, workspace ID, etc
+ */
     private final @Nullable String sourceId;
 
     @OutputCustomType.Constructor({"kind","name","sourceId"})
@@ -25,12 +34,21 @@ public final class MetadataSourceResponse {
         this.sourceId = sourceId;
     }
 
+/**
+ * Source type of the content
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * Name of the content source.  The repo name, solution name, LA workspace name etc.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * ID of the content source.  The solution ID, workspace ID, etc
+ */
     public Optional<String> getSourceId() {
         return Optional.ofNullable(this.sourceId);
     }

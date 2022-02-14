@@ -16,26 +16,89 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetIncidentResult {
+/**
+ * Additional data on the incident
+ */
     private final IncidentAdditionalDataResponse additionalData;
+/**
+ * The reason the incident was closed
+ */
     private final @Nullable String classification;
+/**
+ * Describes the reason the incident was closed
+ */
     private final @Nullable String classificationComment;
+/**
+ * The classification reason the incident was closed with
+ */
     private final @Nullable String classificationReason;
+/**
+ * The time the incident was created
+ */
     private final String createdTimeUtc;
+/**
+ * The description of the incident
+ */
     private final @Nullable String description;
+/**
+ * Etag of the azure resource
+ */
     private final @Nullable String etag;
+/**
+ * The time of the first activity in the incident
+ */
     private final @Nullable String firstActivityTimeUtc;
+/**
+ * Azure resource Id
+ */
     private final String id;
+/**
+ * A sequential number
+ */
     private final Integer incidentNumber;
+/**
+ * The deep-link url to the incident in Azure portal
+ */
     private final String incidentUrl;
+/**
+ * List of labels relevant to this incident
+ */
     private final @Nullable List<IncidentLabelResponse> labels;
+/**
+ * The time of the last activity in the incident
+ */
     private final @Nullable String lastActivityTimeUtc;
+/**
+ * The last time the incident was updated
+ */
     private final String lastModifiedTimeUtc;
+/**
+ * Azure resource name
+ */
     private final String name;
+/**
+ * Describes a user that the incident is assigned to
+ */
     private final @Nullable IncidentOwnerInfoResponse owner;
+/**
+ * List of resource ids of Analytic rules related to the incident
+ */
     private final List<String> relatedAnalyticRuleIds;
+/**
+ * The severity of the incident
+ */
     private final String severity;
+/**
+ * The status of the incident
+ */
     private final String status;
+/**
+ * The title of the incident
+ */
     private final String title;
+/**
+ * Azure resource type
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"additionalData","classification","classificationComment","classificationReason","createdTimeUtc","description","etag","firstActivityTimeUtc","id","incidentNumber","incidentUrl","labels","lastActivityTimeUtc","lastModifiedTimeUtc","name","owner","relatedAnalyticRuleIds","severity","status","title","type"})
@@ -84,66 +147,129 @@ public final class GetIncidentResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Additional data on the incident
+ */
     public IncidentAdditionalDataResponse getAdditionalData() {
         return this.additionalData;
     }
+/**
+ * The reason the incident was closed
+ */
     public Optional<String> getClassification() {
         return Optional.ofNullable(this.classification);
     }
+/**
+ * Describes the reason the incident was closed
+ */
     public Optional<String> getClassificationComment() {
         return Optional.ofNullable(this.classificationComment);
     }
+/**
+ * The classification reason the incident was closed with
+ */
     public Optional<String> getClassificationReason() {
         return Optional.ofNullable(this.classificationReason);
     }
+/**
+ * The time the incident was created
+ */
     public String getCreatedTimeUtc() {
         return this.createdTimeUtc;
     }
+/**
+ * The description of the incident
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * Etag of the azure resource
+ */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+/**
+ * The time of the first activity in the incident
+ */
     public Optional<String> getFirstActivityTimeUtc() {
         return Optional.ofNullable(this.firstActivityTimeUtc);
     }
+/**
+ * Azure resource Id
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * A sequential number
+ */
     public Integer getIncidentNumber() {
         return this.incidentNumber;
     }
+/**
+ * The deep-link url to the incident in Azure portal
+ */
     public String getIncidentUrl() {
         return this.incidentUrl;
     }
+/**
+ * List of labels relevant to this incident
+ */
     public List<IncidentLabelResponse> getLabels() {
         return this.labels == null ? List.of() : this.labels;
     }
+/**
+ * The time of the last activity in the incident
+ */
     public Optional<String> getLastActivityTimeUtc() {
         return Optional.ofNullable(this.lastActivityTimeUtc);
     }
+/**
+ * The last time the incident was updated
+ */
     public String getLastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
+/**
+ * Azure resource name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Describes a user that the incident is assigned to
+ */
     public Optional<IncidentOwnerInfoResponse> getOwner() {
         return Optional.ofNullable(this.owner);
     }
+/**
+ * List of resource ids of Analytic rules related to the incident
+ */
     public List<String> getRelatedAnalyticRuleIds() {
         return this.relatedAnalyticRuleIds;
     }
+/**
+ * The severity of the incident
+ */
     public String getSeverity() {
         return this.severity;
     }
+/**
+ * The status of the incident
+ */
     public String getStatus() {
         return this.status;
     }
+/**
+ * The title of the incident
+ */
     public String getTitle() {
         return this.title;
     }
+/**
+ * Azure resource type
+ */
     public String getType() {
         return this.type;
     }

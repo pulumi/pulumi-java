@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Database connection string information.
+ */
 public final class ConnStringInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnStringInfoResponse Empty = new ConnStringInfoResponse();
 
+    /**
+     * Connection string value.
+     */
     @InputImport(name="connectionString")
     private final @Nullable String connectionString;
 
@@ -21,6 +27,9 @@ public final class ConnStringInfoResponse extends io.pulumi.resources.InvokeArgs
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
     }
 
+    /**
+     * Name of connection string.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -28,6 +37,9 @@ public final class ConnStringInfoResponse extends io.pulumi.resources.InvokeArgs
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Type of database.
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

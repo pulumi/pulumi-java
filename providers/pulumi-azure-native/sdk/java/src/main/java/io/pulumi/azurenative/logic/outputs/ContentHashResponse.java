@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ContentHashResponse {
+/**
+ * The algorithm of the content hash.
+ */
     private final @Nullable String algorithm;
+/**
+ * The value of the content hash.
+ */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"algorithm","value"})
@@ -22,9 +28,15 @@ public final class ContentHashResponse {
         this.value = value;
     }
 
+/**
+ * The algorithm of the content hash.
+ */
     public Optional<String> getAlgorithm() {
         return Optional.ofNullable(this.algorithm);
     }
+/**
+ * The value of the content hash.
+ */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

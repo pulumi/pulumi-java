@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PrePostStepResponse {
+/**
+ * The resource Id of the step to be run.
+ */
     private final String stepId;
 
     @OutputCustomType.Constructor({"stepId"})
@@ -16,6 +19,9 @@ public final class PrePostStepResponse {
         this.stepId = Objects.requireNonNull(stepId);
     }
 
+/**
+ * The resource Id of the step to be run.
+ */
     public String getStepId() {
         return this.stepId;
     }

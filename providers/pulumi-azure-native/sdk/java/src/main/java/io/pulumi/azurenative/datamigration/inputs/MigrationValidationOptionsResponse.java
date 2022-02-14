@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Types of validations to run after the migration
+ */
 public final class MigrationValidationOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrationValidationOptionsResponse Empty = new MigrationValidationOptionsResponse();
 
+    /**
+     * Allows to perform a checksum based data integrity validation between source and target for the selected database / tables .
+     */
     @InputImport(name="enableDataIntegrityValidation")
     private final @Nullable Boolean enableDataIntegrityValidation;
 
@@ -21,6 +27,9 @@ public final class MigrationValidationOptionsResponse extends io.pulumi.resource
         return this.enableDataIntegrityValidation == null ? Optional.empty() : Optional.ofNullable(this.enableDataIntegrityValidation);
     }
 
+    /**
+     * Allows to perform a quick and intelligent query analysis by retrieving queries from the source database and executes them in the target. The result will have execution statistics for executions in source and target databases for the extracted queries.
+     */
     @InputImport(name="enableQueryAnalysisValidation")
     private final @Nullable Boolean enableQueryAnalysisValidation;
 
@@ -28,6 +37,9 @@ public final class MigrationValidationOptionsResponse extends io.pulumi.resource
         return this.enableQueryAnalysisValidation == null ? Optional.empty() : Optional.ofNullable(this.enableQueryAnalysisValidation);
     }
 
+    /**
+     * Allows to compare the schema information between source and target.
+     */
     @InputImport(name="enableSchemaValidation")
     private final @Nullable Boolean enableSchemaValidation;
 

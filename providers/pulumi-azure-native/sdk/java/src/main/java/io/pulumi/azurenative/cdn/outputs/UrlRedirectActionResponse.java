@@ -10,7 +10,14 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UrlRedirectActionResponse {
+/**
+ * The name of the action for the delivery rule.
+Expected value is 'UrlRedirect'.
+ */
     private final String name;
+/**
+ * Defines the parameters for the action.
+ */
     private final UrlRedirectActionParametersResponse parameters;
 
     @OutputCustomType.Constructor({"name","parameters"})
@@ -21,9 +28,16 @@ public final class UrlRedirectActionResponse {
         this.parameters = Objects.requireNonNull(parameters);
     }
 
+/**
+ * The name of the action for the delivery rule.
+Expected value is 'UrlRedirect'.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Defines the parameters for the action.
+ */
     public UrlRedirectActionParametersResponse getParameters() {
         return this.parameters;
     }

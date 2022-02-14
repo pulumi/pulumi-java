@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Configuration options for the master authorized networks feature. Enabled master authorized networks will disallow all external traffic to access Kubernetes master through HTTPS except traffic from the given CIDR blocks, Google Compute Engine Public IPs and Google Prod IPs.
+ */
 public final class MasterAuthorizedNetworksConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MasterAuthorizedNetworksConfigResponse Empty = new MasterAuthorizedNetworksConfigResponse();
 
+    /**
+     * cidr_blocks define up to 50 external networks that could access Kubernetes master through HTTPS.
+     */
     @InputImport(name="cidrBlocks", required=true)
     private final List<CidrBlockResponse> cidrBlocks;
 
@@ -21,6 +27,9 @@ public final class MasterAuthorizedNetworksConfigResponse extends io.pulumi.reso
         return this.cidrBlocks;
     }
 
+    /**
+     * Whether or not master authorized networks is enabled.
+     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

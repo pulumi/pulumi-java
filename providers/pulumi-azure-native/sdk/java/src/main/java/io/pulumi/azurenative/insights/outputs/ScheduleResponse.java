@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ScheduleResponse {
+/**
+ * frequency (in minutes) at which rule condition should be evaluated.
+ */
     private final Integer frequencyInMinutes;
+/**
+ * Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).
+ */
     private final Integer timeWindowInMinutes;
 
     @OutputCustomType.Constructor({"frequencyInMinutes","timeWindowInMinutes"})
@@ -20,9 +26,15 @@ public final class ScheduleResponse {
         this.timeWindowInMinutes = Objects.requireNonNull(timeWindowInMinutes);
     }
 
+/**
+ * frequency (in minutes) at which rule condition should be evaluated.
+ */
     public Integer getFrequencyInMinutes() {
         return this.frequencyInMinutes;
     }
+/**
+ * Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).
+ */
     public Integer getTimeWindowInMinutes() {
         return this.timeWindowInMinutes;
     }

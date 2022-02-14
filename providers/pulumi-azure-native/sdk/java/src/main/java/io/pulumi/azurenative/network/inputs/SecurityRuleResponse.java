@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network security rule.
+ */
 public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityRuleResponse Empty = new SecurityRuleResponse();
 
+    /**
+     * The network traffic is allowed or denied.
+     */
     @InputImport(name="access", required=true)
     private final String access;
 
@@ -24,6 +30,9 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.access;
     }
 
+    /**
+     * A description for this rule. Restricted to 140 chars.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -31,6 +40,9 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The destination address prefix. CIDR or destination IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used.
+     */
     @InputImport(name="destinationAddressPrefix")
     private final @Nullable String destinationAddressPrefix;
 
@@ -38,6 +50,9 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.destinationAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.destinationAddressPrefix);
     }
 
+    /**
+     * The destination address prefixes. CIDR or destination IP ranges.
+     */
     @InputImport(name="destinationAddressPrefixes")
     private final @Nullable List<String> destinationAddressPrefixes;
 
@@ -45,6 +60,9 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.destinationAddressPrefixes == null ? List.of() : this.destinationAddressPrefixes;
     }
 
+    /**
+     * The application security group specified as destination.
+     */
     @InputImport(name="destinationApplicationSecurityGroups")
     private final @Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups;
 
@@ -52,6 +70,9 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.destinationApplicationSecurityGroups == null ? List.of() : this.destinationApplicationSecurityGroups;
     }
 
+    /**
+     * The destination port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
+     */
     @InputImport(name="destinationPortRange")
     private final @Nullable String destinationPortRange;
 
@@ -59,6 +80,9 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.destinationPortRange == null ? Optional.empty() : Optional.ofNullable(this.destinationPortRange);
     }
 
+    /**
+     * The destination port ranges.
+     */
     @InputImport(name="destinationPortRanges")
     private final @Nullable List<String> destinationPortRanges;
 
@@ -66,6 +90,9 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.destinationPortRanges == null ? List.of() : this.destinationPortRanges;
     }
 
+    /**
+     * The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.
+     */
     @InputImport(name="direction", required=true)
     private final String direction;
 
@@ -73,6 +100,9 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.direction;
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -80,6 +110,9 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -87,6 +120,9 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -94,6 +130,9 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
+     */
     @InputImport(name="priority")
     private final @Nullable Integer priority;
 
@@ -101,6 +140,9 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
+    /**
+     * Network protocol this rule applies to.
+     */
     @InputImport(name="protocol", required=true)
     private final String protocol;
 
@@ -108,6 +150,9 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.protocol;
     }
 
+    /**
+     * The provisioning state of the security rule resource.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -115,6 +160,9 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.provisioningState;
     }
 
+    /**
+     * The CIDR or source IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.
+     */
     @InputImport(name="sourceAddressPrefix")
     private final @Nullable String sourceAddressPrefix;
 
@@ -122,6 +170,9 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourceAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.sourceAddressPrefix);
     }
 
+    /**
+     * The CIDR or source IP ranges.
+     */
     @InputImport(name="sourceAddressPrefixes")
     private final @Nullable List<String> sourceAddressPrefixes;
 
@@ -129,6 +180,9 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourceAddressPrefixes == null ? List.of() : this.sourceAddressPrefixes;
     }
 
+    /**
+     * The application security group specified as source.
+     */
     @InputImport(name="sourceApplicationSecurityGroups")
     private final @Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups;
 
@@ -136,6 +190,9 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourceApplicationSecurityGroups == null ? List.of() : this.sourceApplicationSecurityGroups;
     }
 
+    /**
+     * The source port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
+     */
     @InputImport(name="sourcePortRange")
     private final @Nullable String sourcePortRange;
 
@@ -143,6 +200,9 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourcePortRange == null ? Optional.empty() : Optional.ofNullable(this.sourcePortRange);
     }
 
+    /**
+     * The source port ranges.
+     */
     @InputImport(name="sourcePortRanges")
     private final @Nullable List<String> sourcePortRanges;
 
@@ -150,6 +210,9 @@ public final class SecurityRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourcePortRanges == null ? List.of() : this.sourcePortRanges;
     }
 
+    /**
+     * The type of the resource.
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

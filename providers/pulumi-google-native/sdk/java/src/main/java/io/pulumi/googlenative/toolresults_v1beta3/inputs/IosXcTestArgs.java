@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A test of an iOS application that uses the XCTest framework.
+ */
 public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IosXcTestArgs Empty = new IosXcTestArgs();
 
+    /**
+     * Bundle ID of the app.
+     */
     @InputImport(name="bundleId")
     private final @Nullable Input<String> bundleId;
 
@@ -21,6 +27,9 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.bundleId == null ? Input.empty() : this.bundleId;
     }
 
+    /**
+     * Xcode version that the test was run with.
+     */
     @InputImport(name="xcodeVersion")
     private final @Nullable Input<String> xcodeVersion;
 

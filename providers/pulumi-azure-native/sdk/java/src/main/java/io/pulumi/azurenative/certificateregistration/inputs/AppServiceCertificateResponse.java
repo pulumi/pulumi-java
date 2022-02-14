@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Key Vault container for a certificate that is purchased through Azure.
+ */
 public final class AppServiceCertificateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AppServiceCertificateResponse Empty = new AppServiceCertificateResponse();
 
+    /**
+     * Key Vault resource Id.
+     */
     @InputImport(name="keyVaultId")
     private final @Nullable String keyVaultId;
 
@@ -21,6 +27,9 @@ public final class AppServiceCertificateResponse extends io.pulumi.resources.Inv
         return this.keyVaultId == null ? Optional.empty() : Optional.ofNullable(this.keyVaultId);
     }
 
+    /**
+     * Key Vault secret name.
+     */
     @InputImport(name="keyVaultSecretName")
     private final @Nullable String keyVaultSecretName;
 
@@ -28,6 +37,9 @@ public final class AppServiceCertificateResponse extends io.pulumi.resources.Inv
         return this.keyVaultSecretName == null ? Optional.empty() : Optional.ofNullable(this.keyVaultSecretName);
     }
 
+    /**
+     * Status of the Key Vault secret.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Active message associated with project.
+ */
 public final class StatusMessageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StatusMessageResponse Empty = new StatusMessageResponse();
 
+    /**
+     * Service-defined message code.
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -19,6 +25,9 @@ public final class StatusMessageResponse extends io.pulumi.resources.InvokeArgs 
         return this.code;
     }
 
+    /**
+     * Time in UTC at which the message was created.
+     */
     @InputImport(name="createdTimeUtc", required=true)
     private final String createdTimeUtc;
 
@@ -26,6 +35,9 @@ public final class StatusMessageResponse extends io.pulumi.resources.InvokeArgs 
         return this.createdTimeUtc;
     }
 
+    /**
+     * Severity level of the status message.
+     */
     @InputImport(name="level", required=true)
     private final String level;
 
@@ -33,6 +45,9 @@ public final class StatusMessageResponse extends io.pulumi.resources.InvokeArgs 
         return this.level;
     }
 
+    /**
+     * A human-readable representation of the message code.
+     */
     @InputImport(name="message", required=true)
     private final String message;
 

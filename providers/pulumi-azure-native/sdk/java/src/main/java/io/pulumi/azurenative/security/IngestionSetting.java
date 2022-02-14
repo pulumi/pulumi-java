@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.security;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.security.IngestionSettingArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -14,21 +13,115 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Configures how to correlate scan data and logs with resources associated with the subscription.
+API Version: 2021-01-15-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create an ingestion setting for subscription
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ingestionSetting = new AzureNative.Security.IngestionSetting("ingestionSetting", new AzureNative.Security.IngestionSettingArgs
+        {
+            IngestionSettingName = "default",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := security.NewIngestionSetting(ctx, "ingestionSetting", &security.IngestionSettingArgs{
+			IngestionSettingName: pulumi.String("default"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const ingestionSetting = new azure_native.security.IngestionSetting("ingestionSetting", {ingestionSettingName: "default"});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+ingestion_setting = azure_native.security.IngestionSetting("ingestionSetting", ingestion_setting_name="default")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:security:IngestionSetting default /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/ingestionSettings/default 
+```
+
+ */
 @ResourceType(type="azure-native:security:IngestionSetting")
 public class IngestionSetting extends io.pulumi.resources.CustomResource {
+    /**
+     * Resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public IngestionSetting(String name, @Nullable IngestionSettingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:security:IngestionSetting", name, args == null ? IngestionSettingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -47,6 +140,14 @@ public class IngestionSetting extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static IngestionSetting get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IngestionSetting(name, id, options);
     }

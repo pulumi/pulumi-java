@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobConfigurationTableCopyArgs Empty = new JobConfigurationTableCopyArgs();
 
+    /**
+     * [Optional] Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion.
+     */
     @InputImport(name="createDisposition")
     private final @Nullable Input<String> createDisposition;
 
@@ -25,6 +31,9 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
         return this.createDisposition == null ? Input.empty() : this.createDisposition;
     }
 
+    /**
+     * Custom encryption configuration (e.g., Cloud KMS keys).
+     */
     @InputImport(name="destinationEncryptionConfiguration")
     private final @Nullable Input<EncryptionConfigurationArgs> destinationEncryptionConfiguration;
 
@@ -32,6 +41,9 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
         return this.destinationEncryptionConfiguration == null ? Input.empty() : this.destinationEncryptionConfiguration;
     }
 
+    /**
+     * [Optional] The time when the destination table expires. Expired tables will be deleted and their storage reclaimed.
+     */
     @InputImport(name="destinationExpirationTime")
     private final @Nullable Input<Object> destinationExpirationTime;
 
@@ -39,6 +51,9 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
         return this.destinationExpirationTime == null ? Input.empty() : this.destinationExpirationTime;
     }
 
+    /**
+     * [Required] The destination table
+     */
     @InputImport(name="destinationTable")
     private final @Nullable Input<TableReferenceArgs> destinationTable;
 
@@ -46,6 +61,9 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
         return this.destinationTable == null ? Input.empty() : this.destinationTable;
     }
 
+    /**
+     * [Optional] Supported operation types in table copy job.
+     */
     @InputImport(name="operationType")
     private final @Nullable Input<String> operationType;
 
@@ -53,6 +71,9 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
         return this.operationType == null ? Input.empty() : this.operationType;
     }
 
+    /**
+     * [Pick one] Source table to copy.
+     */
     @InputImport(name="sourceTable")
     private final @Nullable Input<TableReferenceArgs> sourceTable;
 
@@ -60,6 +81,9 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
         return this.sourceTable == null ? Input.empty() : this.sourceTable;
     }
 
+    /**
+     * [Pick one] Source tables to copy.
+     */
     @InputImport(name="sourceTables")
     private final @Nullable Input<List<TableReferenceArgs>> sourceTables;
 
@@ -67,6 +91,9 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
         return this.sourceTables == null ? Input.empty() : this.sourceTables;
     }
 
+    /**
+     * [Optional] Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion.
+     */
     @InputImport(name="writeDisposition")
     private final @Nullable Input<String> writeDisposition;
 

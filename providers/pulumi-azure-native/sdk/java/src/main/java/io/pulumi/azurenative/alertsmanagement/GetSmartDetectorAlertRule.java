@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSmartDetectorAlertRule {
+/**
+ * The alert rule information
+API Version: 2019-06-01.
+ *
+ * The alert rule information
+ */
     public static CompletableFuture<GetSmartDetectorAlertRuleResult> invokeAsync(GetSmartDetectorAlertRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:alertsmanagement:getSmartDetectorAlertRule", TypeShape.of(GetSmartDetectorAlertRuleResult.class), args == null ? GetSmartDetectorAlertRuleArgs.Empty : args, Utilities.withVersion(options));
     }

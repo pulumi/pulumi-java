@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DedicatedCloudNodeArgs Empty = new DedicatedCloudNodeArgs();
 
+    /**
+     * Availability Zone id, e.g. "az1"
+     */
     @InputImport(name="availabilityZoneId", required=true)
     private final Input<String> availabilityZoneId;
 
@@ -24,6 +30,9 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
         return this.availabilityZoneId;
     }
 
+    /**
+     * dedicated cloud node name
+     */
     @InputImport(name="dedicatedCloudNodeName")
     private final @Nullable Input<String> dedicatedCloudNodeName;
 
@@ -31,6 +40,9 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
         return this.dedicatedCloudNodeName == null ? Input.empty() : this.dedicatedCloudNodeName;
     }
 
+    /**
+     * SKU's id
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -38,6 +50,9 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
         return this.id;
     }
 
+    /**
+     * Azure region
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -45,6 +60,9 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * SKU's name
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -52,6 +70,9 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
         return this.name;
     }
 
+    /**
+     * count of nodes to create
+     */
     @InputImport(name="nodesCount", required=true)
     private final Input<Integer> nodesCount;
 
@@ -59,6 +80,9 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
         return this.nodesCount;
     }
 
+    /**
+     * Placement Group id, e.g. "n1"
+     */
     @InputImport(name="placementGroupId", required=true)
     private final Input<String> placementGroupId;
 
@@ -66,6 +90,9 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
         return this.placementGroupId;
     }
 
+    /**
+     * purchase id
+     */
     @InputImport(name="purchaseId", required=true)
     private final Input<String> purchaseId;
 
@@ -73,6 +100,9 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
         return this.purchaseId;
     }
 
+    /**
+     * The name of the resource group
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -80,6 +110,9 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
+    /**
+     * Dedicated Cloud Nodes SKU
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -87,6 +120,9 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Dedicated Cloud Nodes tags
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Any scheduled maintenancce for this instance.
+ */
 public final class SqlScheduledMaintenanceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SqlScheduledMaintenanceResponse Empty = new SqlScheduledMaintenanceResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="canDefer", required=true)
     private final Boolean canDefer;
 
@@ -20,6 +26,9 @@ public final class SqlScheduledMaintenanceResponse extends io.pulumi.resources.I
         return this.canDefer;
     }
 
+    /**
+     * If the scheduled maintenance can be rescheduled.
+     */
     @InputImport(name="canReschedule", required=true)
     private final Boolean canReschedule;
 
@@ -27,6 +36,9 @@ public final class SqlScheduledMaintenanceResponse extends io.pulumi.resources.I
         return this.canReschedule;
     }
 
+    /**
+     * Maintenance cannot be rescheduled to start beyond this deadline.
+     */
     @InputImport(name="scheduleDeadlineTime", required=true)
     private final String scheduleDeadlineTime;
 
@@ -34,6 +46,9 @@ public final class SqlScheduledMaintenanceResponse extends io.pulumi.resources.I
         return this.scheduleDeadlineTime;
     }
 
+    /**
+     * The start time of any upcoming scheduled maintenance for this instance.
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 

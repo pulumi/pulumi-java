@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Database instance local user password validation policy
+ */
 public final class PasswordValidationPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PasswordValidationPolicyArgs Empty = new PasswordValidationPolicyArgs();
 
+    /**
+     * The complexity of the password.
+     */
     @InputImport(name="complexity")
     private final @Nullable Input<PasswordValidationPolicyComplexity> complexity;
 
@@ -24,6 +30,9 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
         return this.complexity == null ? Input.empty() : this.complexity;
     }
 
+    /**
+     * Disallow username as a part of the password.
+     */
     @InputImport(name="disallowUsernameSubstring")
     private final @Nullable Input<Boolean> disallowUsernameSubstring;
 
@@ -31,6 +40,9 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
         return this.disallowUsernameSubstring == null ? Input.empty() : this.disallowUsernameSubstring;
     }
 
+    /**
+     * Minimum number of characters allowed.
+     */
     @InputImport(name="minLength")
     private final @Nullable Input<Integer> minLength;
 
@@ -38,6 +50,9 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
         return this.minLength == null ? Input.empty() : this.minLength;
     }
 
+    /**
+     * Minimum interval after which the password can be changed. This flag is only supported for PostgresSQL.
+     */
     @InputImport(name="passwordChangeInterval")
     private final @Nullable Input<String> passwordChangeInterval;
 
@@ -45,6 +60,9 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
         return this.passwordChangeInterval == null ? Input.empty() : this.passwordChangeInterval;
     }
 
+    /**
+     * Number of previous passwords that cannot be reused.
+     */
     @InputImport(name="reuseInterval")
     private final @Nullable Input<Integer> reuseInterval;
 

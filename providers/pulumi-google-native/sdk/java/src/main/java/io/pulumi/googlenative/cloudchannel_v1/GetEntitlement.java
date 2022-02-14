@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEntitlement {
+/**
+ * Returns the requested Entitlement resource. Possible error codes: * PERMISSION_DENIED: The customer doesn't belong to the reseller. * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: The customer entitlement was not found. Return value: The requested Entitlement resource.
+ */
     public static CompletableFuture<GetEntitlementResult> invokeAsync(GetEntitlementArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudchannel/v1:getEntitlement", TypeShape.of(GetEntitlementResult.class), args == null ? GetEntitlementArgs.Empty : args, Utilities.withVersion(options));
     }

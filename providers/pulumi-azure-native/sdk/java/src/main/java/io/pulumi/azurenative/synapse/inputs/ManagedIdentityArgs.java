@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The workspace managed identity
+ */
 public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedIdentityArgs Empty = new ManagedIdentityArgs();
 
+    /**
+     * The type of managed identity for the workspace
+     */
     @InputImport(name="type")
     private final @Nullable Input<ResourceIdentityType> type;
 

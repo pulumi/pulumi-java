@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HlsResponse {
+/**
+ * The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.
+ */
     private final @Nullable Integer fragmentsPerTsSegment;
 
     @OutputCustomType.Constructor({"fragmentsPerTsSegment"})
@@ -18,6 +21,9 @@ public final class HlsResponse {
         this.fragmentsPerTsSegment = fragmentsPerTsSegment;
     }
 
+/**
+ * The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.
+ */
     public Optional<Integer> getFragmentsPerTsSegment() {
         return Optional.ofNullable(this.fragmentsPerTsSegment);
     }

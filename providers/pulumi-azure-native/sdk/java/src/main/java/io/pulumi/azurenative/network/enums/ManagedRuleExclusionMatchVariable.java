@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The variable type to be excluded.
+ */
     @EnumType
     public enum ManagedRuleExclusionMatchVariable {
+/**
+ * 
+ */
         RequestHeaderNames("RequestHeaderNames"),
+/**
+ * 
+ */
         RequestCookieNames("RequestCookieNames"),
+/**
+ * 
+ */
         QueryStringArgNames("QueryStringArgNames"),
+/**
+ * 
+ */
         RequestBodyPostArgNames("RequestBodyPostArgNames"),
+/**
+ * 
+ */
         RequestBodyJsonArgNames("RequestBodyJsonArgNames");
 
         private final String value;

@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Gets or sets the target availability zone.
+ */
     @EnumType
     public enum TargetAvailabilityZone {
+/**
+ * 
+ */
         One("1"),
+/**
+ * 
+ */
         Two("2"),
+/**
+ * 
+ */
         Three("3"),
+/**
+ * 
+ */
         NA("NA");
 
         private final String value;

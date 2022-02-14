@@ -8,10 +8,16 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Config to block services with externalIPs field.
+ */
 public final class ServiceExternalIPsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceExternalIPsConfigResponse Empty = new ServiceExternalIPsConfigResponse();
 
+    /**
+     * Whether Services with ExternalIPs field are allowed or not.
+     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

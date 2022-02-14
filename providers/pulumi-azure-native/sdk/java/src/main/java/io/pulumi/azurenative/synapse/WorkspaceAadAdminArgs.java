@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class WorkspaceAadAdminArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkspaceAadAdminArgs Empty = new WorkspaceAadAdminArgs();
 
+    /**
+     * Workspace active directory administrator type
+     */
     @InputImport(name="administratorType")
     private final @Nullable Input<String> administratorType;
 
@@ -21,6 +27,9 @@ public final class WorkspaceAadAdminArgs extends io.pulumi.resources.ResourceArg
         return this.administratorType == null ? Input.empty() : this.administratorType;
     }
 
+    /**
+     * Login of the workspace active directory administrator
+     */
     @InputImport(name="login")
     private final @Nullable Input<String> login;
 
@@ -28,6 +37,9 @@ public final class WorkspaceAadAdminArgs extends io.pulumi.resources.ResourceArg
         return this.login == null ? Input.empty() : this.login;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -35,6 +47,9 @@ public final class WorkspaceAadAdminArgs extends io.pulumi.resources.ResourceArg
         return this.resourceGroupName;
     }
 
+    /**
+     * Object ID of the workspace active directory administrator
+     */
     @InputImport(name="sid")
     private final @Nullable Input<String> sid;
 
@@ -42,6 +57,9 @@ public final class WorkspaceAadAdminArgs extends io.pulumi.resources.ResourceArg
         return this.sid == null ? Input.empty() : this.sid;
     }
 
+    /**
+     * Tenant ID of the workspace active directory administrator
+     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 
@@ -49,6 +67,9 @@ public final class WorkspaceAadAdminArgs extends io.pulumi.resources.ResourceArg
         return this.tenantId == null ? Input.empty() : this.tenantId;
     }
 
+    /**
+     * The name of the workspace
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

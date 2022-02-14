@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AppServiceCertificateResponse {
+/**
+ * Key Vault resource Id.
+ */
     private final @Nullable String keyVaultId;
+/**
+ * Key Vault secret name.
+ */
     private final @Nullable String keyVaultSecretName;
+/**
+ * Status of the Key Vault secret.
+ */
     private final String provisioningState;
 
     @OutputCustomType.Constructor({"keyVaultId","keyVaultSecretName","provisioningState"})
@@ -25,12 +34,21 @@ public final class AppServiceCertificateResponse {
         this.provisioningState = Objects.requireNonNull(provisioningState);
     }
 
+/**
+ * Key Vault resource Id.
+ */
     public Optional<String> getKeyVaultId() {
         return Optional.ofNullable(this.keyVaultId);
     }
+/**
+ * Key Vault secret name.
+ */
     public Optional<String> getKeyVaultSecretName() {
         return Optional.ofNullable(this.keyVaultSecretName);
     }
+/**
+ * Status of the Key Vault secret.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }

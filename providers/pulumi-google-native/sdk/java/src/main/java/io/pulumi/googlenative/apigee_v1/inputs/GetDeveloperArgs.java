@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetDeveloperArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDeveloperArgs Empty = new GetDeveloperArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="action")
     private final @Nullable String action;
 
@@ -21,6 +27,9 @@ public final class GetDeveloperArgs extends io.pulumi.resources.InvokeArgs {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="developerId", required=true)
     private final String developerId;
 
@@ -28,6 +37,9 @@ public final class GetDeveloperArgs extends io.pulumi.resources.InvokeArgs {
         return this.developerId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 

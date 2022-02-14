@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A snapshot schedule.
+ */
 public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScheduleResponse Empty = new ScheduleResponse();
 
+    /**
+     * A crontab-like specification that the schedule uses to take snapshots.
+     */
     @InputImport(name="crontabSpec", required=true)
     private final String crontabSpec;
 
@@ -20,6 +26,9 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.crontabSpec;
     }
 
+    /**
+     * A list of snapshot names created in this schedule.
+     */
     @InputImport(name="prefix", required=true)
     private final String prefix;
 
@@ -27,6 +36,9 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
         return this.prefix;
     }
 
+    /**
+     * The maximum number of snapshots to retain in this schedule.
+     */
     @InputImport(name="retentionCount", required=true)
     private final Integer retentionCount;
 

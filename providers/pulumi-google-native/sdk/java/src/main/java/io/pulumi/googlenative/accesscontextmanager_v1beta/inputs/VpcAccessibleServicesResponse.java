@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Specifies how APIs are allowed to communicate within the Service Perimeter.
+ */
 public final class VpcAccessibleServicesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VpcAccessibleServicesResponse Empty = new VpcAccessibleServicesResponse();
 
+    /**
+     * The list of APIs usable within the Service Perimeter. Must be empty unless 'enable_restriction' is True. You can specify a list of individual services, as well as include the 'RESTRICTED-SERVICES' value, which automatically includes all of the services protected by the perimeter.
+     */
     @InputImport(name="allowedServices", required=true)
     private final List<String> allowedServices;
 
@@ -21,6 +27,9 @@ public final class VpcAccessibleServicesResponse extends io.pulumi.resources.Inv
         return this.allowedServices;
     }
 
+    /**
+     * Whether to restrict API calls within the Service Perimeter to the list of APIs specified in 'allowed_services'.
+     */
     @InputImport(name="enableRestriction", required=true)
     private final Boolean enableRestriction;
 

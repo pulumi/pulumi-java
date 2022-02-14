@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MachinePropertiesResponseOsProfile {
+/**
+ * Specifies the host OS name of the hybrid machine.
+ */
     private final String computerName;
 
     @OutputCustomType.Constructor({"computerName"})
@@ -16,6 +19,9 @@ public final class MachinePropertiesResponseOsProfile {
         this.computerName = Objects.requireNonNull(computerName);
     }
 
+/**
+ * Specifies the host OS name of the hybrid machine.
+ */
     public String getComputerName() {
         return this.computerName;
     }

@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class KubernetesIPConfigurationResponse {
+/**
+ * IP address of the Kubernetes node.
+ */
     private final @Nullable String ipAddress;
+/**
+ * Port of the Kubernetes node.
+ */
     private final String port;
 
     @OutputCustomType.Constructor({"ipAddress","port"})
@@ -22,9 +28,15 @@ public final class KubernetesIPConfigurationResponse {
         this.port = Objects.requireNonNull(port);
     }
 
+/**
+ * IP address of the Kubernetes node.
+ */
     public Optional<String> getIpAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
+/**
+ * Port of the Kubernetes node.
+ */
     public String getPort() {
         return this.port;
     }

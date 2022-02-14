@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PipelinePolicyResponse {
+/**
+ * Pipeline ElapsedTime Metric Policy.
+ */
     private final @Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric;
 
     @OutputCustomType.Constructor({"elapsedTimeMetric"})
@@ -18,6 +21,9 @@ public final class PipelinePolicyResponse {
         this.elapsedTimeMetric = elapsedTimeMetric;
     }
 
+/**
+ * Pipeline ElapsedTime Metric Policy.
+ */
     public Optional<PipelineElapsedTimeMetricPolicyResponse> getElapsedTimeMetric() {
         return Optional.ofNullable(this.elapsedTimeMetric);
     }

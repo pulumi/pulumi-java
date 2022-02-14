@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The B2B partner content.
+ */
 public final class B2BPartnerContentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final B2BPartnerContentResponse Empty = new B2BPartnerContentResponse();
 
+    /**
+     * The list of partner business identities.
+     */
     @InputImport(name="businessIdentities")
     private final @Nullable List<BusinessIdentityResponse> businessIdentities;
 

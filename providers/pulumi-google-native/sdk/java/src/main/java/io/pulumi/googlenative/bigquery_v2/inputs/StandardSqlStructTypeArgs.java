@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class StandardSqlStructTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StandardSqlStructTypeArgs Empty = new StandardSqlStructTypeArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="fields")
     private final @Nullable Input<List<StandardSqlFieldArgs>> fields;
 

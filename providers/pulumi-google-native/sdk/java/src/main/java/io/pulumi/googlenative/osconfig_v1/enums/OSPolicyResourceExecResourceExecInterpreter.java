@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Required. The script interpreter to use.
+ */
     @EnumType
     public enum OSPolicyResourceExecResourceExecInterpreter {
+/**
+ * Defaults to NONE.
+ */
         InterpreterUnspecified("INTERPRETER_UNSPECIFIED"),
+/**
+ * If an interpreter is not specified, the source is executed directly. This execution, without an interpreter, only succeeds for executables and scripts that have shebang lines.
+ */
         None("NONE"),
+/**
+ * Indicates that the script runs with `/bin/sh` on Linux and `cmd.exe` on Windows.
+ */
         Shell("SHELL"),
+/**
+ * Indicates that the script runs with PowerShell.
+ */
         Powershell("POWERSHELL");
 
         private final String value;

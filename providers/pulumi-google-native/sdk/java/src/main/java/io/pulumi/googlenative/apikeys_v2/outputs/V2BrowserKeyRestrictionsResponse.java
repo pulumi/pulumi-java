@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class V2BrowserKeyRestrictionsResponse {
+/**
+ * A list of regular expressions for the referrer URLs that are allowed to make API calls with this key.
+ */
     private final List<String> allowedReferrers;
 
     @OutputCustomType.Constructor({"allowedReferrers"})
@@ -17,6 +20,9 @@ public final class V2BrowserKeyRestrictionsResponse {
         this.allowedReferrers = Objects.requireNonNull(allowedReferrers);
     }
 
+/**
+ * A list of regular expressions for the referrer URLs that are allowed to make API calls with this key.
+ */
     public List<String> getAllowedReferrers() {
         return this.allowedReferrers;
     }

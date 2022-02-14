@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RateLimitRuleListResponse {
+/**
+ * List of rules
+ */
     private final @Nullable List<RateLimitRuleResponse> rules;
 
     @OutputCustomType.Constructor({"rules"})
@@ -18,6 +21,9 @@ public final class RateLimitRuleListResponse {
         this.rules = rules;
     }
 
+/**
+ * List of rules
+ */
     public List<RateLimitRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }

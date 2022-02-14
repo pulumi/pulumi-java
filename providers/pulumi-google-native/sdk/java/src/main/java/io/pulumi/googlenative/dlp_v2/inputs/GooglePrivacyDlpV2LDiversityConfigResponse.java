@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * l-diversity metric, used for analysis of reidentification risk.
+ */
 public final class GooglePrivacyDlpV2LDiversityConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2LDiversityConfigResponse Empty = new GooglePrivacyDlpV2LDiversityConfigResponse();
 
+    /**
+     * Set of quasi-identifiers indicating how equivalence classes are defined for the l-diversity computation. When multiple fields are specified, they are considered a single composite key.
+     */
     @InputImport(name="quasiIds", required=true)
     private final List<GooglePrivacyDlpV2FieldIdResponse> quasiIds;
 
@@ -20,6 +26,9 @@ public final class GooglePrivacyDlpV2LDiversityConfigResponse extends io.pulumi.
         return this.quasiIds;
     }
 
+    /**
+     * Sensitive field for computing the l-value.
+     */
     @InputImport(name="sensitiveAttribute", required=true)
     private final GooglePrivacyDlpV2FieldIdResponse sensitiveAttribute;
 

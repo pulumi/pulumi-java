@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListStorageAccountKeysResult {
+/**
+ * 
+ */
     private final String userStorageKey;
 
     @OutputCustomType.Constructor({"userStorageKey"})
@@ -16,6 +19,9 @@ public final class ListStorageAccountKeysResult {
         this.userStorageKey = Objects.requireNonNull(userStorageKey);
     }
 
+/**
+ * 
+ */
     public String getUserStorageKey() {
         return this.userStorageKey;
     }

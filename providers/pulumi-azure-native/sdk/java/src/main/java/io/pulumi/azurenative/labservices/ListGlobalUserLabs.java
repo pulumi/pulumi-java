@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListGlobalUserLabs {
+/**
+ * Lists the labs owned by a user
+API Version: 2018-10-15.
+ *
+ * Lists the labs owned by a user
+ */
     public static CompletableFuture<ListGlobalUserLabsResult> invokeAsync(ListGlobalUserLabsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:listGlobalUserLabs", TypeShape.of(ListGlobalUserLabsResult.class), args == null ? ListGlobalUserLabsArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,17 +4,23 @@
 package io.pulumi.kubernetes.core_v1.outputs;
 
 import io.pulumi.core.internal.annotations.OutputCustomType;
-import io.pulumi.kubernetes.core_v1.outputs.ContainerStateRunning;
-import io.pulumi.kubernetes.core_v1.outputs.ContainerStateTerminated;
-import io.pulumi.kubernetes.core_v1.outputs.ContainerStateWaiting;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ContainerState {
+/**
+ * Details about a running container
+ */
     private final @Nullable ContainerStateRunning running;
+/**
+ * Details about a terminated container
+ */
     private final @Nullable ContainerStateTerminated terminated;
+/**
+ * Details about a waiting container
+ */
     private final @Nullable ContainerStateWaiting waiting;
 
     @OutputCustomType.Constructor({"running","terminated","waiting"})
@@ -27,12 +33,21 @@ public final class ContainerState {
         this.waiting = waiting;
     }
 
+/**
+ * Details about a running container
+ */
     public Optional<ContainerStateRunning> getRunning() {
         return Optional.ofNullable(this.running);
     }
+/**
+ * Details about a terminated container
+ */
     public Optional<ContainerStateTerminated> getTerminated() {
         return Optional.ofNullable(this.terminated);
     }
+/**
+ * Details about a waiting container
+ */
     public Optional<ContainerStateWaiting> getWaiting() {
         return Optional.ofNullable(this.waiting);
     }

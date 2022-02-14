@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StatefulPolicyPreservedStateResponse {
+/**
+ * Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
+ */
     private final Map<String,String> disks;
 
     @OutputCustomType.Constructor({"disks"})
@@ -17,6 +20,9 @@ public final class StatefulPolicyPreservedStateResponse {
         this.disks = Objects.requireNonNull(disks);
     }
 
+/**
+ * Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
+ */
     public Map<String,String> getDisks() {
         return this.disks;
     }

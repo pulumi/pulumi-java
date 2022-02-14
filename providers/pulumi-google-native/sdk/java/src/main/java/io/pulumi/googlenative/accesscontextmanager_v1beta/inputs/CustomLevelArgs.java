@@ -9,10 +9,16 @@ import io.pulumi.googlenative.accesscontextmanager_v1beta.inputs.ExprArgs;
 import java.util.Objects;
 
 
+/**
+ * `CustomLevel` is an `AccessLevel` using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request. See CEL spec at: https://github.com/google/cel-spec
+ */
 public final class CustomLevelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomLevelArgs Empty = new CustomLevelArgs();
 
+    /**
+     * A Cloud CEL expression evaluating to a boolean.
+     */
     @InputImport(name="expr", required=true)
     private final Input<ExprArgs> expr;
 

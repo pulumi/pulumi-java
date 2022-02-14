@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntegrationRuntime {
+/**
+ * Integration runtime resource type.
+API Version: 2021-03-01.
+ *
+ * Integration runtime resource type.
+ */
     public static CompletableFuture<GetIntegrationRuntimeResult> invokeAsync(GetIntegrationRuntimeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getIntegrationRuntime", TypeShape.of(GetIntegrationRuntimeResult.class), args == null ? GetIntegrationRuntimeArgs.Empty : args, Utilities.withVersion(options));
     }

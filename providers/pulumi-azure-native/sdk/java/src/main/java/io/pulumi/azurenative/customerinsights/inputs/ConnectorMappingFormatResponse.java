@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Connector mapping property format.
+ */
 public final class ConnectorMappingFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectorMappingFormatResponse Empty = new ConnectorMappingFormatResponse();
 
+    /**
+     * The oData language.
+     */
     @InputImport(name="acceptLanguage")
     private final @Nullable String acceptLanguage;
 
@@ -21,6 +27,9 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
         return this.acceptLanguage == null ? Optional.empty() : Optional.ofNullable(this.acceptLanguage);
     }
 
+    /**
+     * Character separating array elements.
+     */
     @InputImport(name="arraySeparator")
     private final @Nullable String arraySeparator;
 
@@ -28,6 +37,9 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
         return this.arraySeparator == null ? Optional.empty() : Optional.ofNullable(this.arraySeparator);
     }
 
+    /**
+     * The character that signifies a break between columns.
+     */
     @InputImport(name="columnDelimiter")
     private final @Nullable String columnDelimiter;
 
@@ -35,6 +47,9 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
         return this.columnDelimiter == null ? Optional.empty() : Optional.ofNullable(this.columnDelimiter);
     }
 
+    /**
+     * The type mapping format.
+     */
     @InputImport(name="formatType", required=true)
     private final String formatType;
 
@@ -42,6 +57,9 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
         return this.formatType;
     }
 
+    /**
+     * Quote character, used to indicate enquoted fields.
+     */
     @InputImport(name="quoteCharacter")
     private final @Nullable String quoteCharacter;
 
@@ -49,6 +67,9 @@ public final class ConnectorMappingFormatResponse extends io.pulumi.resources.In
         return this.quoteCharacter == null ? Optional.empty() : Optional.ofNullable(this.quoteCharacter);
     }
 
+    /**
+     * Escape character for quotes, can be the same as the quoteCharacter.
+     */
     @InputImport(name="quoteEscapeCharacter")
     private final @Nullable String quoteEscapeCharacter;
 

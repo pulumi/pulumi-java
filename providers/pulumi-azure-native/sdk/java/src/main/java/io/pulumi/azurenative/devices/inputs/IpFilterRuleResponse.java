@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The IP filter rules for the IoT hub.
+ */
 public final class IpFilterRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IpFilterRuleResponse Empty = new IpFilterRuleResponse();
 
+    /**
+     * The desired action for requests captured by this rule.
+     */
     @InputImport(name="action", required=true)
     private final String action;
 
@@ -19,6 +25,9 @@ public final class IpFilterRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.action;
     }
 
+    /**
+     * The name of the IP filter rule.
+     */
     @InputImport(name="filterName", required=true)
     private final String filterName;
 
@@ -26,6 +35,9 @@ public final class IpFilterRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.filterName;
     }
 
+    /**
+     * A string that contains the IP address range in CIDR notation for the rule.
+     */
     @InputImport(name="ipMask", required=true)
     private final String ipMask;
 

@@ -10,8 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ClusterJobResponse {
+/**
+ * Resource ID of the streaming job.
+ */
     private final String id;
+/**
+ * The current execution state of the streaming job.
+ */
     private final String jobState;
+/**
+ * The number of streaming units that are used by the streaming job.
+ */
     private final Integer streamingUnits;
 
     @OutputCustomType.Constructor({"id","jobState","streamingUnits"})
@@ -24,12 +33,21 @@ public final class ClusterJobResponse {
         this.streamingUnits = Objects.requireNonNull(streamingUnits);
     }
 
+/**
+ * Resource ID of the streaming job.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The current execution state of the streaming job.
+ */
     public String getJobState() {
         return this.jobState;
     }
+/**
+ * The number of streaming units that are used by the streaming job.
+ */
     public Integer getStreamingUnits() {
         return this.streamingUnits;
     }

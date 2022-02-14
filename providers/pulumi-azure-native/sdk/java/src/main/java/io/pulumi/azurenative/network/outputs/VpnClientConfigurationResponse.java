@@ -17,17 +17,53 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VpnClientConfigurationResponse {
+/**
+ * The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
+ */
     private final @Nullable String aadAudience;
+/**
+ * The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
+ */
     private final @Nullable String aadIssuer;
+/**
+ * The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
+ */
     private final @Nullable String aadTenant;
+/**
+ * The radius server address property of the VirtualNetworkGateway resource for vpn client connection.
+ */
     private final @Nullable String radiusServerAddress;
+/**
+ * The radius secret property of the VirtualNetworkGateway resource for vpn client connection.
+ */
     private final @Nullable String radiusServerSecret;
+/**
+ * The radiusServers property for multiple radius server configuration.
+ */
     private final @Nullable List<RadiusServerResponse> radiusServers;
+/**
+ * VPN authentication types for the virtual network gateway..
+ */
     private final @Nullable List<String> vpnAuthenticationTypes;
+/**
+ * The reference to the address space resource which represents Address space for P2S VpnClient.
+ */
     private final @Nullable AddressSpaceResponse vpnClientAddressPool;
+/**
+ * VpnClientIpsecPolicies for virtual network gateway P2S client.
+ */
     private final @Nullable List<IpsecPolicyResponse> vpnClientIpsecPolicies;
+/**
+ * VpnClientProtocols for Virtual network gateway.
+ */
     private final @Nullable List<String> vpnClientProtocols;
+/**
+ * VpnClientRevokedCertificate for Virtual network gateway.
+ */
     private final @Nullable List<VpnClientRevokedCertificateResponse> vpnClientRevokedCertificates;
+/**
+ * VpnClientRootCertificate for virtual network gateway.
+ */
     private final @Nullable List<VpnClientRootCertificateResponse> vpnClientRootCertificates;
 
     @OutputCustomType.Constructor({"aadAudience","aadIssuer","aadTenant","radiusServerAddress","radiusServerSecret","radiusServers","vpnAuthenticationTypes","vpnClientAddressPool","vpnClientIpsecPolicies","vpnClientProtocols","vpnClientRevokedCertificates","vpnClientRootCertificates"})
@@ -58,39 +94,75 @@ public final class VpnClientConfigurationResponse {
         this.vpnClientRootCertificates = vpnClientRootCertificates;
     }
 
+/**
+ * The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
+ */
     public Optional<String> getAadAudience() {
         return Optional.ofNullable(this.aadAudience);
     }
+/**
+ * The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
+ */
     public Optional<String> getAadIssuer() {
         return Optional.ofNullable(this.aadIssuer);
     }
+/**
+ * The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
+ */
     public Optional<String> getAadTenant() {
         return Optional.ofNullable(this.aadTenant);
     }
+/**
+ * The radius server address property of the VirtualNetworkGateway resource for vpn client connection.
+ */
     public Optional<String> getRadiusServerAddress() {
         return Optional.ofNullable(this.radiusServerAddress);
     }
+/**
+ * The radius secret property of the VirtualNetworkGateway resource for vpn client connection.
+ */
     public Optional<String> getRadiusServerSecret() {
         return Optional.ofNullable(this.radiusServerSecret);
     }
+/**
+ * The radiusServers property for multiple radius server configuration.
+ */
     public List<RadiusServerResponse> getRadiusServers() {
         return this.radiusServers == null ? List.of() : this.radiusServers;
     }
+/**
+ * VPN authentication types for the virtual network gateway..
+ */
     public List<String> getVpnAuthenticationTypes() {
         return this.vpnAuthenticationTypes == null ? List.of() : this.vpnAuthenticationTypes;
     }
+/**
+ * The reference to the address space resource which represents Address space for P2S VpnClient.
+ */
     public Optional<AddressSpaceResponse> getVpnClientAddressPool() {
         return Optional.ofNullable(this.vpnClientAddressPool);
     }
+/**
+ * VpnClientIpsecPolicies for virtual network gateway P2S client.
+ */
     public List<IpsecPolicyResponse> getVpnClientIpsecPolicies() {
         return this.vpnClientIpsecPolicies == null ? List.of() : this.vpnClientIpsecPolicies;
     }
+/**
+ * VpnClientProtocols for Virtual network gateway.
+ */
     public List<String> getVpnClientProtocols() {
         return this.vpnClientProtocols == null ? List.of() : this.vpnClientProtocols;
     }
+/**
+ * VpnClientRevokedCertificate for Virtual network gateway.
+ */
     public List<VpnClientRevokedCertificateResponse> getVpnClientRevokedCertificates() {
         return this.vpnClientRevokedCertificates == null ? List.of() : this.vpnClientRevokedCertificates;
     }
+/**
+ * VpnClientRootCertificate for virtual network gateway.
+ */
     public List<VpnClientRootCertificateResponse> getVpnClientRootCertificates() {
         return this.vpnClientRootCertificates == null ? List.of() : this.vpnClientRootCertificates;
     }

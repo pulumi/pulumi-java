@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Information about the database restore.
+ */
 public final class RestoreInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RestoreInfoResponse Empty = new RestoreInfoResponse();
 
+    /**
+     * Information about the backup used to restore the database. The backup may no longer exist.
+     */
     @InputImport(name="backupInfo", required=true)
     private final BackupInfoResponse backupInfo;
 
@@ -20,6 +26,9 @@ public final class RestoreInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.backupInfo;
     }
 
+    /**
+     * The type of the restore source.
+     */
     @InputImport(name="sourceType", required=true)
     private final String sourceType;
 

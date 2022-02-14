@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class LinkedStorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LinkedStorageAccountArgs Empty = new LinkedStorageAccountArgs();
 
+    /**
+     * Linked storage accounts type.
+     */
     @InputImport(name="dataSourceType")
     private final @Nullable Input<String> dataSourceType;
 
@@ -22,6 +28,9 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
         return this.dataSourceType == null ? Input.empty() : this.dataSourceType;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -29,6 +38,9 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
         return this.resourceGroupName;
     }
 
+    /**
+     * Linked storage accounts resources ids.
+     */
     @InputImport(name="storageAccountIds")
     private final @Nullable Input<List<String>> storageAccountIds;
 
@@ -36,6 +48,9 @@ public final class LinkedStorageAccountArgs extends io.pulumi.resources.Resource
         return this.storageAccountIds == null ? Input.empty() : this.storageAccountIds;
     }
 
+    /**
+     * The name of the workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

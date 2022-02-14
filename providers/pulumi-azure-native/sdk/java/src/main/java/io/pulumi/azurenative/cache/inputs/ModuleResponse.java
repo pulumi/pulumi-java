@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies configuration of a redis module
+ */
 public final class ModuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ModuleResponse Empty = new ModuleResponse();
 
+    /**
+     * Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.
+     */
     @InputImport(name="args")
     private final @Nullable String args;
 
@@ -21,6 +27,9 @@ public final class ModuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.args == null ? Optional.empty() : Optional.ofNullable(this.args);
     }
 
+    /**
+     * The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,6 +37,9 @@ public final class ModuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The version of the module, e.g. '1.0'.
+     */
     @InputImport(name="version", required=true)
     private final String version;
 

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * AAD Vpn authentication type related parameters.
+ */
 public final class AadAuthenticationParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AadAuthenticationParametersResponse Empty = new AadAuthenticationParametersResponse();
 
+    /**
+     * AAD Vpn authentication parameter AAD audience.
+     */
     @InputImport(name="aadAudience")
     private final @Nullable String aadAudience;
 
@@ -21,6 +27,9 @@ public final class AadAuthenticationParametersResponse extends io.pulumi.resourc
         return this.aadAudience == null ? Optional.empty() : Optional.ofNullable(this.aadAudience);
     }
 
+    /**
+     * AAD Vpn authentication parameter AAD issuer.
+     */
     @InputImport(name="aadIssuer")
     private final @Nullable String aadIssuer;
 
@@ -28,6 +37,9 @@ public final class AadAuthenticationParametersResponse extends io.pulumi.resourc
         return this.aadIssuer == null ? Optional.empty() : Optional.ofNullable(this.aadIssuer);
     }
 
+    /**
+     * AAD Vpn authentication parameter AAD tenant.
+     */
     @InputImport(name="aadTenant")
     private final @Nullable String aadTenant;
 

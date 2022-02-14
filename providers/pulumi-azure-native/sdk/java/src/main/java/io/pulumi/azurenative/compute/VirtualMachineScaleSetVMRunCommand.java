@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.compute.VirtualMachineScaleSetVMRunCommandArgs;
 import io.pulumi.azurenative.compute.outputs.RunCommandInputParameterResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineRunCommandInstanceViewResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineRunCommandScriptSourceResponse;
@@ -20,99 +19,362 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Describes a Virtual Machine run command.
+API Version: 2021-03-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create VirtualMachineScaleSet VM run command.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSetVMRunCommand = new AzureNative.Compute.VirtualMachineScaleSetVMRunCommand("virtualMachineScaleSetVMRunCommand", new AzureNative.Compute.VirtualMachineScaleSetVMRunCommandArgs
+        {
+            AsyncExecution = false,
+            InstanceId = "0",
+            Location = "West US",
+            Parameters = 
+            {
+                new AzureNative.Compute.Inputs.RunCommandInputParameterArgs
+                {
+                    Name = "param1",
+                    Value = "value1",
+                },
+                new AzureNative.Compute.Inputs.RunCommandInputParameterArgs
+                {
+                    Name = "param2",
+                    Value = "value2",
+                },
+            },
+            ResourceGroupName = "myResourceGroup",
+            RunAsPassword = "<runAsPassword>",
+            RunAsUser = "user1",
+            RunCommandName = "myRunCommand",
+            Source = new AzureNative.Compute.Inputs.VirtualMachineRunCommandScriptSourceArgs
+            {
+                Script = "Write-Host Hello World!",
+            },
+            TimeoutInSeconds = 3600,
+            VmScaleSetName = "myvmScaleSet",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachineScaleSetVMRunCommand(ctx, "virtualMachineScaleSetVMRunCommand", &compute.VirtualMachineScaleSetVMRunCommandArgs{
+			AsyncExecution: pulumi.Bool(false),
+			InstanceId:     pulumi.String("0"),
+			Location:       pulumi.String("West US"),
+			Parameters: []compute.RunCommandInputParameterArgs{
+				&compute.RunCommandInputParameterArgs{
+					Name:  pulumi.String("param1"),
+					Value: pulumi.String("value1"),
+				},
+				&compute.RunCommandInputParameterArgs{
+					Name:  pulumi.String("param2"),
+					Value: pulumi.String("value2"),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			RunAsPassword:     pulumi.String("<runAsPassword>"),
+			RunAsUser:         pulumi.String("user1"),
+			RunCommandName:    pulumi.String("myRunCommand"),
+			Source: &compute.VirtualMachineRunCommandScriptSourceArgs{
+				Script: pulumi.String("Write-Host Hello World!"),
+			},
+			TimeoutInSeconds: pulumi.Int(3600),
+			VmScaleSetName:   pulumi.String("myvmScaleSet"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const virtualMachineScaleSetVMRunCommand = new azure_native.compute.VirtualMachineScaleSetVMRunCommand("virtualMachineScaleSetVMRunCommand", {
+    asyncExecution: false,
+    instanceId: "0",
+    location: "West US",
+    parameters: [
+        {
+            name: "param1",
+            value: "value1",
+        },
+        {
+            name: "param2",
+            value: "value2",
+        },
+    ],
+    resourceGroupName: "myResourceGroup",
+    runAsPassword: "<runAsPassword>",
+    runAsUser: "user1",
+    runCommandName: "myRunCommand",
+    source: {
+        script: "Write-Host Hello World!",
+    },
+    timeoutInSeconds: 3600,
+    vmScaleSetName: "myvmScaleSet",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+virtual_machine_scale_set_vm_run_command = azure_native.compute.VirtualMachineScaleSetVMRunCommand("virtualMachineScaleSetVMRunCommand",
+    async_execution=False,
+    instance_id="0",
+    location="West US",
+    parameters=[
+        azure_native.compute.RunCommandInputParameterArgs(
+            name="param1",
+            value="value1",
+        ),
+        azure_native.compute.RunCommandInputParameterArgs(
+            name="param2",
+            value="value2",
+        ),
+    ],
+    resource_group_name="myResourceGroup",
+    run_as_password="<runAsPassword>",
+    run_as_user="user1",
+    run_command_name="myRunCommand",
+    source=azure_native.compute.VirtualMachineRunCommandScriptSourceArgs(
+        script="Write-Host Hello World!",
+    ),
+    timeout_in_seconds=3600,
+    vm_scale_set_name="myvmScaleSet")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:compute:VirtualMachineScaleSetVMRunCommand myRunCommand /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/myvmScaleSet/virtualMachines/0/runCommands/myRunCommand 
+```
+
+ */
 @ResourceType(type="azure-native:compute:VirtualMachineScaleSetVMRunCommand")
 public class VirtualMachineScaleSetVMRunCommand extends io.pulumi.resources.CustomResource {
+    /**
+     * Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.
+     */
     @OutputExport(name="asyncExecution", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> asyncExecution;
 
+    /**
+     * @return Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.
+     */
     public Output</* @Nullable */ Boolean> getAsyncExecution() {
         return this.asyncExecution;
     }
+    /**
+     * Specifies the Azure storage blob where script error stream will be uploaded.
+     */
     @OutputExport(name="errorBlobUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> errorBlobUri;
 
+    /**
+     * @return Specifies the Azure storage blob where script error stream will be uploaded.
+     */
     public Output</* @Nullable */ String> getErrorBlobUri() {
         return this.errorBlobUri;
     }
+    /**
+     * The virtual machine run command instance view.
+     */
     @OutputExport(name="instanceView", type=VirtualMachineRunCommandInstanceViewResponse.class, parameters={})
     private Output<VirtualMachineRunCommandInstanceViewResponse> instanceView;
 
+    /**
+     * @return The virtual machine run command instance view.
+     */
     public Output<VirtualMachineRunCommandInstanceViewResponse> getInstanceView() {
         return this.instanceView;
     }
+    /**
+     * Resource location
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Specifies the Azure storage blob where script output stream will be uploaded.
+     */
     @OutputExport(name="outputBlobUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> outputBlobUri;
 
+    /**
+     * @return Specifies the Azure storage blob where script output stream will be uploaded.
+     */
     public Output</* @Nullable */ String> getOutputBlobUri() {
         return this.outputBlobUri;
     }
+    /**
+     * The parameters used by the script.
+     */
     @OutputExport(name="parameters", type=List.class, parameters={RunCommandInputParameterResponse.class})
     private Output</* @Nullable */ List<RunCommandInputParameterResponse>> parameters;
 
+    /**
+     * @return The parameters used by the script.
+     */
     public Output</* @Nullable */ List<RunCommandInputParameterResponse>> getParameters() {
         return this.parameters;
     }
+    /**
+     * The parameters used by the script.
+     */
     @OutputExport(name="protectedParameters", type=List.class, parameters={RunCommandInputParameterResponse.class})
     private Output</* @Nullable */ List<RunCommandInputParameterResponse>> protectedParameters;
 
+    /**
+     * @return The parameters used by the script.
+     */
     public Output</* @Nullable */ List<RunCommandInputParameterResponse>> getProtectedParameters() {
         return this.protectedParameters;
     }
+    /**
+     * The provisioning state, which only appears in the response.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state, which only appears in the response.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Specifies the user account password on the VM when executing the run command.
+     */
     @OutputExport(name="runAsPassword", type=String.class, parameters={})
     private Output</* @Nullable */ String> runAsPassword;
 
+    /**
+     * @return Specifies the user account password on the VM when executing the run command.
+     */
     public Output</* @Nullable */ String> getRunAsPassword() {
         return this.runAsPassword;
     }
+    /**
+     * Specifies the user account on the VM when executing the run command.
+     */
     @OutputExport(name="runAsUser", type=String.class, parameters={})
     private Output</* @Nullable */ String> runAsUser;
 
+    /**
+     * @return Specifies the user account on the VM when executing the run command.
+     */
     public Output</* @Nullable */ String> getRunAsUser() {
         return this.runAsUser;
     }
+    /**
+     * The source of the run command script.
+     */
     @OutputExport(name="source", type=VirtualMachineRunCommandScriptSourceResponse.class, parameters={})
     private Output</* @Nullable */ VirtualMachineRunCommandScriptSourceResponse> source;
 
+    /**
+     * @return The source of the run command script.
+     */
     public Output</* @Nullable */ VirtualMachineRunCommandScriptSourceResponse> getSource() {
         return this.source;
     }
+    /**
+     * Resource tags
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The timeout in seconds to execute the run command.
+     */
     @OutputExport(name="timeoutInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> timeoutInSeconds;
 
+    /**
+     * @return The timeout in seconds to execute the run command.
+     */
     public Output</* @Nullable */ Integer> getTimeoutInSeconds() {
         return this.timeoutInSeconds;
     }
+    /**
+     * Resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public VirtualMachineScaleSetVMRunCommand(String name, VirtualMachineScaleSetVMRunCommandArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:compute:VirtualMachineScaleSetVMRunCommand", name, args == null ? VirtualMachineScaleSetVMRunCommandArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -136,6 +398,14 @@ public class VirtualMachineScaleSetVMRunCommand extends io.pulumi.resources.Cust
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static VirtualMachineScaleSetVMRunCommand get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualMachineScaleSetVMRunCommand(name, id, options);
     }

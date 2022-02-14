@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a Replica for this Secret.
+ */
 public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicaArgs Empty = new ReplicaArgs();
 
+    /**
+     * The canonical IDs of the location to replicate data. For example: `"us-east1"`.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 

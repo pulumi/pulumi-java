@@ -8,16 +8,46 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Request variable to compare with.
+ */
     @EnumType
     public enum FrontDoorMatchVariable {
+/**
+ * 
+ */
         RemoteAddr("RemoteAddr"),
+/**
+ * 
+ */
         RequestMethod("RequestMethod"),
+/**
+ * 
+ */
         QueryString("QueryString"),
+/**
+ * 
+ */
         PostArgs("PostArgs"),
+/**
+ * 
+ */
         RequestUri("RequestUri"),
+/**
+ * 
+ */
         RequestHeader("RequestHeader"),
+/**
+ * 
+ */
         RequestBody("RequestBody"),
+/**
+ * 
+ */
         Cookies("Cookies"),
+/**
+ * 
+ */
         SocketAddr("SocketAddr");
 
         private final String value;

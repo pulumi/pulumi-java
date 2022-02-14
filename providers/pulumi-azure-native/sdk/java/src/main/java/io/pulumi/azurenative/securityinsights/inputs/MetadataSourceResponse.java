@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The original source of the content item, where it comes from.
+ */
 public final class MetadataSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MetadataSourceResponse Empty = new MetadataSourceResponse();
 
+    /**
+     * Source type of the content
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -21,6 +27,9 @@ public final class MetadataSourceResponse extends io.pulumi.resources.InvokeArgs
         return this.kind;
     }
 
+    /**
+     * Name of the content source.  The repo name, solution name, LA workspace name etc.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -28,6 +37,9 @@ public final class MetadataSourceResponse extends io.pulumi.resources.InvokeArgs
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * ID of the content source.  The solution ID, workspace ID, etc
+     */
     @InputImport(name="sourceId")
     private final @Nullable String sourceId;
 

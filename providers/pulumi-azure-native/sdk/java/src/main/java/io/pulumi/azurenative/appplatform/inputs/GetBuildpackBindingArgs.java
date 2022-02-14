@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetBuildpackBindingArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBuildpackBindingArgs Empty = new GetBuildpackBindingArgs();
 
+    /**
+     * The name of the build service resource.
+     */
     @InputImport(name="buildServiceName", required=true)
     private final String buildServiceName;
 
@@ -19,6 +25,9 @@ public final class GetBuildpackBindingArgs extends io.pulumi.resources.InvokeArg
         return this.buildServiceName;
     }
 
+    /**
+     * The name of the builder resource.
+     */
     @InputImport(name="builderName", required=true)
     private final String builderName;
 
@@ -26,6 +35,9 @@ public final class GetBuildpackBindingArgs extends io.pulumi.resources.InvokeArg
         return this.builderName;
     }
 
+    /**
+     * The name of the Buildpack Binding Name
+     */
     @InputImport(name="buildpackBindingName", required=true)
     private final String buildpackBindingName;
 
@@ -33,6 +45,9 @@ public final class GetBuildpackBindingArgs extends io.pulumi.resources.InvokeArg
         return this.buildpackBindingName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -40,6 +55,9 @@ public final class GetBuildpackBindingArgs extends io.pulumi.resources.InvokeArg
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Service resource.
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class MediaServiceIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MediaServiceIdentityResponse Empty = new MediaServiceIdentityResponse();
 
+    /**
+     * The Principal ID of the identity.
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -19,6 +25,9 @@ public final class MediaServiceIdentityResponse extends io.pulumi.resources.Invo
         return this.principalId;
     }
 
+    /**
+     * The Tenant ID of the identity.
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -26,6 +35,9 @@ public final class MediaServiceIdentityResponse extends io.pulumi.resources.Invo
         return this.tenantId;
     }
 
+    /**
+     * The identity type.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

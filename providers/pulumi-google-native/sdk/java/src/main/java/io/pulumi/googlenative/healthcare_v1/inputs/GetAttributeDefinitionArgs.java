@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetAttributeDefinitionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAttributeDefinitionArgs Empty = new GetAttributeDefinitionArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="attributeDefinitionId", required=true)
     private final String attributeDefinitionId;
 
@@ -21,6 +27,9 @@ public final class GetAttributeDefinitionArgs extends io.pulumi.resources.Invoke
         return this.attributeDefinitionId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="consentStoreId", required=true)
     private final String consentStoreId;
 
@@ -28,6 +37,9 @@ public final class GetAttributeDefinitionArgs extends io.pulumi.resources.Invoke
         return this.consentStoreId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="datasetId", required=true)
     private final String datasetId;
 
@@ -35,6 +47,9 @@ public final class GetAttributeDefinitionArgs extends io.pulumi.resources.Invoke
         return this.datasetId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -42,6 +57,9 @@ public final class GetAttributeDefinitionArgs extends io.pulumi.resources.Invoke
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The details of the identity used for CMK
+ */
 public final class CmkKekIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CmkKekIdentityResponse Empty = new CmkKekIdentityResponse();
 
+    /**
+     * Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field
+     */
     @InputImport(name="useSystemAssignedIdentity")
     private final @Nullable Boolean useSystemAssignedIdentity;
 
@@ -22,6 +28,9 @@ public final class CmkKekIdentityResponse extends io.pulumi.resources.InvokeArgs
         return this.useSystemAssignedIdentity == null ? Optional.empty() : Optional.ofNullable(this.useSystemAssignedIdentity);
     }
 
+    /**
+     * The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned
+     */
     @InputImport(name="userAssignedIdentity")
     private final @Nullable String userAssignedIdentity;
 

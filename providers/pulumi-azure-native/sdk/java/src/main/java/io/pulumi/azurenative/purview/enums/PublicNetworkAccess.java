@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Gets or sets the public network access.
+ */
     @EnumType
     public enum PublicNetworkAccess {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         Enabled("Enabled"),
+/**
+ * 
+ */
         Disabled("Disabled");
 
         private final String value;

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A POSIX filesystem resource.
+ */
 public final class PosixFilesystemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PosixFilesystemArgs Empty = new PosixFilesystemArgs();
 
+    /**
+     * Root directory path to the filesystem.
+     */
     @InputImport(name="rootDirectory")
     private final @Nullable Input<String> rootDirectory;
 

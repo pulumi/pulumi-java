@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallRuleArgs Empty = new FirewallRuleArgs();
 
+    /**
+     * The name of the Redis cache.
+     */
     @InputImport(name="cacheName", required=true)
     private final Input<String> cacheName;
 
@@ -21,6 +27,9 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.cacheName;
     }
 
+    /**
+     * highest IP address included in the range
+     */
     @InputImport(name="endIP", required=true)
     private final Input<String> endIP;
 
@@ -28,6 +37,9 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.endIP;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -35,6 +47,9 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the firewall rule.
+     */
     @InputImport(name="ruleName")
     private final @Nullable Input<String> ruleName;
 
@@ -42,6 +57,9 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.ruleName == null ? Input.empty() : this.ruleName;
     }
 
+    /**
+     * lowest IP address included in the range
+     */
     @InputImport(name="startIP", required=true)
     private final Input<String> startIP;
 

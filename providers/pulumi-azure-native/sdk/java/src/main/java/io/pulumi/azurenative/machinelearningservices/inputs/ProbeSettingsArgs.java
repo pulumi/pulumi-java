@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Deployment container liveness/readiness probe configuration.
+ */
 public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProbeSettingsArgs Empty = new ProbeSettingsArgs();
 
+    /**
+     * The number of failures to allow before returning an unhealthy status.
+     */
     @InputImport(name="failureThreshold")
     private final @Nullable Input<Integer> failureThreshold;
 
@@ -22,6 +28,9 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.failureThreshold == null ? Input.empty() : this.failureThreshold;
     }
 
+    /**
+     * The delay before the first probe in ISO 8601 format.
+     */
     @InputImport(name="initialDelay")
     private final @Nullable Input<String> initialDelay;
 
@@ -29,6 +38,9 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.initialDelay == null ? Input.empty() : this.initialDelay;
     }
 
+    /**
+     * The length of time between probes in ISO 8601 format.
+     */
     @InputImport(name="period")
     private final @Nullable Input<String> period;
 
@@ -36,6 +48,9 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.period == null ? Input.empty() : this.period;
     }
 
+    /**
+     * The number of successful probes before returning a healthy status.
+     */
     @InputImport(name="successThreshold")
     private final @Nullable Input<Integer> successThreshold;
 
@@ -43,6 +58,9 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.successThreshold == null ? Input.empty() : this.successThreshold;
     }
 
+    /**
+     * The probe timeout in ISO 8601 format.
+     */
     @InputImport(name="timeout")
     private final @Nullable Input<String> timeout;
 

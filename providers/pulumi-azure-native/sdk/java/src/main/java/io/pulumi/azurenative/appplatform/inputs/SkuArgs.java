@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Sku of Azure Spring Cloud
+ */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 
+    /**
+     * Current capacity of the target resource
+     */
     @InputImport(name="capacity")
     private final @Nullable Input<Integer> capacity;
 
@@ -22,6 +28,9 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
+    /**
+     * Name of the Sku
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +38,9 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Tier of the Sku
+     */
     @InputImport(name="tier")
     private final @Nullable Input<String> tier;
 

@@ -13,11 +13,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSentinelOnboardingStateResult {
+/**
+ * Flag that indicates the status of the CMK setting
+ */
     private final @Nullable Boolean customerManagedKey;
+/**
+ * Etag of the azure resource
+ */
     private final @Nullable String etag;
+/**
+ * Azure resource Id
+ */
     private final String id;
+/**
+ * Azure resource name
+ */
     private final String name;
+/**
+ * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+ */
     private final SystemDataResponse systemData;
+/**
+ * Azure resource type
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"customerManagedKey","etag","id","name","systemData","type"})
@@ -36,21 +54,39 @@ public final class GetSentinelOnboardingStateResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Flag that indicates the status of the CMK setting
+ */
     public Optional<Boolean> getCustomerManagedKey() {
         return Optional.ofNullable(this.customerManagedKey);
     }
+/**
+ * Etag of the azure resource
+ */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+/**
+ * Azure resource Id
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Azure resource name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * Azure resource type
+ */
     public String getType() {
         return this.type;
     }

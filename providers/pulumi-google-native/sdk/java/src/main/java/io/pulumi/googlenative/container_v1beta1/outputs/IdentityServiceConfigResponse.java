@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IdentityServiceConfigResponse {
+/**
+ * Whether to enable the Identity Service component
+ */
     private final Boolean enabled;
 
     @OutputCustomType.Constructor({"enabled"})
@@ -16,6 +19,9 @@ public final class IdentityServiceConfigResponse {
         this.enabled = Objects.requireNonNull(enabled);
     }
 
+/**
+ * Whether to enable the Identity Service component
+ */
     public Boolean getEnabled() {
         return this.enabled;
     }

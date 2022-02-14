@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings for hybrid compute management
+ */
 public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HybridComputeSettingsPropertiesArgs Empty = new HybridComputeSettingsPropertiesArgs();
 
+    /**
+     * Whether or not to automatically install Azure Arc (hybrid compute) agents on machines
+     */
     @InputImport(name="autoProvision", required=true)
     private final Input<Either<String,AutoProvision>> autoProvision;
 
@@ -25,6 +31,9 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
         return this.autoProvision;
     }
 
+    /**
+     * For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.
+     */
     @InputImport(name="proxyServer")
     private final @Nullable Input<ProxyServerPropertiesArgs> proxyServer;
 
@@ -32,6 +41,9 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
         return this.proxyServer == null ? Input.empty() : this.proxyServer;
     }
 
+    /**
+     * The location where the metadata of machines will be stored
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -39,6 +51,9 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * The name of the resource group where Arc (Hybrid Compute) connectors are connected.
+     */
     @InputImport(name="resourceGroupName")
     private final @Nullable Input<String> resourceGroupName;
 
@@ -46,6 +61,9 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
         return this.resourceGroupName == null ? Input.empty() : this.resourceGroupName;
     }
 
+    /**
+     * An object to access resources that are secured by an Azure AD tenant.
+     */
     @InputImport(name="servicePrincipal")
     private final @Nullable Input<ServicePrincipalPropertiesArgs> servicePrincipal;
 

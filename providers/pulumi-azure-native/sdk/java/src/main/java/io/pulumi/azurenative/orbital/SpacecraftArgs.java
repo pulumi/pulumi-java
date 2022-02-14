@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SpacecraftArgs Empty = new SpacecraftArgs();
 
+    /**
+     * Links of the Spacecraft
+     */
     @InputImport(name="links")
     private final @Nullable Input<List<SpacecraftLinkArgs>> links;
 
@@ -24,6 +30,9 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
         return this.links == null ? Input.empty() : this.links;
     }
 
+    /**
+     * The geo-location where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -31,6 +40,9 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * NORAD ID of the spacecraft.
+     */
     @InputImport(name="noradId", required=true)
     private final Input<String> noradId;
 
@@ -38,6 +50,9 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
         return this.noradId;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -45,6 +60,9 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Spacecraft ID
+     */
     @InputImport(name="spacecraftName")
     private final @Nullable Input<String> spacecraftName;
 
@@ -52,6 +70,9 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
         return this.spacecraftName == null ? Input.empty() : this.spacecraftName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -59,6 +80,9 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Title line of Two Line Element (TLE).
+     */
     @InputImport(name="titleLine")
     private final @Nullable Input<String> titleLine;
 
@@ -66,6 +90,9 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
         return this.titleLine == null ? Input.empty() : this.titleLine;
     }
 
+    /**
+     * Line 1 of Two Line Element (TLE).
+     */
     @InputImport(name="tleLine1")
     private final @Nullable Input<String> tleLine1;
 
@@ -73,6 +100,9 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
         return this.tleLine1 == null ? Input.empty() : this.tleLine1;
     }
 
+    /**
+     * Line 2 of Two Line Element (TLE).
+     */
     @InputImport(name="tleLine2")
     private final @Nullable Input<String> tleLine2;
 

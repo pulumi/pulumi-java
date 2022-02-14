@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TransferConfigArgs Empty = new TransferConfigArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="authorizationCode")
     private final @Nullable Input<String> authorizationCode;
 
@@ -26,6 +32,9 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.authorizationCode == null ? Input.empty() : this.authorizationCode;
     }
 
+    /**
+     * The number of days to look back to automatically refresh the data. For example, if `data_refresh_window_days = 10`, then every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if the data source supports the feature. Set the value to 0 to use the default value.
+     */
     @InputImport(name="dataRefreshWindowDays")
     private final @Nullable Input<Integer> dataRefreshWindowDays;
 
@@ -33,6 +42,9 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataRefreshWindowDays == null ? Input.empty() : this.dataRefreshWindowDays;
     }
 
+    /**
+     * Data source id. Cannot be changed once data transfer is created.
+     */
     @InputImport(name="dataSourceId")
     private final @Nullable Input<String> dataSourceId;
 
@@ -40,6 +52,9 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataSourceId == null ? Input.empty() : this.dataSourceId;
     }
 
+    /**
+     * The BigQuery target dataset id.
+     */
     @InputImport(name="destinationDatasetId")
     private final @Nullable Input<String> destinationDatasetId;
 
@@ -47,6 +62,9 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationDatasetId == null ? Input.empty() : this.destinationDatasetId;
     }
 
+    /**
+     * Is this config disabled. When set to true, no runs are scheduled for a given transfer.
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -54,6 +72,9 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * User specified display name for the data transfer.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -61,6 +82,9 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Email notifications will be sent according to these preferences to the email address of the user who owns this transfer config.
+     */
     @InputImport(name="emailPreferences")
     private final @Nullable Input<EmailPreferencesArgs> emailPreferences;
 
@@ -68,6 +92,9 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.emailPreferences == null ? Input.empty() : this.emailPreferences;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -75,6 +102,9 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource name of the transfer config. Transfer config names have the form `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where `config_id` is usually a uuid, even though it is not guaranteed or required. The name is ignored when creating a transfer config.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -82,6 +112,9 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Pub/Sub topic where notifications will be sent after transfer runs associated with this transfer config finish. The format for specifying a pubsub topic is: `projects/{project}/topics/{topic}`
+     */
     @InputImport(name="notificationPubsubTopic")
     private final @Nullable Input<String> notificationPubsubTopic;
 
@@ -89,6 +122,9 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.notificationPubsubTopic == null ? Input.empty() : this.notificationPubsubTopic;
     }
 
+    /**
+     * Parameters specific to each data source. For more information see the bq tab in the 'Setting up a data transfer' section for each data source. For example the parameters for Cloud Storage transfers are listed here: https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
+     */
     @InputImport(name="params")
     private final @Nullable Input<Map<String,String>> params;
 
@@ -96,6 +132,9 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.params == null ? Input.empty() : this.params;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -103,6 +142,9 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the default value for the data source will be used. The specified times are in UTC. Examples of valid format: `1st,3rd monday of month 15:30`, `every wed,fri of jan,jun 13:15`, and `first sunday of quarter 00:00`. See more explanation about the format here: https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format NOTE: The minimum interval time between recurring transfers depends on the data source; refer to the documentation for your data source.
+     */
     @InputImport(name="schedule")
     private final @Nullable Input<String> schedule;
 
@@ -110,6 +152,9 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.schedule == null ? Input.empty() : this.schedule;
     }
 
+    /**
+     * Options customizing the data transfer schedule.
+     */
     @InputImport(name="scheduleOptions")
     private final @Nullable Input<ScheduleOptionsArgs> scheduleOptions;
 
@@ -117,6 +162,9 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.scheduleOptions == null ? Input.empty() : this.scheduleOptions;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="serviceAccountName")
     private final @Nullable Input<String> serviceAccountName;
 
@@ -124,6 +172,9 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceAccountName == null ? Input.empty() : this.serviceAccountName;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="versionInfo")
     private final @Nullable Input<String> versionInfo;
 

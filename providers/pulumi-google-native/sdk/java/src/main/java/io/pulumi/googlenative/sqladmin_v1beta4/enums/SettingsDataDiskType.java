@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of data disk: `PD_SSD` (default) or `PD_HDD`. Not used for First Generation instances.
+ */
     @EnumType
     public enum SettingsDataDiskType {
+/**
+ * This is an unknown data disk type.
+ */
         SqlDataDiskTypeUnspecified("SQL_DATA_DISK_TYPE_UNSPECIFIED"),
+/**
+ * An SSD data disk.
+ */
         PdSsd("PD_SSD"),
+/**
+ * An HDD data disk.
+ */
         PdHdd("PD_HDD"),
+/**
+ * This field is deprecated and will be removed from a future version of the API.
+ */
         ObsoleteLocalSsd("OBSOLETE_LOCAL_SSD");
 
         private final String value;

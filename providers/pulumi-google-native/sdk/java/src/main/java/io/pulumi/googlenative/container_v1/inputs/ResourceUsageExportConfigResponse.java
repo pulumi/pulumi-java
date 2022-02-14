@@ -10,10 +10,16 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Configuration for exporting cluster resource usages.
+ */
 public final class ResourceUsageExportConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceUsageExportConfigResponse Empty = new ResourceUsageExportConfigResponse();
 
+    /**
+     * Configuration to use BigQuery as usage export destination.
+     */
     @InputImport(name="bigqueryDestination", required=true)
     private final BigQueryDestinationResponse bigqueryDestination;
 
@@ -21,6 +27,9 @@ public final class ResourceUsageExportConfigResponse extends io.pulumi.resources
         return this.bigqueryDestination;
     }
 
+    /**
+     * Configuration to enable resource consumption metering.
+     */
     @InputImport(name="consumptionMeteringConfig", required=true)
     private final ConsumptionMeteringConfigResponse consumptionMeteringConfig;
 
@@ -28,6 +37,9 @@ public final class ResourceUsageExportConfigResponse extends io.pulumi.resources
         return this.consumptionMeteringConfig;
     }
 
+    /**
+     * Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created in the cluster to meter network egress traffic.
+     */
     @InputImport(name="enableNetworkEgressMetering", required=true)
     private final Boolean enableNetworkEgressMetering;
 

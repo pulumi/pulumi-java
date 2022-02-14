@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Database connection string value to type pair.
+ */
 public final class ConnStringValueTypePairResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnStringValueTypePairResponse Empty = new ConnStringValueTypePairResponse();
 
+    /**
+     * Type of database.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -19,6 +25,9 @@ public final class ConnStringValueTypePairResponse extends io.pulumi.resources.I
         return this.type;
     }
 
+    /**
+     * Value of pair.
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

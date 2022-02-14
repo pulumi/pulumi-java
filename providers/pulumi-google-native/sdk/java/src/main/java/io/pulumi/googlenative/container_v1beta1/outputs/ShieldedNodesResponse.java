@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ShieldedNodesResponse {
+/**
+ * Whether Shielded Nodes features are enabled on all nodes in this cluster.
+ */
     private final Boolean enabled;
 
     @OutputCustomType.Constructor({"enabled"})
@@ -16,6 +19,9 @@ public final class ShieldedNodesResponse {
         this.enabled = Objects.requireNonNull(enabled);
     }
 
+/**
+ * Whether Shielded Nodes features are enabled on all nodes in this cluster.
+ */
     public Boolean getEnabled() {
         return this.enabled;
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ModelReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ModelReferenceResponse Empty = new ModelReferenceResponse();
 
+    /**
+     * [Required] The ID of the dataset containing this model.
+     */
     @InputImport(name="datasetId", required=true)
     private final String datasetId;
 
@@ -19,6 +25,9 @@ public final class ModelReferenceResponse extends io.pulumi.resources.InvokeArgs
         return this.datasetId;
     }
 
+    /**
+     * [Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+     */
     @InputImport(name="modelId", required=true)
     private final String modelId;
 
@@ -26,6 +35,9 @@ public final class ModelReferenceResponse extends io.pulumi.resources.InvokeArgs
         return this.modelId;
     }
 
+    /**
+     * [Required] The ID of the project containing this model.
+     */
     @InputImport(name="project", required=true)
     private final String project;
 

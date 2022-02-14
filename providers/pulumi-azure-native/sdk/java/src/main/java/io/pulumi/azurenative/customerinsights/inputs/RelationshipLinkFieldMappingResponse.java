@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The fields mapping for Relationships.
+ */
 public final class RelationshipLinkFieldMappingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RelationshipLinkFieldMappingResponse Empty = new RelationshipLinkFieldMappingResponse();
 
+    /**
+     * The field name on the Interaction Type.
+     */
     @InputImport(name="interactionFieldName", required=true)
     private final String interactionFieldName;
 
@@ -21,6 +27,9 @@ public final class RelationshipLinkFieldMappingResponse extends io.pulumi.resour
         return this.interactionFieldName;
     }
 
+    /**
+     * Link type.
+     */
     @InputImport(name="linkType")
     private final @Nullable String linkType;
 
@@ -28,6 +37,9 @@ public final class RelationshipLinkFieldMappingResponse extends io.pulumi.resour
         return this.linkType == null ? Optional.empty() : Optional.ofNullable(this.linkType);
     }
 
+    /**
+     * The field name on the Relationship metadata.
+     */
     @InputImport(name="relationshipFieldName", required=true)
     private final String relationshipFieldName;
 

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * AgentPoolType represents types of an agent pool
+ */
     @EnumType
     public enum AgentPoolType {
+/**
+ * 
+ */
         VirtualMachineScaleSets("VirtualMachineScaleSets"),
+/**
+ * 
+ */
         AvailabilitySet("AvailabilitySet");
 
         private final String value;

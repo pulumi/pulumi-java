@@ -9,10 +9,16 @@ import io.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleTypeMoneyRespo
 import java.util.Objects;
 
 
+/**
+ * The budgeted amount for each usage period.
+ */
 public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse Empty = new GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse();
 
+    /**
+     * Use the last period's actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget's time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.
+     */
     @InputImport(name="lastPeriodAmount", required=true)
     private final GoogleCloudBillingBudgetsV1beta1LastPeriodAmountResponse lastPeriodAmount;
 
@@ -20,6 +26,9 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse extends 
         return this.lastPeriodAmount;
     }
 
+    /**
+     * A specified amount to use as the budget. `currency_code` is optional. If specified when creating a budget, it must match the currency of the billing account. If specified when updating a budget, it must match the currency_code of the existing budget. The `currency_code` is provided on output.
+     */
     @InputImport(name="specifiedAmount", required=true)
     private final GoogleTypeMoneyResponse specifiedAmount;
 

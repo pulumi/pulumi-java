@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class JitNetworkAccessRequestVirtualMachineResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JitNetworkAccessRequestVirtualMachineResponse Empty = new JitNetworkAccessRequestVirtualMachineResponse();
 
+    /**
+     * Resource ID of the virtual machine that is linked to this policy
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -21,6 +27,9 @@ public final class JitNetworkAccessRequestVirtualMachineResponse extends io.pulu
         return this.id;
     }
 
+    /**
+     * The ports that were opened for the virtual machine
+     */
     @InputImport(name="ports", required=true)
     private final List<JitNetworkAccessRequestPortResponse> ports;
 

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.SERVING_STATUS_UNSPECIFIED is an invalid value. Defaults to SERVING.
+ */
     @EnumType
     public enum VersionServingStatus {
+/**
+ * Not specified.
+ */
         ServingStatusUnspecified("SERVING_STATUS_UNSPECIFIED"),
+/**
+ * Currently serving. Instances are created according to the scaling settings of the version.
+ */
         Serving("SERVING"),
+/**
+ * Disabled. No instances will be created and the scaling settings are ignored until the state of the version changes to SERVING.
+ */
         Stopped("STOPPED");
 
         private final String value;

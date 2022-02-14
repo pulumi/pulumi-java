@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The HTTP header.
+ */
 public final class HTTPHeaderResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HTTPHeaderResponse Empty = new HTTPHeaderResponse();
 
+    /**
+     * The name in HTTP header.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +27,9 @@ public final class HTTPHeaderResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The value in HTTP header.
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

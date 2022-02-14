@@ -10,10 +10,17 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Managed identity settings for upstream.
+ */
 public final class ManagedIdentitySettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedIdentitySettingsArgs Empty = new ManagedIdentitySettingsArgs();
 
+    /**
+     * The Resource indicating the App ID URI of the target resource.
+It also appears in the aud (audience) claim of the issued token.
+     */
     @InputImport(name="resource")
     private final @Nullable Input<String> resource;
 

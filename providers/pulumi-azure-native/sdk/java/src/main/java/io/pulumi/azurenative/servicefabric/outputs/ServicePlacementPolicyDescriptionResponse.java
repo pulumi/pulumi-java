@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServicePlacementPolicyDescriptionResponse {
+/**
+ * The type of placement policy for a service fabric service. Following are the possible values.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -16,6 +19,9 @@ public final class ServicePlacementPolicyDescriptionResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The type of placement policy for a service fabric service. Following are the possible values.
+ */
     public String getType() {
         return this.type;
     }

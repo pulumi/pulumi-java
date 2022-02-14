@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkflow {
+/**
+ * Gets details of a single Workflow.
+ */
     public static CompletableFuture<GetWorkflowResult> invokeAsync(GetWorkflowArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:workflows/v1:getWorkflow", TypeShape.of(GetWorkflowResult.class), args == null ? GetWorkflowArgs.Empty : args, Utilities.withVersion(options));
     }

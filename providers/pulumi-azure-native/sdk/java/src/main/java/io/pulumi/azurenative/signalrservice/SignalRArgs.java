@@ -19,10 +19,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SignalRArgs Empty = new SignalRArgs();
 
+    /**
+     * Cross-Origin Resource Sharing (CORS) settings.
+     */
     @InputImport(name="cors")
     private final @Nullable Input<SignalRCorsSettingsArgs> cors;
 
@@ -30,6 +36,14 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
         return this.cors == null ? Input.empty() : this.cors;
     }
 
+    /**
+     * List of SignalR featureFlags. e.g. ServiceMode.
+
+FeatureFlags that are not included in the parameters for the update operation will not be modified.
+And the response will only include featureFlags that are explicitly set. 
+When a featureFlag is not explicitly set, SignalR service will use its globally default value. 
+But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
+     */
     @InputImport(name="features")
     private final @Nullable Input<List<SignalRFeatureArgs>> features;
 
@@ -37,6 +51,9 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
         return this.features == null ? Input.empty() : this.features;
     }
 
+    /**
+     * The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"
+     */
     @InputImport(name="kind")
     private final @Nullable Input<Either<String,ServiceKind>> kind;
 
@@ -44,6 +61,9 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -51,6 +71,9 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Network ACLs
+     */
     @InputImport(name="networkACLs")
     private final @Nullable Input<SignalRNetworkACLsArgs> networkACLs;
 
@@ -58,6 +81,9 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkACLs == null ? Input.empty() : this.networkACLs;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -65,6 +91,9 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the SignalR resource.
+     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -72,6 +101,9 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
+    /**
+     * The billing information of the resource.(e.g. Free, Standard)
+     */
     @InputImport(name="sku")
     private final @Nullable Input<ResourceSkuArgs> sku;
 
@@ -79,6 +111,9 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Tags of the service which is a list of key value pairs that describe the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -86,6 +121,9 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Upstream settings when the Azure SignalR is in server-less mode.
+     */
     @InputImport(name="upstream")
     private final @Nullable Input<ServerlessUpstreamSettingsArgs> upstream;
 

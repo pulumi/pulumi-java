@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class WindowsUserConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WindowsUserConfigurationArgs Empty = new WindowsUserConfigurationArgs();
 
+    /**
+     * Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.
+     */
     @InputImport(name="loginMode")
     private final @Nullable Input<LoginMode> loginMode;
 

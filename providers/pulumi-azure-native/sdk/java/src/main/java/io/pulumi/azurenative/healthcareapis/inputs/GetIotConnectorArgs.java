@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetIotConnectorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIotConnectorArgs Empty = new GetIotConnectorArgs();
 
+    /**
+     * The name of IoT Connector resource.
+     */
     @InputImport(name="iotConnectorName", required=true)
     private final String iotConnectorName;
 
@@ -19,6 +25,9 @@ public final class GetIotConnectorArgs extends io.pulumi.resources.InvokeArgs {
         return this.iotConnectorName;
     }
 
+    /**
+     * The name of the resource group that contains the service instance.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetIotConnectorArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of workspace resource.
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

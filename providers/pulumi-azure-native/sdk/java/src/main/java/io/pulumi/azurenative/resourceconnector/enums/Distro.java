@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Represents a supported Fabric/Infra. (AKSEdge etc...).
+ */
     @EnumType
     public enum Distro {
+/**
+ * 
+ */
         AKSEdge("AKSEdge");
 
         private final String value;

@@ -11,16 +11,49 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BastionActiveSessionResponse {
+/**
+ * The protocol used to connect to the target.
+ */
     private final String protocol;
+/**
+ * The type of the resource.
+ */
     private final String resourceType;
+/**
+ * Duration in mins the session has been active.
+ */
     private final Double sessionDurationInMins;
+/**
+ * A unique id for the session.
+ */
     private final String sessionId;
+/**
+ * The time when the session started.
+ */
     private final Object startTime;
+/**
+ * The host name of the target.
+ */
     private final String targetHostName;
+/**
+ * The IP Address of the target.
+ */
     private final String targetIpAddress;
+/**
+ * The resource group of the target.
+ */
     private final String targetResourceGroup;
+/**
+ * The resource id of the target.
+ */
     private final String targetResourceId;
+/**
+ * The subscription id for the target virtual machine.
+ */
     private final String targetSubscriptionId;
+/**
+ * The user name who is active on this session.
+ */
     private final String userName;
 
     @OutputCustomType.Constructor({"protocol","resourceType","sessionDurationInMins","sessionId","startTime","targetHostName","targetIpAddress","targetResourceGroup","targetResourceId","targetSubscriptionId","userName"})
@@ -49,36 +82,69 @@ public final class BastionActiveSessionResponse {
         this.userName = Objects.requireNonNull(userName);
     }
 
+/**
+ * The protocol used to connect to the target.
+ */
     public String getProtocol() {
         return this.protocol;
     }
+/**
+ * The type of the resource.
+ */
     public String getPropResourceType() {
         return this.resourceType;
     }
+/**
+ * Duration in mins the session has been active.
+ */
     public Double getSessionDurationInMins() {
         return this.sessionDurationInMins;
     }
+/**
+ * A unique id for the session.
+ */
     public String getSessionId() {
         return this.sessionId;
     }
+/**
+ * The time when the session started.
+ */
     public Object getStartTime() {
         return this.startTime;
     }
+/**
+ * The host name of the target.
+ */
     public String getTargetHostName() {
         return this.targetHostName;
     }
+/**
+ * The IP Address of the target.
+ */
     public String getTargetIpAddress() {
         return this.targetIpAddress;
     }
+/**
+ * The resource group of the target.
+ */
     public String getTargetResourceGroup() {
         return this.targetResourceGroup;
     }
+/**
+ * The resource id of the target.
+ */
     public String getTargetResourceId() {
         return this.targetResourceId;
     }
+/**
+ * The subscription id for the target virtual machine.
+ */
     public String getTargetSubscriptionId() {
         return this.targetSubscriptionId;
     }
+/**
+ * The user name who is active on this session.
+ */
     public String getUserName() {
         return this.userName;
     }

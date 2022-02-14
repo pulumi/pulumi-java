@@ -9,10 +9,16 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Configuration of preserved resources.
+ */
 public final class StatefulPolicyPreservedStateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StatefulPolicyPreservedStateResponse Empty = new StatefulPolicyPreservedStateResponse();
 
+    /**
+     * Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
+     */
     @InputImport(name="disks", required=true)
     private final Map<String,String> disks;
 

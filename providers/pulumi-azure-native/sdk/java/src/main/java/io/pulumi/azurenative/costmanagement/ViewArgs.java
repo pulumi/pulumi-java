@@ -21,10 +21,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ViewArgs Empty = new ViewArgs();
 
+    /**
+     * Show costs accumulated over time.
+     */
     @InputImport(name="accumulated")
     private final @Nullable Input<Either<String,AccumulatedType>> accumulated;
 
@@ -32,6 +38,9 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
         return this.accumulated == null ? Input.empty() : this.accumulated;
     }
 
+    /**
+     * Chart type of the main view in Cost Analysis. Required.
+     */
     @InputImport(name="chart")
     private final @Nullable Input<Either<String,ChartType>> chart;
 
@@ -39,6 +48,9 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
         return this.chart == null ? Input.empty() : this.chart;
     }
 
+    /**
+     * Has definition for data in this report config.
+     */
     @InputImport(name="dataSet")
     private final @Nullable Input<ReportConfigDatasetArgs> dataSet;
 
@@ -46,6 +58,9 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataSet == null ? Input.empty() : this.dataSet;
     }
 
+    /**
+     * User input name of the view. Required.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -53,6 +68,9 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+     */
     @InputImport(name="eTag")
     private final @Nullable Input<String> eTag;
 
@@ -60,6 +78,9 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
         return this.eTag == null ? Input.empty() : this.eTag;
     }
 
+    /**
+     * List of KPIs to show in Cost Analysis UI.
+     */
     @InputImport(name="kpis")
     private final @Nullable Input<List<KpiPropertiesArgs>> kpis;
 
@@ -67,6 +88,9 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
         return this.kpis == null ? Input.empty() : this.kpis;
     }
 
+    /**
+     * Metric to use when displaying costs.
+     */
     @InputImport(name="metric")
     private final @Nullable Input<Either<String,MetricType>> metric;
 
@@ -74,6 +98,9 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
         return this.metric == null ? Input.empty() : this.metric;
     }
 
+    /**
+     * Configuration of 3 sub-views in the Cost Analysis UI.
+     */
     @InputImport(name="pivots")
     private final @Nullable Input<List<PivotPropertiesArgs>> pivots;
 
@@ -81,6 +108,9 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
         return this.pivots == null ? Input.empty() : this.pivots;
     }
 
+    /**
+     * Cost Management scope to save the view on. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for ExternalBillingAccount scope, and '/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for ExternalSubscription scope.
+     */
     @InputImport(name="scope")
     private final @Nullable Input<String> scope;
 
@@ -88,6 +118,9 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
         return this.scope == null ? Input.empty() : this.scope;
     }
 
+    /**
+     * Has time period for pulling data for the report.
+     */
     @InputImport(name="timePeriod")
     private final @Nullable Input<ReportConfigTimePeriodArgs> timePeriod;
 
@@ -95,6 +128,9 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
         return this.timePeriod == null ? Input.empty() : this.timePeriod;
     }
 
+    /**
+     * The time frame for pulling data for the report. If custom, then a specific time period must be provided.
+     */
     @InputImport(name="timeframe", required=true)
     private final Input<Either<String,ReportTimeframeType>> timeframe;
 
@@ -102,6 +138,9 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
         return this.timeframe;
     }
 
+    /**
+     * The type of the report. Usage represents actual usage, forecast represents forecasted data and UsageAndForecast represents both usage and forecasted data. Actual usage and forecasted data can be differentiated based on dates.
+     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,ReportType>> type;
 
@@ -109,6 +148,9 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
         return this.type;
     }
 
+    /**
+     * View name
+     */
     @InputImport(name="viewName")
     private final @Nullable Input<String> viewName;
 

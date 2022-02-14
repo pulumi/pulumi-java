@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ScopeSelector {
+/**
+ * A list of scope selector requirements by scope of the resources.
+ */
     private final @Nullable List<ScopedResourceSelectorRequirement> matchExpressions;
 
     @OutputCustomType.Constructor({"matchExpressions"})
@@ -18,6 +21,9 @@ public final class ScopeSelector {
         this.matchExpressions = matchExpressions;
     }
 
+/**
+ * A list of scope selector requirements by scope of the resources.
+ */
     public List<ScopedResourceSelectorRequirement> getMatchExpressions() {
         return this.matchExpressions == null ? List.of() : this.matchExpressions;
     }

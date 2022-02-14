@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataSetMappingArgs Empty = new DataSetMappingArgs();
 
+    /**
+     * The name of the share account.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -23,6 +29,9 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the data set mapping to be created.
+     */
     @InputImport(name="dataSetMappingName")
     private final @Nullable Input<String> dataSetMappingName;
 
@@ -30,6 +39,9 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataSetMappingName == null ? Input.empty() : this.dataSetMappingName;
     }
 
+    /**
+     * Kind of data set mapping.
+     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,DataSetMappingKind>> kind;
 
@@ -37,6 +49,9 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +59,9 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the share subscription which will hold the data set sink.
+     */
     @InputImport(name="shareSubscriptionName", required=true)
     private final Input<String> shareSubscriptionName;
 

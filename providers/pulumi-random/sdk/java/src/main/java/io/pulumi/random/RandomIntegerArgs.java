@@ -13,10 +13,17 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RandomIntegerArgs Empty = new RandomIntegerArgs();
 
+    /**
+     * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+
+     */
     @InputImport(name="keepers")
     private final @Nullable Input<Map<String,Object>> keepers;
 
@@ -24,6 +31,10 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
         return this.keepers == null ? Input.empty() : this.keepers;
     }
 
+    /**
+     * The maximum inclusive value of the range.
+
+     */
     @InputImport(name="max", required=true)
     private final Input<Integer> max;
 
@@ -31,6 +42,10 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
         return this.max;
     }
 
+    /**
+     * The minimum inclusive value of the range.
+
+     */
     @InputImport(name="min", required=true)
     private final Input<Integer> min;
 
@@ -38,6 +53,10 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
         return this.min;
     }
 
+    /**
+     * A custom seed to always produce the same value.
+
+     */
     @InputImport(name="seed")
     private final @Nullable Input<String> seed;
 

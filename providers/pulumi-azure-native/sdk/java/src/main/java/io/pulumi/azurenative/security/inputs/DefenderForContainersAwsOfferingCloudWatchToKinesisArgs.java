@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The cloudwatch to kinesis connection configuration
+ */
 public final class DefenderForContainersAwsOfferingCloudWatchToKinesisArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DefenderForContainersAwsOfferingCloudWatchToKinesisArgs Empty = new DefenderForContainersAwsOfferingCloudWatchToKinesisArgs();
 
+    /**
+     * The cloud role ARN in AWS for this feature
+     */
     @InputImport(name="cloudRoleArn")
     private final @Nullable Input<String> cloudRoleArn;
 

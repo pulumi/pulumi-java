@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.apimanagement.GatewayArgs;
 import io.pulumi.azurenative.apimanagement.outputs.ResourceLocationDataContractResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,33 +14,167 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Gateway details.
+API Version: 2020-12-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### ApiManagementCreateGateway
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var gateway = new AzureNative.ApiManagement.Gateway("gateway", new AzureNative.ApiManagement.GatewayArgs
+        {
+            Description = "my gateway 1",
+            GatewayId = "gw1",
+            LocationData = new AzureNative.ApiManagement.Inputs.ResourceLocationDataContractArgs
+            {
+                Name = "my location",
+            },
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := apimanagement.NewGateway(ctx, "gateway", &apimanagement.GatewayArgs{
+			Description: pulumi.String("my gateway 1"),
+			GatewayId:   pulumi.String("gw1"),
+			LocationData: &apimanagement.ResourceLocationDataContractArgs{
+				Name: pulumi.String("my location"),
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			ServiceName:       pulumi.String("apimService1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const gateway = new azure_native.apimanagement.Gateway("gateway", {
+    description: "my gateway 1",
+    gatewayId: "gw1",
+    locationData: {
+        name: "my location",
+    },
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+gateway = azure_native.apimanagement.Gateway("gateway",
+    description="my gateway 1",
+    gateway_id="gw1",
+    location_data=azure_native.apimanagement.ResourceLocationDataContractArgs(
+        name="my location",
+    ),
+    resource_group_name="rg1",
+    service_name="apimService1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:apimanagement:Gateway a1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/gateways/gw1 
+```
+
+ */
 @ResourceType(type="azure-native:apimanagement:Gateway")
 public class Gateway extends io.pulumi.resources.CustomResource {
+    /**
+     * Gateway description
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Gateway description
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Gateway location.
+     */
     @OutputExport(name="locationData", type=ResourceLocationDataContractResponse.class, parameters={})
     private Output</* @Nullable */ ResourceLocationDataContractResponse> locationData;
 
+    /**
+     * @return Gateway location.
+     */
     public Output</* @Nullable */ ResourceLocationDataContractResponse> getLocationData() {
         return this.locationData;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Resource type for API Management resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type for API Management resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Gateway(String name, GatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:Gateway", name, args == null ? GatewayArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -66,6 +199,14 @@ public class Gateway extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Gateway get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Gateway(name, id, options);
     }

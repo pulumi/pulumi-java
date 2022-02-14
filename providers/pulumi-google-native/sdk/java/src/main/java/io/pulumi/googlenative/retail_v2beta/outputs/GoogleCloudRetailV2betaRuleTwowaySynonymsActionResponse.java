@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse {
+/**
+ * Defines a set of synonyms. Can specify up to 100 synonyms. Must specify at least 2 synonyms.
+ */
     private final List<String> synonyms;
 
     @OutputCustomType.Constructor({"synonyms"})
@@ -17,6 +20,9 @@ public final class GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse {
         this.synonyms = Objects.requireNonNull(synonyms);
     }
 
+/**
+ * Defines a set of synonyms. Can specify up to 100 synonyms. Must specify at least 2 synonyms.
+ */
     public List<String> getSynonyms() {
         return this.synonyms;
     }

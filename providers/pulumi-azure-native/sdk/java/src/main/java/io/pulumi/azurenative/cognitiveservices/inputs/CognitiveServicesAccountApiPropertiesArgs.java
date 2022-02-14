@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The api properties for special APIs.
+ */
 public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CognitiveServicesAccountApiPropertiesArgs Empty = new CognitiveServicesAccountApiPropertiesArgs();
 
+    /**
+     * (Metrics Advisor Only) The Azure AD Client Id (Application Id).
+     */
     @InputImport(name="aadClientId")
     private final @Nullable Input<String> aadClientId;
 
@@ -22,6 +28,9 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
         return this.aadClientId == null ? Input.empty() : this.aadClientId;
     }
 
+    /**
+     * (Metrics Advisor Only) The Azure AD Tenant Id.
+     */
     @InputImport(name="aadTenantId")
     private final @Nullable Input<String> aadTenantId;
 
@@ -29,6 +38,9 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
         return this.aadTenantId == null ? Input.empty() : this.aadTenantId;
     }
 
+    /**
+     * (Personalization Only) The flag to enable statistics of Bing Search.
+     */
     @InputImport(name="eventHubConnectionString")
     private final @Nullable Input<String> eventHubConnectionString;
 
@@ -36,6 +48,9 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
         return this.eventHubConnectionString == null ? Input.empty() : this.eventHubConnectionString;
     }
 
+    /**
+     * (QnAMaker Only) The Azure Search endpoint id of QnAMaker.
+     */
     @InputImport(name="qnaAzureSearchEndpointId")
     private final @Nullable Input<String> qnaAzureSearchEndpointId;
 
@@ -43,6 +58,9 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
         return this.qnaAzureSearchEndpointId == null ? Input.empty() : this.qnaAzureSearchEndpointId;
     }
 
+    /**
+     * (QnAMaker Only) The Azure Search endpoint key of QnAMaker.
+     */
     @InputImport(name="qnaAzureSearchEndpointKey")
     private final @Nullable Input<String> qnaAzureSearchEndpointKey;
 
@@ -50,6 +68,9 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
         return this.qnaAzureSearchEndpointKey == null ? Input.empty() : this.qnaAzureSearchEndpointKey;
     }
 
+    /**
+     * (QnAMaker Only) The runtime endpoint of QnAMaker.
+     */
     @InputImport(name="qnaRuntimeEndpoint")
     private final @Nullable Input<String> qnaRuntimeEndpoint;
 
@@ -57,6 +78,9 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
         return this.qnaRuntimeEndpoint == null ? Input.empty() : this.qnaRuntimeEndpoint;
     }
 
+    /**
+     * (Bing Search Only) The flag to enable statistics of Bing Search.
+     */
     @InputImport(name="statisticsEnabled")
     private final @Nullable Input<Boolean> statisticsEnabled;
 
@@ -64,6 +88,9 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
         return this.statisticsEnabled == null ? Input.empty() : this.statisticsEnabled;
     }
 
+    /**
+     * (Personalization Only) The storage account connection string.
+     */
     @InputImport(name="storageAccountConnectionString")
     private final @Nullable Input<String> storageAccountConnectionString;
 
@@ -71,6 +98,9 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
         return this.storageAccountConnectionString == null ? Input.empty() : this.storageAccountConnectionString;
     }
 
+    /**
+     * (Metrics Advisor Only) The super user of Metrics Advisor.
+     */
     @InputImport(name="superUser")
     private final @Nullable Input<String> superUser;
 
@@ -78,6 +108,9 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
         return this.superUser == null ? Input.empty() : this.superUser;
     }
 
+    /**
+     * (Metrics Advisor Only) The website name of Metrics Advisor.
+     */
     @InputImport(name="websiteName")
     private final @Nullable Input<String> websiteName;
 

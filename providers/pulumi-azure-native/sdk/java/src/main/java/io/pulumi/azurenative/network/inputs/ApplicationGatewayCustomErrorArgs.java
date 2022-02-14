@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Customer error of an application gateway.
+ */
 public final class ApplicationGatewayCustomErrorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationGatewayCustomErrorArgs Empty = new ApplicationGatewayCustomErrorArgs();
 
+    /**
+     * Error page URL of the application gateway customer error.
+     */
     @InputImport(name="customErrorPageUrl")
     private final @Nullable Input<String> customErrorPageUrl;
 
@@ -23,6 +29,9 @@ public final class ApplicationGatewayCustomErrorArgs extends io.pulumi.resources
         return this.customErrorPageUrl == null ? Input.empty() : this.customErrorPageUrl;
     }
 
+    /**
+     * Status code of the application gateway customer error.
+     */
     @InputImport(name="statusCode")
     private final @Nullable Input<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode;
 

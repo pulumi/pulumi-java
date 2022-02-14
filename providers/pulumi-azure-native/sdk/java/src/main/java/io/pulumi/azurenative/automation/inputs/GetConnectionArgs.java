@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConnectionArgs Empty = new GetConnectionArgs();
 
+    /**
+     * The name of the automation account.
+     */
     @InputImport(name="automationAccountName", required=true)
     private final String automationAccountName;
 
@@ -19,6 +25,9 @@ public final class GetConnectionArgs extends io.pulumi.resources.InvokeArgs {
         return this.automationAccountName;
     }
 
+    /**
+     * The name of connection.
+     */
     @InputImport(name="connectionName", required=true)
     private final String connectionName;
 
@@ -26,6 +35,9 @@ public final class GetConnectionArgs extends io.pulumi.resources.InvokeArgs {
         return this.connectionName;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

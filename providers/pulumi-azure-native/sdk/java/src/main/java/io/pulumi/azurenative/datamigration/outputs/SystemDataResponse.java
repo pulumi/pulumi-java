@@ -11,11 +11,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SystemDataResponse {
+/**
+ * 
+ */
     private final @Nullable String createdAt;
+/**
+ * 
+ */
     private final @Nullable String createdBy;
+/**
+ * 
+ */
     private final @Nullable String createdByType;
+/**
+ * 
+ */
     private final @Nullable String lastModifiedAt;
+/**
+ * 
+ */
     private final @Nullable String lastModifiedBy;
+/**
+ * 
+ */
     private final @Nullable String lastModifiedByType;
 
     @OutputCustomType.Constructor({"createdAt","createdBy","createdByType","lastModifiedAt","lastModifiedBy","lastModifiedByType"})
@@ -34,21 +52,39 @@ public final class SystemDataResponse {
         this.lastModifiedByType = lastModifiedByType;
     }
 
+/**
+ * 
+ */
     public Optional<String> getCreatedAt() {
         return Optional.ofNullable(this.createdAt);
     }
+/**
+ * 
+ */
     public Optional<String> getCreatedBy() {
         return Optional.ofNullable(this.createdBy);
     }
+/**
+ * 
+ */
     public Optional<String> getCreatedByType() {
         return Optional.ofNullable(this.createdByType);
     }
+/**
+ * 
+ */
     public Optional<String> getLastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
+/**
+ * 
+ */
     public Optional<String> getLastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
+/**
+ * 
+ */
     public Optional<String> getLastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }

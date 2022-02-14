@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The Kind of the object. Currently only Series8000 is supported
+ */
     @EnumType
     public enum Kind {
+/**
+ * 
+ */
         Series8000("Series8000");
 
         private final String value;

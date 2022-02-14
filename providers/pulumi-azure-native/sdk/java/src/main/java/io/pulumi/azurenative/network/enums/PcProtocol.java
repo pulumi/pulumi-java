@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Protocol to be filtered on.
+ */
     @EnumType
     public enum PcProtocol {
+/**
+ * 
+ */
         TCP("TCP"),
+/**
+ * 
+ */
         UDP("UDP"),
+/**
+ * 
+ */
         Any("Any");
 
         private final String value;

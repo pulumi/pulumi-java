@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum LoggingConfigLogActionStatesItem {
+/**
+ * Default value. This value is unused.
+ */
         LoggableActionStateUnspecified("LOGGABLE_ACTION_STATE_UNSPECIFIED"),
+/**
+ * `LoggableAction` completed successfully. `SUCCEEDED` actions are logged as INFO.
+ */
         Succeeded("SUCCEEDED"),
+/**
+ * `LoggableAction` terminated in an error state. `FAILED` actions are logged as ERROR.
+ */
         Failed("FAILED");
 
         private final String value;

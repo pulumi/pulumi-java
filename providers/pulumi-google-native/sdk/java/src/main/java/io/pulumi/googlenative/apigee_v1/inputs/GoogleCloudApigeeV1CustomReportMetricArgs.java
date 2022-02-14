@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * This encapsulates a metric property of the form sum(message_count) where name is message_count and function is sum
+ */
 public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudApigeeV1CustomReportMetricArgs Empty = new GoogleCloudApigeeV1CustomReportMetricArgs();
 
+    /**
+     * aggregate function
+     */
     @InputImport(name="function")
     private final @Nullable Input<String> function;
 
@@ -21,6 +27,9 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
         return this.function == null ? Input.empty() : this.function;
     }
 
+    /**
+     * name of the metric
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

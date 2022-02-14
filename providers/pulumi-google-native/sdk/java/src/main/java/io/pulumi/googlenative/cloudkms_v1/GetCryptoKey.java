@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCryptoKey {
+/**
+ * Returns metadata for a given CryptoKey, as well as its primary CryptoKeyVersion.
+ */
     public static CompletableFuture<GetCryptoKeyResult> invokeAsync(GetCryptoKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudkms/v1:getCryptoKey", TypeShape.of(GetCryptoKeyResult.class), args == null ? GetCryptoKeyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,10 +11,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse Empty = new MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse();
 
+    /**
+     * Name of the database
+     */
     @InputImport(name="databaseName", required=true)
     private final String databaseName;
 
@@ -22,6 +28,9 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
         return this.databaseName;
     }
 
+    /**
+     * Migration end time
+     */
     @InputImport(name="endedOn", required=true)
     private final String endedOn;
 
@@ -29,6 +38,9 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
         return this.endedOn;
     }
 
+    /**
+     * Migration exceptions and warnings
+     */
     @InputImport(name="exceptionsAndWarnings", required=true)
     private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
@@ -36,6 +48,9 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
         return this.exceptionsAndWarnings;
     }
 
+    /**
+     * Result identifier
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -43,6 +58,9 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
         return this.id;
     }
 
+    /**
+     * Migration progress message
+     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -50,6 +68,10 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
         return this.message;
     }
 
+    /**
+     * Result type
+Expected value is 'DatabaseLevelOutput'.
+     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 
@@ -57,6 +79,9 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
         return this.resultType;
     }
 
+    /**
+     * Size of the database in megabytes
+     */
     @InputImport(name="sizeMB", required=true)
     private final Double sizeMB;
 
@@ -64,6 +89,9 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
         return this.sizeMB;
     }
 
+    /**
+     * Current stage of migration
+     */
     @InputImport(name="stage", required=true)
     private final String stage;
 
@@ -71,6 +99,9 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
         return this.stage;
     }
 
+    /**
+     * Migration start time
+     */
     @InputImport(name="startedOn", required=true)
     private final String startedOn;
 
@@ -78,6 +109,9 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse extends 
         return this.startedOn;
     }
 
+    /**
+     * Current state of migration
+     */
     @InputImport(name="state", required=true)
     private final String state;
 

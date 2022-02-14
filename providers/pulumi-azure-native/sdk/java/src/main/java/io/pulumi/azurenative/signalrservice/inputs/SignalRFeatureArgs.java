@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Feature of a SignalR resource, which controls the SignalR runtime behavior.
+ */
 public final class SignalRFeatureArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SignalRFeatureArgs Empty = new SignalRFeatureArgs();
 
+    /**
+     * FeatureFlags is the supported features of Azure SignalR service.
+- ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
+- EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.
+     */
     @InputImport(name="flag", required=true)
     private final Input<Either<String,FeatureFlags>> flag;
 
@@ -24,6 +32,9 @@ public final class SignalRFeatureArgs extends io.pulumi.resources.ResourceArgs {
         return this.flag;
     }
 
+    /**
+     * Optional properties related to this feature.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 
@@ -31,6 +42,9 @@ public final class SignalRFeatureArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

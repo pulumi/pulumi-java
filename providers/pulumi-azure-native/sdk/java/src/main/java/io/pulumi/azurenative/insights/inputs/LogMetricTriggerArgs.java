@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A log metrics trigger descriptor.
+ */
 public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LogMetricTriggerArgs Empty = new LogMetricTriggerArgs();
 
+    /**
+     * Evaluation of metric on a particular column
+     */
     @InputImport(name="metricColumn")
     private final @Nullable Input<String> metricColumn;
 
@@ -25,6 +31,9 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
         return this.metricColumn == null ? Input.empty() : this.metricColumn;
     }
 
+    /**
+     * Metric Trigger Type - 'Consecutive' or 'Total'
+     */
     @InputImport(name="metricTriggerType")
     private final @Nullable Input<Either<String,MetricTriggerType>> metricTriggerType;
 
@@ -32,6 +41,9 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
         return this.metricTriggerType == null ? Input.empty() : this.metricTriggerType;
     }
 
+    /**
+     * The threshold of the metric trigger.
+     */
     @InputImport(name="threshold")
     private final @Nullable Input<Double> threshold;
 
@@ -39,6 +51,9 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
         return this.threshold == null ? Input.empty() : this.threshold;
     }
 
+    /**
+     * Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.
+     */
     @InputImport(name="thresholdOperator")
     private final @Nullable Input<Either<String,ConditionalOperator>> thresholdOperator;
 

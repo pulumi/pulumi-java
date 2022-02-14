@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PlacementPolicyResponse {
+/**
+ * The type of placement.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -16,6 +19,9 @@ public final class PlacementPolicyResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The type of placement.
+ */
     public String getType() {
         return this.type;
     }

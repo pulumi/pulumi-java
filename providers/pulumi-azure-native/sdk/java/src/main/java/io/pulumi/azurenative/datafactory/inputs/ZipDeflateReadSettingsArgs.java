@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The ZipDeflate compression read settings.
+ */
 public final class ZipDeflateReadSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ZipDeflateReadSettingsArgs Empty = new ZipDeflateReadSettingsArgs();
 
+    /**
+     * Preserve the zip file name as folder path. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="preserveZipFileNameAsFolder")
     private final @Nullable Input<Object> preserveZipFileNameAsFolder;
 
@@ -22,6 +28,10 @@ public final class ZipDeflateReadSettingsArgs extends io.pulumi.resources.Resour
         return this.preserveZipFileNameAsFolder == null ? Input.empty() : this.preserveZipFileNameAsFolder;
     }
 
+    /**
+     * The Compression setting type.
+Expected value is 'ZipDeflateReadSettings'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

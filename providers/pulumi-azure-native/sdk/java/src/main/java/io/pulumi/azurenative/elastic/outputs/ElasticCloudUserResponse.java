@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ElasticCloudUserResponse {
+/**
+ * Elastic cloud default dashboard sso URL of the Elastic user account.
+ */
     private final String elasticCloudSsoDefaultUrl;
+/**
+ * Email of the Elastic User Account.
+ */
     private final String emailAddress;
+/**
+ * User Id of the elastic account of the User.
+ */
     private final String id;
 
     @OutputCustomType.Constructor({"elasticCloudSsoDefaultUrl","emailAddress","id"})
@@ -23,12 +32,21 @@ public final class ElasticCloudUserResponse {
         this.id = Objects.requireNonNull(id);
     }
 
+/**
+ * Elastic cloud default dashboard sso URL of the Elastic user account.
+ */
     public String getElasticCloudSsoDefaultUrl() {
         return this.elasticCloudSsoDefaultUrl;
     }
+/**
+ * Email of the Elastic User Account.
+ */
     public String getEmailAddress() {
         return this.emailAddress;
     }
+/**
+ * User Id of the elastic account of the User.
+ */
     public String getId() {
         return this.id;
     }

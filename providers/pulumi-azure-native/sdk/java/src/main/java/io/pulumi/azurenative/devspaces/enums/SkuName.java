@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The name of the SKU for Azure Dev Spaces Controller.
+ */
     @EnumType
     public enum SkuName {
+/**
+ * 
+ */
         S1("S1");
 
         private final String value;

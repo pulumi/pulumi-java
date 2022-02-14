@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ApigatewayApiConfigOpenApiDocumentResponse {
+/**
+ * The OpenAPI Specification document file.
+ */
     private final ApigatewayApiConfigFileResponse document;
 
     @OutputCustomType.Constructor({"document"})
@@ -16,6 +19,9 @@ public final class ApigatewayApiConfigOpenApiDocumentResponse {
         this.document = Objects.requireNonNull(document);
     }
 
+/**
+ * The OpenAPI Specification document file.
+ */
     public ApigatewayApiConfigFileResponse getDocument() {
         return this.document;
     }

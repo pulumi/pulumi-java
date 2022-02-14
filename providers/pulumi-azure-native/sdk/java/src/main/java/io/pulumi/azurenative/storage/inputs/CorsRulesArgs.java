@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Sets the CORS rules. You can include up to five CorsRule elements in the request. 
+ */
 public final class CorsRulesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CorsRulesArgs Empty = new CorsRulesArgs();
 
+    /**
+     * The List of CORS rules. You can include up to five CorsRule elements in the request. 
+     */
     @InputImport(name="corsRules")
     private final @Nullable Input<List<CorsRuleArgs>> corsRules;
 

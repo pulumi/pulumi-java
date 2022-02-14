@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.PrivateRecordSetArgs;
 import io.pulumi.azurenative.network.outputs.ARecordResponse;
 import io.pulumi.azurenative.network.outputs.AaaaRecordResponse;
 import io.pulumi.azurenative.network.outputs.CnameRecordResponse;
@@ -25,99 +24,1127 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Describes a DNS record set (a collection of DNS records with the same name and type) in a Private DNS zone.
+API Version: 2020-06-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### PUT Private DNS Zone A Record Set
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateRecordSet = new AzureNative.Network.PrivateRecordSet("privateRecordSet", new AzureNative.Network.PrivateRecordSetArgs
+        {
+            ARecords = 
+            {
+                new AzureNative.Network.Inputs.ARecordArgs
+                {
+                    Ipv4Address = "1.2.3.4",
+                },
+            },
+            Metadata = 
+            {
+                { "key1", "value1" },
+            },
+            PrivateZoneName = "privatezone1.com",
+            RecordType = "A",
+            RelativeRecordSetName = "recordA",
+            ResourceGroupName = "resourceGroup1",
+            Ttl = 3600,
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewPrivateRecordSet(ctx, "privateRecordSet", &network.PrivateRecordSetArgs{
+			ARecords: []network.ARecordArgs{
+				&network.ARecordArgs{
+					Ipv4Address: pulumi.String("1.2.3.4"),
+				},
+			},
+			Metadata: pulumi.StringMap{
+				"key1": pulumi.String("value1"),
+			},
+			PrivateZoneName:       pulumi.String("privatezone1.com"),
+			RecordType:            pulumi.String("A"),
+			RelativeRecordSetName: pulumi.String("recordA"),
+			ResourceGroupName:     pulumi.String("resourceGroup1"),
+			Ttl:                   pulumi.Float64(3600),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const privateRecordSet = new azure_native.network.PrivateRecordSet("privateRecordSet", {
+    aRecords: [{
+        ipv4Address: "1.2.3.4",
+    }],
+    metadata: {
+        key1: "value1",
+    },
+    privateZoneName: "privatezone1.com",
+    recordType: "A",
+    relativeRecordSetName: "recordA",
+    resourceGroupName: "resourceGroup1",
+    ttl: 3600,
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+private_record_set = azure_native.network.PrivateRecordSet("privateRecordSet",
+    a_records=[azure_native.network.ARecordArgs(
+        ipv4_address="1.2.3.4",
+    )],
+    metadata={
+        "key1": "value1",
+    },
+    private_zone_name="privatezone1.com",
+    record_type="A",
+    relative_record_set_name="recordA",
+    resource_group_name="resourceGroup1",
+    ttl=3600)
+
+```
+
+{{% /example %}}
+{{% example %}}
+### PUT Private DNS Zone AAAA Record Set
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateRecordSet = new AzureNative.Network.PrivateRecordSet("privateRecordSet", new AzureNative.Network.PrivateRecordSetArgs
+        {
+            AaaaRecords = 
+            {
+                new AzureNative.Network.Inputs.AaaaRecordArgs
+                {
+                    Ipv6Address = "::1",
+                },
+            },
+            Metadata = 
+            {
+                { "key1", "value1" },
+            },
+            PrivateZoneName = "privatezone1.com",
+            RecordType = "AAAA",
+            RelativeRecordSetName = "recordAAAA",
+            ResourceGroupName = "resourceGroup1",
+            Ttl = 3600,
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewPrivateRecordSet(ctx, "privateRecordSet", &network.PrivateRecordSetArgs{
+			AaaaRecords: []network.AaaaRecordArgs{
+				&network.AaaaRecordArgs{
+					Ipv6Address: pulumi.String("::1"),
+				},
+			},
+			Metadata: pulumi.StringMap{
+				"key1": pulumi.String("value1"),
+			},
+			PrivateZoneName:       pulumi.String("privatezone1.com"),
+			RecordType:            pulumi.String("AAAA"),
+			RelativeRecordSetName: pulumi.String("recordAAAA"),
+			ResourceGroupName:     pulumi.String("resourceGroup1"),
+			Ttl:                   pulumi.Float64(3600),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const privateRecordSet = new azure_native.network.PrivateRecordSet("privateRecordSet", {
+    aaaaRecords: [{
+        ipv6Address: "::1",
+    }],
+    metadata: {
+        key1: "value1",
+    },
+    privateZoneName: "privatezone1.com",
+    recordType: "AAAA",
+    relativeRecordSetName: "recordAAAA",
+    resourceGroupName: "resourceGroup1",
+    ttl: 3600,
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+private_record_set = azure_native.network.PrivateRecordSet("privateRecordSet",
+    aaaa_records=[azure_native.network.AaaaRecordArgs(
+        ipv6_address="::1",
+    )],
+    metadata={
+        "key1": "value1",
+    },
+    private_zone_name="privatezone1.com",
+    record_type="AAAA",
+    relative_record_set_name="recordAAAA",
+    resource_group_name="resourceGroup1",
+    ttl=3600)
+
+```
+
+{{% /example %}}
+{{% example %}}
+### PUT Private DNS Zone CNAME Record Set
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateRecordSet = new AzureNative.Network.PrivateRecordSet("privateRecordSet", new AzureNative.Network.PrivateRecordSetArgs
+        {
+            CnameRecord = new AzureNative.Network.Inputs.CnameRecordArgs
+            {
+                Cname = "contoso.com",
+            },
+            Metadata = 
+            {
+                { "key1", "value1" },
+            },
+            PrivateZoneName = "privatezone1.com",
+            RecordType = "CNAME",
+            RelativeRecordSetName = "recordCNAME",
+            ResourceGroupName = "resourceGroup1",
+            Ttl = 3600,
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewPrivateRecordSet(ctx, "privateRecordSet", &network.PrivateRecordSetArgs{
+			CnameRecord: &network.CnameRecordArgs{
+				Cname: pulumi.String("contoso.com"),
+			},
+			Metadata: pulumi.StringMap{
+				"key1": pulumi.String("value1"),
+			},
+			PrivateZoneName:       pulumi.String("privatezone1.com"),
+			RecordType:            pulumi.String("CNAME"),
+			RelativeRecordSetName: pulumi.String("recordCNAME"),
+			ResourceGroupName:     pulumi.String("resourceGroup1"),
+			Ttl:                   pulumi.Float64(3600),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const privateRecordSet = new azure_native.network.PrivateRecordSet("privateRecordSet", {
+    cnameRecord: {
+        cname: "contoso.com",
+    },
+    metadata: {
+        key1: "value1",
+    },
+    privateZoneName: "privatezone1.com",
+    recordType: "CNAME",
+    relativeRecordSetName: "recordCNAME",
+    resourceGroupName: "resourceGroup1",
+    ttl: 3600,
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+private_record_set = azure_native.network.PrivateRecordSet("privateRecordSet",
+    cname_record=azure_native.network.CnameRecordArgs(
+        cname="contoso.com",
+    ),
+    metadata={
+        "key1": "value1",
+    },
+    private_zone_name="privatezone1.com",
+    record_type="CNAME",
+    relative_record_set_name="recordCNAME",
+    resource_group_name="resourceGroup1",
+    ttl=3600)
+
+```
+
+{{% /example %}}
+{{% example %}}
+### PUT Private DNS Zone MX Record Set
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateRecordSet = new AzureNative.Network.PrivateRecordSet("privateRecordSet", new AzureNative.Network.PrivateRecordSetArgs
+        {
+            Metadata = 
+            {
+                { "key1", "value1" },
+            },
+            MxRecords = 
+            {
+                new AzureNative.Network.Inputs.MxRecordArgs
+                {
+                    Exchange = "mail.privatezone1.com",
+                    Preference = 0,
+                },
+            },
+            PrivateZoneName = "privatezone1.com",
+            RecordType = "MX",
+            RelativeRecordSetName = "recordMX",
+            ResourceGroupName = "resourceGroup1",
+            Ttl = 3600,
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewPrivateRecordSet(ctx, "privateRecordSet", &network.PrivateRecordSetArgs{
+			Metadata: pulumi.StringMap{
+				"key1": pulumi.String("value1"),
+			},
+			MxRecords: []network.MxRecordArgs{
+				&network.MxRecordArgs{
+					Exchange:   pulumi.String("mail.privatezone1.com"),
+					Preference: pulumi.Int(0),
+				},
+			},
+			PrivateZoneName:       pulumi.String("privatezone1.com"),
+			RecordType:            pulumi.String("MX"),
+			RelativeRecordSetName: pulumi.String("recordMX"),
+			ResourceGroupName:     pulumi.String("resourceGroup1"),
+			Ttl:                   pulumi.Float64(3600),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const privateRecordSet = new azure_native.network.PrivateRecordSet("privateRecordSet", {
+    metadata: {
+        key1: "value1",
+    },
+    mxRecords: [{
+        exchange: "mail.privatezone1.com",
+        preference: 0,
+    }],
+    privateZoneName: "privatezone1.com",
+    recordType: "MX",
+    relativeRecordSetName: "recordMX",
+    resourceGroupName: "resourceGroup1",
+    ttl: 3600,
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+private_record_set = azure_native.network.PrivateRecordSet("privateRecordSet",
+    metadata={
+        "key1": "value1",
+    },
+    mx_records=[azure_native.network.MxRecordArgs(
+        exchange="mail.privatezone1.com",
+        preference=0,
+    )],
+    private_zone_name="privatezone1.com",
+    record_type="MX",
+    relative_record_set_name="recordMX",
+    resource_group_name="resourceGroup1",
+    ttl=3600)
+
+```
+
+{{% /example %}}
+{{% example %}}
+### PUT Private DNS Zone PTR Record Set
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateRecordSet = new AzureNative.Network.PrivateRecordSet("privateRecordSet", new AzureNative.Network.PrivateRecordSetArgs
+        {
+            Metadata = 
+            {
+                { "key1", "value1" },
+            },
+            PrivateZoneName = "0.0.127.in-addr.arpa",
+            PtrRecords = 
+            {
+                new AzureNative.Network.Inputs.PtrRecordArgs
+                {
+                    Ptrdname = "localhost",
+                },
+            },
+            RecordType = "PTR",
+            RelativeRecordSetName = "1",
+            ResourceGroupName = "resourceGroup1",
+            Ttl = 3600,
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewPrivateRecordSet(ctx, "privateRecordSet", &network.PrivateRecordSetArgs{
+			Metadata: pulumi.StringMap{
+				"key1": pulumi.String("value1"),
+			},
+			PrivateZoneName: pulumi.String("0.0.127.in-addr.arpa"),
+			PtrRecords: []network.PtrRecordArgs{
+				&network.PtrRecordArgs{
+					Ptrdname: pulumi.String("localhost"),
+				},
+			},
+			RecordType:            pulumi.String("PTR"),
+			RelativeRecordSetName: pulumi.String("1"),
+			ResourceGroupName:     pulumi.String("resourceGroup1"),
+			Ttl:                   pulumi.Float64(3600),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const privateRecordSet = new azure_native.network.PrivateRecordSet("privateRecordSet", {
+    metadata: {
+        key1: "value1",
+    },
+    privateZoneName: "0.0.127.in-addr.arpa",
+    ptrRecords: [{
+        ptrdname: "localhost",
+    }],
+    recordType: "PTR",
+    relativeRecordSetName: "1",
+    resourceGroupName: "resourceGroup1",
+    ttl: 3600,
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+private_record_set = azure_native.network.PrivateRecordSet("privateRecordSet",
+    metadata={
+        "key1": "value1",
+    },
+    private_zone_name="0.0.127.in-addr.arpa",
+    ptr_records=[azure_native.network.PtrRecordArgs(
+        ptrdname="localhost",
+    )],
+    record_type="PTR",
+    relative_record_set_name="1",
+    resource_group_name="resourceGroup1",
+    ttl=3600)
+
+```
+
+{{% /example %}}
+{{% example %}}
+### PUT Private DNS Zone SOA Record Set
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateRecordSet = new AzureNative.Network.PrivateRecordSet("privateRecordSet", new AzureNative.Network.PrivateRecordSetArgs
+        {
+            Metadata = 
+            {
+                { "key1", "value1" },
+            },
+            PrivateZoneName = "privatezone1.com",
+            RecordType = "SOA",
+            RelativeRecordSetName = "@",
+            ResourceGroupName = "resourceGroup1",
+            SoaRecord = new AzureNative.Network.Inputs.SoaRecordArgs
+            {
+                Email = "azureprivatedns-hostmaster.microsoft.com",
+                ExpireTime = 2419200,
+                Host = "azureprivatedns.net",
+                MinimumTtl = 300,
+                RefreshTime = 3600,
+                RetryTime = 300,
+                SerialNumber = 1,
+            },
+            Ttl = 3600,
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewPrivateRecordSet(ctx, "privateRecordSet", &network.PrivateRecordSetArgs{
+			Metadata: pulumi.StringMap{
+				"key1": pulumi.String("value1"),
+			},
+			PrivateZoneName:       pulumi.String("privatezone1.com"),
+			RecordType:            pulumi.String("SOA"),
+			RelativeRecordSetName: pulumi.String("@"),
+			ResourceGroupName:     pulumi.String("resourceGroup1"),
+			SoaRecord: &network.SoaRecordArgs{
+				Email:        pulumi.String("azureprivatedns-hostmaster.microsoft.com"),
+				ExpireTime:   pulumi.Float64(2419200),
+				Host:         pulumi.String("azureprivatedns.net"),
+				MinimumTtl:   pulumi.Float64(300),
+				RefreshTime:  pulumi.Float64(3600),
+				RetryTime:    pulumi.Float64(300),
+				SerialNumber: pulumi.Float64(1),
+			},
+			Ttl: pulumi.Float64(3600),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const privateRecordSet = new azure_native.network.PrivateRecordSet("privateRecordSet", {
+    metadata: {
+        key1: "value1",
+    },
+    privateZoneName: "privatezone1.com",
+    recordType: "SOA",
+    relativeRecordSetName: "@",
+    resourceGroupName: "resourceGroup1",
+    soaRecord: {
+        email: "azureprivatedns-hostmaster.microsoft.com",
+        expireTime: 2419200,
+        host: "azureprivatedns.net",
+        minimumTtl: 300,
+        refreshTime: 3600,
+        retryTime: 300,
+        serialNumber: 1,
+    },
+    ttl: 3600,
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+private_record_set = azure_native.network.PrivateRecordSet("privateRecordSet",
+    metadata={
+        "key1": "value1",
+    },
+    private_zone_name="privatezone1.com",
+    record_type="SOA",
+    relative_record_set_name="@",
+    resource_group_name="resourceGroup1",
+    soa_record=azure_native.network.SoaRecordArgs(
+        email="azureprivatedns-hostmaster.microsoft.com",
+        expire_time=2419200,
+        host="azureprivatedns.net",
+        minimum_ttl=300,
+        refresh_time=3600,
+        retry_time=300,
+        serial_number=1,
+    ),
+    ttl=3600)
+
+```
+
+{{% /example %}}
+{{% example %}}
+### PUT Private DNS Zone SRV Record Set
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateRecordSet = new AzureNative.Network.PrivateRecordSet("privateRecordSet", new AzureNative.Network.PrivateRecordSetArgs
+        {
+            Metadata = 
+            {
+                { "key1", "value1" },
+            },
+            PrivateZoneName = "privatezone1.com",
+            RecordType = "SRV",
+            RelativeRecordSetName = "recordSRV",
+            ResourceGroupName = "resourceGroup1",
+            SrvRecords = 
+            {
+                new AzureNative.Network.Inputs.SrvRecordArgs
+                {
+                    Port = 80,
+                    Priority = 0,
+                    Target = "contoso.com",
+                    Weight = 10,
+                },
+            },
+            Ttl = 3600,
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewPrivateRecordSet(ctx, "privateRecordSet", &network.PrivateRecordSetArgs{
+			Metadata: pulumi.StringMap{
+				"key1": pulumi.String("value1"),
+			},
+			PrivateZoneName:       pulumi.String("privatezone1.com"),
+			RecordType:            pulumi.String("SRV"),
+			RelativeRecordSetName: pulumi.String("recordSRV"),
+			ResourceGroupName:     pulumi.String("resourceGroup1"),
+			SrvRecords: []network.SrvRecordArgs{
+				&network.SrvRecordArgs{
+					Port:     pulumi.Int(80),
+					Priority: pulumi.Int(0),
+					Target:   pulumi.String("contoso.com"),
+					Weight:   pulumi.Int(10),
+				},
+			},
+			Ttl: pulumi.Float64(3600),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const privateRecordSet = new azure_native.network.PrivateRecordSet("privateRecordSet", {
+    metadata: {
+        key1: "value1",
+    },
+    privateZoneName: "privatezone1.com",
+    recordType: "SRV",
+    relativeRecordSetName: "recordSRV",
+    resourceGroupName: "resourceGroup1",
+    srvRecords: [{
+        port: 80,
+        priority: 0,
+        target: "contoso.com",
+        weight: 10,
+    }],
+    ttl: 3600,
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+private_record_set = azure_native.network.PrivateRecordSet("privateRecordSet",
+    metadata={
+        "key1": "value1",
+    },
+    private_zone_name="privatezone1.com",
+    record_type="SRV",
+    relative_record_set_name="recordSRV",
+    resource_group_name="resourceGroup1",
+    srv_records=[azure_native.network.SrvRecordArgs(
+        port=80,
+        priority=0,
+        target="contoso.com",
+        weight=10,
+    )],
+    ttl=3600)
+
+```
+
+{{% /example %}}
+{{% example %}}
+### PUT Private DNS Zone TXT Record Set
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateRecordSet = new AzureNative.Network.PrivateRecordSet("privateRecordSet", new AzureNative.Network.PrivateRecordSetArgs
+        {
+            Metadata = 
+            {
+                { "key1", "value1" },
+            },
+            PrivateZoneName = "privatezone1.com",
+            RecordType = "TXT",
+            RelativeRecordSetName = "recordTXT",
+            ResourceGroupName = "resourceGroup1",
+            Ttl = 3600,
+            TxtRecords = 
+            {
+                new AzureNative.Network.Inputs.TxtRecordArgs
+                {
+                    Value = 
+                    {
+                        "string1",
+                        "string2",
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewPrivateRecordSet(ctx, "privateRecordSet", &network.PrivateRecordSetArgs{
+			Metadata: pulumi.StringMap{
+				"key1": pulumi.String("value1"),
+			},
+			PrivateZoneName:       pulumi.String("privatezone1.com"),
+			RecordType:            pulumi.String("TXT"),
+			RelativeRecordSetName: pulumi.String("recordTXT"),
+			ResourceGroupName:     pulumi.String("resourceGroup1"),
+			Ttl:                   pulumi.Float64(3600),
+			TxtRecords: []network.TxtRecordArgs{
+				&network.TxtRecordArgs{
+					Value: pulumi.StringArray{
+						pulumi.String("string1"),
+						pulumi.String("string2"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const privateRecordSet = new azure_native.network.PrivateRecordSet("privateRecordSet", {
+    metadata: {
+        key1: "value1",
+    },
+    privateZoneName: "privatezone1.com",
+    recordType: "TXT",
+    relativeRecordSetName: "recordTXT",
+    resourceGroupName: "resourceGroup1",
+    ttl: 3600,
+    txtRecords: [{
+        value: [
+            "string1",
+            "string2",
+        ],
+    }],
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+private_record_set = azure_native.network.PrivateRecordSet("privateRecordSet",
+    metadata={
+        "key1": "value1",
+    },
+    private_zone_name="privatezone1.com",
+    record_type="TXT",
+    relative_record_set_name="recordTXT",
+    resource_group_name="resourceGroup1",
+    ttl=3600,
+    txt_records=[azure_native.network.TxtRecordArgs(
+        value=[
+            "string1",
+            "string2",
+        ],
+    )])
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:PrivateRecordSet recordtxt /subscriptions/subscriptionId/resourceGroups/resourceGroup1/providers/Microsoft.Network/privateDnsZones/privatezone1.com/TXT/recordtxt 
+```
+
+ */
 @ResourceType(type="azure-native:network:PrivateRecordSet")
 public class PrivateRecordSet extends io.pulumi.resources.CustomResource {
+    /**
+     * The list of A records in the record set.
+     */
     @OutputExport(name="aRecords", type=List.class, parameters={ARecordResponse.class})
     private Output</* @Nullable */ List<ARecordResponse>> aRecords;
 
+    /**
+     * @return The list of A records in the record set.
+     */
     public Output</* @Nullable */ List<ARecordResponse>> getARecords() {
         return this.aRecords;
     }
+    /**
+     * The list of AAAA records in the record set.
+     */
     @OutputExport(name="aaaaRecords", type=List.class, parameters={AaaaRecordResponse.class})
     private Output</* @Nullable */ List<AaaaRecordResponse>> aaaaRecords;
 
+    /**
+     * @return The list of AAAA records in the record set.
+     */
     public Output</* @Nullable */ List<AaaaRecordResponse>> getAaaaRecords() {
         return this.aaaaRecords;
     }
+    /**
+     * The CNAME record in the record set.
+     */
     @OutputExport(name="cnameRecord", type=CnameRecordResponse.class, parameters={})
     private Output</* @Nullable */ CnameRecordResponse> cnameRecord;
 
+    /**
+     * @return The CNAME record in the record set.
+     */
     public Output</* @Nullable */ CnameRecordResponse> getCnameRecord() {
         return this.cnameRecord;
     }
+    /**
+     * The ETag of the record set.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return The ETag of the record set.
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * Fully qualified domain name of the record set.
+     */
     @OutputExport(name="fqdn", type=String.class, parameters={})
     private Output<String> fqdn;
 
+    /**
+     * @return Fully qualified domain name of the record set.
+     */
     public Output<String> getFqdn() {
         return this.fqdn;
     }
+    /**
+     * Is the record set auto-registered in the Private DNS zone through a virtual network link?
+     */
     @OutputExport(name="isAutoRegistered", type=Boolean.class, parameters={})
     private Output<Boolean> isAutoRegistered;
 
+    /**
+     * @return Is the record set auto-registered in the Private DNS zone through a virtual network link?
+     */
     public Output<Boolean> getIsAutoRegistered() {
         return this.isAutoRegistered;
     }
+    /**
+     * The metadata attached to the record set.
+     */
     @OutputExport(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> metadata;
 
+    /**
+     * @return The metadata attached to the record set.
+     */
     public Output</* @Nullable */ Map<String,String>> getMetadata() {
         return this.metadata;
     }
+    /**
+     * The list of MX records in the record set.
+     */
     @OutputExport(name="mxRecords", type=List.class, parameters={MxRecordResponse.class})
     private Output</* @Nullable */ List<MxRecordResponse>> mxRecords;
 
+    /**
+     * @return The list of MX records in the record set.
+     */
     public Output</* @Nullable */ List<MxRecordResponse>> getMxRecords() {
         return this.mxRecords;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The list of PTR records in the record set.
+     */
     @OutputExport(name="ptrRecords", type=List.class, parameters={PtrRecordResponse.class})
     private Output</* @Nullable */ List<PtrRecordResponse>> ptrRecords;
 
+    /**
+     * @return The list of PTR records in the record set.
+     */
     public Output</* @Nullable */ List<PtrRecordResponse>> getPtrRecords() {
         return this.ptrRecords;
     }
+    /**
+     * The SOA record in the record set.
+     */
     @OutputExport(name="soaRecord", type=SoaRecordResponse.class, parameters={})
     private Output</* @Nullable */ SoaRecordResponse> soaRecord;
 
+    /**
+     * @return The SOA record in the record set.
+     */
     public Output</* @Nullable */ SoaRecordResponse> getSoaRecord() {
         return this.soaRecord;
     }
+    /**
+     * The list of SRV records in the record set.
+     */
     @OutputExport(name="srvRecords", type=List.class, parameters={SrvRecordResponse.class})
     private Output</* @Nullable */ List<SrvRecordResponse>> srvRecords;
 
+    /**
+     * @return The list of SRV records in the record set.
+     */
     public Output</* @Nullable */ List<SrvRecordResponse>> getSrvRecords() {
         return this.srvRecords;
     }
+    /**
+     * The TTL (time-to-live) of the records in the record set.
+     */
     @OutputExport(name="ttl", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> ttl;
 
+    /**
+     * @return The TTL (time-to-live) of the records in the record set.
+     */
     public Output</* @Nullable */ Double> getTtl() {
         return this.ttl;
     }
+    /**
+     * The list of TXT records in the record set.
+     */
     @OutputExport(name="txtRecords", type=List.class, parameters={TxtRecordResponse.class})
     private Output</* @Nullable */ List<TxtRecordResponse>> txtRecords;
 
+    /**
+     * @return The list of TXT records in the record set.
+     */
     public Output</* @Nullable */ List<TxtRecordResponse>> getTxtRecords() {
         return this.txtRecords;
     }
+    /**
+     * The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public PrivateRecordSet(String name, PrivateRecordSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:PrivateRecordSet", name, args == null ? PrivateRecordSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -138,6 +1165,14 @@ public class PrivateRecordSet extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static PrivateRecordSet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateRecordSet(name, id, options);
     }

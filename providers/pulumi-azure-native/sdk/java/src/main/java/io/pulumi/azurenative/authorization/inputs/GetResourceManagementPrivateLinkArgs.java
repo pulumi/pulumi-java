@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetResourceManagementPrivateLinkArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetResourceManagementPrivateLinkArgs Empty = new GetResourceManagementPrivateLinkArgs();
 
+    /**
+     * The name of the resource group the template will be deployed to. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class GetResourceManagementPrivateLinkArgs extends io.pulumi.resour
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the resource management private link.
+     */
     @InputImport(name="rmplName", required=true)
     private final String rmplName;
 

@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity Document Database Collection source.
+ */
 public final class DocumentDbCollectionSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DocumentDbCollectionSourceResponse Empty = new DocumentDbCollectionSourceResponse();
 
+    /**
+     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+     */
     @InputImport(name="additionalColumns")
     private final @Nullable Object additionalColumns;
 
@@ -22,6 +28,9 @@ public final class DocumentDbCollectionSourceResponse extends io.pulumi.resource
         return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
     }
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -29,6 +38,9 @@ public final class DocumentDbCollectionSourceResponse extends io.pulumi.resource
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
+    /**
+     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -36,6 +48,9 @@ public final class DocumentDbCollectionSourceResponse extends io.pulumi.resource
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
+    /**
+     * Nested properties separator. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="nestingSeparator")
     private final @Nullable Object nestingSeparator;
 
@@ -43,6 +58,9 @@ public final class DocumentDbCollectionSourceResponse extends io.pulumi.resource
         return this.nestingSeparator == null ? Optional.empty() : Optional.ofNullable(this.nestingSeparator);
     }
 
+    /**
+     * Documents query. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="query")
     private final @Nullable Object query;
 
@@ -50,6 +68,9 @@ public final class DocumentDbCollectionSourceResponse extends io.pulumi.resource
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
     }
 
+    /**
+     * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="queryTimeout")
     private final @Nullable Object queryTimeout;
 
@@ -57,6 +78,9 @@ public final class DocumentDbCollectionSourceResponse extends io.pulumi.resource
         return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
     }
 
+    /**
+     * Source retry count. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="sourceRetryCount")
     private final @Nullable Object sourceRetryCount;
 
@@ -64,6 +88,9 @@ public final class DocumentDbCollectionSourceResponse extends io.pulumi.resource
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
     }
 
+    /**
+     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="sourceRetryWait")
     private final @Nullable Object sourceRetryWait;
 
@@ -71,6 +98,10 @@ public final class DocumentDbCollectionSourceResponse extends io.pulumi.resource
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
     }
 
+    /**
+     * Copy source type.
+Expected value is 'DocumentDbCollectionSource'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

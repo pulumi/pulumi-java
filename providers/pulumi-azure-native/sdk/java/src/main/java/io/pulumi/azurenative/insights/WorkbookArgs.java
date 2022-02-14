@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkbookArgs Empty = new WorkbookArgs();
 
+    /**
+     * Workbook category, as defined by the user at creation time.
+     */
     @InputImport(name="category", required=true)
     private final Input<String> category;
 
@@ -25,6 +31,9 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
         return this.category;
     }
 
+    /**
+     * The user-defined name (display name) of the workbook.
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -32,6 +41,9 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Azure resource Id
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -39,6 +51,9 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Identity used for BYOS
+     */
     @InputImport(name="identity")
     private final @Nullable Input<WorkbookManagedIdentityArgs> identity;
 
@@ -46,6 +61,9 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * The kind of workbook. Choices are user and shared.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<Either<String,Kind>> kind;
 
@@ -53,6 +71,9 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Resource location
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -60,6 +81,9 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Azure resource name
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -67,6 +91,9 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -74,6 +101,9 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Application Insights component resource.
+     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -81,6 +111,9 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
+    /**
+     * Configuration of this particular workbook. Configuration data is a string containing valid JSON
+     */
     @InputImport(name="serializedData", required=true)
     private final Input<String> serializedData;
 
@@ -88,6 +121,9 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
         return this.serializedData;
     }
 
+    /**
+     * ResourceId for a source resource.
+     */
     @InputImport(name="sourceId")
     private final @Nullable Input<String> sourceId;
 
@@ -95,6 +131,9 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceId == null ? Input.empty() : this.sourceId;
     }
 
+    /**
+     * BYOS Storage Account URI
+     */
     @InputImport(name="storageUri")
     private final @Nullable Input<String> storageUri;
 
@@ -102,6 +141,9 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageUri == null ? Input.empty() : this.storageUri;
     }
 
+    /**
+     * Resource tags
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -109,6 +151,9 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Azure resource type
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 
@@ -116,6 +161,9 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * Workbook version
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

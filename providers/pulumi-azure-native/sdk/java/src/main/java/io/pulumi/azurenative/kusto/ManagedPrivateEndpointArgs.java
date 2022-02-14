@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedPrivateEndpointArgs Empty = new ManagedPrivateEndpointArgs();
 
+    /**
+     * The name of the Kusto cluster.
+     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -21,6 +27,9 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
         return this.clusterName;
     }
 
+    /**
+     * The groupId in which the managed private endpoint is created.
+     */
     @InputImport(name="groupId", required=true)
     private final Input<String> groupId;
 
@@ -28,6 +37,9 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
         return this.groupId;
     }
 
+    /**
+     * The name of the managed private endpoint.
+     */
     @InputImport(name="managedPrivateEndpointName")
     private final @Nullable Input<String> managedPrivateEndpointName;
 
@@ -35,6 +47,9 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
         return this.managedPrivateEndpointName == null ? Input.empty() : this.managedPrivateEndpointName;
     }
 
+    /**
+     * The ARM resource ID of the resource for which the managed private endpoint is created.
+     */
     @InputImport(name="privateLinkResourceId", required=true)
     private final Input<String> privateLinkResourceId;
 
@@ -42,6 +57,9 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
         return this.privateLinkResourceId;
     }
 
+    /**
+     * The region of the resource to which the managed private endpoint is created.
+     */
     @InputImport(name="privateLinkResourceRegion")
     private final @Nullable Input<String> privateLinkResourceRegion;
 
@@ -49,6 +67,9 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
         return this.privateLinkResourceRegion == null ? Input.empty() : this.privateLinkResourceRegion;
     }
 
+    /**
+     * The user request message.
+     */
     @InputImport(name="requestMessage")
     private final @Nullable Input<String> requestMessage;
 
@@ -56,6 +77,9 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
         return this.requestMessage == null ? Input.empty() : this.requestMessage;
     }
 
+    /**
+     * The name of the resource group containing the Kusto cluster.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

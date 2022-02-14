@@ -3,7 +3,6 @@
 
 package io.pulumi.azurenative.kusto.outputs;
 
-import io.pulumi.azurenative.kusto.outputs.IdentityResponseUserAssignedIdentities;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
@@ -12,9 +11,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IdentityResponse {
+/**
+ * The principal ID of resource identity.
+ */
     private final String principalId;
+/**
+ * The tenant ID of resource.
+ */
     private final String tenantId;
+/**
+ * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove all identities.
+ */
     private final String type;
+/**
+ * The list of user identities associated with the Kusto cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+ */
     private final @Nullable Map<String,IdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type","userAssignedIdentities"})
@@ -29,15 +40,27 @@ public final class IdentityResponse {
         this.userAssignedIdentities = userAssignedIdentities;
     }
 
+/**
+ * The principal ID of resource identity.
+ */
     public String getPrincipalId() {
         return this.principalId;
     }
+/**
+ * The tenant ID of resource.
+ */
     public String getTenantId() {
         return this.tenantId;
     }
+/**
+ * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove all identities.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * The list of user identities associated with the Kusto cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+ */
     public Map<String,IdentityResponseUserAssignedIdentities> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

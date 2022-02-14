@@ -9,18 +9,57 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class InMageRcmNicDetailsResponse {
+/**
+ * A value indicating whether this is the primary NIC.
+ */
     private final String isPrimaryNic;
+/**
+ * A value indicating whether this NIC is selected for failover.
+ */
     private final String isSelectedForFailover;
+/**
+ * The NIC Id.
+ */
     private final String nicId;
+/**
+ * The source IP address.
+ */
     private final String sourceIPAddress;
+/**
+ * The source IP address type.
+ */
     private final String sourceIPAddressType;
+/**
+ * Source network Id.
+ */
     private final String sourceNetworkId;
+/**
+ * Source subnet name.
+ */
     private final String sourceSubnetName;
+/**
+ * The target IP address.
+ */
     private final String targetIPAddress;
+/**
+ * The target IP address type.
+ */
     private final String targetIPAddressType;
+/**
+ * Target subnet name.
+ */
     private final String targetSubnetName;
+/**
+ * The test IP address.
+ */
     private final String testIPAddress;
+/**
+ * The test IP address type.
+ */
     private final String testIPAddressType;
+/**
+ * Test subnet name.
+ */
     private final String testSubnetName;
 
     @OutputCustomType.Constructor({"isPrimaryNic","isSelectedForFailover","nicId","sourceIPAddress","sourceIPAddressType","sourceNetworkId","sourceSubnetName","targetIPAddress","targetIPAddressType","targetSubnetName","testIPAddress","testIPAddressType","testSubnetName"})
@@ -53,42 +92,81 @@ public final class InMageRcmNicDetailsResponse {
         this.testSubnetName = Objects.requireNonNull(testSubnetName);
     }
 
+/**
+ * A value indicating whether this is the primary NIC.
+ */
     public String getIsPrimaryNic() {
         return this.isPrimaryNic;
     }
+/**
+ * A value indicating whether this NIC is selected for failover.
+ */
     public String getIsSelectedForFailover() {
         return this.isSelectedForFailover;
     }
+/**
+ * The NIC Id.
+ */
     public String getNicId() {
         return this.nicId;
     }
+/**
+ * The source IP address.
+ */
     public String getSourceIPAddress() {
         return this.sourceIPAddress;
     }
+/**
+ * The source IP address type.
+ */
     public String getSourceIPAddressType() {
         return this.sourceIPAddressType;
     }
+/**
+ * Source network Id.
+ */
     public String getSourceNetworkId() {
         return this.sourceNetworkId;
     }
+/**
+ * Source subnet name.
+ */
     public String getSourceSubnetName() {
         return this.sourceSubnetName;
     }
+/**
+ * The target IP address.
+ */
     public String getTargetIPAddress() {
         return this.targetIPAddress;
     }
+/**
+ * The target IP address type.
+ */
     public String getTargetIPAddressType() {
         return this.targetIPAddressType;
     }
+/**
+ * Target subnet name.
+ */
     public String getTargetSubnetName() {
         return this.targetSubnetName;
     }
+/**
+ * The test IP address.
+ */
     public String getTestIPAddress() {
         return this.testIPAddress;
     }
+/**
+ * The test IP address type.
+ */
     public String getTestIPAddressType() {
         return this.testIPAddressType;
     }
+/**
+ * Test subnet name.
+ */
     public String getTestSubnetName() {
         return this.testSubnetName;
     }

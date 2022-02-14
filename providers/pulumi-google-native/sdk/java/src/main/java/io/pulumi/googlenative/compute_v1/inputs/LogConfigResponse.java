@@ -10,10 +10,16 @@ import io.pulumi.googlenative.compute_v1.inputs.LogConfigDataAccessOptionsRespon
 import java.util.Objects;
 
 
+/**
+ * This is deprecated and has no effect. Do not use.
+ */
 public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LogConfigResponse Empty = new LogConfigResponse();
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="cloudAudit", required=true)
     private final LogConfigCloudAuditOptionsResponse cloudAudit;
 
@@ -21,6 +27,9 @@ public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.cloudAudit;
     }
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="counter", required=true)
     private final LogConfigCounterOptionsResponse counter;
 
@@ -28,6 +37,9 @@ public final class LogConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.counter;
     }
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="dataAccess", required=true)
     private final LogConfigDataAccessOptionsResponse dataAccess;
 

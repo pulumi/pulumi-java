@@ -11,9 +11,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetComponentLinkedStorageAccountResult {
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     private final String id;
+/**
+ * Linked storage account resource ID
+ */
     private final @Nullable String linkedStorageAccount;
+/**
+ * The name of the resource
+ */
     private final String name;
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","linkedStorageAccount","name","type"})
@@ -28,15 +40,27 @@ public final class GetComponentLinkedStorageAccountResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Linked storage account resource ID
+ */
     public Optional<String> getLinkedStorageAccount() {
         return Optional.ofNullable(this.linkedStorageAccount);
     }
+/**
+ * The name of the resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     public String getType() {
         return this.type;
     }

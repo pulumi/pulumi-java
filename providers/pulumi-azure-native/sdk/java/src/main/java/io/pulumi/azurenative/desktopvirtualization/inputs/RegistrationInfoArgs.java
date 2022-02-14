@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a RegistrationInfo definition.
+ */
 public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RegistrationInfoArgs Empty = new RegistrationInfoArgs();
 
+    /**
+     * Expiration time of registration token.
+     */
     @InputImport(name="expirationTime")
     private final @Nullable Input<String> expirationTime;
 
@@ -23,6 +29,9 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
     }
 
+    /**
+     * The type of resetting the token.
+     */
     @InputImport(name="registrationTokenOperation")
     private final @Nullable Input<Either<String,RegistrationTokenOperation>> registrationTokenOperation;
 
@@ -30,6 +39,9 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
         return this.registrationTokenOperation == null ? Input.empty() : this.registrationTokenOperation;
     }
 
+    /**
+     * The registration token base64 encoded string.
+     */
     @InputImport(name="token")
     private final @Nullable Input<String> token;
 

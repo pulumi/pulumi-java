@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specification of ValidationCA. Defines the mechanism to obtain the Certificate Authority certificate to validate the peer certificate.
+ */
 public final class ValidationCAArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ValidationCAArgs Empty = new ValidationCAArgs();
 
+    /**
+     * The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.
+     */
     @InputImport(name="certificateProviderInstance")
     private final @Nullable Input<CertificateProviderInstanceArgs> certificateProviderInstance;
 
@@ -22,6 +28,9 @@ public final class ValidationCAArgs extends io.pulumi.resources.ResourceArgs {
         return this.certificateProviderInstance == null ? Input.empty() : this.certificateProviderInstance;
     }
 
+    /**
+     * gRPC specific configuration to access the gRPC server to obtain the CA certificate.
+     */
     @InputImport(name="grpcEndpoint")
     private final @Nullable Input<GoogleCloudNetworksecurityV1GrpcEndpointArgs> grpcEndpoint;
 

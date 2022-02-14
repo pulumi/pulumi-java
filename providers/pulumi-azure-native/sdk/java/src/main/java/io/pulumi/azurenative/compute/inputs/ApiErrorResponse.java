@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Api error.
+ */
 public final class ApiErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiErrorResponse Empty = new ApiErrorResponse();
 
+    /**
+     * The error code.
+     */
     @InputImport(name="code")
     private final @Nullable String code;
 
@@ -24,6 +30,9 @@ public final class ApiErrorResponse extends io.pulumi.resources.InvokeArgs {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
+    /**
+     * The Api error details
+     */
     @InputImport(name="details")
     private final @Nullable List<ApiErrorBaseResponse> details;
 
@@ -31,6 +40,9 @@ public final class ApiErrorResponse extends io.pulumi.resources.InvokeArgs {
         return this.details == null ? List.of() : this.details;
     }
 
+    /**
+     * The Api inner error
+     */
     @InputImport(name="innererror")
     private final @Nullable InnerErrorResponse innererror;
 
@@ -38,6 +50,9 @@ public final class ApiErrorResponse extends io.pulumi.resources.InvokeArgs {
         return this.innererror == null ? Optional.empty() : Optional.ofNullable(this.innererror);
     }
 
+    /**
+     * The error message.
+     */
     @InputImport(name="message")
     private final @Nullable String message;
 
@@ -45,6 +60,9 @@ public final class ApiErrorResponse extends io.pulumi.resources.InvokeArgs {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
+    /**
+     * The target of the particular error.
+     */
     @InputImport(name="target")
     private final @Nullable String target;
 

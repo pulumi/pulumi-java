@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a VM and the setting Id it was created for.
+ */
 public final class ResourceSetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceSetResponse Empty = new ResourceSetResponse();
 
+    /**
+     * resourceSettingId for the environment
+     */
     @InputImport(name="resourceSettingId")
     private final @Nullable String resourceSettingId;
 
@@ -21,6 +27,9 @@ public final class ResourceSetResponse extends io.pulumi.resources.InvokeArgs {
         return this.resourceSettingId == null ? Optional.empty() : Optional.ofNullable(this.resourceSettingId);
     }
 
+    /**
+     * VM resource Id for the environment
+     */
     @InputImport(name="vmResourceId")
     private final @Nullable String vmResourceId;
 

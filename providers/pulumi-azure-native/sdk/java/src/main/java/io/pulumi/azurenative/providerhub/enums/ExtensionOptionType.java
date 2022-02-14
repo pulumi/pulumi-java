@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum ExtensionOptionType {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         DoNotMergeExistingReadOnlyAndSecretProperties("DoNotMergeExistingReadOnlyAndSecretProperties"),
+/**
+ * 
+ */
         IncludeInternalMetadata("IncludeInternalMetadata");
 
         private final String value;

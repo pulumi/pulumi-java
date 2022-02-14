@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The SKU of the Maps Account.
+ */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuResponse Empty = new SkuResponse();
 
+    /**
+     * The name of the SKU, in standard format (such as S0).
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * Gets the sku tier. This is based on the SKU name.
+     */
     @InputImport(name="tier", required=true)
     private final String tier;
 

@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Records a failed evaluation job run.
+ */
 public final class GoogleCloudDatalabelingV1beta1AttemptResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatalabelingV1beta1AttemptResponse Empty = new GoogleCloudDatalabelingV1beta1AttemptResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="attemptTime", required=true)
     private final String attemptTime;
 
@@ -21,6 +27,9 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse extends io.pulu
         return this.attemptTime;
     }
 
+    /**
+     * Details of errors that occurred.
+     */
     @InputImport(name="partialFailures", required=true)
     private final List<GoogleRpcStatusResponse> partialFailures;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetRecordSetArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRecordSetArgs Empty = new GetRecordSetArgs();
 
+    /**
+     * The type of DNS record in this record set.
+     */
     @InputImport(name="recordType", required=true)
     private final String recordType;
 
@@ -19,6 +25,9 @@ public final class GetRecordSetArgs extends io.pulumi.resources.InvokeArgs {
         return this.recordType;
     }
 
+    /**
+     * The name of the record set, relative to the name of the zone.
+     */
     @InputImport(name="relativeRecordSetName", required=true)
     private final String relativeRecordSetName;
 
@@ -26,6 +35,9 @@ public final class GetRecordSetArgs extends io.pulumi.resources.InvokeArgs {
         return this.relativeRecordSetName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,9 @@ public final class GetRecordSetArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the DNS zone (without a terminating dot).
+     */
     @InputImport(name="zoneName", required=true)
     private final String zoneName;
 

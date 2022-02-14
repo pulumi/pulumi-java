@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListTopicSharedAccessKeys {
+/**
+ * Shared access keys of the Topic
+API Version: 2020-06-01.
+ *
+ * Shared access keys of the Topic
+ */
     public static CompletableFuture<ListTopicSharedAccessKeysResult> invokeAsync(ListTopicSharedAccessKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:listTopicSharedAccessKeys", TypeShape.of(ListTopicSharedAccessKeysResult.class), args == null ? ListTopicSharedAccessKeysArgs.Empty : args, Utilities.withVersion(options));
     }

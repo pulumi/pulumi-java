@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The source of the action to execute.
+ */
     @EnumType
     public enum JobStepActionSource {
+/**
+ * 
+ */
         Inline("Inline");
 
         private final String value;

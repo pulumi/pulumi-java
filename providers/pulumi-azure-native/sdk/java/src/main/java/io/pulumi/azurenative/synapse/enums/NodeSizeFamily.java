@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The kind of nodes that the Big Data pool provides.
+ */
     @EnumType
     public enum NodeSizeFamily {
+/**
+ * 
+ */
         None("None"),
+/**
+ * 
+ */
         MemoryOptimized("MemoryOptimized"),
+/**
+ * 
+ */
         HardwareAcceleratedFPGA("HardwareAcceleratedFPGA"),
+/**
+ * 
+ */
         HardwareAcceleratedGPU("HardwareAcceleratedGPU");
 
         private final String value;

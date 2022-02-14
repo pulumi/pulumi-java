@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTimeSeriesDatabaseConnection {
+/**
+ * Describes a time series database connection resource.
+API Version: 2021-06-30-preview.
+ *
+ * Describes a time series database connection resource.
+ */
     public static CompletableFuture<GetTimeSeriesDatabaseConnectionResult> invokeAsync(GetTimeSeriesDatabaseConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:digitaltwins:getTimeSeriesDatabaseConnection", TypeShape.of(GetTimeSeriesDatabaseConnectionResult.class), args == null ? GetTimeSeriesDatabaseConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

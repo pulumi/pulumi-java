@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ControllerArgs Empty = new ControllerArgs();
 
+    /**
+     * Region where the Azure resource is located.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -23,6 +29,9 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of the resource.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -30,6 +39,9 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +49,9 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Model representing SKU for Azure Dev Spaces Controller.
+     */
     @InputImport(name="sku", required=true)
     private final Input<SkuArgs> sku;
 
@@ -44,6 +59,9 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku;
     }
 
+    /**
+     * Tags for the Azure resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -51,6 +69,9 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Credentials of the target container host (base64).
+     */
     @InputImport(name="targetContainerHostCredentialsBase64", required=true)
     private final Input<String> targetContainerHostCredentialsBase64;
 
@@ -58,6 +79,9 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetContainerHostCredentialsBase64;
     }
 
+    /**
+     * Resource ID of the target container host
+     */
     @InputImport(name="targetContainerHostResourceId", required=true)
     private final Input<String> targetContainerHostResourceId;
 

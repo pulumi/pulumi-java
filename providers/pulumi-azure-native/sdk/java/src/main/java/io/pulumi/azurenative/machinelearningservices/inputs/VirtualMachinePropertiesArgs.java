@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class VirtualMachinePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachinePropertiesArgs Empty = new VirtualMachinePropertiesArgs();
 
+    /**
+     * Public IP address of the virtual machine.
+     */
     @InputImport(name="address")
     private final @Nullable Input<String> address;
 
@@ -23,6 +29,9 @@ public final class VirtualMachinePropertiesArgs extends io.pulumi.resources.Reso
         return this.address == null ? Input.empty() : this.address;
     }
 
+    /**
+     * Admin credentials for virtual machine
+     */
     @InputImport(name="administratorAccount")
     private final @Nullable Input<VirtualMachineSshCredentialsArgs> administratorAccount;
 
@@ -30,6 +39,9 @@ public final class VirtualMachinePropertiesArgs extends io.pulumi.resources.Reso
         return this.administratorAccount == null ? Input.empty() : this.administratorAccount;
     }
 
+    /**
+     * Port open for ssh connections.
+     */
     @InputImport(name="sshPort")
     private final @Nullable Input<Integer> sshPort;
 
@@ -37,6 +49,9 @@ public final class VirtualMachinePropertiesArgs extends io.pulumi.resources.Reso
         return this.sshPort == null ? Input.empty() : this.sshPort;
     }
 
+    /**
+     * Virtual Machine size
+     */
     @InputImport(name="virtualMachineSize")
     private final @Nullable Input<String> virtualMachineSize;
 

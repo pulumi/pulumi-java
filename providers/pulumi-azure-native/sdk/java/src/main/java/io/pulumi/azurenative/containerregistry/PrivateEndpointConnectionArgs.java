@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateEndpointConnectionArgs Empty = new PrivateEndpointConnectionArgs();
 
+    /**
+     * The resource of private endpoint.
+     */
     @InputImport(name="privateEndpoint")
     private final @Nullable Input<PrivateEndpointArgs> privateEndpoint;
 
@@ -23,6 +29,9 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateEndpoint == null ? Input.empty() : this.privateEndpoint;
     }
 
+    /**
+     * The name of the private endpoint connection.
+     */
     @InputImport(name="privateEndpointConnectionName")
     private final @Nullable Input<String> privateEndpointConnectionName;
 
@@ -30,6 +39,9 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
+    /**
+     * A collection of information about the state of the connection between service consumer and provider.
+     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
@@ -37,6 +49,9 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
     }
 
+    /**
+     * The name of the container registry.
+     */
     @InputImport(name="registryName", required=true)
     private final Input<String> registryName;
 
@@ -44,6 +59,9 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.registryName;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

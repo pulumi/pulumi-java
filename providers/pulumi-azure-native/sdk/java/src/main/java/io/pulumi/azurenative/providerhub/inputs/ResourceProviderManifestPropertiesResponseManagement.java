@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResourceProviderManifestPropertiesResponseManagement extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceProviderManifestPropertiesResponseManagement Empty = new ResourceProviderManifestPropertiesResponseManagement();
 
+    /**
+     * 
+     */
     @InputImport(name="incidentContactEmail")
     private final @Nullable String incidentContactEmail;
 
@@ -24,6 +30,9 @@ public final class ResourceProviderManifestPropertiesResponseManagement extends 
         return this.incidentContactEmail == null ? Optional.empty() : Optional.ofNullable(this.incidentContactEmail);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="incidentRoutingService")
     private final @Nullable String incidentRoutingService;
 
@@ -31,6 +40,9 @@ public final class ResourceProviderManifestPropertiesResponseManagement extends 
         return this.incidentRoutingService == null ? Optional.empty() : Optional.ofNullable(this.incidentRoutingService);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="incidentRoutingTeam")
     private final @Nullable String incidentRoutingTeam;
 
@@ -38,6 +50,9 @@ public final class ResourceProviderManifestPropertiesResponseManagement extends 
         return this.incidentRoutingTeam == null ? Optional.empty() : Optional.ofNullable(this.incidentRoutingTeam);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="manifestOwners")
     private final @Nullable List<String> manifestOwners;
 
@@ -45,6 +60,9 @@ public final class ResourceProviderManifestPropertiesResponseManagement extends 
         return this.manifestOwners == null ? List.of() : this.manifestOwners;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="resourceAccessPolicy")
     private final @Nullable String resourceAccessPolicy;
 
@@ -52,6 +70,9 @@ public final class ResourceProviderManifestPropertiesResponseManagement extends 
         return this.resourceAccessPolicy == null ? Optional.empty() : Optional.ofNullable(this.resourceAccessPolicy);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="resourceAccessRoles")
     private final @Nullable List<Object> resourceAccessRoles;
 
@@ -59,6 +80,9 @@ public final class ResourceProviderManifestPropertiesResponseManagement extends 
         return this.resourceAccessRoles == null ? List.of() : this.resourceAccessRoles;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="schemaOwners")
     private final @Nullable List<String> schemaOwners;
 
@@ -66,6 +90,9 @@ public final class ResourceProviderManifestPropertiesResponseManagement extends 
         return this.schemaOwners == null ? List.of() : this.schemaOwners;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="serviceTreeInfos")
     private final @Nullable List<ServiceTreeInfoResponse> serviceTreeInfos;
 

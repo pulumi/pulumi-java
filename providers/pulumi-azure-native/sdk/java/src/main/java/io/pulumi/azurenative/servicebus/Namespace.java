@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.servicebus;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.servicebus.NamespaceArgs;
 import io.pulumi.azurenative.servicebus.outputs.SBSkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,69 +15,256 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Description of a namespace resource.
+API Version: 2017-04-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### NameSpaceCreate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @namespace = new AzureNative.ServiceBus.Namespace("namespace", new AzureNative.ServiceBus.NamespaceArgs
+        {
+            Location = "South Central US",
+            NamespaceName = "sdk-Namespace2924",
+            ResourceGroupName = "ArunMonocle",
+            Sku = new AzureNative.ServiceBus.Inputs.SBSkuArgs
+            {
+                Name = "Standard",
+                Tier = "Standard",
+            },
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	servicebus "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicebus"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := servicebus.NewNamespace(ctx, "namespace", &servicebus.NamespaceArgs{
+			Location:          pulumi.String("South Central US"),
+			NamespaceName:     pulumi.String("sdk-Namespace2924"),
+			ResourceGroupName: pulumi.String("ArunMonocle"),
+			Sku: &servicebus.SBSkuArgs{
+				Name: "Standard",
+				Tier: "Standard",
+			},
+			Tags: pulumi.StringMap{
+				"tag1": pulumi.String("value1"),
+				"tag2": pulumi.String("value2"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const namespace = new azure_native.servicebus.Namespace("namespace", {
+    location: "South Central US",
+    namespaceName: "sdk-Namespace2924",
+    resourceGroupName: "ArunMonocle",
+    sku: {
+        name: "Standard",
+        tier: "Standard",
+    },
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+namespace = azure_native.servicebus.Namespace("namespace",
+    location="South Central US",
+    namespace_name="sdk-Namespace2924",
+    resource_group_name="ArunMonocle",
+    sku=azure_native.servicebus.SBSkuArgs(
+        name="Standard",
+        tier="Standard",
+    ),
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+    })
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:servicebus:Namespace sdk-Namespace-2924 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-2924 
+```
+
+ */
 @ResourceType(type="azure-native:servicebus:Namespace")
 public class Namespace extends io.pulumi.resources.CustomResource {
+    /**
+     * The time the namespace was created.
+     */
     @OutputExport(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
+    /**
+     * @return The time the namespace was created.
+     */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
+    /**
+     * The Geo-location where the resource lives
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The Geo-location where the resource lives
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Identifier for Azure Insights metrics
+     */
     @OutputExport(name="metricId", type=String.class, parameters={})
     private Output<String> metricId;
 
+    /**
+     * @return Identifier for Azure Insights metrics
+     */
     public Output<String> getMetricId() {
         return this.metricId;
     }
+    /**
+     * Resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Provisioning state of the namespace.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state of the namespace.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Endpoint you can use to perform Service Bus operations.
+     */
     @OutputExport(name="serviceBusEndpoint", type=String.class, parameters={})
     private Output<String> serviceBusEndpoint;
 
+    /**
+     * @return Endpoint you can use to perform Service Bus operations.
+     */
     public Output<String> getServiceBusEndpoint() {
         return this.serviceBusEndpoint;
     }
+    /**
+     * Properties of Sku
+     */
     @OutputExport(name="sku", type=SBSkuResponse.class, parameters={})
     private Output</* @Nullable */ SBSkuResponse> sku;
 
+    /**
+     * @return Properties of Sku
+     */
     public Output</* @Nullable */ SBSkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * Resource tags
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The time the namespace was updated.
+     */
     @OutputExport(name="updatedAt", type=String.class, parameters={})
     private Output<String> updatedAt;
 
+    /**
+     * @return The time the namespace was updated.
+     */
     public Output<String> getUpdatedAt() {
         return this.updatedAt;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Namespace(String name, NamespaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:servicebus:Namespace", name, args == null ? NamespaceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -103,6 +289,14 @@ public class Namespace extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Namespace get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Namespace(name, id, options);
     }

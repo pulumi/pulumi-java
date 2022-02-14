@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PtrRecordResponse {
+/**
+ * The PTR target domain name for this PTR record.
+ */
     private final @Nullable String ptrdname;
 
     @OutputCustomType.Constructor({"ptrdname"})
@@ -18,6 +21,9 @@ public final class PtrRecordResponse {
         this.ptrdname = ptrdname;
     }
 
+/**
+ * The PTR target domain name for this PTR record.
+ */
     public Optional<String> getPtrdname() {
         return Optional.ofNullable(this.ptrdname);
     }

@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EncryptionInTransitPropertiesResponse {
+/**
+ * Indicates whether or not inter cluster node communication is encrypted in transit.
+ */
     private final @Nullable Boolean isEncryptionInTransitEnabled;
 
     @OutputCustomType.Constructor({"isEncryptionInTransitEnabled"})
@@ -18,6 +21,9 @@ public final class EncryptionInTransitPropertiesResponse {
         this.isEncryptionInTransitEnabled = isEncryptionInTransitEnabled;
     }
 
+/**
+ * Indicates whether or not inter cluster node communication is encrypted in transit.
+ */
     public Optional<Boolean> getIsEncryptionInTransitEnabled() {
         return Optional.ofNullable(this.isEncryptionInTransitEnabled);
     }

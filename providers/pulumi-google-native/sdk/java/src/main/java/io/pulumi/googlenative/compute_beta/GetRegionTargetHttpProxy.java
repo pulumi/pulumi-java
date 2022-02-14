@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionTargetHttpProxy {
+/**
+ * Returns the specified TargetHttpProxy resource in the specified region. Gets a list of available target HTTP proxies by making a list() request.
+ */
     public static CompletableFuture<GetRegionTargetHttpProxyResult> invokeAsync(GetRegionTargetHttpProxyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getRegionTargetHttpProxy", TypeShape.of(GetRegionTargetHttpProxyResult.class), args == null ? GetRegionTargetHttpProxyArgs.Empty : args, Utilities.withVersion(options));
     }

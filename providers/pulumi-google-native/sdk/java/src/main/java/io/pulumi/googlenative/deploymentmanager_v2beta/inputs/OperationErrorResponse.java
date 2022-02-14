@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * [Output Only] If errors are generated during processing of the operation, this field will be populated.
+ */
 public final class OperationErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OperationErrorResponse Empty = new OperationErrorResponse();
 
+    /**
+     * The array of errors encountered while processing this operation.
+     */
     @InputImport(name="errors", required=true)
     private final List<OperationErrorErrorsItemResponse> errors;
 

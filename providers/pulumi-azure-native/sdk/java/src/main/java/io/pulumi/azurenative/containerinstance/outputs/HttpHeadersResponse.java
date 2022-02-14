@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HttpHeadersResponse {
+/**
+ * The header name.
+ */
     private final @Nullable String name;
+/**
+ * The header value.
+ */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -22,9 +28,15 @@ public final class HttpHeadersResponse {
         this.value = value;
     }
 
+/**
+ * The header name.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * The header value.
+ */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

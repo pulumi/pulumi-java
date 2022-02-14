@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ComponentSourceResponse {
+/**
+ * Dataflow service generated name for this source.
+ */
     private final String name;
+/**
+ * User name for the original user transform or collection with which this source is most closely associated.
+ */
     private final String originalTransformOrCollection;
+/**
+ * Human-readable name for this transform; may be user or system generated.
+ */
     private final String userName;
 
     @OutputCustomType.Constructor({"name","originalTransformOrCollection","userName"})
@@ -23,12 +32,21 @@ public final class ComponentSourceResponse {
         this.userName = Objects.requireNonNull(userName);
     }
 
+/**
+ * Dataflow service generated name for this source.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * User name for the original user transform or collection with which this source is most closely associated.
+ */
     public String getOriginalTransformOrCollection() {
         return this.originalTransformOrCollection;
     }
+/**
+ * Human-readable name for this transform; may be user or system generated.
+ */
     public String getUserName() {
         return this.userName;
     }

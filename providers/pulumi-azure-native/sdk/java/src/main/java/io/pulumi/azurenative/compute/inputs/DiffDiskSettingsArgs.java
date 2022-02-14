@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the parameters of ephemeral disk settings that can be specified for operating system disk. <br><br> NOTE: The ephemeral disk settings can only be specified for managed disk.
+ */
 public final class DiffDiskSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiffDiskSettingsArgs Empty = new DiffDiskSettingsArgs();
 
+    /**
+     * Specifies the ephemeral disk settings for operating system disk.
+     */
     @InputImport(name="option")
     private final @Nullable Input<Either<String,DiffDiskOptions>> option;
 
@@ -24,6 +30,9 @@ public final class DiffDiskSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.option == null ? Input.empty() : this.option;
     }
 
+    /**
+     * Specifies the ephemeral disk placement for operating system disk.<br><br> Possible values are: <br><br> **CacheDisk** <br><br> **ResourceDisk** <br><br> Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.<br><br> Refer to VM size documentation for Windows VM at https://docs.microsoft.com/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.
+     */
     @InputImport(name="placement")
     private final @Nullable Input<Either<String,DiffDiskPlacement>> placement;
 

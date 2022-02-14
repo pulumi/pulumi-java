@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListWebAppMetadataSlotArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListWebAppMetadataSlotArgs Empty = new ListWebAppMetadataSlotArgs();
 
+    /**
+     * Name of the app.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class ListWebAppMetadataSlotArgs extends io.pulumi.resources.Invoke
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class ListWebAppMetadataSlotArgs extends io.pulumi.resources.Invoke
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the deployment slot. If a slot is not specified, the API will get the metadata for the production slot.
+     */
     @InputImport(name="slot", required=true)
     private final String slot;
 

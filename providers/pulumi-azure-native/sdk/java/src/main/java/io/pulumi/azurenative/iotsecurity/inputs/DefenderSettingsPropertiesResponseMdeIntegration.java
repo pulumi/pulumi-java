@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * MDE integration configuration
+ */
 public final class DefenderSettingsPropertiesResponseMdeIntegration extends io.pulumi.resources.InvokeArgs {
 
     public static final DefenderSettingsPropertiesResponseMdeIntegration Empty = new DefenderSettingsPropertiesResponseMdeIntegration();
 
+    /**
+     * Integration status
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

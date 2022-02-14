@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a size category supported by this Lab Account (small, medium or large)
+ */
 public final class EnvironmentSizeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvironmentSizeResponse Empty = new EnvironmentSizeResponse();
 
+    /**
+     * The pay-as-you-go dollar price per hour this size will cost. It does not include discounts and may not reflect the actual price the size will cost. This is the maximum price of all prices within this tier.
+     */
     @InputImport(name="maxPrice", required=true)
     private final Double maxPrice;
 
@@ -25,6 +31,9 @@ public final class EnvironmentSizeResponse extends io.pulumi.resources.InvokeArg
         return this.maxPrice;
     }
 
+    /**
+     * The amount of memory available (in GB). This is the minimum amount of memory within this tier.
+     */
     @InputImport(name="minMemory", required=true)
     private final Double minMemory;
 
@@ -32,6 +41,9 @@ public final class EnvironmentSizeResponse extends io.pulumi.resources.InvokeArg
         return this.minMemory;
     }
 
+    /**
+     * The number of cores a VM of this size has. This is the minimum number of cores within this tier.
+     */
     @InputImport(name="minNumberOfCores", required=true)
     private final Integer minNumberOfCores;
 
@@ -39,6 +51,9 @@ public final class EnvironmentSizeResponse extends io.pulumi.resources.InvokeArg
         return this.minNumberOfCores;
     }
 
+    /**
+     * The size category
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -46,6 +61,9 @@ public final class EnvironmentSizeResponse extends io.pulumi.resources.InvokeArg
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Represents a set of compute sizes that can serve this given size type
+     */
     @InputImport(name="vmSizes")
     private final @Nullable List<SizeInfoResponse> vmSizes;
 

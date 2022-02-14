@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ApiPortalResourceRequestsResponse {
+/**
+ * Cpu allocated to each API portal instance
+ */
     private final String cpu;
+/**
+ * Memory allocated to each API portal instance
+ */
     private final String memory;
 
     @OutputCustomType.Constructor({"cpu","memory"})
@@ -20,9 +26,15 @@ public final class ApiPortalResourceRequestsResponse {
         this.memory = Objects.requireNonNull(memory);
     }
 
+/**
+ * Cpu allocated to each API portal instance
+ */
     public String getCpu() {
         return this.cpu;
     }
+/**
+ * Memory allocated to each API portal instance
+ */
     public String getMemory() {
         return this.memory;
     }

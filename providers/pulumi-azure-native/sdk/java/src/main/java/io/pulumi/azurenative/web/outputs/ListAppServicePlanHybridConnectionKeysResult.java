@@ -11,11 +11,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListAppServicePlanHybridConnectionKeysResult {
+/**
+ * Resource Id.
+ */
     private final String id;
+/**
+ * Kind of resource.
+ */
     private final @Nullable String kind;
+/**
+ * Resource Name.
+ */
     private final String name;
+/**
+ * The name of the send key.
+ */
     private final String sendKeyName;
+/**
+ * The value of the send key.
+ */
     private final String sendKeyValue;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","kind","name","sendKeyName","sendKeyValue","type"})
@@ -34,21 +52,39 @@ public final class ListAppServicePlanHybridConnectionKeysResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Resource Id.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Kind of resource.
+ */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
+/**
+ * Resource Name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The name of the send key.
+ */
     public String getSendKeyName() {
         return this.sendKeyName;
     }
+/**
+ * The value of the send key.
+ */
     public String getSendKeyValue() {
         return this.sendKeyValue;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

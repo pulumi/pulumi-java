@@ -9,10 +9,16 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectTemplateRes
 import java.util.Objects;
 
 
+/**
+ * Snapshot of the inspection configuration.
+ */
 public final class GooglePrivacyDlpV2RequestedOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2RequestedOptionsResponse Empty = new GooglePrivacyDlpV2RequestedOptionsResponse();
 
+    /**
+     * Inspect config.
+     */
     @InputImport(name="jobConfig", required=true)
     private final GooglePrivacyDlpV2InspectJobConfigResponse jobConfig;
 
@@ -20,6 +26,9 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse extends io.pulumi.
         return this.jobConfig;
     }
 
+    /**
+     * If run with an InspectTemplate, a snapshot of its state at the time of this run.
+     */
     @InputImport(name="snapshotInspectTemplate", required=true)
     private final GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate;
 

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The application package contact information.
+ */
 public final class ApplicationPackageContactResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationPackageContactResponse Empty = new ApplicationPackageContactResponse();
 
+    /**
+     * The contact name.
+     */
     @InputImport(name="contactName")
     private final @Nullable String contactName;
 
@@ -21,6 +27,9 @@ public final class ApplicationPackageContactResponse extends io.pulumi.resources
         return this.contactName == null ? Optional.empty() : Optional.ofNullable(this.contactName);
     }
 
+    /**
+     * The contact email.
+     */
     @InputImport(name="email", required=true)
     private final String email;
 
@@ -28,6 +37,9 @@ public final class ApplicationPackageContactResponse extends io.pulumi.resources
         return this.email;
     }
 
+    /**
+     * The contact phone number.
+     */
     @InputImport(name="phone", required=true)
     private final String phone;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRuleSet {
+/**
+ * Friendly RuleSet name mapping to the any RuleSet or secret related information.
+API Version: 2020-09-01.
+ *
+ * Friendly RuleSet name mapping to the any RuleSet or secret related information.
+ */
     public static CompletableFuture<GetRuleSetResult> invokeAsync(GetRuleSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cdn:getRuleSet", TypeShape.of(GetRuleSetResult.class), args == null ? GetRuleSetArgs.Empty : args, Utilities.withVersion(options));
     }

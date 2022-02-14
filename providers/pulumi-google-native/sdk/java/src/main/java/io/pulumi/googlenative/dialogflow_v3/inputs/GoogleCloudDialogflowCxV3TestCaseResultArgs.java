@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a result from running a test case in an agent environment.
+ */
 public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3TestCaseResultArgs Empty = new GoogleCloudDialogflowCxV3TestCaseResultArgs();
 
+    /**
+     * The conversation turns uttered during the test case replay in chronological order.
+     */
     @InputImport(name="conversationTurns")
     private final @Nullable Input<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> conversationTurns;
 
@@ -24,6 +30,9 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
         return this.conversationTurns == null ? Input.empty() : this.conversationTurns;
     }
 
+    /**
+     * Environment where the test was run. If not set, it indicates the draft environment.
+     */
     @InputImport(name="environment")
     private final @Nullable Input<String> environment;
 
@@ -31,6 +40,9 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
         return this.environment == null ? Input.empty() : this.environment;
     }
 
+    /**
+     * The resource name for the test case result. Format: `projects//locations//agents//testCases/ /results/`.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,6 +50,9 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Whether the test case passed in the agent environment.
+     */
     @InputImport(name="testResult")
     private final @Nullable Input<GoogleCloudDialogflowCxV3TestCaseResultTestResult> testResult;
 
@@ -45,6 +60,9 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
         return this.testResult == null ? Input.empty() : this.testResult;
     }
 
+    /**
+     * The time that the test was run.
+     */
     @InputImport(name="testTime")
     private final @Nullable Input<String> testTime;
 

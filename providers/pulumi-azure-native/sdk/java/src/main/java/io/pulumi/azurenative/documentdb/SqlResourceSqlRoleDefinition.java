@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.documentdb.SqlResourceSqlRoleDefinitionArgs;
 import io.pulumi.azurenative.documentdb.outputs.PermissionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,39 +14,222 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An Azure Cosmos DB SQL Role Definition.
+API Version: 2021-03-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### CosmosDBSqlRoleDefinitionCreateUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sqlResourceSqlRoleDefinition = new AzureNative.DocumentDB.SqlResourceSqlRoleDefinition("sqlResourceSqlRoleDefinition", new AzureNative.DocumentDB.SqlResourceSqlRoleDefinitionArgs
+        {
+            AccountName = "myAccountName",
+            AssignableScopes = 
+            {
+                "/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/sales",
+                "/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases",
+            },
+            Permissions = 
+            {
+                new AzureNative.DocumentDB.Inputs.PermissionArgs
+                {
+                    DataActions = 
+                    {
+                        "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/create",
+                        "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/read",
+                    },
+                    NotDataActions = {},
+                },
+            },
+            ResourceGroupName = "myResourceGroupName",
+            RoleDefinitionId = "myRoleDefinitionId",
+            RoleName = "myRoleName",
+            Type = "CustomRole",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := documentdb.NewSqlResourceSqlRoleDefinition(ctx, "sqlResourceSqlRoleDefinition", &documentdb.SqlResourceSqlRoleDefinitionArgs{
+			AccountName: pulumi.String("myAccountName"),
+			AssignableScopes: pulumi.StringArray{
+				pulumi.String("/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/sales"),
+				pulumi.String("/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases"),
+			},
+			Permissions: []documentdb.PermissionArgs{
+				&documentdb.PermissionArgs{
+					DataActions: pulumi.StringArray{
+						pulumi.String("Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/create"),
+						pulumi.String("Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/read"),
+					},
+					NotDataActions: pulumi.StringArray{},
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroupName"),
+			RoleDefinitionId:  pulumi.String("myRoleDefinitionId"),
+			RoleName:          pulumi.String("myRoleName"),
+			Type:              "CustomRole",
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const sqlResourceSqlRoleDefinition = new azure_native.documentdb.SqlResourceSqlRoleDefinition("sqlResourceSqlRoleDefinition", {
+    accountName: "myAccountName",
+    assignableScopes: [
+        "/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/sales",
+        "/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases",
+    ],
+    permissions: [{
+        dataActions: [
+            "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/create",
+            "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/read",
+        ],
+        notDataActions: [],
+    }],
+    resourceGroupName: "myResourceGroupName",
+    roleDefinitionId: "myRoleDefinitionId",
+    roleName: "myRoleName",
+    type: "CustomRole",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+sql_resource_sql_role_definition = azure_native.documentdb.SqlResourceSqlRoleDefinition("sqlResourceSqlRoleDefinition",
+    account_name="myAccountName",
+    assignable_scopes=[
+        "/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/sales",
+        "/subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/dbs/purchases",
+    ],
+    permissions=[azure_native.documentdb.PermissionArgs(
+        data_actions=[
+            "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/create",
+            "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/read",
+        ],
+        not_data_actions=[],
+    )],
+    resource_group_name="myResourceGroupName",
+    role_definition_id="myRoleDefinitionId",
+    role_name="myRoleName",
+    type="CustomRole")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:documentdb:SqlResourceSqlRoleDefinition myRoleDefinitionId /subscriptions/mySubscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlRoleDefinitions/myRoleDefinitionId 
+```
+
+ */
 @ResourceType(type="azure-native:documentdb:SqlResourceSqlRoleDefinition")
 public class SqlResourceSqlRoleDefinition extends io.pulumi.resources.CustomResource {
+    /**
+     * A set of fully qualified Scopes at or below which Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist.
+     */
     @OutputExport(name="assignableScopes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> assignableScopes;
 
+    /**
+     * @return A set of fully qualified Scopes at or below which Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist.
+     */
     public Output</* @Nullable */ List<String>> getAssignableScopes() {
         return this.assignableScopes;
     }
+    /**
+     * The name of the database account.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the database account.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The set of operations allowed through this Role Definition.
+     */
     @OutputExport(name="permissions", type=List.class, parameters={PermissionResponse.class})
     private Output</* @Nullable */ List<PermissionResponse>> permissions;
 
+    /**
+     * @return The set of operations allowed through this Role Definition.
+     */
     public Output</* @Nullable */ List<PermissionResponse>> getPermissions() {
         return this.permissions;
     }
+    /**
+     * A user-friendly name for the Role Definition. Must be unique for the database account.
+     */
     @OutputExport(name="roleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleName;
 
+    /**
+     * @return A user-friendly name for the Role Definition. Must be unique for the database account.
+     */
     public Output</* @Nullable */ String> getRoleName() {
         return this.roleName;
     }
+    /**
+     * The type of Azure resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of Azure resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SqlResourceSqlRoleDefinition(String name, SqlResourceSqlRoleDefinitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:documentdb:SqlResourceSqlRoleDefinition", name, args == null ? SqlResourceSqlRoleDefinitionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -74,6 +256,14 @@ public class SqlResourceSqlRoleDefinition extends io.pulumi.resources.CustomReso
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SqlResourceSqlRoleDefinition get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SqlResourceSqlRoleDefinition(name, id, options);
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Identifier of an Android application for key use.
+ */
 public final class V2AndroidApplicationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final V2AndroidApplicationResponse Empty = new V2AndroidApplicationResponse();
 
+    /**
+     * The package name of the application.
+     */
     @InputImport(name="packageName", required=true)
     private final String packageName;
 
@@ -19,6 +25,9 @@ public final class V2AndroidApplicationResponse extends io.pulumi.resources.Invo
         return this.packageName;
     }
 
+    /**
+     * The SHA1 fingerprint of the application. For example, both sha1 formats are acceptable : DA:39:A3:EE:5E:6B:4B:0D:32:55:BF:EF:95:60:18:90:AF:D8:07:09 or DA39A3EE5E6B4B0D3255BFEF95601890AFD80709. Output format is the latter.
+     */
     @InputImport(name="sha1Fingerprint", required=true)
     private final String sha1Fingerprint;
 

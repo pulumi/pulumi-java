@@ -22,10 +22,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobArgs Empty = new JobArgs();
 
+    /**
+     * Optional. Job is a Hadoop job.
+     */
     @InputImport(name="hadoopJob")
     private final @Nullable Input<HadoopJobArgs> hadoopJob;
 
@@ -33,6 +39,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.hadoopJob == null ? Input.empty() : this.hadoopJob;
     }
 
+    /**
+     * Optional. Job is a Hive job.
+     */
     @InputImport(name="hiveJob")
     private final @Nullable Input<HiveJobArgs> hiveJob;
 
@@ -40,6 +49,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.hiveJob == null ? Input.empty() : this.hiveJob;
     }
 
+    /**
+     * Optional. The labels to associate with this job. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a job.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -47,6 +59,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Optional. Job is a Pig job.
+     */
     @InputImport(name="pigJob")
     private final @Nullable Input<PigJobArgs> pigJob;
 
@@ -54,6 +69,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.pigJob == null ? Input.empty() : this.pigJob;
     }
 
+    /**
+     * Job information, including how, when, and where to run the job.
+     */
     @InputImport(name="placement", required=true)
     private final Input<JobPlacementArgs> placement;
 
@@ -61,6 +79,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.placement;
     }
 
+    /**
+     * Optional. Job is a Presto job.
+     */
     @InputImport(name="prestoJob")
     private final @Nullable Input<PrestoJobArgs> prestoJob;
 
@@ -68,6 +89,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.prestoJob == null ? Input.empty() : this.prestoJob;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -75,6 +99,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Optional. Job is a PySpark job.
+     */
     @InputImport(name="pysparkJob")
     private final @Nullable Input<PySparkJobArgs> pysparkJob;
 
@@ -82,6 +109,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.pysparkJob == null ? Input.empty() : this.pysparkJob;
     }
 
+    /**
+     * Optional. The fully qualified reference to the job, which can be used to obtain the equivalent REST path of the job resource. If this property is not specified when a job is created, the server generates a job_id.
+     */
     @InputImport(name="reference")
     private final @Nullable Input<JobReferenceArgs> reference;
 
@@ -89,6 +119,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.reference == null ? Input.empty() : this.reference;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="region", required=true)
     private final Input<String> region;
 
@@ -96,6 +129,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.region;
     }
 
+    /**
+     * Optional. A unique id used to identify the request. If the server receives two SubmitJobRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1beta2#google.cloud.dataproc.v1.SubmitJobRequest)s with the same id, then the second request will be ignored and the first Job created and stored in the backend is returned.It is recommended to always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -103,6 +139,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * Optional. Job scheduling configuration.
+     */
     @InputImport(name="scheduling")
     private final @Nullable Input<JobSchedulingArgs> scheduling;
 
@@ -110,6 +149,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.scheduling == null ? Input.empty() : this.scheduling;
     }
 
+    /**
+     * Optional. Job is a Spark job.
+     */
     @InputImport(name="sparkJob")
     private final @Nullable Input<SparkJobArgs> sparkJob;
 
@@ -117,6 +159,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.sparkJob == null ? Input.empty() : this.sparkJob;
     }
 
+    /**
+     * Optional. Job is a SparkR job.
+     */
     @InputImport(name="sparkRJob")
     private final @Nullable Input<SparkRJobArgs> sparkRJob;
 
@@ -124,6 +169,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.sparkRJob == null ? Input.empty() : this.sparkRJob;
     }
 
+    /**
+     * Optional. Job is a SparkSql job.
+     */
     @InputImport(name="sparkSqlJob")
     private final @Nullable Input<SparkSqlJobArgs> sparkSqlJob;
 

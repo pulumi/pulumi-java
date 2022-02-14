@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Description of the IoT hub.
+ */
 public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IotHubDefinitionDescriptionResponse Empty = new IotHubDefinitionDescriptionResponse();
 
+    /**
+     * weight to apply for a given iot h.
+     */
     @InputImport(name="allocationWeight")
     private final @Nullable Integer allocationWeight;
 
@@ -23,6 +29,9 @@ public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resourc
         return this.allocationWeight == null ? Optional.empty() : Optional.ofNullable(this.allocationWeight);
     }
 
+    /**
+     * flag for applying allocationPolicy or not for a given iot hub.
+     */
     @InputImport(name="applyAllocationPolicy")
     private final @Nullable Boolean applyAllocationPolicy;
 
@@ -30,6 +39,9 @@ public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resourc
         return this.applyAllocationPolicy == null ? Optional.empty() : Optional.ofNullable(this.applyAllocationPolicy);
     }
 
+    /**
+     * Connection string of the IoT hub.
+     */
     @InputImport(name="connectionString", required=true)
     private final String connectionString;
 
@@ -37,6 +49,9 @@ public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resourc
         return this.connectionString;
     }
 
+    /**
+     * ARM region of the IoT hub.
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -44,6 +59,9 @@ public final class IotHubDefinitionDescriptionResponse extends io.pulumi.resourc
         return this.location;
     }
 
+    /**
+     * Host name of the IoT hub.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

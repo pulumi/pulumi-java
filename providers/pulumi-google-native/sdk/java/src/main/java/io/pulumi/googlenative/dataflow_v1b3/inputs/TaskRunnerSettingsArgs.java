@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Taskrunner configuration settings.
+ */
 public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TaskRunnerSettingsArgs Empty = new TaskRunnerSettingsArgs();
 
+    /**
+     * Whether to also send taskrunner log info to stderr.
+     */
     @InputImport(name="alsologtostderr")
     private final @Nullable Input<Boolean> alsologtostderr;
 
@@ -24,6 +30,9 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.alsologtostderr == null ? Input.empty() : this.alsologtostderr;
     }
 
+    /**
+     * The location on the worker for task-specific subdirectories.
+     */
     @InputImport(name="baseTaskDir")
     private final @Nullable Input<String> baseTaskDir;
 
@@ -31,6 +40,9 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.baseTaskDir == null ? Input.empty() : this.baseTaskDir;
     }
 
+    /**
+     * The base URL for the taskrunner to use when accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value is "http://www.googleapis.com/"
+     */
     @InputImport(name="baseUrl")
     private final @Nullable Input<String> baseUrl;
 
@@ -38,6 +50,9 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.baseUrl == null ? Input.empty() : this.baseUrl;
     }
 
+    /**
+     * The file to store preprocessing commands in.
+     */
     @InputImport(name="commandlinesFileName")
     private final @Nullable Input<String> commandlinesFileName;
 
@@ -45,6 +60,9 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.commandlinesFileName == null ? Input.empty() : this.commandlinesFileName;
     }
 
+    /**
+     * Whether to continue taskrunner if an exception is hit.
+     */
     @InputImport(name="continueOnException")
     private final @Nullable Input<Boolean> continueOnException;
 
@@ -52,6 +70,9 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.continueOnException == null ? Input.empty() : this.continueOnException;
     }
 
+    /**
+     * The API version of endpoint, e.g. "v1b3"
+     */
     @InputImport(name="dataflowApiVersion")
     private final @Nullable Input<String> dataflowApiVersion;
 
@@ -59,6 +80,9 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.dataflowApiVersion == null ? Input.empty() : this.dataflowApiVersion;
     }
 
+    /**
+     * The command to launch the worker harness.
+     */
     @InputImport(name="harnessCommand")
     private final @Nullable Input<String> harnessCommand;
 
@@ -66,6 +90,9 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.harnessCommand == null ? Input.empty() : this.harnessCommand;
     }
 
+    /**
+     * The suggested backend language.
+     */
     @InputImport(name="languageHint")
     private final @Nullable Input<String> languageHint;
 
@@ -73,6 +100,9 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.languageHint == null ? Input.empty() : this.languageHint;
     }
 
+    /**
+     * The directory on the VM to store logs.
+     */
     @InputImport(name="logDir")
     private final @Nullable Input<String> logDir;
 
@@ -80,6 +110,9 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.logDir == null ? Input.empty() : this.logDir;
     }
 
+    /**
+     * Whether to send taskrunner log info to Google Compute Engine VM serial console.
+     */
     @InputImport(name="logToSerialconsole")
     private final @Nullable Input<Boolean> logToSerialconsole;
 
@@ -87,6 +120,9 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.logToSerialconsole == null ? Input.empty() : this.logToSerialconsole;
     }
 
+    /**
+     * Indicates where to put logs. If this is not specified, the logs will not be uploaded. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+     */
     @InputImport(name="logUploadLocation")
     private final @Nullable Input<String> logUploadLocation;
 
@@ -94,6 +130,9 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.logUploadLocation == null ? Input.empty() : this.logUploadLocation;
     }
 
+    /**
+     * The OAuth2 scopes to be requested by the taskrunner in order to access the Cloud Dataflow API.
+     */
     @InputImport(name="oauthScopes")
     private final @Nullable Input<List<String>> oauthScopes;
 
@@ -101,6 +140,9 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.oauthScopes == null ? Input.empty() : this.oauthScopes;
     }
 
+    /**
+     * The settings to pass to the parallel worker harness.
+     */
     @InputImport(name="parallelWorkerSettings")
     private final @Nullable Input<WorkerSettingsArgs> parallelWorkerSettings;
 
@@ -108,6 +150,9 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.parallelWorkerSettings == null ? Input.empty() : this.parallelWorkerSettings;
     }
 
+    /**
+     * The streaming worker main class name.
+     */
     @InputImport(name="streamingWorkerMainClass")
     private final @Nullable Input<String> streamingWorkerMainClass;
 
@@ -115,6 +160,9 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.streamingWorkerMainClass == null ? Input.empty() : this.streamingWorkerMainClass;
     }
 
+    /**
+     * The UNIX group ID on the worker VM to use for tasks launched by taskrunner; e.g. "wheel".
+     */
     @InputImport(name="taskGroup")
     private final @Nullable Input<String> taskGroup;
 
@@ -122,6 +170,9 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.taskGroup == null ? Input.empty() : this.taskGroup;
     }
 
+    /**
+     * The UNIX user ID on the worker VM to use for tasks launched by taskrunner; e.g. "root".
+     */
     @InputImport(name="taskUser")
     private final @Nullable Input<String> taskUser;
 
@@ -129,6 +180,9 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.taskUser == null ? Input.empty() : this.taskUser;
     }
 
+    /**
+     * The prefix of the resources the taskrunner should use for temporary storage. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket}/{object} bucket.storage.googleapis.com/{object}
+     */
     @InputImport(name="tempStoragePrefix")
     private final @Nullable Input<String> tempStoragePrefix;
 
@@ -136,6 +190,9 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.tempStoragePrefix == null ? Input.empty() : this.tempStoragePrefix;
     }
 
+    /**
+     * The ID string of the VM.
+     */
     @InputImport(name="vmId")
     private final @Nullable Input<String> vmId;
 
@@ -143,6 +200,9 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.vmId == null ? Input.empty() : this.vmId;
     }
 
+    /**
+     * The file to store the workflow in.
+     */
     @InputImport(name="workflowFileName")
     private final @Nullable Input<String> workflowFileName;
 

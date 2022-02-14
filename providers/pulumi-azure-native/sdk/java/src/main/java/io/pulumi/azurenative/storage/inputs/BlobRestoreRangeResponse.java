@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Blob range
+ */
 public final class BlobRestoreRangeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BlobRestoreRangeResponse Empty = new BlobRestoreRangeResponse();
 
+    /**
+     * Blob end range. This is exclusive. Empty means account end.
+     */
     @InputImport(name="endRange", required=true)
     private final String endRange;
 
@@ -19,6 +25,9 @@ public final class BlobRestoreRangeResponse extends io.pulumi.resources.InvokeAr
         return this.endRange;
     }
 
+    /**
+     * Blob start range. This is inclusive. Empty means account start.
+     */
     @InputImport(name="startRange", required=true)
     private final String startRange;
 

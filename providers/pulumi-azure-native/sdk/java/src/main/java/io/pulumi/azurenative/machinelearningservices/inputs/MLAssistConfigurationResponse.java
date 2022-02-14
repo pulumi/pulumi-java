@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents configuration for machine learning assisted features in a labeling job.
+ */
 public final class MLAssistConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MLAssistConfigurationResponse Empty = new MLAssistConfigurationResponse();
 
+    /**
+     * The compute designated for inferencing.
+     */
     @InputImport(name="inferencingComputeBinding", required=true)
     private final ComputeBindingResponse inferencingComputeBinding;
 
@@ -24,6 +30,9 @@ public final class MLAssistConfigurationResponse extends io.pulumi.resources.Inv
         return this.inferencingComputeBinding;
     }
 
+    /**
+     * Indicates whether MLAssist feature is enabled.
+     */
     @InputImport(name="mlAssistEnabled")
     private final @Nullable Boolean mlAssistEnabled;
 
@@ -31,6 +40,9 @@ public final class MLAssistConfigurationResponse extends io.pulumi.resources.Inv
         return this.mlAssistEnabled == null ? Optional.empty() : Optional.ofNullable(this.mlAssistEnabled);
     }
 
+    /**
+     * Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.
+     */
     @InputImport(name="modelNamePrefix", required=true)
     private final String modelNamePrefix;
 
@@ -38,6 +50,9 @@ public final class MLAssistConfigurationResponse extends io.pulumi.resources.Inv
         return this.modelNamePrefix;
     }
 
+    /**
+     * Prelabel accuracy threshold used in MLAssist feature.
+     */
     @InputImport(name="prelabelAccuracyThreshold")
     private final @Nullable Double prelabelAccuracyThreshold;
 
@@ -45,6 +60,9 @@ public final class MLAssistConfigurationResponse extends io.pulumi.resources.Inv
         return this.prelabelAccuracyThreshold == null ? Optional.empty() : Optional.ofNullable(this.prelabelAccuracyThreshold);
     }
 
+    /**
+     * The compute designated for training.
+     */
     @InputImport(name="trainingComputeBinding", required=true)
     private final ComputeBindingResponse trainingComputeBinding;
 

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the certificate details.
+ */
 public final class CertificateDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CertificateDescriptionResponse Empty = new CertificateDescriptionResponse();
 
+    /**
+     * Thumbprint of the primary certificate.
+     */
     @InputImport(name="thumbprint", required=true)
     private final String thumbprint;
 
@@ -21,6 +27,9 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
         return this.thumbprint;
     }
 
+    /**
+     * Thumbprint of the secondary certificate.
+     */
     @InputImport(name="thumbprintSecondary")
     private final @Nullable String thumbprintSecondary;
 
@@ -28,6 +37,9 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
         return this.thumbprintSecondary == null ? Optional.empty() : Optional.ofNullable(this.thumbprintSecondary);
     }
 
+    /**
+     * The local certificate store location.
+     */
     @InputImport(name="x509StoreName")
     private final @Nullable String x509StoreName;
 

@@ -9,10 +9,16 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * The share setting for reservations and sole tenancy node groups.
+ */
 public final class ShareSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ShareSettingsResponse Empty = new ShareSettingsResponse();
 
+    /**
+     * A map of project id and project config. This is only valid when share_type's value is SPECIFIC_PROJECTS.
+     */
     @InputImport(name="projectMap", required=true)
     private final Map<String,String> projectMap;
 
@@ -20,6 +26,9 @@ public final class ShareSettingsResponse extends io.pulumi.resources.InvokeArgs 
         return this.projectMap;
     }
 
+    /**
+     * Type of sharing for this shared-reservation
+     */
     @InputImport(name="shareType", required=true)
     private final String shareType;
 

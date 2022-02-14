@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MetricCounterSetResponse {
+/**
+ * The counters that should be collected in this set.
+ */
     private final List<MetricCounterResponse> counters;
 
     @OutputCustomType.Constructor({"counters"})
@@ -17,6 +20,9 @@ public final class MetricCounterSetResponse {
         this.counters = Objects.requireNonNull(counters);
     }
 
+/**
+ * The counters that should be collected in this set.
+ */
     public List<MetricCounterResponse> getCounters() {
         return this.counters;
     }

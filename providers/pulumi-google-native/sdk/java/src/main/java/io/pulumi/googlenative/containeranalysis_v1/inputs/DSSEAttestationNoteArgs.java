@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DSSEAttestationNoteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DSSEAttestationNoteArgs Empty = new DSSEAttestationNoteArgs();
 
+    /**
+     * DSSEHint hints at the purpose of the attestation authority.
+     */
     @InputImport(name="hint")
     private final @Nullable Input<DSSEHintArgs> hint;
 

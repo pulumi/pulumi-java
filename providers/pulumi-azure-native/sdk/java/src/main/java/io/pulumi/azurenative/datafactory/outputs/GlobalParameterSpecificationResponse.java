@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GlobalParameterSpecificationResponse {
+/**
+ * Global Parameter type.
+ */
     private final String type;
+/**
+ * Value of parameter.
+ */
     private final Object value;
 
     @OutputCustomType.Constructor({"type","value"})
@@ -21,9 +27,15 @@ public final class GlobalParameterSpecificationResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * Global Parameter type.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Value of parameter.
+ */
     public Object getValue() {
         return this.value;
     }

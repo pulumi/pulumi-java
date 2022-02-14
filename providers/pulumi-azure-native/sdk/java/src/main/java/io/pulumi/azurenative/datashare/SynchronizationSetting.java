@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.datashare;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.datashare.SynchronizationSettingArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,34 +14,161 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A Synchronization Setting data transfer object.
+API Version: 2020-09-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### SynchronizationSettings_Create
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var synchronizationSetting = new AzureNative.DataShare.SynchronizationSetting("synchronizationSetting", new AzureNative.DataShare.SynchronizationSettingArgs
+        {
+            AccountName = "Account1",
+            Kind = "ScheduleBased",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareName = "Share1",
+            SynchronizationSettingName = "Dataset1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datashare.NewSynchronizationSetting(ctx, "synchronizationSetting", &datashare.SynchronizationSettingArgs{
+			AccountName:                pulumi.String("Account1"),
+			Kind:                       pulumi.String("ScheduleBased"),
+			ResourceGroupName:          pulumi.String("SampleResourceGroup"),
+			ShareName:                  pulumi.String("Share1"),
+			SynchronizationSettingName: pulumi.String("Dataset1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const synchronizationSetting = new azure_native.datashare.SynchronizationSetting("synchronizationSetting", {
+    accountName: "Account1",
+    kind: "ScheduleBased",
+    resourceGroupName: "SampleResourceGroup",
+    shareName: "Share1",
+    synchronizationSettingName: "Dataset1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+synchronization_setting = azure_native.datashare.SynchronizationSetting("synchronizationSetting",
+    account_name="Account1",
+    kind="ScheduleBased",
+    resource_group_name="SampleResourceGroup",
+    share_name="Share1",
+    synchronization_setting_name="Dataset1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:datashare:SynchronizationSetting SynchronizationSetting1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shares/Share1/synchronizationSettings/SynchronizationSetting1 
+```
+
+ * @deprecated
+ * Please use one of the variants: ScheduledSynchronizationSetting.
+ */
 @Deprecated /* Please use one of the variants: ScheduledSynchronizationSetting. */
 @ResourceType(type="azure-native:datashare:SynchronizationSetting")
 public class SynchronizationSetting extends io.pulumi.resources.CustomResource {
+    /**
+     * Kind of synchronization setting.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return Kind of synchronization setting.
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * Name of the azure resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the azure resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * System Data of the Azure resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return System Data of the Azure resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Type of the azure resource
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of the azure resource
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SynchronizationSetting(String name, SynchronizationSettingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datashare:SynchronizationSetting", name, args == null ? SynchronizationSettingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -65,6 +191,14 @@ public class SynchronizationSetting extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SynchronizationSetting get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SynchronizationSetting(name, id, options);
     }

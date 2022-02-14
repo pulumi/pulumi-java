@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Cache network settings.
+ */
 public final class CacheNetworkSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CacheNetworkSettingsResponse Empty = new CacheNetworkSettingsResponse();
 
+    /**
+     * DNS search domain
+     */
     @InputImport(name="dnsSearchDomain")
     private final @Nullable String dnsSearchDomain;
 
@@ -23,6 +29,9 @@ public final class CacheNetworkSettingsResponse extends io.pulumi.resources.Invo
         return this.dnsSearchDomain == null ? Optional.empty() : Optional.ofNullable(this.dnsSearchDomain);
     }
 
+    /**
+     * DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.
+     */
     @InputImport(name="dnsServers")
     private final @Nullable List<String> dnsServers;
 
@@ -30,6 +39,9 @@ public final class CacheNetworkSettingsResponse extends io.pulumi.resources.Invo
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
 
+    /**
+     * The IPv4 maximum transmission unit configured for the subnet.
+     */
     @InputImport(name="mtu")
     private final @Nullable Integer mtu;
 
@@ -37,6 +49,9 @@ public final class CacheNetworkSettingsResponse extends io.pulumi.resources.Invo
         return this.mtu == null ? Optional.empty() : Optional.ofNullable(this.mtu);
     }
 
+    /**
+     * NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.
+     */
     @InputImport(name="ntpServer")
     private final @Nullable String ntpServer;
 
@@ -44,6 +59,9 @@ public final class CacheNetworkSettingsResponse extends io.pulumi.resources.Invo
         return this.ntpServer == null ? Optional.empty() : Optional.ofNullable(this.ntpServer);
     }
 
+    /**
+     * Array of additional IP addresses used by this Cache.
+     */
     @InputImport(name="utilityAddresses", required=true)
     private final List<String> utilityAddresses;
 

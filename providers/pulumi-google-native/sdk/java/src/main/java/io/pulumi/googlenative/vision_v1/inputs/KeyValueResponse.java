@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A product label represented as a key-value pair.
+ */
 public final class KeyValueResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyValueResponse Empty = new KeyValueResponse();
 
+    /**
+     * The key of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -19,6 +25,9 @@ public final class KeyValueResponse extends io.pulumi.resources.InvokeArgs {
         return this.key;
     }
 
+    /**
+     * The value of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

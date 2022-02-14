@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The EngagementFabric SKU
+ */
 public final class SKUArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SKUArgs Empty = new SKUArgs();
 
+    /**
+     * The name of the SKU
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +27,9 @@ public final class SKUArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * The price tier of the SKU
+     */
     @InputImport(name="tier")
     private final @Nullable Input<String> tier;
 

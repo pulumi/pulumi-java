@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the connection monitor test group.
+ */
 public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectionMonitorTestGroupResponse Empty = new ConnectionMonitorTestGroupResponse();
 
+    /**
+     * List of destination endpoint names.
+     */
     @InputImport(name="destinations", required=true)
     private final List<String> destinations;
 
@@ -23,6 +29,9 @@ public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resource
         return this.destinations;
     }
 
+    /**
+     * Value indicating whether test group is disabled.
+     */
     @InputImport(name="disable")
     private final @Nullable Boolean disable;
 
@@ -30,6 +39,9 @@ public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resource
         return this.disable == null ? Optional.empty() : Optional.ofNullable(this.disable);
     }
 
+    /**
+     * The name of the connection monitor test group.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -37,6 +49,9 @@ public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resource
         return this.name;
     }
 
+    /**
+     * List of source endpoint names.
+     */
     @InputImport(name="sources", required=true)
     private final List<String> sources;
 
@@ -44,6 +59,9 @@ public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resource
         return this.sources;
     }
 
+    /**
+     * List of test configuration names.
+     */
     @InputImport(name="testConfigurations", required=true)
     private final List<String> testConfigurations;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApiIssueAttachmentArgs Empty = new GetApiIssueAttachmentArgs();
 
+    /**
+     * API identifier. Must be unique in the current API Management service instance.
+     */
     @InputImport(name="apiId", required=true)
     private final String apiId;
 
@@ -19,6 +25,9 @@ public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeA
         return this.apiId;
     }
 
+    /**
+     * Attachment identifier within an Issue. Must be unique in the current Issue.
+     */
     @InputImport(name="attachmentId", required=true)
     private final String attachmentId;
 
@@ -26,6 +35,9 @@ public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeA
         return this.attachmentId;
     }
 
+    /**
+     * Issue identifier. Must be unique in the current API Management service instance.
+     */
     @InputImport(name="issueId", required=true)
     private final String issueId;
 
@@ -33,6 +45,9 @@ public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeA
         return this.issueId;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -40,6 +55,9 @@ public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeA
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure blob read settings.
+ */
 public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureBlobStorageReadSettingsResponse Empty = new AzureBlobStorageReadSettingsResponse();
 
+    /**
+     * Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="deleteFilesAfterCompletion")
     private final @Nullable Object deleteFilesAfterCompletion;
 
@@ -23,6 +29,9 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
         return this.deleteFilesAfterCompletion == null ? Optional.empty() : Optional.ofNullable(this.deleteFilesAfterCompletion);
     }
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -30,6 +39,9 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
+    /**
+     * Indicates whether to enable partition discovery.
+     */
     @InputImport(name="enablePartitionDiscovery")
     private final @Nullable Boolean enablePartitionDiscovery;
 
@@ -37,6 +49,9 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
         return this.enablePartitionDiscovery == null ? Optional.empty() : Optional.ofNullable(this.enablePartitionDiscovery);
     }
 
+    /**
+     * Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="fileListPath")
     private final @Nullable Object fileListPath;
 
@@ -44,6 +59,9 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
         return this.fileListPath == null ? Optional.empty() : Optional.ofNullable(this.fileListPath);
     }
 
+    /**
+     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -51,6 +69,9 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
+    /**
+     * The end of file's modified datetime. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="modifiedDatetimeEnd")
     private final @Nullable Object modifiedDatetimeEnd;
 
@@ -58,6 +79,9 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
         return this.modifiedDatetimeEnd == null ? Optional.empty() : Optional.ofNullable(this.modifiedDatetimeEnd);
     }
 
+    /**
+     * The start of file's modified datetime. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="modifiedDatetimeStart")
     private final @Nullable Object modifiedDatetimeStart;
 
@@ -65,6 +89,9 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
         return this.modifiedDatetimeStart == null ? Optional.empty() : Optional.ofNullable(this.modifiedDatetimeStart);
     }
 
+    /**
+     * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="partitionRootPath")
     private final @Nullable Object partitionRootPath;
 
@@ -72,6 +99,9 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
         return this.partitionRootPath == null ? Optional.empty() : Optional.ofNullable(this.partitionRootPath);
     }
 
+    /**
+     * The prefix filter for the Azure Blob name. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="prefix")
     private final @Nullable Object prefix;
 
@@ -79,6 +109,9 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 
+    /**
+     * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="recursive")
     private final @Nullable Object recursive;
 
@@ -86,6 +119,10 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
         return this.recursive == null ? Optional.empty() : Optional.ofNullable(this.recursive);
     }
 
+    /**
+     * The read setting type.
+Expected value is 'AzureBlobStorageReadSettings'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -93,6 +130,9 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
         return this.type;
     }
 
+    /**
+     * Azure blob wildcardFileName. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="wildcardFileName")
     private final @Nullable Object wildcardFileName;
 
@@ -100,6 +140,9 @@ public final class AzureBlobStorageReadSettingsResponse extends io.pulumi.resour
         return this.wildcardFileName == null ? Optional.empty() : Optional.ofNullable(this.wildcardFileName);
     }
 
+    /**
+     * Azure blob wildcardFolderPath. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="wildcardFolderPath")
     private final @Nullable Object wildcardFolderPath;
 

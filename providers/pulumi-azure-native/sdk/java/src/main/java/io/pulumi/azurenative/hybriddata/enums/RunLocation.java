@@ -8,34 +8,118 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * This is the preferred geo location for the job to run.
+ */
     @EnumType
     public enum RunLocation {
+/**
+ * 
+ */
         None("none"),
+/**
+ * 
+ */
         Australiaeast("australiaeast"),
+/**
+ * 
+ */
         Australiasoutheast("australiasoutheast"),
+/**
+ * 
+ */
         Brazilsouth("brazilsouth"),
+/**
+ * 
+ */
         Canadacentral("canadacentral"),
+/**
+ * 
+ */
         Canadaeast("canadaeast"),
+/**
+ * 
+ */
         Centralindia("centralindia"),
+/**
+ * 
+ */
         Centralus("centralus"),
+/**
+ * 
+ */
         Eastasia("eastasia"),
+/**
+ * 
+ */
         Eastus("eastus"),
+/**
+ * 
+ */
         Eastus2("eastus2"),
+/**
+ * 
+ */
         Japaneast("japaneast"),
+/**
+ * 
+ */
         Japanwest("japanwest"),
+/**
+ * 
+ */
         Koreacentral("koreacentral"),
+/**
+ * 
+ */
         Koreasouth("koreasouth"),
+/**
+ * 
+ */
         Southeastasia("southeastasia"),
+/**
+ * 
+ */
         Southcentralus("southcentralus"),
+/**
+ * 
+ */
         Southindia("southindia"),
+/**
+ * 
+ */
         Northcentralus("northcentralus"),
+/**
+ * 
+ */
         Northeurope("northeurope"),
+/**
+ * 
+ */
         Uksouth("uksouth"),
+/**
+ * 
+ */
         Ukwest("ukwest"),
+/**
+ * 
+ */
         Westcentralus("westcentralus"),
+/**
+ * 
+ */
         Westeurope("westeurope"),
+/**
+ * 
+ */
         Westindia("westindia"),
+/**
+ * 
+ */
         Westus("westus"),
+/**
+ * 
+ */
         Westus2("westus2");
 
         private final String value;

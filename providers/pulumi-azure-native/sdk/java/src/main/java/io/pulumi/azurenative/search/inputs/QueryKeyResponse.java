@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes an API key for a given Azure Cognitive Search service that has permissions for query operations only.
+ */
 public final class QueryKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final QueryKeyResponse Empty = new QueryKeyResponse();
 
+    /**
+     * The value of the query API key.
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -19,6 +25,9 @@ public final class QueryKeyResponse extends io.pulumi.resources.InvokeArgs {
         return this.key;
     }
 
+    /**
+     * The name of the query API key; may be empty.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

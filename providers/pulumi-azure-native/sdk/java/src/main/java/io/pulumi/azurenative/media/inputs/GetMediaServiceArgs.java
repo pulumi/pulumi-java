@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetMediaServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMediaServiceArgs Empty = new GetMediaServiceArgs();
 
+    /**
+     * The Media Services account name.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetMediaServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the resource group within the Azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

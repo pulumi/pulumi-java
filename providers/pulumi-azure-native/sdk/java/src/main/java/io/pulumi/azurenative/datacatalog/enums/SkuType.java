@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Azure data catalog SKU.
+ */
     @EnumType
     public enum SkuType {
+/**
+ * 
+ */
         Free("Free"),
+/**
+ * 
+ */
         Standard("Standard");
 
         private final String value;

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAndroidMAMPolicyByName {
+/**
+ * Android Policy entity for Intune MAM.
+API Version: 2015-01-14-preview.
+ *
+ * Android Policy entity for Intune MAM.
+ */
     public static CompletableFuture<GetAndroidMAMPolicyByNameResult> invokeAsync(GetAndroidMAMPolicyByNameArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:intune:getAndroidMAMPolicyByName", TypeShape.of(GetAndroidMAMPolicyByNameResult.class), args == null ? GetAndroidMAMPolicyByNameArgs.Empty : args, Utilities.withVersion(options));
     }

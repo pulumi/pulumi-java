@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the connection monitor endpoint scope.
+ */
 public final class ConnectionMonitorEndpointScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionMonitorEndpointScopeArgs Empty = new ConnectionMonitorEndpointScopeArgs();
 
+    /**
+     * List of items which needs to be excluded from the endpoint scope.
+     */
     @InputImport(name="exclude")
     private final @Nullable Input<List<ConnectionMonitorEndpointScopeItemArgs>> exclude;
 
@@ -22,6 +28,9 @@ public final class ConnectionMonitorEndpointScopeArgs extends io.pulumi.resource
         return this.exclude == null ? Input.empty() : this.exclude;
     }
 
+    /**
+     * List of items which needs to be included to the endpoint scope.
+     */
     @InputImport(name="include")
     private final @Nullable Input<List<ConnectionMonitorEndpointScopeItemArgs>> include;
 

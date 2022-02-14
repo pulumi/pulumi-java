@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse {
+/**
+ * The estimated anonymity for these quasi-identifier values.
+ */
     private final String estimatedAnonymity;
+/**
+ * The quasi-identifier values.
+ */
     private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
     @OutputCustomType.Constructor({"estimatedAnonymity","quasiIdsValues"})
@@ -22,9 +28,15 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse {
         this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
     }
 
+/**
+ * The estimated anonymity for these quasi-identifier values.
+ */
     public String getEstimatedAnonymity() {
         return this.estimatedAnonymity;
     }
+/**
+ * The quasi-identifier values.
+ */
     public List<GooglePrivacyDlpV2ValueResponse> getQuasiIdsValues() {
         return this.quasiIdsValues;
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Google Cloud Build information.
+ */
 public final class BuildInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BuildInfoResponse Empty = new BuildInfoResponse();
 
+    /**
+     * The Google Cloud Build id. Example: "f966068f-08b2-42c8-bdfe-74137dff2bf9"
+     */
     @InputImport(name="cloudBuildId", required=true)
     private final String cloudBuildId;
 

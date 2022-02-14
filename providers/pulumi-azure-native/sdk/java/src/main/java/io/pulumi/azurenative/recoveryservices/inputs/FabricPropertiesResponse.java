@@ -20,10 +20,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Fabric properties.
+ */
 public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FabricPropertiesResponse Empty = new FabricPropertiesResponse();
 
+    /**
+     * BCDR state of the fabric.
+     */
     @InputImport(name="bcdrState")
     private final @Nullable String bcdrState;
 
@@ -31,6 +37,9 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
         return this.bcdrState == null ? Optional.empty() : Optional.ofNullable(this.bcdrState);
     }
 
+    /**
+     * Fabric specific settings.
+     */
     @InputImport(name="customDetails")
     private final @Nullable Object customDetails;
 
@@ -38,6 +47,9 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
         return this.customDetails == null ? null : this.customDetails;
     }
 
+    /**
+     * Encryption details for the fabric.
+     */
     @InputImport(name="encryptionDetails")
     private final @Nullable EncryptionDetailsResponse encryptionDetails;
 
@@ -45,6 +57,9 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
         return this.encryptionDetails == null ? Optional.empty() : Optional.ofNullable(this.encryptionDetails);
     }
 
+    /**
+     * Friendly name of the fabric.
+     */
     @InputImport(name="friendlyName")
     private final @Nullable String friendlyName;
 
@@ -52,6 +67,9 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
+    /**
+     * Health of fabric.
+     */
     @InputImport(name="health")
     private final @Nullable String health;
 
@@ -59,6 +77,9 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
         return this.health == null ? Optional.empty() : Optional.ofNullable(this.health);
     }
 
+    /**
+     * Fabric health error details.
+     */
     @InputImport(name="healthErrorDetails")
     private final @Nullable List<HealthErrorResponse> healthErrorDetails;
 
@@ -66,6 +87,9 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
         return this.healthErrorDetails == null ? List.of() : this.healthErrorDetails;
     }
 
+    /**
+     * Dra Registration Id.
+     */
     @InputImport(name="internalIdentifier")
     private final @Nullable String internalIdentifier;
 
@@ -73,6 +97,9 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
         return this.internalIdentifier == null ? Optional.empty() : Optional.ofNullable(this.internalIdentifier);
     }
 
+    /**
+     * Rollover encryption details for the fabric.
+     */
     @InputImport(name="rolloverEncryptionDetails")
     private final @Nullable EncryptionDetailsResponse rolloverEncryptionDetails;
 

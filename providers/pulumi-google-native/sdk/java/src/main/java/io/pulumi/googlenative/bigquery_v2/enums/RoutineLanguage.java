@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Optional. Defaults to "SQL".
+ */
     @EnumType
     public enum RoutineLanguage {
+/**
+ * 
+ */
         LanguageUnspecified("LANGUAGE_UNSPECIFIED"),
+/**
+ * SQL language.
+ */
         Sql("SQL"),
+/**
+ * JavaScript language.
+ */
         Javascript("JAVASCRIPT");
 
         private final String value;

@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ImageAnnotationResponse {
+/**
+ * The list of polygons outlining the sensitive regions in the image.
+ */
     private final List<BoundingPolyResponse> boundingPolys;
+/**
+ * 0-based index of the image frame. For example, an image frame in a DICOM instance.
+ */
     private final Integer frameIndex;
 
     @OutputCustomType.Constructor({"boundingPolys","frameIndex"})
@@ -22,9 +28,15 @@ public final class ImageAnnotationResponse {
         this.frameIndex = Objects.requireNonNull(frameIndex);
     }
 
+/**
+ * The list of polygons outlining the sensitive regions in the image.
+ */
     public List<BoundingPolyResponse> getBoundingPolys() {
         return this.boundingPolys;
     }
+/**
+ * 0-based index of the image frame. For example, an image frame in a DICOM instance.
+ */
     public Integer getFrameIndex() {
         return this.frameIndex;
     }

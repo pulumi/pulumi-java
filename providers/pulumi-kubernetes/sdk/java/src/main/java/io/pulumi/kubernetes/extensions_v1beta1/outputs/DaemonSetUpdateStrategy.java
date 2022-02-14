@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DaemonSetUpdateStrategy {
+/**
+ * Rolling update config params. Present only if type = "RollingUpdate".
+ */
     private final @Nullable RollingUpdateDaemonSet rollingUpdate;
+/**
+ * Type of daemon set update. Can be "RollingUpdate" or "OnDelete". Default is OnDelete.
+ */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"rollingUpdate","type"})
@@ -23,9 +29,15 @@ public final class DaemonSetUpdateStrategy {
         this.type = type;
     }
 
+/**
+ * Rolling update config params. Present only if type = "RollingUpdate".
+ */
     public Optional<RollingUpdateDaemonSet> getRollingUpdate() {
         return Optional.ofNullable(this.rollingUpdate);
     }
+/**
+ * Type of daemon set update. Can be "RollingUpdate" or "OnDelete". Default is OnDelete.
+ */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

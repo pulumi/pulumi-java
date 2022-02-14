@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiVersionSetArgs Empty = new ApiVersionSetArgs();
 
+    /**
+     * Description of API Version Set.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +29,9 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Name of API Version Set
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -30,6 +39,9 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +49,9 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -44,6 +59,9 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
+    /**
+     * Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
+     */
     @InputImport(name="versionHeaderName")
     private final @Nullable Input<String> versionHeaderName;
 
@@ -51,6 +69,9 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.versionHeaderName == null ? Input.empty() : this.versionHeaderName;
     }
 
+    /**
+     * Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
+     */
     @InputImport(name="versionQueryName")
     private final @Nullable Input<String> versionQueryName;
 
@@ -58,6 +79,9 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.versionQueryName == null ? Input.empty() : this.versionQueryName;
     }
 
+    /**
+     * Api Version Set identifier. Must be unique in the current API Management service instance.
+     */
     @InputImport(name="versionSetId")
     private final @Nullable Input<String> versionSetId;
 
@@ -65,6 +89,9 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.versionSetId == null ? Input.empty() : this.versionSetId;
     }
 
+    /**
+     * An value that determines where the API Version identifier will be located in a HTTP request.
+     */
     @InputImport(name="versioningScheme", required=true)
     private final Input<Either<String,VersioningScheme>> versioningScheme;
 

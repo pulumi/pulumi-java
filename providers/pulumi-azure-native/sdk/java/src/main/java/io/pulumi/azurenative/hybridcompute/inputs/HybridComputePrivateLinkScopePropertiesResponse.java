@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties that define a Azure Arc PrivateLinkScope resource.
+ */
 public final class HybridComputePrivateLinkScopePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HybridComputePrivateLinkScopePropertiesResponse Empty = new HybridComputePrivateLinkScopePropertiesResponse();
 
+    /**
+     * The Guid id of the private link scope.
+     */
     @InputImport(name="privateLinkScopeId", required=true)
     private final String privateLinkScopeId;
 
@@ -21,6 +27,9 @@ public final class HybridComputePrivateLinkScopePropertiesResponse extends io.pu
         return this.privateLinkScopeId;
     }
 
+    /**
+     * Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -28,6 +37,9 @@ public final class HybridComputePrivateLinkScopePropertiesResponse extends io.pu
         return this.provisioningState;
     }
 
+    /**
+     * Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints.
+     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable String publicNetworkAccess;
 

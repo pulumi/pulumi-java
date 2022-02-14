@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Time window specified for daily maintenance operations.
+ */
 public final class DailyMaintenanceWindowArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DailyMaintenanceWindowArgs Empty = new DailyMaintenanceWindowArgs();
 
+    /**
+     * Time within the maintenance window to start the maintenance operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-59] GMT.
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 

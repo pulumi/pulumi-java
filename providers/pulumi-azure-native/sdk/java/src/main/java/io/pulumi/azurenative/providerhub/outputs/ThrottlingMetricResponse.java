@@ -12,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ThrottlingMetricResponse {
+/**
+ * 
+ */
     private final @Nullable String interval;
+/**
+ * 
+ */
     private final Double limit;
+/**
+ * 
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"interval","limit","type"})
@@ -26,12 +35,21 @@ public final class ThrottlingMetricResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * 
+ */
     public Optional<String> getInterval() {
         return Optional.ofNullable(this.interval);
     }
+/**
+ * 
+ */
     public Double getLimit() {
         return this.limit;
     }
+/**
+ * 
+ */
     public String getType() {
         return this.type;
     }

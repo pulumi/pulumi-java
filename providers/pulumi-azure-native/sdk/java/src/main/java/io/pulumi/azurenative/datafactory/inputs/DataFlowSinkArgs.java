@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Transformation for data flow sink.
+ */
 public final class DataFlowSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataFlowSinkArgs Empty = new DataFlowSinkArgs();
 
+    /**
+     * Dataset reference.
+     */
     @InputImport(name="dataset")
     private final @Nullable Input<DatasetReferenceArgs> dataset;
 
@@ -24,6 +30,9 @@ public final class DataFlowSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataset == null ? Input.empty() : this.dataset;
     }
 
+    /**
+     * Transformation description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +40,9 @@ public final class DataFlowSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Flowlet Reference
+     */
     @InputImport(name="flowlet")
     private final @Nullable Input<DataFlowReferenceArgs> flowlet;
 
@@ -38,6 +50,9 @@ public final class DataFlowSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.flowlet == null ? Input.empty() : this.flowlet;
     }
 
+    /**
+     * Linked service reference.
+     */
     @InputImport(name="linkedService")
     private final @Nullable Input<LinkedServiceReferenceArgs> linkedService;
 
@@ -45,6 +60,9 @@ public final class DataFlowSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkedService == null ? Input.empty() : this.linkedService;
     }
 
+    /**
+     * Transformation name.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -52,6 +70,9 @@ public final class DataFlowSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * Schema linked service reference.
+     */
     @InputImport(name="schemaLinkedService")
     private final @Nullable Input<LinkedServiceReferenceArgs> schemaLinkedService;
 

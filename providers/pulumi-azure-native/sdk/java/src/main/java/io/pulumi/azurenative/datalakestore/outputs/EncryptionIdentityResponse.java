@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EncryptionIdentityResponse {
+/**
+ * The principal identifier associated with the encryption.
+ */
     private final String principalId;
+/**
+ * The tenant identifier associated with the encryption.
+ */
     private final String tenantId;
+/**
+ * The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type"})
@@ -23,12 +32,21 @@ public final class EncryptionIdentityResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The principal identifier associated with the encryption.
+ */
     public String getPrincipalId() {
         return this.principalId;
     }
+/**
+ * The tenant identifier associated with the encryption.
+ */
     public String getTenantId() {
         return this.tenantId;
     }
+/**
+ * The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
+ */
     public String getType() {
         return this.type;
     }

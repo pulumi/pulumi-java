@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOnlineDeploymentLogs {
+/**
+ * 
+API Version: 2021-03-01-preview.
+ */
     public static CompletableFuture<GetOnlineDeploymentLogsResult> invokeAsync(GetOnlineDeploymentLogsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getOnlineDeploymentLogs", TypeShape.of(GetOnlineDeploymentLogsResult.class), args == null ? GetOnlineDeploymentLogsArgs.Empty : args, Utilities.withVersion(options));
     }

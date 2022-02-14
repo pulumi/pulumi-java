@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GrafeasV1beta1ImageDetailsResponse {
+/**
+ * Immutable. The child image derived from the base image.
+ */
     private final DerivedResponse derivedImage;
 
     @OutputCustomType.Constructor({"derivedImage"})
@@ -16,6 +19,9 @@ public final class GrafeasV1beta1ImageDetailsResponse {
         this.derivedImage = Objects.requireNonNull(derivedImage);
     }
 
+/**
+ * Immutable. The child image derived from the base image.
+ */
     public DerivedResponse getDerivedImage() {
         return this.derivedImage;
     }

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutoScaleSettingsArgs Empty = new AutoScaleSettingsArgs();
 
+    /**
+     * If omitted, the default value is 15 minutes (PT15M).
+     */
     @InputImport(name="evaluationInterval")
     private final @Nullable Input<String> evaluationInterval;
 
@@ -21,6 +27,9 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
         return this.evaluationInterval == null ? Input.empty() : this.evaluationInterval;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="formula", required=true)
     private final Input<String> formula;
 

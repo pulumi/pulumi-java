@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSavedQuery {
+/**
+ * Gets details about a saved query.
+ */
     public static CompletableFuture<GetSavedQueryResult> invokeAsync(GetSavedQueryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudasset/v1:getSavedQuery", TypeShape.of(GetSavedQueryResult.class), args == null ? GetSavedQueryArgs.Empty : args, Utilities.withVersion(options));
     }

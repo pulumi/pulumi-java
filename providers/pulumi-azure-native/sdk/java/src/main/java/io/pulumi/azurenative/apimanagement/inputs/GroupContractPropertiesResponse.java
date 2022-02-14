@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Group contract Properties.
+ */
 public final class GroupContractPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GroupContractPropertiesResponse Empty = new GroupContractPropertiesResponse();
 
+    /**
+     * true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
+     */
     @InputImport(name="builtIn", required=true)
     private final Boolean builtIn;
 
@@ -22,6 +28,9 @@ public final class GroupContractPropertiesResponse extends io.pulumi.resources.I
         return this.builtIn;
     }
 
+    /**
+     * Group description. Can contain HTML formatting tags.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -29,6 +38,9 @@ public final class GroupContractPropertiesResponse extends io.pulumi.resources.I
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Group name.
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -36,6 +48,9 @@ public final class GroupContractPropertiesResponse extends io.pulumi.resources.I
         return this.displayName;
     }
 
+    /**
+     * For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
+     */
     @InputImport(name="externalId")
     private final @Nullable String externalId;
 
@@ -43,6 +58,9 @@ public final class GroupContractPropertiesResponse extends io.pulumi.resources.I
         return this.externalId == null ? Optional.empty() : Optional.ofNullable(this.externalId);
     }
 
+    /**
+     * Group type.
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

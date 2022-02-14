@@ -14,18 +14,57 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDiskPoolResult {
+/**
+ * List of additional capabilities for Disk pool.
+ */
     private final @Nullable List<String> additionalCapabilities;
+/**
+ * Logical zone for Disk pool resource; example: ["1"].
+ */
     private final List<String> availabilityZones;
+/**
+ * List of Azure Managed Disks to attach to a Disk pool. Can attach 8 disks at most.
+ */
     private final @Nullable List<DiskResponse> disks;
+/**
+ * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     private final String id;
+/**
+ * The geo-location where the resource lives.
+ */
     private final String location;
+/**
+ * The name of the resource
+ */
     private final String name;
+/**
+ * State of the operation on the resource.
+ */
     private final String provisioningState;
+/**
+ * Operational status of the Disk pool.
+ */
     private final String status;
+/**
+ * Azure Resource ID of a Subnet for the Disk pool.
+ */
     private final String subnetId;
+/**
+ * Resource metadata required by ARM RPC
+ */
     private final SystemMetadataResponse systemData;
+/**
+ * Resource tags.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Determines the SKU of VM deployed for Disk pool
+ */
     private final String tier;
+/**
+ * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"additionalCapabilities","availabilityZones","disks","id","location","name","provisioningState","status","subnetId","systemData","tags","tier","type"})
@@ -58,42 +97,81 @@ public final class GetDiskPoolResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * List of additional capabilities for Disk pool.
+ */
     public List<String> getAdditionalCapabilities() {
         return this.additionalCapabilities == null ? List.of() : this.additionalCapabilities;
     }
+/**
+ * Logical zone for Disk pool resource; example: ["1"].
+ */
     public List<String> getAvailabilityZones() {
         return this.availabilityZones;
     }
+/**
+ * List of Azure Managed Disks to attach to a Disk pool. Can attach 8 disks at most.
+ */
     public List<DiskResponse> getDisks() {
         return this.disks == null ? List.of() : this.disks;
     }
+/**
+ * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The geo-location where the resource lives.
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * The name of the resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * State of the operation on the resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Operational status of the Disk pool.
+ */
     public String getStatus() {
         return this.status;
     }
+/**
+ * Azure Resource ID of a Subnet for the Disk pool.
+ */
     public String getSubnetId() {
         return this.subnetId;
     }
+/**
+ * Resource metadata required by ARM RPC
+ */
     public SystemMetadataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * Resource tags.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Determines the SKU of VM deployed for Disk pool
+ */
     public String getTier() {
         return this.tier;
     }
+/**
+ * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+ */
     public String getType() {
         return this.type;
     }

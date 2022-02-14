@@ -12,10 +12,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Rule based backup policy
+ */
 public final class BackupPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BackupPolicyResponse Empty = new BackupPolicyResponse();
 
+    /**
+     * Type of datasource for the backup management
+     */
     @InputImport(name="datasourceTypes", required=true)
     private final List<String> datasourceTypes;
 
@@ -23,6 +29,10 @@ public final class BackupPolicyResponse extends io.pulumi.resources.InvokeArgs {
         return this.datasourceTypes;
     }
 
+    /**
+     * 
+Expected value is 'BackupPolicy'.
+     */
     @InputImport(name="objectType", required=true)
     private final String objectType;
 
@@ -30,6 +40,9 @@ public final class BackupPolicyResponse extends io.pulumi.resources.InvokeArgs {
         return this.objectType;
     }
 
+    /**
+     * Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
+     */
     @InputImport(name="policyRules", required=true)
     private final List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules;
 

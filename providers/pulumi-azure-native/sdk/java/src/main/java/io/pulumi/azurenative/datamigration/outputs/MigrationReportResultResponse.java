@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MigrationReportResultResponse {
+/**
+ * Migration validation result identifier
+ */
     private final String id;
+/**
+ * The url of the report.
+ */
     private final String reportUrl;
 
     @OutputCustomType.Constructor({"id","reportUrl"})
@@ -20,9 +26,15 @@ public final class MigrationReportResultResponse {
         this.reportUrl = Objects.requireNonNull(reportUrl);
     }
 
+/**
+ * Migration validation result identifier
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The url of the report.
+ */
     public String getReportUrl() {
         return this.reportUrl;
     }

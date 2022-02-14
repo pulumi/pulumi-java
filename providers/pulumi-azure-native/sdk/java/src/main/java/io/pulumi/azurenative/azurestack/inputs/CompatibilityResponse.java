@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Product compatibility
+ */
 public final class CompatibilityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CompatibilityResponse Empty = new CompatibilityResponse();
 
+    /**
+     * Full error message if any compatibility issues are found
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -23,6 +29,9 @@ public final class CompatibilityResponse extends io.pulumi.resources.InvokeArgs 
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Tells if product is compatible with current device
+     */
     @InputImport(name="isCompatible")
     private final @Nullable Boolean isCompatible;
 
@@ -30,6 +39,9 @@ public final class CompatibilityResponse extends io.pulumi.resources.InvokeArgs 
         return this.isCompatible == null ? Optional.empty() : Optional.ofNullable(this.isCompatible);
     }
 
+    /**
+     * List of all issues found
+     */
     @InputImport(name="issues")
     private final @Nullable List<String> issues;
 
@@ -37,6 +49,9 @@ public final class CompatibilityResponse extends io.pulumi.resources.InvokeArgs 
         return this.issues == null ? List.of() : this.issues;
     }
 
+    /**
+     * Short error message if any compatibility issues are found
+     */
     @InputImport(name="message")
     private final @Nullable String message;
 

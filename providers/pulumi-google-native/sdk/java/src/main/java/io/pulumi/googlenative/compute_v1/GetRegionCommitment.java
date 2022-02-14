@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionCommitment {
+/**
+ * Returns the specified commitment resource. Gets a list of available commitments by making a list() request.
+ */
     public static CompletableFuture<GetRegionCommitmentResult> invokeAsync(GetRegionCommitmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getRegionCommitment", TypeShape.of(GetRegionCommitmentResult.class), args == null ? GetRegionCommitmentArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudMlV1__MetricSpecResponse {
+/**
+ * metric name.
+ */
     private final String name;
+/**
+ * Target specifies the target value for the given metric; once real metric deviates from the threshold by a certain percentage, the node count changes.
+ */
     private final Integer target;
 
     @OutputCustomType.Constructor({"name","target"})
@@ -21,9 +27,15 @@ public final class GoogleCloudMlV1__MetricSpecResponse {
         this.target = Objects.requireNonNull(target);
     }
 
+/**
+ * metric name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Target specifies the target value for the given metric; once real metric deviates from the threshold by a certain percentage, the node count changes.
+ */
     public Integer getTarget() {
         return this.target;
     }

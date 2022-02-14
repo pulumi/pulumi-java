@@ -11,10 +11,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AgentDetailsResponse {
+/**
+ * The Id of the agent running on the server.
+ */
     private final String agentId;
+/**
+ * The machine BIOS Id.
+ */
     private final String biosId;
+/**
+ * The details of agent disks.
+ */
     private final List<AgentDiskDetailsResponse> disks;
+/**
+ * The machine FQDN.
+ */
     private final String fqdn;
+/**
+ * The Id of the machine to which the agent is registered.
+ */
     private final String machineId;
 
     @OutputCustomType.Constructor({"agentId","biosId","disks","fqdn","machineId"})
@@ -31,18 +46,33 @@ public final class AgentDetailsResponse {
         this.machineId = Objects.requireNonNull(machineId);
     }
 
+/**
+ * The Id of the agent running on the server.
+ */
     public String getAgentId() {
         return this.agentId;
     }
+/**
+ * The machine BIOS Id.
+ */
     public String getBiosId() {
         return this.biosId;
     }
+/**
+ * The details of agent disks.
+ */
     public List<AgentDiskDetailsResponse> getDisks() {
         return this.disks;
     }
+/**
+ * The machine FQDN.
+ */
     public String getFqdn() {
         return this.fqdn;
     }
+/**
+ * The Id of the machine to which the agent is registered.
+ */
     public String getMachineId() {
         return this.machineId;
     }

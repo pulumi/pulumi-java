@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A custom preset for encoding video with the H.264 (AVC) codec.
+ */
 public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs {
 
     public static final VideoEncoderH264Args Empty = new VideoEncoderH264Args();
 
+    /**
+     * The maximum bitrate, in kilobits per second or Kbps, at which video should be encoded. If omitted, encoder sets it automatically to try and match the quality of the input video.
+     */
     @InputImport(name="bitrateKbps")
     private final @Nullable Input<String> bitrateKbps;
 
@@ -22,6 +28,9 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
         return this.bitrateKbps == null ? Input.empty() : this.bitrateKbps;
     }
 
+    /**
+     * The frame rate (in frames per second) of the encoded video. The value must be greater than zero, and less than or equal to 300. If omitted, the encoder uses the average frame rate of the input video.
+     */
     @InputImport(name="frameRate")
     private final @Nullable Input<String> frameRate;
 
@@ -29,6 +38,9 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
         return this.frameRate == null ? Input.empty() : this.frameRate;
     }
 
+    /**
+     * Describes the resolution of the encoded video. If omitted, the encoder uses the resolution of the input video.
+     */
     @InputImport(name="scale")
     private final @Nullable Input<VideoScaleArgs> scale;
 
@@ -36,6 +48,10 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
         return this.scale == null ? Input.empty() : this.scale;
     }
 
+    /**
+     * The discriminator for derived types.
+Expected value is '#Microsoft.VideoAnalyzer.VideoEncoderH264'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

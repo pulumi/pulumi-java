@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListAccountKeys {
+/**
+ * The Account access keys.
+API Version: 2020-12-01-preview.
+ *
+ * The Account access keys.
+ */
     public static CompletableFuture<ListAccountKeysResult> invokeAsync(ListAccountKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:purview:listAccountKeys", TypeShape.of(ListAccountKeysResult.class), args == null ? ListAccountKeysArgs.Empty : args, Utilities.withVersion(options));
     }

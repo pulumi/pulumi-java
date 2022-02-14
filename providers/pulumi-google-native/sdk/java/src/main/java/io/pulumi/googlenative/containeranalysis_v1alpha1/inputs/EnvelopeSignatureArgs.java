@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A DSSE signature
+ */
 public final class EnvelopeSignatureArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvelopeSignatureArgs Empty = new EnvelopeSignatureArgs();
 
+    /**
+     * A reference id to the key being used for signing
+     */
     @InputImport(name="keyid")
     private final @Nullable Input<String> keyid;
 
@@ -21,6 +27,9 @@ public final class EnvelopeSignatureArgs extends io.pulumi.resources.ResourceArg
         return this.keyid == null ? Input.empty() : this.keyid;
     }
 
+    /**
+     * The signature itself
+     */
     @InputImport(name="sig")
     private final @Nullable Input<String> sig;
 

@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Type of the operator
+ */
     @EnumType
     public enum OperatorType {
+/**
+ * 
+ */
         Flux("Flux");
 
         private final String value;

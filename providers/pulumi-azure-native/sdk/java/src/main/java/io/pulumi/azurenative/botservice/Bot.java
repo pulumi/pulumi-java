@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.botservice;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.botservice.BotArgs;
 import io.pulumi.azurenative.botservice.outputs.BotPropertiesResponse;
 import io.pulumi.azurenative.botservice.outputs.SkuResponse;
 import io.pulumi.core.Alias;
@@ -17,63 +16,322 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Bot resource definition
+API Version: 2021-03-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create Bot
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bot = new AzureNative.BotService.Bot("bot", new AzureNative.BotService.BotArgs
+        {
+            Kind = "sdk",
+            Location = "West US",
+            Properties = new AzureNative.BotService.Inputs.BotPropertiesArgs
+            {
+                CmekKeyVaultUrl = "https://myCmekKey",
+                Description = "The description of the bot",
+                DeveloperAppInsightKey = "appinsightskey",
+                DeveloperAppInsightsApiKey = "appinsightsapikey",
+                DeveloperAppInsightsApplicationId = "appinsightsappid",
+                DisplayName = "The Name of the bot",
+                Endpoint = "http://mybot.coffee",
+                IconUrl = "http://myicon",
+                IsCmekEnabled = true,
+                LuisAppIds = 
+                {
+                    "luisappid1",
+                    "luisappid2",
+                },
+                LuisKey = "luiskey",
+                MsaAppId = "exampleappid",
+                PublicNetworkAccess = "Enabled",
+                SchemaTransformationVersion = "1.0",
+            },
+            ResourceGroupName = "OneResourceGroupName",
+            ResourceName = "samplebotname",
+            Sku = new AzureNative.BotService.Inputs.SkuArgs
+            {
+                Name = "S1",
+            },
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	botservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/botservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := botservice.NewBot(ctx, "bot", &botservice.BotArgs{
+			Kind:     pulumi.String("sdk"),
+			Location: pulumi.String("West US"),
+			Properties: &botservice.BotPropertiesArgs{
+				CmekKeyVaultUrl:                   pulumi.String("https://myCmekKey"),
+				Description:                       pulumi.String("The description of the bot"),
+				DeveloperAppInsightKey:            pulumi.String("appinsightskey"),
+				DeveloperAppInsightsApiKey:        pulumi.String("appinsightsapikey"),
+				DeveloperAppInsightsApplicationId: pulumi.String("appinsightsappid"),
+				DisplayName:                       pulumi.String("The Name of the bot"),
+				Endpoint:                          pulumi.String("http://mybot.coffee"),
+				IconUrl:                           pulumi.String("http://myicon"),
+				IsCmekEnabled:                     pulumi.Bool(true),
+				LuisAppIds: pulumi.StringArray{
+					pulumi.String("luisappid1"),
+					pulumi.String("luisappid2"),
+				},
+				LuisKey:                     pulumi.String("luiskey"),
+				MsaAppId:                    pulumi.String("exampleappid"),
+				PublicNetworkAccess:         pulumi.String("Enabled"),
+				SchemaTransformationVersion: pulumi.String("1.0"),
+			},
+			ResourceGroupName: pulumi.String("OneResourceGroupName"),
+			ResourceName:      pulumi.String("samplebotname"),
+			Sku: &botservice.SkuArgs{
+				Name: pulumi.String("S1"),
+			},
+			Tags: pulumi.StringMap{
+				"tag1": pulumi.String("value1"),
+				"tag2": pulumi.String("value2"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const bot = new azure_native.botservice.Bot("bot", {
+    kind: "sdk",
+    location: "West US",
+    properties: {
+        cmekKeyVaultUrl: "https://myCmekKey",
+        description: "The description of the bot",
+        developerAppInsightKey: "appinsightskey",
+        developerAppInsightsApiKey: "appinsightsapikey",
+        developerAppInsightsApplicationId: "appinsightsappid",
+        displayName: "The Name of the bot",
+        endpoint: "http://mybot.coffee",
+        iconUrl: "http://myicon",
+        isCmekEnabled: true,
+        luisAppIds: [
+            "luisappid1",
+            "luisappid2",
+        ],
+        luisKey: "luiskey",
+        msaAppId: "exampleappid",
+        publicNetworkAccess: "Enabled",
+        schemaTransformationVersion: "1.0",
+    },
+    resourceGroupName: "OneResourceGroupName",
+    resourceName: "samplebotname",
+    sku: {
+        name: "S1",
+    },
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+bot = azure_native.botservice.Bot("bot",
+    kind="sdk",
+    location="West US",
+    properties=azure_native.botservice.BotPropertiesArgs(
+        cmek_key_vault_url="https://myCmekKey",
+        description="The description of the bot",
+        developer_app_insight_key="appinsightskey",
+        developer_app_insights_api_key="appinsightsapikey",
+        developer_app_insights_application_id="appinsightsappid",
+        display_name="The Name of the bot",
+        endpoint="http://mybot.coffee",
+        icon_url="http://myicon",
+        is_cmek_enabled=True,
+        luis_app_ids=[
+            "luisappid1",
+            "luisappid2",
+        ],
+        luis_key="luiskey",
+        msa_app_id="exampleappid",
+        public_network_access="Enabled",
+        schema_transformation_version="1.0",
+    ),
+    resource_group_name="OneResourceGroupName",
+    resource_name="samplebotname",
+    sku=azure_native.botservice.SkuArgs(
+        name="S1",
+    ),
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+    })
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:botservice:Bot samplebotname /subscriptions/subscription-id/resourceGroups/OneResourceGroupName/providers/Microsoft.BotService/botServices/samplebotname 
+```
+
+ */
 @ResourceType(type="azure-native:botservice:Bot")
 public class Bot extends io.pulumi.resources.CustomResource {
+    /**
+     * Entity Tag
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return Entity Tag
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * Required. Gets or sets the Kind of the resource.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return Required. Gets or sets the Kind of the resource.
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * Specifies the location of the resource.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Specifies the location of the resource.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Specifies the name of the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Specifies the name of the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The set of properties specific to bot resource
+     */
     @OutputExport(name="properties", type=BotPropertiesResponse.class, parameters={})
     private Output<BotPropertiesResponse> properties;
 
+    /**
+     * @return The set of properties specific to bot resource
+     */
     public Output<BotPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Gets or sets the SKU of the resource.
+     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
+    /**
+     * @return Gets or sets the SKU of the resource.
+     */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * Contains resource tags defined as key/value pairs.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Contains resource tags defined as key/value pairs.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Specifies the type of the resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Specifies the type of the resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Entity zones
+     */
     @OutputExport(name="zones", type=List.class, parameters={String.class})
     private Output<List<String>> zones;
 
+    /**
+     * @return Entity zones
+     */
     public Output<List<String>> getZones() {
         return this.zones;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Bot(String name, BotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:botservice:Bot", name, args == null ? BotArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -96,6 +354,14 @@ public class Bot extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Bot get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Bot(name, id, options);
     }

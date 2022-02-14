@@ -6,6 +6,9 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 import java.util.Objects;
 
 
+/**
+ * Strategy used to delete a service. This strategy is a placeholder only used by the system generated rollout to delete a service.
+ */
 public final class DeleteServiceStrategyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeleteServiceStrategyResponse Empty = new DeleteServiceStrategyResponse();

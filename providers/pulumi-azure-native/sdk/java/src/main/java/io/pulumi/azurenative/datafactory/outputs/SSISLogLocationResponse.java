@@ -13,9 +13,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SSISLogLocationResponse {
+/**
+ * The package execution log access credential.
+ */
     private final @Nullable SSISAccessCredentialResponse accessCredential;
+/**
+ * The SSIS package execution log path. Type: string (or Expression with resultType string).
+ */
     private final Object logPath;
+/**
+ * Specifies the interval to refresh log. The default interval is 5 minutes. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+ */
     private final @Nullable Object logRefreshInterval;
+/**
+ * The type of SSIS log location.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"accessCredential","logPath","logRefreshInterval","type"})
@@ -30,15 +42,27 @@ public final class SSISLogLocationResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The package execution log access credential.
+ */
     public Optional<SSISAccessCredentialResponse> getAccessCredential() {
         return Optional.ofNullable(this.accessCredential);
     }
+/**
+ * The SSIS package execution log path. Type: string (or Expression with resultType string).
+ */
     public Object getLogPath() {
         return this.logPath;
     }
+/**
+ * Specifies the interval to refresh log. The default interval is 5 minutes. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+ */
     public Optional<Object> getLogRefreshInterval() {
         return Optional.ofNullable(this.logRefreshInterval);
     }
+/**
+ * The type of SSIS log location.
+ */
     public String getType() {
         return this.type;
     }

@@ -8,13 +8,34 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The state.
+ */
     @EnumType
     public enum WorkflowState {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         Completed("Completed"),
+/**
+ * 
+ */
         Enabled("Enabled"),
+/**
+ * 
+ */
         Disabled("Disabled"),
+/**
+ * 
+ */
         Deleted("Deleted"),
+/**
+ * 
+ */
         Suspended("Suspended");
 
         private final String value;

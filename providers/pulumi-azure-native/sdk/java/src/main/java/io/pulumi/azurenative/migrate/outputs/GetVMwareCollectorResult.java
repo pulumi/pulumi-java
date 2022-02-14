@@ -12,10 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetVMwareCollectorResult {
+/**
+ * 
+ */
     private final @Nullable String eTag;
+/**
+ * 
+ */
     private final String id;
+/**
+ * 
+ */
     private final String name;
+/**
+ * 
+ */
     private final CollectorPropertiesResponse properties;
+/**
+ * 
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"eTag","id","name","properties","type"})
@@ -32,18 +47,33 @@ public final class GetVMwareCollectorResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * 
+ */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
+/**
+ * 
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * 
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * 
+ */
     public CollectorPropertiesResponse getProperties() {
         return this.properties;
     }
+/**
+ * 
+ */
     public String getType() {
         return this.type;
     }

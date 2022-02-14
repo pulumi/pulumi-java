@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Streaming endpoint access control definition.
+ */
 public final class StreamingEndpointAccessControlArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StreamingEndpointAccessControlArgs Empty = new StreamingEndpointAccessControlArgs();
 
+    /**
+     * The access control of Akamai
+     */
     @InputImport(name="akamai")
     private final @Nullable Input<AkamaiAccessControlArgs> akamai;
 
@@ -22,6 +28,9 @@ public final class StreamingEndpointAccessControlArgs extends io.pulumi.resource
         return this.akamai == null ? Input.empty() : this.akamai;
     }
 
+    /**
+     * The IP access control of the streaming endpoint.
+     */
     @InputImport(name="ip")
     private final @Nullable Input<IPAccessControlArgs> ip;
 

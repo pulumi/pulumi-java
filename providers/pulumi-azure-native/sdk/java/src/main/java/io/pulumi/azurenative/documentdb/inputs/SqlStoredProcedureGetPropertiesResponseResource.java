@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SqlStoredProcedureGetPropertiesResponseResource extends io.pulumi.resources.InvokeArgs {
 
     public static final SqlStoredProcedureGetPropertiesResponseResource Empty = new SqlStoredProcedureGetPropertiesResponseResource();
 
+    /**
+     * Body of the Stored Procedure
+     */
     @InputImport(name="body")
     private final @Nullable String body;
 
@@ -22,6 +28,9 @@ public final class SqlStoredProcedureGetPropertiesResponseResource extends io.pu
         return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
     }
 
+    /**
+     * A system generated property representing the resource etag required for optimistic concurrency control.
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -29,6 +38,9 @@ public final class SqlStoredProcedureGetPropertiesResponseResource extends io.pu
         return this.etag;
     }
 
+    /**
+     * Name of the Cosmos DB SQL storedProcedure
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -36,6 +48,9 @@ public final class SqlStoredProcedureGetPropertiesResponseResource extends io.pu
         return this.id;
     }
 
+    /**
+     * A system generated property. A unique identifier.
+     */
     @InputImport(name="rid", required=true)
     private final String rid;
 
@@ -43,6 +58,9 @@ public final class SqlStoredProcedureGetPropertiesResponseResource extends io.pu
         return this.rid;
     }
 
+    /**
+     * A system generated property that denotes the last updated timestamp of the resource.
+     */
     @InputImport(name="ts", required=true)
     private final Double ts;
 

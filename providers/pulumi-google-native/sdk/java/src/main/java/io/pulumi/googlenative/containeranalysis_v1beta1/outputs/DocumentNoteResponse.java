@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DocumentNoteResponse {
+/**
+ * Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields ("SPDX-Metadata")
+ */
     private final String dataLicence;
+/**
+ * Provide a reference number that can be used to understand how to parse and interpret the rest of the file
+ */
     private final String spdxVersion;
 
     @OutputCustomType.Constructor({"dataLicence","spdxVersion"})
@@ -20,9 +26,15 @@ public final class DocumentNoteResponse {
         this.spdxVersion = Objects.requireNonNull(spdxVersion);
     }
 
+/**
+ * Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields ("SPDX-Metadata")
+ */
     public String getDataLicence() {
         return this.dataLicence;
     }
+/**
+ * Provide a reference number that can be used to understand how to parse and interpret the rest of the file
+ */
     public String getSpdxVersion() {
         return this.spdxVersion;
     }

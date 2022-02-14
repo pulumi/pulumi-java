@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CurrentSpendResponse {
+/**
+ * The total amount of cost which is being tracked by the budget.
+ */
     private final Double amount;
+/**
+ * The unit of measure for the budget amount.
+ */
     private final String unit;
 
     @OutputCustomType.Constructor({"amount","unit"})
@@ -21,9 +27,15 @@ public final class CurrentSpendResponse {
         this.unit = Objects.requireNonNull(unit);
     }
 
+/**
+ * The total amount of cost which is being tracked by the budget.
+ */
     public Double getAmount() {
         return this.amount;
     }
+/**
+ * The unit of measure for the budget amount.
+ */
     public String getUnit() {
         return this.unit;
     }

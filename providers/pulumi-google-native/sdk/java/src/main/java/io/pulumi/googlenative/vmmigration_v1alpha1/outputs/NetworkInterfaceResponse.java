@@ -9,9 +9,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NetworkInterfaceResponse {
+/**
+ * The external IP to define in the NIC.
+ */
     private final String externalIp;
+/**
+ * The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4 address \ a named address resource full path.
+ */
     private final String internalIp;
+/**
+ * The network to connect the NIC to.
+ */
     private final String network;
+/**
+ * The subnetwork to connect the NIC to.
+ */
     private final String subnetwork;
 
     @OutputCustomType.Constructor({"externalIp","internalIp","network","subnetwork"})
@@ -26,15 +38,27 @@ public final class NetworkInterfaceResponse {
         this.subnetwork = Objects.requireNonNull(subnetwork);
     }
 
+/**
+ * The external IP to define in the NIC.
+ */
     public String getExternalIp() {
         return this.externalIp;
     }
+/**
+ * The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4 address \ a named address resource full path.
+ */
     public String getInternalIp() {
         return this.internalIp;
     }
+/**
+ * The network to connect the NIC to.
+ */
     public String getNetwork() {
         return this.network;
     }
+/**
+ * The subnetwork to connect the NIC to.
+ */
     public String getSubnetwork() {
         return this.subnetwork;
     }

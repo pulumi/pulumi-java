@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DistributionGroupListReceiverValueResponse {
+/**
+ * The list of distribution groups.
+ */
     private final @Nullable List<String> distributionGroups;
 
     @OutputCustomType.Constructor({"distributionGroups"})
@@ -18,6 +21,9 @@ public final class DistributionGroupListReceiverValueResponse {
         this.distributionGroups = distributionGroups;
     }
 
+/**
+ * The list of distribution groups.
+ */
     public List<String> getDistributionGroups() {
         return this.distributionGroups == null ? List.of() : this.distributionGroups;
     }

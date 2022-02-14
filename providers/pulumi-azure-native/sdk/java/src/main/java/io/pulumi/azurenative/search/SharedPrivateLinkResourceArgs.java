@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SharedPrivateLinkResourceArgs Empty = new SharedPrivateLinkResourceArgs();
 
+    /**
+     * Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<SharedPrivateLinkResourcePropertiesArgs> properties;
 
@@ -22,6 +28,9 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -29,6 +38,9 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Azure Cognitive Search service associated with the specified resource group.
+     */
     @InputImport(name="searchServiceName", required=true)
     private final Input<String> searchServiceName;
 
@@ -36,6 +48,9 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
         return this.searchServiceName;
     }
 
+    /**
+     * The name of the shared private link resource managed by the Azure Cognitive Search service within the specified resource group.
+     */
     @InputImport(name="sharedPrivateLinkResourceName")
     private final @Nullable Input<String> sharedPrivateLinkResourceName;
 

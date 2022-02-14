@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the output of a function.
+ */
 public final class FunctionOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FunctionOutputArgs Empty = new FunctionOutputArgs();
 
+    /**
+     * The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx
+     */
     @InputImport(name="dataType")
     private final @Nullable Input<String> dataType;
 

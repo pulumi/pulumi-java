@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IPv6FirewallRuleArgs Empty = new IPv6FirewallRuleArgs();
 
+    /**
+     * The end IP address of the firewall rule. Must be IPv6 format. Must be greater than or equal to startIpAddress.
+     */
     @InputImport(name="endIPv6Address")
     private final @Nullable Input<String> endIPv6Address;
 
@@ -21,6 +27,9 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
         return this.endIPv6Address == null ? Input.empty() : this.endIPv6Address;
     }
 
+    /**
+     * The name of the firewall rule.
+     */
     @InputImport(name="firewallRuleName")
     private final @Nullable Input<String> firewallRuleName;
 
@@ -28,6 +37,9 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
         return this.firewallRuleName == null ? Input.empty() : this.firewallRuleName;
     }
 
+    /**
+     * Resource name.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +47,9 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -42,6 +57,9 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -49,6 +67,9 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
         return this.serverName;
     }
 
+    /**
+     * The start IP address of the firewall rule. Must be IPv6 format.
+     */
     @InputImport(name="startIPv6Address")
     private final @Nullable Input<String> startIPv6Address;
 

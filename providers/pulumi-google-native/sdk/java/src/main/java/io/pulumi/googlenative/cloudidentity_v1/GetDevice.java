@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDevice {
+/**
+ * Retrieves the specified device.
+ */
     public static CompletableFuture<GetDeviceResult> invokeAsync(GetDeviceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudidentity/v1:getDevice", TypeShape.of(GetDeviceResult.class), args == null ? GetDeviceArgs.Empty : args, Utilities.withVersion(options));
     }

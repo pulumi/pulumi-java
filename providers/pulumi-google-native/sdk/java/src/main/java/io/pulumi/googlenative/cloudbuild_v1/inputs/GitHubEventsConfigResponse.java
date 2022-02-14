@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a GitHub event is received.
+ */
 public final class GitHubEventsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GitHubEventsConfigResponse Empty = new GitHubEventsConfigResponse();
 
+    /**
+     * Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+     */
     @InputImport(name="enterpriseConfigResourceName", required=true)
     private final String enterpriseConfigResourceName;
 
@@ -21,6 +27,9 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
         return this.enterpriseConfigResourceName;
     }
 
+    /**
+     * The installationID that emits the GitHub event.
+     */
     @InputImport(name="installationId", required=true)
     private final String installationId;
 
@@ -28,6 +37,9 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
         return this.installationId;
     }
 
+    /**
+     * Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is "cloud-builders".
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,6 +47,9 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
         return this.name;
     }
 
+    /**
+     * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
+     */
     @InputImport(name="owner", required=true)
     private final String owner;
 
@@ -42,6 +57,9 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
         return this.owner;
     }
 
+    /**
+     * filter to match changes in pull requests.
+     */
     @InputImport(name="pullRequest", required=true)
     private final PullRequestFilterResponse pullRequest;
 
@@ -49,6 +67,9 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
         return this.pullRequest;
     }
 
+    /**
+     * filter to match changes in refs like branches, tags.
+     */
     @InputImport(name="push", required=true)
     private final PushFilterResponse push;
 

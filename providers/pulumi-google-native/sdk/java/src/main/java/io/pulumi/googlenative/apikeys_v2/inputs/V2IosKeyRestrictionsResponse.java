@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The iOS apps that are allowed to use the key.
+ */
 public final class V2IosKeyRestrictionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final V2IosKeyRestrictionsResponse Empty = new V2IosKeyRestrictionsResponse();
 
+    /**
+     * A list of bundle IDs that are allowed when making API calls with this key.
+     */
     @InputImport(name="allowedBundleIds", required=true)
     private final List<String> allowedBundleIds;
 

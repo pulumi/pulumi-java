@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Conflict resolution policy of the sync group.
+ */
     @EnumType
     public enum SyncConflictResolutionPolicy {
+/**
+ * 
+ */
         HubWin("HubWin"),
+/**
+ * 
+ */
         MemberWin("MemberWin");
 
         private final String value;

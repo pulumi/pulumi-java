@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RelationshipArgs Empty = new RelationshipArgs();
 
+    /**
+     * The Relationship Cardinality.
+     */
     @InputImport(name="cardinality")
     private final @Nullable Input<CardinalityTypes> cardinality;
 
@@ -26,6 +32,9 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
         return this.cardinality == null ? Input.empty() : this.cardinality;
     }
 
+    /**
+     * Localized descriptions for the Relationship.
+     */
     @InputImport(name="description")
     private final @Nullable Input<Map<String,String>> description;
 
@@ -33,6 +42,9 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Localized display name for the Relationship.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<Map<String,String>> displayName;
 
@@ -40,6 +52,9 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The expiry date time in UTC.
+     */
     @InputImport(name="expiryDateTimeUtc")
     private final @Nullable Input<String> expiryDateTimeUtc;
 
@@ -47,6 +62,9 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
         return this.expiryDateTimeUtc == null ? Input.empty() : this.expiryDateTimeUtc;
     }
 
+    /**
+     * The properties of the Relationship.
+     */
     @InputImport(name="fields")
     private final @Nullable Input<List<PropertyDefinitionArgs>> fields;
 
@@ -54,6 +72,9 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
         return this.fields == null ? Input.empty() : this.fields;
     }
 
+    /**
+     * The name of the hub.
+     */
     @InputImport(name="hubName", required=true)
     private final Input<String> hubName;
 
@@ -61,6 +82,9 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
         return this.hubName;
     }
 
+    /**
+     * Optional property to be used to map fields in profile to their strong ids in related profile.
+     */
     @InputImport(name="lookupMappings")
     private final @Nullable Input<List<RelationshipTypeMappingArgs>> lookupMappings;
 
@@ -68,6 +92,9 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
         return this.lookupMappings == null ? Input.empty() : this.lookupMappings;
     }
 
+    /**
+     * Profile type.
+     */
     @InputImport(name="profileType", required=true)
     private final Input<String> profileType;
 
@@ -75,6 +102,9 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
         return this.profileType;
     }
 
+    /**
+     * Related profile being referenced.
+     */
     @InputImport(name="relatedProfileType", required=true)
     private final Input<String> relatedProfileType;
 
@@ -82,6 +112,9 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
         return this.relatedProfileType;
     }
 
+    /**
+     * The name of the Relationship.
+     */
     @InputImport(name="relationshipName")
     private final @Nullable Input<String> relationshipName;
 
@@ -89,6 +122,9 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
         return this.relationshipName == null ? Input.empty() : this.relationshipName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

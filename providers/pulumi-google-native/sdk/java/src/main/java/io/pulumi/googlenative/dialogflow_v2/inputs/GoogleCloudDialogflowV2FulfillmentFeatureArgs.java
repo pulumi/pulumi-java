@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Whether fulfillment is enabled for the specific feature.
+ */
 public final class GoogleCloudDialogflowV2FulfillmentFeatureArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2FulfillmentFeatureArgs Empty = new GoogleCloudDialogflowV2FulfillmentFeatureArgs();
 
+    /**
+     * The type of the feature that enabled for fulfillment.
+     */
     @InputImport(name="type")
     private final @Nullable Input<GoogleCloudDialogflowV2FulfillmentFeatureType> type;
 

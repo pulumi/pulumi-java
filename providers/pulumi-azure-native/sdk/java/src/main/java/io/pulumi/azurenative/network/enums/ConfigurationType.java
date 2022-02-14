@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Configuration Deployment Type.
+ */
     @EnumType
     public enum ConfigurationType {
+/**
+ * 
+ */
         SecurityAdmin("SecurityAdmin"),
+/**
+ * 
+ */
         SecurityUser("SecurityUser"),
+/**
+ * 
+ */
         Connectivity("Connectivity");
 
         private final String value;

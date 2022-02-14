@@ -22,10 +22,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Execute power query activity.
+ */
 public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExecuteWranglingDataflowActivityResponse Empty = new ExecuteWranglingDataflowActivityResponse();
 
+    /**
+     * Compute properties for data flow activity.
+     */
     @InputImport(name="compute")
     private final @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute;
 
@@ -33,6 +39,9 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
         return this.compute == null ? Optional.empty() : Optional.ofNullable(this.compute);
     }
 
+    /**
+     * Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
+     */
     @InputImport(name="continueOnError")
     private final @Nullable Object continueOnError;
 
@@ -40,6 +49,9 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
         return this.continueOnError == null ? Optional.empty() : Optional.ofNullable(this.continueOnError);
     }
 
+    /**
+     * Data flow reference.
+     */
     @InputImport(name="dataFlow", required=true)
     private final DataFlowReferenceResponse dataFlow;
 
@@ -47,6 +59,9 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
         return this.dataFlow;
     }
 
+    /**
+     * Activity depends on condition.
+     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -54,6 +69,9 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -61,6 +79,9 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="integrationRuntime")
     private final @Nullable IntegrationRuntimeReferenceResponse integrationRuntime;
 
@@ -68,6 +89,9 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
         return this.integrationRuntime == null ? Optional.empty() : Optional.ofNullable(this.integrationRuntime);
     }
 
+    /**
+     * Activity name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -75,6 +99,9 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
         return this.name;
     }
 
+    /**
+     * Activity policy.
+     */
     @InputImport(name="policy")
     private final @Nullable ActivityPolicyResponse policy;
 
@@ -82,6 +109,9 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
+    /**
+     * List of mapping for Power Query mashup query to sink dataset(s).
+     */
     @InputImport(name="queries")
     private final @Nullable List<PowerQuerySinkMappingResponse> queries;
 
@@ -89,6 +119,9 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
         return this.queries == null ? List.of() : this.queries;
     }
 
+    /**
+     * Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean)
+     */
     @InputImport(name="runConcurrently")
     private final @Nullable Object runConcurrently;
 
@@ -96,6 +129,9 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
         return this.runConcurrently == null ? Optional.empty() : Optional.ofNullable(this.runConcurrently);
     }
 
+    /**
+     * (Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.
+     */
     @InputImport(name="sinks")
     private final @Nullable Map<String,PowerQuerySinkResponse> sinks;
 
@@ -103,6 +139,9 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
         return this.sinks == null ? Map.of() : this.sinks;
     }
 
+    /**
+     * Staging info for execute data flow activity.
+     */
     @InputImport(name="staging")
     private final @Nullable DataFlowStagingInfoResponse staging;
 
@@ -110,6 +149,9 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
         return this.staging == null ? Optional.empty() : Optional.ofNullable(this.staging);
     }
 
+    /**
+     * Trace level setting used for data flow monitoring output. Supported values are: 'coarse', 'fine', and 'none'. Type: string (or Expression with resultType string)
+     */
     @InputImport(name="traceLevel")
     private final @Nullable Object traceLevel;
 
@@ -117,6 +159,10 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
         return this.traceLevel == null ? Optional.empty() : Optional.ofNullable(this.traceLevel);
     }
 
+    /**
+     * Type of activity.
+Expected value is 'ExecuteWranglingDataflow'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -124,6 +170,9 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

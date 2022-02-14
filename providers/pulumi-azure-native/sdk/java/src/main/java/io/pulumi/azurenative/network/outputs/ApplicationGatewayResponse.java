@@ -39,43 +39,157 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationGatewayResponse {
+/**
+ * Authentication certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     private final @Nullable List<ApplicationGatewayAuthenticationCertificateResponse> authenticationCertificates;
+/**
+ * Autoscale Configuration.
+ */
     private final @Nullable ApplicationGatewayAutoscaleConfigurationResponse autoscaleConfiguration;
+/**
+ * Backend address pool of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     private final @Nullable List<ApplicationGatewayBackendAddressPoolResponse> backendAddressPools;
+/**
+ * Backend http settings of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     private final @Nullable List<ApplicationGatewayBackendHttpSettingsResponse> backendHttpSettingsCollection;
+/**
+ * Custom error configurations of the application gateway resource.
+ */
     private final @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations;
+/**
+ * Whether FIPS is enabled on the application gateway resource.
+ */
     private final @Nullable Boolean enableFips;
+/**
+ * Whether HTTP2 is enabled on the application gateway resource.
+ */
     private final @Nullable Boolean enableHttp2;
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     private final String etag;
+/**
+ * Reference to the FirewallPolicy resource.
+ */
     private final @Nullable SubResourceResponse firewallPolicy;
+/**
+ * If true, associates a firewall policy with an application gateway regardless whether the policy differs from the WAF Config.
+ */
     private final @Nullable Boolean forceFirewallPolicyAssociation;
+/**
+ * Frontend IP addresses of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     private final @Nullable List<ApplicationGatewayFrontendIPConfigurationResponse> frontendIPConfigurations;
+/**
+ * Frontend ports of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     private final @Nullable List<ApplicationGatewayFrontendPortResponse> frontendPorts;
+/**
+ * Subnets of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     private final @Nullable List<ApplicationGatewayIPConfigurationResponse> gatewayIPConfigurations;
+/**
+ * Http listeners of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     private final @Nullable List<ApplicationGatewayHttpListenerResponse> httpListeners;
+/**
+ * Resource ID.
+ */
     private final @Nullable String id;
+/**
+ * The identity of the application gateway, if configured.
+ */
     private final @Nullable ManagedServiceIdentityResponse identity;
+/**
+ * Resource location.
+ */
     private final @Nullable String location;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * Operational state of the application gateway resource.
+ */
     private final String operationalState;
+/**
+ * Private Endpoint connections on application gateway.
+ */
     private final List<ApplicationGatewayPrivateEndpointConnectionResponse> privateEndpointConnections;
+/**
+ * PrivateLink configurations on application gateway.
+ */
     private final @Nullable List<ApplicationGatewayPrivateLinkConfigurationResponse> privateLinkConfigurations;
+/**
+ * Probes of the application gateway resource.
+ */
     private final @Nullable List<ApplicationGatewayProbeResponse> probes;
+/**
+ * The provisioning state of the application gateway resource.
+ */
     private final String provisioningState;
+/**
+ * Redirect configurations of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     private final @Nullable List<ApplicationGatewayRedirectConfigurationResponse> redirectConfigurations;
+/**
+ * Request routing rules of the application gateway resource.
+ */
     private final @Nullable List<ApplicationGatewayRequestRoutingRuleResponse> requestRoutingRules;
+/**
+ * The resource GUID property of the application gateway resource.
+ */
     private final String resourceGuid;
+/**
+ * Rewrite rules for the application gateway resource.
+ */
     private final @Nullable List<ApplicationGatewayRewriteRuleSetResponse> rewriteRuleSets;
+/**
+ * SKU of the application gateway resource.
+ */
     private final @Nullable ApplicationGatewaySkuResponse sku;
+/**
+ * SSL certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     private final @Nullable List<ApplicationGatewaySslCertificateResponse> sslCertificates;
+/**
+ * SSL policy of the application gateway resource.
+ */
     private final @Nullable ApplicationGatewaySslPolicyResponse sslPolicy;
+/**
+ * SSL profiles of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     private final @Nullable List<ApplicationGatewaySslProfileResponse> sslProfiles;
+/**
+ * Resource tags.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Trusted client certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     private final @Nullable List<ApplicationGatewayTrustedClientCertificateResponse> trustedClientCertificates;
+/**
+ * Trusted Root certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     private final @Nullable List<ApplicationGatewayTrustedRootCertificateResponse> trustedRootCertificates;
+/**
+ * Resource type.
+ */
     private final String type;
+/**
+ * URL path map of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     private final @Nullable List<ApplicationGatewayUrlPathMapResponse> urlPathMaps;
+/**
+ * Web application firewall configuration.
+ */
     private final @Nullable ApplicationGatewayWebApplicationFirewallConfigurationResponse webApplicationFirewallConfiguration;
+/**
+ * A list of availability zones denoting where the resource needs to come from.
+ */
     private final @Nullable List<String> zones;
 
     @OutputCustomType.Constructor({"authenticationCertificates","autoscaleConfiguration","backendAddressPools","backendHttpSettingsCollection","customErrorConfigurations","enableFips","enableHttp2","etag","firewallPolicy","forceFirewallPolicyAssociation","frontendIPConfigurations","frontendPorts","gatewayIPConfigurations","httpListeners","id","identity","location","name","operationalState","privateEndpointConnections","privateLinkConfigurations","probes","provisioningState","redirectConfigurations","requestRoutingRules","resourceGuid","rewriteRuleSets","sku","sslCertificates","sslPolicy","sslProfiles","tags","trustedClientCertificates","trustedRootCertificates","type","urlPathMaps","webApplicationFirewallConfiguration","zones"})
@@ -158,117 +272,231 @@ public final class ApplicationGatewayResponse {
         this.zones = zones;
     }
 
+/**
+ * Authentication certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     public List<ApplicationGatewayAuthenticationCertificateResponse> getAuthenticationCertificates() {
         return this.authenticationCertificates == null ? List.of() : this.authenticationCertificates;
     }
+/**
+ * Autoscale Configuration.
+ */
     public Optional<ApplicationGatewayAutoscaleConfigurationResponse> getAutoscaleConfiguration() {
         return Optional.ofNullable(this.autoscaleConfiguration);
     }
+/**
+ * Backend address pool of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     public List<ApplicationGatewayBackendAddressPoolResponse> getBackendAddressPools() {
         return this.backendAddressPools == null ? List.of() : this.backendAddressPools;
     }
+/**
+ * Backend http settings of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     public List<ApplicationGatewayBackendHttpSettingsResponse> getBackendHttpSettingsCollection() {
         return this.backendHttpSettingsCollection == null ? List.of() : this.backendHttpSettingsCollection;
     }
+/**
+ * Custom error configurations of the application gateway resource.
+ */
     public List<ApplicationGatewayCustomErrorResponse> getCustomErrorConfigurations() {
         return this.customErrorConfigurations == null ? List.of() : this.customErrorConfigurations;
     }
+/**
+ * Whether FIPS is enabled on the application gateway resource.
+ */
     public Optional<Boolean> getEnableFips() {
         return Optional.ofNullable(this.enableFips);
     }
+/**
+ * Whether HTTP2 is enabled on the application gateway resource.
+ */
     public Optional<Boolean> getEnableHttp2() {
         return Optional.ofNullable(this.enableHttp2);
     }
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * Reference to the FirewallPolicy resource.
+ */
     public Optional<SubResourceResponse> getFirewallPolicy() {
         return Optional.ofNullable(this.firewallPolicy);
     }
+/**
+ * If true, associates a firewall policy with an application gateway regardless whether the policy differs from the WAF Config.
+ */
     public Optional<Boolean> getForceFirewallPolicyAssociation() {
         return Optional.ofNullable(this.forceFirewallPolicyAssociation);
     }
+/**
+ * Frontend IP addresses of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     public List<ApplicationGatewayFrontendIPConfigurationResponse> getFrontendIPConfigurations() {
         return this.frontendIPConfigurations == null ? List.of() : this.frontendIPConfigurations;
     }
+/**
+ * Frontend ports of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     public List<ApplicationGatewayFrontendPortResponse> getFrontendPorts() {
         return this.frontendPorts == null ? List.of() : this.frontendPorts;
     }
+/**
+ * Subnets of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     public List<ApplicationGatewayIPConfigurationResponse> getGatewayIPConfigurations() {
         return this.gatewayIPConfigurations == null ? List.of() : this.gatewayIPConfigurations;
     }
+/**
+ * Http listeners of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     public List<ApplicationGatewayHttpListenerResponse> getHttpListeners() {
         return this.httpListeners == null ? List.of() : this.httpListeners;
     }
+/**
+ * Resource ID.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * The identity of the application gateway, if configured.
+ */
     public Optional<ManagedServiceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
+/**
+ * Resource location.
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Operational state of the application gateway resource.
+ */
     public String getOperationalState() {
         return this.operationalState;
     }
+/**
+ * Private Endpoint connections on application gateway.
+ */
     public List<ApplicationGatewayPrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
+/**
+ * PrivateLink configurations on application gateway.
+ */
     public List<ApplicationGatewayPrivateLinkConfigurationResponse> getPrivateLinkConfigurations() {
         return this.privateLinkConfigurations == null ? List.of() : this.privateLinkConfigurations;
     }
+/**
+ * Probes of the application gateway resource.
+ */
     public List<ApplicationGatewayProbeResponse> getProbes() {
         return this.probes == null ? List.of() : this.probes;
     }
+/**
+ * The provisioning state of the application gateway resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Redirect configurations of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     public List<ApplicationGatewayRedirectConfigurationResponse> getRedirectConfigurations() {
         return this.redirectConfigurations == null ? List.of() : this.redirectConfigurations;
     }
+/**
+ * Request routing rules of the application gateway resource.
+ */
     public List<ApplicationGatewayRequestRoutingRuleResponse> getRequestRoutingRules() {
         return this.requestRoutingRules == null ? List.of() : this.requestRoutingRules;
     }
+/**
+ * The resource GUID property of the application gateway resource.
+ */
     public String getResourceGuid() {
         return this.resourceGuid;
     }
+/**
+ * Rewrite rules for the application gateway resource.
+ */
     public List<ApplicationGatewayRewriteRuleSetResponse> getRewriteRuleSets() {
         return this.rewriteRuleSets == null ? List.of() : this.rewriteRuleSets;
     }
+/**
+ * SKU of the application gateway resource.
+ */
     public Optional<ApplicationGatewaySkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
+/**
+ * SSL certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     public List<ApplicationGatewaySslCertificateResponse> getSslCertificates() {
         return this.sslCertificates == null ? List.of() : this.sslCertificates;
     }
+/**
+ * SSL policy of the application gateway resource.
+ */
     public Optional<ApplicationGatewaySslPolicyResponse> getSslPolicy() {
         return Optional.ofNullable(this.sslPolicy);
     }
+/**
+ * SSL profiles of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     public List<ApplicationGatewaySslProfileResponse> getSslProfiles() {
         return this.sslProfiles == null ? List.of() : this.sslProfiles;
     }
+/**
+ * Resource tags.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Trusted client certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     public List<ApplicationGatewayTrustedClientCertificateResponse> getTrustedClientCertificates() {
         return this.trustedClientCertificates == null ? List.of() : this.trustedClientCertificates;
     }
+/**
+ * Trusted Root certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     public List<ApplicationGatewayTrustedRootCertificateResponse> getTrustedRootCertificates() {
         return this.trustedRootCertificates == null ? List.of() : this.trustedRootCertificates;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * URL path map of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
+ */
     public List<ApplicationGatewayUrlPathMapResponse> getUrlPathMaps() {
         return this.urlPathMaps == null ? List.of() : this.urlPathMaps;
     }
+/**
+ * Web application firewall configuration.
+ */
     public Optional<ApplicationGatewayWebApplicationFirewallConfigurationResponse> getWebApplicationFirewallConfiguration() {
         return Optional.ofNullable(this.webApplicationFirewallConfiguration);
     }
+/**
+ * A list of availability zones denoting where the resource needs to come from.
+ */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }

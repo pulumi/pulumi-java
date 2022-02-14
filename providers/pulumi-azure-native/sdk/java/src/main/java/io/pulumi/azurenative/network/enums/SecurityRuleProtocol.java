@@ -8,13 +8,34 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Network protocol this rule applies to.
+ */
     @EnumType
     public enum SecurityRuleProtocol {
+/**
+ * 
+ */
         Tcp("Tcp"),
+/**
+ * 
+ */
         Udp("Udp"),
+/**
+ * 
+ */
         Icmp("Icmp"),
+/**
+ * 
+ */
         Esp("Esp"),
+/**
+ * 
+ */
         Asterisk("*"),
+/**
+ * 
+ */
         Ah("Ah");
 
         private final String value;

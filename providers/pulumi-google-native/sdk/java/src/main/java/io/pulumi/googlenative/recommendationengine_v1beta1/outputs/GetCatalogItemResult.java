@@ -13,12 +13,33 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetCatalogItemResult {
+/**
+ * Catalog item categories. This field is repeated for supporting one catalog item belonging to several parallel category hierarchies. For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categoryHierarchies": [ { "categories": ["Shoes & Accessories", "Shoes"]}, { "categories": ["Sports & Fitness", "Athletic Clothing", "Shoes"] } ]
+ */
     private final List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse> categoryHierarchies;
+/**
+ * Optional. Catalog item description. UTF-8 encoded string with a length limit of 5 KiB.
+ */
     private final String description;
+/**
+ * Optional. Highly encouraged. Extra catalog item attributes to be included in the recommendation model. For example, for retail products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the item attributes here.
+ */
     private final GoogleCloudRecommendationengineV1beta1FeatureMapResponse itemAttributes;
+/**
+ * Optional. Variant group identifier for prediction results. UTF-8 encoded string with a length limit of 128 bytes. This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).
+ */
     private final String itemGroupId;
+/**
+ * Optional. Metadata specific to retail products.
+ */
     private final GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse productMetadata;
+/**
+ * Optional. Filtering tags associated with the catalog item. Each tag should be a UTF-8 encoded string with a length limit of 1 KiB. This tag can be used for filtering recommendation results by passing the tag as part of the predict request filter.
+ */
     private final List<String> tags;
+/**
+ * Catalog item title. UTF-8 encoded string with a length limit of 1 KiB.
+ */
     private final String title;
 
     @OutputCustomType.Constructor({"categoryHierarchies","description","itemAttributes","itemGroupId","productMetadata","tags","title"})
@@ -39,24 +60,45 @@ public final class GetCatalogItemResult {
         this.title = Objects.requireNonNull(title);
     }
 
+/**
+ * Catalog item categories. This field is repeated for supporting one catalog item belonging to several parallel category hierarchies. For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categoryHierarchies": [ { "categories": ["Shoes & Accessories", "Shoes"]}, { "categories": ["Sports & Fitness", "Athletic Clothing", "Shoes"] } ]
+ */
     public List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse> getCategoryHierarchies() {
         return this.categoryHierarchies;
     }
+/**
+ * Optional. Catalog item description. UTF-8 encoded string with a length limit of 5 KiB.
+ */
     public String getDescription() {
         return this.description;
     }
+/**
+ * Optional. Highly encouraged. Extra catalog item attributes to be included in the recommendation model. For example, for retail products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the item attributes here.
+ */
     public GoogleCloudRecommendationengineV1beta1FeatureMapResponse getItemAttributes() {
         return this.itemAttributes;
     }
+/**
+ * Optional. Variant group identifier for prediction results. UTF-8 encoded string with a length limit of 128 bytes. This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).
+ */
     public String getItemGroupId() {
         return this.itemGroupId;
     }
+/**
+ * Optional. Metadata specific to retail products.
+ */
     public GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse getProductMetadata() {
         return this.productMetadata;
     }
+/**
+ * Optional. Filtering tags associated with the catalog item. Each tag should be a UTF-8 encoded string with a length limit of 1 KiB. This tag can be used for filtering recommendation results by passing the tag as part of the predict request filter.
+ */
     public List<String> getTags() {
         return this.tags;
     }
+/**
+ * Catalog item title. UTF-8 encoded string with a length limit of 1 KiB.
+ */
     public String getTitle() {
         return this.title;
     }

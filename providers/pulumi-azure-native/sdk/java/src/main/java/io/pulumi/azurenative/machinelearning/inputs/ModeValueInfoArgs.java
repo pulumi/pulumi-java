@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Nested parameter definition.
+ */
 public final class ModeValueInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModeValueInfoArgs Empty = new ModeValueInfoArgs();
 
+    /**
+     * The interface string name for the nested parameter.
+     */
     @InputImport(name="interfaceString")
     private final @Nullable Input<String> interfaceString;
 
@@ -23,6 +29,9 @@ public final class ModeValueInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.interfaceString == null ? Input.empty() : this.interfaceString;
     }
 
+    /**
+     * The definition of the parameter.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<List<ModuleAssetParameterArgs>> parameters;
 

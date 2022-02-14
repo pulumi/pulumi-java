@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the network interface ip settings.
+ */
 public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NicIPSettingsResponse Empty = new NicIPSettingsResponse();
 
+    /**
+     * Gets or sets the nic allocation method.
+     */
     @InputImport(name="allocationMethod")
     private final @Nullable String allocationMethod;
 
@@ -23,6 +29,9 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
         return this.allocationMethod == null ? Optional.empty() : Optional.ofNullable(this.allocationMethod);
     }
 
+    /**
+     * Gets or sets the dns servers.
+     */
     @InputImport(name="dnsServers")
     private final @Nullable List<String> dnsServers;
 
@@ -30,6 +39,9 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
 
+    /**
+     * Gets or sets the gateway.
+     */
     @InputImport(name="gateway")
     private final @Nullable List<String> gateway;
 
@@ -37,6 +49,9 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
         return this.gateway == null ? List.of() : this.gateway;
     }
 
+    /**
+     * Gets or sets the ip address for the nic.
+     */
     @InputImport(name="ipAddress")
     private final @Nullable String ipAddress;
 
@@ -44,6 +59,9 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 
+    /**
+     * Gets or sets the IP address information being reported for this NIC. This contains the same IPv4 information above plus IPV6 information.
+     */
     @InputImport(name="ipAddressInfo", required=true)
     private final List<NicIPAddressSettingsResponse> ipAddressInfo;
 
@@ -51,6 +69,9 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
         return this.ipAddressInfo;
     }
 
+    /**
+     * Gets or sets the primary server.
+     */
     @InputImport(name="primaryWinsServer", required=true)
     private final String primaryWinsServer;
 
@@ -58,6 +79,9 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
         return this.primaryWinsServer;
     }
 
+    /**
+     * Gets or sets the secondary server.
+     */
     @InputImport(name="secondaryWinsServer", required=true)
     private final String secondaryWinsServer;
 
@@ -65,6 +89,9 @@ public final class NicIPSettingsResponse extends io.pulumi.resources.InvokeArgs 
         return this.secondaryWinsServer;
     }
 
+    /**
+     * Gets or sets the mask.
+     */
     @InputImport(name="subnetMask")
     private final @Nullable String subnetMask;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBackupPolicyArgs Empty = new GetBackupPolicyArgs();
 
+    /**
+     * The name of the NetApp account
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * Backup policy Name which uniquely identify backup policy.
+     */
     @InputImport(name="backupPolicyName", required=true)
     private final String backupPolicyName;
 
@@ -26,6 +35,9 @@ public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.backupPolicyName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The call participant speaking for a given utterance.
+ */
 public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudContactcenterinsightsV1ConversationParticipantResponse Empty = new GoogleCloudContactcenterinsightsV1ConversationParticipantResponse();
 
+    /**
+     * The name of the participant provided by Dialogflow. Format: projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
+     */
     @InputImport(name="dialogflowParticipantName", required=true)
     private final String dialogflowParticipantName;
 
@@ -19,6 +25,9 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
         return this.dialogflowParticipantName;
     }
 
+    /**
+     * Obfuscated user ID from Dialogflow.
+     */
     @InputImport(name="obfuscatedExternalUserId", required=true)
     private final String obfuscatedExternalUserId;
 
@@ -26,6 +35,9 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
         return this.obfuscatedExternalUserId;
     }
 
+    /**
+     * The role of the participant.
+     */
     @InputImport(name="role", required=true)
     private final String role;
 
@@ -33,6 +45,9 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
         return this.role;
     }
 
+    /**
+     * A user-specified ID representing the participant.
+     */
     @InputImport(name="userId", required=true)
     private final String userId;
 

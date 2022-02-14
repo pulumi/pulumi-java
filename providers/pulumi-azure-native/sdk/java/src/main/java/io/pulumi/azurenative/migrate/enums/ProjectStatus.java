@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Assessment project status.
+ */
     @EnumType
     public enum ProjectStatus {
+/**
+ * 
+ */
         Active("Active"),
+/**
+ * 
+ */
         Inactive("Inactive");
 
         private final String value;

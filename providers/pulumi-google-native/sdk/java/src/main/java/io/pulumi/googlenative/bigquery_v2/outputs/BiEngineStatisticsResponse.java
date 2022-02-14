@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BiEngineStatisticsResponse {
+/**
+ * Specifies which mode of BI Engine acceleration was performed (if any).
+ */
     private final String biEngineMode;
+/**
+ * In case of DISABLED or PARTIAL bi_engine_mode, these contain the explanatory reasons as to why BI Engine could not accelerate. In case the full query was accelerated, this field is not populated.
+ */
     private final List<BiEngineReasonResponse> biEngineReasons;
 
     @OutputCustomType.Constructor({"biEngineMode","biEngineReasons"})
@@ -22,9 +28,15 @@ public final class BiEngineStatisticsResponse {
         this.biEngineReasons = Objects.requireNonNull(biEngineReasons);
     }
 
+/**
+ * Specifies which mode of BI Engine acceleration was performed (if any).
+ */
     public String getBiEngineMode() {
         return this.biEngineMode;
     }
+/**
+ * In case of DISABLED or PARTIAL bi_engine_mode, these contain the explanatory reasons as to why BI Engine could not accelerate. In case the full query was accelerated, this field is not populated.
+ */
     public List<BiEngineReasonResponse> getBiEngineReasons() {
         return this.biEngineReasons;
     }

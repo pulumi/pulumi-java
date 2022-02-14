@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.
+ */
     @EnumType
     public enum Encoding {
+/**
+ * 
+ */
         UTF8("UTF8");
 
         private final String value;

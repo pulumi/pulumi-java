@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBot {
+/**
+ * Bot resource definition
+API Version: 2021-03-01.
+ *
+ * Bot resource definition
+ */
     public static CompletableFuture<GetBotResult> invokeAsync(GetBotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:botservice:getBot", TypeShape.of(GetBotResult.class), args == null ? GetBotArgs.Empty : args, Utilities.withVersion(options));
     }

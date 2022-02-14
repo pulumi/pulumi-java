@@ -10,13 +10,37 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListWorkspaceNotebookAccessTokenResult {
+/**
+ * 
+ */
     private final String accessToken;
+/**
+ * 
+ */
     private final Integer expiresIn;
+/**
+ * 
+ */
     private final String hostName;
+/**
+ * 
+ */
     private final String notebookResourceId;
+/**
+ * 
+ */
     private final String publicDns;
+/**
+ * 
+ */
     private final String refreshToken;
+/**
+ * 
+ */
     private final String scope;
+/**
+ * 
+ */
     private final String tokenType;
 
     @OutputCustomType.Constructor({"accessToken","expiresIn","hostName","notebookResourceId","publicDns","refreshToken","scope","tokenType"})
@@ -39,27 +63,51 @@ public final class ListWorkspaceNotebookAccessTokenResult {
         this.tokenType = Objects.requireNonNull(tokenType);
     }
 
+/**
+ * 
+ */
     public String getAccessToken() {
         return this.accessToken;
     }
+/**
+ * 
+ */
     public Integer getExpiresIn() {
         return this.expiresIn;
     }
+/**
+ * 
+ */
     public String getHostName() {
         return this.hostName;
     }
+/**
+ * 
+ */
     public String getNotebookResourceId() {
         return this.notebookResourceId;
     }
+/**
+ * 
+ */
     public String getPublicDns() {
         return this.publicDns;
     }
+/**
+ * 
+ */
     public String getRefreshToken() {
         return this.refreshToken;
     }
+/**
+ * 
+ */
     public String getScope() {
         return this.scope;
     }
+/**
+ * 
+ */
     public String getTokenType() {
         return this.tokenType;
     }

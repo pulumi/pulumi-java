@@ -8,10 +8,16 @@ import io.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyAdaptiveProtect
 import java.util.Objects;
 
 
+/**
+ * Configuration options for Cloud Armor Adaptive Protection (CAAP).
+ */
 public final class SecurityPolicyAdaptiveProtectionConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityPolicyAdaptiveProtectionConfigResponse Empty = new SecurityPolicyAdaptiveProtectionConfigResponse();
 
+    /**
+     * If set to true, enables Cloud Armor Machine Learning.
+     */
     @InputImport(name="layer7DdosDefenseConfig", required=true)
     private final SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig;
 

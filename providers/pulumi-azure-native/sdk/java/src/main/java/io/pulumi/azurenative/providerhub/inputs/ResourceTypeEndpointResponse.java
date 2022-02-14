@@ -3,7 +3,6 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.azurenative.providerhub.inputs.ResourceTypeEndpointResponseFeaturesRule;
 import io.pulumi.azurenative.providerhub.inputs.ResourceTypeExtensionResponse;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.Boolean;
@@ -14,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResourceTypeEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceTypeEndpointResponse Empty = new ResourceTypeEndpointResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="apiVersions")
     private final @Nullable List<String> apiVersions;
 
@@ -25,6 +30,9 @@ public final class ResourceTypeEndpointResponse extends io.pulumi.resources.Invo
         return this.apiVersions == null ? List.of() : this.apiVersions;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Boolean enabled;
 
@@ -32,6 +40,9 @@ public final class ResourceTypeEndpointResponse extends io.pulumi.resources.Invo
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="extensions")
     private final @Nullable List<ResourceTypeExtensionResponse> extensions;
 
@@ -39,6 +50,9 @@ public final class ResourceTypeEndpointResponse extends io.pulumi.resources.Invo
         return this.extensions == null ? List.of() : this.extensions;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="featuresRule")
     private final @Nullable ResourceTypeEndpointResponseFeaturesRule featuresRule;
 
@@ -46,6 +60,9 @@ public final class ResourceTypeEndpointResponse extends io.pulumi.resources.Invo
         return this.featuresRule == null ? Optional.empty() : Optional.ofNullable(this.featuresRule);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="locations")
     private final @Nullable List<String> locations;
 
@@ -53,6 +70,9 @@ public final class ResourceTypeEndpointResponse extends io.pulumi.resources.Invo
         return this.locations == null ? List.of() : this.locations;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requiredFeatures")
     private final @Nullable List<String> requiredFeatures;
 
@@ -60,6 +80,9 @@ public final class ResourceTypeEndpointResponse extends io.pulumi.resources.Invo
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="timeout")
     private final @Nullable String timeout;
 

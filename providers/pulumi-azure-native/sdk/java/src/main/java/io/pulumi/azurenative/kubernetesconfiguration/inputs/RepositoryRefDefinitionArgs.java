@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The source reference for the GitRepository object.
+ */
 public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RepositoryRefDefinitionArgs Empty = new RepositoryRefDefinitionArgs();
 
+    /**
+     * The git repository branch name to checkout.
+     */
     @InputImport(name="branch")
     private final @Nullable Input<String> branch;
 
@@ -21,6 +27,9 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
         return this.branch == null ? Input.empty() : this.branch;
     }
 
+    /**
+     * The commit SHA to checkout. This value must be combined with the branch name to be valid. This takes precedence over semver.
+     */
     @InputImport(name="commit")
     private final @Nullable Input<String> commit;
 
@@ -28,6 +37,9 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
         return this.commit == null ? Input.empty() : this.commit;
     }
 
+    /**
+     * The semver range used to match against git repository tags. This takes precedence over tag.
+     */
     @InputImport(name="semver")
     private final @Nullable Input<String> semver;
 
@@ -35,6 +47,9 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
         return this.semver == null ? Input.empty() : this.semver;
     }
 
+    /**
+     * The git repository tag name to checkout. This takes precedence over branch.
+     */
     @InputImport(name="tag")
     private final @Nullable Input<String> tag;
 

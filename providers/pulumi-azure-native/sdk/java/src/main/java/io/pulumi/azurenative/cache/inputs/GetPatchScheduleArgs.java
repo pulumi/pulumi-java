@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetPatchScheduleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPatchScheduleArgs Empty = new GetPatchScheduleArgs();
 
+    /**
+     * Default string modeled as parameter for auto generation to work correctly.
+     */
     @InputImport(name="default", required=true)
     private final String $default;
 
@@ -19,6 +25,9 @@ public final class GetPatchScheduleArgs extends io.pulumi.resources.InvokeArgs {
         return this.$default;
     }
 
+    /**
+     * The name of the redis cache.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +35,9 @@ public final class GetPatchScheduleArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.avs;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.avs.WorkloadNetworkVMGroupArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -15,51 +14,203 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * NSX VM Group
+API Version: 2020-07-17-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### WorkloadNetworks_CreateVMGroup
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workloadNetworkVMGroup = new AzureNative.AVS.WorkloadNetworkVMGroup("workloadNetworkVMGroup", new AzureNative.AVS.WorkloadNetworkVMGroupArgs
+        {
+            DisplayName = "vmGroup1",
+            Members = 
+            {
+                "564d43da-fefc-2a3b-1d92-42855622fa50",
+            },
+            PrivateCloudName = "cloud1",
+            ResourceGroupName = "group1",
+            Revision = 1,
+            VmGroupId = "vmGroup1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	avs "github.com/pulumi/pulumi-azure-native/sdk/go/azure/avs"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := avs.NewWorkloadNetworkVMGroup(ctx, "workloadNetworkVMGroup", &avs.WorkloadNetworkVMGroupArgs{
+			DisplayName: pulumi.String("vmGroup1"),
+			Members: pulumi.StringArray{
+				pulumi.String("564d43da-fefc-2a3b-1d92-42855622fa50"),
+			},
+			PrivateCloudName:  pulumi.String("cloud1"),
+			ResourceGroupName: pulumi.String("group1"),
+			Revision:          pulumi.Float64(1),
+			VmGroupId:         pulumi.String("vmGroup1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const workloadNetworkVMGroup = new azure_native.avs.WorkloadNetworkVMGroup("workloadNetworkVMGroup", {
+    displayName: "vmGroup1",
+    members: ["564d43da-fefc-2a3b-1d92-42855622fa50"],
+    privateCloudName: "cloud1",
+    resourceGroupName: "group1",
+    revision: 1,
+    vmGroupId: "vmGroup1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+workload_network_vm_group = azure_native.avs.WorkloadNetworkVMGroup("workloadNetworkVMGroup",
+    display_name="vmGroup1",
+    members=["564d43da-fefc-2a3b-1d92-42855622fa50"],
+    private_cloud_name="cloud1",
+    resource_group_name="group1",
+    revision=1,
+    vm_group_id="vmGroup1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:avs:WorkloadNetworkVMGroup vmGroup1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/vmGroups/vmGroup1 
+```
+
+ */
 @ResourceType(type="azure-native:avs:WorkloadNetworkVMGroup")
 public class WorkloadNetworkVMGroup extends io.pulumi.resources.CustomResource {
+    /**
+     * Display name of the VM group.
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
+    /**
+     * @return Display name of the VM group.
+     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Virtual machine members of this group.
+     */
     @OutputExport(name="members", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> members;
 
+    /**
+     * @return Virtual machine members of this group.
+     */
     public Output</* @Nullable */ List<String>> getMembers() {
         return this.members;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * NSX revision number.
+     */
     @OutputExport(name="revision", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> revision;
 
+    /**
+     * @return NSX revision number.
+     */
     public Output</* @Nullable */ Double> getRevision() {
         return this.revision;
     }
+    /**
+     * VM Group status.
+     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
+    /**
+     * @return VM Group status.
+     */
     public Output<String> getStatus() {
         return this.status;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public WorkloadNetworkVMGroup(String name, WorkloadNetworkVMGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:avs:WorkloadNetworkVMGroup", name, args == null ? WorkloadNetworkVMGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -81,6 +232,14 @@ public class WorkloadNetworkVMGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static WorkloadNetworkVMGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WorkloadNetworkVMGroup(name, id, options);
     }

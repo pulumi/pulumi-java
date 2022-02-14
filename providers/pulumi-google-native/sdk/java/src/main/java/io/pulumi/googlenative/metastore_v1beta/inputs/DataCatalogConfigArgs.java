@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies how metastore metadata should be integrated with the Data Catalog service.
+ */
 public final class DataCatalogConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataCatalogConfigArgs Empty = new DataCatalogConfigArgs();
 
+    /**
+     * Defines whether the metastore metadata should be synced to Data Catalog. The default value is to disable syncing metastore metadata to Data Catalog.
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

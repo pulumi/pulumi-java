@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class QuotaInfoResponse {
+/**
+ * The cores used by the cluster.
+ */
     private final @Nullable Integer coresUsed;
 
     @OutputCustomType.Constructor({"coresUsed"})
@@ -18,6 +21,9 @@ public final class QuotaInfoResponse {
         this.coresUsed = coresUsed;
     }
 
+/**
+ * The cores used by the cluster.
+ */
     public Optional<Integer> getCoresUsed() {
         return Optional.ofNullable(this.coresUsed);
     }

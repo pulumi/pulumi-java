@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GkeClusterReferenceResponse {
+/**
+ * The full or partial name of a GKE cluster, using one of the following forms: * `projects/{project}/locations/{location}/clusters/{cluster}` * `locations/{location}/clusters/{cluster}` * `{cluster}` If project and location are not specified, the project and location of the GameServerCluster resource are used to generate the full name of the GKE cluster.
+ */
     private final String cluster;
 
     @OutputCustomType.Constructor({"cluster"})
@@ -16,6 +19,9 @@ public final class GkeClusterReferenceResponse {
         this.cluster = Objects.requireNonNull(cluster);
     }
 
+/**
+ * The full or partial name of a GKE cluster, using one of the following forms: * `projects/{project}/locations/{location}/clusters/{cluster}` * `locations/{location}/clusters/{cluster}` * `{cluster}` If project and location are not specified, the project and location of the GameServerCluster resource are used to generate the full name of the GKE cluster.
+ */
     public String getCluster() {
         return this.cluster;
     }

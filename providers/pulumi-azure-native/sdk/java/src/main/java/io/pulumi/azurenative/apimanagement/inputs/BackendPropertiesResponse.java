@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties specific to the Backend Type.
+ */
 public final class BackendPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BackendPropertiesResponse Empty = new BackendPropertiesResponse();
 
+    /**
+     * Backend Service Fabric Cluster Properties
+     */
     @InputImport(name="serviceFabricCluster")
     private final @Nullable BackendServiceFabricClusterPropertiesResponse serviceFabricCluster;
 

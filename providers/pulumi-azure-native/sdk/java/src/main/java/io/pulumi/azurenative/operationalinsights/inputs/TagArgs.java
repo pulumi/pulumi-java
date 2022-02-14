@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A tag of a saved search.
+ */
 public final class TagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TagArgs Empty = new TagArgs();
 
+    /**
+     * The tag name.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -20,6 +26,9 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * The tag value.
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

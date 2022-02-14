@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecretArgs Empty = new SecretArgs();
 
+    /**
+     * The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `\p{Ll}\p{Lo}{0,62}` Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}` No more than 64 labels can be assigned to a given resource.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -23,6 +29,9 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -30,6 +39,9 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Immutable. The replication policy of the secret data attached to the Secret. The replication policy cannot be changed after the Secret has been created.
+     */
     @InputImport(name="replication", required=true)
     private final Input<ReplicationArgs> replication;
 
@@ -37,6 +49,9 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
         return this.replication;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="secretId", required=true)
     private final Input<String> secretId;
 

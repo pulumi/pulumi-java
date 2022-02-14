@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).
+ */
     @EnumType
     public enum OrganizationBillingType {
+/**
+ * Billing type not specified.
+ */
         BillingTypeUnspecified("BILLING_TYPE_UNSPECIFIED"),
+/**
+ * A pre-paid subscription to Apigee.
+ */
         Subscription("SUBSCRIPTION"),
+/**
+ * Free and limited access to Apigee for evaluation purposes only. only.
+ */
         Evaluation("EVALUATION");
 
         private final String value;

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Indicates whether the hostname is a standard or repository hostname.
+ */
     @EnumType
     public enum HostType {
+/**
+ * 
+ */
         Standard("Standard"),
+/**
+ * 
+ */
         Repository("Repository");
 
         private final String value;

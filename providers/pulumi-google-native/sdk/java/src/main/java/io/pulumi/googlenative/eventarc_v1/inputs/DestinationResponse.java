@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Represents a target of an invocation over HTTP.
+ */
 public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DestinationResponse Empty = new DestinationResponse();
 
+    /**
+     * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+     */
     @InputImport(name="cloudFunction", required=true)
     private final String cloudFunction;
 
@@ -21,6 +27,9 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
         return this.cloudFunction;
     }
 
+    /**
+     * Cloud Run fully-managed resource that receives the events. The resource should be in the same project as the trigger.
+     */
     @InputImport(name="cloudRun", required=true)
     private final CloudRunResponse cloudRun;
 
@@ -28,6 +37,9 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
         return this.cloudRun;
     }
 
+    /**
+     * A GKE service capable of receiving events. The service should be running in the same project as the trigger.
+     */
     @InputImport(name="gke", required=true)
     private final GKEResponse gke;
 

@@ -11,16 +11,49 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MySqlReplicaConfigurationResponse {
+/**
+ * PEM representation of the trusted CA's x509 certificate.
+ */
     private final String caCertificate;
+/**
+ * PEM representation of the replica's x509 certificate.
+ */
     private final String clientCertificate;
+/**
+ * PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.
+ */
     private final String clientKey;
+/**
+ * Seconds to wait between connect retries. MySQL's default is 60 seconds.
+ */
     private final Integer connectRetryInterval;
+/**
+ * Path to a SQL dump file in Google Cloud Storage from which the replica instance is to be created. The URI is in the form gs://bucketName/fileName. Compressed gzip files (.gz) are also supported. Dumps have the binlog co-ordinates from which replication begins. This can be accomplished by setting --master-data to 1 when using mysqldump.
+ */
     private final String dumpFilePath;
+/**
+ * This is always `sql#mysqlReplicaConfiguration`.
+ */
     private final String kind;
+/**
+ * Interval in milliseconds between replication heartbeats.
+ */
     private final String masterHeartbeatPeriod;
+/**
+ * The password for the replication connection.
+ */
     private final String password;
+/**
+ * A list of permissible ciphers to use for SSL encryption.
+ */
     private final String sslCipher;
+/**
+ * The username for the replication connection.
+ */
     private final String username;
+/**
+ * Whether or not to check the primary instance's Common Name value in the certificate that it sends during the SSL handshake.
+ */
     private final Boolean verifyServerCertificate;
 
     @OutputCustomType.Constructor({"caCertificate","clientCertificate","clientKey","connectRetryInterval","dumpFilePath","kind","masterHeartbeatPeriod","password","sslCipher","username","verifyServerCertificate"})
@@ -49,36 +82,69 @@ public final class MySqlReplicaConfigurationResponse {
         this.verifyServerCertificate = Objects.requireNonNull(verifyServerCertificate);
     }
 
+/**
+ * PEM representation of the trusted CA's x509 certificate.
+ */
     public String getCaCertificate() {
         return this.caCertificate;
     }
+/**
+ * PEM representation of the replica's x509 certificate.
+ */
     public String getClientCertificate() {
         return this.clientCertificate;
     }
+/**
+ * PEM representation of the replica's private key. The corresponsing public key is encoded in the client's certificate.
+ */
     public String getClientKey() {
         return this.clientKey;
     }
+/**
+ * Seconds to wait between connect retries. MySQL's default is 60 seconds.
+ */
     public Integer getConnectRetryInterval() {
         return this.connectRetryInterval;
     }
+/**
+ * Path to a SQL dump file in Google Cloud Storage from which the replica instance is to be created. The URI is in the form gs://bucketName/fileName. Compressed gzip files (.gz) are also supported. Dumps have the binlog co-ordinates from which replication begins. This can be accomplished by setting --master-data to 1 when using mysqldump.
+ */
     public String getDumpFilePath() {
         return this.dumpFilePath;
     }
+/**
+ * This is always `sql#mysqlReplicaConfiguration`.
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * Interval in milliseconds between replication heartbeats.
+ */
     public String getMasterHeartbeatPeriod() {
         return this.masterHeartbeatPeriod;
     }
+/**
+ * The password for the replication connection.
+ */
     public String getPassword() {
         return this.password;
     }
+/**
+ * A list of permissible ciphers to use for SSL encryption.
+ */
     public String getSslCipher() {
         return this.sslCipher;
     }
+/**
+ * The username for the replication connection.
+ */
     public String getUsername() {
         return this.username;
     }
+/**
+ * Whether or not to check the primary instance's Common Name value in the certificate that it sends during the SSL handshake.
+ */
     public Boolean getVerifyServerCertificate() {
         return this.verifyServerCertificate;
     }

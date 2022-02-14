@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetBackupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBackupArgs Empty = new GetBackupArgs();
 
+    /**
+     * The name of the NetApp account
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetBackupArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the backup
+     */
     @InputImport(name="backupName", required=true)
     private final String backupName;
 
@@ -26,6 +35,9 @@ public final class GetBackupArgs extends io.pulumi.resources.InvokeArgs {
         return this.backupName;
     }
 
+    /**
+     * The name of the capacity pool
+     */
     @InputImport(name="poolName", required=true)
     private final String poolName;
 
@@ -33,6 +45,9 @@ public final class GetBackupArgs extends io.pulumi.resources.InvokeArgs {
         return this.poolName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -40,6 +55,9 @@ public final class GetBackupArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the volume
+     */
     @InputImport(name="volumeName", required=true)
     private final String volumeName;
 

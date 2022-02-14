@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ManagedZonePrivateVisibilityConfigResponse {
+/**
+ * 
+ */
     private final String kind;
+/**
+ * The list of VPC networks that can see this zone.
+ */
     private final List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
 
     @OutputCustomType.Constructor({"kind","networks"})
@@ -22,9 +28,15 @@ public final class ManagedZonePrivateVisibilityConfigResponse {
         this.networks = Objects.requireNonNull(networks);
     }
 
+/**
+ * 
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * The list of VPC networks that can see this zone.
+ */
     public List<ManagedZonePrivateVisibilityConfigNetworkResponse> getNetworks() {
         return this.networks;
     }

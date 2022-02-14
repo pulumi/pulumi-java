@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CostAllocationRuleDetailsResponse {
+/**
+ * Source resources for cost allocation. At this time, this list can contain no more than one element.
+ */
     private final @Nullable List<SourceCostAllocationResourceResponse> sourceResources;
+/**
+ * Target resources for cost allocation. At this time, this list can contain no more than one element.
+ */
     private final @Nullable List<TargetCostAllocationResourceResponse> targetResources;
 
     @OutputCustomType.Constructor({"sourceResources","targetResources"})
@@ -23,9 +29,15 @@ public final class CostAllocationRuleDetailsResponse {
         this.targetResources = targetResources;
     }
 
+/**
+ * Source resources for cost allocation. At this time, this list can contain no more than one element.
+ */
     public List<SourceCostAllocationResourceResponse> getSourceResources() {
         return this.sourceResources == null ? List.of() : this.sourceResources;
     }
+/**
+ * Target resources for cost allocation. At this time, this list can contain no more than one element.
+ */
     public List<TargetCostAllocationResourceResponse> getTargetResources() {
         return this.targetResources == null ? List.of() : this.targetResources;
     }

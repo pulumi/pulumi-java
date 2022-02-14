@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Tag filter information for the VM.
+ */
 public final class TagSettingsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TagSettingsPropertiesArgs Empty = new TagSettingsPropertiesArgs();
 
+    /**
+     * Filter VMs by Any or All specified tags.
+     */
     @InputImport(name="filterOperator")
     private final @Nullable Input<TagOperators> filterOperator;
 
@@ -24,6 +30,9 @@ public final class TagSettingsPropertiesArgs extends io.pulumi.resources.Resourc
         return this.filterOperator == null ? Input.empty() : this.filterOperator;
     }
 
+    /**
+     * Dictionary of tags with its list of values.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,List<String>>> tags;
 

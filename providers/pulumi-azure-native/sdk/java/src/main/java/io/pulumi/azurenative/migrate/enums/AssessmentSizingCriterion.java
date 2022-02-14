@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Assessment sizing criterion.
+ */
     @EnumType
     public enum AssessmentSizingCriterion {
+/**
+ * 
+ */
         PerformanceBased("PerformanceBased"),
+/**
+ * 
+ */
         AsOnPremises("AsOnPremises");
 
         private final String value;

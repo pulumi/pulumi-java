@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * VirtualNetworkGatewayConnection properties.
+ */
 public final class TunnelConnectionHealthResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TunnelConnectionHealthResponse Empty = new TunnelConnectionHealthResponse();
 
+    /**
+     * Virtual Network Gateway connection status.
+     */
     @InputImport(name="connectionStatus", required=true)
     private final String connectionStatus;
 
@@ -20,6 +26,9 @@ public final class TunnelConnectionHealthResponse extends io.pulumi.resources.In
         return this.connectionStatus;
     }
 
+    /**
+     * The Egress Bytes Transferred in this connection.
+     */
     @InputImport(name="egressBytesTransferred", required=true)
     private final Double egressBytesTransferred;
 
@@ -27,6 +36,9 @@ public final class TunnelConnectionHealthResponse extends io.pulumi.resources.In
         return this.egressBytesTransferred;
     }
 
+    /**
+     * The Ingress Bytes Transferred in this connection.
+     */
     @InputImport(name="ingressBytesTransferred", required=true)
     private final Double ingressBytesTransferred;
 
@@ -34,6 +46,9 @@ public final class TunnelConnectionHealthResponse extends io.pulumi.resources.In
         return this.ingressBytesTransferred;
     }
 
+    /**
+     * The time at which connection was established in Utc format.
+     */
     @InputImport(name="lastConnectionEstablishedUtcTime", required=true)
     private final String lastConnectionEstablishedUtcTime;
 
@@ -41,6 +56,9 @@ public final class TunnelConnectionHealthResponse extends io.pulumi.resources.In
         return this.lastConnectionEstablishedUtcTime;
     }
 
+    /**
+     * Tunnel name.
+     */
     @InputImport(name="tunnel", required=true)
     private final String tunnel;
 

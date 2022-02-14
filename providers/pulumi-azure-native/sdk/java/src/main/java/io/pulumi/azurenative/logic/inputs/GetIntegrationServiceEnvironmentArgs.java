@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetIntegrationServiceEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIntegrationServiceEnvironmentArgs Empty = new GetIntegrationServiceEnvironmentArgs();
 
+    /**
+     * The integration service environment name.
+     */
     @InputImport(name="integrationServiceEnvironmentName", required=true)
     private final String integrationServiceEnvironmentName;
 
@@ -19,6 +25,9 @@ public final class GetIntegrationServiceEnvironmentArgs extends io.pulumi.resour
         return this.integrationServiceEnvironmentName;
     }
 
+    /**
+     * The resource group.
+     */
     @InputImport(name="resourceGroup", required=true)
     private final String resourceGroup;
 

@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Kubernetes role storage resource
+ */
 public final class KubernetesRoleStorageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KubernetesRoleStorageResponse Empty = new KubernetesRoleStorageResponse();
 
+    /**
+     * Mount points of shares in role(s).
+     */
     @InputImport(name="endpoints")
     private final @Nullable List<MountPointMapResponse> endpoints;
 
@@ -23,6 +29,9 @@ public final class KubernetesRoleStorageResponse extends io.pulumi.resources.Inv
         return this.endpoints == null ? List.of() : this.endpoints;
     }
 
+    /**
+     * Kubernetes storage class info.
+     */
     @InputImport(name="storageClasses", required=true)
     private final List<KubernetesRoleStorageClassInfoResponse> storageClasses;
 

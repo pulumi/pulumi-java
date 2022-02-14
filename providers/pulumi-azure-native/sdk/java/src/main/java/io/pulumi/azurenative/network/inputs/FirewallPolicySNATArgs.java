@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The private IP addresses/IP ranges to which traffic will not be SNAT.
+ */
 public final class FirewallPolicySNATArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallPolicySNATArgs Empty = new FirewallPolicySNATArgs();
 
+    /**
+     * List of private IP addresses/IP address ranges to not be SNAT.
+     */
     @InputImport(name="privateRanges")
     private final @Nullable Input<List<String>> privateRanges;
 

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The quick replies response message.
+ */
 public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs Empty = new GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs();
 
+    /**
+     * Optional. The collection of quick replies.
+     */
     @InputImport(name="quickReplies")
     private final @Nullable Input<List<String>> quickReplies;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs extends 
         return this.quickReplies == null ? Input.empty() : this.quickReplies;
     }
 
+    /**
+     * Optional. The title of the collection of quick replies.
+     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 

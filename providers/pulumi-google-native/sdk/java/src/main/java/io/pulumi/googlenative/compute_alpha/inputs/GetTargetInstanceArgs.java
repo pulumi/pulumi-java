@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetTargetInstanceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTargetInstanceArgs Empty = new GetTargetInstanceArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -21,6 +27,9 @@ public final class GetTargetInstanceArgs extends io.pulumi.resources.InvokeArgs 
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="targetInstance", required=true)
     private final String targetInstance;
 
@@ -28,6 +37,9 @@ public final class GetTargetInstanceArgs extends io.pulumi.resources.InvokeArgs 
         return this.targetInstance;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="zone", required=true)
     private final String zone;
 

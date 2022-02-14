@@ -8,7 +8,6 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.redis_v1beta1.InstanceArgs;
 import io.pulumi.googlenative.redis_v1beta1.outputs.MaintenancePolicyResponse;
 import io.pulumi.googlenative.redis_v1beta1.outputs.MaintenanceScheduleResponse;
 import io.pulumi.googlenative.redis_v1beta1.outputs.NodeInfoResponse;
@@ -21,195 +20,390 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a Redis instance based on the specified tier and memory size. By default, the instance is accessible from the project's [default network](https://cloud.google.com/vpc/docs/vpc). The creation is executed asynchronously and callers may check the returned operation to track its progress. Once the operation is completed the Redis instance will be fully functional. The completed longrunning.Operation will contain the new instance object in the response field. The returned operation is automatically deleted after a few hours, so there is no need to call DeleteOperation.
+ */
 @ResourceType(type="google-native:redis/v1beta1:Instance")
 public class Instance extends io.pulumi.resources.CustomResource {
+    /**
+     * Optional. If specified, at least one node will be provisioned in this zone in addition to the zone specified in location_id. Only applicable to standard tier. If provided, it must be a different zone from the one provided in [location_id]. Additional nodes beyond the first 2 will be placed in zones selected by the service.
+     */
     @OutputExport(name="alternativeLocationId", type=String.class, parameters={})
     private Output<String> alternativeLocationId;
 
+    /**
+     * @return Optional. If specified, at least one node will be provisioned in this zone in addition to the zone specified in location_id. Only applicable to standard tier. If provided, it must be a different zone from the one provided in [location_id]. Additional nodes beyond the first 2 will be placed in zones selected by the service.
+     */
     public Output<String> getAlternativeLocationId() {
         return this.alternativeLocationId;
     }
+    /**
+     * Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to "true" AUTH is enabled on the instance. Default value is "false" meaning AUTH is disabled.
+     */
     @OutputExport(name="authEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> authEnabled;
 
+    /**
+     * @return Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to "true" AUTH is enabled on the instance. Default value is "false" meaning AUTH is disabled.
+     */
     public Output<Boolean> getAuthEnabled() {
         return this.authEnabled;
     }
+    /**
+     * Optional. The full name of the Google Compute Engine [network](https://cloud.google.com/vpc/docs/vpc) to which the instance is connected. If left unspecified, the `default` network will be used.
+     */
     @OutputExport(name="authorizedNetwork", type=String.class, parameters={})
     private Output<String> authorizedNetwork;
 
+    /**
+     * @return Optional. The full name of the Google Compute Engine [network](https://cloud.google.com/vpc/docs/vpc) to which the instance is connected. If left unspecified, the `default` network will be used.
+     */
     public Output<String> getAuthorizedNetwork() {
         return this.authorizedNetwork;
     }
+    /**
+     * Optional. The network connect mode of the Redis instance. If not provided, the connect mode defaults to DIRECT_PEERING.
+     */
     @OutputExport(name="connectMode", type=String.class, parameters={})
     private Output<String> connectMode;
 
+    /**
+     * @return Optional. The network connect mode of the Redis instance. If not provided, the connect mode defaults to DIRECT_PEERING.
+     */
     public Output<String> getConnectMode() {
         return this.connectMode;
     }
+    /**
+     * The time the instance was created.
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return The time the instance was created.
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * The current zone where the Redis primary node is located. In basic tier, this will always be the same as [location_id]. In standard tier, this can be the zone of any node in the instance.
+     */
     @OutputExport(name="currentLocationId", type=String.class, parameters={})
     private Output<String> currentLocationId;
 
+    /**
+     * @return The current zone where the Redis primary node is located. In basic tier, this will always be the same as [location_id]. In standard tier, this can be the zone of any node in the instance.
+     */
     public Output<String> getCurrentLocationId() {
         return this.currentLocationId;
     }
+    /**
+     * An arbitrary and optional user-provided name for the instance.
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return An arbitrary and optional user-provided name for the instance.
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
+     */
     @OutputExport(name="host", type=String.class, parameters={})
     private Output<String> host;
 
+    /**
+     * @return Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
+     */
     public Output<String> getHost() {
         return this.host;
     }
+    /**
+     * Resource labels to represent user provided metadata
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
+    /**
+     * @return Resource labels to represent user provided metadata
+     */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * Optional. The zone where the instance will be provisioned. If not provided, the service will choose a zone from the specified region for the instance. For standard tier, additional nodes will be added across multiple zones for protection against zonal failures. If specified, at least one node will be provisioned in this zone.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Optional. The zone where the instance will be provisioned. If not provided, the service will choose a zone from the specified region for the instance. For standard tier, additional nodes will be added across multiple zones for protection against zonal failures. If specified, at least one node will be provisioned in this zone.
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Optional. The maintenance policy for the instance. If not provided, maintenance events can be performed at any time.
+     */
     @OutputExport(name="maintenancePolicy", type=MaintenancePolicyResponse.class, parameters={})
     private Output<MaintenancePolicyResponse> maintenancePolicy;
 
+    /**
+     * @return Optional. The maintenance policy for the instance. If not provided, maintenance events can be performed at any time.
+     */
     public Output<MaintenancePolicyResponse> getMaintenancePolicy() {
         return this.maintenancePolicy;
     }
+    /**
+     * Date and time of upcoming maintenance events which have been scheduled.
+     */
     @OutputExport(name="maintenanceSchedule", type=MaintenanceScheduleResponse.class, parameters={})
     private Output<MaintenanceScheduleResponse> maintenanceSchedule;
 
+    /**
+     * @return Date and time of upcoming maintenance events which have been scheduled.
+     */
     public Output<MaintenanceScheduleResponse> getMaintenanceSchedule() {
         return this.maintenanceSchedule;
     }
+    /**
+     * Redis memory size in GiB.
+     */
     @OutputExport(name="memorySizeGb", type=Integer.class, parameters={})
     private Output<Integer> memorySizeGb;
 
+    /**
+     * @return Redis memory size in GiB.
+     */
     public Output<Integer> getMemorySizeGb() {
         return this.memorySizeGb;
     }
+    /**
+     * Unique name of the resource in this scope including project and location using the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Redis instances are managed and addressed at regional level so location_id here refers to a GCP region; however, users may choose which specific zone (or collection of zones for cross-zone instances) an instance should be provisioned in. Refer to location_id and alternative_location_id fields for more details.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Unique name of the resource in this scope including project and location using the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Redis instances are managed and addressed at regional level so location_id here refers to a GCP region; however, users may choose which specific zone (or collection of zones for cross-zone instances) an instance should be provisioned in. Refer to location_id and alternative_location_id fields for more details.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Info per node.
+     */
     @OutputExport(name="nodes", type=List.class, parameters={NodeInfoResponse.class})
     private Output<List<NodeInfoResponse>> nodes;
 
+    /**
+     * @return Info per node.
+     */
     public Output<List<NodeInfoResponse>> getNodes() {
         return this.nodes;
     }
+    /**
+     * Optional. Persistence configuration parameters
+     */
     @OutputExport(name="persistenceConfig", type=PersistenceConfigResponse.class, parameters={})
     private Output<PersistenceConfigResponse> persistenceConfig;
 
+    /**
+     * @return Optional. Persistence configuration parameters
+     */
     public Output<PersistenceConfigResponse> getPersistenceConfig() {
         return this.persistenceConfig;
     }
+    /**
+     * Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export operation.
+     */
     @OutputExport(name="persistenceIamIdentity", type=String.class, parameters={})
     private Output<String> persistenceIamIdentity;
 
+    /**
+     * @return Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export operation.
+     */
     public Output<String> getPersistenceIamIdentity() {
         return this.persistenceIamIdentity;
     }
+    /**
+     * The port number of the exposed Redis endpoint.
+     */
     @OutputExport(name="port", type=Integer.class, parameters={})
     private Output<Integer> port;
 
+    /**
+     * @return The port number of the exposed Redis endpoint.
+     */
     public Output<Integer> getPort() {
         return this.port;
     }
+    /**
+     * Hostname or IP address of the exposed readonly Redis endpoint. Standard tier only. Targets all healthy replica nodes in instance. Replication is asynchronous and replica nodes will exhibit some lag behind the primary. Write requests must target 'host'.
+     */
     @OutputExport(name="readEndpoint", type=String.class, parameters={})
     private Output<String> readEndpoint;
 
+    /**
+     * @return Hostname or IP address of the exposed readonly Redis endpoint. Standard tier only. Targets all healthy replica nodes in instance. Replication is asynchronous and replica nodes will exhibit some lag behind the primary. Write requests must target 'host'.
+     */
     public Output<String> getReadEndpoint() {
         return this.readEndpoint;
     }
+    /**
+     * The port number of the exposed readonly redis endpoint. Standard tier only. Write requests should target 'port'.
+     */
     @OutputExport(name="readEndpointPort", type=Integer.class, parameters={})
     private Output<Integer> readEndpointPort;
 
+    /**
+     * @return The port number of the exposed readonly redis endpoint. Standard tier only. Write requests should target 'port'.
+     */
     public Output<Integer> getReadEndpointPort() {
         return this.readEndpointPort;
     }
+    /**
+     * Optional. Read replica mode. Can only be specified when trying to create the instance.
+     */
     @OutputExport(name="readReplicasMode", type=String.class, parameters={})
     private Output<String> readReplicasMode;
 
+    /**
+     * @return Optional. Read replica mode. Can only be specified when trying to create the instance.
+     */
     public Output<String> getReadReplicasMode() {
         return this.readReplicasMode;
     }
+    /**
+     * Optional. Redis configuration parameters, according to http://redis.io/topics/config. Currently, the only supported parameters are: Redis version 3.2 and newer: * maxmemory-policy * notify-keyspace-events Redis version 4.0 and newer: * activedefrag * lfu-decay-time * lfu-log-factor * maxmemory-gb Redis version 5.0 and newer: * stream-node-max-bytes * stream-node-max-entries
+     */
     @OutputExport(name="redisConfigs", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> redisConfigs;
 
+    /**
+     * @return Optional. Redis configuration parameters, according to http://redis.io/topics/config. Currently, the only supported parameters are: Redis version 3.2 and newer: * maxmemory-policy * notify-keyspace-events Redis version 4.0 and newer: * activedefrag * lfu-decay-time * lfu-log-factor * maxmemory-gb Redis version 5.0 and newer: * stream-node-max-bytes * stream-node-max-entries
+     */
     public Output<Map<String,String>> getRedisConfigs() {
         return this.redisConfigs;
     }
+    /**
+     * Optional. The version of Redis software. If not provided, latest supported version will be used. Currently, the supported values are: * `REDIS_3_2` for Redis 3.2 compatibility * `REDIS_4_0` for Redis 4.0 compatibility (default) * `REDIS_5_0` for Redis 5.0 compatibility * `REDIS_6_X` for Redis 6.x compatibility
+     */
     @OutputExport(name="redisVersion", type=String.class, parameters={})
     private Output<String> redisVersion;
 
+    /**
+     * @return Optional. The version of Redis software. If not provided, latest supported version will be used. Currently, the supported values are: * `REDIS_3_2` for Redis 3.2 compatibility * `REDIS_4_0` for Redis 4.0 compatibility (default) * `REDIS_5_0` for Redis 5.0 compatibility * `REDIS_6_X` for Redis 6.x compatibility
+     */
     public Output<String> getRedisVersion() {
         return this.redisVersion;
     }
+    /**
+     * Optional. The number of replica nodes. The valid range for the Standard Tier with read replicas enabled is [1-5] and defaults to 2. If read replicas are not enabled for a Standard Tier instance, the only valid value is 1 and the default is 1. The valid value for basic tier is 0 and the default is also 0.
+     */
     @OutputExport(name="replicaCount", type=Integer.class, parameters={})
     private Output<Integer> replicaCount;
 
+    /**
+     * @return Optional. The number of replica nodes. The valid range for the Standard Tier with read replicas enabled is [1-5] and defaults to 2. If read replicas are not enabled for a Standard Tier instance, the only valid value is 1 and the default is 1. The valid value for basic tier is 0 and the default is also 0.
+     */
     public Output<Integer> getReplicaCount() {
         return this.replicaCount;
     }
+    /**
+     * Optional. For DIRECT_PEERING mode, the CIDR range of internal addresses that are reserved for this instance. Range must be unique and non-overlapping with existing subnets in an authorized network. For PRIVATE_SERVICE_ACCESS mode, the name of one allocated IP address ranges associated with this private service access connection. If not provided, the service will choose an unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29. For READ_REPLICAS_ENABLED the default block size is /28.
+     */
     @OutputExport(name="reservedIpRange", type=String.class, parameters={})
     private Output<String> reservedIpRange;
 
+    /**
+     * @return Optional. For DIRECT_PEERING mode, the CIDR range of internal addresses that are reserved for this instance. Range must be unique and non-overlapping with existing subnets in an authorized network. For PRIVATE_SERVICE_ACCESS mode, the name of one allocated IP address ranges associated with this private service access connection. If not provided, the service will choose an unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29. For READ_REPLICAS_ENABLED the default block size is /28.
+     */
     public Output<String> getReservedIpRange() {
         return this.reservedIpRange;
     }
+    /**
+     * Optional. Additional ip ranges for node placement, beyond those specified in reserved_ip_range. At most 1 secondary IP range is supported. The mask value must not exceed /28. Not supported for BASIC tier. Updates can only add new ranges, once added ranges cannot be changed or deleted. Values in this list cannot overlap with the reserved_ip_range. Not supported during instance creation.
+     */
     @OutputExport(name="secondaryIpRange", type=String.class, parameters={})
     private Output<String> secondaryIpRange;
 
+    /**
+     * @return Optional. Additional ip ranges for node placement, beyond those specified in reserved_ip_range. At most 1 secondary IP range is supported. The mask value must not exceed /28. Not supported for BASIC tier. Updates can only add new ranges, once added ranges cannot be changed or deleted. Values in this list cannot overlap with the reserved_ip_range. Not supported during instance creation.
+     */
     public Output<String> getSecondaryIpRange() {
         return this.secondaryIpRange;
     }
+    /**
+     * List of server CA certificates for the instance.
+     */
     @OutputExport(name="serverCaCerts", type=List.class, parameters={TlsCertificateResponse.class})
     private Output<List<TlsCertificateResponse>> serverCaCerts;
 
+    /**
+     * @return List of server CA certificates for the instance.
+     */
     public Output<List<TlsCertificateResponse>> getServerCaCerts() {
         return this.serverCaCerts;
     }
+    /**
+     * The current state of this instance.
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return The current state of this instance.
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * Additional information about the current status of this instance, if available.
+     */
     @OutputExport(name="statusMessage", type=String.class, parameters={})
     private Output<String> statusMessage;
 
+    /**
+     * @return Additional information about the current status of this instance, if available.
+     */
     public Output<String> getStatusMessage() {
         return this.statusMessage;
     }
+    /**
+     * The service tier of the instance.
+     */
     @OutputExport(name="tier", type=String.class, parameters={})
     private Output<String> tier;
 
+    /**
+     * @return The service tier of the instance.
+     */
     public Output<String> getTier() {
         return this.tier;
     }
+    /**
+     * Optional. The TLS mode of the Redis instance. If not provided, TLS is disabled for the instance.
+     */
     @OutputExport(name="transitEncryptionMode", type=String.class, parameters={})
     private Output<String> transitEncryptionMode;
 
+    /**
+     * @return Optional. The TLS mode of the Redis instance. If not provided, TLS is disabled for the instance.
+     */
     public Output<String> getTransitEncryptionMode() {
         return this.transitEncryptionMode;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Instance(String name, InstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:redis/v1beta1:Instance", name, args == null ? InstanceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -225,6 +419,14 @@ public class Instance extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Instance get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Instance(name, id, options);
     }

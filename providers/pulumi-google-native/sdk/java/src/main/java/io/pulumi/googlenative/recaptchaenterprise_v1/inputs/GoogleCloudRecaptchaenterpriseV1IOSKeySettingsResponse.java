@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Settings specific to keys that can be used by iOS apps.
+ */
 public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse Empty = new GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse();
 
+    /**
+     * If set to true, allowed_bundle_ids are not enforced.
+     */
     @InputImport(name="allowAllBundleIds", required=true)
     private final Boolean allowAllBundleIds;
 
@@ -21,6 +27,9 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse extend
         return this.allowAllBundleIds;
     }
 
+    /**
+     * iOS bundle ids of apps allowed to use the key. Example: 'com.companyname.productname.appname'
+     */
     @InputImport(name="allowedBundleIds", required=true)
     private final List<String> allowedBundleIds;
 

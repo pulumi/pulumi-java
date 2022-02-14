@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Call-specific metadata.
+ */
 public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs Empty = new GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs();
 
+    /**
+     * The audio channel that contains the agent.
+     */
     @InputImport(name="agentChannel")
     private final @Nullable Input<Integer> agentChannel;
 
@@ -21,6 +27,9 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
         return this.agentChannel == null ? Input.empty() : this.agentChannel;
     }
 
+    /**
+     * The audio channel that contains the customer.
+     */
     @InputImport(name="customerChannel")
     private final @Nullable Input<Integer> customerChannel;
 

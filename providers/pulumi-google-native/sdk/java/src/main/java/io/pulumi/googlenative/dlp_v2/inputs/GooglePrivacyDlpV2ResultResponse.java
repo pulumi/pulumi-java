@@ -11,10 +11,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * All result fields mentioned below are updated while the job is processing.
+ */
 public final class GooglePrivacyDlpV2ResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2ResultResponse Empty = new GooglePrivacyDlpV2ResultResponse();
 
+    /**
+     * Statistics related to the processing of hybrid inspect.
+     */
     @InputImport(name="hybridStats", required=true)
     private final GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats;
 
@@ -22,6 +28,9 @@ public final class GooglePrivacyDlpV2ResultResponse extends io.pulumi.resources.
         return this.hybridStats;
     }
 
+    /**
+     * Statistics of how many instances of each info type were found during inspect job.
+     */
     @InputImport(name="infoTypeStats", required=true)
     private final List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats;
 
@@ -29,6 +38,9 @@ public final class GooglePrivacyDlpV2ResultResponse extends io.pulumi.resources.
         return this.infoTypeStats;
     }
 
+    /**
+     * Total size in bytes that were processed.
+     */
     @InputImport(name="processedBytes", required=true)
     private final String processedBytes;
 
@@ -36,6 +48,9 @@ public final class GooglePrivacyDlpV2ResultResponse extends io.pulumi.resources.
         return this.processedBytes;
     }
 
+    /**
+     * Estimate of the number of bytes to process.
+     */
     @InputImport(name="totalEstimatedBytes", required=true)
     private final String totalEstimatedBytes;
 

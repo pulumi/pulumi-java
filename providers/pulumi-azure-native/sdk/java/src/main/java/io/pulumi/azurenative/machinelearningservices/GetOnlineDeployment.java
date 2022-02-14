@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOnlineDeployment {
+/**
+ * 
+API Version: 2021-03-01-preview.
+ */
     public static CompletableFuture<GetOnlineDeploymentResult> invokeAsync(GetOnlineDeploymentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getOnlineDeployment", TypeShape.of(GetOnlineDeploymentResult.class), args == null ? GetOnlineDeploymentArgs.Empty : args, Utilities.withVersion(options));
     }

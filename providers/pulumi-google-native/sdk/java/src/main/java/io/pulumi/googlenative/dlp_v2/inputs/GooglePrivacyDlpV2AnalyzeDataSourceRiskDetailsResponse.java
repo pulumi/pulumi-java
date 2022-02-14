@@ -16,10 +16,16 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RequestedRiskAnaly
 import java.util.Objects;
 
 
+/**
+ * Result of a risk analysis operation request.
+ */
 public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse Empty = new GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse();
 
+    /**
+     * Categorical stats result
+     */
     @InputImport(name="categoricalStatsResult", required=true)
     private final GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult;
 
@@ -27,6 +33,9 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
         return this.categoricalStatsResult;
     }
 
+    /**
+     * Delta-presence result
+     */
     @InputImport(name="deltaPresenceEstimationResult", required=true)
     private final GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult;
 
@@ -34,6 +43,9 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
         return this.deltaPresenceEstimationResult;
     }
 
+    /**
+     * K-anonymity result
+     */
     @InputImport(name="kAnonymityResult", required=true)
     private final GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult;
 
@@ -41,6 +53,9 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
         return this.kAnonymityResult;
     }
 
+    /**
+     * K-map result
+     */
     @InputImport(name="kMapEstimationResult", required=true)
     private final GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult;
 
@@ -48,6 +63,9 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
         return this.kMapEstimationResult;
     }
 
+    /**
+     * L-divesity result
+     */
     @InputImport(name="lDiversityResult", required=true)
     private final GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult;
 
@@ -55,6 +73,9 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
         return this.lDiversityResult;
     }
 
+    /**
+     * Numerical stats result
+     */
     @InputImport(name="numericalStatsResult", required=true)
     private final GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult;
 
@@ -62,6 +83,9 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
         return this.numericalStatsResult;
     }
 
+    /**
+     * The configuration used for this job.
+     */
     @InputImport(name="requestedOptions", required=true)
     private final GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions;
 
@@ -69,6 +93,9 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
         return this.requestedOptions;
     }
 
+    /**
+     * Privacy metric to compute.
+     */
     @InputImport(name="requestedPrivacyMetric", required=true)
     private final GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric;
 
@@ -76,6 +103,9 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse extend
         return this.requestedPrivacyMetric;
     }
 
+    /**
+     * Input dataset to compute metrics over.
+     */
     @InputImport(name="requestedSourceTable", required=true)
     private final GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable;
 

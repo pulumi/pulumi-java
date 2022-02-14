@@ -13,10 +13,16 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Provenance of a build. Contains all information needed to verify the full details about the build from source to completion.
+ */
 public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BuildProvenanceResponse Empty = new BuildProvenanceResponse();
 
+    /**
+     * Special options applied to this build. This is a catch-all field where build providers can enter any desired additional details.
+     */
     @InputImport(name="buildOptions", required=true)
     private final Map<String,String> buildOptions;
 
@@ -24,6 +30,9 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
         return this.buildOptions;
     }
 
+    /**
+     * Version string of the builder at the time this build was executed.
+     */
     @InputImport(name="builderVersion", required=true)
     private final String builderVersion;
 
@@ -31,6 +40,9 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
         return this.builderVersion;
     }
 
+    /**
+     * Output of the build.
+     */
     @InputImport(name="builtArtifacts", required=true)
     private final List<ArtifactResponse> builtArtifacts;
 
@@ -38,6 +50,9 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
         return this.builtArtifacts;
     }
 
+    /**
+     * Commands requested by the build.
+     */
     @InputImport(name="commands", required=true)
     private final List<CommandResponse> commands;
 
@@ -45,6 +60,9 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
         return this.commands;
     }
 
+    /**
+     * Time at which the build was created.
+     */
     @InputImport(name="createTime", required=true)
     private final String createTime;
 
@@ -52,6 +70,9 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
         return this.createTime;
     }
 
+    /**
+     * E-mail address of the user who initiated this build. Note that this was the user's e-mail address at the time the build was initiated; this address may not represent the same end-user for all time.
+     */
     @InputImport(name="creator", required=true)
     private final String creator;
 
@@ -59,6 +80,9 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
         return this.creator;
     }
 
+    /**
+     * Time at which execution of the build was finished.
+     */
     @InputImport(name="endTime", required=true)
     private final String endTime;
 
@@ -66,6 +90,9 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
         return this.endTime;
     }
 
+    /**
+     * URI where any logs for this provenance were written.
+     */
     @InputImport(name="logsUri", required=true)
     private final String logsUri;
 
@@ -73,6 +100,9 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
         return this.logsUri;
     }
 
+    /**
+     * ID of the project.
+     */
     @InputImport(name="project", required=true)
     private final String project;
 
@@ -80,6 +110,9 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
         return this.project;
     }
 
+    /**
+     * Details of the Source input to the build.
+     */
     @InputImport(name="sourceProvenance", required=true)
     private final SourceResponse sourceProvenance;
 
@@ -87,6 +120,9 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
         return this.sourceProvenance;
     }
 
+    /**
+     * Time at which execution of the build was started.
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 
@@ -94,6 +130,9 @@ public final class BuildProvenanceResponse extends io.pulumi.resources.InvokeArg
         return this.startTime;
     }
 
+    /**
+     * Trigger identifier if the build was triggered automatically; empty if not.
+     */
     @InputImport(name="triggerId", required=true)
     private final String triggerId;
 

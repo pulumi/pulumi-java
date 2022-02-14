@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Size of terminal font.
+ */
     @EnumType
     public enum FontSize {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         Small("Small"),
+/**
+ * 
+ */
         Medium("Medium"),
+/**
+ * 
+ */
         Large("Large");
 
         private final String value;

@@ -13,7 +13,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListNetworkManagerDeploymentStatusResult {
+/**
+ * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+ */
     private final @Nullable String skipToken;
+/**
+ * Gets a page of Network Manager Deployment Status
+ */
     private final @Nullable List<NetworkManagerDeploymentStatusResponse> value;
 
     @OutputCustomType.Constructor({"skipToken","value"})
@@ -24,9 +30,15 @@ public final class ListNetworkManagerDeploymentStatusResult {
         this.value = value;
     }
 
+/**
+ * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+ */
     public Optional<String> getSkipToken() {
         return Optional.ofNullable(this.skipToken);
     }
+/**
+ * Gets a page of Network Manager Deployment Status
+ */
     public List<NetworkManagerDeploymentStatusResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

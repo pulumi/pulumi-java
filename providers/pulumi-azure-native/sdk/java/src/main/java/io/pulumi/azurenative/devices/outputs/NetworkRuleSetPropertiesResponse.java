@@ -14,8 +14,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NetworkRuleSetPropertiesResponse {
+/**
+ * If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub
+ */
     private final Boolean applyToBuiltInEventHubEndpoint;
+/**
+ * Default Action for Network Rule Set
+ */
     private final @Nullable String defaultAction;
+/**
+ * List of IP Rules
+ */
     private final List<NetworkRuleSetIpRuleResponse> ipRules;
 
     @OutputCustomType.Constructor({"applyToBuiltInEventHubEndpoint","defaultAction","ipRules"})
@@ -28,12 +37,21 @@ public final class NetworkRuleSetPropertiesResponse {
         this.ipRules = Objects.requireNonNull(ipRules);
     }
 
+/**
+ * If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub
+ */
     public Boolean getApplyToBuiltInEventHubEndpoint() {
         return this.applyToBuiltInEventHubEndpoint;
     }
+/**
+ * Default Action for Network Rule Set
+ */
     public Optional<String> getDefaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
+/**
+ * List of IP Rules
+ */
     public List<NetworkRuleSetIpRuleResponse> getIpRules() {
         return this.ipRules;
     }

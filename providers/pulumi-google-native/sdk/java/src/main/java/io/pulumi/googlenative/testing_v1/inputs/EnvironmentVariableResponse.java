@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A key-value pair passed as an environment variable to the test.
+ */
 public final class EnvironmentVariableResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvironmentVariableResponse Empty = new EnvironmentVariableResponse();
 
+    /**
+     * Key for the environment variable.
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -19,6 +25,9 @@ public final class EnvironmentVariableResponse extends io.pulumi.resources.Invok
         return this.key;
     }
 
+    /**
+     * Value for the environment variable.
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

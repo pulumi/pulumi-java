@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetNodePoolArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNodePoolArgs Empty = new GetNodePoolArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="clusterId", required=true)
     private final String clusterId;
 
@@ -21,6 +27,9 @@ public final class GetNodePoolArgs extends io.pulumi.resources.InvokeArgs {
         return this.clusterId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -28,6 +37,9 @@ public final class GetNodePoolArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="nodePoolId", required=true)
     private final String nodePoolId;
 
@@ -35,6 +47,9 @@ public final class GetNodePoolArgs extends io.pulumi.resources.InvokeArgs {
         return this.nodePoolId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * IngressStatus describe the current state of the Ingress.
+ */
 public final class IngressStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IngressStatusArgs Empty = new IngressStatusArgs();
 
+    /**
+     * LoadBalancer contains the current status of the load-balancer.
+     */
     @InputImport(name="loadBalancer")
     private final @Nullable Input<LoadBalancerStatusArgs> loadBalancer;
 

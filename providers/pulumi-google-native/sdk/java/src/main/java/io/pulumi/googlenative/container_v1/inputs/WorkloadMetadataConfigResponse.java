@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * WorkloadMetadataConfig defines the metadata configuration to expose to workloads on the node pool.
+ */
 public final class WorkloadMetadataConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkloadMetadataConfigResponse Empty = new WorkloadMetadataConfigResponse();
 
+    /**
+     * Mode is the configuration for how to expose metadata to workloads running on the node pool.
+     */
     @InputImport(name="mode", required=true)
     private final String mode;
 

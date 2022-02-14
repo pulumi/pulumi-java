@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetStepArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetStepArgs Empty = new GetStepArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="executionId", required=true)
     private final String executionId;
 
@@ -21,6 +27,9 @@ public final class GetStepArgs extends io.pulumi.resources.InvokeArgs {
         return this.executionId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="historyId", required=true)
     private final String historyId;
 
@@ -28,6 +37,9 @@ public final class GetStepArgs extends io.pulumi.resources.InvokeArgs {
         return this.historyId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -35,6 +47,9 @@ public final class GetStepArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="stepId", required=true)
     private final String stepId;
 

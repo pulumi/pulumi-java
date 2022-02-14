@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class DistributionPolicyZoneConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DistributionPolicyZoneConfigurationResponse Empty = new DistributionPolicyZoneConfigurationResponse();
 
+    /**
+     * The URL of the zone. The zone must exist in the region where the managed instance group is located.
+     */
     @InputImport(name="zone", required=true)
     private final String zone;
 

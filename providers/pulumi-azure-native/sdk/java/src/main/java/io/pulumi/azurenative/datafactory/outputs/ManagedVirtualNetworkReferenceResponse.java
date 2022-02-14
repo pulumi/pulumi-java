@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ManagedVirtualNetworkReferenceResponse {
+/**
+ * Reference ManagedVirtualNetwork name.
+ */
     private final String referenceName;
+/**
+ * Managed Virtual Network reference type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"referenceName","type"})
@@ -20,9 +26,15 @@ public final class ManagedVirtualNetworkReferenceResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Reference ManagedVirtualNetwork name.
+ */
     public String getReferenceName() {
         return this.referenceName;
     }
+/**
+ * Managed Virtual Network reference type.
+ */
     public String getType() {
         return this.type;
     }

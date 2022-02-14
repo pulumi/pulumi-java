@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RRSetRoutingPolicyGeoPolicyResponse {
+/**
+ * The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.
+ */
     private final List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items;
+/**
+ * 
+ */
     private final String kind;
 
     @OutputCustomType.Constructor({"items","kind"})
@@ -22,9 +28,15 @@ public final class RRSetRoutingPolicyGeoPolicyResponse {
         this.kind = Objects.requireNonNull(kind);
     }
 
+/**
+ * The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.
+ */
     public List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> getItems() {
         return this.items;
     }
+/**
+ * 
+ */
     public String getKind() {
         return this.kind;
     }

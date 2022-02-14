@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Affinity is a group of affinity scheduling rules.
+ */
 public final class AffinityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AffinityArgs Empty = new AffinityArgs();
 
+    /**
+     * Describes node affinity scheduling rules for the pod.
+     */
     @InputImport(name="nodeAffinity")
     private final @Nullable Input<NodeAffinityArgs> nodeAffinity;
 
@@ -23,6 +29,9 @@ public final class AffinityArgs extends io.pulumi.resources.ResourceArgs {
         return this.nodeAffinity == null ? Input.empty() : this.nodeAffinity;
     }
 
+    /**
+     * Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).
+     */
     @InputImport(name="podAffinity")
     private final @Nullable Input<PodAffinityArgs> podAffinity;
 
@@ -30,6 +39,9 @@ public final class AffinityArgs extends io.pulumi.resources.ResourceArgs {
         return this.podAffinity == null ? Input.empty() : this.podAffinity;
     }
 
+    /**
+     * Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).
+     */
     @InputImport(name="podAntiAffinity")
     private final @Nullable Input<PodAntiAffinityArgs> podAntiAffinity;
 

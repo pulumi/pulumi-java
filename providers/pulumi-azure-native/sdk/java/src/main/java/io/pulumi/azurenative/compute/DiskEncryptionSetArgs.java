@@ -16,10 +16,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskEncryptionSetArgs Empty = new DiskEncryptionSetArgs();
 
+    /**
+     * The key vault key which is currently used by this disk encryption set.
+     */
     @InputImport(name="activeKey")
     private final @Nullable Input<KeyForDiskEncryptionSetArgs> activeKey;
 
@@ -27,6 +33,9 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
         return this.activeKey == null ? Input.empty() : this.activeKey;
     }
 
+    /**
+     * The name of the disk encryption set that is being created. The name can't be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
+     */
     @InputImport(name="diskEncryptionSetName")
     private final @Nullable Input<String> diskEncryptionSetName;
 
@@ -34,6 +43,9 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
         return this.diskEncryptionSetName == null ? Input.empty() : this.diskEncryptionSetName;
     }
 
+    /**
+     * The type of key used to encrypt the data of the disk.
+     */
     @InputImport(name="encryptionType")
     private final @Nullable Input<Either<String,DiskEncryptionSetType>> encryptionType;
 
@@ -41,6 +53,9 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
         return this.encryptionType == null ? Input.empty() : this.encryptionType;
     }
 
+    /**
+     * The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<EncryptionSetIdentityArgs> identity;
 
@@ -48,6 +63,9 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * Resource location
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -55,6 +73,9 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -62,6 +83,9 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
         return this.resourceGroupName;
     }
 
+    /**
+     * Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.
+     */
     @InputImport(name="rotationToLatestKeyVersionEnabled")
     private final @Nullable Input<Boolean> rotationToLatestKeyVersionEnabled;
 
@@ -69,6 +93,9 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
         return this.rotationToLatestKeyVersionEnabled == null ? Input.empty() : this.rotationToLatestKeyVersionEnabled;
     }
 
+    /**
+     * Resource tags
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

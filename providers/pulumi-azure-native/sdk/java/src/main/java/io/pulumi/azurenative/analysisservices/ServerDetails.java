@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.analysisservices;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.analysisservices.ServerDetailsArgs;
 import io.pulumi.azurenative.analysisservices.outputs.GatewayDetailsResponse;
 import io.pulumi.azurenative.analysisservices.outputs.IPv4FirewallSettingsResponse;
 import io.pulumi.azurenative.analysisservices.outputs.ResourceSkuResponse;
@@ -20,99 +19,342 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Represents an instance of an Analysis Services resource.
+API Version: 2017-08-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create a server.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serverDetails = new AzureNative.AnalysisServices.ServerDetails("serverDetails", new AzureNative.AnalysisServices.ServerDetailsArgs
+        {
+            AsAdministrators = new AzureNative.AnalysisServices.Inputs.ServerAdministratorsArgs
+            {
+                Members = 
+                {
+                    "azsdktest@microsoft.com",
+                    "azsdktest2@microsoft.com",
+                },
+            },
+            Location = "West US",
+            ResourceGroupName = "TestRG",
+            ServerName = "azsdktest",
+            Sku = new AzureNative.AnalysisServices.Inputs.ResourceSkuArgs
+            {
+                Capacity = 1,
+                Name = "S1",
+                Tier = "Standard",
+            },
+            Tags = 
+            {
+                { "testKey", "testValue" },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	analysisservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/analysisservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := analysisservices.NewServerDetails(ctx, "serverDetails", &analysisservices.ServerDetailsArgs{
+			AsAdministrators: &analysisservices.ServerAdministratorsArgs{
+				Members: pulumi.StringArray{
+					pulumi.String("azsdktest@microsoft.com"),
+					pulumi.String("azsdktest2@microsoft.com"),
+				},
+			},
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("TestRG"),
+			ServerName:        pulumi.String("azsdktest"),
+			Sku: &analysisservices.ResourceSkuArgs{
+				Capacity: pulumi.Int(1),
+				Name:     pulumi.String("S1"),
+				Tier:     pulumi.String("Standard"),
+			},
+			Tags: pulumi.StringMap{
+				"testKey": pulumi.String("testValue"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const serverDetails = new azure_native.analysisservices.ServerDetails("serverDetails", {
+    asAdministrators: {
+        members: [
+            "azsdktest@microsoft.com",
+            "azsdktest2@microsoft.com",
+        ],
+    },
+    location: "West US",
+    resourceGroupName: "TestRG",
+    serverName: "azsdktest",
+    sku: {
+        capacity: 1,
+        name: "S1",
+        tier: "Standard",
+    },
+    tags: {
+        testKey: "testValue",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+server_details = azure_native.analysisservices.ServerDetails("serverDetails",
+    as_administrators=azure_native.analysisservices.ServerAdministratorsArgs(
+        members=[
+            "azsdktest@microsoft.com",
+            "azsdktest2@microsoft.com",
+        ],
+    ),
+    location="West US",
+    resource_group_name="TestRG",
+    server_name="azsdktest",
+    sku=azure_native.analysisservices.ResourceSkuArgs(
+        capacity=1,
+        name="S1",
+        tier="Standard",
+    ),
+    tags={
+        "testKey": "testValue",
+    })
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:analysisservices:ServerDetails azsdktest /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.AnalysisServices/servers/azsdktest 
+```
+
+ */
 @ResourceType(type="azure-native:analysisservices:ServerDetails")
 public class ServerDetails extends io.pulumi.resources.CustomResource {
+    /**
+     * A collection of AS server administrators
+     */
     @OutputExport(name="asAdministrators", type=ServerAdministratorsResponse.class, parameters={})
     private Output</* @Nullable */ ServerAdministratorsResponse> asAdministrators;
 
+    /**
+     * @return A collection of AS server administrators
+     */
     public Output</* @Nullable */ ServerAdministratorsResponse> getAsAdministrators() {
         return this.asAdministrators;
     }
+    /**
+     * The SAS container URI to the backup container.
+     */
     @OutputExport(name="backupBlobContainerUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> backupBlobContainerUri;
 
+    /**
+     * @return The SAS container URI to the backup container.
+     */
     public Output</* @Nullable */ String> getBackupBlobContainerUri() {
         return this.backupBlobContainerUri;
     }
+    /**
+     * The gateway details configured for the AS server.
+     */
     @OutputExport(name="gatewayDetails", type=GatewayDetailsResponse.class, parameters={})
     private Output</* @Nullable */ GatewayDetailsResponse> gatewayDetails;
 
+    /**
+     * @return The gateway details configured for the AS server.
+     */
     public Output</* @Nullable */ GatewayDetailsResponse> getGatewayDetails() {
         return this.gatewayDetails;
     }
+    /**
+     * The firewall settings for the AS server.
+     */
     @OutputExport(name="ipV4FirewallSettings", type=IPv4FirewallSettingsResponse.class, parameters={})
     private Output</* @Nullable */ IPv4FirewallSettingsResponse> ipV4FirewallSettings;
 
+    /**
+     * @return The firewall settings for the AS server.
+     */
     public Output</* @Nullable */ IPv4FirewallSettingsResponse> getIpV4FirewallSettings() {
         return this.ipV4FirewallSettings;
     }
+    /**
+     * Location of the Analysis Services resource.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Location of the Analysis Services resource.
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The managed mode of the server (0 = not managed, 1 = managed).
+     */
     @OutputExport(name="managedMode", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> managedMode;
 
+    /**
+     * @return The managed mode of the server (0 = not managed, 1 = managed).
+     */
     public Output</* @Nullable */ Integer> getManagedMode() {
         return this.managedMode;
     }
+    /**
+     * The name of the Analysis Services resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the Analysis Services resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.
+     */
     @OutputExport(name="querypoolConnectionMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> querypoolConnectionMode;
 
+    /**
+     * @return How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.
+     */
     public Output</* @Nullable */ String> getQuerypoolConnectionMode() {
         return this.querypoolConnectionMode;
     }
+    /**
+     * The full name of the Analysis Services resource.
+     */
     @OutputExport(name="serverFullName", type=String.class, parameters={})
     private Output<String> serverFullName;
 
+    /**
+     * @return The full name of the Analysis Services resource.
+     */
     public Output<String> getServerFullName() {
         return this.serverFullName;
     }
+    /**
+     * The server monitor mode for AS server
+     */
     @OutputExport(name="serverMonitorMode", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> serverMonitorMode;
 
+    /**
+     * @return The server monitor mode for AS server
+     */
     public Output</* @Nullable */ Integer> getServerMonitorMode() {
         return this.serverMonitorMode;
     }
+    /**
+     * The SKU of the Analysis Services resource.
+     */
     @OutputExport(name="sku", type=ResourceSkuResponse.class, parameters={})
     private Output<ResourceSkuResponse> sku;
 
+    /**
+     * @return The SKU of the Analysis Services resource.
+     */
     public Output<ResourceSkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * Key-value pairs of additional resource provisioning properties.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Key-value pairs of additional resource provisioning properties.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the Analysis Services resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the Analysis Services resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ServerDetails(String name, ServerDetailsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:analysisservices:ServerDetails", name, args == null ? ServerDetailsArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -134,6 +376,14 @@ public class ServerDetails extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ServerDetails get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServerDetails(name, id, options);
     }

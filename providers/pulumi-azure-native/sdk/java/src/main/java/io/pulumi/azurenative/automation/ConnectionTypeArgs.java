@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionTypeArgs Empty = new ConnectionTypeArgs();
 
+    /**
+     * The name of the automation account.
+     */
     @InputImport(name="automationAccountName", required=true)
     private final Input<String> automationAccountName;
 
@@ -24,6 +30,9 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.automationAccountName;
     }
 
+    /**
+     * The parameters supplied to the create or update connection type operation.
+     */
     @InputImport(name="connectionTypeName")
     private final @Nullable Input<String> connectionTypeName;
 
@@ -31,6 +40,9 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectionTypeName == null ? Input.empty() : this.connectionTypeName;
     }
 
+    /**
+     * Gets or sets the field definitions of the connection type.
+     */
     @InputImport(name="fieldDefinitions", required=true)
     private final Input<Map<String,FieldDefinitionArgs>> fieldDefinitions;
 
@@ -38,6 +50,9 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.fieldDefinitions;
     }
 
+    /**
+     * Gets or sets a Boolean value to indicate if the connection type is global.
+     */
     @InputImport(name="isGlobal")
     private final @Nullable Input<Boolean> isGlobal;
 
@@ -45,6 +60,9 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.isGlobal == null ? Input.empty() : this.isGlobal;
     }
 
+    /**
+     * Gets or sets the name of the connection type.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -52,6 +70,9 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

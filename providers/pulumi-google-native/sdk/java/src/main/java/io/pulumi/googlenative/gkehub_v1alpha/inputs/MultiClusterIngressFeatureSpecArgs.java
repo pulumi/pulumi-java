@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * **Multi-cluster Ingress**: The configuration for the MultiClusterIngress feature.
+ */
 public final class MultiClusterIngressFeatureSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MultiClusterIngressFeatureSpecArgs Empty = new MultiClusterIngressFeatureSpecArgs();
 
+    /**
+     * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
+     */
     @InputImport(name="configMembership")
     private final @Nullable Input<String> configMembership;
 

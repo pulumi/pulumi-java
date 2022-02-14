@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Sftp read settings.
+ */
 public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpReadSettingsArgs Empty = new HttpReadSettingsArgs();
 
+    /**
+     * The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="additionalHeaders")
     private final @Nullable Input<Object> additionalHeaders;
 
@@ -23,6 +29,9 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.additionalHeaders == null ? Input.empty() : this.additionalHeaders;
     }
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -30,6 +39,9 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
+    /**
+     * Indicates whether to enable partition discovery.
+     */
     @InputImport(name="enablePartitionDiscovery")
     private final @Nullable Input<Boolean> enablePartitionDiscovery;
 
@@ -37,6 +49,9 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.enablePartitionDiscovery == null ? Input.empty() : this.enablePartitionDiscovery;
     }
 
+    /**
+     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -44,6 +59,9 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
+    /**
+     * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="partitionRootPath")
     private final @Nullable Input<Object> partitionRootPath;
 
@@ -51,6 +69,9 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.partitionRootPath == null ? Input.empty() : this.partitionRootPath;
     }
 
+    /**
+     * The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="requestBody")
     private final @Nullable Input<Object> requestBody;
 
@@ -58,6 +79,9 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.requestBody == null ? Input.empty() : this.requestBody;
     }
 
+    /**
+     * The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="requestMethod")
     private final @Nullable Input<Object> requestMethod;
 
@@ -65,6 +89,9 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.requestMethod == null ? Input.empty() : this.requestMethod;
     }
 
+    /**
+     * Specifies the timeout for a HTTP client to get HTTP response from HTTP server.
+     */
     @InputImport(name="requestTimeout")
     private final @Nullable Input<Object> requestTimeout;
 
@@ -72,6 +99,10 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
         return this.requestTimeout == null ? Input.empty() : this.requestTimeout;
     }
 
+    /**
+     * The read setting type.
+Expected value is 'HttpReadSettings'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

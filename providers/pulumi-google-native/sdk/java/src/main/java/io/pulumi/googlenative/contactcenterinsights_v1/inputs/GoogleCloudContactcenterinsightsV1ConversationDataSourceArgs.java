@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The conversation source, which is a combination of transcript and audio.
+ */
 public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs Empty = new GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs();
 
+    /**
+     * The source when the conversation comes from Dialogflow.
+     */
     @InputImport(name="dialogflowSource")
     private final @Nullable Input<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs 
         return this.dialogflowSource == null ? Input.empty() : this.dialogflowSource;
     }
 
+    /**
+     * A Cloud Storage location specification for the audio and transcript.
+     */
     @InputImport(name="gcsSource")
     private final @Nullable Input<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource;
 

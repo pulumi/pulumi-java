@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DiskAccessArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskAccessArgs Empty = new DiskAccessArgs();
 
+    /**
+     * The name of the disk access resource that is being created. The name can't be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
+     */
     @InputImport(name="diskAccessName")
     private final @Nullable Input<String> diskAccessName;
 
@@ -22,6 +28,9 @@ public final class DiskAccessArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskAccessName == null ? Input.empty() : this.diskAccessName;
     }
 
+    /**
+     * Resource location
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -29,6 +38,9 @@ public final class DiskAccessArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,9 @@ public final class DiskAccessArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

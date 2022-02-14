@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetReplicationPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetReplicationPolicyArgs Empty = new GetReplicationPolicyArgs();
 
+    /**
+     * Replication policy name.
+     */
     @InputImport(name="policyName", required=true)
     private final String policyName;
 
@@ -19,6 +25,9 @@ public final class GetReplicationPolicyArgs extends io.pulumi.resources.InvokeAr
         return this.policyName;
     }
 
+    /**
+     * The name of the resource group where the recovery services vault is present.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetReplicationPolicyArgs extends io.pulumi.resources.InvokeAr
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the recovery services vault.
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

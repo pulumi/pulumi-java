@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Dapr component configuration
+ */
 public final class DaprComponentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DaprComponentResponse Empty = new DaprComponentResponse();
 
+    /**
+     * Component metadata
+     */
     @InputImport(name="metadata")
     private final @Nullable List<DaprMetadataResponse> metadata;
 
@@ -23,6 +29,9 @@ public final class DaprComponentResponse extends io.pulumi.resources.InvokeArgs 
         return this.metadata == null ? List.of() : this.metadata;
     }
 
+    /**
+     * Component name
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -30,6 +39,9 @@ public final class DaprComponentResponse extends io.pulumi.resources.InvokeArgs 
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Component type
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -37,6 +49,9 @@ public final class DaprComponentResponse extends io.pulumi.resources.InvokeArgs 
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
+    /**
+     * Component version
+     */
     @InputImport(name="version")
     private final @Nullable String version;
 

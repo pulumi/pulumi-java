@@ -13,15 +13,46 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TeradataSourceResponse {
+/**
+ * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+ */
     private final @Nullable Object additionalColumns;
+/**
+ * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+ */
     private final @Nullable Object disableMetricsCollection;
+/**
+ * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+ */
     private final @Nullable Object maxConcurrentConnections;
+/**
+ * The partition mechanism that will be used for teradata read in parallel. Possible values include: "None", "Hash", "DynamicRange".
+ */
     private final @Nullable Object partitionOption;
+/**
+ * The settings that will be leveraged for teradata source partitioning.
+ */
     private final @Nullable TeradataPartitionSettingsResponse partitionSettings;
+/**
+ * Teradata query. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object query;
+/**
+ * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+ */
     private final @Nullable Object queryTimeout;
+/**
+ * Source retry count. Type: integer (or Expression with resultType integer).
+ */
     private final @Nullable Object sourceRetryCount;
+/**
+ * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+ */
     private final @Nullable Object sourceRetryWait;
+/**
+ * Copy source type.
+Expected value is 'TeradataSource'.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"additionalColumns","disableMetricsCollection","maxConcurrentConnections","partitionOption","partitionSettings","query","queryTimeout","sourceRetryCount","sourceRetryWait","type"})
@@ -48,33 +79,64 @@ public final class TeradataSourceResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+ */
     public Optional<Object> getAdditionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
+/**
+ * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+ */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
+/**
+ * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+ */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
+/**
+ * The partition mechanism that will be used for teradata read in parallel. Possible values include: "None", "Hash", "DynamicRange".
+ */
     public Optional<Object> getPartitionOption() {
         return Optional.ofNullable(this.partitionOption);
     }
+/**
+ * The settings that will be leveraged for teradata source partitioning.
+ */
     public Optional<TeradataPartitionSettingsResponse> getPartitionSettings() {
         return Optional.ofNullable(this.partitionSettings);
     }
+/**
+ * Teradata query. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getQuery() {
         return Optional.ofNullable(this.query);
     }
+/**
+ * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+ */
     public Optional<Object> getQueryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
+/**
+ * Source retry count. Type: integer (or Expression with resultType integer).
+ */
     public Optional<Object> getSourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
+/**
+ * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+ */
     public Optional<Object> getSourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
+/**
+ * Copy source type.
+Expected value is 'TeradataSource'.
+ */
     public String getType() {
         return this.type;
     }

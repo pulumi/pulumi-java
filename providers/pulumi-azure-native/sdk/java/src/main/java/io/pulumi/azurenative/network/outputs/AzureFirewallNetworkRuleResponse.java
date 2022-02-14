@@ -12,14 +12,41 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureFirewallNetworkRuleResponse {
+/**
+ * Description of the rule.
+ */
     private final @Nullable String description;
+/**
+ * List of destination IP addresses.
+ */
     private final @Nullable List<String> destinationAddresses;
+/**
+ * List of destination FQDNs.
+ */
     private final @Nullable List<String> destinationFqdns;
+/**
+ * List of destination IpGroups for this rule.
+ */
     private final @Nullable List<String> destinationIpGroups;
+/**
+ * List of destination ports.
+ */
     private final @Nullable List<String> destinationPorts;
+/**
+ * Name of the network rule.
+ */
     private final @Nullable String name;
+/**
+ * Array of AzureFirewallNetworkRuleProtocols.
+ */
     private final @Nullable List<String> protocols;
+/**
+ * List of source IP addresses for this rule.
+ */
     private final @Nullable List<String> sourceAddresses;
+/**
+ * List of source IpGroups for this rule.
+ */
     private final @Nullable List<String> sourceIpGroups;
 
     @OutputCustomType.Constructor({"description","destinationAddresses","destinationFqdns","destinationIpGroups","destinationPorts","name","protocols","sourceAddresses","sourceIpGroups"})
@@ -44,30 +71,57 @@ public final class AzureFirewallNetworkRuleResponse {
         this.sourceIpGroups = sourceIpGroups;
     }
 
+/**
+ * Description of the rule.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * List of destination IP addresses.
+ */
     public List<String> getDestinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
+/**
+ * List of destination FQDNs.
+ */
     public List<String> getDestinationFqdns() {
         return this.destinationFqdns == null ? List.of() : this.destinationFqdns;
     }
+/**
+ * List of destination IpGroups for this rule.
+ */
     public List<String> getDestinationIpGroups() {
         return this.destinationIpGroups == null ? List.of() : this.destinationIpGroups;
     }
+/**
+ * List of destination ports.
+ */
     public List<String> getDestinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
+/**
+ * Name of the network rule.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * Array of AzureFirewallNetworkRuleProtocols.
+ */
     public List<String> getProtocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
+/**
+ * List of source IP addresses for this rule.
+ */
     public List<String> getSourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
+/**
+ * List of source IpGroups for this rule.
+ */
     public List<String> getSourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }

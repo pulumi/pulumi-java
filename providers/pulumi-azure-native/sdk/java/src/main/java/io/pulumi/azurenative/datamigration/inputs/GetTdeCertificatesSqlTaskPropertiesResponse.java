@@ -17,10 +17,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for the task that gets TDE certificates in Base64 encoded format.
+ */
 public final class GetTdeCertificatesSqlTaskPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTdeCertificatesSqlTaskPropertiesResponse Empty = new GetTdeCertificatesSqlTaskPropertiesResponse();
 
+    /**
+     * Array of command properties.
+     */
     @InputImport(name="commands", required=true)
     private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
@@ -28,6 +34,9 @@ public final class GetTdeCertificatesSqlTaskPropertiesResponse extends io.pulumi
         return this.commands;
     }
 
+    /**
+     * Array of errors. This is ignored if submitted.
+     */
     @InputImport(name="errors", required=true)
     private final List<ODataErrorResponse> errors;
 
@@ -35,6 +44,9 @@ public final class GetTdeCertificatesSqlTaskPropertiesResponse extends io.pulumi
         return this.errors;
     }
 
+    /**
+     * Task input
+     */
     @InputImport(name="input")
     private final @Nullable GetTdeCertificatesSqlTaskInputResponse input;
 
@@ -42,6 +54,9 @@ public final class GetTdeCertificatesSqlTaskPropertiesResponse extends io.pulumi
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
     }
 
+    /**
+     * Task output. This is ignored if submitted.
+     */
     @InputImport(name="output", required=true)
     private final List<GetTdeCertificatesSqlTaskOutputResponse> output;
 
@@ -49,6 +64,9 @@ public final class GetTdeCertificatesSqlTaskPropertiesResponse extends io.pulumi
         return this.output;
     }
 
+    /**
+     * The state of the task. This is ignored if submitted.
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -56,6 +74,10 @@ public final class GetTdeCertificatesSqlTaskPropertiesResponse extends io.pulumi
         return this.state;
     }
 
+    /**
+     * Task type.
+Expected value is 'GetTDECertificates.Sql'.
+     */
     @InputImport(name="taskType", required=true)
     private final String taskType;
 

@@ -11,9 +11,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutomationActionEventHubResponse {
+/**
+ * The type of the action that will be triggered by the Automation
+Expected value is 'EventHub'.
+ */
     private final String actionType;
+/**
+ * The target Event Hub connection string (it will not be included in any response).
+ */
     private final @Nullable String connectionString;
+/**
+ * The target Event Hub Azure Resource ID.
+ */
     private final @Nullable String eventHubResourceId;
+/**
+ * The target Event Hub SAS policy name.
+ */
     private final String sasPolicyName;
 
     @OutputCustomType.Constructor({"actionType","connectionString","eventHubResourceId","sasPolicyName"})
@@ -28,15 +41,28 @@ public final class AutomationActionEventHubResponse {
         this.sasPolicyName = Objects.requireNonNull(sasPolicyName);
     }
 
+/**
+ * The type of the action that will be triggered by the Automation
+Expected value is 'EventHub'.
+ */
     public String getActionType() {
         return this.actionType;
     }
+/**
+ * The target Event Hub connection string (it will not be included in any response).
+ */
     public Optional<String> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
+/**
+ * The target Event Hub Azure Resource ID.
+ */
     public Optional<String> getEventHubResourceId() {
         return Optional.ofNullable(this.eventHubResourceId);
     }
+/**
+ * The target Event Hub SAS policy name.
+ */
     public String getSasPolicyName() {
         return this.sasPolicyName;
     }

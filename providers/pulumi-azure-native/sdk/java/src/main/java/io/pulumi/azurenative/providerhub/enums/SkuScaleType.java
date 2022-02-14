@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum SkuScaleType {
+/**
+ * 
+ */
         None("None"),
+/**
+ * 
+ */
         Manual("Manual"),
+/**
+ * 
+ */
         Automatic("Automatic");
 
         private final String value;

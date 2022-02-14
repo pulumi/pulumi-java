@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetPolicyDefinitionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPolicyDefinitionArgs Empty = new GetPolicyDefinitionArgs();
 
+    /**
+     * The name of the policy definition to get.
+     */
     @InputImport(name="policyDefinitionName", required=true)
     private final String policyDefinitionName;
 

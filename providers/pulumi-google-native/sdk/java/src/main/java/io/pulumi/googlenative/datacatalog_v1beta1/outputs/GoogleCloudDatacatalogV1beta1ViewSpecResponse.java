@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDatacatalogV1beta1ViewSpecResponse {
+/**
+ * The query that defines the table view.
+ */
     private final String viewQuery;
 
     @OutputCustomType.Constructor({"viewQuery"})
@@ -16,6 +19,9 @@ public final class GoogleCloudDatacatalogV1beta1ViewSpecResponse {
         this.viewQuery = Objects.requireNonNull(viewQuery);
     }
 
+/**
+ * The query that defines the table view.
+ */
     public String getViewQuery() {
         return this.viewQuery;
     }

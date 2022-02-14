@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DashboardArgs Empty = new DashboardArgs();
 
+    /**
+     * The content is divided into equally spaced columns and the widgets are arranged vertically.
+     */
     @InputImport(name="columnLayout")
     private final @Nullable Input<ColumnLayoutArgs> columnLayout;
 
@@ -26,6 +32,9 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.columnLayout == null ? Input.empty() : this.columnLayout;
     }
 
+    /**
+     * The mutable, human-readable name.
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -33,6 +42,9 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * etag is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. An etag is returned in the response to GetDashboard, and users are expected to put that etag in the request to UpdateDashboard to ensure that their change will be applied to the same version of the Dashboard configuration. The field should not be passed during dashboard creation.
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -40,6 +52,9 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * Content is arranged with a basic layout that re-flows a simple list of informational elements like widgets or tiles.
+     */
     @InputImport(name="gridLayout")
     private final @Nullable Input<GridLayoutArgs> gridLayout;
 
@@ -47,6 +62,9 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.gridLayout == null ? Input.empty() : this.gridLayout;
     }
 
+    /**
+     * Labels applied to the dashboard
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -54,6 +72,9 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The content is arranged as a grid of tiles, with each content widget occupying one or more grid blocks.
+     */
     @InputImport(name="mosaicLayout")
     private final @Nullable Input<MosaicLayoutArgs> mosaicLayout;
 
@@ -61,6 +82,9 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.mosaicLayout == null ? Input.empty() : this.mosaicLayout;
     }
 
+    /**
+     * Immutable. The resource name of the dashboard.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -68,6 +92,9 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -75,6 +102,9 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The content is divided into equally spaced rows and the widgets are arranged horizontally.
+     */
     @InputImport(name="rowLayout")
     private final @Nullable Input<RowLayoutArgs> rowLayout;
 
@@ -82,6 +112,9 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
         return this.rowLayout == null ? Input.empty() : this.rowLayout;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="validateOnly")
     private final @Nullable Input<String> validateOnly;
 

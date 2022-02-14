@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetExportConfigurationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetExportConfigurationArgs Empty = new GetExportConfigurationArgs();
 
+    /**
+     * The Continuous Export configuration ID. This is unique within a Application Insights component.
+     */
     @InputImport(name="exportId", required=true)
     private final String exportId;
 
@@ -19,6 +25,9 @@ public final class GetExportConfigurationArgs extends io.pulumi.resources.Invoke
         return this.exportId;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetExportConfigurationArgs extends io.pulumi.resources.Invoke
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Application Insights component resource.
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

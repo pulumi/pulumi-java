@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EventLogConfigurationResponse {
+/**
+ * 
+ */
     private final @Nullable String filter;
+/**
+ * 
+ */
     private final String logName;
 
     @OutputCustomType.Constructor({"filter","logName"})
@@ -22,9 +28,15 @@ public final class EventLogConfigurationResponse {
         this.logName = Objects.requireNonNull(logName);
     }
 
+/**
+ * 
+ */
     public Optional<String> getFilter() {
         return Optional.ofNullable(this.filter);
     }
+/**
+ * 
+ */
     public String getLogName() {
         return this.logName;
     }

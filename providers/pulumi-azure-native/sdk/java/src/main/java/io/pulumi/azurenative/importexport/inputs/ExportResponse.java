@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A property containing information about the blobs to be exported for an export job. This property is required for export jobs, but must not be specified for import jobs.
+ */
 public final class ExportResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExportResponse Empty = new ExportResponse();
 
+    /**
+     * The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root. 
+     */
     @InputImport(name="blobListBlobPath")
     private final @Nullable String blobListBlobPath;
 
@@ -22,6 +28,9 @@ public final class ExportResponse extends io.pulumi.resources.InvokeArgs {
         return this.blobListBlobPath == null ? Optional.empty() : Optional.ofNullable(this.blobListBlobPath);
     }
 
+    /**
+     * A collection of blob-path strings.
+     */
     @InputImport(name="blobPath")
     private final @Nullable List<String> blobPath;
 
@@ -29,6 +38,9 @@ public final class ExportResponse extends io.pulumi.resources.InvokeArgs {
         return this.blobPath == null ? List.of() : this.blobPath;
     }
 
+    /**
+     * A collection of blob-prefix strings.
+     */
     @InputImport(name="blobPathPrefix")
     private final @Nullable List<String> blobPathPrefix;
 

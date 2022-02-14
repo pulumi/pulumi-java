@@ -19,10 +19,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a policy option.
+ */
 public final class ContentKeyPolicyOptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContentKeyPolicyOptionResponse Empty = new ContentKeyPolicyOptionResponse();
 
+    /**
+     * The key delivery configuration.
+     */
     @InputImport(name="configuration", required=true)
     private final Object configuration;
 
@@ -30,6 +36,9 @@ public final class ContentKeyPolicyOptionResponse extends io.pulumi.resources.In
         return this.configuration;
     }
 
+    /**
+     * The Policy Option description.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -37,6 +46,9 @@ public final class ContentKeyPolicyOptionResponse extends io.pulumi.resources.In
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The legacy Policy Option ID.
+     */
     @InputImport(name="policyOptionId", required=true)
     private final String policyOptionId;
 
@@ -44,6 +56,9 @@ public final class ContentKeyPolicyOptionResponse extends io.pulumi.resources.In
         return this.policyOptionId;
     }
 
+    /**
+     * The requirements that must be met to deliver keys with this configuration
+     */
     @InputImport(name="restriction", required=true)
     private final Object restriction;
 

@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StorageAccountResponse {
+/**
+ * The Azure Resource Manager ID of the storage account resource.
+ */
     private final String id;
+/**
+ * The storage account key.
+ */
     private final String key;
 
     @OutputCustomType.Constructor({"id","key"})
@@ -20,9 +26,15 @@ public final class StorageAccountResponse {
         this.key = Objects.requireNonNull(key);
     }
 
+/**
+ * The Azure Resource Manager ID of the storage account resource.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The storage account key.
+ */
     public String getKey() {
         return this.key;
     }

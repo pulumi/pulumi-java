@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorResponse Empty = new MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorResponse();
 
+    /**
+     * Error message
+     */
     @InputImport(name="errorMessage")
     private final @Nullable String errorMessage;
 
@@ -23,6 +29,9 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorRespons
         return this.errorMessage == null ? Optional.empty() : Optional.ofNullable(this.errorMessage);
     }
 
+    /**
+     * List of error events.
+     */
     @InputImport(name="events")
     private final @Nullable List<SyncMigrationDatabaseErrorEventResponse> events;
 
@@ -30,6 +39,9 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorRespons
         return this.events == null ? List.of() : this.events;
     }
 
+    /**
+     * Result identifier
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -37,6 +49,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorRespons
         return this.id;
     }
 
+    /**
+     * Result type
+Expected value is 'DatabaseLevelErrorOutput'.
+     */
     @InputImport(name="resultType", required=true)
     private final String resultType;
 

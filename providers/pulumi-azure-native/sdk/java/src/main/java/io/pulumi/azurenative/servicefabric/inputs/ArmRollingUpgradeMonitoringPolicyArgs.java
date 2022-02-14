@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The policy used for monitoring the application upgrade
+ */
 public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ArmRollingUpgradeMonitoringPolicyArgs Empty = new ArmRollingUpgradeMonitoringPolicyArgs();
 
+    /**
+     * The activation Mode of the service package
+     */
     @InputImport(name="failureAction")
     private final @Nullable Input<Either<String,ArmUpgradeFailureAction>> failureAction;
 
@@ -23,6 +29,9 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
         return this.failureAction == null ? Input.empty() : this.failureAction;
     }
 
+    /**
+     * The amount of time to retry health evaluation when the application or cluster is unhealthy before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
+     */
     @InputImport(name="healthCheckRetryTimeout")
     private final @Nullable Input<String> healthCheckRetryTimeout;
 
@@ -30,6 +39,9 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
         return this.healthCheckRetryTimeout == null ? Input.empty() : this.healthCheckRetryTimeout;
     }
 
+    /**
+     * The amount of time that the application or cluster must remain healthy before the upgrade proceeds to the next upgrade domain. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
+     */
     @InputImport(name="healthCheckStableDuration")
     private final @Nullable Input<String> healthCheckStableDuration;
 
@@ -37,6 +49,9 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
         return this.healthCheckStableDuration == null ? Input.empty() : this.healthCheckStableDuration;
     }
 
+    /**
+     * The amount of time to wait after completing an upgrade domain before applying health policies. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
+     */
     @InputImport(name="healthCheckWaitDuration")
     private final @Nullable Input<String> healthCheckWaitDuration;
 
@@ -44,6 +59,9 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
         return this.healthCheckWaitDuration == null ? Input.empty() : this.healthCheckWaitDuration;
     }
 
+    /**
+     * The amount of time each upgrade domain has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
+     */
     @InputImport(name="upgradeDomainTimeout")
     private final @Nullable Input<String> upgradeDomainTimeout;
 
@@ -51,6 +69,9 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
         return this.upgradeDomainTimeout == null ? Input.empty() : this.upgradeDomainTimeout;
     }
 
+    /**
+     * The amount of time the overall upgrade has to complete before FailureAction is executed. It is first interpreted as a string representing an ISO 8601 duration. If that fails, then it is interpreted as a number representing the total number of milliseconds.
+     */
     @InputImport(name="upgradeTimeout")
     private final @Nullable Input<String> upgradeTimeout;
 

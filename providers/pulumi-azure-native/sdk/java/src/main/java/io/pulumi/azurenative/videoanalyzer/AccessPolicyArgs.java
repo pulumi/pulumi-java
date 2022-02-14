@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccessPolicyArgs Empty = new AccessPolicyArgs();
 
+    /**
+     * The name of the access policy to create or update.
+     */
     @InputImport(name="accessPolicyName")
     private final @Nullable Input<String> accessPolicyName;
 
@@ -24,6 +30,9 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessPolicyName == null ? Input.empty() : this.accessPolicyName;
     }
 
+    /**
+     * The Azure Video Analyzer account name.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -31,6 +40,9 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * Authentication method to be used when validating client API access.
+     */
     @InputImport(name="authentication")
     private final @Nullable Input<JwtAuthenticationArgs> authentication;
 
@@ -38,6 +50,9 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.authentication == null ? Input.empty() : this.authentication;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -45,6 +60,9 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Defines the access level granted by this policy.
+     */
     @InputImport(name="role")
     private final @Nullable Input<Either<String,AccessPolicyRole>> role;
 

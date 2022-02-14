@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Oracle data source configuration
+ */
 public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OracleSourceConfigArgs Empty = new OracleSourceConfigArgs();
 
+    /**
+     * Oracle objects to exclude from the stream.
+     */
     @InputImport(name="excludeObjects")
     private final @Nullable Input<OracleRdbmsArgs> excludeObjects;
 
@@ -21,6 +27,9 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
         return this.excludeObjects == null ? Input.empty() : this.excludeObjects;
     }
 
+    /**
+     * Oracle objects to include in the stream.
+     */
     @InputImport(name="includeObjects")
     private final @Nullable Input<OracleRdbmsArgs> includeObjects;
 

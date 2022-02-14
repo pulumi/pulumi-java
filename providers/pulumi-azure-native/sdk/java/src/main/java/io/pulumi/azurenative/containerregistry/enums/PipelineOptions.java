@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum PipelineOptions {
+/**
+ * 
+ */
         OverwriteTags("OverwriteTags"),
+/**
+ * 
+ */
         OverwriteBlobs("OverwriteBlobs"),
+/**
+ * 
+ */
         DeleteSourceBlobOnSuccess("DeleteSourceBlobOnSuccess"),
+/**
+ * 
+ */
         ContinueOnErrors("ContinueOnErrors");
 
         private final String value;

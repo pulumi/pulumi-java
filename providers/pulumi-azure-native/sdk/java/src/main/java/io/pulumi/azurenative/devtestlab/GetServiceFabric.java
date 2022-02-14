@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServiceFabric {
+/**
+ * A Service Fabric.
+API Version: 2018-09-15.
+ *
+ * A Service Fabric.
+ */
     public static CompletableFuture<GetServiceFabricResult> invokeAsync(GetServiceFabricArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getServiceFabric", TypeShape.of(GetServiceFabricResult.class), args == null ? GetServiceFabricArgs.Empty : args, Utilities.withVersion(options));
     }

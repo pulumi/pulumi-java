@@ -10,9 +10,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudRunOpV2TrafficTargetResponse {
+/**
+ * Specifies percent of the traffic to this Revision. This defaults to zero if unspecified.
+ */
     private final Integer percent;
+/**
+ * Revision to which to send this portion of traffic, if traffic allocation is by revision.
+ */
     private final String revision;
+/**
+ * Indicates a string to be part of the URI to exclusively reference this target.
+ */
     private final String tag;
+/**
+ * The allocation type for this traffic target.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"percent","revision","tag","type"})
@@ -27,15 +39,27 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Specifies percent of the traffic to this Revision. This defaults to zero if unspecified.
+ */
     public Integer getPercent() {
         return this.percent;
     }
+/**
+ * Revision to which to send this portion of traffic, if traffic allocation is by revision.
+ */
     public String getRevision() {
         return this.revision;
     }
+/**
+ * Indicates a string to be part of the URI to exclusively reference this target.
+ */
     public String getTag() {
         return this.tag;
     }
+/**
+ * The allocation type for this traffic target.
+ */
     public String getType() {
         return this.type;
     }

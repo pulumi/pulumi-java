@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class SecurityPolicyAdvancedOptionsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityPolicyAdvancedOptionsConfigResponse Empty = new SecurityPolicyAdvancedOptionsConfigResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="jsonParsing", required=true)
     private final String jsonParsing;
 
@@ -19,6 +25,9 @@ public final class SecurityPolicyAdvancedOptionsConfigResponse extends io.pulumi
         return this.jsonParsing;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="logLevel", required=true)
     private final String logLevel;
 

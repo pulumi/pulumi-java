@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPipelineRun {
+/**
+ * An object that represents a pipeline run for a container registry.
+API Version: 2020-11-01-preview.
+ *
+ * An object that represents a pipeline run for a container registry.
+ */
     public static CompletableFuture<GetPipelineRunResult> invokeAsync(GetPipelineRunArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getPipelineRun", TypeShape.of(GetPipelineRunResult.class), args == null ? GetPipelineRunArgs.Empty : args, Utilities.withVersion(options));
     }

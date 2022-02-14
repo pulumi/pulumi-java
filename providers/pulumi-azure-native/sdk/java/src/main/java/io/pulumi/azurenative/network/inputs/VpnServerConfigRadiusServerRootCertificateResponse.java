@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of Radius Server root certificate of VpnServerConfiguration.
+ */
 public final class VpnServerConfigRadiusServerRootCertificateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VpnServerConfigRadiusServerRootCertificateResponse Empty = new VpnServerConfigRadiusServerRootCertificateResponse();
 
+    /**
+     * The certificate name.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +27,9 @@ public final class VpnServerConfigRadiusServerRootCertificateResponse extends io
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The certificate public data.
+     */
     @InputImport(name="publicCertData")
     private final @Nullable String publicCertData;
 

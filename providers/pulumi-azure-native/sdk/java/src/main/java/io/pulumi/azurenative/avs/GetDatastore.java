@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDatastore {
+/**
+ * A datastore resource
+API Version: 2021-01-01-preview.
+ *
+ * A datastore resource
+ */
     public static CompletableFuture<GetDatastoreResult> invokeAsync(GetDatastoreArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:avs:getDatastore", TypeShape.of(GetDatastoreResult.class), args == null ? GetDatastoreArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The current Term object.
+ */
 public final class SaasPropertiesResponseTerm extends io.pulumi.resources.InvokeArgs {
 
     public static final SaasPropertiesResponseTerm Empty = new SaasPropertiesResponseTerm();
 
+    /**
+     * The end date of the current term
+     */
     @InputImport(name="endDate")
     private final @Nullable String endDate;
 
@@ -21,6 +27,9 @@ public final class SaasPropertiesResponseTerm extends io.pulumi.resources.Invoke
         return this.endDate == null ? Optional.empty() : Optional.ofNullable(this.endDate);
     }
 
+    /**
+     * The start date of the current term
+     */
     @InputImport(name="startDate")
     private final @Nullable String startDate;
 
@@ -28,6 +37,9 @@ public final class SaasPropertiesResponseTerm extends io.pulumi.resources.Invoke
         return this.startDate == null ? Optional.empty() : Optional.ofNullable(this.startDate);
     }
 
+    /**
+     * The unit indicating Monthly / Yearly
+     */
     @InputImport(name="termUnit")
     private final @Nullable String termUnit;
 

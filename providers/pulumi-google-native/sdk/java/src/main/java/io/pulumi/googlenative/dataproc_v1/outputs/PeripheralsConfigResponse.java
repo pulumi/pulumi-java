@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PeripheralsConfigResponse {
+/**
+ * Optional. Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[region]/services/[service_id]
+ */
     private final String metastoreService;
+/**
+ * Optional. The Spark History Server configuration for the workload.
+ */
     private final SparkHistoryServerConfigResponse sparkHistoryServerConfig;
 
     @OutputCustomType.Constructor({"metastoreService","sparkHistoryServerConfig"})
@@ -21,9 +27,15 @@ public final class PeripheralsConfigResponse {
         this.sparkHistoryServerConfig = Objects.requireNonNull(sparkHistoryServerConfig);
     }
 
+/**
+ * Optional. Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[region]/services/[service_id]
+ */
     public String getMetastoreService() {
         return this.metastoreService;
     }
+/**
+ * Optional. The Spark History Server configuration for the workload.
+ */
     public SparkHistoryServerConfigResponse getSparkHistoryServerConfig() {
         return this.sparkHistoryServerConfig;
     }

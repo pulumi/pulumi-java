@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Gets or sets the blockchain protocol.
+ */
     @EnumType
     public enum BlockchainProtocol {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         Parity("Parity"),
+/**
+ * 
+ */
         Quorum("Quorum"),
+/**
+ * 
+ */
         Corda("Corda");
 
         private final String value;

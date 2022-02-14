@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Represents a metric to optimize.
+ */
 public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudMlV1_StudyConfig_MetricSpecResponse Empty = new GoogleCloudMlV1_StudyConfig_MetricSpecResponse();
 
+    /**
+     * The optimization goal of the metric.
+     */
     @InputImport(name="goal", required=true)
     private final String goal;
 
@@ -19,6 +25,9 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse extends io.pul
         return this.goal;
     }
 
+    /**
+     * The name of the metric.
+     */
     @InputImport(name="metric", required=true)
     private final String metric;
 

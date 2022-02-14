@@ -12,10 +12,17 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines a delta health policy used to evaluate the health of an application or one of its child entities when upgrading the cluster.
+
+ */
 public final class ApplicationDeltaHealthPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationDeltaHealthPolicyArgs Empty = new ApplicationDeltaHealthPolicyArgs();
 
+    /**
+     * The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.
+     */
     @InputImport(name="defaultServiceTypeDeltaHealthPolicy")
     private final @Nullable Input<ServiceTypeDeltaHealthPolicyArgs> defaultServiceTypeDeltaHealthPolicy;
 
@@ -23,6 +30,9 @@ public final class ApplicationDeltaHealthPolicyArgs extends io.pulumi.resources.
         return this.defaultServiceTypeDeltaHealthPolicy == null ? Input.empty() : this.defaultServiceTypeDeltaHealthPolicy;
     }
 
+    /**
+     * The map with service type delta health policy per service type name. The map is empty by default.
+     */
     @InputImport(name="serviceTypeDeltaHealthPolicies")
     private final @Nullable Input<Map<String,ServiceTypeDeltaHealthPolicyArgs>> serviceTypeDeltaHealthPolicies;
 

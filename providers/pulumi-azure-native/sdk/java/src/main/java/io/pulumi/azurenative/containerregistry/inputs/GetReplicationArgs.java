@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetReplicationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetReplicationArgs Empty = new GetReplicationArgs();
 
+    /**
+     * The name of the container registry.
+     */
     @InputImport(name="registryName", required=true)
     private final String registryName;
 
@@ -19,6 +25,9 @@ public final class GetReplicationArgs extends io.pulumi.resources.InvokeArgs {
         return this.registryName;
     }
 
+    /**
+     * The name of the replication.
+     */
     @InputImport(name="replicationName", required=true)
     private final String replicationName;
 
@@ -26,6 +35,9 @@ public final class GetReplicationArgs extends io.pulumi.resources.InvokeArgs {
         return this.replicationName;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

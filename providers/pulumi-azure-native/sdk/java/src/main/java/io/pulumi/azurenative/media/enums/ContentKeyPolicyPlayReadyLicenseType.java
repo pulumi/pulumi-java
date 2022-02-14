@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The license type.
+ */
     @EnumType
     public enum ContentKeyPolicyPlayReadyLicenseType {
+/**
+ * Represents a ContentKeyPolicyPlayReadyLicenseType that is unavailable in current API version.
+ */
         Unknown("Unknown"),
+/**
+ * Non persistent license.
+ */
         NonPersistent("NonPersistent"),
+/**
+ * Persistent license. Allows offline playback.
+ */
         Persistent("Persistent");
 
         private final String value;

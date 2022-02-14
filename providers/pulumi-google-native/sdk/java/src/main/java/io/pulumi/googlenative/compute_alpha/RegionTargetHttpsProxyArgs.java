@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RegionTargetHttpsProxyArgs Empty = new RegionTargetHttpsProxyArgs();
 
+    /**
+     * Optional. A URL referring to a networksecurity.AuthorizationPolicy resource that describes how the proxy should authorize inbound traffic. If left blank, access will not be restricted by an authorization policy. Refer to the AuthorizationPolicy resource for additional details. authorizationPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. Note: This field currently has no impact.
+     */
     @InputImport(name="authorizationPolicy")
     private final @Nullable Input<String> authorizationPolicy;
 
@@ -24,6 +30,9 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
         return this.authorizationPolicy == null ? Input.empty() : this.authorizationPolicy;
     }
 
+    /**
+     * URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored.
+     */
     @InputImport(name="certificateMap")
     private final @Nullable Input<String> certificateMap;
 
@@ -31,6 +40,9 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
         return this.certificateMap == null ? Input.empty() : this.certificateMap;
     }
 
+    /**
+     * An optional description of this resource. Provide this property when you create the resource.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -38,6 +50,9 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * URLs to networkservices.HttpFilter resources enabled for xDS clients using this configuration. For example, https://networkservices.googleapis.com/beta/projects/project/locations/ locationhttpFilters/httpFilter Only filters that handle outbound connection and stream events may be specified. These filters work in conjunction with a default set of HTTP filters that may already be configured by Traffic Director. Traffic Director will determine the final location of these filters within xDS configuration based on the name of the HTTP filter. If Traffic Director positions multiple filters at the same location, those filters will be in the same order as specified in this list. httpFilters only applies for loadbalancers with loadBalancingScheme set to INTERNAL_SELF_MANAGED. See ForwardingRule for more details.
+     */
     @InputImport(name="httpFilters")
     private final @Nullable Input<List<String>> httpFilters;
 
@@ -45,6 +60,9 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
         return this.httpFilters == null ? Input.empty() : this.httpFilters;
     }
 
+    /**
+     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +70,9 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -59,6 +80,9 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * This field only applies when the forwarding rule that references this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED. When this field is set to true, Envoy proxies set up inbound traffic interception and bind to the IP address and port specified in the forwarding rule. This is generally useful when using Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar proxy). The Envoy proxy listens for inbound requests and handles requests when it receives them. The default is false.
+     */
     @InputImport(name="proxyBind")
     private final @Nullable Input<Boolean> proxyBind;
 
@@ -66,6 +90,9 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
         return this.proxyBind == null ? Input.empty() : this.proxyBind;
     }
 
+    /**
+     * Specifies the QUIC override policy for this TargetHttpsProxy resource. This setting determines whether the load balancer attempts to negotiate QUIC with clients. You can specify NONE, ENABLE, or DISABLE. - When quic-override is set to NONE, Google manages whether QUIC is used. - When quic-override is set to ENABLE, the load balancer uses QUIC when possible. - When quic-override is set to DISABLE, the load balancer doesn't use QUIC. - If the quic-override flag is not specified, NONE is implied. 
+     */
     @InputImport(name="quicOverride")
     private final @Nullable Input<RegionTargetHttpsProxyQuicOverride> quicOverride;
 
@@ -73,6 +100,9 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
         return this.quicOverride == null ? Input.empty() : this.quicOverride;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="region", required=true)
     private final Input<String> region;
 
@@ -80,6 +110,9 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
         return this.region;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -87,6 +120,9 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field currently has no impact.
+     */
     @InputImport(name="serverTlsPolicy")
     private final @Nullable Input<String> serverTlsPolicy;
 
@@ -94,6 +130,9 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
         return this.serverTlsPolicy == null ? Input.empty() : this.serverTlsPolicy;
     }
 
+    /**
+     * URLs to SslCertificate resources that are used to authenticate connections between users and the load balancer. At least one SSL certificate must be specified. Currently, you may specify up to 15 SSL certificates. sslCertificates do not apply when the load balancing scheme is set to INTERNAL_SELF_MANAGED.
+     */
     @InputImport(name="sslCertificates")
     private final @Nullable Input<List<String>> sslCertificates;
 
@@ -101,6 +140,9 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
         return this.sslCertificates == null ? Input.empty() : this.sslCertificates;
     }
 
+    /**
+     * URL of SslPolicy resource that will be associated with the TargetHttpsProxy resource. If not set, the TargetHttpsProxy resource has no SSL policy configured.
+     */
     @InputImport(name="sslPolicy")
     private final @Nullable Input<String> sslPolicy;
 
@@ -108,6 +150,9 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
         return this.sslPolicy == null ? Input.empty() : this.sslPolicy;
     }
 
+    /**
+     * A fully-qualified or valid partial URL to the UrlMap resource that defines the mapping from URL to the BackendService. For example, the following are all valid URLs for specifying a URL map: - https://www.googleapis.compute/v1/projects/project/global/urlMaps/ url-map - projects/project/global/urlMaps/url-map - global/urlMaps/url-map 
+     */
     @InputImport(name="urlMap")
     private final @Nullable Input<String> urlMap;
 

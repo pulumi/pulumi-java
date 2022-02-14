@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies a node in the web service graph. The node can either be an input, output or asset node, so only one of the corresponding id properties is populated at any given time.
+ */
 public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GraphNodeArgs Empty = new GraphNodeArgs();
 
+    /**
+     * The id of the asset represented by this node.
+     */
     @InputImport(name="assetId")
     private final @Nullable Input<String> assetId;
 
@@ -23,6 +29,9 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
         return this.assetId == null ? Input.empty() : this.assetId;
     }
 
+    /**
+     * The id of the input element represented by this node.
+     */
     @InputImport(name="inputId")
     private final @Nullable Input<String> inputId;
 
@@ -30,6 +39,9 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
         return this.inputId == null ? Input.empty() : this.inputId;
     }
 
+    /**
+     * The id of the output element represented by this node.
+     */
     @InputImport(name="outputId")
     private final @Nullable Input<String> outputId;
 
@@ -37,6 +49,9 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
         return this.outputId == null ? Input.empty() : this.outputId;
     }
 
+    /**
+     * If applicable, parameters of the node. Global graph parameters map into these, with values set at runtime.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,WebServiceParameterArgs>> parameters;
 

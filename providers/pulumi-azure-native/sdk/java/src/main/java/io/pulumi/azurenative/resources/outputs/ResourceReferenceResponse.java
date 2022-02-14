@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourceReferenceResponse {
+/**
+ * The fully qualified resource Id.
+ */
     private final String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -16,6 +19,9 @@ public final class ResourceReferenceResponse {
         this.id = Objects.requireNonNull(id);
     }
 
+/**
+ * The fully qualified resource Id.
+ */
     public String getId() {
         return this.id;
     }

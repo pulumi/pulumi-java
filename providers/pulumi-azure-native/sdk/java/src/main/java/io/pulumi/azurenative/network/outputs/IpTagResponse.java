@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IpTagResponse {
+/**
+ * The IP tag type. Example: FirstPartyUsage.
+ */
     private final @Nullable String ipTagType;
+/**
+ * The value of the IP tag associated with the public IP. Example: SQL.
+ */
     private final @Nullable String tag;
 
     @OutputCustomType.Constructor({"ipTagType","tag"})
@@ -22,9 +28,15 @@ public final class IpTagResponse {
         this.tag = tag;
     }
 
+/**
+ * The IP tag type. Example: FirstPartyUsage.
+ */
     public Optional<String> getIpTagType() {
         return Optional.ofNullable(this.ipTagType);
     }
+/**
+ * The value of the IP tag associated with the public IP. Example: SQL.
+ */
     public Optional<String> getTag() {
         return Optional.ofNullable(this.tag);
     }

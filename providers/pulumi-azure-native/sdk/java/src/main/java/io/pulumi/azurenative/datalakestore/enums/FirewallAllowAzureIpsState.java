@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
+ */
     @EnumType
     public enum FirewallAllowAzureIpsState {
+/**
+ * 
+ */
         Enabled("Enabled"),
+/**
+ * 
+ */
         Disabled("Disabled");
 
         private final String value;

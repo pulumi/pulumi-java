@@ -8,37 +8,69 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.firebaserules_v1.ReleaseArgs;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Create a `Release`. Release names should reflect the developer's deployment practices. For example, the release name may include the environment name, application name, application version, or any other name meaningful to the developer. Once a `Release` refers to a `Ruleset`, the rules can be enforced by Firebase Rules-enabled services. More than one `Release` may be 'live' concurrently. Consider the following three `Release` names for `projects/foo` and the `Ruleset` to which they refer. Release Name -> Ruleset Name * projects/foo/releases/prod -> projects/foo/rulesets/uuid123 * projects/foo/releases/prod/beta -> projects/foo/rulesets/uuid123 * projects/foo/releases/prod/v23 -> projects/foo/rulesets/uuid456 The relationships reflect a `Ruleset` rollout in progress. The `prod` and `prod/beta` releases refer to the same `Ruleset`. However, `prod/v23` refers to a new `Ruleset`. The `Ruleset` reference for a `Release` may be updated using the UpdateRelease method.
+ */
 @ResourceType(type="google-native:firebaserules/v1:Release")
 public class Release extends io.pulumi.resources.CustomResource {
+    /**
+     * Time the release was created.
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return Time the release was created.
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Format: `projects/{project_id}/releases/{release_id}`
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Format: `projects/{project_id}/releases/{release_id}`
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the `Release` to be created.
+     */
     @OutputExport(name="rulesetName", type=String.class, parameters={})
     private Output<String> rulesetName;
 
+    /**
+     * @return Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the `Release` to be created.
+     */
     public Output<String> getRulesetName() {
         return this.rulesetName;
     }
+    /**
+     * Time the release was updated.
+     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
+    /**
+     * @return Time the release was updated.
+     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Release(String name, @Nullable ReleaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:firebaserules/v1:Release", name, args == null ? ReleaseArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -54,6 +86,14 @@ public class Release extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Release get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Release(name, id, options);
     }

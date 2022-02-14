@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum KnownSyslogDataSourceStreams {
+/**
+ * 
+ */
         MicrosoftSyslog("Microsoft-Syslog");
 
         private final String value;

@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebAppDiagnosticLogsConfigurationArgs Empty = new WebAppDiagnosticLogsConfigurationArgs();
 
+    /**
+     * Application logs configuration.
+     */
     @InputImport(name="applicationLogs")
     private final @Nullable Input<ApplicationLogsConfigArgs> applicationLogs;
 
@@ -24,6 +30,9 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
         return this.applicationLogs == null ? Input.empty() : this.applicationLogs;
     }
 
+    /**
+     * Detailed error messages configuration.
+     */
     @InputImport(name="detailedErrorMessages")
     private final @Nullable Input<EnabledConfigArgs> detailedErrorMessages;
 
@@ -31,6 +40,9 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
         return this.detailedErrorMessages == null ? Input.empty() : this.detailedErrorMessages;
     }
 
+    /**
+     * Failed requests tracing configuration.
+     */
     @InputImport(name="failedRequestsTracing")
     private final @Nullable Input<EnabledConfigArgs> failedRequestsTracing;
 
@@ -38,6 +50,9 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
         return this.failedRequestsTracing == null ? Input.empty() : this.failedRequestsTracing;
     }
 
+    /**
+     * HTTP logs configuration.
+     */
     @InputImport(name="httpLogs")
     private final @Nullable Input<HttpLogsConfigArgs> httpLogs;
 
@@ -45,6 +60,9 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
         return this.httpLogs == null ? Input.empty() : this.httpLogs;
     }
 
+    /**
+     * Kind of resource.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -52,6 +70,9 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the app.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -59,6 +80,9 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

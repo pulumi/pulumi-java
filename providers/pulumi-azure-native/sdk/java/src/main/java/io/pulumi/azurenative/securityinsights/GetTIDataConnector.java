@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTIDataConnector {
+/**
+ * Represents threat intelligence data connector.
+API Version: 2020-01-01.
+ *
+ * Represents threat intelligence data connector.
+ */
     public static CompletableFuture<GetTIDataConnectorResult> invokeAsync(GetTIDataConnectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getTIDataConnector", TypeShape.of(GetTIDataConnectorResult.class), args == null ? GetTIDataConnectorArgs.Empty : args, Utilities.withVersion(options));
     }

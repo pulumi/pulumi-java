@@ -12,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ChannelTypeDescriptionResponse {
+/**
+ * Text description for the channel
+ */
     private final @Nullable String channelDescription;
+/**
+ * All the available functions for the channel
+ */
     private final @Nullable List<String> channelFunctions;
+/**
+ * Channel type
+ */
     private final @Nullable String channelType;
 
     @OutputCustomType.Constructor({"channelDescription","channelFunctions","channelType"})
@@ -26,12 +35,21 @@ public final class ChannelTypeDescriptionResponse {
         this.channelType = channelType;
     }
 
+/**
+ * Text description for the channel
+ */
     public Optional<String> getChannelDescription() {
         return Optional.ofNullable(this.channelDescription);
     }
+/**
+ * All the available functions for the channel
+ */
     public List<String> getChannelFunctions() {
         return this.channelFunctions == null ? List.of() : this.channelFunctions;
     }
+/**
+ * Channel type
+ */
     public Optional<String> getChannelType() {
         return Optional.ofNullable(this.channelType);
     }

@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The image update trigger that caused a build.
+ */
 public final class ImageUpdateTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ImageUpdateTriggerResponse Empty = new ImageUpdateTriggerResponse();
 
+    /**
+     * The unique ID of the trigger.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -23,6 +29,9 @@ public final class ImageUpdateTriggerResponse extends io.pulumi.resources.Invoke
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The list of image updates that caused the build.
+     */
     @InputImport(name="images")
     private final @Nullable List<ImageDescriptorResponse> images;
 
@@ -30,6 +39,9 @@ public final class ImageUpdateTriggerResponse extends io.pulumi.resources.Invoke
         return this.images == null ? List.of() : this.images;
     }
 
+    /**
+     * The timestamp when the image update happened.
+     */
     @InputImport(name="timestamp")
     private final @Nullable String timestamp;
 

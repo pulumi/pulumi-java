@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Canonical service scoped to an Istio mesh. Anthos clusters running ASM >= 1.6.8 will have their services ingested as this type.
+ */
 public final class IstioCanonicalServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IstioCanonicalServiceArgs Empty = new IstioCanonicalServiceArgs();
 
+    /**
+     * The name of the canonical service underlying this service. Corresponds to the destination_canonical_service_name metric label in label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).
+     */
     @InputImport(name="canonicalService")
     private final @Nullable Input<String> canonicalService;
 
@@ -21,6 +27,9 @@ public final class IstioCanonicalServiceArgs extends io.pulumi.resources.Resourc
         return this.canonicalService == null ? Input.empty() : this.canonicalService;
     }
 
+    /**
+     * The namespace of the canonical service underlying this service. Corresponds to the destination_canonical_service_namespace metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).
+     */
     @InputImport(name="canonicalServiceNamespace")
     private final @Nullable Input<String> canonicalServiceNamespace;
 
@@ -28,6 +37,9 @@ public final class IstioCanonicalServiceArgs extends io.pulumi.resources.Resourc
         return this.canonicalServiceNamespace == null ? Input.empty() : this.canonicalServiceNamespace;
     }
 
+    /**
+     * Identifier for the Istio mesh in which this canonical service is defined. Corresponds to the mesh_uid metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).
+     */
     @InputImport(name="meshUid")
     private final @Nullable Input<String> meshUid;
 

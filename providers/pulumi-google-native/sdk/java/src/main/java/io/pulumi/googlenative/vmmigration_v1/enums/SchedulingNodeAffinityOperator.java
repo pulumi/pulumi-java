@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The operator to use for the node resources specified in the `values` parameter.
+ */
     @EnumType
     public enum SchedulingNodeAffinityOperator {
+/**
+ * An unknown, unexpected behavior.
+ */
         OperatorUnspecified("OPERATOR_UNSPECIFIED"),
+/**
+ * The node resource group should be in these resources affinity.
+ */
         In("IN"),
+/**
+ * The node resource group should not be in these resources affinity.
+ */
         NotIn("NOT_IN");
 
         private final String value;

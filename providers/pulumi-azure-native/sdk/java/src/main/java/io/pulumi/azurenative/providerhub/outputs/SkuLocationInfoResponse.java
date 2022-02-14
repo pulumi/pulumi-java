@@ -13,10 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SkuLocationInfoResponse {
+/**
+ * 
+ */
     private final @Nullable List<String> extendedLocations;
+/**
+ * 
+ */
     private final String location;
+/**
+ * 
+ */
     private final @Nullable String type;
+/**
+ * 
+ */
     private final @Nullable List<SkuZoneDetailResponse> zoneDetails;
+/**
+ * 
+ */
     private final @Nullable List<String> zones;
 
     @OutputCustomType.Constructor({"extendedLocations","location","type","zoneDetails","zones"})
@@ -33,18 +48,33 @@ public final class SkuLocationInfoResponse {
         this.zones = zones;
     }
 
+/**
+ * 
+ */
     public List<String> getExtendedLocations() {
         return this.extendedLocations == null ? List.of() : this.extendedLocations;
     }
+/**
+ * 
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * 
+ */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
+/**
+ * 
+ */
     public List<SkuZoneDetailResponse> getZoneDetails() {
         return this.zoneDetails == null ? List.of() : this.zoneDetails;
     }
+/**
+ * 
+ */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }

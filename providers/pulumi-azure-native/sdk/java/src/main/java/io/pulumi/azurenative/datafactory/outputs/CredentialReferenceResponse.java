@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CredentialReferenceResponse {
+/**
+ * Reference credential name.
+ */
     private final String referenceName;
+/**
+ * Credential reference type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"referenceName","type"})
@@ -20,9 +26,15 @@ public final class CredentialReferenceResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Reference credential name.
+ */
     public String getReferenceName() {
         return this.referenceName;
     }
+/**
+ * Credential reference type.
+ */
     public String getType() {
         return this.type;
     }

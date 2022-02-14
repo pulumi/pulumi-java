@@ -8,10 +8,16 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Configuration for the Backup for GKE Agent.
+ */
 public final class GkeBackupAgentConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GkeBackupAgentConfigResponse Empty = new GkeBackupAgentConfigResponse();
 
+    /**
+     * Whether the Backup for GKE agent is enabled for this cluster.
+     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

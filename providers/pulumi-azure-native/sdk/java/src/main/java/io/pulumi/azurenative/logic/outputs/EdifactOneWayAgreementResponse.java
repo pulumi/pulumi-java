@@ -10,8 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EdifactOneWayAgreementResponse {
+/**
+ * The EDIFACT protocol settings.
+ */
     private final EdifactProtocolSettingsResponse protocolSettings;
+/**
+ * The receiver business identity
+ */
     private final BusinessIdentityResponse receiverBusinessIdentity;
+/**
+ * The sender business identity
+ */
     private final BusinessIdentityResponse senderBusinessIdentity;
 
     @OutputCustomType.Constructor({"protocolSettings","receiverBusinessIdentity","senderBusinessIdentity"})
@@ -24,12 +33,21 @@ public final class EdifactOneWayAgreementResponse {
         this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity);
     }
 
+/**
+ * The EDIFACT protocol settings.
+ */
     public EdifactProtocolSettingsResponse getProtocolSettings() {
         return this.protocolSettings;
     }
+/**
+ * The receiver business identity
+ */
     public BusinessIdentityResponse getReceiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
     }
+/**
+ * The sender business identity
+ */
     public BusinessIdentityResponse getSenderBusinessIdentity() {
         return this.senderBusinessIdentity;
     }

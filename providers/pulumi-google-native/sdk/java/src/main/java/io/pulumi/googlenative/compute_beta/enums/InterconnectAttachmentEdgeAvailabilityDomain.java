@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Desired availability domain for the attachment. Only available for type PARTNER, at creation time, and can take one of the following values: - AVAILABILITY_DOMAIN_ANY - AVAILABILITY_DOMAIN_1 - AVAILABILITY_DOMAIN_2 For improved reliability, customers should configure a pair of attachments, one per availability domain. The selected availability domain will be provided to the Partner via the pairing key, so that the provisioned circuit will lie in the specified domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
+ */
     @EnumType
     public enum InterconnectAttachmentEdgeAvailabilityDomain {
+/**
+ * 
+ */
         AvailabilityDomain1("AVAILABILITY_DOMAIN_1"),
+/**
+ * 
+ */
         AvailabilityDomain2("AVAILABILITY_DOMAIN_2"),
+/**
+ * 
+ */
         AvailabilityDomainAny("AVAILABILITY_DOMAIN_ANY");
 
         private final String value;

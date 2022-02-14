@@ -16,10 +16,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details of the Process Server.
+ */
 public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProcessServerResponse Empty = new ProcessServerResponse();
 
+    /**
+     * Agent expiry date.
+     */
     @InputImport(name="agentExpiryDate")
     private final @Nullable String agentExpiryDate;
 
@@ -27,6 +33,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.agentExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.agentExpiryDate);
     }
 
+    /**
+     * The version of the scout component on the server.
+     */
     @InputImport(name="agentVersion")
     private final @Nullable String agentVersion;
 
@@ -34,6 +43,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
     }
 
+    /**
+     * The agent version details.
+     */
     @InputImport(name="agentVersionDetails")
     private final @Nullable VersionDetailsResponse agentVersionDetails;
 
@@ -41,6 +53,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.agentVersionDetails == null ? Optional.empty() : Optional.ofNullable(this.agentVersionDetails);
     }
 
+    /**
+     * The available memory.
+     */
     @InputImport(name="availableMemoryInBytes")
     private final @Nullable Double availableMemoryInBytes;
 
@@ -48,6 +63,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.availableMemoryInBytes == null ? Optional.empty() : Optional.ofNullable(this.availableMemoryInBytes);
     }
 
+    /**
+     * The available space.
+     */
     @InputImport(name="availableSpaceInBytes")
     private final @Nullable Double availableSpaceInBytes;
 
@@ -55,6 +73,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.availableSpaceInBytes == null ? Optional.empty() : Optional.ofNullable(this.availableSpaceInBytes);
     }
 
+    /**
+     * The percentage of the CPU load.
+     */
     @InputImport(name="cpuLoad")
     private final @Nullable String cpuLoad;
 
@@ -62,6 +83,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.cpuLoad == null ? Optional.empty() : Optional.ofNullable(this.cpuLoad);
     }
 
+    /**
+     * The CPU load status.
+     */
     @InputImport(name="cpuLoadStatus")
     private final @Nullable String cpuLoadStatus;
 
@@ -69,6 +93,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.cpuLoadStatus == null ? Optional.empty() : Optional.ofNullable(this.cpuLoadStatus);
     }
 
+    /**
+     * The Process Server's friendly name.
+     */
     @InputImport(name="friendlyName")
     private final @Nullable String friendlyName;
 
@@ -76,6 +103,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
+    /**
+     * The health of Process Server.
+     */
     @InputImport(name="health", required=true)
     private final String health;
 
@@ -83,6 +113,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.health;
     }
 
+    /**
+     * Health errors.
+     */
     @InputImport(name="healthErrors")
     private final @Nullable List<HealthErrorResponse> healthErrors;
 
@@ -90,6 +123,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.healthErrors == null ? List.of() : this.healthErrors;
     }
 
+    /**
+     * The agent generated Id.
+     */
     @InputImport(name="hostId")
     private final @Nullable String hostId;
 
@@ -97,6 +133,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.hostId == null ? Optional.empty() : Optional.ofNullable(this.hostId);
     }
 
+    /**
+     * The Process Server Id.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -104,6 +143,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The IP address of the server.
+     */
     @InputImport(name="ipAddress")
     private final @Nullable String ipAddress;
 
@@ -111,6 +153,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 
+    /**
+     * The last heartbeat received from the server.
+     */
     @InputImport(name="lastHeartbeat")
     private final @Nullable String lastHeartbeat;
 
@@ -118,6 +163,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.lastHeartbeat == null ? Optional.empty() : Optional.ofNullable(this.lastHeartbeat);
     }
 
+    /**
+     * The servers configured with this PS.
+     */
     @InputImport(name="machineCount")
     private final @Nullable String machineCount;
 
@@ -125,6 +173,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.machineCount == null ? Optional.empty() : Optional.ofNullable(this.machineCount);
     }
 
+    /**
+     * The MARS communication status.
+     */
     @InputImport(name="marsCommunicationStatus", required=true)
     private final String marsCommunicationStatus;
 
@@ -132,6 +183,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.marsCommunicationStatus;
     }
 
+    /**
+     * The MARS registration status.
+     */
     @InputImport(name="marsRegistrationStatus", required=true)
     private final String marsRegistrationStatus;
 
@@ -139,6 +193,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.marsRegistrationStatus;
     }
 
+    /**
+     * The memory usage status.
+     */
     @InputImport(name="memoryUsageStatus")
     private final @Nullable String memoryUsageStatus;
 
@@ -146,6 +203,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.memoryUsageStatus == null ? Optional.empty() : Optional.ofNullable(this.memoryUsageStatus);
     }
 
+    /**
+     * The list of the mobility service updates available on the Process Server.
+     */
     @InputImport(name="mobilityServiceUpdates")
     private final @Nullable List<MobilityServiceUpdateResponse> mobilityServiceUpdates;
 
@@ -153,6 +213,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.mobilityServiceUpdates == null ? List.of() : this.mobilityServiceUpdates;
     }
 
+    /**
+     * The OS type of the server.
+     */
     @InputImport(name="osType")
     private final @Nullable String osType;
 
@@ -160,6 +223,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
     }
 
+    /**
+     * OS Version of the process server. Note: This will get populated if user has CS version greater than 9.12.0.0.
+     */
     @InputImport(name="osVersion")
     private final @Nullable String osVersion;
 
@@ -167,6 +233,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.osVersion == null ? Optional.empty() : Optional.ofNullable(this.osVersion);
     }
 
+    /**
+     * The PS service status.
+     */
     @InputImport(name="psServiceStatus")
     private final @Nullable String psServiceStatus;
 
@@ -174,6 +243,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.psServiceStatus == null ? Optional.empty() : Optional.ofNullable(this.psServiceStatus);
     }
 
+    /**
+     * The process server stats refresh time.
+     */
     @InputImport(name="psStatsRefreshTime", required=true)
     private final String psStatsRefreshTime;
 
@@ -181,6 +253,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.psStatsRefreshTime;
     }
 
+    /**
+     * The number of replication pairs configured in this PS.
+     */
     @InputImport(name="replicationPairCount")
     private final @Nullable String replicationPairCount;
 
@@ -188,6 +263,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.replicationPairCount == null ? Optional.empty() : Optional.ofNullable(this.replicationPairCount);
     }
 
+    /**
+     * The space usage status.
+     */
     @InputImport(name="spaceUsageStatus")
     private final @Nullable String spaceUsageStatus;
 
@@ -195,6 +273,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.spaceUsageStatus == null ? Optional.empty() : Optional.ofNullable(this.spaceUsageStatus);
     }
 
+    /**
+     * The PS SSL cert expiry date.
+     */
     @InputImport(name="sslCertExpiryDate")
     private final @Nullable String sslCertExpiryDate;
 
@@ -202,6 +283,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.sslCertExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.sslCertExpiryDate);
     }
 
+    /**
+     * CS SSL cert expiry date.
+     */
     @InputImport(name="sslCertExpiryRemainingDays")
     private final @Nullable Integer sslCertExpiryRemainingDays;
 
@@ -209,6 +293,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.sslCertExpiryRemainingDays == null ? Optional.empty() : Optional.ofNullable(this.sslCertExpiryRemainingDays);
     }
 
+    /**
+     * The percentage of the system load.
+     */
     @InputImport(name="systemLoad")
     private final @Nullable String systemLoad;
 
@@ -216,6 +303,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.systemLoad == null ? Optional.empty() : Optional.ofNullable(this.systemLoad);
     }
 
+    /**
+     * The system load status.
+     */
     @InputImport(name="systemLoadStatus")
     private final @Nullable String systemLoadStatus;
 
@@ -223,6 +313,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.systemLoadStatus == null ? Optional.empty() : Optional.ofNullable(this.systemLoadStatus);
     }
 
+    /**
+     * The throughput in bytes.
+     */
     @InputImport(name="throughputInBytes", required=true)
     private final Double throughputInBytes;
 
@@ -230,6 +323,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.throughputInBytes;
     }
 
+    /**
+     * The throughput in MBps.
+     */
     @InputImport(name="throughputInMBps", required=true)
     private final Double throughputInMBps;
 
@@ -237,6 +333,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.throughputInMBps;
     }
 
+    /**
+     * The throughput status.
+     */
     @InputImport(name="throughputStatus", required=true)
     private final String throughputStatus;
 
@@ -244,6 +343,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.throughputStatus;
     }
 
+    /**
+     * The uploading pending data in bytes.
+     */
     @InputImport(name="throughputUploadPendingDataInBytes", required=true)
     private final Double throughputUploadPendingDataInBytes;
 
@@ -251,6 +353,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.throughputUploadPendingDataInBytes;
     }
 
+    /**
+     * The total memory.
+     */
     @InputImport(name="totalMemoryInBytes")
     private final @Nullable Double totalMemoryInBytes;
 
@@ -258,6 +363,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.totalMemoryInBytes == null ? Optional.empty() : Optional.ofNullable(this.totalMemoryInBytes);
     }
 
+    /**
+     * The total space.
+     */
     @InputImport(name="totalSpaceInBytes")
     private final @Nullable Double totalSpaceInBytes;
 
@@ -265,6 +373,9 @@ public final class ProcessServerResponse extends io.pulumi.resources.InvokeArgs 
         return this.totalSpaceInBytes == null ? Optional.empty() : Optional.ofNullable(this.totalSpaceInBytes);
     }
 
+    /**
+     * Version status
+     */
     @InputImport(name="versionStatus")
     private final @Nullable String versionStatus;
 

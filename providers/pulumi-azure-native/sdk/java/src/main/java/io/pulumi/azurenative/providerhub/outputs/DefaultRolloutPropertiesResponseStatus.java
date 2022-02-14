@@ -14,10 +14,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DefaultRolloutPropertiesResponseStatus {
+/**
+ * 
+ */
     private final @Nullable List<String> completedRegions;
+/**
+ * 
+ */
     private final @Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions;
+/**
+ * 
+ */
     private final @Nullable String nextTrafficRegion;
+/**
+ * 
+ */
     private final @Nullable String nextTrafficRegionScheduledTime;
+/**
+ * 
+ */
     private final @Nullable String subscriptionReregistrationResult;
 
     @OutputCustomType.Constructor({"completedRegions","failedOrSkippedRegions","nextTrafficRegion","nextTrafficRegionScheduledTime","subscriptionReregistrationResult"})
@@ -34,18 +49,33 @@ public final class DefaultRolloutPropertiesResponseStatus {
         this.subscriptionReregistrationResult = subscriptionReregistrationResult;
     }
 
+/**
+ * 
+ */
     public List<String> getCompletedRegions() {
         return this.completedRegions == null ? List.of() : this.completedRegions;
     }
+/**
+ * 
+ */
     public Map<String,ExtendedErrorInfoResponse> getFailedOrSkippedRegions() {
         return this.failedOrSkippedRegions == null ? Map.of() : this.failedOrSkippedRegions;
     }
+/**
+ * 
+ */
     public Optional<String> getNextTrafficRegion() {
         return Optional.ofNullable(this.nextTrafficRegion);
     }
+/**
+ * 
+ */
     public Optional<String> getNextTrafficRegionScheduledTime() {
         return Optional.ofNullable(this.nextTrafficRegionScheduledTime);
     }
+/**
+ * 
+ */
     public Optional<String> getSubscriptionReregistrationResult() {
         return Optional.ofNullable(this.subscriptionReregistrationResult);
     }

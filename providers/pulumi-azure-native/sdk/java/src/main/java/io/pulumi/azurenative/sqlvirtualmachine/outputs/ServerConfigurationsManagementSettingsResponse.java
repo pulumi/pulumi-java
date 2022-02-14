@@ -14,9 +14,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServerConfigurationsManagementSettingsResponse {
+/**
+ * Additional SQL feature settings.
+ */
     private final @Nullable AdditionalFeaturesServerConfigurationsResponse additionalFeaturesServerConfigurations;
+/**
+ * SQL connectivity type settings.
+ */
     private final @Nullable SqlConnectivityUpdateSettingsResponse sqlConnectivityUpdateSettings;
+/**
+ * SQL storage update settings.
+ */
     private final @Nullable SqlStorageUpdateSettingsResponse sqlStorageUpdateSettings;
+/**
+ * SQL workload type settings.
+ */
     private final @Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings;
 
     @OutputCustomType.Constructor({"additionalFeaturesServerConfigurations","sqlConnectivityUpdateSettings","sqlStorageUpdateSettings","sqlWorkloadTypeUpdateSettings"})
@@ -31,15 +43,27 @@ public final class ServerConfigurationsManagementSettingsResponse {
         this.sqlWorkloadTypeUpdateSettings = sqlWorkloadTypeUpdateSettings;
     }
 
+/**
+ * Additional SQL feature settings.
+ */
     public Optional<AdditionalFeaturesServerConfigurationsResponse> getAdditionalFeaturesServerConfigurations() {
         return Optional.ofNullable(this.additionalFeaturesServerConfigurations);
     }
+/**
+ * SQL connectivity type settings.
+ */
     public Optional<SqlConnectivityUpdateSettingsResponse> getSqlConnectivityUpdateSettings() {
         return Optional.ofNullable(this.sqlConnectivityUpdateSettings);
     }
+/**
+ * SQL storage update settings.
+ */
     public Optional<SqlStorageUpdateSettingsResponse> getSqlStorageUpdateSettings() {
         return Optional.ofNullable(this.sqlStorageUpdateSettings);
     }
+/**
+ * SQL workload type settings.
+ */
     public Optional<SqlWorkloadTypeUpdateSettingsResponse> getSqlWorkloadTypeUpdateSettings() {
         return Optional.ofNullable(this.sqlWorkloadTypeUpdateSettings);
     }

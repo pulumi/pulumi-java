@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SettingResponse {
+/**
+ * The name of the setting.
+ */
     private final @Nullable String name;
+/**
+ * The value of the setting.
+ */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -22,9 +28,15 @@ public final class SettingResponse {
         this.value = value;
     }
 
+/**
+ * The name of the setting.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * The value of the setting.
+ */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

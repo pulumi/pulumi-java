@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class RemediationAtSubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RemediationAtSubscriptionArgs Empty = new RemediationAtSubscriptionArgs();
 
+    /**
+     * The filters that will be applied to determine which resources to remediate.
+     */
     @InputImport(name="filters")
     private final @Nullable Input<RemediationFiltersArgs> filters;
 
@@ -24,6 +30,9 @@ public final class RemediationAtSubscriptionArgs extends io.pulumi.resources.Res
         return this.filters == null ? Input.empty() : this.filters;
     }
 
+    /**
+     * The resource ID of the policy assignment that should be remediated.
+     */
     @InputImport(name="policyAssignmentId")
     private final @Nullable Input<String> policyAssignmentId;
 
@@ -31,6 +40,9 @@ public final class RemediationAtSubscriptionArgs extends io.pulumi.resources.Res
         return this.policyAssignmentId == null ? Input.empty() : this.policyAssignmentId;
     }
 
+    /**
+     * The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.
+     */
     @InputImport(name="policyDefinitionReferenceId")
     private final @Nullable Input<String> policyDefinitionReferenceId;
 
@@ -38,6 +50,9 @@ public final class RemediationAtSubscriptionArgs extends io.pulumi.resources.Res
         return this.policyDefinitionReferenceId == null ? Input.empty() : this.policyDefinitionReferenceId;
     }
 
+    /**
+     * The name of the remediation.
+     */
     @InputImport(name="remediationName")
     private final @Nullable Input<String> remediationName;
 
@@ -45,6 +60,9 @@ public final class RemediationAtSubscriptionArgs extends io.pulumi.resources.Res
         return this.remediationName == null ? Input.empty() : this.remediationName;
     }
 
+    /**
+     * The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
+     */
     @InputImport(name="resourceDiscoveryMode")
     private final @Nullable Input<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode;
 

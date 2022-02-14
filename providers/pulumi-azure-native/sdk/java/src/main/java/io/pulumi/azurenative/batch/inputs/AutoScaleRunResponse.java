@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AutoScaleRunResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutoScaleRunResponse Empty = new AutoScaleRunResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="error")
     private final @Nullable AutoScaleRunErrorResponse error;
 
@@ -22,6 +28,9 @@ public final class AutoScaleRunResponse extends io.pulumi.resources.InvokeArgs {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="evaluationTime", required=true)
     private final String evaluationTime;
 
@@ -29,6 +38,9 @@ public final class AutoScaleRunResponse extends io.pulumi.resources.InvokeArgs {
         return this.evaluationTime;
     }
 
+    /**
+     * Each variable value is returned in the form $variable=value, and variables are separated by semicolons.
+     */
     @InputImport(name="results")
     private final @Nullable String results;
 

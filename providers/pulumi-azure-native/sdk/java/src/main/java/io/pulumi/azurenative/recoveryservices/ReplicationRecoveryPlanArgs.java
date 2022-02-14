@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicationRecoveryPlanArgs Empty = new ReplicationRecoveryPlanArgs();
 
+    /**
+     * Recovery plan creation properties.
+     */
     @InputImport(name="properties", required=true)
     private final Input<CreateRecoveryPlanInputPropertiesArgs> properties;
 
@@ -22,6 +28,9 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
         return this.properties;
     }
 
+    /**
+     * Recovery plan name.
+     */
     @InputImport(name="recoveryPlanName")
     private final @Nullable Input<String> recoveryPlanName;
 
@@ -29,6 +38,9 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
         return this.recoveryPlanName == null ? Input.empty() : this.recoveryPlanName;
     }
 
+    /**
+     * The name of the resource group where the recovery services vault is present.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,9 @@ public final class ReplicationRecoveryPlanArgs extends io.pulumi.resources.Resou
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the recovery services vault.
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 

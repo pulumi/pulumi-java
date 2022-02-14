@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Scope of the extensionInstance. It can be either Cluster or Namespace; but not both.
+ */
 public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScopeArgs Empty = new ScopeArgs();
 
+    /**
+     * Specifies that the scope of the extensionInstance is Cluster
+     */
     @InputImport(name="cluster")
     private final @Nullable Input<ScopeClusterArgs> cluster;
 
@@ -22,6 +28,9 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
         return this.cluster == null ? Input.empty() : this.cluster;
     }
 
+    /**
+     * Specifies that the scope of the extensionInstance is Namespace
+     */
     @InputImport(name="namespace")
     private final @Nullable Input<ScopeNamespaceArgs> namespace;
 

@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnectionProfile {
+/**
+ * Gets details of a single connection profile.
+ */
     public static CompletableFuture<GetConnectionProfileResult> invokeAsync(GetConnectionProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datamigration/v1:getConnectionProfile", TypeShape.of(GetConnectionProfileResult.class), args == null ? GetConnectionProfileArgs.Empty : args, Utilities.withVersion(options));
     }

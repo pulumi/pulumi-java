@@ -12,10 +12,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Sets the time for recurring patch deployments.
+ */
 public final class RecurringScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RecurringScheduleResponse Empty = new RecurringScheduleResponse();
 
+    /**
+     * Optional. The end time at which a recurring patch deployment schedule is no longer active.
+     */
     @InputImport(name="endTime", required=true)
     private final String endTime;
 
@@ -23,6 +29,9 @@ public final class RecurringScheduleResponse extends io.pulumi.resources.InvokeA
         return this.endTime;
     }
 
+    /**
+     * The frequency unit of this recurring schedule.
+     */
     @InputImport(name="frequency", required=true)
     private final String frequency;
 
@@ -30,6 +39,9 @@ public final class RecurringScheduleResponse extends io.pulumi.resources.InvokeA
         return this.frequency;
     }
 
+    /**
+     * The time the last patch job ran successfully.
+     */
     @InputImport(name="lastExecuteTime", required=true)
     private final String lastExecuteTime;
 
@@ -37,6 +49,9 @@ public final class RecurringScheduleResponse extends io.pulumi.resources.InvokeA
         return this.lastExecuteTime;
     }
 
+    /**
+     * Schedule with monthly executions.
+     */
     @InputImport(name="monthly", required=true)
     private final MonthlyScheduleResponse monthly;
 
@@ -44,6 +59,9 @@ public final class RecurringScheduleResponse extends io.pulumi.resources.InvokeA
         return this.monthly;
     }
 
+    /**
+     * The time the next patch job is scheduled to run.
+     */
     @InputImport(name="nextExecuteTime", required=true)
     private final String nextExecuteTime;
 
@@ -51,6 +69,9 @@ public final class RecurringScheduleResponse extends io.pulumi.resources.InvokeA
         return this.nextExecuteTime;
     }
 
+    /**
+     * Optional. The time that the recurring schedule becomes effective. Defaults to `create_time` of the patch deployment.
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 
@@ -58,6 +79,9 @@ public final class RecurringScheduleResponse extends io.pulumi.resources.InvokeA
         return this.startTime;
     }
 
+    /**
+     * Time of the day to run a recurring deployment.
+     */
     @InputImport(name="timeOfDay", required=true)
     private final TimeOfDayResponse timeOfDay;
 
@@ -65,6 +89,9 @@ public final class RecurringScheduleResponse extends io.pulumi.resources.InvokeA
         return this.timeOfDay;
     }
 
+    /**
+     * Defines the time zone that `time_of_day` is relative to. The rules for daylight saving time are determined by the chosen time zone.
+     */
     @InputImport(name="timeZone", required=true)
     private final TimeZoneResponse timeZone;
 
@@ -72,6 +99,9 @@ public final class RecurringScheduleResponse extends io.pulumi.resources.InvokeA
         return this.timeZone;
     }
 
+    /**
+     * Schedule with weekly executions.
+     */
     @InputImport(name="weekly", required=true)
     private final WeeklyScheduleResponse weekly;
 

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Qos Traffic Profiler Port range properties.
+ */
 public final class QosPortRangeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final QosPortRangeArgs Empty = new QosPortRangeArgs();
 
+    /**
+     * Qos Port Range end.
+     */
     @InputImport(name="end")
     private final @Nullable Input<Integer> end;
 
@@ -21,6 +27,9 @@ public final class QosPortRangeArgs extends io.pulumi.resources.ResourceArgs {
         return this.end == null ? Input.empty() : this.end;
     }
 
+    /**
+     * Qos Port Range start.
+     */
     @InputImport(name="start")
     private final @Nullable Input<Integer> start;
 

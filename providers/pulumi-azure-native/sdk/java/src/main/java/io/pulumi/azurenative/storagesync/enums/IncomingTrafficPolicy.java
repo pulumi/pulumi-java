@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Incoming Traffic Policy
+ */
     @EnumType
     public enum IncomingTrafficPolicy {
+/**
+ * 
+ */
         AllowAllTraffic("AllowAllTraffic"),
+/**
+ * 
+ */
         AllowVirtualNetworksOnly("AllowVirtualNetworksOnly");
 
         private final String value;

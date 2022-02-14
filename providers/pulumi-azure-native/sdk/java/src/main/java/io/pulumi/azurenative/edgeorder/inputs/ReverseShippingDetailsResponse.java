@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Reverse shipment details.
+ */
 public final class ReverseShippingDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReverseShippingDetailsResponse Empty = new ReverseShippingDetailsResponse();
 
+    /**
+     * Carrier Name for display purpose. Not to be used for any processing.
+     */
     @InputImport(name="carrierDisplayName", required=true)
     private final String carrierDisplayName;
 
@@ -19,6 +25,9 @@ public final class ReverseShippingDetailsResponse extends io.pulumi.resources.In
         return this.carrierDisplayName;
     }
 
+    /**
+     * Name of the carrier.
+     */
     @InputImport(name="carrierName", required=true)
     private final String carrierName;
 
@@ -26,6 +35,9 @@ public final class ReverseShippingDetailsResponse extends io.pulumi.resources.In
         return this.carrierName;
     }
 
+    /**
+     * SAS key to download the reverse shipment label of the package.
+     */
     @InputImport(name="sasKeyForLabel", required=true)
     private final String sasKeyForLabel;
 
@@ -33,6 +45,9 @@ public final class ReverseShippingDetailsResponse extends io.pulumi.resources.In
         return this.sasKeyForLabel;
     }
 
+    /**
+     * TrackingId of the package
+     */
     @InputImport(name="trackingId", required=true)
     private final String trackingId;
 
@@ -40,6 +55,9 @@ public final class ReverseShippingDetailsResponse extends io.pulumi.resources.In
         return this.trackingId;
     }
 
+    /**
+     * TrackingUrl of the package.
+     */
     @InputImport(name="trackingUrl", required=true)
     private final String trackingUrl;
 

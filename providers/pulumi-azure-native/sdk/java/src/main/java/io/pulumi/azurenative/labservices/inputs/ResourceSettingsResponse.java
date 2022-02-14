@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents resource specific settings
+ */
 public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceSettingsResponse Empty = new ResourceSettingsResponse();
 
+    /**
+     * The translated compute cores of the virtual machine
+     */
     @InputImport(name="cores", required=true)
     private final Integer cores;
 
@@ -23,6 +29,9 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.cores;
     }
 
+    /**
+     * The resource id of the gallery image used for creating the virtual machine
+     */
     @InputImport(name="galleryImageResourceId")
     private final @Nullable String galleryImageResourceId;
 
@@ -30,6 +39,9 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.galleryImageResourceId == null ? Optional.empty() : Optional.ofNullable(this.galleryImageResourceId);
     }
 
+    /**
+     * The unique id of the resource setting
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -37,6 +49,9 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.id;
     }
 
+    /**
+     * The name of the image used to created the environment setting
+     */
     @InputImport(name="imageName", required=true)
     private final String imageName;
 
@@ -44,6 +59,9 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.imageName;
     }
 
+    /**
+     * Details specific to Reference Vm
+     */
     @InputImport(name="referenceVm", required=true)
     private final ReferenceVmResponse referenceVm;
 
@@ -51,6 +69,9 @@ public final class ResourceSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.referenceVm;
     }
 
+    /**
+     * The size of the virtual machine
+     */
     @InputImport(name="size")
     private final @Nullable String size;
 

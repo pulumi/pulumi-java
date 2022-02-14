@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PrivateEndpointPropertyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateEndpointPropertyResponse Empty = new PrivateEndpointPropertyResponse();
 
+    /**
+     * Resource id of the private endpoint.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 

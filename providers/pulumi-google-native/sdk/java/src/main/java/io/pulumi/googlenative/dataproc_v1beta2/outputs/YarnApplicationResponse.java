@@ -10,9 +10,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class YarnApplicationResponse {
+/**
+ * The application name.
+ */
     private final String name;
+/**
+ * The numerical progress of the application, from 1 to 100.
+ */
     private final Double progress;
+/**
+ * The application state.
+ */
     private final String state;
+/**
+ * The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer that provides application-specific information. The URL uses the internal hostname, and requires a proxy server for resolution and, possibly, access.
+ */
     private final String trackingUrl;
 
     @OutputCustomType.Constructor({"name","progress","state","trackingUrl"})
@@ -27,15 +39,27 @@ public final class YarnApplicationResponse {
         this.trackingUrl = Objects.requireNonNull(trackingUrl);
     }
 
+/**
+ * The application name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The numerical progress of the application, from 1 to 100.
+ */
     public Double getProgress() {
         return this.progress;
     }
+/**
+ * The application state.
+ */
     public String getState() {
         return this.state;
     }
+/**
+ * The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer that provides application-specific information. The URL uses the internal hostname, and requires a proxy server for resolution and, possibly, access.
+ */
     public String getTrackingUrl() {
         return this.trackingUrl;
     }

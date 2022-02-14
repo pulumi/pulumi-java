@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HostQueryArgs Empty = new HostQueryArgs();
 
+    /**
+     * Delimiter used in the CSV file, if `outputFormat` is set to `csv`. Defaults to the `,` (comma) character. Supported delimiter characters include comma (`,`), pipe (`|`), and tab (`\t`).
+     */
     @InputImport(name="csvDelimiter")
     private final @Nullable Input<String> csvDelimiter;
 
@@ -25,6 +31,9 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.csvDelimiter == null ? Input.empty() : this.csvDelimiter;
     }
 
+    /**
+     * A list of dimensions. https://docs.apigee.com/api-platform/analytics/analytics-reference#dimensions
+     */
     @InputImport(name="dimensions")
     private final @Nullable Input<List<String>> dimensions;
 
@@ -32,6 +41,9 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.dimensions == null ? Input.empty() : this.dimensions;
     }
 
+    /**
+     * Hostname needs to be specified if query intends to run at host level. This field is only allowed when query is submitted by CreateHostAsyncQuery where analytics data will be grouped by organization and hostname.
+     */
     @InputImport(name="envgroupHostname")
     private final @Nullable Input<String> envgroupHostname;
 
@@ -39,6 +51,9 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.envgroupHostname == null ? Input.empty() : this.envgroupHostname;
     }
 
+    /**
+     * Boolean expression that can be used to filter data. Filter expressions can be combined using AND/OR terms and should be fully parenthesized to avoid ambiguity. See Analytics metrics, dimensions, and filters reference https://docs.apigee.com/api-platform/analytics/analytics-reference for more information on the fields available to filter on. For more information on the tokens that you use to build filter expressions, see Filter expression syntax. https://docs.apigee.com/api-platform/analytics/asynch-reports-api#filter-expression-syntax
+     */
     @InputImport(name="filter")
     private final @Nullable Input<String> filter;
 
@@ -46,6 +61,9 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.filter == null ? Input.empty() : this.filter;
     }
 
+    /**
+     * Time unit used to group the result set. Valid values include: second, minute, hour, day, week, or month. If a query includes groupByTimeUnit, then the result is an aggregation based on the specified time unit and the resultant timestamp does not include milliseconds precision. If a query omits groupByTimeUnit, then the resultant timestamp includes milliseconds precision.
+     */
     @InputImport(name="groupByTimeUnit")
     private final @Nullable Input<String> groupByTimeUnit;
 
@@ -53,6 +71,9 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.groupByTimeUnit == null ? Input.empty() : this.groupByTimeUnit;
     }
 
+    /**
+     * Maximum number of rows that can be returned in the result.
+     */
     @InputImport(name="limit")
     private final @Nullable Input<Integer> limit;
 
@@ -60,6 +81,9 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.limit == null ? Input.empty() : this.limit;
     }
 
+    /**
+     * A list of Metrics.
+     */
     @InputImport(name="metrics")
     private final @Nullable Input<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics;
 
@@ -67,6 +91,9 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.metrics == null ? Input.empty() : this.metrics;
     }
 
+    /**
+     * Asynchronous Query Name.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -74,6 +101,9 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 
@@ -81,6 +111,9 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.organizationId;
     }
 
+    /**
+     * Valid values include: `csv` or `json`. Defaults to `json`. Note: Configure the delimiter for CSV output using the csvDelimiter property.
+     */
     @InputImport(name="outputFormat")
     private final @Nullable Input<String> outputFormat;
 
@@ -88,6 +121,9 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.outputFormat == null ? Input.empty() : this.outputFormat;
     }
 
+    /**
+     * Asynchronous Report ID.
+     */
     @InputImport(name="reportDefinitionId")
     private final @Nullable Input<String> reportDefinitionId;
 
@@ -95,6 +131,9 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
         return this.reportDefinitionId == null ? Input.empty() : this.reportDefinitionId;
     }
 
+    /**
+     * Time range for the query. Can use the following predefined strings to specify the time range: `last60minutes` `last24hours` `last7days` Or, specify the timeRange as a structure describing start and end timestamps in the ISO format: yyyy-mm-ddThh:mm:ssZ. Example: "timeRange": { "start": "2018-07-29T00:13:00Z", "end": "2018-08-01T00:18:00Z" }
+     */
     @InputImport(name="timeRange", required=true)
     private final Input<Object> timeRange;
 

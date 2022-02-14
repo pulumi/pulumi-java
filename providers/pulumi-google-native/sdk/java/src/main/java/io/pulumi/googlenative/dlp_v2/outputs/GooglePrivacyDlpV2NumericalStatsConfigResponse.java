@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2NumericalStatsConfigResponse {
+/**
+ * Field to compute numerical stats on. Supported types are integer, float, date, datetime, timestamp, time.
+ */
     private final GooglePrivacyDlpV2FieldIdResponse field;
 
     @OutputCustomType.Constructor({"field"})
@@ -16,6 +19,9 @@ public final class GooglePrivacyDlpV2NumericalStatsConfigResponse {
         this.field = Objects.requireNonNull(field);
     }
 
+/**
+ * Field to compute numerical stats on. Supported types are integer, float, date, datetime, timestamp, time.
+ */
     public GooglePrivacyDlpV2FieldIdResponse getField() {
         return this.field;
     }

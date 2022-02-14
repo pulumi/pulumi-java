@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NamespaceIpFilterRuleArgs Empty = new NamespaceIpFilterRuleArgs();
 
+    /**
+     * The IP Filter Action
+     */
     @InputImport(name="action")
     private final @Nullable Input<Either<String,IPAction>> action;
 
@@ -23,6 +29,9 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
         return this.action == null ? Input.empty() : this.action;
     }
 
+    /**
+     * IP Filter name
+     */
     @InputImport(name="filterName")
     private final @Nullable Input<String> filterName;
 
@@ -30,6 +39,9 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
         return this.filterName == null ? Input.empty() : this.filterName;
     }
 
+    /**
+     * The IP Filter Rule name.
+     */
     @InputImport(name="ipFilterRuleName")
     private final @Nullable Input<String> ipFilterRuleName;
 
@@ -37,6 +49,9 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
         return this.ipFilterRuleName == null ? Input.empty() : this.ipFilterRuleName;
     }
 
+    /**
+     * IP Mask
+     */
     @InputImport(name="ipMask")
     private final @Nullable Input<String> ipMask;
 
@@ -44,6 +59,9 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
         return this.ipMask == null ? Input.empty() : this.ipMask;
     }
 
+    /**
+     * The Namespace name
+     */
     @InputImport(name="namespaceName", required=true)
     private final Input<String> namespaceName;
 
@@ -51,6 +69,9 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
         return this.namespaceName;
     }
 
+    /**
+     * Name of the resource group within the azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

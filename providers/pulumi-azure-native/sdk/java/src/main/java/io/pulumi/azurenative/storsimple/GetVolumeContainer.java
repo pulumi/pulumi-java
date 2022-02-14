@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVolumeContainer {
+/**
+ * The volume container.
+API Version: 2017-06-01.
+ *
+ * The volume container.
+ */
     public static CompletableFuture<GetVolumeContainerResult> invokeAsync(GetVolumeContainerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storsimple:getVolumeContainer", TypeShape.of(GetVolumeContainerResult.class), args == null ? GetVolumeContainerArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebAppPublicCertificateSlotArgs Empty = new WebAppPublicCertificateSlotArgs();
 
+    /**
+     * Public Certificate byte array
+     */
     @InputImport(name="blob")
     private final @Nullable Input<String> blob;
 
@@ -22,6 +28,9 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
         return this.blob == null ? Input.empty() : this.blob;
     }
 
+    /**
+     * Kind of resource.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -29,6 +38,9 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the app.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -36,6 +48,9 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
         return this.name;
     }
 
+    /**
+     * Public Certificate Location
+     */
     @InputImport(name="publicCertificateLocation")
     private final @Nullable Input<PublicCertificateLocation> publicCertificateLocation;
 
@@ -43,6 +58,9 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
         return this.publicCertificateLocation == null ? Input.empty() : this.publicCertificateLocation;
     }
 
+    /**
+     * Public certificate name.
+     */
     @InputImport(name="publicCertificateName")
     private final @Nullable Input<String> publicCertificateName;
 
@@ -50,6 +68,9 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
         return this.publicCertificateName == null ? Input.empty() : this.publicCertificateName;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -57,6 +78,9 @@ public final class WebAppPublicCertificateSlotArgs extends io.pulumi.resources.R
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the deployment slot. If a slot is not specified, the API will create a binding for the production slot.
+     */
     @InputImport(name="slot", required=true)
     private final Input<String> slot;
 

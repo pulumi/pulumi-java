@@ -14,10 +14,17 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Definition of which data will be collected from a separate VM extension that integrates with the Azure Monitor Agent.
+Collected from either Windows and Linux machines, depending on which extension is defined.
+ */
 public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExtensionDataSourceArgs Empty = new ExtensionDataSourceArgs();
 
+    /**
+     * The name of the VM extension.
+     */
     @InputImport(name="extensionName", required=true)
     private final Input<String> extensionName;
 
@@ -25,6 +32,9 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
         return this.extensionName;
     }
 
+    /**
+     * The extension settings. The format is specific for particular extension.
+     */
     @InputImport(name="extensionSettings")
     private final @Nullable Input<Object> extensionSettings;
 
@@ -32,6 +42,9 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
         return this.extensionSettings == null ? Input.empty() : this.extensionSettings;
     }
 
+    /**
+     * The list of data sources this extension needs data from.
+     */
     @InputImport(name="inputDataSources")
     private final @Nullable Input<List<String>> inputDataSources;
 
@@ -39,6 +52,10 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
         return this.inputDataSources == null ? Input.empty() : this.inputDataSources;
     }
 
+    /**
+     * A friendly name for the data source. 
+This name should be unique across all data sources (regardless of type) within the data collection rule.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -46,6 +63,10 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * List of streams that this data source will be sent to.
+A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+     */
     @InputImport(name="streams")
     private final @Nullable Input<List<Either<String,KnownExtensionDataSourceStreams>>> streams;
 

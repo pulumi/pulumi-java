@@ -11,10 +11,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Details of the data to be used for importing data to azure.
+ */
 public final class DataImportDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataImportDetailsArgs Empty = new DataImportDetailsArgs();
 
+    /**
+     * Account details of the data to be transferred
+     */
     @InputImport(name="accountDetails", required=true)
     private final Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
 

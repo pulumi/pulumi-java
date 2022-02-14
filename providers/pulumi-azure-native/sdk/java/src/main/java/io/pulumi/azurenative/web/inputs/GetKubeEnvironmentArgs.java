@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetKubeEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetKubeEnvironmentArgs Empty = new GetKubeEnvironmentArgs();
 
+    /**
+     * Name of the Kubernetes Environment.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class GetKubeEnvironmentArgs extends io.pulumi.resources.InvokeArgs
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

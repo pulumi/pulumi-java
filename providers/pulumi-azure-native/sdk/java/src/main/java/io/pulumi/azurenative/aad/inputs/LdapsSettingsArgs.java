@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Secure LDAP Settings
+ */
 public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LdapsSettingsArgs Empty = new LdapsSettingsArgs();
 
+    /**
+     * A flag to determine whether or not Secure LDAP access over the internet is enabled or disabled.
+     */
     @InputImport(name="externalAccess")
     private final @Nullable Input<Either<String,ExternalAccess>> externalAccess;
 
@@ -24,6 +30,9 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.externalAccess == null ? Input.empty() : this.externalAccess;
     }
 
+    /**
+     * A flag to determine whether or not Secure LDAP is enabled or disabled.
+     */
     @InputImport(name="ldaps")
     private final @Nullable Input<Either<String,Ldaps>> ldaps;
 
@@ -31,6 +40,9 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.ldaps == null ? Input.empty() : this.ldaps;
     }
 
+    /**
+     * The certificate required to configure Secure LDAP. The parameter passed here should be a base64encoded representation of the certificate pfx file.
+     */
     @InputImport(name="pfxCertificate")
     private final @Nullable Input<String> pfxCertificate;
 
@@ -38,6 +50,9 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.pfxCertificate == null ? Input.empty() : this.pfxCertificate;
     }
 
+    /**
+     * The password to decrypt the provided Secure LDAP certificate pfx file.
+     */
     @InputImport(name="pfxCertificatePassword")
     private final @Nullable Input<String> pfxCertificatePassword;
 

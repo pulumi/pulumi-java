@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a Service Bus Queue output data source.
+ */
 public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceBusQueueOutputDataSourceResponse Empty = new ServiceBusQueueOutputDataSourceResponse();
 
+    /**
+     * A string array of the names of output columns to be attached to Service Bus messages as custom properties.
+     */
     @InputImport(name="propertyColumns")
     private final @Nullable List<String> propertyColumns;
 
@@ -22,6 +28,9 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
         return this.propertyColumns == null ? List.of() : this.propertyColumns;
     }
 
+    /**
+     * The name of the Service Bus Queue. Required on PUT (CreateOrReplace) requests.
+     */
     @InputImport(name="queueName")
     private final @Nullable String queueName;
 
@@ -29,6 +38,9 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
         return this.queueName == null ? Optional.empty() : Optional.ofNullable(this.queueName);
     }
 
+    /**
+     * The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+     */
     @InputImport(name="serviceBusNamespace")
     private final @Nullable String serviceBusNamespace;
 
@@ -36,6 +48,9 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
         return this.serviceBusNamespace == null ? Optional.empty() : Optional.ofNullable(this.serviceBusNamespace);
     }
 
+    /**
+     * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
+     */
     @InputImport(name="sharedAccessPolicyKey")
     private final @Nullable String sharedAccessPolicyKey;
 
@@ -43,6 +58,9 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
         return this.sharedAccessPolicyKey == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyKey);
     }
 
+    /**
+     * The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
+     */
     @InputImport(name="sharedAccessPolicyName")
     private final @Nullable String sharedAccessPolicyName;
 
@@ -50,6 +68,10 @@ public final class ServiceBusQueueOutputDataSourceResponse extends io.pulumi.res
         return this.sharedAccessPolicyName == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyName);
     }
 
+    /**
+     * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+Expected value is 'Microsoft.ServiceBus/Queue'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

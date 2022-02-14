@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The group by expression to be used in the report.
+ */
 public final class ReportGroupingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReportGroupingResponse Empty = new ReportGroupingResponse();
 
+    /**
+     * The name of the column to group.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class ReportGroupingResponse extends io.pulumi.resources.InvokeArgs
         return this.name;
     }
 
+    /**
+     * Has type of the column to group.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

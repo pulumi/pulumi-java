@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * This is deprecated and has no effect. Do not use.
+ */
     @EnumType
     public enum LogConfigDataAccessOptionsLogMode {
+/**
+ * This is deprecated and has no effect. Do not use.
+ */
         LogFailClosed("LOG_FAIL_CLOSED"),
+/**
+ * This is deprecated and has no effect. Do not use.
+ */
         LogModeUnspecified("LOG_MODE_UNSPECIFIED");
 
         private final String value;

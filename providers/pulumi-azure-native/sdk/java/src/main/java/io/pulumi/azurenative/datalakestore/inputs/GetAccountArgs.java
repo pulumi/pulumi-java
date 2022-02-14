@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetAccountArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAccountArgs Empty = new GetAccountArgs();
 
+    /**
+     * The name of the Data Lake Store account.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetAccountArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the Azure resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyArgs Empty = new GetCaPoolCertificateAuthorityCertificateRevocationListIamPolicyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="caPoolId", required=true)
     private final String caPoolId;
 
@@ -21,6 +27,9 @@ public final class GetCaPoolCertificateAuthorityCertificateRevocationListIamPoli
         return this.caPoolId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="certificateAuthorityId", required=true)
     private final String certificateAuthorityId;
 
@@ -28,6 +37,9 @@ public final class GetCaPoolCertificateAuthorityCertificateRevocationListIamPoli
         return this.certificateAuthorityId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="certificateRevocationListId", required=true)
     private final String certificateRevocationListId;
 
@@ -35,6 +47,9 @@ public final class GetCaPoolCertificateAuthorityCertificateRevocationListIamPoli
         return this.certificateRevocationListId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -42,6 +57,9 @@ public final class GetCaPoolCertificateAuthorityCertificateRevocationListIamPoli
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="optionsRequestedPolicyVersion")
     private final @Nullable String optionsRequestedPolicyVersion;
 
@@ -49,6 +67,9 @@ public final class GetCaPoolCertificateAuthorityCertificateRevocationListIamPoli
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

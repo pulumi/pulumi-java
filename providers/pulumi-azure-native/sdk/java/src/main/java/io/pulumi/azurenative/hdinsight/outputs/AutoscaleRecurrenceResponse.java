@@ -13,7 +13,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutoscaleRecurrenceResponse {
+/**
+ * Array of schedule-based autoscale rules
+ */
     private final @Nullable List<AutoscaleScheduleResponse> schedule;
+/**
+ * The time zone for the autoscale schedule times
+ */
     private final @Nullable String timeZone;
 
     @OutputCustomType.Constructor({"schedule","timeZone"})
@@ -24,9 +30,15 @@ public final class AutoscaleRecurrenceResponse {
         this.timeZone = timeZone;
     }
 
+/**
+ * Array of schedule-based autoscale rules
+ */
     public List<AutoscaleScheduleResponse> getSchedule() {
         return this.schedule == null ? List.of() : this.schedule;
     }
+/**
+ * The time zone for the autoscale schedule times
+ */
     public Optional<String> getTimeZone() {
         return Optional.ofNullable(this.timeZone);
     }

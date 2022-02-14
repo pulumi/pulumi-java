@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MonitoringConfigResponse {
+/**
+ * Monitoring components configuration
+ */
     private final MonitoringComponentConfigResponse componentConfig;
+/**
+ * Enable Google Cloud Managed Service for Prometheus in the cluster.
+ */
     private final ManagedPrometheusConfigResponse managedPrometheusConfig;
 
     @OutputCustomType.Constructor({"componentConfig","managedPrometheusConfig"})
@@ -21,9 +27,15 @@ public final class MonitoringConfigResponse {
         this.managedPrometheusConfig = Objects.requireNonNull(managedPrometheusConfig);
     }
 
+/**
+ * Monitoring components configuration
+ */
     public MonitoringComponentConfigResponse getComponentConfig() {
         return this.componentConfig;
     }
+/**
+ * Enable Google Cloud Managed Service for Prometheus in the cluster.
+ */
     public ManagedPrometheusConfigResponse getManagedPrometheusConfig() {
         return this.managedPrometheusConfig;
     }

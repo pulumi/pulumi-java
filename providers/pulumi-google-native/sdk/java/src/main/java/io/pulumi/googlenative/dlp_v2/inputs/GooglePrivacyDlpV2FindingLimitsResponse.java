@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Configuration to control the number of findings returned for inspection. This is not used for de-identification or data profiling.
+ */
 public final class GooglePrivacyDlpV2FindingLimitsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2FindingLimitsResponse Empty = new GooglePrivacyDlpV2FindingLimitsResponse();
 
+    /**
+     * Configuration of findings limit given for specified infoTypes.
+     */
     @InputImport(name="maxFindingsPerInfoType", required=true)
     private final List<GooglePrivacyDlpV2InfoTypeLimitResponse> maxFindingsPerInfoType;
 
@@ -21,6 +27,9 @@ public final class GooglePrivacyDlpV2FindingLimitsResponse extends io.pulumi.res
         return this.maxFindingsPerInfoType;
     }
 
+    /**
+     * Max number of findings that will be returned for each item scanned. When set within `InspectJobConfig`, the maximum returned is 2000 regardless if this is set higher. When set within `InspectContentRequest`, this field is ignored.
+     */
     @InputImport(name="maxFindingsPerItem", required=true)
     private final Integer maxFindingsPerItem;
 
@@ -28,6 +37,9 @@ public final class GooglePrivacyDlpV2FindingLimitsResponse extends io.pulumi.res
         return this.maxFindingsPerItem;
     }
 
+    /**
+     * Max number of findings that will be returned per request/job. When set within `InspectContentRequest`, the maximum returned is 2000 regardless if this is set higher.
+     */
     @InputImport(name="maxFindingsPerRequest", required=true)
     private final Integer maxFindingsPerRequest;
 

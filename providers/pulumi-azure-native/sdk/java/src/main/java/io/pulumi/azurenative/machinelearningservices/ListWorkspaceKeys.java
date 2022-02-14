@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWorkspaceKeys {
+/**
+ * 
+API Version: 2021-01-01.
+ */
     public static CompletableFuture<ListWorkspaceKeysResult> invokeAsync(ListWorkspaceKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:listWorkspaceKeys", TypeShape.of(ListWorkspaceKeysResult.class), args == null ? ListWorkspaceKeysArgs.Empty : args, Utilities.withVersion(options));
     }

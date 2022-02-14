@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListOpenShiftClusterAdminCredentialsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListOpenShiftClusterAdminCredentialsArgs Empty = new ListOpenShiftClusterAdminCredentialsArgs();
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class ListOpenShiftClusterAdminCredentialsArgs extends io.pulumi.re
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the OpenShift cluster resource.
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

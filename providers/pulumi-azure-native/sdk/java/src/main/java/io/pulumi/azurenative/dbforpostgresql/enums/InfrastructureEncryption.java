@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Status showing whether the server enabled infrastructure encryption.
+ */
     @EnumType
     public enum InfrastructureEncryption {
+/**
+ * Default value for single layer of encryption for data at rest.
+ */
         Enabled("Enabled"),
+/**
+ * Additional (2nd) layer of encryption for data at rest
+ */
         Disabled("Disabled");
 
         private final String value;

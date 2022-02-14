@@ -8,13 +8,34 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Name of the stage.
+ */
     @EnumType
     public enum NotificationStageName {
+/**
+ * Notification at device prepared stage.
+ */
         DevicePrepared("DevicePrepared"),
+/**
+ * Notification at device dispatched stage.
+ */
         Dispatched("Dispatched"),
+/**
+ * Notification at device delivered stage.
+ */
         Delivered("Delivered"),
+/**
+ * Notification at device picked up from user stage.
+ */
         PickedUp("PickedUp"),
+/**
+ * Notification at device received at Azure datacenter stage.
+ */
         AtAzureDC("AtAzureDC"),
+/**
+ * Notification at data copy started stage.
+ */
         DataCopy("DataCopy");
 
         private final String value;

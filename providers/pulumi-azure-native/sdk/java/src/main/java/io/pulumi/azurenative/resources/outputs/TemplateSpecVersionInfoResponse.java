@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TemplateSpecVersionInfoResponse {
+/**
+ * Template Spec version description.
+ */
     private final String description;
+/**
+ * The timestamp of when the version was created.
+ */
     private final String timeCreated;
+/**
+ * The timestamp of when the version was last modified.
+ */
     private final String timeModified;
 
     @OutputCustomType.Constructor({"description","timeCreated","timeModified"})
@@ -23,12 +32,21 @@ public final class TemplateSpecVersionInfoResponse {
         this.timeModified = Objects.requireNonNull(timeModified);
     }
 
+/**
+ * Template Spec version description.
+ */
     public String getDescription() {
         return this.description;
     }
+/**
+ * The timestamp of when the version was created.
+ */
     public String getTimeCreated() {
         return this.timeCreated;
     }
+/**
+ * The timestamp of when the version was last modified.
+ */
     public String getTimeModified() {
         return this.timeModified;
     }

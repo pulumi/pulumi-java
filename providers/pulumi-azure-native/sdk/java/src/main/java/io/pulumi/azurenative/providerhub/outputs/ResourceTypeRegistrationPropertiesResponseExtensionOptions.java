@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceTypeRegistrationPropertiesResponseExtensionOptions {
+/**
+ * 
+ */
     private final @Nullable ResourceTypeExtensionOptionsResponseResourceCreationBegin resourceCreationBegin;
 
     @OutputCustomType.Constructor({"resourceCreationBegin"})
@@ -18,6 +21,9 @@ public final class ResourceTypeRegistrationPropertiesResponseExtensionOptions {
         this.resourceCreationBegin = resourceCreationBegin;
     }
 
+/**
+ * 
+ */
     public Optional<ResourceTypeExtensionOptionsResponseResourceCreationBegin> getResourceCreationBegin() {
         return Optional.ofNullable(this.resourceCreationBegin);
     }

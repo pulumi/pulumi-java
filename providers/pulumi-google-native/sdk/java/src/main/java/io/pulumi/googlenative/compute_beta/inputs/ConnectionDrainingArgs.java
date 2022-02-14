@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Message containing connection draining configuration.
+ */
 public final class ConnectionDrainingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionDrainingArgs Empty = new ConnectionDrainingArgs();
 
+    /**
+     * Configures a duration timeout for existing requests on a removed backend instance. For supported load balancers and protocols, as described in Enabling connection draining.
+     */
     @InputImport(name="drainingTimeoutSec")
     private final @Nullable Input<Integer> drainingTimeoutSec;
 

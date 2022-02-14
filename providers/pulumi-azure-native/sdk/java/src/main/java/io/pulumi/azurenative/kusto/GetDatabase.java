@@ -14,6 +14,12 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: ReadOnlyFollowingDatabase, ReadWriteDatabase. */
 public class GetDatabase {
+/**
+ * Class representing a Kusto database.
+API Version: 2021-01-01.
+ *
+ * Class representing a Kusto database.
+ */
     public static CompletableFuture<GetDatabaseResult> invokeAsync(GetDatabaseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getDatabase", TypeShape.of(GetDatabaseResult.class), args == null ? GetDatabaseArgs.Empty : args, Utilities.withVersion(options));
     }

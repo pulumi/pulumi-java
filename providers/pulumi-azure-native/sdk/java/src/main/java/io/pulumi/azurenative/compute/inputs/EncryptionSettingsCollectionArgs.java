@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Encryption settings for disk or snapshot
+ */
 public final class EncryptionSettingsCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EncryptionSettingsCollectionArgs Empty = new EncryptionSettingsCollectionArgs();
 
+    /**
+     * Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.
+     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 
@@ -24,6 +30,9 @@ public final class EncryptionSettingsCollectionArgs extends io.pulumi.resources.
         return this.enabled;
     }
 
+    /**
+     * A collection of encryption settings, one for each disk volume.
+     */
     @InputImport(name="encryptionSettings")
     private final @Nullable Input<List<EncryptionSettingsElementArgs>> encryptionSettings;
 
@@ -31,6 +40,9 @@ public final class EncryptionSettingsCollectionArgs extends io.pulumi.resources.
         return this.encryptionSettings == null ? Input.empty() : this.encryptionSettings;
     }
 
+    /**
+     * Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. '1.0' corresponds to Azure Disk Encryption with AAD app.'1.1' corresponds to Azure Disk Encryption.
+     */
     @InputImport(name="encryptionSettingsVersion")
     private final @Nullable Input<String> encryptionSettingsVersion;
 

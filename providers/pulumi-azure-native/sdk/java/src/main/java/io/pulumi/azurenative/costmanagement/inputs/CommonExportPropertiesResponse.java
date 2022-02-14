@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The common properties of the export.
+ */
 public final class CommonExportPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CommonExportPropertiesResponse Empty = new CommonExportPropertiesResponse();
 
+    /**
+     * Has the definition for the export.
+     */
     @InputImport(name="definition", required=true)
     private final ExportDefinitionResponse definition;
 
@@ -24,6 +30,9 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
         return this.definition;
     }
 
+    /**
+     * Has delivery information for the export.
+     */
     @InputImport(name="deliveryInfo", required=true)
     private final ExportDeliveryInfoResponse deliveryInfo;
 
@@ -31,6 +40,9 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
         return this.deliveryInfo;
     }
 
+    /**
+     * The format of the export being delivered. Currently only 'Csv' is supported.
+     */
     @InputImport(name="format")
     private final @Nullable String format;
 
@@ -38,6 +50,9 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
     }
 
+    /**
+     * If the export has an active schedule, provides an estimate of the next execution time.
+     */
     @InputImport(name="nextRunTimeEstimate", required=true)
     private final String nextRunTimeEstimate;
 
@@ -45,6 +60,9 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
         return this.nextRunTimeEstimate;
     }
 
+    /**
+     * If requested, has the most recent execution history for the export.
+     */
     @InputImport(name="runHistory")
     private final @Nullable ExportExecutionListResultResponse runHistory;
 

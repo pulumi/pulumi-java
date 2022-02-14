@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a part of a training phrase.
+ */
 public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs Empty = new GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs();
 
+    /**
+     * Optional. The parameter name for the value extracted from the annotated part of the example. This field is required for annotated parts of the training phrase.
+     */
     @InputImport(name="alias")
     private final @Nullable Input<String> alias;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
         return this.alias == null ? Input.empty() : this.alias;
     }
 
+    /**
+     * Optional. The entity type name prefixed with `@`. This field is required for annotated parts of the training phrase.
+     */
     @InputImport(name="entityType")
     private final @Nullable Input<String> entityType;
 
@@ -29,6 +38,9 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
         return this.entityType == null ? Input.empty() : this.entityType;
     }
 
+    /**
+     * The text for this part.
+     */
     @InputImport(name="text", required=true)
     private final Input<String> text;
 
@@ -36,6 +48,9 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
         return this.text;
     }
 
+    /**
+     * Optional. Indicates whether the text was manually annotated. This field is set to true when the Dialogflow Console is used to manually annotate the part. When creating an annotated part with the API, you must set this to true.
+     */
     @InputImport(name="userDefined")
     private final @Nullable Input<Boolean> userDefined;
 

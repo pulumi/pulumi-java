@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudRunOpV2VpcAccessResponse {
+/**
+ * VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}
+ */
     private final String connector;
+/**
+ * Traffic VPC egress settings.
+ */
     private final String egress;
 
     @OutputCustomType.Constructor({"connector","egress"})
@@ -20,9 +26,15 @@ public final class GoogleCloudRunOpV2VpcAccessResponse {
         this.egress = Objects.requireNonNull(egress);
     }
 
+/**
+ * VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}
+ */
     public String getConnector() {
         return this.connector;
     }
+/**
+ * Traffic VPC egress settings.
+ */
     public String getEgress() {
         return this.egress;
     }

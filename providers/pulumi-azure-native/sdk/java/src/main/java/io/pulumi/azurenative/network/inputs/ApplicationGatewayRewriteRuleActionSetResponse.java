@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Set of actions in the Rewrite Rule in Application Gateway.
+ */
 public final class ApplicationGatewayRewriteRuleActionSetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayRewriteRuleActionSetResponse Empty = new ApplicationGatewayRewriteRuleActionSetResponse();
 
+    /**
+     * Request Header Actions in the Action Set.
+     */
     @InputImport(name="requestHeaderConfigurations")
     private final @Nullable List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations;
 
@@ -23,6 +29,9 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse extends io.pul
         return this.requestHeaderConfigurations == null ? List.of() : this.requestHeaderConfigurations;
     }
 
+    /**
+     * Response Header Actions in the Action Set.
+     */
     @InputImport(name="responseHeaderConfigurations")
     private final @Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations;
 
@@ -30,6 +39,9 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse extends io.pul
         return this.responseHeaderConfigurations == null ? List.of() : this.responseHeaderConfigurations;
     }
 
+    /**
+     * Url Configuration Action in the Action Set.
+     */
     @InputImport(name="urlConfiguration")
     private final @Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration;
 

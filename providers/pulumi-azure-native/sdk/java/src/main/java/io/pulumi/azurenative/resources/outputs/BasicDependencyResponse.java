@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BasicDependencyResponse {
+/**
+ * The ID of the dependency.
+ */
     private final @Nullable String id;
+/**
+ * The dependency resource name.
+ */
     private final @Nullable String resourceName;
+/**
+ * The dependency resource type.
+ */
     private final @Nullable String resourceType;
 
     @OutputCustomType.Constructor({"id","resourceName","resourceType"})
@@ -25,12 +34,21 @@ public final class BasicDependencyResponse {
         this.resourceType = resourceType;
     }
 
+/**
+ * The ID of the dependency.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * The dependency resource name.
+ */
     public Optional<String> getPropResourceName() {
         return Optional.ofNullable(this.resourceName);
     }
+/**
+ * The dependency resource type.
+ */
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }

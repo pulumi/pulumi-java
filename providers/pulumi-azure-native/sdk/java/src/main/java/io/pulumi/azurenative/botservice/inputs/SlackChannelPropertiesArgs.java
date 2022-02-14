@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The parameters to provide for the Slack channel.
+ */
 public final class SlackChannelPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SlackChannelPropertiesArgs Empty = new SlackChannelPropertiesArgs();
 
+    /**
+     * The Slack client id
+     */
     @InputImport(name="clientId")
     private final @Nullable Input<String> clientId;
 
@@ -22,6 +28,9 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
         return this.clientId == null ? Input.empty() : this.clientId;
     }
 
+    /**
+     * The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.
+     */
     @InputImport(name="clientSecret")
     private final @Nullable Input<String> clientSecret;
 
@@ -29,6 +38,9 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
     }
 
+    /**
+     * Whether this channel is enabled for the bot
+     */
     @InputImport(name="isEnabled", required=true)
     private final Input<Boolean> isEnabled;
 
@@ -36,6 +48,9 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
         return this.isEnabled;
     }
 
+    /**
+     * The Slack landing page Url
+     */
     @InputImport(name="landingPageUrl")
     private final @Nullable Input<String> landingPageUrl;
 
@@ -43,6 +58,9 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
         return this.landingPageUrl == null ? Input.empty() : this.landingPageUrl;
     }
 
+    /**
+     * The Slack signing secret.
+     */
     @InputImport(name="signingSecret")
     private final @Nullable Input<String> signingSecret;
 
@@ -50,6 +68,9 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
         return this.signingSecret == null ? Input.empty() : this.signingSecret;
     }
 
+    /**
+     * The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.
+     */
     @InputImport(name="verificationToken")
     private final @Nullable Input<String> verificationToken;
 

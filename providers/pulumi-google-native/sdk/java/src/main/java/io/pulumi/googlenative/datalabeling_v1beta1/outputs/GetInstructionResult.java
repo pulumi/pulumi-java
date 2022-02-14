@@ -11,13 +11,37 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetInstructionResult {
+/**
+ * The names of any related resources that are blocking changes to the instruction.
+ */
     private final List<String> blockingResources;
+/**
+ * Creation time of instruction.
+ */
     private final String createTime;
+/**
+ * The data type of this instruction.
+ */
     private final String dataType;
+/**
+ * Optional. User-provided description of the instruction. The description can be up to 10000 characters long.
+ */
     private final String description;
+/**
+ * The display name of the instruction. Maximum of 64 characters.
+ */
     private final String displayName;
+/**
+ * Instruction resource name, format: projects/{project_id}/instructions/{instruction_id}
+ */
     private final String name;
+/**
+ * Instruction from a PDF document. The PDF should be in a Cloud Storage bucket.
+ */
     private final GoogleCloudDatalabelingV1beta1PdfInstructionResponse pdfInstruction;
+/**
+ * Last update time of instruction.
+ */
     private final String updateTime;
 
     @OutputCustomType.Constructor({"blockingResources","createTime","dataType","description","displayName","name","pdfInstruction","updateTime"})
@@ -40,27 +64,51 @@ public final class GetInstructionResult {
         this.updateTime = Objects.requireNonNull(updateTime);
     }
 
+/**
+ * The names of any related resources that are blocking changes to the instruction.
+ */
     public List<String> getBlockingResources() {
         return this.blockingResources;
     }
+/**
+ * Creation time of instruction.
+ */
     public String getCreateTime() {
         return this.createTime;
     }
+/**
+ * The data type of this instruction.
+ */
     public String getDataType() {
         return this.dataType;
     }
+/**
+ * Optional. User-provided description of the instruction. The description can be up to 10000 characters long.
+ */
     public String getDescription() {
         return this.description;
     }
+/**
+ * The display name of the instruction. Maximum of 64 characters.
+ */
     public String getDisplayName() {
         return this.displayName;
     }
+/**
+ * Instruction resource name, format: projects/{project_id}/instructions/{instruction_id}
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Instruction from a PDF document. The PDF should be in a Cloud Storage bucket.
+ */
     public GoogleCloudDatalabelingV1beta1PdfInstructionResponse getPdfInstruction() {
         return this.pdfInstruction;
     }
+/**
+ * Last update time of instruction.
+ */
     public String getUpdateTime() {
         return this.updateTime;
     }

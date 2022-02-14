@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * PrivateLinkServiceConnection resource.
+ */
 public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateLinkServiceConnectionArgs Empty = new PrivateLinkServiceConnectionArgs();
 
+    /**
+     * The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to.
+     */
     @InputImport(name="groupIds")
     private final @Nullable Input<List<String>> groupIds;
 
@@ -23,6 +29,9 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
         return this.groupIds == null ? Input.empty() : this.groupIds;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -30,6 +39,9 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,6 +49,9 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A collection of read-only information about the state of the connection to the remote resource.
+     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
@@ -44,6 +59,9 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
     }
 
+    /**
+     * The resource id of private link service.
+     */
     @InputImport(name="privateLinkServiceId")
     private final @Nullable Input<String> privateLinkServiceId;
 
@@ -51,6 +69,9 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
         return this.privateLinkServiceId == null ? Input.empty() : this.privateLinkServiceId;
     }
 
+    /**
+     * A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
+     */
     @InputImport(name="requestMessage")
     private final @Nullable Input<String> requestMessage;
 

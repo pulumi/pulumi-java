@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs Empty = new ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="optInHeaders")
     private final @Nullable Input<Either<String,OptInHeaderType>> optInHeaders;
 

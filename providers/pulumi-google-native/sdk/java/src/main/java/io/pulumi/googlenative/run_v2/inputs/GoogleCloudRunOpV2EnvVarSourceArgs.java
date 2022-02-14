@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * EnvVarSource represents a source for the value of an EnvVar.
+ */
 public final class GoogleCloudRunOpV2EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudRunOpV2EnvVarSourceArgs Empty = new GoogleCloudRunOpV2EnvVarSourceArgs();
 
+    /**
+     * Selects a secret and a specific version from Cloud Secret Manager.
+     */
     @InputImport(name="secretKeyRef")
     private final @Nullable Input<GoogleCloudRunOpV2SecretKeySelectorArgs> secretKeyRef;
 

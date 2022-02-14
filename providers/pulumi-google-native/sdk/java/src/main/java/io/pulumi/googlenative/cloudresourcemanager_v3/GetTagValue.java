@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTagValue {
+/**
+ * Retrieves TagValue. If the TagValue or namespaced name does not exist, or if the user does not have permission to view it, this method will return `PERMISSION_DENIED`.
+ */
     public static CompletableFuture<GetTagValueResult> invokeAsync(GetTagValueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v3:getTagValue", TypeShape.of(GetTagValueResult.class), args == null ? GetTagValueArgs.Empty : args, Utilities.withVersion(options));
     }

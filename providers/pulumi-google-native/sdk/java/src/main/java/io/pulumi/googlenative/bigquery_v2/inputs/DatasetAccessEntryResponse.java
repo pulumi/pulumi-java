@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class DatasetAccessEntryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatasetAccessEntryResponse Empty = new DatasetAccessEntryResponse();
 
+    /**
+     * [Required] The dataset this entry applies to.
+     */
     @InputImport(name="dataset", required=true)
     private final DatasetReferenceResponse dataset;
 
@@ -21,6 +27,9 @@ public final class DatasetAccessEntryResponse extends io.pulumi.resources.Invoke
         return this.dataset;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="targetTypes", required=true)
     private final List<String> targetTypes;
 

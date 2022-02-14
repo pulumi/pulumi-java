@@ -13,7 +13,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ProviderHubMetadataResponseThirdPartyProviderAuthorization {
+/**
+ * 
+ */
     private final @Nullable List<LightHouseAuthorizationResponse> authorizations;
+/**
+ * 
+ */
     private final @Nullable String managedByTenantId;
 
     @OutputCustomType.Constructor({"authorizations","managedByTenantId"})
@@ -24,9 +30,15 @@ public final class ProviderHubMetadataResponseThirdPartyProviderAuthorization {
         this.managedByTenantId = managedByTenantId;
     }
 
+/**
+ * 
+ */
     public List<LightHouseAuthorizationResponse> getAuthorizations() {
         return this.authorizations == null ? List.of() : this.authorizations;
     }
+/**
+ * 
+ */
     public Optional<String> getManagedByTenantId() {
         return Optional.ofNullable(this.managedByTenantId);
     }

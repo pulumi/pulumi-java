@@ -15,10 +15,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagementGroupDetailsResponse {
+/**
+ * (Optional) The ID of the parent management group.
+ */
     private final @Nullable ParentGroupInfoResponse parent;
+/**
+ * The path from the root to the current group.
+ */
     private final @Nullable List<ManagementGroupPathElementResponse> path;
+/**
+ * The identity of the principal or process that updated the object.
+ */
     private final @Nullable String updatedBy;
+/**
+ * The date and time when this object was last updated.
+ */
     private final @Nullable String updatedTime;
+/**
+ * The version number of the object.
+ */
     private final @Nullable Double version;
 
     @OutputCustomType.Constructor({"parent","path","updatedBy","updatedTime","version"})
@@ -35,18 +50,33 @@ public final class ManagementGroupDetailsResponse {
         this.version = version;
     }
 
+/**
+ * (Optional) The ID of the parent management group.
+ */
     public Optional<ParentGroupInfoResponse> getParent() {
         return Optional.ofNullable(this.parent);
     }
+/**
+ * The path from the root to the current group.
+ */
     public List<ManagementGroupPathElementResponse> getPath() {
         return this.path == null ? List.of() : this.path;
     }
+/**
+ * The identity of the principal or process that updated the object.
+ */
     public Optional<String> getUpdatedBy() {
         return Optional.ofNullable(this.updatedBy);
     }
+/**
+ * The date and time when this object was last updated.
+ */
     public Optional<String> getUpdatedTime() {
         return Optional.ofNullable(this.updatedTime);
     }
+/**
+ * The version number of the object.
+ */
     public Optional<Double> getVersion() {
         return Optional.ofNullable(this.version);
     }

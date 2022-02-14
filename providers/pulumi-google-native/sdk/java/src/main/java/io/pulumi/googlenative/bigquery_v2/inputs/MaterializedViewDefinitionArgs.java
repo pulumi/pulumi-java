@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MaterializedViewDefinitionArgs Empty = new MaterializedViewDefinitionArgs();
 
+    /**
+     * [Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base table is updated. The default value is "true".
+     */
     @InputImport(name="enableRefresh")
     private final @Nullable Input<Boolean> enableRefresh;
 
@@ -22,6 +28,9 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
         return this.enableRefresh == null ? Input.empty() : this.enableRefresh;
     }
 
+    /**
+     * [Required] A query whose result is persisted.
+     */
     @InputImport(name="query")
     private final @Nullable Input<String> query;
 
@@ -29,6 +38,9 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
         return this.query == null ? Input.empty() : this.query;
     }
 
+    /**
+     * [Optional] [TrustedTester] The maximum frequency at which this materialized view will be refreshed. The default value is "1800000" (30 minutes).
+     */
     @InputImport(name="refreshIntervalMs")
     private final @Nullable Input<String> refreshIntervalMs;
 

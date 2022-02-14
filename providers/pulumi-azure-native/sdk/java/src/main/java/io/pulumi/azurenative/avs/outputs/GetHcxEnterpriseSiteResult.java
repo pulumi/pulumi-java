@@ -9,10 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetHcxEnterpriseSiteResult {
+/**
+ * The activation key
+ */
     private final String activationKey;
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * The status of the HCX Enterprise Site
+ */
     private final String status;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"activationKey","id","name","status","type"})
@@ -29,18 +44,33 @@ public final class GetHcxEnterpriseSiteResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The activation key
+ */
     public String getActivationKey() {
         return this.activationKey;
     }
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The status of the HCX Enterprise Site
+ */
     public String getStatus() {
         return this.status;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

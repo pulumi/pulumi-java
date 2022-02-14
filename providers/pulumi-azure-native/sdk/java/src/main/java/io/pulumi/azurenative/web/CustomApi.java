@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.web.CustomApiArgs;
 import io.pulumi.azurenative.web.outputs.CustomApiPropertiesDefinitionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,45 +15,212 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A custom API
+API Version: 2016-06-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Replace a custom API
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var customApi = new AzureNative.Web.CustomApi("customApi", new AzureNative.Web.CustomApiArgs
+        {
+            ApiName = "testCustomApi",
+            Properties = new AzureNative.Web.Inputs.CustomApiPropertiesDefinitionArgs
+            {
+                ApiDefinitions = new AzureNative.Web.Inputs.ApiResourceDefinitionsArgs
+                {
+                    OriginalSwaggerUrl = "https://tempuri.org/swagger.json",
+                },
+                ApiType = "Rest",
+                Capabilities = {},
+                Description = "",
+                DisplayName = "testCustomApi",
+                IconUri = "/testIcon.svg",
+            },
+            ResourceGroupName = "testResourceGroup",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	web "github.com/pulumi/pulumi-azure-native/sdk/go/azure/web"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := web.NewCustomApi(ctx, "customApi", &web.CustomApiArgs{
+			ApiName: pulumi.String("testCustomApi"),
+			Properties: &web.CustomApiPropertiesDefinitionArgs{
+				ApiDefinitions: &web.ApiResourceDefinitionsArgs{
+					OriginalSwaggerUrl: pulumi.String("https://tempuri.org/swagger.json"),
+				},
+				ApiType:      pulumi.String("Rest"),
+				Capabilities: pulumi.StringArray{},
+				Description:  pulumi.String(""),
+				DisplayName:  pulumi.String("testCustomApi"),
+				IconUri:      pulumi.String("/testIcon.svg"),
+			},
+			ResourceGroupName: pulumi.String("testResourceGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const customApi = new azure_native.web.CustomApi("customApi", {
+    apiName: "testCustomApi",
+    properties: {
+        apiDefinitions: {
+            originalSwaggerUrl: "https://tempuri.org/swagger.json",
+        },
+        apiType: "Rest",
+        capabilities: [],
+        description: "",
+        displayName: "testCustomApi",
+        iconUri: "/testIcon.svg",
+    },
+    resourceGroupName: "testResourceGroup",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+custom_api = azure_native.web.CustomApi("customApi",
+    api_name="testCustomApi",
+    properties=azure_native.web.CustomApiPropertiesDefinitionArgs(
+        api_definitions=azure_native.web.ApiResourceDefinitionsArgs(
+            original_swagger_url="https://tempuri.org/swagger.json",
+        ),
+        api_type="Rest",
+        capabilities=[],
+        description="",
+        display_name="testCustomApi",
+        icon_uri="/testIcon.svg",
+    ),
+    resource_group_name="testResourceGroup")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:web:CustomApi testCustomApi /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Web/customApis/testCustomApi 
+```
+
+ */
 @ResourceType(type="azure-native:web:CustomApi")
 public class CustomApi extends io.pulumi.resources.CustomResource {
+    /**
+     * Resource ETag
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return Resource ETag
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * Resource location
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Custom API properties
+     */
     @OutputExport(name="properties", type=CustomApiPropertiesDefinitionResponse.class, parameters={})
     private Output<CustomApiPropertiesDefinitionResponse> properties;
 
+    /**
+     * @return Custom API properties
+     */
     public Output<CustomApiPropertiesDefinitionResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Resource tags
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public CustomApi(String name, CustomApiArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:CustomApi", name, args == null ? CustomApiArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -73,6 +239,14 @@ public class CustomApi extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static CustomApi get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CustomApi(name, id, options);
     }

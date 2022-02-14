@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class NodeTemplateNodeTypeFlexibilityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NodeTemplateNodeTypeFlexibilityResponse Empty = new NodeTemplateNodeTypeFlexibilityResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="cpus", required=true)
     private final String cpus;
 
@@ -19,6 +25,9 @@ public final class NodeTemplateNodeTypeFlexibilityResponse extends io.pulumi.res
         return this.cpus;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="localSsd", required=true)
     private final String localSsd;
 
@@ -26,6 +35,9 @@ public final class NodeTemplateNodeTypeFlexibilityResponse extends io.pulumi.res
         return this.localSsd;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="memory", required=true)
     private final String memory;
 

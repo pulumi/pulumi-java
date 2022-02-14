@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListMonitoredResourceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListMonitoredResourceArgs Empty = new ListMonitoredResourceArgs();
 
+    /**
+     * Monitor resource name
+     */
     @InputImport(name="monitorName", required=true)
     private final String monitorName;
 
@@ -19,6 +25,9 @@ public final class ListMonitoredResourceArgs extends io.pulumi.resources.InvokeA
         return this.monitorName;
     }
 
+    /**
+     * The name of the resource group to which the Elastic resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

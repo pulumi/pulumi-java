@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Static delivery attribute mapping details.
+ */
 public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StaticDeliveryAttributeMappingResponse Empty = new StaticDeliveryAttributeMappingResponse();
 
+    /**
+     * Boolean flag to tell if the attribute contains sensitive information .
+     */
     @InputImport(name="isSecret")
     private final @Nullable Boolean isSecret;
 
@@ -22,6 +28,9 @@ public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.reso
         return this.isSecret == null ? Optional.empty() : Optional.ofNullable(this.isSecret);
     }
 
+    /**
+     * Name of the delivery attribute or header.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -29,6 +38,10 @@ public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.reso
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Type of the delivery attribute or header name.
+Expected value is 'Static'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -36,6 +49,9 @@ public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.reso
         return this.type;
     }
 
+    /**
+     * Value of the delivery attribute.
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

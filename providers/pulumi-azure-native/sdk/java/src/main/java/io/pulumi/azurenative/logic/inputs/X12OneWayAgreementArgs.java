@@ -10,10 +10,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The X12 one-way agreement.
+ */
 public final class X12OneWayAgreementArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final X12OneWayAgreementArgs Empty = new X12OneWayAgreementArgs();
 
+    /**
+     * The X12 protocol settings.
+     */
     @InputImport(name="protocolSettings", required=true)
     private final Input<X12ProtocolSettingsArgs> protocolSettings;
 
@@ -21,6 +27,9 @@ public final class X12OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
         return this.protocolSettings;
     }
 
+    /**
+     * The receiver business identity
+     */
     @InputImport(name="receiverBusinessIdentity", required=true)
     private final Input<BusinessIdentityArgs> receiverBusinessIdentity;
 
@@ -28,6 +37,9 @@ public final class X12OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
         return this.receiverBusinessIdentity;
     }
 
+    /**
+     * The sender business identity
+     */
     @InputImport(name="senderBusinessIdentity", required=true)
     private final Input<BusinessIdentityArgs> senderBusinessIdentity;
 

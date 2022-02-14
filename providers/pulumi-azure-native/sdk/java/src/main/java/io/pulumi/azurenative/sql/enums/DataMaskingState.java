@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The state of the data masking policy.
+ */
     @EnumType
     public enum DataMaskingState {
+/**
+ * 
+ */
         Disabled("Disabled"),
+/**
+ * 
+ */
         Enabled("Enabled");
 
         private final String value;

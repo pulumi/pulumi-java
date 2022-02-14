@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetGalleryApplicationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGalleryApplicationArgs Empty = new GetGalleryApplicationArgs();
 
+    /**
+     * The name of the gallery Application Definition to be retrieved.
+     */
     @InputImport(name="galleryApplicationName", required=true)
     private final String galleryApplicationName;
 
@@ -19,6 +25,9 @@ public final class GetGalleryApplicationArgs extends io.pulumi.resources.InvokeA
         return this.galleryApplicationName;
     }
 
+    /**
+     * The name of the Shared Application Gallery from which the Application Definitions are to be retrieved.
+     */
     @InputImport(name="galleryName", required=true)
     private final String galleryName;
 
@@ -26,6 +35,9 @@ public final class GetGalleryApplicationArgs extends io.pulumi.resources.InvokeA
         return this.galleryName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

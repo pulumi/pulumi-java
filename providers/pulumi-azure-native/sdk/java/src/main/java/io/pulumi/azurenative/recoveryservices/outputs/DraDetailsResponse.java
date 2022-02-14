@@ -11,11 +11,29 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DraDetailsResponse {
+/**
+ * The health of the DRA.
+ */
     private final String health;
+/**
+ * The health errors.
+ */
     private final List<HealthErrorResponse> healthErrors;
+/**
+ * The DRA Id.
+ */
     private final String id;
+/**
+ * The last heartbeat received from the DRA.
+ */
     private final String lastHeartbeatUtc;
+/**
+ * The DRA name.
+ */
     private final String name;
+/**
+ * The DRA version.
+ */
     private final String version;
 
     @OutputCustomType.Constructor({"health","healthErrors","id","lastHeartbeatUtc","name","version"})
@@ -34,21 +52,39 @@ public final class DraDetailsResponse {
         this.version = Objects.requireNonNull(version);
     }
 
+/**
+ * The health of the DRA.
+ */
     public String getHealth() {
         return this.health;
     }
+/**
+ * The health errors.
+ */
     public List<HealthErrorResponse> getHealthErrors() {
         return this.healthErrors;
     }
+/**
+ * The DRA Id.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The last heartbeat received from the DRA.
+ */
     public String getLastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
+/**
+ * The DRA name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The DRA version.
+ */
     public String getVersion() {
         return this.version;
     }

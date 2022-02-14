@@ -11,10 +11,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The rule that specifies conditions when findings of infoTypes specified in `InspectionRuleSet` are removed from results.
+ */
 public final class GooglePrivacyDlpV2ExclusionRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2ExclusionRuleResponse Empty = new GooglePrivacyDlpV2ExclusionRuleResponse();
 
+    /**
+     * Dictionary which defines the rule.
+     */
     @InputImport(name="dictionary", required=true)
     private final GooglePrivacyDlpV2DictionaryResponse dictionary;
 
@@ -22,6 +28,9 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends io.pulumi.res
         return this.dictionary;
     }
 
+    /**
+     * Set of infoTypes for which findings would affect this rule.
+     */
     @InputImport(name="excludeInfoTypes", required=true)
     private final GooglePrivacyDlpV2ExcludeInfoTypesResponse excludeInfoTypes;
 
@@ -29,6 +38,9 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends io.pulumi.res
         return this.excludeInfoTypes;
     }
 
+    /**
+     * How the rule is applied, see MatchingType documentation for details.
+     */
     @InputImport(name="matchingType", required=true)
     private final String matchingType;
 
@@ -36,6 +48,9 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends io.pulumi.res
         return this.matchingType;
     }
 
+    /**
+     * Regular expression which defines the rule.
+     */
     @InputImport(name="regex", required=true)
     private final GooglePrivacyDlpV2RegexResponse regex;
 

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ListSiteIdentifiersAssignedToHostNameArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListSiteIdentifiersAssignedToHostNameArgs Empty = new ListSiteIdentifiersAssignedToHostNameArgs();
 
+    /**
+     * Name of the object.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

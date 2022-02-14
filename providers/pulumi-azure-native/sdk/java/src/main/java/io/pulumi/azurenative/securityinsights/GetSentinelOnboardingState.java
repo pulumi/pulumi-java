@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSentinelOnboardingState {
+/**
+ * Sentinel onboarding state
+API Version: 2021-03-01-preview.
+ *
+ * Sentinel onboarding state
+ */
     public static CompletableFuture<GetSentinelOnboardingStateResult> invokeAsync(GetSentinelOnboardingStateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getSentinelOnboardingState", TypeShape.of(GetSentinelOnboardingStateResult.class), args == null ? GetSentinelOnboardingStateArgs.Empty : args, Utilities.withVersion(options));
     }

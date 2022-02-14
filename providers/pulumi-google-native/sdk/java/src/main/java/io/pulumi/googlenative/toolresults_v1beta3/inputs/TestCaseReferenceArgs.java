@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A reference to a test case. Test case references are canonically ordered lexicographically by these three factors: * First, by test_suite_name. * Second, by class_name. * Third, by name.
+ */
 public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TestCaseReferenceArgs Empty = new TestCaseReferenceArgs();
 
+    /**
+     * The name of the class.
+     */
     @InputImport(name="className")
     private final @Nullable Input<String> className;
 
@@ -21,6 +27,9 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
         return this.className == null ? Input.empty() : this.className;
     }
 
+    /**
+     * The name of the test case. Required.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -28,6 +37,9 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the test suite to which this test case belongs.
+     */
     @InputImport(name="testSuiteName")
     private final @Nullable Input<String> testSuiteName;
 

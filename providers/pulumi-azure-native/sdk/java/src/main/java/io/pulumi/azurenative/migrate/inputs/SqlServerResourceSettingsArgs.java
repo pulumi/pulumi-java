@@ -9,10 +9,17 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines the SQL Server resource settings.
+ */
 public final class SqlServerResourceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlServerResourceSettingsArgs Empty = new SqlServerResourceSettingsArgs();
 
+    /**
+     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+Expected value is 'Microsoft.Sql/servers'.
+     */
     @InputImport(name="resourceType", required=true)
     private final Input<String> resourceType;
 
@@ -20,6 +27,9 @@ public final class SqlServerResourceSettingsArgs extends io.pulumi.resources.Res
         return this.resourceType;
     }
 
+    /**
+     * Gets or sets the target Resource name.
+     */
     @InputImport(name="targetResourceName", required=true)
     private final Input<String> targetResourceName;
 

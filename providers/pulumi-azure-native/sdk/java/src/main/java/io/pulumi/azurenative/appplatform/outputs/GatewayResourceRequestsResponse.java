@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GatewayResourceRequestsResponse {
+/**
+ * Cpu allocated to each Spring Cloud Gateway instance.
+ */
     private final @Nullable String cpu;
+/**
+ * Memory allocated to each Spring Cloud Gateway instance.
+ */
     private final @Nullable String memory;
 
     @OutputCustomType.Constructor({"cpu","memory"})
@@ -22,9 +28,15 @@ public final class GatewayResourceRequestsResponse {
         this.memory = memory;
     }
 
+/**
+ * Cpu allocated to each Spring Cloud Gateway instance.
+ */
     public Optional<String> getCpu() {
         return Optional.ofNullable(this.cpu);
     }
+/**
+ * Memory allocated to each Spring Cloud Gateway instance.
+ */
     public Optional<String> getMemory() {
         return Optional.ofNullable(this.memory);
     }

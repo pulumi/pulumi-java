@@ -9,14 +9,41 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class KeyUsageOptionsResponse {
+/**
+ * The key may be used to sign certificates.
+ */
     private final Boolean certSign;
+/**
+ * The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
+ */
     private final Boolean contentCommitment;
+/**
+ * The key may be used sign certificate revocation lists.
+ */
     private final Boolean crlSign;
+/**
+ * The key may be used to encipher data.
+ */
     private final Boolean dataEncipherment;
+/**
+ * The key may be used to decipher only.
+ */
     private final Boolean decipherOnly;
+/**
+ * The key may be used for digital signatures.
+ */
     private final Boolean digitalSignature;
+/**
+ * The key may be used to encipher only.
+ */
     private final Boolean encipherOnly;
+/**
+ * The key may be used in a key agreement protocol.
+ */
     private final Boolean keyAgreement;
+/**
+ * The key may be used to encipher other keys.
+ */
     private final Boolean keyEncipherment;
 
     @OutputCustomType.Constructor({"certSign","contentCommitment","crlSign","dataEncipherment","decipherOnly","digitalSignature","encipherOnly","keyAgreement","keyEncipherment"})
@@ -41,30 +68,57 @@ public final class KeyUsageOptionsResponse {
         this.keyEncipherment = Objects.requireNonNull(keyEncipherment);
     }
 
+/**
+ * The key may be used to sign certificates.
+ */
     public Boolean getCertSign() {
         return this.certSign;
     }
+/**
+ * The key may be used for cryptographic commitments. Note that this may also be referred to as "non-repudiation".
+ */
     public Boolean getContentCommitment() {
         return this.contentCommitment;
     }
+/**
+ * The key may be used sign certificate revocation lists.
+ */
     public Boolean getCrlSign() {
         return this.crlSign;
     }
+/**
+ * The key may be used to encipher data.
+ */
     public Boolean getDataEncipherment() {
         return this.dataEncipherment;
     }
+/**
+ * The key may be used to decipher only.
+ */
     public Boolean getDecipherOnly() {
         return this.decipherOnly;
     }
+/**
+ * The key may be used for digital signatures.
+ */
     public Boolean getDigitalSignature() {
         return this.digitalSignature;
     }
+/**
+ * The key may be used to encipher only.
+ */
     public Boolean getEncipherOnly() {
         return this.encipherOnly;
     }
+/**
+ * The key may be used in a key agreement protocol.
+ */
     public Boolean getKeyAgreement() {
         return this.keyAgreement;
     }
+/**
+ * The key may be used to encipher other keys.
+ */
     public Boolean getKeyEncipherment() {
         return this.keyEncipherment;
     }

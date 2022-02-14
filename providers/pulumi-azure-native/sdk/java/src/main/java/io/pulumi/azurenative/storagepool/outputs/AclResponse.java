@@ -10,9 +10,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AclResponse {
+/**
+ * iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".
+ */
     private final String initiatorIqn;
+/**
+ * List of LUN names mapped to the ACL.
+ */
     private final List<String> mappedLuns;
+/**
+ * Password for Challenge Handshake Authentication Protocol (CHAP) authentication.
+ */
     private final String password;
+/**
+ * Username for Challenge Handshake Authentication Protocol (CHAP) authentication.
+ */
     private final String username;
 
     @OutputCustomType.Constructor({"initiatorIqn","mappedLuns","password","username"})
@@ -27,15 +39,27 @@ public final class AclResponse {
         this.username = Objects.requireNonNull(username);
     }
 
+/**
+ * iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".
+ */
     public String getInitiatorIqn() {
         return this.initiatorIqn;
     }
+/**
+ * List of LUN names mapped to the ACL.
+ */
     public List<String> getMappedLuns() {
         return this.mappedLuns;
     }
+/**
+ * Password for Challenge Handshake Authentication Protocol (CHAP) authentication.
+ */
     public String getPassword() {
         return this.password;
     }
+/**
+ * Username for Challenge Handshake Authentication Protocol (CHAP) authentication.
+ */
     public String getUsername() {
         return this.username;
     }

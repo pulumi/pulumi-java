@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFluidRelayServer {
+/**
+ * A FluidRelay Server.
+API Version: 2021-03-12-preview.
+ *
+ * A FluidRelay Server.
+ */
     public static CompletableFuture<GetFluidRelayServerResult> invokeAsync(GetFluidRelayServerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:fluidrelay:getFluidRelayServer", TypeShape.of(GetFluidRelayServerResult.class), args == null ? GetFluidRelayServerArgs.Empty : args, Utilities.withVersion(options));
     }

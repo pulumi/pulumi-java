@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AppLogsConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppLogsConfigurationArgs Empty = new AppLogsConfigurationArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="destination")
     private final @Nullable Input<String> destination;
 
@@ -22,6 +28,9 @@ public final class AppLogsConfigurationArgs extends io.pulumi.resources.Resource
         return this.destination == null ? Input.empty() : this.destination;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="logAnalyticsConfiguration")
     private final @Nullable Input<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration;
 

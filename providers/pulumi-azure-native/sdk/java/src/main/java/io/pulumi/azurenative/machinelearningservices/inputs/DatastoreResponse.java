@@ -20,10 +20,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Machine Learning datastore object.
+ */
 public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatastoreResponse Empty = new DatastoreResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="azureDataLakeSection")
     private final @Nullable AzureDataLakeSectionResponse azureDataLakeSection;
 
@@ -31,6 +37,9 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
         return this.azureDataLakeSection == null ? Optional.empty() : Optional.ofNullable(this.azureDataLakeSection);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="azureMySqlSection")
     private final @Nullable AzureMySqlSectionResponse azureMySqlSection;
 
@@ -38,6 +47,9 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
         return this.azureMySqlSection == null ? Optional.empty() : Optional.ofNullable(this.azureMySqlSection);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="azurePostgreSqlSection")
     private final @Nullable AzurePostgreSqlSectionResponse azurePostgreSqlSection;
 
@@ -45,6 +57,9 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
         return this.azurePostgreSqlSection == null ? Optional.empty() : Optional.ofNullable(this.azurePostgreSqlSection);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="azureSqlDatabaseSection")
     private final @Nullable AzureSqlDatabaseSectionResponse azureSqlDatabaseSection;
 
@@ -52,6 +67,9 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
         return this.azureSqlDatabaseSection == null ? Optional.empty() : Optional.ofNullable(this.azureSqlDatabaseSection);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="azureStorageSection")
     private final @Nullable AzureStorageSectionResponse azureStorageSection;
 
@@ -59,6 +77,9 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
         return this.azureStorageSection == null ? Optional.empty() : Optional.ofNullable(this.azureStorageSection);
     }
 
+    /**
+     * The User who created the datastore.
+     */
     @InputImport(name="createdBy", required=true)
     private final UserInfoResponse createdBy;
 
@@ -66,6 +87,9 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
         return this.createdBy;
     }
 
+    /**
+     * The date and time when the datastore was created.
+     */
     @InputImport(name="createdTime", required=true)
     private final String createdTime;
 
@@ -73,6 +97,9 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
         return this.createdTime;
     }
 
+    /**
+     * The datastore type.
+     */
     @InputImport(name="dataStoreType")
     private final @Nullable String dataStoreType;
 
@@ -80,6 +107,9 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
         return this.dataStoreType == null ? Optional.empty() : Optional.ofNullable(this.dataStoreType);
     }
 
+    /**
+     * Description of the datastore.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -87,6 +117,9 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Data specific to GlusterFS.
+     */
     @InputImport(name="glusterFsSection")
     private final @Nullable GlusterFsSectionResponse glusterFsSection;
 
@@ -94,6 +127,9 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
         return this.glusterFsSection == null ? Optional.empty() : Optional.ofNullable(this.glusterFsSection);
     }
 
+    /**
+     * A read only property that denotes whether the service datastore has been validated with credentials.
+     */
     @InputImport(name="hasBeenValidated")
     private final @Nullable Boolean hasBeenValidated;
 
@@ -101,6 +137,9 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
         return this.hasBeenValidated == null ? Optional.empty() : Optional.ofNullable(this.hasBeenValidated);
     }
 
+    /**
+     * Info about origin if it is linked.
+     */
     @InputImport(name="linkedInfo")
     private final @Nullable LinkedInfoResponse linkedInfo;
 
@@ -108,6 +147,9 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
         return this.linkedInfo == null ? Optional.empty() : Optional.ofNullable(this.linkedInfo);
     }
 
+    /**
+     * The User who modified the datastore.
+     */
     @InputImport(name="modifiedBy", required=true)
     private final UserInfoResponse modifiedBy;
 
@@ -115,6 +157,9 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
         return this.modifiedBy;
     }
 
+    /**
+     * The date and time when the datastore was last modified.
+     */
     @InputImport(name="modifiedTime", required=true)
     private final String modifiedTime;
 
@@ -122,6 +167,9 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
         return this.modifiedTime;
     }
 
+    /**
+     * Name of the datastore.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -129,6 +177,9 @@ public final class DatastoreResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Tags for this datastore.
+     */
     @InputImport(name="tags", required=true)
     private final Map<String,String> tags;
 

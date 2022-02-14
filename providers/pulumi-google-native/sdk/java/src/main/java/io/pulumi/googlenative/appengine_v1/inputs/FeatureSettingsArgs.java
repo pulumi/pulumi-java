@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The feature specific settings to be used in the application. These define behaviors that are user configurable.
+ */
 public final class FeatureSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FeatureSettingsArgs Empty = new FeatureSettingsArgs();
 
+    /**
+     * Boolean value indicating if split health checks should be used instead of the legacy health checks. At an app.yaml level, this means defaulting to 'readiness_check' and 'liveness_check' values instead of 'health_check' ones. Once the legacy 'health_check' behavior is deprecated, and this value is always true, this setting can be removed.
+     */
     @InputImport(name="splitHealthChecks")
     private final @Nullable Input<Boolean> splitHealthChecks;
 
@@ -21,6 +27,9 @@ public final class FeatureSettingsArgs extends io.pulumi.resources.ResourceArgs 
         return this.splitHealthChecks == null ? Input.empty() : this.splitHealthChecks;
     }
 
+    /**
+     * If true, use Container-Optimized OS (https://cloud.google.com/container-optimized-os/) base image for VMs, rather than a base Debian image.
+     */
     @InputImport(name="useContainerOptimizedOs")
     private final @Nullable Input<Boolean> useContainerOptimizedOs;
 

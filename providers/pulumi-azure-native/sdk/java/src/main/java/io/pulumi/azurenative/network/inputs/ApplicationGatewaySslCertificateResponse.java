@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * SSL certificates of an application gateway.
+ */
 public final class ApplicationGatewaySslCertificateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewaySslCertificateResponse Empty = new ApplicationGatewaySslCertificateResponse();
 
+    /**
+     * Base-64 encoded pfx certificate. Only applicable in PUT Request.
+     */
     @InputImport(name="data")
     private final @Nullable String data;
 
@@ -21,6 +27,9 @@ public final class ApplicationGatewaySslCertificateResponse extends io.pulumi.re
         return this.data == null ? Optional.empty() : Optional.ofNullable(this.data);
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -28,6 +37,9 @@ public final class ApplicationGatewaySslCertificateResponse extends io.pulumi.re
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -35,6 +47,9 @@ public final class ApplicationGatewaySslCertificateResponse extends io.pulumi.re
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
+     */
     @InputImport(name="keyVaultSecretId")
     private final @Nullable String keyVaultSecretId;
 
@@ -42,6 +57,9 @@ public final class ApplicationGatewaySslCertificateResponse extends io.pulumi.re
         return this.keyVaultSecretId == null ? Optional.empty() : Optional.ofNullable(this.keyVaultSecretId);
     }
 
+    /**
+     * Name of the SSL certificate that is unique within an Application Gateway.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -49,6 +67,9 @@ public final class ApplicationGatewaySslCertificateResponse extends io.pulumi.re
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Password for the pfx file specified in data. Only applicable in PUT request.
+     */
     @InputImport(name="password")
     private final @Nullable String password;
 
@@ -56,6 +77,9 @@ public final class ApplicationGatewaySslCertificateResponse extends io.pulumi.re
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
+    /**
+     * The provisioning state of the SSL certificate resource.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -63,6 +87,9 @@ public final class ApplicationGatewaySslCertificateResponse extends io.pulumi.re
         return this.provisioningState;
     }
 
+    /**
+     * Base-64 encoded Public cert data corresponding to pfx specified in data. Only applicable in GET request.
+     */
     @InputImport(name="publicCertData", required=true)
     private final String publicCertData;
 
@@ -70,6 +97,9 @@ public final class ApplicationGatewaySslCertificateResponse extends io.pulumi.re
         return this.publicCertData;
     }
 
+    /**
+     * Type of the resource.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

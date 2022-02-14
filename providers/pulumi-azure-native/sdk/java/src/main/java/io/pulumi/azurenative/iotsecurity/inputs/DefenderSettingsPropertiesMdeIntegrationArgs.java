@@ -11,10 +11,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * MDE integration configuration
+ */
 public final class DefenderSettingsPropertiesMdeIntegrationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DefenderSettingsPropertiesMdeIntegrationArgs Empty = new DefenderSettingsPropertiesMdeIntegrationArgs();
 
+    /**
+     * Integration status
+     */
     @InputImport(name="status", required=true)
     private final Input<Either<String,MdeIntegration>> status;
 

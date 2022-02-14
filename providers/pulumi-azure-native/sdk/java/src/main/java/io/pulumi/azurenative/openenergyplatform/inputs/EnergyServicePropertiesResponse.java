@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class EnergyServicePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnergyServicePropertiesResponse Empty = new EnergyServicePropertiesResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="authAppId")
     private final @Nullable String authAppId;
 
@@ -23,6 +29,9 @@ public final class EnergyServicePropertiesResponse extends io.pulumi.resources.I
         return this.authAppId == null ? Optional.empty() : Optional.ofNullable(this.authAppId);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="dataPartitionNames")
     private final @Nullable List<DataPartitionNamesResponse> dataPartitionNames;
 
@@ -30,6 +39,9 @@ public final class EnergyServicePropertiesResponse extends io.pulumi.resources.I
         return this.dataPartitionNames == null ? List.of() : this.dataPartitionNames;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="dnsName", required=true)
     private final String dnsName;
 
@@ -37,6 +49,9 @@ public final class EnergyServicePropertiesResponse extends io.pulumi.resources.I
         return this.dnsName;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

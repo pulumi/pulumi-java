@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Linux operation systems profile.
+ */
 public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OsProfileResponse Empty = new OsProfileResponse();
 
+    /**
+     * The Linux OS profile.
+     */
     @InputImport(name="linuxOperatingSystemProfile")
     private final @Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile;
 

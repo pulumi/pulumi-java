@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FixedOrPercentResponse {
+/**
+ * Specifies a fixed value.
+ */
     private final Integer fixed;
+/**
+ * Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
+ */
     private final Integer percent;
 
     @OutputCustomType.Constructor({"fixed","percent"})
@@ -20,9 +26,15 @@ public final class FixedOrPercentResponse {
         this.percent = Objects.requireNonNull(percent);
     }
 
+/**
+ * Specifies a fixed value.
+ */
     public Integer getFixed() {
         return this.fixed;
     }
+/**
+ * Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
+ */
     public Integer getPercent() {
         return this.percent;
     }

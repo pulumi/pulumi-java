@@ -10,10 +10,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetAddonResult {
+/**
+ * The path ID that uniquely identifies the object.
+ */
     private final String id;
+/**
+ * Addon type.
+ */
     private final String kind;
+/**
+ * The object name.
+ */
     private final String name;
+/**
+ * Addon type
+ */
     private final SystemDataResponse systemData;
+/**
+ * The hierarchical type of the object.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","kind","name","systemData","type"})
@@ -30,18 +45,33 @@ public final class GetAddonResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The path ID that uniquely identifies the object.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Addon type.
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * The object name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Addon type
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * The hierarchical type of the object.
+ */
     public String getType() {
         return this.type;
     }

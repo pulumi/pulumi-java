@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventHubAuthorizationRule {
+/**
+ * Single item in a List or Get AuthorizationRule operation
+API Version: 2017-04-01.
+ *
+ * Single item in a List or Get AuthorizationRule operation
+ */
     public static CompletableFuture<GetEventHubAuthorizationRuleResult> invokeAsync(GetEventHubAuthorizationRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventhub:getEventHubAuthorizationRule", TypeShape.of(GetEventHubAuthorizationRuleResult.class), args == null ? GetEventHubAuthorizationRuleArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,9 +11,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OutputDataBindingResponse {
+/**
+ * ARM resource ID of the datastore where the data output will be stored.
+ */
     private final @Nullable String datastoreId;
+/**
+ * Mechanism for data movement to datastore.
+ */
     private final @Nullable String mode;
+/**
+ * Location of data inside the container process.
+ */
     private final @Nullable String pathOnCompute;
+/**
+ * Path within the datastore to the data.
+ */
     private final @Nullable String pathOnDatastore;
 
     @OutputCustomType.Constructor({"datastoreId","mode","pathOnCompute","pathOnDatastore"})
@@ -28,15 +40,27 @@ public final class OutputDataBindingResponse {
         this.pathOnDatastore = pathOnDatastore;
     }
 
+/**
+ * ARM resource ID of the datastore where the data output will be stored.
+ */
     public Optional<String> getDatastoreId() {
         return Optional.ofNullable(this.datastoreId);
     }
+/**
+ * Mechanism for data movement to datastore.
+ */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }
+/**
+ * Location of data inside the container process.
+ */
     public Optional<String> getPathOnCompute() {
         return Optional.ofNullable(this.pathOnCompute);
     }
+/**
+ * Path within the datastore to the data.
+ */
     public Optional<String> getPathOnDatastore() {
         return Optional.ofNullable(this.pathOnDatastore);
     }

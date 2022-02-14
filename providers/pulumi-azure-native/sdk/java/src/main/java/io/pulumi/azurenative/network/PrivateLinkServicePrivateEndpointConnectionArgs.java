@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateLinkServicePrivateEndpointConnectionArgs Empty = new PrivateLinkServicePrivateEndpointConnectionArgs();
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -22,6 +28,9 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +38,9 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the private end point connection.
+     */
     @InputImport(name="peConnectionName")
     private final @Nullable Input<String> peConnectionName;
 
@@ -36,6 +48,9 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
         return this.peConnectionName == null ? Input.empty() : this.peConnectionName;
     }
 
+    /**
+     * A collection of information about the state of the connection between service consumer and provider.
+     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
@@ -43,6 +58,9 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -50,6 +68,9 @@ public final class PrivateLinkServicePrivateEndpointConnectionArgs extends io.pu
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the private link service.
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

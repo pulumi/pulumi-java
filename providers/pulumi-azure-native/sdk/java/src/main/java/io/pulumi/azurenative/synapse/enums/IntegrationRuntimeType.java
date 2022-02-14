@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Type of integration runtime.
+ */
     @EnumType
     public enum IntegrationRuntimeType {
+/**
+ * 
+ */
         Managed("Managed"),
+/**
+ * 
+ */
         SelfHosted("SelfHosted");
 
         private final String value;

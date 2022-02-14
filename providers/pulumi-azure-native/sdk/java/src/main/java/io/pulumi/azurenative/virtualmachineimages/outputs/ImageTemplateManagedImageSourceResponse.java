@@ -9,7 +9,14 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ImageTemplateManagedImageSourceResponse {
+/**
+ * ARM resource id of the managed image in customer subscription
+ */
     private final String imageId;
+/**
+ * Specifies the type of source image you want to start with.
+Expected value is 'ManagedImage'.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"imageId","type"})
@@ -20,9 +27,16 @@ public final class ImageTemplateManagedImageSourceResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * ARM resource id of the managed image in customer subscription
+ */
     public String getImageId() {
         return this.imageId;
     }
+/**
+ * Specifies the type of source image you want to start with.
+Expected value is 'ManagedImage'.
+ */
     public String getType() {
         return this.type;
     }

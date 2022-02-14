@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The data source that enriched by ueba.
+ */
     @EnumType
     public enum UebaDataSources {
+/**
+ * 
+ */
         AuditLogs("AuditLogs"),
+/**
+ * 
+ */
         AzureActivity("AzureActivity"),
+/**
+ * 
+ */
         SecurityEvent("SecurityEvent"),
+/**
+ * 
+ */
         SigninLogs("SigninLogs");
 
         private final String value;

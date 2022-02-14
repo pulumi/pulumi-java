@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetCryptoKeyVersionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCryptoKeyVersionArgs Empty = new GetCryptoKeyVersionArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="cryptoKeyId", required=true)
     private final String cryptoKeyId;
 
@@ -21,6 +27,9 @@ public final class GetCryptoKeyVersionArgs extends io.pulumi.resources.InvokeArg
         return this.cryptoKeyId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="cryptoKeyVersionId", required=true)
     private final String cryptoKeyVersionId;
 
@@ -28,6 +37,9 @@ public final class GetCryptoKeyVersionArgs extends io.pulumi.resources.InvokeArg
         return this.cryptoKeyVersionId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="keyRingId", required=true)
     private final String keyRingId;
 
@@ -35,6 +47,9 @@ public final class GetCryptoKeyVersionArgs extends io.pulumi.resources.InvokeArg
         return this.keyRingId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -42,6 +57,9 @@ public final class GetCryptoKeyVersionArgs extends io.pulumi.resources.InvokeArg
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

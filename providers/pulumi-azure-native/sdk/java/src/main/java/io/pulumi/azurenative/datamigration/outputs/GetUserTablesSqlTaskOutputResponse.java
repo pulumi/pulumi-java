@@ -13,8 +13,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetUserTablesSqlTaskOutputResponse {
+/**
+ * Mapping from database name to list of tables
+ */
     private final Map<String,List<DatabaseTableResponse>> databasesToTables;
+/**
+ * Result identifier
+ */
     private final String id;
+/**
+ * Validation errors
+ */
     private final List<ReportableExceptionResponse> validationErrors;
 
     @OutputCustomType.Constructor({"databasesToTables","id","validationErrors"})
@@ -27,12 +36,21 @@ public final class GetUserTablesSqlTaskOutputResponse {
         this.validationErrors = Objects.requireNonNull(validationErrors);
     }
 
+/**
+ * Mapping from database name to list of tables
+ */
     public Map<String,List<DatabaseTableResponse>> getDatabasesToTables() {
         return this.databasesToTables;
     }
+/**
+ * Result identifier
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Validation errors
+ */
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
     }

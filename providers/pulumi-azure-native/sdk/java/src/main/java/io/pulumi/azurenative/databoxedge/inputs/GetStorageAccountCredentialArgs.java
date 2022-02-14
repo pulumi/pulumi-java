@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetStorageAccountCredentialArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetStorageAccountCredentialArgs Empty = new GetStorageAccountCredentialArgs();
 
+    /**
+     * The device name.
+     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -19,6 +25,9 @@ public final class GetStorageAccountCredentialArgs extends io.pulumi.resources.I
         return this.deviceName;
     }
 
+    /**
+     * The storage account credential name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +35,9 @@ public final class GetStorageAccountCredentialArgs extends io.pulumi.resources.I
         return this.name;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Action to perform
+ */
     @EnumType
     public enum HeaderAction {
+/**
+ * 
+ */
         Append("Append"),
+/**
+ * 
+ */
         Overwrite("Overwrite"),
+/**
+ * 
+ */
         Delete("Delete");
 
         private final String value;

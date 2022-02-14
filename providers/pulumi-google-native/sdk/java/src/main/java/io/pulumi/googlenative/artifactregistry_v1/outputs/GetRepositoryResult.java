@@ -11,13 +11,37 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetRepositoryResult {
+/**
+ * The time when the repository was created.
+ */
     private final String createTime;
+/**
+ * The user-provided description of the repository.
+ */
     private final String description;
+/**
+ * The format of packages that are stored in the repository.
+ */
     private final String format;
+/**
+ * The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
+ */
     private final String kmsKeyName;
+/**
+ * Labels with user-defined metadata. This field may contain up to 64 entries. Label keys and values may be no longer than 63 characters. Label keys must begin with a lowercase letter and may only contain lowercase letters, numeric characters, underscores, and dashes.
+ */
     private final Map<String,String> labels;
+/**
+ * Maven repository config contains repository level configuration for the repositories of maven type.
+ */
     private final MavenRepositoryConfigResponse mavenConfig;
+/**
+ * The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1".
+ */
     private final String name;
+/**
+ * The time when the repository was last updated.
+ */
     private final String updateTime;
 
     @OutputCustomType.Constructor({"createTime","description","format","kmsKeyName","labels","mavenConfig","name","updateTime"})
@@ -40,27 +64,51 @@ public final class GetRepositoryResult {
         this.updateTime = Objects.requireNonNull(updateTime);
     }
 
+/**
+ * The time when the repository was created.
+ */
     public String getCreateTime() {
         return this.createTime;
     }
+/**
+ * The user-provided description of the repository.
+ */
     public String getDescription() {
         return this.description;
     }
+/**
+ * The format of packages that are stored in the repository.
+ */
     public String getFormat() {
         return this.format;
     }
+/**
+ * The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
+ */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }
+/**
+ * Labels with user-defined metadata. This field may contain up to 64 entries. Label keys and values may be no longer than 63 characters. Label keys must begin with a lowercase letter and may only contain lowercase letters, numeric characters, underscores, and dashes.
+ */
     public Map<String,String> getLabels() {
         return this.labels;
     }
+/**
+ * Maven repository config contains repository level configuration for the repositories of maven type.
+ */
     public MavenRepositoryConfigResponse getMavenConfig() {
         return this.mavenConfig;
     }
+/**
+ * The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1".
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The time when the repository was last updated.
+ */
     public String getUpdateTime() {
         return this.updateTime;
     }

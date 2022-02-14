@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.datashare;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.datashare.ShareSubscriptionArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,117 +14,330 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A share subscription data transfer object.
+API Version: 2020-09-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### ShareSubscriptions_Create
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var shareSubscription = new AzureNative.DataShare.ShareSubscription("shareSubscription", new AzureNative.DataShare.ShareSubscriptionArgs
+        {
+            AccountName = "Account1",
+            ExpirationDate = "2020-08-26T22:33:24.5785265Z",
+            InvitationId = "12345678-1234-1234-12345678abd",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareSubscriptionName = "ShareSubscription1",
+            SourceShareLocation = "eastus2",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datashare.NewShareSubscription(ctx, "shareSubscription", &datashare.ShareSubscriptionArgs{
+			AccountName:           pulumi.String("Account1"),
+			ExpirationDate:        pulumi.String("2020-08-26T22:33:24.5785265Z"),
+			InvitationId:          pulumi.String("12345678-1234-1234-12345678abd"),
+			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
+			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
+			SourceShareLocation:   pulumi.String("eastus2"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const shareSubscription = new azure_native.datashare.ShareSubscription("shareSubscription", {
+    accountName: "Account1",
+    expirationDate: "2020-08-26T22:33:24.5785265Z",
+    invitationId: "12345678-1234-1234-12345678abd",
+    resourceGroupName: "SampleResourceGroup",
+    shareSubscriptionName: "ShareSubscription1",
+    sourceShareLocation: "eastus2",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+share_subscription = azure_native.datashare.ShareSubscription("shareSubscription",
+    account_name="Account1",
+    expiration_date="2020-08-26T22:33:24.5785265Z",
+    invitation_id="12345678-1234-1234-12345678abd",
+    resource_group_name="SampleResourceGroup",
+    share_subscription_name="ShareSubscription1",
+    source_share_location="eastus2")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:datashare:ShareSubscription ShareSubscription1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/sharesubscriptions/ShareSubscription1 
+```
+
+ */
 @ResourceType(type="azure-native:datashare:ShareSubscription")
 public class ShareSubscription extends io.pulumi.resources.CustomResource {
+    /**
+     * Time at which the share subscription was created.
+     */
     @OutputExport(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
+    /**
+     * @return Time at which the share subscription was created.
+     */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
+    /**
+     * The expiration date of the share subscription.
+     */
     @OutputExport(name="expirationDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> expirationDate;
 
+    /**
+     * @return The expiration date of the share subscription.
+     */
     public Output</* @Nullable */ String> getExpirationDate() {
         return this.expirationDate;
     }
+    /**
+     * The invitation id.
+     */
     @OutputExport(name="invitationId", type=String.class, parameters={})
     private Output<String> invitationId;
 
+    /**
+     * @return The invitation id.
+     */
     public Output<String> getInvitationId() {
         return this.invitationId;
     }
+    /**
+     * Name of the azure resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the azure resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Email of the provider who created the resource
+     */
     @OutputExport(name="providerEmail", type=String.class, parameters={})
     private Output<String> providerEmail;
 
+    /**
+     * @return Email of the provider who created the resource
+     */
     public Output<String> getProviderEmail() {
         return this.providerEmail;
     }
+    /**
+     * Name of the provider who created the resource
+     */
     @OutputExport(name="providerName", type=String.class, parameters={})
     private Output<String> providerName;
 
+    /**
+     * @return Name of the provider who created the resource
+     */
     public Output<String> getProviderName() {
         return this.providerName;
     }
+    /**
+     * Tenant name of the provider who created the resource
+     */
     @OutputExport(name="providerTenantName", type=String.class, parameters={})
     private Output<String> providerTenantName;
 
+    /**
+     * @return Tenant name of the provider who created the resource
+     */
     public Output<String> getProviderTenantName() {
         return this.providerTenantName;
     }
+    /**
+     * Provisioning state of the share subscription
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state of the share subscription
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Description of share
+     */
     @OutputExport(name="shareDescription", type=String.class, parameters={})
     private Output<String> shareDescription;
 
+    /**
+     * @return Description of share
+     */
     public Output<String> getShareDescription() {
         return this.shareDescription;
     }
+    /**
+     * Kind of share
+     */
     @OutputExport(name="shareKind", type=String.class, parameters={})
     private Output<String> shareKind;
 
+    /**
+     * @return Kind of share
+     */
     public Output<String> getShareKind() {
         return this.shareKind;
     }
+    /**
+     * Name of the share
+     */
     @OutputExport(name="shareName", type=String.class, parameters={})
     private Output<String> shareName;
 
+    /**
+     * @return Name of the share
+     */
     public Output<String> getShareName() {
         return this.shareName;
     }
+    /**
+     * Gets the current status of share subscription.
+     */
     @OutputExport(name="shareSubscriptionStatus", type=String.class, parameters={})
     private Output<String> shareSubscriptionStatus;
 
+    /**
+     * @return Gets the current status of share subscription.
+     */
     public Output<String> getShareSubscriptionStatus() {
         return this.shareSubscriptionStatus;
     }
+    /**
+     * Terms of a share
+     */
     @OutputExport(name="shareTerms", type=String.class, parameters={})
     private Output<String> shareTerms;
 
+    /**
+     * @return Terms of a share
+     */
     public Output<String> getShareTerms() {
         return this.shareTerms;
     }
+    /**
+     * Source share location.
+     */
     @OutputExport(name="sourceShareLocation", type=String.class, parameters={})
     private Output<String> sourceShareLocation;
 
+    /**
+     * @return Source share location.
+     */
     public Output<String> getSourceShareLocation() {
         return this.sourceShareLocation;
     }
+    /**
+     * System Data of the Azure resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return System Data of the Azure resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Type of the azure resource
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of the azure resource
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Email of the user who created the resource
+     */
     @OutputExport(name="userEmail", type=String.class, parameters={})
     private Output<String> userEmail;
 
+    /**
+     * @return Email of the user who created the resource
+     */
     public Output<String> getUserEmail() {
         return this.userEmail;
     }
+    /**
+     * Name of the user who created the resource
+     */
     @OutputExport(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
+    /**
+     * @return Name of the user who created the resource
+     */
     public Output<String> getUserName() {
         return this.userName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ShareSubscription(String name, ShareSubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datashare:ShareSubscription", name, args == null ? ShareSubscriptionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -148,6 +360,14 @@ public class ShareSubscription extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ShareSubscription get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ShareSubscription(name, id, options);
     }

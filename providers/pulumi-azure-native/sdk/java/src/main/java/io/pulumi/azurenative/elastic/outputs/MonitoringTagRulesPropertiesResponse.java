@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MonitoringTagRulesPropertiesResponse {
+/**
+ * Rules for sending logs.
+ */
     private final @Nullable LogRulesResponse logRules;
+/**
+ * Provisioning state of the monitoring tag rules.
+ */
     private final @Nullable String provisioningState;
 
     @OutputCustomType.Constructor({"logRules","provisioningState"})
@@ -23,9 +29,15 @@ public final class MonitoringTagRulesPropertiesResponse {
         this.provisioningState = provisioningState;
     }
 
+/**
+ * Rules for sending logs.
+ */
     public Optional<LogRulesResponse> getLogRules() {
         return Optional.ofNullable(this.logRules);
     }
+/**
+ * Provisioning state of the monitoring tag rules.
+ */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }

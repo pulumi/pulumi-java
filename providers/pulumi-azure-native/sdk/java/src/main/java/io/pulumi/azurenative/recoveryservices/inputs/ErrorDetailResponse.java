@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Error Detail class which encapsulates Code, Message and Recommendations.
+ */
 public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ErrorDetailResponse Empty = new ErrorDetailResponse();
 
+    /**
+     * Error code.
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -20,6 +26,9 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
         return this.code;
     }
 
+    /**
+     * Error Message related to the Code.
+     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -27,6 +36,9 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
         return this.message;
     }
 
+    /**
+     * List of recommendation strings.
+     */
     @InputImport(name="recommendations", required=true)
     private final List<String> recommendations;
 

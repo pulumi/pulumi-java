@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The authentication type to be used to connect to the FTP server.
+ */
     @EnumType
     public enum SftpAuthenticationType {
+/**
+ * 
+ */
         Basic("Basic"),
+/**
+ * 
+ */
         SshPublicKey("SshPublicKey"),
+/**
+ * 
+ */
         MultiFactor("MultiFactor");
 
         private final String value;

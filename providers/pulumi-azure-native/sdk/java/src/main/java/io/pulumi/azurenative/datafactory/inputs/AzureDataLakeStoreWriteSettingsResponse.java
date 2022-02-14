@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure data lake store write settings.
+ */
 public final class AzureDataLakeStoreWriteSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureDataLakeStoreWriteSettingsResponse Empty = new AzureDataLakeStoreWriteSettingsResponse();
 
+    /**
+     * The type of copy behavior for copy sink.
+     */
     @InputImport(name="copyBehavior")
     private final @Nullable Object copyBehavior;
 
@@ -22,6 +28,9 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends io.pulumi.res
         return this.copyBehavior == null ? Optional.empty() : Optional.ofNullable(this.copyBehavior);
     }
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -29,6 +38,9 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends io.pulumi.res
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
+    /**
+     * Specifies the expiry time of the written files. The time is applied to the UTC time zone in the format of "2018-12-01T05:00:00Z". Default value is NULL. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="expiryDateTime")
     private final @Nullable Object expiryDateTime;
 
@@ -36,6 +48,9 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends io.pulumi.res
         return this.expiryDateTime == null ? Optional.empty() : Optional.ofNullable(this.expiryDateTime);
     }
 
+    /**
+     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -43,6 +58,10 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends io.pulumi.res
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
+    /**
+     * The write setting type.
+Expected value is 'AzureDataLakeStoreWriteSettings'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PipelineDiagnosticSettingsResponse {
+/**
+ * Diagnostic settings for request.
+ */
     private final @Nullable HttpMessageDiagnosticResponse request;
+/**
+ * Diagnostic settings for response.
+ */
     private final @Nullable HttpMessageDiagnosticResponse response;
 
     @OutputCustomType.Constructor({"request","response"})
@@ -22,9 +28,15 @@ public final class PipelineDiagnosticSettingsResponse {
         this.response = response;
     }
 
+/**
+ * Diagnostic settings for request.
+ */
     public Optional<HttpMessageDiagnosticResponse> getRequest() {
         return Optional.ofNullable(this.request);
     }
+/**
+ * Diagnostic settings for response.
+ */
     public Optional<HttpMessageDiagnosticResponse> getResponse() {
         return Optional.ofNullable(this.response);
     }

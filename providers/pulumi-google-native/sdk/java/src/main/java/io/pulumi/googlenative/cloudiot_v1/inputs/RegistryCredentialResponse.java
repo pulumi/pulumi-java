@@ -8,10 +8,16 @@ import io.pulumi.googlenative.cloudiot_v1.inputs.PublicKeyCertificateResponse;
 import java.util.Objects;
 
 
+/**
+ * A server-stored registry credential used to validate device credentials.
+ */
 public final class RegistryCredentialResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RegistryCredentialResponse Empty = new RegistryCredentialResponse();
 
+    /**
+     * A public key certificate used to verify the device credentials.
+     */
     @InputImport(name="publicKeyCertificate", required=true)
     private final PublicKeyCertificateResponse publicKeyCertificate;
 

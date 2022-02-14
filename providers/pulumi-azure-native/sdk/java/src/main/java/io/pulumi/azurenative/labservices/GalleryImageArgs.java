@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GalleryImageArgs Empty = new GalleryImageArgs();
 
+    /**
+     * The name of the gallery Image.
+     */
     @InputImport(name="galleryImageName")
     private final @Nullable Input<String> galleryImageName;
 
@@ -23,6 +29,9 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.galleryImageName == null ? Input.empty() : this.galleryImageName;
     }
 
+    /**
+     * Indicates whether this gallery image is enabled.
+     */
     @InputImport(name="isEnabled")
     private final @Nullable Input<Boolean> isEnabled;
 
@@ -30,6 +39,9 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.isEnabled == null ? Input.empty() : this.isEnabled;
     }
 
+    /**
+     * Indicates whether this gallery has been overridden for this lab account
+     */
     @InputImport(name="isOverride")
     private final @Nullable Input<Boolean> isOverride;
 
@@ -37,6 +49,9 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.isOverride == null ? Input.empty() : this.isOverride;
     }
 
+    /**
+     * Indicates if the plan has been authorized for programmatic deployment.
+     */
     @InputImport(name="isPlanAuthorized")
     private final @Nullable Input<Boolean> isPlanAuthorized;
 
@@ -44,6 +59,9 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.isPlanAuthorized == null ? Input.empty() : this.isPlanAuthorized;
     }
 
+    /**
+     * The name of the lab Account.
+     */
     @InputImport(name="labAccountName", required=true)
     private final Input<String> labAccountName;
 
@@ -51,6 +69,9 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.labAccountName;
     }
 
+    /**
+     * The location of the resource.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -58,6 +79,9 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The provisioning status of the resource.
+     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<String> provisioningState;
 
@@ -65,6 +89,9 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -72,6 +99,9 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The tags of the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -79,6 +109,9 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The unique immutable identifier of a resource (Guid).
+     */
     @InputImport(name="uniqueIdentifier")
     private final @Nullable Input<String> uniqueIdentifier;
 

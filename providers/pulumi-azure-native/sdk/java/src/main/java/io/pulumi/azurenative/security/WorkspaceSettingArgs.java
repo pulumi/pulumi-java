@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class WorkspaceSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkspaceSettingArgs Empty = new WorkspaceSettingArgs();
 
+    /**
+     * All the VMs in this scope will send their security data to the mentioned workspace unless overridden by a setting with more specific scope
+     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 
@@ -21,6 +27,9 @@ public final class WorkspaceSettingArgs extends io.pulumi.resources.ResourceArgs
         return this.scope;
     }
 
+    /**
+     * The full Azure ID of the workspace to save the data in
+     */
     @InputImport(name="workspaceId", required=true)
     private final Input<String> workspaceId;
 
@@ -28,6 +37,9 @@ public final class WorkspaceSettingArgs extends io.pulumi.resources.ResourceArgs
         return this.workspaceId;
     }
 
+    /**
+     * Name of the security setting
+     */
     @InputImport(name="workspaceSettingName")
     private final @Nullable Input<String> workspaceSettingName;
 

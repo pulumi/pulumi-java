@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetNotificationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNotificationArgs Empty = new GetNotificationArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="bucket", required=true)
     private final String bucket;
 
@@ -21,6 +27,9 @@ public final class GetNotificationArgs extends io.pulumi.resources.InvokeArgs {
         return this.bucket;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="notification", required=true)
     private final String notification;
 
@@ -28,6 +37,9 @@ public final class GetNotificationArgs extends io.pulumi.resources.InvokeArgs {
         return this.notification;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="provisionalUserProject")
     private final @Nullable String provisionalUserProject;
 
@@ -35,6 +47,9 @@ public final class GetNotificationArgs extends io.pulumi.resources.InvokeArgs {
         return this.provisionalUserProject == null ? Optional.empty() : Optional.ofNullable(this.provisionalUserProject);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="userProject")
     private final @Nullable String userProject;
 

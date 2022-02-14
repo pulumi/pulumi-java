@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Table column.
+ */
 public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ColumnResponse Empty = new ColumnResponse();
 
+    /**
+     * Column data type logical hint.
+     */
     @InputImport(name="dataTypeHint")
     private final @Nullable String dataTypeHint;
 
@@ -22,6 +28,9 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
         return this.dataTypeHint == null ? Optional.empty() : Optional.ofNullable(this.dataTypeHint);
     }
 
+    /**
+     * Column description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -29,6 +38,9 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Column display name.
+     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -36,6 +48,9 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * Is displayed by default.
+     */
     @InputImport(name="isDefaultDisplay", required=true)
     private final Boolean isDefaultDisplay;
 
@@ -43,6 +58,9 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
         return this.isDefaultDisplay;
     }
 
+    /**
+     * Is column hidden.
+     */
     @InputImport(name="isHidden", required=true)
     private final Boolean isHidden;
 
@@ -50,6 +68,9 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
         return this.isHidden;
     }
 
+    /**
+     * Column name.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -57,6 +78,9 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Column data type.
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

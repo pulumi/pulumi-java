@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstantSnapshot {
+/**
+ * Returns the specified InstantSnapshot resource in the specified zone.
+ */
     public static CompletableFuture<GetInstantSnapshotResult> invokeAsync(GetInstantSnapshotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getInstantSnapshot", TypeShape.of(GetInstantSnapshotResult.class), args == null ? GetInstantSnapshotArgs.Empty : args, Utilities.withVersion(options));
     }

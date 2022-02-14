@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Type of the source uploaded
+ */
     @EnumType
     public enum UserSourceType {
+/**
+ * 
+ */
         Jar("Jar"),
+/**
+ * 
+ */
         NetCoreZip("NetCoreZip"),
+/**
+ * 
+ */
         Source("Source");
 
         private final String value;

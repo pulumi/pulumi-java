@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetTestResultVideoDownloadURLResult {
+/**
+ * The download URL.
+ */
     private final String downloadUrl;
+/**
+ * Expiry date of the download URL.
+ */
     private final String expirationTime;
 
     @OutputCustomType.Constructor({"downloadUrl","expirationTime"})
@@ -20,9 +26,15 @@ public final class GetTestResultVideoDownloadURLResult {
         this.expirationTime = Objects.requireNonNull(expirationTime);
     }
 
+/**
+ * The download URL.
+ */
     public String getDownloadUrl() {
         return this.downloadUrl;
     }
+/**
+ * Expiry date of the download URL.
+ */
     public String getExpirationTime() {
         return this.expirationTime;
     }

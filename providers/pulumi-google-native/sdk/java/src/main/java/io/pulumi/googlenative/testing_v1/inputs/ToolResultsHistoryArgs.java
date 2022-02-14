@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Represents a tool results history resource.
+ */
 public final class ToolResultsHistoryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ToolResultsHistoryArgs Empty = new ToolResultsHistoryArgs();
 
+    /**
+     * A tool results history ID.
+     */
     @InputImport(name="historyId", required=true)
     private final Input<String> historyId;
 
@@ -20,6 +26,9 @@ public final class ToolResultsHistoryArgs extends io.pulumi.resources.ResourceAr
         return this.historyId;
     }
 
+    /**
+     * The cloud project that owns the tool results history.
+     */
     @InputImport(name="project", required=true)
     private final Input<String> project;
 

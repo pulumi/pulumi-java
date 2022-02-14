@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MoveResourceErrorResponse {
+/**
+ * The move resource error body.
+ */
     private final @Nullable MoveResourceErrorBodyResponse properties;
 
     @OutputCustomType.Constructor({"properties"})
@@ -18,6 +21,9 @@ public final class MoveResourceErrorResponse {
         this.properties = properties;
     }
 
+/**
+ * The move resource error body.
+ */
     public Optional<MoveResourceErrorBodyResponse> getProperties() {
         return Optional.ofNullable(this.properties);
     }

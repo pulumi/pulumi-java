@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Triggers for auto-heal.
+ */
 public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutoHealTriggersArgs Empty = new AutoHealTriggersArgs();
 
+    /**
+     * A rule based on private bytes.
+     */
     @InputImport(name="privateBytesInKB")
     private final @Nullable Input<Integer> privateBytesInKB;
 
@@ -26,6 +32,9 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
         return this.privateBytesInKB == null ? Input.empty() : this.privateBytesInKB;
     }
 
+    /**
+     * A rule based on total requests.
+     */
     @InputImport(name="requests")
     private final @Nullable Input<RequestsBasedTriggerArgs> requests;
 
@@ -33,6 +42,9 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
         return this.requests == null ? Input.empty() : this.requests;
     }
 
+    /**
+     * A rule based on request execution time.
+     */
     @InputImport(name="slowRequests")
     private final @Nullable Input<SlowRequestsBasedTriggerArgs> slowRequests;
 
@@ -40,6 +52,9 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
         return this.slowRequests == null ? Input.empty() : this.slowRequests;
     }
 
+    /**
+     * A rule based on multiple Slow Requests Rule with path
+     */
     @InputImport(name="slowRequestsWithPath")
     private final @Nullable Input<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath;
 
@@ -47,6 +62,9 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
         return this.slowRequestsWithPath == null ? Input.empty() : this.slowRequestsWithPath;
     }
 
+    /**
+     * A rule based on status codes.
+     */
     @InputImport(name="statusCodes")
     private final @Nullable Input<List<StatusCodesBasedTriggerArgs>> statusCodes;
 
@@ -54,6 +72,9 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
         return this.statusCodes == null ? Input.empty() : this.statusCodes;
     }
 
+    /**
+     * A rule based on status codes ranges.
+     */
     @InputImport(name="statusCodesRange")
     private final @Nullable Input<List<StatusCodesRangeBasedTriggerArgs>> statusCodesRange;
 

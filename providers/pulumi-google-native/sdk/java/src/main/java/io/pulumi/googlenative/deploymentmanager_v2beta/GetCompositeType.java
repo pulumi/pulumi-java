@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCompositeType {
+/**
+ * Gets information about a specific composite type.
+ */
     public static CompletableFuture<GetCompositeTypeResult> invokeAsync(GetCompositeTypeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:deploymentmanager/v2beta:getCompositeType", TypeShape.of(GetCompositeTypeResult.class), args == null ? GetCompositeTypeArgs.Empty : args, Utilities.withVersion(options));
     }

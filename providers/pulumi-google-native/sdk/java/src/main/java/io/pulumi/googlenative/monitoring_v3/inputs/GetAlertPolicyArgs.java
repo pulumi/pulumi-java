@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetAlertPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAlertPolicyArgs Empty = new GetAlertPolicyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="alertPolicyId", required=true)
     private final String alertPolicyId;
 
@@ -21,6 +27,9 @@ public final class GetAlertPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.alertPolicyId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

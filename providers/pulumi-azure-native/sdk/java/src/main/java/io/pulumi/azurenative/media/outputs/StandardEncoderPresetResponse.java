@@ -30,9 +30,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StandardEncoderPresetResponse {
+/**
+ * The list of codecs to be used when encoding the input video.
+ */
     private final List<Object> codecs;
+/**
+ * One or more filtering operations that are applied to the input media before encoding.
+ */
     private final @Nullable FiltersResponse filters;
+/**
+ * The list of outputs to be produced by the encoder.
+ */
     private final List<Object> formats;
+/**
+ * The discriminator for derived types.
+Expected value is '#Microsoft.Media.StandardEncoderPreset'.
+ */
     private final String odataType;
 
     @OutputCustomType.Constructor({"codecs","filters","formats","odataType"})
@@ -47,15 +60,28 @@ public final class StandardEncoderPresetResponse {
         this.odataType = Objects.requireNonNull(odataType);
     }
 
+/**
+ * The list of codecs to be used when encoding the input video.
+ */
     public List<Object> getCodecs() {
         return this.codecs;
     }
+/**
+ * One or more filtering operations that are applied to the input media before encoding.
+ */
     public Optional<FiltersResponse> getFilters() {
         return Optional.ofNullable(this.filters);
     }
+/**
+ * The list of outputs to be produced by the encoder.
+ */
     public List<Object> getFormats() {
         return this.formats;
     }
+/**
+ * The discriminator for derived types.
+Expected value is '#Microsoft.Media.StandardEncoderPreset'.
+ */
     public String getOdataType() {
         return this.odataType;
     }

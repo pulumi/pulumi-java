@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The provisioning state of the linked service.
+ */
     @EnumType
     public enum LinkedServiceEntityStatus {
+/**
+ * 
+ */
         Succeeded("Succeeded"),
+/**
+ * 
+ */
         Deleting("Deleting"),
+/**
+ * 
+ */
         ProvisioningAccount("ProvisioningAccount"),
+/**
+ * 
+ */
         Updating("Updating");
 
         private final String value;

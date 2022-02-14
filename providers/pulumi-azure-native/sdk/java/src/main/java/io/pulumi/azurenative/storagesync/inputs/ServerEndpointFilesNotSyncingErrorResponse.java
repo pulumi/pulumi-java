@@ -9,10 +9,16 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Files not syncing error object
+ */
 public final class ServerEndpointFilesNotSyncingErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServerEndpointFilesNotSyncingErrorResponse Empty = new ServerEndpointFilesNotSyncingErrorResponse();
 
+    /**
+     * Error code (HResult)
+     */
     @InputImport(name="errorCode", required=true)
     private final Integer errorCode;
 
@@ -20,6 +26,9 @@ public final class ServerEndpointFilesNotSyncingErrorResponse extends io.pulumi.
         return this.errorCode;
     }
 
+    /**
+     * Count of persistent files not syncing with the specified error code
+     */
     @InputImport(name="persistentCount", required=true)
     private final Double persistentCount;
 
@@ -27,6 +36,9 @@ public final class ServerEndpointFilesNotSyncingErrorResponse extends io.pulumi.
         return this.persistentCount;
     }
 
+    /**
+     * Count of transient files not syncing with the specified error code
+     */
     @InputImport(name="transientCount", required=true)
     private final Double transientCount;
 

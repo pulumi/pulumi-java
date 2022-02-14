@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Online deployment scoring requests configuration.
+ */
 public final class OnlineRequestSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OnlineRequestSettingsArgs Empty = new OnlineRequestSettingsArgs();
 
+    /**
+     * The number of requests allowed to queue at once for this deployment.
+     */
     @InputImport(name="maxConcurrentRequestsPerInstance")
     private final @Nullable Input<Integer> maxConcurrentRequestsPerInstance;
 
@@ -22,6 +28,9 @@ public final class OnlineRequestSettingsArgs extends io.pulumi.resources.Resourc
         return this.maxConcurrentRequestsPerInstance == null ? Input.empty() : this.maxConcurrentRequestsPerInstance;
     }
 
+    /**
+     * The maximum queue wait time in ISO 8601 format. Supports millisecond precision.
+     */
     @InputImport(name="maxQueueWait")
     private final @Nullable Input<String> maxQueueWait;
 
@@ -29,6 +38,9 @@ public final class OnlineRequestSettingsArgs extends io.pulumi.resources.Resourc
         return this.maxQueueWait == null ? Input.empty() : this.maxQueueWait;
     }
 
+    /**
+     * The request timeout in ISO 8601 format. Supports millisecond precision.
+     */
     @InputImport(name="requestTimeout")
     private final @Nullable Input<String> requestTimeout;
 

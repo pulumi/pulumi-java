@@ -13,10 +13,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetDataFlowResult {
+/**
+ * Etag identifies change in the resource.
+ */
     private final String etag;
+/**
+ * The resource identifier.
+ */
     private final String id;
+/**
+ * The resource name.
+ */
     private final String name;
+/**
+ * Data flow properties.
+ */
     private final Object properties;
+/**
+ * The resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","name","properties","type"})
@@ -33,18 +48,33 @@ public final class GetDataFlowResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Etag identifies change in the resource.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * The resource identifier.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Data flow properties.
+ */
     public Object getProperties() {
         return this.properties;
     }
+/**
+ * The resource type.
+ */
     public String getType() {
         return this.type;
     }

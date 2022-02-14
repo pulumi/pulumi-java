@@ -8,10 +8,16 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * ManagedPrometheusConfig defines the configuration for Google Cloud Managed Service for Prometheus.
+ */
 public final class ManagedPrometheusConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedPrometheusConfigResponse Empty = new ManagedPrometheusConfigResponse();
 
+    /**
+     * Enable Managed Collection.
+     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

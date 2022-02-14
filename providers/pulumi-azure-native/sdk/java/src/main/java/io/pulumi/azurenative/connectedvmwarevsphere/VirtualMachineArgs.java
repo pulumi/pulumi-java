@@ -20,10 +20,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineArgs Empty = new VirtualMachineArgs();
 
+    /**
+     * Gets or sets the extended location.
+     */
     @InputImport(name="extendedLocation")
     private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
@@ -31,6 +37,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
     }
 
+    /**
+     * Firmware type
+     */
     @InputImport(name="firmwareType")
     private final @Nullable Input<Either<String,FirmwareType>> firmwareType;
 
@@ -38,6 +47,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.firmwareType == null ? Input.empty() : this.firmwareType;
     }
 
+    /**
+     * Hardware properties.
+     */
     @InputImport(name="hardwareProfile")
     private final @Nullable Input<HardwareProfileArgs> hardwareProfile;
 
@@ -45,6 +57,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.hardwareProfile == null ? Input.empty() : this.hardwareProfile;
     }
 
+    /**
+     * The identity of the resource.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityArgs> identity;
 
@@ -52,6 +67,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * Gets or sets the inventory Item ID for the virtual machine.
+     */
     @InputImport(name="inventoryItemId")
     private final @Nullable Input<String> inventoryItemId;
 
@@ -59,6 +77,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.inventoryItemId == null ? Input.empty() : this.inventoryItemId;
     }
 
+    /**
+     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -66,6 +87,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Gets or sets the location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -73,6 +97,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Gets or sets the vCenter MoRef (Managed Object Reference) ID for the virtual machine.
+     */
     @InputImport(name="moRefId")
     private final @Nullable Input<String> moRefId;
 
@@ -80,6 +107,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.moRefId == null ? Input.empty() : this.moRefId;
     }
 
+    /**
+     * Network properties.
+     */
     @InputImport(name="networkProfile")
     private final @Nullable Input<NetworkProfileArgs> networkProfile;
 
@@ -87,6 +117,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkProfile == null ? Input.empty() : this.networkProfile;
     }
 
+    /**
+     * OS properties.
+     */
     @InputImport(name="osProfile")
     private final @Nullable Input<OsProfileArgs> osProfile;
 
@@ -94,6 +127,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.osProfile == null ? Input.empty() : this.osProfile;
     }
 
+    /**
+     * Placement properties.
+     */
     @InputImport(name="placementProfile")
     private final @Nullable Input<PlacementProfileArgs> placementProfile;
 
@@ -101,6 +137,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.placementProfile == null ? Input.empty() : this.placementProfile;
     }
 
+    /**
+     * The Resource Group Name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -108,6 +147,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Gets or sets the ARM Id of the resourcePool resource on which this virtual machine will
+deploy.
+     */
     @InputImport(name="resourcePoolId")
     private final @Nullable Input<String> resourcePoolId;
 
@@ -115,6 +158,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourcePoolId == null ? Input.empty() : this.resourcePoolId;
     }
 
+    /**
+     * Gets or sets the SMBIOS UUID of the vm.
+     */
     @InputImport(name="smbiosUuid")
     private final @Nullable Input<String> smbiosUuid;
 
@@ -122,6 +168,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.smbiosUuid == null ? Input.empty() : this.smbiosUuid;
     }
 
+    /**
+     * Storage properties.
+     */
     @InputImport(name="storageProfile")
     private final @Nullable Input<StorageProfileArgs> storageProfile;
 
@@ -129,6 +178,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageProfile == null ? Input.empty() : this.storageProfile;
     }
 
+    /**
+     * Gets or sets the Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -136,6 +188,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Gets or sets the ARM Id of the template resource to deploy the virtual machine.
+     */
     @InputImport(name="templateId")
     private final @Nullable Input<String> templateId;
 
@@ -143,6 +198,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.templateId == null ? Input.empty() : this.templateId;
     }
 
+    /**
+     * Gets or sets the ARM Id of the vCenter resource in which this resource pool resides.
+     */
     @InputImport(name="vCenterId")
     private final @Nullable Input<String> vCenterId;
 
@@ -150,6 +208,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         return this.vCenterId == null ? Input.empty() : this.vCenterId;
     }
 
+    /**
+     * Name of the virtual machine resource.
+     */
     @InputImport(name="virtualMachineName")
     private final @Nullable Input<String> virtualMachineName;
 

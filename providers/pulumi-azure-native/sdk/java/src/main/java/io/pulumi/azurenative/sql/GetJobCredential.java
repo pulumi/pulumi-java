@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetJobCredential {
+/**
+ * A stored credential that can be used by a job to connect to target databases.
+API Version: 2020-11-01-preview.
+ *
+ * A stored credential that can be used by a job to connect to target databases.
+ */
     public static CompletableFuture<GetJobCredentialResult> invokeAsync(GetJobCredentialArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getJobCredential", TypeShape.of(GetJobCredentialResult.class), args == null ? GetJobCredentialArgs.Empty : args, Utilities.withVersion(options));
     }

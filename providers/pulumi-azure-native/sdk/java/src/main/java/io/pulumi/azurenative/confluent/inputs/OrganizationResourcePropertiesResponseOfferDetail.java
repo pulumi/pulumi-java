@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Confluent offer detail
+ */
 public final class OrganizationResourcePropertiesResponseOfferDetail extends io.pulumi.resources.InvokeArgs {
 
     public static final OrganizationResourcePropertiesResponseOfferDetail Empty = new OrganizationResourcePropertiesResponseOfferDetail();
 
+    /**
+     * Offer Id
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -21,6 +27,9 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Offer Plan Id
+     */
     @InputImport(name="planId")
     private final @Nullable String planId;
 
@@ -28,6 +37,9 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
         return this.planId == null ? Optional.empty() : Optional.ofNullable(this.planId);
     }
 
+    /**
+     * Offer Plan Name
+     */
     @InputImport(name="planName")
     private final @Nullable String planName;
 
@@ -35,6 +47,9 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
         return this.planName == null ? Optional.empty() : Optional.ofNullable(this.planName);
     }
 
+    /**
+     * Publisher Id
+     */
     @InputImport(name="publisherId")
     private final @Nullable String publisherId;
 
@@ -42,6 +57,9 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
         return this.publisherId == null ? Optional.empty() : Optional.ofNullable(this.publisherId);
     }
 
+    /**
+     * SaaS Offer Status
+     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -49,6 +67,9 @@ public final class OrganizationResourcePropertiesResponseOfferDetail extends io.
         return this.status;
     }
 
+    /**
+     * Offer Plan Term unit
+     */
     @InputImport(name="termUnit")
     private final @Nullable String termUnit;
 

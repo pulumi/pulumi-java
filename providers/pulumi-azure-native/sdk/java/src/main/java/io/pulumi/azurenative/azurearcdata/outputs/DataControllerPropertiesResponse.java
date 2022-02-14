@@ -17,13 +17,37 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DataControllerPropertiesResponse {
+/**
+ * Username and password for basic login authentication.
+ */
     private final @Nullable BasicLoginInformationResponse basicLoginInformation;
+/**
+ * The raw kubernetes information
+ */
     private final @Nullable Object k8sRaw;
+/**
+ * Last uploaded date from Kubernetes cluster. Defaults to current date time
+ */
     private final @Nullable String lastUploadedDate;
+/**
+ * Log analytics workspace id and primary key
+ */
     private final @Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig;
+/**
+ * Properties from the Kubernetes data controller
+ */
     private final @Nullable OnPremisePropertyResponse onPremiseProperty;
+/**
+ * 
+ */
     private final String provisioningState;
+/**
+ * Service principal for uploading billing, metrics and logs.
+ */
     private final @Nullable UploadServicePrincipalResponse uploadServicePrincipal;
+/**
+ * Properties on upload watermark.  Mostly timestamp for each upload data type
+ */
     private final @Nullable UploadWatermarkResponse uploadWatermark;
 
     @OutputCustomType.Constructor({"basicLoginInformation","k8sRaw","lastUploadedDate","logAnalyticsWorkspaceConfig","onPremiseProperty","provisioningState","uploadServicePrincipal","uploadWatermark"})
@@ -46,27 +70,51 @@ public final class DataControllerPropertiesResponse {
         this.uploadWatermark = uploadWatermark;
     }
 
+/**
+ * Username and password for basic login authentication.
+ */
     public Optional<BasicLoginInformationResponse> getBasicLoginInformation() {
         return Optional.ofNullable(this.basicLoginInformation);
     }
+/**
+ * The raw kubernetes information
+ */
     public Optional<Object> getK8sRaw() {
         return Optional.ofNullable(this.k8sRaw);
     }
+/**
+ * Last uploaded date from Kubernetes cluster. Defaults to current date time
+ */
     public Optional<String> getLastUploadedDate() {
         return Optional.ofNullable(this.lastUploadedDate);
     }
+/**
+ * Log analytics workspace id and primary key
+ */
     public Optional<LogAnalyticsWorkspaceConfigResponse> getLogAnalyticsWorkspaceConfig() {
         return Optional.ofNullable(this.logAnalyticsWorkspaceConfig);
     }
+/**
+ * Properties from the Kubernetes data controller
+ */
     public Optional<OnPremisePropertyResponse> getOnPremiseProperty() {
         return Optional.ofNullable(this.onPremiseProperty);
     }
+/**
+ * 
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Service principal for uploading billing, metrics and logs.
+ */
     public Optional<UploadServicePrincipalResponse> getUploadServicePrincipal() {
         return Optional.ofNullable(this.uploadServicePrincipal);
     }
+/**
+ * Properties on upload watermark.  Mostly timestamp for each upload data type
+ */
     public Optional<UploadWatermarkResponse> getUploadWatermark() {
         return Optional.ofNullable(this.uploadWatermark);
     }

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Type of the user.
+ */
     @EnumType
     public enum UserType {
+/**
+ * 
+ */
         Share("Share"),
+/**
+ * 
+ */
         LocalManagement("LocalManagement"),
+/**
+ * 
+ */
         ARM("ARM");
 
         private final String value;

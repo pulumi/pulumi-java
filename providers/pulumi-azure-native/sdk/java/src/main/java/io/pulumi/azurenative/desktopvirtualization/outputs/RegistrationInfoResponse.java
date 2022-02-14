@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RegistrationInfoResponse {
+/**
+ * Expiration time of registration token.
+ */
     private final @Nullable String expirationTime;
+/**
+ * The type of resetting the token.
+ */
     private final @Nullable String registrationTokenOperation;
+/**
+ * The registration token base64 encoded string.
+ */
     private final @Nullable String token;
 
     @OutputCustomType.Constructor({"expirationTime","registrationTokenOperation","token"})
@@ -25,12 +34,21 @@ public final class RegistrationInfoResponse {
         this.token = token;
     }
 
+/**
+ * Expiration time of registration token.
+ */
     public Optional<String> getExpirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
+/**
+ * The type of resetting the token.
+ */
     public Optional<String> getRegistrationTokenOperation() {
         return Optional.ofNullable(this.registrationTokenOperation);
     }
+/**
+ * The registration token base64 encoded string.
+ */
     public Optional<String> getToken() {
         return Optional.ofNullable(this.token);
     }

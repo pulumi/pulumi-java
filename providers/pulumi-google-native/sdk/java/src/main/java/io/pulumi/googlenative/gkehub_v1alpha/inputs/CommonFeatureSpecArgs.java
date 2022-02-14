@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * CommonFeatureSpec contains Hub-wide configuration information
+ */
 public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CommonFeatureSpecArgs Empty = new CommonFeatureSpecArgs();
 
+    /**
+     * Appdevexperience specific spec.
+     */
     @InputImport(name="appdevexperience")
     private final @Nullable Input<AppDevExperienceFeatureSpecArgs> appdevexperience;
 
@@ -23,6 +29,9 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
         return this.appdevexperience == null ? Input.empty() : this.appdevexperience;
     }
 
+    /**
+     * Cloud Audit Logging-specific spec.
+     */
     @InputImport(name="cloudauditlogging")
     private final @Nullable Input<CloudAuditLoggingFeatureSpecArgs> cloudauditlogging;
 
@@ -30,6 +39,9 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
         return this.cloudauditlogging == null ? Input.empty() : this.cloudauditlogging;
     }
 
+    /**
+     * Multicluster Ingress-specific spec.
+     */
     @InputImport(name="multiclusteringress")
     private final @Nullable Input<MultiClusterIngressFeatureSpecArgs> multiclusteringress;
 

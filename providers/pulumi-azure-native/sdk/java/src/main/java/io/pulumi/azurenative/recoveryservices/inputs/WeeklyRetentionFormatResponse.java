@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Weekly retention format.
+ */
 public final class WeeklyRetentionFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WeeklyRetentionFormatResponse Empty = new WeeklyRetentionFormatResponse();
 
+    /**
+     * List of days of the week.
+     */
     @InputImport(name="daysOfTheWeek")
     private final @Nullable List<String> daysOfTheWeek;
 
@@ -22,6 +28,9 @@ public final class WeeklyRetentionFormatResponse extends io.pulumi.resources.Inv
         return this.daysOfTheWeek == null ? List.of() : this.daysOfTheWeek;
     }
 
+    /**
+     * List of weeks of month.
+     */
     @InputImport(name="weeksOfTheMonth")
     private final @Nullable List<String> weeksOfTheMonth;
 

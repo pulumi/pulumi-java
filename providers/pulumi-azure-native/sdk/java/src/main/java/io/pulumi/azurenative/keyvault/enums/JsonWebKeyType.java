@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of the key. For valid values, see JsonWebKeyType.
+ */
     @EnumType
     public enum JsonWebKeyType {
+/**
+ * 
+ */
         EC("EC"),
+/**
+ * 
+ */
         ECHSM("EC-HSM"),
+/**
+ * 
+ */
         RSA("RSA"),
+/**
+ * 
+ */
         RSAHSM("RSA-HSM");
 
         private final String value;

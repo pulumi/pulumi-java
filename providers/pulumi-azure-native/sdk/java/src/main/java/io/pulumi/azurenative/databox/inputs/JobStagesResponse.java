@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Job stages.
+ */
 public final class JobStagesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JobStagesResponse Empty = new JobStagesResponse();
 
+    /**
+     * Display name of the job stage.
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -20,6 +26,9 @@ public final class JobStagesResponse extends io.pulumi.resources.InvokeArgs {
         return this.displayName;
     }
 
+    /**
+     * Job Stage Details
+     */
     @InputImport(name="jobStageDetails", required=true)
     private final Object jobStageDetails;
 
@@ -27,6 +36,9 @@ public final class JobStagesResponse extends io.pulumi.resources.InvokeArgs {
         return this.jobStageDetails;
     }
 
+    /**
+     * Name of the job stage.
+     */
     @InputImport(name="stageName", required=true)
     private final String stageName;
 
@@ -34,6 +46,9 @@ public final class JobStagesResponse extends io.pulumi.resources.InvokeArgs {
         return this.stageName;
     }
 
+    /**
+     * Status of the job stage.
+     */
     @InputImport(name="stageStatus", required=true)
     private final String stageStatus;
 
@@ -41,6 +56,9 @@ public final class JobStagesResponse extends io.pulumi.resources.InvokeArgs {
         return this.stageStatus;
     }
 
+    /**
+     * Time for the job stage in UTC ISO 8601 format.
+     */
     @InputImport(name="stageTime", required=true)
     private final String stageTime;
 

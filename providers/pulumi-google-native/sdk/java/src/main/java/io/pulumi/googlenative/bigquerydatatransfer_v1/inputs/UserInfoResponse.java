@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Information about a user.
+ */
 public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UserInfoResponse Empty = new UserInfoResponse();
 
+    /**
+     * E-mail address of the user.
+     */
     @InputImport(name="email", required=true)
     private final String email;
 

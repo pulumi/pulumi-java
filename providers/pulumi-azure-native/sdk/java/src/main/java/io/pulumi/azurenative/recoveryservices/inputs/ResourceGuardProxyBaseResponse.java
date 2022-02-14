@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResourceGuardProxyBaseResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceGuardProxyBaseResponse Empty = new ResourceGuardProxyBaseResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="lastUpdatedTime")
     private final @Nullable String lastUpdatedTime;
 
@@ -23,6 +29,9 @@ public final class ResourceGuardProxyBaseResponse extends io.pulumi.resources.In
         return this.lastUpdatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdatedTime);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="resourceGuardOperationDetails")
     private final @Nullable List<ResourceGuardOperationDetailResponse> resourceGuardOperationDetails;
 
@@ -30,6 +39,9 @@ public final class ResourceGuardProxyBaseResponse extends io.pulumi.resources.In
         return this.resourceGuardOperationDetails == null ? List.of() : this.resourceGuardOperationDetails;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="resourceGuardResourceId")
     private final @Nullable String resourceGuardResourceId;
 

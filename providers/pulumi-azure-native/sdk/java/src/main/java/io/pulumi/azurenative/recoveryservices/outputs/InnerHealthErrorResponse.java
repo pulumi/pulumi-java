@@ -11,17 +11,53 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InnerHealthErrorResponse {
+/**
+ * Error creation time (UTC)
+ */
     private final @Nullable String creationTimeUtc;
+/**
+ * ID of the entity.
+ */
     private final @Nullable String entityId;
+/**
+ * Category of error.
+ */
     private final @Nullable String errorCategory;
+/**
+ * Error code.
+ */
     private final @Nullable String errorCode;
+/**
+ * Level of error.
+ */
     private final @Nullable String errorLevel;
+/**
+ * Error message.
+ */
     private final @Nullable String errorMessage;
+/**
+ * Source of error.
+ */
     private final @Nullable String errorSource;
+/**
+ * Type of error.
+ */
     private final @Nullable String errorType;
+/**
+ * Possible causes of error.
+ */
     private final @Nullable String possibleCauses;
+/**
+ * Recommended action to resolve error.
+ */
     private final @Nullable String recommendedAction;
+/**
+ * DRA error message.
+ */
     private final @Nullable String recoveryProviderErrorMessage;
+/**
+ * Summary message of the entity.
+ */
     private final @Nullable String summaryMessage;
 
     @OutputCustomType.Constructor({"creationTimeUtc","entityId","errorCategory","errorCode","errorLevel","errorMessage","errorSource","errorType","possibleCauses","recommendedAction","recoveryProviderErrorMessage","summaryMessage"})
@@ -52,39 +88,75 @@ public final class InnerHealthErrorResponse {
         this.summaryMessage = summaryMessage;
     }
 
+/**
+ * Error creation time (UTC)
+ */
     public Optional<String> getCreationTimeUtc() {
         return Optional.ofNullable(this.creationTimeUtc);
     }
+/**
+ * ID of the entity.
+ */
     public Optional<String> getEntityId() {
         return Optional.ofNullable(this.entityId);
     }
+/**
+ * Category of error.
+ */
     public Optional<String> getErrorCategory() {
         return Optional.ofNullable(this.errorCategory);
     }
+/**
+ * Error code.
+ */
     public Optional<String> getErrorCode() {
         return Optional.ofNullable(this.errorCode);
     }
+/**
+ * Level of error.
+ */
     public Optional<String> getErrorLevel() {
         return Optional.ofNullable(this.errorLevel);
     }
+/**
+ * Error message.
+ */
     public Optional<String> getErrorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
+/**
+ * Source of error.
+ */
     public Optional<String> getErrorSource() {
         return Optional.ofNullable(this.errorSource);
     }
+/**
+ * Type of error.
+ */
     public Optional<String> getErrorType() {
         return Optional.ofNullable(this.errorType);
     }
+/**
+ * Possible causes of error.
+ */
     public Optional<String> getPossibleCauses() {
         return Optional.ofNullable(this.possibleCauses);
     }
+/**
+ * Recommended action to resolve error.
+ */
     public Optional<String> getRecommendedAction() {
         return Optional.ofNullable(this.recommendedAction);
     }
+/**
+ * DRA error message.
+ */
     public Optional<String> getRecoveryProviderErrorMessage() {
         return Optional.ofNullable(this.recoveryProviderErrorMessage);
     }
+/**
+ * Summary message of the entity.
+ */
     public Optional<String> getSummaryMessage() {
         return Optional.ofNullable(this.summaryMessage);
     }

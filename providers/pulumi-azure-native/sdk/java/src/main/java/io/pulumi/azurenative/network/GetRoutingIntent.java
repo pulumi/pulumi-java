@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRoutingIntent {
+/**
+ * The routing intent child resource of a Virtual hub.
+API Version: 2021-05-01.
+ *
+ * The routing intent child resource of a Virtual hub.
+ */
     public static CompletableFuture<GetRoutingIntentResult> invokeAsync(GetRoutingIntentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getRoutingIntent", TypeShape.of(GetRoutingIntentResult.class), args == null ? GetRoutingIntentArgs.Empty : args, Utilities.withVersion(options));
     }

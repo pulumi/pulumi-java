@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiagnosticLoggerArgs Empty = new DiagnosticLoggerArgs();
 
+    /**
+     * Diagnostic identifier. Must be unique in the current API Management service instance.
+     */
     @InputImport(name="diagnosticId", required=true)
     private final Input<String> diagnosticId;
 
@@ -21,6 +27,9 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
         return this.diagnosticId;
     }
 
+    /**
+     * Logger identifier. Must be unique in the API Management service instance.
+     */
     @InputImport(name="loggerid")
     private final @Nullable Input<String> loggerid;
 
@@ -28,6 +37,9 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
         return this.loggerid == null ? Input.empty() : this.loggerid;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -35,6 +47,9 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

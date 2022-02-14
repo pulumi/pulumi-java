@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.healthcareapis;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.healthcareapis.ServiceArgs;
 import io.pulumi.azurenative.healthcareapis.outputs.ServicesPropertiesResponse;
 import io.pulumi.azurenative.healthcareapis.outputs.ServicesResourceResponseIdentity;
 import io.pulumi.azurenative.healthcareapis.outputs.SystemDataResponse;
@@ -18,63 +17,507 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The description of the service.
+API Version: 2021-01-11.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create or Update a service with all parameters
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var service = new AzureNative.HealthcareApis.Service("service", new AzureNative.HealthcareApis.ServiceArgs
+        {
+            Identity = new AzureNative.HealthcareApis.Inputs.ServicesResourceIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Kind = "fhir-R4",
+            Location = "westus2",
+            Properties = new AzureNative.HealthcareApis.Inputs.ServicesPropertiesArgs
+            {
+                AccessPolicies = 
+                {
+                    new AzureNative.HealthcareApis.Inputs.ServiceAccessPolicyEntryArgs
+                    {
+                        ObjectId = "c487e7d1-3210-41a3-8ccc-e9372b78da47",
+                    },
+                    new AzureNative.HealthcareApis.Inputs.ServiceAccessPolicyEntryArgs
+                    {
+                        ObjectId = "5b307da8-43d4-492b-8b66-b0294ade872f",
+                    },
+                },
+                AuthenticationConfiguration = new AzureNative.HealthcareApis.Inputs.ServiceAuthenticationConfigurationInfoArgs
+                {
+                    Audience = "https://azurehealthcareapis.com",
+                    Authority = "https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc",
+                    SmartProxyEnabled = true,
+                },
+                CorsConfiguration = new AzureNative.HealthcareApis.Inputs.ServiceCorsConfigurationInfoArgs
+                {
+                    AllowCredentials = false,
+                    Headers = 
+                    {
+                        "*",
+                    },
+                    MaxAge = 1440,
+                    Methods = 
+                    {
+                        "DELETE",
+                        "GET",
+                        "OPTIONS",
+                        "PATCH",
+                        "POST",
+                        "PUT",
+                    },
+                    Origins = 
+                    {
+                        "*",
+                    },
+                },
+                CosmosDbConfiguration = new AzureNative.HealthcareApis.Inputs.ServiceCosmosDbConfigurationInfoArgs
+                {
+                    KeyVaultKeyUri = "https://my-vault.vault.azure.net/keys/my-key",
+                    OfferThroughput = 1000,
+                },
+                ExportConfiguration = new AzureNative.HealthcareApis.Inputs.ServiceExportConfigurationInfoArgs
+                {
+                    StorageAccountName = "existingStorageAccount",
+                },
+                PrivateEndpointConnections = {},
+                PublicNetworkAccess = "Disabled",
+            },
+            ResourceGroupName = "rg1",
+            ResourceName = "service1",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	healthcareapis "github.com/pulumi/pulumi-azure-native/sdk/go/azure/healthcareapis"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := healthcareapis.NewService(ctx, "service", &healthcareapis.ServiceArgs{
+			Identity: &healthcareapis.ServicesResourceIdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+			Kind:     "fhir-R4",
+			Location: pulumi.String("westus2"),
+			Properties: &healthcareapis.ServicesPropertiesArgs{
+				AccessPolicies: healthcareapis.ServiceAccessPolicyEntryArray{
+					&healthcareapis.ServiceAccessPolicyEntryArgs{
+						ObjectId: pulumi.String("c487e7d1-3210-41a3-8ccc-e9372b78da47"),
+					},
+					&healthcareapis.ServiceAccessPolicyEntryArgs{
+						ObjectId: pulumi.String("5b307da8-43d4-492b-8b66-b0294ade872f"),
+					},
+				},
+				AuthenticationConfiguration: &healthcareapis.ServiceAuthenticationConfigurationInfoArgs{
+					Audience:          pulumi.String("https://azurehealthcareapis.com"),
+					Authority:         pulumi.String("https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc"),
+					SmartProxyEnabled: pulumi.Bool(true),
+				},
+				CorsConfiguration: &healthcareapis.ServiceCorsConfigurationInfoArgs{
+					AllowCredentials: pulumi.Bool(false),
+					Headers: pulumi.StringArray{
+						pulumi.String("*"),
+					},
+					MaxAge: pulumi.Int(1440),
+					Methods: pulumi.StringArray{
+						pulumi.String("DELETE"),
+						pulumi.String("GET"),
+						pulumi.String("OPTIONS"),
+						pulumi.String("PATCH"),
+						pulumi.String("POST"),
+						pulumi.String("PUT"),
+					},
+					Origins: pulumi.StringArray{
+						pulumi.String("*"),
+					},
+				},
+				CosmosDbConfiguration: &healthcareapis.ServiceCosmosDbConfigurationInfoArgs{
+					KeyVaultKeyUri:  pulumi.String("https://my-vault.vault.azure.net/keys/my-key"),
+					OfferThroughput: pulumi.Int(1000),
+				},
+				ExportConfiguration: &healthcareapis.ServiceExportConfigurationInfoArgs{
+					StorageAccountName: pulumi.String("existingStorageAccount"),
+				},
+				PrivateEndpointConnections: healthcareapis.PrivateEndpointConnectionArray{},
+				PublicNetworkAccess:        pulumi.String("Disabled"),
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			ResourceName:      pulumi.String("service1"),
+			Tags:              nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const service = new azure_native.healthcareapis.Service("service", {
+    identity: {
+        type: "SystemAssigned",
+    },
+    kind: "fhir-R4",
+    location: "westus2",
+    properties: {
+        accessPolicies: [
+            {
+                objectId: "c487e7d1-3210-41a3-8ccc-e9372b78da47",
+            },
+            {
+                objectId: "5b307da8-43d4-492b-8b66-b0294ade872f",
+            },
+        ],
+        authenticationConfiguration: {
+            audience: "https://azurehealthcareapis.com",
+            authority: "https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc",
+            smartProxyEnabled: true,
+        },
+        corsConfiguration: {
+            allowCredentials: false,
+            headers: ["*"],
+            maxAge: 1440,
+            methods: [
+                "DELETE",
+                "GET",
+                "OPTIONS",
+                "PATCH",
+                "POST",
+                "PUT",
+            ],
+            origins: ["*"],
+        },
+        cosmosDbConfiguration: {
+            keyVaultKeyUri: "https://my-vault.vault.azure.net/keys/my-key",
+            offerThroughput: 1000,
+        },
+        exportConfiguration: {
+            storageAccountName: "existingStorageAccount",
+        },
+        privateEndpointConnections: [],
+        publicNetworkAccess: "Disabled",
+    },
+    resourceGroupName: "rg1",
+    resourceName: "service1",
+    tags: {},
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+service = azure_native.healthcareapis.Service("service",
+    identity=azure_native.healthcareapis.ServicesResourceIdentityArgs(
+        type="SystemAssigned",
+    ),
+    kind="fhir-R4",
+    location="westus2",
+    properties=azure_native.healthcareapis.ServicesPropertiesArgs(
+        access_policies=[
+            azure_native.healthcareapis.ServiceAccessPolicyEntryArgs(
+                object_id="c487e7d1-3210-41a3-8ccc-e9372b78da47",
+            ),
+            azure_native.healthcareapis.ServiceAccessPolicyEntryArgs(
+                object_id="5b307da8-43d4-492b-8b66-b0294ade872f",
+            ),
+        ],
+        authentication_configuration=azure_native.healthcareapis.ServiceAuthenticationConfigurationInfoArgs(
+            audience="https://azurehealthcareapis.com",
+            authority="https://login.microsoftonline.com/abfde7b2-df0f-47e6-aabf-2462b07508dc",
+            smart_proxy_enabled=True,
+        ),
+        cors_configuration=azure_native.healthcareapis.ServiceCorsConfigurationInfoArgs(
+            allow_credentials=False,
+            headers=["*"],
+            max_age=1440,
+            methods=[
+                "DELETE",
+                "GET",
+                "OPTIONS",
+                "PATCH",
+                "POST",
+                "PUT",
+            ],
+            origins=["*"],
+        ),
+        cosmos_db_configuration=azure_native.healthcareapis.ServiceCosmosDbConfigurationInfoArgs(
+            key_vault_key_uri="https://my-vault.vault.azure.net/keys/my-key",
+            offer_throughput=1000,
+        ),
+        export_configuration=azure_native.healthcareapis.ServiceExportConfigurationInfoArgs(
+            storage_account_name="existingStorageAccount",
+        ),
+        private_endpoint_connections=[],
+        public_network_access="Disabled",
+    ),
+    resource_group_name="rg1",
+    resource_name="service1",
+    tags={})
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create or Update a service with minimum parameters
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var service = new AzureNative.HealthcareApis.Service("service", new AzureNative.HealthcareApis.ServiceArgs
+        {
+            Kind = "fhir-R4",
+            Location = "westus2",
+            Properties = new AzureNative.HealthcareApis.Inputs.ServicesPropertiesArgs
+            {
+                AccessPolicies = 
+                {
+                    new AzureNative.HealthcareApis.Inputs.ServiceAccessPolicyEntryArgs
+                    {
+                        ObjectId = "c487e7d1-3210-41a3-8ccc-e9372b78da47",
+                    },
+                },
+            },
+            ResourceGroupName = "rg1",
+            ResourceName = "service2",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	healthcareapis "github.com/pulumi/pulumi-azure-native/sdk/go/azure/healthcareapis"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := healthcareapis.NewService(ctx, "service", &healthcareapis.ServiceArgs{
+			Kind:     "fhir-R4",
+			Location: pulumi.String("westus2"),
+			Properties: &healthcareapis.ServicesPropertiesArgs{
+				AccessPolicies: healthcareapis.ServiceAccessPolicyEntryArray{
+					&healthcareapis.ServiceAccessPolicyEntryArgs{
+						ObjectId: pulumi.String("c487e7d1-3210-41a3-8ccc-e9372b78da47"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			ResourceName:      pulumi.String("service2"),
+			Tags:              nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const service = new azure_native.healthcareapis.Service("service", {
+    kind: "fhir-R4",
+    location: "westus2",
+    properties: {
+        accessPolicies: [{
+            objectId: "c487e7d1-3210-41a3-8ccc-e9372b78da47",
+        }],
+    },
+    resourceGroupName: "rg1",
+    resourceName: "service2",
+    tags: {},
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+service = azure_native.healthcareapis.Service("service",
+    kind="fhir-R4",
+    location="westus2",
+    properties=azure_native.healthcareapis.ServicesPropertiesArgs(
+        access_policies=[azure_native.healthcareapis.ServiceAccessPolicyEntryArgs(
+            object_id="c487e7d1-3210-41a3-8ccc-e9372b78da47",
+        )],
+    ),
+    resource_group_name="rg1",
+    resource_name="service2",
+    tags={})
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:healthcareapis:Service service2 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.HealthcareApis/services/service2 
+```
+
+ */
 @ResourceType(type="azure-native:healthcareapis:Service")
 public class Service extends io.pulumi.resources.CustomResource {
+    /**
+     * An etag associated with the resource, used for optimistic concurrency when editing it.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return An etag associated with the resource, used for optimistic concurrency when editing it.
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * Setting indicating whether the service has a managed identity associated with it.
+     */
     @OutputExport(name="identity", type=ServicesResourceResponseIdentity.class, parameters={})
     private Output</* @Nullable */ ServicesResourceResponseIdentity> identity;
 
+    /**
+     * @return Setting indicating whether the service has a managed identity associated with it.
+     */
     public Output</* @Nullable */ ServicesResourceResponseIdentity> getIdentity() {
         return this.identity;
     }
+    /**
+     * The kind of the service.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return The kind of the service.
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * The resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The resource location.
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The common properties of a service.
+     */
     @OutputExport(name="properties", type=ServicesPropertiesResponse.class, parameters={})
     private Output<ServicesPropertiesResponse> properties;
 
+    /**
+     * @return The common properties of a service.
+     */
     public Output<ServicesPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Metadata pertaining to creation and last modification of the resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Service(String name, ServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:healthcareapis:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -98,6 +541,14 @@ public class Service extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Service get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Service(name, id, options);
     }

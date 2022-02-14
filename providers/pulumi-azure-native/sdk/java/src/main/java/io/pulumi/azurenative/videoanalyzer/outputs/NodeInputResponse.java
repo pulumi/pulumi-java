@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NodeInputResponse {
+/**
+ * The name of the upstream node in the pipeline which output is used as input of the current node.
+ */
     private final String nodeName;
 
     @OutputCustomType.Constructor({"nodeName"})
@@ -16,6 +19,9 @@ public final class NodeInputResponse {
         this.nodeName = Objects.requireNonNull(nodeName);
     }
 
+/**
+ * The name of the upstream node in the pipeline which output is used as input of the current node.
+ */
     public String getNodeName() {
         return this.nodeName;
     }

@@ -8,19 +8,58 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum Month {
+/**
+ * 
+ */
         April("April"),
+/**
+ * 
+ */
         August("August"),
+/**
+ * 
+ */
         December("December"),
+/**
+ * 
+ */
         February("February"),
+/**
+ * 
+ */
         January("January"),
+/**
+ * 
+ */
         July("July"),
+/**
+ * 
+ */
         June("June"),
+/**
+ * 
+ */
         March("March"),
+/**
+ * 
+ */
         May("May"),
+/**
+ * 
+ */
         November("November"),
+/**
+ * 
+ */
         October("October"),
+/**
+ * 
+ */
         September("September");
 
         private final String value;

@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StorageSettingResponse {
+/**
+ * Gets or sets the type of the datastore.
+ */
     private final @Nullable String datastoreType;
+/**
+ * Gets or sets the type.
+ */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"datastoreType","type"})
@@ -22,9 +28,15 @@ public final class StorageSettingResponse {
         this.type = type;
     }
 
+/**
+ * Gets or sets the type of the datastore.
+ */
     public Optional<String> getDatastoreType() {
         return Optional.ofNullable(this.datastoreType);
     }
+/**
+ * Gets or sets the type.
+ */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

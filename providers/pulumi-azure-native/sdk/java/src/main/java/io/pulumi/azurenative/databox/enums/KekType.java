@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Type of encryption key used for key encryption.
+ */
     @EnumType
     public enum KekType {
+/**
+ * Key encryption key is managed by Microsoft.
+ */
         MicrosoftManaged("MicrosoftManaged"),
+/**
+ * Key encryption key is managed by the Customer.
+ */
         CustomerManaged("CustomerManaged");
 
         private final String value;

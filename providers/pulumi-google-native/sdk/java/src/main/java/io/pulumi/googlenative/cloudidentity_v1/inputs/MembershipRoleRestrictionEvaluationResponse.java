@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The evaluated state of this restriction.
+ */
 public final class MembershipRoleRestrictionEvaluationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MembershipRoleRestrictionEvaluationResponse Empty = new MembershipRoleRestrictionEvaluationResponse();
 
+    /**
+     * The current state of the restriction
+     */
     @InputImport(name="state", required=true)
     private final String state;
 

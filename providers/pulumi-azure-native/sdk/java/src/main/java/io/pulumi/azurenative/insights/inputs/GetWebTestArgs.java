@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetWebTestArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWebTestArgs Empty = new GetWebTestArgs();
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class GetWebTestArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Application Insights webtest resource.
+     */
     @InputImport(name="webTestName", required=true)
     private final String webTestName;
 

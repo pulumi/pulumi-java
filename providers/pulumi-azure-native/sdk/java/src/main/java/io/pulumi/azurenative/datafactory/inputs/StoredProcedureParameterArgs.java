@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SQL stored procedure parameter.
+ */
 public final class StoredProcedureParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StoredProcedureParameterArgs Empty = new StoredProcedureParameterArgs();
 
+    /**
+     * Stored procedure parameter type.
+     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,StoredProcedureParameterType>> type;
 
@@ -24,6 +30,9 @@ public final class StoredProcedureParameterArgs extends io.pulumi.resources.Reso
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * Stored procedure parameter value. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="value")
     private final @Nullable Input<Object> value;
 

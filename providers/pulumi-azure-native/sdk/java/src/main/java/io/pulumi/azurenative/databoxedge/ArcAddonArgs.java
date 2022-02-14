@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ArcAddonArgs Empty = new ArcAddonArgs();
 
+    /**
+     * The addon name.
+     */
     @InputImport(name="addonName")
     private final @Nullable Input<String> addonName;
 
@@ -21,6 +27,9 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.addonName == null ? Input.empty() : this.addonName;
     }
 
+    /**
+     * The device name.
+     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -28,6 +37,10 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceName;
     }
 
+    /**
+     * Addon type.
+Expected value is 'ArcForKubernetes'.
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -35,6 +48,9 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -42,6 +58,9 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Arc resource location
+     */
     @InputImport(name="resourceLocation", required=true)
     private final Input<String> resourceLocation;
 
@@ -49,6 +68,9 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceLocation;
     }
 
+    /**
+     * Arc resource Name
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 
@@ -56,6 +78,9 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName;
     }
 
+    /**
+     * The role name.
+     */
     @InputImport(name="roleName", required=true)
     private final Input<String> roleName;
 
@@ -63,6 +88,9 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleName;
     }
 
+    /**
+     * Arc resource subscription Id
+     */
     @InputImport(name="subscriptionId", required=true)
     private final Input<String> subscriptionId;
 

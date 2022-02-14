@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Required. The desired format of the notification message payloads.
+ */
     @EnumType
     public enum NotificationConfigPayloadFormat {
+/**
+ * Illegal value, to avoid allowing a default.
+ */
         PayloadFormatUnspecified("PAYLOAD_FORMAT_UNSPECIFIED"),
+/**
+ * No payload is included with the notification.
+ */
         None("NONE"),
+/**
+ * `TransferOperation` is [formatted as a JSON response](https://developers.google.com/protocol-buffers/docs/proto3#json), in application/json.
+ */
         Json("JSON");
 
         private final String value;

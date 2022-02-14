@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The operation against the threshold that triggers alert rule.
+ */
     @EnumType
     public enum TriggerOperator {
+/**
+ * 
+ */
         GreaterThan("GreaterThan"),
+/**
+ * 
+ */
         LessThan("LessThan"),
+/**
+ * 
+ */
         Equal("Equal"),
+/**
+ * 
+ */
         NotEqual("NotEqual");
 
         private final String value;

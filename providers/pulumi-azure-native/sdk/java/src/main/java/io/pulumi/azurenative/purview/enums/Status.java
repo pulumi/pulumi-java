@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The status.
+ */
     @EnumType
     public enum Status {
+/**
+ * 
+ */
         Unknown("Unknown"),
+/**
+ * 
+ */
         Pending("Pending"),
+/**
+ * 
+ */
         Approved("Approved"),
+/**
+ * 
+ */
         Rejected("Rejected"),
+/**
+ * 
+ */
         Disconnected("Disconnected");
 
         private final String value;

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * [Deprecated] The configuration to access the SDS server. The configuration to access the SDS server.
+ */
 public final class SdsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SdsConfigArgs Empty = new SdsConfigArgs();
 
+    /**
+     * The configuration to access the SDS server over GRPC.
+     */
     @InputImport(name="grpcServiceConfig")
     private final @Nullable Input<GrpcServiceConfigArgs> grpcServiceConfig;
 

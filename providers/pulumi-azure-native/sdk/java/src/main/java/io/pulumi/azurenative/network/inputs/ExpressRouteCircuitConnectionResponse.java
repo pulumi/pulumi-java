@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Express Route Circuit Connection in an ExpressRouteCircuitPeering resource.
+ */
 public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExpressRouteCircuitConnectionResponse Empty = new ExpressRouteCircuitConnectionResponse();
 
+    /**
+     * /29 IP address space to carve out Customer addresses for tunnels.
+     */
     @InputImport(name="addressPrefix")
     private final @Nullable String addressPrefix;
 
@@ -23,6 +29,9 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
         return this.addressPrefix == null ? Optional.empty() : Optional.ofNullable(this.addressPrefix);
     }
 
+    /**
+     * The authorization key.
+     */
     @InputImport(name="authorizationKey")
     private final @Nullable String authorizationKey;
 
@@ -30,6 +39,9 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
         return this.authorizationKey == null ? Optional.empty() : Optional.ofNullable(this.authorizationKey);
     }
 
+    /**
+     * Express Route Circuit connection state.
+     */
     @InputImport(name="circuitConnectionStatus", required=true)
     private final String circuitConnectionStatus;
 
@@ -37,6 +49,9 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
         return this.circuitConnectionStatus;
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -44,6 +59,9 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
         return this.etag;
     }
 
+    /**
+     * Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.
+     */
     @InputImport(name="expressRouteCircuitPeering")
     private final @Nullable SubResourceResponse expressRouteCircuitPeering;
 
@@ -51,6 +69,9 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
         return this.expressRouteCircuitPeering == null ? Optional.empty() : Optional.ofNullable(this.expressRouteCircuitPeering);
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -58,6 +79,9 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * IPv6 Address PrefixProperties of the express route circuit connection.
+     */
     @InputImport(name="ipv6CircuitConnectionConfig")
     private final @Nullable Ipv6CircuitConnectionConfigResponse ipv6CircuitConnectionConfig;
 
@@ -65,6 +89,9 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
         return this.ipv6CircuitConnectionConfig == null ? Optional.empty() : Optional.ofNullable(this.ipv6CircuitConnectionConfig);
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -72,6 +99,9 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Reference to Express Route Circuit Private Peering Resource of the peered circuit.
+     */
     @InputImport(name="peerExpressRouteCircuitPeering")
     private final @Nullable SubResourceResponse peerExpressRouteCircuitPeering;
 
@@ -79,6 +109,9 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
         return this.peerExpressRouteCircuitPeering == null ? Optional.empty() : Optional.ofNullable(this.peerExpressRouteCircuitPeering);
     }
 
+    /**
+     * The provisioning state of the express route circuit connection resource.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -86,6 +119,9 @@ public final class ExpressRouteCircuitConnectionResponse extends io.pulumi.resou
         return this.provisioningState;
     }
 
+    /**
+     * Type of the resource.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

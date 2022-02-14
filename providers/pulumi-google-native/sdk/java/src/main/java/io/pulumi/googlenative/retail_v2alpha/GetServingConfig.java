@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServingConfig {
+/**
+ * Gets a ServingConfig. Returns a NotFound error if the ServingConfig does not exist.
+ */
     public static CompletableFuture<GetServingConfigResult> invokeAsync(GetServingConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:retail/v2alpha:getServingConfig", TypeShape.of(GetServingConfigResult.class), args == null ? GetServingConfigArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Each pivot must contain a 'type' and 'name'.
+ */
 public final class PivotPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PivotPropertiesResponse Empty = new PivotPropertiesResponse();
 
+    /**
+     * Data field to show in view.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +27,9 @@ public final class PivotPropertiesResponse extends io.pulumi.resources.InvokeArg
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Data type to show in view.
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

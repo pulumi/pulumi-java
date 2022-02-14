@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCompany {
+/**
+ * Retrieves specified company.
+ */
     public static CompletableFuture<GetCompanyResult> invokeAsync(GetCompanyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:jobs/v3:getCompany", TypeShape.of(GetCompanyResult.class), args == null ? GetCompanyArgs.Empty : args, Utilities.withVersion(options));
     }

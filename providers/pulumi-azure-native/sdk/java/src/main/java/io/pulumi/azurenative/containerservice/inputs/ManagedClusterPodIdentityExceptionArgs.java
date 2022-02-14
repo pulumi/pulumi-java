@@ -10,10 +10,16 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ManagedClusterPodIdentityExceptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedClusterPodIdentityExceptionArgs Empty = new ManagedClusterPodIdentityExceptionArgs();
 
+    /**
+     * Name of the pod identity exception.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +27,9 @@ public final class ManagedClusterPodIdentityExceptionArgs extends io.pulumi.reso
         return this.name;
     }
 
+    /**
+     * Namespace of the pod identity exception.
+     */
     @InputImport(name="namespace", required=true)
     private final Input<String> namespace;
 
@@ -28,6 +37,9 @@ public final class ManagedClusterPodIdentityExceptionArgs extends io.pulumi.reso
         return this.namespace;
     }
 
+    /**
+     * Pod labels to match.
+     */
     @InputImport(name="podLabels", required=true)
     private final Input<Map<String,String>> podLabels;
 

@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssignmentArgs Empty = new AssignmentArgs();
 
+    /**
+     * Additional data about the assignment
+     */
     @InputImport(name="additionalData")
     private final @Nullable Input<AssignmentPropertiesAdditionalDataArgs> additionalData;
 
@@ -26,6 +32,9 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.additionalData == null ? Input.empty() : this.additionalData;
     }
 
+    /**
+     * Component item with key as applied to this standard assignment over the given scope
+     */
     @InputImport(name="assignedComponent")
     private final @Nullable Input<AssignedComponentItemArgs> assignedComponent;
 
@@ -33,6 +42,9 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.assignedComponent == null ? Input.empty() : this.assignedComponent;
     }
 
+    /**
+     * Standard item with key as applied to this standard assignment over the given scope
+     */
     @InputImport(name="assignedStandard")
     private final @Nullable Input<AssignedStandardItemArgs> assignedStandard;
 
@@ -40,6 +52,9 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.assignedStandard == null ? Input.empty() : this.assignedStandard;
     }
 
+    /**
+     * The security assignment key - unique key for the standard assignment
+     */
     @InputImport(name="assignmentId")
     private final @Nullable Input<String> assignmentId;
 
@@ -47,6 +62,9 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.assignmentId == null ? Input.empty() : this.assignmentId;
     }
 
+    /**
+     * description of the standardAssignment
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -54,6 +72,9 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * display name of the standardAssignment
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -61,6 +82,9 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * expected effect of this assignment (Disable/Exempt/etc)
+     */
     @InputImport(name="effect")
     private final @Nullable Input<String> effect;
 
@@ -68,6 +92,9 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.effect == null ? Input.empty() : this.effect;
     }
 
+    /**
+     * Expiration date of this assignment as a full ISO date
+     */
     @InputImport(name="expiresOn")
     private final @Nullable Input<String> expiresOn;
 
@@ -75,6 +102,9 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.expiresOn == null ? Input.empty() : this.expiresOn;
     }
 
+    /**
+     * Kind of the resource
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -82,6 +112,9 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Location where the resource is stored
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -89,6 +122,9 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Object> metadata;
 
@@ -96,6 +132,9 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -103,6 +142,9 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Scope to which the standardAssignment applies - can be a subscription path or a resource group under that subscription
+     */
     @InputImport(name="scope")
     private final @Nullable Input<String> scope;
 
@@ -110,6 +152,9 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.scope == null ? Input.empty() : this.scope;
     }
 
+    /**
+     * A list of key value pairs that describe the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

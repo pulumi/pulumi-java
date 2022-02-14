@@ -10,9 +10,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FutureReservationStatusResponse {
+/**
+ * Fully qualified urls of the automatically created reservations at start_time.
+ */
     private final List<String> autoCreatedReservations;
+/**
+ * This count indicates the fulfilled capacity so far. This is set during "PROVISIONING" state. This count also includes capacity delivered as part of existing matching reservations.
+ */
     private final String fulfilledCount;
+/**
+ * Time when Future Reservation would become LOCKED, after which no modifications to Future Reservation will be allowed. Applicable only after the Future Reservation is in the APPROVED state. The lock_time is an RFC3339 string. The procurement_status will transition to PROCURING state at this time.
+ */
     private final String lockTime;
+/**
+ * Current state of this Future Reservation
+ */
     private final String procurementStatus;
 
     @OutputCustomType.Constructor({"autoCreatedReservations","fulfilledCount","lockTime","procurementStatus"})
@@ -27,15 +39,27 @@ public final class FutureReservationStatusResponse {
         this.procurementStatus = Objects.requireNonNull(procurementStatus);
     }
 
+/**
+ * Fully qualified urls of the automatically created reservations at start_time.
+ */
     public List<String> getAutoCreatedReservations() {
         return this.autoCreatedReservations;
     }
+/**
+ * This count indicates the fulfilled capacity so far. This is set during "PROVISIONING" state. This count also includes capacity delivered as part of existing matching reservations.
+ */
     public String getFulfilledCount() {
         return this.fulfilledCount;
     }
+/**
+ * Time when Future Reservation would become LOCKED, after which no modifications to Future Reservation will be allowed. Applicable only after the Future Reservation is in the APPROVED state. The lock_time is an RFC3339 string. The procurement_status will transition to PROCURING state at this time.
+ */
     public String getLockTime() {
         return this.lockTime;
     }
+/**
+ * Current state of this Future Reservation
+ */
     public String getProcurementStatus() {
         return this.procurementStatus;
     }

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAnalyticsItem {
+/**
+ * Properties that define an Analytics item that is associated to an Application Insights component.
+API Version: 2015-05-01.
+ *
+ * Properties that define an Analytics item that is associated to an Application Insights component.
+ */
     public static CompletableFuture<GetAnalyticsItemResult> invokeAsync(GetAnalyticsItemArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getAnalyticsItem", TypeShape.of(GetAnalyticsItemResult.class), args == null ? GetAnalyticsItemArgs.Empty : args, Utilities.withVersion(options));
     }

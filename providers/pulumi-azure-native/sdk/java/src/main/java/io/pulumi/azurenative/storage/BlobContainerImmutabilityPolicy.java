@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.storage.BlobContainerImmutabilityPolicyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -16,45 +15,186 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The ImmutabilityPolicy property of a blob container, including Id, resource name, resource type, Etag.
+API Version: 2021-02-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### CreateOrUpdateImmutabilityPolicy
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var blobContainerImmutabilityPolicy = new AzureNative.Storage.BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy", new AzureNative.Storage.BlobContainerImmutabilityPolicyArgs
+        {
+            AccountName = "sto7069",
+            AllowProtectedAppendWrites = true,
+            ContainerName = "container6397",
+            ImmutabilityPeriodSinceCreationInDays = 3,
+            ImmutabilityPolicyName = "default",
+            ResourceGroupName = "res1782",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storage.NewBlobContainerImmutabilityPolicy(ctx, "blobContainerImmutabilityPolicy", &storage.BlobContainerImmutabilityPolicyArgs{
+			AccountName:                           pulumi.String("sto7069"),
+			AllowProtectedAppendWrites:            pulumi.Bool(true),
+			ContainerName:                         pulumi.String("container6397"),
+			ImmutabilityPeriodSinceCreationInDays: pulumi.Int(3),
+			ImmutabilityPolicyName:                pulumi.String("default"),
+			ResourceGroupName:                     pulumi.String("res1782"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const blobContainerImmutabilityPolicy = new azure_native.storage.BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy", {
+    accountName: "sto7069",
+    allowProtectedAppendWrites: true,
+    containerName: "container6397",
+    immutabilityPeriodSinceCreationInDays: 3,
+    immutabilityPolicyName: "default",
+    resourceGroupName: "res1782",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+blob_container_immutability_policy = azure_native.storage.BlobContainerImmutabilityPolicy("blobContainerImmutabilityPolicy",
+    account_name="sto7069",
+    allow_protected_append_writes=True,
+    container_name="container6397",
+    immutability_period_since_creation_in_days=3,
+    immutability_policy_name="default",
+    resource_group_name="res1782")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:storage:BlobContainerImmutabilityPolicy default /subscriptions/{subscription-id}/resourceGroups/res1782/providers/Microsoft.Storage/storageAccounts/sto7069/blobServices/default/containers/container6397/immutabilityPolicies/default 
+```
+
+ */
 @ResourceType(type="azure-native:storage:BlobContainerImmutabilityPolicy")
 public class BlobContainerImmutabilityPolicy extends io.pulumi.resources.CustomResource {
+    /**
+     * This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
+     */
     @OutputExport(name="allowProtectedAppendWrites", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowProtectedAppendWrites;
 
+    /**
+     * @return This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
+     */
     public Output</* @Nullable */ Boolean> getAllowProtectedAppendWrites() {
         return this.allowProtectedAppendWrites;
     }
+    /**
+     * Resource Etag.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return Resource Etag.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The immutability period for the blobs in the container since the policy creation, in days.
+     */
     @OutputExport(name="immutabilityPeriodSinceCreationInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> immutabilityPeriodSinceCreationInDays;
 
+    /**
+     * @return The immutability period for the blobs in the container since the policy creation, in days.
+     */
     public Output</* @Nullable */ Integer> getImmutabilityPeriodSinceCreationInDays() {
         return this.immutabilityPeriodSinceCreationInDays;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public BlobContainerImmutabilityPolicy(String name, BlobContainerImmutabilityPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storage:BlobContainerImmutabilityPolicy", name, args == null ? BlobContainerImmutabilityPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -84,6 +224,14 @@ public class BlobContainerImmutabilityPolicy extends io.pulumi.resources.CustomR
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static BlobContainerImmutabilityPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BlobContainerImmutabilityPolicy(name, id, options);
     }

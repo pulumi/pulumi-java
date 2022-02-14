@@ -8,10 +8,16 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * VerticalPodAutoscaling contains global, per-cluster information required by Vertical Pod Autoscaler to automatically adjust the resources of pods controlled by it.
+ */
 public final class VerticalPodAutoscalingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VerticalPodAutoscalingResponse Empty = new VerticalPodAutoscalingResponse();
 
+    /**
+     * Enables vertical pod autoscaling.
+     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

@@ -14,9 +14,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class Subject {
+/**
+ * `group` matches based on user group name.
+ */
     private final @Nullable GroupSubject group;
+/**
+ * `kind` indicates which one of the other fields is non-empty. Required
+ */
     private final String kind;
+/**
+ * `serviceAccount` matches ServiceAccounts.
+ */
     private final @Nullable ServiceAccountSubject serviceAccount;
+/**
+ * `user` matches based on username.
+ */
     private final @Nullable UserSubject user;
 
     @OutputCustomType.Constructor({"group","kind","serviceAccount","user"})
@@ -31,15 +43,27 @@ public final class Subject {
         this.user = user;
     }
 
+/**
+ * `group` matches based on user group name.
+ */
     public Optional<GroupSubject> getGroup() {
         return Optional.ofNullable(this.group);
     }
+/**
+ * `kind` indicates which one of the other fields is non-empty. Required
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * `serviceAccount` matches ServiceAccounts.
+ */
     public Optional<ServiceAccountSubject> getServiceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
+/**
+ * `user` matches based on username.
+ */
     public Optional<UserSubject> getUser() {
         return Optional.ofNullable(this.user);
     }

@@ -8,10 +8,16 @@ import io.pulumi.googlenative.runtimeconfig_v1beta1.inputs.CardinalityResponse;
 import java.util.Objects;
 
 
+/**
+ * The condition that a Waiter resource is waiting for.
+ */
 public final class EndConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EndConditionResponse Empty = new EndConditionResponse();
 
+    /**
+     * The cardinality of the `EndCondition`.
+     */
     @InputImport(name="cardinality", required=true)
     private final CardinalityResponse cardinality;
 

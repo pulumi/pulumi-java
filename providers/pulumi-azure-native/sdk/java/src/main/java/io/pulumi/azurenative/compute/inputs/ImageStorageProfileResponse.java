@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a storage profile.
+ */
 public final class ImageStorageProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ImageStorageProfileResponse Empty = new ImageStorageProfileResponse();
 
+    /**
+     * Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+     */
     @InputImport(name="dataDisks")
     private final @Nullable List<ImageDataDiskResponse> dataDisks;
 
@@ -24,6 +30,9 @@ public final class ImageStorageProfileResponse extends io.pulumi.resources.Invok
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
 
+    /**
+     * Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+     */
     @InputImport(name="osDisk")
     private final @Nullable ImageOSDiskResponse osDisk;
 
@@ -31,6 +40,9 @@ public final class ImageStorageProfileResponse extends io.pulumi.resources.Invok
         return this.osDisk == null ? Optional.empty() : Optional.ofNullable(this.osDisk);
     }
 
+    /**
+     * Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).
+     */
     @InputImport(name="zoneResilient")
     private final @Nullable Boolean zoneResilient;
 

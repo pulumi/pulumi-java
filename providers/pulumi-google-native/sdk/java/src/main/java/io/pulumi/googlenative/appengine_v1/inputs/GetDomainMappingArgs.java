@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetDomainMappingArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDomainMappingArgs Empty = new GetDomainMappingArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="appId", required=true)
     private final String appId;
 
@@ -19,6 +25,9 @@ public final class GetDomainMappingArgs extends io.pulumi.resources.InvokeArgs {
         return this.appId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="domainMappingId", required=true)
     private final String domainMappingId;
 

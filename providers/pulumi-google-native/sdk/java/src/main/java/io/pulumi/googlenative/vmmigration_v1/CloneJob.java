@@ -8,51 +8,97 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.vmmigration_v1.CloneJobArgs;
 import io.pulumi.googlenative.vmmigration_v1.outputs.ComputeEngineTargetDetailsResponse;
 import io.pulumi.googlenative.vmmigration_v1.outputs.StatusResponse;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Initiates a Clone of a specific migrating VM.
+Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+on Google Cloud even though it will be deleted from Pulumi state.
+ */
 @ResourceType(type="google-native:vmmigration/v1:CloneJob")
 public class CloneJob extends io.pulumi.resources.CustomResource {
+    /**
+     * Details of the target VM in Compute Engine.
+     */
     @OutputExport(name="computeEngineTargetDetails", type=ComputeEngineTargetDetailsResponse.class, parameters={})
     private Output<ComputeEngineTargetDetailsResponse> computeEngineTargetDetails;
 
+    /**
+     * @return Details of the target VM in Compute Engine.
+     */
     public Output<ComputeEngineTargetDetailsResponse> getComputeEngineTargetDetails() {
         return this.computeEngineTargetDetails;
     }
+    /**
+     * The time the clone job was created (as an API call, not when it was actually created in the target).
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return The time the clone job was created (as an API call, not when it was actually created in the target).
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Provides details for the errors that led to the Clone Job's state.
+     */
     @OutputExport(name="error", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> error;
 
+    /**
+     * @return Provides details for the errors that led to the Clone Job's state.
+     */
     public Output<StatusResponse> getError() {
         return this.error;
     }
+    /**
+     * The name of the clone.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the clone.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * State of the clone job.
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return State of the clone job.
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * The time the state was last updated.
+     */
     @OutputExport(name="stateTime", type=String.class, parameters={})
     private Output<String> stateTime;
 
+    /**
+     * @return The time the state was last updated.
+     */
     public Output<String> getStateTime() {
         return this.stateTime;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public CloneJob(String name, CloneJobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:vmmigration/v1:CloneJob", name, args == null ? CloneJobArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -68,6 +114,14 @@ public class CloneJob extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static CloneJob get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CloneJob(name, id, options);
     }

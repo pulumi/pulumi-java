@@ -13,9 +13,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterUpgradeDeltaHealthPolicyResponse {
+/**
+ * Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.
+ */
     private final @Nullable Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies;
+/**
+ * The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
+The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
+
+ */
     private final Integer maxPercentDeltaUnhealthyApplications;
+/**
+ * The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
+The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
+
+ */
     private final Integer maxPercentDeltaUnhealthyNodes;
+/**
+ * The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
+The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
+
+ */
     private final Integer maxPercentUpgradeDomainDeltaUnhealthyNodes;
 
     @OutputCustomType.Constructor({"applicationDeltaHealthPolicies","maxPercentDeltaUnhealthyApplications","maxPercentDeltaUnhealthyNodes","maxPercentUpgradeDomainDeltaUnhealthyNodes"})
@@ -30,15 +51,36 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse {
         this.maxPercentUpgradeDomainDeltaUnhealthyNodes = Objects.requireNonNull(maxPercentUpgradeDomainDeltaUnhealthyNodes);
     }
 
+/**
+ * Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.
+ */
     public Map<String,ApplicationDeltaHealthPolicyResponse> getApplicationDeltaHealthPolicies() {
         return this.applicationDeltaHealthPolicies == null ? Map.of() : this.applicationDeltaHealthPolicies;
     }
+/**
+ * The maximum allowed percentage of applications health degradation allowed during cluster upgrades.
+The delta is measured between the state of the applications at the beginning of upgrade and the state of the applications at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
+
+ */
     public Integer getMaxPercentDeltaUnhealthyApplications() {
         return this.maxPercentDeltaUnhealthyApplications;
     }
+/**
+ * The maximum allowed percentage of nodes health degradation allowed during cluster upgrades.
+The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
+
+ */
     public Integer getMaxPercentDeltaUnhealthyNodes() {
         return this.maxPercentDeltaUnhealthyNodes;
     }
+/**
+ * The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades.
+The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation.
+The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
+
+ */
     public Integer getMaxPercentUpgradeDomainDeltaUnhealthyNodes() {
         return this.maxPercentUpgradeDomainDeltaUnhealthyNodes;
     }

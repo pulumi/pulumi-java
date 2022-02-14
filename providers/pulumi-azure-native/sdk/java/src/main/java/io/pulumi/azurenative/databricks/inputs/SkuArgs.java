@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SKU for the resource.
+ */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 
+    /**
+     * The SKU name.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +27,9 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * The SKU tier.
+     */
     @InputImport(name="tier")
     private final @Nullable Input<String> tier;
 

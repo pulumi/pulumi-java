@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.recoveryservices.VaultArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.IdentityDataResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.SkuResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.SystemDataResponse;
@@ -19,63 +18,510 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Resource information, as returned by the resource provider.
+API Version: 2021-01-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create or Update Recovery Services vault
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vault = new AzureNative.RecoveryServices.Vault("vault", new AzureNative.RecoveryServices.VaultArgs
+        {
+            Identity = new AzureNative.RecoveryServices.Inputs.IdentityDataArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Location = "West US",
+            Properties = ,
+            ResourceGroupName = "Default-RecoveryServices-ResourceGroup",
+            Sku = new AzureNative.RecoveryServices.Inputs.SkuArgs
+            {
+                Name = "Standard",
+            },
+            VaultName = "swaggerExample",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewVault(ctx, "vault", &recoveryservices.VaultArgs{
+			Identity: &recoveryservices.IdentityDataArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+			Location:          pulumi.String("West US"),
+			Properties:        nil,
+			ResourceGroupName: pulumi.String("Default-RecoveryServices-ResourceGroup"),
+			Sku: &recoveryservices.SkuArgs{
+				Name: pulumi.String("Standard"),
+			},
+			VaultName: pulumi.String("swaggerExample"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const vault = new azure_native.recoveryservices.Vault("vault", {
+    identity: {
+        type: "SystemAssigned",
+    },
+    location: "West US",
+    properties: {},
+    resourceGroupName: "Default-RecoveryServices-ResourceGroup",
+    sku: {
+        name: "Standard",
+    },
+    vaultName: "swaggerExample",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+vault = azure_native.recoveryservices.Vault("vault",
+    identity=azure_native.recoveryservices.IdentityDataArgs(
+        type="SystemAssigned",
+    ),
+    location="West US",
+    properties=azure_native.recoveryservices.VaultPropertiesArgs(),
+    resource_group_name="Default-RecoveryServices-ResourceGroup",
+    sku=azure_native.recoveryservices.SkuArgs(
+        name="Standard",
+    ),
+    vault_name="swaggerExample")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create or Update Vault with CustomerManagedKeys
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vault = new AzureNative.RecoveryServices.Vault("vault", new AzureNative.RecoveryServices.VaultArgs
+        {
+            Identity = new AzureNative.RecoveryServices.Inputs.IdentityDataArgs
+            {
+                Type = "UserAssigned",
+                UserAssignedIdentities = 
+                {
+                    { "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi",  },
+                },
+            },
+            Location = "West US",
+            Properties = new AzureNative.RecoveryServices.Inputs.VaultPropertiesArgs
+            {
+                Encryption = new AzureNative.RecoveryServices.Inputs.VaultPropertiesEncryptionArgs
+                {
+                    InfrastructureEncryption = "Enabled",
+                    KekIdentity = new AzureNative.RecoveryServices.Inputs.CmkKekIdentityArgs
+                    {
+                        UserAssignedIdentity = "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi",
+                    },
+                    KeyVaultProperties = new AzureNative.RecoveryServices.Inputs.CmkKeyVaultPropertiesArgs
+                    {
+                        KeyUri = "https://cmk2xkv.vault.azure.net/keys/Key1/0767b348bb1a4c07baa6c4ec0055d2b3",
+                    },
+                },
+            },
+            ResourceGroupName = "Default-RecoveryServices-ResourceGroup",
+            Sku = new AzureNative.RecoveryServices.Inputs.SkuArgs
+            {
+                Name = "Standard",
+            },
+            VaultName = "swaggerExample",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewVault(ctx, "vault", &recoveryservices.VaultArgs{
+			Identity: &recoveryservices.IdentityDataArgs{
+				Type: pulumi.String("UserAssigned"),
+				UserAssignedIdentities: pulumi.AnyMap{
+					"/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi": nil,
+				},
+			},
+			Location: pulumi.String("West US"),
+			Properties: &recoveryservices.VaultPropertiesArgs{
+				Encryption: &recoveryservices.VaultPropertiesEncryptionArgs{
+					InfrastructureEncryption: pulumi.String("Enabled"),
+					KekIdentity: &recoveryservices.CmkKekIdentityArgs{
+						UserAssignedIdentity: pulumi.String("/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi"),
+					},
+					KeyVaultProperties: &recoveryservices.CmkKeyVaultPropertiesArgs{
+						KeyUri: pulumi.String("https://cmk2xkv.vault.azure.net/keys/Key1/0767b348bb1a4c07baa6c4ec0055d2b3"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("Default-RecoveryServices-ResourceGroup"),
+			Sku: &recoveryservices.SkuArgs{
+				Name: pulumi.String("Standard"),
+			},
+			VaultName: pulumi.String("swaggerExample"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const vault = new azure_native.recoveryservices.Vault("vault", {
+    identity: {
+        type: "UserAssigned",
+        userAssignedIdentities: {
+            "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi": {},
+        },
+    },
+    location: "West US",
+    properties: {
+        encryption: {
+            infrastructureEncryption: "Enabled",
+            kekIdentity: {
+                userAssignedIdentity: "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi",
+            },
+            keyVaultProperties: {
+                keyUri: "https://cmk2xkv.vault.azure.net/keys/Key1/0767b348bb1a4c07baa6c4ec0055d2b3",
+            },
+        },
+    },
+    resourceGroupName: "Default-RecoveryServices-ResourceGroup",
+    sku: {
+        name: "Standard",
+    },
+    vaultName: "swaggerExample",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+vault = azure_native.recoveryservices.Vault("vault",
+    identity=azure_native.recoveryservices.IdentityDataArgs(
+        type="UserAssigned",
+        user_assigned_identities={
+            "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi": {},
+        },
+    ),
+    location="West US",
+    properties=azure_native.recoveryservices.VaultPropertiesArgs(
+        encryption=azure_native.recoveryservices.VaultPropertiesEncryptionArgs(
+            infrastructure_encryption="Enabled",
+            kek_identity=azure_native.recoveryservices.CmkKekIdentityArgs(
+                user_assigned_identity="/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi",
+            ),
+            key_vault_properties=azure_native.recoveryservices.CmkKeyVaultPropertiesArgs(
+                key_uri="https://cmk2xkv.vault.azure.net/keys/Key1/0767b348bb1a4c07baa6c4ec0055d2b3",
+            ),
+        ),
+    ),
+    resource_group_name="Default-RecoveryServices-ResourceGroup",
+    sku=azure_native.recoveryservices.SkuArgs(
+        name="Standard",
+    ),
+    vault_name="swaggerExample")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create or Update Vault with User Assigned Identity
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vault = new AzureNative.RecoveryServices.Vault("vault", new AzureNative.RecoveryServices.VaultArgs
+        {
+            Identity = new AzureNative.RecoveryServices.Inputs.IdentityDataArgs
+            {
+                Type = "UserAssigned",
+                UserAssignedIdentities = 
+                {
+                    { "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi",  },
+                },
+            },
+            Location = "West US",
+            Properties = ,
+            ResourceGroupName = "Default-RecoveryServices-ResourceGroup",
+            Sku = new AzureNative.RecoveryServices.Inputs.SkuArgs
+            {
+                Name = "Standard",
+            },
+            VaultName = "swaggerExample",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewVault(ctx, "vault", &recoveryservices.VaultArgs{
+			Identity: &recoveryservices.IdentityDataArgs{
+				Type: pulumi.String("UserAssigned"),
+				UserAssignedIdentities: pulumi.AnyMap{
+					"/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi": nil,
+				},
+			},
+			Location:          pulumi.String("West US"),
+			Properties:        nil,
+			ResourceGroupName: pulumi.String("Default-RecoveryServices-ResourceGroup"),
+			Sku: &recoveryservices.SkuArgs{
+				Name: pulumi.String("Standard"),
+			},
+			VaultName: pulumi.String("swaggerExample"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const vault = new azure_native.recoveryservices.Vault("vault", {
+    identity: {
+        type: "UserAssigned",
+        userAssignedIdentities: {
+            "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi": {},
+        },
+    },
+    location: "West US",
+    properties: {},
+    resourceGroupName: "Default-RecoveryServices-ResourceGroup",
+    sku: {
+        name: "Standard",
+    },
+    vaultName: "swaggerExample",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+vault = azure_native.recoveryservices.Vault("vault",
+    identity=azure_native.recoveryservices.IdentityDataArgs(
+        type="UserAssigned",
+        user_assigned_identities={
+            "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi": {},
+        },
+    ),
+    location="West US",
+    properties=azure_native.recoveryservices.VaultPropertiesArgs(),
+    resource_group_name="Default-RecoveryServices-ResourceGroup",
+    sku=azure_native.recoveryservices.SkuArgs(
+        name="Standard",
+    ),
+    vault_name="swaggerExample")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:recoveryservices:Vault swaggerExample /subscriptions/77777777-b0c6-47a2-b37c-d8e65a629c18/resourceGroups/Default-RecoveryServices-ResourceGroup/providers/Microsoft.RecoveryServices/vaults/swaggerExample 
+```
+
+ */
 @ResourceType(type="azure-native:recoveryservices:Vault")
 public class Vault extends io.pulumi.resources.CustomResource {
+    /**
+     * Optional ETag.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return Optional ETag.
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * Identity for the resource.
+     */
     @OutputExport(name="identity", type=IdentityDataResponse.class, parameters={})
     private Output</* @Nullable */ IdentityDataResponse> identity;
 
+    /**
+     * @return Identity for the resource.
+     */
     public Output</* @Nullable */ IdentityDataResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * Resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location.
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name associated with the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name associated with the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Properties of the vault.
+     */
     @OutputExport(name="properties", type=VaultPropertiesResponse.class, parameters={})
     private Output<VaultPropertiesResponse> properties;
 
+    /**
+     * @return Properties of the vault.
+     */
     public Output<VaultPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Identifies the unique system identifier for each Azure resource.
+     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
+    /**
+     * @return Identifies the unique system identifier for each Azure resource.
+     */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Metadata pertaining to creation and last modification of the resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Vault(String name, VaultArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:recoveryservices:Vault", name, args == null ? VaultArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -104,6 +550,14 @@ public class Vault extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Vault get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Vault(name, id, options);
     }

@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlobalNetworkEndpointGroup {
+/**
+ * Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
+ */
     public static CompletableFuture<GetGlobalNetworkEndpointGroupResult> invokeAsync(GetGlobalNetworkEndpointGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getGlobalNetworkEndpointGroup", TypeShape.of(GetGlobalNetworkEndpointGroupResult.class), args == null ? GetGlobalNetworkEndpointGroupArgs.Empty : args, Utilities.withVersion(options));
     }

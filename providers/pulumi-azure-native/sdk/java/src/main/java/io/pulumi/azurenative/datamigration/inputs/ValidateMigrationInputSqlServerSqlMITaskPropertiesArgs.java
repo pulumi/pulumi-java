@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for task that validates migration input for SQL to Azure SQL Database Managed Instance
+ */
 public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ValidateMigrationInputSqlServerSqlMITaskPropertiesArgs Empty = new ValidateMigrationInputSqlServerSqlMITaskPropertiesArgs();
 
+    /**
+     * Task input
+     */
     @InputImport(name="input")
     private final @Nullable Input<ValidateMigrationInputSqlServerSqlMITaskInputArgs> input;
 
@@ -22,6 +28,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesArgs extend
         return this.input == null ? Input.empty() : this.input;
     }
 
+    /**
+     * Task type.
+Expected value is 'ValidateMigrationInput.SqlServer.AzureSqlDbMI'.
+     */
     @InputImport(name="taskType", required=true)
     private final Input<String> taskType;
 

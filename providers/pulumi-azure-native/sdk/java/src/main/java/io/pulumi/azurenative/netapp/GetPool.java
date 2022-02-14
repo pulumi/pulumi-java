@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPool {
+/**
+ * Capacity pool resource
+API Version: 2020-12-01.
+ *
+ * Capacity pool resource
+ */
     public static CompletableFuture<GetPoolResult> invokeAsync(GetPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:netapp:getPool", TypeShape.of(GetPoolResult.class), args == null ? GetPoolArgs.Empty : args, Utilities.withVersion(options));
     }

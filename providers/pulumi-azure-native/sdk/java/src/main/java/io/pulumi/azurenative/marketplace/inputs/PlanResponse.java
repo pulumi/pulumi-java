@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PlanResponse Empty = new PlanResponse();
 
+    /**
+     * Plan accessibility
+     */
     @InputImport(name="accessibility")
     private final @Nullable String accessibility;
 
@@ -21,6 +27,9 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
         return this.accessibility == null ? Optional.empty() : Optional.ofNullable(this.accessibility);
     }
 
+    /**
+     * Alternative stack type
+     */
     @InputImport(name="altStackReference", required=true)
     private final String altStackReference;
 
@@ -28,6 +37,9 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
         return this.altStackReference;
     }
 
+    /**
+     * Friendly name for the plan for display in the marketplace
+     */
     @InputImport(name="planDisplayName", required=true)
     private final String planDisplayName;
 
@@ -35,6 +47,9 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
         return this.planDisplayName;
     }
 
+    /**
+     * Text identifier for this plan
+     */
     @InputImport(name="planId", required=true)
     private final String planId;
 
@@ -42,6 +57,9 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
         return this.planId;
     }
 
+    /**
+     * Identifier for this plan
+     */
     @InputImport(name="skuId", required=true)
     private final String skuId;
 
@@ -49,6 +67,9 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
         return this.skuId;
     }
 
+    /**
+     * Stack type (classic or arm)
+     */
     @InputImport(name="stackType", required=true)
     private final String stackType;
 

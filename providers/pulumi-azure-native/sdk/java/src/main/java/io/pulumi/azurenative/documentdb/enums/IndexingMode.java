@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Indicates the indexing mode.
+ */
     @EnumType
     public enum IndexingMode {
+/**
+ * 
+ */
         Consistent("consistent"),
+/**
+ * 
+ */
         Lazy("lazy"),
+/**
+ * 
+ */
         None("none");
 
         private final String value;

@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProductArgs Empty = new ProductArgs();
 
+    /**
+     * whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of false.
+     */
     @InputImport(name="approvalRequired")
     private final @Nullable Input<Boolean> approvalRequired;
 
@@ -24,6 +30,9 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
         return this.approvalRequired == null ? Input.empty() : this.approvalRequired;
     }
 
+    /**
+     * Product description. May include HTML formatting tags.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +40,9 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Product name.
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -38,6 +50,9 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Product identifier. Must be unique in the current API Management service instance.
+     */
     @InputImport(name="productId")
     private final @Nullable Input<String> productId;
 
@@ -45,6 +60,9 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
         return this.productId == null ? Input.empty() : this.productId;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -52,6 +70,9 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -59,6 +80,9 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
+    /**
+     * whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is notPublished.
+     */
     @InputImport(name="state")
     private final @Nullable Input<ProductState> state;
 
@@ -66,6 +90,9 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * Whether a product subscription is required for accessing APIs included in this product. If true, the product is referred to as "protected" and a valid subscription key is required for a request to an API included in the product to succeed. If false, the product is referred to as "open" and requests to an API included in the product can be made without a subscription key. If property is omitted when creating a new product it's value is assumed to be true.
+     */
     @InputImport(name="subscriptionRequired")
     private final @Nullable Input<Boolean> subscriptionRequired;
 
@@ -73,6 +100,9 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
         return this.subscriptionRequired == null ? Input.empty() : this.subscriptionRequired;
     }
 
+    /**
+     * Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false.
+     */
     @InputImport(name="subscriptionsLimit")
     private final @Nullable Input<Integer> subscriptionsLimit;
 
@@ -80,6 +110,9 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
         return this.subscriptionsLimit == null ? Input.empty() : this.subscriptionsLimit;
     }
 
+    /**
+     * Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process.
+     */
     @InputImport(name="terms")
     private final @Nullable Input<String> terms;
 

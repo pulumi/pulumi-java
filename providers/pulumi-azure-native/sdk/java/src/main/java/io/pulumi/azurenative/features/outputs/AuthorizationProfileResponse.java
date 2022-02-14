@@ -9,10 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AuthorizationProfileResponse {
+/**
+ * The approved time
+ */
     private final String approvedTime;
+/**
+ * The approver
+ */
     private final String approver;
+/**
+ * The requested time
+ */
     private final String requestedTime;
+/**
+ * The requester
+ */
     private final String requester;
+/**
+ * The requester object id
+ */
     private final String requesterObjectId;
 
     @OutputCustomType.Constructor({"approvedTime","approver","requestedTime","requester","requesterObjectId"})
@@ -29,18 +44,33 @@ public final class AuthorizationProfileResponse {
         this.requesterObjectId = Objects.requireNonNull(requesterObjectId);
     }
 
+/**
+ * The approved time
+ */
     public String getApprovedTime() {
         return this.approvedTime;
     }
+/**
+ * The approver
+ */
     public String getApprover() {
         return this.approver;
     }
+/**
+ * The requested time
+ */
     public String getRequestedTime() {
         return this.requestedTime;
     }
+/**
+ * The requester
+ */
     public String getRequester() {
         return this.requester;
     }
+/**
+ * The requester object id
+ */
     public String getRequesterObjectId() {
         return this.requesterObjectId;
     }

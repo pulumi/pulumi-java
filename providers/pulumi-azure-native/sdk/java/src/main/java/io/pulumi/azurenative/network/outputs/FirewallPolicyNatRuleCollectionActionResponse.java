@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FirewallPolicyNatRuleCollectionActionResponse {
+/**
+ * The type of action.
+ */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -18,6 +21,9 @@ public final class FirewallPolicyNatRuleCollectionActionResponse {
         this.type = type;
     }
 
+/**
+ * The type of action.
+ */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

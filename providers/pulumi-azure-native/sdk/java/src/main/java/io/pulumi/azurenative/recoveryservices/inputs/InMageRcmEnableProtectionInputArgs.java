@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * InMageRcm specific enable protection input.
+ */
 public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InMageRcmEnableProtectionInputArgs Empty = new InMageRcmEnableProtectionInputArgs();
 
+    /**
+     * The default disk input.
+     */
     @InputImport(name="disksDefault")
     private final @Nullable Input<InMageRcmDisksDefaultInputArgs> disksDefault;
 
@@ -26,6 +32,9 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
         return this.disksDefault == null ? Input.empty() : this.disksDefault;
     }
 
+    /**
+     * The disks to include list.
+     */
     @InputImport(name="disksToInclude")
     private final @Nullable Input<List<InMageRcmDiskInputArgs>> disksToInclude;
 
@@ -33,6 +42,9 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
         return this.disksToInclude == null ? Input.empty() : this.disksToInclude;
     }
 
+    /**
+     * The ARM Id of discovered machine.
+     */
     @InputImport(name="fabricDiscoveryMachineId")
     private final @Nullable Input<String> fabricDiscoveryMachineId;
 
@@ -40,6 +52,10 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
         return this.fabricDiscoveryMachineId == null ? Input.empty() : this.fabricDiscoveryMachineId;
     }
 
+    /**
+     * The class type.
+Expected value is 'InMageRcm'.
+     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -47,6 +63,9 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
+    /**
+     * The license type.
+     */
     @InputImport(name="licenseType")
     private final @Nullable Input<Either<String,LicenseType>> licenseType;
 
@@ -54,6 +73,9 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
         return this.licenseType == null ? Input.empty() : this.licenseType;
     }
 
+    /**
+     * The multi VM group name.
+     */
     @InputImport(name="multiVmGroupName")
     private final @Nullable Input<String> multiVmGroupName;
 
@@ -61,6 +83,9 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
         return this.multiVmGroupName == null ? Input.empty() : this.multiVmGroupName;
     }
 
+    /**
+     * The process server Id.
+     */
     @InputImport(name="processServerId")
     private final @Nullable Input<String> processServerId;
 
@@ -68,6 +93,9 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
         return this.processServerId == null ? Input.empty() : this.processServerId;
     }
 
+    /**
+     * The run-as account Id.
+     */
     @InputImport(name="runAsAccountId")
     private final @Nullable Input<String> runAsAccountId;
 
@@ -75,6 +103,9 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
         return this.runAsAccountId == null ? Input.empty() : this.runAsAccountId;
     }
 
+    /**
+     * The target availability set ARM Id.
+     */
     @InputImport(name="targetAvailabilitySetId")
     private final @Nullable Input<String> targetAvailabilitySetId;
 
@@ -82,6 +113,9 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
         return this.targetAvailabilitySetId == null ? Input.empty() : this.targetAvailabilitySetId;
     }
 
+    /**
+     * The target availability zone.
+     */
     @InputImport(name="targetAvailabilityZone")
     private final @Nullable Input<String> targetAvailabilityZone;
 
@@ -89,6 +123,9 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
         return this.targetAvailabilityZone == null ? Input.empty() : this.targetAvailabilityZone;
     }
 
+    /**
+     * The target boot diagnostics storage account ARM Id.
+     */
     @InputImport(name="targetBootDiagnosticsStorageAccountId")
     private final @Nullable Input<String> targetBootDiagnosticsStorageAccountId;
 
@@ -96,6 +133,9 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
         return this.targetBootDiagnosticsStorageAccountId == null ? Input.empty() : this.targetBootDiagnosticsStorageAccountId;
     }
 
+    /**
+     * The selected target network ARM Id.
+     */
     @InputImport(name="targetNetworkId")
     private final @Nullable Input<String> targetNetworkId;
 
@@ -103,6 +143,9 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
         return this.targetNetworkId == null ? Input.empty() : this.targetNetworkId;
     }
 
+    /**
+     * The target proximity placement group Id.
+     */
     @InputImport(name="targetProximityPlacementGroupId")
     private final @Nullable Input<String> targetProximityPlacementGroupId;
 
@@ -110,6 +153,9 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
         return this.targetProximityPlacementGroupId == null ? Input.empty() : this.targetProximityPlacementGroupId;
     }
 
+    /**
+     * The target resource group ARM Id.
+     */
     @InputImport(name="targetResourceGroupId")
     private final @Nullable Input<String> targetResourceGroupId;
 
@@ -117,6 +163,9 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
         return this.targetResourceGroupId == null ? Input.empty() : this.targetResourceGroupId;
     }
 
+    /**
+     * The selected target subnet name.
+     */
     @InputImport(name="targetSubnetName")
     private final @Nullable Input<String> targetSubnetName;
 
@@ -124,6 +173,9 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
         return this.targetSubnetName == null ? Input.empty() : this.targetSubnetName;
     }
 
+    /**
+     * The target VM name.
+     */
     @InputImport(name="targetVmName")
     private final @Nullable Input<String> targetVmName;
 
@@ -131,6 +183,9 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
         return this.targetVmName == null ? Input.empty() : this.targetVmName;
     }
 
+    /**
+     * The target VM size.
+     */
     @InputImport(name="targetVmSize")
     private final @Nullable Input<String> targetVmSize;
 
@@ -138,6 +193,9 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
         return this.targetVmSize == null ? Input.empty() : this.targetVmSize;
     }
 
+    /**
+     * The selected test network ARM Id.
+     */
     @InputImport(name="testNetworkId")
     private final @Nullable Input<String> testNetworkId;
 
@@ -145,6 +203,9 @@ public final class InMageRcmEnableProtectionInputArgs extends io.pulumi.resource
         return this.testNetworkId == null ? Input.empty() : this.testNetworkId;
     }
 
+    /**
+     * The selected test subnet name.
+     */
     @InputImport(name="testSubnetName")
     private final @Nullable Input<String> testSubnetName;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListListTenantConfigurationViolation {
+/**
+ * List of list of items that violate tenant's configuration.
+API Version: 2020-09-01-preview.
+ *
+ * List of list of items that violate tenant's configuration.
+ */
     public static CompletableFuture<ListListTenantConfigurationViolationResult> invokeAsync(@Nullable ListListTenantConfigurationViolationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:portal:listListTenantConfigurationViolation", TypeShape.of(ListListTenantConfigurationViolationResult.class), args == null ? ListListTenantConfigurationViolationArgs.Empty : args, Utilities.withVersion(options));
     }

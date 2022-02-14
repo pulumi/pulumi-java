@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationManagementPolicyResponse {
+/**
+ * The managed application management mode.
+ */
     private final @Nullable String mode;
 
     @OutputCustomType.Constructor({"mode"})
@@ -18,6 +21,9 @@ public final class ApplicationManagementPolicyResponse {
         this.mode = mode;
     }
 
+/**
+ * The managed application management mode.
+ */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }

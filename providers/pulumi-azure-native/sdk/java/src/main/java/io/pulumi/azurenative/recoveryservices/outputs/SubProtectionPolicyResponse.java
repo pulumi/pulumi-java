@@ -18,8 +18,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SubProtectionPolicyResponse {
+/**
+ * Type of backup policy type
+ */
     private final @Nullable String policyType;
+/**
+ * Retention policy with the details on backup copy retention ranges.
+ */
     private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
+/**
+ * Backup schedule specified as part of backup policy.
+ */
     private final @Nullable Object schedulePolicy;
 
     @OutputCustomType.Constructor({"policyType","retentionPolicy","schedulePolicy"})
@@ -32,12 +41,21 @@ public final class SubProtectionPolicyResponse {
         this.schedulePolicy = schedulePolicy;
     }
 
+/**
+ * Type of backup policy type
+ */
     public Optional<String> getPolicyType() {
         return Optional.ofNullable(this.policyType);
     }
+/**
+ * Retention policy with the details on backup copy retention ranges.
+ */
     public Optional<Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse>> getRetentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
+/**
+ * Backup schedule specified as part of backup policy.
+ */
     public Optional<Object> getSchedulePolicy() {
         return Optional.ofNullable(this.schedulePolicy);
     }

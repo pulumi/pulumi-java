@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * By default, your agent responds to a matched intent with a static response. As an alternative, you can provide a more dynamic response by using fulfillment. When you enable fulfillment for an intent, Dialogflow responds to that intent by calling a service that you define. For example, if an end-user wants to schedule a haircut on Friday, your service can check your database and respond to the end-user with availability information for Friday. For more information, see the [fulfillment guide](https://cloud.google.com/dialogflow/docs/fulfillment-overview).
+ */
 public final class GoogleCloudDialogflowV2beta1FulfillmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1FulfillmentArgs Empty = new GoogleCloudDialogflowV2beta1FulfillmentArgs();
 
+    /**
+     * The human-readable name of the fulfillment, unique within the agent. This field is not used for Fulfillment in an Environment.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -25,6 +31,9 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentArgs extends io.pulumi
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Whether fulfillment is enabled.
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -32,6 +41,9 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentArgs extends io.pulumi
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * The field defines whether the fulfillment is enabled for certain features.
+     */
     @InputImport(name="features")
     private final @Nullable Input<List<GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs>> features;
 
@@ -39,6 +51,9 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentArgs extends io.pulumi
         return this.features == null ? Input.empty() : this.features;
     }
 
+    /**
+     * Configuration for a generic web service.
+     */
     @InputImport(name="genericWebService")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceArgs> genericWebService;
 
@@ -46,6 +61,9 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentArgs extends io.pulumi
         return this.genericWebService == null ? Input.empty() : this.genericWebService;
     }
 
+    /**
+     * The unique identifier of the fulfillment. Supported formats: - `projects//agent/fulfillment` - `projects//locations//agent/fulfillment` This field is not used for Fulfillment in an Environment.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

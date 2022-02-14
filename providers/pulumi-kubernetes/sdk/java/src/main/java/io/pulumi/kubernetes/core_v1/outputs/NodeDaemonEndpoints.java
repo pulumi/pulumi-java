@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NodeDaemonEndpoints {
+/**
+ * Endpoint on which Kubelet is listening.
+ */
     private final @Nullable DaemonEndpoint kubeletEndpoint;
 
     @OutputCustomType.Constructor({"kubeletEndpoint"})
@@ -18,6 +21,9 @@ public final class NodeDaemonEndpoints {
         this.kubeletEndpoint = kubeletEndpoint;
     }
 
+/**
+ * Endpoint on which Kubelet is listening.
+ */
     public Optional<DaemonEndpoint> getKubeletEndpoint() {
         return Optional.ofNullable(this.kubeletEndpoint);
     }

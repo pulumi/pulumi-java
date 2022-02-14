@@ -21,29 +21,101 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetClusterResult {
+/**
+ * The cluster data ingestion URI.
+ */
     private final String dataIngestionUri;
+/**
+ * A boolean value that indicates if the cluster's disks are encrypted.
+ */
     private final @Nullable Boolean enableDiskEncryption;
+/**
+ * A boolean value that indicates if double encryption is enabled.
+ */
     private final @Nullable Boolean enableDoubleEncryption;
+/**
+ * A boolean value that indicates if the purge operations are enabled.
+ */
     private final @Nullable Boolean enablePurge;
+/**
+ * A boolean value that indicates if the streaming ingest is enabled.
+ */
     private final @Nullable Boolean enableStreamingIngest;
+/**
+ * The engine type
+ */
     private final @Nullable String engineType;
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     private final String etag;
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     private final String id;
+/**
+ * The identity of the cluster, if configured.
+ */
     private final @Nullable IdentityResponse identity;
+/**
+ * KeyVault properties for the cluster encryption.
+ */
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
+/**
+ * List of the cluster's language extensions.
+ */
     private final LanguageExtensionsListResponse languageExtensions;
+/**
+ * The geo-location where the resource lives
+ */
     private final String location;
+/**
+ * The name of the resource
+ */
     private final String name;
+/**
+ * Optimized auto scale definition.
+ */
     private final @Nullable OptimizedAutoscaleResponse optimizedAutoscale;
+/**
+ * The provisioned state of the resource.
+ */
     private final String provisioningState;
+/**
+ * The SKU of the cluster.
+ */
     private final AzureSkuResponse sku;
+/**
+ * The state of the resource.
+ */
     private final String state;
+/**
+ * The reason for the cluster's current state.
+ */
     private final String stateReason;
+/**
+ * Resource tags.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * The cluster's external tenants.
+ */
     private final @Nullable List<TrustedExternalTenantResponse> trustedExternalTenants;
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     private final String type;
+/**
+ * The cluster URI.
+ */
     private final String uri;
+/**
+ * Virtual network definition.
+ */
     private final @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration;
+/**
+ * The availability zones of the cluster.
+ */
     private final @Nullable List<String> zones;
 
     @OutputCustomType.Constructor({"dataIngestionUri","enableDiskEncryption","enableDoubleEncryption","enablePurge","enableStreamingIngest","engineType","etag","id","identity","keyVaultProperties","languageExtensions","location","name","optimizedAutoscale","provisioningState","sku","state","stateReason","tags","trustedExternalTenants","type","uri","virtualNetworkConfiguration","zones"})
@@ -98,75 +170,147 @@ public final class GetClusterResult {
         this.zones = zones;
     }
 
+/**
+ * The cluster data ingestion URI.
+ */
     public String getDataIngestionUri() {
         return this.dataIngestionUri;
     }
+/**
+ * A boolean value that indicates if the cluster's disks are encrypted.
+ */
     public Optional<Boolean> getEnableDiskEncryption() {
         return Optional.ofNullable(this.enableDiskEncryption);
     }
+/**
+ * A boolean value that indicates if double encryption is enabled.
+ */
     public Optional<Boolean> getEnableDoubleEncryption() {
         return Optional.ofNullable(this.enableDoubleEncryption);
     }
+/**
+ * A boolean value that indicates if the purge operations are enabled.
+ */
     public Optional<Boolean> getEnablePurge() {
         return Optional.ofNullable(this.enablePurge);
     }
+/**
+ * A boolean value that indicates if the streaming ingest is enabled.
+ */
     public Optional<Boolean> getEnableStreamingIngest() {
         return Optional.ofNullable(this.enableStreamingIngest);
     }
+/**
+ * The engine type
+ */
     public Optional<String> getEngineType() {
         return Optional.ofNullable(this.engineType);
     }
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The identity of the cluster, if configured.
+ */
     public Optional<IdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
+/**
+ * KeyVault properties for the cluster encryption.
+ */
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
+/**
+ * List of the cluster's language extensions.
+ */
     public LanguageExtensionsListResponse getLanguageExtensions() {
         return this.languageExtensions;
     }
+/**
+ * The geo-location where the resource lives
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * The name of the resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Optimized auto scale definition.
+ */
     public Optional<OptimizedAutoscaleResponse> getOptimizedAutoscale() {
         return Optional.ofNullable(this.optimizedAutoscale);
     }
+/**
+ * The provisioned state of the resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * The SKU of the cluster.
+ */
     public AzureSkuResponse getSku() {
         return this.sku;
     }
+/**
+ * The state of the resource.
+ */
     public String getState() {
         return this.state;
     }
+/**
+ * The reason for the cluster's current state.
+ */
     public String getStateReason() {
         return this.stateReason;
     }
+/**
+ * Resource tags.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * The cluster's external tenants.
+ */
     public List<TrustedExternalTenantResponse> getTrustedExternalTenants() {
         return this.trustedExternalTenants == null ? List.of() : this.trustedExternalTenants;
     }
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * The cluster URI.
+ */
     public String getUri() {
         return this.uri;
     }
+/**
+ * Virtual network definition.
+ */
     public Optional<VirtualNetworkConfigurationResponse> getVirtualNetworkConfiguration() {
         return Optional.ofNullable(this.virtualNetworkConfiguration);
     }
+/**
+ * The availability zones of the cluster.
+ */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }

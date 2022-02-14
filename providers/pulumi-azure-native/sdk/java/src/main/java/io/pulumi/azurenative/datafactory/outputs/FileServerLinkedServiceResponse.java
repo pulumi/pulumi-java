@@ -19,14 +19,42 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FileServerLinkedServiceResponse {
+/**
+ * List of tags that can be used for describing the linked service.
+ */
     private final @Nullable List<Object> annotations;
+/**
+ * The integration runtime reference.
+ */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+/**
+ * Linked service description.
+ */
     private final @Nullable String description;
+/**
+ * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object encryptedCredential;
+/**
+ * Host name of the server. Type: string (or Expression with resultType string).
+ */
     private final Object host;
+/**
+ * Parameters for linked service.
+ */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+/**
+ * Password to logon the server.
+ */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+/**
+ * Type of linked service.
+Expected value is 'FileServer'.
+ */
     private final String type;
+/**
+ * User ID to logon the server. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object userId;
 
     @OutputCustomType.Constructor({"annotations","connectVia","description","encryptedCredential","host","parameters","password","type","userId"})
@@ -51,30 +79,58 @@ public final class FileServerLinkedServiceResponse {
         this.userId = userId;
     }
 
+/**
+ * List of tags that can be used for describing the linked service.
+ */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
+/**
+ * The integration runtime reference.
+ */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
+/**
+ * Linked service description.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
+/**
+ * Host name of the server. Type: string (or Expression with resultType string).
+ */
     public Object getHost() {
         return this.host;
     }
+/**
+ * Parameters for linked service.
+ */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+/**
+ * Password to logon the server.
+ */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
+/**
+ * Type of linked service.
+Expected value is 'FileServer'.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * User ID to logon the server. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getUserId() {
         return Optional.ofNullable(this.userId);
     }

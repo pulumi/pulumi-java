@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * VPN client root certificate of virtual network gateway.
+ */
 public final class VpnClientRootCertificateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VpnClientRootCertificateResponse Empty = new VpnClientRootCertificateResponse();
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -21,6 +27,9 @@ public final class VpnClientRootCertificateResponse extends io.pulumi.resources.
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -28,6 +37,9 @@ public final class VpnClientRootCertificateResponse extends io.pulumi.resources.
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -35,6 +47,9 @@ public final class VpnClientRootCertificateResponse extends io.pulumi.resources.
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The provisioning state of the VPN client root certificate resource.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -42,6 +57,9 @@ public final class VpnClientRootCertificateResponse extends io.pulumi.resources.
         return this.provisioningState;
     }
 
+    /**
+     * The certificate public data.
+     */
     @InputImport(name="publicCertData", required=true)
     private final String publicCertData;
 

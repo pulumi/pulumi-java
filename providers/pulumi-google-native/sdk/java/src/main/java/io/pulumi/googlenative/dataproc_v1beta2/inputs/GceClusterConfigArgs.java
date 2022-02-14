@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Common config settings for resources of Compute Engine cluster instances, applicable to all instances in the cluster.
+ */
 public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GceClusterConfigArgs Empty = new GceClusterConfigArgs();
 
+    /**
+     * Optional. If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This internal_ip_only restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.
+     */
     @InputImport(name="internalIpOnly")
     private final @Nullable Input<Boolean> internalIpOnly;
 
@@ -28,6 +34,9 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.internalIpOnly == null ? Input.empty() : this.internalIpOnly;
     }
 
+    /**
+     * The Compute Engine metadata entries to add to all instances (see Project and instance metadata (https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -35,6 +44,9 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * Optional. The Compute Engine network to be used for machine communications. Cannot be specified with subnetwork_uri. If neither network_uri nor subnetwork_uri is specified, the "default" network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see Using Subnetworks (https://cloud.google.com/compute/docs/subnetworks) for more information).A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default projects/[project_id]/regions/global/default default
+     */
     @InputImport(name="networkUri")
     private final @Nullable Input<String> networkUri;
 
@@ -42,6 +54,9 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.networkUri == null ? Input.empty() : this.networkUri;
     }
 
+    /**
+     * Optional. Node Group Affinity for sole-tenant clusters.
+     */
     @InputImport(name="nodeGroupAffinity")
     private final @Nullable Input<NodeGroupAffinityArgs> nodeGroupAffinity;
 
@@ -49,6 +64,9 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.nodeGroupAffinity == null ? Input.empty() : this.nodeGroupAffinity;
     }
 
+    /**
+     * Optional. The type of IPv6 access for a cluster.
+     */
     @InputImport(name="privateIpv6GoogleAccess")
     private final @Nullable Input<GceClusterConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
 
@@ -56,6 +74,9 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.privateIpv6GoogleAccess == null ? Input.empty() : this.privateIpv6GoogleAccess;
     }
 
+    /**
+     * Optional. Reservation Affinity for consuming Zonal reservation.
+     */
     @InputImport(name="reservationAffinity")
     private final @Nullable Input<ReservationAffinityArgs> reservationAffinity;
 
@@ -63,6 +84,9 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.reservationAffinity == null ? Input.empty() : this.reservationAffinity;
     }
 
+    /**
+     * Optional. The Dataproc service account (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-accounts#service_accounts_in_dataproc) (also see VM Data Plane identity (https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to access Google Cloud Platform services.If not specified, the Compute Engine default service account (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.
+     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<String> serviceAccount;
 
@@ -70,6 +94,9 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
+    /**
+     * Optional. The URIs of service account scopes to be included in Compute Engine instances. The following base set of scopes is always included: https://www.googleapis.com/auth/cloud.useraccounts.readonly https://www.googleapis.com/auth/devstorage.read_write https://www.googleapis.com/auth/logging.writeIf no scopes are specified, the following defaults are also provided: https://www.googleapis.com/auth/bigquery https://www.googleapis.com/auth/bigtable.admin.table https://www.googleapis.com/auth/bigtable.data https://www.googleapis.com/auth/devstorage.full_control
+     */
     @InputImport(name="serviceAccountScopes")
     private final @Nullable Input<List<String>> serviceAccountScopes;
 
@@ -77,6 +104,9 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.serviceAccountScopes == null ? Input.empty() : this.serviceAccountScopes;
     }
 
+    /**
+     * Optional. Shielded Instance Config for clusters using Compute Engine Shielded VMs (https://cloud.google.com/security/shielded-cloud/shielded-vm).
+     */
     @InputImport(name="shieldedInstanceConfig")
     private final @Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
@@ -84,6 +114,9 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
     }
 
+    /**
+     * Optional. The Compute Engine subnetwork to be used for machine communications. Cannot be specified with network_uri.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/regions/us-east1/subnetworks/sub0 projects/[project_id]/regions/us-east1/subnetworks/sub0 sub0
+     */
     @InputImport(name="subnetworkUri")
     private final @Nullable Input<String> subnetworkUri;
 
@@ -91,6 +124,9 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.subnetworkUri == null ? Input.empty() : this.subnetworkUri;
     }
 
+    /**
+     * The Compute Engine tags to add to all instances (see Tagging instances (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 
@@ -98,6 +134,9 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone] projects/[project_id]/zones/[zone] us-central1-f
+     */
     @InputImport(name="zoneUri")
     private final @Nullable Input<String> zoneUri;
 

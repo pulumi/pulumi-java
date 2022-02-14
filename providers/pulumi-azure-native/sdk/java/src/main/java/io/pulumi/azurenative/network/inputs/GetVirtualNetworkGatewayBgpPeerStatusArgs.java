@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVirtualNetworkGatewayBgpPeerStatusArgs Empty = new GetVirtualNetworkGatewayBgpPeerStatusArgs();
 
+    /**
+     * The IP address of the peer to retrieve the status of.
+     */
     @InputImport(name="peer")
     private final @Nullable String peer;
 
@@ -21,6 +27,9 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends io.pulumi.r
         return this.peer == null ? Optional.empty() : Optional.ofNullable(this.peer);
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -28,6 +37,9 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends io.pulumi.r
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the virtual network gateway.
+     */
     @InputImport(name="virtualNetworkGatewayName", required=true)
     private final String virtualNetworkGatewayName;
 

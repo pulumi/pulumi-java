@@ -17,18 +17,57 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetTestMatrixResult {
+/**
+ * Information about the client which invoked the test.
+ */
     private final ClientInfoResponse clientInfo;
+/**
+ * The devices the tests are being executed on.
+ */
     private final EnvironmentMatrixResponse environmentMatrix;
+/**
+ * If true, only a single attempt at most will be made to run each execution/shard in the matrix. Flaky test attempts are not affected. Normally, 2 or more attempts are made if a potential infrastructure issue is detected. This feature is for latency sensitive workloads. The incidence of execution failures may be significantly greater for fail-fast matrices and support is more limited because of that expectation.
+ */
     private final Boolean failFast;
+/**
+ * The number of times a TestExecution should be re-attempted if one or more of its test cases fail for any reason. The maximum number of reruns allowed is 10. Default is 0, which implies no reruns.
+ */
     private final Integer flakyTestAttempts;
+/**
+ * Describes why the matrix is considered invalid. Only useful for matrices in the INVALID state.
+ */
     private final String invalidMatrixDetails;
+/**
+ * Output Only. The overall outcome of the test. Only set when the test matrix state is FINISHED.
+ */
     private final String outcomeSummary;
+/**
+ * The cloud project that owns the test matrix.
+ */
     private final String project;
+/**
+ * Where the results for the matrix are written.
+ */
     private final ResultStorageResponse resultStorage;
+/**
+ * Indicates the current progress of the test matrix.
+ */
     private final String state;
+/**
+ * The list of test executions that the service creates for this matrix.
+ */
     private final List<TestExecutionResponse> testExecutions;
+/**
+ * Unique id set by the service.
+ */
     private final String testMatrixId;
+/**
+ * How to run the test.
+ */
     private final TestSpecificationResponse testSpecification;
+/**
+ * The time this test matrix was initially created.
+ */
     private final String timestamp;
 
     @OutputCustomType.Constructor({"clientInfo","environmentMatrix","failFast","flakyTestAttempts","invalidMatrixDetails","outcomeSummary","project","resultStorage","state","testExecutions","testMatrixId","testSpecification","timestamp"})
@@ -61,42 +100,81 @@ public final class GetTestMatrixResult {
         this.timestamp = Objects.requireNonNull(timestamp);
     }
 
+/**
+ * Information about the client which invoked the test.
+ */
     public ClientInfoResponse getClientInfo() {
         return this.clientInfo;
     }
+/**
+ * The devices the tests are being executed on.
+ */
     public EnvironmentMatrixResponse getEnvironmentMatrix() {
         return this.environmentMatrix;
     }
+/**
+ * If true, only a single attempt at most will be made to run each execution/shard in the matrix. Flaky test attempts are not affected. Normally, 2 or more attempts are made if a potential infrastructure issue is detected. This feature is for latency sensitive workloads. The incidence of execution failures may be significantly greater for fail-fast matrices and support is more limited because of that expectation.
+ */
     public Boolean getFailFast() {
         return this.failFast;
     }
+/**
+ * The number of times a TestExecution should be re-attempted if one or more of its test cases fail for any reason. The maximum number of reruns allowed is 10. Default is 0, which implies no reruns.
+ */
     public Integer getFlakyTestAttempts() {
         return this.flakyTestAttempts;
     }
+/**
+ * Describes why the matrix is considered invalid. Only useful for matrices in the INVALID state.
+ */
     public String getInvalidMatrixDetails() {
         return this.invalidMatrixDetails;
     }
+/**
+ * Output Only. The overall outcome of the test. Only set when the test matrix state is FINISHED.
+ */
     public String getOutcomeSummary() {
         return this.outcomeSummary;
     }
+/**
+ * The cloud project that owns the test matrix.
+ */
     public String getProject() {
         return this.project;
     }
+/**
+ * Where the results for the matrix are written.
+ */
     public ResultStorageResponse getResultStorage() {
         return this.resultStorage;
     }
+/**
+ * Indicates the current progress of the test matrix.
+ */
     public String getState() {
         return this.state;
     }
+/**
+ * The list of test executions that the service creates for this matrix.
+ */
     public List<TestExecutionResponse> getTestExecutions() {
         return this.testExecutions;
     }
+/**
+ * Unique id set by the service.
+ */
     public String getTestMatrixId() {
         return this.testMatrixId;
     }
+/**
+ * How to run the test.
+ */
     public TestSpecificationResponse getTestSpecification() {
         return this.testSpecification;
     }
+/**
+ * The time this test matrix was initially created.
+ */
     public String getTimestamp() {
         return this.timestamp;
     }

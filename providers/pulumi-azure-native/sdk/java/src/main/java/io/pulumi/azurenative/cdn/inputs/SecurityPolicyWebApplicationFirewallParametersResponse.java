@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The json object containing security policy waf parameters
+ */
 public final class SecurityPolicyWebApplicationFirewallParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityPolicyWebApplicationFirewallParametersResponse Empty = new SecurityPolicyWebApplicationFirewallParametersResponse();
 
+    /**
+     * Waf associations
+     */
     @InputImport(name="associations")
     private final @Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations;
 
@@ -24,6 +30,10 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
         return this.associations == null ? List.of() : this.associations;
     }
 
+    /**
+     * The type of the Security policy to create.
+Expected value is 'WebApplicationFirewall'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -31,6 +41,9 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
         return this.type;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="wafPolicy")
     private final @Nullable ResourceReferenceResponse wafPolicy;
 

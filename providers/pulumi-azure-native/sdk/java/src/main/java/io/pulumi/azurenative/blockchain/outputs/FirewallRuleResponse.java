@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FirewallRuleResponse {
+/**
+ * Gets or sets the end IP address of the firewall rule range.
+ */
     private final @Nullable String endIpAddress;
+/**
+ * Gets or sets the name of the firewall rules.
+ */
     private final @Nullable String ruleName;
+/**
+ * Gets or sets the start IP address of the firewall rule range.
+ */
     private final @Nullable String startIpAddress;
 
     @OutputCustomType.Constructor({"endIpAddress","ruleName","startIpAddress"})
@@ -25,12 +34,21 @@ public final class FirewallRuleResponse {
         this.startIpAddress = startIpAddress;
     }
 
+/**
+ * Gets or sets the end IP address of the firewall rule range.
+ */
     public Optional<String> getEndIpAddress() {
         return Optional.ofNullable(this.endIpAddress);
     }
+/**
+ * Gets or sets the name of the firewall rules.
+ */
     public Optional<String> getRuleName() {
         return Optional.ofNullable(this.ruleName);
     }
+/**
+ * Gets or sets the start IP address of the firewall rule range.
+ */
     public Optional<String> getStartIpAddress() {
         return Optional.ofNullable(this.startIpAddress);
     }

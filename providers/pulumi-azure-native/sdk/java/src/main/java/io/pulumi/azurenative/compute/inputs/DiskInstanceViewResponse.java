@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The instance view of the disk.
+ */
 public final class DiskInstanceViewResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DiskInstanceViewResponse Empty = new DiskInstanceViewResponse();
 
+    /**
+     * Specifies the encryption settings for the OS Disk. <br><br> Minimum api-version: 2015-06-15
+     */
     @InputImport(name="encryptionSettings")
     private final @Nullable List<DiskEncryptionSettingsResponse> encryptionSettings;
 
@@ -24,6 +30,9 @@ public final class DiskInstanceViewResponse extends io.pulumi.resources.InvokeAr
         return this.encryptionSettings == null ? List.of() : this.encryptionSettings;
     }
 
+    /**
+     * The disk name.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -31,6 +40,9 @@ public final class DiskInstanceViewResponse extends io.pulumi.resources.InvokeAr
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The resource status information.
+     */
     @InputImport(name="statuses")
     private final @Nullable List<InstanceViewStatusResponse> statuses;
 

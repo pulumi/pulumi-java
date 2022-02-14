@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration settings of the Twitter provider.
+ */
 public final class TwitterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TwitterArgs Empty = new TwitterArgs();
 
+    /**
+     * <code>false</code> if the Twitter provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -22,6 +28,9 @@ public final class TwitterArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * The configuration settings of the app registration for the Twitter provider.
+     */
     @InputImport(name="registration")
     private final @Nullable Input<TwitterRegistrationArgs> registration;
 

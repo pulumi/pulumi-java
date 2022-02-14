@@ -8,55 +8,102 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.sqladmin_v1beta4.DatabaseArgs;
 import io.pulumi.googlenative.sqladmin_v1beta4.outputs.SqlServerDatabaseDetailsResponse;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Inserts a resource containing information about a database inside a Cloud SQL instance.
+ */
 @ResourceType(type="google-native:sqladmin/v1beta4:Database")
 public class Database extends io.pulumi.resources.CustomResource {
+    /**
+     * The Cloud SQL charset value.
+     */
     @OutputExport(name="charset", type=String.class, parameters={})
     private Output<String> charset;
 
+    /**
+     * @return The Cloud SQL charset value.
+     */
     public Output<String> getCharset() {
         return this.charset;
     }
+    /**
+     * The Cloud SQL collation value.
+     */
     @OutputExport(name="collation", type=String.class, parameters={})
     private Output<String> collation;
 
+    /**
+     * @return The Cloud SQL collation value.
+     */
     public Output<String> getCollation() {
         return this.collation;
     }
+    /**
+     * The name of the Cloud SQL instance. This does not include the project ID.
+     */
     @OutputExport(name="instance", type=String.class, parameters={})
     private Output<String> instance;
 
+    /**
+     * @return The name of the Cloud SQL instance. This does not include the project ID.
+     */
     public Output<String> getInstance() {
         return this.instance;
     }
+    /**
+     * This is always `sql#database`.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return This is always `sql#database`.
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The project ID of the project containing the Cloud SQL database. The Google apps domain is prefixed if applicable.
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The project ID of the project containing the Cloud SQL database. The Google apps domain is prefixed if applicable.
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * The URI of this resource.
+     */
     @OutputExport(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
+    /**
+     * @return The URI of this resource.
+     */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
+    /**
+     * 
+     */
     @OutputExport(name="sqlserverDatabaseDetails", type=SqlServerDatabaseDetailsResponse.class, parameters={})
     private Output<SqlServerDatabaseDetailsResponse> sqlserverDatabaseDetails;
 
@@ -64,6 +111,12 @@ public class Database extends io.pulumi.resources.CustomResource {
         return this.sqlserverDatabaseDetails;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Database(String name, DatabaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:sqladmin/v1beta4:Database", name, args == null ? DatabaseArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -79,6 +132,14 @@ public class Database extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Database get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Database(name, id, options);
     }

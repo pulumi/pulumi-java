@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RedisLinkedServerResponse {
+/**
+ * Linked server Id.
+ */
     private final String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -16,6 +19,9 @@ public final class RedisLinkedServerResponse {
         this.id = Objects.requireNonNull(id);
     }
 
+/**
+ * Linked server Id.
+ */
     public String getId() {
         return this.id;
     }

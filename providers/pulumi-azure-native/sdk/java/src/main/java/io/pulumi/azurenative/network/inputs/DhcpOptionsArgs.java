@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * DhcpOptions contains an array of DNS servers available to VMs deployed in the virtual network. Standard DHCP option for a subnet overrides VNET DHCP options.
+ */
 public final class DhcpOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DhcpOptionsArgs Empty = new DhcpOptionsArgs();
 
+    /**
+     * The list of DNS servers IP addresses.
+     */
     @InputImport(name="dnsServers")
     private final @Nullable Input<List<String>> dnsServers;
 

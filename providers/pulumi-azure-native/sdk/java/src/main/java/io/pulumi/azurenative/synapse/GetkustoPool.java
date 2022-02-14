@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetkustoPool {
+/**
+ * Class representing a Kusto kusto pool.
+API Version: 2021-04-01-preview.
+ *
+ * Class representing a Kusto kusto pool.
+ */
     public static CompletableFuture<GetkustoPoolResult> invokeAsync(GetkustoPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getkustoPool", TypeShape.of(GetkustoPoolResult.class), args == null ? GetkustoPoolArgs.Empty : args, Utilities.withVersion(options));
     }

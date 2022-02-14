@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class TransparentDataEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TransparentDataEncryptionArgs Empty = new TransparentDataEncryptionArgs();
 
+    /**
+     * The name of the database for which setting the transparent data encryption applies.
+     */
     @InputImport(name="databaseName", required=true)
     private final Input<String> databaseName;
 
@@ -23,6 +29,9 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
         return this.databaseName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -30,6 +39,9 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -37,6 +49,9 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
         return this.serverName;
     }
 
+    /**
+     * The status of the database transparent data encryption.
+     */
     @InputImport(name="status")
     private final @Nullable Input<Either<String,TransparentDataEncryptionStatus>> status;
 
@@ -44,6 +59,9 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * The name of the transparent data encryption configuration.
+     */
     @InputImport(name="transparentDataEncryptionName")
     private final @Nullable Input<String> transparentDataEncryptionName;
 

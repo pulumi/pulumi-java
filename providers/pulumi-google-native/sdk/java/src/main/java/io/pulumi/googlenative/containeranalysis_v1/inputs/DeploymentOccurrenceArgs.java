@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The period during which some deployable was active in a runtime.
+ */
 public final class DeploymentOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeploymentOccurrenceArgs Empty = new DeploymentOccurrenceArgs();
 
+    /**
+     * Address of the runtime element hosting this deployment.
+     */
     @InputImport(name="address")
     private final @Nullable Input<String> address;
 
@@ -22,6 +28,9 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
         return this.address == null ? Input.empty() : this.address;
     }
 
+    /**
+     * Configuration used to create this deployment.
+     */
     @InputImport(name="config")
     private final @Nullable Input<String> config;
 
@@ -29,6 +38,9 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
         return this.config == null ? Input.empty() : this.config;
     }
 
+    /**
+     * Beginning of the lifetime of this deployment.
+     */
     @InputImport(name="deployTime", required=true)
     private final Input<String> deployTime;
 
@@ -36,6 +48,9 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
         return this.deployTime;
     }
 
+    /**
+     * Platform hosting this deployment.
+     */
     @InputImport(name="platform")
     private final @Nullable Input<DeploymentOccurrencePlatform> platform;
 
@@ -43,6 +58,9 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
         return this.platform == null ? Input.empty() : this.platform;
     }
 
+    /**
+     * End of the lifetime of this deployment.
+     */
     @InputImport(name="undeployTime")
     private final @Nullable Input<String> undeployTime;
 
@@ -50,6 +68,9 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
         return this.undeployTime == null ? Input.empty() : this.undeployTime;
     }
 
+    /**
+     * Identity of the user that triggered this deployment.
+     */
     @InputImport(name="userEmail")
     private final @Nullable Input<String> userEmail;
 

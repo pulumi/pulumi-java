@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Daily retention format.
+ */
 public final class DailyRetentionFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DailyRetentionFormatResponse Empty = new DailyRetentionFormatResponse();
 
+    /**
+     * List of days of the month.
+     */
     @InputImport(name="daysOfTheMonth")
     private final @Nullable List<DayResponse> daysOfTheMonth;
 

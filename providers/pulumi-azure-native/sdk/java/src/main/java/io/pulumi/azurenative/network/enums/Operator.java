@@ -8,19 +8,58 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Comparison type to use for matching with the variable value.
+ */
     @EnumType
     public enum Operator {
+/**
+ * 
+ */
         Any("Any"),
+/**
+ * 
+ */
         IPMatch("IPMatch"),
+/**
+ * 
+ */
         GeoMatch("GeoMatch"),
+/**
+ * 
+ */
         Equal("Equal"),
+/**
+ * 
+ */
         Contains("Contains"),
+/**
+ * 
+ */
         LessThan("LessThan"),
+/**
+ * 
+ */
         GreaterThan("GreaterThan"),
+/**
+ * 
+ */
         LessThanOrEqual("LessThanOrEqual"),
+/**
+ * 
+ */
         GreaterThanOrEqual("GreaterThanOrEqual"),
+/**
+ * 
+ */
         BeginsWith("BeginsWith"),
+/**
+ * 
+ */
         EndsWith("EndsWith"),
+/**
+ * 
+ */
         RegEx("RegEx");
 
         private final String value;

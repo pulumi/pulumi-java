@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies the storage settings for the virtual machine disks.
+ */
 public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageProfileArgs Empty = new StorageProfileArgs();
 
+    /**
+     * Specifies the parameters that are used to add a data disk to a virtual machine.
+     */
     @InputImport(name="dataDisks")
     private final @Nullable Input<List<DataDiskArgs>> dataDisks;
 
@@ -24,6 +30,9 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataDisks == null ? Input.empty() : this.dataDisks;
     }
 
+    /**
+     * The image reference properties.
+     */
     @InputImport(name="imageReference")
     private final @Nullable Input<ImageReferenceArgs> imageReference;
 
@@ -31,6 +40,9 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.imageReference == null ? Input.empty() : this.imageReference;
     }
 
+    /**
+     * Specifies information about the operating system disk used by the virtual machine.
+     */
     @InputImport(name="osDisk")
     private final @Nullable Input<OsDiskArgs> osDisk;
 

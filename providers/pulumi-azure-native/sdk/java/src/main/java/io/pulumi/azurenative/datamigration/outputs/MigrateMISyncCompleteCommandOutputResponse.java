@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MigrateMISyncCompleteCommandOutputResponse {
+/**
+ * List of errors that happened during the command execution
+ */
     private final @Nullable List<ReportableExceptionResponse> errors;
 
     @OutputCustomType.Constructor({"errors"})
@@ -18,6 +21,9 @@ public final class MigrateMISyncCompleteCommandOutputResponse {
         this.errors = errors;
     }
 
+/**
+ * List of errors that happened during the command execution
+ */
     public List<ReportableExceptionResponse> getErrors() {
         return this.errors == null ? List.of() : this.errors;
     }

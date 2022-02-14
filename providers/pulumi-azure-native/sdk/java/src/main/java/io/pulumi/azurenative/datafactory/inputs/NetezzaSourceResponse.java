@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity Netezza source.
+ */
 public final class NetezzaSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetezzaSourceResponse Empty = new NetezzaSourceResponse();
 
+    /**
+     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+     */
     @InputImport(name="additionalColumns")
     private final @Nullable Object additionalColumns;
 
@@ -23,6 +29,9 @@ public final class NetezzaSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
     }
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -30,6 +39,9 @@ public final class NetezzaSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
+    /**
+     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -37,6 +49,9 @@ public final class NetezzaSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
+    /**
+     * The partition mechanism that will be used for Netezza read in parallel. Possible values include: "None", "DataSlice", "DynamicRange".
+     */
     @InputImport(name="partitionOption")
     private final @Nullable Object partitionOption;
 
@@ -44,6 +59,9 @@ public final class NetezzaSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.partitionOption == null ? Optional.empty() : Optional.ofNullable(this.partitionOption);
     }
 
+    /**
+     * The settings that will be leveraged for Netezza source partitioning.
+     */
     @InputImport(name="partitionSettings")
     private final @Nullable NetezzaPartitionSettingsResponse partitionSettings;
 
@@ -51,6 +69,9 @@ public final class NetezzaSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.partitionSettings == null ? Optional.empty() : Optional.ofNullable(this.partitionSettings);
     }
 
+    /**
+     * A query to retrieve data from source. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="query")
     private final @Nullable Object query;
 
@@ -58,6 +79,9 @@ public final class NetezzaSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
     }
 
+    /**
+     * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="queryTimeout")
     private final @Nullable Object queryTimeout;
 
@@ -65,6 +89,9 @@ public final class NetezzaSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
     }
 
+    /**
+     * Source retry count. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="sourceRetryCount")
     private final @Nullable Object sourceRetryCount;
 
@@ -72,6 +99,9 @@ public final class NetezzaSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
     }
 
+    /**
+     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="sourceRetryWait")
     private final @Nullable Object sourceRetryWait;
 
@@ -79,6 +109,10 @@ public final class NetezzaSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
     }
 
+    /**
+     * Copy source type.
+Expected value is 'NetezzaSource'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

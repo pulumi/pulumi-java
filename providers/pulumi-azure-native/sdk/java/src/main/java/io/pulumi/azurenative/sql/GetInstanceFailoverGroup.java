@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceFailoverGroup {
+/**
+ * An instance failover group.
+API Version: 2020-11-01-preview.
+ *
+ * An instance failover group.
+ */
     public static CompletableFuture<GetInstanceFailoverGroupResult> invokeAsync(GetInstanceFailoverGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getInstanceFailoverGroup", TypeShape.of(GetInstanceFailoverGroupResult.class), args == null ? GetInstanceFailoverGroupArgs.Empty : args, Utilities.withVersion(options));
     }

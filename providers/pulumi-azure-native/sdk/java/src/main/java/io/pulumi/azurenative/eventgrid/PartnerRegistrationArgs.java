@@ -14,10 +14,19 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PartnerRegistrationArgs Empty = new PartnerRegistrationArgs();
 
+    /**
+     * List of Azure subscription Ids that are authorized to create a partner namespace
+associated with this partner registration. This is an optional property. Creating
+partner namespaces is always permitted under the same Azure subscription as the one used
+for creating the partner registration.
+     */
     @InputImport(name="authorizedAzureSubscriptionIds")
     private final @Nullable Input<List<String>> authorizedAzureSubscriptionIds;
 
@@ -25,6 +34,9 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
         return this.authorizedAzureSubscriptionIds == null ? Input.empty() : this.authorizedAzureSubscriptionIds;
     }
 
+    /**
+     * The extension of the customer service URI of the publisher.
+     */
     @InputImport(name="customerServiceUri")
     private final @Nullable Input<String> customerServiceUri;
 
@@ -32,6 +44,9 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
         return this.customerServiceUri == null ? Input.empty() : this.customerServiceUri;
     }
 
+    /**
+     * Location of the resource.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -39,6 +54,9 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * URI of the logo.
+     */
     @InputImport(name="logoUri")
     private final @Nullable Input<String> logoUri;
 
@@ -46,6 +64,10 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
         return this.logoUri == null ? Input.empty() : this.logoUri;
     }
 
+    /**
+     * Long description for the custom scenarios and integration to be displayed in the portal if needed.
+Length of this description should not exceed 2048 characters.
+     */
     @InputImport(name="longDescription")
     private final @Nullable Input<String> longDescription;
 
@@ -53,6 +75,9 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
         return this.longDescription == null ? Input.empty() : this.longDescription;
     }
 
+    /**
+     * The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.
+     */
     @InputImport(name="partnerCustomerServiceExtension")
     private final @Nullable Input<String> partnerCustomerServiceExtension;
 
@@ -60,6 +85,12 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
         return this.partnerCustomerServiceExtension == null ? Input.empty() : this.partnerCustomerServiceExtension;
     }
 
+    /**
+     * The customer service number of the publisher. The expected phone format should start with a '+' sign 
+followed by the country code. The remaining digits are then followed. Only digits and spaces are allowed and its
+length cannot exceed 16 digits including country code. Examples of valid phone numbers are: +1 515 123 4567 and
++966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43
+     */
     @InputImport(name="partnerCustomerServiceNumber")
     private final @Nullable Input<String> partnerCustomerServiceNumber;
 
@@ -67,6 +98,9 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
         return this.partnerCustomerServiceNumber == null ? Input.empty() : this.partnerCustomerServiceNumber;
     }
 
+    /**
+     * Official name of the partner name. For example: "Contoso".
+     */
     @InputImport(name="partnerName")
     private final @Nullable Input<String> partnerName;
 
@@ -74,6 +108,9 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
         return this.partnerName == null ? Input.empty() : this.partnerName;
     }
 
+    /**
+     * Name of the partner registration.
+     */
     @InputImport(name="partnerRegistrationName")
     private final @Nullable Input<String> partnerRegistrationName;
 
@@ -81,6 +118,9 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
         return this.partnerRegistrationName == null ? Input.empty() : this.partnerRegistrationName;
     }
 
+    /**
+     * Short description of the partner resource type. The length of this description should not exceed 256 characters.
+     */
     @InputImport(name="partnerResourceTypeDescription")
     private final @Nullable Input<String> partnerResourceTypeDescription;
 
@@ -88,6 +128,9 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
         return this.partnerResourceTypeDescription == null ? Input.empty() : this.partnerResourceTypeDescription;
     }
 
+    /**
+     * Display name of the partner resource type.
+     */
     @InputImport(name="partnerResourceTypeDisplayName")
     private final @Nullable Input<String> partnerResourceTypeDisplayName;
 
@@ -95,6 +138,9 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
         return this.partnerResourceTypeDisplayName == null ? Input.empty() : this.partnerResourceTypeDisplayName;
     }
 
+    /**
+     * Name of the partner resource type.
+     */
     @InputImport(name="partnerResourceTypeName")
     private final @Nullable Input<String> partnerResourceTypeName;
 
@@ -102,6 +148,9 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
         return this.partnerResourceTypeName == null ? Input.empty() : this.partnerResourceTypeName;
     }
 
+    /**
+     * The name of the resource group within the user's subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -109,6 +158,10 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
+    /**
+     * URI of the partner website that can be used by Azure customers to setup Event Grid
+integration on an event source.
+     */
     @InputImport(name="setupUri")
     private final @Nullable Input<String> setupUri;
 
@@ -116,6 +169,9 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
         return this.setupUri == null ? Input.empty() : this.setupUri;
     }
 
+    /**
+     * Tags of the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -123,6 +179,9 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Visibility state of the partner registration.
+     */
     @InputImport(name="visibilityState")
     private final @Nullable Input<Either<String,PartnerRegistrationVisibilityState>> visibilityState;
 

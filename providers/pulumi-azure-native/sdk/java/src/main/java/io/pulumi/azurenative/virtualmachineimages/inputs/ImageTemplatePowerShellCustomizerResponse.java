@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Runs the specified PowerShell on the VM (Windows). Corresponds to Packer powershell provisioner. Exactly one of 'scriptUri' or 'inline' can be specified.
+ */
 public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ImageTemplatePowerShellCustomizerResponse Empty = new ImageTemplatePowerShellCustomizerResponse();
 
+    /**
+     * Array of PowerShell commands to execute
+     */
     @InputImport(name="inline")
     private final @Nullable List<String> inline;
 
@@ -24,6 +30,9 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
         return this.inline == null ? List.of() : this.inline;
     }
 
+    /**
+     * Friendly Name to provide context on what this customization step does
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -31,6 +40,9 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.
+     */
     @InputImport(name="runAsSystem")
     private final @Nullable Boolean runAsSystem;
 
@@ -38,6 +50,9 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
         return this.runAsSystem == null ? Optional.empty() : Optional.ofNullable(this.runAsSystem);
     }
 
+    /**
+     * If specified, the PowerShell script will be run with elevated privileges
+     */
     @InputImport(name="runElevated")
     private final @Nullable Boolean runElevated;
 
@@ -45,6 +60,9 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
         return this.runElevated == null ? Optional.empty() : Optional.ofNullable(this.runElevated);
     }
 
+    /**
+     * URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
+     */
     @InputImport(name="scriptUri")
     private final @Nullable String scriptUri;
 
@@ -52,6 +70,9 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
         return this.scriptUri == null ? Optional.empty() : Optional.ofNullable(this.scriptUri);
     }
 
+    /**
+     * SHA256 checksum of the power shell script provided in the scriptUri field above
+     */
     @InputImport(name="sha256Checksum")
     private final @Nullable String sha256Checksum;
 
@@ -59,6 +80,10 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
         return this.sha256Checksum == null ? Optional.empty() : Optional.ofNullable(this.sha256Checksum);
     }
 
+    /**
+     * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
+Expected value is 'PowerShell'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -66,6 +91,9 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
         return this.type;
     }
 
+    /**
+     * Valid exit codes for the PowerShell script. [Default: 0]
+     */
     @InputImport(name="validExitCodes")
     private final @Nullable List<Integer> validExitCodes;
 

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.apimanagement.ProductPolicyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -14,33 +13,207 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Policy Contract details.
+API Version: 2020-12-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### ApiManagementCreateProductPolicy
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var productPolicy = new AzureNative.ApiManagement.ProductPolicy("productPolicy", new AzureNative.ApiManagement.ProductPolicyArgs
+        {
+            Format = "xml",
+            PolicyId = "policy",
+            ProductId = "5702e97e5157a50f48dce801",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Value = @"<policies>
+  <inbound>
+    <rate-limit calls=""{{call-count}}"" renewal-period=""15""></rate-limit>
+    <log-to-eventhub logger-id=""16"">
+                      @( string.Join("","", DateTime.UtcNow, context.Deployment.ServiceName, context.RequestId, context.Request.IpAddress, context.Operation.Name) ) 
+                  </log-to-eventhub>
+    <quota-by-key calls=""40"" counter-key=""cc"" renewal-period=""3600"" increment-count=""@(context.Request.Method == &quot;POST&quot; ? 1:2)"" />
+    <base />
+  </inbound>
+  <backend>
+    <base />
+  </backend>
+  <outbound>
+    <base />
+  </outbound>
+</policies>",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := apimanagement.NewProductPolicy(ctx, "productPolicy", &apimanagement.ProductPolicyArgs{
+			Format:            pulumi.String("xml"),
+			PolicyId:          pulumi.String("policy"),
+			ProductId:         pulumi.String("5702e97e5157a50f48dce801"),
+			ResourceGroupName: pulumi.String("rg1"),
+			ServiceName:       pulumi.String("apimService1"),
+			Value: pulumi.String("<policies>\n  <inbound>\n    <rate-limit calls=\"{{call-count}}\" renewal-period=\"15\"></rate-limit>\n    <log-to-eventhub logger-id=\"16\">\n                      @( string.Join(\",\", DateTime.UtcNow, context.Deployment.ServiceName, context.RequestId, context.Request.IpAddress, context.Operation.Name) ) \n                  </log-to-eventhub>\n    <quota-by-key calls=\"40\" counter-key=\"cc\" renewal-period=\"3600\" increment-count=\"@(context.Request.Method == &quot;POST&quot; ? 1:2)\" />\n    <base />\n  </inbound>\n  <backend>\n    <base />\n  </backend>\n  <outbound>\n    <base />\n  </outbound>\n</policies>"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const productPolicy = new azure_native.apimanagement.ProductPolicy("productPolicy", {
+    format: "xml",
+    policyId: "policy",
+    productId: "5702e97e5157a50f48dce801",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    value: `<policies>
+  <inbound>
+    <rate-limit calls="{{call-count}}" renewal-period="15"></rate-limit>
+    <log-to-eventhub logger-id="16">
+                      @( string.Join(",", DateTime.UtcNow, context.Deployment.ServiceName, context.RequestId, context.Request.IpAddress, context.Operation.Name) ) 
+                  </log-to-eventhub>
+    <quota-by-key calls="40" counter-key="cc" renewal-period="3600" increment-count="@(context.Request.Method == &quot;POST&quot; ? 1:2)" />
+    <base />
+  </inbound>
+  <backend>
+    <base />
+  </backend>
+  <outbound>
+    <base />
+  </outbound>
+</policies>`,
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+product_policy = azure_native.apimanagement.ProductPolicy("productPolicy",
+    format="xml",
+    policy_id="policy",
+    product_id="5702e97e5157a50f48dce801",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    value="""<policies>
+  <inbound>
+    <rate-limit calls="{{call-count}}" renewal-period="15"></rate-limit>
+    <log-to-eventhub logger-id="16">
+                      @( string.Join(",", DateTime.UtcNow, context.Deployment.ServiceName, context.RequestId, context.Request.IpAddress, context.Operation.Name) ) 
+                  </log-to-eventhub>
+    <quota-by-key calls="40" counter-key="cc" renewal-period="3600" increment-count="@(context.Request.Method == &quot;POST&quot; ? 1:2)" />
+    <base />
+  </inbound>
+  <backend>
+    <base />
+  </backend>
+  <outbound>
+    <base />
+  </outbound>
+</policies>""")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:apimanagement:ProductPolicy policy /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/products/5702e97e5157a50f48dce801/policies/policy 
+```
+
+ */
 @ResourceType(type="azure-native:apimanagement:ProductPolicy")
 public class ProductPolicy extends io.pulumi.resources.CustomResource {
+    /**
+     * Format of the policyContent.
+     */
     @OutputExport(name="format", type=String.class, parameters={})
     private Output</* @Nullable */ String> format;
 
+    /**
+     * @return Format of the policyContent.
+     */
     public Output</* @Nullable */ String> getFormat() {
         return this.format;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Resource type for API Management resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type for API Management resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Contents of the Policy as defined by the format.
+     */
     @OutputExport(name="value", type=String.class, parameters={})
     private Output<String> value;
 
+    /**
+     * @return Contents of the Policy as defined by the format.
+     */
     public Output<String> getValue() {
         return this.value;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ProductPolicy(String name, ProductPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:ProductPolicy", name, args == null ? ProductPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -69,6 +242,14 @@ public class ProductPolicy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ProductPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ProductPolicy(name, id, options);
     }

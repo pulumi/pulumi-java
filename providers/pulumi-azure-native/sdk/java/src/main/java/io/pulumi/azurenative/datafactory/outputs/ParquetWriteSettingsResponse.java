@@ -12,8 +12,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ParquetWriteSettingsResponse {
+/**
+ * Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object fileNamePrefix;
+/**
+ * Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
+ */
     private final @Nullable Object maxRowsPerFile;
+/**
+ * The write setting type.
+Expected value is 'ParquetWriteSettings'.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"fileNamePrefix","maxRowsPerFile","type"})
@@ -26,12 +36,22 @@ public final class ParquetWriteSettingsResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getFileNamePrefix() {
         return Optional.ofNullable(this.fileNamePrefix);
     }
+/**
+ * Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
+ */
     public Optional<Object> getMaxRowsPerFile() {
         return Optional.ofNullable(this.maxRowsPerFile);
     }
+/**
+ * The write setting type.
+Expected value is 'ParquetWriteSettings'.
+ */
     public String getType() {
         return this.type;
     }

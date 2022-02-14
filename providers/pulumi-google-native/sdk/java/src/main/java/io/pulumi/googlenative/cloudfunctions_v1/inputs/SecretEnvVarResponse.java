@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Configuration for a secret environment variable. It has the information necessary to fetch the secret value from secret manager and expose it as an environment variable. Secret value is not a part of the configuration. Secret values are only fetched when a new clone starts.
+ */
 public final class SecretEnvVarResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecretEnvVarResponse Empty = new SecretEnvVarResponse();
 
+    /**
+     * Name of the environment variable.
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -19,6 +25,9 @@ public final class SecretEnvVarResponse extends io.pulumi.resources.InvokeArgs {
         return this.key;
     }
 
+    /**
+     * Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function's project assuming that the secret exists in the same project as of the function.
+     */
     @InputImport(name="project", required=true)
     private final String project;
 
@@ -26,6 +35,9 @@ public final class SecretEnvVarResponse extends io.pulumi.resources.InvokeArgs {
         return this.project;
     }
 
+    /**
+     * Name of the secret in secret manager (not the full resource name).
+     */
     @InputImport(name="secret", required=true)
     private final String secret;
 
@@ -33,6 +45,9 @@ public final class SecretEnvVarResponse extends io.pulumi.resources.InvokeArgs {
         return this.secret;
     }
 
+    /**
+     * Version of the secret (version number or the string 'latest'). It is recommended to use a numeric version for secret environment variables as any updates to the secret value is not reflected until new clones start.
+     */
     @InputImport(name="version", required=true)
     private final String version;
 

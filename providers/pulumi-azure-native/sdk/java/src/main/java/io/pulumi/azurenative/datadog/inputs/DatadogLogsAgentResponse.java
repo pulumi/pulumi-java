@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DatadogLogsAgentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatadogLogsAgentResponse Empty = new DatadogLogsAgentResponse();
 
+    /**
+     * The transport.
+     */
     @InputImport(name="transport")
     private final @Nullable String transport;
 

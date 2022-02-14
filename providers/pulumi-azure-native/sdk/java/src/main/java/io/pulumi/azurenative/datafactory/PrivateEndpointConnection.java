@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.datafactory;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.datafactory.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.datafactory.outputs.RemotePrivateEndpointConnectionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,33 +14,180 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Private Endpoint Connection ARM resource.
+API Version: 2018-06-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Approves or rejects a private endpoint connection for a factory.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpointConnection = new AzureNative.DataFactory.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.DataFactory.PrivateEndpointConnectionArgs
+        {
+            FactoryName = "exampleFactoryName",
+            PrivateEndpointConnectionName = "connection",
+            Properties = new AzureNative.DataFactory.Inputs.PrivateLinkConnectionApprovalRequestArgs
+            {
+                PrivateLinkServiceConnectionState = new AzureNative.DataFactory.Inputs.PrivateLinkConnectionStateArgs
+                {
+                    ActionsRequired = "",
+                    Description = "Approved by admin.",
+                    Status = "Approved",
+                },
+            },
+            ResourceGroupName = "exampleResourceGroup",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	datafactory "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datafactory"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datafactory.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &datafactory.PrivateEndpointConnectionArgs{
+			FactoryName:                   pulumi.String("exampleFactoryName"),
+			PrivateEndpointConnectionName: pulumi.String("connection"),
+			Properties: &datafactory.PrivateLinkConnectionApprovalRequestArgs{
+				PrivateLinkServiceConnectionState: &datafactory.PrivateLinkConnectionStateArgs{
+					ActionsRequired: pulumi.String(""),
+					Description:     pulumi.String("Approved by admin."),
+					Status:          pulumi.String("Approved"),
+				},
+			},
+			ResourceGroupName: pulumi.String("exampleResourceGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const privateEndpointConnection = new azure_native.datafactory.PrivateEndpointConnection("privateEndpointConnection", {
+    factoryName: "exampleFactoryName",
+    privateEndpointConnectionName: "connection",
+    properties: {
+        privateLinkServiceConnectionState: {
+            actionsRequired: "",
+            description: "Approved by admin.",
+            status: "Approved",
+        },
+    },
+    resourceGroupName: "exampleResourceGroup",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+private_endpoint_connection = azure_native.datafactory.PrivateEndpointConnection("privateEndpointConnection",
+    factory_name="exampleFactoryName",
+    private_endpoint_connection_name="connection",
+    properties=azure_native.datafactory.PrivateLinkConnectionApprovalRequestArgs(
+        private_link_service_connection_state=azure_native.datafactory.PrivateLinkConnectionStateArgs(
+            actions_required="",
+            description="Approved by admin.",
+            status="Approved",
+        ),
+    ),
+    resource_group_name="exampleResourceGroup")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:datafactory:PrivateEndpointConnection exampleFactoryName /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName 
+```
+
+ */
 @ResourceType(type="azure-native:datafactory:PrivateEndpointConnection")
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
+    /**
+     * Etag identifies change in the resource.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return Etag identifies change in the resource.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Core resource properties
+     */
     @OutputExport(name="properties", type=RemotePrivateEndpointConnectionResponse.class, parameters={})
     private Output<RemotePrivateEndpointConnectionResponse> properties;
 
+    /**
+     * @return Core resource properties
+     */
     public Output<RemotePrivateEndpointConnectionResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * The resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public PrivateEndpointConnection(String name, PrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datafactory:PrivateEndpointConnection", name, args == null ? PrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -60,6 +206,14 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static PrivateEndpointConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateEndpointConnection(name, id, options);
     }

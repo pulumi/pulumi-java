@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A class representing database principal entity.
+ */
 public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatabasePrincipalResponse Empty = new DatabasePrincipalResponse();
 
+    /**
+     * Application id - relevant only for application principal type.
+     */
     @InputImport(name="appId")
     private final @Nullable String appId;
 
@@ -21,6 +27,9 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
         return this.appId == null ? Optional.empty() : Optional.ofNullable(this.appId);
     }
 
+    /**
+     * Database principal email if exists.
+     */
     @InputImport(name="email")
     private final @Nullable String email;
 
@@ -28,6 +37,9 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
         return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
     }
 
+    /**
+     * Database principal fully qualified name.
+     */
     @InputImport(name="fqn")
     private final @Nullable String fqn;
 
@@ -35,6 +47,9 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
         return this.fqn == null ? Optional.empty() : Optional.ofNullable(this.fqn);
     }
 
+    /**
+     * Database principal name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -42,6 +57,9 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
         return this.name;
     }
 
+    /**
+     * Database principal role.
+     */
     @InputImport(name="role", required=true)
     private final String role;
 
@@ -49,6 +67,9 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
         return this.role;
     }
 
+    /**
+     * The tenant name of the principal
+     */
     @InputImport(name="tenantName", required=true)
     private final String tenantName;
 
@@ -56,6 +77,9 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
         return this.tenantName;
     }
 
+    /**
+     * Database principal type.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.VirtualHubBgpConnectionArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -15,51 +14,194 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Virtual Appliance Site resource.
+API Version: 2020-11-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### VirtualHubRouteTableV2Put
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualHubBgpConnection = new AzureNative.Network.VirtualHubBgpConnection("virtualHubBgpConnection", new AzureNative.Network.VirtualHubBgpConnectionArgs
+        {
+            ConnectionName = "conn1",
+            PeerAsn = 20000,
+            PeerIp = "192.168.1.5",
+            ResourceGroupName = "rg1",
+            VirtualHubName = "hub1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewVirtualHubBgpConnection(ctx, "virtualHubBgpConnection", &network.VirtualHubBgpConnectionArgs{
+			ConnectionName:    pulumi.String("conn1"),
+			PeerAsn:           pulumi.Float64(20000),
+			PeerIp:            pulumi.String("192.168.1.5"),
+			ResourceGroupName: pulumi.String("rg1"),
+			VirtualHubName:    pulumi.String("hub1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const virtualHubBgpConnection = new azure_native.network.VirtualHubBgpConnection("virtualHubBgpConnection", {
+    connectionName: "conn1",
+    peerAsn: 20000,
+    peerIp: "192.168.1.5",
+    resourceGroupName: "rg1",
+    virtualHubName: "hub1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+virtual_hub_bgp_connection = azure_native.network.VirtualHubBgpConnection("virtualHubBgpConnection",
+    connection_name="conn1",
+    peer_asn=20000,
+    peer_ip="192.168.1.5",
+    resource_group_name="rg1",
+    virtual_hub_name="hub1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:VirtualHubBgpConnection conn1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/hub1/bgpConnections/conn1 
+```
+
+ */
 @ResourceType(type="azure-native:network:VirtualHubBgpConnection")
 public class VirtualHubBgpConnection extends io.pulumi.resources.CustomResource {
+    /**
+     * The current state of the VirtualHub to Peer.
+     */
     @OutputExport(name="connectionState", type=String.class, parameters={})
     private Output<String> connectionState;
 
+    /**
+     * @return The current state of the VirtualHub to Peer.
+     */
     public Output<String> getConnectionState() {
         return this.connectionState;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Name of the connection.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return Name of the connection.
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * Peer ASN.
+     */
     @OutputExport(name="peerAsn", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> peerAsn;
 
+    /**
+     * @return Peer ASN.
+     */
     public Output</* @Nullable */ Double> getPeerAsn() {
         return this.peerAsn;
     }
+    /**
+     * Peer IP.
+     */
     @OutputExport(name="peerIp", type=String.class, parameters={})
     private Output</* @Nullable */ String> peerIp;
 
+    /**
+     * @return Peer IP.
+     */
     public Output</* @Nullable */ String> getPeerIp() {
         return this.peerIp;
     }
+    /**
+     * The provisioning state of the resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Connection type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Connection type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public VirtualHubBgpConnection(String name, VirtualHubBgpConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:VirtualHubBgpConnection", name, args == null ? VirtualHubBgpConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -85,6 +227,14 @@ public class VirtualHubBgpConnection extends io.pulumi.resources.CustomResource 
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static VirtualHubBgpConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualHubBgpConnection(name, id, options);
     }

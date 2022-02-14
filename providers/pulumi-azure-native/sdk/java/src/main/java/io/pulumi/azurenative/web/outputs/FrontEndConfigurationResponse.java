@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FrontEndConfigurationResponse {
+/**
+ * 
+ */
     private final @Nullable String kind;
 
     @OutputCustomType.Constructor({"kind"})
@@ -18,6 +21,9 @@ public final class FrontEndConfigurationResponse {
         this.kind = kind;
     }
 
+/**
+ * 
+ */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }

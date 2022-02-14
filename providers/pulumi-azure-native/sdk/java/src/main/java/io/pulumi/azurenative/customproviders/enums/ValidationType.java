@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of validation to run against a matching request.
+ */
     @EnumType
     public enum ValidationType {
+/**
+ * 
+ */
         Swagger("Swagger");
 
         private final String value;

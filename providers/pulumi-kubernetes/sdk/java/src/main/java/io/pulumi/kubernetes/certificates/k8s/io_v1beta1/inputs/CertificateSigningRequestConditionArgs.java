@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class CertificateSigningRequestConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateSigningRequestConditionArgs Empty = new CertificateSigningRequestConditionArgs();
 
+    /**
+     * lastTransitionTime is the time the condition last transitioned from one status to another. If unset, when a new condition type is added or an existing condition's status is changed, the server defaults this to the current time.
+     */
     @InputImport(name="lastTransitionTime")
     private final @Nullable Input<String> lastTransitionTime;
 
@@ -21,6 +27,9 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
         return this.lastTransitionTime == null ? Input.empty() : this.lastTransitionTime;
     }
 
+    /**
+     * timestamp for the last update to this condition
+     */
     @InputImport(name="lastUpdateTime")
     private final @Nullable Input<String> lastUpdateTime;
 
@@ -28,6 +37,9 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
         return this.lastUpdateTime == null ? Input.empty() : this.lastUpdateTime;
     }
 
+    /**
+     * human readable message with details about the request state
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -35,6 +47,9 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
         return this.message == null ? Input.empty() : this.message;
     }
 
+    /**
+     * brief reason for the request state
+     */
     @InputImport(name="reason")
     private final @Nullable Input<String> reason;
 
@@ -42,6 +57,9 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
         return this.reason == null ? Input.empty() : this.reason;
     }
 
+    /**
+     * Status of the condition, one of True, False, Unknown. Approved, Denied, and Failed conditions may not be "False" or "Unknown". Defaults to "True". If unset, should be treated as "True".
+     */
     @InputImport(name="status")
     private final @Nullable Input<String> status;
 
@@ -49,6 +67,9 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * request approval state, currently Approved or Denied.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

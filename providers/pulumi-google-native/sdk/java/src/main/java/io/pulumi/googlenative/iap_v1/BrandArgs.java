@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BrandArgs Empty = new BrandArgs();
 
+    /**
+     * Application name displayed on OAuth consent screen.
+     */
     @InputImport(name="applicationTitle")
     private final @Nullable Input<String> applicationTitle;
 
@@ -21,6 +27,9 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationTitle == null ? Input.empty() : this.applicationTitle;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -28,6 +37,9 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Support email displayed on the OAuth consent screen.
+     */
     @InputImport(name="supportEmail")
     private final @Nullable Input<String> supportEmail;
 

@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Enforce a minimal Tls version for the server.
+ */
     @EnumType
     public enum MinimalTlsVersionEnum {
+/**
+ * 
+ */
         TLS1_0("TLS1_0"),
+/**
+ * 
+ */
         TLS1_1("TLS1_1"),
+/**
+ * 
+ */
         TLS1_2("TLS1_2"),
+/**
+ * 
+ */
         TLSEnforcementDisabled("TLSEnforcementDisabled");
 
         private final String value;

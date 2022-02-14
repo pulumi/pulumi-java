@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A starting intent specified by an action, uri, and categories.
+ */
 public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StartActivityIntentArgs Empty = new StartActivityIntentArgs();
 
+    /**
+     * Action name. Required for START_ACTIVITY.
+     */
     @InputImport(name="action")
     private final @Nullable Input<String> action;
 
@@ -22,6 +28,9 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
         return this.action == null ? Input.empty() : this.action;
     }
 
+    /**
+     * Intent categories to set on the intent.
+     */
     @InputImport(name="categories")
     private final @Nullable Input<List<String>> categories;
 
@@ -29,6 +38,9 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
         return this.categories == null ? Input.empty() : this.categories;
     }
 
+    /**
+     * URI for the action.
+     */
     @InputImport(name="uri")
     private final @Nullable Input<String> uri;
 

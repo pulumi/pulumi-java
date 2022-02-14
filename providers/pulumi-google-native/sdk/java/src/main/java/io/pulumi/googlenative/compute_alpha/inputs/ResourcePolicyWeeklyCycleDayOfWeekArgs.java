@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResourcePolicyWeeklyCycleDayOfWeekArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourcePolicyWeeklyCycleDayOfWeekArgs Empty = new ResourcePolicyWeeklyCycleDayOfWeekArgs();
 
+    /**
+     * Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
+     */
     @InputImport(name="day")
     private final @Nullable Input<ResourcePolicyWeeklyCycleDayOfWeekDay> day;
 
@@ -22,6 +28,9 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekArgs extends io.pulumi.reso
         return this.day == null ? Input.empty() : this.day;
     }
 
+    /**
+     * Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 

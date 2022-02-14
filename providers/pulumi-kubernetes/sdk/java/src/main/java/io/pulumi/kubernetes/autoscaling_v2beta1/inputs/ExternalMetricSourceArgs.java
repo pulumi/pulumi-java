@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ExternalMetricSource indicates how to scale on a metric not associated with any Kubernetes object (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster). Exactly one "target" type should be set.
+ */
 public final class ExternalMetricSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExternalMetricSourceArgs Empty = new ExternalMetricSourceArgs();
 
+    /**
+     * metricName is the name of the metric in question.
+     */
     @InputImport(name="metricName", required=true)
     private final Input<String> metricName;
 
@@ -22,6 +28,9 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
         return this.metricName;
     }
 
+    /**
+     * metricSelector is used to identify a specific time series within a given metric.
+     */
     @InputImport(name="metricSelector")
     private final @Nullable Input<LabelSelectorArgs> metricSelector;
 
@@ -29,6 +38,9 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
         return this.metricSelector == null ? Input.empty() : this.metricSelector;
     }
 
+    /**
+     * targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually exclusive with TargetValue.
+     */
     @InputImport(name="targetAverageValue")
     private final @Nullable Input<String> targetAverageValue;
 
@@ -36,6 +48,9 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
         return this.targetAverageValue == null ? Input.empty() : this.targetAverageValue;
     }
 
+    /**
+     * targetValue is the target value of the metric (as a quantity). Mutually exclusive with TargetAverageValue.
+     */
     @InputImport(name="targetValue")
     private final @Nullable Input<String> targetValue;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Customer Managed Identity
+ */
 public final class MyWorkbookUserAssignedIdentitiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MyWorkbookUserAssignedIdentitiesResponse Empty = new MyWorkbookUserAssignedIdentitiesResponse();
 
+    /**
+     * The principal ID of resource identity.
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -19,6 +25,9 @@ public final class MyWorkbookUserAssignedIdentitiesResponse extends io.pulumi.re
         return this.principalId;
     }
 
+    /**
+     * The tenant ID of resource.
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 

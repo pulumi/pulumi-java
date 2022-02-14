@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNode {
+/**
+ * Gets the details of a node.
+ */
     public static CompletableFuture<GetNodeResult> invokeAsync(GetNodeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:tpu/v1:getNode", TypeShape.of(GetNodeResult.class), args == null ? GetNodeArgs.Empty : args, Utilities.withVersion(options));
     }

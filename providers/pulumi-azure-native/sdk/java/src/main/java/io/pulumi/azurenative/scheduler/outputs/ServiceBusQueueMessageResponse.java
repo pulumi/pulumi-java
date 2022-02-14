@@ -14,12 +14,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceBusQueueMessageResponse {
+/**
+ * Gets or sets the Service Bus authentication.
+ */
     private final @Nullable ServiceBusAuthenticationResponse authentication;
+/**
+ * Gets or sets the brokered message properties.
+ */
     private final @Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties;
+/**
+ * Gets or sets the custom message properties.
+ */
     private final @Nullable Map<String,String> customMessageProperties;
+/**
+ * Gets or sets the message.
+ */
     private final @Nullable String message;
+/**
+ * Gets or sets the namespace.
+ */
     private final @Nullable String namespace;
+/**
+ * Gets or sets the queue name.
+ */
     private final @Nullable String queueName;
+/**
+ * Gets or sets the transport type.
+ */
     private final @Nullable String transportType;
 
     @OutputCustomType.Constructor({"authentication","brokeredMessageProperties","customMessageProperties","message","namespace","queueName","transportType"})
@@ -40,24 +61,45 @@ public final class ServiceBusQueueMessageResponse {
         this.transportType = transportType;
     }
 
+/**
+ * Gets or sets the Service Bus authentication.
+ */
     public Optional<ServiceBusAuthenticationResponse> getAuthentication() {
         return Optional.ofNullable(this.authentication);
     }
+/**
+ * Gets or sets the brokered message properties.
+ */
     public Optional<ServiceBusBrokeredMessagePropertiesResponse> getBrokeredMessageProperties() {
         return Optional.ofNullable(this.brokeredMessageProperties);
     }
+/**
+ * Gets or sets the custom message properties.
+ */
     public Map<String,String> getCustomMessageProperties() {
         return this.customMessageProperties == null ? Map.of() : this.customMessageProperties;
     }
+/**
+ * Gets or sets the message.
+ */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
+/**
+ * Gets or sets the namespace.
+ */
     public Optional<String> getNamespace() {
         return Optional.ofNullable(this.namespace);
     }
+/**
+ * Gets or sets the queue name.
+ */
     public Optional<String> getQueueName() {
         return Optional.ofNullable(this.queueName);
     }
+/**
+ * Gets or sets the transport type.
+ */
     public Optional<String> getTransportType() {
         return Optional.ofNullable(this.transportType);
     }

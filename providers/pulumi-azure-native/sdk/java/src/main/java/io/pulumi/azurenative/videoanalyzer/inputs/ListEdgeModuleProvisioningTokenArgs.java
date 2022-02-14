@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListEdgeModuleProvisioningTokenArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListEdgeModuleProvisioningTokenArgs Empty = new ListEdgeModuleProvisioningTokenArgs();
 
+    /**
+     * The Azure Video Analyzer account name.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class ListEdgeModuleProvisioningTokenArgs extends io.pulumi.resourc
         return this.accountName;
     }
 
+    /**
+     * The name of the edge module used to create a new provisioning token.
+     */
     @InputImport(name="edgeModuleName", required=true)
     private final String edgeModuleName;
 
@@ -26,6 +35,9 @@ public final class ListEdgeModuleProvisioningTokenArgs extends io.pulumi.resourc
         return this.edgeModuleName;
     }
 
+    /**
+     * The desired expiration date of the registration token. The Azure Video Analyzer IoT edge module must be initialized and connected to the Internet prior to the token expiration date.
+     */
     @InputImport(name="expirationDate", required=true)
     private final String expirationDate;
 
@@ -33,6 +45,9 @@ public final class ListEdgeModuleProvisioningTokenArgs extends io.pulumi.resourc
         return this.expirationDate;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

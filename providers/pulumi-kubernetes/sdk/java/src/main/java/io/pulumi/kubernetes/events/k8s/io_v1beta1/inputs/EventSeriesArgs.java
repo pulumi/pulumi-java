@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * EventSeries contain information on series of events, i.e. thing that was/is happening continuously for some time.
+ */
 public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EventSeriesArgs Empty = new EventSeriesArgs();
 
+    /**
+     * count is the number of occurrences in this series up to the last heartbeat time.
+     */
     @InputImport(name="count", required=true)
     private final Input<Integer> count;
 
@@ -22,6 +28,9 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
         return this.count;
     }
 
+    /**
+     * lastObservedTime is the time when last Event from the series was seen before last heartbeat.
+     */
     @InputImport(name="lastObservedTime", required=true)
     private final Input<String> lastObservedTime;
 
@@ -29,6 +38,9 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastObservedTime;
     }
 
+    /**
+     * Information whether this series is ongoing or finished. Deprecated. Planned removal for 1.18
+     */
     @InputImport(name="state")
     private final @Nullable Input<String> state;
 

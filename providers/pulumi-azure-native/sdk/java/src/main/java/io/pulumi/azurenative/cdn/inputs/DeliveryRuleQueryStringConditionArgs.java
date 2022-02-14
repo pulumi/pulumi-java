@@ -10,10 +10,17 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines the QueryString condition for the delivery rule.
+ */
 public final class DeliveryRuleQueryStringConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeliveryRuleQueryStringConditionArgs Empty = new DeliveryRuleQueryStringConditionArgs();
 
+    /**
+     * The name of the condition for the delivery rule.
+Expected value is 'QueryString'.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +28,9 @@ public final class DeliveryRuleQueryStringConditionArgs extends io.pulumi.resour
         return this.name;
     }
 
+    /**
+     * Defines the parameters for the condition.
+     */
     @InputImport(name="parameters", required=true)
     private final Input<QueryStringMatchConditionParametersArgs> parameters;
 

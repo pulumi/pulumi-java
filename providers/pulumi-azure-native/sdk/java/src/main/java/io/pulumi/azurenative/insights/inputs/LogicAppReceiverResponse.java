@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A logic app receiver.
+ */
 public final class LogicAppReceiverResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LogicAppReceiverResponse Empty = new LogicAppReceiverResponse();
 
+    /**
+     * The callback url where http request sent to.
+     */
     @InputImport(name="callbackUrl", required=true)
     private final String callbackUrl;
 
@@ -22,6 +28,9 @@ public final class LogicAppReceiverResponse extends io.pulumi.resources.InvokeAr
         return this.callbackUrl;
     }
 
+    /**
+     * The name of the logic app receiver. Names must be unique across all receivers within an action group.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -29,6 +38,9 @@ public final class LogicAppReceiverResponse extends io.pulumi.resources.InvokeAr
         return this.name;
     }
 
+    /**
+     * The azure resource id of the logic app receiver.
+     */
     @InputImport(name="resourceId", required=true)
     private final String resourceId;
 
@@ -36,6 +48,9 @@ public final class LogicAppReceiverResponse extends io.pulumi.resources.InvokeAr
         return this.resourceId;
     }
 
+    /**
+     * Indicates whether to use common alert schema.
+     */
     @InputImport(name="useCommonAlertSchema")
     private final @Nullable Boolean useCommonAlertSchema;
 

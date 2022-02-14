@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EventSource {
+/**
+ * Component from which the event is generated.
+ */
     private final @Nullable String component;
+/**
+ * Node name on which the event is generated.
+ */
     private final @Nullable String host;
 
     @OutputCustomType.Constructor({"component","host"})
@@ -22,9 +28,15 @@ public final class EventSource {
         this.host = host;
     }
 
+/**
+ * Component from which the event is generated.
+ */
     public Optional<String> getComponent() {
         return Optional.ofNullable(this.component);
     }
+/**
+ * Node name on which the event is generated.
+ */
     public Optional<String> getHost() {
         return Optional.ofNullable(this.host);
     }

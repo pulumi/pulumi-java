@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Condition applicable to the resource, or to the job overall, that warrant customer attention.
+ */
 public final class DiagnosticConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DiagnosticConditionResponse Empty = new DiagnosticConditionResponse();
 
+    /**
+     * The opaque diagnostic code.
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -19,6 +25,9 @@ public final class DiagnosticConditionResponse extends io.pulumi.resources.Invok
         return this.code;
     }
 
+    /**
+     * The human-readable message describing the condition in detail. Localized in the Accept-Language of the client request.
+     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -26,6 +35,9 @@ public final class DiagnosticConditionResponse extends io.pulumi.resources.Invok
         return this.message;
     }
 
+    /**
+     * The UTC timestamp of when the condition started. Customers should be able to find a corresponding event in the ops log around this time.
+     */
     @InputImport(name="since", required=true)
     private final String since;
 

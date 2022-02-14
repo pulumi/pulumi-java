@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CollectionOverrideResponse {
+/**
+ * The collection that identifies this resource within its service.
+ */
     private final String collection;
+/**
+ * The options to apply to this resource-level override
+ */
     private final OptionsResponse options;
 
     @OutputCustomType.Constructor({"collection","options"})
@@ -21,9 +27,15 @@ public final class CollectionOverrideResponse {
         this.options = Objects.requireNonNull(options);
     }
 
+/**
+ * The collection that identifies this resource within its service.
+ */
     public String getCollection() {
         return this.collection;
     }
+/**
+ * The options to apply to this resource-level override
+ */
     public OptionsResponse getOptions() {
         return this.options;
     }

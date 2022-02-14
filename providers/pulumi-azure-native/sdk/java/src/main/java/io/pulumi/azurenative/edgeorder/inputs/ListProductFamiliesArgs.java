@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ListProductFamiliesArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListProductFamiliesArgs Empty = new ListProductFamiliesArgs();
 
+    /**
+     * Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details
+     */
     @InputImport(name="customerSubscriptionDetails")
     private final @Nullable CustomerSubscriptionDetails customerSubscriptionDetails;
 
@@ -25,6 +31,9 @@ public final class ListProductFamiliesArgs extends io.pulumi.resources.InvokeArg
         return this.customerSubscriptionDetails == null ? Optional.empty() : Optional.ofNullable(this.customerSubscriptionDetails);
     }
 
+    /**
+     * $expand is supported on configurations parameter for product, which provides details on the configurations for the product.
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -32,6 +41,9 @@ public final class ListProductFamiliesArgs extends io.pulumi.resources.InvokeArg
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * Dictionary of filterable properties on product family.
+     */
     @InputImport(name="filterableProperties", required=true)
     private final Map<String,List<FilterableProperty>> filterableProperties;
 
@@ -39,6 +51,9 @@ public final class ListProductFamiliesArgs extends io.pulumi.resources.InvokeArg
         return this.filterableProperties;
     }
 
+    /**
+     * $skipToken is supported on list of product families, which provides the next page in the list of product families.
+     */
     @InputImport(name="skipToken")
     private final @Nullable String skipToken;
 

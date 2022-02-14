@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.keyvault;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.keyvault.KeyArgs;
 import io.pulumi.azurenative.keyvault.outputs.KeyAttributesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -17,75 +16,244 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The key resource.
+API Version: 2019-09-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create a key
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var key = new AzureNative.KeyVault.Key("key", new AzureNative.KeyVault.KeyArgs
+        {
+            KeyName = "sample-key-name",
+            Properties = new AzureNative.KeyVault.Inputs.KeyPropertiesArgs
+            {
+                Kty = "RSA",
+            },
+            ResourceGroupName = "sample-group",
+            VaultName = "sample-vault-name",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	keyvault "github.com/pulumi/pulumi-azure-native/sdk/go/azure/keyvault"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := keyvault.NewKey(ctx, "key", &keyvault.KeyArgs{
+			KeyName: pulumi.String("sample-key-name"),
+			Properties: &keyvault.KeyPropertiesArgs{
+				Kty: pulumi.String("RSA"),
+			},
+			ResourceGroupName: pulumi.String("sample-group"),
+			VaultName:         pulumi.String("sample-vault-name"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const key = new azure_native.keyvault.Key("key", {
+    keyName: "sample-key-name",
+    properties: {
+        kty: "RSA",
+    },
+    resourceGroupName: "sample-group",
+    vaultName: "sample-vault-name",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+key = azure_native.keyvault.Key("key",
+    key_name="sample-key-name",
+    properties=azure_native.keyvault.KeyPropertiesArgs(
+        kty="RSA",
+    ),
+    resource_group_name="sample-group",
+    vault_name="sample-vault-name")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:keyvault:Key sample-key-name /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/sample-group/providers/Microsoft.KeyVault/vaults/sample-vault-name/keys/sample-key-name 
+```
+
+ */
 @ResourceType(type="azure-native:keyvault:Key")
 public class Key extends io.pulumi.resources.CustomResource {
+    /**
+     * The attributes of the key.
+     */
     @OutputExport(name="attributes", type=KeyAttributesResponse.class, parameters={})
     private Output</* @Nullable */ KeyAttributesResponse> attributes;
 
+    /**
+     * @return The attributes of the key.
+     */
     public Output</* @Nullable */ KeyAttributesResponse> getAttributes() {
         return this.attributes;
     }
+    /**
+     * The elliptic curve name. For valid values, see JsonWebKeyCurveName.
+     */
     @OutputExport(name="curveName", type=String.class, parameters={})
     private Output</* @Nullable */ String> curveName;
 
+    /**
+     * @return The elliptic curve name. For valid values, see JsonWebKeyCurveName.
+     */
     public Output</* @Nullable */ String> getCurveName() {
         return this.curveName;
     }
+    /**
+     * 
+     */
     @OutputExport(name="keyOps", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> keyOps;
 
     public Output</* @Nullable */ List<String>> getKeyOps() {
         return this.keyOps;
     }
+    /**
+     * The key size in bits. For example: 2048, 3072, or 4096 for RSA.
+     */
     @OutputExport(name="keySize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> keySize;
 
+    /**
+     * @return The key size in bits. For example: 2048, 3072, or 4096 for RSA.
+     */
     public Output</* @Nullable */ Integer> getKeySize() {
         return this.keySize;
     }
+    /**
+     * The URI to retrieve the current version of the key.
+     */
     @OutputExport(name="keyUri", type=String.class, parameters={})
     private Output<String> keyUri;
 
+    /**
+     * @return The URI to retrieve the current version of the key.
+     */
     public Output<String> getKeyUri() {
         return this.keyUri;
     }
+    /**
+     * The URI to retrieve the specific version of the key.
+     */
     @OutputExport(name="keyUriWithVersion", type=String.class, parameters={})
     private Output<String> keyUriWithVersion;
 
+    /**
+     * @return The URI to retrieve the specific version of the key.
+     */
     public Output<String> getKeyUriWithVersion() {
         return this.keyUriWithVersion;
     }
+    /**
+     * The type of the key. For valid values, see JsonWebKeyType.
+     */
     @OutputExport(name="kty", type=String.class, parameters={})
     private Output</* @Nullable */ String> kty;
 
+    /**
+     * @return The type of the key. For valid values, see JsonWebKeyType.
+     */
     public Output</* @Nullable */ String> getKty() {
         return this.kty;
     }
+    /**
+     * Azure location of the key vault resource.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Azure location of the key vault resource.
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Name of the key vault resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the key vault resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Tags assigned to the key vault resource.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tags;
 
+    /**
+     * @return Tags assigned to the key vault resource.
+     */
     public Output<Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type of the key vault resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type of the key vault resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Key(String name, KeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:keyvault:Key", name, args == null ? KeyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -109,6 +277,14 @@ public class Key extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Key get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Key(name, id, options);
     }

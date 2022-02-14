@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Sci mode enabled/disabled.
+ */
     @EnumType
     public enum ExpressRouteLinkMacSecSciState {
+/**
+ * 
+ */
         Disabled("Disabled"),
+/**
+ * 
+ */
         Enabled("Enabled");
 
         private final String value;

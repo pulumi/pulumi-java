@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The AssignmentPrincipal
+ */
 public final class AssignmentPrincipalArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssignmentPrincipalArgs Empty = new AssignmentPrincipalArgs();
 
+    /**
+     * The principal id being assigned to.
+     */
     @InputImport(name="principalId", required=true)
     private final Input<String> principalId;
 
@@ -22,6 +28,9 @@ public final class AssignmentPrincipalArgs extends io.pulumi.resources.ResourceA
         return this.principalId;
     }
 
+    /**
+     * Other metadata for the principal.
+     */
     @InputImport(name="principalMetadata")
     private final @Nullable Input<Map<String,String>> principalMetadata;
 
@@ -29,6 +38,9 @@ public final class AssignmentPrincipalArgs extends io.pulumi.resources.ResourceA
         return this.principalMetadata == null ? Input.empty() : this.principalMetadata;
     }
 
+    /**
+     * The Type of the principal ID.
+     */
     @InputImport(name="principalType", required=true)
     private final Input<String> principalType;
 

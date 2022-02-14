@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetNetworkArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNetworkArgs Empty = new GetNetworkArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="network", required=true)
     private final String network;
 
@@ -21,6 +27,9 @@ public final class GetNetworkArgs extends io.pulumi.resources.InvokeArgs {
         return this.network;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

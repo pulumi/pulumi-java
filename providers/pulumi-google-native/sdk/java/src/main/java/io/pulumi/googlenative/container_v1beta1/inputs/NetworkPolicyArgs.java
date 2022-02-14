@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration options for the NetworkPolicy feature. https://kubernetes.io/docs/concepts/services-networking/networkpolicies/
+ */
 public final class NetworkPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkPolicyArgs Empty = new NetworkPolicyArgs();
 
+    /**
+     * Whether network policy is enabled on the cluster.
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -22,6 +28,9 @@ public final class NetworkPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * The selected network policy provider.
+     */
     @InputImport(name="provider")
     private final @Nullable Input<NetworkPolicyProvider> provider;
 

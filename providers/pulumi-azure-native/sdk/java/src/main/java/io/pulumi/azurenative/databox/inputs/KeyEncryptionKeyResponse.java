@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Encryption key containing details about key to encrypt different keys.
+ */
 public final class KeyEncryptionKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyEncryptionKeyResponse Empty = new KeyEncryptionKeyResponse();
 
+    /**
+     * Managed identity properties used for key encryption.
+     */
     @InputImport(name="identityProperties")
     private final @Nullable IdentityPropertiesResponse identityProperties;
 
@@ -22,6 +28,9 @@ public final class KeyEncryptionKeyResponse extends io.pulumi.resources.InvokeAr
         return this.identityProperties == null ? Optional.empty() : Optional.ofNullable(this.identityProperties);
     }
 
+    /**
+     * Type of encryption key used for key encryption.
+     */
     @InputImport(name="kekType", required=true)
     private final String kekType;
 
@@ -29,6 +38,9 @@ public final class KeyEncryptionKeyResponse extends io.pulumi.resources.InvokeAr
         return this.kekType;
     }
 
+    /**
+     * Key encryption key. It is required in case of Customer managed KekType.
+     */
     @InputImport(name="kekUrl")
     private final @Nullable String kekUrl;
 
@@ -36,6 +48,9 @@ public final class KeyEncryptionKeyResponse extends io.pulumi.resources.InvokeAr
         return this.kekUrl == null ? Optional.empty() : Optional.ofNullable(this.kekUrl);
     }
 
+    /**
+     * Kek vault resource id. It is required in case of Customer managed KekType.
+     */
     @InputImport(name="kekVaultResourceID")
     private final @Nullable String kekVaultResourceID;
 

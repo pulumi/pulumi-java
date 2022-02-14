@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of this referenced entity.
+ */
     @EnumType
     public enum IntegrationRuntimeEntityReferenceType {
+/**
+ * 
+ */
         IntegrationRuntimeReference("IntegrationRuntimeReference"),
+/**
+ * 
+ */
         LinkedServiceReference("LinkedServiceReference");
 
         private final String value;

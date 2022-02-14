@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A notification event receiver value.
+ */
 public final class NotificationReceiverValueResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NotificationReceiverValueResponse Empty = new NotificationReceiverValueResponse();
 
+    /**
+     * The user object receiver value.
+     */
     @InputImport(name="distributionGroupListReceiverValue")
     private final @Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue;
 
@@ -23,6 +29,9 @@ public final class NotificationReceiverValueResponse extends io.pulumi.resources
         return this.distributionGroupListReceiverValue == null ? Optional.empty() : Optional.ofNullable(this.distributionGroupListReceiverValue);
     }
 
+    /**
+     * The user object receiver value.
+     */
     @InputImport(name="subscriptionReceiverValue")
     private final @Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue;
 
@@ -30,6 +39,9 @@ public final class NotificationReceiverValueResponse extends io.pulumi.resources
         return this.subscriptionReceiverValue == null ? Optional.empty() : Optional.ofNullable(this.subscriptionReceiverValue);
     }
 
+    /**
+     * The user object receiver value.
+     */
     @InputImport(name="userObjectReceiverValue")
     private final @Nullable UserObjectReceiverValueResponse userObjectReceiverValue;
 

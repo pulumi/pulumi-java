@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnectionProfileIamPolicy {
+/**
+ * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+ */
     public static CompletableFuture<GetConnectionProfileIamPolicyResult> invokeAsync(GetConnectionProfileIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datamigration/v1beta1:getConnectionProfileIamPolicy", TypeShape.of(GetConnectionProfileIamPolicyResult.class), args == null ? GetConnectionProfileIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Value for the specified parameter. Can be either 'value' or 'reference' but not both.
+ */
 public final class ParameterValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ParameterValueArgs Empty = new ParameterValueArgs();
 
+    /**
+     * Parameter value as reference type.
+     */
     @InputImport(name="reference")
     private final @Nullable Input<SecretValueReferenceArgs> reference;
 
@@ -22,6 +28,9 @@ public final class ParameterValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.reference == null ? Input.empty() : this.reference;
     }
 
+    /**
+     * Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.
+     */
     @InputImport(name="value")
     private final @Nullable Input<Object> value;
 

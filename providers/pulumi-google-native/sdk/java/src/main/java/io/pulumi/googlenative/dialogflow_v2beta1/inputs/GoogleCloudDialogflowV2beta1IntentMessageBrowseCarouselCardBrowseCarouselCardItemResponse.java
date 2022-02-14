@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Browsing carousel tile
+ */
 public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse Empty = new GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse();
 
+    /**
+     * Optional. Description of the carousel item. Maximum of four lines of text.
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -21,6 +27,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
         return this.description;
     }
 
+    /**
+     * Optional. Text that appears at the bottom of the Browse Carousel Card. Maximum of one line of text.
+     */
     @InputImport(name="footer", required=true)
     private final String footer;
 
@@ -28,6 +37,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
         return this.footer;
     }
 
+    /**
+     * Optional. Hero image for the carousel item.
+     */
     @InputImport(name="image", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
 
@@ -35,6 +47,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
         return this.image;
     }
 
+    /**
+     * Action to present to the user.
+     */
     @InputImport(name="openUriAction", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction;
 
@@ -42,6 +57,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
         return this.openUriAction;
     }
 
+    /**
+     * Title of the carousel item. Maximum of two lines of text.
+     */
     @InputImport(name="title", required=true)
     private final String title;
 

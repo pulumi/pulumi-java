@@ -10,8 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AdvancedMachineFeaturesResponse {
+/**
+ * Whether to enable nested virtualization or not (default is false).
+ */
     private final Boolean enableNestedVirtualization;
+/**
+ * Whether to enable UEFI networking for instance creation.
+ */
     private final Boolean enableUefiNetworking;
+/**
+ * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+ */
     private final Integer threadsPerCore;
 
     @OutputCustomType.Constructor({"enableNestedVirtualization","enableUefiNetworking","threadsPerCore"})
@@ -24,12 +33,21 @@ public final class AdvancedMachineFeaturesResponse {
         this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
     }
 
+/**
+ * Whether to enable nested virtualization or not (default is false).
+ */
     public Boolean getEnableNestedVirtualization() {
         return this.enableNestedVirtualization;
     }
+/**
+ * Whether to enable UEFI networking for instance creation.
+ */
     public Boolean getEnableUefiNetworking() {
         return this.enableUefiNetworking;
     }
+/**
+ * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+ */
     public Integer getThreadsPerCore() {
         return this.threadsPerCore;
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetDeploymentAtSubscriptionScopeArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDeploymentAtSubscriptionScopeArgs Empty = new GetDeploymentAtSubscriptionScopeArgs();
 
+    /**
+     * The name of the deployment.
+     */
     @InputImport(name="deploymentName", required=true)
     private final String deploymentName;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetApiManagementServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApiManagementServiceArgs Empty = new GetApiManagementServiceArgs();
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class GetApiManagementServiceArgs extends io.pulumi.resources.Invok
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

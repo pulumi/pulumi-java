@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class IssueModelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IssueModelArgs Empty = new IssueModelArgs();
 
+    /**
+     * The representative name for the issue model.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -22,6 +28,9 @@ public final class IssueModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Configs for the input data that used to create the issue model.
+     */
     @InputImport(name="inputDataConfig")
     private final @Nullable Input<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs> inputDataConfig;
 
@@ -29,6 +38,9 @@ public final class IssueModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.inputDataConfig == null ? Input.empty() : this.inputDataConfig;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -36,6 +48,9 @@ public final class IssueModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Immutable. The resource name of the issue model. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -43,6 +58,9 @@ public final class IssueModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

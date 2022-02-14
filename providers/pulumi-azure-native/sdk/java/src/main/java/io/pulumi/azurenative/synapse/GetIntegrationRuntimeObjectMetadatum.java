@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntegrationRuntimeObjectMetadatum {
+/**
+ * A list of SSIS object metadata.
+API Version: 2021-03-01.
+ *
+ * A list of SSIS object metadata.
+ */
     public static CompletableFuture<GetIntegrationRuntimeObjectMetadatumResult> invokeAsync(GetIntegrationRuntimeObjectMetadatumArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getIntegrationRuntimeObjectMetadatum", TypeShape.of(GetIntegrationRuntimeObjectMetadatumResult.class), args == null ? GetIntegrationRuntimeObjectMetadatumArgs.Empty : args, Utilities.withVersion(options));
     }

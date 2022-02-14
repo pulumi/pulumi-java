@@ -11,10 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConfigMapNodeConfigSource {
+/**
+ * KubeletConfigKey declares which key of the referenced ConfigMap corresponds to the KubeletConfiguration structure This field is required in all cases.
+ */
     private final String kubeletConfigKey;
+/**
+ * Name is the metadata.name of the referenced ConfigMap. This field is required in all cases.
+ */
     private final String name;
+/**
+ * Namespace is the metadata.namespace of the referenced ConfigMap. This field is required in all cases.
+ */
     private final String namespace;
+/**
+ * ResourceVersion is the metadata.ResourceVersion of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
+ */
     private final @Nullable String resourceVersion;
+/**
+ * UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
+ */
     private final @Nullable String uid;
 
     @OutputCustomType.Constructor({"kubeletConfigKey","name","namespace","resourceVersion","uid"})
@@ -31,18 +46,33 @@ public final class ConfigMapNodeConfigSource {
         this.uid = uid;
     }
 
+/**
+ * KubeletConfigKey declares which key of the referenced ConfigMap corresponds to the KubeletConfiguration structure This field is required in all cases.
+ */
     public String getKubeletConfigKey() {
         return this.kubeletConfigKey;
     }
+/**
+ * Name is the metadata.name of the referenced ConfigMap. This field is required in all cases.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Namespace is the metadata.namespace of the referenced ConfigMap. This field is required in all cases.
+ */
     public String getNamespace() {
         return this.namespace;
     }
+/**
+ * ResourceVersion is the metadata.ResourceVersion of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
+ */
     public Optional<String> getResourceVersion() {
         return Optional.ofNullable(this.resourceVersion);
     }
+/**
+ * UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
+ */
     public Optional<String> getUid() {
         return Optional.ofNullable(this.uid);
     }

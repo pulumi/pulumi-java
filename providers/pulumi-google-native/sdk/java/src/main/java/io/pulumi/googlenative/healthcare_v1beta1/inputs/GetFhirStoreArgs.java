@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetFhirStoreArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFhirStoreArgs Empty = new GetFhirStoreArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="datasetId", required=true)
     private final String datasetId;
 
@@ -21,6 +27,9 @@ public final class GetFhirStoreArgs extends io.pulumi.resources.InvokeArgs {
         return this.datasetId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="fhirStoreId", required=true)
     private final String fhirStoreId;
 
@@ -28,6 +37,9 @@ public final class GetFhirStoreArgs extends io.pulumi.resources.InvokeArgs {
         return this.fhirStoreId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -35,6 +47,9 @@ public final class GetFhirStoreArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

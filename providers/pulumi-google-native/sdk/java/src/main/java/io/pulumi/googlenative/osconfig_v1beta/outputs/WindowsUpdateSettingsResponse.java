@@ -10,8 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WindowsUpdateSettingsResponse {
+/**
+ * Only apply updates of these windows update classifications. If empty, all updates are applied.
+ */
     private final List<String> classifications;
+/**
+ * List of KBs to exclude from update.
+ */
     private final List<String> excludes;
+/**
+ * An exclusive list of kbs to be updated. These are the only patches that will be updated. This field must not be used with other patch configurations.
+ */
     private final List<String> exclusivePatches;
 
     @OutputCustomType.Constructor({"classifications","excludes","exclusivePatches"})
@@ -24,12 +33,21 @@ public final class WindowsUpdateSettingsResponse {
         this.exclusivePatches = Objects.requireNonNull(exclusivePatches);
     }
 
+/**
+ * Only apply updates of these windows update classifications. If empty, all updates are applied.
+ */
     public List<String> getClassifications() {
         return this.classifications;
     }
+/**
+ * List of KBs to exclude from update.
+ */
     public List<String> getExcludes() {
         return this.excludes;
     }
+/**
+ * An exclusive list of kbs to be updated. These are the only patches that will be updated. This field must not be used with other patch configurations.
+ */
     public List<String> getExclusivePatches() {
         return this.exclusivePatches;
     }

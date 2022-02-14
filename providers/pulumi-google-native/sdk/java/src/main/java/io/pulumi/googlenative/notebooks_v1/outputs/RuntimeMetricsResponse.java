@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RuntimeMetricsResponse {
+/**
+ * The system metrics.
+ */
     private final Map<String,String> systemMetrics;
 
     @OutputCustomType.Constructor({"systemMetrics"})
@@ -17,6 +20,9 @@ public final class RuntimeMetricsResponse {
         this.systemMetrics = Objects.requireNonNull(systemMetrics);
     }
 
+/**
+ * The system metrics.
+ */
     public Map<String,String> getSystemMetrics() {
         return this.systemMetrics;
     }

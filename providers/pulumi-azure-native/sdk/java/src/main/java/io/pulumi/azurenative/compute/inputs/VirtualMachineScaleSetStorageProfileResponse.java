@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a virtual machine scale set storage profile.
+ */
 public final class VirtualMachineScaleSetStorageProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineScaleSetStorageProfileResponse Empty = new VirtualMachineScaleSetStorageProfileResponse();
 
+    /**
+     * Specifies the parameters that are used to add data disks to the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+     */
     @InputImport(name="dataDisks")
     private final @Nullable List<VirtualMachineScaleSetDataDiskResponse> dataDisks;
 
@@ -24,6 +30,9 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends io.pulum
         return this.dataDisks == null ? List.of() : this.dataDisks;
     }
 
+    /**
+     * Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
+     */
     @InputImport(name="imageReference")
     private final @Nullable ImageReferenceResponse imageReference;
 
@@ -31,6 +40,9 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends io.pulum
         return this.imageReference == null ? Optional.empty() : Optional.ofNullable(this.imageReference);
     }
 
+    /**
+     * Specifies information about the operating system disk used by the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+     */
     @InputImport(name="osDisk")
     private final @Nullable VirtualMachineScaleSetOSDiskResponse osDisk;
 

@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure action group
+ */
 public final class AzNsActionGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzNsActionGroupResponse Empty = new AzNsActionGroupResponse();
 
+    /**
+     * Azure Action Group reference.
+     */
     @InputImport(name="actionGroup")
     private final @Nullable List<String> actionGroup;
 
@@ -22,6 +28,9 @@ public final class AzNsActionGroupResponse extends io.pulumi.resources.InvokeArg
         return this.actionGroup == null ? List.of() : this.actionGroup;
     }
 
+    /**
+     * Custom payload to be sent for all webhook URI in Azure action group
+     */
     @InputImport(name="customWebhookPayload")
     private final @Nullable String customWebhookPayload;
 
@@ -29,6 +38,9 @@ public final class AzNsActionGroupResponse extends io.pulumi.resources.InvokeArg
         return this.customWebhookPayload == null ? Optional.empty() : Optional.ofNullable(this.customWebhookPayload);
     }
 
+    /**
+     * Custom subject override for all email ids in Azure action group
+     */
     @InputImport(name="emailSubject")
     private final @Nullable String emailSubject;
 

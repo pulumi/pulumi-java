@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TestBaseAccountArgs Empty = new TestBaseAccountArgs();
 
+    /**
+     * The geo-location where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -24,6 +30,9 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group that contains the resource.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -31,6 +40,9 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The flag indicating if we would like to restore the Test Base Accounts which were soft deleted before.
+     */
     @InputImport(name="restore")
     private final @Nullable Input<Boolean> restore;
 
@@ -38,6 +50,9 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.restore == null ? Input.empty() : this.restore;
     }
 
+    /**
+     * The SKU of the Test Base Account.
+     */
     @InputImport(name="sku", required=true)
     private final Input<TestBaseAccountSKUArgs> sku;
 
@@ -45,6 +60,9 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.sku;
     }
 
+    /**
+     * The tags of the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -52,6 +70,9 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The resource name of the Test Base Account.
+     */
     @InputImport(name="testBaseAccountName")
     private final @Nullable Input<String> testBaseAccountName;
 

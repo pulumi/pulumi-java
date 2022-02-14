@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Role definition permissions.
+ */
 public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PermissionArgs Empty = new PermissionArgs();
 
+    /**
+     * Allowed actions.
+     */
     @InputImport(name="actions")
     private final @Nullable Input<List<String>> actions;
 
@@ -22,6 +28,9 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
         return this.actions == null ? Input.empty() : this.actions;
     }
 
+    /**
+     * Allowed Data actions.
+     */
     @InputImport(name="dataActions")
     private final @Nullable Input<List<String>> dataActions;
 
@@ -29,6 +38,9 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataActions == null ? Input.empty() : this.dataActions;
     }
 
+    /**
+     * Denied actions.
+     */
     @InputImport(name="notActions")
     private final @Nullable Input<List<String>> notActions;
 
@@ -36,6 +48,9 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
         return this.notActions == null ? Input.empty() : this.notActions;
     }
 
+    /**
+     * Denied Data actions.
+     */
     @InputImport(name="notDataActions")
     private final @Nullable Input<List<String>> notDataActions;
 

@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the properties of an existing Shared Private Link Resource managed by the Azure Cognitive Search service.
+ */
 public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SharedPrivateLinkResourcePropertiesArgs Empty = new SharedPrivateLinkResourcePropertiesArgs();
 
+    /**
+     * The group id from the provider of resource the shared private link resource is for.
+     */
     @InputImport(name="groupId")
     private final @Nullable Input<String> groupId;
 
@@ -23,6 +29,9 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
         return this.groupId == null ? Input.empty() : this.groupId;
     }
 
+    /**
+     * The resource id of the resource the shared private link resource is for.
+     */
     @InputImport(name="privateLinkResourceId")
     private final @Nullable Input<String> privateLinkResourceId;
 
@@ -30,6 +39,9 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
         return this.privateLinkResourceId == null ? Input.empty() : this.privateLinkResourceId;
     }
 
+    /**
+     * The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.
+     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<SharedPrivateLinkResourceProvisioningState> provisioningState;
 
@@ -37,6 +49,9 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
+    /**
+     * The request message for requesting approval of the shared private link resource.
+     */
     @InputImport(name="requestMessage")
     private final @Nullable Input<String> requestMessage;
 
@@ -44,6 +59,9 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
         return this.requestMessage == null ? Input.empty() : this.requestMessage;
     }
 
+    /**
+     * Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).
+     */
     @InputImport(name="resourceRegion")
     private final @Nullable Input<String> resourceRegion;
 
@@ -51,6 +69,9 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
         return this.resourceRegion == null ? Input.empty() : this.resourceRegion;
     }
 
+    /**
+     * Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.
+     */
     @InputImport(name="status")
     private final @Nullable Input<SharedPrivateLinkResourceStatus> status;
 

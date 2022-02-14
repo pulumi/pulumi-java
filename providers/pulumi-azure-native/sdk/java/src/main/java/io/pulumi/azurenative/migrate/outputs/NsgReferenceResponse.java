@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NsgReferenceResponse {
+/**
+ * Gets the ARM resource ID of the tracked resource being referenced.
+ */
     private final String sourceArmResourceId;
 
     @OutputCustomType.Constructor({"sourceArmResourceId"})
@@ -16,6 +19,9 @@ public final class NsgReferenceResponse {
         this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
     }
 
+/**
+ * Gets the ARM resource ID of the tracked resource being referenced.
+ */
     public String getSourceArmResourceId() {
         return this.sourceArmResourceId;
     }

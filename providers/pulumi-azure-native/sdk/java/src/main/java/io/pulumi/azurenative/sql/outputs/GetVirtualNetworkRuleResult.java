@@ -12,11 +12,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetVirtualNetworkRuleResult {
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Create firewall rule before the virtual network has vnet service endpoint enabled.
+ */
     private final @Nullable Boolean ignoreMissingVnetServiceEndpoint;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * Virtual Network Rule State
+ */
     private final String state;
+/**
+ * Resource type.
+ */
     private final String type;
+/**
+ * The ARM resource id of the virtual network subnet.
+ */
     private final String virtualNetworkSubnetId;
 
     @OutputCustomType.Constructor({"id","ignoreMissingVnetServiceEndpoint","name","state","type","virtualNetworkSubnetId"})
@@ -35,21 +53,39 @@ public final class GetVirtualNetworkRuleResult {
         this.virtualNetworkSubnetId = Objects.requireNonNull(virtualNetworkSubnetId);
     }
 
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Create firewall rule before the virtual network has vnet service endpoint enabled.
+ */
     public Optional<Boolean> getIgnoreMissingVnetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Virtual Network Rule State
+ */
     public String getState() {
         return this.state;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * The ARM resource id of the virtual network subnet.
+ */
     public String getVirtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId;
     }

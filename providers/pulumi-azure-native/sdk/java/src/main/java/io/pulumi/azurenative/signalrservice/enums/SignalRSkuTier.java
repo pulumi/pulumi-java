@@ -8,11 +8,28 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Optional tier of this particular SKU. 'Standard' or 'Free'. 
+
+`Basic` is deprecated, use `Standard` instead.
+ */
     @EnumType
     public enum SignalRSkuTier {
+/**
+ * 
+ */
         Free("Free"),
+/**
+ * 
+ */
         Basic("Basic"),
+/**
+ * 
+ */
         Standard("Standard"),
+/**
+ * 
+ */
         Premium("Premium");
 
         private final String value;

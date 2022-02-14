@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Frontend port of an application gateway.
+ */
 public final class ApplicationGatewayFrontendPortArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationGatewayFrontendPortArgs Empty = new ApplicationGatewayFrontendPortArgs();
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -22,6 +28,9 @@ public final class ApplicationGatewayFrontendPortArgs extends io.pulumi.resource
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Name of the frontend port that is unique within an Application Gateway.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +38,9 @@ public final class ApplicationGatewayFrontendPortArgs extends io.pulumi.resource
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Frontend port.
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 

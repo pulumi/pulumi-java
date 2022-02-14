@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWorkspaceNotebookAccessToken {
+/**
+ * 
+API Version: 2021-01-01.
+ */
     public static CompletableFuture<ListWorkspaceNotebookAccessTokenResult> invokeAsync(ListWorkspaceNotebookAccessTokenArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:listWorkspaceNotebookAccessToken", TypeShape.of(ListWorkspaceNotebookAccessTokenResult.class), args == null ? ListWorkspaceNotebookAccessTokenArgs.Empty : args, Utilities.withVersion(options));
     }

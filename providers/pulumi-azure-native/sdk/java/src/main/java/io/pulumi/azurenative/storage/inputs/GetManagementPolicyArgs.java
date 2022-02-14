@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetManagementPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetManagementPolicyArgs Empty = new GetManagementPolicyArgs();
 
+    /**
+     * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetManagementPolicyArgs extends io.pulumi.resources.InvokeArg
         return this.accountName;
     }
 
+    /**
+     * The name of the Storage Account Management Policy. It should always be 'default'
+     */
     @InputImport(name="managementPolicyName", required=true)
     private final String managementPolicyName;
 
@@ -26,6 +35,9 @@ public final class GetManagementPolicyArgs extends io.pulumi.resources.InvokeArg
         return this.managementPolicyName;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

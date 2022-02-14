@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LinkedServiceArgs Empty = new LinkedServiceArgs();
 
+    /**
+     * Identity for the resource.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityArgs> identity;
 
@@ -23,6 +29,9 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * Friendly name of the linked workspace
+     */
     @InputImport(name="linkName")
     private final @Nullable Input<String> linkName;
 
@@ -30,6 +39,9 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkName == null ? Input.empty() : this.linkName;
     }
 
+    /**
+     * location of the linked service.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -37,6 +49,9 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Friendly name of the linked service
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -44,6 +59,9 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * LinkedService specific properties.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<LinkedServicePropsArgs> properties;
 
@@ -51,6 +69,9 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Name of the resource group in which workspace is located.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -58,6 +79,9 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of Azure Machine Learning workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

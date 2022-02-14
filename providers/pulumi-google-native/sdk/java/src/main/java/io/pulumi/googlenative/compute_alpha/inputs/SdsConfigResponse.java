@@ -8,10 +8,16 @@ import io.pulumi.googlenative.compute_alpha.inputs.GrpcServiceConfigResponse;
 import java.util.Objects;
 
 
+/**
+ * [Deprecated] The configuration to access the SDS server. The configuration to access the SDS server.
+ */
 public final class SdsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SdsConfigResponse Empty = new SdsConfigResponse();
 
+    /**
+     * The configuration to access the SDS server over GRPC.
+     */
     @InputImport(name="grpcServiceConfig", required=true)
     private final GrpcServiceConfigResponse grpcServiceConfig;
 

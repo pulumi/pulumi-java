@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Recovery plan creation properties.
+ */
 public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CreateRecoveryPlanInputPropertiesArgs Empty = new CreateRecoveryPlanInputPropertiesArgs();
 
+    /**
+     * The failover deployment model.
+     */
     @InputImport(name="failoverDeploymentModel")
     private final @Nullable Input<Either<String,FailoverDeploymentModel>> failoverDeploymentModel;
 
@@ -26,6 +32,9 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
         return this.failoverDeploymentModel == null ? Input.empty() : this.failoverDeploymentModel;
     }
 
+    /**
+     * The recovery plan groups.
+     */
     @InputImport(name="groups", required=true)
     private final Input<List<RecoveryPlanGroupArgs>> groups;
 
@@ -33,6 +42,9 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
         return this.groups;
     }
 
+    /**
+     * The primary fabric Id.
+     */
     @InputImport(name="primaryFabricId", required=true)
     private final Input<String> primaryFabricId;
 
@@ -40,6 +52,9 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
         return this.primaryFabricId;
     }
 
+    /**
+     * The provider specific input.
+     */
     @InputImport(name="providerSpecificInput")
     private final @Nullable Input<List<RecoveryPlanA2AInputArgs>> providerSpecificInput;
 
@@ -47,6 +62,9 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
         return this.providerSpecificInput == null ? Input.empty() : this.providerSpecificInput;
     }
 
+    /**
+     * The recovery fabric Id.
+     */
     @InputImport(name="recoveryFabricId", required=true)
     private final Input<String> recoveryFabricId;
 

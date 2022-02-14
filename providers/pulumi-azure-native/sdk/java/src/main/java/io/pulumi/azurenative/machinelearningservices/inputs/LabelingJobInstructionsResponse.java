@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Instructions for a labeling job.
+ */
 public final class LabelingJobInstructionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LabelingJobInstructionsResponse Empty = new LabelingJobInstructionsResponse();
 
+    /**
+     * The link to a page with detailed labeling instructions for labelers.
+     */
     @InputImport(name="uri")
     private final @Nullable String uri;
 

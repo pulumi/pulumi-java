@@ -11,10 +11,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetInstanceResult {
+/**
+ * The policy to define whether or not RBE features can be used or how they can be used.
+ */
     private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse featurePolicy;
+/**
+ * The location is a GCP region. Currently only `us-central1` is supported.
+ */
     private final String location;
+/**
+ * Whether stack driver logging is enabled for the instance.
+ */
     private final Boolean loggingEnabled;
+/**
+ * Instance resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`. Name should not be populated when creating an instance since it is provided in the `instance_id` field.
+ */
     private final String name;
+/**
+ * State of the instance.
+ */
     private final String state;
 
     @OutputCustomType.Constructor({"featurePolicy","location","loggingEnabled","name","state"})
@@ -31,18 +46,33 @@ public final class GetInstanceResult {
         this.state = Objects.requireNonNull(state);
     }
 
+/**
+ * The policy to define whether or not RBE features can be used or how they can be used.
+ */
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse getFeaturePolicy() {
         return this.featurePolicy;
     }
+/**
+ * The location is a GCP region. Currently only `us-central1` is supported.
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * Whether stack driver logging is enabled for the instance.
+ */
     public Boolean getLoggingEnabled() {
         return this.loggingEnabled;
     }
+/**
+ * Instance resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`. Name should not be populated when creating an instance since it is provided in the `instance_id` field.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * State of the instance.
+ */
     public String getState() {
         return this.state;
     }

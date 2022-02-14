@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PipelineSourceTriggerDescriptorResponse {
+/**
+ * The timestamp when the source update happened.
+ */
     private final @Nullable String timestamp;
 
     @OutputCustomType.Constructor({"timestamp"})
@@ -18,6 +21,9 @@ public final class PipelineSourceTriggerDescriptorResponse {
         this.timestamp = timestamp;
     }
 
+/**
+ * The timestamp when the source update happened.
+ */
     public Optional<String> getTimestamp() {
         return Optional.ofNullable(this.timestamp);
     }

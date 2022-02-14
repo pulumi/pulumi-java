@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of a managed identity
+ */
 public final class IdentityPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IdentityPropertiesResponse Empty = new IdentityPropertiesResponse();
 
+    /**
+     * The client secret URL of the identity.
+     */
     @InputImport(name="clientSecretUrl")
     private final @Nullable String clientSecretUrl;
 
@@ -21,6 +27,9 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
         return this.clientSecretUrl == null ? Optional.empty() : Optional.ofNullable(this.clientSecretUrl);
     }
 
+    /**
+     * The principal id of resource identity.
+     */
     @InputImport(name="principalId")
     private final @Nullable String principalId;
 
@@ -28,6 +37,9 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
         return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);
     }
 
+    /**
+     * The tenant identifier of resource.
+     */
     @InputImport(name="tenantId")
     private final @Nullable String tenantId;
 
@@ -35,6 +47,9 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
     }
 
+    /**
+     * Managed identity.
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

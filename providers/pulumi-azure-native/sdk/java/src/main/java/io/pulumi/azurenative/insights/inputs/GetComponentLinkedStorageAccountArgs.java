@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetComponentLinkedStorageAccountArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetComponentLinkedStorageAccountArgs Empty = new GetComponentLinkedStorageAccountArgs();
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class GetComponentLinkedStorageAccountArgs extends io.pulumi.resour
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Application Insights component resource.
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 
@@ -26,6 +35,9 @@ public final class GetComponentLinkedStorageAccountArgs extends io.pulumi.resour
         return this.resourceName;
     }
 
+    /**
+     * The type of the Application Insights component data source for the linked storage account.
+     */
     @InputImport(name="storageType", required=true)
     private final String storageType;
 

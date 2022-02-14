@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Staging settings.
+ */
 public final class StagingSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StagingSettingsArgs Empty = new StagingSettingsArgs();
 
+    /**
+     * Specifies whether to use compression when copying data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="enableCompression")
     private final @Nullable Input<Object> enableCompression;
 
@@ -22,6 +28,9 @@ public final class StagingSettingsArgs extends io.pulumi.resources.ResourceArgs 
         return this.enableCompression == null ? Input.empty() : this.enableCompression;
     }
 
+    /**
+     * Staging linked service reference.
+     */
     @InputImport(name="linkedServiceName", required=true)
     private final Input<LinkedServiceReferenceArgs> linkedServiceName;
 
@@ -29,6 +38,9 @@ public final class StagingSettingsArgs extends io.pulumi.resources.ResourceArgs 
         return this.linkedServiceName;
     }
 
+    /**
+     * The path to storage for storing the interim data. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="path")
     private final @Nullable Input<Object> path;
 

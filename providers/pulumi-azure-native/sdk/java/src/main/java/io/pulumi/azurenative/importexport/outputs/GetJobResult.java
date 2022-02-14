@@ -15,13 +15,37 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetJobResult {
+/**
+ * Specifies the resource identifier of the job.
+ */
     private final String id;
+/**
+ * Specifies the job identity details
+ */
     private final @Nullable IdentityDetailsResponse identity;
+/**
+ * Specifies the Azure location where the job is created.
+ */
     private final @Nullable String location;
+/**
+ * Specifies the name of the job.
+ */
     private final String name;
+/**
+ * Specifies the job properties
+ */
     private final JobDetailsResponse properties;
+/**
+ * SystemData of ImportExport Jobs.
+ */
     private final SystemDataResponse systemData;
+/**
+ * Specifies the tags that are assigned to the job.
+ */
     private final @Nullable Object tags;
+/**
+ * Specifies the type of the job resource.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","identity","location","name","properties","systemData","tags","type"})
@@ -44,27 +68,51 @@ public final class GetJobResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Specifies the resource identifier of the job.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Specifies the job identity details
+ */
     public Optional<IdentityDetailsResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
+/**
+ * Specifies the Azure location where the job is created.
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * Specifies the name of the job.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Specifies the job properties
+ */
     public JobDetailsResponse getProperties() {
         return this.properties;
     }
+/**
+ * SystemData of ImportExport Jobs.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * Specifies the tags that are assigned to the job.
+ */
     public Optional<Object> getTags() {
         return Optional.ofNullable(this.tags);
     }
+/**
+ * Specifies the type of the job resource.
+ */
     public String getType() {
         return this.type;
     }

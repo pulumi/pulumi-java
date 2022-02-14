@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEnvironmentSetting {
+/**
+ * Represents settings of an environment, from which environment instances would be created
+API Version: 2018-10-15.
+ *
+ * Represents settings of an environment, from which environment instances would be created
+ */
     public static CompletableFuture<GetEnvironmentSettingResult> invokeAsync(GetEnvironmentSettingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getEnvironmentSetting", TypeShape.of(GetEnvironmentSettingResult.class), args == null ? GetEnvironmentSettingArgs.Empty : args, Utilities.withVersion(options));
     }

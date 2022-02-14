@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Retention tag
+ */
 public final class RetentionTagResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RetentionTagResponse Empty = new RetentionTagResponse();
 
+    /**
+     * Retention Tag version.
+     */
     @InputImport(name="eTag", required=true)
     private final String eTag;
 
@@ -19,6 +25,9 @@ public final class RetentionTagResponse extends io.pulumi.resources.InvokeArgs {
         return this.eTag;
     }
 
+    /**
+     * Retention Tag version.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -26,6 +35,9 @@ public final class RetentionTagResponse extends io.pulumi.resources.InvokeArgs {
         return this.id;
     }
 
+    /**
+     * Retention Tag Name to relate it to retention rule.
+     */
     @InputImport(name="tagName", required=true)
     private final String tagName;
 

@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PolicyArgs Empty = new PolicyArgs();
 
+    /**
+     * Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
+     */
     @InputImport(name="alternativeNameServerConfig")
     private final @Nullable Input<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig;
 
@@ -25,6 +31,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.alternativeNameServerConfig == null ? Input.empty() : this.alternativeNameServerConfig;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="clientOperationId")
     private final @Nullable Input<String> clientOperationId;
 
@@ -32,6 +41,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientOperationId == null ? Input.empty() : this.clientOperationId;
     }
 
+    /**
+     * A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the policy's function.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,6 +51,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When enabled, a virtual IP address is allocated from each of the subnetworks that are bound to this policy.
+     */
     @InputImport(name="enableInboundForwarding")
     private final @Nullable Input<Boolean> enableInboundForwarding;
 
@@ -46,6 +61,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableInboundForwarding == null ? Input.empty() : this.enableInboundForwarding;
     }
 
+    /**
+     * Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
+     */
     @InputImport(name="enableLogging")
     private final @Nullable Input<Boolean> enableLogging;
 
@@ -53,6 +71,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableLogging == null ? Input.empty() : this.enableLogging;
     }
 
+    /**
+     * Unique identifier for the resource; defined by the server (output only).
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -60,6 +81,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -67,6 +91,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * User-assigned name for this policy.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -74,6 +101,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * List of network names specifying networks to which this policy is applied.
+     */
     @InputImport(name="networks")
     private final @Nullable Input<List<PolicyNetworkArgs>> networks;
 
@@ -81,6 +111,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.networks == null ? Input.empty() : this.networks;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

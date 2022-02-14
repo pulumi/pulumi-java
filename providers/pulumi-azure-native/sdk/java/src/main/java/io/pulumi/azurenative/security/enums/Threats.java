@@ -8,15 +8,42 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Threats impact of the assessment
+ */
     @EnumType
     public enum Threats {
+/**
+ * 
+ */
         AccountBreach("accountBreach"),
+/**
+ * 
+ */
         DataExfiltration("dataExfiltration"),
+/**
+ * 
+ */
         DataSpillage("dataSpillage"),
+/**
+ * 
+ */
         MaliciousInsider("maliciousInsider"),
+/**
+ * 
+ */
         ElevationOfPrivilege("elevationOfPrivilege"),
+/**
+ * 
+ */
         ThreatResistance("threatResistance"),
+/**
+ * 
+ */
         MissingCoverage("missingCoverage"),
+/**
+ * 
+ */
         DenialOfService("denialOfService");
 
         private final String value;

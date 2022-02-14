@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The reference to the transport protocol used by the load balancing rule.
+ */
     @EnumType
     public enum Protocol {
+/**
+ * 
+ */
         Tcp("tcp"),
+/**
+ * 
+ */
         Udp("udp");
 
         private final String value;

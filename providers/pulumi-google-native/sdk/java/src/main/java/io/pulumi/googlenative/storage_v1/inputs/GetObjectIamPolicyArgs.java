@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetObjectIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetObjectIamPolicyArgs Empty = new GetObjectIamPolicyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="bucket", required=true)
     private final String bucket;
 
@@ -21,6 +27,9 @@ public final class GetObjectIamPolicyArgs extends io.pulumi.resources.InvokeArgs
         return this.bucket;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="generation")
     private final @Nullable String generation;
 
@@ -28,6 +37,9 @@ public final class GetObjectIamPolicyArgs extends io.pulumi.resources.InvokeArgs
         return this.generation == null ? Optional.empty() : Optional.ofNullable(this.generation);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="object", required=true)
     private final String object;
 
@@ -35,6 +47,9 @@ public final class GetObjectIamPolicyArgs extends io.pulumi.resources.InvokeArgs
         return this.object;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="provisionalUserProject")
     private final @Nullable String provisionalUserProject;
 
@@ -42,6 +57,9 @@ public final class GetObjectIamPolicyArgs extends io.pulumi.resources.InvokeArgs
         return this.provisionalUserProject == null ? Optional.empty() : Optional.ofNullable(this.provisionalUserProject);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="userProject")
     private final @Nullable String userProject;
 

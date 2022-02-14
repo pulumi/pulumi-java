@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Deployment on error behavior.
+ */
 public final class OnErrorDeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OnErrorDeploymentArgs Empty = new OnErrorDeploymentArgs();
 
+    /**
+     * The deployment to be used on error case.
+     */
     @InputImport(name="deploymentName")
     private final @Nullable Input<String> deploymentName;
 
@@ -22,6 +28,9 @@ public final class OnErrorDeploymentArgs extends io.pulumi.resources.ResourceArg
         return this.deploymentName == null ? Input.empty() : this.deploymentName;
     }
 
+    /**
+     * The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.
+     */
     @InputImport(name="type")
     private final @Nullable Input<OnErrorDeploymentType> type;
 

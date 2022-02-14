@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MediaServiceIdentityResponse {
+/**
+ * The Principal ID of the identity.
+ */
     private final String principalId;
+/**
+ * The Tenant ID of the identity.
+ */
     private final String tenantId;
+/**
+ * The identity type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type"})
@@ -23,12 +32,21 @@ public final class MediaServiceIdentityResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The Principal ID of the identity.
+ */
     public String getPrincipalId() {
         return this.principalId;
     }
+/**
+ * The Tenant ID of the identity.
+ */
     public String getTenantId() {
         return this.tenantId;
     }
+/**
+ * The identity type.
+ */
     public String getType() {
         return this.type;
     }

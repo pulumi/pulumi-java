@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the parameters for PostArgs match conditions
+ */
 public final class PostArgsMatchConditionParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PostArgsMatchConditionParametersArgs Empty = new PostArgsMatchConditionParametersArgs();
 
+    /**
+     * The match value for the condition of the delivery rule
+     */
     @InputImport(name="matchValues")
     private final @Nullable Input<List<String>> matchValues;
 
@@ -26,6 +32,9 @@ public final class PostArgsMatchConditionParametersArgs extends io.pulumi.resour
         return this.matchValues == null ? Input.empty() : this.matchValues;
     }
 
+    /**
+     * Describes if this is negate condition or not
+     */
     @InputImport(name="negateCondition")
     private final @Nullable Input<Boolean> negateCondition;
 
@@ -33,6 +42,9 @@ public final class PostArgsMatchConditionParametersArgs extends io.pulumi.resour
         return this.negateCondition == null ? Input.empty() : this.negateCondition;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 
@@ -40,6 +52,9 @@ public final class PostArgsMatchConditionParametersArgs extends io.pulumi.resour
         return this.odataType;
     }
 
+    /**
+     * Describes operator to be matched
+     */
     @InputImport(name="operator", required=true)
     private final Input<Either<String,PostArgsOperator>> operator;
 
@@ -47,6 +62,9 @@ public final class PostArgsMatchConditionParametersArgs extends io.pulumi.resour
         return this.operator;
     }
 
+    /**
+     * Name of PostArg to be matched
+     */
     @InputImport(name="selector")
     private final @Nullable Input<String> selector;
 
@@ -54,6 +72,9 @@ public final class PostArgsMatchConditionParametersArgs extends io.pulumi.resour
         return this.selector == null ? Input.empty() : this.selector;
     }
 
+    /**
+     * List of transforms
+     */
     @InputImport(name="transforms")
     private final @Nullable Input<List<Either<String,Transform>>> transforms;
 

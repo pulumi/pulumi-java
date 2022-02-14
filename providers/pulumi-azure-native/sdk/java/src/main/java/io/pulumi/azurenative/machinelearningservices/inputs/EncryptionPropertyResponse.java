@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class EncryptionPropertyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EncryptionPropertyResponse Empty = new EncryptionPropertyResponse();
 
+    /**
+     * The identity that will be used to access the key vault for encryption at rest.
+     */
     @InputImport(name="identity")
     private final @Nullable IdentityForCmkResponse identity;
 
@@ -23,6 +29,9 @@ public final class EncryptionPropertyResponse extends io.pulumi.resources.Invoke
         return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
     }
 
+    /**
+     * Customer Key vault properties.
+     */
     @InputImport(name="keyVaultProperties", required=true)
     private final KeyVaultPropertiesResponse keyVaultProperties;
 
@@ -30,6 +39,9 @@ public final class EncryptionPropertyResponse extends io.pulumi.resources.Invoke
         return this.keyVaultProperties;
     }
 
+    /**
+     * Indicates whether or not the encryption is enabled for the workspace.
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FirstQualityResponse {
+/**
+ * The first quality bitrate.
+ */
     private final Integer bitrate;
 
     @OutputCustomType.Constructor({"bitrate"})
@@ -16,6 +19,9 @@ public final class FirstQualityResponse {
         this.bitrate = Objects.requireNonNull(bitrate);
     }
 
+/**
+ * The first quality bitrate.
+ */
     public Integer getBitrate() {
         return this.bitrate;
     }

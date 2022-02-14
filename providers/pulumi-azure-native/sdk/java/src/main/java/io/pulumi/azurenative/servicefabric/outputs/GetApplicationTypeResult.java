@@ -12,12 +12,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetApplicationTypeResult {
+/**
+ * Azure resource etag.
+ */
     private final String etag;
+/**
+ * Azure resource identifier.
+ */
     private final String id;
+/**
+ * It will be deprecated in New API, resource location depends on the parent resource.
+ */
     private final @Nullable String location;
+/**
+ * Azure resource name.
+ */
     private final String name;
+/**
+ * The current deployment or provisioning state, which only appears in the response.
+ */
     private final String provisioningState;
+/**
+ * Azure resource tags.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Azure resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","location","name","provisioningState","tags","type"})
@@ -38,24 +59,45 @@ public final class GetApplicationTypeResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Azure resource etag.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * Azure resource identifier.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * It will be deprecated in New API, resource location depends on the parent resource.
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * Azure resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The current deployment or provisioning state, which only appears in the response.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Azure resource tags.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Azure resource type.
+ */
     public String getType() {
         return this.type;
     }

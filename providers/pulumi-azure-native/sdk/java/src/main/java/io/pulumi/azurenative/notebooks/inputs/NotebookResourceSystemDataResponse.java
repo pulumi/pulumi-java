@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * System data for notebook resource
+ */
 public final class NotebookResourceSystemDataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NotebookResourceSystemDataResponse Empty = new NotebookResourceSystemDataResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="createdAt")
     private final @Nullable String createdAt;
 
@@ -21,6 +27,9 @@ public final class NotebookResourceSystemDataResponse extends io.pulumi.resource
         return this.createdAt == null ? Optional.empty() : Optional.ofNullable(this.createdAt);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="createdBy")
     private final @Nullable String createdBy;
 
@@ -28,6 +37,9 @@ public final class NotebookResourceSystemDataResponse extends io.pulumi.resource
         return this.createdBy == null ? Optional.empty() : Optional.ofNullable(this.createdBy);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="createdByType")
     private final @Nullable String createdByType;
 
@@ -35,6 +47,9 @@ public final class NotebookResourceSystemDataResponse extends io.pulumi.resource
         return this.createdByType == null ? Optional.empty() : Optional.ofNullable(this.createdByType);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="lastModifiedAt")
     private final @Nullable String lastModifiedAt;
 
@@ -42,6 +57,9 @@ public final class NotebookResourceSystemDataResponse extends io.pulumi.resource
         return this.lastModifiedAt == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedAt);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="lastModifiedBy")
     private final @Nullable String lastModifiedBy;
 
@@ -49,6 +67,9 @@ public final class NotebookResourceSystemDataResponse extends io.pulumi.resource
         return this.lastModifiedBy == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedBy);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="lastModifiedByType")
     private final @Nullable String lastModifiedByType;
 

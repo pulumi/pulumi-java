@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEnterpriseChannel {
+/**
+ * Enterprise Channel resource definition
+API Version: 2018-07-12.
+ *
+ * Enterprise Channel resource definition
+ */
     public static CompletableFuture<GetEnterpriseChannelResult> invokeAsync(GetEnterpriseChannelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:botservice:getEnterpriseChannel", TypeShape.of(GetEnterpriseChannelResult.class), args == null ? GetEnterpriseChannelArgs.Empty : args, Utilities.withVersion(options));
     }

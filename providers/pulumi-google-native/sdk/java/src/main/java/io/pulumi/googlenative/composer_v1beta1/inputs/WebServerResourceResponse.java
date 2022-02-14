@@ -8,10 +8,16 @@ import java.lang.Double;
 import java.util.Objects;
 
 
+/**
+ * Configuration for resources used by Airflow web server.
+ */
 public final class WebServerResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WebServerResourceResponse Empty = new WebServerResourceResponse();
 
+    /**
+     * Optional. CPU request and limit for Airflow web server.
+     */
     @InputImport(name="cpu", required=true)
     private final Double cpu;
 
@@ -19,6 +25,9 @@ public final class WebServerResourceResponse extends io.pulumi.resources.InvokeA
         return this.cpu;
     }
 
+    /**
+     * Optional. Memory (GB) request and limit for Airflow web server.
+     */
     @InputImport(name="memoryGb", required=true)
     private final Double memoryGb;
 
@@ -26,6 +35,9 @@ public final class WebServerResourceResponse extends io.pulumi.resources.InvokeA
         return this.memoryGb;
     }
 
+    /**
+     * Optional. Storage (GB) request and limit for Airflow web server.
+     */
     @InputImport(name="storageGb", required=true)
     private final Double storageGb;
 

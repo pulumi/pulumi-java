@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A replication policy that replicates the Secret payload into the locations specified in Secret.replication.user_managed.replicas
+ */
 public final class UserManagedArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserManagedArgs Empty = new UserManagedArgs();
 
+    /**
+     * The list of Replicas for this Secret. Cannot be empty.
+     */
     @InputImport(name="replicas", required=true)
     private final Input<List<ReplicaArgs>> replicas;
 

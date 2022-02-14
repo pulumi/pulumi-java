@@ -8,7 +8,6 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.containeranalysis_v1alpha1.OccurrenceArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.AttestationResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.BuildDetailsResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.ComplianceOccurrenceResponse;
@@ -28,147 +27,295 @@ import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.VulnerabilityDe
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a new `Occurrence`. Use this method to create `Occurrences` for a resource.
+Auto-naming is currently not supported for this resource.
+ */
 @ResourceType(type="google-native:containeranalysis/v1alpha1:Occurrence")
 public class Occurrence extends io.pulumi.resources.CustomResource {
+    /**
+     * Describes an attestation of an artifact.
+     */
     @OutputExport(name="attestation", type=AttestationResponse.class, parameters={})
     private Output<AttestationResponse> attestation;
 
+    /**
+     * @return Describes an attestation of an artifact.
+     */
     public Output<AttestationResponse> getAttestation() {
         return this.attestation;
     }
+    /**
+     * Build details for a verifiable build.
+     */
     @OutputExport(name="buildDetails", type=BuildDetailsResponse.class, parameters={})
     private Output<BuildDetailsResponse> buildDetails;
 
+    /**
+     * @return Build details for a verifiable build.
+     */
     public Output<BuildDetailsResponse> getBuildDetails() {
         return this.buildDetails;
     }
+    /**
+     * Describes whether or not a resource passes compliance checks.
+     */
     @OutputExport(name="compliance", type=ComplianceOccurrenceResponse.class, parameters={})
     private Output<ComplianceOccurrenceResponse> compliance;
 
+    /**
+     * @return Describes whether or not a resource passes compliance checks.
+     */
     public Output<ComplianceOccurrenceResponse> getCompliance() {
         return this.compliance;
     }
+    /**
+     * The time this `Occurrence` was created.
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return The time this `Occurrence` was created.
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Describes the deployment of an artifact on a runtime.
+     */
     @OutputExport(name="deployment", type=DeploymentResponse.class, parameters={})
     private Output<DeploymentResponse> deployment;
 
+    /**
+     * @return Describes the deployment of an artifact on a runtime.
+     */
     public Output<DeploymentResponse> getDeployment() {
         return this.deployment;
     }
+    /**
+     * Describes how this resource derives from the basis in the associated note.
+     */
     @OutputExport(name="derivedImage", type=DerivedResponse.class, parameters={})
     private Output<DerivedResponse> derivedImage;
 
+    /**
+     * @return Describes how this resource derives from the basis in the associated note.
+     */
     public Output<DerivedResponse> getDerivedImage() {
         return this.derivedImage;
     }
+    /**
+     * Describes the initial scan status for this resource.
+     */
     @OutputExport(name="discovered", type=DiscoveredResponse.class, parameters={})
     private Output<DiscoveredResponse> discovered;
 
+    /**
+     * @return Describes the initial scan status for this resource.
+     */
     public Output<DiscoveredResponse> getDiscovered() {
         return this.discovered;
     }
+    /**
+     * This represents a DSSE attestation occurrence
+     */
     @OutputExport(name="dsseAttestation", type=DSSEAttestationOccurrenceResponse.class, parameters={})
     private Output<DSSEAttestationOccurrenceResponse> dsseAttestation;
 
+    /**
+     * @return This represents a DSSE attestation occurrence
+     */
     public Output<DSSEAttestationOccurrenceResponse> getDsseAttestation() {
         return this.dsseAttestation;
     }
+    /**
+     * https://github.com/secure-systems-lab/dsse
+     */
     @OutputExport(name="envelope", type=EnvelopeResponse.class, parameters={})
     private Output<EnvelopeResponse> envelope;
 
+    /**
+     * @return https://github.com/secure-systems-lab/dsse
+     */
     public Output<EnvelopeResponse> getEnvelope() {
         return this.envelope;
     }
+    /**
+     * Describes the installation of a package on the linked resource.
+     */
     @OutputExport(name="installation", type=InstallationResponse.class, parameters={})
     private Output<InstallationResponse> installation;
 
+    /**
+     * @return Describes the installation of a package on the linked resource.
+     */
     public Output<InstallationResponse> getInstallation() {
         return this.installation;
     }
+    /**
+     * This explicitly denotes which of the `Occurrence` details are specified. This field can be used as a filter in list requests.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return This explicitly denotes which of the `Occurrence` details are specified. This field can be used as a filter in list requests.
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * The name of the `Occurrence` in the form "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the `Occurrence` in the form "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * An analysis note associated with this image, in the form "providers/{provider_id}/notes/{NOTE_ID}" This field can be used as a filter in list requests.
+     */
     @OutputExport(name="noteName", type=String.class, parameters={})
     private Output<String> noteName;
 
+    /**
+     * @return An analysis note associated with this image, in the form "providers/{provider_id}/notes/{NOTE_ID}" This field can be used as a filter in list requests.
+     */
     public Output<String> getNoteName() {
         return this.noteName;
     }
+    /**
+     * A description of actions that can be taken to remedy the `Note`
+     */
     @OutputExport(name="remediation", type=String.class, parameters={})
     private Output<String> remediation;
 
+    /**
+     * @return A description of actions that can be taken to remedy the `Note`
+     */
     public Output<String> getRemediation() {
         return this.remediation;
     }
+    /**
+     *  The resource for which the `Occurrence` applies.
+     */
     @OutputExport(name="resource", type=ResourceResponse.class, parameters={})
     private Output<ResourceResponse> resource;
 
+    /**
+     * @return  The resource for which the `Occurrence` applies.
+     */
     public Output<ResourceResponse> getResource() {
         return this.resource;
     }
+    /**
+     * The unique URL of the image or the container for which the `Occurrence` applies. For example, https://gcr.io/project/image@sha256:foo This field can be used as a filter in list requests.
+     */
     @OutputExport(name="resourceUrl", type=String.class, parameters={})
     private Output<String> resourceUrl;
 
+    /**
+     * @return The unique URL of the image or the container for which the `Occurrence` applies. For example, https://gcr.io/project/image@sha256:foo This field can be used as a filter in list requests.
+     */
     public Output<String> getResourceUrl() {
         return this.resourceUrl;
     }
+    /**
+     * Describes a specific software bill of materials document.
+     */
     @OutputExport(name="sbom", type=DocumentOccurrenceResponse.class, parameters={})
     private Output<DocumentOccurrenceResponse> sbom;
 
+    /**
+     * @return Describes a specific software bill of materials document.
+     */
     public Output<DocumentOccurrenceResponse> getSbom() {
         return this.sbom;
     }
+    /**
+     * Describes a specific SPDX File.
+     */
     @OutputExport(name="spdxFile", type=FileOccurrenceResponse.class, parameters={})
     private Output<FileOccurrenceResponse> spdxFile;
 
+    /**
+     * @return Describes a specific SPDX File.
+     */
     public Output<FileOccurrenceResponse> getSpdxFile() {
         return this.spdxFile;
     }
+    /**
+     * Describes a specific SPDX Package.
+     */
     @OutputExport(name="spdxPackage", type=PackageInfoOccurrenceResponse.class, parameters={})
     private Output<PackageInfoOccurrenceResponse> spdxPackage;
 
+    /**
+     * @return Describes a specific SPDX Package.
+     */
     public Output<PackageInfoOccurrenceResponse> getSpdxPackage() {
         return this.spdxPackage;
     }
+    /**
+     * Describes a specific relationship between SPDX elements.
+     */
     @OutputExport(name="spdxRelationship", type=RelationshipOccurrenceResponse.class, parameters={})
     private Output<RelationshipOccurrenceResponse> spdxRelationship;
 
+    /**
+     * @return Describes a specific relationship between SPDX elements.
+     */
     public Output<RelationshipOccurrenceResponse> getSpdxRelationship() {
         return this.spdxRelationship;
     }
+    /**
+     * The time this `Occurrence` was last updated.
+     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
+    /**
+     * @return The time this `Occurrence` was last updated.
+     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
+    /**
+     * Describes an upgrade.
+     */
     @OutputExport(name="upgrade", type=UpgradeOccurrenceResponse.class, parameters={})
     private Output<UpgradeOccurrenceResponse> upgrade;
 
+    /**
+     * @return Describes an upgrade.
+     */
     public Output<UpgradeOccurrenceResponse> getUpgrade() {
         return this.upgrade;
     }
+    /**
+     * Details of a security vulnerability note.
+     */
     @OutputExport(name="vulnerabilityDetails", type=VulnerabilityDetailsResponse.class, parameters={})
     private Output<VulnerabilityDetailsResponse> vulnerabilityDetails;
 
+    /**
+     * @return Details of a security vulnerability note.
+     */
     public Output<VulnerabilityDetailsResponse> getVulnerabilityDetails() {
         return this.vulnerabilityDetails;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Occurrence(String name, @Nullable OccurrenceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:containeranalysis/v1alpha1:Occurrence", name, args == null ? OccurrenceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -184,6 +331,14 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Occurrence get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Occurrence(name, id, options);
     }

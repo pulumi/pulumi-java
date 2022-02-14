@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of error management to use for the mapping.
+ */
     @EnumType
     public enum ErrorManagementTypes {
+/**
+ * 
+ */
         RejectAndContinue("RejectAndContinue"),
+/**
+ * 
+ */
         StopImport("StopImport"),
+/**
+ * 
+ */
         RejectUntilLimit("RejectUntilLimit");
 
         private final String value;

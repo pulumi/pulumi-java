@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class CloudServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CloudServiceArgs Empty = new CloudServiceArgs();
 
+    /**
+     * Name of the cloud service.
+     */
     @InputImport(name="cloudServiceName")
     private final @Nullable Input<String> cloudServiceName;
 
@@ -23,6 +29,9 @@ public final class CloudServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.cloudServiceName == null ? Input.empty() : this.cloudServiceName;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -30,6 +39,9 @@ public final class CloudServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Cloud service properties
+     */
     @InputImport(name="properties")
     private final @Nullable Input<CloudServicePropertiesArgs> properties;
 
@@ -37,6 +49,9 @@ public final class CloudServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +59,9 @@ public final class CloudServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

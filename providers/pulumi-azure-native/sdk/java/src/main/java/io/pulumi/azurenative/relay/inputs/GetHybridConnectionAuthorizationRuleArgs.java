@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetHybridConnectionAuthorizationRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetHybridConnectionAuthorizationRuleArgs Empty = new GetHybridConnectionAuthorizationRuleArgs();
 
+    /**
+     * The authorization rule name.
+     */
     @InputImport(name="authorizationRuleName", required=true)
     private final String authorizationRuleName;
 
@@ -19,6 +25,9 @@ public final class GetHybridConnectionAuthorizationRuleArgs extends io.pulumi.re
         return this.authorizationRuleName;
     }
 
+    /**
+     * The hybrid connection name.
+     */
     @InputImport(name="hybridConnectionName", required=true)
     private final String hybridConnectionName;
 
@@ -26,6 +35,9 @@ public final class GetHybridConnectionAuthorizationRuleArgs extends io.pulumi.re
         return this.hybridConnectionName;
     }
 
+    /**
+     * The namespace name
+     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -33,6 +45,9 @@ public final class GetHybridConnectionAuthorizationRuleArgs extends io.pulumi.re
         return this.namespaceName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

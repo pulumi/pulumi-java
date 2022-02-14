@@ -12,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceTypeExtensionResponse {
+/**
+ * 
+ */
     private final @Nullable String endpointUri;
+/**
+ * 
+ */
     private final @Nullable List<String> extensionCategories;
+/**
+ * 
+ */
     private final @Nullable String timeout;
 
     @OutputCustomType.Constructor({"endpointUri","extensionCategories","timeout"})
@@ -26,12 +35,21 @@ public final class ResourceTypeExtensionResponse {
         this.timeout = timeout;
     }
 
+/**
+ * 
+ */
     public Optional<String> getEndpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }
+/**
+ * 
+ */
     public List<String> getExtensionCategories() {
         return this.extensionCategories == null ? List.of() : this.extensionCategories;
     }
+/**
+ * 
+ */
     public Optional<String> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }

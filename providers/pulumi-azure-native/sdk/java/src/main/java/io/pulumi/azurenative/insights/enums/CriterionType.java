@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Specifies the type of threshold criteria
+ */
     @EnumType
     public enum CriterionType {
+/**
+ * 
+ */
         StaticThresholdCriterion("StaticThresholdCriterion"),
+/**
+ * 
+ */
         DynamicThresholdCriterion("DynamicThresholdCriterion");
 
         private final String value;

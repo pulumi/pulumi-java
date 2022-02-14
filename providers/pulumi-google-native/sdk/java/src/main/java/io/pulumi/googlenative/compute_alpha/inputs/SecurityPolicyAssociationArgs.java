@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SecurityPolicyAssociationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityPolicyAssociationArgs Empty = new SecurityPolicyAssociationArgs();
 
+    /**
+     * The resource that the security policy is attached to.
+     */
     @InputImport(name="attachmentId")
     private final @Nullable Input<String> attachmentId;
 
@@ -21,6 +27,9 @@ public final class SecurityPolicyAssociationArgs extends io.pulumi.resources.Res
         return this.attachmentId == null ? Input.empty() : this.attachmentId;
     }
 
+    /**
+     * The name for an association.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

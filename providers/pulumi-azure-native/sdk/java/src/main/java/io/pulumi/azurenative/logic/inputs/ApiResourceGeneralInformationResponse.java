@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The API general information.
+ */
 public final class ApiResourceGeneralInformationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiResourceGeneralInformationResponse Empty = new ApiResourceGeneralInformationResponse();
 
+    /**
+     * The description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -21,6 +27,9 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The display name.
+     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -28,6 +37,9 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * The icon url.
+     */
     @InputImport(name="iconUrl")
     private final @Nullable String iconUrl;
 
@@ -35,6 +47,9 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
         return this.iconUrl == null ? Optional.empty() : Optional.ofNullable(this.iconUrl);
     }
 
+    /**
+     * The release tag.
+     */
     @InputImport(name="releaseTag")
     private final @Nullable String releaseTag;
 
@@ -42,6 +57,9 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
         return this.releaseTag == null ? Optional.empty() : Optional.ofNullable(this.releaseTag);
     }
 
+    /**
+     * The terms of use url.
+     */
     @InputImport(name="termsOfUseUrl")
     private final @Nullable String termsOfUseUrl;
 
@@ -49,6 +67,9 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
         return this.termsOfUseUrl == null ? Optional.empty() : Optional.ofNullable(this.termsOfUseUrl);
     }
 
+    /**
+     * The tier.
+     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

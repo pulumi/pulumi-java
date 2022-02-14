@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeidentifyTemplateArgs Empty = new DeidentifyTemplateArgs();
 
+    /**
+     * The core content of the template.
+     */
     @InputImport(name="deidentifyConfig")
     private final @Nullable Input<GooglePrivacyDlpV2DeidentifyConfigArgs> deidentifyConfig;
 
@@ -22,6 +28,9 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
         return this.deidentifyConfig == null ? Input.empty() : this.deidentifyConfig;
     }
 
+    /**
+     * Short description (max 256 chars).
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +38,9 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Display name (max 256 chars).
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -36,6 +48,9 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -43,6 +58,9 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -50,6 +68,9 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The template id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
+     */
     @InputImport(name="templateId")
     private final @Nullable Input<String> templateId;
 

@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The KPI GroupBy field metadata.
+ */
 public final class KpiGroupByMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KpiGroupByMetadataResponse Empty = new KpiGroupByMetadataResponse();
 
+    /**
+     * The display name.
+     */
     @InputImport(name="displayName")
     private final @Nullable Map<String,String> displayName;
 
@@ -22,6 +28,9 @@ public final class KpiGroupByMetadataResponse extends io.pulumi.resources.Invoke
         return this.displayName == null ? Map.of() : this.displayName;
     }
 
+    /**
+     * The name of the field.
+     */
     @InputImport(name="fieldName")
     private final @Nullable String fieldName;
 
@@ -29,6 +38,9 @@ public final class KpiGroupByMetadataResponse extends io.pulumi.resources.Invoke
         return this.fieldName == null ? Optional.empty() : Optional.ofNullable(this.fieldName);
     }
 
+    /**
+     * The type of the field.
+     */
     @InputImport(name="fieldType")
     private final @Nullable String fieldType;
 

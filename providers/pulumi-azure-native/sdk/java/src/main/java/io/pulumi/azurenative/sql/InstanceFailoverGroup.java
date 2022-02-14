@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.sql.InstanceFailoverGroupArgs;
 import io.pulumi.azurenative.sql.outputs.InstanceFailoverGroupReadOnlyEndpointResponse;
 import io.pulumi.azurenative.sql.outputs.InstanceFailoverGroupReadWriteEndpointResponse;
 import io.pulumi.azurenative.sql.outputs.ManagedInstancePairInfoResponse;
@@ -18,57 +17,268 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An instance failover group.
+API Version: 2020-11-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create failover group
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instanceFailoverGroup = new AzureNative.Sql.InstanceFailoverGroup("instanceFailoverGroup", new AzureNative.Sql.InstanceFailoverGroupArgs
+        {
+            FailoverGroupName = "failover-group-test-3",
+            LocationName = "Japan East",
+            ManagedInstancePairs = 
+            {
+                new AzureNative.Sql.Inputs.ManagedInstancePairInfoArgs
+                {
+                    PartnerManagedInstanceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-secondary-mngdInstance",
+                    PrimaryManagedInstanceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-primary-mngdInstance",
+                },
+            },
+            PartnerRegions = 
+            {
+                new AzureNative.Sql.Inputs.PartnerRegionInfoArgs
+                {
+                    Location = "Japan West",
+                },
+            },
+            ReadOnlyEndpoint = new AzureNative.Sql.Inputs.InstanceFailoverGroupReadOnlyEndpointArgs
+            {
+                FailoverPolicy = "Disabled",
+            },
+            ReadWriteEndpoint = new AzureNative.Sql.Inputs.InstanceFailoverGroupReadWriteEndpointArgs
+            {
+                FailoverPolicy = "Automatic",
+                FailoverWithDataLossGracePeriodMinutes = 480,
+            },
+            ResourceGroupName = "Default",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewInstanceFailoverGroup(ctx, "instanceFailoverGroup", &sql.InstanceFailoverGroupArgs{
+			FailoverGroupName: pulumi.String("failover-group-test-3"),
+			LocationName:      pulumi.String("Japan East"),
+			ManagedInstancePairs: sql.ManagedInstancePairInfoArray{
+				&sql.ManagedInstancePairInfoArgs{
+					PartnerManagedInstanceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-secondary-mngdInstance"),
+					PrimaryManagedInstanceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-primary-mngdInstance"),
+				},
+			},
+			PartnerRegions: sql.PartnerRegionInfoArray{
+				&sql.PartnerRegionInfoArgs{
+					Location: pulumi.String("Japan West"),
+				},
+			},
+			ReadOnlyEndpoint: &sql.InstanceFailoverGroupReadOnlyEndpointArgs{
+				FailoverPolicy: pulumi.String("Disabled"),
+			},
+			ReadWriteEndpoint: &sql.InstanceFailoverGroupReadWriteEndpointArgs{
+				FailoverPolicy:                         pulumi.String("Automatic"),
+				FailoverWithDataLossGracePeriodMinutes: pulumi.Int(480),
+			},
+			ResourceGroupName: pulumi.String("Default"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const instanceFailoverGroup = new azure_native.sql.InstanceFailoverGroup("instanceFailoverGroup", {
+    failoverGroupName: "failover-group-test-3",
+    locationName: "Japan East",
+    managedInstancePairs: [{
+        partnerManagedInstanceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-secondary-mngdInstance",
+        primaryManagedInstanceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-primary-mngdInstance",
+    }],
+    partnerRegions: [{
+        location: "Japan West",
+    }],
+    readOnlyEndpoint: {
+        failoverPolicy: "Disabled",
+    },
+    readWriteEndpoint: {
+        failoverPolicy: "Automatic",
+        failoverWithDataLossGracePeriodMinutes: 480,
+    },
+    resourceGroupName: "Default",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+instance_failover_group = azure_native.sql.InstanceFailoverGroup("instanceFailoverGroup",
+    failover_group_name="failover-group-test-3",
+    location_name="Japan East",
+    managed_instance_pairs=[azure_native.sql.ManagedInstancePairInfoArgs(
+        partner_managed_instance_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-secondary-mngdInstance",
+        primary_managed_instance_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/managedInstances/failover-group-primary-mngdInstance",
+    )],
+    partner_regions=[azure_native.sql.PartnerRegionInfoArgs(
+        location="Japan West",
+    )],
+    read_only_endpoint=azure_native.sql.InstanceFailoverGroupReadOnlyEndpointArgs(
+        failover_policy="Disabled",
+    ),
+    read_write_endpoint=azure_native.sql.InstanceFailoverGroupReadWriteEndpointArgs(
+        failover_policy="Automatic",
+        failover_with_data_loss_grace_period_minutes=480,
+    ),
+    resource_group_name="Default")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:sql:InstanceFailoverGroup failover-group-test-3 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default/providers/Microsoft.Sql/locations/JapanEast/instanceFailoverGroups/failover-group-test-3 
+```
+
+ */
 @ResourceType(type="azure-native:sql:InstanceFailoverGroup")
 public class InstanceFailoverGroup extends io.pulumi.resources.CustomResource {
+    /**
+     * List of managed instance pairs in the failover group.
+     */
     @OutputExport(name="managedInstancePairs", type=List.class, parameters={ManagedInstancePairInfoResponse.class})
     private Output<List<ManagedInstancePairInfoResponse>> managedInstancePairs;
 
+    /**
+     * @return List of managed instance pairs in the failover group.
+     */
     public Output<List<ManagedInstancePairInfoResponse>> getManagedInstancePairs() {
         return this.managedInstancePairs;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Partner region information for the failover group.
+     */
     @OutputExport(name="partnerRegions", type=List.class, parameters={PartnerRegionInfoResponse.class})
     private Output<List<PartnerRegionInfoResponse>> partnerRegions;
 
+    /**
+     * @return Partner region information for the failover group.
+     */
     public Output<List<PartnerRegionInfoResponse>> getPartnerRegions() {
         return this.partnerRegions;
     }
+    /**
+     * Read-only endpoint of the failover group instance.
+     */
     @OutputExport(name="readOnlyEndpoint", type=InstanceFailoverGroupReadOnlyEndpointResponse.class, parameters={})
     private Output</* @Nullable */ InstanceFailoverGroupReadOnlyEndpointResponse> readOnlyEndpoint;
 
+    /**
+     * @return Read-only endpoint of the failover group instance.
+     */
     public Output</* @Nullable */ InstanceFailoverGroupReadOnlyEndpointResponse> getReadOnlyEndpoint() {
         return this.readOnlyEndpoint;
     }
+    /**
+     * Read-write endpoint of the failover group instance.
+     */
     @OutputExport(name="readWriteEndpoint", type=InstanceFailoverGroupReadWriteEndpointResponse.class, parameters={})
     private Output<InstanceFailoverGroupReadWriteEndpointResponse> readWriteEndpoint;
 
+    /**
+     * @return Read-write endpoint of the failover group instance.
+     */
     public Output<InstanceFailoverGroupReadWriteEndpointResponse> getReadWriteEndpoint() {
         return this.readWriteEndpoint;
     }
+    /**
+     * Local replication role of the failover group instance.
+     */
     @OutputExport(name="replicationRole", type=String.class, parameters={})
     private Output<String> replicationRole;
 
+    /**
+     * @return Local replication role of the failover group instance.
+     */
     public Output<String> getReplicationRole() {
         return this.replicationRole;
     }
+    /**
+     * Replication state of the failover group instance.
+     */
     @OutputExport(name="replicationState", type=String.class, parameters={})
     private Output<String> replicationState;
 
+    /**
+     * @return Replication state of the failover group instance.
+     */
     public Output<String> getReplicationState() {
         return this.replicationState;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public InstanceFailoverGroup(String name, InstanceFailoverGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:InstanceFailoverGroup", name, args == null ? InstanceFailoverGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -93,6 +303,14 @@ public class InstanceFailoverGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static InstanceFailoverGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new InstanceFailoverGroup(name, id, options);
     }

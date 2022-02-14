@@ -10,8 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AllocationSpecificSKUReservationResponse {
+/**
+ * Specifies the number of resources that are allocated.
+ */
     private final String count;
+/**
+ * Indicates how many instances are in use.
+ */
     private final String inUseCount;
+/**
+ * The instance properties for the reservation.
+ */
     private final AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
 
     @OutputCustomType.Constructor({"count","inUseCount","instanceProperties"})
@@ -24,12 +33,21 @@ public final class AllocationSpecificSKUReservationResponse {
         this.instanceProperties = Objects.requireNonNull(instanceProperties);
     }
 
+/**
+ * Specifies the number of resources that are allocated.
+ */
     public String getCount() {
         return this.count;
     }
+/**
+ * Indicates how many instances are in use.
+ */
     public String getInUseCount() {
         return this.inUseCount;
     }
+/**
+ * The instance properties for the reservation.
+ */
     public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse getInstanceProperties() {
         return this.instanceProperties;
     }

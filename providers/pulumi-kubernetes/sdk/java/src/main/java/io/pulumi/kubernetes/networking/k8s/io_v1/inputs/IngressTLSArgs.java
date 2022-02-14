@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * IngressTLS describes the transport layer security associated with an Ingress.
+ */
 public final class IngressTLSArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IngressTLSArgs Empty = new IngressTLSArgs();
 
+    /**
+     * Hosts are a list of hosts included in the TLS certificate. The values in this list must match the name/s used in the tlsSecret. Defaults to the wildcard host setting for the loadbalancer controller fulfilling this Ingress, if left unspecified.
+     */
     @InputImport(name="hosts")
     private final @Nullable Input<List<String>> hosts;
 
@@ -22,6 +28,9 @@ public final class IngressTLSArgs extends io.pulumi.resources.ResourceArgs {
         return this.hosts == null ? Input.empty() : this.hosts;
     }
 
+    /**
+     * SecretName is the name of the secret used to terminate TLS traffic on port 443. Field is left optional to allow TLS routing based on SNI hostname alone. If the SNI host in a listener conflicts with the "Host" header field used by an IngressRule, the SNI host is used for termination and value of the Host header is used for routing.
+     */
     @InputImport(name="secretName")
     private final @Nullable Input<String> secretName;
 

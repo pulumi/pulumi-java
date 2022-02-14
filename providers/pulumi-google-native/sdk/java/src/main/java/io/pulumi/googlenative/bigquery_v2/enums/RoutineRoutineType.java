@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Required. The type of routine.
+ */
     @EnumType
     public enum RoutineRoutineType {
+/**
+ * 
+ */
         RoutineTypeUnspecified("ROUTINE_TYPE_UNSPECIFIED"),
+/**
+ * Non-builtin permanent scalar function.
+ */
         ScalarFunction("SCALAR_FUNCTION"),
+/**
+ * Stored procedure.
+ */
         Procedure("PROCEDURE"),
+/**
+ * Non-builtin permanent TVF.
+ */
         TableValuedFunction("TABLE_VALUED_FUNCTION");
 
         private final String value;

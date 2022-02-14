@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Indicates whether any or all of the expressions should match with the response content.
+ */
     @EnumType
     public enum RestMatchQuantifier {
+/**
+ * 
+ */
         All("All"),
+/**
+ * 
+ */
         Any("Any");
 
         private final String value;

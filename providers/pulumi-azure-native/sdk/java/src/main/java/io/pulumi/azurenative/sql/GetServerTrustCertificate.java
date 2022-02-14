@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerTrustCertificate {
+/**
+ * Server trust certificate imported from box to enable connection between box and Sql Managed Instance.
+API Version: 2021-05-01-preview.
+ *
+ * Server trust certificate imported from box to enable connection between box and Sql Managed Instance.
+ */
     public static CompletableFuture<GetServerTrustCertificateResult> invokeAsync(GetServerTrustCertificateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerTrustCertificate", TypeShape.of(GetServerTrustCertificateResult.class), args == null ? GetServerTrustCertificateArgs.Empty : args, Utilities.withVersion(options));
     }

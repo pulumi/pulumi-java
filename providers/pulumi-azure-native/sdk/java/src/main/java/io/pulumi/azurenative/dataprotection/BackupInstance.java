@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.dataprotection;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.dataprotection.BackupInstanceArgs;
 import io.pulumi.azurenative.dataprotection.outputs.BackupInstanceResponse;
 import io.pulumi.azurenative.dataprotection.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
@@ -16,33 +15,231 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * BackupInstance Resource
+API Version: 2021-01-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create BackupInstance
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var backupInstance = new AzureNative.DataProtection.BackupInstance("backupInstance", new AzureNative.DataProtection.BackupInstanceArgs
+        {
+            BackupInstanceName = "testInstance1",
+            Properties = new AzureNative.DataProtection.Inputs.BackupInstanceArgs
+            {
+                DataSourceInfo = new AzureNative.DataProtection.Inputs.DatasourceArgs
+                {
+                    DatasourceType = "OssDB",
+                    ObjectType = "Datasource",
+                    ResourceID = "/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest/databases/testdb",
+                    ResourceLocation = "",
+                    ResourceName = "testdb",
+                    ResourceType = "Microsoft.DBforPostgreSQL/servers/databases",
+                    ResourceUri = "",
+                },
+                DataSourceSetInfo = new AzureNative.DataProtection.Inputs.DatasourceSetArgs
+                {
+                    DatasourceType = "OssDB",
+                    ObjectType = "DatasourceSet",
+                    ResourceID = "/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest",
+                    ResourceLocation = "",
+                    ResourceName = "viveksipgtest",
+                    ResourceType = "Microsoft.DBforPostgreSQL/servers",
+                    ResourceUri = "",
+                },
+                FriendlyName = "harshitbi2",
+                ObjectType = "BackupInstance",
+                PolicyInfo = new AzureNative.DataProtection.Inputs.PolicyInfoArgs
+                {
+                    PolicyId = "/subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/000pikumar/providers/Microsoft.DataProtection/Backupvaults/PratikPrivatePreviewVault1/backupPolicies/PratikPolicy1",
+                    PolicyParameters = new AzureNative.DataProtection.Inputs.PolicyParametersArgs
+                    {
+                        DataStoreParametersList = 
+                        {
+                            new AzureNative.DataProtection.Inputs.AzureOperationalStoreParametersArgs
+                            {
+                                DataStoreType = "OperationalStore",
+                                ObjectType = "AzureOperationalStoreParameters",
+                                ResourceGroupId = "/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest",
+                            },
+                        },
+                    },
+                },
+            },
+            ResourceGroupName = "000pikumar",
+            VaultName = "PratikPrivatePreviewVault1",
+        });
+    }
+
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const backupInstance = new azure_native.dataprotection.BackupInstance("backupInstance", {
+    backupInstanceName: "testInstance1",
+    properties: {
+        dataSourceInfo: {
+            datasourceType: "OssDB",
+            objectType: "Datasource",
+            resourceID: "/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest/databases/testdb",
+            resourceLocation: "",
+            resourceName: "testdb",
+            resourceType: "Microsoft.DBforPostgreSQL/servers/databases",
+            resourceUri: "",
+        },
+        dataSourceSetInfo: {
+            datasourceType: "OssDB",
+            objectType: "DatasourceSet",
+            resourceID: "/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest",
+            resourceLocation: "",
+            resourceName: "viveksipgtest",
+            resourceType: "Microsoft.DBforPostgreSQL/servers",
+            resourceUri: "",
+        },
+        friendlyName: "harshitbi2",
+        objectType: "BackupInstance",
+        policyInfo: {
+            policyId: "/subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/000pikumar/providers/Microsoft.DataProtection/Backupvaults/PratikPrivatePreviewVault1/backupPolicies/PratikPolicy1",
+            policyParameters: {
+                dataStoreParametersList: [{
+                    dataStoreType: "OperationalStore",
+                    objectType: "AzureOperationalStoreParameters",
+                    resourceGroupId: "/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest",
+                }],
+            },
+        },
+    },
+    resourceGroupName: "000pikumar",
+    vaultName: "PratikPrivatePreviewVault1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+backup_instance = azure_native.dataprotection.BackupInstance("backupInstance",
+    backup_instance_name="testInstance1",
+    properties=azure_native.dataprotection.BackupInstanceArgs(
+        data_source_info=azure_native.dataprotection.DatasourceArgs(
+            datasource_type="OssDB",
+            object_type="Datasource",
+            resource_id="/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest/databases/testdb",
+            resource_location="",
+            resource_name="testdb",
+            resource_type="Microsoft.DBforPostgreSQL/servers/databases",
+            resource_uri="",
+        ),
+        data_source_set_info=azure_native.dataprotection.DatasourceSetArgs(
+            datasource_type="OssDB",
+            object_type="DatasourceSet",
+            resource_id="/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest/providers/Microsoft.DBforPostgreSQL/servers/viveksipgtest",
+            resource_location="",
+            resource_name="viveksipgtest",
+            resource_type="Microsoft.DBforPostgreSQL/servers",
+            resource_uri="",
+        ),
+        friendly_name="harshitbi2",
+        object_type="BackupInstance",
+        policy_info=azure_native.dataprotection.PolicyInfoArgs(
+            policy_id="/subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/000pikumar/providers/Microsoft.DataProtection/Backupvaults/PratikPrivatePreviewVault1/backupPolicies/PratikPolicy1",
+            policy_parameters=azure_native.dataprotection.PolicyParametersArgs(
+                data_store_parameters_list=[{
+                    "dataStoreType": "OperationalStore",
+                    "objectType": "AzureOperationalStoreParameters",
+                    "resourceGroupId": "/subscriptions/f75d8d8b-6735-4697-82e1-1a7a3ff0d5d4/resourceGroups/viveksipgtest",
+                }],
+            ),
+        ),
+    ),
+    resource_group_name="000pikumar",
+    vault_name="PratikPrivatePreviewVault1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:dataprotection:BackupInstance harshitbi2 /subscriptions/04cf684a-d41f-4550-9f70-7708a3a2283b/resourceGroups/000pikumar/providers/Microsoft.DataProtection/backupVaults/PratikPrivatePreviewVault1/backupInstances/harshitbi2 
+```
+
+ */
 @ResourceType(type="azure-native:dataprotection:BackupInstance")
 public class BackupInstance extends io.pulumi.resources.CustomResource {
+    /**
+     * Resource name associated with the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name associated with the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * BackupInstanceResource properties
+     */
     @OutputExport(name="properties", type=BackupInstanceResponse.class, parameters={})
     private Output<BackupInstanceResponse> properties;
 
+    /**
+     * @return BackupInstanceResource properties
+     */
     public Output<BackupInstanceResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Metadata pertaining to creation and last modification of the resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public BackupInstance(String name, BackupInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:dataprotection:BackupInstance", name, args == null ? BackupInstanceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -66,6 +263,14 @@ public class BackupInstance extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static BackupInstance get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BackupInstance(name, id, options);
     }

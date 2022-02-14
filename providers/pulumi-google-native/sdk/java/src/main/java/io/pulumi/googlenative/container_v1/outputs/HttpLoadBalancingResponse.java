@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HttpLoadBalancingResponse {
+/**
+ * Whether the HTTP Load Balancing controller is enabled in the cluster. When enabled, it runs a small pod in the cluster that manages the load balancers.
+ */
     private final Boolean disabled;
 
     @OutputCustomType.Constructor({"disabled"})
@@ -16,6 +19,9 @@ public final class HttpLoadBalancingResponse {
         this.disabled = Objects.requireNonNull(disabled);
     }
 
+/**
+ * Whether the HTTP Load Balancing controller is enabled in the cluster. When enabled, it runs a small pod in the cluster that manages the load balancers.
+ */
     public Boolean getDisabled() {
         return this.disabled;
     }

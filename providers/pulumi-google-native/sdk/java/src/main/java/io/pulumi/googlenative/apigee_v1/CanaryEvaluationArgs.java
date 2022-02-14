@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CanaryEvaluationArgs Empty = new CanaryEvaluationArgs();
 
+    /**
+     * The stable version that is serving requests.
+     */
     @InputImport(name="control", required=true)
     private final Input<String> control;
 
@@ -21,6 +27,9 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
         return this.control;
     }
 
+    /**
+     * End time for the evaluation's analysis.
+     */
     @InputImport(name="endTime", required=true)
     private final Input<String> endTime;
 
@@ -28,6 +37,9 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
         return this.endTime;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="instanceId", required=true)
     private final Input<String> instanceId;
 
@@ -35,6 +47,9 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
         return this.instanceId;
     }
 
+    /**
+     * Labels used to filter the metrics used for a canary evaluation.
+     */
     @InputImport(name="metricLabels", required=true)
     private final Input<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels;
 
@@ -42,6 +57,9 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
         return this.metricLabels;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 
@@ -49,6 +67,9 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
         return this.organizationId;
     }
 
+    /**
+     * Start time for the canary evaluation's analysis.
+     */
     @InputImport(name="startTime", required=true)
     private final Input<String> startTime;
 
@@ -56,6 +77,9 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
         return this.startTime;
     }
 
+    /**
+     * The newer version that is serving requests.
+     */
     @InputImport(name="treatment", required=true)
     private final Input<String> treatment;
 

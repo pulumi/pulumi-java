@@ -9,13 +9,38 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ActivityTimelineItemResponse {
+/**
+ * The grouping bucket end time.
+ */
     private final String bucketEndTimeUTC;
+/**
+ * The grouping bucket start time.
+ */
     private final String bucketStartTimeUTC;
+/**
+ * The activity timeline content.
+ */
     private final String content;
+/**
+ * The time of the first activity in the grouping bucket.
+ */
     private final String firstActivityTimeUTC;
+/**
+ * The entity query kind
+Expected value is 'Activity'.
+ */
     private final String kind;
+/**
+ * The time of the last activity in the grouping bucket.
+ */
     private final String lastActivityTimeUTC;
+/**
+ * The activity query id.
+ */
     private final String queryId;
+/**
+ * The activity timeline title.
+ */
     private final String title;
 
     @OutputCustomType.Constructor({"bucketEndTimeUTC","bucketStartTimeUTC","content","firstActivityTimeUTC","kind","lastActivityTimeUTC","queryId","title"})
@@ -38,27 +63,52 @@ public final class ActivityTimelineItemResponse {
         this.title = Objects.requireNonNull(title);
     }
 
+/**
+ * The grouping bucket end time.
+ */
     public String getBucketEndTimeUTC() {
         return this.bucketEndTimeUTC;
     }
+/**
+ * The grouping bucket start time.
+ */
     public String getBucketStartTimeUTC() {
         return this.bucketStartTimeUTC;
     }
+/**
+ * The activity timeline content.
+ */
     public String getContent() {
         return this.content;
     }
+/**
+ * The time of the first activity in the grouping bucket.
+ */
     public String getFirstActivityTimeUTC() {
         return this.firstActivityTimeUTC;
     }
+/**
+ * The entity query kind
+Expected value is 'Activity'.
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * The time of the last activity in the grouping bucket.
+ */
     public String getLastActivityTimeUTC() {
         return this.lastActivityTimeUTC;
     }
+/**
+ * The activity query id.
+ */
     public String getQueryId() {
         return this.queryId;
     }
+/**
+ * The activity timeline title.
+ */
     public String getTitle() {
         return this.title;
     }

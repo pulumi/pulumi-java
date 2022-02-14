@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The text response message.
+ */
 public final class GoogleCloudDialogflowV2IntentMessageTextResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageTextResponse Empty = new GoogleCloudDialogflowV2IntentMessageTextResponse();
 
+    /**
+     * Optional. The collection of the agent's responses.
+     */
     @InputImport(name="text", required=true)
     private final List<String> text;
 

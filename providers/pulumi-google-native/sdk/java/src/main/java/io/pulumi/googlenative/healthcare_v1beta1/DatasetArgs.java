@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetArgs Empty = new DatasetArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="datasetId")
     private final @Nullable Input<String> datasetId;
 
@@ -21,6 +27,9 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.datasetId == null ? Input.empty() : this.datasetId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -28,6 +37,9 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Resource name of the dataset, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +47,9 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -42,6 +57,9 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The default timezone used by this dataset. Must be a either a valid IANA time zone name such as "America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources, such as HL7 messages, where no explicit timezone is specified.
+     */
     @InputImport(name="timeZone")
     private final @Nullable Input<String> timeZone;
 

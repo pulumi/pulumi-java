@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specifies an audio clip to be played by the client as part of the response.
+ */
 public final class GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs Empty = new GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs();
 
+    /**
+     * URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
+     */
     @InputImport(name="audioUri", required=true)
     private final Input<String> audioUri;
 

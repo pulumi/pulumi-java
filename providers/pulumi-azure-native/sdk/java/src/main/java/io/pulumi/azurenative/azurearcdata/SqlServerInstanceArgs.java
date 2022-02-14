@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlServerInstanceArgs Empty = new SqlServerInstanceArgs();
 
+    /**
+     * The geo-location where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -23,6 +29,9 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * null
+     */
     @InputImport(name="properties")
     private final @Nullable Input<SqlServerInstancePropertiesArgs> properties;
 
@@ -30,6 +39,9 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the Azure resource group
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +49,9 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of SQL Server Instance
+     */
     @InputImport(name="sqlServerInstanceName")
     private final @Nullable Input<String> sqlServerInstanceName;
 
@@ -44,6 +59,9 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
         return this.sqlServerInstanceName == null ? Input.empty() : this.sqlServerInstanceName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

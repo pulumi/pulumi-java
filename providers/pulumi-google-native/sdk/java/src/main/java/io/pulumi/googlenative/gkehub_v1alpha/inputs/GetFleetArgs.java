@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetFleetArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFleetArgs Empty = new GetFleetArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="fleetId", required=true)
     private final String fleetId;
 
@@ -21,6 +27,9 @@ public final class GetFleetArgs extends io.pulumi.resources.InvokeArgs {
         return this.fleetId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -28,6 +37,9 @@ public final class GetFleetArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

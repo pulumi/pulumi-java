@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TimeZoneResponse {
+/**
+ * Optional. IANA Time Zone Database version number, e.g. "2019a".
+ */
     private final String version;
 
     @OutputCustomType.Constructor({"version"})
@@ -16,6 +19,9 @@ public final class TimeZoneResponse {
         this.version = Objects.requireNonNull(version);
     }
 
+/**
+ * Optional. IANA Time Zone Database version number, e.g. "2019a".
+ */
     public String getVersion() {
         return this.version;
     }

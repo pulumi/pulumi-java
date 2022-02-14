@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTopic {
+/**
+ * Description of topic resource.
+API Version: 2017-04-01.
+ *
+ * Description of topic resource.
+ */
     public static CompletableFuture<GetTopicResult> invokeAsync(GetTopicArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getTopic", TypeShape.of(GetTopicResult.class), args == null ? GetTopicArgs.Empty : args, Utilities.withVersion(options));
     }

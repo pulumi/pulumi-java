@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.peering;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.peering.RegisteredAsnArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -15,39 +14,166 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The customer's ASN that is registered by the peering service provider.
+API Version: 2021-01-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create or update a registered ASN for the peering
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var registeredAsn = new AzureNative.Peering.RegisteredAsn("registeredAsn", new AzureNative.Peering.RegisteredAsnArgs
+        {
+            Asn = 65000,
+            PeeringName = "peeringName",
+            RegisteredAsnName = "registeredAsnName",
+            ResourceGroupName = "rgName",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	peering "github.com/pulumi/pulumi-azure-native/sdk/go/azure/peering"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := peering.NewRegisteredAsn(ctx, "registeredAsn", &peering.RegisteredAsnArgs{
+			Asn:               pulumi.Int(65000),
+			PeeringName:       pulumi.String("peeringName"),
+			RegisteredAsnName: pulumi.String("registeredAsnName"),
+			ResourceGroupName: pulumi.String("rgName"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const registeredAsn = new azure_native.peering.RegisteredAsn("registeredAsn", {
+    asn: 65000,
+    peeringName: "peeringName",
+    registeredAsnName: "registeredAsnName",
+    resourceGroupName: "rgName",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+registered_asn = azure_native.peering.RegisteredAsn("registeredAsn",
+    asn=65000,
+    peering_name="peeringName",
+    registered_asn_name="registeredAsnName",
+    resource_group_name="rgName")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:peering:RegisteredAsn registeredAsnName /subscriptions/subId/resourceGroups/rgName/providers/Microsoft.Peering/peerings/peeringName/registeredAsns/registeredAsnName 
+```
+
+ */
 @ResourceType(type="azure-native:peering:RegisteredAsn")
 public class RegisteredAsn extends io.pulumi.resources.CustomResource {
+    /**
+     * The customer's ASN from which traffic originates.
+     */
     @OutputExport(name="asn", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> asn;
 
+    /**
+     * @return The customer's ASN from which traffic originates.
+     */
     public Output</* @Nullable */ Integer> getAsn() {
         return this.asn;
     }
+    /**
+     * The name of the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The peering service prefix key that is to be shared with the customer.
+     */
     @OutputExport(name="peeringServicePrefixKey", type=String.class, parameters={})
     private Output<String> peeringServicePrefixKey;
 
+    /**
+     * @return The peering service prefix key that is to be shared with the customer.
+     */
     public Output<String> getPeeringServicePrefixKey() {
         return this.peeringServicePrefixKey;
     }
+    /**
+     * The provisioning state of the resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The type of the resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public RegisteredAsn(String name, RegisteredAsnArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:peering:RegisteredAsn", name, args == null ? RegisteredAsnArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -70,6 +196,14 @@ public class RegisteredAsn extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static RegisteredAsn get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RegisteredAsn(name, id, options);
     }

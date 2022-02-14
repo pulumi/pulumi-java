@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetNamespaceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNamespaceArgs Empty = new GetNamespaceArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -21,6 +27,9 @@ public final class GetNamespaceArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="namespaceId", required=true)
     private final String namespaceId;
 
@@ -28,6 +37,9 @@ public final class GetNamespaceArgs extends io.pulumi.resources.InvokeArgs {
         return this.namespaceId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Current status of the share.
+ */
     @EnumType
     public enum ShareStatus {
+/**
+ * 
+ */
         Offline("Offline"),
+/**
+ * 
+ */
         Unknown("Unknown"),
+/**
+ * 
+ */
         OK("OK"),
+/**
+ * 
+ */
         Updating("Updating"),
+/**
+ * 
+ */
         NeedsAttention("NeedsAttention");
 
         private final String value;

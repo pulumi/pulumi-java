@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Compute numerical stats over an individual column, including min, max, and quantiles.
+ */
 public final class GooglePrivacyDlpV2NumericalStatsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2NumericalStatsConfigArgs Empty = new GooglePrivacyDlpV2NumericalStatsConfigArgs();
 
+    /**
+     * Field to compute numerical stats on. Supported types are integer, float, date, datetime, timestamp, time.
+     */
     @InputImport(name="field")
     private final @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> field;
 

@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A (sub) field of a type.
+ */
 public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FieldResponse Empty = new FieldResponse();
 
+    /**
+     * The maximum number of times this field can be repeated. 0 or -1 means unbounded.
+     */
     @InputImport(name="maxOccurs", required=true)
     private final Integer maxOccurs;
 
@@ -20,6 +26,9 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
         return this.maxOccurs;
     }
 
+    /**
+     * The minimum number of times this field must be present/repeated.
+     */
     @InputImport(name="minOccurs", required=true)
     private final Integer minOccurs;
 
@@ -27,6 +36,9 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
         return this.minOccurs;
     }
 
+    /**
+     * The name of the field. For example, "PID-1" or just "1".
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -34,6 +46,9 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The HL7v2 table this field refers to. For example, PID-15 (Patient's Primary Language) usually refers to table "0296".
+     */
     @InputImport(name="table", required=true)
     private final String table;
 
@@ -41,6 +56,9 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
         return this.table;
     }
 
+    /**
+     * The type of this field. A Type with this name must be defined in an Hl7TypesConfig.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

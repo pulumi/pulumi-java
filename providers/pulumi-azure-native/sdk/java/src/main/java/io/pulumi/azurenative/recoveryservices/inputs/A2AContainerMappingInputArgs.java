@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A2A container mapping input.
+ */
 public final class A2AContainerMappingInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final A2AContainerMappingInputArgs Empty = new A2AContainerMappingInputArgs();
 
+    /**
+     * A value indicating whether the auto update is enabled.
+     */
     @InputImport(name="agentAutoUpdateStatus")
     private final @Nullable Input<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus;
 
@@ -23,6 +29,9 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
         return this.agentAutoUpdateStatus == null ? Input.empty() : this.agentAutoUpdateStatus;
     }
 
+    /**
+     * The automation account arm id.
+     */
     @InputImport(name="automationAccountArmId")
     private final @Nullable Input<String> automationAccountArmId;
 
@@ -30,6 +39,10 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
         return this.automationAccountArmId == null ? Input.empty() : this.automationAccountArmId;
     }
 
+    /**
+     * The class type.
+Expected value is 'A2A'.
+     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 

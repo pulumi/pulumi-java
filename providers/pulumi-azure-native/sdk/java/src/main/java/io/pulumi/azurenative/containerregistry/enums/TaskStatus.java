@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The current status of task.
+ */
     @EnumType
     public enum TaskStatus {
+/**
+ * 
+ */
         Disabled("Disabled"),
+/**
+ * 
+ */
         Enabled("Enabled");
 
         private final String value;

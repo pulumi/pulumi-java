@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of time series connection resource.
+ */
     @EnumType
     public enum ConnectionType {
+/**
+ * 
+ */
         AzureDataExplorer("AzureDataExplorer");
 
         private final String value;

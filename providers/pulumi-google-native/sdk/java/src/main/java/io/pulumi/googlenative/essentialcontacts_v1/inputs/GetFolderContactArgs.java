@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetFolderContactArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFolderContactArgs Empty = new GetFolderContactArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="contactId", required=true)
     private final String contactId;
 
@@ -19,6 +25,9 @@ public final class GetFolderContactArgs extends io.pulumi.resources.InvokeArgs {
         return this.contactId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="folderId", required=true)
     private final String folderId;
 

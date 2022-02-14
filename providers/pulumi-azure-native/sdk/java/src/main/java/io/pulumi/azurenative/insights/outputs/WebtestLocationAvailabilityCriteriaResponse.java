@@ -10,9 +10,22 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class WebtestLocationAvailabilityCriteriaResponse {
+/**
+ * The Application Insights resource Id.
+ */
     private final String componentId;
+/**
+ * The number of failed locations.
+ */
     private final Double failedLocationCount;
+/**
+ * specifies the type of the alert criteria.
+Expected value is 'Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria'.
+ */
     private final String odataType;
+/**
+ * The Application Insights web test Id.
+ */
     private final String webTestId;
 
     @OutputCustomType.Constructor({"componentId","failedLocationCount","odataType","webTestId"})
@@ -27,15 +40,28 @@ public final class WebtestLocationAvailabilityCriteriaResponse {
         this.webTestId = Objects.requireNonNull(webTestId);
     }
 
+/**
+ * The Application Insights resource Id.
+ */
     public String getComponentId() {
         return this.componentId;
     }
+/**
+ * The number of failed locations.
+ */
     public Double getFailedLocationCount() {
         return this.failedLocationCount;
     }
+/**
+ * specifies the type of the alert criteria.
+Expected value is 'Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria'.
+ */
     public String getOdataType() {
         return this.odataType;
     }
+/**
+ * The Application Insights web test Id.
+ */
     public String getWebTestId() {
         return this.webTestId;
     }

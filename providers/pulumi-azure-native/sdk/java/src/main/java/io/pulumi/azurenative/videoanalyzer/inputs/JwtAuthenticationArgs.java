@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for access validation based on JSON Web Tokens (JWT).
+ */
 public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JwtAuthenticationArgs Empty = new JwtAuthenticationArgs();
 
+    /**
+     * List of expected token audiences. Token audience is valid if it matches at least one of the given values.
+     */
     @InputImport(name="audiences")
     private final @Nullable Input<List<String>> audiences;
 
@@ -26,6 +32,9 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
         return this.audiences == null ? Input.empty() : this.audiences;
     }
 
+    /**
+     * List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.
+     */
     @InputImport(name="claims")
     private final @Nullable Input<List<TokenClaimArgs>> claims;
 
@@ -33,6 +42,9 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
         return this.claims == null ? Input.empty() : this.claims;
     }
 
+    /**
+     * List of expected token issuers. Token issuer is valid if it matches at least one of the given values.
+     */
     @InputImport(name="issuers")
     private final @Nullable Input<List<String>> issuers;
 
@@ -40,6 +52,9 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
         return this.issuers == null ? Input.empty() : this.issuers;
     }
 
+    /**
+     * List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.
+     */
     @InputImport(name="keys")
     private final @Nullable Input<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys;
 
@@ -47,6 +62,10 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
         return this.keys == null ? Input.empty() : this.keys;
     }
 
+    /**
+     * The discriminator for derived types.
+Expected value is '#Microsoft.VideoAnalyzer.JwtAuthentication'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

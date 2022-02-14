@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The authentication keys.
+ */
 public final class CreateServiceRequestKeysArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CreateServiceRequestKeysArgs Empty = new CreateServiceRequestKeysArgs();
 
+    /**
+     * The primary key.
+     */
     @InputImport(name="primaryKey")
     private final @Nullable Input<String> primaryKey;
 
@@ -21,6 +27,9 @@ public final class CreateServiceRequestKeysArgs extends io.pulumi.resources.Reso
         return this.primaryKey == null ? Input.empty() : this.primaryKey;
     }
 
+    /**
+     * The secondary key.
+     */
     @InputImport(name="secondaryKey")
     private final @Nullable Input<String> secondaryKey;
 

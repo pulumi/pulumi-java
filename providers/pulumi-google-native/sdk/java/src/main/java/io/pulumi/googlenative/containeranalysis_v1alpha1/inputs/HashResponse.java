@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Container message for hash values.
+ */
 public final class HashResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HashResponse Empty = new HashResponse();
 
+    /**
+     * The type of hash that was performed.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -19,6 +25,9 @@ public final class HashResponse extends io.pulumi.resources.InvokeArgs {
         return this.type;
     }
 
+    /**
+     * The hash value.
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * This contains the fields corresponding to the definition of a software supply chain step in an in-toto layout. This information goes into a Grafeas note.
+ */
 public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InTotoArgs Empty = new InTotoArgs();
 
+    /**
+     * This field contains the expected command used to perform the step.
+     */
     @InputImport(name="expectedCommand")
     private final @Nullable Input<List<String>> expectedCommand;
 
@@ -24,6 +30,9 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
         return this.expectedCommand == null ? Input.empty() : this.expectedCommand;
     }
 
+    /**
+     * The following fields contain in-toto artifact rules identifying the artifacts that enter this supply chain step, and exit the supply chain step, i.e. materials and products of the step.
+     */
     @InputImport(name="expectedMaterials")
     private final @Nullable Input<List<ArtifactRuleArgs>> expectedMaterials;
 
@@ -31,6 +40,9 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
         return this.expectedMaterials == null ? Input.empty() : this.expectedMaterials;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="expectedProducts")
     private final @Nullable Input<List<ArtifactRuleArgs>> expectedProducts;
 
@@ -38,6 +50,9 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
         return this.expectedProducts == null ? Input.empty() : this.expectedProducts;
     }
 
+    /**
+     * This field contains the public keys that can be used to verify the signatures on the step metadata.
+     */
     @InputImport(name="signingKeys")
     private final @Nullable Input<List<SigningKeyArgs>> signingKeys;
 
@@ -45,6 +60,9 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
         return this.signingKeys == null ? Input.empty() : this.signingKeys;
     }
 
+    /**
+     * This field identifies the name of the step in the supply chain.
+     */
     @InputImport(name="stepName")
     private final @Nullable Input<String> stepName;
 
@@ -52,6 +70,9 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
         return this.stepName == null ? Input.empty() : this.stepName;
     }
 
+    /**
+     * This field contains a value that indicates the minimum number of keys that need to be used to sign the step's in-toto link.
+     */
     @InputImport(name="threshold")
     private final @Nullable Input<String> threshold;
 

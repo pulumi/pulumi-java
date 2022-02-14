@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The integration account partner content.
+ */
 public final class PartnerContentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PartnerContentResponse Empty = new PartnerContentResponse();
 
+    /**
+     * The B2B partner content.
+     */
     @InputImport(name="b2b")
     private final @Nullable B2BPartnerContentResponse b2b;
 

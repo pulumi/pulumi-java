@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings for a Python environment.
+ */
 public final class ModelEnvironmentDefinitionResponseResponsePython extends io.pulumi.resources.InvokeArgs {
 
     public static final ModelEnvironmentDefinitionResponseResponsePython Empty = new ModelEnvironmentDefinitionResponseResponsePython();
 
+    /**
+     * 
+     */
     @InputImport(name="baseCondaEnvironment")
     private final @Nullable String baseCondaEnvironment;
 
@@ -23,6 +29,9 @@ public final class ModelEnvironmentDefinitionResponseResponsePython extends io.p
         return this.baseCondaEnvironment == null ? Optional.empty() : Optional.ofNullable(this.baseCondaEnvironment);
     }
 
+    /**
+     * A JObject containing Conda dependencies.
+     */
     @InputImport(name="condaDependencies")
     private final @Nullable Object condaDependencies;
 
@@ -30,6 +39,9 @@ public final class ModelEnvironmentDefinitionResponseResponsePython extends io.p
         return this.condaDependencies == null ? Optional.empty() : Optional.ofNullable(this.condaDependencies);
     }
 
+    /**
+     * The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
+     */
     @InputImport(name="interpreterPath")
     private final @Nullable String interpreterPath;
 
@@ -37,6 +49,9 @@ public final class ModelEnvironmentDefinitionResponseResponsePython extends io.p
         return this.interpreterPath == null ? Optional.empty() : Optional.ofNullable(this.interpreterPath);
     }
 
+    /**
+     * True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
+     */
     @InputImport(name="userManagedDependencies")
     private final @Nullable Boolean userManagedDependencies;
 

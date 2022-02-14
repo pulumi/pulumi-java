@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetFolderArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFolderArgs Empty = new GetFolderArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="folderId", required=true)
     private final String folderId;
 

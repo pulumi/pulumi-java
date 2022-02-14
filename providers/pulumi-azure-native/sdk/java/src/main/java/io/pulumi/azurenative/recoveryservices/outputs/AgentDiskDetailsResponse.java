@@ -11,10 +11,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AgentDiskDetailsResponse {
+/**
+ * The disk capacity in bytes.
+ */
     private final Double capacityInBytes;
+/**
+ * The disk Id.
+ */
     private final String diskId;
+/**
+ * The disk name.
+ */
     private final String diskName;
+/**
+ * A value indicating whether the disk is the OS disk.
+ */
     private final String isOSDisk;
+/**
+ * The lun of disk.
+ */
     private final Integer lunId;
 
     @OutputCustomType.Constructor({"capacityInBytes","diskId","diskName","isOSDisk","lunId"})
@@ -31,18 +46,33 @@ public final class AgentDiskDetailsResponse {
         this.lunId = Objects.requireNonNull(lunId);
     }
 
+/**
+ * The disk capacity in bytes.
+ */
     public Double getCapacityInBytes() {
         return this.capacityInBytes;
     }
+/**
+ * The disk Id.
+ */
     public String getDiskId() {
         return this.diskId;
     }
+/**
+ * The disk name.
+ */
     public String getDiskName() {
         return this.diskName;
     }
+/**
+ * A value indicating whether the disk is the OS disk.
+ */
     public String getIsOSDisk() {
         return this.isOSDisk;
     }
+/**
+ * The lun of disk.
+ */
     public Integer getLunId() {
         return this.lunId;
     }

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRestorePointCollection {
+/**
+ * Create or update Restore Point collection parameters.
+API Version: 2021-03-01.
+ *
+ * Create or update Restore Point collection parameters.
+ */
     public static CompletableFuture<GetRestorePointCollectionResult> invokeAsync(GetRestorePointCollectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getRestorePointCollection", TypeShape.of(GetRestorePointCollectionResult.class), args == null ? GetRestorePointCollectionArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetAuthorizationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAuthorizationArgs Empty = new GetAuthorizationArgs();
 
+    /**
+     * Name of the ExpressRoute Circuit Authorization in the private cloud
+     */
     @InputImport(name="authorizationName", required=true)
     private final String authorizationName;
 
@@ -19,6 +25,9 @@ public final class GetAuthorizationArgs extends io.pulumi.resources.InvokeArgs {
         return this.authorizationName;
     }
 
+    /**
+     * Name of the private cloud
+     */
     @InputImport(name="privateCloudName", required=true)
     private final String privateCloudName;
 
@@ -26,6 +35,9 @@ public final class GetAuthorizationArgs extends io.pulumi.resources.InvokeArgs {
         return this.privateCloudName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

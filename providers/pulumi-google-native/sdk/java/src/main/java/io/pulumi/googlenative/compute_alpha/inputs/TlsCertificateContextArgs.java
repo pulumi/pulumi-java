@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * [Deprecated] Defines the mechanism to obtain the client or server certificate. Defines the mechanism to obtain the client or server certificate.
+ */
 public final class TlsCertificateContextArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TlsCertificateContextArgs Empty = new TlsCertificateContextArgs();
 
+    /**
+     * Specifies the certificate and private key paths. This field is applicable only if tlsCertificateSource is set to USE_PATH.
+     */
     @InputImport(name="certificatePaths")
     private final @Nullable Input<TlsCertificatePathsArgs> certificatePaths;
 
@@ -23,6 +29,9 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
         return this.certificatePaths == null ? Input.empty() : this.certificatePaths;
     }
 
+    /**
+     * Defines how TLS certificates are obtained.
+     */
     @InputImport(name="certificateSource")
     private final @Nullable Input<TlsCertificateContextCertificateSource> certificateSource;
 
@@ -30,6 +39,9 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
         return this.certificateSource == null ? Input.empty() : this.certificateSource;
     }
 
+    /**
+     * Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
+     */
     @InputImport(name="sdsConfig")
     private final @Nullable Input<SdsConfigArgs> sdsConfig;
 

@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceTypeExtensionOptionsResponseResourceCreationBegin {
+/**
+ * 
+ */
     private final @Nullable List<String> request;
+/**
+ * 
+ */
     private final @Nullable List<String> response;
 
     @OutputCustomType.Constructor({"request","response"})
@@ -22,9 +28,15 @@ public final class ResourceTypeExtensionOptionsResponseResourceCreationBegin {
         this.response = response;
     }
 
+/**
+ * 
+ */
     public List<String> getRequest() {
         return this.request == null ? List.of() : this.request;
     }
+/**
+ * 
+ */
     public List<String> getResponse() {
         return this.response == null ? List.of() : this.response;
     }

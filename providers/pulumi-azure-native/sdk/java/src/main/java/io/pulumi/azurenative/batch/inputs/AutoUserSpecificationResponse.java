@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AutoUserSpecificationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutoUserSpecificationResponse Empty = new AutoUserSpecificationResponse();
 
+    /**
+     * The default value is nonAdmin.
+     */
     @InputImport(name="elevationLevel")
     private final @Nullable String elevationLevel;
 
@@ -21,6 +27,9 @@ public final class AutoUserSpecificationResponse extends io.pulumi.resources.Inv
         return this.elevationLevel == null ? Optional.empty() : Optional.ofNullable(this.elevationLevel);
     }
 
+    /**
+     * The default value is Pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by start tasks.
+     */
     @InputImport(name="scope")
     private final @Nullable String scope;
 

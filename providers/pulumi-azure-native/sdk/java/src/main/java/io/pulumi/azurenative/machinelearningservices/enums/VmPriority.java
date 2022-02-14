@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Virtual Machine priority
+ */
     @EnumType
     public enum VmPriority {
+/**
+ * 
+ */
         Dedicated("Dedicated"),
+/**
+ * 
+ */
         LowPriority("LowPriority");
 
         private final String value;

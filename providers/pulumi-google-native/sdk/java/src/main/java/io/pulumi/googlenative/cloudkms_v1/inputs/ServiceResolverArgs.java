@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A ServiceResolver represents an EKM replica that can be reached within an EkmConnection.
+ */
 public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceResolverArgs Empty = new ServiceResolverArgs();
 
+    /**
+     * Optional. The filter applied to the endpoints of the resolved service. If no filter is specified, all endpoints will be considered. An endpoint will be chosen arbitrarily from the filtered list for each request. For endpoint filter syntax and examples, see https://cloud.google.com/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#resolveservicerequest.
+     */
     @InputImport(name="endpointFilter")
     private final @Nullable Input<String> endpointFilter;
 
@@ -23,6 +29,9 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
         return this.endpointFilter == null ? Input.empty() : this.endpointFilter;
     }
 
+    /**
+     * The hostname of the EKM replica used at TLS and HTTP layers.
+     */
     @InputImport(name="hostname", required=true)
     private final Input<String> hostname;
 
@@ -30,6 +39,9 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
         return this.hostname;
     }
 
+    /**
+     * A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
+     */
     @InputImport(name="serverCertificates", required=true)
     private final Input<List<CertificateArgs>> serverCertificates;
 
@@ -37,6 +49,9 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
         return this.serverCertificates;
     }
 
+    /**
+     * The resource name of the Service Directory service pointing to an EKM replica, in the format `projects//{@literal /}locations//{@literal /}namespaces//{@literal /}services/*`.
+     */
     @InputImport(name="serviceDirectoryService", required=true)
     private final Input<String> serviceDirectoryService;
 

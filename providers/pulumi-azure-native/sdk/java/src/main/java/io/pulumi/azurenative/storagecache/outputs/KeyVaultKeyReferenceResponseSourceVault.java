@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class KeyVaultKeyReferenceResponseSourceVault {
+/**
+ * Resource Id.
+ */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -18,6 +21,9 @@ public final class KeyVaultKeyReferenceResponseSourceVault {
         this.id = id;
     }
 
+/**
+ * Resource Id.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

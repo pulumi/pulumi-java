@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An Android mobile test specification.
+ */
 public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AndroidTestArgs Empty = new AndroidTestArgs();
 
+    /**
+     * Information about the application under test.
+     */
     @InputImport(name="androidAppInfo")
     private final @Nullable Input<AndroidAppInfoArgs> androidAppInfo;
 
@@ -25,6 +31,9 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.androidAppInfo == null ? Input.empty() : this.androidAppInfo;
     }
 
+    /**
+     * An Android instrumentation test.
+     */
     @InputImport(name="androidInstrumentationTest")
     private final @Nullable Input<AndroidInstrumentationTestArgs> androidInstrumentationTest;
 
@@ -32,6 +41,9 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.androidInstrumentationTest == null ? Input.empty() : this.androidInstrumentationTest;
     }
 
+    /**
+     * An Android robo test.
+     */
     @InputImport(name="androidRoboTest")
     private final @Nullable Input<AndroidRoboTestArgs> androidRoboTest;
 
@@ -39,6 +51,9 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.androidRoboTest == null ? Input.empty() : this.androidRoboTest;
     }
 
+    /**
+     * An Android test loop.
+     */
     @InputImport(name="androidTestLoop")
     private final @Nullable Input<AndroidTestLoopArgs> androidTestLoop;
 
@@ -46,6 +61,9 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.androidTestLoop == null ? Input.empty() : this.androidTestLoop;
     }
 
+    /**
+     * Max time a test is allowed to run before it is automatically cancelled.
+     */
     @InputImport(name="testTimeout")
     private final @Nullable Input<DurationArgs> testTimeout;
 

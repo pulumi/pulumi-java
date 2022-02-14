@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Represents an incident label
+ */
 public final class IncidentLabelResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IncidentLabelResponse Empty = new IncidentLabelResponse();
 
+    /**
+     * The name of the label
+     */
     @InputImport(name="labelName", required=true)
     private final String labelName;
 
@@ -19,6 +25,9 @@ public final class IncidentLabelResponse extends io.pulumi.resources.InvokeArgs 
         return this.labelName;
     }
 
+    /**
+     * The type of the label
+     */
     @InputImport(name="labelType", required=true)
     private final String labelType;
 

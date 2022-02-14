@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information for connecting to SQL database server
+ */
 public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlConnectionInfoArgs Empty = new SqlConnectionInfoArgs();
 
+    /**
+     * Additional connection settings
+     */
     @InputImport(name="additionalSettings")
     private final @Nullable Input<String> additionalSettings;
 
@@ -25,6 +31,9 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
         return this.additionalSettings == null ? Input.empty() : this.additionalSettings;
     }
 
+    /**
+     * Authentication type to use for connection
+     */
     @InputImport(name="authentication")
     private final @Nullable Input<Either<String,AuthenticationType>> authentication;
 
@@ -32,6 +41,9 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
         return this.authentication == null ? Input.empty() : this.authentication;
     }
 
+    /**
+     * Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
+     */
     @InputImport(name="dataSource", required=true)
     private final Input<String> dataSource;
 
@@ -39,6 +51,9 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
         return this.dataSource;
     }
 
+    /**
+     * Whether to encrypt the connection
+     */
     @InputImport(name="encryptConnection")
     private final @Nullable Input<Boolean> encryptConnection;
 
@@ -46,6 +61,9 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
         return this.encryptConnection == null ? Input.empty() : this.encryptConnection;
     }
 
+    /**
+     * Password credential.
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -53,6 +71,9 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * Server platform type for connection
+     */
     @InputImport(name="platform")
     private final @Nullable Input<Either<String,SqlSourcePlatform>> platform;
 
@@ -60,6 +81,9 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
         return this.platform == null ? Input.empty() : this.platform;
     }
 
+    /**
+     * Whether to trust the server certificate
+     */
     @InputImport(name="trustServerCertificate")
     private final @Nullable Input<Boolean> trustServerCertificate;
 
@@ -67,6 +91,10 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
         return this.trustServerCertificate == null ? Input.empty() : this.trustServerCertificate;
     }
 
+    /**
+     * Type of connection info
+Expected value is 'SqlConnectionInfo'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -74,6 +102,9 @@ public final class SqlConnectionInfoArgs extends io.pulumi.resources.ResourceArg
         return this.type;
     }
 
+    /**
+     * User name
+     */
     @InputImport(name="userName")
     private final @Nullable Input<String> userName;
 

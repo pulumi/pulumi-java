@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Represents the spec to match discrete values from parent parameter.
+ */
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse Empty = new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse();
 
+    /**
+     * Matches values of the parent parameter with type 'DISCRETE'. All values must exist in `discrete_value_spec` of parent parameter.
+     */
     @InputImport(name="values", required=true)
     private final List<Double> values;
 

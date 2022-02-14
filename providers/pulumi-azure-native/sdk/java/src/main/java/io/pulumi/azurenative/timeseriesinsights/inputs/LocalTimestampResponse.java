@@ -3,7 +3,6 @@
 
 package io.pulumi.azurenative.timeseriesinsights.inputs;
 
-import io.pulumi.azurenative.timeseriesinsights.inputs.LocalTimestampResponseTimeZoneOffset;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -11,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
+ */
 public final class LocalTimestampResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LocalTimestampResponse Empty = new LocalTimestampResponse();
 
+    /**
+     * An enum that represents the format of the local timestamp property that needs to be set.
+     */
     @InputImport(name="format")
     private final @Nullable String format;
 
@@ -22,6 +27,9 @@ public final class LocalTimestampResponse extends io.pulumi.resources.InvokeArgs
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
     }
 
+    /**
+     * An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.
+     */
     @InputImport(name="timeZoneOffset")
     private final @Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset;
 

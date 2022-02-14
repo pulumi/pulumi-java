@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PrincipalsResponse {
+/**
+ * Object Id for the user
+ */
     private final @Nullable String objectId;
+/**
+ * UPN of the user.
+ */
     private final @Nullable String upn;
 
     @OutputCustomType.Constructor({"objectId","upn"})
@@ -22,9 +28,15 @@ public final class PrincipalsResponse {
         this.upn = upn;
     }
 
+/**
+ * Object Id for the user
+ */
     public Optional<String> getObjectId() {
         return Optional.ofNullable(this.objectId);
     }
+/**
+ * UPN of the user.
+ */
     public Optional<String> getUpn() {
         return Optional.ofNullable(this.upn);
     }

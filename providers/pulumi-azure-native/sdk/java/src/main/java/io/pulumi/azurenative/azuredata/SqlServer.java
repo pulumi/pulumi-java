@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.azuredata;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.azuredata.SqlServerArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -15,51 +14,206 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A SQL server.
+API Version: 2019-07-24-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Creates or updates a SQL Server in a Registration group.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sqlServer = new AzureNative.AzureData.SqlServer("sqlServer", new AzureNative.AzureData.SqlServerArgs
+        {
+            Cores = 8,
+            Edition = "Latin",
+            PropertyBag = "",
+            RegistrationID = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerRegistrations/testsqlregistration",
+            ResourceGroupName = "testrg",
+            SqlServerName = "testsqlserver",
+            SqlServerRegistrationName = "testsqlregistration",
+            Version = "2008",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	azuredata "github.com/pulumi/pulumi-azure-native/sdk/go/azure/azuredata"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := azuredata.NewSqlServer(ctx, "sqlServer", &azuredata.SqlServerArgs{
+			Cores:                     pulumi.Int(8),
+			Edition:                   pulumi.String("Latin"),
+			PropertyBag:               pulumi.String(""),
+			RegistrationID:            pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerRegistrations/testsqlregistration"),
+			ResourceGroupName:         pulumi.String("testrg"),
+			SqlServerName:             pulumi.String("testsqlserver"),
+			SqlServerRegistrationName: pulumi.String("testsqlregistration"),
+			Version:                   pulumi.String("2008"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const sqlServer = new azure_native.azuredata.SqlServer("sqlServer", {
+    cores: 8,
+    edition: "Latin",
+    propertyBag: "",
+    registrationID: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerRegistrations/testsqlregistration",
+    resourceGroupName: "testrg",
+    sqlServerName: "testsqlserver",
+    sqlServerRegistrationName: "testsqlregistration",
+    version: "2008",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+sql_server = azure_native.azuredata.SqlServer("sqlServer",
+    cores=8,
+    edition="Latin",
+    property_bag="",
+    registration_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerRegistrations/testsqlregistration",
+    resource_group_name="testrg",
+    sql_server_name="testsqlserver",
+    sql_server_registration_name="testsqlregistration",
+    version="2008")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:azuredata:SqlServer testsqlserver /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerRegistrations/testsqlregistration/sqlServers/testsqlserver 
+```
+
+ */
 @ResourceType(type="azure-native:azuredata:SqlServer")
 public class SqlServer extends io.pulumi.resources.CustomResource {
+    /**
+     * Cores of the Sql Server.
+     */
     @OutputExport(name="cores", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> cores;
 
+    /**
+     * @return Cores of the Sql Server.
+     */
     public Output</* @Nullable */ Integer> getCores() {
         return this.cores;
     }
+    /**
+     * Sql Server Edition.
+     */
     @OutputExport(name="edition", type=String.class, parameters={})
     private Output</* @Nullable */ String> edition;
 
+    /**
+     * @return Sql Server Edition.
+     */
     public Output</* @Nullable */ String> getEdition() {
         return this.edition;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Sql Server Json Property Bag.
+     */
     @OutputExport(name="propertyBag", type=String.class, parameters={})
     private Output</* @Nullable */ String> propertyBag;
 
+    /**
+     * @return Sql Server Json Property Bag.
+     */
     public Output</* @Nullable */ String> getPropertyBag() {
         return this.propertyBag;
     }
+    /**
+     * ID for Parent Sql Server Registration.
+     */
     @OutputExport(name="registrationID", type=String.class, parameters={})
     private Output</* @Nullable */ String> registrationID;
 
+    /**
+     * @return ID for Parent Sql Server Registration.
+     */
     public Output</* @Nullable */ String> getRegistrationID() {
         return this.registrationID;
     }
+    /**
+     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Version of the Sql Server.
+     */
     @OutputExport(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
+    /**
+     * @return Version of the Sql Server.
+     */
     public Output</* @Nullable */ String> getVersion() {
         return this.version;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SqlServer(String name, SqlServerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:azuredata:SqlServer", name, args == null ? SqlServerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -79,6 +233,14 @@ public class SqlServer extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SqlServer get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SqlServer(name, id, options);
     }

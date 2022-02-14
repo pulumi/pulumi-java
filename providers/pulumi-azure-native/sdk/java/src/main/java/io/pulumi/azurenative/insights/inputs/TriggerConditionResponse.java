@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The condition that results in the Log Search rule.
+ */
 public final class TriggerConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TriggerConditionResponse Empty = new TriggerConditionResponse();
 
+    /**
+     * Trigger condition for metric query rule
+     */
     @InputImport(name="metricTrigger")
     private final @Nullable LogMetricTriggerResponse metricTrigger;
 
@@ -23,6 +29,9 @@ public final class TriggerConditionResponse extends io.pulumi.resources.InvokeAr
         return this.metricTrigger == null ? Optional.empty() : Optional.ofNullable(this.metricTrigger);
     }
 
+    /**
+     * Result or count threshold based on which rule should be triggered.
+     */
     @InputImport(name="threshold", required=true)
     private final Double threshold;
 
@@ -30,6 +39,9 @@ public final class TriggerConditionResponse extends io.pulumi.resources.InvokeAr
         return this.threshold;
     }
 
+    /**
+     * Evaluation operation for rule - 'GreaterThan' or 'LessThan.
+     */
     @InputImport(name="thresholdOperator", required=true)
     private final String thresholdOperator;
 

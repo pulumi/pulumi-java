@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.PrivateLinkServiceArgs;
 import io.pulumi.azurenative.network.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.network.outputs.FrontendIPConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceResponse;
@@ -23,105 +22,432 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Private link service resource.
+API Version: 2020-11-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create private link service
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateLinkService = new AzureNative.Network.PrivateLinkService("privateLinkService", new AzureNative.Network.PrivateLinkServiceArgs
+        {
+            AutoApproval = new AzureNative.Network.Inputs.PrivateLinkServicePropertiesAutoApprovalArgs
+            {
+                Subscriptions = 
+                {
+                    "subscription1",
+                    "subscription2",
+                },
+            },
+            Fqdns = 
+            {
+                "fqdn1",
+                "fqdn2",
+                "fqdn3",
+            },
+            IpConfigurations = 
+            {
+                new AzureNative.Network.Inputs.PrivateLinkServiceIpConfigurationArgs
+                {
+                    Name = "fe-lb",
+                    PrivateIPAddress = "10.0.1.4",
+                    PrivateIPAddressVersion = "IPv4",
+                    PrivateIPAllocationMethod = "Static",
+                    Subnet = new AzureNative.Network.Inputs.SubnetArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb",
+                    },
+                },
+            },
+            LoadBalancerFrontendIpConfigurations = 
+            {
+                new AzureNative.Network.Inputs.FrontendIPConfigurationArgs
+                {
+                    Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
+                },
+            },
+            Location = "eastus",
+            ResourceGroupName = "rg1",
+            ServiceName = "testPls",
+            Visibility = new AzureNative.Network.Inputs.PrivateLinkServicePropertiesVisibilityArgs
+            {
+                Subscriptions = 
+                {
+                    "subscription1",
+                    "subscription2",
+                    "subscription3",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewPrivateLinkService(ctx, "privateLinkService", &network.PrivateLinkServiceArgs{
+			AutoApproval: &network.PrivateLinkServicePropertiesAutoApprovalArgs{
+				Subscriptions: pulumi.StringArray{
+					pulumi.String("subscription1"),
+					pulumi.String("subscription2"),
+				},
+			},
+			Fqdns: pulumi.StringArray{
+				pulumi.String("fqdn1"),
+				pulumi.String("fqdn2"),
+				pulumi.String("fqdn3"),
+			},
+			IpConfigurations: []network.PrivateLinkServiceIpConfigurationArgs{
+				&network.PrivateLinkServiceIpConfigurationArgs{
+					Name:                      pulumi.String("fe-lb"),
+					PrivateIPAddress:          pulumi.String("10.0.1.4"),
+					PrivateIPAddressVersion:   pulumi.String("IPv4"),
+					PrivateIPAllocationMethod: pulumi.String("Static"),
+					Subnet: &network.SubnetArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb"),
+					},
+				},
+			},
+			LoadBalancerFrontendIpConfigurations: []network.FrontendIPConfigurationArgs{
+				&network.FrontendIPConfigurationArgs{
+					Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb"),
+				},
+			},
+			Location:          pulumi.String("eastus"),
+			ResourceGroupName: pulumi.String("rg1"),
+			ServiceName:       pulumi.String("testPls"),
+			Visibility: &network.PrivateLinkServicePropertiesVisibilityArgs{
+				Subscriptions: pulumi.StringArray{
+					pulumi.String("subscription1"),
+					pulumi.String("subscription2"),
+					pulumi.String("subscription3"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const privateLinkService = new azure_native.network.PrivateLinkService("privateLinkService", {
+    autoApproval: {
+        subscriptions: [
+            "subscription1",
+            "subscription2",
+        ],
+    },
+    fqdns: [
+        "fqdn1",
+        "fqdn2",
+        "fqdn3",
+    ],
+    ipConfigurations: [{
+        name: "fe-lb",
+        privateIPAddress: "10.0.1.4",
+        privateIPAddressVersion: "IPv4",
+        privateIPAllocationMethod: "Static",
+        subnet: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb",
+        },
+    }],
+    loadBalancerFrontendIpConfigurations: [{
+        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
+    }],
+    location: "eastus",
+    resourceGroupName: "rg1",
+    serviceName: "testPls",
+    visibility: {
+        subscriptions: [
+            "subscription1",
+            "subscription2",
+            "subscription3",
+        ],
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+private_link_service = azure_native.network.PrivateLinkService("privateLinkService",
+    auto_approval=azure_native.network.PrivateLinkServicePropertiesAutoApprovalArgs(
+        subscriptions=[
+            "subscription1",
+            "subscription2",
+        ],
+    ),
+    fqdns=[
+        "fqdn1",
+        "fqdn2",
+        "fqdn3",
+    ],
+    ip_configurations=[azure_native.network.PrivateLinkServiceIpConfigurationArgs(
+        name="fe-lb",
+        private_ip_address="10.0.1.4",
+        private_ip_address_version="IPv4",
+        private_ip_allocation_method="Static",
+        subnet=azure_native.network.SubnetArgs(
+            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnetlb/subnets/subnetlb",
+        ),
+    )],
+    load_balancer_frontend_ip_configurations=[azure_native.network.FrontendIPConfigurationArgs(
+        id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/loadBalancers/lb/frontendIPConfigurations/fe-lb",
+    )],
+    location="eastus",
+    resource_group_name="rg1",
+    service_name="testPls",
+    visibility=azure_native.network.PrivateLinkServicePropertiesVisibilityArgs(
+        subscriptions=[
+            "subscription1",
+            "subscription2",
+            "subscription3",
+        ],
+    ))
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:PrivateLinkService testPls /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls 
+```
+
+ */
 @ResourceType(type="azure-native:network:PrivateLinkService")
 public class PrivateLinkService extends io.pulumi.resources.CustomResource {
+    /**
+     * The alias of the private link service.
+     */
     @OutputExport(name="alias", type=String.class, parameters={})
     private Output<String> alias;
 
+    /**
+     * @return The alias of the private link service.
+     */
     public Output<String> getAlias() {
         return this.alias;
     }
+    /**
+     * The auto-approval list of the private link service.
+     */
     @OutputExport(name="autoApproval", type=PrivateLinkServicePropertiesResponseAutoApproval.class, parameters={})
     private Output</* @Nullable */ PrivateLinkServicePropertiesResponseAutoApproval> autoApproval;
 
+    /**
+     * @return The auto-approval list of the private link service.
+     */
     public Output</* @Nullable */ PrivateLinkServicePropertiesResponseAutoApproval> getAutoApproval() {
         return this.autoApproval;
     }
+    /**
+     * Whether the private link service is enabled for proxy protocol or not.
+     */
     @OutputExport(name="enableProxyProtocol", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableProxyProtocol;
 
+    /**
+     * @return Whether the private link service is enabled for proxy protocol or not.
+     */
     public Output</* @Nullable */ Boolean> getEnableProxyProtocol() {
         return this.enableProxyProtocol;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The extended location of the load balancer.
+     */
     @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
+    /**
+     * @return The extended location of the load balancer.
+     */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
+    /**
+     * The list of Fqdn.
+     */
     @OutputExport(name="fqdns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> fqdns;
 
+    /**
+     * @return The list of Fqdn.
+     */
     public Output</* @Nullable */ List<String>> getFqdns() {
         return this.fqdns;
     }
+    /**
+     * An array of private link service IP configurations.
+     */
     @OutputExport(name="ipConfigurations", type=List.class, parameters={PrivateLinkServiceIpConfigurationResponse.class})
     private Output</* @Nullable */ List<PrivateLinkServiceIpConfigurationResponse>> ipConfigurations;
 
+    /**
+     * @return An array of private link service IP configurations.
+     */
     public Output</* @Nullable */ List<PrivateLinkServiceIpConfigurationResponse>> getIpConfigurations() {
         return this.ipConfigurations;
     }
+    /**
+     * An array of references to the load balancer IP configurations.
+     */
     @OutputExport(name="loadBalancerFrontendIpConfigurations", type=List.class, parameters={FrontendIPConfigurationResponse.class})
     private Output</* @Nullable */ List<FrontendIPConfigurationResponse>> loadBalancerFrontendIpConfigurations;
 
+    /**
+     * @return An array of references to the load balancer IP configurations.
+     */
     public Output</* @Nullable */ List<FrontendIPConfigurationResponse>> getLoadBalancerFrontendIpConfigurations() {
         return this.loadBalancerFrontendIpConfigurations;
     }
+    /**
+     * Resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * An array of references to the network interfaces created for this private link service.
+     */
     @OutputExport(name="networkInterfaces", type=List.class, parameters={NetworkInterfaceResponse.class})
     private Output<List<NetworkInterfaceResponse>> networkInterfaces;
 
+    /**
+     * @return An array of references to the network interfaces created for this private link service.
+     */
     public Output<List<NetworkInterfaceResponse>> getNetworkInterfaces() {
         return this.networkInterfaces;
     }
+    /**
+     * An array of list about connections to the private endpoint.
+     */
     @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
+    /**
+     * @return An array of list about connections to the private endpoint.
+     */
     public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
+    /**
+     * The provisioning state of the private link service resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the private link service resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The visibility list of the private link service.
+     */
     @OutputExport(name="visibility", type=PrivateLinkServicePropertiesResponseVisibility.class, parameters={})
     private Output</* @Nullable */ PrivateLinkServicePropertiesResponseVisibility> visibility;
 
+    /**
+     * @return The visibility list of the private link service.
+     */
     public Output</* @Nullable */ PrivateLinkServicePropertiesResponseVisibility> getVisibility() {
         return this.visibility;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public PrivateLinkService(String name, PrivateLinkServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:PrivateLinkService", name, args == null ? PrivateLinkServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -156,6 +482,14 @@ public class PrivateLinkService extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static PrivateLinkService get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateLinkService(name, id, options);
     }

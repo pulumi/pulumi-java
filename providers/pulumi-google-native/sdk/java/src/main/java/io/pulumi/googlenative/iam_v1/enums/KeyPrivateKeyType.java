@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The output format of the private key. The default value is `TYPE_GOOGLE_CREDENTIALS_FILE`, which is the Google Credentials File format.
+ */
     @EnumType
     public enum KeyPrivateKeyType {
+/**
+ * Unspecified. Equivalent to `TYPE_GOOGLE_CREDENTIALS_FILE`.
+ */
         TypeUnspecified("TYPE_UNSPECIFIED"),
+/**
+ * PKCS12 format. The password for the PKCS12 file is `notasecret`. For more information, see https://tools.ietf.org/html/rfc7292.
+ */
         TypePkcs12File("TYPE_PKCS12_FILE"),
+/**
+ * Google Credentials File format.
+ */
         TypeGoogleCredentialsFile("TYPE_GOOGLE_CREDENTIALS_FILE");
 
         private final String value;

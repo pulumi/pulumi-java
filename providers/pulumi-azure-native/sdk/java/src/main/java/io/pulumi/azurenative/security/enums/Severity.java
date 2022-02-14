@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The severity level of the assessment
+ */
     @EnumType
     public enum Severity {
+/**
+ * 
+ */
         Low("Low"),
+/**
+ * 
+ */
         Medium("Medium"),
+/**
+ * 
+ */
         High("High");
 
         private final String value;

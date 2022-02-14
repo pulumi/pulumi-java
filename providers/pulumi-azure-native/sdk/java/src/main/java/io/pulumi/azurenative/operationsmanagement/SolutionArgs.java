@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SolutionArgs Empty = new SolutionArgs();
 
+    /**
+     * Resource location
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -24,6 +30,9 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Plan for solution object supported by the OperationsManagement resource provider.
+     */
     @InputImport(name="plan")
     private final @Nullable Input<SolutionPlanArgs> plan;
 
@@ -31,6 +40,9 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
         return this.plan == null ? Input.empty() : this.plan;
     }
 
+    /**
+     * Properties for solution object supported by the OperationsManagement resource provider.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<SolutionPropertiesArgs> properties;
 
@@ -38,6 +50,9 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group to get. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -45,6 +60,9 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * User Solution Name.
+     */
     @InputImport(name="solutionName")
     private final @Nullable Input<String> solutionName;
 
@@ -52,6 +70,9 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
         return this.solutionName == null ? Input.empty() : this.solutionName;
     }
 
+    /**
+     * Resource tags
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

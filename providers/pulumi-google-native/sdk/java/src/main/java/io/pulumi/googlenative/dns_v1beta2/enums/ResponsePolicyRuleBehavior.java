@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Answer this query with a behavior rather than DNS data.
+ */
     @EnumType
     public enum ResponsePolicyRuleBehavior {
+/**
+ * 
+ */
         BehaviorUnspecified("behaviorUnspecified"),
+/**
+ * Skip a less-specific ResponsePolicyRule and continue normal query logic. This can be used in conjunction with a wildcard to exempt a subset of the wildcard ResponsePolicyRule from the ResponsePolicy behavior and e.g., query the public internet instead. For instance, if these rules exist: *.example.com -> 1.2.3.4 foo.example.com -> PASSTHRU Then a query for 'foo.example.com' skips the wildcard.
+ */
         BypassResponsePolicy("bypassResponsePolicy");
 
         private final String value;

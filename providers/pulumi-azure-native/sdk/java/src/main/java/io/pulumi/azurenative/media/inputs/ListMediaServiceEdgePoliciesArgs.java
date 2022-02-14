@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ListMediaServiceEdgePoliciesArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListMediaServiceEdgePoliciesArgs Empty = new ListMediaServiceEdgePoliciesArgs();
 
+    /**
+     * The Media Services account name.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -21,6 +27,9 @@ public final class ListMediaServiceEdgePoliciesArgs extends io.pulumi.resources.
         return this.accountName;
     }
 
+    /**
+     * Unique identifier of the edge device.
+     */
     @InputImport(name="deviceId")
     private final @Nullable String deviceId;
 
@@ -28,6 +37,9 @@ public final class ListMediaServiceEdgePoliciesArgs extends io.pulumi.resources.
         return this.deviceId == null ? Optional.empty() : Optional.ofNullable(this.deviceId);
     }
 
+    /**
+     * The name of the resource group within the Azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

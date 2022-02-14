@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * AgentPoolMode represents mode of an agent pool
+ */
     @EnumType
     public enum AgentPoolMode {
+/**
+ * 
+ */
         System("System"),
+/**
+ * 
+ */
         User("User");
 
         private final String value;

@@ -16,10 +16,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Last created Dataset definition.
+ */
 public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs {
 
     public static final DatasetResponseLatest Empty = new DatasetResponseLatest();
 
+    /**
+     * User who created.
+     */
     @InputImport(name="createdBy")
     private final @Nullable UserInfoResponse createdBy;
 
@@ -27,6 +33,9 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
         return this.createdBy == null ? Optional.empty() : Optional.ofNullable(this.createdBy);
     }
 
+    /**
+     * The dataset creation time (UTC).
+     */
     @InputImport(name="createdTime", required=true)
     private final String createdTime;
 
@@ -34,6 +43,9 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
         return this.createdTime;
     }
 
+    /**
+     *  Datastore and reference to location of data such as relativePath, Sql Query and etc.
+     */
     @InputImport(name="dataPath")
     private final @Nullable DatasetResponseDataPath dataPath;
 
@@ -41,6 +53,9 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
         return this.dataPath == null ? Optional.empty() : Optional.ofNullable(this.dataPath);
     }
 
+    /**
+     * Dataflow Json
+     */
     @InputImport(name="dataflow", required=true)
     private final String dataflow;
 
@@ -48,6 +63,9 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
         return this.dataflow;
     }
 
+    /**
+     * Dataset state
+     */
     @InputImport(name="datasetDefinitionState")
     private final @Nullable DatasetStateResponse datasetDefinitionState;
 
@@ -55,6 +73,9 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
         return this.datasetDefinitionState == null ? Optional.empty() : Optional.ofNullable(this.datasetDefinitionState);
     }
 
+    /**
+     * Unique Dataset identifier.
+     */
     @InputImport(name="datasetId", required=true)
     private final String datasetId;
 
@@ -62,6 +83,9 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
         return this.datasetId;
     }
 
+    /**
+     * Description about the dataset.
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -69,6 +93,9 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
         return this.description;
     }
 
+    /**
+     * eTag description
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -76,6 +103,9 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
         return this.etag;
     }
 
+    /**
+     * Dataset FileType, specified by user.
+     */
     @InputImport(name="fileType", required=true)
     private final String fileType;
 
@@ -83,6 +113,9 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
         return this.fileType;
     }
 
+    /**
+     * The dataset last modified time (UTC).
+     */
     @InputImport(name="modifiedTime", required=true)
     private final String modifiedTime;
 
@@ -90,6 +123,9 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
         return this.modifiedTime;
     }
 
+    /**
+     * Summary of Definition changes.
+     */
     @InputImport(name="notes", required=true)
     private final String notes;
 
@@ -97,6 +133,9 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
         return this.notes;
     }
 
+    /**
+     * Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.
+     */
     @InputImport(name="partitionFormatInPath", required=true)
     private final Boolean partitionFormatInPath;
 
@@ -104,6 +143,9 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
         return this.partitionFormatInPath;
     }
 
+    /**
+     * Properties stores information like name of time series column for time series dataset.
+     */
     @InputImport(name="properties")
     private final @Nullable Map<String,Object> properties;
 
@@ -111,6 +153,9 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
         return this.properties == null ? Map.of() : this.properties;
     }
 
+    /**
+     * Indicates the saved dataset this definition is mapping to, populated on Get.
+     */
     @InputImport(name="savedDatasetId", required=true)
     private final String savedDatasetId;
 
@@ -118,6 +163,9 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
         return this.savedDatasetId;
     }
 
+    /**
+     * Tags associated with the dataset.
+     */
     @InputImport(name="tags", required=true)
     private final Map<String,String> tags;
 
@@ -125,6 +173,9 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
         return this.tags;
     }
 
+    /**
+     *  Telemetry information about the dataset including information like which service the dataset was created from.
+     */
     @InputImport(name="telemetryInfo", required=true)
     private final Map<String,String> telemetryInfo;
 
@@ -132,6 +183,9 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
         return this.telemetryInfo;
     }
 
+    /**
+     *  Whether to use description and tags from the definition level as opposed to dataset level (old behavior).
+     */
     @InputImport(name="useDescriptionTagsFromDefinition", required=true)
     private final Boolean useDescriptionTagsFromDefinition;
 
@@ -139,6 +193,9 @@ public final class DatasetResponseLatest extends io.pulumi.resources.InvokeArgs 
         return this.useDescriptionTagsFromDefinition;
     }
 
+    /**
+     * An identifier uniquely identifies a definition change.
+     */
     @InputImport(name="versionId", required=true)
     private final String versionId;
 

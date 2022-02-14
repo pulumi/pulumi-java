@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class KubernetesDashboardResponse {
+/**
+ * Whether the Kubernetes Dashboard is enabled for this cluster.
+ */
     private final Boolean disabled;
 
     @OutputCustomType.Constructor({"disabled"})
@@ -16,6 +19,9 @@ public final class KubernetesDashboardResponse {
         this.disabled = Objects.requireNonNull(disabled);
     }
 
+/**
+ * Whether the Kubernetes Dashboard is enabled for this cluster.
+ */
     public Boolean getDisabled() {
         return this.disabled;
     }

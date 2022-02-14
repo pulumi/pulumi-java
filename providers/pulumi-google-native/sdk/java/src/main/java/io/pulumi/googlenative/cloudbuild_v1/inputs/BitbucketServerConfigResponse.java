@@ -11,10 +11,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * BitbucketServerConfig represents the configuration for a Bitbucket Server.
+ */
 public final class BitbucketServerConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BitbucketServerConfigResponse Empty = new BitbucketServerConfigResponse();
 
+    /**
+     * Immutable. API Key that will be attached to webhook. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
+     */
     @InputImport(name="apiKey", required=true)
     private final String apiKey;
 
@@ -22,6 +28,9 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
         return this.apiKey;
     }
 
+    /**
+     * Connected Bitbucket Server repositories for this config.
+     */
     @InputImport(name="connectedRepositories", required=true)
     private final List<BitbucketServerRepositoryIdResponse> connectedRepositories;
 
@@ -29,6 +38,9 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
         return this.connectedRepositories;
     }
 
+    /**
+     * Time when the config was created.
+     */
     @InputImport(name="createTime", required=true)
     private final String createTime;
 
@@ -36,6 +48,9 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
         return this.createTime;
     }
 
+    /**
+     * Immutable. The URI of the Bitbucket Server host. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
+     */
     @InputImport(name="hostUri", required=true)
     private final String hostUri;
 
@@ -43,6 +58,9 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
         return this.hostUri;
     }
 
+    /**
+     * The resource name for the config.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -50,6 +68,9 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
         return this.name;
     }
 
+    /**
+     * Optional. The network to be used when reaching out to the Bitbucket Server instance. The VPC network must be enabled for private service connection. This should be set if the Bitbucket Server instance is hosted on-premises and not reachable by public internet. If this field is left empty, no network peering will occur and calls to the Bitbucket Server instance will be made over the public internet. Must be in the format `projects/{project}/global/networks/{network}`, where {project} is a project number or id and {network} is the name of a VPC network in the project.
+     */
     @InputImport(name="peeredNetwork", required=true)
     private final String peeredNetwork;
 
@@ -57,6 +78,9 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
         return this.peeredNetwork;
     }
 
+    /**
+     * Secret Manager secrets needed by the config.
+     */
     @InputImport(name="secrets", required=true)
     private final BitbucketServerSecretsResponse secrets;
 
@@ -64,6 +88,9 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
         return this.secrets;
     }
 
+    /**
+     * Optional. SSL certificate to use for requests to Bitbucket Server. The format should be PEM format but the extension can be one of .pem, .cer, or .crt.
+     */
     @InputImport(name="sslCa", required=true)
     private final String sslCa;
 
@@ -71,6 +98,9 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
         return this.sslCa;
     }
 
+    /**
+     * Username of the account Cloud Build will use on Bitbucket Server.
+     */
     @InputImport(name="username", required=true)
     private final String username;
 
@@ -78,6 +108,9 @@ public final class BitbucketServerConfigResponse extends io.pulumi.resources.Inv
         return this.username;
     }
 
+    /**
+     * UUID included in webhook requests. The UUID is used to look up the corresponding config.
+     */
     @InputImport(name="webhookKey", required=true)
     private final String webhookKey;
 

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Host OS supported by the Kubernetes role.
+ */
     @EnumType
     public enum PlatformType {
+/**
+ * 
+ */
         Windows("Windows"),
+/**
+ * 
+ */
         Linux("Linux");
 
         private final String value;

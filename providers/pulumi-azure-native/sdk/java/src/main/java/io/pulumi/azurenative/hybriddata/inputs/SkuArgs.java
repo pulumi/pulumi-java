@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The sku type.
+ */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 
+    /**
+     * The sku name. Required for data manager creation, optional for update.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +27,9 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The sku tier. This is based on the SKU name.
+     */
     @InputImport(name="tier")
     private final @Nullable Input<String> tier;
 

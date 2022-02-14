@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceDetailsArgs Empty = new InstanceDetailsArgs();
 
+    /**
+     * A collection of DFP instance administrators
+     */
     @InputImport(name="administration")
     private final @Nullable Input<DFPInstanceAdministratorsArgs> administration;
 
@@ -23,6 +29,9 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.administration == null ? Input.empty() : this.administration;
     }
 
+    /**
+     * The name of the DFP instances. It must be a minimum of 3 characters, and a maximum of 63.
+     */
     @InputImport(name="instanceName")
     private final @Nullable Input<String> instanceName;
 
@@ -30,6 +39,9 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.instanceName == null ? Input.empty() : this.instanceName;
     }
 
+    /**
+     * Location of the DFP resource.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -37,6 +49,9 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the Azure Resource group of which a given DFP instance is part. This name must be at least 1 character in length, and no more than 90.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +59,9 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * Key-value pairs of additional resource provisioning properties.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

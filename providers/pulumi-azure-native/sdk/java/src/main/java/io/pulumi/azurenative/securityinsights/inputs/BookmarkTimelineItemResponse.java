@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents bookmark timeline item.
+ */
 public final class BookmarkTimelineItemResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BookmarkTimelineItemResponse Empty = new BookmarkTimelineItemResponse();
 
+    /**
+     * The bookmark azure resource id.
+     */
     @InputImport(name="azureResourceId", required=true)
     private final String azureResourceId;
 
@@ -23,6 +29,9 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
         return this.azureResourceId;
     }
 
+    /**
+     * Describes a user that created the bookmark
+     */
     @InputImport(name="createdBy")
     private final @Nullable UserInfoResponse createdBy;
 
@@ -30,6 +39,9 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
         return this.createdBy == null ? Optional.empty() : Optional.ofNullable(this.createdBy);
     }
 
+    /**
+     * The bookmark display name.
+     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -37,6 +49,9 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * The bookmark end time.
+     */
     @InputImport(name="endTimeUtc")
     private final @Nullable String endTimeUtc;
 
@@ -44,6 +59,9 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
         return this.endTimeUtc == null ? Optional.empty() : Optional.ofNullable(this.endTimeUtc);
     }
 
+    /**
+     * The bookmark event time.
+     */
     @InputImport(name="eventTime")
     private final @Nullable String eventTime;
 
@@ -51,6 +69,10 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
         return this.eventTime == null ? Optional.empty() : Optional.ofNullable(this.eventTime);
     }
 
+    /**
+     * The entity query kind
+Expected value is 'Bookmark'.
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -58,6 +80,9 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
         return this.kind;
     }
 
+    /**
+     * List of labels relevant to this bookmark
+     */
     @InputImport(name="labels")
     private final @Nullable List<String> labels;
 
@@ -65,6 +90,9 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
         return this.labels == null ? List.of() : this.labels;
     }
 
+    /**
+     * The notes of the bookmark
+     */
     @InputImport(name="notes")
     private final @Nullable String notes;
 
@@ -72,6 +100,9 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
         return this.notes == null ? Optional.empty() : Optional.ofNullable(this.notes);
     }
 
+    /**
+     * The bookmark start time.
+     */
     @InputImport(name="startTimeUtc")
     private final @Nullable String startTimeUtc;
 

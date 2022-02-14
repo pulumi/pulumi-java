@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Alerts data type for data connectors.
+ */
 public final class AlertsDataTypeOfDataConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AlertsDataTypeOfDataConnectorArgs Empty = new AlertsDataTypeOfDataConnectorArgs();
 
+    /**
+     * Alerts data type connection.
+     */
     @InputImport(name="alerts")
     private final @Nullable Input<DataConnectorDataTypeCommonArgs> alerts;
 

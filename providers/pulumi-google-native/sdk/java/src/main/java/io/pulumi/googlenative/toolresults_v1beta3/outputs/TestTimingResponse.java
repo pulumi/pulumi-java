@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TestTimingResponse {
+/**
+ * How long it took to run the test process. - In response: present if previously set. - In create/update request: optional
+ */
     private final DurationResponse testProcessDuration;
 
     @OutputCustomType.Constructor({"testProcessDuration"})
@@ -16,6 +19,9 @@ public final class TestTimingResponse {
         this.testProcessDuration = Objects.requireNonNull(testProcessDuration);
     }
 
+/**
+ * How long it took to run the test process. - In response: present if previously set. - In create/update request: optional
+ */
     public DurationResponse getTestProcessDuration() {
         return this.testProcessDuration;
     }

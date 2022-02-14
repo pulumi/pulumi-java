@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2InfoTypeTransformationResponse {
+/**
+ * InfoTypes to apply the transformation to. An empty list will cause this transformation to apply to all findings that correspond to infoTypes that were requested in `InspectConfig`.
+ */
     private final List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
+/**
+ * Primitive transformation to apply to the infoType.
+ */
     private final GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation;
 
     @OutputCustomType.Constructor({"infoTypes","primitiveTransformation"})
@@ -22,9 +28,15 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationResponse {
         this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation);
     }
 
+/**
+ * InfoTypes to apply the transformation to. An empty list will cause this transformation to apply to all findings that correspond to infoTypes that were requested in `InspectConfig`.
+ */
     public List<GooglePrivacyDlpV2InfoTypeResponse> getInfoTypes() {
         return this.infoTypes;
     }
+/**
+ * Primitive transformation to apply to the infoType.
+ */
     public GooglePrivacyDlpV2PrimitiveTransformationResponse getPrimitiveTransformation() {
         return this.primitiveTransformation;
     }

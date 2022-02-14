@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HybridIdentityMetadatumArgs Empty = new HybridIdentityMetadatumArgs();
 
+    /**
+     * Name of the hybridIdentityMetadata.
+     */
     @InputImport(name="metadataName")
     private final @Nullable Input<String> metadataName;
 
@@ -21,6 +27,9 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
         return this.metadataName == null ? Input.empty() : this.metadataName;
     }
 
+    /**
+     * Gets or sets the Public Key.
+     */
     @InputImport(name="publicKey")
     private final @Nullable Input<String> publicKey;
 
@@ -28,6 +37,9 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
         return this.publicKey == null ? Input.empty() : this.publicKey;
     }
 
+    /**
+     * The Resource Group Name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -35,6 +47,9 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the vm.
+     */
     @InputImport(name="virtualMachineName", required=true)
     private final Input<String> virtualMachineName;
 
@@ -42,6 +57,9 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
         return this.virtualMachineName;
     }
 
+    /**
+     * Gets or sets the Vm Id.
+     */
     @InputImport(name="vmId")
     private final @Nullable Input<String> vmId;
 

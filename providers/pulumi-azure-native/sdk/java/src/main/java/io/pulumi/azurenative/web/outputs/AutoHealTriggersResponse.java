@@ -16,11 +16,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutoHealTriggersResponse {
+/**
+ * A rule based on private bytes.
+ */
     private final @Nullable Integer privateBytesInKB;
+/**
+ * A rule based on total requests.
+ */
     private final @Nullable RequestsBasedTriggerResponse requests;
+/**
+ * A rule based on request execution time.
+ */
     private final @Nullable SlowRequestsBasedTriggerResponse slowRequests;
+/**
+ * A rule based on multiple Slow Requests Rule with path
+ */
     private final @Nullable List<SlowRequestsBasedTriggerResponse> slowRequestsWithPath;
+/**
+ * A rule based on status codes.
+ */
     private final @Nullable List<StatusCodesBasedTriggerResponse> statusCodes;
+/**
+ * A rule based on status codes ranges.
+ */
     private final @Nullable List<StatusCodesRangeBasedTriggerResponse> statusCodesRange;
 
     @OutputCustomType.Constructor({"privateBytesInKB","requests","slowRequests","slowRequestsWithPath","statusCodes","statusCodesRange"})
@@ -39,21 +57,39 @@ public final class AutoHealTriggersResponse {
         this.statusCodesRange = statusCodesRange;
     }
 
+/**
+ * A rule based on private bytes.
+ */
     public Optional<Integer> getPrivateBytesInKB() {
         return Optional.ofNullable(this.privateBytesInKB);
     }
+/**
+ * A rule based on total requests.
+ */
     public Optional<RequestsBasedTriggerResponse> getRequests() {
         return Optional.ofNullable(this.requests);
     }
+/**
+ * A rule based on request execution time.
+ */
     public Optional<SlowRequestsBasedTriggerResponse> getSlowRequests() {
         return Optional.ofNullable(this.slowRequests);
     }
+/**
+ * A rule based on multiple Slow Requests Rule with path
+ */
     public List<SlowRequestsBasedTriggerResponse> getSlowRequestsWithPath() {
         return this.slowRequestsWithPath == null ? List.of() : this.slowRequestsWithPath;
     }
+/**
+ * A rule based on status codes.
+ */
     public List<StatusCodesBasedTriggerResponse> getStatusCodes() {
         return this.statusCodes == null ? List.of() : this.statusCodes;
     }
+/**
+ * A rule based on status codes ranges.
+ */
     public List<StatusCodesRangeBasedTriggerResponse> getStatusCodesRange() {
         return this.statusCodesRange == null ? List.of() : this.statusCodesRange;
     }

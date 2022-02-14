@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IndexArgs Empty = new IndexArgs();
 
+    /**
+     * The index's ancestor mode. Must not be ANCESTOR_MODE_UNSPECIFIED.
+     */
     @InputImport(name="ancestor", required=true)
     private final Input<IndexAncestor> ancestor;
 
@@ -24,6 +30,9 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
         return this.ancestor;
     }
 
+    /**
+     * The entity kind to which this index applies.
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -31,6 +40,9 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -38,6 +50,9 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * An ordered sequence of property names and their index attributes.
+     */
     @InputImport(name="properties", required=true)
     private final Input<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties;
 

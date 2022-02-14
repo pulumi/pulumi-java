@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A schedule for disks where the schedueled operations are performed.
+ */
 public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourcePolicySnapshotSchedulePolicyScheduleArgs Empty = new ResourcePolicySnapshotSchedulePolicyScheduleArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="dailySchedule")
     private final @Nullable Input<ResourcePolicyDailyCycleArgs> dailySchedule;
 
@@ -23,6 +29,9 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
         return this.dailySchedule == null ? Input.empty() : this.dailySchedule;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="hourlySchedule")
     private final @Nullable Input<ResourcePolicyHourlyCycleArgs> hourlySchedule;
 
@@ -30,6 +39,9 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
         return this.hourlySchedule == null ? Input.empty() : this.hourlySchedule;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="weeklySchedule")
     private final @Nullable Input<ResourcePolicyWeeklyCycleArgs> weeklySchedule;
 

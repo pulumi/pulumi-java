@@ -13,10 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListWebAppConnectionStringsResult {
+/**
+ * Resource Id.
+ */
     private final String id;
+/**
+ * Kind of resource.
+ */
     private final @Nullable String kind;
+/**
+ * Resource Name.
+ */
     private final String name;
+/**
+ * Connection strings.
+ */
     private final Map<String,ConnStringValueTypePairResponse> properties;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","kind","name","properties","type"})
@@ -33,18 +48,33 @@ public final class ListWebAppConnectionStringsResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Resource Id.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Kind of resource.
+ */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
+/**
+ * Resource Name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Connection strings.
+ */
     public Map<String,ConnStringValueTypePairResponse> getProperties() {
         return this.properties;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

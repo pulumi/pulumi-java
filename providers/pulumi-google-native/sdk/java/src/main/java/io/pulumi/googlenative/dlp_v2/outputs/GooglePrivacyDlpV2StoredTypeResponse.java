@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2StoredTypeResponse {
+/**
+ * Timestamp indicating when the version of the `StoredInfoType` used for inspection was created. Output-only field, populated by the system.
+ */
     private final String createTime;
+/**
+ * Resource name of the requested `StoredInfoType`, for example `organizations/433245324/storedInfoTypes/432452342` or `projects/project-id/storedInfoTypes/432452342`.
+ */
     private final String name;
 
     @OutputCustomType.Constructor({"createTime","name"})
@@ -20,9 +26,15 @@ public final class GooglePrivacyDlpV2StoredTypeResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+/**
+ * Timestamp indicating when the version of the `StoredInfoType` used for inspection was created. Output-only field, populated by the system.
+ */
     public String getCreateTime() {
         return this.createTime;
     }
+/**
+ * Resource name of the requested `StoredInfoType`, for example `organizations/433245324/storedInfoTypes/432452342` or `projects/project-id/storedInfoTypes/432452342`.
+ */
     public String getName() {
         return this.name;
     }

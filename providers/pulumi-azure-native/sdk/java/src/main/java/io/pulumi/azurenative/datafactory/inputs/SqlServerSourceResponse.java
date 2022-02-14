@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity SQL server source.
+ */
 public final class SqlServerSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SqlServerSourceResponse Empty = new SqlServerSourceResponse();
 
+    /**
+     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+     */
     @InputImport(name="additionalColumns")
     private final @Nullable Object additionalColumns;
 
@@ -25,6 +31,9 @@ public final class SqlServerSourceResponse extends io.pulumi.resources.InvokeArg
         return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
     }
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -32,6 +41,9 @@ public final class SqlServerSourceResponse extends io.pulumi.resources.InvokeArg
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
+    /**
+     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -39,6 +51,9 @@ public final class SqlServerSourceResponse extends io.pulumi.resources.InvokeArg
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
+    /**
+     * The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
+     */
     @InputImport(name="partitionOption")
     private final @Nullable Object partitionOption;
 
@@ -46,6 +61,9 @@ public final class SqlServerSourceResponse extends io.pulumi.resources.InvokeArg
         return this.partitionOption == null ? Optional.empty() : Optional.ofNullable(this.partitionOption);
     }
 
+    /**
+     * The settings that will be leveraged for Sql source partitioning.
+     */
     @InputImport(name="partitionSettings")
     private final @Nullable SqlPartitionSettingsResponse partitionSettings;
 
@@ -53,6 +71,9 @@ public final class SqlServerSourceResponse extends io.pulumi.resources.InvokeArg
         return this.partitionSettings == null ? Optional.empty() : Optional.ofNullable(this.partitionSettings);
     }
 
+    /**
+     * Which additional types to produce.
+     */
     @InputImport(name="produceAdditionalTypes")
     private final @Nullable Object produceAdditionalTypes;
 
@@ -60,6 +81,9 @@ public final class SqlServerSourceResponse extends io.pulumi.resources.InvokeArg
         return this.produceAdditionalTypes == null ? Optional.empty() : Optional.ofNullable(this.produceAdditionalTypes);
     }
 
+    /**
+     * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="queryTimeout")
     private final @Nullable Object queryTimeout;
 
@@ -67,6 +91,9 @@ public final class SqlServerSourceResponse extends io.pulumi.resources.InvokeArg
         return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
     }
 
+    /**
+     * Source retry count. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="sourceRetryCount")
     private final @Nullable Object sourceRetryCount;
 
@@ -74,6 +101,9 @@ public final class SqlServerSourceResponse extends io.pulumi.resources.InvokeArg
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
     }
 
+    /**
+     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="sourceRetryWait")
     private final @Nullable Object sourceRetryWait;
 
@@ -81,6 +111,9 @@ public final class SqlServerSourceResponse extends io.pulumi.resources.InvokeArg
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
     }
 
+    /**
+     * SQL reader query. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="sqlReaderQuery")
     private final @Nullable Object sqlReaderQuery;
 
@@ -88,6 +121,9 @@ public final class SqlServerSourceResponse extends io.pulumi.resources.InvokeArg
         return this.sqlReaderQuery == null ? Optional.empty() : Optional.ofNullable(this.sqlReaderQuery);
     }
 
+    /**
+     * Name of the stored procedure for a SQL Database source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="sqlReaderStoredProcedureName")
     private final @Nullable Object sqlReaderStoredProcedureName;
 
@@ -95,6 +131,9 @@ public final class SqlServerSourceResponse extends io.pulumi.resources.InvokeArg
         return this.sqlReaderStoredProcedureName == null ? Optional.empty() : Optional.ofNullable(this.sqlReaderStoredProcedureName);
     }
 
+    /**
+     * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
+     */
     @InputImport(name="storedProcedureParameters")
     private final @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
 
@@ -102,6 +141,10 @@ public final class SqlServerSourceResponse extends io.pulumi.resources.InvokeArg
         return this.storedProcedureParameters == null ? Map.of() : this.storedProcedureParameters;
     }
 
+    /**
+     * Copy source type.
+Expected value is 'SqlServerSource'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

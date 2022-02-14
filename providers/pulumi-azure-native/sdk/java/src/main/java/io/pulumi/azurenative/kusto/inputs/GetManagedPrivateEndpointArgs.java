@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetManagedPrivateEndpointArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetManagedPrivateEndpointArgs Empty = new GetManagedPrivateEndpointArgs();
 
+    /**
+     * The name of the Kusto cluster.
+     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -19,6 +25,9 @@ public final class GetManagedPrivateEndpointArgs extends io.pulumi.resources.Inv
         return this.clusterName;
     }
 
+    /**
+     * The name of the managed private endpoint.
+     */
     @InputImport(name="managedPrivateEndpointName", required=true)
     private final String managedPrivateEndpointName;
 
@@ -26,6 +35,9 @@ public final class GetManagedPrivateEndpointArgs extends io.pulumi.resources.Inv
         return this.managedPrivateEndpointName;
     }
 
+    /**
+     * The name of the resource group containing the Kusto cluster.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

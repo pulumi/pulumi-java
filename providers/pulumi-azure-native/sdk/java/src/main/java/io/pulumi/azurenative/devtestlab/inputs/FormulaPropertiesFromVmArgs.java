@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information about a VM from which a formula is to be created.
+ */
 public final class FormulaPropertiesFromVmArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FormulaPropertiesFromVmArgs Empty = new FormulaPropertiesFromVmArgs();
 
+    /**
+     * The identifier of the VM from which a formula is to be created.
+     */
     @InputImport(name="labVmId")
     private final @Nullable Input<String> labVmId;
 

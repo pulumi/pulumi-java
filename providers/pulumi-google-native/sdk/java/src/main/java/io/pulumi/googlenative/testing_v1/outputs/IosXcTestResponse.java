@@ -11,10 +11,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IosXcTestResponse {
+/**
+ * The bundle id for the application under test.
+ */
     private final String appBundleId;
+/**
+ * The option to test special app entitlements. Setting this would re-sign the app having special entitlements with an explicit application-identifier. Currently supports testing aps-environment entitlement.
+ */
     private final Boolean testSpecialEntitlements;
+/**
+ * The .zip containing the .xctestrun file and the contents of the DerivedData/Build/Products directory. The .xctestrun file in this zip is ignored if the xctestrun field is specified.
+ */
     private final FileReferenceResponse testsZip;
+/**
+ * The Xcode version that should be used for the test. Use the TestEnvironmentDiscoveryService to get supported options. Defaults to the latest Xcode version Firebase Test Lab supports.
+ */
     private final String xcodeVersion;
+/**
+ * An .xctestrun file that will override the .xctestrun file in the tests zip. Because the .xctestrun file contains environment variables along with test methods to run and/or ignore, this can be useful for sharding tests. Default is taken from the tests zip.
+ */
     private final FileReferenceResponse xctestrun;
 
     @OutputCustomType.Constructor({"appBundleId","testSpecialEntitlements","testsZip","xcodeVersion","xctestrun"})
@@ -31,18 +46,33 @@ public final class IosXcTestResponse {
         this.xctestrun = Objects.requireNonNull(xctestrun);
     }
 
+/**
+ * The bundle id for the application under test.
+ */
     public String getAppBundleId() {
         return this.appBundleId;
     }
+/**
+ * The option to test special app entitlements. Setting this would re-sign the app having special entitlements with an explicit application-identifier. Currently supports testing aps-environment entitlement.
+ */
     public Boolean getTestSpecialEntitlements() {
         return this.testSpecialEntitlements;
     }
+/**
+ * The .zip containing the .xctestrun file and the contents of the DerivedData/Build/Products directory. The .xctestrun file in this zip is ignored if the xctestrun field is specified.
+ */
     public FileReferenceResponse getTestsZip() {
         return this.testsZip;
     }
+/**
+ * The Xcode version that should be used for the test. Use the TestEnvironmentDiscoveryService to get supported options. Defaults to the latest Xcode version Firebase Test Lab supports.
+ */
     public String getXcodeVersion() {
         return this.xcodeVersion;
     }
+/**
+ * An .xctestrun file that will override the .xctestrun file in the tests zip. Because the .xctestrun file contains environment variables along with test methods to run and/or ignore, this can be useful for sharding tests. Default is taken from the tests zip.
+ */
     public FileReferenceResponse getXctestrun() {
         return this.xctestrun;
     }

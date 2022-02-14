@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainMappingArgs Empty = new DomainMappingArgs();
 
+    /**
+     * The API version for this call such as "domains.cloudrun.com/v1".
+     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -24,6 +30,9 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="dryRun")
     private final @Nullable Input<String> dryRun;
 
@@ -31,6 +40,9 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.dryRun == null ? Input.empty() : this.dryRun;
     }
 
+    /**
+     * The kind of resource, in this case "DomainMapping".
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -38,6 +50,9 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -45,6 +60,9 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Metadata associated with this BuildTemplate.
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<ObjectMetaArgs> metadata;
 
@@ -52,6 +70,9 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -59,6 +80,9 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The spec for this DomainMapping.
+     */
     @InputImport(name="spec")
     private final @Nullable Input<DomainMappingSpecArgs> spec;
 
@@ -66,6 +90,9 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
         return this.spec == null ? Input.empty() : this.spec;
     }
 
+    /**
+     * The current status of the DomainMapping.
+     */
     @InputImport(name="status")
     private final @Nullable Input<DomainMappingStatusArgs> status;
 

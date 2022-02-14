@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * NetworkInterface represents a NIC of a VM.
+ */
 public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkInterfaceResponse Empty = new NetworkInterfaceResponse();
 
+    /**
+     * The external IP to define in the NIC.
+     */
     @InputImport(name="externalIp", required=true)
     private final String externalIp;
 
@@ -19,6 +25,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.externalIp;
     }
 
+    /**
+     * The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4 address \ a named address resource full path.
+     */
     @InputImport(name="internalIp", required=true)
     private final String internalIp;
 
@@ -26,6 +35,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.internalIp;
     }
 
+    /**
+     * The network to connect the NIC to.
+     */
     @InputImport(name="network", required=true)
     private final String network;
 
@@ -33,6 +45,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.network;
     }
 
+    /**
+     * The subnetwork to connect the NIC to.
+     */
     @InputImport(name="subnetwork", required=true)
     private final String subnetwork;
 

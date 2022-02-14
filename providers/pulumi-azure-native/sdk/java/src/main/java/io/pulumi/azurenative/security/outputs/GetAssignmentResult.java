@@ -17,22 +17,73 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAssignmentResult {
+/**
+ * Additional data about the assignment
+ */
     private final @Nullable AssignmentPropertiesResponseAdditionalData additionalData;
+/**
+ * Component item with key as applied to this standard assignment over the given scope
+ */
     private final @Nullable AssignedComponentItemResponse assignedComponent;
+/**
+ * Standard item with key as applied to this standard assignment over the given scope
+ */
     private final @Nullable AssignedStandardItemResponse assignedStandard;
+/**
+ * description of the standardAssignment
+ */
     private final @Nullable String description;
+/**
+ * display name of the standardAssignment
+ */
     private final @Nullable String displayName;
+/**
+ * expected effect of this assignment (Disable/Exempt/etc)
+ */
     private final @Nullable String effect;
+/**
+ * Entity tag is used for comparing two or more entities from the same requested resource.
+ */
     private final @Nullable String etag;
+/**
+ * Expiration date of this assignment as a full ISO date
+ */
     private final @Nullable String expiresOn;
+/**
+ * Resource Id
+ */
     private final String id;
+/**
+ * Kind of the resource
+ */
     private final @Nullable String kind;
+/**
+ * Location where the resource is stored
+ */
     private final @Nullable String location;
+/**
+ * The assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
+ */
     private final @Nullable Object metadata;
+/**
+ * Resource name
+ */
     private final String name;
+/**
+ * Scope to which the standardAssignment applies - can be a subscription path or a resource group under that subscription
+ */
     private final @Nullable String scope;
+/**
+ * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+ */
     private final SystemDataResponse systemData;
+/**
+ * A list of key value pairs that describe the resource.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Resource type
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"additionalData","assignedComponent","assignedStandard","description","displayName","effect","etag","expiresOn","id","kind","location","metadata","name","scope","systemData","tags","type"})
@@ -73,54 +124,105 @@ public final class GetAssignmentResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Additional data about the assignment
+ */
     public Optional<AssignmentPropertiesResponseAdditionalData> getAdditionalData() {
         return Optional.ofNullable(this.additionalData);
     }
+/**
+ * Component item with key as applied to this standard assignment over the given scope
+ */
     public Optional<AssignedComponentItemResponse> getAssignedComponent() {
         return Optional.ofNullable(this.assignedComponent);
     }
+/**
+ * Standard item with key as applied to this standard assignment over the given scope
+ */
     public Optional<AssignedStandardItemResponse> getAssignedStandard() {
         return Optional.ofNullable(this.assignedStandard);
     }
+/**
+ * description of the standardAssignment
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * display name of the standardAssignment
+ */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+/**
+ * expected effect of this assignment (Disable/Exempt/etc)
+ */
     public Optional<String> getEffect() {
         return Optional.ofNullable(this.effect);
     }
+/**
+ * Entity tag is used for comparing two or more entities from the same requested resource.
+ */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+/**
+ * Expiration date of this assignment as a full ISO date
+ */
     public Optional<String> getExpiresOn() {
         return Optional.ofNullable(this.expiresOn);
     }
+/**
+ * Resource Id
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Kind of the resource
+ */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
+/**
+ * Location where the resource is stored
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * The assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
+ */
     public Optional<Object> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
+/**
+ * Resource name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Scope to which the standardAssignment applies - can be a subscription path or a resource group under that subscription
+ */
     public Optional<String> getScope() {
         return Optional.ofNullable(this.scope);
     }
+/**
+ * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * A list of key value pairs that describe the resource.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Resource type
+ */
     public String getType() {
         return this.type;
     }

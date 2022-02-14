@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * KeyRevocationActionType of the instance.
+ */
     @EnumType
     public enum InstancePropertiesKeyRevocationActionType {
+/**
+ * Default value. This value is unused.
+ */
         KeyRevocationActionTypeUnspecified("KEY_REVOCATION_ACTION_TYPE_UNSPECIFIED"),
+/**
+ * Indicates user chose no operation.
+ */
         None("NONE"),
+/**
+ * Indicates user chose to opt for VM shutdown on key revocation.
+ */
         Stop("STOP");
 
         private final String value;

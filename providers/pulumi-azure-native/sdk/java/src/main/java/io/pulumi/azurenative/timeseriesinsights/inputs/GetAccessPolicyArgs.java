@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetAccessPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAccessPolicyArgs Empty = new GetAccessPolicyArgs();
 
+    /**
+     * The name of the Time Series Insights access policy associated with the specified environment.
+     */
     @InputImport(name="accessPolicyName", required=true)
     private final String accessPolicyName;
 
@@ -19,6 +25,9 @@ public final class GetAccessPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.accessPolicyName;
     }
 
+    /**
+     * The name of the Time Series Insights environment associated with the specified resource group.
+     */
     @InputImport(name="environmentName", required=true)
     private final String environmentName;
 
@@ -26,6 +35,9 @@ public final class GetAccessPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.environmentName;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

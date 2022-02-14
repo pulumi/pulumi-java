@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains infrastructure information about the Appliance
+ */
 public final class AppliancePropertiesResponseInfrastructureConfig extends io.pulumi.resources.InvokeArgs {
 
     public static final AppliancePropertiesResponseInfrastructureConfig Empty = new AppliancePropertiesResponseInfrastructureConfig();
 
+    /**
+     * Information about the connected appliance.
+     */
     @InputImport(name="provider")
     private final @Nullable String provider;
 

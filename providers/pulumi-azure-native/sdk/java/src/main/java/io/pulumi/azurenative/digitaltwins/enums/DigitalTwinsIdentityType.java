@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of Managed Identity used by the DigitalTwinsInstance. Only SystemAssigned is supported.
+ */
     @EnumType
     public enum DigitalTwinsIdentityType {
+/**
+ * 
+ */
         None("None"),
+/**
+ * 
+ */
         SystemAssigned("SystemAssigned");
 
         private final String value;

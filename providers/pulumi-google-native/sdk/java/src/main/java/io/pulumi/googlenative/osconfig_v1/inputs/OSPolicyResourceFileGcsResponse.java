@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specifies a file available as a Cloud Storage Object.
+ */
 public final class OSPolicyResourceFileGcsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OSPolicyResourceFileGcsResponse Empty = new OSPolicyResourceFileGcsResponse();
 
+    /**
+     * Bucket of the Cloud Storage object.
+     */
     @InputImport(name="bucket", required=true)
     private final String bucket;
 
@@ -19,6 +25,9 @@ public final class OSPolicyResourceFileGcsResponse extends io.pulumi.resources.I
         return this.bucket;
     }
 
+    /**
+     * Generation number of the Cloud Storage object.
+     */
     @InputImport(name="generation", required=true)
     private final String generation;
 
@@ -26,6 +35,9 @@ public final class OSPolicyResourceFileGcsResponse extends io.pulumi.resources.I
         return this.generation;
     }
 
+    /**
+     * Name of the Cloud Storage object.
+     */
     @InputImport(name="object", required=true)
     private final String object;
 

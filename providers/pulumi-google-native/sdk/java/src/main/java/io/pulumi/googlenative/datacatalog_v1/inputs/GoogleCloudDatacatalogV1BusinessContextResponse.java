@@ -9,10 +9,16 @@ import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1Entr
 import java.util.Objects;
 
 
+/**
+ * Business Context of the entry.
+ */
 public final class GoogleCloudDatacatalogV1BusinessContextResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatacatalogV1BusinessContextResponse Empty = new GoogleCloudDatacatalogV1BusinessContextResponse();
 
+    /**
+     * Contact people for the entry.
+     */
     @InputImport(name="contacts", required=true)
     private final GoogleCloudDatacatalogV1ContactsResponse contacts;
 
@@ -20,6 +26,9 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse extends io.pu
         return this.contacts;
     }
 
+    /**
+     * Entry overview fields for rich text descriptions of entries.
+     */
     @InputImport(name="entryOverview", required=true)
     private final GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview;
 

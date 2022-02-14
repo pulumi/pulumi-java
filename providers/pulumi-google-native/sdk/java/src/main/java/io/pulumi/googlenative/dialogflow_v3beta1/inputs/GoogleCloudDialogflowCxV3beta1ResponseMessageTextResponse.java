@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The text response message.
+ */
 public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse Empty = new GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse();
 
+    /**
+     * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
+     */
     @InputImport(name="allowPlaybackInterruption", required=true)
     private final Boolean allowPlaybackInterruption;
 
@@ -21,6 +27,9 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse ext
         return this.allowPlaybackInterruption;
     }
 
+    /**
+     * A collection of text responses.
+     */
     @InputImport(name="text", required=true)
     private final List<String> text;
 

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.databoxedge.IoTRoleArgs;
 import io.pulumi.azurenative.databoxedge.outputs.ComputeResourceResponse;
 import io.pulumi.azurenative.databoxedge.outputs.IoTDeviceInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.IoTEdgeAgentInfoResponse;
@@ -19,81 +18,376 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Compute role.
+API Version: 2020-12-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### RolePut
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ioTRole = new AzureNative.DataBoxEdge.IoTRole("ioTRole", new AzureNative.DataBoxEdge.IoTRoleArgs
+        {
+            DeviceName = "testedgedevice",
+            HostPlatform = "Linux",
+            IoTDeviceDetails = new AzureNative.DataBoxEdge.Inputs.IoTDeviceInfoArgs
+            {
+                Authentication = new AzureNative.DataBoxEdge.Inputs.AuthenticationArgs
+                {
+                    SymmetricKey = new AzureNative.DataBoxEdge.Inputs.SymmetricKeyArgs
+                    {
+                        ConnectionString = new AzureNative.DataBoxEdge.Inputs.AsymmetricEncryptedSecretArgs
+                        {
+                            EncryptionAlgorithm = "AES256",
+                            EncryptionCertThumbprint = "348586569999244",
+                            Value = "Encrypted<<HostName=iothub.azure-devices.net;DeviceId=iotDevice;SharedAccessKey=2C750FscEas3JmQ8Bnui5yQWZPyml0/UiRt1bQwd8=>>",
+                        },
+                    },
+                },
+                DeviceId = "iotdevice",
+                IoTHostHub = "iothub.azure-devices.net",
+            },
+            IoTEdgeDeviceDetails = new AzureNative.DataBoxEdge.Inputs.IoTDeviceInfoArgs
+            {
+                Authentication = new AzureNative.DataBoxEdge.Inputs.AuthenticationArgs
+                {
+                    SymmetricKey = new AzureNative.DataBoxEdge.Inputs.SymmetricKeyArgs
+                    {
+                        ConnectionString = new AzureNative.DataBoxEdge.Inputs.AsymmetricEncryptedSecretArgs
+                        {
+                            EncryptionAlgorithm = "AES256",
+                            EncryptionCertThumbprint = "1245475856069999244",
+                            Value = "Encrypted<<HostName=iothub.azure-devices.net;DeviceId=iotEdge;SharedAccessKey=2C750FscEas3JmQ8Bnui5yQWZPyml0/UiRt1bQwd8=>>",
+                        },
+                    },
+                },
+                DeviceId = "iotEdge",
+                IoTHostHub = "iothub.azure-devices.net",
+            },
+            Kind = "IOT",
+            Name = "IoTRole1",
+            ResourceGroupName = "GroupForEdgeAutomation",
+            RoleStatus = "Enabled",
+            ShareMappings = {},
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := databoxedge.NewIoTRole(ctx, "ioTRole", &databoxedge.IoTRoleArgs{
+			DeviceName:   pulumi.String("testedgedevice"),
+			HostPlatform: pulumi.String("Linux"),
+			IoTDeviceDetails: &databoxedge.IoTDeviceInfoArgs{
+				Authentication: &databoxedge.AuthenticationArgs{
+					SymmetricKey: &databoxedge.SymmetricKeyArgs{
+						ConnectionString: &databoxedge.AsymmetricEncryptedSecretArgs{
+							EncryptionAlgorithm:      pulumi.String("AES256"),
+							EncryptionCertThumbprint: pulumi.String("348586569999244"),
+							Value:                    pulumi.String("Encrypted<<HostName=iothub.azure-devices.net;DeviceId=iotDevice;SharedAccessKey=2C750FscEas3JmQ8Bnui5yQWZPyml0/UiRt1bQwd8=>>"),
+						},
+					},
+				},
+				DeviceId:   pulumi.String("iotdevice"),
+				IoTHostHub: pulumi.String("iothub.azure-devices.net"),
+			},
+			IoTEdgeDeviceDetails: &databoxedge.IoTDeviceInfoArgs{
+				Authentication: &databoxedge.AuthenticationArgs{
+					SymmetricKey: &databoxedge.SymmetricKeyArgs{
+						ConnectionString: &databoxedge.AsymmetricEncryptedSecretArgs{
+							EncryptionAlgorithm:      pulumi.String("AES256"),
+							EncryptionCertThumbprint: pulumi.String("1245475856069999244"),
+							Value:                    pulumi.String("Encrypted<<HostName=iothub.azure-devices.net;DeviceId=iotEdge;SharedAccessKey=2C750FscEas3JmQ8Bnui5yQWZPyml0/UiRt1bQwd8=>>"),
+						},
+					},
+				},
+				DeviceId:   pulumi.String("iotEdge"),
+				IoTHostHub: pulumi.String("iothub.azure-devices.net"),
+			},
+			Kind:              pulumi.String("IOT"),
+			Name:              pulumi.String("IoTRole1"),
+			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
+			RoleStatus:        pulumi.String("Enabled"),
+			ShareMappings:     databoxedge.MountPointMapArray{},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const ioTRole = new azure_native.databoxedge.IoTRole("ioTRole", {
+    deviceName: "testedgedevice",
+    hostPlatform: "Linux",
+    ioTDeviceDetails: {
+        authentication: {
+            symmetricKey: {
+                connectionString: {
+                    encryptionAlgorithm: "AES256",
+                    encryptionCertThumbprint: "348586569999244",
+                    value: "Encrypted<<HostName=iothub.azure-devices.net;DeviceId=iotDevice;SharedAccessKey=2C750FscEas3JmQ8Bnui5yQWZPyml0/UiRt1bQwd8=>>",
+                },
+            },
+        },
+        deviceId: "iotdevice",
+        ioTHostHub: "iothub.azure-devices.net",
+    },
+    ioTEdgeDeviceDetails: {
+        authentication: {
+            symmetricKey: {
+                connectionString: {
+                    encryptionAlgorithm: "AES256",
+                    encryptionCertThumbprint: "1245475856069999244",
+                    value: "Encrypted<<HostName=iothub.azure-devices.net;DeviceId=iotEdge;SharedAccessKey=2C750FscEas3JmQ8Bnui5yQWZPyml0/UiRt1bQwd8=>>",
+                },
+            },
+        },
+        deviceId: "iotEdge",
+        ioTHostHub: "iothub.azure-devices.net",
+    },
+    kind: "IOT",
+    name: "IoTRole1",
+    resourceGroupName: "GroupForEdgeAutomation",
+    roleStatus: "Enabled",
+    shareMappings: [],
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+io_t_role = azure_native.databoxedge.IoTRole("ioTRole",
+    device_name="testedgedevice",
+    host_platform="Linux",
+    io_t_device_details=azure_native.databoxedge.IoTDeviceInfoArgs(
+        authentication=azure_native.databoxedge.AuthenticationArgs(
+            symmetric_key=azure_native.databoxedge.SymmetricKeyArgs(
+                connection_string=azure_native.databoxedge.AsymmetricEncryptedSecretArgs(
+                    encryption_algorithm="AES256",
+                    encryption_cert_thumbprint="348586569999244",
+                    value="Encrypted<<HostName=iothub.azure-devices.net;DeviceId=iotDevice;SharedAccessKey=2C750FscEas3JmQ8Bnui5yQWZPyml0/UiRt1bQwd8=>>",
+                ),
+            ),
+        ),
+        device_id="iotdevice",
+        io_t_host_hub="iothub.azure-devices.net",
+    ),
+    io_t_edge_device_details=azure_native.databoxedge.IoTDeviceInfoArgs(
+        authentication=azure_native.databoxedge.AuthenticationArgs(
+            symmetric_key=azure_native.databoxedge.SymmetricKeyArgs(
+                connection_string=azure_native.databoxedge.AsymmetricEncryptedSecretArgs(
+                    encryption_algorithm="AES256",
+                    encryption_cert_thumbprint="1245475856069999244",
+                    value="Encrypted<<HostName=iothub.azure-devices.net;DeviceId=iotEdge;SharedAccessKey=2C750FscEas3JmQ8Bnui5yQWZPyml0/UiRt1bQwd8=>>",
+                ),
+            ),
+        ),
+        device_id="iotEdge",
+        io_t_host_hub="iothub.azure-devices.net",
+    ),
+    kind="IOT",
+    name="IoTRole1",
+    resource_group_name="GroupForEdgeAutomation",
+    role_status="Enabled",
+    share_mappings=[])
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:databoxedge:IoTRole IoTRole1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/roles/IoTRole1 
+```
+
+ */
 @ResourceType(type="azure-native:databoxedge:IoTRole")
 public class IoTRole extends io.pulumi.resources.CustomResource {
+    /**
+     * Resource allocation
+     */
     @OutputExport(name="computeResource", type=ComputeResourceResponse.class, parameters={})
     private Output</* @Nullable */ ComputeResourceResponse> computeResource;
 
+    /**
+     * @return Resource allocation
+     */
     public Output</* @Nullable */ ComputeResourceResponse> getComputeResource() {
         return this.computeResource;
     }
+    /**
+     * Host OS supported by the IoT role.
+     */
     @OutputExport(name="hostPlatform", type=String.class, parameters={})
     private Output<String> hostPlatform;
 
+    /**
+     * @return Host OS supported by the IoT role.
+     */
     public Output<String> getHostPlatform() {
         return this.hostPlatform;
     }
+    /**
+     * Platform where the Iot runtime is hosted.
+     */
     @OutputExport(name="hostPlatformType", type=String.class, parameters={})
     private Output<String> hostPlatformType;
 
+    /**
+     * @return Platform where the Iot runtime is hosted.
+     */
     public Output<String> getHostPlatformType() {
         return this.hostPlatformType;
     }
+    /**
+     * IoT device metadata to which data box edge device needs to be connected.
+     */
     @OutputExport(name="ioTDeviceDetails", type=IoTDeviceInfoResponse.class, parameters={})
     private Output<IoTDeviceInfoResponse> ioTDeviceDetails;
 
+    /**
+     * @return IoT device metadata to which data box edge device needs to be connected.
+     */
     public Output<IoTDeviceInfoResponse> getIoTDeviceDetails() {
         return this.ioTDeviceDetails;
     }
+    /**
+     * Iot edge agent details to download the agent and bootstrap iot runtime.
+     */
     @OutputExport(name="ioTEdgeAgentInfo", type=IoTEdgeAgentInfoResponse.class, parameters={})
     private Output</* @Nullable */ IoTEdgeAgentInfoResponse> ioTEdgeAgentInfo;
 
+    /**
+     * @return Iot edge agent details to download the agent and bootstrap iot runtime.
+     */
     public Output</* @Nullable */ IoTEdgeAgentInfoResponse> getIoTEdgeAgentInfo() {
         return this.ioTEdgeAgentInfo;
     }
+    /**
+     * IoT edge device to which the IoT role needs to be configured.
+     */
     @OutputExport(name="ioTEdgeDeviceDetails", type=IoTDeviceInfoResponse.class, parameters={})
     private Output<IoTDeviceInfoResponse> ioTEdgeDeviceDetails;
 
+    /**
+     * @return IoT edge device to which the IoT role needs to be configured.
+     */
     public Output<IoTDeviceInfoResponse> getIoTEdgeDeviceDetails() {
         return this.ioTEdgeDeviceDetails;
     }
+    /**
+     * Role type.
+Expected value is 'IOT'.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return Role type.
+Expected value is 'IOT'.
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * The object name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The object name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Role status.
+     */
     @OutputExport(name="roleStatus", type=String.class, parameters={})
     private Output<String> roleStatus;
 
+    /**
+     * @return Role status.
+     */
     public Output<String> getRoleStatus() {
         return this.roleStatus;
     }
+    /**
+     * Mount points of shares in role(s).
+     */
     @OutputExport(name="shareMappings", type=List.class, parameters={MountPointMapResponse.class})
     private Output</* @Nullable */ List<MountPointMapResponse>> shareMappings;
 
+    /**
+     * @return Mount points of shares in role(s).
+     */
     public Output</* @Nullable */ List<MountPointMapResponse>> getShareMappings() {
         return this.shareMappings;
     }
+    /**
+     * Role configured on ASE resource
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Role configured on ASE resource
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The hierarchical type of the object.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The hierarchical type of the object.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public IoTRole(String name, IoTRoleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:databoxedge:IoTRole", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -129,6 +423,14 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static IoTRole get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IoTRole(name, id, options);
     }

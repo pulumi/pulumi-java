@@ -13,6 +13,14 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAgentPool {
+/**
+ * The agentpool that has the ARM resource and properties. 
+The agentpool will have all information to create an agent pool.
+API Version: 2019-06-01-preview.
+ *
+ * The agentpool that has the ARM resource and properties. 
+The agentpool will have all information to create an agent pool.
+ */
     public static CompletableFuture<GetAgentPoolResult> invokeAsync(GetAgentPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getAgentPool", TypeShape.of(GetAgentPoolResult.class), args == null ? GetAgentPoolArgs.Empty : args, Utilities.withVersion(options));
     }

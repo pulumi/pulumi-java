@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApp {
+/**
+ * App resource payload
+API Version: 2020-07-01.
+ *
+ * App resource payload
+ */
     public static CompletableFuture<GetAppResult> invokeAsync(GetAppArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getApp", TypeShape.of(GetAppResult.class), args == null ? GetAppArgs.Empty : args, Utilities.withVersion(options));
     }

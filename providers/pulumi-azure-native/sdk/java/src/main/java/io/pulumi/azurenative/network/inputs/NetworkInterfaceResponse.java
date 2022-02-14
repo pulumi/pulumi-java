@@ -21,10 +21,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A network interface in a resource group.
+ */
 public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkInterfaceResponse Empty = new NetworkInterfaceResponse();
 
+    /**
+     * The DNS settings in network interface.
+     */
     @InputImport(name="dnsSettings")
     private final @Nullable NetworkInterfaceDnsSettingsResponse dnsSettings;
 
@@ -32,6 +38,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.dnsSettings == null ? Optional.empty() : Optional.ofNullable(this.dnsSettings);
     }
 
+    /**
+     * A reference to the dscp configuration to which the network interface is linked.
+     */
     @InputImport(name="dscpConfiguration", required=true)
     private final SubResourceResponse dscpConfiguration;
 
@@ -39,6 +48,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.dscpConfiguration;
     }
 
+    /**
+     * If the network interface is accelerated networking enabled.
+     */
     @InputImport(name="enableAcceleratedNetworking")
     private final @Nullable Boolean enableAcceleratedNetworking;
 
@@ -46,6 +58,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.enableAcceleratedNetworking == null ? Optional.empty() : Optional.ofNullable(this.enableAcceleratedNetworking);
     }
 
+    /**
+     * Indicates whether IP forwarding is enabled on this network interface.
+     */
     @InputImport(name="enableIPForwarding")
     private final @Nullable Boolean enableIPForwarding;
 
@@ -53,6 +68,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.enableIPForwarding == null ? Optional.empty() : Optional.ofNullable(this.enableIPForwarding);
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -60,6 +78,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.etag;
     }
 
+    /**
+     * The extended location of the network interface.
+     */
     @InputImport(name="extendedLocation")
     private final @Nullable ExtendedLocationResponse extendedLocation;
 
@@ -67,6 +88,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.extendedLocation == null ? Optional.empty() : Optional.ofNullable(this.extendedLocation);
     }
 
+    /**
+     * A list of references to linked BareMetal resources.
+     */
     @InputImport(name="hostedWorkloads", required=true)
     private final List<String> hostedWorkloads;
 
@@ -74,6 +98,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.hostedWorkloads;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -81,6 +108,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * A list of IPConfigurations of the network interface.
+     */
     @InputImport(name="ipConfigurations")
     private final @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations;
 
@@ -88,6 +118,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -95,6 +128,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * The MAC address of the network interface.
+     */
     @InputImport(name="macAddress", required=true)
     private final String macAddress;
 
@@ -102,6 +138,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.macAddress;
     }
 
+    /**
+     * Migration phase of Network Interface resource.
+     */
     @InputImport(name="migrationPhase")
     private final @Nullable String migrationPhase;
 
@@ -109,6 +148,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.migrationPhase == null ? Optional.empty() : Optional.ofNullable(this.migrationPhase);
     }
 
+    /**
+     * Resource name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -116,6 +158,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.name;
     }
 
+    /**
+     * The reference to the NetworkSecurityGroup resource.
+     */
     @InputImport(name="networkSecurityGroup")
     private final @Nullable NetworkSecurityGroupResponse networkSecurityGroup;
 
@@ -123,6 +168,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.networkSecurityGroup == null ? Optional.empty() : Optional.ofNullable(this.networkSecurityGroup);
     }
 
+    /**
+     * Type of Network Interface resource.
+     */
     @InputImport(name="nicType")
     private final @Nullable String nicType;
 
@@ -130,6 +178,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.nicType == null ? Optional.empty() : Optional.ofNullable(this.nicType);
     }
 
+    /**
+     * Whether this is a primary network interface on a virtual machine.
+     */
     @InputImport(name="primary", required=true)
     private final Boolean primary;
 
@@ -137,6 +188,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.primary;
     }
 
+    /**
+     * A reference to the private endpoint to which the network interface is linked.
+     */
     @InputImport(name="privateEndpoint", required=true)
     private final PrivateEndpointResponse privateEndpoint;
 
@@ -144,6 +198,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.privateEndpoint;
     }
 
+    /**
+     * Privatelinkservice of the network interface resource.
+     */
     @InputImport(name="privateLinkService")
     private final @Nullable PrivateLinkServiceResponse privateLinkService;
 
@@ -151,6 +208,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.privateLinkService == null ? Optional.empty() : Optional.ofNullable(this.privateLinkService);
     }
 
+    /**
+     * The provisioning state of the network interface resource.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -158,6 +218,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.provisioningState;
     }
 
+    /**
+     * The resource GUID property of the network interface resource.
+     */
     @InputImport(name="resourceGuid", required=true)
     private final String resourceGuid;
 
@@ -165,6 +228,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.resourceGuid;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 
@@ -172,6 +238,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.tags == null ? Map.of() : this.tags;
     }
 
+    /**
+     * A list of TapConfigurations of the network interface.
+     */
     @InputImport(name="tapConfigurations", required=true)
     private final List<NetworkInterfaceTapConfigurationResponse> tapConfigurations;
 
@@ -179,6 +248,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.tapConfigurations;
     }
 
+    /**
+     * Resource type.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -186,6 +258,9 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
         return this.type;
     }
 
+    /**
+     * The reference to a virtual machine.
+     */
     @InputImport(name="virtualMachine", required=true)
     private final SubResourceResponse virtualMachine;
 

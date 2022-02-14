@@ -11,10 +11,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A column with a semantic tag attached.
+ */
 public final class GooglePrivacyDlpV2TaggedFieldResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2TaggedFieldResponse Empty = new GooglePrivacyDlpV2TaggedFieldResponse();
 
+    /**
+     * A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary table that contains statistical information on the possible values of this column (below).
+     */
     @InputImport(name="customTag", required=true)
     private final String customTag;
 
@@ -22,6 +28,9 @@ public final class GooglePrivacyDlpV2TaggedFieldResponse extends io.pulumi.resou
         return this.customTag;
     }
 
+    /**
+     * Identifies the column.
+     */
     @InputImport(name="field", required=true)
     private final GooglePrivacyDlpV2FieldIdResponse field;
 
@@ -29,6 +38,9 @@ public final class GooglePrivacyDlpV2TaggedFieldResponse extends io.pulumi.resou
         return this.field;
     }
 
+    /**
+     * If no semantic tag is indicated, we infer the statistical model from the distribution of values in the input data
+     */
     @InputImport(name="inferred", required=true)
     private final GoogleProtobufEmptyResponse inferred;
 
@@ -36,6 +48,9 @@ public final class GooglePrivacyDlpV2TaggedFieldResponse extends io.pulumi.resou
         return this.inferred;
     }
 
+    /**
+     * A column can be tagged with a InfoType to use the relevant public dataset as a statistical model of population, if available. We currently support US ZIP codes, region codes, ages and genders. To programmatically obtain the list of supported InfoTypes, use ListInfoTypes with the supported_by=RISK_ANALYSIS filter.
+     */
     @InputImport(name="infoType", required=true)
     private final GooglePrivacyDlpV2InfoTypeResponse infoType;
 

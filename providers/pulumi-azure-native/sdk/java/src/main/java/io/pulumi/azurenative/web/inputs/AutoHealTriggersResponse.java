@@ -15,10 +15,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Triggers for auto-heal.
+ */
 public final class AutoHealTriggersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutoHealTriggersResponse Empty = new AutoHealTriggersResponse();
 
+    /**
+     * A rule based on private bytes.
+     */
     @InputImport(name="privateBytesInKB")
     private final @Nullable Integer privateBytesInKB;
 
@@ -26,6 +32,9 @@ public final class AutoHealTriggersResponse extends io.pulumi.resources.InvokeAr
         return this.privateBytesInKB == null ? Optional.empty() : Optional.ofNullable(this.privateBytesInKB);
     }
 
+    /**
+     * A rule based on total requests.
+     */
     @InputImport(name="requests")
     private final @Nullable RequestsBasedTriggerResponse requests;
 
@@ -33,6 +42,9 @@ public final class AutoHealTriggersResponse extends io.pulumi.resources.InvokeAr
         return this.requests == null ? Optional.empty() : Optional.ofNullable(this.requests);
     }
 
+    /**
+     * A rule based on request execution time.
+     */
     @InputImport(name="slowRequests")
     private final @Nullable SlowRequestsBasedTriggerResponse slowRequests;
 
@@ -40,6 +52,9 @@ public final class AutoHealTriggersResponse extends io.pulumi.resources.InvokeAr
         return this.slowRequests == null ? Optional.empty() : Optional.ofNullable(this.slowRequests);
     }
 
+    /**
+     * A rule based on multiple Slow Requests Rule with path
+     */
     @InputImport(name="slowRequestsWithPath")
     private final @Nullable List<SlowRequestsBasedTriggerResponse> slowRequestsWithPath;
 
@@ -47,6 +62,9 @@ public final class AutoHealTriggersResponse extends io.pulumi.resources.InvokeAr
         return this.slowRequestsWithPath == null ? List.of() : this.slowRequestsWithPath;
     }
 
+    /**
+     * A rule based on status codes.
+     */
     @InputImport(name="statusCodes")
     private final @Nullable List<StatusCodesBasedTriggerResponse> statusCodes;
 
@@ -54,6 +72,9 @@ public final class AutoHealTriggersResponse extends io.pulumi.resources.InvokeAr
         return this.statusCodes == null ? List.of() : this.statusCodes;
     }
 
+    /**
+     * A rule based on status codes ranges.
+     */
     @InputImport(name="statusCodesRange")
     private final @Nullable List<StatusCodesRangeBasedTriggerResponse> statusCodesRange;
 

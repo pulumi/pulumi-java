@@ -10,9 +10,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ManagedIntegrationRuntimeErrorResponse {
+/**
+ * Error code.
+ */
     private final String code;
+/**
+ * Error message.
+ */
     private final String message;
+/**
+ * Managed integration runtime error parameters.
+ */
     private final List<String> parameters;
+/**
+ * The time when the error occurred.
+ */
     private final String time;
 
     @OutputCustomType.Constructor({"code","message","parameters","time"})
@@ -27,15 +39,27 @@ public final class ManagedIntegrationRuntimeErrorResponse {
         this.time = Objects.requireNonNull(time);
     }
 
+/**
+ * Error code.
+ */
     public String getCode() {
         return this.code;
     }
+/**
+ * Error message.
+ */
     public String getMessage() {
         return this.message;
     }
+/**
+ * Managed integration runtime error parameters.
+ */
     public List<String> getParameters() {
         return this.parameters;
     }
+/**
+ * The time when the error occurred.
+ */
     public String getTime() {
         return this.time;
     }

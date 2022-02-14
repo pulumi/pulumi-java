@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class JobStatistics4Response extends io.pulumi.resources.InvokeArgs {
 
     public static final JobStatistics4Response Empty = new JobStatistics4Response();
 
+    /**
+     * Number of files per destination URI or URI pattern specified in the extract configuration. These values will be in the same order as the URIs specified in the 'destinationUris' field.
+     */
     @InputImport(name="destinationUriFileCounts", required=true)
     private final List<String> destinationUriFileCounts;
 
@@ -20,6 +26,9 @@ public final class JobStatistics4Response extends io.pulumi.resources.InvokeArgs
         return this.destinationUriFileCounts;
     }
 
+    /**
+     * Number of user bytes extracted into the result. This is the byte count as computed by BigQuery for billing purposes.
+     */
     @InputImport(name="inputBytes", required=true)
     private final String inputBytes;
 

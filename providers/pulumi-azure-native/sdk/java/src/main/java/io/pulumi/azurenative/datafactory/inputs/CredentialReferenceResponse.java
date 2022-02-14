@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Credential reference type.
+ */
 public final class CredentialReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CredentialReferenceResponse Empty = new CredentialReferenceResponse();
 
+    /**
+     * Reference credential name.
+     */
     @InputImport(name="referenceName", required=true)
     private final String referenceName;
 
@@ -19,6 +25,9 @@ public final class CredentialReferenceResponse extends io.pulumi.resources.Invok
         return this.referenceName;
     }
 
+    /**
+     * Credential reference type.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

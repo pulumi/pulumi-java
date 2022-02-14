@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse {
+/**
+ * 
+ */
     private final Integer concurrencyLimit;
 
     @OutputCustomType.Constructor({"concurrencyLimit"})
@@ -16,6 +19,9 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse {
         this.concurrencyLimit = Objects.requireNonNull(concurrencyLimit);
     }
 
+/**
+ * 
+ */
     public Integer getConcurrencyLimit() {
         return this.concurrencyLimit;
     }

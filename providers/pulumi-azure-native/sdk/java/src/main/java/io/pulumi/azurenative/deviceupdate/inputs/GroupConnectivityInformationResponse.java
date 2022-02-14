@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Group connectivity details.
+ */
 public final class GroupConnectivityInformationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GroupConnectivityInformationResponse Empty = new GroupConnectivityInformationResponse();
 
+    /**
+     * List of customer visible FQDNs.
+     */
     @InputImport(name="customerVisibleFqdns")
     private final @Nullable List<String> customerVisibleFqdns;
 
@@ -22,6 +28,9 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
         return this.customerVisibleFqdns == null ? List.of() : this.customerVisibleFqdns;
     }
 
+    /**
+     * Group ID.
+     */
     @InputImport(name="groupId", required=true)
     private final String groupId;
 
@@ -29,6 +38,9 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
         return this.groupId;
     }
 
+    /**
+     * Internal FQDN.
+     */
     @InputImport(name="internalFqdn", required=true)
     private final String internalFqdn;
 
@@ -36,6 +48,9 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
         return this.internalFqdn;
     }
 
+    /**
+     * Member name.
+     */
     @InputImport(name="memberName", required=true)
     private final String memberName;
 
@@ -43,6 +58,9 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
         return this.memberName;
     }
 
+    /**
+     * PrivateLinkService ARM region.
+     */
     @InputImport(name="privateLinkServiceArmRegion")
     private final @Nullable String privateLinkServiceArmRegion;
 
@@ -50,6 +68,9 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
         return this.privateLinkServiceArmRegion == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceArmRegion);
     }
 
+    /**
+     * Redirect map ID.
+     */
     @InputImport(name="redirectMapId")
     private final @Nullable String redirectMapId;
 

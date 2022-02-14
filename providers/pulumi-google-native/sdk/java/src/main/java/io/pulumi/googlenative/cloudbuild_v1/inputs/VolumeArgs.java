@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Volume describes a Docker container volume which is mounted into build steps in order to persist files across build step execution.
+ */
 public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VolumeArgs Empty = new VolumeArgs();
 
+    /**
+     * Name of the volume to mount. Volume names must be unique per build step and must be valid names for Docker volumes. Each named volume must be used by at least two build steps.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +27,9 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Path at which to mount the volume. Paths must be absolute and cannot conflict with other volume paths on the same build step or with certain reserved volume paths.
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 

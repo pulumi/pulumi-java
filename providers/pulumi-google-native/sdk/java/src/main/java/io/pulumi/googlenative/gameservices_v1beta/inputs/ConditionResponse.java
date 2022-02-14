@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A condition to be met.
+ */
 public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConditionResponse Empty = new ConditionResponse();
 
+    /**
+     * Trusted attributes supplied by the IAM system.
+     */
     @InputImport(name="iam", required=true)
     private final String iam;
 
@@ -20,6 +26,9 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
         return this.iam;
     }
 
+    /**
+     * An operator to apply the subject with.
+     */
     @InputImport(name="op", required=true)
     private final String op;
 
@@ -27,6 +36,9 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
         return this.op;
     }
 
+    /**
+     * Trusted attributes discharged by the service.
+     */
     @InputImport(name="svc", required=true)
     private final String svc;
 
@@ -34,6 +46,9 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
         return this.svc;
     }
 
+    /**
+     * Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.
+     */
     @InputImport(name="sys", required=true)
     private final String sys;
 
@@ -41,6 +56,9 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
         return this.sys;
     }
 
+    /**
+     * The objects of the condition.
+     */
     @InputImport(name="values", required=true)
     private final List<String> values;
 

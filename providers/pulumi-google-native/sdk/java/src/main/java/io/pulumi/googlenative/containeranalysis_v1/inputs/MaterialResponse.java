@@ -9,10 +9,16 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class MaterialResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MaterialResponse Empty = new MaterialResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="digest", required=true)
     private final Map<String,String> digest;
 
@@ -20,6 +26,9 @@ public final class MaterialResponse extends io.pulumi.resources.InvokeArgs {
         return this.digest;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

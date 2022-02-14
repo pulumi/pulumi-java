@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
+ */
 public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PodDNSConfigArgs Empty = new PodDNSConfigArgs();
 
+    /**
+     * A list of DNS name server IP addresses. This will be appended to the base nameservers generated from DNSPolicy. Duplicated nameservers will be removed.
+     */
     @InputImport(name="nameservers")
     private final @Nullable Input<List<String>> nameservers;
 
@@ -23,6 +29,9 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.nameservers == null ? Input.empty() : this.nameservers;
     }
 
+    /**
+     * A list of DNS resolver options. This will be merged with the base options generated from DNSPolicy. Duplicated entries will be removed. Resolution options given in Options will override those that appear in the base DNSPolicy.
+     */
     @InputImport(name="options")
     private final @Nullable Input<List<PodDNSConfigOptionArgs>> options;
 
@@ -30,6 +39,9 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.options == null ? Input.empty() : this.options;
     }
 
+    /**
+     * A list of DNS search domains for host-name lookup. This will be appended to the base search paths generated from DNSPolicy. Duplicated search paths will be removed.
+     */
     @InputImport(name="searches")
     private final @Nullable Input<List<String>> searches;
 

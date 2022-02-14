@@ -8,10 +8,28 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Values are:
+
+ none - The caching mode for the disk is not enabled.
+ readOnly - The caching mode for the disk is read only.
+ readWrite - The caching mode for the disk is read and write.
+
+ The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
+ */
     @EnumType
     public enum CachingType {
+/**
+ * The caching mode for the disk is not enabled.
+ */
         None("None"),
+/**
+ * The caching mode for the disk is read only.
+ */
         ReadOnly("ReadOnly"),
+/**
+ * The caching mode for the disk is read and write.
+ */
         ReadWrite("ReadWrite");
 
         private final String value;

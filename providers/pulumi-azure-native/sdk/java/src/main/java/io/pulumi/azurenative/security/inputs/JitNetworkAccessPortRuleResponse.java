@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class JitNetworkAccessPortRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JitNetworkAccessPortRuleResponse Empty = new JitNetworkAccessPortRuleResponse();
 
+    /**
+     * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
+     */
     @InputImport(name="allowedSourceAddressPrefix")
     private final @Nullable String allowedSourceAddressPrefix;
 
@@ -23,6 +29,9 @@ public final class JitNetworkAccessPortRuleResponse extends io.pulumi.resources.
         return this.allowedSourceAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.allowedSourceAddressPrefix);
     }
 
+    /**
+     * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
+     */
     @InputImport(name="allowedSourceAddressPrefixes")
     private final @Nullable List<String> allowedSourceAddressPrefixes;
 
@@ -30,6 +39,9 @@ public final class JitNetworkAccessPortRuleResponse extends io.pulumi.resources.
         return this.allowedSourceAddressPrefixes == null ? List.of() : this.allowedSourceAddressPrefixes;
     }
 
+    /**
+     * Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day
+     */
     @InputImport(name="maxRequestAccessDuration", required=true)
     private final String maxRequestAccessDuration;
 
@@ -37,6 +49,9 @@ public final class JitNetworkAccessPortRuleResponse extends io.pulumi.resources.
         return this.maxRequestAccessDuration;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="number", required=true)
     private final Integer number;
 
@@ -44,6 +59,9 @@ public final class JitNetworkAccessPortRuleResponse extends io.pulumi.resources.
         return this.number;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="protocol", required=true)
     private final String protocol;
 

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The authentication mechanism used to connect to the Phoenix server.
+ */
     @EnumType
     public enum PhoenixAuthenticationType {
+/**
+ * 
+ */
         Anonymous("Anonymous"),
+/**
+ * 
+ */
         UsernameAndPassword("UsernameAndPassword"),
+/**
+ * 
+ */
         WindowsAzureHDInsightService("WindowsAzureHDInsightService");
 
         private final String value;

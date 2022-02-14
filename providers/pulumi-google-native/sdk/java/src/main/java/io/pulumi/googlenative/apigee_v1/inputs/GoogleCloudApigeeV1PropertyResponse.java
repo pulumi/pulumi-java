@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A single property entry in the Properties message.
+ */
 public final class GoogleCloudApigeeV1PropertyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudApigeeV1PropertyResponse Empty = new GoogleCloudApigeeV1PropertyResponse();
 
+    /**
+     * The property key
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class GoogleCloudApigeeV1PropertyResponse extends io.pulumi.resourc
         return this.name;
     }
 
+    /**
+     * The property value
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

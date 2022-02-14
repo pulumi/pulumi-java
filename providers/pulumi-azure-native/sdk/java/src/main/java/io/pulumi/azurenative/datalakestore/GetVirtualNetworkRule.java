@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualNetworkRule {
+/**
+ * Data Lake Store virtual network rule information.
+API Version: 2016-11-01.
+ *
+ * Data Lake Store virtual network rule information.
+ */
     public static CompletableFuture<GetVirtualNetworkRuleResult> invokeAsync(GetVirtualNetworkRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datalakestore:getVirtualNetworkRule", TypeShape.of(GetVirtualNetworkRuleResult.class), args == null ? GetVirtualNetworkRuleArgs.Empty : args, Utilities.withVersion(options));
     }

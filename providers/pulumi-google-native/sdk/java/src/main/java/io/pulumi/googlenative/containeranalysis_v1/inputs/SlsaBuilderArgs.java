@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SlsaBuilderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SlsaBuilderArgs Empty = new SlsaBuilderArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 

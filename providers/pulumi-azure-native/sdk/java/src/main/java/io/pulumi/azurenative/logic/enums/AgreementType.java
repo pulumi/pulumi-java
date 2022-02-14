@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The agreement type.
+ */
     @EnumType
     public enum AgreementType {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         AS2("AS2"),
+/**
+ * 
+ */
         X12("X12"),
+/**
+ * 
+ */
         Edifact("Edifact");
 
         private final String value;

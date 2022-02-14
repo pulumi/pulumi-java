@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GatewayInstanceResponse {
+/**
+ * Name of the Spring Cloud Gateway instance
+ */
     private final String name;
+/**
+ * Status of the Spring Cloud Gateway instance
+ */
     private final String status;
 
     @OutputCustomType.Constructor({"name","status"})
@@ -20,9 +26,15 @@ public final class GatewayInstanceResponse {
         this.status = Objects.requireNonNull(status);
     }
 
+/**
+ * Name of the Spring Cloud Gateway instance
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Status of the Spring Cloud Gateway instance
+ */
     public String getStatus() {
         return this.status;
     }

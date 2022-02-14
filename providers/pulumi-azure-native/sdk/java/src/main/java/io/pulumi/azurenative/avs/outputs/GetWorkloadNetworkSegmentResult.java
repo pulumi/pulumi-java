@@ -15,15 +15,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetWorkloadNetworkSegmentResult {
+/**
+ * Gateway which to connect segment to.
+ */
     private final @Nullable String connectedGateway;
+/**
+ * Display name of the segment.
+ */
     private final @Nullable String displayName;
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * Port Vif which segment is associated with.
+ */
     private final List<WorkloadNetworkSegmentPortVifResponse> portVif;
+/**
+ * The provisioning state
+ */
     private final String provisioningState;
+/**
+ * NSX revision number.
+ */
     private final @Nullable Double revision;
+/**
+ * Segment status.
+ */
     private final String status;
+/**
+ * Subnet which to connect segment to.
+ */
     private final @Nullable WorkloadNetworkSegmentSubnetResponse subnet;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"connectedGateway","displayName","id","name","portVif","provisioningState","revision","status","subnet","type"})
@@ -50,33 +80,63 @@ public final class GetWorkloadNetworkSegmentResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Gateway which to connect segment to.
+ */
     public Optional<String> getConnectedGateway() {
         return Optional.ofNullable(this.connectedGateway);
     }
+/**
+ * Display name of the segment.
+ */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Port Vif which segment is associated with.
+ */
     public List<WorkloadNetworkSegmentPortVifResponse> getPortVif() {
         return this.portVif;
     }
+/**
+ * The provisioning state
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * NSX revision number.
+ */
     public Optional<Double> getRevision() {
         return Optional.ofNullable(this.revision);
     }
+/**
+ * Segment status.
+ */
     public String getStatus() {
         return this.status;
     }
+/**
+ * Subnet which to connect segment to.
+ */
     public Optional<WorkloadNetworkSegmentSubnetResponse> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

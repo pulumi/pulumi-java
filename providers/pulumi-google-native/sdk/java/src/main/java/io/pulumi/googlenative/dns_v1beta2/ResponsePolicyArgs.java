@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResponsePolicyArgs Empty = new ResponsePolicyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="clientOperationId")
     private final @Nullable Input<String> clientOperationId;
 
@@ -24,6 +30,9 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientOperationId == null ? Input.empty() : this.clientOperationId;
     }
 
+    /**
+     * User-provided description for this Response Policy.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +40,9 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The list of Google Kubernetes Engine clusters to which this response policy is applied.
+     */
     @InputImport(name="gkeClusters")
     private final @Nullable Input<List<ResponsePolicyGKEClusterArgs>> gkeClusters;
 
@@ -38,6 +50,9 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.gkeClusters == null ? Input.empty() : this.gkeClusters;
     }
 
+    /**
+     * Unique identifier for the resource; defined by the server (output only).
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -45,6 +60,9 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -52,6 +70,9 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * List of network names specifying networks to which this policy is applied.
+     */
     @InputImport(name="networks")
     private final @Nullable Input<List<ResponsePolicyNetworkArgs>> networks;
 
@@ -59,6 +80,9 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.networks == null ? Input.empty() : this.networks;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -66,6 +90,9 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * User assigned name for this Response Policy.
+     */
     @InputImport(name="responsePolicyName")
     private final @Nullable Input<String> responsePolicyName;
 

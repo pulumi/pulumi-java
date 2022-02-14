@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConsumerGroupArgs Empty = new ConsumerGroupArgs();
 
+    /**
+     * The consumer group name
+     */
     @InputImport(name="consumerGroupName")
     private final @Nullable Input<String> consumerGroupName;
 
@@ -21,6 +27,9 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.consumerGroupName == null ? Input.empty() : this.consumerGroupName;
     }
 
+    /**
+     * The Event Hub name
+     */
     @InputImport(name="eventHubName", required=true)
     private final Input<String> eventHubName;
 
@@ -28,6 +37,9 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventHubName;
     }
 
+    /**
+     * The Namespace name
+     */
     @InputImport(name="namespaceName", required=true)
     private final Input<String> namespaceName;
 
@@ -35,6 +47,9 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.namespaceName;
     }
 
+    /**
+     * Name of the resource group within the azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -42,6 +57,9 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * User Metadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.
+     */
     @InputImport(name="userMetadata")
     private final @Nullable Input<String> userMetadata;
 

@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnStringValueTypePairResponse {
+/**
+ * Type of database.
+ */
     private final String type;
+/**
+ * Value of pair.
+ */
     private final String value;
 
     @OutputCustomType.Constructor({"type","value"})
@@ -20,9 +26,15 @@ public final class ConnStringValueTypePairResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * Type of database.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Value of pair.
+ */
     public String getValue() {
         return this.value;
     }

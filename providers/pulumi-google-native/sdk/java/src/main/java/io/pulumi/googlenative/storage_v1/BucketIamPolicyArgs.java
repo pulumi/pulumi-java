@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketIamPolicyArgs Empty = new BucketIamPolicyArgs();
 
+    /**
+     * An association between a role, which comes with a set of permissions, and members who may assume that role.
+     */
     @InputImport(name="bindings")
     private final @Nullable Input<List<BucketIamPolicyBindingsItemArgs>> bindings;
 
@@ -24,6 +30,9 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.bindings == null ? Input.empty() : this.bindings;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="bucket", required=true)
     private final Input<String> bucket;
 
@@ -31,6 +40,9 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.bucket;
     }
 
+    /**
+     * HTTP 1.1  Entity tag for the policy.
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -38,6 +50,9 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * The kind of item this is. For policies, this is always storage#policy. This field is ignored on input.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -45,6 +60,9 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="provisionalUserProject")
     private final @Nullable Input<String> provisionalUserProject;
 
@@ -52,6 +70,9 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.provisionalUserProject == null ? Input.empty() : this.provisionalUserProject;
     }
 
+    /**
+     * The ID of the resource to which this policy belongs. Will be of the form projects/_/buckets/bucket for buckets, and projects/_/buckets/bucket/objects/object for objects. A specific generation may be specified by appending #generationNumber to the end of the object name, e.g. projects/_/buckets/my-bucket/objects/data.txt#17. The current generation can be denoted with #0. This field is ignored on input.
+     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 
@@ -59,6 +80,9 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceId == null ? Input.empty() : this.resourceId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="userProject")
     private final @Nullable Input<String> userProject;
 
@@ -66,6 +90,9 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
         return this.userProject == null ? Input.empty() : this.userProject;
     }
 
+    /**
+     * The IAM policy format version.
+     */
     @InputImport(name="version")
     private final @Nullable Input<Integer> version;
 

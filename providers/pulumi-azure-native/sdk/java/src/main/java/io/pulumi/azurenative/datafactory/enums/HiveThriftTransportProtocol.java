@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The transport protocol to use in the Thrift layer.
+ */
     @EnumType
     public enum HiveThriftTransportProtocol {
+/**
+ * 
+ */
         Binary("Binary"),
+/**
+ * 
+ */
         SASL("SASL"),
+/**
+ * 
+ */
         HTTP_("HTTP ");
 
         private final String value;

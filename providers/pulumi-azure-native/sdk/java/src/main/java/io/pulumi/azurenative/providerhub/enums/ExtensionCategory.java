@@ -8,23 +8,74 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum ExtensionCategory {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         ResourceCreationValidate("ResourceCreationValidate"),
+/**
+ * 
+ */
         ResourceCreationBegin("ResourceCreationBegin"),
+/**
+ * 
+ */
         ResourceCreationCompleted("ResourceCreationCompleted"),
+/**
+ * 
+ */
         ResourceReadValidate("ResourceReadValidate"),
+/**
+ * 
+ */
         ResourceReadBegin("ResourceReadBegin"),
+/**
+ * 
+ */
         ResourcePatchValidate("ResourcePatchValidate"),
+/**
+ * 
+ */
         ResourcePatchCompleted("ResourcePatchCompleted"),
+/**
+ * 
+ */
         ResourceDeletionValidate("ResourceDeletionValidate"),
+/**
+ * 
+ */
         ResourceDeletionBegin("ResourceDeletionBegin"),
+/**
+ * 
+ */
         ResourceDeletionCompleted("ResourceDeletionCompleted"),
+/**
+ * 
+ */
         ResourcePostAction("ResourcePostAction"),
+/**
+ * 
+ */
         SubscriptionLifecycleNotification("SubscriptionLifecycleNotification"),
+/**
+ * 
+ */
         ResourcePatchBegin("ResourcePatchBegin"),
+/**
+ * 
+ */
         ResourceMoveBegin("ResourceMoveBegin"),
+/**
+ * 
+ */
         ResourceMoveCompleted("ResourceMoveCompleted");
 
         private final String value;

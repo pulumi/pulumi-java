@@ -8,10 +8,16 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * The Autoscaling targets for a Cluster. These determine the recommended nodes.
+ */
 public final class AutoscalingTargetsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutoscalingTargetsResponse Empty = new AutoscalingTargetsResponse();
 
+    /**
+     * The cpu utilization that the Autoscaler should be trying to achieve. This number is on a scale from 0 (no utilization) to 100 (total utilization), and is limited between 10 and 80.
+     */
     @InputImport(name="cpuUtilizationPercent", required=true)
     private final Integer cpuUtilizationPercent;
 

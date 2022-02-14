@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetApiSchemaArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApiSchemaArgs Empty = new GetApiSchemaArgs();
 
+    /**
+     * API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
+     */
     @InputImport(name="apiId", required=true)
     private final String apiId;
 
@@ -19,6 +25,9 @@ public final class GetApiSchemaArgs extends io.pulumi.resources.InvokeArgs {
         return this.apiId;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetApiSchemaArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Schema identifier within an API. Must be unique in the current API Management service instance.
+     */
     @InputImport(name="schemaId", required=true)
     private final String schemaId;
 
@@ -33,6 +45,9 @@ public final class GetApiSchemaArgs extends io.pulumi.resources.InvokeArgs {
         return this.schemaId;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

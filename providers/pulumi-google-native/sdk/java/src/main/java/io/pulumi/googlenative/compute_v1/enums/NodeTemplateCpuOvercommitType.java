@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * CPU overcommit.
+ */
     @EnumType
     public enum NodeTemplateCpuOvercommitType {
+/**
+ * 
+ */
         CpuOvercommitTypeUnspecified("CPU_OVERCOMMIT_TYPE_UNSPECIFIED"),
+/**
+ * 
+ */
         Enabled("ENABLED"),
+/**
+ * 
+ */
         None("NONE");
 
         private final String value;

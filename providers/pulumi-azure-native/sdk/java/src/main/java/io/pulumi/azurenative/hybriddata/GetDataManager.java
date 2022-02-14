@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataManager {
+/**
+ * The DataManager resource.
+API Version: 2019-06-01.
+ *
+ * The DataManager resource.
+ */
     public static CompletableFuture<GetDataManagerResult> invokeAsync(GetDataManagerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybriddata:getDataManager", TypeShape.of(GetDataManagerResult.class), args == null ? GetDataManagerArgs.Empty : args, Utilities.withVersion(options));
     }

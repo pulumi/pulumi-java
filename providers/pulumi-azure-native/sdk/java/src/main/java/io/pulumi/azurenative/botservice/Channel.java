@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.botservice;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.botservice.ChannelArgs;
 import io.pulumi.azurenative.botservice.outputs.AlexaChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.DirectLineChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.DirectLineSpeechChannelResponse;
@@ -30,63 +29,578 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Bot channel resource definition
+API Version: 2021-03-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create Alexa Bot
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var channel = new AzureNative.BotService.Channel("channel", new AzureNative.BotService.ChannelArgs
+        {
+            ChannelName = "AlexaChannel",
+            Location = "global",
+            Properties = new AzureNative.BotService.Inputs.AlexaChannelArgs
+            {
+                ChannelName = "AlexaChannel",
+                Properties = new AzureNative.BotService.Inputs.AlexaChannelPropertiesArgs
+                {
+                    AlexaSkillId = "XAlexaSkillIdX",
+                    IsEnabled = true,
+                },
+            },
+            ResourceGroupName = "OneResourceGroupName",
+            ResourceName = "samplebotname",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	botservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/botservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := botservice.NewChannel(ctx, "channel", &botservice.ChannelArgs{
+			ChannelName: pulumi.String("AlexaChannel"),
+			Location:    pulumi.String("global"),
+			Properties: botservice.AlexaChannel{
+				ChannelName: "AlexaChannel",
+				Properties: botservice.AlexaChannelProperties{
+					AlexaSkillId: "XAlexaSkillIdX",
+					IsEnabled:    true,
+				},
+			},
+			ResourceGroupName: pulumi.String("OneResourceGroupName"),
+			ResourceName:      pulumi.String("samplebotname"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const channel = new azure_native.botservice.Channel("channel", {
+    channelName: "AlexaChannel",
+    location: "global",
+    properties: {
+        channelName: "AlexaChannel",
+        properties: {
+            alexaSkillId: "XAlexaSkillIdX",
+            isEnabled: true,
+        },
+    },
+    resourceGroupName: "OneResourceGroupName",
+    resourceName: "samplebotname",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+channel = azure_native.botservice.Channel("channel",
+    channel_name="AlexaChannel",
+    location="global",
+    properties=azure_native.botservice.AlexaChannelArgs(
+        channel_name="AlexaChannel",
+        properties=azure_native.botservice.AlexaChannelPropertiesArgs(
+            alexa_skill_id="XAlexaSkillIdX",
+            is_enabled=True,
+        ),
+    ),
+    resource_group_name="OneResourceGroupName",
+    resource_name="samplebotname")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create Bot
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var channel = new AzureNative.BotService.Channel("channel", new AzureNative.BotService.ChannelArgs
+        {
+            ChannelName = "EmailChannel",
+            Location = "global",
+            Properties = new AzureNative.BotService.Inputs.EmailChannelArgs
+            {
+                ChannelName = "EmailChannel",
+                Properties = new AzureNative.BotService.Inputs.EmailChannelPropertiesArgs
+                {
+                    EmailAddress = "a@b.com",
+                    IsEnabled = true,
+                    Password = "pwd",
+                },
+            },
+            ResourceGroupName = "OneResourceGroupName",
+            ResourceName = "samplebotname",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	botservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/botservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := botservice.NewChannel(ctx, "channel", &botservice.ChannelArgs{
+			ChannelName: pulumi.String("EmailChannel"),
+			Location:    pulumi.String("global"),
+			Properties: botservice.EmailChannel{
+				ChannelName: "EmailChannel",
+				Properties: botservice.EmailChannelProperties{
+					EmailAddress: "a@b.com",
+					IsEnabled:    true,
+					Password:     "pwd",
+				},
+			},
+			ResourceGroupName: pulumi.String("OneResourceGroupName"),
+			ResourceName:      pulumi.String("samplebotname"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const channel = new azure_native.botservice.Channel("channel", {
+    channelName: "EmailChannel",
+    location: "global",
+    properties: {
+        channelName: "EmailChannel",
+        properties: {
+            emailAddress: "a@b.com",
+            isEnabled: true,
+            password: "pwd",
+        },
+    },
+    resourceGroupName: "OneResourceGroupName",
+    resourceName: "samplebotname",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+channel = azure_native.botservice.Channel("channel",
+    channel_name="EmailChannel",
+    location="global",
+    properties=azure_native.botservice.EmailChannelArgs(
+        channel_name="EmailChannel",
+        properties=azure_native.botservice.EmailChannelPropertiesArgs(
+            email_address="a@b.com",
+            is_enabled=True,
+            password="pwd",
+        ),
+    ),
+    resource_group_name="OneResourceGroupName",
+    resource_name="samplebotname")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create DirectLine Speech Bot
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var channel = new AzureNative.BotService.Channel("channel", new AzureNative.BotService.ChannelArgs
+        {
+            ChannelName = "DirectLineSpeechChannel",
+            Location = "global",
+            Properties = new AzureNative.BotService.Inputs.DirectLineSpeechChannelArgs
+            {
+                ChannelName = "DirectLineSpeechChannel",
+                Properties = new AzureNative.BotService.Inputs.DirectLineSpeechChannelPropertiesArgs
+                {
+                    CognitiveServiceRegion = "XcognitiveServiceRegionX",
+                    CognitiveServiceSubscriptionKey = "XcognitiveServiceSubscriptionKeyX",
+                    IsEnabled = true,
+                },
+            },
+            ResourceGroupName = "OneResourceGroupName",
+            ResourceName = "samplebotname",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	botservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/botservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := botservice.NewChannel(ctx, "channel", &botservice.ChannelArgs{
+			ChannelName: pulumi.String("DirectLineSpeechChannel"),
+			Location:    pulumi.String("global"),
+			Properties: botservice.DirectLineSpeechChannel{
+				ChannelName: "DirectLineSpeechChannel",
+				Properties: botservice.DirectLineSpeechChannelProperties{
+					CognitiveServiceRegion:          "XcognitiveServiceRegionX",
+					CognitiveServiceSubscriptionKey: "XcognitiveServiceSubscriptionKeyX",
+					IsEnabled:                       true,
+				},
+			},
+			ResourceGroupName: pulumi.String("OneResourceGroupName"),
+			ResourceName:      pulumi.String("samplebotname"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const channel = new azure_native.botservice.Channel("channel", {
+    channelName: "DirectLineSpeechChannel",
+    location: "global",
+    properties: {
+        channelName: "DirectLineSpeechChannel",
+        properties: {
+            cognitiveServiceRegion: "XcognitiveServiceRegionX",
+            cognitiveServiceSubscriptionKey: "XcognitiveServiceSubscriptionKeyX",
+            isEnabled: true,
+        },
+    },
+    resourceGroupName: "OneResourceGroupName",
+    resourceName: "samplebotname",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+channel = azure_native.botservice.Channel("channel",
+    channel_name="DirectLineSpeechChannel",
+    location="global",
+    properties=azure_native.botservice.DirectLineSpeechChannelArgs(
+        channel_name="DirectLineSpeechChannel",
+        properties=azure_native.botservice.DirectLineSpeechChannelPropertiesArgs(
+            cognitive_service_region="XcognitiveServiceRegionX",
+            cognitive_service_subscription_key="XcognitiveServiceSubscriptionKeyX",
+            is_enabled=True,
+        ),
+    ),
+    resource_group_name="OneResourceGroupName",
+    resource_name="samplebotname")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create Line Bot
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var channel = new AzureNative.BotService.Channel("channel", new AzureNative.BotService.ChannelArgs
+        {
+            ChannelName = "LineChannel",
+            Location = "global",
+            Properties = new AzureNative.BotService.Inputs.LineChannelArgs
+            {
+                ChannelName = "LineChannel",
+                Properties = new AzureNative.BotService.Inputs.LineChannelPropertiesArgs
+                {
+                    LineRegistrations = 
+                    {
+                        new AzureNative.BotService.Inputs.LineRegistrationArgs
+                        {
+                            ChannelAccessToken = "channelAccessToken",
+                            ChannelSecret = "channelSecret",
+                        },
+                    },
+                },
+            },
+            ResourceGroupName = "OneResourceGroupName",
+            ResourceName = "samplebotname",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	botservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/botservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := botservice.NewChannel(ctx, "channel", &botservice.ChannelArgs{
+			ChannelName: pulumi.String("LineChannel"),
+			Location:    pulumi.String("global"),
+			Properties: botservice.LineChannel{
+				ChannelName: "LineChannel",
+				Properties: botservice.LineChannelProperties{
+					LineRegistrations: []botservice.LineRegistration{
+						botservice.LineRegistration{
+							ChannelAccessToken: "channelAccessToken",
+							ChannelSecret:      "channelSecret",
+						},
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("OneResourceGroupName"),
+			ResourceName:      pulumi.String("samplebotname"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const channel = new azure_native.botservice.Channel("channel", {
+    channelName: "LineChannel",
+    location: "global",
+    properties: {
+        channelName: "LineChannel",
+        properties: {
+            lineRegistrations: [{
+                channelAccessToken: "channelAccessToken",
+                channelSecret: "channelSecret",
+            }],
+        },
+    },
+    resourceGroupName: "OneResourceGroupName",
+    resourceName: "samplebotname",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+channel = azure_native.botservice.Channel("channel",
+    channel_name="LineChannel",
+    location="global",
+    properties=azure_native.botservice.LineChannelArgs(
+        channel_name="LineChannel",
+        properties=azure_native.botservice.LineChannelPropertiesArgs(
+            line_registrations=[azure_native.botservice.LineRegistrationArgs(
+                channel_access_token="channelAccessToken",
+                channel_secret="channelSecret",
+            )],
+        ),
+    ),
+    resource_group_name="OneResourceGroupName",
+    resource_name="samplebotname")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:botservice:Channel myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.BotService/botServices/{resourceName}/channels/{channelName} 
+```
+
+ */
 @ResourceType(type="azure-native:botservice:Channel")
 public class Channel extends io.pulumi.resources.CustomResource {
+    /**
+     * Entity Tag
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return Entity Tag
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * Required. Gets or sets the Kind of the resource.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return Required. Gets or sets the Kind of the resource.
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * Specifies the location of the resource.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Specifies the location of the resource.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Specifies the name of the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Specifies the name of the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The set of properties specific to bot channel resource
+     */
     @OutputExport(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
+    /**
+     * @return The set of properties specific to bot channel resource
+     */
     public Output<Object> getProperties() {
         return this.properties;
     }
+    /**
+     * Gets or sets the SKU of the resource.
+     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
+    /**
+     * @return Gets or sets the SKU of the resource.
+     */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * Contains resource tags defined as key/value pairs.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Contains resource tags defined as key/value pairs.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Specifies the type of the resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Specifies the type of the resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Entity zones
+     */
     @OutputExport(name="zones", type=List.class, parameters={String.class})
     private Output<List<String>> zones;
 
+    /**
+     * @return Entity zones
+     */
     public Output<List<String>> getZones() {
         return this.zones;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Channel(String name, ChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:botservice:Channel", name, args == null ? ChannelArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -109,6 +623,14 @@ public class Channel extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Channel get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Channel(name, id, options);
     }

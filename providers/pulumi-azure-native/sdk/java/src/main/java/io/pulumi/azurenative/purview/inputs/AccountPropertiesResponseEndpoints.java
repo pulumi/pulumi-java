@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The URIs that are the public endpoints of the account.
+ */
 public final class AccountPropertiesResponseEndpoints extends io.pulumi.resources.InvokeArgs {
 
     public static final AccountPropertiesResponseEndpoints Empty = new AccountPropertiesResponseEndpoints();
 
+    /**
+     * Gets the catalog endpoint.
+     */
     @InputImport(name="catalog", required=true)
     private final String catalog;
 
@@ -19,6 +25,9 @@ public final class AccountPropertiesResponseEndpoints extends io.pulumi.resource
         return this.catalog;
     }
 
+    /**
+     * Gets the guardian endpoint.
+     */
     @InputImport(name="guardian", required=true)
     private final String guardian;
 
@@ -26,6 +35,9 @@ public final class AccountPropertiesResponseEndpoints extends io.pulumi.resource
         return this.guardian;
     }
 
+    /**
+     * Gets the scan endpoint.
+     */
     @InputImport(name="scan", required=true)
     private final String scan;
 

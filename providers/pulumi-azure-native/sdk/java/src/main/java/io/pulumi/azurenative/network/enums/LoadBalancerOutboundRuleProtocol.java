@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The protocol for the outbound rule in load balancer.
+ */
     @EnumType
     public enum LoadBalancerOutboundRuleProtocol {
+/**
+ * 
+ */
         Tcp("Tcp"),
+/**
+ * 
+ */
         Udp("Udp"),
+/**
+ * 
+ */
         All("All");
 
         private final String value;

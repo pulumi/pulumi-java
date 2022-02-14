@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ObjectMetricStatus indicates the current value of a metric describing a kubernetes object (for example, hits-per-second on an Ingress object).
+ */
 public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ObjectMetricStatusArgs Empty = new ObjectMetricStatusArgs();
 
+    /**
+     * averageValue is the current value of the average of the metric across all relevant pods (as a quantity)
+     */
     @InputImport(name="averageValue")
     private final @Nullable Input<String> averageValue;
 
@@ -23,6 +29,9 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
         return this.averageValue == null ? Input.empty() : this.averageValue;
     }
 
+    /**
+     * currentValue is the current value of the metric (as a quantity).
+     */
     @InputImport(name="currentValue", required=true)
     private final Input<String> currentValue;
 
@@ -30,6 +39,9 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
         return this.currentValue;
     }
 
+    /**
+     * metricName is the name of the metric in question.
+     */
     @InputImport(name="metricName", required=true)
     private final Input<String> metricName;
 
@@ -37,6 +49,9 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
         return this.metricName;
     }
 
+    /**
+     * selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the ObjectMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.
+     */
     @InputImport(name="selector")
     private final @Nullable Input<LabelSelectorArgs> selector;
 
@@ -44,6 +59,9 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
         return this.selector == null ? Input.empty() : this.selector;
     }
 
+    /**
+     * target is the described Kubernetes object.
+     */
     @InputImport(name="target", required=true)
     private final Input<CrossVersionObjectReferenceArgs> target;
 

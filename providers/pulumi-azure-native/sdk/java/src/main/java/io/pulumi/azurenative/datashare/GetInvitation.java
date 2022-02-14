@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInvitation {
+/**
+ * A Invitation data transfer object.
+API Version: 2020-09-01.
+ *
+ * A Invitation data transfer object.
+ */
     public static CompletableFuture<GetInvitationResult> invokeAsync(GetInvitationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getInvitation", TypeShape.of(GetInvitationResult.class), args == null ? GetInvitationArgs.Empty : args, Utilities.withVersion(options));
     }

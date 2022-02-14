@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudApigeeV1TraceSamplingConfigResponse {
+/**
+ * Sampler of distributed tracing. OFF is the default value.
+ */
     private final String sampler;
+/**
+ * Field sampling rate. This value is only applicable when using the PROBABILITY sampler. The supported values are > 0 and <= 0.5.
+ */
     private final Double samplingRate;
 
     @OutputCustomType.Constructor({"sampler","samplingRate"})
@@ -21,9 +27,15 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigResponse {
         this.samplingRate = Objects.requireNonNull(samplingRate);
     }
 
+/**
+ * Sampler of distributed tracing. OFF is the default value.
+ */
     public String getSampler() {
         return this.sampler;
     }
+/**
+ * Field sampling rate. This value is only applicable when using the PROBABILITY sampler. The supported values are > 0 and <= 0.5.
+ */
     public Double getSamplingRate() {
         return this.samplingRate;
     }

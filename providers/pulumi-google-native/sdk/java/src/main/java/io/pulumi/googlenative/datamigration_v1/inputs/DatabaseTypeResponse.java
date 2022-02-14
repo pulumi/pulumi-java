@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A message defining the database engine and provider.
+ */
 public final class DatabaseTypeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatabaseTypeResponse Empty = new DatabaseTypeResponse();
 
+    /**
+     * The database engine.
+     */
     @InputImport(name="engine", required=true)
     private final String engine;
 
@@ -19,6 +25,9 @@ public final class DatabaseTypeResponse extends io.pulumi.resources.InvokeArgs {
         return this.engine;
     }
 
+    /**
+     * The database provider.
+     */
     @InputImport(name="provider", required=true)
     private final String provider;
 

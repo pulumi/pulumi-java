@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetContact {
+/**
+ * Gets a single contact.
+ */
     public static CompletableFuture<GetContactResult> invokeAsync(GetContactArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:essentialcontacts/v1:getContact", TypeShape.of(GetContactResult.class), args == null ? GetContactArgs.Empty : args, Utilities.withVersion(options));
     }

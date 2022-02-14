@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * A flag to determine whether or not NtlmV1 is enabled or disabled.
+ */
     @EnumType
     public enum NtlmV1 {
+/**
+ * 
+ */
         Enabled("Enabled"),
+/**
+ * 
+ */
         Disabled("Disabled");
 
         private final String value;

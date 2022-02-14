@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Word-level info for words in a transcript.
+ */
 public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse Empty = new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse();
 
+    /**
+     * A confidence estimate between 0.0 and 1.0 of the fidelity of this word. A default value of 0.0 indicates that the value is unset.
+     */
     @InputImport(name="confidence", required=true)
     private final Double confidence;
 
@@ -20,6 +26,9 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
         return this.confidence;
     }
 
+    /**
+     * Time offset of the end of this word relative to the beginning of the total conversation.
+     */
     @InputImport(name="endOffset", required=true)
     private final String endOffset;
 
@@ -27,6 +36,9 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
         return this.endOffset;
     }
 
+    /**
+     * Time offset of the start of this word relative to the beginning of the total conversation.
+     */
     @InputImport(name="startOffset", required=true)
     private final String startOffset;
 
@@ -34,6 +46,9 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
         return this.startOffset;
     }
 
+    /**
+     * The word itself. Includes punctuation marks that surround the word.
+     */
     @InputImport(name="word", required=true)
     private final String word;
 

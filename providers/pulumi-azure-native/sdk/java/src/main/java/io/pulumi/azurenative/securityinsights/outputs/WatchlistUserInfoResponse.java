@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WatchlistUserInfoResponse {
+/**
+ * The email of the user.
+ */
     private final String email;
+/**
+ * The name of the user.
+ */
     private final String name;
+/**
+ * The object id of the user.
+ */
     private final @Nullable String objectId;
 
     @OutputCustomType.Constructor({"email","name","objectId"})
@@ -25,12 +34,21 @@ public final class WatchlistUserInfoResponse {
         this.objectId = objectId;
     }
 
+/**
+ * The email of the user.
+ */
     public String getEmail() {
         return this.email;
     }
+/**
+ * The name of the user.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The object id of the user.
+ */
     public Optional<String> getObjectId() {
         return Optional.ofNullable(this.objectId);
     }

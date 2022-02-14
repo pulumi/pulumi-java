@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.media.AccountFilterArgs;
 import io.pulumi.azurenative.media.outputs.FilterTrackSelectionResponse;
 import io.pulumi.azurenative.media.outputs.FirstQualityResponse;
 import io.pulumi.azurenative.media.outputs.PresentationTimeRangeResponse;
@@ -18,45 +17,370 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An Account Filter.
+API Version: 2020-05-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create an Account Filter
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var accountFilter = new AzureNative.Media.AccountFilter("accountFilter", new AzureNative.Media.AccountFilterArgs
+        {
+            AccountName = "contosomedia",
+            FilterName = "newAccountFilter",
+            FirstQuality = new AzureNative.Media.Inputs.FirstQualityArgs
+            {
+                Bitrate = 128000,
+            },
+            PresentationTimeRange = new AzureNative.Media.Inputs.PresentationTimeRangeArgs
+            {
+                EndTimestamp = 170000000,
+                ForceEndTimestamp = false,
+                LiveBackoffDuration = 0,
+                PresentationWindowDuration = 9223372036854774784,
+                StartTimestamp = 0,
+                Timescale = 10000000,
+            },
+            ResourceGroupName = "contoso",
+            Tracks = 
+            {
+                new AzureNative.Media.Inputs.FilterTrackSelectionArgs
+                {
+                    TrackSelections = 
+                    {
+                        new AzureNative.Media.Inputs.FilterTrackPropertyConditionArgs
+                        {
+                            Operation = "Equal",
+                            Property = "Type",
+                            Value = "Audio",
+                        },
+                        new AzureNative.Media.Inputs.FilterTrackPropertyConditionArgs
+                        {
+                            Operation = "NotEqual",
+                            Property = "Language",
+                            Value = "en",
+                        },
+                        new AzureNative.Media.Inputs.FilterTrackPropertyConditionArgs
+                        {
+                            Operation = "NotEqual",
+                            Property = "FourCC",
+                            Value = "EC-3",
+                        },
+                    },
+                },
+                new AzureNative.Media.Inputs.FilterTrackSelectionArgs
+                {
+                    TrackSelections = 
+                    {
+                        new AzureNative.Media.Inputs.FilterTrackPropertyConditionArgs
+                        {
+                            Operation = "Equal",
+                            Property = "Type",
+                            Value = "Video",
+                        },
+                        new AzureNative.Media.Inputs.FilterTrackPropertyConditionArgs
+                        {
+                            Operation = "Equal",
+                            Property = "Bitrate",
+                            Value = "3000000-5000000",
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	media "github.com/pulumi/pulumi-azure-native/sdk/go/azure/media"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := media.NewAccountFilter(ctx, "accountFilter", &media.AccountFilterArgs{
+			AccountName: pulumi.String("contosomedia"),
+			FilterName:  pulumi.String("newAccountFilter"),
+			FirstQuality: &media.FirstQualityArgs{
+				Bitrate: pulumi.Int(128000),
+			},
+			PresentationTimeRange: &media.PresentationTimeRangeArgs{
+				EndTimestamp:               pulumi.Float64(170000000),
+				ForceEndTimestamp:          pulumi.Bool(false),
+				LiveBackoffDuration:        pulumi.Float64(0),
+				PresentationWindowDuration: pulumi.Float64(9223372036854774784),
+				StartTimestamp:             pulumi.Float64(0),
+				Timescale:                  pulumi.Float64(10000000),
+			},
+			ResourceGroupName: pulumi.String("contoso"),
+			Tracks: []media.FilterTrackSelectionArgs{
+				&media.FilterTrackSelectionArgs{
+					TrackSelections: []media.FilterTrackPropertyConditionArgs{
+						&media.FilterTrackPropertyConditionArgs{
+							Operation: pulumi.String("Equal"),
+							Property:  pulumi.String("Type"),
+							Value:     pulumi.String("Audio"),
+						},
+						&media.FilterTrackPropertyConditionArgs{
+							Operation: pulumi.String("NotEqual"),
+							Property:  pulumi.String("Language"),
+							Value:     pulumi.String("en"),
+						},
+						&media.FilterTrackPropertyConditionArgs{
+							Operation: pulumi.String("NotEqual"),
+							Property:  pulumi.String("FourCC"),
+							Value:     pulumi.String("EC-3"),
+						},
+					},
+				},
+				&media.FilterTrackSelectionArgs{
+					TrackSelections: []media.FilterTrackPropertyConditionArgs{
+						&media.FilterTrackPropertyConditionArgs{
+							Operation: pulumi.String("Equal"),
+							Property:  pulumi.String("Type"),
+							Value:     pulumi.String("Video"),
+						},
+						&media.FilterTrackPropertyConditionArgs{
+							Operation: pulumi.String("Equal"),
+							Property:  pulumi.String("Bitrate"),
+							Value:     pulumi.String("3000000-5000000"),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const accountFilter = new azure_native.media.AccountFilter("accountFilter", {
+    accountName: "contosomedia",
+    filterName: "newAccountFilter",
+    firstQuality: {
+        bitrate: 128000,
+    },
+    presentationTimeRange: {
+        endTimestamp: 170000000,
+        forceEndTimestamp: false,
+        liveBackoffDuration: 0,
+        presentationWindowDuration: 9223372036854774784,
+        startTimestamp: 0,
+        timescale: 10000000,
+    },
+    resourceGroupName: "contoso",
+    tracks: [
+        {
+            trackSelections: [
+                {
+                    operation: "Equal",
+                    property: "Type",
+                    value: "Audio",
+                },
+                {
+                    operation: "NotEqual",
+                    property: "Language",
+                    value: "en",
+                },
+                {
+                    operation: "NotEqual",
+                    property: "FourCC",
+                    value: "EC-3",
+                },
+            ],
+        },
+        {
+            trackSelections: [
+                {
+                    operation: "Equal",
+                    property: "Type",
+                    value: "Video",
+                },
+                {
+                    operation: "Equal",
+                    property: "Bitrate",
+                    value: "3000000-5000000",
+                },
+            ],
+        },
+    ],
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+account_filter = azure_native.media.AccountFilter("accountFilter",
+    account_name="contosomedia",
+    filter_name="newAccountFilter",
+    first_quality=azure_native.media.FirstQualityArgs(
+        bitrate=128000,
+    ),
+    presentation_time_range=azure_native.media.PresentationTimeRangeArgs(
+        end_timestamp=170000000,
+        force_end_timestamp=False,
+        live_backoff_duration=0,
+        presentation_window_duration=9223372036854774784,
+        start_timestamp=0,
+        timescale=10000000,
+    ),
+    resource_group_name="contoso",
+    tracks=[
+        azure_native.media.FilterTrackSelectionArgs(
+            track_selections=[
+                azure_native.media.FilterTrackPropertyConditionArgs(
+                    operation="Equal",
+                    property="Type",
+                    value="Audio",
+                ),
+                azure_native.media.FilterTrackPropertyConditionArgs(
+                    operation="NotEqual",
+                    property="Language",
+                    value="en",
+                ),
+                azure_native.media.FilterTrackPropertyConditionArgs(
+                    operation="NotEqual",
+                    property="FourCC",
+                    value="EC-3",
+                ),
+            ],
+        ),
+        azure_native.media.FilterTrackSelectionArgs(
+            track_selections=[
+                azure_native.media.FilterTrackPropertyConditionArgs(
+                    operation="Equal",
+                    property="Type",
+                    value="Video",
+                ),
+                azure_native.media.FilterTrackPropertyConditionArgs(
+                    operation="Equal",
+                    property="Bitrate",
+                    value="3000000-5000000",
+                ),
+            ],
+        ),
+    ])
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:media:AccountFilter newAccountFilter /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/accountFilters/newAccountFilter 
+```
+
+ */
 @ResourceType(type="azure-native:media:AccountFilter")
 public class AccountFilter extends io.pulumi.resources.CustomResource {
+    /**
+     * The first quality.
+     */
     @OutputExport(name="firstQuality", type=FirstQualityResponse.class, parameters={})
     private Output</* @Nullable */ FirstQualityResponse> firstQuality;
 
+    /**
+     * @return The first quality.
+     */
     public Output</* @Nullable */ FirstQualityResponse> getFirstQuality() {
         return this.firstQuality;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The presentation time range.
+     */
     @OutputExport(name="presentationTimeRange", type=PresentationTimeRangeResponse.class, parameters={})
     private Output</* @Nullable */ PresentationTimeRangeResponse> presentationTimeRange;
 
+    /**
+     * @return The presentation time range.
+     */
     public Output</* @Nullable */ PresentationTimeRangeResponse> getPresentationTimeRange() {
         return this.presentationTimeRange;
     }
+    /**
+     * The system metadata relating to this resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system metadata relating to this resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The tracks selection conditions.
+     */
     @OutputExport(name="tracks", type=List.class, parameters={FilterTrackSelectionResponse.class})
     private Output</* @Nullable */ List<FilterTrackSelectionResponse>> tracks;
 
+    /**
+     * @return The tracks selection conditions.
+     */
     public Output</* @Nullable */ List<FilterTrackSelectionResponse>> getTracks() {
         return this.tracks;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AccountFilter(String name, AccountFilterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:media:AccountFilter", name, args == null ? AccountFilterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -77,6 +401,14 @@ public class AccountFilter extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AccountFilter get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AccountFilter(name, id, options);
     }

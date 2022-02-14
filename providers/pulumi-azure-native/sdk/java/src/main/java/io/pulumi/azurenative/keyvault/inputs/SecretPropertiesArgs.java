@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of the secret
+ */
 public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecretPropertiesArgs Empty = new SecretPropertiesArgs();
 
+    /**
+     * The attributes of the secret.
+     */
     @InputImport(name="attributes")
     private final @Nullable Input<SecretAttributesArgs> attributes;
 
@@ -22,6 +28,9 @@ public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs
         return this.attributes == null ? Input.empty() : this.attributes;
     }
 
+    /**
+     * The content type of the secret.
+     */
     @InputImport(name="contentType")
     private final @Nullable Input<String> contentType;
 
@@ -29,6 +38,9 @@ public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs
         return this.contentType == null ? Input.empty() : this.contentType;
     }
 
+    /**
+     * The value of the secret. NOTE: 'value' will never be returned from the service, as APIs using this model are is intended for internal use in ARM deployments. Users should use the data-plane REST service for interaction with vault secrets.
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

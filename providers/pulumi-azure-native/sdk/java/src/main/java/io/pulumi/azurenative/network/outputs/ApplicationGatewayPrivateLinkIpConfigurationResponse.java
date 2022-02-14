@@ -13,14 +13,41 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationGatewayPrivateLinkIpConfigurationResponse {
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     private final String etag;
+/**
+ * Resource ID.
+ */
     private final @Nullable String id;
+/**
+ * The name of application gateway private link ip configuration.
+ */
     private final @Nullable String name;
+/**
+ * Whether the ip configuration is primary or not.
+ */
     private final @Nullable Boolean primary;
+/**
+ * The private IP address of the IP configuration.
+ */
     private final @Nullable String privateIPAddress;
+/**
+ * The private IP address allocation method.
+ */
     private final @Nullable String privateIPAllocationMethod;
+/**
+ * The provisioning state of the application gateway private link IP configuration.
+ */
     private final String provisioningState;
+/**
+ * Reference to the subnet resource.
+ */
     private final @Nullable SubResourceResponse subnet;
+/**
+ * The resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","name","primary","privateIPAddress","privateIPAllocationMethod","provisioningState","subnet","type"})
@@ -45,30 +72,57 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * Resource ID.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * The name of application gateway private link ip configuration.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * Whether the ip configuration is primary or not.
+ */
     public Optional<Boolean> getPrimary() {
         return Optional.ofNullable(this.primary);
     }
+/**
+ * The private IP address of the IP configuration.
+ */
     public Optional<String> getPrivateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
+/**
+ * The private IP address allocation method.
+ */
     public Optional<String> getPrivateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
+/**
+ * The provisioning state of the application gateway private link IP configuration.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Reference to the subnet resource.
+ */
     public Optional<SubResourceResponse> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
+/**
+ * The resource type.
+ */
     public String getType() {
         return this.type;
     }

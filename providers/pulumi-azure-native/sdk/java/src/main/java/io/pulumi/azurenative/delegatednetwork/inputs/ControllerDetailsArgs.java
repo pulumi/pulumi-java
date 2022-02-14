@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * controller details
+ */
 public final class ControllerDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ControllerDetailsArgs Empty = new ControllerDetailsArgs();
 
+    /**
+     * controller arm resource id
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 

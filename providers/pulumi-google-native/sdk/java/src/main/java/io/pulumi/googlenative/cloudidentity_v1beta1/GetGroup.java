@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGroup {
+/**
+ * Retrieves a `Group`.
+ */
     public static CompletableFuture<GetGroupResult> invokeAsync(GetGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudidentity/v1beta1:getGroup", TypeShape.of(GetGroupResult.class), args == null ? GetGroupArgs.Empty : args, Utilities.withVersion(options));
     }

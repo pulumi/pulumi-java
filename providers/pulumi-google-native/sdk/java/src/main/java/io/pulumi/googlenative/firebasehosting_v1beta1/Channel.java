@@ -8,70 +8,132 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.firebasehosting_v1beta1.ChannelArgs;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.ReleaseResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a new channel in the specified site.
+ */
 @ResourceType(type="google-native:firebasehosting/v1beta1:Channel")
 public class Channel extends io.pulumi.resources.CustomResource {
+    /**
+     * The time at which the channel was created.
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return The time at which the channel was created.
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it's set directly or via the `ttl` field.
+     */
     @OutputExport(name="expireTime", type=String.class, parameters={})
     private Output<String> expireTime;
 
+    /**
+     * @return The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it's set directly or via the `ttl` field.
+     */
     public Output<String> getExpireTime() {
         return this.expireTime;
     }
+    /**
+     * Text labels used for extra metadata and/or filtering.
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
+    /**
+     * @return Text labels used for extra metadata and/or filtering.
+     */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The current release for the channel, if any.
+     */
     @OutputExport(name="release", type=ReleaseResponse.class, parameters={})
     private Output<ReleaseResponse> release;
 
+    /**
+     * @return The current release for the channel, if any.
+     */
     public Output<ReleaseResponse> getRelease() {
         return this.release;
     }
+    /**
+     * The number of previous releases to retain on the channel for rollback or other purposes. Must be a number between 1-100. Defaults to 10 for new channels.
+     */
     @OutputExport(name="retainedReleaseCount", type=Integer.class, parameters={})
     private Output<Integer> retainedReleaseCount;
 
+    /**
+     * @return The number of previous releases to retain on the channel for rollback or other purposes. Must be a number between 1-100. Defaults to 10 for new channels.
+     */
     public Output<Integer> getRetainedReleaseCount() {
         return this.retainedReleaseCount;
     }
+    /**
+     * Input only. A time-to-live for this channel. Sets `expire_time` to the provided duration past the time of the request.
+     */
     @OutputExport(name="ttl", type=String.class, parameters={})
     private Output<String> ttl;
 
+    /**
+     * @return Input only. A time-to-live for this channel. Sets `expire_time` to the provided duration past the time of the request.
+     */
     public Output<String> getTtl() {
         return this.ttl;
     }
+    /**
+     * The time at which the channel was last updated.
+     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
+    /**
+     * @return The time at which the channel was last updated.
+     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
+    /**
+     * The URL at which the content of this channel's current release can be viewed. This URL is a Firebase-provided subdomain of `web.app`. The content of this channel's current release can also be viewed at the Firebase-provided subdomain of `firebaseapp.com`. If this channel is the `live` channel for the Hosting site, then the content of this channel's current release can also be viewed at any connected custom domains.
+     */
     @OutputExport(name="url", type=String.class, parameters={})
     private Output<String> url;
 
+    /**
+     * @return The URL at which the content of this channel's current release can be viewed. This URL is a Firebase-provided subdomain of `web.app`. The content of this channel's current release can also be viewed at the Firebase-provided subdomain of `firebaseapp.com`. If this channel is the `live` channel for the Hosting site, then the content of this channel's current release can also be viewed at any connected custom domains.
+     */
     public Output<String> getUrl() {
         return this.url;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Channel(String name, ChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:firebasehosting/v1beta1:Channel", name, args == null ? ChannelArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -87,6 +149,14 @@ public class Channel extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Channel get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Channel(name, id, options);
     }

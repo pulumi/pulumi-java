@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetSavedQueryArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSavedQueryArgs Empty = new GetSavedQueryArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="savedQueryId", required=true)
     private final String savedQueryId;
 
@@ -19,6 +25,9 @@ public final class GetSavedQueryArgs extends io.pulumi.resources.InvokeArgs {
         return this.savedQueryId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="v1Id", required=true)
     private final String v1Id;
 
@@ -26,6 +35,9 @@ public final class GetSavedQueryArgs extends io.pulumi.resources.InvokeArgs {
         return this.v1Id;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="v1Id1", required=true)
     private final String v1Id1;
 

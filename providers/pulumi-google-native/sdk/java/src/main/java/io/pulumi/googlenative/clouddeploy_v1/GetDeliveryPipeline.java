@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeliveryPipeline {
+/**
+ * Gets details of a single DeliveryPipeline.
+ */
     public static CompletableFuture<GetDeliveryPipelineResult> invokeAsync(GetDeliveryPipelineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:clouddeploy/v1:getDeliveryPipeline", TypeShape.of(GetDeliveryPipelineResult.class), args == null ? GetDeliveryPipelineArgs.Empty : args, Utilities.withVersion(options));
     }

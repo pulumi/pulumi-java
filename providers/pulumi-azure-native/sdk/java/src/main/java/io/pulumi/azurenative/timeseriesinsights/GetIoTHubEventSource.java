@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIoTHubEventSource {
+/**
+ * An event source that receives its data from an Azure IoTHub.
+API Version: 2020-05-15.
+ *
+ * An event source that receives its data from an Azure IoTHub.
+ */
     public static CompletableFuture<GetIoTHubEventSourceResult> invokeAsync(GetIoTHubEventSourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getIoTHubEventSource", TypeShape.of(GetIoTHubEventSourceResult.class), args == null ? GetIoTHubEventSourceArgs.Empty : args, Utilities.withVersion(options));
     }

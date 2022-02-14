@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse {
+/**
+ * For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
+ */
     private final String testingChallenge;
+/**
+ * All assessments for this Key will return this score. Must be between 0 (likely not legitimate) and 1 (likely legitimate) inclusive.
+ */
     private final Double testingScore;
 
     @OutputCustomType.Constructor({"testingChallenge","testingScore"})
@@ -21,9 +27,15 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse {
         this.testingScore = Objects.requireNonNull(testingScore);
     }
 
+/**
+ * For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
+ */
     public String getTestingChallenge() {
         return this.testingChallenge;
     }
+/**
+ * All assessments for this Key will return this score. Must be between 0 (likely not legitimate) and 1 (likely legitimate) inclusive.
+ */
     public Double getTestingScore() {
         return this.testingScore;
     }

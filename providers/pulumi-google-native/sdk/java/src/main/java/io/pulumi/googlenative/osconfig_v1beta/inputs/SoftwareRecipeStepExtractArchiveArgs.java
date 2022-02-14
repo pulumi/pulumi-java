@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Extracts an archive of the type specified in the specified directory.
+ */
 public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SoftwareRecipeStepExtractArchiveArgs Empty = new SoftwareRecipeStepExtractArchiveArgs();
 
+    /**
+     * The id of the relevant artifact in the recipe.
+     */
     @InputImport(name="artifactId", required=true)
     private final Input<String> artifactId;
 
@@ -22,6 +28,9 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
         return this.artifactId;
     }
 
+    /**
+     * Directory to extract archive to. Defaults to `/` on Linux or `C:\` on Windows.
+     */
     @InputImport(name="destination")
     private final @Nullable Input<String> destination;
 
@@ -29,6 +38,9 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
         return this.destination == null ? Input.empty() : this.destination;
     }
 
+    /**
+     * The type of the archive to extract.
+     */
     @InputImport(name="type", required=true)
     private final Input<SoftwareRecipeStepExtractArchiveType> type;
 

@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InsightsTableResultResponseColumns {
+/**
+ * the name of the colum
+ */
     private final @Nullable String name;
+/**
+ * the type of the colum
+ */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"name","type"})
@@ -22,9 +28,15 @@ public final class InsightsTableResultResponseColumns {
         this.type = type;
     }
 
+/**
+ * the name of the colum
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * the type of the colum
+ */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStorageAccountCredential {
+/**
+ * The storage account credential.
+API Version: 2020-12-01.
+ *
+ * The storage account credential.
+ */
     public static CompletableFuture<GetStorageAccountCredentialResult> invokeAsync(GetStorageAccountCredentialArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getStorageAccountCredential", TypeShape.of(GetStorageAccountCredentialResult.class), args == null ? GetStorageAccountCredentialArgs.Empty : args, Utilities.withVersion(options));
     }

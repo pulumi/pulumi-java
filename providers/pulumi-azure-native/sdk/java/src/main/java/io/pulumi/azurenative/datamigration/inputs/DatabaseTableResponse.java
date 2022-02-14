@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Table properties
+ */
 public final class DatabaseTableResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatabaseTableResponse Empty = new DatabaseTableResponse();
 
+    /**
+     * Indicates whether table is empty or not
+     */
     @InputImport(name="hasRows", required=true)
     private final Boolean hasRows;
 
@@ -20,6 +26,9 @@ public final class DatabaseTableResponse extends io.pulumi.resources.InvokeArgs 
         return this.hasRows;
     }
 
+    /**
+     * Schema-qualified name of the table
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

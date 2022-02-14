@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FlowSchemaStatus {
+/**
+ * `conditions` is a list of the current states of FlowSchema.
+ */
     private final @Nullable List<FlowSchemaCondition> conditions;
 
     @OutputCustomType.Constructor({"conditions"})
@@ -18,6 +21,9 @@ public final class FlowSchemaStatus {
         this.conditions = conditions;
     }
 
+/**
+ * `conditions` is a list of the current states of FlowSchema.
+ */
     public List<FlowSchemaCondition> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }

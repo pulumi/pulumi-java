@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLiveEvent {
+/**
+ * The live event.
+API Version: 2020-05-01.
+ *
+ * The live event.
+ */
     public static CompletableFuture<GetLiveEventResult> invokeAsync(GetLiveEventArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getLiveEvent", TypeShape.of(GetLiveEventResult.class), args == null ? GetLiveEventArgs.Empty : args, Utilities.withVersion(options));
     }

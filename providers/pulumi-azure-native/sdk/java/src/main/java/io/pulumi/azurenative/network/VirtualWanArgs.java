@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualWanArgs Empty = new VirtualWanArgs();
 
+    /**
+     * True if branch to branch traffic is allowed.
+     */
     @InputImport(name="allowBranchToBranchTraffic")
     private final @Nullable Input<Boolean> allowBranchToBranchTraffic;
 
@@ -23,6 +29,9 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowBranchToBranchTraffic == null ? Input.empty() : this.allowBranchToBranchTraffic;
     }
 
+    /**
+     * True if Vnet to Vnet traffic is allowed.
+     */
     @InputImport(name="allowVnetToVnetTraffic")
     private final @Nullable Input<Boolean> allowVnetToVnetTraffic;
 
@@ -30,6 +39,9 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowVnetToVnetTraffic == null ? Input.empty() : this.allowVnetToVnetTraffic;
     }
 
+    /**
+     * Vpn encryption to be disabled or not.
+     */
     @InputImport(name="disableVpnEncryption")
     private final @Nullable Input<Boolean> disableVpnEncryption;
 
@@ -37,6 +49,9 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
         return this.disableVpnEncryption == null ? Input.empty() : this.disableVpnEncryption;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -44,6 +59,9 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -51,6 +69,9 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource group name of the VirtualWan.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -58,6 +79,9 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -65,6 +89,9 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The type of the VirtualWAN.
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 
@@ -72,6 +99,9 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * The name of the VirtualWAN being created or updated.
+     */
     @InputImport(name="virtualWANName")
     private final @Nullable Input<String> virtualWANName;
 

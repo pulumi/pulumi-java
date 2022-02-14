@@ -13,7 +13,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HubPublicIPAddressesResponse {
+/**
+ * The list of Public IP addresses associated with azure firewall or IP addresses to be retained.
+ */
     private final @Nullable List<AzureFirewallPublicIPAddressResponse> addresses;
+/**
+ * The number of Public IP addresses associated with azure firewall.
+ */
     private final @Nullable Integer count;
 
     @OutputCustomType.Constructor({"addresses","count"})
@@ -24,9 +30,15 @@ public final class HubPublicIPAddressesResponse {
         this.count = count;
     }
 
+/**
+ * The list of Public IP addresses associated with azure firewall or IP addresses to be retained.
+ */
     public List<AzureFirewallPublicIPAddressResponse> getAddresses() {
         return this.addresses == null ? List.of() : this.addresses;
     }
+/**
+ * The number of Public IP addresses associated with azure firewall.
+ */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }

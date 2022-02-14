@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity Salesforce source.
+ */
 public final class SalesforceSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SalesforceSourceResponse Empty = new SalesforceSourceResponse();
 
+    /**
+     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+     */
     @InputImport(name="additionalColumns")
     private final @Nullable Object additionalColumns;
 
@@ -22,6 +28,9 @@ public final class SalesforceSourceResponse extends io.pulumi.resources.InvokeAr
         return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
     }
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -29,6 +38,9 @@ public final class SalesforceSourceResponse extends io.pulumi.resources.InvokeAr
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
+    /**
+     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -36,6 +48,9 @@ public final class SalesforceSourceResponse extends io.pulumi.resources.InvokeAr
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
+    /**
+     * Database query. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="query")
     private final @Nullable Object query;
 
@@ -43,6 +58,9 @@ public final class SalesforceSourceResponse extends io.pulumi.resources.InvokeAr
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
     }
 
+    /**
+     * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="queryTimeout")
     private final @Nullable Object queryTimeout;
 
@@ -50,6 +68,9 @@ public final class SalesforceSourceResponse extends io.pulumi.resources.InvokeAr
         return this.queryTimeout == null ? Optional.empty() : Optional.ofNullable(this.queryTimeout);
     }
 
+    /**
+     * The read behavior for the operation. Default is Query.
+     */
     @InputImport(name="readBehavior")
     private final @Nullable String readBehavior;
 
@@ -57,6 +78,9 @@ public final class SalesforceSourceResponse extends io.pulumi.resources.InvokeAr
         return this.readBehavior == null ? Optional.empty() : Optional.ofNullable(this.readBehavior);
     }
 
+    /**
+     * Source retry count. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="sourceRetryCount")
     private final @Nullable Object sourceRetryCount;
 
@@ -64,6 +88,9 @@ public final class SalesforceSourceResponse extends io.pulumi.resources.InvokeAr
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
     }
 
+    /**
+     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="sourceRetryWait")
     private final @Nullable Object sourceRetryWait;
 
@@ -71,6 +98,10 @@ public final class SalesforceSourceResponse extends io.pulumi.resources.InvokeAr
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
     }
 
+    /**
+     * Copy source type.
+Expected value is 'SalesforceSource'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

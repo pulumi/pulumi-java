@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * InMageAzureV2 Managed disk details.
+ */
 public final class InMageAzureV2ManagedDiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InMageAzureV2ManagedDiskDetailsResponse Empty = new InMageAzureV2ManagedDiskDetailsResponse();
 
+    /**
+     * The disk id.
+     */
     @InputImport(name="diskId")
     private final @Nullable String diskId;
 
@@ -21,6 +27,9 @@ public final class InMageAzureV2ManagedDiskDetailsResponse extends io.pulumi.res
         return this.diskId == null ? Optional.empty() : Optional.ofNullable(this.diskId);
     }
 
+    /**
+     * The replica disk type.
+     */
     @InputImport(name="replicaDiskType")
     private final @Nullable String replicaDiskType;
 
@@ -28,6 +37,9 @@ public final class InMageAzureV2ManagedDiskDetailsResponse extends io.pulumi.res
         return this.replicaDiskType == null ? Optional.empty() : Optional.ofNullable(this.replicaDiskType);
     }
 
+    /**
+     * Seed managed disk Id.
+     */
     @InputImport(name="seedManagedDiskId")
     private final @Nullable String seedManagedDiskId;
 

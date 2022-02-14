@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Concur Service linked service.
+ */
 public final class ConcurLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConcurLinkedServiceArgs Empty = new ConcurLinkedServiceArgs();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -29,6 +35,9 @@ public final class ConcurLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * Application client_id supplied by Concur App Management.
+     */
     @InputImport(name="clientId", required=true)
     private final Input<Object> clientId;
 
@@ -36,6 +45,9 @@ public final class ConcurLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.clientId;
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -43,6 +55,9 @@ public final class ConcurLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
+    /**
+     * Properties used to connect to Concur. It is mutually exclusive with any other properties in the linked service. Type: object.
+     */
     @InputImport(name="connectionProperties")
     private final @Nullable Input<Object> connectionProperties;
 
@@ -50,6 +65,9 @@ public final class ConcurLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.connectionProperties == null ? Input.empty() : this.connectionProperties;
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -57,6 +75,9 @@ public final class ConcurLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -64,6 +85,9 @@ public final class ConcurLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -71,6 +95,9 @@ public final class ConcurLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * The password corresponding to the user name that you provided in the username field.
+     */
     @InputImport(name="password")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
@@ -78,6 +105,10 @@ public final class ConcurLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'Concur'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -85,6 +116,9 @@ public final class ConcurLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.type;
     }
 
+    /**
+     * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+     */
     @InputImport(name="useEncryptedEndpoints")
     private final @Nullable Input<Object> useEncryptedEndpoints;
 
@@ -92,6 +126,9 @@ public final class ConcurLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.useEncryptedEndpoints == null ? Input.empty() : this.useEncryptedEndpoints;
     }
 
+    /**
+     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+     */
     @InputImport(name="useHostVerification")
     private final @Nullable Input<Object> useHostVerification;
 
@@ -99,6 +136,9 @@ public final class ConcurLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.useHostVerification == null ? Input.empty() : this.useHostVerification;
     }
 
+    /**
+     * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+     */
     @InputImport(name="usePeerVerification")
     private final @Nullable Input<Object> usePeerVerification;
 
@@ -106,6 +146,9 @@ public final class ConcurLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.usePeerVerification == null ? Input.empty() : this.usePeerVerification;
     }
 
+    /**
+     * The user name that you use to access Concur Service.
+     */
     @InputImport(name="username", required=true)
     private final Input<Object> username;
 

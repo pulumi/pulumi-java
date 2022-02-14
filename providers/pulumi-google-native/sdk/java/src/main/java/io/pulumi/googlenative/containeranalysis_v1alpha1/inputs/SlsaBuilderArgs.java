@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SlsaBuilder encapsulates the identity of the builder of this provenance.
+ */
 public final class SlsaBuilderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SlsaBuilderArgs Empty = new SlsaBuilderArgs();
 
+    /**
+     * id is the id of the slsa provenance builder
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 

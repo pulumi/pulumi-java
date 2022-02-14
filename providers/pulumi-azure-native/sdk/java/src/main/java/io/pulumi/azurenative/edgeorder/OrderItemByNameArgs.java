@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OrderItemByNameArgs Empty = new OrderItemByNameArgs();
 
+    /**
+     * Represents shipping and return address for order item
+     */
     @InputImport(name="addressDetails", required=true)
     private final Input<AddressDetailsArgs> addressDetails;
 
@@ -24,6 +30,9 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
         return this.addressDetails;
     }
 
+    /**
+     * The geo-location where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -31,6 +40,9 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Id of the order to which order item belongs to
+     */
     @InputImport(name="orderId", required=true)
     private final Input<String> orderId;
 
@@ -38,6 +50,9 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
         return this.orderId;
     }
 
+    /**
+     * Represents order item details.
+     */
     @InputImport(name="orderItemDetails", required=true)
     private final Input<OrderItemDetailsArgs> orderItemDetails;
 
@@ -45,6 +60,9 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
         return this.orderItemDetails;
     }
 
+    /**
+     * The name of the order item
+     */
     @InputImport(name="orderItemName")
     private final @Nullable Input<String> orderItemName;
 
@@ -52,6 +70,9 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
         return this.orderItemName == null ? Input.empty() : this.orderItemName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,6 +80,9 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

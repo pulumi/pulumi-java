@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MessageResponse {
+/**
+ * The actual message text.
+ */
     private final String message;
+/**
+ * Time in UTC this message was provided.
+ */
     private final String timeStamp;
 
     @OutputCustomType.Constructor({"message","timeStamp"})
@@ -20,9 +26,15 @@ public final class MessageResponse {
         this.timeStamp = Objects.requireNonNull(timeStamp);
     }
 
+/**
+ * The actual message text.
+ */
     public String getMessage() {
         return this.message;
     }
+/**
+ * Time in UTC this message was provided.
+ */
     public String getTimeStamp() {
         return this.timeStamp;
     }

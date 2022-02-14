@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataControllerArgs Empty = new DataControllerArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="dataControllerName")
     private final @Nullable Input<String> dataControllerName;
 
@@ -24,6 +30,9 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataControllerName == null ? Input.empty() : this.dataControllerName;
     }
 
+    /**
+     * The extendedLocation of the resource.
+     */
     @InputImport(name="extendedLocation")
     private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
@@ -31,6 +40,9 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
     }
 
+    /**
+     * The geo-location where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -38,6 +50,9 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The data controller's properties
+     */
     @InputImport(name="properties", required=true)
     private final Input<DataControllerPropertiesArgs> properties;
 
@@ -45,6 +60,9 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
+    /**
+     * The name of the Azure resource group
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -52,6 +70,9 @@ public final class DataControllerArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

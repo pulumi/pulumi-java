@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum DataSource {
+/**
+ * Devices twin data
+ */
         TwinData("TwinData");
 
         private final String value;

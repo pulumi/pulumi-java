@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult {
+/**
+ * Returned sas url of the blob to which the p2s vpn connection detailed health will be written.
+ */
     private final @Nullable String sasUrl;
 
     @OutputCustomType.Constructor({"sasUrl"})
@@ -18,6 +21,9 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedResult {
         this.sasUrl = sasUrl;
     }
 
+/**
+ * Returned sas url of the blob to which the p2s vpn connection detailed health will be written.
+ */
     public Optional<String> getSasUrl() {
         return Optional.ofNullable(this.sasUrl);
     }

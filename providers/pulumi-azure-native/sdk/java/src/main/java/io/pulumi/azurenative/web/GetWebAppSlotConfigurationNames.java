@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppSlotConfigurationNames {
+/**
+ * Slot Config names azure resource.
+API Version: 2020-12-01.
+ *
+ * Slot Config names azure resource.
+ */
     public static CompletableFuture<GetWebAppSlotConfigurationNamesResult> invokeAsync(GetWebAppSlotConfigurationNamesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppSlotConfigurationNames", TypeShape.of(GetWebAppSlotConfigurationNamesResult.class), args == null ? GetWebAppSlotConfigurationNamesArgs.Empty : args, Utilities.withVersion(options));
     }

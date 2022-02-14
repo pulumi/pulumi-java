@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Online endpoint configuration
+ */
 public final class OnlineEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OnlineEndpointResponse Empty = new OnlineEndpointResponse();
 
+    /**
+     * Inference endpoint authentication mode type
+     */
     @InputImport(name="authMode", required=true)
     private final String authMode;
 
@@ -23,6 +29,9 @@ public final class OnlineEndpointResponse extends io.pulumi.resources.InvokeArgs
         return this.authMode;
     }
 
+    /**
+     * Description of the inference endpoint.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -30,6 +39,9 @@ public final class OnlineEndpointResponse extends io.pulumi.resources.InvokeArgs
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Property dictionary. Properties can be added, but not removed or altered.
+     */
     @InputImport(name="properties")
     private final @Nullable Map<String,String> properties;
 
@@ -37,6 +49,9 @@ public final class OnlineEndpointResponse extends io.pulumi.resources.InvokeArgs
         return this.properties == null ? Map.of() : this.properties;
     }
 
+    /**
+     * State of endpoint provisioning.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -44,6 +59,9 @@ public final class OnlineEndpointResponse extends io.pulumi.resources.InvokeArgs
         return this.provisioningState;
     }
 
+    /**
+     * Endpoint URI.
+     */
     @InputImport(name="scoringUri", required=true)
     private final String scoringUri;
 
@@ -51,6 +69,9 @@ public final class OnlineEndpointResponse extends io.pulumi.resources.InvokeArgs
         return this.scoringUri;
     }
 
+    /**
+     * Endpoint Swagger URI.
+     */
     @InputImport(name="swaggerUri", required=true)
     private final String swaggerUri;
 
@@ -58,6 +79,10 @@ public final class OnlineEndpointResponse extends io.pulumi.resources.InvokeArgs
         return this.swaggerUri;
     }
 
+    /**
+     * ARM resource ID of the compute if it exists.
+optional
+     */
     @InputImport(name="target")
     private final @Nullable String target;
 
@@ -65,6 +90,9 @@ public final class OnlineEndpointResponse extends io.pulumi.resources.InvokeArgs
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
     }
 
+    /**
+     * Traffic rules on how the traffic will be routed across deployments.
+     */
     @InputImport(name="traffic")
     private final @Nullable Map<String,Integer> traffic;
 

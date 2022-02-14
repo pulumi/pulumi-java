@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.hybridcompute;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.hybridcompute.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.hybridcompute.outputs.PrivateEndpointConnectionPropertiesResponse;
 import io.pulumi.azurenative.hybridcompute.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
@@ -16,33 +15,176 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A private endpoint connection
+API Version: 2021-03-25-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Approve or reject a private endpoint connection with a given name.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpointConnection = new AzureNative.HybridCompute.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.HybridCompute.PrivateEndpointConnectionArgs
+        {
+            PrivateEndpointConnectionName = "private-endpoint-connection-name",
+            Properties = new AzureNative.HybridCompute.Inputs.PrivateEndpointConnectionPropertiesArgs
+            {
+                PrivateLinkServiceConnectionState = new AzureNative.HybridCompute.Inputs.PrivateLinkServiceConnectionStatePropertyArgs
+                {
+                    Description = "Approved by johndoe@contoso.com",
+                    Status = "Approved",
+                },
+            },
+            ResourceGroupName = "myResourceGroup",
+            ScopeName = "myPrivateLinkScope",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	hybridcompute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hybridcompute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := hybridcompute.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &hybridcompute.PrivateEndpointConnectionArgs{
+			PrivateEndpointConnectionName: pulumi.String("private-endpoint-connection-name"),
+			Properties: &hybridcompute.PrivateEndpointConnectionPropertiesArgs{
+				PrivateLinkServiceConnectionState: &hybridcompute.PrivateLinkServiceConnectionStatePropertyArgs{
+					Description: pulumi.String("Approved by johndoe@contoso.com"),
+					Status:      pulumi.String("Approved"),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			ScopeName:         pulumi.String("myPrivateLinkScope"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const privateEndpointConnection = new azure_native.hybridcompute.PrivateEndpointConnection("privateEndpointConnection", {
+    privateEndpointConnectionName: "private-endpoint-connection-name",
+    properties: {
+        privateLinkServiceConnectionState: {
+            description: "Approved by johndoe@contoso.com",
+            status: "Approved",
+        },
+    },
+    resourceGroupName: "myResourceGroup",
+    scopeName: "myPrivateLinkScope",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+private_endpoint_connection = azure_native.hybridcompute.PrivateEndpointConnection("privateEndpointConnection",
+    private_endpoint_connection_name="private-endpoint-connection-name",
+    properties=azure_native.hybridcompute.PrivateEndpointConnectionPropertiesArgs(
+        private_link_service_connection_state=azure_native.hybridcompute.PrivateLinkServiceConnectionStatePropertyArgs(
+            description="Approved by johndoe@contoso.com",
+            status="Approved",
+        ),
+    ),
+    resource_group_name="myResourceGroup",
+    scope_name="myPrivateLinkScope")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:hybridcompute:PrivateEndpointConnection private-endpoint-connection-name /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/privateLinkScopes/myPrivateLinkScope/privateEndpointConnections/private-endpoint-connection-name 
+```
+
+ */
 @ResourceType(type="azure-native:hybridcompute:PrivateEndpointConnection")
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Resource properties.
+     */
     @OutputExport(name="properties", type=PrivateEndpointConnectionPropertiesResponse.class, parameters={})
     private Output<PrivateEndpointConnectionPropertiesResponse> properties;
 
+    /**
+     * @return Resource properties.
+     */
     public Output<PrivateEndpointConnectionPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * The system meta data relating to this resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system meta data relating to this resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public PrivateEndpointConnection(String name, PrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:hybridcompute:PrivateEndpointConnection", name, args == null ? PrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -68,6 +210,14 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static PrivateEndpointConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateEndpointConnection(name, id, options);
     }

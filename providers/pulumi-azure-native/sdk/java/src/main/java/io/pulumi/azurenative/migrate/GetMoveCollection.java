@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMoveCollection {
+/**
+ * Define the move collection.
+API Version: 2021-01-01.
+ *
+ * Define the move collection.
+ */
     public static CompletableFuture<GetMoveCollectionResult> invokeAsync(GetMoveCollectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getMoveCollection", TypeShape.of(GetMoveCollectionResult.class), args == null ? GetMoveCollectionArgs.Empty : args, Utilities.withVersion(options));
     }

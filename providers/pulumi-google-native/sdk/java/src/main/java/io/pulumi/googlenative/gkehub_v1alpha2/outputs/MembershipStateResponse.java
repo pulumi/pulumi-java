@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MembershipStateResponse {
+/**
+ * The current state of the Membership resource.
+ */
     private final String code;
 
     @OutputCustomType.Constructor({"code"})
@@ -16,6 +19,9 @@ public final class MembershipStateResponse {
         this.code = Objects.requireNonNull(code);
     }
 
+/**
+ * The current state of the Membership resource.
+ */
     public String getCode() {
         return this.code;
     }

@@ -8,10 +8,17 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * E2E Network Mapping fabric specific settings.
+ */
 public final class VmmToVmmNetworkMappingSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VmmToVmmNetworkMappingSettingsResponse Empty = new VmmToVmmNetworkMappingSettingsResponse();
 
+    /**
+     * Gets the Instance type.
+Expected value is 'VmmToVmm'.
+     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 

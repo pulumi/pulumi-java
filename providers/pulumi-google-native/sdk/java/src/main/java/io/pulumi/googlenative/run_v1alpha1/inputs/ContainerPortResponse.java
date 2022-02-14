@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * ContainerPort represents a network port in a single container.
+ */
 public final class ContainerPortResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerPortResponse Empty = new ContainerPortResponse();
 
+    /**
+     * (Optional) Port number the container listens on. This must be a valid port number, 0 < x < 65536.
+     */
     @InputImport(name="containerPort", required=true)
     private final Integer containerPort;
 
@@ -20,6 +26,9 @@ public final class ContainerPortResponse extends io.pulumi.resources.InvokeArgs 
         return this.containerPort;
     }
 
+    /**
+     * (Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -27,6 +36,9 @@ public final class ContainerPortResponse extends io.pulumi.resources.InvokeArgs 
         return this.name;
     }
 
+    /**
+     * (Optional) Protocol for port. Must be "TCP". Defaults to "TCP".
+     */
     @InputImport(name="protocol", required=true)
     private final String protocol;
 

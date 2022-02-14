@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPrivateEndpointConnectionArgs Empty = new GetPrivateEndpointConnectionArgs();
 
+    /**
+     * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
         return this.accountName;
     }
 
+    /**
+     * The name of the private endpoint connection associated with the Azure resource
+     */
     @InputImport(name="privateEndpointConnectionName", required=true)
     private final String privateEndpointConnectionName;
 
@@ -26,6 +35,9 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
         return this.privateEndpointConnectionName;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final Python2PackageArgs Empty = new Python2PackageArgs();
 
+    /**
+     * The name of the automation account.
+     */
     @InputImport(name="automationAccountName", required=true)
     private final Input<String> automationAccountName;
 
@@ -23,6 +29,9 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.automationAccountName;
     }
 
+    /**
+     * Gets or sets the module content link.
+     */
     @InputImport(name="contentLink", required=true)
     private final Input<ContentLinkArgs> contentLink;
 
@@ -30,6 +39,9 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentLink;
     }
 
+    /**
+     * The name of python package.
+     */
     @InputImport(name="packageName")
     private final @Nullable Input<String> packageName;
 
@@ -37,6 +49,9 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.packageName == null ? Input.empty() : this.packageName;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +59,9 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Gets or sets the tags attached to the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

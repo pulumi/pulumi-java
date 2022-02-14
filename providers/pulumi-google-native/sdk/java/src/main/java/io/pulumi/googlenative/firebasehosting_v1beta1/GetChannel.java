@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetChannel {
+/**
+ * Retrieves information for the specified channel of the specified site.
+ */
     public static CompletableFuture<GetChannelResult> invokeAsync(GetChannelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebasehosting/v1beta1:getChannel", TypeShape.of(GetChannelResult.class), args == null ? GetChannelArgs.Empty : args, Utilities.withVersion(options));
     }

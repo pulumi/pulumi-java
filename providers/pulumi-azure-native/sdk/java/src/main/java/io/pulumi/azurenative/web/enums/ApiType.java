@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The API type
+ */
     @EnumType
     public enum ApiType {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         Rest("Rest"),
+/**
+ * 
+ */
         Soap("Soap");
 
         private final String value;

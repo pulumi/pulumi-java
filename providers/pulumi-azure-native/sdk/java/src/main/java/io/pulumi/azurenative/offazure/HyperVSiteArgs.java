@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HyperVSiteArgs Empty = new HyperVSiteArgs();
 
+    /**
+     * eTag for concurrency control.
+     */
     @InputImport(name="eTag")
     private final @Nullable Input<String> eTag;
 
@@ -23,6 +29,9 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.eTag == null ? Input.empty() : this.eTag;
     }
 
+    /**
+     * Azure location in which Sites is created.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -30,6 +39,9 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of the Hyper-V site.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,6 +49,9 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Nested properties of Hyper-V site.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<SitePropertiesArgs> properties;
 
@@ -44,6 +59,9 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -51,6 +69,9 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Site name.
+     */
     @InputImport(name="siteName")
     private final @Nullable Input<String> siteName;
 
@@ -58,6 +79,9 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.siteName == null ? Input.empty() : this.siteName;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

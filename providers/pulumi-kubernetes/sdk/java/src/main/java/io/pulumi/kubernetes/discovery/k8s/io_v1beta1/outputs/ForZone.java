@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ForZone {
+/**
+ * name represents the name of the zone.
+ */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +19,9 @@ public final class ForZone {
         this.name = Objects.requireNonNull(name);
     }
 
+/**
+ * name represents the name of the zone.
+ */
     public String getName() {
         return this.name;
     }

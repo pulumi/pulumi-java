@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Image annotation.
+ */
 public final class ImageAnnotationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ImageAnnotationResponse Empty = new ImageAnnotationResponse();
 
+    /**
+     * The list of polygons outlining the sensitive regions in the image.
+     */
     @InputImport(name="boundingPolys", required=true)
     private final List<BoundingPolyResponse> boundingPolys;
 
@@ -21,6 +27,9 @@ public final class ImageAnnotationResponse extends io.pulumi.resources.InvokeArg
         return this.boundingPolys;
     }
 
+    /**
+     * 0-based index of the image frame. For example, an image frame in a DICOM instance.
+     */
     @InputImport(name="frameIndex", required=true)
     private final Integer frameIndex;
 

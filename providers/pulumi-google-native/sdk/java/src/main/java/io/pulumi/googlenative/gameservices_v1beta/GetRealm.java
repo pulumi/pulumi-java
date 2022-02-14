@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRealm {
+/**
+ * Gets details of a single realm.
+ */
     public static CompletableFuture<GetRealmResult> invokeAsync(GetRealmArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gameservices/v1beta:getRealm", TypeShape.of(GetRealmResult.class), args == null ? GetRealmArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The tier of the particular SKU, e.g. Basic.
+ */
     @EnumType
     public enum SkuTier {
+/**
+ * 
+ */
         Basic("Basic"),
+/**
+ * 
+ */
         GeneralPurpose("GeneralPurpose"),
+/**
+ * 
+ */
         MemoryOptimized("MemoryOptimized");
 
         private final String value;

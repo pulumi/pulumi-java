@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The owner of the object. This will always be the uploader of the object.
+ */
 public final class BucketObjectOwnerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketObjectOwnerArgs Empty = new BucketObjectOwnerArgs();
 
+    /**
+     * The entity, in the form user-userId.
+     */
     @InputImport(name="entity")
     private final @Nullable Input<String> entity;
 
@@ -21,6 +27,9 @@ public final class BucketObjectOwnerArgs extends io.pulumi.resources.ResourceArg
         return this.entity == null ? Input.empty() : this.entity;
     }
 
+    /**
+     * The ID for the entity.
+     */
     @InputImport(name="entityId")
     private final @Nullable Input<String> entityId;
 

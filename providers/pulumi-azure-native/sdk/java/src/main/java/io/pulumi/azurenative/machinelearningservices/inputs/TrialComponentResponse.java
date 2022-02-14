@@ -17,10 +17,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Trial component definition.
+ */
 public final class TrialComponentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TrialComponentResponse Empty = new TrialComponentResponse();
 
+    /**
+     * ARM resource ID of the code asset.
+     */
     @InputImport(name="codeId")
     private final @Nullable String codeId;
 
@@ -28,6 +34,9 @@ public final class TrialComponentResponse extends io.pulumi.resources.InvokeArgs
         return this.codeId == null ? Optional.empty() : Optional.ofNullable(this.codeId);
     }
 
+    /**
+     * The command to execute on startup of the job. eg. "python train.py"
+     */
     @InputImport(name="command", required=true)
     private final String command;
 
@@ -35,6 +44,9 @@ public final class TrialComponentResponse extends io.pulumi.resources.InvokeArgs
         return this.command;
     }
 
+    /**
+     * Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
+     */
     @InputImport(name="distribution")
     private final @Nullable Object distribution;
 
@@ -42,6 +54,9 @@ public final class TrialComponentResponse extends io.pulumi.resources.InvokeArgs
         return this.distribution == null ? null : this.distribution;
     }
 
+    /**
+     * The ARM resource ID of the Environment specification for the job.
+     */
     @InputImport(name="environmentId")
     private final @Nullable String environmentId;
 
@@ -49,6 +64,9 @@ public final class TrialComponentResponse extends io.pulumi.resources.InvokeArgs
         return this.environmentId == null ? Optional.empty() : Optional.ofNullable(this.environmentId);
     }
 
+    /**
+     * Environment variables included in the job.
+     */
     @InputImport(name="environmentVariables")
     private final @Nullable Map<String,String> environmentVariables;
 
@@ -56,6 +74,9 @@ public final class TrialComponentResponse extends io.pulumi.resources.InvokeArgs
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
     }
 
+    /**
+     * Mapping of input data bindings used in the job.
+     */
     @InputImport(name="inputDataBindings")
     private final @Nullable Map<String,InputDataBindingResponse> inputDataBindings;
 
@@ -63,6 +84,9 @@ public final class TrialComponentResponse extends io.pulumi.resources.InvokeArgs
         return this.inputDataBindings == null ? Map.of() : this.inputDataBindings;
     }
 
+    /**
+     * Mapping of output data bindings used in the job.
+     */
     @InputImport(name="outputDataBindings")
     private final @Nullable Map<String,OutputDataBindingResponse> outputDataBindings;
 
@@ -70,6 +94,10 @@ public final class TrialComponentResponse extends io.pulumi.resources.InvokeArgs
         return this.outputDataBindings == null ? Map.of() : this.outputDataBindings;
     }
 
+    /**
+     * The max run duration in ISO 8601 format, after which the trial component will be cancelled.
+Only supports duration with precision as low as Seconds.
+     */
     @InputImport(name="timeout")
     private final @Nullable String timeout;
 

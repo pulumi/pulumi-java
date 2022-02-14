@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Cluster node details.
+ */
 public final class ClusterNodeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClusterNodeResponse Empty = new ClusterNodeResponse();
 
+    /**
+     * Number of physical cores on the cluster node.
+     */
     @InputImport(name="coreCount", required=true)
     private final Double coreCount;
 
@@ -20,6 +26,9 @@ public final class ClusterNodeResponse extends io.pulumi.resources.InvokeArgs {
         return this.coreCount;
     }
 
+    /**
+     * Id of the node in the cluster.
+     */
     @InputImport(name="id", required=true)
     private final Double id;
 
@@ -27,6 +36,9 @@ public final class ClusterNodeResponse extends io.pulumi.resources.InvokeArgs {
         return this.id;
     }
 
+    /**
+     * Manufacturer of the cluster node hardware.
+     */
     @InputImport(name="manufacturer", required=true)
     private final String manufacturer;
 
@@ -34,6 +46,9 @@ public final class ClusterNodeResponse extends io.pulumi.resources.InvokeArgs {
         return this.manufacturer;
     }
 
+    /**
+     * Total available memory on the cluster node (in GiB).
+     */
     @InputImport(name="memoryInGiB", required=true)
     private final Double memoryInGiB;
 
@@ -41,6 +56,9 @@ public final class ClusterNodeResponse extends io.pulumi.resources.InvokeArgs {
         return this.memoryInGiB;
     }
 
+    /**
+     * Model name of the cluster node hardware.
+     */
     @InputImport(name="model", required=true)
     private final String model;
 
@@ -48,6 +66,9 @@ public final class ClusterNodeResponse extends io.pulumi.resources.InvokeArgs {
         return this.model;
     }
 
+    /**
+     * Name of the cluster node.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -55,6 +76,9 @@ public final class ClusterNodeResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * Operating system running on the cluster node.
+     */
     @InputImport(name="osName", required=true)
     private final String osName;
 
@@ -62,6 +86,9 @@ public final class ClusterNodeResponse extends io.pulumi.resources.InvokeArgs {
         return this.osName;
     }
 
+    /**
+     * Version of the operating system running on the cluster node.
+     */
     @InputImport(name="osVersion", required=true)
     private final String osVersion;
 
@@ -69,6 +96,9 @@ public final class ClusterNodeResponse extends io.pulumi.resources.InvokeArgs {
         return this.osVersion;
     }
 
+    /**
+     * Immutable id of the cluster node.
+     */
     @InputImport(name="serialNumber", required=true)
     private final String serialNumber;
 

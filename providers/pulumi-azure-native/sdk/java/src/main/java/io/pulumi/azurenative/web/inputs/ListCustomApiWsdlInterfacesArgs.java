@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListCustomApiWsdlInterfacesArgs Empty = new ListCustomApiWsdlInterfacesArgs();
 
+    /**
+     * The WSDL content
+     */
     @InputImport(name="content")
     private final @Nullable String content;
 
@@ -24,6 +30,9 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
     }
 
+    /**
+     * The WSDL import method
+     */
     @InputImport(name="importMethod")
     private final @Nullable Either<String,WsdlImportMethod> importMethod;
 
@@ -31,6 +40,9 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
         return this.importMethod == null ? null : this.importMethod;
     }
 
+    /**
+     * The location
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -38,6 +50,9 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
         return this.location;
     }
 
+    /**
+     * The service with name and endpoint names
+     */
     @InputImport(name="service")
     private final @Nullable WsdlService service;
 
@@ -45,6 +60,9 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
         return this.service == null ? Optional.empty() : Optional.ofNullable(this.service);
     }
 
+    /**
+     * Subscription Id
+     */
     @InputImport(name="subscriptionId")
     private final @Nullable String subscriptionId;
 
@@ -52,6 +70,9 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
     }
 
+    /**
+     * The WSDL URL
+     */
     @InputImport(name="url")
     private final @Nullable String url;
 

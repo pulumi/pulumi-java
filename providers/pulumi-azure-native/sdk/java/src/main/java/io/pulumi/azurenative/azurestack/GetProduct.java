@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProduct {
+/**
+ * Product information.
+API Version: 2017-06-01.
+ *
+ * Product information.
+ */
     public static CompletableFuture<GetProductResult> invokeAsync(GetProductArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurestack:getProduct", TypeShape.of(GetProductResult.class), args == null ? GetProductArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Edifact agreement framing settings.
+ */
 public final class EdifactFramingSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EdifactFramingSettingsResponse Empty = new EdifactFramingSettingsResponse();
 
+    /**
+     * The character encoding.
+     */
     @InputImport(name="characterEncoding")
     private final @Nullable String characterEncoding;
 
@@ -22,6 +28,9 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
         return this.characterEncoding == null ? Optional.empty() : Optional.ofNullable(this.characterEncoding);
     }
 
+    /**
+     * The EDIFACT frame setting characterSet.
+     */
     @InputImport(name="characterSet", required=true)
     private final String characterSet;
 
@@ -29,6 +38,9 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
         return this.characterSet;
     }
 
+    /**
+     * The component separator.
+     */
     @InputImport(name="componentSeparator", required=true)
     private final Integer componentSeparator;
 
@@ -36,6 +48,9 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
         return this.componentSeparator;
     }
 
+    /**
+     * The data element separator.
+     */
     @InputImport(name="dataElementSeparator", required=true)
     private final Integer dataElementSeparator;
 
@@ -43,6 +58,9 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
         return this.dataElementSeparator;
     }
 
+    /**
+     * The EDIFACT frame setting decimal indicator.
+     */
     @InputImport(name="decimalPointIndicator", required=true)
     private final String decimalPointIndicator;
 
@@ -50,6 +68,9 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
         return this.decimalPointIndicator;
     }
 
+    /**
+     * The protocol version.
+     */
     @InputImport(name="protocolVersion", required=true)
     private final Integer protocolVersion;
 
@@ -57,6 +78,9 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
         return this.protocolVersion;
     }
 
+    /**
+     * The release indicator.
+     */
     @InputImport(name="releaseIndicator", required=true)
     private final Integer releaseIndicator;
 
@@ -64,6 +88,9 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
         return this.releaseIndicator;
     }
 
+    /**
+     * The repetition separator.
+     */
     @InputImport(name="repetitionSeparator", required=true)
     private final Integer repetitionSeparator;
 
@@ -71,6 +98,9 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
         return this.repetitionSeparator;
     }
 
+    /**
+     * The segment terminator.
+     */
     @InputImport(name="segmentTerminator", required=true)
     private final Integer segmentTerminator;
 
@@ -78,6 +108,9 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
         return this.segmentTerminator;
     }
 
+    /**
+     * The EDIFACT frame setting segment terminator suffix.
+     */
     @InputImport(name="segmentTerminatorSuffix", required=true)
     private final String segmentTerminatorSuffix;
 
@@ -85,6 +118,9 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
         return this.segmentTerminatorSuffix;
     }
 
+    /**
+     * The service code list directory version.
+     */
     @InputImport(name="serviceCodeListDirectoryVersion")
     private final @Nullable String serviceCodeListDirectoryVersion;
 

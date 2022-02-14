@@ -14,16 +14,49 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetKustoPoolAttachedDatabaseConfigurationResult {
+/**
+ * The list of databases from the clusterResourceId which are currently attached to the kusto pool.
+ */
     private final List<String> attachedDatabaseNames;
+/**
+ * The name of the database which you would like to attach, use * if you want to follow all current and future databases.
+ */
     private final String databaseName;
+/**
+ * The default principals modification kind
+ */
     private final String defaultPrincipalsModificationKind;
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     private final String id;
+/**
+ * The resource id of the kusto pool where the databases you would like to attach reside.
+ */
     private final String kustoPoolResourceId;
+/**
+ * Resource location.
+ */
     private final @Nullable String location;
+/**
+ * The name of the resource
+ */
     private final String name;
+/**
+ * The provisioned state of the resource.
+ */
     private final String provisioningState;
+/**
+ * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+ */
     private final SystemDataResponse systemData;
+/**
+ * Table level sharing specifications
+ */
     private final @Nullable TableLevelSharingPropertiesResponse tableLevelSharingProperties;
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"attachedDatabaseNames","databaseName","defaultPrincipalsModificationKind","id","kustoPoolResourceId","location","name","provisioningState","systemData","tableLevelSharingProperties","type"})
@@ -52,36 +85,69 @@ public final class GetKustoPoolAttachedDatabaseConfigurationResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The list of databases from the clusterResourceId which are currently attached to the kusto pool.
+ */
     public List<String> getAttachedDatabaseNames() {
         return this.attachedDatabaseNames;
     }
+/**
+ * The name of the database which you would like to attach, use * if you want to follow all current and future databases.
+ */
     public String getDatabaseName() {
         return this.databaseName;
     }
+/**
+ * The default principals modification kind
+ */
     public String getDefaultPrincipalsModificationKind() {
         return this.defaultPrincipalsModificationKind;
     }
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The resource id of the kusto pool where the databases you would like to attach reside.
+ */
     public String getKustoPoolResourceId() {
         return this.kustoPoolResourceId;
     }
+/**
+ * Resource location.
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * The name of the resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The provisioned state of the resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * Table level sharing specifications
+ */
     public Optional<TableLevelSharingPropertiesResponse> getTableLevelSharingProperties() {
         return Optional.ofNullable(this.tableLevelSharingProperties);
     }
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     public String getType() {
         return this.type;
     }

@@ -13,7 +13,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WorkbookTemplateLocalizedGalleryResponse {
+/**
+ * Workbook galleries supported by the template.
+ */
     private final @Nullable List<WorkbookTemplateGalleryResponse> galleries;
+/**
+ * Valid JSON object containing workbook template payload.
+ */
     private final @Nullable Object templateData;
 
     @OutputCustomType.Constructor({"galleries","templateData"})
@@ -24,9 +30,15 @@ public final class WorkbookTemplateLocalizedGalleryResponse {
         this.templateData = templateData;
     }
 
+/**
+ * Workbook galleries supported by the template.
+ */
     public List<WorkbookTemplateGalleryResponse> getGalleries() {
         return this.galleries == null ? List.of() : this.galleries;
     }
+/**
+ * Valid JSON object containing workbook template payload.
+ */
     public Optional<Object> getTemplateData() {
         return Optional.ofNullable(this.templateData);
     }

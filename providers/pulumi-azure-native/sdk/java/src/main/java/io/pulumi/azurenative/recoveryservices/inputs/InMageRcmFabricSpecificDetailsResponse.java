@@ -16,10 +16,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * InMageRcm fabric specific details.
+ */
 public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InMageRcmFabricSpecificDetailsResponse Empty = new InMageRcmFabricSpecificDetailsResponse();
 
+    /**
+     * The list of agent details.
+     */
     @InputImport(name="agentDetails", required=true)
     private final List<AgentDetailsResponse> agentDetails;
 
@@ -27,6 +33,9 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
         return this.agentDetails;
     }
 
+    /**
+     * The control plane Uri.
+     */
     @InputImport(name="controlPlaneUri", required=true)
     private final String controlPlaneUri;
 
@@ -34,6 +43,9 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
         return this.controlPlaneUri;
     }
 
+    /**
+     * The data plane Uri.
+     */
     @InputImport(name="dataPlaneUri", required=true)
     private final String dataPlaneUri;
 
@@ -41,6 +53,9 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
         return this.dataPlaneUri;
     }
 
+    /**
+     * The list of DRAs.
+     */
     @InputImport(name="dras", required=true)
     private final List<DraDetailsResponse> dras;
 
@@ -48,6 +63,10 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
         return this.dras;
     }
 
+    /**
+     * Gets the class type. Overridden in derived classes.
+Expected value is 'InMageRcm'.
+     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -55,6 +74,9 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
         return this.instanceType;
     }
 
+    /**
+     * The ARM Id of the physical site.
+     */
     @InputImport(name="physicalSiteId", required=true)
     private final String physicalSiteId;
 
@@ -62,6 +84,9 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
         return this.physicalSiteId;
     }
 
+    /**
+     * The list of process servers.
+     */
     @InputImport(name="processServers", required=true)
     private final List<ProcessServerDetailsResponse> processServers;
 
@@ -69,6 +94,9 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
         return this.processServers;
     }
 
+    /**
+     * The list of push installers.
+     */
     @InputImport(name="pushInstallers", required=true)
     private final List<PushInstallerDetailsResponse> pushInstallers;
 
@@ -76,6 +104,9 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
         return this.pushInstallers;
     }
 
+    /**
+     * The list of RCM proxies.
+     */
     @InputImport(name="rcmProxies", required=true)
     private final List<RcmProxyDetailsResponse> rcmProxies;
 
@@ -83,6 +114,9 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
         return this.rcmProxies;
     }
 
+    /**
+     * The list of replication agents.
+     */
     @InputImport(name="replicationAgents", required=true)
     private final List<ReplicationAgentDetailsResponse> replicationAgents;
 
@@ -90,6 +124,9 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
         return this.replicationAgents;
     }
 
+    /**
+     * The list of reprotect agents.
+     */
     @InputImport(name="reprotectAgents", required=true)
     private final List<ReprotectAgentDetailsResponse> reprotectAgents;
 
@@ -97,6 +134,9 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
         return this.reprotectAgents;
     }
 
+    /**
+     * The service container Id.
+     */
     @InputImport(name="serviceContainerId", required=true)
     private final String serviceContainerId;
 
@@ -104,6 +144,9 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
         return this.serviceContainerId;
     }
 
+    /**
+     * The service endpoint.
+     */
     @InputImport(name="serviceEndpoint", required=true)
     private final String serviceEndpoint;
 
@@ -111,6 +154,9 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
         return this.serviceEndpoint;
     }
 
+    /**
+     * The service resource Id.
+     */
     @InputImport(name="serviceResourceId", required=true)
     private final String serviceResourceId;
 
@@ -118,6 +164,9 @@ public final class InMageRcmFabricSpecificDetailsResponse extends io.pulumi.reso
         return this.serviceResourceId;
     }
 
+    /**
+     * The ARM Id of the VMware site.
+     */
     @InputImport(name="vmwareSiteId", required=true)
     private final String vmwareSiteId;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedInstanceAdministrator {
+/**
+ * An Azure SQL managed instance administrator.
+API Version: 2020-11-01-preview.
+ *
+ * An Azure SQL managed instance administrator.
+ */
     public static CompletableFuture<GetManagedInstanceAdministratorResult> invokeAsync(GetManagedInstanceAdministratorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedInstanceAdministrator", TypeShape.of(GetManagedInstanceAdministratorResult.class), args == null ? GetManagedInstanceAdministratorArgs.Empty : args, Utilities.withVersion(options));
     }

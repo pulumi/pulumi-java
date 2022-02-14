@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebPubSubArgs Empty = new WebPubSubArgs();
 
+    /**
+     * The settings for event handler in webpubsub service.
+     */
     @InputImport(name="eventHandler")
     private final @Nullable Input<EventHandlerSettingsArgs> eventHandler;
 
@@ -29,6 +35,14 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventHandler == null ? Input.empty() : this.eventHandler;
     }
 
+    /**
+     * List of the featureFlags.
+
+FeatureFlags that are not included in the parameters for the update operation will not be modified.
+And the response will only include featureFlags that are explicitly set. 
+When a featureFlag is not explicitly set, its globally default value will be used
+But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
+     */
     @InputImport(name="features")
     private final @Nullable Input<List<WebPubSubFeatureArgs>> features;
 
@@ -36,6 +50,9 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
         return this.features == null ? Input.empty() : this.features;
     }
 
+    /**
+     * The managed identity response
+     */
     @InputImport(name="identity")
     private final @Nullable Input<ManagedIdentityArgs> identity;
 
@@ -43,6 +60,9 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * The GEO location of the resource. e.g. West US | East US | North Central US | South Central US.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -50,6 +70,9 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Network ACLs
+     */
     @InputImport(name="networkACLs")
     private final @Nullable Input<WebPubSubNetworkACLsArgs> networkACLs;
 
@@ -57,6 +80,11 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkACLs == null ? Input.empty() : this.networkACLs;
     }
 
+    /**
+     * Enable or disable public network access. Default to "Enabled".
+When it's Enabled, network ACLs still apply.
+When it's Disabled, public network access is always disabled no matter what you set in network ACLs.
+     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<String> publicNetworkAccess;
 
@@ -64,6 +92,9 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -71,6 +102,9 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the resource.
+     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -78,6 +112,9 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
+    /**
+     * The billing information of the resource.(e.g. Free, Standard)
+     */
     @InputImport(name="sku")
     private final @Nullable Input<ResourceSkuArgs> sku;
 
@@ -85,6 +122,9 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Tags of the service which is a list of key value pairs that describe the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -92,6 +132,9 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * TLS settings.
+     */
     @InputImport(name="tls")
     private final @Nullable Input<WebPubSubTlsSettingsArgs> tls;
 

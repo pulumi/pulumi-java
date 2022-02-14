@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Encryption properties of a Data Pool
+ */
 public final class DataPoolEncryptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataPoolEncryptionResponse Empty = new DataPoolEncryptionResponse();
 
+    /**
+     * The name of Key Vault key
+     */
     @InputImport(name="keyName", required=true)
     private final String keyName;
 
@@ -21,6 +27,9 @@ public final class DataPoolEncryptionResponse extends io.pulumi.resources.Invoke
         return this.keyName;
     }
 
+    /**
+     * The URI of a soft delete-enabled Key Vault that is in the same location as the Data Pool location
+     */
     @InputImport(name="keyVaultUri", required=true)
     private final String keyVaultUri;
 
@@ -28,6 +37,9 @@ public final class DataPoolEncryptionResponse extends io.pulumi.resources.Invoke
         return this.keyVaultUri;
     }
 
+    /**
+     * The version of Key Vault key
+     */
     @InputImport(name="keyVersion")
     private final @Nullable String keyVersion;
 
@@ -35,6 +47,9 @@ public final class DataPoolEncryptionResponse extends io.pulumi.resources.Invoke
         return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
     }
 
+    /**
+     * The resource ID of a user-assigned Managed Identity used to access the encryption key in the Key Vault. Requires access to the key operations get, wrap, unwrap, and recover
+     */
     @InputImport(name="userAssignedIdentity", required=true)
     private final String userAssignedIdentity;
 

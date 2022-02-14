@@ -12,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SkuResponse {
+/**
+ * Specifies the number of virtual machines in the scale set.
+ */
     private final @Nullable Double capacity;
+/**
+ * The sku name.
+ */
     private final @Nullable String name;
+/**
+ * Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic**
+ */
     private final @Nullable String tier;
 
     @OutputCustomType.Constructor({"capacity","name","tier"})
@@ -26,12 +35,21 @@ public final class SkuResponse {
         this.tier = tier;
     }
 
+/**
+ * Specifies the number of virtual machines in the scale set.
+ */
     public Optional<Double> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
+/**
+ * The sku name.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic**
+ */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class SinkConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SinkConfigurationResponse Empty = new SinkConfigurationResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 

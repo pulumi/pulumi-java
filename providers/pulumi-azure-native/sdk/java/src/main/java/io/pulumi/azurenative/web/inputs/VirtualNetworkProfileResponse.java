@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specification for using a Virtual Network.
+ */
 public final class VirtualNetworkProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualNetworkProfileResponse Empty = new VirtualNetworkProfileResponse();
 
+    /**
+     * Resource id of the Virtual Network.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -21,6 +27,9 @@ public final class VirtualNetworkProfileResponse extends io.pulumi.resources.Inv
         return this.id;
     }
 
+    /**
+     * Name of the Virtual Network (read-only).
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,6 +37,9 @@ public final class VirtualNetworkProfileResponse extends io.pulumi.resources.Inv
         return this.name;
     }
 
+    /**
+     * Subnet within the Virtual Network.
+     */
     @InputImport(name="subnet")
     private final @Nullable String subnet;
 
@@ -35,6 +47,9 @@ public final class VirtualNetworkProfileResponse extends io.pulumi.resources.Inv
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 
+    /**
+     * Resource type of the Virtual Network (read-only).
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

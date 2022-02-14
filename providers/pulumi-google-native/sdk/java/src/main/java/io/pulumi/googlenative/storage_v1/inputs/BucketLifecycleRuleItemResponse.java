@@ -9,10 +9,16 @@ import io.pulumi.googlenative.storage_v1.inputs.BucketLifecycleRuleItemCondition
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class BucketLifecycleRuleItemResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketLifecycleRuleItemResponse Empty = new BucketLifecycleRuleItemResponse();
 
+    /**
+     * The action to take.
+     */
     @InputImport(name="action", required=true)
     private final BucketLifecycleRuleItemActionResponse action;
 
@@ -20,6 +26,9 @@ public final class BucketLifecycleRuleItemResponse extends io.pulumi.resources.I
         return this.action;
     }
 
+    /**
+     * The condition(s) under which the action will be taken.
+     */
     @InputImport(name="condition", required=true)
     private final BucketLifecycleRuleItemConditionResponse condition;
 

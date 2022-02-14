@@ -10,8 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class YumRepositoryResponse {
+/**
+ * The location of the repository directory.
+ */
     private final String baseUrl;
+/**
+ * The display name of the repository.
+ */
     private final String displayName;
+/**
+ * URIs of GPG keys.
+ */
     private final List<String> gpgKeys;
 
     @OutputCustomType.Constructor({"baseUrl","displayName","gpgKeys"})
@@ -24,12 +33,21 @@ public final class YumRepositoryResponse {
         this.gpgKeys = Objects.requireNonNull(gpgKeys);
     }
 
+/**
+ * The location of the repository directory.
+ */
     public String getBaseUrl() {
         return this.baseUrl;
     }
+/**
+ * The display name of the repository.
+ */
     public String getDisplayName() {
         return this.displayName;
     }
+/**
+ * URIs of GPG keys.
+ */
     public List<String> getGpgKeys() {
         return this.gpgKeys;
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetApiIssueCommentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApiIssueCommentArgs Empty = new GetApiIssueCommentArgs();
 
+    /**
+     * API identifier. Must be unique in the current API Management service instance.
+     */
     @InputImport(name="apiId", required=true)
     private final String apiId;
 
@@ -19,6 +25,9 @@ public final class GetApiIssueCommentArgs extends io.pulumi.resources.InvokeArgs
         return this.apiId;
     }
 
+    /**
+     * Comment identifier within an Issue. Must be unique in the current Issue.
+     */
     @InputImport(name="commentId", required=true)
     private final String commentId;
 
@@ -26,6 +35,9 @@ public final class GetApiIssueCommentArgs extends io.pulumi.resources.InvokeArgs
         return this.commentId;
     }
 
+    /**
+     * Issue identifier. Must be unique in the current API Management service instance.
+     */
     @InputImport(name="issueId", required=true)
     private final String issueId;
 
@@ -33,6 +45,9 @@ public final class GetApiIssueCommentArgs extends io.pulumi.resources.InvokeArgs
         return this.issueId;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -40,6 +55,9 @@ public final class GetApiIssueCommentArgs extends io.pulumi.resources.InvokeArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

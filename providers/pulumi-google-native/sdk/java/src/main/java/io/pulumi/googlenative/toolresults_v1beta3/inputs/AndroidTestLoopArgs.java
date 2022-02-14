@@ -6,6 +6,9 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 import java.util.Objects;
 
 
+/**
+ * Test Loops are tests that can be launched by the app itself, determining when to run by listening for an intent.
+ */
 public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AndroidTestLoopArgs Empty = new AndroidTestLoopArgs();

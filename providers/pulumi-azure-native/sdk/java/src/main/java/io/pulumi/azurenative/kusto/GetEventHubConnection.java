@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventHubConnection {
+/**
+ * Class representing an event hub connection.
+API Version: 2018-09-07-preview.
+ *
+ * Class representing an event hub connection.
+ */
     public static CompletableFuture<GetEventHubConnectionResult> invokeAsync(GetEventHubConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getEventHubConnection", TypeShape.of(GetEventHubConnectionResult.class), args == null ? GetEventHubConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

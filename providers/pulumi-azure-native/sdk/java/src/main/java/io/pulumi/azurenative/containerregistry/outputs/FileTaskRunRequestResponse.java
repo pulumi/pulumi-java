@@ -18,17 +18,55 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FileTaskRunRequestResponse {
+/**
+ * The machine configuration of the run agent.
+ */
     private final @Nullable AgentPropertiesResponse agentConfiguration;
+/**
+ * The dedicated agent pool for the run.
+ */
     private final @Nullable String agentPoolName;
+/**
+ * The properties that describes a set of credentials that will be used when this run is invoked.
+ */
     private final @Nullable CredentialsResponse credentials;
+/**
+ * The value that indicates whether archiving is enabled for the run or not.
+ */
     private final @Nullable Boolean isArchiveEnabled;
+/**
+ * The template that describes the repository and tag information for run log artifact.
+ */
     private final @Nullable String logTemplate;
+/**
+ * The platform properties against which the run has to happen.
+ */
     private final PlatformPropertiesResponse platform;
+/**
+ * The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
+If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
+ */
     private final @Nullable String sourceLocation;
+/**
+ * The template/definition file path relative to the source.
+ */
     private final String taskFilePath;
+/**
+ * Run timeout in seconds.
+ */
     private final @Nullable Integer timeout;
+/**
+ * The type of the run request.
+Expected value is 'FileTaskRunRequest'.
+ */
     private final String type;
+/**
+ * The collection of overridable values that can be passed when running a task.
+ */
     private final @Nullable List<SetValueResponse> values;
+/**
+ * The values/parameters file path relative to the source.
+ */
     private final @Nullable String valuesFilePath;
 
     @OutputCustomType.Constructor({"agentConfiguration","agentPoolName","credentials","isArchiveEnabled","logTemplate","platform","sourceLocation","taskFilePath","timeout","type","values","valuesFilePath"})
@@ -59,39 +97,77 @@ public final class FileTaskRunRequestResponse {
         this.valuesFilePath = valuesFilePath;
     }
 
+/**
+ * The machine configuration of the run agent.
+ */
     public Optional<AgentPropertiesResponse> getAgentConfiguration() {
         return Optional.ofNullable(this.agentConfiguration);
     }
+/**
+ * The dedicated agent pool for the run.
+ */
     public Optional<String> getAgentPoolName() {
         return Optional.ofNullable(this.agentPoolName);
     }
+/**
+ * The properties that describes a set of credentials that will be used when this run is invoked.
+ */
     public Optional<CredentialsResponse> getCredentials() {
         return Optional.ofNullable(this.credentials);
     }
+/**
+ * The value that indicates whether archiving is enabled for the run or not.
+ */
     public Optional<Boolean> getIsArchiveEnabled() {
         return Optional.ofNullable(this.isArchiveEnabled);
     }
+/**
+ * The template that describes the repository and tag information for run log artifact.
+ */
     public Optional<String> getLogTemplate() {
         return Optional.ofNullable(this.logTemplate);
     }
+/**
+ * The platform properties against which the run has to happen.
+ */
     public PlatformPropertiesResponse getPlatform() {
         return this.platform;
     }
+/**
+ * The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
+If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
+ */
     public Optional<String> getSourceLocation() {
         return Optional.ofNullable(this.sourceLocation);
     }
+/**
+ * The template/definition file path relative to the source.
+ */
     public String getTaskFilePath() {
         return this.taskFilePath;
     }
+/**
+ * Run timeout in seconds.
+ */
     public Optional<Integer> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
+/**
+ * The type of the run request.
+Expected value is 'FileTaskRunRequest'.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * The collection of overridable values that can be passed when running a task.
+ */
     public List<SetValueResponse> getValues() {
         return this.values == null ? List.of() : this.values;
     }
+/**
+ * The values/parameters file path relative to the source.
+ */
     public Optional<String> getValuesFilePath() {
         return Optional.ofNullable(this.valuesFilePath);
     }

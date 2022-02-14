@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The type of Human Agent Assistant API suggestion to perform, and the maximum number of results to return for that type. Multiple `Feature` objects can be specified in the `features` list.
+ */
 public final class GoogleCloudDialogflowV2beta1SuggestionFeatureResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2beta1SuggestionFeatureResponse Empty = new GoogleCloudDialogflowV2beta1SuggestionFeatureResponse();
 
+    /**
+     * Type of Human Agent Assistant API feature to request.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

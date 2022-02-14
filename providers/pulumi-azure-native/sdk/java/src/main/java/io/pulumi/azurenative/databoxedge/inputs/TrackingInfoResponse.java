@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Tracking courier information.
+ */
 public final class TrackingInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TrackingInfoResponse Empty = new TrackingInfoResponse();
 
+    /**
+     * Name of the carrier used in the delivery.
+     */
     @InputImport(name="carrierName")
     private final @Nullable String carrierName;
 
@@ -21,6 +27,9 @@ public final class TrackingInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.carrierName == null ? Optional.empty() : Optional.ofNullable(this.carrierName);
     }
 
+    /**
+     * Serial number of the device being tracked.
+     */
     @InputImport(name="serialNumber")
     private final @Nullable String serialNumber;
 
@@ -28,6 +37,9 @@ public final class TrackingInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.serialNumber == null ? Optional.empty() : Optional.ofNullable(this.serialNumber);
     }
 
+    /**
+     * Tracking ID of the shipment.
+     */
     @InputImport(name="trackingId")
     private final @Nullable String trackingId;
 
@@ -35,6 +47,9 @@ public final class TrackingInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.trackingId == null ? Optional.empty() : Optional.ofNullable(this.trackingId);
     }
 
+    /**
+     * Tracking URL of the shipment.
+     */
     @InputImport(name="trackingUrl")
     private final @Nullable String trackingUrl;
 

@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Databox Job Details
+ */
 public final class DataBoxJobDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataBoxJobDetailsArgs Empty = new DataBoxJobDetailsArgs();
 
+    /**
+     * Contact details for notification and shipping.
+     */
     @InputImport(name="contactDetails", required=true)
     private final Input<ContactDetailsArgs> contactDetails;
 
@@ -29,6 +35,9 @@ public final class DataBoxJobDetailsArgs extends io.pulumi.resources.ResourceArg
         return this.contactDetails;
     }
 
+    /**
+     * Details of the data to be exported from azure.
+     */
     @InputImport(name="dataExportDetails")
     private final @Nullable Input<List<DataExportDetailsArgs>> dataExportDetails;
 
@@ -36,6 +45,9 @@ public final class DataBoxJobDetailsArgs extends io.pulumi.resources.ResourceArg
         return this.dataExportDetails == null ? Input.empty() : this.dataExportDetails;
     }
 
+    /**
+     * Details of the data to be imported into azure.
+     */
     @InputImport(name="dataImportDetails")
     private final @Nullable Input<List<DataImportDetailsArgs>> dataImportDetails;
 
@@ -43,6 +55,9 @@ public final class DataBoxJobDetailsArgs extends io.pulumi.resources.ResourceArg
         return this.dataImportDetails == null ? Input.empty() : this.dataImportDetails;
     }
 
+    /**
+     * Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+     */
     @InputImport(name="devicePassword")
     private final @Nullable Input<String> devicePassword;
 
@@ -50,6 +65,9 @@ public final class DataBoxJobDetailsArgs extends io.pulumi.resources.ResourceArg
         return this.devicePassword == null ? Input.empty() : this.devicePassword;
     }
 
+    /**
+     * The expected size of the data, which needs to be transferred in this job, in terabytes.
+     */
     @InputImport(name="expectedDataSizeInTeraBytes")
     private final @Nullable Input<Integer> expectedDataSizeInTeraBytes;
 
@@ -57,6 +75,10 @@ public final class DataBoxJobDetailsArgs extends io.pulumi.resources.ResourceArg
         return this.expectedDataSizeInTeraBytes == null ? Input.empty() : this.expectedDataSizeInTeraBytes;
     }
 
+    /**
+     * Indicates the type of job details.
+Expected value is 'DataBox'.
+     */
     @InputImport(name="jobDetailsType", required=true)
     private final Input<String> jobDetailsType;
 
@@ -64,6 +86,9 @@ public final class DataBoxJobDetailsArgs extends io.pulumi.resources.ResourceArg
         return this.jobDetailsType;
     }
 
+    /**
+     * Details about which key encryption type is being used.
+     */
     @InputImport(name="keyEncryptionKey")
     private final @Nullable Input<KeyEncryptionKeyArgs> keyEncryptionKey;
 
@@ -71,6 +96,9 @@ public final class DataBoxJobDetailsArgs extends io.pulumi.resources.ResourceArg
         return this.keyEncryptionKey == null ? Input.empty() : this.keyEncryptionKey;
     }
 
+    /**
+     * Preferences for the order.
+     */
     @InputImport(name="preferences")
     private final @Nullable Input<PreferencesArgs> preferences;
 
@@ -78,6 +106,9 @@ public final class DataBoxJobDetailsArgs extends io.pulumi.resources.ResourceArg
         return this.preferences == null ? Input.empty() : this.preferences;
     }
 
+    /**
+     * Shipping address of the customer.
+     */
     @InputImport(name="shippingAddress")
     private final @Nullable Input<ShippingAddressArgs> shippingAddress;
 

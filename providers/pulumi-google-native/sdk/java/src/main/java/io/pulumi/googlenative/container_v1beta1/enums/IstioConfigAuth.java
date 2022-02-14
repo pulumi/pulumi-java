@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The specified Istio auth mode, either none, or mutual TLS.
+ */
     @EnumType
     public enum IstioConfigAuth {
+/**
+ * auth not enabled
+ */
         AuthNone("AUTH_NONE"),
+/**
+ * auth mutual TLS enabled
+ */
         AuthMutualTls("AUTH_MUTUAL_TLS");
 
         private final String value;

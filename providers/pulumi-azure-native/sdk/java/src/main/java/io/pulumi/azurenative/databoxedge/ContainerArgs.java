@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerArgs Empty = new ContainerArgs();
 
+    /**
+     * The container name.
+     */
     @InputImport(name="containerName")
     private final @Nullable Input<String> containerName;
 
@@ -23,6 +29,9 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerName == null ? Input.empty() : this.containerName;
     }
 
+    /**
+     * DataFormat for Container
+     */
     @InputImport(name="dataFormat", required=true)
     private final Input<Either<String,AzureContainerDataFormat>> dataFormat;
 
@@ -30,6 +39,9 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataFormat;
     }
 
+    /**
+     * The device name.
+     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -37,6 +49,9 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceName;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +59,9 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The Storage Account Name
+     */
     @InputImport(name="storageAccountName", required=true)
     private final Input<String> storageAccountName;
 

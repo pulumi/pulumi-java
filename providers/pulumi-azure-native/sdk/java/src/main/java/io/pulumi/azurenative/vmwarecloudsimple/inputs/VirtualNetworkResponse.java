@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Virtual network model
+ */
 public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualNetworkResponse Empty = new VirtualNetworkResponse();
 
+    /**
+     * can be used in vm creation/deletion
+     */
     @InputImport(name="assignable", required=true)
     private final Boolean assignable;
 
@@ -20,6 +26,9 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
         return this.assignable;
     }
 
+    /**
+     * virtual network id (privateCloudId:vsphereId)
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -27,6 +36,9 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
         return this.id;
     }
 
+    /**
+     * Azure region
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -34,6 +46,9 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
         return this.location;
     }
 
+    /**
+     * {VirtualNetworkName}
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -41,6 +56,9 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
         return this.name;
     }
 
+    /**
+     * The Private Cloud id
+     */
     @InputImport(name="privateCloudId", required=true)
     private final String privateCloudId;
 
@@ -48,6 +66,9 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
         return this.privateCloudId;
     }
 
+    /**
+     * {resourceProviderNamespace}/{resourceType}
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Flag specifying if the resource monitoring is enabled or disabled.
+ */
     @EnumType
     public enum MonitoringStatus {
+/**
+ * 
+ */
         Enabled("Enabled"),
+/**
+ * 
+ */
         Disabled("Disabled");
 
         private final String value;

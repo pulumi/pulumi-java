@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.recoveryservices.ReplicationProtectedItemArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.ReplicationProtectedItemPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,33 +14,188 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Replication protected item.
+API Version: 2018-07-10.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Enables protection.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var replicationProtectedItem = new AzureNative.RecoveryServices.ReplicationProtectedItem("replicationProtectedItem", new AzureNative.RecoveryServices.ReplicationProtectedItemArgs
+        {
+            FabricName = "cloud1",
+            Properties = new AzureNative.RecoveryServices.Inputs.EnableProtectionInputPropertiesArgs
+            {
+                PolicyId = "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1",
+                ProtectableItemId = "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectableItems/f8491e4f-817a-40dd-a90c-af773978c75b",
+                ProviderSpecificDetails = new AzureNative.RecoveryServices.Inputs.HyperVReplicaAzureEnableProtectionInputArgs
+                {
+                    InstanceType = "HyperVReplicaAzure",
+                },
+            },
+            ProtectionContainerName = "cloud_6d224fc6-f326-5d35-96de-fbf51efb3179",
+            ReplicatedProtectedItemName = "f8491e4f-817a-40dd-a90c-af773978c75b",
+            ResourceGroupName = "resourceGroupPS1",
+            ResourceName = "vault1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewReplicationProtectedItem(ctx, "replicationProtectedItem", &recoveryservices.ReplicationProtectedItemArgs{
+			FabricName: pulumi.String("cloud1"),
+			Properties: &recoveryservices.EnableProtectionInputPropertiesArgs{
+				PolicyId:          pulumi.String("/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1"),
+				ProtectableItemId: pulumi.String("/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectableItems/f8491e4f-817a-40dd-a90c-af773978c75b"),
+				ProviderSpecificDetails: recoveryservices.HyperVReplicaAzureEnableProtectionInput{
+					InstanceType: "HyperVReplicaAzure",
+				},
+			},
+			ProtectionContainerName:     pulumi.String("cloud_6d224fc6-f326-5d35-96de-fbf51efb3179"),
+			ReplicatedProtectedItemName: pulumi.String("f8491e4f-817a-40dd-a90c-af773978c75b"),
+			ResourceGroupName:           pulumi.String("resourceGroupPS1"),
+			ResourceName:                pulumi.String("vault1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const replicationProtectedItem = new azure_native.recoveryservices.ReplicationProtectedItem("replicationProtectedItem", {
+    fabricName: "cloud1",
+    properties: {
+        policyId: "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1",
+        protectableItemId: "/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectableItems/f8491e4f-817a-40dd-a90c-af773978c75b",
+        providerSpecificDetails: {
+            instanceType: "HyperVReplicaAzure",
+        },
+    },
+    protectionContainerName: "cloud_6d224fc6-f326-5d35-96de-fbf51efb3179",
+    replicatedProtectedItemName: "f8491e4f-817a-40dd-a90c-af773978c75b",
+    resourceGroupName: "resourceGroupPS1",
+    resourceName: "vault1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+replication_protected_item = azure_native.recoveryservices.ReplicationProtectedItem("replicationProtectedItem",
+    fabric_name="cloud1",
+    properties=azure_native.recoveryservices.EnableProtectionInputPropertiesArgs(
+        policy_id="/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationPolicies/protectionprofile1",
+        protectable_item_id="/Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectableItems/f8491e4f-817a-40dd-a90c-af773978c75b",
+        provider_specific_details=azure_native.recoveryservices.HyperVReplicaAzureEnableProtectionInputArgs(
+            instance_type="HyperVReplicaAzure",
+        ),
+    ),
+    protection_container_name="cloud_6d224fc6-f326-5d35-96de-fbf51efb3179",
+    replicated_protected_item_name="f8491e4f-817a-40dd-a90c-af773978c75b",
+    resource_group_name="resourceGroupPS1",
+    resource_name="vault1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:recoveryservices:ReplicationProtectedItem f8491e4f-817a-40dd-a90c-af773978c75b /Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1/replicationProtectionContainers/cloud_6d224fc6-f326-5d35-96de-fbf51efb3179/replicationProtectedItems/f8491e4f-817a-40dd-a90c-af773978c75b 
+```
+
+ */
 @ResourceType(type="azure-native:recoveryservices:ReplicationProtectedItem")
 public class ReplicationProtectedItem extends io.pulumi.resources.CustomResource {
+    /**
+     * Resource Location
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource Location
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource Name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource Name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The custom data.
+     */
     @OutputExport(name="properties", type=ReplicationProtectedItemPropertiesResponse.class, parameters={})
     private Output<ReplicationProtectedItemPropertiesResponse> properties;
 
+    /**
+     * @return The custom data.
+     */
     public Output<ReplicationProtectedItemPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Resource Type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource Type
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ReplicationProtectedItem(String name, ReplicationProtectedItemArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:recoveryservices:ReplicationProtectedItem", name, args == null ? ReplicationProtectedItemArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -71,6 +225,14 @@ public class ReplicationProtectedItem extends io.pulumi.resources.CustomResource
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ReplicationProtectedItem get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ReplicationProtectedItem(name, id, options);
     }

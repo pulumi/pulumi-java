@@ -14,12 +14,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MonitorPropertiesResponse {
+/**
+ * Datadog organization properties
+ */
     private final @Nullable DatadogOrganizationPropertiesResponse datadogOrganizationProperties;
+/**
+ * 
+ */
     private final String liftrResourceCategory;
+/**
+ * The priority of the resource.
+ */
     private final Integer liftrResourcePreference;
+/**
+ * Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
+ */
     private final String marketplaceSubscriptionStatus;
+/**
+ * Flag specifying if the resource monitoring is enabled or disabled.
+ */
     private final @Nullable String monitoringStatus;
+/**
+ * 
+ */
     private final String provisioningState;
+/**
+ * User info
+ */
     private final @Nullable UserInfoResponse userInfo;
 
     @OutputCustomType.Constructor({"datadogOrganizationProperties","liftrResourceCategory","liftrResourcePreference","marketplaceSubscriptionStatus","monitoringStatus","provisioningState","userInfo"})
@@ -40,24 +61,45 @@ public final class MonitorPropertiesResponse {
         this.userInfo = userInfo;
     }
 
+/**
+ * Datadog organization properties
+ */
     public Optional<DatadogOrganizationPropertiesResponse> getDatadogOrganizationProperties() {
         return Optional.ofNullable(this.datadogOrganizationProperties);
     }
+/**
+ * 
+ */
     public String getLiftrResourceCategory() {
         return this.liftrResourceCategory;
     }
+/**
+ * The priority of the resource.
+ */
     public Integer getLiftrResourcePreference() {
         return this.liftrResourcePreference;
     }
+/**
+ * Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
+ */
     public String getMarketplaceSubscriptionStatus() {
         return this.marketplaceSubscriptionStatus;
     }
+/**
+ * Flag specifying if the resource monitoring is enabled or disabled.
+ */
     public Optional<String> getMonitoringStatus() {
         return Optional.ofNullable(this.monitoringStatus);
     }
+/**
+ * 
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * User info
+ */
     public Optional<UserInfoResponse> getUserInfo() {
         return Optional.ofNullable(this.userInfo);
     }

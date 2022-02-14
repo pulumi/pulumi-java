@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetDatasetDicomStoreIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDatasetDicomStoreIamPolicyArgs Empty = new GetDatasetDicomStoreIamPolicyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="datasetId", required=true)
     private final String datasetId;
 
@@ -21,6 +27,9 @@ public final class GetDatasetDicomStoreIamPolicyArgs extends io.pulumi.resources
         return this.datasetId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="dicomStoreId", required=true)
     private final String dicomStoreId;
 
@@ -28,6 +37,9 @@ public final class GetDatasetDicomStoreIamPolicyArgs extends io.pulumi.resources
         return this.dicomStoreId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -35,6 +47,9 @@ public final class GetDatasetDicomStoreIamPolicyArgs extends io.pulumi.resources
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="optionsRequestedPolicyVersion")
     private final @Nullable String optionsRequestedPolicyVersion;
 
@@ -42,6 +57,9 @@ public final class GetDatasetDicomStoreIamPolicyArgs extends io.pulumi.resources
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

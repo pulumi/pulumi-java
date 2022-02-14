@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MHSMPrivateEndpointConnectionArgs Empty = new MHSMPrivateEndpointConnectionArgs();
 
+    /**
+     * The supported Azure location where the managed HSM Pool should be created.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -24,6 +30,9 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of the managed HSM Pool
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -31,6 +40,9 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
         return this.name;
     }
 
+    /**
+     * Name of the private endpoint connection associated with the managed hsm pool.
+     */
     @InputImport(name="privateEndpointConnectionName")
     private final @Nullable Input<String> privateEndpointConnectionName;
 
@@ -38,6 +50,9 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
+    /**
+     * Approval state of the private link connection.
+     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable Input<MHSMPrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
@@ -45,6 +60,9 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
     }
 
+    /**
+     * Name of the resource group that contains the managed HSM pool.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -52,6 +70,9 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
         return this.resourceGroupName;
     }
 
+    /**
+     * SKU details
+     */
     @InputImport(name="sku")
     private final @Nullable Input<ManagedHsmSkuArgs> sku;
 
@@ -59,6 +80,9 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Resource tags
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

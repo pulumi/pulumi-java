@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.databoxedge.ShareArgs;
 import io.pulumi.azurenative.databoxedge.outputs.AzureContainerInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.ClientAccessRightResponse;
 import io.pulumi.azurenative.databoxedge.outputs.MountPointMapResponse;
@@ -20,87 +19,321 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Represents a share on the  Data Box Edge/Gateway device.
+API Version: 2020-12-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### SharePut
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var share = new AzureNative.DataBoxEdge.Share("share", new AzureNative.DataBoxEdge.ShareArgs
+        {
+            AccessProtocol = "SMB",
+            AzureContainerInfo = new AzureNative.DataBoxEdge.Inputs.AzureContainerInfoArgs
+            {
+                ContainerName = "testContainerSMB",
+                DataFormat = "BlockBlob",
+                StorageAccountCredentialId = "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/sac1",
+            },
+            DataPolicy = "Cloud",
+            Description = "",
+            DeviceName = "testedgedevice",
+            MonitoringStatus = "Enabled",
+            Name = "smbshare",
+            ResourceGroupName = "GroupForEdgeAutomation",
+            ShareStatus = "Online",
+            UserAccessRights = 
+            {
+                new AzureNative.DataBoxEdge.Inputs.UserAccessRightArgs
+                {
+                    AccessType = "Change",
+                    UserId = "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/users/user2",
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := databoxedge.NewShare(ctx, "share", &databoxedge.ShareArgs{
+			AccessProtocol: pulumi.String("SMB"),
+			AzureContainerInfo: &databoxedge.AzureContainerInfoArgs{
+				ContainerName:              pulumi.String("testContainerSMB"),
+				DataFormat:                 pulumi.String("BlockBlob"),
+				StorageAccountCredentialId: pulumi.String("/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/sac1"),
+			},
+			DataPolicy:        pulumi.String("Cloud"),
+			Description:       pulumi.String(""),
+			DeviceName:        pulumi.String("testedgedevice"),
+			MonitoringStatus:  pulumi.String("Enabled"),
+			Name:              pulumi.String("smbshare"),
+			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
+			ShareStatus:       pulumi.String("Online"),
+			UserAccessRights: []databoxedge.UserAccessRightArgs{
+				&databoxedge.UserAccessRightArgs{
+					AccessType: pulumi.String("Change"),
+					UserId:     pulumi.String("/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/users/user2"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const share = new azure_native.databoxedge.Share("share", {
+    accessProtocol: "SMB",
+    azureContainerInfo: {
+        containerName: "testContainerSMB",
+        dataFormat: "BlockBlob",
+        storageAccountCredentialId: "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/sac1",
+    },
+    dataPolicy: "Cloud",
+    description: "",
+    deviceName: "testedgedevice",
+    monitoringStatus: "Enabled",
+    name: "smbshare",
+    resourceGroupName: "GroupForEdgeAutomation",
+    shareStatus: "Online",
+    userAccessRights: [{
+        accessType: "Change",
+        userId: "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/users/user2",
+    }],
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+share = azure_native.databoxedge.Share("share",
+    access_protocol="SMB",
+    azure_container_info=azure_native.databoxedge.AzureContainerInfoArgs(
+        container_name="testContainerSMB",
+        data_format="BlockBlob",
+        storage_account_credential_id="/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccountCredentials/sac1",
+    ),
+    data_policy="Cloud",
+    description="",
+    device_name="testedgedevice",
+    monitoring_status="Enabled",
+    name="smbshare",
+    resource_group_name="GroupForEdgeAutomation",
+    share_status="Online",
+    user_access_rights=[azure_native.databoxedge.UserAccessRightArgs(
+        access_type="Change",
+        user_id="/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/users/user2",
+    )])
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:databoxedge:Share smbshare /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/shares/smbshare 
+```
+
+ */
 @ResourceType(type="azure-native:databoxedge:Share")
 public class Share extends io.pulumi.resources.CustomResource {
+    /**
+     * Access protocol to be used by the share.
+     */
     @OutputExport(name="accessProtocol", type=String.class, parameters={})
     private Output<String> accessProtocol;
 
+    /**
+     * @return Access protocol to be used by the share.
+     */
     public Output<String> getAccessProtocol() {
         return this.accessProtocol;
     }
+    /**
+     * Azure container mapping for the share.
+     */
     @OutputExport(name="azureContainerInfo", type=AzureContainerInfoResponse.class, parameters={})
     private Output</* @Nullable */ AzureContainerInfoResponse> azureContainerInfo;
 
+    /**
+     * @return Azure container mapping for the share.
+     */
     public Output</* @Nullable */ AzureContainerInfoResponse> getAzureContainerInfo() {
         return this.azureContainerInfo;
     }
+    /**
+     * List of IP addresses and corresponding access rights on the share(required for NFS protocol).
+     */
     @OutputExport(name="clientAccessRights", type=List.class, parameters={ClientAccessRightResponse.class})
     private Output</* @Nullable */ List<ClientAccessRightResponse>> clientAccessRights;
 
+    /**
+     * @return List of IP addresses and corresponding access rights on the share(required for NFS protocol).
+     */
     public Output</* @Nullable */ List<ClientAccessRightResponse>> getClientAccessRights() {
         return this.clientAccessRights;
     }
+    /**
+     * Data policy of the share.
+     */
     @OutputExport(name="dataPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataPolicy;
 
+    /**
+     * @return Data policy of the share.
+     */
     public Output</* @Nullable */ String> getDataPolicy() {
         return this.dataPolicy;
     }
+    /**
+     * Description for the share.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Description for the share.
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Current monitoring status of the share.
+     */
     @OutputExport(name="monitoringStatus", type=String.class, parameters={})
     private Output<String> monitoringStatus;
 
+    /**
+     * @return Current monitoring status of the share.
+     */
     public Output<String> getMonitoringStatus() {
         return this.monitoringStatus;
     }
+    /**
+     * The object name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The object name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Details of the refresh job on this share.
+     */
     @OutputExport(name="refreshDetails", type=RefreshDetailsResponse.class, parameters={})
     private Output</* @Nullable */ RefreshDetailsResponse> refreshDetails;
 
+    /**
+     * @return Details of the refresh job on this share.
+     */
     public Output</* @Nullable */ RefreshDetailsResponse> getRefreshDetails() {
         return this.refreshDetails;
     }
+    /**
+     * Share mount point to the role.
+     */
     @OutputExport(name="shareMappings", type=List.class, parameters={MountPointMapResponse.class})
     private Output<List<MountPointMapResponse>> shareMappings;
 
+    /**
+     * @return Share mount point to the role.
+     */
     public Output<List<MountPointMapResponse>> getShareMappings() {
         return this.shareMappings;
     }
+    /**
+     * Current status of the share.
+     */
     @OutputExport(name="shareStatus", type=String.class, parameters={})
     private Output<String> shareStatus;
 
+    /**
+     * @return Current status of the share.
+     */
     public Output<String> getShareStatus() {
         return this.shareStatus;
     }
+    /**
+     * Share on ASE device
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Share on ASE device
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The hierarchical type of the object.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The hierarchical type of the object.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Mapping of users and corresponding access rights on the share (required for SMB protocol).
+     */
     @OutputExport(name="userAccessRights", type=List.class, parameters={UserAccessRightResponse.class})
     private Output</* @Nullable */ List<UserAccessRightResponse>> userAccessRights;
 
+    /**
+     * @return Mapping of users and corresponding access rights on the share (required for SMB protocol).
+     */
     public Output</* @Nullable */ List<UserAccessRightResponse>> getUserAccessRights() {
         return this.userAccessRights;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Share(String name, ShareArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:databoxedge:Share", name, args == null ? ShareArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -129,6 +362,14 @@ public class Share extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Share get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Share(name, id, options);
     }

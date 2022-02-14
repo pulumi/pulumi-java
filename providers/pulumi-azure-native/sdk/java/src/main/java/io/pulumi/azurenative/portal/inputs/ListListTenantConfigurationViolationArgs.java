@@ -6,6 +6,9 @@ package io.pulumi.azurenative.portal.inputs;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListListTenantConfigurationViolationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListListTenantConfigurationViolationArgs Empty = new ListListTenantConfigurationViolationArgs();

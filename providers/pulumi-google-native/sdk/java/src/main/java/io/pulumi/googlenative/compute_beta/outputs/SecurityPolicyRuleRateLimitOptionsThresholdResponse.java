@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse {
+/**
+ * Number of HTTP(S) requests for calculating the threshold.
+ */
     private final Integer count;
+/**
+ * Interval over which the threshold is computed.
+ */
     private final Integer intervalSec;
 
     @OutputCustomType.Constructor({"count","intervalSec"})
@@ -20,9 +26,15 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse {
         this.intervalSec = Objects.requireNonNull(intervalSec);
     }
 
+/**
+ * Number of HTTP(S) requests for calculating the threshold.
+ */
     public Integer getCount() {
         return this.count;
     }
+/**
+ * Interval over which the threshold is computed.
+ */
     public Integer getIntervalSec() {
         return this.intervalSec;
     }

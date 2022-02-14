@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetStorageInsightConfigArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetStorageInsightConfigArgs Empty = new GetStorageInsightConfigArgs();
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class GetStorageInsightConfigArgs extends io.pulumi.resources.Invok
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the storageInsightsConfigs resource
+     */
     @InputImport(name="storageInsightName", required=true)
     private final String storageInsightName;
 
@@ -26,6 +35,9 @@ public final class GetStorageInsightConfigArgs extends io.pulumi.resources.Invok
         return this.storageInsightName;
     }
 
+    /**
+     * The name of the workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

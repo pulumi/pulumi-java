@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetVirtualMachineArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVirtualMachineArgs Empty = new GetVirtualMachineArgs();
 
+    /**
+     * Specify the $expand query. Example: 'properties($expand=artifacts,computeVm,networkInterface,applicableSchedule)'
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +27,9 @@ public final class GetVirtualMachineArgs extends io.pulumi.resources.InvokeArgs 
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the lab.
+     */
     @InputImport(name="labName", required=true)
     private final String labName;
 
@@ -28,6 +37,9 @@ public final class GetVirtualMachineArgs extends io.pulumi.resources.InvokeArgs 
         return this.labName;
     }
 
+    /**
+     * The name of the virtual machine.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,6 +47,9 @@ public final class GetVirtualMachineArgs extends io.pulumi.resources.InvokeArgs 
         return this.name;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

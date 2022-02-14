@@ -13,13 +13,37 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetApplicationGatewayPrivateEndpointConnectionResult {
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     private final String etag;
+/**
+ * Resource ID.
+ */
     private final @Nullable String id;
+/**
+ * The consumer link id.
+ */
     private final String linkIdentifier;
+/**
+ * Name of the private endpoint connection on an application gateway.
+ */
     private final @Nullable String name;
+/**
+ * The resource of private end point.
+ */
     private final PrivateEndpointResponse privateEndpoint;
+/**
+ * A collection of information about the state of the connection between service consumer and provider.
+ */
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+/**
+ * The provisioning state of the application gateway private endpoint connection resource.
+ */
     private final String provisioningState;
+/**
+ * Type of the resource.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","linkIdentifier","name","privateEndpoint","privateLinkServiceConnectionState","provisioningState","type"})
@@ -42,27 +66,51 @@ public final class GetApplicationGatewayPrivateEndpointConnectionResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * Resource ID.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * The consumer link id.
+ */
     public String getLinkIdentifier() {
         return this.linkIdentifier;
     }
+/**
+ * Name of the private endpoint connection on an application gateway.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * The resource of private end point.
+ */
     public PrivateEndpointResponse getPrivateEndpoint() {
         return this.privateEndpoint;
     }
+/**
+ * A collection of information about the state of the connection between service consumer and provider.
+ */
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
+/**
+ * The provisioning state of the application gateway private endpoint connection resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Type of the resource.
+ */
     public String getType() {
         return this.type;
     }

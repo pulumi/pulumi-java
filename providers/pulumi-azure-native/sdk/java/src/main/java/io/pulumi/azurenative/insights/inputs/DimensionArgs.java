@@ -12,10 +12,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Specifies the criteria for converting log to metric.
+ */
 public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DimensionArgs Empty = new DimensionArgs();
 
+    /**
+     * Name of the dimension
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -23,6 +29,9 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * Operator for dimension values
+     */
     @InputImport(name="operator", required=true)
     private final Input<Either<String,Operator>> operator;
 
@@ -30,6 +39,9 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.operator;
     }
 
+    /**
+     * List of dimension values
+     */
     @InputImport(name="values", required=true)
     private final Input<List<String>> values;
 

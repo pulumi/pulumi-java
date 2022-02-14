@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetWebAppRelayServiceConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWebAppRelayServiceConnectionArgs Empty = new GetWebAppRelayServiceConnectionArgs();
 
+    /**
+     * Name of the hybrid connection.
+     */
     @InputImport(name="entityName", required=true)
     private final String entityName;
 
@@ -19,6 +25,9 @@ public final class GetWebAppRelayServiceConnectionArgs extends io.pulumi.resourc
         return this.entityName;
     }
 
+    /**
+     * Name of the app.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +35,9 @@ public final class GetWebAppRelayServiceConnectionArgs extends io.pulumi.resourc
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

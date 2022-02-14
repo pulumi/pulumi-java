@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * the type of action that should occur when the scale rule fires.
+ */
     @EnumType
     public enum ScaleType {
+/**
+ * 
+ */
         ChangeCount("ChangeCount"),
+/**
+ * 
+ */
         PercentChangeCount("PercentChangeCount"),
+/**
+ * 
+ */
         ExactCount("ExactCount"),
+/**
+ * 
+ */
         ServiceAllowedNextValue("ServiceAllowedNextValue");
 
         private final String value;

@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties that define an exchange connection.
+ */
 public final class ExchangeConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExchangeConnectionArgs Empty = new ExchangeConnectionArgs();
 
+    /**
+     * The BGP session associated with the connection.
+     */
     @InputImport(name="bgpSession")
     private final @Nullable Input<BgpSessionArgs> bgpSession;
 
@@ -23,6 +29,9 @@ public final class ExchangeConnectionArgs extends io.pulumi.resources.ResourceAr
         return this.bgpSession == null ? Input.empty() : this.bgpSession;
     }
 
+    /**
+     * The unique identifier (GUID) for the connection.
+     */
     @InputImport(name="connectionIdentifier")
     private final @Nullable Input<String> connectionIdentifier;
 
@@ -30,6 +39,9 @@ public final class ExchangeConnectionArgs extends io.pulumi.resources.ResourceAr
         return this.connectionIdentifier == null ? Input.empty() : this.connectionIdentifier;
     }
 
+    /**
+     * The PeeringDB.com ID of the facility at which the connection has to be set up.
+     */
     @InputImport(name="peeringDBFacilityId")
     private final @Nullable Input<Integer> peeringDBFacilityId;
 

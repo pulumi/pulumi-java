@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties corresponding to a line channel registration
+ */
 public final class LineRegistrationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LineRegistrationResponse Empty = new LineRegistrationResponse();
 
+    /**
+     * Access token for the line channel registration
+     */
     @InputImport(name="channelAccessToken")
     private final @Nullable String channelAccessToken;
 
@@ -21,6 +27,9 @@ public final class LineRegistrationResponse extends io.pulumi.resources.InvokeAr
         return this.channelAccessToken == null ? Optional.empty() : Optional.ofNullable(this.channelAccessToken);
     }
 
+    /**
+     * Secret for the line channel registration
+     */
     @InputImport(name="channelSecret")
     private final @Nullable String channelSecret;
 
@@ -28,6 +37,9 @@ public final class LineRegistrationResponse extends io.pulumi.resources.InvokeAr
         return this.channelSecret == null ? Optional.empty() : Optional.ofNullable(this.channelSecret);
     }
 
+    /**
+     * Id generated for the line channel registration
+     */
     @InputImport(name="generatedId", required=true)
     private final String generatedId;
 

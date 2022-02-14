@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A server-stored registry credential used to validate device credentials.
+ */
 public final class RegistryCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RegistryCredentialArgs Empty = new RegistryCredentialArgs();
 
+    /**
+     * A public key certificate used to verify the device credentials.
+     */
     @InputImport(name="publicKeyCertificate")
     private final @Nullable Input<PublicKeyCertificateArgs> publicKeyCertificate;
 

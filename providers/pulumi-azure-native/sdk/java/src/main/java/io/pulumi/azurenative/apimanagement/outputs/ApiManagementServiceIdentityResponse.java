@@ -12,9 +12,24 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApiManagementServiceIdentityResponse {
+/**
+ * The principal id of the identity.
+ */
     private final String principalId;
+/**
+ * The client tenant id of the identity.
+ */
     private final String tenantId;
+/**
+ * The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.
+ */
     private final String type;
+/**
+ * The list of user identities associated with the resource. The user identity 
+dictionary key references will be ARM resource ids in the form: 
+'/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
+    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+ */
     private final @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type","userAssignedIdentities"})
@@ -29,15 +44,30 @@ public final class ApiManagementServiceIdentityResponse {
         this.userAssignedIdentities = userAssignedIdentities;
     }
 
+/**
+ * The principal id of the identity.
+ */
     public String getPrincipalId() {
         return this.principalId;
     }
+/**
+ * The client tenant id of the identity.
+ */
     public String getTenantId() {
         return this.tenantId;
     }
+/**
+ * The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * The list of user identities associated with the resource. The user identity 
+dictionary key references will be ARM resource ids in the form: 
+'/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
+    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+ */
     public Map<String,UserIdentityPropertiesResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

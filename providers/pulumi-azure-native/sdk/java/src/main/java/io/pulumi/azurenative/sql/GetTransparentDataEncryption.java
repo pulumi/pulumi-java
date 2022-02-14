@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransparentDataEncryption {
+/**
+ * Represents a database transparent data encryption configuration.
+API Version: 2014-04-01.
+ *
+ * Represents a database transparent data encryption configuration.
+ */
     public static CompletableFuture<GetTransparentDataEncryptionResult> invokeAsync(GetTransparentDataEncryptionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getTransparentDataEncryption", TypeShape.of(GetTransparentDataEncryptionResult.class), args == null ? GetTransparentDataEncryptionArgs.Empty : args, Utilities.withVersion(options));
     }

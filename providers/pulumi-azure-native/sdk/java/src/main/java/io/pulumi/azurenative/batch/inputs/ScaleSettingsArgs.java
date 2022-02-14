@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the desired size of the pool. This can either be 'fixedScale' where the requested targetDedicatedNodes is specified, or 'autoScale' which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.
+ */
 public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScaleSettingsArgs Empty = new ScaleSettingsArgs();
 
+    /**
+     * This property and fixedScale are mutually exclusive and one of the properties must be specified.
+     */
     @InputImport(name="autoScale")
     private final @Nullable Input<AutoScaleSettingsArgs> autoScale;
 
@@ -22,6 +28,9 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoScale == null ? Input.empty() : this.autoScale;
     }
 
+    /**
+     * This property and autoScale are mutually exclusive and one of the properties must be specified.
+     */
     @InputImport(name="fixedScale")
     private final @Nullable Input<FixedScaleSettingsArgs> fixedScale;
 

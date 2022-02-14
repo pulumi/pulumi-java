@@ -11,9 +11,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SignatureResponse {
+/**
+ * Optional. An image of the user's signature.
+ */
     private final ImageResponse image;
+/**
+ * Optional. Metadata associated with the user's signature. For example, the user's name or the user's title.
+ */
     private final Map<String,String> metadata;
+/**
+ * Optional. Timestamp of the signature.
+ */
     private final String signatureTime;
+/**
+ * User's UUID provided by the client.
+ */
     private final String userId;
 
     @OutputCustomType.Constructor({"image","metadata","signatureTime","userId"})
@@ -28,15 +40,27 @@ public final class SignatureResponse {
         this.userId = Objects.requireNonNull(userId);
     }
 
+/**
+ * Optional. An image of the user's signature.
+ */
     public ImageResponse getImage() {
         return this.image;
     }
+/**
+ * Optional. Metadata associated with the user's signature. For example, the user's name or the user's title.
+ */
     public Map<String,String> getMetadata() {
         return this.metadata;
     }
+/**
+ * Optional. Timestamp of the signature.
+ */
     public String getSignatureTime() {
         return this.signatureTime;
     }
+/**
+ * User's UUID provided by the client.
+ */
     public String getUserId() {
         return this.userId;
     }

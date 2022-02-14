@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiIssue {
+/**
+ * Issue Contract details.
+API Version: 2020-12-01.
+ *
+ * Issue Contract details.
+ */
     public static CompletableFuture<GetApiIssueResult> invokeAsync(GetApiIssueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiIssue", TypeShape.of(GetApiIssueResult.class), args == null ? GetApiIssueArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ExtendedErrorInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExtendedErrorInfoArgs Empty = new ExtendedErrorInfoArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="additionalInfo")
     private final @Nullable Input<List<TypedErrorInfoArgs>> additionalInfo;
 
@@ -23,6 +29,9 @@ public final class ExtendedErrorInfoArgs extends io.pulumi.resources.ResourceArg
         return this.additionalInfo == null ? Input.empty() : this.additionalInfo;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="code")
     private final @Nullable Input<String> code;
 
@@ -30,6 +39,9 @@ public final class ExtendedErrorInfoArgs extends io.pulumi.resources.ResourceArg
         return this.code == null ? Input.empty() : this.code;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="details")
     private final @Nullable Input<List<ExtendedErrorInfoArgs>> details;
 
@@ -37,6 +49,9 @@ public final class ExtendedErrorInfoArgs extends io.pulumi.resources.ResourceArg
         return this.details == null ? Input.empty() : this.details;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -44,6 +59,9 @@ public final class ExtendedErrorInfoArgs extends io.pulumi.resources.ResourceArg
         return this.message == null ? Input.empty() : this.message;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="target")
     private final @Nullable Input<String> target;
 

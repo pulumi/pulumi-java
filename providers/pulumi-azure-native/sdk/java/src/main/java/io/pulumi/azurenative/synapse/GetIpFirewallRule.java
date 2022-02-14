@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIpFirewallRule {
+/**
+ * IP firewall rule
+API Version: 2021-03-01.
+ *
+ * IP firewall rule
+ */
     public static CompletableFuture<GetIpFirewallRuleResult> invokeAsync(GetIpFirewallRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getIpFirewallRule", TypeShape.of(GetIpFirewallRuleResult.class), args == null ? GetIpFirewallRuleArgs.Empty : args, Utilities.withVersion(options));
     }

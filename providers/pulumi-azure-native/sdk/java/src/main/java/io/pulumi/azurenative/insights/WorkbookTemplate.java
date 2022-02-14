@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.insights.WorkbookTemplateArgs;
 import io.pulumi.azurenative.insights.outputs.WorkbookTemplateGalleryResponse;
 import io.pulumi.azurenative.insights.outputs.WorkbookTemplateLocalizedGalleryResponse;
 import io.pulumi.core.Alias;
@@ -19,63 +18,256 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * An Application Insights workbook template definition.
+API Version: 2019-10-17-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### WorkbookTemplateAdd
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workbookTemplate = new AzureNative.Insights.WorkbookTemplate("workbookTemplate", new AzureNative.Insights.WorkbookTemplateArgs
+        {
+            Author = "Contoso",
+            Galleries = 
+            {
+                new AzureNative.Insights.Inputs.WorkbookTemplateGalleryArgs
+                {
+                    Category = "Failures",
+                    Name = "Simple Template",
+                    Order = 100,
+                    ResourceType = "microsoft.insights/components",
+                    Type = "tsg",
+                },
+            },
+            Location = "west us",
+            Priority = 1,
+            ResourceGroupName = "my-resource-group",
+            ResourceName = "testtemplate2",
+            TemplateData = ,
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := insights.NewWorkbookTemplate(ctx, "workbookTemplate", &insights.WorkbookTemplateArgs{
+			Author: pulumi.String("Contoso"),
+			Galleries: insights.WorkbookTemplateGalleryArray{
+				&insights.WorkbookTemplateGalleryArgs{
+					Category:     pulumi.String("Failures"),
+					Name:         pulumi.String("Simple Template"),
+					Order:        pulumi.Int(100),
+					ResourceType: pulumi.String("microsoft.insights/components"),
+					Type:         pulumi.String("tsg"),
+				},
+			},
+			Location:          pulumi.String("west us"),
+			Priority:          pulumi.Int(1),
+			ResourceGroupName: pulumi.String("my-resource-group"),
+			ResourceName:      pulumi.String("testtemplate2"),
+			TemplateData:      nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const workbookTemplate = new azure_native.insights.WorkbookTemplate("workbookTemplate", {
+    author: "Contoso",
+    galleries: [{
+        category: "Failures",
+        name: "Simple Template",
+        order: 100,
+        resourceType: "microsoft.insights/components",
+        type: "tsg",
+    }],
+    location: "west us",
+    priority: 1,
+    resourceGroupName: "my-resource-group",
+    resourceName: "testtemplate2",
+    templateData: {},
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+workbook_template = azure_native.insights.WorkbookTemplate("workbookTemplate",
+    author="Contoso",
+    galleries=[azure_native.insights.WorkbookTemplateGalleryArgs(
+        category="Failures",
+        name="Simple Template",
+        order=100,
+        resource_type="microsoft.insights/components",
+        type="tsg",
+    )],
+    location="west us",
+    priority=1,
+    resource_group_name="my-resource-group",
+    resource_name="testtemplate2",
+    template_data={})
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:insights:WorkbookTemplate testtemplate2 /subscriptions/50359d91-7b9d-4823-85af-eb298a61ba95/resourceGroups/testrg/providers/microsoft.insights/workbooktemplates/testtemplate2 
+```
+
+ */
 @ResourceType(type="azure-native:insights:WorkbookTemplate")
 public class WorkbookTemplate extends io.pulumi.resources.CustomResource {
+    /**
+     * Information about the author of the workbook template.
+     */
     @OutputExport(name="author", type=String.class, parameters={})
     private Output</* @Nullable */ String> author;
 
+    /**
+     * @return Information about the author of the workbook template.
+     */
     public Output</* @Nullable */ String> getAuthor() {
         return this.author;
     }
+    /**
+     * Workbook galleries supported by the template.
+     */
     @OutputExport(name="galleries", type=List.class, parameters={WorkbookTemplateGalleryResponse.class})
     private Output<List<WorkbookTemplateGalleryResponse>> galleries;
 
+    /**
+     * @return Workbook galleries supported by the template.
+     */
     public Output<List<WorkbookTemplateGalleryResponse>> getGalleries() {
         return this.galleries;
     }
+    /**
+     * Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.
+     */
     @OutputExport(name="localized", type=Map.class, parameters={String.class, List.class})
     private Output</* @Nullable */ Map<String,List<WorkbookTemplateLocalizedGalleryResponse>>> localized;
 
+    /**
+     * @return Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.
+     */
     public Output</* @Nullable */ Map<String,List<WorkbookTemplateLocalizedGalleryResponse>>> getLocalized() {
         return this.localized;
     }
+    /**
+     * Resource location
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Azure resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Azure resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.
+     */
     @OutputExport(name="priority", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> priority;
 
+    /**
+     * @return Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.
+     */
     public Output</* @Nullable */ Integer> getPriority() {
         return this.priority;
     }
+    /**
+     * Resource tags
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Valid JSON object containing workbook template payload.
+     */
     @OutputExport(name="templateData", type=Object.class, parameters={})
     private Output<Object> templateData;
 
+    /**
+     * @return Valid JSON object containing workbook template payload.
+     */
     public Output<Object> getTemplateData() {
         return this.templateData;
     }
+    /**
+     * Azure resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Azure resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public WorkbookTemplate(String name, WorkbookTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:WorkbookTemplate", name, args == null ? WorkbookTemplateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -95,6 +287,14 @@ public class WorkbookTemplate extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static WorkbookTemplate get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WorkbookTemplate(name, id, options);
     }

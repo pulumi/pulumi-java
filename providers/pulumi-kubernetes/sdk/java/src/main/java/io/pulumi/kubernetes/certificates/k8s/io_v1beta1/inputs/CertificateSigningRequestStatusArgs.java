@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class CertificateSigningRequestStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateSigningRequestStatusArgs Empty = new CertificateSigningRequestStatusArgs();
 
+    /**
+     * If request was approved, the controller will place the issued certificate here.
+     */
     @InputImport(name="certificate")
     private final @Nullable Input<String> certificate;
 
@@ -23,6 +29,9 @@ public final class CertificateSigningRequestStatusArgs extends io.pulumi.resourc
         return this.certificate == null ? Input.empty() : this.certificate;
     }
 
+    /**
+     * Conditions applied to the request, such as approval or denial.
+     */
     @InputImport(name="conditions")
     private final @Nullable Input<List<CertificateSigningRequestConditionArgs>> conditions;
 

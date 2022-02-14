@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A single property entry in the Properties message.
+ */
 public final class GoogleCloudApigeeV1PropertyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudApigeeV1PropertyArgs Empty = new GoogleCloudApigeeV1PropertyArgs();
 
+    /**
+     * The property key
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +27,9 @@ public final class GoogleCloudApigeeV1PropertyArgs extends io.pulumi.resources.R
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The property value
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

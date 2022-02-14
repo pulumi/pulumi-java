@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetMuteConfigArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMuteConfigArgs Empty = new GetMuteConfigArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="muteConfigId", required=true)
     private final String muteConfigId;
 
@@ -21,6 +27,9 @@ public final class GetMuteConfigArgs extends io.pulumi.resources.InvokeArgs {
         return this.muteConfigId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

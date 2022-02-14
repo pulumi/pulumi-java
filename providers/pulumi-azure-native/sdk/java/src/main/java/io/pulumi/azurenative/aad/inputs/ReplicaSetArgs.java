@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Replica Set Definition
+ */
 public final class ReplicaSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicaSetArgs Empty = new ReplicaSetArgs();
 
+    /**
+     * Virtual network location
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -21,6 +27,9 @@ public final class ReplicaSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the virtual network that Domain Services will be deployed on. The id of the subnet that Domain Services will be deployed on. /virtualNetwork/vnetName/subnets/subnetName.
+     */
     @InputImport(name="subnetId")
     private final @Nullable Input<String> subnetId;
 

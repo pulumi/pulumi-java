@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetDomainArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDomainArgs Empty = new GetDomainArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="domainId", required=true)
     private final String domainId;
 
@@ -21,6 +27,9 @@ public final class GetDomainArgs extends io.pulumi.resources.InvokeArgs {
         return this.domainId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

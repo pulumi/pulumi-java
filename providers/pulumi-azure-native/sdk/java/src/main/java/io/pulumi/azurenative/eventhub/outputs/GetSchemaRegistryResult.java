@@ -13,16 +13,49 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSchemaRegistryResult {
+/**
+ * Exact time the Schema Group was created.
+ */
     private final String createdAtUtc;
+/**
+ * The ETag value.
+ */
     private final String eTag;
+/**
+ * dictionary object for SchemaGroup group properties
+ */
     private final @Nullable Map<String,String> groupProperties;
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     private final String id;
+/**
+ * The geo-location where the resource lives
+ */
     private final String location;
+/**
+ * The name of the resource
+ */
     private final String name;
+/**
+ * 
+ */
     private final @Nullable String schemaCompatibility;
+/**
+ * 
+ */
     private final @Nullable String schemaType;
+/**
+ * The system meta data relating to this resource.
+ */
     private final SystemDataResponse systemData;
+/**
+ * The type of the resource. E.g. "Microsoft.EventHub/Namespaces" or "Microsoft.EventHub/Namespaces/EventHubs"
+ */
     private final String type;
+/**
+ * Exact time the Schema Group was updated
+ */
     private final String updatedAtUtc;
 
     @OutputCustomType.Constructor({"createdAtUtc","eTag","groupProperties","id","location","name","schemaCompatibility","schemaType","systemData","type","updatedAtUtc"})
@@ -51,36 +84,69 @@ public final class GetSchemaRegistryResult {
         this.updatedAtUtc = Objects.requireNonNull(updatedAtUtc);
     }
 
+/**
+ * Exact time the Schema Group was created.
+ */
     public String getCreatedAtUtc() {
         return this.createdAtUtc;
     }
+/**
+ * The ETag value.
+ */
     public String getETag() {
         return this.eTag;
     }
+/**
+ * dictionary object for SchemaGroup group properties
+ */
     public Map<String,String> getGroupProperties() {
         return this.groupProperties == null ? Map.of() : this.groupProperties;
     }
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The geo-location where the resource lives
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * The name of the resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * 
+ */
     public Optional<String> getSchemaCompatibility() {
         return Optional.ofNullable(this.schemaCompatibility);
     }
+/**
+ * 
+ */
     public Optional<String> getSchemaType() {
         return Optional.ofNullable(this.schemaType);
     }
+/**
+ * The system meta data relating to this resource.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * The type of the resource. E.g. "Microsoft.EventHub/Namespaces" or "Microsoft.EventHub/Namespaces/EventHubs"
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Exact time the Schema Group was updated
+ */
     public String getUpdatedAtUtc() {
         return this.updatedAtUtc;
     }

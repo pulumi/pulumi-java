@@ -10,8 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DiscoveredResponse {
+/**
+ * The status of discovery for the resource.
+ */
     private final String analysisStatus;
+/**
+ * When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage is output only and populated by the API.
+ */
     private final StatusResponse analysisStatusError;
+/**
+ * Whether the resource is continuously analyzed.
+ */
     private final String continuousAnalysis;
 
     @OutputCustomType.Constructor({"analysisStatus","analysisStatusError","continuousAnalysis"})
@@ -24,12 +33,21 @@ public final class DiscoveredResponse {
         this.continuousAnalysis = Objects.requireNonNull(continuousAnalysis);
     }
 
+/**
+ * The status of discovery for the resource.
+ */
     public String getAnalysisStatus() {
         return this.analysisStatus;
     }
+/**
+ * When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage is output only and populated by the API.
+ */
     public StatusResponse getAnalysisStatusError() {
         return this.analysisStatusError;
     }
+/**
+ * Whether the resource is continuously analyzed.
+ */
     public String getContinuousAnalysis() {
         return this.continuousAnalysis;
     }

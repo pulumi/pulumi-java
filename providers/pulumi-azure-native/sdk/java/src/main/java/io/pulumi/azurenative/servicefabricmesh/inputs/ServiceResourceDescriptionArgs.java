@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * This type describes a service resource.
+ */
 public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceResourceDescriptionArgs Empty = new ServiceResourceDescriptionArgs();
 
+    /**
+     * Auto scaling policies
+     */
     @InputImport(name="autoScalingPolicies")
     private final @Nullable Input<List<AutoScalingPolicyArgs>> autoScalingPolicies;
 
@@ -29,6 +35,9 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
         return this.autoScalingPolicies == null ? Input.empty() : this.autoScalingPolicies;
     }
 
+    /**
+     * Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).
+     */
     @InputImport(name="codePackages", required=true)
     private final Input<List<ContainerCodePackagePropertiesArgs>> codePackages;
 
@@ -36,6 +45,9 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
         return this.codePackages;
     }
 
+    /**
+     * User readable description of the service.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -43,6 +55,9 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Reference to sinks in DiagnosticsDescription.
+     */
     @InputImport(name="diagnostics")
     private final @Nullable Input<DiagnosticsRefArgs> diagnostics;
 
@@ -50,6 +65,9 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
         return this.diagnostics == null ? Input.empty() : this.diagnostics;
     }
 
+    /**
+     * The name of the resource
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -57,6 +75,9 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The names of the private networks that this service needs to be part of.
+     */
     @InputImport(name="networkRefs")
     private final @Nullable Input<List<NetworkRefArgs>> networkRefs;
 
@@ -64,6 +85,9 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
         return this.networkRefs == null ? Input.empty() : this.networkRefs;
     }
 
+    /**
+     * The operation system required by the code in service.
+     */
     @InputImport(name="osType", required=true)
     private final Input<Either<String,OperatingSystemType>> osType;
 
@@ -71,6 +95,9 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
         return this.osType;
     }
 
+    /**
+     * The number of replicas of the service to create. Defaults to 1 if not specified.
+     */
     @InputImport(name="replicaCount")
     private final @Nullable Input<Integer> replicaCount;
 

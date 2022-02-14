@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A table type
+ */
 public final class StandardSqlTableTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StandardSqlTableTypeArgs Empty = new StandardSqlTableTypeArgs();
 
+    /**
+     * The columns in this table type
+     */
     @InputImport(name="columns")
     private final @Nullable Input<List<StandardSqlFieldArgs>> columns;
 

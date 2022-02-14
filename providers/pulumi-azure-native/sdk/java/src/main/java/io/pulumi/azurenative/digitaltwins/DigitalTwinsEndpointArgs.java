@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DigitalTwinsEndpointArgs Empty = new DigitalTwinsEndpointArgs();
 
+    /**
+     * Name of Endpoint Resource.
+     */
     @InputImport(name="endpointName")
     private final @Nullable Input<String> endpointName;
 
@@ -25,6 +31,9 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
         return this.endpointName == null ? Input.empty() : this.endpointName;
     }
 
+    /**
+     * DigitalTwinsInstance endpoint resource properties.
+     */
     @InputImport(name="properties", required=true)
     private final Input<Object> properties;
 
@@ -32,6 +41,9 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
         return this.properties;
     }
 
+    /**
+     * The name of the resource group that contains the DigitalTwinsInstance.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -39,6 +51,9 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the DigitalTwinsInstance.
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 

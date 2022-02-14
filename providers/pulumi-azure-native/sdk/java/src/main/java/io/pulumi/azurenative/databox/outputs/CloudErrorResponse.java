@@ -13,10 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CloudErrorResponse {
+/**
+ * Cloud error additional info.
+ */
     private final List<AdditionalErrorInfoResponse> additionalInfo;
+/**
+ * Cloud error code.
+ */
     private final @Nullable String code;
+/**
+ * Cloud error details.
+ */
     private final List<CloudErrorResponse> details;
+/**
+ * Cloud error message.
+ */
     private final @Nullable String message;
+/**
+ * Cloud error target.
+ */
     private final @Nullable String target;
 
     @OutputCustomType.Constructor({"additionalInfo","code","details","message","target"})
@@ -33,18 +48,33 @@ public final class CloudErrorResponse {
         this.target = target;
     }
 
+/**
+ * Cloud error additional info.
+ */
     public List<AdditionalErrorInfoResponse> getAdditionalInfo() {
         return this.additionalInfo;
     }
+/**
+ * Cloud error code.
+ */
     public Optional<String> getCode() {
         return Optional.ofNullable(this.code);
     }
+/**
+ * Cloud error details.
+ */
     public List<CloudErrorResponse> getDetails() {
         return this.details;
     }
+/**
+ * Cloud error message.
+ */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
+/**
+ * Cloud error target.
+ */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }

@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HTTPHeader {
+/**
+ * The header field name
+ */
     private final String name;
+/**
+ * The header field value
+ */
     private final String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -20,9 +26,15 @@ public final class HTTPHeader {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * The header field name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The header field value
+ */
     public String getValue() {
         return this.value;
     }

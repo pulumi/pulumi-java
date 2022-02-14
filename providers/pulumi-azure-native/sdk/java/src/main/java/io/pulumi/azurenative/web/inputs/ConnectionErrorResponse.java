@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Connection error
+ */
 public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectionErrorResponse Empty = new ConnectionErrorResponse();
 
+    /**
+     * Code of the status
+     */
     @InputImport(name="code")
     private final @Nullable String code;
 
@@ -22,6 +28,9 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
+    /**
+     * Resource ETag
+     */
     @InputImport(name="etag")
     private final @Nullable String etag;
 
@@ -29,6 +38,9 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
         return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
     }
 
+    /**
+     * Resource id
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -36,6 +48,9 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
         return this.id;
     }
 
+    /**
+     * Resource location
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -43,6 +58,9 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * Description of the status
+     */
     @InputImport(name="message")
     private final @Nullable String message;
 
@@ -50,6 +68,9 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
+    /**
+     * Resource name
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -57,6 +78,9 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
         return this.name;
     }
 
+    /**
+     * Resource tags
+     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 
@@ -64,6 +88,9 @@ public final class ConnectionErrorResponse extends io.pulumi.resources.InvokeArg
         return this.tags == null ? Map.of() : this.tags;
     }
 
+    /**
+     * Resource type
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

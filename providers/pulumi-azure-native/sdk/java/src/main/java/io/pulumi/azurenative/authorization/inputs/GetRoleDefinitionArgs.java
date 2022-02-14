@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetRoleDefinitionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRoleDefinitionArgs Empty = new GetRoleDefinitionArgs();
 
+    /**
+     * The ID of the role definition.
+     */
     @InputImport(name="roleDefinitionId", required=true)
     private final String roleDefinitionId;
 
@@ -19,6 +25,9 @@ public final class GetRoleDefinitionArgs extends io.pulumi.resources.InvokeArgs 
         return this.roleDefinitionId;
     }
 
+    /**
+     * The scope of the role definition.
+     */
     @InputImport(name="scope", required=true)
     private final String scope;
 

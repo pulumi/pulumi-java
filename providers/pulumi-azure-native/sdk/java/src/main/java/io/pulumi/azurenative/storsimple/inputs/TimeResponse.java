@@ -8,10 +8,16 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * The time.
+ */
 public final class TimeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TimeResponse Empty = new TimeResponse();
 
+    /**
+     * The hour.
+     */
     @InputImport(name="hours", required=true)
     private final Integer hours;
 
@@ -19,6 +25,9 @@ public final class TimeResponse extends io.pulumi.resources.InvokeArgs {
         return this.hours;
     }
 
+    /**
+     * The minute.
+     */
     @InputImport(name="minutes", required=true)
     private final Integer minutes;
 
@@ -26,6 +35,9 @@ public final class TimeResponse extends io.pulumi.resources.InvokeArgs {
         return this.minutes;
     }
 
+    /**
+     * The second.
+     */
     @InputImport(name="seconds", required=true)
     private final Integer seconds;
 

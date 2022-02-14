@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Details of the final state "forward" and associated resource.
+ */
 public final class ForwardInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ForwardInfoResponse Empty = new ForwardInfoResponse();
 
+    /**
+     * URI of the resource that the packet is forwarded to.
+     */
     @InputImport(name="resourceUri", required=true)
     private final String resourceUri;
 
@@ -19,6 +25,9 @@ public final class ForwardInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.resourceUri;
     }
 
+    /**
+     * Target type where this packet is forwarded to.
+     */
     @InputImport(name="target", required=true)
     private final String target;
 

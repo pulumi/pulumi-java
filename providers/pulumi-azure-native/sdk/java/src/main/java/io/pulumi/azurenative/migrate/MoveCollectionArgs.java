@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MoveCollectionArgs Empty = new MoveCollectionArgs();
 
+    /**
+     * Defines the MSI properties of the Move Collection.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityArgs> identity;
 
@@ -24,6 +30,9 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * The geo-location where the resource lives.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -31,6 +40,9 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The Move Collection Name.
+     */
     @InputImport(name="moveCollectionName")
     private final @Nullable Input<String> moveCollectionName;
 
@@ -38,6 +50,9 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.moveCollectionName == null ? Input.empty() : this.moveCollectionName;
     }
 
+    /**
+     * Defines the move collection properties.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<MoveCollectionPropertiesArgs> properties;
 
@@ -45,6 +60,9 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The Resource Group Name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -52,6 +70,9 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

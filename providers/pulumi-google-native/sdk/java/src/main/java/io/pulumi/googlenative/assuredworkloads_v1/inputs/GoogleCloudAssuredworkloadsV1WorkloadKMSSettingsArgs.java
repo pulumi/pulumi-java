@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Settings specific to the Key Management Service.
+ */
 public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs Empty = new GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs();
 
+    /**
+     * Input only. Immutable. The time at which the Key Management Service will automatically create a new version of the crypto key and mark it as the primary.
+     */
     @InputImport(name="nextRotationTime", required=true)
     private final Input<String> nextRotationTime;
 
@@ -20,6 +26,9 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs extends 
         return this.nextRotationTime;
     }
 
+    /**
+     * Input only. Immutable. [next_rotation_time] will be advanced by this period when the Key Management Service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours.
+     */
     @InputImport(name="rotationPeriod", required=true)
     private final Input<String> rotationPeriod;
 

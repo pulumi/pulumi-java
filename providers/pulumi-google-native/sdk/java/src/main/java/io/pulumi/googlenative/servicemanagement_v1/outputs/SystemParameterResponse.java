@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SystemParameterResponse {
+/**
+ * Define the HTTP header name to use for the parameter. It is case insensitive.
+ */
     private final String httpHeader;
+/**
+ * Define the name of the parameter, such as "api_key" . It is case sensitive.
+ */
     private final String name;
+/**
+ * Define the URL query parameter name to use for the parameter. It is case sensitive.
+ */
     private final String urlQueryParameter;
 
     @OutputCustomType.Constructor({"httpHeader","name","urlQueryParameter"})
@@ -23,12 +32,21 @@ public final class SystemParameterResponse {
         this.urlQueryParameter = Objects.requireNonNull(urlQueryParameter);
     }
 
+/**
+ * Define the HTTP header name to use for the parameter. It is case insensitive.
+ */
     public String getHttpHeader() {
         return this.httpHeader;
     }
+/**
+ * Define the name of the parameter, such as "api_key" . It is case sensitive.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Define the URL query parameter name to use for the parameter. It is case sensitive.
+ */
     public String getUrlQueryParameter() {
         return this.urlQueryParameter;
     }

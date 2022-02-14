@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Control over how the notification channels in notification_channels are notified when this alert fires.
+ */
 public final class AlertStrategyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AlertStrategyResponse Empty = new AlertStrategyResponse();
 
+    /**
+     * If an alert policy that was active has no data for this long, any open incidents will close
+     */
     @InputImport(name="autoClose", required=true)
     private final String autoClose;
 
@@ -20,6 +26,9 @@ public final class AlertStrategyResponse extends io.pulumi.resources.InvokeArgs 
         return this.autoClose;
     }
 
+    /**
+     * Required for alert policies with a LogMatch condition.This limit is not implemented for alert policies that are not log-based.
+     */
     @InputImport(name="notificationRateLimit", required=true)
     private final NotificationRateLimitResponse notificationRateLimit;
 

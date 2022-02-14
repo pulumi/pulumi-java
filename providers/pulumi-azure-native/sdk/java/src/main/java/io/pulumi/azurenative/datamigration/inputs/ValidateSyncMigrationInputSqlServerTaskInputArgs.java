@@ -11,10 +11,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Input for task that validates migration input for SQL sync migrations
+ */
 public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ValidateSyncMigrationInputSqlServerTaskInputArgs Empty = new ValidateSyncMigrationInputSqlServerTaskInputArgs();
 
+    /**
+     * Databases to migrate
+     */
     @InputImport(name="selectedDatabases", required=true)
     private final Input<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases;
 
@@ -22,6 +28,9 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends io.p
         return this.selectedDatabases;
     }
 
+    /**
+     * Information for connecting to source SQL server
+     */
     @InputImport(name="sourceConnectionInfo", required=true)
     private final Input<SqlConnectionInfoArgs> sourceConnectionInfo;
 
@@ -29,6 +38,9 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends io.p
         return this.sourceConnectionInfo;
     }
 
+    /**
+     * Information for connecting to target
+     */
     @InputImport(name="targetConnectionInfo", required=true)
     private final Input<SqlConnectionInfoArgs> targetConnectionInfo;
 

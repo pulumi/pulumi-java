@@ -8,75 +8,143 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.cloudbuild_v1alpha1.WorkerPoolArgs;
 import io.pulumi.googlenative.cloudbuild_v1alpha1.outputs.WorkerConfigResponse;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a `WorkerPool` to run the builds, and returns the new worker pool.
+ */
 @ResourceType(type="google-native:cloudbuild/v1alpha1:WorkerPool")
 public class WorkerPool extends io.pulumi.resources.CustomResource {
+    /**
+     * Time at which the request to create the `WorkerPool` was received.
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return Time at which the request to create the `WorkerPool` was received.
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Time at which the request to delete the `WorkerPool` was received.
+     */
     @OutputExport(name="deleteTime", type=String.class, parameters={})
     private Output<String> deleteTime;
 
+    /**
+     * @return Time at which the request to delete the `WorkerPool` was received.
+     */
     public Output<String> getDeleteTime() {
         return this.deleteTime;
     }
+    /**
+     * User-defined name of the `WorkerPool`.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return User-defined name of the `WorkerPool`.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The project ID of the GCP project for which the `WorkerPool` is created.
+     */
     @OutputExport(name="project", type=String.class, parameters={})
     private Output<String> project;
 
+    /**
+     * @return The project ID of the GCP project for which the `WorkerPool` is created.
+     */
     public Output<String> getProject() {
         return this.project;
     }
+    /**
+     * List of regions to create the `WorkerPool`. Regions can't be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.
+     */
     @OutputExport(name="regions", type=List.class, parameters={String.class})
     private Output<List<String>> regions;
 
+    /**
+     * @return List of regions to create the `WorkerPool`. Regions can't be empty. If Cloud Build adds a new GCP region in the future, the existing `WorkerPool` will not be enabled in the new region automatically; you must add the new region to the `regions` field to enable the `WorkerPool` in that region.
+     */
     public Output<List<String>> getRegions() {
         return this.regions;
     }
+    /**
+     * The service account used to manage the `WorkerPool`. The service account must have the Compute Instance Admin (Beta) permission at the project level.
+     */
     @OutputExport(name="serviceAccountEmail", type=String.class, parameters={})
     private Output<String> serviceAccountEmail;
 
+    /**
+     * @return The service account used to manage the `WorkerPool`. The service account must have the Compute Instance Admin (Beta) permission at the project level.
+     */
     public Output<String> getServiceAccountEmail() {
         return this.serviceAccountEmail;
     }
+    /**
+     * WorkerPool Status.
+     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
+    /**
+     * @return WorkerPool Status.
+     */
     public Output<String> getStatus() {
         return this.status;
     }
+    /**
+     * Time at which the request to update the `WorkerPool` was received.
+     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
+    /**
+     * @return Time at which the request to update the `WorkerPool` was received.
+     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
+    /**
+     * Configuration to be used for a creating workers in the `WorkerPool`.
+     */
     @OutputExport(name="workerConfig", type=WorkerConfigResponse.class, parameters={})
     private Output<WorkerConfigResponse> workerConfig;
 
+    /**
+     * @return Configuration to be used for a creating workers in the `WorkerPool`.
+     */
     public Output<WorkerConfigResponse> getWorkerConfig() {
         return this.workerConfig;
     }
+    /**
+     * Total number of workers to be created across all requested regions.
+     */
     @OutputExport(name="workerCount", type=String.class, parameters={})
     private Output<String> workerCount;
 
+    /**
+     * @return Total number of workers to be created across all requested regions.
+     */
     public Output<String> getWorkerCount() {
         return this.workerCount;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public WorkerPool(String name, @Nullable WorkerPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:cloudbuild/v1alpha1:WorkerPool", name, args == null ? WorkerPoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -92,6 +160,14 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static WorkerPool get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WorkerPool(name, id, options);
     }

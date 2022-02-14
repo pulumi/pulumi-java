@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines load balancer frontend IP configuration properties.
+ */
 public final class LBFrontendIPConfigurationResourceSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LBFrontendIPConfigurationResourceSettingsResponse Empty = new LBFrontendIPConfigurationResourceSettingsResponse();
 
+    /**
+     * Gets or sets the frontend IP configuration name.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -22,6 +28,10 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends io.
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Gets or sets the IP address of the Load Balancer.This is only specified if a specific
+private IP address shall be allocated from the subnet specified in subnetRef.
+     */
     @InputImport(name="privateIpAddress")
     private final @Nullable String privateIpAddress;
 
@@ -29,6 +39,9 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends io.
         return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
     }
 
+    /**
+     * Gets or sets PrivateIP allocation method (Static/Dynamic).
+     */
     @InputImport(name="privateIpAllocationMethod")
     private final @Nullable String privateIpAllocationMethod;
 
@@ -36,6 +49,9 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends io.
         return this.privateIpAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIpAllocationMethod);
     }
 
+    /**
+     * Defines reference to subnet.
+     */
     @InputImport(name="subnet")
     private final @Nullable SubnetReferenceResponse subnet;
 
@@ -43,6 +59,9 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends io.
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 
+    /**
+     * Gets or sets the csv list of zones.
+     */
     @InputImport(name="zones")
     private final @Nullable String zones;
 

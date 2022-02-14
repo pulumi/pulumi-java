@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class RouterMd5AuthenticationKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RouterMd5AuthenticationKeyResponse Empty = new RouterMd5AuthenticationKeyResponse();
 
+    /**
+     * [Input only] Value of the key. For patch and update calls, it can be skipped to copy the value from the previous configuration. This is allowed if the key with the same name existed before the operation. Maximum length is 80 characters. Can only contain printable ASCII characters.
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -19,6 +25,9 @@ public final class RouterMd5AuthenticationKeyResponse extends io.pulumi.resource
         return this.key;
     }
 
+    /**
+     * Name used to identify the key. Must be unique within a router. Must be referenced by at least one bgpPeer. Must comply with RFC1035.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

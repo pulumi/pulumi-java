@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListKustoPoolLanguageExtensionsResult {
+/**
+ * The list of language extensions.
+ */
     private final @Nullable List<LanguageExtensionResponse> value;
 
     @OutputCustomType.Constructor({"value"})
@@ -18,6 +21,9 @@ public final class ListKustoPoolLanguageExtensionsResult {
         this.value = value;
     }
 
+/**
+ * The list of language extensions.
+ */
     public List<LanguageExtensionResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

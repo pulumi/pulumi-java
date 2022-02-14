@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MembershipStateResponse {
+/**
+ * The current state of the Membership resource.
+ */
     private final String code;
+/**
+ * This field is never set by the Hub Service.
+ */
     private final String description;
+/**
+ * This field is never set by the Hub Service.
+ */
     private final String updateTime;
 
     @OutputCustomType.Constructor({"code","description","updateTime"})
@@ -23,12 +32,21 @@ public final class MembershipStateResponse {
         this.updateTime = Objects.requireNonNull(updateTime);
     }
 
+/**
+ * The current state of the Membership resource.
+ */
     public String getCode() {
         return this.code;
     }
+/**
+ * This field is never set by the Hub Service.
+ */
     public String getDescription() {
         return this.description;
     }
+/**
+ * This field is never set by the Hub Service.
+ */
     public String getUpdateTime() {
         return this.updateTime;
     }

@@ -23,10 +23,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for the task that migrates on-prem SQL Server databases to Azure SQL Database
+ */
 public final class MigrateSqlServerSqlDbTaskPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateSqlServerSqlDbTaskPropertiesResponse Empty = new MigrateSqlServerSqlDbTaskPropertiesResponse();
 
+    /**
+     * Array of command properties.
+     */
     @InputImport(name="commands", required=true)
     private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
@@ -34,6 +40,9 @@ public final class MigrateSqlServerSqlDbTaskPropertiesResponse extends io.pulumi
         return this.commands;
     }
 
+    /**
+     * Array of errors. This is ignored if submitted.
+     */
     @InputImport(name="errors", required=true)
     private final List<ODataErrorResponse> errors;
 
@@ -41,6 +50,9 @@ public final class MigrateSqlServerSqlDbTaskPropertiesResponse extends io.pulumi
         return this.errors;
     }
 
+    /**
+     * Task input
+     */
     @InputImport(name="input")
     private final @Nullable MigrateSqlServerSqlDbTaskInputResponse input;
 
@@ -48,6 +60,9 @@ public final class MigrateSqlServerSqlDbTaskPropertiesResponse extends io.pulumi
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
     }
 
+    /**
+     * Task output. This is ignored if submitted.
+     */
     @InputImport(name="output", required=true)
     private final List<Object> output;
 
@@ -55,6 +70,9 @@ public final class MigrateSqlServerSqlDbTaskPropertiesResponse extends io.pulumi
         return this.output;
     }
 
+    /**
+     * The state of the task. This is ignored if submitted.
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -62,6 +80,10 @@ public final class MigrateSqlServerSqlDbTaskPropertiesResponse extends io.pulumi
         return this.state;
     }
 
+    /**
+     * Task type.
+Expected value is 'Migrate.SqlServer.SqlDb'.
+     */
     @InputImport(name="taskType", required=true)
     private final String taskType;
 

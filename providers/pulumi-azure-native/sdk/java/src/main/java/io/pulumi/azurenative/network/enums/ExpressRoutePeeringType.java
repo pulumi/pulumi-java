@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The peering type.
+ */
     @EnumType
     public enum ExpressRoutePeeringType {
+/**
+ * 
+ */
         AzurePublicPeering("AzurePublicPeering"),
+/**
+ * 
+ */
         AzurePrivatePeering("AzurePrivatePeering"),
+/**
+ * 
+ */
         MicrosoftPeering("MicrosoftPeering");
 
         private final String value;

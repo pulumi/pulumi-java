@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SapMonitorArgs Empty = new SapMonitorArgs();
 
+    /**
+     * The value indicating whether to send analytics to Microsoft
+     */
     @InputImport(name="enableCustomerAnalytics")
     private final @Nullable Input<Boolean> enableCustomerAnalytics;
 
@@ -23,6 +29,9 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableCustomerAnalytics == null ? Input.empty() : this.enableCustomerAnalytics;
     }
 
+    /**
+     * The geo-location where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -30,6 +39,9 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The ARM ID of the Log Analytics Workspace that is used for monitoring
+     */
     @InputImport(name="logAnalyticsWorkspaceArmId")
     private final @Nullable Input<String> logAnalyticsWorkspaceArmId;
 
@@ -37,6 +49,9 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
         return this.logAnalyticsWorkspaceArmId == null ? Input.empty() : this.logAnalyticsWorkspaceArmId;
     }
 
+    /**
+     * The workspace ID of the log analytics workspace to be used for monitoring
+     */
     @InputImport(name="logAnalyticsWorkspaceId")
     private final @Nullable Input<String> logAnalyticsWorkspaceId;
 
@@ -44,6 +59,9 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
         return this.logAnalyticsWorkspaceId == null ? Input.empty() : this.logAnalyticsWorkspaceId;
     }
 
+    /**
+     * The shared key of the log analytics workspace that is used for monitoring
+     */
     @InputImport(name="logAnalyticsWorkspaceSharedKey")
     private final @Nullable Input<String> logAnalyticsWorkspaceSharedKey;
 
@@ -51,6 +69,9 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
         return this.logAnalyticsWorkspaceSharedKey == null ? Input.empty() : this.logAnalyticsWorkspaceSharedKey;
     }
 
+    /**
+     * The subnet which the SAP monitor will be deployed in
+     */
     @InputImport(name="monitorSubnet")
     private final @Nullable Input<String> monitorSubnet;
 
@@ -58,6 +79,9 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
         return this.monitorSubnet == null ? Input.empty() : this.monitorSubnet;
     }
 
+    /**
+     * Name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -65,6 +89,9 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the SAP monitor resource.
+     */
     @InputImport(name="sapMonitorName")
     private final @Nullable Input<String> sapMonitorName;
 
@@ -72,6 +99,9 @@ public final class SapMonitorArgs extends io.pulumi.resources.ResourceArgs {
         return this.sapMonitorName == null ? Input.empty() : this.sapMonitorName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

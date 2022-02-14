@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIotSecuritySolution {
+/**
+ * IoT Security solution configuration and resource information.
+API Version: 2019-08-01.
+ *
+ * IoT Security solution configuration and resource information.
+ */
     public static CompletableFuture<GetIotSecuritySolutionResult> invokeAsync(GetIotSecuritySolutionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getIotSecuritySolution", TypeShape.of(GetIotSecuritySolutionResult.class), args == null ? GetIotSecuritySolutionArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,12 +11,33 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MysqlColumnResponse {
+/**
+ * Column collation.
+ */
     private final String collation;
+/**
+ * Column name.
+ */
     private final String column;
+/**
+ * The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html
+ */
     private final String dataType;
+/**
+ * Column length.
+ */
     private final Integer length;
+/**
+ * Whether or not the column can accept a null value.
+ */
     private final Boolean nullable;
+/**
+ * The ordinal position of the column in the table.
+ */
     private final Integer ordinalPosition;
+/**
+ * Whether or not the column represents a primary key.
+ */
     private final Boolean primaryKey;
 
     @OutputCustomType.Constructor({"collation","column","dataType","length","nullable","ordinalPosition","primaryKey"})
@@ -37,24 +58,45 @@ public final class MysqlColumnResponse {
         this.primaryKey = Objects.requireNonNull(primaryKey);
     }
 
+/**
+ * Column collation.
+ */
     public String getCollation() {
         return this.collation;
     }
+/**
+ * Column name.
+ */
     public String getColumn() {
         return this.column;
     }
+/**
+ * The MySQL data type. Full data types list can be found here: https://dev.mysql.com/doc/refman/8.0/en/data-types.html
+ */
     public String getDataType() {
         return this.dataType;
     }
+/**
+ * Column length.
+ */
     public Integer getLength() {
         return this.length;
     }
+/**
+ * Whether or not the column can accept a null value.
+ */
     public Boolean getNullable() {
         return this.nullable;
     }
+/**
+ * The ordinal position of the column in the table.
+ */
     public Integer getOrdinalPosition() {
         return this.ordinalPosition;
     }
+/**
+ * Whether or not the column represents a primary key.
+ */
     public Boolean getPrimaryKey() {
         return this.primaryKey;
     }

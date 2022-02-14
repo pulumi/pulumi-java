@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * InMageRcm fabric provider specific settings.
+ */
 public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InMageRcmFabricCreationInputArgs Empty = new InMageRcmFabricCreationInputArgs();
 
+    /**
+     * The certificate to be used for AAD authentication.
+     */
     @InputImport(name="authCertificate")
     private final @Nullable Input<String> authCertificate;
 
@@ -22,6 +28,10 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
         return this.authCertificate == null ? Input.empty() : this.authCertificate;
     }
 
+    /**
+     * Gets the class type.
+Expected value is 'InMageRcm'.
+     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -29,6 +39,9 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
+    /**
+     * The ARM Id of the physical site.
+     */
     @InputImport(name="physicalSiteId")
     private final @Nullable Input<String> physicalSiteId;
 
@@ -36,6 +49,9 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
         return this.physicalSiteId == null ? Input.empty() : this.physicalSiteId;
     }
 
+    /**
+     * The identity provider input for source agent authentication.
+     */
     @InputImport(name="sourceAgentIdentity")
     private final @Nullable Input<IdentityProviderInputArgs> sourceAgentIdentity;
 
@@ -43,6 +59,9 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
         return this.sourceAgentIdentity == null ? Input.empty() : this.sourceAgentIdentity;
     }
 
+    /**
+     * The ARM Id of the VMware site.
+     */
     @InputImport(name="vmwareSiteId")
     private final @Nullable Input<String> vmwareSiteId;
 

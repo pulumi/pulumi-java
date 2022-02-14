@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListWebAppFunctionKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListWebAppFunctionKeysArgs Empty = new ListWebAppFunctionKeysArgs();
 
+    /**
+     * Function name.
+     */
     @InputImport(name="functionName", required=true)
     private final String functionName;
 
@@ -19,6 +25,9 @@ public final class ListWebAppFunctionKeysArgs extends io.pulumi.resources.Invoke
         return this.functionName;
     }
 
+    /**
+     * Site name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +35,9 @@ public final class ListWebAppFunctionKeysArgs extends io.pulumi.resources.Invoke
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

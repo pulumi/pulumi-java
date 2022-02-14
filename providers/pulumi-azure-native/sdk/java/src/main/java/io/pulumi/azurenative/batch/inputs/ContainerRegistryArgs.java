@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ContainerRegistryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerRegistryArgs Empty = new ContainerRegistryArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="password", required=true)
     private final Input<String> password;
 
@@ -21,6 +27,9 @@ public final class ContainerRegistryArgs extends io.pulumi.resources.ResourceArg
         return this.password;
     }
 
+    /**
+     * If omitted, the default is "docker.io".
+     */
     @InputImport(name="registryServer")
     private final @Nullable Input<String> registryServer;
 
@@ -28,6 +37,9 @@ public final class ContainerRegistryArgs extends io.pulumi.resources.ResourceArg
         return this.registryServer == null ? Input.empty() : this.registryServer;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="userName", required=true)
     private final Input<String> userName;
 

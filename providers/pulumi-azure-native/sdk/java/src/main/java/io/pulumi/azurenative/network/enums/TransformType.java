@@ -8,13 +8,34 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Describes what transforms applied before matching.
+ */
     @EnumType
     public enum TransformType {
+/**
+ * 
+ */
         Lowercase("Lowercase"),
+/**
+ * 
+ */
         Uppercase("Uppercase"),
+/**
+ * 
+ */
         Trim("Trim"),
+/**
+ * 
+ */
         UrlDecode("UrlDecode"),
+/**
+ * 
+ */
         UrlEncode("UrlEncode"),
+/**
+ * 
+ */
         RemoveNulls("RemoveNulls");
 
         private final String value;

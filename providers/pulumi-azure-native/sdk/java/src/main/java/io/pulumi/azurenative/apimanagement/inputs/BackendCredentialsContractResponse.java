@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details of the Credentials used to connect to Backend.
+ */
 public final class BackendCredentialsContractResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BackendCredentialsContractResponse Empty = new BackendCredentialsContractResponse();
 
+    /**
+     * Authorization header authentication
+     */
     @InputImport(name="authorization")
     private final @Nullable BackendAuthorizationHeaderCredentialsResponse authorization;
 
@@ -24,6 +30,9 @@ public final class BackendCredentialsContractResponse extends io.pulumi.resource
         return this.authorization == null ? Optional.empty() : Optional.ofNullable(this.authorization);
     }
 
+    /**
+     * List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.
+     */
     @InputImport(name="certificate")
     private final @Nullable List<String> certificate;
 
@@ -31,6 +40,9 @@ public final class BackendCredentialsContractResponse extends io.pulumi.resource
         return this.certificate == null ? List.of() : this.certificate;
     }
 
+    /**
+     * List of Client Certificate Ids.
+     */
     @InputImport(name="certificateIds")
     private final @Nullable List<String> certificateIds;
 
@@ -38,6 +50,9 @@ public final class BackendCredentialsContractResponse extends io.pulumi.resource
         return this.certificateIds == null ? List.of() : this.certificateIds;
     }
 
+    /**
+     * Header Parameter description.
+     */
     @InputImport(name="header")
     private final @Nullable Map<String,List<String>> header;
 
@@ -45,6 +60,9 @@ public final class BackendCredentialsContractResponse extends io.pulumi.resource
         return this.header == null ? Map.of() : this.header;
     }
 
+    /**
+     * Query Parameter description.
+     */
     @InputImport(name="query")
     private final @Nullable Map<String,List<String>> query;
 

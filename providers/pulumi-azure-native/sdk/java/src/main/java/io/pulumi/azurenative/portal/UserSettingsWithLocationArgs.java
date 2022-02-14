@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class UserSettingsWithLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserSettingsWithLocationArgs Empty = new UserSettingsWithLocationArgs();
 
+    /**
+     * The provider location
+     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -22,6 +28,9 @@ public final class UserSettingsWithLocationArgs extends io.pulumi.resources.Reso
         return this.location;
     }
 
+    /**
+     * The cloud shell user settings properties.
+     */
     @InputImport(name="properties", required=true)
     private final Input<UserPropertiesArgs> properties;
 
@@ -29,6 +38,9 @@ public final class UserSettingsWithLocationArgs extends io.pulumi.resources.Reso
         return this.properties;
     }
 
+    /**
+     * The name of the user settings
+     */
     @InputImport(name="userSettingsName")
     private final @Nullable Input<String> userSettingsName;
 

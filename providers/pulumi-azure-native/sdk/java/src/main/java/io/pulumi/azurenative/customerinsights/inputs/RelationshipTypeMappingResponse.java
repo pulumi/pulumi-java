@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Maps fields in Profile to their corresponding StrongIds in Related Profile.
+ */
 public final class RelationshipTypeMappingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RelationshipTypeMappingResponse Empty = new RelationshipTypeMappingResponse();
 
+    /**
+     * Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.
+     */
     @InputImport(name="fieldMappings", required=true)
     private final List<RelationshipTypeFieldMappingResponse> fieldMappings;
 

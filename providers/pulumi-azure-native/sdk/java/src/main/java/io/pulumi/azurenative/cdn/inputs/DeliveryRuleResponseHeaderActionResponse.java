@@ -9,10 +9,17 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines the response header action for the delivery rule.
+ */
 public final class DeliveryRuleResponseHeaderActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeliveryRuleResponseHeaderActionResponse Empty = new DeliveryRuleResponseHeaderActionResponse();
 
+    /**
+     * The name of the action for the delivery rule.
+Expected value is 'ModifyResponseHeader'.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -20,6 +27,9 @@ public final class DeliveryRuleResponseHeaderActionResponse extends io.pulumi.re
         return this.name;
     }
 
+    /**
+     * Defines the parameters for the action.
+     */
     @InputImport(name="parameters", required=true)
     private final HeaderActionParametersResponse parameters;
 

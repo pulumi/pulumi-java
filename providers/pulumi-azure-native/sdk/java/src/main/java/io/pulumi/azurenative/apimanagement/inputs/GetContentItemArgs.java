@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetContentItemArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetContentItemArgs Empty = new GetContentItemArgs();
 
+    /**
+     * Content item identifier.
+     */
     @InputImport(name="contentItemId", required=true)
     private final String contentItemId;
 
@@ -19,6 +25,9 @@ public final class GetContentItemArgs extends io.pulumi.resources.InvokeArgs {
         return this.contentItemId;
     }
 
+    /**
+     * Content type identifier.
+     */
     @InputImport(name="contentTypeId", required=true)
     private final String contentTypeId;
 
@@ -26,6 +35,9 @@ public final class GetContentItemArgs extends io.pulumi.resources.InvokeArgs {
         return this.contentTypeId;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,9 @@ public final class GetContentItemArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Represents an Amazon Web Services identity provider.
+ */
 public final class AwsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AwsArgs Empty = new AwsArgs();
 
+    /**
+     * The AWS account ID.
+     */
     @InputImport(name="accountId", required=true)
     private final Input<String> accountId;
 

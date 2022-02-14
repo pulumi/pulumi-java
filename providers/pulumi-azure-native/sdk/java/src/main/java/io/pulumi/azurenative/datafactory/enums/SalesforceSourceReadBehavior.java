@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The read behavior for the operation. Default is Query.
+ */
     @EnumType
     public enum SalesforceSourceReadBehavior {
+/**
+ * 
+ */
         Query("Query"),
+/**
+ * 
+ */
         QueryAll("QueryAll");
 
         private final String value;

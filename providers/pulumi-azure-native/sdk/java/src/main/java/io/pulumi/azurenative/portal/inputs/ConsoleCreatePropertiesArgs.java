@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Cloud shell properties for creating a console.
+ */
 public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConsoleCreatePropertiesArgs Empty = new ConsoleCreatePropertiesArgs();
 
+    /**
+     * The operating system type of the cloud shell.
+     */
     @InputImport(name="osType", required=true)
     private final Input<Either<String,OsType>> osType;
 
@@ -24,6 +30,9 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
         return this.osType;
     }
 
+    /**
+     * Provisioning state of the console.
+     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
 
@@ -31,6 +40,9 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
+    /**
+     * Uri of the console.
+     */
     @InputImport(name="uri")
     private final @Nullable Input<String> uri;
 

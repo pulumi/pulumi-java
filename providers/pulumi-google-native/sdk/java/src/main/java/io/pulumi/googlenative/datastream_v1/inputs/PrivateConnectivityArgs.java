@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Private Connectivity
+ */
 public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateConnectivityArgs Empty = new PrivateConnectivityArgs();
 
+    /**
+     * A reference to a private connection resource. Format: `projects/{project}/locations/{location}/privateConnections/{name}`
+     */
     @InputImport(name="privateConnection", required=true)
     private final Input<String> privateConnection;
 

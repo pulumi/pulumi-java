@@ -11,12 +11,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatabasePrincipalResponse {
+/**
+ * Application id - relevant only for application principal type.
+ */
     private final @Nullable String appId;
+/**
+ * Database principal email if exists.
+ */
     private final @Nullable String email;
+/**
+ * Database principal fully qualified name.
+ */
     private final @Nullable String fqn;
+/**
+ * Database principal name.
+ */
     private final String name;
+/**
+ * Database principal role.
+ */
     private final String role;
+/**
+ * The tenant name of the principal
+ */
     private final String tenantName;
+/**
+ * Database principal type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"appId","email","fqn","name","role","tenantName","type"})
@@ -37,24 +58,45 @@ public final class DatabasePrincipalResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Application id - relevant only for application principal type.
+ */
     public Optional<String> getAppId() {
         return Optional.ofNullable(this.appId);
     }
+/**
+ * Database principal email if exists.
+ */
     public Optional<String> getEmail() {
         return Optional.ofNullable(this.email);
     }
+/**
+ * Database principal fully qualified name.
+ */
     public Optional<String> getFqn() {
         return Optional.ofNullable(this.fqn);
     }
+/**
+ * Database principal name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Database principal role.
+ */
     public String getRole() {
         return this.role;
     }
+/**
+ * The tenant name of the principal
+ */
     public String getTenantName() {
         return this.tenantName;
     }
+/**
+ * Database principal type.
+ */
     public String getType() {
         return this.type;
     }

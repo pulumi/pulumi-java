@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentArgs Empty = new EnvironmentArgs();
 
+    /**
+     * The name of the environment.
+     */
     @InputImport(name="environmentName")
     private final @Nullable Input<String> environmentName;
 
@@ -23,6 +29,9 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentName == null ? Input.empty() : this.environmentName;
     }
 
+    /**
+     * The name of the environment Setting.
+     */
     @InputImport(name="environmentSettingName", required=true)
     private final Input<String> environmentSettingName;
 
@@ -30,6 +39,9 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentSettingName;
     }
 
+    /**
+     * The name of the lab Account.
+     */
     @InputImport(name="labAccountName", required=true)
     private final Input<String> labAccountName;
 
@@ -37,6 +49,9 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.labAccountName;
     }
 
+    /**
+     * The name of the lab.
+     */
     @InputImport(name="labName", required=true)
     private final Input<String> labName;
 
@@ -44,6 +59,9 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.labName;
     }
 
+    /**
+     * The location of the resource.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -51,6 +69,9 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The provisioning status of the resource.
+     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<String> provisioningState;
 
@@ -58,6 +79,9 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -65,6 +89,9 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The set of a VM and the setting id it was created for
+     */
     @InputImport(name="resourceSets")
     private final @Nullable Input<ResourceSetArgs> resourceSets;
 
@@ -72,6 +99,9 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceSets == null ? Input.empty() : this.resourceSets;
     }
 
+    /**
+     * The tags of the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -79,6 +109,9 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The unique immutable identifier of a resource (Guid).
+     */
     @InputImport(name="uniqueIdentifier")
     private final @Nullable Input<String> uniqueIdentifier;
 

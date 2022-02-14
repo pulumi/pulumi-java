@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DestinationTablePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DestinationTablePropertiesArgs Empty = new DestinationTablePropertiesArgs();
 
+    /**
+     * [Optional] The description for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current description is provided, the job will fail.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +28,9 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * [Internal] This field is for Google internal use only.
+     */
     @InputImport(name="expirationTime")
     private final @Nullable Input<String> expirationTime;
 
@@ -29,6 +38,9 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
     }
 
+    /**
+     * [Optional] The friendly name for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current friendly name is provided, the job will fail.
+     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -36,6 +48,9 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
+    /**
+     * [Optional] The labels associated with this table. You can use these to organize and group your tables. This will only be used if the destination table is newly created. If the table already exists and labels are different than the current labels are provided, the job will fail.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 

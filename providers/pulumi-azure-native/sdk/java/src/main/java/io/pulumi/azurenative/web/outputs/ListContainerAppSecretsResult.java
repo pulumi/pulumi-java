@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListContainerAppSecretsResult {
+/**
+ * Collection of resources.
+ */
     private final List<ContainerAppSecretResponse> value;
 
     @OutputCustomType.Constructor({"value"})
@@ -17,6 +20,9 @@ public final class ListContainerAppSecretsResult {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * Collection of resources.
+ */
     public List<ContainerAppSecretResponse> getValue() {
         return this.value;
     }

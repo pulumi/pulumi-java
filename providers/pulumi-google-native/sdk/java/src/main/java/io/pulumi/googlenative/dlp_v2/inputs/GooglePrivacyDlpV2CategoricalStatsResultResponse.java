@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Result of the categorical stats computation.
+ */
 public final class GooglePrivacyDlpV2CategoricalStatsResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2CategoricalStatsResultResponse Empty = new GooglePrivacyDlpV2CategoricalStatsResultResponse();
 
+    /**
+     * Histogram of value frequencies in the column.
+     */
     @InputImport(name="valueFrequencyHistogramBuckets", required=true)
     private final List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets;
 

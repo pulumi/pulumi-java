@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum KnownDataFlowStreams {
+/**
+ * 
+ */
         MicrosoftEvent("Microsoft-Event"),
+/**
+ * 
+ */
         MicrosoftInsightsMetrics("Microsoft-InsightsMetrics"),
+/**
+ * 
+ */
         MicrosoftPerf("Microsoft-Perf"),
+/**
+ * 
+ */
         MicrosoftSyslog("Microsoft-Syslog"),
+/**
+ * 
+ */
         MicrosoftWindowsEvent("Microsoft-WindowsEvent");
 
         private final String value;

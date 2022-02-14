@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.visualstudio;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.visualstudio.AccountArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -15,39 +14,178 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The response to an account resource GET request.
+API Version: 2014-04-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create an account resource
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var account = new AzureNative.VisualStudio.Account("account", new AzureNative.VisualStudio.AccountArgs
+        {
+            AccountName = "Example",
+            Location = "Central US",
+            OperationType = "create",
+            Properties = ,
+            ResourceGroupName = "VS-Example-Group",
+            ResourceName = "Example",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	visualstudio "github.com/pulumi/pulumi-azure-native/sdk/go/azure/visualstudio"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := visualstudio.NewAccount(ctx, "account", &visualstudio.AccountArgs{
+			AccountName:       pulumi.String("Example"),
+			Location:          pulumi.String("Central US"),
+			OperationType:     pulumi.String("create"),
+			Properties:        nil,
+			ResourceGroupName: pulumi.String("VS-Example-Group"),
+			ResourceName:      pulumi.String("Example"),
+			Tags:              nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const account = new azure_native.visualstudio.Account("account", {
+    accountName: "Example",
+    location: "Central US",
+    operationType: "create",
+    properties: {},
+    resourceGroupName: "VS-Example-Group",
+    resourceName: "Example",
+    tags: {},
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+account = azure_native.visualstudio.Account("account",
+    account_name="Example",
+    location="Central US",
+    operation_type="create",
+    properties={},
+    resource_group_name="VS-Example-Group",
+    resource_name="Example",
+    tags={})
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:visualstudio:Account VS-Example-Group /subscriptions/0de7f055-dbea-498d-8e9e-da287eedca90/resourceGroups/VS-Example-Group/providers/Microsoft.VisualStudio/account/Example 
+```
+
+ */
 @ResourceType(type="azure-native:visualstudio:Account")
 public class Account extends io.pulumi.resources.CustomResource {
+    /**
+     * Resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Resource properties.
+     */
     @OutputExport(name="properties", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> properties;
 
+    /**
+     * @return Resource properties.
+     */
     public Output<Map<String,String>> getProperties() {
         return this.properties;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Account(String name, AccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:visualstudio:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -67,6 +205,14 @@ public class Account extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Account get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Account(name, id, options);
     }

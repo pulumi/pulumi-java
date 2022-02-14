@@ -14,8 +14,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HttpMessageDiagnosticResponse {
+/**
+ * Body logging settings.
+ */
     private final @Nullable BodyDiagnosticSettingsResponse body;
+/**
+ * Data masking settings.
+ */
     private final @Nullable DataMaskingResponse dataMasking;
+/**
+ * Array of HTTP Headers to log.
+ */
     private final @Nullable List<String> headers;
 
     @OutputCustomType.Constructor({"body","dataMasking","headers"})
@@ -28,12 +37,21 @@ public final class HttpMessageDiagnosticResponse {
         this.headers = headers;
     }
 
+/**
+ * Body logging settings.
+ */
     public Optional<BodyDiagnosticSettingsResponse> getBody() {
         return Optional.ofNullable(this.body);
     }
+/**
+ * Data masking settings.
+ */
     public Optional<DataMaskingResponse> getDataMasking() {
         return Optional.ofNullable(this.dataMasking);
     }
+/**
+ * Array of HTTP Headers to log.
+ */
     public List<String> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
     }

@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RoleSinkInfoResponse {
+/**
+ * Compute role ID.
+ */
     private final String roleId;
 
     @OutputCustomType.Constructor({"roleId"})
@@ -16,6 +19,9 @@ public final class RoleSinkInfoResponse {
         this.roleId = Objects.requireNonNull(roleId);
     }
 
+/**
+ * Compute role ID.
+ */
     public String getRoleId() {
         return this.roleId;
     }

@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NotificationSettingsResponse {
+/**
+ * The state of notifications feature.
+ */
     private final @Nullable String activationState;
+/**
+ * Configuration properties of an Azure Monitor workspace that receives change notifications.
+ */
     private final @Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties;
 
     @OutputCustomType.Constructor({"activationState","azureMonitorWorkspaceProperties"})
@@ -23,9 +29,15 @@ public final class NotificationSettingsResponse {
         this.azureMonitorWorkspaceProperties = azureMonitorWorkspaceProperties;
     }
 
+/**
+ * The state of notifications feature.
+ */
     public Optional<String> getActivationState() {
         return Optional.ofNullable(this.activationState);
     }
+/**
+ * Configuration properties of an Azure Monitor workspace that receives change notifications.
+ */
     public Optional<AzureMonitorWorkspacePropertiesResponse> getAzureMonitorWorkspaceProperties() {
         return Optional.ofNullable(this.azureMonitorWorkspaceProperties);
     }

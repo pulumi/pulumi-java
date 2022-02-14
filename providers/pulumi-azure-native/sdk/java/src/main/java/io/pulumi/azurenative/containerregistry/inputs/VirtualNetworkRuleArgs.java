@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Virtual network rule.
+ */
 public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualNetworkRuleArgs Empty = new VirtualNetworkRuleArgs();
 
+    /**
+     * The action of virtual network rule.
+     */
     @InputImport(name="action")
     private final @Nullable Input<Either<String,Action>> action;
 
@@ -23,6 +29,9 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
         return this.action == null ? Input.empty() : this.action;
     }
 
+    /**
+     * Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
+     */
     @InputImport(name="virtualNetworkResourceId", required=true)
     private final Input<String> virtualNetworkResourceId;
 

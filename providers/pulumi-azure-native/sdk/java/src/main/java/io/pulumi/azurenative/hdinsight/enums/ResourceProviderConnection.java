@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The direction for the resource provider connection.
+ */
     @EnumType
     public enum ResourceProviderConnection {
+/**
+ * 
+ */
         Inbound("Inbound"),
+/**
+ * 
+ */
         Outbound("Outbound");
 
         private final String value;

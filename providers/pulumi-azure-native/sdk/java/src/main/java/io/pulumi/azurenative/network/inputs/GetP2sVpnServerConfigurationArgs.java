@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetP2sVpnServerConfigurationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetP2sVpnServerConfigurationArgs Empty = new GetP2sVpnServerConfigurationArgs();
 
+    /**
+     * The name of the P2SVpnServerConfiguration.
+     */
     @InputImport(name="p2SVpnServerConfigurationName", required=true)
     private final String p2SVpnServerConfigurationName;
 
@@ -19,6 +25,9 @@ public final class GetP2sVpnServerConfigurationArgs extends io.pulumi.resources.
         return this.p2SVpnServerConfigurationName;
     }
 
+    /**
+     * The resource group name of the P2SVpnServerConfiguration.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetP2sVpnServerConfigurationArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the VirtualWan.
+     */
     @InputImport(name="virtualWanName", required=true)
     private final String virtualWanName;
 

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The database engine.
+ */
     @EnumType
     public enum DatabaseTypeEngine {
+/**
+ * The source database engine of the migration job is unknown.
+ */
         DatabaseEngineUnspecified("DATABASE_ENGINE_UNSPECIFIED"),
+/**
+ * The source engine is MySQL.
+ */
         Mysql("MYSQL"),
+/**
+ * The source engine is PostgreSQL.
+ */
         Postgresql("POSTGRESQL");
 
         private final String value;

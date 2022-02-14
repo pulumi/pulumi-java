@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataStoreArgs Empty = new DataStoreArgs();
 
+    /**
+     * List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
+     */
     @InputImport(name="customerSecrets")
     private final @Nullable Input<List<CustomerSecretArgs>> customerSecrets;
 
@@ -25,6 +31,9 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.customerSecrets == null ? Input.empty() : this.customerSecrets;
     }
 
+    /**
+     * The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+     */
     @InputImport(name="dataManagerName", required=true)
     private final Input<String> dataManagerName;
 
@@ -32,6 +41,9 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataManagerName;
     }
 
+    /**
+     * The data store/repository name to be created or updated.
+     */
     @InputImport(name="dataStoreName")
     private final @Nullable Input<String> dataStoreName;
 
@@ -39,6 +51,9 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataStoreName == null ? Input.empty() : this.dataStoreName;
     }
 
+    /**
+     * The arm id of the data store type.
+     */
     @InputImport(name="dataStoreTypeId", required=true)
     private final Input<String> dataStoreTypeId;
 
@@ -46,6 +61,9 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataStoreTypeId;
     }
 
+    /**
+     * A generic json used differently by each data source type.
+     */
     @InputImport(name="extendedProperties")
     private final @Nullable Input<Object> extendedProperties;
 
@@ -53,6 +71,9 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.extendedProperties == null ? Input.empty() : this.extendedProperties;
     }
 
+    /**
+     * Arm Id for the manager resource to which the data source is associated. This is optional.
+     */
     @InputImport(name="repositoryId")
     private final @Nullable Input<String> repositoryId;
 
@@ -60,6 +81,9 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.repositoryId == null ? Input.empty() : this.repositoryId;
     }
 
+    /**
+     * The Resource Group Name
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -67,6 +91,9 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * State of the data source.
+     */
     @InputImport(name="state", required=true)
     private final Input<State> state;
 

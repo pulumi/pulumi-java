@@ -11,9 +11,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VideoCreationPropertiesResponse {
+/**
+ * Optional description provided by the user. Value can be up to 2048 characters long.
+ */
     private final @Nullable String description;
+/**
+ * Video retention period indicates how long the video is kept in storage. Value must be specified in ISO8601 duration format (i.e. "P1D" equals 1 day) and can vary between 1 day to 10 years, in 1 day increments. When absent (null), all video content is retained indefinitely. This property is only allowed for topologies where "kind" is set to "live".
+ */
     private final @Nullable String retentionPeriod;
+/**
+ * Segment length indicates the length of individual content files (segments) which are persisted to storage. Smaller segments provide lower archive playback latency but generate larger volume of storage transactions. Larger segments reduce the amount of storage transactions while increasing the archive playback latency. Value must be specified in ISO8601 duration format (i.e. "PT30S" equals 30 seconds) and can vary between 30 seconds to 5 minutes, in 30 seconds increments. Changing this value after the initial call to create the video resource can lead to errors when uploading content to the archive. Default value is 30 seconds. This property is only allowed for topologies where "kind" is set to "live".
+ */
     private final @Nullable String segmentLength;
+/**
+ * Optional title provided by the user. Value can be up to 256 characters long.
+ */
     private final @Nullable String title;
 
     @OutputCustomType.Constructor({"description","retentionPeriod","segmentLength","title"})
@@ -28,15 +40,27 @@ public final class VideoCreationPropertiesResponse {
         this.title = title;
     }
 
+/**
+ * Optional description provided by the user. Value can be up to 2048 characters long.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * Video retention period indicates how long the video is kept in storage. Value must be specified in ISO8601 duration format (i.e. "P1D" equals 1 day) and can vary between 1 day to 10 years, in 1 day increments. When absent (null), all video content is retained indefinitely. This property is only allowed for topologies where "kind" is set to "live".
+ */
     public Optional<String> getRetentionPeriod() {
         return Optional.ofNullable(this.retentionPeriod);
     }
+/**
+ * Segment length indicates the length of individual content files (segments) which are persisted to storage. Smaller segments provide lower archive playback latency but generate larger volume of storage transactions. Larger segments reduce the amount of storage transactions while increasing the archive playback latency. Value must be specified in ISO8601 duration format (i.e. "PT30S" equals 30 seconds) and can vary between 30 seconds to 5 minutes, in 30 seconds increments. Changing this value after the initial call to create the video resource can lead to errors when uploading content to the archive. Default value is 30 seconds. This property is only allowed for topologies where "kind" is set to "live".
+ */
     public Optional<String> getSegmentLength() {
         return Optional.ofNullable(this.segmentLength);
     }
+/**
+ * Optional title provided by the user. Value can be up to 256 characters long.
+ */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Validation for inquired protectable items under a given container.
+ */
 public final class InquiryValidationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InquiryValidationArgs Empty = new InquiryValidationArgs();
 
+    /**
+     * Status for the Inquiry Validation.
+     */
     @InputImport(name="status")
     private final @Nullable Input<String> status;
 

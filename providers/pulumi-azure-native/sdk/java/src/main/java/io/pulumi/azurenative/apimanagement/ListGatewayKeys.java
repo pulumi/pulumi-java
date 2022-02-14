@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListGatewayKeys {
+/**
+ * Gateway authentication keys.
+API Version: 2020-12-01.
+ *
+ * Gateway authentication keys.
+ */
     public static CompletableFuture<ListGatewayKeysResult> invokeAsync(ListGatewayKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:listGatewayKeys", TypeShape.of(ListGatewayKeysResult.class), args == null ? ListGatewayKeysArgs.Empty : args, Utilities.withVersion(options));
     }

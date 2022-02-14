@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NotificationEventReceiverResponse {
+/**
+ * The type of the notification event receiver.
+ */
     private final @Nullable String receiverType;
+/**
+ * The notification event receiver value.
+ */
     private final @Nullable NotificationReceiverValueResponse receiverValue;
 
     @OutputCustomType.Constructor({"receiverType","receiverValue"})
@@ -23,9 +29,15 @@ public final class NotificationEventReceiverResponse {
         this.receiverValue = receiverValue;
     }
 
+/**
+ * The type of the notification event receiver.
+ */
     public Optional<String> getReceiverType() {
         return Optional.ofNullable(this.receiverType);
     }
+/**
+ * The notification event receiver value.
+ */
     public Optional<NotificationReceiverValueResponse> getReceiverValue() {
         return Optional.ofNullable(this.receiverValue);
     }

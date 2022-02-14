@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A track selection condition. This property is reserved for future use, any value set on this property will be ignored.
+ */
 public final class LiveEventInputTrackSelectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LiveEventInputTrackSelectionArgs Empty = new LiveEventInputTrackSelectionArgs();
 
+    /**
+     * Comparing operation. This property is reserved for future use, any value set on this property will be ignored.
+     */
     @InputImport(name="operation")
     private final @Nullable Input<String> operation;
 
@@ -21,6 +27,9 @@ public final class LiveEventInputTrackSelectionArgs extends io.pulumi.resources.
         return this.operation == null ? Input.empty() : this.operation;
     }
 
+    /**
+     * Property name to select. This property is reserved for future use, any value set on this property will be ignored.
+     */
     @InputImport(name="property")
     private final @Nullable Input<String> property;
 
@@ -28,6 +37,9 @@ public final class LiveEventInputTrackSelectionArgs extends io.pulumi.resources.
         return this.property == null ? Input.empty() : this.property;
     }
 
+    /**
+     * Property value to select. This property is reserved for future use, any value set on this property will be ignored.
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

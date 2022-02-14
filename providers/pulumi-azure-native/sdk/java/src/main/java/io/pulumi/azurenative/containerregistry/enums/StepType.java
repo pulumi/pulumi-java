@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of the step.
+ */
     @EnumType
     public enum StepType {
+/**
+ * 
+ */
         Docker("Docker"),
+/**
+ * 
+ */
         FileTask("FileTask"),
+/**
+ * 
+ */
         EncodedTask("EncodedTask");
 
         private final String value;

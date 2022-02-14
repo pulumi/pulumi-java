@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.databoxedge.FileEventTriggerArgs;
 import io.pulumi.azurenative.databoxedge.outputs.FileSourceInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.RoleSinkInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
@@ -17,51 +16,222 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Trigger details.
+API Version: 2020-12-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### TriggerPut
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fileEventTrigger = new AzureNative.DataBoxEdge.FileEventTrigger("fileEventTrigger", new AzureNative.DataBoxEdge.FileEventTriggerArgs
+        {
+            CustomContextTag = "CustomContextTags-1235346475",
+            DeviceName = "testedgedevice",
+            Kind = "FileEvent",
+            Name = "trigger1",
+            ResourceGroupName = "GroupForEdgeAutomation",
+            SinkInfo = new AzureNative.DataBoxEdge.Inputs.RoleSinkInfoArgs
+            {
+                RoleId = "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/roles/role1",
+            },
+            SourceInfo = new AzureNative.DataBoxEdge.Inputs.FileSourceInfoArgs
+            {
+                ShareId = "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/shares/share1",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := databoxedge.NewFileEventTrigger(ctx, "fileEventTrigger", &databoxedge.FileEventTriggerArgs{
+			CustomContextTag:  pulumi.String("CustomContextTags-1235346475"),
+			DeviceName:        pulumi.String("testedgedevice"),
+			Kind:              pulumi.String("FileEvent"),
+			Name:              pulumi.String("trigger1"),
+			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
+			SinkInfo: &databoxedge.RoleSinkInfoArgs{
+				RoleId: pulumi.String("/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/roles/role1"),
+			},
+			SourceInfo: &databoxedge.FileSourceInfoArgs{
+				ShareId: pulumi.String("/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/shares/share1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const fileEventTrigger = new azure_native.databoxedge.FileEventTrigger("fileEventTrigger", {
+    customContextTag: "CustomContextTags-1235346475",
+    deviceName: "testedgedevice",
+    kind: "FileEvent",
+    name: "trigger1",
+    resourceGroupName: "GroupForEdgeAutomation",
+    sinkInfo: {
+        roleId: "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/roles/role1",
+    },
+    sourceInfo: {
+        shareId: "/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/shares/share1",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+file_event_trigger = azure_native.databoxedge.FileEventTrigger("fileEventTrigger",
+    custom_context_tag="CustomContextTags-1235346475",
+    device_name="testedgedevice",
+    kind="FileEvent",
+    name="trigger1",
+    resource_group_name="GroupForEdgeAutomation",
+    sink_info=azure_native.databoxedge.RoleSinkInfoArgs(
+        role_id="/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/roles/role1",
+    ),
+    source_info=azure_native.databoxedge.FileSourceInfoArgs(
+        share_id="/subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/shares/share1",
+    ))
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:databoxedge:FileEventTrigger trigger1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/triggers/trigger1 
+```
+
+ */
 @ResourceType(type="azure-native:databoxedge:FileEventTrigger")
 public class FileEventTrigger extends io.pulumi.resources.CustomResource {
+    /**
+     * A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
+     */
     @OutputExport(name="customContextTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> customContextTag;
 
+    /**
+     * @return A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
+     */
     public Output</* @Nullable */ String> getCustomContextTag() {
         return this.customContextTag;
     }
+    /**
+     * Trigger Kind.
+Expected value is 'FileEvent'.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return Trigger Kind.
+Expected value is 'FileEvent'.
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * The object name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The object name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Role sink info.
+     */
     @OutputExport(name="sinkInfo", type=RoleSinkInfoResponse.class, parameters={})
     private Output<RoleSinkInfoResponse> sinkInfo;
 
+    /**
+     * @return Role sink info.
+     */
     public Output<RoleSinkInfoResponse> getSinkInfo() {
         return this.sinkInfo;
     }
+    /**
+     * File event source details.
+     */
     @OutputExport(name="sourceInfo", type=FileSourceInfoResponse.class, parameters={})
     private Output<FileSourceInfoResponse> sourceInfo;
 
+    /**
+     * @return File event source details.
+     */
     public Output<FileSourceInfoResponse> getSourceInfo() {
         return this.sourceInfo;
     }
+    /**
+     * Trigger in DataBoxEdge Resource
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Trigger in DataBoxEdge Resource
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The hierarchical type of the object.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The hierarchical type of the object.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public FileEventTrigger(String name, FileEventTriggerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:databoxedge:FileEventTrigger", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -97,6 +267,14 @@ public class FileEventTrigger extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static FileEventTrigger get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FileEventTrigger(name, id, options);
     }

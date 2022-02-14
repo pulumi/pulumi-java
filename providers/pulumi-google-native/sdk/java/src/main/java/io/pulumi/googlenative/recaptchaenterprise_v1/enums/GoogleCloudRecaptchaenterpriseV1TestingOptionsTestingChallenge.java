@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
+ */
     @EnumType
     public enum GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge {
+/**
+ * Perform the normal risk analysis and return either nocaptcha or a challenge depending on risk and trust factors.
+ */
         TestingChallengeUnspecified("TESTING_CHALLENGE_UNSPECIFIED"),
+/**
+ * Challenge requests for this key always return a nocaptcha, which does not require a solution.
+ */
         Nocaptcha("NOCAPTCHA"),
+/**
+ * Challenge requests for this key always return an unsolvable challenge.
+ */
         UnsolvableChallenge("UNSOLVABLE_CHALLENGE");
 
         private final String value;

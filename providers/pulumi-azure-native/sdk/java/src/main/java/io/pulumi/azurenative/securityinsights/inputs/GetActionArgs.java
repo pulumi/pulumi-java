@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetActionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetActionArgs Empty = new GetActionArgs();
 
+    /**
+     * Action ID
+     */
     @InputImport(name="actionId", required=true)
     private final String actionId;
 
@@ -19,6 +25,9 @@ public final class GetActionArgs extends io.pulumi.resources.InvokeArgs {
         return this.actionId;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetActionArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Alert rule ID
+     */
     @InputImport(name="ruleId", required=true)
     private final String ruleId;
 
@@ -33,6 +45,9 @@ public final class GetActionArgs extends io.pulumi.resources.InvokeArgs {
         return this.ruleId;
     }
 
+    /**
+     * The name of the workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

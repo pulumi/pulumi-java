@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A bounding polygon for the detected image annotation.
+ */
 public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BoundingPolyArgs Empty = new BoundingPolyArgs();
 
+    /**
+     * A description of this polygon.
+     */
     @InputImport(name="label")
     private final @Nullable Input<String> label;
 
@@ -23,6 +29,9 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
         return this.label == null ? Input.empty() : this.label;
     }
 
+    /**
+     * List of the vertices of this polygon.
+     */
     @InputImport(name="vertices")
     private final @Nullable Input<List<VertexArgs>> vertices;
 

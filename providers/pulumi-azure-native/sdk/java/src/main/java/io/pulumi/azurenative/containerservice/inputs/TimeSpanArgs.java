@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The time span with start and end properties.
+ */
 public final class TimeSpanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TimeSpanArgs Empty = new TimeSpanArgs();
 
+    /**
+     * The end of a time span
+     */
     @InputImport(name="end")
     private final @Nullable Input<String> end;
 
@@ -21,6 +27,9 @@ public final class TimeSpanArgs extends io.pulumi.resources.ResourceArgs {
         return this.end == null ? Input.empty() : this.end;
     }
 
+    /**
+     * The start of a time span
+     */
     @InputImport(name="start")
     private final @Nullable Input<String> start;
 

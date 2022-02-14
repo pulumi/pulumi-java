@@ -11,10 +11,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class OperationByProviderRegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OperationByProviderRegistrationArgs Empty = new OperationByProviderRegistrationArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="contents", required=true)
     private final Input<List<OperationsDefinitionArgs>> contents;
 
@@ -22,6 +28,9 @@ public final class OperationByProviderRegistrationArgs extends io.pulumi.resourc
         return this.contents;
     }
 
+    /**
+     * The name of the resource provider hosted within ProviderHub.
+     */
     @InputImport(name="providerNamespace", required=true)
     private final Input<String> providerNamespace;
 

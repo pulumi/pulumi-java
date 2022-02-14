@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A message representing a measurement.
+ */
 public final class GoogleCloudMlV1__MeasurementArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudMlV1__MeasurementArgs Empty = new GoogleCloudMlV1__MeasurementArgs();
 
+    /**
+     * Provides a list of metrics that act as inputs into the objective function.
+     */
     @InputImport(name="metrics")
     private final @Nullable Input<List<GoogleCloudMlV1_Measurement_MetricArgs>> metrics;
 
@@ -23,6 +29,9 @@ public final class GoogleCloudMlV1__MeasurementArgs extends io.pulumi.resources.
         return this.metrics == null ? Input.empty() : this.metrics;
     }
 
+    /**
+     * The number of steps a machine learning model has been trained for. Must be non-negative.
+     */
     @InputImport(name="stepCount")
     private final @Nullable Input<String> stepCount;
 

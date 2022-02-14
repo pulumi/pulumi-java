@@ -12,9 +12,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UpgradeOccurrenceResponse {
+/**
+ * Metadata about the upgrade for available for the specific operating system for the resource_url. This allows efficient filtering, as well as making it easier to use the occurrence.
+ */
     private final UpgradeDistributionResponse distribution;
+/**
+ * Required for non-Windows OS. The package this Upgrade is for.
+ */
     private final String $package;
+/**
+ * Required for non-Windows OS. The version of the package in a machine + human readable form.
+ */
     private final VersionResponse parsedVersion;
+/**
+ * Required for Windows OS. Represents the metadata about the Windows update.
+ */
     private final WindowsUpdateResponse windowsUpdate;
 
     @OutputCustomType.Constructor({"distribution","$package","parsedVersion","windowsUpdate"})
@@ -29,15 +41,27 @@ public final class UpgradeOccurrenceResponse {
         this.windowsUpdate = Objects.requireNonNull(windowsUpdate);
     }
 
+/**
+ * Metadata about the upgrade for available for the specific operating system for the resource_url. This allows efficient filtering, as well as making it easier to use the occurrence.
+ */
     public UpgradeDistributionResponse getDistribution() {
         return this.distribution;
     }
+/**
+ * Required for non-Windows OS. The package this Upgrade is for.
+ */
     public String get$package() {
         return this.$package;
     }
+/**
+ * Required for non-Windows OS. The version of the package in a machine + human readable form.
+ */
     public VersionResponse getParsedVersion() {
         return this.parsedVersion;
     }
+/**
+ * Required for Windows OS. Represents the metadata about the Windows update.
+ */
     public WindowsUpdateResponse getWindowsUpdate() {
         return this.windowsUpdate;
     }

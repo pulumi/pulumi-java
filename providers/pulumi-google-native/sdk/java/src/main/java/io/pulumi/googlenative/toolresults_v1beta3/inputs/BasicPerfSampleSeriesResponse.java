@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Encapsulates the metadata for basic sample series represented by a line chart
+ */
 public final class BasicPerfSampleSeriesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BasicPerfSampleSeriesResponse Empty = new BasicPerfSampleSeriesResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="perfMetricType", required=true)
     private final String perfMetricType;
 
@@ -19,6 +25,9 @@ public final class BasicPerfSampleSeriesResponse extends io.pulumi.resources.Inv
         return this.perfMetricType;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="perfUnit", required=true)
     private final String perfUnit;
 
@@ -26,6 +35,9 @@ public final class BasicPerfSampleSeriesResponse extends io.pulumi.resources.Inv
         return this.perfUnit;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="sampleSeriesLabel", required=true)
     private final String sampleSeriesLabel;
 

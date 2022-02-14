@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A PublicKey describes a public key.
+ */
 public final class PublicKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PublicKeyResponse Empty = new PublicKeyResponse();
 
+    /**
+     * The format of the public key.
+     */
     @InputImport(name="format", required=true)
     private final String format;
 
@@ -19,6 +25,9 @@ public final class PublicKeyResponse extends io.pulumi.resources.InvokeArgs {
         return this.format;
     }
 
+    /**
+     * A public key. The padding and encoding must match with the `KeyFormat` value specified for the `format` field.
+     */
     @InputImport(name="key", required=true)
     private final String key;
 

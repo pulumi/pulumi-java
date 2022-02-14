@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Deployment settings payload
+ */
 public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeploymentSettingsArgs Empty = new DeploymentSettingsArgs();
 
+    /**
+     * Required CPU, basic tier should be 1, standard tier should be in range (1, 4)
+     */
     @InputImport(name="cpu")
     private final @Nullable Input<Integer> cpu;
 
@@ -25,6 +31,9 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.cpu == null ? Input.empty() : this.cpu;
     }
 
+    /**
+     * Collection of environment variables
+     */
     @InputImport(name="environmentVariables")
     private final @Nullable Input<Map<String,String>> environmentVariables;
 
@@ -32,6 +41,9 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
     }
 
+    /**
+     * JVM parameter
+     */
     @InputImport(name="jvmOptions")
     private final @Nullable Input<String> jvmOptions;
 
@@ -39,6 +51,9 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.jvmOptions == null ? Input.empty() : this.jvmOptions;
     }
 
+    /**
+     * Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8)
+     */
     @InputImport(name="memoryInGB")
     private final @Nullable Input<Integer> memoryInGB;
 
@@ -46,6 +61,9 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.memoryInGB == null ? Input.empty() : this.memoryInGB;
     }
 
+    /**
+     * The path to the .NET executable relative to zip root
+     */
     @InputImport(name="netCoreMainEntryPath")
     private final @Nullable Input<String> netCoreMainEntryPath;
 
@@ -53,6 +71,9 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.netCoreMainEntryPath == null ? Input.empty() : this.netCoreMainEntryPath;
     }
 
+    /**
+     * Runtime version
+     */
     @InputImport(name="runtimeVersion")
     private final @Nullable Input<Either<String,RuntimeVersion>> runtimeVersion;
 

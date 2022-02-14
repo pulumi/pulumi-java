@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.documentdb.CassandraResourceCassandraViewArgs;
 import io.pulumi.azurenative.documentdb.outputs.CassandraViewGetPropertiesResponseOptions;
 import io.pulumi.azurenative.documentdb.outputs.CassandraViewGetPropertiesResponseResource;
 import io.pulumi.azurenative.documentdb.outputs.ManagedServiceIdentityResponse;
@@ -18,51 +17,209 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * An Azure Cosmos DB Cassandra view.
+API Version: 2021-07-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### CosmosDBCassandraViewCreateUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cassandraResourceCassandraView = new AzureNative.DocumentDB.CassandraResourceCassandraView("cassandraResourceCassandraView", new AzureNative.DocumentDB.CassandraResourceCassandraViewArgs
+        {
+            AccountName = "ddb1",
+            KeyspaceName = "keyspacename",
+            Options = ,
+            Resource = new AzureNative.DocumentDB.Inputs.CassandraViewResourceArgs
+            {
+                Id = "viewname",
+                ViewDefinition = "SELECT columna, columnb, columnc FROM keyspacename.srctablename WHERE columna IS NOT NULL AND columnc IS NOT NULL PRIMARY KEY (columnc, columna)",
+            },
+            ResourceGroupName = "rg1",
+            Tags = ,
+            ViewName = "viewname",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := documentdb.NewCassandraResourceCassandraView(ctx, "cassandraResourceCassandraView", &documentdb.CassandraResourceCassandraViewArgs{
+			AccountName:  pulumi.String("ddb1"),
+			KeyspaceName: pulumi.String("keyspacename"),
+			Options:      nil,
+			Resource: &documentdb.CassandraViewResourceArgs{
+				Id:             pulumi.String("viewname"),
+				ViewDefinition: pulumi.String("SELECT columna, columnb, columnc FROM keyspacename.srctablename WHERE columna IS NOT NULL AND columnc IS NOT NULL PRIMARY KEY (columnc, columna)"),
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			Tags:              nil,
+			ViewName:          pulumi.String("viewname"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const cassandraResourceCassandraView = new azure_native.documentdb.CassandraResourceCassandraView("cassandraResourceCassandraView", {
+    accountName: "ddb1",
+    keyspaceName: "keyspacename",
+    options: {},
+    resource: {
+        id: "viewname",
+        viewDefinition: "SELECT columna, columnb, columnc FROM keyspacename.srctablename WHERE columna IS NOT NULL AND columnc IS NOT NULL PRIMARY KEY (columnc, columna)",
+    },
+    resourceGroupName: "rg1",
+    tags: {},
+    viewName: "viewname",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+cassandra_resource_cassandra_view = azure_native.documentdb.CassandraResourceCassandraView("cassandraResourceCassandraView",
+    account_name="ddb1",
+    keyspace_name="keyspacename",
+    options=azure_native.documentdb.CreateUpdateOptionsArgs(),
+    resource=azure_native.documentdb.CassandraViewResourceArgs(
+        id="viewname",
+        view_definition="SELECT columna, columnb, columnc FROM keyspacename.srctablename WHERE columna IS NOT NULL AND columnc IS NOT NULL PRIMARY KEY (columnc, columna)",
+    ),
+    resource_group_name="rg1",
+    tags={},
+    view_name="viewname")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:documentdb:CassandraResourceCassandraView viewname /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/cassandraKeyspaces/keyspacename/views/viewname 
+```
+
+ */
 @ResourceType(type="azure-native:documentdb:CassandraResourceCassandraView")
 public class CassandraResourceCassandraView extends io.pulumi.resources.CustomResource {
+    /**
+     * Identity for the resource.
+     */
     @OutputExport(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
+    /**
+     * @return Identity for the resource.
+     */
     public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * The location of the resource group to which the resource belongs.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The location of the resource group to which the resource belongs.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the ARM resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the ARM resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * 
+     */
     @OutputExport(name="options", type=CassandraViewGetPropertiesResponseOptions.class, parameters={})
     private Output</* @Nullable */ CassandraViewGetPropertiesResponseOptions> options;
 
     public Output</* @Nullable */ CassandraViewGetPropertiesResponseOptions> getOptions() {
         return this.options;
     }
+    /**
+     * 
+     */
     @OutputExport(name="resource", type=CassandraViewGetPropertiesResponseResource.class, parameters={})
     private Output</* @Nullable */ CassandraViewGetPropertiesResponseResource> resource;
 
     public Output</* @Nullable */ CassandraViewGetPropertiesResponseResource> getResource() {
         return this.resource;
     }
+    /**
+     * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of Azure resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of Azure resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public CassandraResourceCassandraView(String name, CassandraResourceCassandraViewArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:documentdb:CassandraResourceCassandraView", name, args == null ? CassandraResourceCassandraViewArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -82,6 +239,14 @@ public class CassandraResourceCassandraView extends io.pulumi.resources.CustomRe
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static CassandraResourceCassandraView get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CassandraResourceCassandraView(name, id, options);
     }

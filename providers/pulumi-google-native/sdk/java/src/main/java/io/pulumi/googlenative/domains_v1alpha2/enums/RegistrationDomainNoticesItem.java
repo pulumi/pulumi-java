@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum RegistrationDomainNoticesItem {
+/**
+ * The notice is undefined.
+ */
         DomainNoticeUnspecified("DOMAIN_NOTICE_UNSPECIFIED"),
+/**
+ * Indicates that the domain is preloaded on the HTTP Strict Transport Security list in browsers. Serving a website on such domain requires an SSL certificate. For details, see [how to get an SSL certificate](https://support.google.com/domains/answer/7638036).
+ */
         HstsPreloaded("HSTS_PRELOADED");
 
         private final String value;

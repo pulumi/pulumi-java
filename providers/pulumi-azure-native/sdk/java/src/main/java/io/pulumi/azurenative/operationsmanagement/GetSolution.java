@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSolution {
+/**
+ * The container for solution.
+API Version: 2015-11-01-preview.
+ *
+ * The container for solution.
+ */
     public static CompletableFuture<GetSolutionResult> invokeAsync(GetSolutionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationsmanagement:getSolution", TypeShape.of(GetSolutionResult.class), args == null ? GetSolutionArgs.Empty : args, Utilities.withVersion(options));
     }

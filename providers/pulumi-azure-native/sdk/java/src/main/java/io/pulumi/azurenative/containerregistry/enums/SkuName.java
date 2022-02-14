@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The SKU name of the container registry. Required for registry creation.
+ */
     @EnumType
     public enum SkuName {
+/**
+ * 
+ */
         Classic("Classic"),
+/**
+ * 
+ */
         Basic("Basic"),
+/**
+ * 
+ */
         Standard("Standard"),
+/**
+ * 
+ */
         Premium("Premium");
 
         private final String value;

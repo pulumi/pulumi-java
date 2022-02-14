@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetOpenIdConnectProviderArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetOpenIdConnectProviderArgs Empty = new GetOpenIdConnectProviderArgs();
 
+    /**
+     * Identifier of the OpenID Connect Provider.
+     */
     @InputImport(name="opid", required=true)
     private final String opid;
 
@@ -19,6 +25,9 @@ public final class GetOpenIdConnectProviderArgs extends io.pulumi.resources.Invo
         return this.opid;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetOpenIdConnectProviderArgs extends io.pulumi.resources.Invo
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

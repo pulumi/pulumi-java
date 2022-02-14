@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of registration definition inside registration assignment.
+ */
 public final class RegistrationAssignmentPropertiesResponseProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final RegistrationAssignmentPropertiesResponseProperties Empty = new RegistrationAssignmentPropertiesResponseProperties();
 
+    /**
+     * Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
+     */
     @InputImport(name="authorizations")
     private final @Nullable List<AuthorizationResponse> authorizations;
 
@@ -23,6 +29,9 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
         return this.authorizations == null ? List.of() : this.authorizations;
     }
 
+    /**
+     * Description of the registration definition.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -30,6 +39,9 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Id of the managedBy tenant.
+     */
     @InputImport(name="managedByTenantId")
     private final @Nullable String managedByTenantId;
 
@@ -37,6 +49,9 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
         return this.managedByTenantId == null ? Optional.empty() : Optional.ofNullable(this.managedByTenantId);
     }
 
+    /**
+     * Name of the managedBy tenant.
+     */
     @InputImport(name="managedByTenantName")
     private final @Nullable String managedByTenantName;
 
@@ -44,6 +59,9 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
         return this.managedByTenantName == null ? Optional.empty() : Optional.ofNullable(this.managedByTenantName);
     }
 
+    /**
+     * Id of the home tenant.
+     */
     @InputImport(name="manageeTenantId")
     private final @Nullable String manageeTenantId;
 
@@ -51,6 +69,9 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
         return this.manageeTenantId == null ? Optional.empty() : Optional.ofNullable(this.manageeTenantId);
     }
 
+    /**
+     * Name of the home tenant.
+     */
     @InputImport(name="manageeTenantName")
     private final @Nullable String manageeTenantName;
 
@@ -58,6 +79,9 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
         return this.manageeTenantName == null ? Optional.empty() : Optional.ofNullable(this.manageeTenantName);
     }
 
+    /**
+     * Current state of the registration definition.
+     */
     @InputImport(name="provisioningState")
     private final @Nullable String provisioningState;
 
@@ -65,6 +89,9 @@ public final class RegistrationAssignmentPropertiesResponseProperties extends io
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
+    /**
+     * Name of the registration definition.
+     */
     @InputImport(name="registrationDefinitionName")
     private final @Nullable String registrationDefinitionName;
 

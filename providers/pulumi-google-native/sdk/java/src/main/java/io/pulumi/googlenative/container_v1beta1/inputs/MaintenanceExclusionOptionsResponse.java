@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Represents the Maintenance exclusion option.
+ */
 public final class MaintenanceExclusionOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MaintenanceExclusionOptionsResponse Empty = new MaintenanceExclusionOptionsResponse();
 
+    /**
+     * Scope specifies the upgrade scope which upgrades are blocked by the exclusion.
+     */
     @InputImport(name="scope", required=true)
     private final String scope;
 

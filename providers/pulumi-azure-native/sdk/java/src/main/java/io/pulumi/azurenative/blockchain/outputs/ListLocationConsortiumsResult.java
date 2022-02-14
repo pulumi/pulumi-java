@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListLocationConsortiumsResult {
+/**
+ * Gets or sets the collection of consortiums.
+ */
     private final @Nullable List<ConsortiumResponse> value;
 
     @OutputCustomType.Constructor({"value"})
@@ -18,6 +21,9 @@ public final class ListLocationConsortiumsResult {
         this.value = value;
     }
 
+/**
+ * Gets or sets the collection of consortiums.
+ */
     public List<ConsortiumResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

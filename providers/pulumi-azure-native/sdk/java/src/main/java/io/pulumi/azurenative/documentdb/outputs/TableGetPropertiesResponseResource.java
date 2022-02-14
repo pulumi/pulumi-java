@@ -10,9 +10,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TableGetPropertiesResponseResource {
+/**
+ * A system generated property representing the resource etag required for optimistic concurrency control.
+ */
     private final String etag;
+/**
+ * Name of the Cosmos DB table
+ */
     private final String id;
+/**
+ * A system generated property. A unique identifier.
+ */
     private final String rid;
+/**
+ * A system generated property that denotes the last updated timestamp of the resource.
+ */
     private final Double ts;
 
     @OutputCustomType.Constructor({"etag","id","rid","ts"})
@@ -27,15 +39,27 @@ public final class TableGetPropertiesResponseResource {
         this.ts = Objects.requireNonNull(ts);
     }
 
+/**
+ * A system generated property representing the resource etag required for optimistic concurrency control.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * Name of the Cosmos DB table
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * A system generated property. A unique identifier.
+ */
     public String getRid() {
         return this.rid;
     }
+/**
+ * A system generated property that denotes the last updated timestamp of the resource.
+ */
     public Double getTs() {
         return this.ts;
     }

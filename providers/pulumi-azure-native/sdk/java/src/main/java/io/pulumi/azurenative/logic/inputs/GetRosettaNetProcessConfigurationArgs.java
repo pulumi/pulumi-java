@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetRosettaNetProcessConfigurationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRosettaNetProcessConfigurationArgs Empty = new GetRosettaNetProcessConfigurationArgs();
 
+    /**
+     * The integration account name.
+     */
     @InputImport(name="integrationAccountName", required=true)
     private final String integrationAccountName;
 
@@ -19,6 +25,9 @@ public final class GetRosettaNetProcessConfigurationArgs extends io.pulumi.resou
         return this.integrationAccountName;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetRosettaNetProcessConfigurationArgs extends io.pulumi.resou
         return this.resourceGroupName;
     }
 
+    /**
+     * The integration account RosettaNetProcessConfiguration name.
+     */
     @InputImport(name="rosettaNetProcessConfigurationName", required=true)
     private final String rosettaNetProcessConfigurationName;
 

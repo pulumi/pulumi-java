@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobArgs Empty = new JobArgs();
 
+    /**
+     * The name and identifier for the Job.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -24,6 +30,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Additional attributes of the entity.
+     */
     @InputImport(name="properties", required=true)
     private final Input<Either<CommandJobArgs,SweepJobArgs>> properties;
 
@@ -31,6 +40,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -38,6 +50,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of Azure Machine Learning workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

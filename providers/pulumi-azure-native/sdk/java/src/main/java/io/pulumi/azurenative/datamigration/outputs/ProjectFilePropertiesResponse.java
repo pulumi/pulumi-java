@@ -12,10 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ProjectFilePropertiesResponse {
+/**
+ * Optional File extension. If submitted it should not have a leading period and must match the extension from filePath.
+ */
     private final @Nullable String extension;
+/**
+ * Relative path of this file resource. This property can be set when creating or updating the file resource.
+ */
     private final @Nullable String filePath;
+/**
+ * Modification DateTime.
+ */
     private final String lastModified;
+/**
+ * File content type. This property can be modified to reflect the file content type.
+ */
     private final @Nullable String mediaType;
+/**
+ * File size.
+ */
     private final Double size;
 
     @OutputCustomType.Constructor({"extension","filePath","lastModified","mediaType","size"})
@@ -32,18 +47,33 @@ public final class ProjectFilePropertiesResponse {
         this.size = Objects.requireNonNull(size);
     }
 
+/**
+ * Optional File extension. If submitted it should not have a leading period and must match the extension from filePath.
+ */
     public Optional<String> getExtension() {
         return Optional.ofNullable(this.extension);
     }
+/**
+ * Relative path of this file resource. This property can be set when creating or updating the file resource.
+ */
     public Optional<String> getFilePath() {
         return Optional.ofNullable(this.filePath);
     }
+/**
+ * Modification DateTime.
+ */
     public String getLastModified() {
         return this.lastModified;
     }
+/**
+ * File content type. This property can be modified to reflect the file content type.
+ */
     public Optional<String> getMediaType() {
         return Optional.ofNullable(this.mediaType);
     }
+/**
+ * File size.
+ */
     public Double getSize() {
         return this.size;
     }

@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEnvgroupAttachment {
+/**
+ * Gets an environment group attachment.
+ */
     public static CompletableFuture<GetEnvgroupAttachmentResult> invokeAsync(GetEnvgroupAttachmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getEnvgroupAttachment", TypeShape.of(GetEnvgroupAttachmentResult.class), args == null ? GetEnvgroupAttachmentArgs.Empty : args, Utilities.withVersion(options));
     }

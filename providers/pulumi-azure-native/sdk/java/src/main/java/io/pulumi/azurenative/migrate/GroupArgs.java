@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GroupArgs Empty = new GroupArgs();
 
+    /**
+     * For optimistic concurrency control.
+     */
     @InputImport(name="eTag")
     private final @Nullable Input<String> eTag;
 
@@ -22,6 +28,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.eTag == null ? Input.empty() : this.eTag;
     }
 
+    /**
+     * Unique name of a group within a project.
+     */
     @InputImport(name="groupName")
     private final @Nullable Input<String> groupName;
 
@@ -29,6 +38,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.groupName == null ? Input.empty() : this.groupName;
     }
 
+    /**
+     * Name of the Azure Migrate project.
+     */
     @InputImport(name="projectName", required=true)
     private final Input<String> projectName;
 
@@ -36,6 +48,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.projectName;
     }
 
+    /**
+     * Properties of the group.
+     */
     @InputImport(name="properties", required=true)
     private final Input<GroupPropertiesArgs> properties;
 
@@ -43,6 +58,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
+    /**
+     * Name of the Azure Resource Group that project is part of.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

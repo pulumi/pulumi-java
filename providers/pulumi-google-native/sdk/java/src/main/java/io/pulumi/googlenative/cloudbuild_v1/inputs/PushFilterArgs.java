@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Push contains filter properties for matching GitHub git pushes.
+ */
 public final class PushFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PushFilterArgs Empty = new PushFilterArgs();
 
+    /**
+     * Regexes matching branches to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+     */
     @InputImport(name="branch")
     private final @Nullable Input<String> branch;
 
@@ -22,6 +28,9 @@ public final class PushFilterArgs extends io.pulumi.resources.ResourceArgs {
         return this.branch == null ? Input.empty() : this.branch;
     }
 
+    /**
+     * When true, only trigger a build if the revision regex does NOT match the git_ref regex.
+     */
     @InputImport(name="invertRegex")
     private final @Nullable Input<Boolean> invertRegex;
 
@@ -29,6 +38,9 @@ public final class PushFilterArgs extends io.pulumi.resources.ResourceArgs {
         return this.invertRegex == null ? Input.empty() : this.invertRegex;
     }
 
+    /**
+     * Regexes matching tags to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+     */
     @InputImport(name="tag")
     private final @Nullable Input<String> tag;
 

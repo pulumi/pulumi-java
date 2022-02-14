@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * vCenter properties.
+ */
 public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VCenterPropertiesResponse Empty = new VCenterPropertiesResponse();
 
+    /**
+     * The VCenter discovery status.
+     */
     @InputImport(name="discoveryStatus")
     private final @Nullable String discoveryStatus;
 
@@ -23,6 +29,9 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.discoveryStatus == null ? Optional.empty() : Optional.ofNullable(this.discoveryStatus);
     }
 
+    /**
+     * The ARM resource name of the fabric containing this VCenter.
+     */
     @InputImport(name="fabricArmResourceName")
     private final @Nullable String fabricArmResourceName;
 
@@ -30,6 +39,9 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.fabricArmResourceName == null ? Optional.empty() : Optional.ofNullable(this.fabricArmResourceName);
     }
 
+    /**
+     * Friendly name of the vCenter.
+     */
     @InputImport(name="friendlyName")
     private final @Nullable String friendlyName;
 
@@ -37,6 +49,9 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
+    /**
+     * The health errors for this VCenter.
+     */
     @InputImport(name="healthErrors")
     private final @Nullable List<HealthErrorResponse> healthErrors;
 
@@ -44,6 +59,9 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.healthErrors == null ? List.of() : this.healthErrors;
     }
 
+    /**
+     * The infrastructure Id of vCenter.
+     */
     @InputImport(name="infrastructureId")
     private final @Nullable String infrastructureId;
 
@@ -51,6 +69,9 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.infrastructureId == null ? Optional.empty() : Optional.ofNullable(this.infrastructureId);
     }
 
+    /**
+     * VCenter internal ID.
+     */
     @InputImport(name="internalId")
     private final @Nullable String internalId;
 
@@ -58,6 +79,9 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.internalId == null ? Optional.empty() : Optional.ofNullable(this.internalId);
     }
 
+    /**
+     * The IP address of the vCenter.
+     */
     @InputImport(name="ipAddress")
     private final @Nullable String ipAddress;
 
@@ -65,6 +89,9 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 
+    /**
+     * The time when the last heartbeat was received by vCenter.
+     */
     @InputImport(name="lastHeartbeat")
     private final @Nullable String lastHeartbeat;
 
@@ -72,6 +99,9 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.lastHeartbeat == null ? Optional.empty() : Optional.ofNullable(this.lastHeartbeat);
     }
 
+    /**
+     * The port number for discovery.
+     */
     @InputImport(name="port")
     private final @Nullable String port;
 
@@ -79,6 +109,9 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
+    /**
+     * The process server Id.
+     */
     @InputImport(name="processServerId")
     private final @Nullable String processServerId;
 
@@ -86,6 +119,9 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.processServerId == null ? Optional.empty() : Optional.ofNullable(this.processServerId);
     }
 
+    /**
+     * The account Id which has privileges to discover the vCenter.
+     */
     @InputImport(name="runAsAccountId")
     private final @Nullable String runAsAccountId;
 

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a cloud service Extension.
+ */
 public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExtensionArgs Empty = new ExtensionArgs();
 
+    /**
+     * The name of the extension.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -22,6 +28,9 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Extension Properties.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<CloudServiceExtensionPropertiesArgs> properties;
 

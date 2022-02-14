@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListGlobalUserEnvironments {
+/**
+ * Represents the list of environments owned by a user
+API Version: 2018-10-15.
+ *
+ * Represents the list of environments owned by a user
+ */
     public static CompletableFuture<ListGlobalUserEnvironmentsResult> invokeAsync(ListGlobalUserEnvironmentsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:listGlobalUserEnvironments", TypeShape.of(ListGlobalUserEnvironmentsResult.class), args == null ? ListGlobalUserEnvironmentsArgs.Empty : args, Utilities.withVersion(options));
     }

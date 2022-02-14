@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SensorArgs Empty = new SensorArgs();
 
+    /**
+     * Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
+     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 
@@ -24,6 +30,9 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
         return this.scope;
     }
 
+    /**
+     * Name of the IoT sensor
+     */
     @InputImport(name="sensorName")
     private final @Nullable Input<String> sensorName;
 
@@ -31,6 +40,9 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
         return this.sensorName == null ? Input.empty() : this.sensorName;
     }
 
+    /**
+     * Type of sensor
+     */
     @InputImport(name="sensorType")
     private final @Nullable Input<Either<String,SensorType>> sensorType;
 
@@ -38,6 +50,9 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
         return this.sensorType == null ? Input.empty() : this.sensorType;
     }
 
+    /**
+     * TI Automatic mode status of the IoT sensor
+     */
     @InputImport(name="tiAutomaticUpdates")
     private final @Nullable Input<Boolean> tiAutomaticUpdates;
 
@@ -45,6 +60,9 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
         return this.tiAutomaticUpdates == null ? Input.empty() : this.tiAutomaticUpdates;
     }
 
+    /**
+     * Zone of the IoT sensor
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

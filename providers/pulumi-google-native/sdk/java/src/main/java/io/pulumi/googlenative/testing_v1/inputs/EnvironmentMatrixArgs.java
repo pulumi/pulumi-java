@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The matrix of environments in which the test is to be executed.
+ */
 public final class EnvironmentMatrixArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentMatrixArgs Empty = new EnvironmentMatrixArgs();
 
+    /**
+     * A list of Android devices; the test will be run only on the specified devices.
+     */
     @InputImport(name="androidDeviceList")
     private final @Nullable Input<AndroidDeviceListArgs> androidDeviceList;
 
@@ -23,6 +29,9 @@ public final class EnvironmentMatrixArgs extends io.pulumi.resources.ResourceArg
         return this.androidDeviceList == null ? Input.empty() : this.androidDeviceList;
     }
 
+    /**
+     * A matrix of Android devices.
+     */
     @InputImport(name="androidMatrix")
     private final @Nullable Input<AndroidMatrixArgs> androidMatrix;
 
@@ -30,6 +39,9 @@ public final class EnvironmentMatrixArgs extends io.pulumi.resources.ResourceArg
         return this.androidMatrix == null ? Input.empty() : this.androidMatrix;
     }
 
+    /**
+     * A list of iOS devices.
+     */
     @InputImport(name="iosDeviceList")
     private final @Nullable Input<IosDeviceListArgs> iosDeviceList;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Metadata for the text.
+ */
 public final class GoogleCloudDatalabelingV1beta1TextMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatalabelingV1beta1TextMetadataResponse Empty = new GoogleCloudDatalabelingV1beta1TextMetadataResponse();
 
+    /**
+     * The language of this text, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US.
+     */
     @InputImport(name="languageCode", required=true)
     private final String languageCode;
 

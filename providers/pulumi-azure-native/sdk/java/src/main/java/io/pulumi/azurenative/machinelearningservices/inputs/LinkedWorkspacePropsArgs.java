@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * LinkedWorkspace specific properties.
+ */
 public final class LinkedWorkspacePropsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LinkedWorkspacePropsArgs Empty = new LinkedWorkspacePropsArgs();
 
+    /**
+     * ResourceId of the link target of the linked workspace.
+     */
     @InputImport(name="linkedWorkspaceResourceId")
     private final @Nullable Input<String> linkedWorkspaceResourceId;
 
@@ -21,6 +27,9 @@ public final class LinkedWorkspacePropsArgs extends io.pulumi.resources.Resource
         return this.linkedWorkspaceResourceId == null ? Input.empty() : this.linkedWorkspaceResourceId;
     }
 
+    /**
+     * ResourceId of the user assigned identity for the linked workspace.
+     */
     @InputImport(name="userAssignedIdentityResourceId")
     private final @Nullable Input<String> userAssignedIdentityResourceId;
 

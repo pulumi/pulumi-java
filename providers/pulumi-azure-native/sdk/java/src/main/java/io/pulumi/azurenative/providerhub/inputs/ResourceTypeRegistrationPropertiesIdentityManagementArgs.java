@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResourceTypeRegistrationPropertiesIdentityManagementArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceTypeRegistrationPropertiesIdentityManagementArgs Empty = new ResourceTypeRegistrationPropertiesIdentityManagementArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="applicationId")
     private final @Nullable Input<String> applicationId;
 
@@ -23,6 +29,9 @@ public final class ResourceTypeRegistrationPropertiesIdentityManagementArgs exte
         return this.applicationId == null ? Input.empty() : this.applicationId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,IdentityManagementTypes>> type;
 

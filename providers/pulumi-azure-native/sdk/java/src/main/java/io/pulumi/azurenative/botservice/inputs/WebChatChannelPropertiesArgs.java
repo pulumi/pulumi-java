@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The parameters to provide for the Web Chat channel.
+ */
 public final class WebChatChannelPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebChatChannelPropertiesArgs Empty = new WebChatChannelPropertiesArgs();
 
+    /**
+     * The list of Web Chat sites
+     */
     @InputImport(name="sites")
     private final @Nullable Input<List<WebChatSiteArgs>> sites;
 

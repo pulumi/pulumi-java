@@ -14,16 +14,49 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAgentPoolResult {
+/**
+ * The count of agent machine
+ */
     private final @Nullable Integer count;
+/**
+ * The resource ID.
+ */
     private final String id;
+/**
+ * The location of the resource. This cannot be changed after the resource is created.
+ */
     private final String location;
+/**
+ * The name of the resource.
+ */
     private final String name;
+/**
+ * The OS of agent machine
+ */
     private final @Nullable String os;
+/**
+ * The provisioning state of this agent pool
+ */
     private final String provisioningState;
+/**
+ * Metadata pertaining to creation and last modification of the resource.
+ */
     private final SystemDataResponse systemData;
+/**
+ * The tags of the resource.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * The Tier of agent machine
+ */
     private final @Nullable String tier;
+/**
+ * The type of the resource.
+ */
     private final String type;
+/**
+ * The Virtual Network Subnet Resource Id of the agent machine
+ */
     private final @Nullable String virtualNetworkSubnetResourceId;
 
     @OutputCustomType.Constructor({"count","id","location","name","os","provisioningState","systemData","tags","tier","type","virtualNetworkSubnetResourceId"})
@@ -52,36 +85,69 @@ public final class GetAgentPoolResult {
         this.virtualNetworkSubnetResourceId = virtualNetworkSubnetResourceId;
     }
 
+/**
+ * The count of agent machine
+ */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
+/**
+ * The resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The location of the resource. This cannot be changed after the resource is created.
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * The name of the resource.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The OS of agent machine
+ */
     public Optional<String> getOs() {
         return Optional.ofNullable(this.os);
     }
+/**
+ * The provisioning state of this agent pool
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Metadata pertaining to creation and last modification of the resource.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * The tags of the resource.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * The Tier of agent machine
+ */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }
+/**
+ * The type of the resource.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * The Virtual Network Subnet Resource Id of the agent machine
+ */
     public Optional<String> getVirtualNetworkSubnetResourceId() {
         return Optional.ofNullable(this.virtualNetworkSubnetResourceId);
     }

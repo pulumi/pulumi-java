@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetManagementGroupSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetManagementGroupSubscriptionArgs Empty = new GetManagementGroupSubscriptionArgs();
 
+    /**
+     * Management Group ID.
+     */
     @InputImport(name="groupId", required=true)
     private final String groupId;
 
@@ -21,6 +27,9 @@ public final class GetManagementGroupSubscriptionArgs extends io.pulumi.resource
         return this.groupId;
     }
 
+    /**
+     * Subscription ID.
+     */
     @InputImport(name="subscriptionId")
     private final @Nullable String subscriptionId;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSecretValue {
+/**
+ * This type describes a value of a secret resource. The name of this resource is the version identifier corresponding to this secret value.
+API Version: 2018-09-01-preview.
+ *
+ * This type describes a value of a secret resource. The name of this resource is the version identifier corresponding to this secret value.
+ */
     public static CompletableFuture<GetSecretValueResult> invokeAsync(GetSecretValueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getSecretValue", TypeShape.of(GetSecretValueResult.class), args == null ? GetSecretValueArgs.Empty : args, Utilities.withVersion(options));
     }

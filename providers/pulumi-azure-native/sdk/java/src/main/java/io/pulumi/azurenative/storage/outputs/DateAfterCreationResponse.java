@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DateAfterCreationResponse {
+/**
+ * Value indicating the age in days after creation
+ */
     private final Double daysAfterCreationGreaterThan;
 
     @OutputCustomType.Constructor({"daysAfterCreationGreaterThan"})
@@ -16,6 +19,9 @@ public final class DateAfterCreationResponse {
         this.daysAfterCreationGreaterThan = Objects.requireNonNull(daysAfterCreationGreaterThan);
     }
 
+/**
+ * Value indicating the age in days after creation
+ */
     public Double getDaysAfterCreationGreaterThan() {
         return this.daysAfterCreationGreaterThan;
     }

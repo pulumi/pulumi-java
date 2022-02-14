@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The content of an HL7v2 message in a structured format.
+ */
 public final class ParsedDataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ParsedDataResponse Empty = new ParsedDataResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="segments", required=true)
     private final List<SegmentResponse> segments;
 

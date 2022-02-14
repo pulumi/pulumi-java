@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Details of the On Premise resource that was assessed
+ */
 public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OnPremiseResourceDetailsArgs Empty = new OnPremiseResourceDetailsArgs();
 
+    /**
+     * The name of the machine
+     */
     @InputImport(name="machineName", required=true)
     private final Input<String> machineName;
 
@@ -20,6 +26,10 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
         return this.machineName;
     }
 
+    /**
+     * The platform where the assessed resource resides
+Expected value is 'OnPremise'.
+     */
     @InputImport(name="source", required=true)
     private final Input<String> source;
 
@@ -27,6 +37,9 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
         return this.source;
     }
 
+    /**
+     * The oms agent Id installed on the machine
+     */
     @InputImport(name="sourceComputerId", required=true)
     private final Input<String> sourceComputerId;
 
@@ -34,6 +47,9 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
         return this.sourceComputerId;
     }
 
+    /**
+     * The unique Id of the machine
+     */
     @InputImport(name="vmuuid", required=true)
     private final Input<String> vmuuid;
 
@@ -41,6 +57,9 @@ public final class OnPremiseResourceDetailsArgs extends io.pulumi.resources.Reso
         return this.vmuuid;
     }
 
+    /**
+     * Azure resource Id of the workspace the machine is attached to
+     */
     @InputImport(name="workspaceId", required=true)
     private final Input<String> workspaceId;
 

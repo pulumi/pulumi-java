@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutomationAccountArgs Empty = new AutomationAccountArgs();
 
+    /**
+     * The name of the automation account.
+     */
     @InputImport(name="automationAccountName")
     private final @Nullable Input<String> automationAccountName;
 
@@ -26,6 +32,9 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
         return this.automationAccountName == null ? Input.empty() : this.automationAccountName;
     }
 
+    /**
+     * Indicates whether requests using non-AAD authentication are blocked
+     */
     @InputImport(name="disableLocalAuth")
     private final @Nullable Input<Boolean> disableLocalAuth;
 
@@ -33,6 +42,9 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
         return this.disableLocalAuth == null ? Input.empty() : this.disableLocalAuth;
     }
 
+    /**
+     * Set the encryption properties for the automation account
+     */
     @InputImport(name="encryption")
     private final @Nullable Input<EncryptionPropertiesArgs> encryption;
 
@@ -40,6 +52,9 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
         return this.encryption == null ? Input.empty() : this.encryption;
     }
 
+    /**
+     * Sets the identity property for automation account
+     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityArgs> identity;
 
@@ -47,6 +62,9 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * Gets or sets the location of the resource.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -54,6 +72,9 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Gets or sets name of the resource.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -61,6 +82,9 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet
+     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<Boolean> publicNetworkAccess;
 
@@ -68,6 +92,9 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -75,6 +102,9 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
         return this.resourceGroupName;
     }
 
+    /**
+     * Gets or sets account SKU.
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -82,6 +112,9 @@ public final class AutomationAccountArgs extends io.pulumi.resources.ResourceArg
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Gets or sets the tags attached to the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

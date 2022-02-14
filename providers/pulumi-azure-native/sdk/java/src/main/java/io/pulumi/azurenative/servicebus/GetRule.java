@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRule {
+/**
+ * Description of Rule Resource.
+API Version: 2017-04-01.
+ *
+ * Description of Rule Resource.
+ */
     public static CompletableFuture<GetRuleResult> invokeAsync(GetRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getRule", TypeShape.of(GetRuleResult.class), args == null ? GetRuleArgs.Empty : args, Utilities.withVersion(options));
     }

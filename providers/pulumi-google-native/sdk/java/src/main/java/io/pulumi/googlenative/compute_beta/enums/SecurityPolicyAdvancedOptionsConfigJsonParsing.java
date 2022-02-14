@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum SecurityPolicyAdvancedOptionsConfigJsonParsing {
+/**
+ * 
+ */
         Disabled("DISABLED"),
+/**
+ * 
+ */
         Standard("STANDARD");
 
         private final String value;

@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Schedule-based autoscale request parameters
+ */
 public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutoscaleRecurrenceArgs Empty = new AutoscaleRecurrenceArgs();
 
+    /**
+     * Array of schedule-based autoscale rules
+     */
     @InputImport(name="schedule")
     private final @Nullable Input<List<AutoscaleScheduleArgs>> schedule;
 
@@ -23,6 +29,9 @@ public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceA
         return this.schedule == null ? Input.empty() : this.schedule;
     }
 
+    /**
+     * The time zone for the autoscale schedule times
+     */
     @InputImport(name="timeZone")
     private final @Nullable Input<String> timeZone;
 

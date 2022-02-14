@@ -9,10 +9,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The encryption identity properties.
+ */
 public final class EncryptionIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EncryptionIdentityArgs Empty = new EncryptionIdentityArgs();
 
+    /**
+     * The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
+     */
     @InputImport(name="type", required=true)
     private final Input<EncryptionIdentityType> type;
 

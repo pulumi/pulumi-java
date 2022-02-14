@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The recurrence range type. The possible values are: endDate, noEnd, numbered.
+ */
     @EnumType
     public enum AccessReviewRecurrenceRangeType {
+/**
+ * 
+ */
         EndDate("endDate"),
+/**
+ * 
+ */
         NoEnd("noEnd"),
+/**
+ * 
+ */
         Numbered("numbered");
 
         private final String value;

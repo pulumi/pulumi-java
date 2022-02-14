@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVideoAnalyzer {
+/**
+ * A Video Analyzer account.
+API Version: 2021-05-01-preview.
+ *
+ * A Video Analyzer account.
+ */
     public static CompletableFuture<GetVideoAnalyzerResult> invokeAsync(GetVideoAnalyzerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:getVideoAnalyzer", TypeShape.of(GetVideoAnalyzerResult.class), args == null ? GetVideoAnalyzerArgs.Empty : args, Utilities.withVersion(options));
     }

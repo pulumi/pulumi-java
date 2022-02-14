@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Management resource preference to link device
+ */
 public final class ManagementResourcePreferencesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagementResourcePreferencesResponse Empty = new ManagementResourcePreferencesResponse();
 
+    /**
+     * Customer preferred Management resource ARM ID
+     */
     @InputImport(name="preferredManagementResourceId")
     private final @Nullable String preferredManagementResourceId;
 

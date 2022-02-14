@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LinkedInfoResponse {
+/**
+ * LinkedId id.
+ */
     private final @Nullable String linkedId;
+/**
+ * Linked resource name.
+ */
     private final @Nullable String linkedResourceName;
+/**
+ * Datastore origin
+ */
     private final @Nullable String origin;
 
     @OutputCustomType.Constructor({"linkedId","linkedResourceName","origin"})
@@ -25,12 +34,21 @@ public final class LinkedInfoResponse {
         this.origin = origin;
     }
 
+/**
+ * LinkedId id.
+ */
     public Optional<String> getLinkedId() {
         return Optional.ofNullable(this.linkedId);
     }
+/**
+ * Linked resource name.
+ */
     public Optional<String> getLinkedResourceName() {
         return Optional.ofNullable(this.linkedResourceName);
     }
+/**
+ * Datastore origin
+ */
     public Optional<String> getOrigin() {
         return Optional.ofNullable(this.origin);
     }

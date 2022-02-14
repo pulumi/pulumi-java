@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceTypeRegistrationArgs Empty = new ResourceTypeRegistrationArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<ResourceTypeRegistrationPropertiesArgs> properties;
 
@@ -22,6 +28,9 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource provider hosted within ProviderHub.
+     */
     @InputImport(name="providerNamespace", required=true)
     private final Input<String> providerNamespace;
 
@@ -29,6 +38,9 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
         return this.providerNamespace;
     }
 
+    /**
+     * The resource type.
+     */
     @InputImport(name="resourceType")
     private final @Nullable Input<String> resourceType;
 

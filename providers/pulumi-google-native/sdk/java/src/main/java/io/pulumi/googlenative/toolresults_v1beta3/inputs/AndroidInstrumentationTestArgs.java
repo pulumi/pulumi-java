@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A test of an Android application that can control an Android component independently of its normal lifecycle. See for more information on types of Android tests.
+ */
 public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AndroidInstrumentationTestArgs Empty = new AndroidInstrumentationTestArgs();
 
+    /**
+     * The java package for the test to be executed. Required
+     */
     @InputImport(name="testPackageId")
     private final @Nullable Input<String> testPackageId;
 
@@ -23,6 +29,9 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
         return this.testPackageId == null ? Input.empty() : this.testPackageId;
     }
 
+    /**
+     * The InstrumentationTestRunner class. Required
+     */
     @InputImport(name="testRunnerClass")
     private final @Nullable Input<String> testRunnerClass;
 
@@ -30,6 +39,9 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
         return this.testRunnerClass == null ? Input.empty() : this.testRunnerClass;
     }
 
+    /**
+     * Each target must be fully qualified with the package name or class name, in one of these formats: - "package package_name" - "class package_name.class_name" - "class package_name.class_name#method_name" If empty, all targets in the module will be run.
+     */
     @InputImport(name="testTargets")
     private final @Nullable Input<List<String>> testTargets;
 
@@ -37,6 +49,9 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
         return this.testTargets == null ? Input.empty() : this.testTargets;
     }
 
+    /**
+     * The flag indicates whether Android Test Orchestrator will be used to run test or not.
+     */
     @InputImport(name="useOrchestrator")
     private final @Nullable Input<Boolean> useOrchestrator;
 

@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CommitmentQuotaResponse {
+/**
+ * Commitment quota quantity.
+ */
     private final @Nullable Double quantity;
+/**
+ * Commitment quota unit.
+ */
     private final @Nullable String unit;
 
     @OutputCustomType.Constructor({"quantity","unit"})
@@ -23,9 +29,15 @@ public final class CommitmentQuotaResponse {
         this.unit = unit;
     }
 
+/**
+ * Commitment quota quantity.
+ */
     public Optional<Double> getQuantity() {
         return Optional.ofNullable(this.quantity);
     }
+/**
+ * Commitment quota unit.
+ */
     public Optional<String> getUnit() {
         return Optional.ofNullable(this.unit);
     }

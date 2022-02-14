@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Option for job HTML content sanitization. Applied fields are: * description * applicationInfo.instruction * incentives * qualifications * responsibilities HTML tags in these fields may be stripped if sanitiazation isn't disabled. Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.
+ */
     @EnumType
     public enum ProcessingOptionsHtmlSanitization {
+/**
+ * Default value.
+ */
         HtmlSanitizationUnspecified("HTML_SANITIZATION_UNSPECIFIED"),
+/**
+ * Disables sanitization on HTML input.
+ */
         HtmlSanitizationDisabled("HTML_SANITIZATION_DISABLED"),
+/**
+ * Sanitizes HTML input, only accepts bold, italic, ordered list, and unordered list markup tags.
+ */
         SimpleFormattingOnly("SIMPLE_FORMATTING_ONLY");
 
         private final String value;

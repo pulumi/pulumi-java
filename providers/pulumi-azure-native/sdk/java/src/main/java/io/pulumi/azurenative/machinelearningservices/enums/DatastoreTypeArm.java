@@ -8,15 +8,42 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Specifies datastore type.
+ */
     @EnumType
     public enum DatastoreTypeArm {
+/**
+ * 
+ */
         Blob("blob"),
+/**
+ * 
+ */
         Adls("adls"),
+/**
+ * 
+ */
         Adlsgen2("adls-gen2"),
+/**
+ * 
+ */
         Dbfs("dbfs"),
+/**
+ * 
+ */
         File("file"),
+/**
+ * 
+ */
         Mysqldb("mysqldb"),
+/**
+ * 
+ */
         Sqldb("sqldb"),
+/**
+ * 
+ */
         Psqldb("psqldb");
 
         private final String value;

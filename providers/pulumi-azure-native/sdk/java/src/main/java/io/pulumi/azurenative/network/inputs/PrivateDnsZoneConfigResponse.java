@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * PrivateDnsZoneConfig resource.
+ */
 public final class PrivateDnsZoneConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateDnsZoneConfigResponse Empty = new PrivateDnsZoneConfigResponse();
 
+    /**
+     * Name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -23,6 +29,9 @@ public final class PrivateDnsZoneConfigResponse extends io.pulumi.resources.Invo
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The resource id of the private dns zone.
+     */
     @InputImport(name="privateDnsZoneId")
     private final @Nullable String privateDnsZoneId;
 
@@ -30,6 +39,9 @@ public final class PrivateDnsZoneConfigResponse extends io.pulumi.resources.Invo
         return this.privateDnsZoneId == null ? Optional.empty() : Optional.ofNullable(this.privateDnsZoneId);
     }
 
+    /**
+     * A collection of information regarding a recordSet, holding information to identify private resources.
+     */
     @InputImport(name="recordSets", required=true)
     private final List<RecordSetResponse> recordSets;
 

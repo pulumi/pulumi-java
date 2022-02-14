@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PrivateConnectivityResponse {
+/**
+ * 
+ */
     private final String privateConnectionName;
 
     @OutputCustomType.Constructor({"privateConnectionName"})
@@ -16,6 +19,9 @@ public final class PrivateConnectivityResponse {
         this.privateConnectionName = Objects.requireNonNull(privateConnectionName);
     }
 
+/**
+ * 
+ */
     public String getPrivateConnectionName() {
         return this.privateConnectionName;
     }

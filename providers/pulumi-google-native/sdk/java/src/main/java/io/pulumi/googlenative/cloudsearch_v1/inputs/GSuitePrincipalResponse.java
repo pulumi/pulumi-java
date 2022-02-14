@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GSuitePrincipalResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GSuitePrincipalResponse Empty = new GSuitePrincipalResponse();
 
+    /**
+     * This principal represents all users of the G Suite domain of the customer.
+     */
     @InputImport(name="gsuiteDomain", required=true)
     private final Boolean gsuiteDomain;
 
@@ -20,6 +26,9 @@ public final class GSuitePrincipalResponse extends io.pulumi.resources.InvokeArg
         return this.gsuiteDomain;
     }
 
+    /**
+     * This principal references a G Suite group account
+     */
     @InputImport(name="gsuiteGroupEmail", required=true)
     private final String gsuiteGroupEmail;
 
@@ -27,6 +36,9 @@ public final class GSuitePrincipalResponse extends io.pulumi.resources.InvokeArg
         return this.gsuiteGroupEmail;
     }
 
+    /**
+     * This principal references a G Suite user account
+     */
     @InputImport(name="gsuiteUserEmail", required=true)
     private final String gsuiteUserEmail;
 

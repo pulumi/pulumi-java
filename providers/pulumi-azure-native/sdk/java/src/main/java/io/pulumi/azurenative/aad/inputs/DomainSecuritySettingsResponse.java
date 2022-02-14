@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Domain Security Settings
+ */
 public final class DomainSecuritySettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DomainSecuritySettingsResponse Empty = new DomainSecuritySettingsResponse();
 
+    /**
+     * A flag to determine whether or not KerberosArmoring is enabled or disabled.
+     */
     @InputImport(name="kerberosArmoring")
     private final @Nullable String kerberosArmoring;
 
@@ -21,6 +27,9 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
         return this.kerberosArmoring == null ? Optional.empty() : Optional.ofNullable(this.kerberosArmoring);
     }
 
+    /**
+     * A flag to determine whether or not KerberosRc4Encryption is enabled or disabled.
+     */
     @InputImport(name="kerberosRc4Encryption")
     private final @Nullable String kerberosRc4Encryption;
 
@@ -28,6 +37,9 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
         return this.kerberosRc4Encryption == null ? Optional.empty() : Optional.ofNullable(this.kerberosRc4Encryption);
     }
 
+    /**
+     * A flag to determine whether or not NtlmV1 is enabled or disabled.
+     */
     @InputImport(name="ntlmV1")
     private final @Nullable String ntlmV1;
 
@@ -35,6 +47,9 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
         return this.ntlmV1 == null ? Optional.empty() : Optional.ofNullable(this.ntlmV1);
     }
 
+    /**
+     * A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
+     */
     @InputImport(name="syncKerberosPasswords")
     private final @Nullable String syncKerberosPasswords;
 
@@ -42,6 +57,9 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
         return this.syncKerberosPasswords == null ? Optional.empty() : Optional.ofNullable(this.syncKerberosPasswords);
     }
 
+    /**
+     * A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
+     */
     @InputImport(name="syncNtlmPasswords")
     private final @Nullable String syncNtlmPasswords;
 
@@ -49,6 +67,9 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
         return this.syncNtlmPasswords == null ? Optional.empty() : Optional.ofNullable(this.syncNtlmPasswords);
     }
 
+    /**
+     * A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
+     */
     @InputImport(name="syncOnPremPasswords")
     private final @Nullable String syncOnPremPasswords;
 
@@ -56,6 +77,9 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
         return this.syncOnPremPasswords == null ? Optional.empty() : Optional.ofNullable(this.syncOnPremPasswords);
     }
 
+    /**
+     * A flag to determine whether or not TlsV1 is enabled or disabled.
+     */
     @InputImport(name="tlsV1")
     private final @Nullable String tlsV1;
 

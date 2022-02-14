@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RosettaNetPipBusinessDocumentResponse {
+/**
+ * The business document description.
+ */
     private final @Nullable String description;
+/**
+ * The business document name.
+ */
     private final String name;
+/**
+ * The business document version.
+ */
     private final String version;
 
     @OutputCustomType.Constructor({"description","name","version"})
@@ -25,12 +34,21 @@ public final class RosettaNetPipBusinessDocumentResponse {
         this.version = Objects.requireNonNull(version);
     }
 
+/**
+ * The business document description.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * The business document name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The business document version.
+ */
     public String getVersion() {
         return this.version;
     }

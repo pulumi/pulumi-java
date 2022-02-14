@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration settings of the Azure Active directory provider.
+ */
 public final class AzureActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureActiveDirectoryArgs Empty = new AzureActiveDirectoryArgs();
 
+    /**
+     * <code>false</code> if the Azure Active Directory provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -24,6 +30,11 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * Gets a value indicating whether the Azure AD configuration was auto-provisioned using 1st party tooling.
+This is an internal flag primarily intended to support the Azure Management Portal. Users should not
+read or write to this property.
+     */
     @InputImport(name="isAutoProvisioned")
     private final @Nullable Input<Boolean> isAutoProvisioned;
 
@@ -31,6 +42,9 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
         return this.isAutoProvisioned == null ? Input.empty() : this.isAutoProvisioned;
     }
 
+    /**
+     * The configuration settings of the Azure Active Directory login flow.
+     */
     @InputImport(name="login")
     private final @Nullable Input<AzureActiveDirectoryLoginArgs> login;
 
@@ -38,6 +52,9 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
         return this.login == null ? Input.empty() : this.login;
     }
 
+    /**
+     * The configuration settings of the Azure Active Directory app registration.
+     */
     @InputImport(name="registration")
     private final @Nullable Input<AzureActiveDirectoryRegistrationArgs> registration;
 
@@ -45,6 +62,9 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
         return this.registration == null ? Input.empty() : this.registration;
     }
 
+    /**
+     * The configuration settings of the Azure Active Directory token validation flow.
+     */
     @InputImport(name="validation")
     private final @Nullable Input<AzureActiveDirectoryValidationArgs> validation;
 

@@ -19,10 +19,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutomationArgs Empty = new AutomationArgs();
 
+    /**
+     * A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.
+     */
     @InputImport(name="actions")
     private final @Nullable Input<List<Object>> actions;
 
@@ -30,6 +36,9 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
         return this.actions == null ? Input.empty() : this.actions;
     }
 
+    /**
+     * The security automation name.
+     */
     @InputImport(name="automationName")
     private final @Nullable Input<String> automationName;
 
@@ -37,6 +46,9 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
         return this.automationName == null ? Input.empty() : this.automationName;
     }
 
+    /**
+     * The security automation description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -44,6 +56,9 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Indicates whether the security automation is enabled.
+     */
     @InputImport(name="isEnabled")
     private final @Nullable Input<Boolean> isEnabled;
 
@@ -51,6 +66,9 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
         return this.isEnabled == null ? Input.empty() : this.isEnabled;
     }
 
+    /**
+     * Kind of the resource
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -58,6 +76,9 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Location where the resource is stored
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -65,6 +86,9 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -72,6 +96,9 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.
+     */
     @InputImport(name="scopes")
     private final @Nullable Input<List<AutomationScopeArgs>> scopes;
 
@@ -79,6 +106,9 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
         return this.scopes == null ? Input.empty() : this.scopes;
     }
 
+    /**
+     * A collection of the source event types which evaluate the security automation set of rules.
+     */
     @InputImport(name="sources")
     private final @Nullable Input<List<AutomationSourceArgs>> sources;
 
@@ -86,6 +116,9 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
         return this.sources == null ? Input.empty() : this.sources;
     }
 
+    /**
+     * A list of key value pairs that describe the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

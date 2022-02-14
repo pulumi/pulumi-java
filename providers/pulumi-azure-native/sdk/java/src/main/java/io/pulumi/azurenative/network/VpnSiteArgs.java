@@ -19,10 +19,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VpnSiteArgs Empty = new VpnSiteArgs();
 
+    /**
+     * The AddressSpace that contains an array of IP address ranges.
+     */
     @InputImport(name="addressSpace")
     private final @Nullable Input<AddressSpaceArgs> addressSpace;
 
@@ -30,6 +36,9 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.addressSpace == null ? Input.empty() : this.addressSpace;
     }
 
+    /**
+     * The set of bgp properties.
+     */
     @InputImport(name="bgpProperties")
     private final @Nullable Input<BgpSettingsArgs> bgpProperties;
 
@@ -37,6 +46,9 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.bgpProperties == null ? Input.empty() : this.bgpProperties;
     }
 
+    /**
+     * The device properties.
+     */
     @InputImport(name="deviceProperties")
     private final @Nullable Input<DevicePropertiesArgs> deviceProperties;
 
@@ -44,6 +56,9 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceProperties == null ? Input.empty() : this.deviceProperties;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -51,6 +66,9 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The ip-address for the vpn-site.
+     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<String> ipAddress;
 
@@ -58,6 +76,9 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
+    /**
+     * IsSecuritySite flag.
+     */
     @InputImport(name="isSecuritySite")
     private final @Nullable Input<Boolean> isSecuritySite;
 
@@ -65,6 +86,9 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.isSecuritySite == null ? Input.empty() : this.isSecuritySite;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -72,6 +96,9 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Office365 Policy.
+     */
     @InputImport(name="o365Policy")
     private final @Nullable Input<O365PolicyPropertiesArgs> o365Policy;
 
@@ -79,6 +106,9 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.o365Policy == null ? Input.empty() : this.o365Policy;
     }
 
+    /**
+     * The resource group name of the VpnSite.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -86,6 +116,9 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The key for vpn-site that can be used for connections.
+     */
     @InputImport(name="siteKey")
     private final @Nullable Input<String> siteKey;
 
@@ -93,6 +126,9 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.siteKey == null ? Input.empty() : this.siteKey;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -100,6 +136,9 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The VirtualWAN to which the vpnSite belongs.
+     */
     @InputImport(name="virtualWan")
     private final @Nullable Input<SubResourceArgs> virtualWan;
 
@@ -107,6 +146,9 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.virtualWan == null ? Input.empty() : this.virtualWan;
     }
 
+    /**
+     * List of all vpn site links.
+     */
     @InputImport(name="vpnSiteLinks")
     private final @Nullable Input<List<VpnSiteLinkArgs>> vpnSiteLinks;
 
@@ -114,6 +156,9 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.vpnSiteLinks == null ? Input.empty() : this.vpnSiteLinks;
     }
 
+    /**
+     * The name of the VpnSite being created or updated.
+     */
     @InputImport(name="vpnSiteName")
     private final @Nullable Input<String> vpnSiteName;
 

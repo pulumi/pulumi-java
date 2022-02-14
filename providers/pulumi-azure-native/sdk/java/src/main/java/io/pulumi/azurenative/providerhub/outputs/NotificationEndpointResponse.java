@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NotificationEndpointResponse {
+/**
+ * 
+ */
     private final @Nullable List<String> locations;
+/**
+ * 
+ */
     private final @Nullable String notificationDestination;
 
     @OutputCustomType.Constructor({"locations","notificationDestination"})
@@ -23,9 +29,15 @@ public final class NotificationEndpointResponse {
         this.notificationDestination = notificationDestination;
     }
 
+/**
+ * 
+ */
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }
+/**
+ * 
+ */
     public Optional<String> getNotificationDestination() {
         return Optional.ofNullable(this.notificationDestination);
     }

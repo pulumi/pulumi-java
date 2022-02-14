@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Installs an rpm file via the rpm utility.
+ */
 public final class SoftwareRecipeStepInstallRpmArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SoftwareRecipeStepInstallRpmArgs Empty = new SoftwareRecipeStepInstallRpmArgs();
 
+    /**
+     * The id of the relevant artifact in the recipe.
+     */
     @InputImport(name="artifactId", required=true)
     private final Input<String> artifactId;
 

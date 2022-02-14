@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Whether the target is included or excluded from the group.
+ */
     @EnumType
     public enum JobTargetGroupMembershipType {
+/**
+ * 
+ */
         Include("Include"),
+/**
+ * 
+ */
         Exclude("Exclude");
 
         private final String value;

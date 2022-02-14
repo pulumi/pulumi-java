@@ -11,8 +11,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2ConditionResponse {
+/**
+ * Field within the record this condition is evaluated against.
+ */
     private final GooglePrivacyDlpV2FieldIdResponse field;
+/**
+ * Operator used to compare the field or infoType to the value.
+ */
     private final String operator;
+/**
+ * Value to compare against. [Mandatory, except for `EXISTS` tests.]
+ */
     private final GooglePrivacyDlpV2ValueResponse value;
 
     @OutputCustomType.Constructor({"field","operator","value"})
@@ -25,12 +34,21 @@ public final class GooglePrivacyDlpV2ConditionResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * Field within the record this condition is evaluated against.
+ */
     public GooglePrivacyDlpV2FieldIdResponse getField() {
         return this.field;
     }
+/**
+ * Operator used to compare the field or infoType to the value.
+ */
     public String getOperator() {
         return this.operator;
     }
+/**
+ * Value to compare against. [Mandatory, except for `EXISTS` tests.]
+ */
     public GooglePrivacyDlpV2ValueResponse getValue() {
         return this.value;
     }

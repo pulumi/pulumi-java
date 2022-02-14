@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DscNodeConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DscNodeConfigurationArgs Empty = new DscNodeConfigurationArgs();
 
+    /**
+     * The name of the automation account.
+     */
     @InputImport(name="automationAccountName", required=true)
     private final Input<String> automationAccountName;
 
@@ -25,6 +31,9 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
         return this.automationAccountName;
     }
 
+    /**
+     * Gets or sets the configuration of the node.
+     */
     @InputImport(name="configuration", required=true)
     private final Input<DscConfigurationAssociationPropertyArgs> configuration;
 
@@ -32,6 +41,9 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
         return this.configuration;
     }
 
+    /**
+     * If a new build version of NodeConfiguration is required.
+     */
     @InputImport(name="incrementNodeConfigurationBuild")
     private final @Nullable Input<Boolean> incrementNodeConfigurationBuild;
 
@@ -39,6 +51,9 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
         return this.incrementNodeConfigurationBuild == null ? Input.empty() : this.incrementNodeConfigurationBuild;
     }
 
+    /**
+     * Name of the node configuration.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -46,6 +61,9 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The Dsc node configuration name.
+     */
     @InputImport(name="nodeConfigurationName")
     private final @Nullable Input<String> nodeConfigurationName;
 
@@ -53,6 +71,9 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
         return this.nodeConfigurationName == null ? Input.empty() : this.nodeConfigurationName;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -60,6 +81,9 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
         return this.resourceGroupName;
     }
 
+    /**
+     * Gets or sets the source.
+     */
     @InputImport(name="source", required=true)
     private final Input<ContentSourceArgs> source;
 
@@ -67,6 +91,9 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
         return this.source;
     }
 
+    /**
+     * Gets or sets the tags attached to the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

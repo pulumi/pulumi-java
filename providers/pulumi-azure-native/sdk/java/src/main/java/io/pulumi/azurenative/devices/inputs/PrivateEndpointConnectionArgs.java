@@ -9,10 +9,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The private endpoint connection of an IotHub
+ */
 public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateEndpointConnectionArgs Empty = new PrivateEndpointConnectionArgs();
 
+    /**
+     * The properties of a private endpoint connection
+     */
     @InputImport(name="properties", required=true)
     private final Input<PrivateEndpointConnectionPropertiesArgs> properties;
 

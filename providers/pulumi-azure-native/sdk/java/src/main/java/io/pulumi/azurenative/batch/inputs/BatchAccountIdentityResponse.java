@@ -3,7 +3,6 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.azurenative.batch.inputs.BatchAccountIdentityResponseUserAssignedIdentities;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -12,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The identity of the Batch account, if configured. This is only used when the user specifies 'Microsoft.KeyVault' as their Batch account encryption configuration.
+ */
 public final class BatchAccountIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BatchAccountIdentityResponse Empty = new BatchAccountIdentityResponse();
 
+    /**
+     * The principal id of the Batch account. This property will only be provided for a system assigned identity.
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -23,6 +28,9 @@ public final class BatchAccountIdentityResponse extends io.pulumi.resources.Invo
         return this.principalId;
     }
 
+    /**
+     * The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -30,6 +38,9 @@ public final class BatchAccountIdentityResponse extends io.pulumi.resources.Invo
         return this.tenantId;
     }
 
+    /**
+     * The type of identity used for the Batch account.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -37,6 +48,9 @@ public final class BatchAccountIdentityResponse extends io.pulumi.resources.Invo
         return this.type;
     }
 
+    /**
+     * The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Map<String,BatchAccountIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 

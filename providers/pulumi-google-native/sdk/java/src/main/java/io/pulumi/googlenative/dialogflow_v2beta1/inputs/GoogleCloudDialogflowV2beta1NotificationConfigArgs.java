@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines notification behavior.
+ */
 public final class GoogleCloudDialogflowV2beta1NotificationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1NotificationConfigArgs Empty = new GoogleCloudDialogflowV2beta1NotificationConfigArgs();
 
+    /**
+     * Format of message.
+     */
     @InputImport(name="messageFormat")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat> messageFormat;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudDialogflowV2beta1NotificationConfigArgs extends io
         return this.messageFormat == null ? Input.empty() : this.messageFormat;
     }
 
+    /**
+     * Name of the Pub/Sub topic to publish conversation events like CONVERSATION_STARTED as serialized ConversationEvent protos. Notification works for phone calls, if this topic either is in the same project as the conversation or you grant `service-@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic project. Format: `projects//locations//topics/`.
+     */
     @InputImport(name="topic")
     private final @Nullable Input<String> topic;
 

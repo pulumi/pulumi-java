@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetVpnGatewayArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVpnGatewayArgs Empty = new GetVpnGatewayArgs();
 
+    /**
+     * The name of the gateway.
+     */
     @InputImport(name="gatewayName", required=true)
     private final String gatewayName;
 
@@ -19,6 +25,9 @@ public final class GetVpnGatewayArgs extends io.pulumi.resources.InvokeArgs {
         return this.gatewayName;
     }
 
+    /**
+     * The resource group name of the VpnGateway.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

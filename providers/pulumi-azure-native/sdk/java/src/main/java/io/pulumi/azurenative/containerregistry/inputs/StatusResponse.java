@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The status of an Azure resource at the time the operation was called.
+ */
 public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StatusResponse Empty = new StatusResponse();
 
+    /**
+     * The short label for the status.
+     */
     @InputImport(name="displayStatus", required=true)
     private final String displayStatus;
 
@@ -19,6 +25,9 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
         return this.displayStatus;
     }
 
+    /**
+     * The detailed message for the status, including alerts and error messages.
+     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -26,6 +35,9 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
         return this.message;
     }
 
+    /**
+     * The timestamp when the status was changed to the current value.
+     */
     @InputImport(name="timestamp", required=true)
     private final String timestamp;
 

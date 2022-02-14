@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Specifies how each object's temporary hold status should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as TEMPORARY_HOLD_PRESERVE.
+ */
     @EnumType
     public enum MetadataOptionsTemporaryHold {
+/**
+ * Temporary hold behavior is unspecified.
+ */
         TemporaryHoldUnspecified("TEMPORARY_HOLD_UNSPECIFIED"),
+/**
+ * Do not set a temporary hold on the destination object.
+ */
         TemporaryHoldSkip("TEMPORARY_HOLD_SKIP"),
+/**
+ * Preserve the object's original temporary hold status.
+ */
         TemporaryHoldPreserve("TEMPORARY_HOLD_PRESERVE");
 
         private final String value;

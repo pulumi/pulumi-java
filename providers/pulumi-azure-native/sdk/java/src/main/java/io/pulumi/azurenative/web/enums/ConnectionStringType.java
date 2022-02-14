@@ -8,18 +8,54 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Type of database.
+ */
     @EnumType
     public enum ConnectionStringType {
+/**
+ * 
+ */
         MySql("MySql"),
+/**
+ * 
+ */
         SQLServer("SQLServer"),
+/**
+ * 
+ */
         SQLAzure("SQLAzure"),
+/**
+ * 
+ */
         Custom("Custom"),
+/**
+ * 
+ */
         NotificationHub("NotificationHub"),
+/**
+ * 
+ */
         ServiceBus("ServiceBus"),
+/**
+ * 
+ */
         EventHub("EventHub"),
+/**
+ * 
+ */
         ApiHub("ApiHub"),
+/**
+ * 
+ */
         DocDb("DocDb"),
+/**
+ * 
+ */
         RedisCache("RedisCache"),
+/**
+ * 
+ */
         PostgreSQL("PostgreSQL");
 
         private final String value;

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SQL Server specific audit configuration.
+ */
 public final class SqlServerAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlServerAuditConfigArgs Empty = new SqlServerAuditConfigArgs();
 
+    /**
+     * The name of the destination bucket (e.g., gs://mybucket).
+     */
     @InputImport(name="bucket")
     private final @Nullable Input<String> bucket;
 
@@ -21,6 +27,9 @@ public final class SqlServerAuditConfigArgs extends io.pulumi.resources.Resource
         return this.bucket == null ? Input.empty() : this.bucket;
     }
 
+    /**
+     * This is always sql#sqlServerAuditConfig
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 

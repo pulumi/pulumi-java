@@ -9,7 +9,6 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
-import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.PriorityLevelConfigurationArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs.PriorityLevelConfigurationSpec;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs.PriorityLevelConfigurationStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -17,39 +16,78 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * PriorityLevelConfiguration represents the configuration of a priority level.
+ */
 @ResourceType(type="kubernetes:flowcontrol.apiserver.k8s.io/v1beta2:PriorityLevelConfiguration")
 public class PriorityLevelConfiguration extends io.pulumi.resources.CustomResource {
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     */
     @OutputExport(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
+    /**
+     * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * `metadata` is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     */
     @OutputExport(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
+    /**
+     * @return `metadata` is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     */
     public Output</* @Nullable */ ObjectMeta> getMetadata() {
         return this.metadata;
     }
+    /**
+     * `spec` is the specification of the desired behavior of a "request-priority". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     */
     @OutputExport(name="spec", type=PriorityLevelConfigurationSpec.class, parameters={})
     private Output</* @Nullable */ PriorityLevelConfigurationSpec> spec;
 
+    /**
+     * @return `spec` is the specification of the desired behavior of a "request-priority". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     */
     public Output</* @Nullable */ PriorityLevelConfigurationSpec> getSpec() {
         return this.spec;
     }
+    /**
+     * `status` is the current status of a "request-priority". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     */
     @OutputExport(name="status", type=PriorityLevelConfigurationStatus.class, parameters={})
     private Output</* @Nullable */ PriorityLevelConfigurationStatus> status;
 
+    /**
+     * @return `status` is the current status of a "request-priority". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     */
     public Output</* @Nullable */ PriorityLevelConfigurationStatus> getStatus() {
         return this.status;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public PriorityLevelConfiguration(String name, @Nullable PriorityLevelConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("kubernetes:flowcontrol.apiserver.k8s.io/v1beta2:PriorityLevelConfiguration", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -77,6 +115,14 @@ public class PriorityLevelConfiguration extends io.pulumi.resources.CustomResour
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static PriorityLevelConfiguration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PriorityLevelConfiguration(name, id, options);
     }

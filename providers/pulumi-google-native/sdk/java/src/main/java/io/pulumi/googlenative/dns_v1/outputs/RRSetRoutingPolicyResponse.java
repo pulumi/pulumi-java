@@ -11,8 +11,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RRSetRoutingPolicyResponse {
+/**
+ * 
+ */
     private final RRSetRoutingPolicyGeoPolicyResponse geo;
+/**
+ * 
+ */
     private final String kind;
+/**
+ * 
+ */
     private final RRSetRoutingPolicyWrrPolicyResponse wrr;
 
     @OutputCustomType.Constructor({"geo","kind","wrr"})
@@ -25,12 +34,21 @@ public final class RRSetRoutingPolicyResponse {
         this.wrr = Objects.requireNonNull(wrr);
     }
 
+/**
+ * 
+ */
     public RRSetRoutingPolicyGeoPolicyResponse getGeo() {
         return this.geo;
     }
+/**
+ * 
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * 
+ */
     public RRSetRoutingPolicyWrrPolicyResponse getWrr() {
         return this.wrr;
     }

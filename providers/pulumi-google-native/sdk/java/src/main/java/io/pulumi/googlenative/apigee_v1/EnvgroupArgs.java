@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class EnvgroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvgroupArgs Empty = new EnvgroupArgs();
 
+    /**
+     * Host names for this environment group.
+     */
     @InputImport(name="hostnames", required=true)
     private final Input<List<String>> hostnames;
 
@@ -22,6 +28,9 @@ public final class EnvgroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostnames;
     }
 
+    /**
+     * ID of the environment group.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +38,9 @@ public final class EnvgroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 

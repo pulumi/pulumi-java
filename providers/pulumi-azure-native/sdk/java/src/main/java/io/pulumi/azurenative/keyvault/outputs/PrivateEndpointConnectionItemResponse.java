@@ -13,10 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PrivateEndpointConnectionItemResponse {
+/**
+ * Modified whenever there is a change in the state of private endpoint connection.
+ */
     private final @Nullable String etag;
+/**
+ * Id of private endpoint connection.
+ */
     private final @Nullable String id;
+/**
+ * Properties of the private endpoint object.
+ */
     private final @Nullable PrivateEndpointResponse privateEndpoint;
+/**
+ * Approval state of the private link connection.
+ */
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+/**
+ * Provisioning state of the private endpoint connection.
+ */
     private final String provisioningState;
 
     @OutputCustomType.Constructor({"etag","id","privateEndpoint","privateLinkServiceConnectionState","provisioningState"})
@@ -33,18 +48,33 @@ public final class PrivateEndpointConnectionItemResponse {
         this.provisioningState = Objects.requireNonNull(provisioningState);
     }
 
+/**
+ * Modified whenever there is a change in the state of private endpoint connection.
+ */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+/**
+ * Id of private endpoint connection.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * Properties of the private endpoint object.
+ */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
+/**
+ * Approval state of the private link connection.
+ */
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
+/**
+ * Provisioning state of the private endpoint connection.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }

@@ -14,10 +14,17 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure SQL workload-specific backup policy.
+ */
 public final class AzureSqlProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureSqlProtectionPolicyArgs Empty = new AzureSqlProtectionPolicyArgs();
 
+    /**
+     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+Expected value is 'AzureSql'.
+     */
     @InputImport(name="backupManagementType", required=true)
     private final Input<String> backupManagementType;
 
@@ -25,6 +32,9 @@ public final class AzureSqlProtectionPolicyArgs extends io.pulumi.resources.Reso
         return this.backupManagementType;
     }
 
+    /**
+     * Number of items associated with this policy.
+     */
     @InputImport(name="protectedItemsCount")
     private final @Nullable Input<Integer> protectedItemsCount;
 
@@ -32,6 +42,9 @@ public final class AzureSqlProtectionPolicyArgs extends io.pulumi.resources.Reso
         return this.protectedItemsCount == null ? Input.empty() : this.protectedItemsCount;
     }
 
+    /**
+     * Retention policy details.
+     */
     @InputImport(name="retentionPolicy")
     private final @Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 

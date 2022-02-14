@@ -12,10 +12,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetDomainMappingResult {
+/**
+ * The API version for this call such as "domains.cloudrun.com/v1".
+ */
     private final String apiVersion;
+/**
+ * The kind of resource, in this case "DomainMapping".
+ */
     private final String kind;
+/**
+ * Metadata associated with this BuildTemplate.
+ */
     private final ObjectMetaResponse metadata;
+/**
+ * The spec for this DomainMapping.
+ */
     private final DomainMappingSpecResponse spec;
+/**
+ * The current status of the DomainMapping.
+ */
     private final DomainMappingStatusResponse status;
 
     @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec","status"})
@@ -32,18 +47,33 @@ public final class GetDomainMappingResult {
         this.status = Objects.requireNonNull(status);
     }
 
+/**
+ * The API version for this call such as "domains.cloudrun.com/v1".
+ */
     public String getApiVersion() {
         return this.apiVersion;
     }
+/**
+ * The kind of resource, in this case "DomainMapping".
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * Metadata associated with this BuildTemplate.
+ */
     public ObjectMetaResponse getMetadata() {
         return this.metadata;
     }
+/**
+ * The spec for this DomainMapping.
+ */
     public DomainMappingSpecResponse getSpec() {
         return this.spec;
     }
+/**
+ * The current status of the DomainMapping.
+ */
     public DomainMappingStatusResponse getStatus() {
         return this.status;
     }

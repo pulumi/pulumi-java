@@ -11,10 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SharedPrivateLinkResourceResponse {
+/**
+ * The private link resource group id.
+ */
     private final @Nullable String groupId;
+/**
+ * Unique name of the private link.
+ */
     private final @Nullable String name;
+/**
+ * The resource id that private link links to.
+ */
     private final @Nullable String privateLinkResourceId;
+/**
+ * Request message.
+ */
     private final @Nullable String requestMessage;
+/**
+ * Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+ */
     private final @Nullable String status;
 
     @OutputCustomType.Constructor({"groupId","name","privateLinkResourceId","requestMessage","status"})
@@ -31,18 +46,33 @@ public final class SharedPrivateLinkResourceResponse {
         this.status = status;
     }
 
+/**
+ * The private link resource group id.
+ */
     public Optional<String> getGroupId() {
         return Optional.ofNullable(this.groupId);
     }
+/**
+ * Unique name of the private link.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * The resource id that private link links to.
+ */
     public Optional<String> getPrivateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
+/**
+ * Request message.
+ */
     public Optional<String> getRequestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
+/**
+ * Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
+ */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }

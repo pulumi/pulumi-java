@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWorkflowTemplate {
+/**
+ * Retrieves the latest workflow template.Can retrieve previously instantiated template by specifying optional version parameter.
+ */
     public static CompletableFuture<GetWorkflowTemplateResult> invokeAsync(GetWorkflowTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataproc/v1:getWorkflowTemplate", TypeShape.of(GetWorkflowTemplateResult.class), args == null ? GetWorkflowTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

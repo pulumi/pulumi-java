@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudApigeeV1TlsInfoCommonNameArgs Empty = new GoogleCloudApigeeV1TlsInfoCommonNameArgs();
 
+    /**
+     * The TLS Common Name string of the certificate.
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends io.pulumi.re
         return this.value == null ? Input.empty() : this.value;
     }
 
+    /**
+     * Indicates whether the cert should be matched against as a wildcard cert.
+     */
     @InputImport(name="wildcardMatch")
     private final @Nullable Input<Boolean> wildcardMatch;
 

@@ -14,15 +14,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDicomServiceResult {
+/**
+ * Dicom Service authentication configuration.
+ */
     private final @Nullable DicomServiceAuthenticationConfigurationResponse authenticationConfiguration;
+/**
+ * An etag associated with the resource, used for optimistic concurrency when editing it.
+ */
     private final @Nullable String etag;
+/**
+ * The resource identifier.
+ */
     private final String id;
+/**
+ * The resource location.
+ */
     private final @Nullable String location;
+/**
+ * The resource name.
+ */
     private final String name;
+/**
+ * The provisioning state.
+ */
     private final String provisioningState;
+/**
+ * The url of the Dicom Services.
+ */
     private final String serviceUrl;
+/**
+ * Metadata pertaining to creation and last modification of the resource.
+ */
     private final SystemDataResponse systemData;
+/**
+ * Resource tags.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * The resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"authenticationConfiguration","etag","id","location","name","provisioningState","serviceUrl","systemData","tags","type"})
@@ -49,33 +79,63 @@ public final class GetDicomServiceResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Dicom Service authentication configuration.
+ */
     public Optional<DicomServiceAuthenticationConfigurationResponse> getAuthenticationConfiguration() {
         return Optional.ofNullable(this.authenticationConfiguration);
     }
+/**
+ * An etag associated with the resource, used for optimistic concurrency when editing it.
+ */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+/**
+ * The resource identifier.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The resource location.
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * The resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The provisioning state.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * The url of the Dicom Services.
+ */
     public String getServiceUrl() {
         return this.serviceUrl;
     }
+/**
+ * Metadata pertaining to creation and last modification of the resource.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * Resource tags.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * The resource type.
+ */
     public String getType() {
         return this.type;
     }

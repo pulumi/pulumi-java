@@ -19,15 +19,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetTaskRunResult {
+/**
+ * How the run should be forced to rerun even if the run request configuration has not changed
+ */
     private final @Nullable String forceUpdateTag;
+/**
+ * The resource ID.
+ */
     private final String id;
+/**
+ * Identity for the resource.
+ */
     private final @Nullable IdentityPropertiesResponse identity;
+/**
+ * The location of the resource
+ */
     private final @Nullable String location;
+/**
+ * The name of the resource.
+ */
     private final String name;
+/**
+ * The provisioning state of this task run
+ */
     private final String provisioningState;
+/**
+ * The request (parameters) for the run
+ */
     private final @Nullable Object runRequest;
+/**
+ * The result of this task run
+ */
     private final RunResponse runResult;
+/**
+ * Metadata pertaining to creation and last modification of the resource.
+ */
     private final SystemDataResponse systemData;
+/**
+ * The type of the resource.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"forceUpdateTag","id","identity","location","name","provisioningState","runRequest","runResult","systemData","type"})
@@ -54,33 +84,63 @@ public final class GetTaskRunResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * How the run should be forced to rerun even if the run request configuration has not changed
+ */
     public Optional<String> getForceUpdateTag() {
         return Optional.ofNullable(this.forceUpdateTag);
     }
+/**
+ * The resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Identity for the resource.
+ */
     public Optional<IdentityPropertiesResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
+/**
+ * The location of the resource
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * The name of the resource.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The provisioning state of this task run
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * The request (parameters) for the run
+ */
     public Optional<Object> getRunRequest() {
         return Optional.ofNullable(this.runRequest);
     }
+/**
+ * The result of this task run
+ */
     public RunResponse getRunResult() {
         return this.runResult;
     }
+/**
+ * Metadata pertaining to creation and last modification of the resource.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * The type of the resource.
+ */
     public String getType() {
         return this.type;
     }

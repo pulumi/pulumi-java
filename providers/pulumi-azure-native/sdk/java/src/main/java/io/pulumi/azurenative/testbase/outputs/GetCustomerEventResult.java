@@ -12,11 +12,29 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetCustomerEventResult {
+/**
+ * The name of the event subscribed to.
+ */
     private final String eventName;
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * The notification event receivers.
+ */
     private final List<NotificationEventReceiverResponse> receivers;
+/**
+ * The system metadata relating to this resource
+ */
     private final SystemDataResponse systemData;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"eventName","id","name","receivers","systemData","type"})
@@ -35,21 +53,39 @@ public final class GetCustomerEventResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The name of the event subscribed to.
+ */
     public String getEventName() {
         return this.eventName;
     }
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The notification event receivers.
+ */
     public List<NotificationEventReceiverResponse> getReceivers() {
         return this.receivers;
     }
+/**
+ * The system metadata relating to this resource
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListLabVhdsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListLabVhdsArgs Empty = new ListLabVhdsArgs();
 
+    /**
+     * The name of the lab.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class ListLabVhdsArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

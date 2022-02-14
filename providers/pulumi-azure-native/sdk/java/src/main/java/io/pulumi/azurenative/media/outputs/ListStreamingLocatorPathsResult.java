@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListStreamingLocatorPathsResult {
+/**
+ * Download Paths supported by current Streaming Locator
+ */
     private final @Nullable List<String> downloadPaths;
+/**
+ * Streaming Paths supported by current Streaming Locator
+ */
     private final @Nullable List<StreamingPathResponse> streamingPaths;
 
     @OutputCustomType.Constructor({"downloadPaths","streamingPaths"})
@@ -23,9 +29,15 @@ public final class ListStreamingLocatorPathsResult {
         this.streamingPaths = streamingPaths;
     }
 
+/**
+ * Download Paths supported by current Streaming Locator
+ */
     public List<String> getDownloadPaths() {
         return this.downloadPaths == null ? List.of() : this.downloadPaths;
     }
+/**
+ * Streaming Paths supported by current Streaming Locator
+ */
     public List<StreamingPathResponse> getStreamingPaths() {
         return this.streamingPaths == null ? List.of() : this.streamingPaths;
     }

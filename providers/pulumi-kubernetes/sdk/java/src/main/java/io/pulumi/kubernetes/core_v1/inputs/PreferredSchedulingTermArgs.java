@@ -10,10 +10,16 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * An empty preferred scheduling term matches all objects with implicit weight 0 (i.e. it's a no-op). A null preferred scheduling term matches no objects (i.e. is also a no-op).
+ */
 public final class PreferredSchedulingTermArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PreferredSchedulingTermArgs Empty = new PreferredSchedulingTermArgs();
 
+    /**
+     * A node selector term, associated with the corresponding weight.
+     */
     @InputImport(name="preference", required=true)
     private final Input<NodeSelectorTermArgs> preference;
 
@@ -21,6 +27,9 @@ public final class PreferredSchedulingTermArgs extends io.pulumi.resources.Resou
         return this.preference;
     }
 
+    /**
+     * Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100.
+     */
     @InputImport(name="weight", required=true)
     private final Input<Integer> weight;
 

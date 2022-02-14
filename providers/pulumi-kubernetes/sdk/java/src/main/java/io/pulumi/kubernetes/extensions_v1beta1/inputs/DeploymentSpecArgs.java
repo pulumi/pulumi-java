@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * DeploymentSpec is the specification of the desired behavior of the Deployment.
+ */
 public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeploymentSpecArgs Empty = new DeploymentSpecArgs();
 
+    /**
+     * Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)
+     */
     @InputImport(name="minReadySeconds")
     private final @Nullable Input<Integer> minReadySeconds;
 
@@ -26,6 +32,9 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.minReadySeconds == null ? Input.empty() : this.minReadySeconds;
     }
 
+    /**
+     * Indicates that the deployment is paused and will not be processed by the deployment controller.
+     */
     @InputImport(name="paused")
     private final @Nullable Input<Boolean> paused;
 
@@ -33,6 +42,9 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.paused == null ? Input.empty() : this.paused;
     }
 
+    /**
+     * The maximum time in seconds for a deployment to make progress before it is considered to be failed. The deployment controller will continue to process failed deployments and a condition with a ProgressDeadlineExceeded reason will be surfaced in the deployment status. Note that progress will not be estimated during the time a deployment is paused. This is set to the max value of int32 (i.e. 2147483647) by default, which means "no deadline".
+     */
     @InputImport(name="progressDeadlineSeconds")
     private final @Nullable Input<Integer> progressDeadlineSeconds;
 
@@ -40,6 +52,9 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.progressDeadlineSeconds == null ? Input.empty() : this.progressDeadlineSeconds;
     }
 
+    /**
+     * Number of desired pods. This is a pointer to distinguish between explicit zero and not specified. Defaults to 1.
+     */
     @InputImport(name="replicas")
     private final @Nullable Input<Integer> replicas;
 
@@ -47,6 +62,9 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.replicas == null ? Input.empty() : this.replicas;
     }
 
+    /**
+     * The number of old ReplicaSets to retain to allow rollback. This is a pointer to distinguish between explicit zero and not specified. This is set to the max value of int32 (i.e. 2147483647) by default, which means "retaining all old RelicaSets".
+     */
     @InputImport(name="revisionHistoryLimit")
     private final @Nullable Input<Integer> revisionHistoryLimit;
 
@@ -54,6 +72,9 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.revisionHistoryLimit == null ? Input.empty() : this.revisionHistoryLimit;
     }
 
+    /**
+     * DEPRECATED. The config this deployment is rolling back to. Will be cleared after rollback is done.
+     */
     @InputImport(name="rollbackTo")
     private final @Nullable Input<RollbackConfigArgs> rollbackTo;
 
@@ -61,6 +82,9 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.rollbackTo == null ? Input.empty() : this.rollbackTo;
     }
 
+    /**
+     * Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment.
+     */
     @InputImport(name="selector")
     private final @Nullable Input<LabelSelectorArgs> selector;
 
@@ -68,6 +92,9 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.selector == null ? Input.empty() : this.selector;
     }
 
+    /**
+     * The deployment strategy to use to replace existing pods with new ones.
+     */
     @InputImport(name="strategy")
     private final @Nullable Input<DeploymentStrategyArgs> strategy;
 
@@ -75,6 +102,9 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.strategy == null ? Input.empty() : this.strategy;
     }
 
+    /**
+     * Template describes the pods that will be created.
+     */
     @InputImport(name="template", required=true)
     private final Input<PodTemplateSpecArgs> template;
 

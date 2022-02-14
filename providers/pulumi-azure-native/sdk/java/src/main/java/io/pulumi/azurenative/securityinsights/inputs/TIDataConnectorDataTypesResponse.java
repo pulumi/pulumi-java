@@ -3,17 +3,22 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.azurenative.securityinsights.inputs.TIDataConnectorDataTypesResponseIndicators;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The available data types for TI (Threat Intelligence) data connector.
+ */
 public final class TIDataConnectorDataTypesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TIDataConnectorDataTypesResponse Empty = new TIDataConnectorDataTypesResponse();
 
+    /**
+     * Data type for indicators connection.
+     */
     @InputImport(name="indicators")
     private final @Nullable TIDataConnectorDataTypesResponseIndicators indicators;
 

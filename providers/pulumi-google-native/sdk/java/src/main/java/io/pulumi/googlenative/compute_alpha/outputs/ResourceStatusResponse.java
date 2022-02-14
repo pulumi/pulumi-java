@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourceStatusResponse {
+/**
+ * 
+ */
     private final ResourceStatusSchedulingResponse scheduling;
+/**
+ * 
+ */
     private final ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance;
 
     @OutputCustomType.Constructor({"scheduling","upcomingMaintenance"})
@@ -21,9 +27,15 @@ public final class ResourceStatusResponse {
         this.upcomingMaintenance = Objects.requireNonNull(upcomingMaintenance);
     }
 
+/**
+ * 
+ */
     public ResourceStatusSchedulingResponse getScheduling() {
         return this.scheduling;
     }
+/**
+ * 
+ */
     public ResourceStatusUpcomingMaintenanceResponse getUpcomingMaintenance() {
         return this.upcomingMaintenance;
     }

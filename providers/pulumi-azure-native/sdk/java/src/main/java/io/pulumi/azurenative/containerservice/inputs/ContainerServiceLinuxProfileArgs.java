@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Profile for Linux VMs in the container service cluster.
+ */
 public final class ContainerServiceLinuxProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerServiceLinuxProfileArgs Empty = new ContainerServiceLinuxProfileArgs();
 
+    /**
+     * The administrator username to use for Linux VMs.
+     */
     @InputImport(name="adminUsername", required=true)
     private final Input<String> adminUsername;
 
@@ -21,6 +27,9 @@ public final class ContainerServiceLinuxProfileArgs extends io.pulumi.resources.
         return this.adminUsername;
     }
 
+    /**
+     * SSH configuration for Linux-based VMs running on Azure.
+     */
     @InputImport(name="ssh", required=true)
     private final Input<ContainerServiceSshConfigurationArgs> ssh;
 

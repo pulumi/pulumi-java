@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListRunLogSasUrlArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListRunLogSasUrlArgs Empty = new ListRunLogSasUrlArgs();
 
+    /**
+     * The name of the container registry.
+     */
     @InputImport(name="registryName", required=true)
     private final String registryName;
 
@@ -19,6 +25,9 @@ public final class ListRunLogSasUrlArgs extends io.pulumi.resources.InvokeArgs {
         return this.registryName;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class ListRunLogSasUrlArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The run ID.
+     */
     @InputImport(name="runId", required=true)
     private final String runId;
 

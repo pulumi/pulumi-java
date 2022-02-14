@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Disk Details.
+ */
 public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OSDetailsResponse Empty = new OSDetailsResponse();
 
+    /**
+     * The OS Major Version.
+     */
     @InputImport(name="oSMajorVersion")
     private final @Nullable String oSMajorVersion;
 
@@ -21,6 +27,9 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.oSMajorVersion == null ? Optional.empty() : Optional.ofNullable(this.oSMajorVersion);
     }
 
+    /**
+     * The OS Minor Version.
+     */
     @InputImport(name="oSMinorVersion")
     private final @Nullable String oSMinorVersion;
 
@@ -28,6 +37,9 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.oSMinorVersion == null ? Optional.empty() : Optional.ofNullable(this.oSMinorVersion);
     }
 
+    /**
+     * The OS Version.
+     */
     @InputImport(name="oSVersion")
     private final @Nullable String oSVersion;
 
@@ -35,6 +47,9 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.oSVersion == null ? Optional.empty() : Optional.ofNullable(this.oSVersion);
     }
 
+    /**
+     * The OSEdition.
+     */
     @InputImport(name="osEdition")
     private final @Nullable String osEdition;
 
@@ -42,6 +57,9 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.osEdition == null ? Optional.empty() : Optional.ofNullable(this.osEdition);
     }
 
+    /**
+     * VM Disk details.
+     */
     @InputImport(name="osType")
     private final @Nullable String osType;
 
@@ -49,6 +67,9 @@ public final class OSDetailsResponse extends io.pulumi.resources.InvokeArgs {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
     }
 
+    /**
+     * Product type.
+     */
     @InputImport(name="productType")
     private final @Nullable String productType;
 

@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AuthenticatorGroupsConfigResponse {
+/**
+ * Whether this cluster should return group membership lookups during authentication using a group of security groups.
+ */
     private final Boolean enabled;
+/**
+ * The name of the security group-of-groups to be used. Only relevant if enabled = true.
+ */
     private final String securityGroup;
 
     @OutputCustomType.Constructor({"enabled","securityGroup"})
@@ -21,9 +27,15 @@ public final class AuthenticatorGroupsConfigResponse {
         this.securityGroup = Objects.requireNonNull(securityGroup);
     }
 
+/**
+ * Whether this cluster should return group membership lookups during authentication using a group of security groups.
+ */
     public Boolean getEnabled() {
         return this.enabled;
     }
+/**
+ * The name of the security group-of-groups to be used. Only relevant if enabled = true.
+ */
     public String getSecurityGroup() {
         return this.securityGroup;
     }

@@ -21,24 +21,81 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetConnectionMonitorResult {
+/**
+ * Determines if the connection monitor will start automatically once created.
+ */
     private final @Nullable Boolean autoStart;
+/**
+ * Type of connection monitor.
+ */
     private final String connectionMonitorType;
+/**
+ * Describes the destination of connection monitor.
+ */
     private final @Nullable ConnectionMonitorDestinationResponse destination;
+/**
+ * List of connection monitor endpoints.
+ */
     private final @Nullable List<ConnectionMonitorEndpointResponse> endpoints;
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     private final String etag;
+/**
+ * ID of the connection monitor.
+ */
     private final String id;
+/**
+ * Connection monitor location.
+ */
     private final @Nullable String location;
+/**
+ * Monitoring interval in seconds.
+ */
     private final @Nullable Integer monitoringIntervalInSeconds;
+/**
+ * The monitoring status of the connection monitor.
+ */
     private final String monitoringStatus;
+/**
+ * Name of the connection monitor.
+ */
     private final String name;
+/**
+ * Optional notes to be associated with the connection monitor.
+ */
     private final @Nullable String notes;
+/**
+ * List of connection monitor outputs.
+ */
     private final @Nullable List<ConnectionMonitorOutputResponse> outputs;
+/**
+ * The provisioning state of the connection monitor.
+ */
     private final String provisioningState;
+/**
+ * Describes the source of connection monitor.
+ */
     private final @Nullable ConnectionMonitorSourceResponse source;
+/**
+ * The date and time when the connection monitor was started.
+ */
     private final String startTime;
+/**
+ * Connection monitor tags.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * List of connection monitor test configurations.
+ */
     private final @Nullable List<ConnectionMonitorTestConfigurationResponse> testConfigurations;
+/**
+ * List of connection monitor test groups.
+ */
     private final @Nullable List<ConnectionMonitorTestGroupResponse> testGroups;
+/**
+ * Connection monitor type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"autoStart","connectionMonitorType","destination","endpoints","etag","id","location","monitoringIntervalInSeconds","monitoringStatus","name","notes","outputs","provisioningState","source","startTime","tags","testConfigurations","testGroups","type"})
@@ -83,60 +140,117 @@ public final class GetConnectionMonitorResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Determines if the connection monitor will start automatically once created.
+ */
     public Optional<Boolean> getAutoStart() {
         return Optional.ofNullable(this.autoStart);
     }
+/**
+ * Type of connection monitor.
+ */
     public String getConnectionMonitorType() {
         return this.connectionMonitorType;
     }
+/**
+ * Describes the destination of connection monitor.
+ */
     public Optional<ConnectionMonitorDestinationResponse> getDestination() {
         return Optional.ofNullable(this.destination);
     }
+/**
+ * List of connection monitor endpoints.
+ */
     public List<ConnectionMonitorEndpointResponse> getEndpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * ID of the connection monitor.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Connection monitor location.
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * Monitoring interval in seconds.
+ */
     public Optional<Integer> getMonitoringIntervalInSeconds() {
         return Optional.ofNullable(this.monitoringIntervalInSeconds);
     }
+/**
+ * The monitoring status of the connection monitor.
+ */
     public String getMonitoringStatus() {
         return this.monitoringStatus;
     }
+/**
+ * Name of the connection monitor.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Optional notes to be associated with the connection monitor.
+ */
     public Optional<String> getNotes() {
         return Optional.ofNullable(this.notes);
     }
+/**
+ * List of connection monitor outputs.
+ */
     public List<ConnectionMonitorOutputResponse> getOutputs() {
         return this.outputs == null ? List.of() : this.outputs;
     }
+/**
+ * The provisioning state of the connection monitor.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Describes the source of connection monitor.
+ */
     public Optional<ConnectionMonitorSourceResponse> getSource() {
         return Optional.ofNullable(this.source);
     }
+/**
+ * The date and time when the connection monitor was started.
+ */
     public String getStartTime() {
         return this.startTime;
     }
+/**
+ * Connection monitor tags.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * List of connection monitor test configurations.
+ */
     public List<ConnectionMonitorTestConfigurationResponse> getTestConfigurations() {
         return this.testConfigurations == null ? List.of() : this.testConfigurations;
     }
+/**
+ * List of connection monitor test groups.
+ */
     public List<ConnectionMonitorTestGroupResponse> getTestGroups() {
         return this.testGroups == null ? List.of() : this.testGroups;
     }
+/**
+ * Connection monitor type.
+ */
     public String getType() {
         return this.type;
     }

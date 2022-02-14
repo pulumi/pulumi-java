@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LabArgs Empty = new LabArgs();
 
+    /**
+     * The name of the lab Account.
+     */
     @InputImport(name="labAccountName", required=true)
     private final Input<String> labAccountName;
 
@@ -25,6 +31,9 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
         return this.labAccountName;
     }
 
+    /**
+     * The name of the lab.
+     */
     @InputImport(name="labName")
     private final @Nullable Input<String> labName;
 
@@ -32,6 +41,9 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
         return this.labName == null ? Input.empty() : this.labName;
     }
 
+    /**
+     * The location of the resource.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -39,6 +51,9 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Maximum number of users allowed in the lab.
+     */
     @InputImport(name="maxUsersInLab")
     private final @Nullable Input<Integer> maxUsersInLab;
 
@@ -46,6 +61,9 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxUsersInLab == null ? Input.empty() : this.maxUsersInLab;
     }
 
+    /**
+     * The provisioning status of the resource.
+     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<String> provisioningState;
 
@@ -53,6 +71,9 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -60,6 +81,9 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The tags of the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -67,6 +91,9 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The unique immutable identifier of a resource (Guid).
+     */
     @InputImport(name="uniqueIdentifier")
     private final @Nullable Input<String> uniqueIdentifier;
 
@@ -74,6 +101,9 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
         return this.uniqueIdentifier == null ? Input.empty() : this.uniqueIdentifier;
     }
 
+    /**
+     * Maximum duration a user can use an environment for in the lab.
+     */
     @InputImport(name="usageQuota")
     private final @Nullable Input<String> usageQuota;
 
@@ -81,6 +111,9 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
         return this.usageQuota == null ? Input.empty() : this.usageQuota;
     }
 
+    /**
+     * Lab user access mode (open to all vs. restricted to those listed on the lab).
+     */
     @InputImport(name="userAccessMode")
     private final @Nullable Input<Either<String,LabUserAccessMode>> userAccessMode;
 

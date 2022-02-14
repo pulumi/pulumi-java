@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum RouterBgpPeerAdvertisedGroupsItem {
+/**
+ * Advertise all available subnets (including peer VPC subnets).
+ */
         AllSubnets("ALL_SUBNETS");
 
         private final String value;

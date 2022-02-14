@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Describes the kind of secret.
+ */
     @EnumType
     public enum SecretKind {
+/**
+ * A simple secret resource whose plaintext value is provided by the user.
+ */
         InlinedValue("inlinedValue");
 
         private final String value;

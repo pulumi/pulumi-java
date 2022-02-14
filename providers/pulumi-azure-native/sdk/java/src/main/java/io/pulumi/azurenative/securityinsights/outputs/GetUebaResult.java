@@ -13,12 +13,34 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetUebaResult {
+/**
+ * The relevant data sources that enriched by ueba
+ */
     private final @Nullable List<String> dataSources;
+/**
+ * Etag of the azure resource
+ */
     private final @Nullable String etag;
+/**
+ * Azure resource Id
+ */
     private final String id;
+/**
+ * The kind of the setting
+Expected value is 'Ueba'.
+ */
     private final String kind;
+/**
+ * Azure resource name
+ */
     private final String name;
+/**
+ * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+ */
     private final SystemDataResponse systemData;
+/**
+ * Azure resource type
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"dataSources","etag","id","kind","name","systemData","type"})
@@ -39,24 +61,46 @@ public final class GetUebaResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The relevant data sources that enriched by ueba
+ */
     public List<String> getDataSources() {
         return this.dataSources == null ? List.of() : this.dataSources;
     }
+/**
+ * Etag of the azure resource
+ */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+/**
+ * Azure resource Id
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The kind of the setting
+Expected value is 'Ueba'.
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * Azure resource name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * Azure resource type
+ */
     public String getType() {
         return this.type;
     }

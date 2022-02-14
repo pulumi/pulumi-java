@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetInsightsResultsMetadataResponse {
+/**
+ * information about the failed queries
+ */
     private final @Nullable List<GetInsightsErrorResponse> errors;
+/**
+ * the total items found for the insights request
+ */
     private final Integer totalCount;
 
     @OutputCustomType.Constructor({"errors","totalCount"})
@@ -23,9 +29,15 @@ public final class GetInsightsResultsMetadataResponse {
         this.totalCount = Objects.requireNonNull(totalCount);
     }
 
+/**
+ * information about the failed queries
+ */
     public List<GetInsightsErrorResponse> getErrors() {
         return this.errors == null ? List.of() : this.errors;
     }
+/**
+ * the total items found for the insights request
+ */
     public Integer getTotalCount() {
         return this.totalCount;
     }

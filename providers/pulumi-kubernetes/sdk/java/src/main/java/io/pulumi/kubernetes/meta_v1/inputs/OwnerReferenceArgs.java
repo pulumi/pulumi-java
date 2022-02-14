@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * OwnerReference contains enough information to let you identify an owning object. An owning object must be in the same namespace as the dependent, or be cluster-scoped, so there is no namespace field.
+ */
 public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OwnerReferenceArgs Empty = new OwnerReferenceArgs();
 
+    /**
+     * API version of the referent.
+     */
     @InputImport(name="apiVersion", required=true)
     private final Input<String> apiVersion;
 
@@ -22,6 +28,9 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiVersion;
     }
 
+    /**
+     * If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.
+     */
     @InputImport(name="blockOwnerDeletion")
     private final @Nullable Input<Boolean> blockOwnerDeletion;
 
@@ -29,6 +38,9 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.blockOwnerDeletion == null ? Input.empty() : this.blockOwnerDeletion;
     }
 
+    /**
+     * If true, this reference points to the managing controller.
+     */
     @InputImport(name="controller")
     private final @Nullable Input<Boolean> controller;
 
@@ -36,6 +48,9 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.controller == null ? Input.empty() : this.controller;
     }
 
+    /**
+     * Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -43,6 +58,9 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
+    /**
+     * Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -50,6 +68,9 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+     */
     @InputImport(name="uid", required=true)
     private final Input<String> uid;
 

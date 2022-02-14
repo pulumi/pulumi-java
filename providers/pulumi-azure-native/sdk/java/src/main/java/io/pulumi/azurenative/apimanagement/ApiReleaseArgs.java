@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiReleaseArgs Empty = new ApiReleaseArgs();
 
+    /**
+     * Identifier of the API the release belongs to.
+     */
     @InputImport(name="apiId", required=true)
     private final Input<String> apiId;
 
@@ -21,6 +27,9 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiId;
     }
 
+    /**
+     * Release Notes
+     */
     @InputImport(name="notes")
     private final @Nullable Input<String> notes;
 
@@ -28,6 +37,9 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.notes == null ? Input.empty() : this.notes;
     }
 
+    /**
+     * Release identifier within an API. Must be unique in the current API Management service instance.
+     */
     @InputImport(name="releaseId")
     private final @Nullable Input<String> releaseId;
 
@@ -35,6 +47,9 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.releaseId == null ? Input.empty() : this.releaseId;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -42,6 +57,9 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

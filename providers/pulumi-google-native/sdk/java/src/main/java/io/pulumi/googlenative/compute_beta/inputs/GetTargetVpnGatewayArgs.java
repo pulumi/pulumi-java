@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetTargetVpnGatewayArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTargetVpnGatewayArgs Empty = new GetTargetVpnGatewayArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -21,6 +27,9 @@ public final class GetTargetVpnGatewayArgs extends io.pulumi.resources.InvokeArg
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="region", required=true)
     private final String region;
 
@@ -28,6 +37,9 @@ public final class GetTargetVpnGatewayArgs extends io.pulumi.resources.InvokeArg
         return this.region;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="targetVpnGateway", required=true)
     private final String targetVpnGateway;
 

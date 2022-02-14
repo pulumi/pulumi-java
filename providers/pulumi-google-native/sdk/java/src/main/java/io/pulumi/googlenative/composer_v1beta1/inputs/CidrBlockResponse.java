@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * CidrBlock contains an optional name and one CIDR block.
+ */
 public final class CidrBlockResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CidrBlockResponse Empty = new CidrBlockResponse();
 
+    /**
+     * cidr_block must be specified in CIDR notation.
+     */
     @InputImport(name="cidrBlock", required=true)
     private final String cidrBlock;
 
@@ -19,6 +25,9 @@ public final class CidrBlockResponse extends io.pulumi.resources.InvokeArgs {
         return this.cidrBlock;
     }
 
+    /**
+     * display_name is a field for users to identify CIDR blocks.
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 

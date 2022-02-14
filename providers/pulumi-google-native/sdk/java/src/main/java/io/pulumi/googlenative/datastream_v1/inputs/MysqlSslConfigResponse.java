@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * MySQL SSL configuration information.
+ */
 public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MysqlSslConfigResponse Empty = new MysqlSslConfigResponse();
 
+    /**
+     * Input only. PEM-encoded certificate of the CA that signed the source database server's certificate.
+     */
     @InputImport(name="caCertificate", required=true)
     private final String caCertificate;
 
@@ -20,6 +26,9 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
         return this.caCertificate;
     }
 
+    /**
+     * Indicates whether the ca_certificate field is set.
+     */
     @InputImport(name="caCertificateSet", required=true)
     private final Boolean caCertificateSet;
 
@@ -27,6 +36,9 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
         return this.caCertificateSet;
     }
 
+    /**
+     * Input only. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the 'client_key' and the 'ca_certificate' fields are mandatory.
+     */
     @InputImport(name="clientCertificate", required=true)
     private final String clientCertificate;
 
@@ -34,6 +46,9 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
         return this.clientCertificate;
     }
 
+    /**
+     * Indicates whether the client_certificate field is set.
+     */
     @InputImport(name="clientCertificateSet", required=true)
     private final Boolean clientCertificateSet;
 
@@ -41,6 +56,9 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
         return this.clientCertificateSet;
     }
 
+    /**
+     * Input only. PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.
+     */
     @InputImport(name="clientKey", required=true)
     private final String clientKey;
 
@@ -48,6 +66,9 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
         return this.clientKey;
     }
 
+    /**
+     * Indicates whether the client_key field is set.
+     */
     @InputImport(name="clientKeySet", required=true)
     private final Boolean clientKeySet;
 

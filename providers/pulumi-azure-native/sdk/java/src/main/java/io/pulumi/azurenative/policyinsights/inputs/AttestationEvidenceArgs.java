@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A piece of evidence supporting the compliance state set in the attestation.
+ */
 public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AttestationEvidenceArgs Empty = new AttestationEvidenceArgs();
 
+    /**
+     * The description for this piece of evidence.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +27,9 @@ public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceA
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The URI location of the evidence.
+     */
     @InputImport(name="sourceUri")
     private final @Nullable Input<String> sourceUri;
 

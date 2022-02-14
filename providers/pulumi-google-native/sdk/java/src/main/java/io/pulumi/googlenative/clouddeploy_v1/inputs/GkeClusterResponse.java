@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Information specifying a GKE Cluster.
+ */
 public final class GkeClusterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GkeClusterResponse Empty = new GkeClusterResponse();
 
+    /**
+     * Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
+     */
     @InputImport(name="cluster", required=true)
     private final String cluster;
 

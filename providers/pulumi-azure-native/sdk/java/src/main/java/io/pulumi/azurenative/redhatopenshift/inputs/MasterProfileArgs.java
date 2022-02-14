@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * MasterProfile represents a master profile.
+ */
 public final class MasterProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MasterProfileArgs Empty = new MasterProfileArgs();
 
+    /**
+     * The Azure resource ID of the master subnet (immutable).
+     */
     @InputImport(name="subnetId")
     private final @Nullable Input<String> subnetId;
 
@@ -21,6 +27,9 @@ public final class MasterProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.subnetId == null ? Input.empty() : this.subnetId;
     }
 
+    /**
+     * The size of the master VMs (immutable).
+     */
     @InputImport(name="vmSize")
     private final @Nullable Input<String> vmSize;
 

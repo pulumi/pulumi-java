@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The network configuration.
+ */
 public final class NetworkConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkConfigurationArgs Empty = new NetworkConfigurationArgs();
 
+    /**
+     * The access endpoint.
+     */
     @InputImport(name="accessEndpoint")
     private final @Nullable Input<IntegrationServiceEnvironmentAccessEndpointArgs> accessEndpoint;
 
@@ -24,6 +30,9 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
         return this.accessEndpoint == null ? Input.empty() : this.accessEndpoint;
     }
 
+    /**
+     * The subnets.
+     */
     @InputImport(name="subnets")
     private final @Nullable Input<List<ResourceReferenceArgs>> subnets;
 
@@ -31,6 +40,9 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
         return this.subnets == null ? Input.empty() : this.subnets;
     }
 
+    /**
+     * Gets the virtual network address space.
+     */
     @InputImport(name="virtualNetworkAddressSpace")
     private final @Nullable Input<String> virtualNetworkAddressSpace;
 

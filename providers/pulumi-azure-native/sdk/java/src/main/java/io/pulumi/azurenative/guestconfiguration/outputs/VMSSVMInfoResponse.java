@@ -9,10 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VMSSVMInfoResponse {
+/**
+ * A value indicating compliance status of the machine for the assigned guest configuration.
+ */
     private final String complianceStatus;
+/**
+ * Date and time when last compliance status was checked.
+ */
     private final String lastComplianceChecked;
+/**
+ * Id of the latest report for the guest configuration assignment. 
+ */
     private final String latestReportId;
+/**
+ * UUID of the VM.
+ */
     private final String vmId;
+/**
+ * Azure resource Id of the VM.
+ */
     private final String vmResourceId;
 
     @OutputCustomType.Constructor({"complianceStatus","lastComplianceChecked","latestReportId","vmId","vmResourceId"})
@@ -29,18 +44,33 @@ public final class VMSSVMInfoResponse {
         this.vmResourceId = Objects.requireNonNull(vmResourceId);
     }
 
+/**
+ * A value indicating compliance status of the machine for the assigned guest configuration.
+ */
     public String getComplianceStatus() {
         return this.complianceStatus;
     }
+/**
+ * Date and time when last compliance status was checked.
+ */
     public String getLastComplianceChecked() {
         return this.lastComplianceChecked;
     }
+/**
+ * Id of the latest report for the guest configuration assignment. 
+ */
     public String getLatestReportId() {
         return this.latestReportId;
     }
+/**
+ * UUID of the VM.
+ */
     public String getVmId() {
         return this.vmId;
     }
+/**
+ * Azure resource Id of the VM.
+ */
     public String getVmResourceId() {
         return this.vmResourceId;
     }

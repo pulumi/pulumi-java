@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A Dialogflow source of conversation data.
+ */
 public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudContactcenterinsightsV1DialogflowSourceResponse Empty = new GoogleCloudContactcenterinsightsV1DialogflowSourceResponse();
 
+    /**
+     * Cloud Storage URI that points to a file that contains the conversation audio.
+     */
     @InputImport(name="audioUri", required=true)
     private final String audioUri;
 
@@ -19,6 +25,9 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse ex
         return this.audioUri;
     }
 
+    /**
+     * The name of the Dialogflow conversation that this conversation resource is derived from. Format: projects/{project}/locations/{location}/conversations/{conversation}
+     */
     @InputImport(name="dialogflowConversation", required=true)
     private final String dialogflowConversation;
 

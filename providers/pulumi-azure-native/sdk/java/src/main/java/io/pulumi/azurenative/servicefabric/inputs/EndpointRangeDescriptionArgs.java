@@ -9,10 +9,16 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Port range details
+ */
 public final class EndpointRangeDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EndpointRangeDescriptionArgs Empty = new EndpointRangeDescriptionArgs();
 
+    /**
+     * End port of a range of ports
+     */
     @InputImport(name="endPort", required=true)
     private final Input<Integer> endPort;
 
@@ -20,6 +26,9 @@ public final class EndpointRangeDescriptionArgs extends io.pulumi.resources.Reso
         return this.endPort;
     }
 
+    /**
+     * Starting port of a range of ports
+     */
     @InputImport(name="startPort", required=true)
     private final Input<Integer> startPort;
 

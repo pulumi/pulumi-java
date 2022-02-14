@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Indicates the policy to apply to events that arrive out of order in the input event stream.
+ */
     @EnumType
     public enum EventsOutOfOrderPolicy {
+/**
+ * 
+ */
         Adjust("Adjust"),
+/**
+ * 
+ */
         Drop("Drop");
 
         private final String value;

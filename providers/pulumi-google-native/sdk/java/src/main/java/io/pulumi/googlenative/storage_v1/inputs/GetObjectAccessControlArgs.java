@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetObjectAccessControlArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetObjectAccessControlArgs Empty = new GetObjectAccessControlArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="bucket", required=true)
     private final String bucket;
 
@@ -21,6 +27,9 @@ public final class GetObjectAccessControlArgs extends io.pulumi.resources.Invoke
         return this.bucket;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="entity", required=true)
     private final String entity;
 
@@ -28,6 +37,9 @@ public final class GetObjectAccessControlArgs extends io.pulumi.resources.Invoke
         return this.entity;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="generation")
     private final @Nullable String generation;
 
@@ -35,6 +47,9 @@ public final class GetObjectAccessControlArgs extends io.pulumi.resources.Invoke
         return this.generation == null ? Optional.empty() : Optional.ofNullable(this.generation);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="object", required=true)
     private final String object;
 
@@ -42,6 +57,9 @@ public final class GetObjectAccessControlArgs extends io.pulumi.resources.Invoke
         return this.object;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="provisionalUserProject")
     private final @Nullable String provisionalUserProject;
 
@@ -49,6 +67,9 @@ public final class GetObjectAccessControlArgs extends io.pulumi.resources.Invoke
         return this.provisionalUserProject == null ? Optional.empty() : Optional.ofNullable(this.provisionalUserProject);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="userProject")
     private final @Nullable String userProject;
 

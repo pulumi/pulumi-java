@@ -11,9 +11,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConnectionProfileResponse {
+/**
+ * The enabled access level for Client Access over RDP.
+ */
     private final @Nullable String clientRdpAccess;
+/**
+ * The enabled access level for Client Access over SSH.
+ */
     private final @Nullable String clientSshAccess;
+/**
+ * The enabled access level for Web Access over RDP.
+ */
     private final @Nullable String webRdpAccess;
+/**
+ * The enabled access level for Web Access over SSH.
+ */
     private final @Nullable String webSshAccess;
 
     @OutputCustomType.Constructor({"clientRdpAccess","clientSshAccess","webRdpAccess","webSshAccess"})
@@ -28,15 +40,27 @@ public final class ConnectionProfileResponse {
         this.webSshAccess = webSshAccess;
     }
 
+/**
+ * The enabled access level for Client Access over RDP.
+ */
     public Optional<String> getClientRdpAccess() {
         return Optional.ofNullable(this.clientRdpAccess);
     }
+/**
+ * The enabled access level for Client Access over SSH.
+ */
     public Optional<String> getClientSshAccess() {
         return Optional.ofNullable(this.clientSshAccess);
     }
+/**
+ * The enabled access level for Web Access over RDP.
+ */
     public Optional<String> getWebRdpAccess() {
         return Optional.ofNullable(this.webRdpAccess);
     }
+/**
+ * The enabled access level for Web Access over SSH.
+ */
     public Optional<String> getWebSshAccess() {
         return Optional.ofNullable(this.webSshAccess);
     }

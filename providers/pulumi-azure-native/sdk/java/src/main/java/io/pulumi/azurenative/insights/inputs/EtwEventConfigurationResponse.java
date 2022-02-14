@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class EtwEventConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EtwEventConfigurationResponse Empty = new EtwEventConfigurationResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="filter")
     private final @Nullable String filter;
 
@@ -22,6 +28,9 @@ public final class EtwEventConfigurationResponse extends io.pulumi.resources.Inv
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Integer id;
 
@@ -29,6 +38,9 @@ public final class EtwEventConfigurationResponse extends io.pulumi.resources.Inv
         return this.id;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

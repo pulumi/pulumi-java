@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An Android package file to install.
+ */
 public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApkArgs Empty = new ApkArgs();
 
+    /**
+     * The path to an APK to be installed on the device before the test begins.
+     */
     @InputImport(name="location")
     private final @Nullable Input<FileReferenceArgs> location;
 
@@ -22,6 +28,9 @@ public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The java package for the APK to be installed. Value is determined by examining the application's manifest.
+     */
     @InputImport(name="packageName")
     private final @Nullable Input<String> packageName;
 

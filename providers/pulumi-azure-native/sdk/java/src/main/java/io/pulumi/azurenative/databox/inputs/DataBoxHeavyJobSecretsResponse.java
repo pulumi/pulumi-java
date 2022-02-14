@@ -12,10 +12,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The secrets related to a databox heavy job.
+ */
 public final class DataBoxHeavyJobSecretsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataBoxHeavyJobSecretsResponse Empty = new DataBoxHeavyJobSecretsResponse();
 
+    /**
+     * Contains the list of secret objects for a databox heavy job.
+     */
     @InputImport(name="cabinetPodSecrets", required=true)
     private final List<DataBoxHeavySecretResponse> cabinetPodSecrets;
 
@@ -23,6 +29,9 @@ public final class DataBoxHeavyJobSecretsResponse extends io.pulumi.resources.In
         return this.cabinetPodSecrets;
     }
 
+    /**
+     * Dc Access Security Code for Customer Managed Shipping
+     */
     @InputImport(name="dcAccessSecurityCode", required=true)
     private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
 
@@ -30,6 +39,9 @@ public final class DataBoxHeavyJobSecretsResponse extends io.pulumi.resources.In
         return this.dcAccessSecurityCode;
     }
 
+    /**
+     * Error while fetching the secrets.
+     */
     @InputImport(name="error", required=true)
     private final CloudErrorResponse error;
 
@@ -37,6 +49,10 @@ public final class DataBoxHeavyJobSecretsResponse extends io.pulumi.resources.In
         return this.error;
     }
 
+    /**
+     * Used to indicate what type of job secrets object.
+Expected value is 'DataBoxHeavy'.
+     */
     @InputImport(name="jobSecretsType", required=true)
     private final String jobSecretsType;
 

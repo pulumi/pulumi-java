@@ -20,10 +20,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class RegionSecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RegionSecurityPolicyArgs Empty = new RegionSecurityPolicyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="adaptiveProtectionConfig")
     private final @Nullable Input<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
 
@@ -31,6 +37,9 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
         return this.adaptiveProtectionConfig == null ? Input.empty() : this.adaptiveProtectionConfig;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="advancedOptionsConfig")
     private final @Nullable Input<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig;
 
@@ -38,6 +47,9 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
         return this.advancedOptionsConfig == null ? Input.empty() : this.advancedOptionsConfig;
     }
 
+    /**
+     * A list of associations that belong to this policy.
+     */
     @InputImport(name="associations")
     private final @Nullable Input<List<SecurityPolicyAssociationArgs>> associations;
 
@@ -45,6 +57,9 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
         return this.associations == null ? Input.empty() : this.associations;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="cloudArmorConfig")
     private final @Nullable Input<SecurityPolicyCloudArmorConfigArgs> cloudArmorConfig;
 
@@ -52,6 +67,9 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
         return this.cloudArmorConfig == null ? Input.empty() : this.cloudArmorConfig;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="ddosProtectionConfig")
     private final @Nullable Input<SecurityPolicyDdosProtectionConfigArgs> ddosProtectionConfig;
 
@@ -59,6 +77,9 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
         return this.ddosProtectionConfig == null ? Input.empty() : this.ddosProtectionConfig;
     }
 
+    /**
+     * An optional description of this resource. Provide this property when you create the resource.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -66,6 +87,9 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * User-provided name of the Organization security plicy. The name should be unique in the organization in which the security policy is created. This should only be used when SecurityPolicyType is FIREWALL. The name must be 1-63 characters long, and comply with https://www.ietf.org/rfc/rfc1035.txt. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -73,6 +97,9 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -80,6 +107,9 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -87,6 +117,9 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -94,6 +127,9 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="recaptchaOptionsConfig")
     private final @Nullable Input<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig;
 
@@ -101,6 +137,9 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
         return this.recaptchaOptionsConfig == null ? Input.empty() : this.recaptchaOptionsConfig;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="region", required=true)
     private final Input<String> region;
 
@@ -108,6 +147,9 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
         return this.region;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -115,6 +157,9 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * A list of rules that belong to this policy. There must always be a default rule (rule with priority 2147483647 and match "*"). If no rules are provided when creating a security policy, a default rule with action "allow" will be added.
+     */
     @InputImport(name="rules")
     private final @Nullable Input<List<SecurityPolicyRuleArgs>> rules;
 
@@ -122,6 +167,9 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
         return this.rules == null ? Input.empty() : this.rules;
     }
 
+    /**
+     * The type indicates the intended use of the security policy. CLOUD_ARMOR - Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google's cache.
+     */
     @InputImport(name="type")
     private final @Nullable Input<RegionSecurityPolicyType> type;
 
@@ -129,6 +177,9 @@ public final class RegionSecurityPolicyArgs extends io.pulumi.resources.Resource
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="validateOnly")
     private final @Nullable Input<String> validateOnly;
 

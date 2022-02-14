@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * DNSConfig contains the desired set of options for configuring clusterDNS.
+ */
 public final class DNSConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DNSConfigArgs Empty = new DNSConfigArgs();
 
+    /**
+     * cluster_dns indicates which in-cluster DNS provider should be used.
+     */
     @InputImport(name="clusterDns")
     private final @Nullable Input<DNSConfigClusterDns> clusterDns;
 
@@ -23,6 +29,9 @@ public final class DNSConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterDns == null ? Input.empty() : this.clusterDns;
     }
 
+    /**
+     * cluster_dns_domain is the suffix used for all cluster service records.
+     */
     @InputImport(name="clusterDnsDomain")
     private final @Nullable Input<String> clusterDnsDomain;
 
@@ -30,6 +39,9 @@ public final class DNSConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterDnsDomain == null ? Input.empty() : this.clusterDnsDomain;
     }
 
+    /**
+     * cluster_dns_scope indicates the scope of access to cluster DNS records.
+     */
     @InputImport(name="clusterDnsScope")
     private final @Nullable Input<DNSConfigClusterDnsScope> clusterDnsScope;
 

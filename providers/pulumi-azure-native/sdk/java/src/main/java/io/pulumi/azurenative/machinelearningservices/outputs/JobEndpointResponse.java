@@ -13,9 +13,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobEndpointResponse {
+/**
+ * Url for endpoint.
+ */
     private final @Nullable String endpoint;
+/**
+ * Endpoint type.
+ */
     private final @Nullable String jobEndpointType;
+/**
+ * Port for endpoint.
+ */
     private final @Nullable Integer port;
+/**
+ * Additional properties to set on the endpoint.
+ */
     private final @Nullable Map<String,String> properties;
 
     @OutputCustomType.Constructor({"endpoint","jobEndpointType","port","properties"})
@@ -30,15 +42,27 @@ public final class JobEndpointResponse {
         this.properties = properties;
     }
 
+/**
+ * Url for endpoint.
+ */
     public Optional<String> getEndpoint() {
         return Optional.ofNullable(this.endpoint);
     }
+/**
+ * Endpoint type.
+ */
     public Optional<String> getJobEndpointType() {
         return Optional.ofNullable(this.jobEndpointType);
     }
+/**
+ * Port for endpoint.
+ */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
+/**
+ * Additional properties to set on the endpoint.
+ */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }

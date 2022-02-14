@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Asset's type.
+ */
     @EnumType
     public enum AssetType {
+/**
+ * 
+ */
         Module("Module"),
+/**
+ * 
+ */
         Resource("Resource");
 
         private final String value;

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.webpubsub;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.webpubsub.WebPubSubSharedPrivateLinkResourceArgs;
 import io.pulumi.azurenative.webpubsub.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,57 +14,210 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Describes a Shared Private Link Resource
+API Version: 2021-04-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### WebPubSubSharedPrivateLinkResources_CreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var webPubSubSharedPrivateLinkResource = new AzureNative.WebPubSub.WebPubSubSharedPrivateLinkResource("webPubSubSharedPrivateLinkResource", new AzureNative.WebPubSub.WebPubSubSharedPrivateLinkResourceArgs
+        {
+            GroupId = "sites",
+            PrivateLinkResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Web/sites/myWebApp",
+            RequestMessage = "Please approve",
+            ResourceGroupName = "myResourceGroup",
+            ResourceName = "myWebPubSubService",
+            SharedPrivateLinkResourceName = "upstream",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	webpubsub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/webpubsub"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := webpubsub.NewWebPubSubSharedPrivateLinkResource(ctx, "webPubSubSharedPrivateLinkResource", &webpubsub.WebPubSubSharedPrivateLinkResourceArgs{
+			GroupId:                       pulumi.String("sites"),
+			PrivateLinkResourceId:         pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Web/sites/myWebApp"),
+			RequestMessage:                pulumi.String("Please approve"),
+			ResourceGroupName:             pulumi.String("myResourceGroup"),
+			ResourceName:                  pulumi.String("myWebPubSubService"),
+			SharedPrivateLinkResourceName: pulumi.String("upstream"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const webPubSubSharedPrivateLinkResource = new azure_native.webpubsub.WebPubSubSharedPrivateLinkResource("webPubSubSharedPrivateLinkResource", {
+    groupId: "sites",
+    privateLinkResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Web/sites/myWebApp",
+    requestMessage: "Please approve",
+    resourceGroupName: "myResourceGroup",
+    resourceName: "myWebPubSubService",
+    sharedPrivateLinkResourceName: "upstream",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+web_pub_sub_shared_private_link_resource = azure_native.webpubsub.WebPubSubSharedPrivateLinkResource("webPubSubSharedPrivateLinkResource",
+    group_id="sites",
+    private_link_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.Web/sites/myWebApp",
+    request_message="Please approve",
+    resource_group_name="myResourceGroup",
+    resource_name="myWebPubSubService",
+    shared_private_link_resource_name="upstream")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:webpubsub:WebPubSubSharedPrivateLinkResource upstream /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.SignalRService/WebPubSub/myWebPubSubService/privateEndpointConnections/upstream 
+```
+
+ */
 @ResourceType(type="azure-native:webpubsub:WebPubSubSharedPrivateLinkResource")
 public class WebPubSubSharedPrivateLinkResource extends io.pulumi.resources.CustomResource {
+    /**
+     * The group id from the provider of resource the shared private link resource is for
+     */
     @OutputExport(name="groupId", type=String.class, parameters={})
     private Output<String> groupId;
 
+    /**
+     * @return The group id from the provider of resource the shared private link resource is for
+     */
     public Output<String> getGroupId() {
         return this.groupId;
     }
+    /**
+     * The name of the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The resource id of the resource the shared private link resource is for
+     */
     @OutputExport(name="privateLinkResourceId", type=String.class, parameters={})
     private Output<String> privateLinkResourceId;
 
+    /**
+     * @return The resource id of the resource the shared private link resource is for
+     */
     public Output<String> getPrivateLinkResourceId() {
         return this.privateLinkResourceId;
     }
+    /**
+     * Provisioning state of the shared private link resource
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state of the shared private link resource
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The request message for requesting approval of the shared private link resource
+     */
     @OutputExport(name="requestMessage", type=String.class, parameters={})
     private Output</* @Nullable */ String> requestMessage;
 
+    /**
+     * @return The request message for requesting approval of the shared private link resource
+     */
     public Output</* @Nullable */ String> getRequestMessage() {
         return this.requestMessage;
     }
+    /**
+     * Status of the shared private link resource
+     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
+    /**
+     * @return Status of the shared private link resource
+     */
     public Output<String> getStatus() {
         return this.status;
     }
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Metadata pertaining to creation and last modification of the resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public WebPubSubSharedPrivateLinkResource(String name, WebPubSubSharedPrivateLinkResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:webpubsub:WebPubSubSharedPrivateLinkResource", name, args == null ? WebPubSubSharedPrivateLinkResourceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -87,6 +239,14 @@ public class WebPubSubSharedPrivateLinkResource extends io.pulumi.resources.Cust
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static WebPubSubSharedPrivateLinkResource get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebPubSubSharedPrivateLinkResource(name, id, options);
     }

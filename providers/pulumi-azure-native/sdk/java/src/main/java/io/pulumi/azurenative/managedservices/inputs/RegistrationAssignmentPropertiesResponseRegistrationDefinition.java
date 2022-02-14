@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Registration definition inside registration assignment.
+ */
 public final class RegistrationAssignmentPropertiesResponseRegistrationDefinition extends io.pulumi.resources.InvokeArgs {
 
     public static final RegistrationAssignmentPropertiesResponseRegistrationDefinition Empty = new RegistrationAssignmentPropertiesResponseRegistrationDefinition();
 
+    /**
+     * Fully qualified path of the registration definition.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -23,6 +29,9 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
         return this.id;
     }
 
+    /**
+     * Name of the registration definition.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -30,6 +39,9 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
         return this.name;
     }
 
+    /**
+     * Plan details for the managed services.
+     */
     @InputImport(name="plan")
     private final @Nullable PlanResponse plan;
 
@@ -37,6 +49,9 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
         return this.plan == null ? Optional.empty() : Optional.ofNullable(this.plan);
     }
 
+    /**
+     * Properties of registration definition inside registration assignment.
+     */
     @InputImport(name="properties")
     private final @Nullable RegistrationAssignmentPropertiesResponseProperties properties;
 
@@ -44,6 +59,9 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
     }
 
+    /**
+     * Type of the resource (Microsoft.ManagedServices/registrationDefinitions).
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

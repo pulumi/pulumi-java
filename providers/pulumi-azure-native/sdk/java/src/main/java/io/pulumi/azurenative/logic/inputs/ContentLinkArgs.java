@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The content link.
+ */
 public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContentLinkArgs Empty = new ContentLinkArgs();
 
+    /**
+     * The content link URI.
+     */
     @InputImport(name="uri")
     private final @Nullable Input<String> uri;
 

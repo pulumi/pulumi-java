@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * LoggingConfig is cluster logging configuration.
+ */
 public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoggingConfigArgs Empty = new LoggingConfigArgs();
 
+    /**
+     * Logging components configuration
+     */
     @InputImport(name="componentConfig")
     private final @Nullable Input<LoggingComponentConfigArgs> componentConfig;
 

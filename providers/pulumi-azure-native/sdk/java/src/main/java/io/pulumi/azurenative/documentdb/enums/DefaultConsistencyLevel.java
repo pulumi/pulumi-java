@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The default consistency level and configuration settings of the Cosmos DB account.
+ */
     @EnumType
     public enum DefaultConsistencyLevel {
+/**
+ * 
+ */
         Eventual("Eventual"),
+/**
+ * 
+ */
         Session("Session"),
+/**
+ * 
+ */
         BoundedStaleness("BoundedStaleness"),
+/**
+ * 
+ */
         Strong("Strong"),
+/**
+ * 
+ */
         ConsistentPrefix("ConsistentPrefix");
 
         private final String value;

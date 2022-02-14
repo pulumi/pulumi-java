@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSensitivityLabel {
+/**
+ * A sensitivity label.
+API Version: 2020-11-01-preview.
+ *
+ * A sensitivity label.
+ */
     public static CompletableFuture<GetSensitivityLabelResult> invokeAsync(GetSensitivityLabelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getSensitivityLabel", TypeShape.of(GetSensitivityLabelResult.class), args == null ? GetSensitivityLabelArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An action that can manipulate an http header.
+ */
 public final class HeaderActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HeaderActionResponse Empty = new HeaderActionResponse();
 
+    /**
+     * Which type of manipulation to apply to the header.
+     */
     @InputImport(name="headerActionType", required=true)
     private final String headerActionType;
 
@@ -21,6 +27,9 @@ public final class HeaderActionResponse extends io.pulumi.resources.InvokeArgs {
         return this.headerActionType;
     }
 
+    /**
+     * The name of the header this action will apply to.
+     */
     @InputImport(name="headerName", required=true)
     private final String headerName;
 
@@ -28,6 +37,9 @@ public final class HeaderActionResponse extends io.pulumi.resources.InvokeArgs {
         return this.headerName;
     }
 
+    /**
+     * The value to update the given header name with. This value is not used if the actionType is Delete.
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

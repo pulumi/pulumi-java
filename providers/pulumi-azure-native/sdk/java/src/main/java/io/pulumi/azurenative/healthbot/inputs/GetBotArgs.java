@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetBotArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBotArgs Empty = new GetBotArgs();
 
+    /**
+     * The name of the Bot resource.
+     */
     @InputImport(name="botName", required=true)
     private final String botName;
 
@@ -19,6 +25,9 @@ public final class GetBotArgs extends io.pulumi.resources.InvokeArgs {
         return this.botName;
     }
 
+    /**
+     * The name of the Bot resource group in the user subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

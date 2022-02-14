@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Identity properties of the factory resource.
+ */
 public final class FactoryIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FactoryIdentityArgs Empty = new FactoryIdentityArgs();
 
+    /**
+     * The identity type.
+     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,FactoryIdentityType>> type;
 
@@ -25,6 +31,9 @@ public final class FactoryIdentityArgs extends io.pulumi.resources.ResourceArgs 
         return this.type;
     }
 
+    /**
+     * List of user assigned identities for the factory.
+     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
 

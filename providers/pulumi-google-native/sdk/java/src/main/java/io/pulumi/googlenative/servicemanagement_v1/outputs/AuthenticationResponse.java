@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AuthenticationResponse {
+/**
+ * Defines a set of authentication providers that a service supports.
+ */
     private final List<AuthProviderResponse> providers;
+/**
+ * A list of authentication rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
+ */
     private final List<AuthenticationRuleResponse> rules;
 
     @OutputCustomType.Constructor({"providers","rules"})
@@ -22,9 +28,15 @@ public final class AuthenticationResponse {
         this.rules = Objects.requireNonNull(rules);
     }
 
+/**
+ * Defines a set of authentication providers that a service supports.
+ */
     public List<AuthProviderResponse> getProviders() {
         return this.providers;
     }
+/**
+ * A list of authentication rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
+ */
     public List<AuthenticationRuleResponse> getRules() {
         return this.rules;
     }

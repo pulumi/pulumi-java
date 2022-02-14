@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetDataControllerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDataControllerArgs Empty = new GetDataControllerArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="dataControllerName", required=true)
     private final String dataControllerName;
 
@@ -19,6 +25,9 @@ public final class GetDataControllerArgs extends io.pulumi.resources.InvokeArgs 
         return this.dataControllerName;
     }
 
+    /**
+     * The name of the Azure resource group
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

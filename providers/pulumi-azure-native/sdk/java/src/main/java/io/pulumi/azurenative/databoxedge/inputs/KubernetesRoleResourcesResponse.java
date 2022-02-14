@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Kubernetes role resources
+ */
 public final class KubernetesRoleResourcesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KubernetesRoleResourcesResponse Empty = new KubernetesRoleResourcesResponse();
 
+    /**
+     * Kubernetes role compute resource
+     */
     @InputImport(name="compute", required=true)
     private final KubernetesRoleComputeResponse compute;
 
@@ -23,6 +29,9 @@ public final class KubernetesRoleResourcesResponse extends io.pulumi.resources.I
         return this.compute;
     }
 
+    /**
+     * Kubernetes role network resource
+     */
     @InputImport(name="network", required=true)
     private final KubernetesRoleNetworkResponse network;
 
@@ -30,6 +39,9 @@ public final class KubernetesRoleResourcesResponse extends io.pulumi.resources.I
         return this.network;
     }
 
+    /**
+     * Kubernetes role storage resource
+     */
     @InputImport(name="storage")
     private final @Nullable KubernetesRoleStorageResponse storage;
 

@@ -13,7 +13,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DWCopyCommandSettingsResponse {
+/**
+ * Additional options directly passed to SQL DW in Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalOptions": { "MAXERRORS": "1000", "DATEFORMAT": "'ymd'" }
+ */
     private final @Nullable Map<String,String> additionalOptions;
+/**
+ * Specifies the default values for each target column in SQL DW. The default values in the property overwrite the DEFAULT constraint set in the DB, and identity column cannot have a default value. Type: array of objects (or Expression with resultType array of objects).
+ */
     private final @Nullable List<DWCopyCommandDefaultValueResponse> defaultValues;
 
     @OutputCustomType.Constructor({"additionalOptions","defaultValues"})
@@ -24,9 +30,15 @@ public final class DWCopyCommandSettingsResponse {
         this.defaultValues = defaultValues;
     }
 
+/**
+ * Additional options directly passed to SQL DW in Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalOptions": { "MAXERRORS": "1000", "DATEFORMAT": "'ymd'" }
+ */
     public Map<String,String> getAdditionalOptions() {
         return this.additionalOptions == null ? Map.of() : this.additionalOptions;
     }
+/**
+ * Specifies the default values for each target column in SQL DW. The default values in the property overwrite the DEFAULT constraint set in the DB, and identity column cannot have a default value. Type: array of objects (or Expression with resultType array of objects).
+ */
     public List<DWCopyCommandDefaultValueResponse> getDefaultValues() {
         return this.defaultValues == null ? List.of() : this.defaultValues;
     }

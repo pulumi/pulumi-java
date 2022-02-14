@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Other properties of the build.
+ */
 public final class SlsaMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SlsaMetadataResponse Empty = new SlsaMetadataResponse();
 
+    /**
+     * The timestamp of when the build completed.
+     */
     @InputImport(name="buildFinishedOn", required=true)
     private final String buildFinishedOn;
 
@@ -21,6 +27,9 @@ public final class SlsaMetadataResponse extends io.pulumi.resources.InvokeArgs {
         return this.buildFinishedOn;
     }
 
+    /**
+     * Identifies the particular build invocation, which can be useful for finding associated logs or other ad-hoc analysis. The value SHOULD be globally unique, per in-toto Provenance spec.
+     */
     @InputImport(name="buildInvocationId", required=true)
     private final String buildInvocationId;
 
@@ -28,6 +37,9 @@ public final class SlsaMetadataResponse extends io.pulumi.resources.InvokeArgs {
         return this.buildInvocationId;
     }
 
+    /**
+     * The timestamp of when the build started.
+     */
     @InputImport(name="buildStartedOn", required=true)
     private final String buildStartedOn;
 
@@ -35,6 +47,9 @@ public final class SlsaMetadataResponse extends io.pulumi.resources.InvokeArgs {
         return this.buildStartedOn;
     }
 
+    /**
+     * Indicates that the builder claims certain fields in this message to be complete.
+     */
     @InputImport(name="completeness", required=true)
     private final SlsaCompletenessResponse completeness;
 
@@ -42,6 +57,9 @@ public final class SlsaMetadataResponse extends io.pulumi.resources.InvokeArgs {
         return this.completeness;
     }
 
+    /**
+     * If true, the builder claims that running the recipe on materials will produce bit-for-bit identical output.
+     */
     @InputImport(name="reproducible", required=true)
     private final Boolean reproducible;
 

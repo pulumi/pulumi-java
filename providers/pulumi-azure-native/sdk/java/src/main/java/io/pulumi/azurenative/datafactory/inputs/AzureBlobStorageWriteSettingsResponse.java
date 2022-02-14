@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure blob write settings.
+ */
 public final class AzureBlobStorageWriteSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureBlobStorageWriteSettingsResponse Empty = new AzureBlobStorageWriteSettingsResponse();
 
+    /**
+     * Indicates the block size(MB) when writing data to blob. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="blockSizeInMB")
     private final @Nullable Object blockSizeInMB;
 
@@ -22,6 +28,9 @@ public final class AzureBlobStorageWriteSettingsResponse extends io.pulumi.resou
         return this.blockSizeInMB == null ? Optional.empty() : Optional.ofNullable(this.blockSizeInMB);
     }
 
+    /**
+     * The type of copy behavior for copy sink.
+     */
     @InputImport(name="copyBehavior")
     private final @Nullable Object copyBehavior;
 
@@ -29,6 +38,9 @@ public final class AzureBlobStorageWriteSettingsResponse extends io.pulumi.resou
         return this.copyBehavior == null ? Optional.empty() : Optional.ofNullable(this.copyBehavior);
     }
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -36,6 +48,9 @@ public final class AzureBlobStorageWriteSettingsResponse extends io.pulumi.resou
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
+    /**
+     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -43,6 +58,10 @@ public final class AzureBlobStorageWriteSettingsResponse extends io.pulumi.resou
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
+    /**
+     * The write setting type.
+Expected value is 'AzureBlobStorageWriteSettings'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetOsPolicyAssignmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetOsPolicyAssignmentArgs Empty = new GetOsPolicyAssignmentArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -21,6 +27,9 @@ public final class GetOsPolicyAssignmentArgs extends io.pulumi.resources.InvokeA
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="osPolicyAssignmentId", required=true)
     private final String osPolicyAssignmentId;
 
@@ -28,6 +37,9 @@ public final class GetOsPolicyAssignmentArgs extends io.pulumi.resources.InvokeA
         return this.osPolicyAssignmentId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

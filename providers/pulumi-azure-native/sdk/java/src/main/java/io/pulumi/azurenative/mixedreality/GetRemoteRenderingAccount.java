@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRemoteRenderingAccount {
+/**
+ * RemoteRenderingAccount Response.
+API Version: 2021-01-01.
+ *
+ * RemoteRenderingAccount Response.
+ */
     public static CompletableFuture<GetRemoteRenderingAccountResult> invokeAsync(GetRemoteRenderingAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mixedreality:getRemoteRenderingAccount", TypeShape.of(GetRemoteRenderingAccountResult.class), args == null ? GetRemoteRenderingAccountArgs.Empty : args, Utilities.withVersion(options));
     }

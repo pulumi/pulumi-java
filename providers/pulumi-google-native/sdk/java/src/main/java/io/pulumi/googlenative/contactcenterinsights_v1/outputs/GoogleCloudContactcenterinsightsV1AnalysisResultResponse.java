@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse {
+/**
+ * Call-specific metadata created by the analysis.
+ */
     private final GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata;
+/**
+ * The time at which the analysis ended.
+ */
     private final String endTime;
 
     @OutputCustomType.Constructor({"callAnalysisMetadata","endTime"})
@@ -21,9 +27,15 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse {
         this.endTime = Objects.requireNonNull(endTime);
     }
 
+/**
+ * Call-specific metadata created by the analysis.
+ */
     public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse getCallAnalysisMetadata() {
         return this.callAnalysisMetadata;
     }
+/**
+ * The time at which the analysis ended.
+ */
     public String getEndTime() {
         return this.endTime;
     }

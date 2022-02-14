@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetPeeringIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPeeringIamPolicyArgs Empty = new GetPeeringIamPolicyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="optionsRequestedPolicyVersion")
     private final @Nullable String optionsRequestedPolicyVersion;
 
@@ -21,6 +27,9 @@ public final class GetPeeringIamPolicyArgs extends io.pulumi.resources.InvokeArg
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="peeringId", required=true)
     private final String peeringId;
 
@@ -28,6 +37,9 @@ public final class GetPeeringIamPolicyArgs extends io.pulumi.resources.InvokeArg
         return this.peeringId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

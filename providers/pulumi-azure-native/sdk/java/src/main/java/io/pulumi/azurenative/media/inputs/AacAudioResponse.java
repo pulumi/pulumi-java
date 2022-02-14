@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes Advanced Audio Codec (AAC) audio encoding settings.
+ */
 public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AacAudioResponse Empty = new AacAudioResponse();
 
+    /**
+     * The bitrate, in bits per second, of the output encoded audio.
+     */
     @InputImport(name="bitrate")
     private final @Nullable Integer bitrate;
 
@@ -22,6 +28,9 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
         return this.bitrate == null ? Optional.empty() : Optional.ofNullable(this.bitrate);
     }
 
+    /**
+     * The number of channels in the audio.
+     */
     @InputImport(name="channels")
     private final @Nullable Integer channels;
 
@@ -29,6 +38,9 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
         return this.channels == null ? Optional.empty() : Optional.ofNullable(this.channels);
     }
 
+    /**
+     * An optional label for the codec. The label can be used to control muxing behavior.
+     */
     @InputImport(name="label")
     private final @Nullable String label;
 
@@ -36,6 +48,10 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
     }
 
+    /**
+     * The discriminator for derived types.
+Expected value is '#Microsoft.Media.AacAudio'.
+     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -43,6 +59,9 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
         return this.odataType;
     }
 
+    /**
+     * The encoding profile to be used when encoding audio with AAC.
+     */
     @InputImport(name="profile")
     private final @Nullable String profile;
 
@@ -50,6 +69,9 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
         return this.profile == null ? Optional.empty() : Optional.ofNullable(this.profile);
     }
 
+    /**
+     * The sampling rate to use for encoding in hertz.
+     */
     @InputImport(name="samplingRate")
     private final @Nullable Integer samplingRate;
 

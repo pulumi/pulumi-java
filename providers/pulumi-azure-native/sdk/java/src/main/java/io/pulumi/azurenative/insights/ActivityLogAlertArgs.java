@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ActivityLogAlertArgs Empty = new ActivityLogAlertArgs();
 
+    /**
+     * The actions that will activate when the condition is met.
+     */
     @InputImport(name="actions", required=true)
     private final Input<ActionListArgs> actions;
 
@@ -26,6 +32,9 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
         return this.actions;
     }
 
+    /**
+     * The name of the Activity Log Alert rule.
+     */
     @InputImport(name="activityLogAlertName")
     private final @Nullable Input<String> activityLogAlertName;
 
@@ -33,6 +42,9 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
         return this.activityLogAlertName == null ? Input.empty() : this.activityLogAlertName;
     }
 
+    /**
+     * The condition that will cause this alert to activate.
+     */
     @InputImport(name="condition", required=true)
     private final Input<AlertRuleAllOfConditionArgs> condition;
 
@@ -40,6 +52,9 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
         return this.condition;
     }
 
+    /**
+     * A description of this Activity Log Alert rule.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -47,6 +62,9 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -54,6 +72,9 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -61,6 +82,9 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -68,6 +92,9 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.
+     */
     @InputImport(name="scopes", required=true)
     private final Input<List<String>> scopes;
 
@@ -75,6 +102,9 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
         return this.scopes;
     }
 
+    /**
+     * The tags of the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

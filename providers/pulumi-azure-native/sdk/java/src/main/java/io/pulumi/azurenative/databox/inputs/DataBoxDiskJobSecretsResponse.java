@@ -13,10 +13,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The secrets related to disk job.
+ */
 public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataBoxDiskJobSecretsResponse Empty = new DataBoxDiskJobSecretsResponse();
 
+    /**
+     * Dc Access Security Code for Customer Managed Shipping
+     */
     @InputImport(name="dcAccessSecurityCode", required=true)
     private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
 
@@ -24,6 +30,9 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
         return this.dcAccessSecurityCode;
     }
 
+    /**
+     * Contains the list of secrets object for that device.
+     */
     @InputImport(name="diskSecrets", required=true)
     private final List<DiskSecretResponse> diskSecrets;
 
@@ -31,6 +40,9 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
         return this.diskSecrets;
     }
 
+    /**
+     * Error while fetching the secrets.
+     */
     @InputImport(name="error", required=true)
     private final CloudErrorResponse error;
 
@@ -38,6 +50,9 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
         return this.error;
     }
 
+    /**
+     * Whether passkey was provided by user.
+     */
     @InputImport(name="isPasskeyUserDefined", required=true)
     private final Boolean isPasskeyUserDefined;
 
@@ -45,6 +60,10 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
         return this.isPasskeyUserDefined;
     }
 
+    /**
+     * Used to indicate what type of job secrets object.
+Expected value is 'DataBoxDisk'.
+     */
     @InputImport(name="jobSecretsType", required=true)
     private final String jobSecretsType;
 
@@ -52,6 +71,9 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
         return this.jobSecretsType;
     }
 
+    /**
+     * PassKey for the disk Job.
+     */
     @InputImport(name="passKey", required=true)
     private final String passKey;
 

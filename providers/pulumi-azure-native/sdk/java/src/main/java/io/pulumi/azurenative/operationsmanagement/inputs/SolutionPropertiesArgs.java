@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Solution properties supported by the OperationsManagement resource provider.
+ */
 public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SolutionPropertiesArgs Empty = new SolutionPropertiesArgs();
 
+    /**
+     * The azure resources that will be contained within the solutions. They will be locked and gets deleted automatically when the solution is deleted.
+     */
     @InputImport(name="containedResources")
     private final @Nullable Input<List<String>> containedResources;
 
@@ -22,6 +28,9 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.containedResources == null ? Input.empty() : this.containedResources;
     }
 
+    /**
+     * The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.
+     */
     @InputImport(name="referencedResources")
     private final @Nullable Input<List<String>> referencedResources;
 
@@ -29,6 +38,9 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.referencedResources == null ? Input.empty() : this.referencedResources;
     }
 
+    /**
+     * The azure resourceId for the workspace where the solution will be deployed/enabled.
+     */
     @InputImport(name="workspaceResourceId", required=true)
     private final Input<String> workspaceResourceId;
 

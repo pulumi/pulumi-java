@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Required inbound or outbound traffic for Azure Spring Cloud instance.
+ */
 public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RequiredTrafficResponse Empty = new RequiredTrafficResponse();
 
+    /**
+     * The direction of required traffic
+     */
     @InputImport(name="direction", required=true)
     private final String direction;
 
@@ -21,6 +27,9 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
         return this.direction;
     }
 
+    /**
+     * The FQDN list of required traffic
+     */
     @InputImport(name="fqdns", required=true)
     private final List<String> fqdns;
 
@@ -28,6 +37,9 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
         return this.fqdns;
     }
 
+    /**
+     * The ip list of required traffic
+     */
     @InputImport(name="ips", required=true)
     private final List<String> ips;
 
@@ -35,6 +47,9 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
         return this.ips;
     }
 
+    /**
+     * The port of required traffic
+     */
     @InputImport(name="port", required=true)
     private final Integer port;
 
@@ -42,6 +57,9 @@ public final class RequiredTrafficResponse extends io.pulumi.resources.InvokeArg
         return this.port;
     }
 
+    /**
+     * The protocol of required traffic
+     */
     @InputImport(name="protocol", required=true)
     private final String protocol;
 

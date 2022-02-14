@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details of role definition
+ */
 public final class PolicyAssignmentPropertiesResponseRoleDefinition extends io.pulumi.resources.InvokeArgs {
 
     public static final PolicyAssignmentPropertiesResponseRoleDefinition Empty = new PolicyAssignmentPropertiesResponseRoleDefinition();
 
+    /**
+     * Display name of the role definition
+     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -21,6 +27,9 @@ public final class PolicyAssignmentPropertiesResponseRoleDefinition extends io.p
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * Id of the role definition
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -28,6 +37,9 @@ public final class PolicyAssignmentPropertiesResponseRoleDefinition extends io.p
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Type of the role definition
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

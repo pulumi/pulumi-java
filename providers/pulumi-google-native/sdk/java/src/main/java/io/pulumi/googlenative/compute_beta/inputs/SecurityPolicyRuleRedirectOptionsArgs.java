@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SecurityPolicyRuleRedirectOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityPolicyRuleRedirectOptionsArgs Empty = new SecurityPolicyRuleRedirectOptionsArgs();
 
+    /**
+     * Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
+     */
     @InputImport(name="target")
     private final @Nullable Input<String> target;
 
@@ -22,6 +28,9 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends io.pulumi.resou
         return this.target == null ? Input.empty() : this.target;
     }
 
+    /**
+     * Type of the redirect action.
+     */
     @InputImport(name="type")
     private final @Nullable Input<SecurityPolicyRuleRedirectOptionsType> type;
 

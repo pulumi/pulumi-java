@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetKpiArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetKpiArgs Empty = new GetKpiArgs();
 
+    /**
+     * The name of the hub.
+     */
     @InputImport(name="hubName", required=true)
     private final String hubName;
 
@@ -19,6 +25,9 @@ public final class GetKpiArgs extends io.pulumi.resources.InvokeArgs {
         return this.hubName;
     }
 
+    /**
+     * The name of the KPI.
+     */
     @InputImport(name="kpiName", required=true)
     private final String kpiName;
 
@@ -26,6 +35,9 @@ public final class GetKpiArgs extends io.pulumi.resources.InvokeArgs {
         return this.kpiName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

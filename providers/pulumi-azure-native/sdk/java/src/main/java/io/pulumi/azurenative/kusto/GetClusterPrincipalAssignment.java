@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetClusterPrincipalAssignment {
+/**
+ * Class representing a cluster principal assignment.
+API Version: 2021-01-01.
+ *
+ * Class representing a cluster principal assignment.
+ */
     public static CompletableFuture<GetClusterPrincipalAssignmentResult> invokeAsync(GetClusterPrincipalAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getClusterPrincipalAssignment", TypeShape.of(GetClusterPrincipalAssignmentResult.class), args == null ? GetClusterPrincipalAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

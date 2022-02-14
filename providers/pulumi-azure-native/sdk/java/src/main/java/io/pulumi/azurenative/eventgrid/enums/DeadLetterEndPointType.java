@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Type of the endpoint for the dead letter destination
+ */
     @EnumType
     public enum DeadLetterEndPointType {
+/**
+ * 
+ */
         StorageBlob("StorageBlob");
 
         private final String value;

@@ -9,7 +9,14 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AzureBackupParamsResponse {
+/**
+ * BackupType ; Full/Incremental etc
+ */
     private final String backupType;
+/**
+ * Type of the specific object - used for deserializing
+Expected value is 'AzureBackupParams'.
+ */
     private final String objectType;
 
     @OutputCustomType.Constructor({"backupType","objectType"})
@@ -20,9 +27,16 @@ public final class AzureBackupParamsResponse {
         this.objectType = Objects.requireNonNull(objectType);
     }
 
+/**
+ * BackupType ; Full/Incremental etc
+ */
     public String getBackupType() {
         return this.backupType;
     }
+/**
+ * Type of the specific object - used for deserializing
+Expected value is 'AzureBackupParams'.
+ */
     public String getObjectType() {
         return this.objectType;
     }

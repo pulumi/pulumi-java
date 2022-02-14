@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes the client certificate details using common name.
+ */
 public final class ClientCertificateCommonNameArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClientCertificateCommonNameArgs Empty = new ClientCertificateCommonNameArgs();
 
+    /**
+     * The common name of the client certificate.
+     */
     @InputImport(name="certificateCommonName", required=true)
     private final Input<String> certificateCommonName;
 
@@ -21,6 +27,9 @@ public final class ClientCertificateCommonNameArgs extends io.pulumi.resources.R
         return this.certificateCommonName;
     }
 
+    /**
+     * The issuer thumbprint of the client certificate.
+     */
     @InputImport(name="certificateIssuerThumbprint", required=true)
     private final Input<String> certificateIssuerThumbprint;
 
@@ -28,6 +37,9 @@ public final class ClientCertificateCommonNameArgs extends io.pulumi.resources.R
         return this.certificateIssuerThumbprint;
     }
 
+    /**
+     * Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
+     */
     @InputImport(name="isAdmin", required=true)
     private final Input<Boolean> isAdmin;
 

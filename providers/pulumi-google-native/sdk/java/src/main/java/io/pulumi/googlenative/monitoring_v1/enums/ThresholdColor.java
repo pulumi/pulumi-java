@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The state color for this threshold. Color is not allowed in a XyChart.
+ */
     @EnumType
     public enum ThresholdColor {
+/**
+ * Color is unspecified. Not allowed in well-formed requests.
+ */
         ColorUnspecified("COLOR_UNSPECIFIED"),
+/**
+ * Crossing the threshold is "concerning" behavior.
+ */
         Yellow("YELLOW"),
+/**
+ * Crossing the threshold is "emergency" behavior.
+ */
         Red("RED");
 
         private final String value;

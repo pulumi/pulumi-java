@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Cloud Healthcare API resource.
+ */
 public final class CloudHealthcareSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CloudHealthcareSourceArgs Empty = new CloudHealthcareSourceArgs();
 
+    /**
+     * Full path of a Cloud Healthcare API resource.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

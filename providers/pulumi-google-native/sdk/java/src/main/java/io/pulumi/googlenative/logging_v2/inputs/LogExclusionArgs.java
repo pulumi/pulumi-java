@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies a set of log entries that are filtered out by a sink. If your Google Cloud resource receives a large volume of log entries, you can use exclusions to reduce your chargeable logs. Note that exclusions on organization-level and folder-level sinks don't apply to child resources. Note also that you cannot modify the _Required sink or exclude logs from it.
+ */
 public final class LogExclusionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LogExclusionArgs Empty = new LogExclusionArgs();
 
+    /**
+     * Optional. A description of this exclusion.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +28,9 @@ public final class LogExclusionArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Optional. If set to True, then this exclusion is disabled and it does not exclude any log entries. You can update an exclusion to change the value of this field.
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -29,6 +38,9 @@ public final class LogExclusionArgs extends io.pulumi.resources.ResourceArgs {
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-queries) that matches the log entries to be excluded. By using the sample function (https://cloud.google.com/logging/docs/view/advanced-queries#sample), you can exclude less than 100% of the matching log entries.For example, the following query matches 99% of low-severity log entries from Google Cloud Storage buckets:resource.type=gcs_bucket severity<ERROR sample(insertId, 0.99)
+     */
     @InputImport(name="filter", required=true)
     private final Input<String> filter;
 
@@ -36,6 +48,9 @@ public final class LogExclusionArgs extends io.pulumi.resources.ResourceArgs {
         return this.filter;
     }
 
+    /**
+     * A client-assigned identifier, such as "load-balancer-exclusion". Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

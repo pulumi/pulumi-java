@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagementResourcePreferencesResponse {
+/**
+ * Customer preferred Management resource ARM ID
+ */
     private final @Nullable String preferredManagementResourceId;
 
     @OutputCustomType.Constructor({"preferredManagementResourceId"})
@@ -18,6 +21,9 @@ public final class ManagementResourcePreferencesResponse {
         this.preferredManagementResourceId = preferredManagementResourceId;
     }
 
+/**
+ * Customer preferred Management resource ARM ID
+ */
     public Optional<String> getPreferredManagementResourceId() {
         return Optional.ofNullable(this.preferredManagementResourceId);
     }

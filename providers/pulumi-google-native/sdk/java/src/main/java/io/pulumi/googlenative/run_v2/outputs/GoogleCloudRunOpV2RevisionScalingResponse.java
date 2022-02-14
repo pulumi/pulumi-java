@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudRunOpV2RevisionScalingResponse {
+/**
+ * Maximum number of serving instances that this resource should have.
+ */
     private final Integer maxInstanceCount;
+/**
+ * Minimum number of serving instances that this resource should have.
+ */
     private final Integer minInstanceCount;
 
     @OutputCustomType.Constructor({"maxInstanceCount","minInstanceCount"})
@@ -20,9 +26,15 @@ public final class GoogleCloudRunOpV2RevisionScalingResponse {
         this.minInstanceCount = Objects.requireNonNull(minInstanceCount);
     }
 
+/**
+ * Maximum number of serving instances that this resource should have.
+ */
     public Integer getMaxInstanceCount() {
         return this.maxInstanceCount;
     }
+/**
+ * Minimum number of serving instances that this resource should have.
+ */
     public Integer getMinInstanceCount() {
         return this.minInstanceCount;
     }

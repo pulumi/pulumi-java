@@ -17,15 +17,45 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetServiceResult {
+/**
+ * Type used for App Engine services.
+ */
     private final AppEngineResponse appEngine;
+/**
+ * Type used for Cloud Endpoints services.
+ */
     private final CloudEndpointsResponse cloudEndpoints;
+/**
+ * Type used for Istio services that live in a Kubernetes cluster.
+ */
     private final ClusterIstioResponse clusterIstio;
+/**
+ * Custom service type.
+ */
     private final CustomResponse custom;
+/**
+ * Name used for UI elements listing this Service.
+ */
     private final String displayName;
+/**
+ * Type used for canonical services scoped to an Istio mesh. Metrics for Istio are documented here (https://istio.io/latest/docs/reference/config/metrics/)
+ */
     private final IstioCanonicalServiceResponse istioCanonicalService;
+/**
+ * Type used for Istio services scoped to an Istio mesh.
+ */
     private final MeshIstioResponse meshIstio;
+/**
+ * Resource name for this Service. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID] 
+ */
     private final String name;
+/**
+ * Configuration for how to query telemetry on a Service.
+ */
     private final TelemetryResponse telemetry;
+/**
+ * Labels which have been used to annotate the service. Label keys must start with a letter. Label keys and values may contain lowercase letters, numbers, underscores, and dashes. Label keys and values have a maximum length of 63 characters, and must be less than 128 bytes in size. Up to 64 label entries may be stored. For labels which do not have a semantic value, the empty string may be supplied for the label value.
+ */
     private final Map<String,String> userLabels;
 
     @OutputCustomType.Constructor({"appEngine","cloudEndpoints","clusterIstio","custom","displayName","istioCanonicalService","meshIstio","name","telemetry","userLabels"})
@@ -52,33 +82,63 @@ public final class GetServiceResult {
         this.userLabels = Objects.requireNonNull(userLabels);
     }
 
+/**
+ * Type used for App Engine services.
+ */
     public AppEngineResponse getAppEngine() {
         return this.appEngine;
     }
+/**
+ * Type used for Cloud Endpoints services.
+ */
     public CloudEndpointsResponse getCloudEndpoints() {
         return this.cloudEndpoints;
     }
+/**
+ * Type used for Istio services that live in a Kubernetes cluster.
+ */
     public ClusterIstioResponse getClusterIstio() {
         return this.clusterIstio;
     }
+/**
+ * Custom service type.
+ */
     public CustomResponse getCustom() {
         return this.custom;
     }
+/**
+ * Name used for UI elements listing this Service.
+ */
     public String getDisplayName() {
         return this.displayName;
     }
+/**
+ * Type used for canonical services scoped to an Istio mesh. Metrics for Istio are documented here (https://istio.io/latest/docs/reference/config/metrics/)
+ */
     public IstioCanonicalServiceResponse getIstioCanonicalService() {
         return this.istioCanonicalService;
     }
+/**
+ * Type used for Istio services scoped to an Istio mesh.
+ */
     public MeshIstioResponse getMeshIstio() {
         return this.meshIstio;
     }
+/**
+ * Resource name for this Service. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID] 
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Configuration for how to query telemetry on a Service.
+ */
     public TelemetryResponse getTelemetry() {
         return this.telemetry;
     }
+/**
+ * Labels which have been used to annotate the service. Label keys must start with a letter. Label keys and values may contain lowercase letters, numbers, underscores, and dashes. Label keys and values have a maximum length of 63 characters, and must be less than 128 bytes in size. Up to 64 label entries may be stored. For labels which do not have a semantic value, the empty string may be supplied for the label value.
+ */
     public Map<String,String> getUserLabels() {
         return this.userLabels;
     }

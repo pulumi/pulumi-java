@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CaOptionsResponse {
+/**
+ * Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
+ */
     private final Boolean isCa;
+/**
+ * Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate.
+ */
     private final Integer maxIssuerPathLength;
 
     @OutputCustomType.Constructor({"isCa","maxIssuerPathLength"})
@@ -21,9 +27,15 @@ public final class CaOptionsResponse {
         this.maxIssuerPathLength = Objects.requireNonNull(maxIssuerPathLength);
     }
 
+/**
+ * Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
+ */
     public Boolean getIsCa() {
         return this.isCa;
     }
+/**
+ * Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate.
+ */
     public Integer getMaxIssuerPathLength() {
         return this.maxIssuerPathLength;
     }

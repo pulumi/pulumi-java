@@ -8,10 +8,16 @@ import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelin
 import java.util.Objects;
 
 
+/**
+ * Configuration details used for calculating evaluation metrics and creating an Evaluation.
+ */
 public final class GoogleCloudDatalabelingV1beta1EvaluationConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatalabelingV1beta1EvaluationConfigResponse Empty = new GoogleCloudDatalabelingV1beta1EvaluationConfigResponse();
 
+    /**
+     * Only specify this field if the related model performs image object detection (`IMAGE_BOUNDING_BOX_ANNOTATION`). Describes how to evaluate bounding boxes.
+     */
     @InputImport(name="boundingBoxEvaluationOptions", required=true)
     private final GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse boundingBoxEvaluationOptions;
 

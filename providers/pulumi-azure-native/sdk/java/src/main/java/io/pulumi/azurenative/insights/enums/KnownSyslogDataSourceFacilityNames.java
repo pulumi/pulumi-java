@@ -8,28 +8,94 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum KnownSyslogDataSourceFacilityNames {
+/**
+ * 
+ */
         Auth("auth"),
+/**
+ * 
+ */
         Authpriv("authpriv"),
+/**
+ * 
+ */
         Cron("cron"),
+/**
+ * 
+ */
         Daemon("daemon"),
+/**
+ * 
+ */
         Kern("kern"),
+/**
+ * 
+ */
         Lpr("lpr"),
+/**
+ * 
+ */
         Mail("mail"),
+/**
+ * 
+ */
         Mark("mark"),
+/**
+ * 
+ */
         News("news"),
+/**
+ * 
+ */
         Syslog("syslog"),
+/**
+ * 
+ */
         User("user"),
+/**
+ * 
+ */
         Uucp("uucp"),
+/**
+ * 
+ */
         Local0("local0"),
+/**
+ * 
+ */
         Local1("local1"),
+/**
+ * 
+ */
         Local2("local2"),
+/**
+ * 
+ */
         Local3("local3"),
+/**
+ * 
+ */
         Local4("local4"),
+/**
+ * 
+ */
         Local5("local5"),
+/**
+ * 
+ */
         Local6("local6"),
+/**
+ * 
+ */
         Local7("local7"),
+/**
+ * 
+ */
         Asterisk("*");
 
         private final String value;

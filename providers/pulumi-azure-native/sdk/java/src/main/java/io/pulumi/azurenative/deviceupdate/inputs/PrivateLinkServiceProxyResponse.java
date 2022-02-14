@@ -5,7 +5,6 @@ package io.pulumi.azurenative.deviceupdate.inputs;
 
 import io.pulumi.azurenative.deviceupdate.inputs.GroupConnectivityInformationResponse;
 import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -14,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Private link service proxy details.
+ */
 public final class PrivateLinkServiceProxyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateLinkServiceProxyResponse Empty = new PrivateLinkServiceProxyResponse();
 
+    /**
+     * Group connectivity information.
+     */
     @InputImport(name="groupConnectivityInformation")
     private final @Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation;
 
@@ -25,6 +30,9 @@ public final class PrivateLinkServiceProxyResponse extends io.pulumi.resources.I
         return this.groupConnectivityInformation == null ? List.of() : this.groupConnectivityInformation;
     }
 
+    /**
+     * NRP resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -32,6 +40,9 @@ public final class PrivateLinkServiceProxyResponse extends io.pulumi.resources.I
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Remote private endpoint connection details.
+     */
     @InputImport(name="remotePrivateEndpointConnection")
     private final @Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection;
 
@@ -39,6 +50,9 @@ public final class PrivateLinkServiceProxyResponse extends io.pulumi.resources.I
         return this.remotePrivateEndpointConnection == null ? Optional.empty() : Optional.ofNullable(this.remotePrivateEndpointConnection);
     }
 
+    /**
+     * Remote private link service connection state
+     */
     @InputImport(name="remotePrivateLinkServiceConnectionState")
     private final @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState;
 

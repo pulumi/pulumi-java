@@ -11,10 +11,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ResourceTypeRegistrationPropertiesFeaturesRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceTypeRegistrationPropertiesFeaturesRuleArgs Empty = new ResourceTypeRegistrationPropertiesFeaturesRuleArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="requiredFeaturesPolicy", required=true)
     private final Input<Either<String,FeaturesPolicy>> requiredFeaturesPolicy;
 

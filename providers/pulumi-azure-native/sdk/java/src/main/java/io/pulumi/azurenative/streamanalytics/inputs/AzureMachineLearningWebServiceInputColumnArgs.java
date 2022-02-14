@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes an input column for the Azure Machine Learning web service endpoint.
+ */
 public final class AzureMachineLearningWebServiceInputColumnArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureMachineLearningWebServiceInputColumnArgs Empty = new AzureMachineLearningWebServiceInputColumnArgs();
 
+    /**
+     * The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .
+     */
     @InputImport(name="dataType")
     private final @Nullable Input<String> dataType;
 
@@ -22,6 +28,9 @@ public final class AzureMachineLearningWebServiceInputColumnArgs extends io.pulu
         return this.dataType == null ? Input.empty() : this.dataType;
     }
 
+    /**
+     * The zero based index of the function parameter this input maps to.
+     */
     @InputImport(name="mapTo")
     private final @Nullable Input<Integer> mapTo;
 
@@ -29,6 +38,9 @@ public final class AzureMachineLearningWebServiceInputColumnArgs extends io.pulu
         return this.mapTo == null ? Input.empty() : this.mapTo;
     }
 
+    /**
+     * The name of the input column.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

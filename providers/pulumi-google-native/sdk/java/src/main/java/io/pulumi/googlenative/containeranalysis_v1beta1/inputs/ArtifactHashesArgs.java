@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines a hash object for use in Materials and Products.
+ */
 public final class ArtifactHashesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ArtifactHashesArgs Empty = new ArtifactHashesArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="sha256")
     private final @Nullable Input<String> sha256;
 

@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Installs Windows Updates. Corresponds to Packer Windows Update Provisioner (https://github.com/rgl/packer-provisioner-windows-update)
+ */
 public final class ImageTemplateWindowsUpdateCustomizerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ImageTemplateWindowsUpdateCustomizerResponse Empty = new ImageTemplateWindowsUpdateCustomizerResponse();
 
+    /**
+     * Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.
+     */
     @InputImport(name="filters")
     private final @Nullable List<String> filters;
 
@@ -23,6 +29,9 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends io.pulum
         return this.filters == null ? List.of() : this.filters;
     }
 
+    /**
+     * Friendly Name to provide context on what this customization step does
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -30,6 +39,9 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends io.pulum
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.
+     */
     @InputImport(name="searchCriteria")
     private final @Nullable String searchCriteria;
 
@@ -37,6 +49,10 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends io.pulum
         return this.searchCriteria == null ? Optional.empty() : Optional.ofNullable(this.searchCriteria);
     }
 
+    /**
+     * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
+Expected value is 'WindowsUpdate'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -44,6 +60,9 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends io.pulum
         return this.type;
     }
 
+    /**
+     * Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000)
+     */
     @InputImport(name="updateLimit")
     private final @Nullable Integer updateLimit;
 

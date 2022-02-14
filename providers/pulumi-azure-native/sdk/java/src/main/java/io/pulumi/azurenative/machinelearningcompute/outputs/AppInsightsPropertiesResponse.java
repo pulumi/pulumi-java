@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AppInsightsPropertiesResponse {
+/**
+ * ARM resource ID of the App Insights.
+ */
     private final @Nullable String resourceId;
 
     @OutputCustomType.Constructor({"resourceId"})
@@ -18,6 +21,9 @@ public final class AppInsightsPropertiesResponse {
         this.resourceId = resourceId;
     }
 
+/**
+ * ARM resource ID of the App Insights.
+ */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }

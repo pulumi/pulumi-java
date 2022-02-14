@@ -8,15 +8,42 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Required. The day of week that maintenance updates occur.
+ */
     @EnumType
     public enum WeeklyMaintenanceWindowDay {
+/**
+ * The day of the week is unspecified.
+ */
         DayOfWeekUnspecified("DAY_OF_WEEK_UNSPECIFIED"),
+/**
+ * Monday
+ */
         Monday("MONDAY"),
+/**
+ * Tuesday
+ */
         Tuesday("TUESDAY"),
+/**
+ * Wednesday
+ */
         Wednesday("WEDNESDAY"),
+/**
+ * Thursday
+ */
         Thursday("THURSDAY"),
+/**
+ * Friday
+ */
         Friday("FRIDAY"),
+/**
+ * Saturday
+ */
         Saturday("SATURDAY"),
+/**
+ * Sunday
+ */
         Sunday("SUNDAY");
 
         private final String value;

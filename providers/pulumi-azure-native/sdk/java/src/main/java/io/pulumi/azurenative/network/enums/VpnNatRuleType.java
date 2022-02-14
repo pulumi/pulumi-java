@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of NAT rule for VPN NAT.
+ */
     @EnumType
     public enum VpnNatRuleType {
+/**
+ * 
+ */
         Static("Static"),
+/**
+ * 
+ */
         Dynamic("Dynamic");
 
         private final String value;

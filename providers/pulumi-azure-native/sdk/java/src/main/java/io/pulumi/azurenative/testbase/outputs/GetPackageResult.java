@@ -17,24 +17,81 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetPackageResult {
+/**
+ * Application name
+ */
     private final String applicationName;
+/**
+ * The file path of the package.
+ */
     private final String blobPath;
+/**
+ * Resource Etag.
+ */
     private final String etag;
+/**
+ * The flighting ring for feature update.
+ */
     private final String flightingRing;
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Flag showing that whether the package is enabled. It doesn't schedule test for package which is not enabled.
+ */
     private final Boolean isEnabled;
+/**
+ * The UTC timestamp when the package was last modified.
+ */
     private final String lastModifiedTime;
+/**
+ * The geo-location where the resource lives
+ */
     private final String location;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * The status of the package.
+ */
     private final String packageStatus;
+/**
+ * The provisioning state of the resource.
+ */
     private final String provisioningState;
+/**
+ * The system metadata relating to this resource
+ */
     private final SystemDataResponse systemData;
+/**
+ * The tags of the resource.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Specifies the target OSs of specific OS Update types.
+ */
     private final List<TargetOSInfoResponse> targetOSList;
+/**
+ * OOB, functional or both. Mapped to the data in 'tests' property.
+ */
     private final List<String> testTypes;
+/**
+ * The detailed test information.
+ */
     private final List<TestResponse> tests;
+/**
+ * Resource type.
+ */
     private final String type;
+/**
+ * The validation results. There's validation on package when it's created or updated.
+ */
     private final List<PackageValidationResultResponse> validationResults;
+/**
+ * Application version
+ */
     private final String version;
 
     @OutputCustomType.Constructor({"applicationName","blobPath","etag","flightingRing","id","isEnabled","lastModifiedTime","location","name","packageStatus","provisioningState","systemData","tags","targetOSList","testTypes","tests","type","validationResults","version"})
@@ -79,60 +136,117 @@ public final class GetPackageResult {
         this.version = Objects.requireNonNull(version);
     }
 
+/**
+ * Application name
+ */
     public String getApplicationName() {
         return this.applicationName;
     }
+/**
+ * The file path of the package.
+ */
     public String getBlobPath() {
         return this.blobPath;
     }
+/**
+ * Resource Etag.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * The flighting ring for feature update.
+ */
     public String getFlightingRing() {
         return this.flightingRing;
     }
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Flag showing that whether the package is enabled. It doesn't schedule test for package which is not enabled.
+ */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
+/**
+ * The UTC timestamp when the package was last modified.
+ */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
+/**
+ * The geo-location where the resource lives
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The status of the package.
+ */
     public String getPackageStatus() {
         return this.packageStatus;
     }
+/**
+ * The provisioning state of the resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * The system metadata relating to this resource
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * The tags of the resource.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Specifies the target OSs of specific OS Update types.
+ */
     public List<TargetOSInfoResponse> getTargetOSList() {
         return this.targetOSList;
     }
+/**
+ * OOB, functional or both. Mapped to the data in 'tests' property.
+ */
     public List<String> getTestTypes() {
         return this.testTypes;
     }
+/**
+ * The detailed test information.
+ */
     public List<TestResponse> getTests() {
         return this.tests;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * The validation results. There's validation on package when it's created or updated.
+ */
     public List<PackageValidationResultResponse> getValidationResults() {
         return this.validationResults;
     }
+/**
+ * Application version
+ */
     public String getVersion() {
         return this.version;
     }

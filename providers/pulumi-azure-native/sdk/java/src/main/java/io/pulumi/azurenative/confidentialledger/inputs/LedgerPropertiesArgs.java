@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Additional Confidential Ledger properties.
+ */
 public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LedgerPropertiesArgs Empty = new LedgerPropertiesArgs();
 
+    /**
+     * Array of all AAD based Security Principals.
+     */
     @InputImport(name="aadBasedSecurityPrincipals")
     private final @Nullable Input<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals;
 
@@ -26,6 +32,9 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
         return this.aadBasedSecurityPrincipals == null ? Input.empty() : this.aadBasedSecurityPrincipals;
     }
 
+    /**
+     * Array of all cert based Security Principals.
+     */
     @InputImport(name="certBasedSecurityPrincipals")
     private final @Nullable Input<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals;
 
@@ -33,6 +42,9 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
         return this.certBasedSecurityPrincipals == null ? Input.empty() : this.certBasedSecurityPrincipals;
     }
 
+    /**
+     * Name of the Blob Storage Account for saving ledger files
+     */
     @InputImport(name="ledgerStorageAccount")
     private final @Nullable Input<String> ledgerStorageAccount;
 
@@ -40,6 +52,9 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
         return this.ledgerStorageAccount == null ? Input.empty() : this.ledgerStorageAccount;
     }
 
+    /**
+     * Type of Confidential Ledger
+     */
     @InputImport(name="ledgerType")
     private final @Nullable Input<Either<String,LedgerType>> ledgerType;
 

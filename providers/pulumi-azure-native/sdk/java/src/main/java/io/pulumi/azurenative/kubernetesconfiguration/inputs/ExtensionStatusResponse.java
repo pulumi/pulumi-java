@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Status from this instance of the extension.
+ */
 public final class ExtensionStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExtensionStatusResponse Empty = new ExtensionStatusResponse();
 
+    /**
+     * Status code provided by the Extension
+     */
     @InputImport(name="code")
     private final @Nullable String code;
 
@@ -21,6 +27,9 @@ public final class ExtensionStatusResponse extends io.pulumi.resources.InvokeArg
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
+    /**
+     * Short description of status of this instance of the extension.
+     */
     @InputImport(name="displayStatus")
     private final @Nullable String displayStatus;
 
@@ -28,6 +37,9 @@ public final class ExtensionStatusResponse extends io.pulumi.resources.InvokeArg
         return this.displayStatus == null ? Optional.empty() : Optional.ofNullable(this.displayStatus);
     }
 
+    /**
+     * Level of the status.
+     */
     @InputImport(name="level")
     private final @Nullable String level;
 
@@ -35,6 +47,9 @@ public final class ExtensionStatusResponse extends io.pulumi.resources.InvokeArg
         return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
     }
 
+    /**
+     * Detailed message of the status from the Extension instance.
+     */
     @InputImport(name="message")
     private final @Nullable String message;
 
@@ -42,6 +57,9 @@ public final class ExtensionStatusResponse extends io.pulumi.resources.InvokeArg
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
+    /**
+     * DateLiteral (per ISO8601) noting the time of installation status.
+     */
     @InputImport(name="time")
     private final @Nullable String time;
 

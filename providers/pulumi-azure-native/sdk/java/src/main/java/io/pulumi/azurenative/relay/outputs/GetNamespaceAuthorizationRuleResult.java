@@ -10,9 +10,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetNamespaceAuthorizationRuleResult {
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * The rights associated with the rule.
+ */
     private final List<String> rights;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","rights","type"})
@@ -27,15 +39,27 @@ public final class GetNamespaceAuthorizationRuleResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The rights associated with the rule.
+ */
     public List<String> getRights() {
         return this.rights;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

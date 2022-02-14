@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ConfigFileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfigFileResponse Empty = new ConfigFileResponse();
 
+    /**
+     * The contents of the file.
+     */
     @InputImport(name="content", required=true)
     private final String content;
 

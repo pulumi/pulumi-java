@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainArgs Empty = new DomainArgs();
 
+    /**
+     * Name of the domain.
+     */
     @InputImport(name="domainName")
     private final @Nullable Input<String> domainName;
 
@@ -28,6 +34,9 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainName == null ? Input.empty() : this.domainName;
     }
 
+    /**
+     * This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
+     */
     @InputImport(name="inboundIpRules")
     private final @Nullable Input<List<InboundIpRuleArgs>> inboundIpRules;
 
@@ -35,6 +44,9 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.inboundIpRules == null ? Input.empty() : this.inboundIpRules;
     }
 
+    /**
+     * This determines the format that Event Grid should expect for incoming events published to the domain.
+     */
     @InputImport(name="inputSchema")
     private final @Nullable Input<Either<String,InputSchema>> inputSchema;
 
@@ -42,6 +54,9 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.inputSchema == null ? Input.empty() : this.inputSchema;
     }
 
+    /**
+     * Information about the InputSchemaMapping which specified the info about mapping event payload.
+     */
     @InputImport(name="inputSchemaMapping")
     private final @Nullable Input<JsonInputSchemaMappingArgs> inputSchemaMapping;
 
@@ -49,6 +64,9 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.inputSchemaMapping == null ? Input.empty() : this.inputSchemaMapping;
     }
 
+    /**
+     * Location of the resource.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -56,6 +74,10 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * This determines if traffic is allowed over public network. By default it is enabled. 
+You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules" />
+     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
@@ -63,6 +85,9 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
     }
 
+    /**
+     * The name of the resource group within the user's subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -70,6 +95,9 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Tags of the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specifies the resources used to actively manage an instance group.
+ */
 public final class ManagedGroupConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedGroupConfigResponse Empty = new ManagedGroupConfigResponse();
 
+    /**
+     * The name of the Instance Group Manager for this group.
+     */
     @InputImport(name="instanceGroupManagerName", required=true)
     private final String instanceGroupManagerName;
 
@@ -19,6 +25,9 @@ public final class ManagedGroupConfigResponse extends io.pulumi.resources.Invoke
         return this.instanceGroupManagerName;
     }
 
+    /**
+     * The name of the Instance Template used for the Managed Instance Group.
+     */
     @InputImport(name="instanceTemplateName", required=true)
     private final String instanceTemplateName;
 

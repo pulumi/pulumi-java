@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The trigger based on base image dependency.
+ */
 public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BaseImageTriggerResponse Empty = new BaseImageTriggerResponse();
 
+    /**
+     * The type of the auto trigger for base image dependency updates.
+     */
     @InputImport(name="baseImageTriggerType", required=true)
     private final String baseImageTriggerType;
 
@@ -21,6 +27,9 @@ public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeAr
         return this.baseImageTriggerType;
     }
 
+    /**
+     * The name of the trigger.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,6 +37,9 @@ public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeAr
         return this.name;
     }
 
+    /**
+     * The current status of trigger.
+     */
     @InputImport(name="status")
     private final @Nullable String status;
 
@@ -35,6 +47,9 @@ public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeAr
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
+    /**
+     * The endpoint URL for receiving update triggers.
+     */
     @InputImport(name="updateTriggerEndpoint")
     private final @Nullable String updateTriggerEndpoint;
 
@@ -42,6 +57,9 @@ public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeAr
         return this.updateTriggerEndpoint == null ? Optional.empty() : Optional.ofNullable(this.updateTriggerEndpoint);
     }
 
+    /**
+     * Type of Payload body for Base image update triggers.
+     */
     @InputImport(name="updateTriggerPayloadType")
     private final @Nullable String updateTriggerPayloadType;
 

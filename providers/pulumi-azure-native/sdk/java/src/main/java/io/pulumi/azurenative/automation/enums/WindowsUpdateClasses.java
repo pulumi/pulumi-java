@@ -8,16 +8,46 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Update classification included in the software update configuration. A comma separated string with required values
+ */
     @EnumType
     public enum WindowsUpdateClasses {
+/**
+ * 
+ */
         Unclassified("Unclassified"),
+/**
+ * 
+ */
         Critical("Critical"),
+/**
+ * 
+ */
         Security("Security"),
+/**
+ * 
+ */
         UpdateRollup("UpdateRollup"),
+/**
+ * 
+ */
         FeaturePack("FeaturePack"),
+/**
+ * 
+ */
         ServicePack("ServicePack"),
+/**
+ * 
+ */
         Definition("Definition"),
+/**
+ * 
+ */
         Tools("Tools"),
+/**
+ * 
+ */
         Updates("Updates");
 
         private final String value;

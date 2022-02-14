@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ListRemediationDeploymentsAtManagementGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListRemediationDeploymentsAtManagementGroupArgs Empty = new ListRemediationDeploymentsAtManagementGroupArgs();
 
+    /**
+     * Management group ID.
+     */
     @InputImport(name="managementGroupId", required=true)
     private final String managementGroupId;
 
@@ -22,6 +28,9 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends io.pu
         return this.managementGroupId;
     }
 
+    /**
+     * The namespace for Microsoft Management RP; only "Microsoft.Management" is allowed.
+     */
     @InputImport(name="managementGroupsNamespace", required=true)
     private final String managementGroupsNamespace;
 
@@ -29,6 +38,9 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends io.pu
         return this.managementGroupsNamespace;
     }
 
+    /**
+     * The name of the remediation.
+     */
     @InputImport(name="remediationName", required=true)
     private final String remediationName;
 
@@ -36,6 +48,9 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends io.pu
         return this.remediationName;
     }
 
+    /**
+     * Maximum number of records to return.
+     */
     @InputImport(name="top")
     private final @Nullable Integer top;
 

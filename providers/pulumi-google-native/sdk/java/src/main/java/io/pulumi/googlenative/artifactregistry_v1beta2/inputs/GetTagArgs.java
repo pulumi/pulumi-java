@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetTagArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTagArgs Empty = new GetTagArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -21,6 +27,9 @@ public final class GetTagArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="packageId", required=true)
     private final String packageId;
 
@@ -28,6 +37,9 @@ public final class GetTagArgs extends io.pulumi.resources.InvokeArgs {
         return this.packageId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -35,6 +47,9 @@ public final class GetTagArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="repositoryId", required=true)
     private final String repositoryId;
 
@@ -42,6 +57,9 @@ public final class GetTagArgs extends io.pulumi.resources.InvokeArgs {
         return this.repositoryId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="tagId", required=true)
     private final String tagId;
 

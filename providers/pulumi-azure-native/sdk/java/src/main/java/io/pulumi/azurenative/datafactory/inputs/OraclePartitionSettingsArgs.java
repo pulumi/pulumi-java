@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The settings that will be leveraged for Oracle source partitioning.
+ */
 public final class OraclePartitionSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OraclePartitionSettingsArgs Empty = new OraclePartitionSettingsArgs();
 
+    /**
+     * The name of the column in integer type that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="partitionColumnName")
     private final @Nullable Input<Object> partitionColumnName;
 
@@ -22,6 +28,9 @@ public final class OraclePartitionSettingsArgs extends io.pulumi.resources.Resou
         return this.partitionColumnName == null ? Input.empty() : this.partitionColumnName;
     }
 
+    /**
+     * The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="partitionLowerBound")
     private final @Nullable Input<Object> partitionLowerBound;
 
@@ -29,6 +38,9 @@ public final class OraclePartitionSettingsArgs extends io.pulumi.resources.Resou
         return this.partitionLowerBound == null ? Input.empty() : this.partitionLowerBound;
     }
 
+    /**
+     * Names of the physical partitions of Oracle table. 
+     */
     @InputImport(name="partitionNames")
     private final @Nullable Input<List<Object>> partitionNames;
 
@@ -36,6 +48,9 @@ public final class OraclePartitionSettingsArgs extends io.pulumi.resources.Resou
         return this.partitionNames == null ? Input.empty() : this.partitionNames;
     }
 
+    /**
+     * The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="partitionUpperBound")
     private final @Nullable Input<Object> partitionUpperBound;
 

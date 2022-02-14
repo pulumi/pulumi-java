@@ -15,10 +15,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a virtual machine network interface configurations.
+ */
 public final class VirtualMachineNetworkInterfaceConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineNetworkInterfaceConfigurationResponse Empty = new VirtualMachineNetworkInterfaceConfigurationResponse();
 
+    /**
+     * Specify what happens to the network interface when the VM is deleted
+     */
     @InputImport(name="deleteOption")
     private final @Nullable String deleteOption;
 
@@ -26,6 +32,9 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
         return this.deleteOption == null ? Optional.empty() : Optional.ofNullable(this.deleteOption);
     }
 
+    /**
+     * The dns settings to be applied on the network interfaces.
+     */
     @InputImport(name="dnsSettings")
     private final @Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings;
 
@@ -33,6 +42,9 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
         return this.dnsSettings == null ? Optional.empty() : Optional.ofNullable(this.dnsSettings);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="dscpConfiguration")
     private final @Nullable SubResourceResponse dscpConfiguration;
 
@@ -40,6 +52,9 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
         return this.dscpConfiguration == null ? Optional.empty() : Optional.ofNullable(this.dscpConfiguration);
     }
 
+    /**
+     * Specifies whether the network interface is accelerated networking-enabled.
+     */
     @InputImport(name="enableAcceleratedNetworking")
     private final @Nullable Boolean enableAcceleratedNetworking;
 
@@ -47,6 +62,9 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
         return this.enableAcceleratedNetworking == null ? Optional.empty() : Optional.ofNullable(this.enableAcceleratedNetworking);
     }
 
+    /**
+     * Specifies whether the network interface is FPGA networking-enabled.
+     */
     @InputImport(name="enableFpga")
     private final @Nullable Boolean enableFpga;
 
@@ -54,6 +72,9 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
         return this.enableFpga == null ? Optional.empty() : Optional.ofNullable(this.enableFpga);
     }
 
+    /**
+     * Whether IP forwarding enabled on this NIC.
+     */
     @InputImport(name="enableIPForwarding")
     private final @Nullable Boolean enableIPForwarding;
 
@@ -61,6 +82,9 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
         return this.enableIPForwarding == null ? Optional.empty() : Optional.ofNullable(this.enableIPForwarding);
     }
 
+    /**
+     * Specifies the IP configurations of the network interface.
+     */
     @InputImport(name="ipConfigurations", required=true)
     private final List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations;
 
@@ -68,6 +92,9 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
         return this.ipConfigurations;
     }
 
+    /**
+     * The network interface configuration name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -75,6 +102,9 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
         return this.name;
     }
 
+    /**
+     * The network security group.
+     */
     @InputImport(name="networkSecurityGroup")
     private final @Nullable SubResourceResponse networkSecurityGroup;
 
@@ -82,6 +112,9 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
         return this.networkSecurityGroup == null ? Optional.empty() : Optional.ofNullable(this.networkSecurityGroup);
     }
 
+    /**
+     * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
+     */
     @InputImport(name="primary")
     private final @Nullable Boolean primary;
 

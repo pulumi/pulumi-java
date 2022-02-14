@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Collection of instances belong to the API portal
+ */
 public final class ApiPortalInstanceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiPortalInstanceResponse Empty = new ApiPortalInstanceResponse();
 
+    /**
+     * Name of the API portal instance
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class ApiPortalInstanceResponse extends io.pulumi.resources.InvokeA
         return this.name;
     }
 
+    /**
+     * Status of the API portal instance
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

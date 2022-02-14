@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Output object for Deployments
+ */
 public final class DeploymentOutputEntryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeploymentOutputEntryResponse Empty = new DeploymentOutputEntryResponse();
 
+    /**
+     * Key of the output
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -19,6 +25,9 @@ public final class DeploymentOutputEntryResponse extends io.pulumi.resources.Inv
         return this.key;
     }
 
+    /**
+     * Value of the label
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

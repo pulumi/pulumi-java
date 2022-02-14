@@ -12,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceMetricSource {
+/**
+ * name is the name of the resource in question.
+ */
     private final String name;
+/**
+ * targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
+ */
     private final @Nullable Integer targetAverageUtilization;
+/**
+ * targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.
+ */
     private final @Nullable String targetAverageValue;
 
     @OutputCustomType.Constructor({"name","targetAverageUtilization","targetAverageValue"})
@@ -26,12 +35,21 @@ public final class ResourceMetricSource {
         this.targetAverageValue = targetAverageValue;
     }
 
+/**
+ * name is the name of the resource in question.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
+ */
     public Optional<Integer> getTargetAverageUtilization() {
         return Optional.ofNullable(this.targetAverageUtilization);
     }
+/**
+ * targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.
+ */
     public Optional<String> getTargetAverageValue() {
         return Optional.ofNullable(this.targetAverageValue);
     }

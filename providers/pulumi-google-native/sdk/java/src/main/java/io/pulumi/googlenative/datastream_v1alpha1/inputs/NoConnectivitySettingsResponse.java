@@ -6,6 +6,9 @@ package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 import java.util.Objects;
 
 
+/**
+ * No connectivity settings.
+ */
 public final class NoConnectivitySettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NoConnectivitySettingsResponse Empty = new NoConnectivitySettingsResponse();

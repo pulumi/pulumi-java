@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The tier of the service.
+ */
     @EnumType
     public enum ServiceTier {
+/**
+ * The tier is not set.
+ */
         TierUnspecified("TIER_UNSPECIFIED"),
+/**
+ * The developer tier provides limited scalability and no fault tolerance. Good for low-cost proof-of-concept.
+ */
         Developer("DEVELOPER"),
+/**
+ * The enterprise tier provides multi-zone high availability, and sufficient scalability for enterprise-level Dataproc Metastore workloads.
+ */
         Enterprise("ENTERPRISE");
 
         private final String value;

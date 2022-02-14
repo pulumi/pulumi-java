@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Kubernetes cluster configuration
+ */
 public final class KubernetesClusterInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KubernetesClusterInfoArgs Empty = new KubernetesClusterInfoArgs();
 
+    /**
+     * Kubernetes cluster version
+     */
     @InputImport(name="version", required=true)
     private final Input<String> version;
 

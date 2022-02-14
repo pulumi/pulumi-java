@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * PersistentVolumeClaimCondition contails details about state of pvc
+ */
 public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PersistentVolumeClaimConditionArgs Empty = new PersistentVolumeClaimConditionArgs();
 
+    /**
+     * Last time we probed the condition.
+     */
     @InputImport(name="lastProbeTime")
     private final @Nullable Input<String> lastProbeTime;
 
@@ -21,6 +27,9 @@ public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resource
         return this.lastProbeTime == null ? Input.empty() : this.lastProbeTime;
     }
 
+    /**
+     * Last time the condition transitioned from one status to another.
+     */
     @InputImport(name="lastTransitionTime")
     private final @Nullable Input<String> lastTransitionTime;
 
@@ -28,6 +37,9 @@ public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resource
         return this.lastTransitionTime == null ? Input.empty() : this.lastTransitionTime;
     }
 
+    /**
+     * Human-readable message indicating details about last transition.
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -35,6 +47,9 @@ public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resource
         return this.message == null ? Input.empty() : this.message;
     }
 
+    /**
+     * Unique, this should be a short, machine understandable string that gives the reason for condition's last transition. If it reports "ResizeStarted" that means the underlying persistent volume is being resized.
+     */
     @InputImport(name="reason")
     private final @Nullable Input<String> reason;
 
@@ -42,6 +57,9 @@ public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resource
         return this.reason == null ? Input.empty() : this.reason;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="status", required=true)
     private final Input<String> status;
 
@@ -49,6 +67,14 @@ public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resource
         return this.status;
     }
 
+    /**
+     * 
+
+
+Possible enum values:
+ - `"FileSystemResizePending"` - controller resize is finished and a file system resize is pending on node
+ - `"Resizing"` - a user trigger resize of pvc has been started
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListKeyByAutomationAccountResult {
+/**
+ * Lists the automation keys.
+ */
     private final @Nullable List<KeyResponse> keys;
 
     @OutputCustomType.Constructor({"keys"})
@@ -18,6 +21,9 @@ public final class ListKeyByAutomationAccountResult {
         this.keys = keys;
     }
 
+/**
+ * Lists the automation keys.
+ */
     public List<KeyResponse> getKeys() {
         return this.keys == null ? List.of() : this.keys;
     }

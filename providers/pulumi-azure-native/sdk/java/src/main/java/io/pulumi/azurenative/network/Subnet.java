@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.SubnetArgs;
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayIPConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.DelegationResponse;
 import io.pulumi.azurenative.network.outputs.IPConfigurationProfileResponse;
@@ -26,141 +25,536 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Subnet in a virtual network resource.
+API Version: 2020-11-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create subnet
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var subnet = new AzureNative.Network.Subnet("subnet", new AzureNative.Network.SubnetArgs
+        {
+            AddressPrefix = "10.0.0.0/16",
+            ResourceGroupName = "subnet-test",
+            SubnetName = "subnet1",
+            VirtualNetworkName = "vnetname",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewSubnet(ctx, "subnet", &network.SubnetArgs{
+			AddressPrefix:      pulumi.String("10.0.0.0/16"),
+			ResourceGroupName:  pulumi.String("subnet-test"),
+			SubnetName:         pulumi.String("subnet1"),
+			VirtualNetworkName: pulumi.String("vnetname"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const subnet = new azure_native.network.Subnet("subnet", {
+    addressPrefix: "10.0.0.0/16",
+    resourceGroupName: "subnet-test",
+    subnetName: "subnet1",
+    virtualNetworkName: "vnetname",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+subnet = azure_native.network.Subnet("subnet",
+    address_prefix="10.0.0.0/16",
+    resource_group_name="subnet-test",
+    subnet_name="subnet1",
+    virtual_network_name="vnetname")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create subnet with a delegation
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var subnet = new AzureNative.Network.Subnet("subnet", new AzureNative.Network.SubnetArgs
+        {
+            AddressPrefix = "10.0.0.0/16",
+            ResourceGroupName = "subnet-test",
+            SubnetName = "subnet1",
+            VirtualNetworkName = "vnetname",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewSubnet(ctx, "subnet", &network.SubnetArgs{
+			AddressPrefix:      pulumi.String("10.0.0.0/16"),
+			ResourceGroupName:  pulumi.String("subnet-test"),
+			SubnetName:         pulumi.String("subnet1"),
+			VirtualNetworkName: pulumi.String("vnetname"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const subnet = new azure_native.network.Subnet("subnet", {
+    addressPrefix: "10.0.0.0/16",
+    resourceGroupName: "subnet-test",
+    subnetName: "subnet1",
+    virtualNetworkName: "vnetname",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+subnet = azure_native.network.Subnet("subnet",
+    address_prefix="10.0.0.0/16",
+    resource_group_name="subnet-test",
+    subnet_name="subnet1",
+    virtual_network_name="vnetname")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create subnet with service endpoints
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var subnet = new AzureNative.Network.Subnet("subnet", new AzureNative.Network.SubnetArgs
+        {
+            AddressPrefix = "10.0.0.0/16",
+            ResourceGroupName = "subnet-test",
+            ServiceEndpoints = 
+            {
+                new AzureNative.Network.Inputs.ServiceEndpointPropertiesFormatArgs
+                {
+                    Service = "Microsoft.Storage",
+                },
+            },
+            SubnetName = "subnet1",
+            VirtualNetworkName = "vnetname",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewSubnet(ctx, "subnet", &network.SubnetArgs{
+			AddressPrefix:     pulumi.String("10.0.0.0/16"),
+			ResourceGroupName: pulumi.String("subnet-test"),
+			ServiceEndpoints: []network.ServiceEndpointPropertiesFormatArgs{
+				&network.ServiceEndpointPropertiesFormatArgs{
+					Service: pulumi.String("Microsoft.Storage"),
+				},
+			},
+			SubnetName:         pulumi.String("subnet1"),
+			VirtualNetworkName: pulumi.String("vnetname"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const subnet = new azure_native.network.Subnet("subnet", {
+    addressPrefix: "10.0.0.0/16",
+    resourceGroupName: "subnet-test",
+    serviceEndpoints: [{
+        service: "Microsoft.Storage",
+    }],
+    subnetName: "subnet1",
+    virtualNetworkName: "vnetname",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+subnet = azure_native.network.Subnet("subnet",
+    address_prefix="10.0.0.0/16",
+    resource_group_name="subnet-test",
+    service_endpoints=[azure_native.network.ServiceEndpointPropertiesFormatArgs(
+        service="Microsoft.Storage",
+    )],
+    subnet_name="subnet1",
+    virtual_network_name="vnetname")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:Subnet subnet1 /subscriptions/subid/resourceGroups/subnet-test/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/subnet1 
+```
+
+ */
 @ResourceType(type="azure-native:network:Subnet")
 public class Subnet extends io.pulumi.resources.CustomResource {
+    /**
+     * The address prefix for the subnet.
+     */
     @OutputExport(name="addressPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> addressPrefix;
 
+    /**
+     * @return The address prefix for the subnet.
+     */
     public Output</* @Nullable */ String> getAddressPrefix() {
         return this.addressPrefix;
     }
+    /**
+     * List of address prefixes for the subnet.
+     */
     @OutputExport(name="addressPrefixes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> addressPrefixes;
 
+    /**
+     * @return List of address prefixes for the subnet.
+     */
     public Output</* @Nullable */ List<String>> getAddressPrefixes() {
         return this.addressPrefixes;
     }
+    /**
+     * Application gateway IP configurations of virtual network resource.
+     */
     @OutputExport(name="applicationGatewayIpConfigurations", type=List.class, parameters={ApplicationGatewayIPConfigurationResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayIPConfigurationResponse>> applicationGatewayIpConfigurations;
 
+    /**
+     * @return Application gateway IP configurations of virtual network resource.
+     */
     public Output</* @Nullable */ List<ApplicationGatewayIPConfigurationResponse>> getApplicationGatewayIpConfigurations() {
         return this.applicationGatewayIpConfigurations;
     }
+    /**
+     * An array of references to the delegations on the subnet.
+     */
     @OutputExport(name="delegations", type=List.class, parameters={DelegationResponse.class})
     private Output</* @Nullable */ List<DelegationResponse>> delegations;
 
+    /**
+     * @return An array of references to the delegations on the subnet.
+     */
     public Output</* @Nullable */ List<DelegationResponse>> getDelegations() {
         return this.delegations;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Array of IpAllocation which reference this subnet.
+     */
     @OutputExport(name="ipAllocations", type=List.class, parameters={SubResourceResponse.class})
     private Output</* @Nullable */ List<SubResourceResponse>> ipAllocations;
 
+    /**
+     * @return Array of IpAllocation which reference this subnet.
+     */
     public Output</* @Nullable */ List<SubResourceResponse>> getIpAllocations() {
         return this.ipAllocations;
     }
+    /**
+     * Array of IP configuration profiles which reference this subnet.
+     */
     @OutputExport(name="ipConfigurationProfiles", type=List.class, parameters={IPConfigurationProfileResponse.class})
     private Output<List<IPConfigurationProfileResponse>> ipConfigurationProfiles;
 
+    /**
+     * @return Array of IP configuration profiles which reference this subnet.
+     */
     public Output<List<IPConfigurationProfileResponse>> getIpConfigurationProfiles() {
         return this.ipConfigurationProfiles;
     }
+    /**
+     * An array of references to the network interface IP configurations using subnet.
+     */
     @OutputExport(name="ipConfigurations", type=List.class, parameters={IPConfigurationResponse.class})
     private Output<List<IPConfigurationResponse>> ipConfigurations;
 
+    /**
+     * @return An array of references to the network interface IP configurations using subnet.
+     */
     public Output<List<IPConfigurationResponse>> getIpConfigurations() {
         return this.ipConfigurations;
     }
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * Nat gateway associated with this subnet.
+     */
     @OutputExport(name="natGateway", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> natGateway;
 
+    /**
+     * @return Nat gateway associated with this subnet.
+     */
     public Output</* @Nullable */ SubResourceResponse> getNatGateway() {
         return this.natGateway;
     }
+    /**
+     * The reference to the NetworkSecurityGroup resource.
+     */
     @OutputExport(name="networkSecurityGroup", type=NetworkSecurityGroupResponse.class, parameters={})
     private Output</* @Nullable */ NetworkSecurityGroupResponse> networkSecurityGroup;
 
+    /**
+     * @return The reference to the NetworkSecurityGroup resource.
+     */
     public Output</* @Nullable */ NetworkSecurityGroupResponse> getNetworkSecurityGroup() {
         return this.networkSecurityGroup;
     }
+    /**
+     * Enable or Disable apply network policies on private end point in the subnet.
+     */
     @OutputExport(name="privateEndpointNetworkPolicies", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateEndpointNetworkPolicies;
 
+    /**
+     * @return Enable or Disable apply network policies on private end point in the subnet.
+     */
     public Output</* @Nullable */ String> getPrivateEndpointNetworkPolicies() {
         return this.privateEndpointNetworkPolicies;
     }
+    /**
+     * An array of references to private endpoints.
+     */
     @OutputExport(name="privateEndpoints", type=List.class, parameters={PrivateEndpointResponse.class})
     private Output<List<PrivateEndpointResponse>> privateEndpoints;
 
+    /**
+     * @return An array of references to private endpoints.
+     */
     public Output<List<PrivateEndpointResponse>> getPrivateEndpoints() {
         return this.privateEndpoints;
     }
+    /**
+     * Enable or Disable apply network policies on private link service in the subnet.
+     */
     @OutputExport(name="privateLinkServiceNetworkPolicies", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateLinkServiceNetworkPolicies;
 
+    /**
+     * @return Enable or Disable apply network policies on private link service in the subnet.
+     */
     public Output</* @Nullable */ String> getPrivateLinkServiceNetworkPolicies() {
         return this.privateLinkServiceNetworkPolicies;
     }
+    /**
+     * The provisioning state of the subnet resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the subnet resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * A read-only string identifying the intention of use for this subnet based on delegations and other user-defined properties.
+     */
     @OutputExport(name="purpose", type=String.class, parameters={})
     private Output<String> purpose;
 
+    /**
+     * @return A read-only string identifying the intention of use for this subnet based on delegations and other user-defined properties.
+     */
     public Output<String> getPurpose() {
         return this.purpose;
     }
+    /**
+     * An array of references to the external resources using subnet.
+     */
     @OutputExport(name="resourceNavigationLinks", type=List.class, parameters={ResourceNavigationLinkResponse.class})
     private Output<List<ResourceNavigationLinkResponse>> resourceNavigationLinks;
 
+    /**
+     * @return An array of references to the external resources using subnet.
+     */
     public Output<List<ResourceNavigationLinkResponse>> getResourceNavigationLinks() {
         return this.resourceNavigationLinks;
     }
+    /**
+     * The reference to the RouteTable resource.
+     */
     @OutputExport(name="routeTable", type=RouteTableResponse.class, parameters={})
     private Output</* @Nullable */ RouteTableResponse> routeTable;
 
+    /**
+     * @return The reference to the RouteTable resource.
+     */
     public Output</* @Nullable */ RouteTableResponse> getRouteTable() {
         return this.routeTable;
     }
+    /**
+     * An array of references to services injecting into this subnet.
+     */
     @OutputExport(name="serviceAssociationLinks", type=List.class, parameters={ServiceAssociationLinkResponse.class})
     private Output<List<ServiceAssociationLinkResponse>> serviceAssociationLinks;
 
+    /**
+     * @return An array of references to services injecting into this subnet.
+     */
     public Output<List<ServiceAssociationLinkResponse>> getServiceAssociationLinks() {
         return this.serviceAssociationLinks;
     }
+    /**
+     * An array of service endpoint policies.
+     */
     @OutputExport(name="serviceEndpointPolicies", type=List.class, parameters={ServiceEndpointPolicyResponse.class})
     private Output</* @Nullable */ List<ServiceEndpointPolicyResponse>> serviceEndpointPolicies;
 
+    /**
+     * @return An array of service endpoint policies.
+     */
     public Output</* @Nullable */ List<ServiceEndpointPolicyResponse>> getServiceEndpointPolicies() {
         return this.serviceEndpointPolicies;
     }
+    /**
+     * An array of service endpoints.
+     */
     @OutputExport(name="serviceEndpoints", type=List.class, parameters={ServiceEndpointPropertiesFormatResponse.class})
     private Output</* @Nullable */ List<ServiceEndpointPropertiesFormatResponse>> serviceEndpoints;
 
+    /**
+     * @return An array of service endpoints.
+     */
     public Output</* @Nullable */ List<ServiceEndpointPropertiesFormatResponse>> getServiceEndpoints() {
         return this.serviceEndpoints;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output</* @Nullable */ String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Subnet(String name, SubnetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:Subnet", name, args == null ? SubnetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -217,6 +611,14 @@ public class Subnet extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Subnet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Subnet(name, id, options);
     }

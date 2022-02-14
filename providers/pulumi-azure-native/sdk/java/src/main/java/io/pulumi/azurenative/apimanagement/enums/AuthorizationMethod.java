@@ -8,15 +8,42 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum AuthorizationMethod {
+/**
+ * 
+ */
         HEAD("HEAD"),
+/**
+ * 
+ */
         OPTIONS("OPTIONS"),
+/**
+ * 
+ */
         TRACE("TRACE"),
+/**
+ * 
+ */
         GET("GET"),
+/**
+ * 
+ */
         POST("POST"),
+/**
+ * 
+ */
         PUT("PUT"),
+/**
+ * 
+ */
         PATCH("PATCH"),
+/**
+ * 
+ */
         DELETE("DELETE");
 
         private final String value;

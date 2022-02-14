@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes a reference to Key Vault Key
+ */
 public final class KeyVaultKeyReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyVaultKeyReferenceResponse Empty = new KeyVaultKeyReferenceResponse();
 
+    /**
+     * The URL referencing a key encryption key in Key Vault.
+     */
     @InputImport(name="keyUrl", required=true)
     private final String keyUrl;
 
@@ -20,6 +26,9 @@ public final class KeyVaultKeyReferenceResponse extends io.pulumi.resources.Invo
         return this.keyUrl;
     }
 
+    /**
+     * The relative URL of the Key Vault containing the key.
+     */
     @InputImport(name="sourceVault", required=true)
     private final SubResourceResponse sourceVault;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlVirtualMachine {
+/**
+ * A SQL virtual machine.
+API Version: 2017-03-01-preview.
+ *
+ * A SQL virtual machine.
+ */
     public static CompletableFuture<GetSqlVirtualMachineResult> invokeAsync(GetSqlVirtualMachineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sqlvirtualmachine:getSqlVirtualMachine", TypeShape.of(GetSqlVirtualMachineResult.class), args == null ? GetSqlVirtualMachineArgs.Empty : args, Utilities.withVersion(options));
     }

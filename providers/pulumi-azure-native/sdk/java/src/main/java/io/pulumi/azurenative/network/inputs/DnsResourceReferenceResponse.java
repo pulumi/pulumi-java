@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a single Azure resource and its referencing DNS records.
+ */
 public final class DnsResourceReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DnsResourceReferenceResponse Empty = new DnsResourceReferenceResponse();
 
+    /**
+     * A list of dns Records 
+     */
     @InputImport(name="dnsResources")
     private final @Nullable List<SubResourceResponse> dnsResources;
 
@@ -22,6 +28,9 @@ public final class DnsResourceReferenceResponse extends io.pulumi.resources.Invo
         return this.dnsResources == null ? List.of() : this.dnsResources;
     }
 
+    /**
+     * A reference to an azure resource from where the dns resource value is taken.
+     */
     @InputImport(name="targetResource")
     private final @Nullable SubResourceResponse targetResource;
 

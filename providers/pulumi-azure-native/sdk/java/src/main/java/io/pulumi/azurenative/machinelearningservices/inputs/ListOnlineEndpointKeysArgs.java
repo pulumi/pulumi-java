@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListOnlineEndpointKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListOnlineEndpointKeysArgs Empty = new ListOnlineEndpointKeysArgs();
 
+    /**
+     * Online Endpoint name.
+     */
     @InputImport(name="endpointName", required=true)
     private final String endpointName;
 
@@ -19,6 +25,9 @@ public final class ListOnlineEndpointKeysArgs extends io.pulumi.resources.Invoke
         return this.endpointName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class ListOnlineEndpointKeysArgs extends io.pulumi.resources.Invoke
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of Azure Machine Learning workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

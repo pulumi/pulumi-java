@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An Upgrade Occurrence represents that a specific resource_url could install a specific upgrade. This presence is supplied via local sources (i.e. it is present in the mirror and the running system has noticed its availability).
+ */
 public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UpgradeOccurrenceArgs Empty = new UpgradeOccurrenceArgs();
 
+    /**
+     * Metadata about the upgrade for available for the specific operating system for the resource_url. This allows efficient filtering, as well as making it easier to use the occurrence.
+     */
     @InputImport(name="distribution")
     private final @Nullable Input<UpgradeDistributionArgs> distribution;
 
@@ -23,6 +29,9 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
         return this.distribution == null ? Input.empty() : this.distribution;
     }
 
+    /**
+     * Required - The package this Upgrade is for.
+     */
     @InputImport(name="package")
     private final @Nullable Input<String> $package;
 
@@ -30,6 +39,9 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
         return this.$package == null ? Input.empty() : this.$package;
     }
 
+    /**
+     * Required - The version of the package in a machine + human readable form.
+     */
     @InputImport(name="parsedVersion")
     private final @Nullable Input<VersionArgs> parsedVersion;
 

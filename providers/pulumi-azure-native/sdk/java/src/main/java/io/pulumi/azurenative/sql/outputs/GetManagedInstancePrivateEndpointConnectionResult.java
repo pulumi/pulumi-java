@@ -13,11 +13,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetManagedInstancePrivateEndpointConnectionResult {
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * Private endpoint which the connection belongs to.
+ */
     private final @Nullable ManagedInstancePrivateEndpointPropertyResponse privateEndpoint;
+/**
+ * Connection State of the Private Endpoint Connection.
+ */
     private final @Nullable ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState;
+/**
+ * State of the Private Endpoint Connection.
+ */
     private final String provisioningState;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","privateEndpoint","privateLinkServiceConnectionState","provisioningState","type"})
@@ -36,21 +54,39 @@ public final class GetManagedInstancePrivateEndpointConnectionResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Private endpoint which the connection belongs to.
+ */
     public Optional<ManagedInstancePrivateEndpointPropertyResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
+/**
+ * Connection State of the Private Endpoint Connection.
+ */
     public Optional<ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
+/**
+ * State of the Private Endpoint Connection.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

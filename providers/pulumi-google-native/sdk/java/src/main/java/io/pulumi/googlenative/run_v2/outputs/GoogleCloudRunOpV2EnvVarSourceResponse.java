@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudRunOpV2EnvVarSourceResponse {
+/**
+ * Selects a secret and a specific version from Cloud Secret Manager.
+ */
     private final GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef;
 
     @OutputCustomType.Constructor({"secretKeyRef"})
@@ -16,6 +19,9 @@ public final class GoogleCloudRunOpV2EnvVarSourceResponse {
         this.secretKeyRef = Objects.requireNonNull(secretKeyRef);
     }
 
+/**
+ * Selects a secret and a specific version from Cloud Secret Manager.
+ */
     public GoogleCloudRunOpV2SecretKeySelectorResponse getSecretKeyRef() {
         return this.secretKeyRef;
     }

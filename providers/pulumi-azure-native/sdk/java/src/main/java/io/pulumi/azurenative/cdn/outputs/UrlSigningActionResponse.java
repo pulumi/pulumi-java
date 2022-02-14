@@ -10,7 +10,14 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UrlSigningActionResponse {
+/**
+ * The name of the action for the delivery rule.
+Expected value is 'UrlSigning'.
+ */
     private final String name;
+/**
+ * Defines the parameters for the action.
+ */
     private final UrlSigningActionParametersResponse parameters;
 
     @OutputCustomType.Constructor({"name","parameters"})
@@ -21,9 +28,16 @@ public final class UrlSigningActionResponse {
         this.parameters = Objects.requireNonNull(parameters);
     }
 
+/**
+ * The name of the action for the delivery rule.
+Expected value is 'UrlSigning'.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Defines the parameters for the action.
+ */
     public UrlSigningActionParametersResponse getParameters() {
         return this.parameters;
     }

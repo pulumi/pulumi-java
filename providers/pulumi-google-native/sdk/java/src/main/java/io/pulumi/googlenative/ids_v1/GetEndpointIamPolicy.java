@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEndpointIamPolicy {
+/**
+ * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+ */
     public static CompletableFuture<GetEndpointIamPolicyResult> invokeAsync(GetEndpointIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:ids/v1:getEndpointIamPolicy", TypeShape.of(GetEndpointIamPolicyResult.class), args == null ? GetEndpointIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

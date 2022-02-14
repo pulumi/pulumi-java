@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetRulesEngineArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRulesEngineArgs Empty = new GetRulesEngineArgs();
 
+    /**
+     * Name of the Front Door which is globally unique.
+     */
     @InputImport(name="frontDoorName", required=true)
     private final String frontDoorName;
 
@@ -19,6 +25,9 @@ public final class GetRulesEngineArgs extends io.pulumi.resources.InvokeArgs {
         return this.frontDoorName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetRulesEngineArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the Rules Engine which is unique within the Front Door.
+     */
     @InputImport(name="rulesEngineName", required=true)
     private final String rulesEngineName;
 

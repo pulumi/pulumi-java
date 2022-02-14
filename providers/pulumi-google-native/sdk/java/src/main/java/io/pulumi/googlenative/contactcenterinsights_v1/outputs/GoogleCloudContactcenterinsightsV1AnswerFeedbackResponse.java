@@ -10,8 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse {
+/**
+ * Indicates whether an answer or item was clicked by the human agent.
+ */
     private final Boolean clicked;
+/**
+ * The correctness level of an answer.
+ */
     private final String correctnessLevel;
+/**
+ * Indicates whether an answer or item was displayed to the human agent in the agent desktop UI.
+ */
     private final Boolean displayed;
 
     @OutputCustomType.Constructor({"clicked","correctnessLevel","displayed"})
@@ -24,12 +33,21 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse {
         this.displayed = Objects.requireNonNull(displayed);
     }
 
+/**
+ * Indicates whether an answer or item was clicked by the human agent.
+ */
     public Boolean getClicked() {
         return this.clicked;
     }
+/**
+ * The correctness level of an answer.
+ */
     public String getCorrectnessLevel() {
         return this.correctnessLevel;
     }
+/**
+ * Indicates whether an answer or item was displayed to the human agent in the agent desktop UI.
+ */
     public Boolean getDisplayed() {
         return this.displayed;
     }

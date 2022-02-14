@@ -8,18 +8,54 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Describes operator to apply to the match condition.
+ */
     @EnumType
     public enum RulesEngineOperator {
+/**
+ * 
+ */
         Any("Any"),
+/**
+ * 
+ */
         IPMatch("IPMatch"),
+/**
+ * 
+ */
         GeoMatch("GeoMatch"),
+/**
+ * 
+ */
         Equal("Equal"),
+/**
+ * 
+ */
         Contains("Contains"),
+/**
+ * 
+ */
         LessThan("LessThan"),
+/**
+ * 
+ */
         GreaterThan("GreaterThan"),
+/**
+ * 
+ */
         LessThanOrEqual("LessThanOrEqual"),
+/**
+ * 
+ */
         GreaterThanOrEqual("GreaterThanOrEqual"),
+/**
+ * 
+ */
         BeginsWith("BeginsWith"),
+/**
+ * 
+ */
         EndsWith("EndsWith");
 
         private final String value;

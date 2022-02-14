@@ -14,6 +14,12 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: FusionAlertRule, MicrosoftSecurityIncidentCreationAlertRule, ScheduledAlertRule. */
 public class GetAlertRule {
+/**
+ * Alert rule.
+API Version: 2020-01-01.
+ *
+ * Alert rule.
+ */
     public static CompletableFuture<GetAlertRuleResult> invokeAsync(GetAlertRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAlertRule", TypeShape.of(GetAlertRuleResult.class), args == null ? GetAlertRuleArgs.Empty : args, Utilities.withVersion(options));
     }

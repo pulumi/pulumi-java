@@ -16,10 +16,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateEndpointArgs Empty = new PrivateEndpointArgs();
 
+    /**
+     * An array of custom dns configurations.
+     */
     @InputImport(name="customDnsConfigs")
     private final @Nullable Input<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs;
 
@@ -27,6 +33,9 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
         return this.customDnsConfigs == null ? Input.empty() : this.customDnsConfigs;
     }
 
+    /**
+     * The extended location of the load balancer.
+     */
     @InputImport(name="extendedLocation")
     private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
@@ -34,6 +43,9 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -41,6 +53,9 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -48,6 +63,9 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.
+     */
     @InputImport(name="manualPrivateLinkServiceConnections")
     private final @Nullable Input<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
 
@@ -55,6 +73,9 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
         return this.manualPrivateLinkServiceConnections == null ? Input.empty() : this.manualPrivateLinkServiceConnections;
     }
 
+    /**
+     * The name of the private endpoint.
+     */
     @InputImport(name="privateEndpointName")
     private final @Nullable Input<String> privateEndpointName;
 
@@ -62,6 +83,9 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
         return this.privateEndpointName == null ? Input.empty() : this.privateEndpointName;
     }
 
+    /**
+     * A grouping of information about the connection to the remote resource.
+     */
     @InputImport(name="privateLinkServiceConnections")
     private final @Nullable Input<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
 
@@ -69,6 +93,9 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
         return this.privateLinkServiceConnections == null ? Input.empty() : this.privateLinkServiceConnections;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -76,6 +103,9 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The ID of the subnet from which the private IP will be allocated.
+     */
     @InputImport(name="subnet")
     private final @Nullable Input<SubnetArgs> subnet;
 
@@ -83,6 +113,9 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
         return this.subnet == null ? Input.empty() : this.subnet;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

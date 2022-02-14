@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EnvironmentResponse {
+/**
+ * 
+ */
     private final Map<String,String> customValues;
 
     @OutputCustomType.Constructor({"customValues"})
@@ -17,6 +20,9 @@ public final class EnvironmentResponse {
         this.customValues = Objects.requireNonNull(customValues);
     }
 
+/**
+ * 
+ */
     public Map<String,String> getCustomValues() {
         return this.customValues;
     }

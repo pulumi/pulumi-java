@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.datalakeanalytics;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.datalakeanalytics.ComputePolicyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -15,45 +14,190 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Data Lake Analytics compute policy information.
+API Version: 2016-11-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Creates or updates the specified compute policy
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var computePolicy = new AzureNative.DataLakeAnalytics.ComputePolicy("computePolicy", new AzureNative.DataLakeAnalytics.ComputePolicyArgs
+        {
+            AccountName = "contosoadla",
+            ComputePolicyName = "test_policy",
+            MaxDegreeOfParallelismPerJob = 10,
+            MinPriorityPerJob = 30,
+            ObjectId = "776b9091-8916-4638-87f7-9c989a38da98",
+            ObjectType = "User",
+            ResourceGroupName = "contosorg",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	datalakeanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datalakeanalytics"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datalakeanalytics.NewComputePolicy(ctx, "computePolicy", &datalakeanalytics.ComputePolicyArgs{
+			AccountName:                  pulumi.String("contosoadla"),
+			ComputePolicyName:            pulumi.String("test_policy"),
+			MaxDegreeOfParallelismPerJob: pulumi.Int(10),
+			MinPriorityPerJob:            pulumi.Int(30),
+			ObjectId:                     pulumi.String("776b9091-8916-4638-87f7-9c989a38da98"),
+			ObjectType:                   pulumi.String("User"),
+			ResourceGroupName:            pulumi.String("contosorg"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const computePolicy = new azure_native.datalakeanalytics.ComputePolicy("computePolicy", {
+    accountName: "contosoadla",
+    computePolicyName: "test_policy",
+    maxDegreeOfParallelismPerJob: 10,
+    minPriorityPerJob: 30,
+    objectId: "776b9091-8916-4638-87f7-9c989a38da98",
+    objectType: "User",
+    resourceGroupName: "contosorg",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+compute_policy = azure_native.datalakeanalytics.ComputePolicy("computePolicy",
+    account_name="contosoadla",
+    compute_policy_name="test_policy",
+    max_degree_of_parallelism_per_job=10,
+    min_priority_per_job=30,
+    object_id="776b9091-8916-4638-87f7-9c989a38da98",
+    object_type="User",
+    resource_group_name="contosorg")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:datalakeanalytics:ComputePolicy test_policy /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataLakeAnalytics/accounts/{accountName}/computePolicies/{computePolicyName} 
+```
+
+ */
 @ResourceType(type="azure-native:datalakeanalytics:ComputePolicy")
 public class ComputePolicy extends io.pulumi.resources.CustomResource {
+    /**
+     * The maximum degree of parallelism per job this user can use to submit jobs.
+     */
     @OutputExport(name="maxDegreeOfParallelismPerJob", type=Integer.class, parameters={})
     private Output<Integer> maxDegreeOfParallelismPerJob;
 
+    /**
+     * @return The maximum degree of parallelism per job this user can use to submit jobs.
+     */
     public Output<Integer> getMaxDegreeOfParallelismPerJob() {
         return this.maxDegreeOfParallelismPerJob;
     }
+    /**
+     * The minimum priority per job this user can use to submit jobs.
+     */
     @OutputExport(name="minPriorityPerJob", type=Integer.class, parameters={})
     private Output<Integer> minPriorityPerJob;
 
+    /**
+     * @return The minimum priority per job this user can use to submit jobs.
+     */
     public Output<Integer> getMinPriorityPerJob() {
         return this.minPriorityPerJob;
     }
+    /**
+     * The resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The AAD object identifier for the entity to create a policy for.
+     */
     @OutputExport(name="objectId", type=String.class, parameters={})
     private Output<String> objectId;
 
+    /**
+     * @return The AAD object identifier for the entity to create a policy for.
+     */
     public Output<String> getObjectId() {
         return this.objectId;
     }
+    /**
+     * The type of AAD object the object identifier refers to.
+     */
     @OutputExport(name="objectType", type=String.class, parameters={})
     private Output<String> objectType;
 
+    /**
+     * @return The type of AAD object the object identifier refers to.
+     */
     public Output<String> getObjectType() {
         return this.objectType;
     }
+    /**
+     * The resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ComputePolicy(String name, ComputePolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datalakeanalytics:ComputePolicy", name, args == null ? ComputePolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -74,6 +218,14 @@ public class ComputePolicy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ComputePolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ComputePolicy(name, id, options);
     }

@@ -8,16 +8,46 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum SecretPermissions {
+/**
+ * 
+ */
         All("all"),
+/**
+ * 
+ */
         Get("get"),
+/**
+ * 
+ */
         List("list"),
+/**
+ * 
+ */
         Set("set"),
+/**
+ * 
+ */
         Delete("delete"),
+/**
+ * 
+ */
         Backup("backup"),
+/**
+ * 
+ */
         Restore("restore"),
+/**
+ * 
+ */
         Recover("recover"),
+/**
+ * 
+ */
         Purge("purge");
 
         private final String value;

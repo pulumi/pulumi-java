@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetRelationshipArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRelationshipArgs Empty = new GetRelationshipArgs();
 
+    /**
+     * The name of the hub.
+     */
     @InputImport(name="hubName", required=true)
     private final String hubName;
 
@@ -19,6 +25,9 @@ public final class GetRelationshipArgs extends io.pulumi.resources.InvokeArgs {
         return this.hubName;
     }
 
+    /**
+     * The name of the relationship.
+     */
     @InputImport(name="relationshipName", required=true)
     private final String relationshipName;
 
@@ -26,6 +35,9 @@ public final class GetRelationshipArgs extends io.pulumi.resources.InvokeArgs {
         return this.relationshipName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetApiArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApiArgs Empty = new GetApiArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="apiId", required=true)
     private final String apiId;
 
@@ -19,6 +25,9 @@ public final class GetApiArgs extends io.pulumi.resources.InvokeArgs {
         return this.apiId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 

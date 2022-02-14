@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetLocalNetworkGatewayArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLocalNetworkGatewayArgs Empty = new GetLocalNetworkGatewayArgs();
 
+    /**
+     * The name of the local network gateway.
+     */
     @InputImport(name="localNetworkGatewayName", required=true)
     private final String localNetworkGatewayName;
 
@@ -19,6 +25,9 @@ public final class GetLocalNetworkGatewayArgs extends io.pulumi.resources.Invoke
         return this.localNetworkGatewayName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

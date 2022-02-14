@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class LogAnalyticsConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LogAnalyticsConfigurationResponse Empty = new LogAnalyticsConfigurationResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="customerId")
     private final @Nullable String customerId;
 

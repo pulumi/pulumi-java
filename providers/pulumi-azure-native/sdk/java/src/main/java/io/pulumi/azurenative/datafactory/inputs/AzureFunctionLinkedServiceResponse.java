@@ -19,10 +19,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure Function linked service.
+ */
 public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureFunctionLinkedServiceResponse Empty = new AzureFunctionLinkedServiceResponse();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -30,6 +36,9 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * Type of authentication (Required to specify MSI) used to connect to AzureFunction. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="authentication")
     private final @Nullable Object authentication;
 
@@ -37,6 +46,9 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
         return this.authentication == null ? Optional.empty() : Optional.ofNullable(this.authentication);
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -44,6 +56,9 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
+    /**
+     * The credential reference containing authentication information.
+     */
     @InputImport(name="credential")
     private final @Nullable CredentialReferenceResponse credential;
 
@@ -51,6 +66,9 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -58,6 +76,9 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -65,6 +86,9 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
+    /**
+     * The endpoint of the Azure Function App. URL will be in the format https://<accountName>.azurewebsites.net.
+     */
     @InputImport(name="functionAppUrl", required=true)
     private final Object functionAppUrl;
 
@@ -72,6 +96,9 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
         return this.functionAppUrl;
     }
 
+    /**
+     * Function or Host key for Azure Function App.
+     */
     @InputImport(name="functionKey")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> functionKey;
 
@@ -79,6 +106,9 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
         return this.functionKey == null ? null : this.functionKey;
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -86,6 +116,9 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * Allowed token audiences for azure function.
+     */
     @InputImport(name="resourceId")
     private final @Nullable Object resourceId;
 
@@ -93,6 +126,10 @@ public final class AzureFunctionLinkedServiceResponse extends io.pulumi.resource
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'AzureFunction'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

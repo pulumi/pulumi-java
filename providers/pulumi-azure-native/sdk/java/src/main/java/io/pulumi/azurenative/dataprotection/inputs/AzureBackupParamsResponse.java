@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Azure backup parameters
+ */
 public final class AzureBackupParamsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureBackupParamsResponse Empty = new AzureBackupParamsResponse();
 
+    /**
+     * BackupType ; Full/Incremental etc
+     */
     @InputImport(name="backupType", required=true)
     private final String backupType;
 
@@ -19,6 +25,10 @@ public final class AzureBackupParamsResponse extends io.pulumi.resources.InvokeA
         return this.backupType;
     }
 
+    /**
+     * Type of the specific object - used for deserializing
+Expected value is 'AzureBackupParams'.
+     */
     @InputImport(name="objectType", required=true)
     private final String objectType;
 

@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PolicySetDefinitionArgs Empty = new PolicySetDefinitionArgs();
 
+    /**
+     * The policy set definition description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +35,9 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The display name of the policy set definition.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -36,6 +45,9 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The policy set definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Object> metadata;
 
@@ -43,6 +55,9 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The policy set definition parameters that can be used in policy definition references.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterDefinitionsValueArgs>> parameters;
 
@@ -50,6 +65,9 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * The metadata describing groups of policy definition references within the policy set definition.
+     */
     @InputImport(name="policyDefinitionGroups")
     private final @Nullable Input<List<PolicyDefinitionGroupArgs>> policyDefinitionGroups;
 
@@ -57,6 +75,9 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
         return this.policyDefinitionGroups == null ? Input.empty() : this.policyDefinitionGroups;
     }
 
+    /**
+     * An array of policy definition references.
+     */
     @InputImport(name="policyDefinitions", required=true)
     private final Input<List<PolicyDefinitionReferenceArgs>> policyDefinitions;
 
@@ -64,6 +85,9 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
         return this.policyDefinitions;
     }
 
+    /**
+     * The name of the policy set definition to create.
+     */
     @InputImport(name="policySetDefinitionName")
     private final @Nullable Input<String> policySetDefinitionName;
 
@@ -71,6 +95,9 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
         return this.policySetDefinitionName == null ? Input.empty() : this.policySetDefinitionName;
     }
 
+    /**
+     * The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
+     */
     @InputImport(name="policyType")
     private final @Nullable Input<Either<String,PolicyType>> policyType;
 

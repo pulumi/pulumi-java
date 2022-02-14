@@ -9,10 +9,26 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VMwareV2FabricSpecificDetailsResponse {
+/**
+ * Gets the class type. Overridden in derived classes.
+Expected value is 'VMwareV2'.
+ */
     private final String instanceType;
+/**
+ * The Migration solution ARM Id.
+ */
     private final String migrationSolutionId;
+/**
+ * The service endpoint.
+ */
     private final String serviceEndpoint;
+/**
+ * The service resource Id.
+ */
     private final String serviceResourceId;
+/**
+ * The ARM Id of the VMware site.
+ */
     private final String vmwareSiteId;
 
     @OutputCustomType.Constructor({"instanceType","migrationSolutionId","serviceEndpoint","serviceResourceId","vmwareSiteId"})
@@ -29,18 +45,34 @@ public final class VMwareV2FabricSpecificDetailsResponse {
         this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId);
     }
 
+/**
+ * Gets the class type. Overridden in derived classes.
+Expected value is 'VMwareV2'.
+ */
     public String getInstanceType() {
         return this.instanceType;
     }
+/**
+ * The Migration solution ARM Id.
+ */
     public String getMigrationSolutionId() {
         return this.migrationSolutionId;
     }
+/**
+ * The service endpoint.
+ */
     public String getServiceEndpoint() {
         return this.serviceEndpoint;
     }
+/**
+ * The service resource Id.
+ */
     public String getServiceResourceId() {
         return this.serviceResourceId;
     }
+/**
+ * The ARM Id of the VMware site.
+ */
     public String getVmwareSiteId() {
         return this.vmwareSiteId;
     }

@@ -12,11 +12,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VmVmPlacementPolicyPropertiesResponse {
+/**
+ * placement policy affinity type
+ */
     private final String affinityType;
+/**
+ * Display name of the placement policy
+ */
     private final @Nullable String displayName;
+/**
+ * The provisioning state
+ */
     private final String provisioningState;
+/**
+ * Whether the placement policy is enabled or disabled
+ */
     private final @Nullable String state;
+/**
+ * placement policy type
+Expected value is 'VmVm'.
+ */
     private final String type;
+/**
+ * Virtual machine members list
+ */
     private final List<String> vmMembers;
 
     @OutputCustomType.Constructor({"affinityType","displayName","provisioningState","state","type","vmMembers"})
@@ -35,21 +54,40 @@ public final class VmVmPlacementPolicyPropertiesResponse {
         this.vmMembers = Objects.requireNonNull(vmMembers);
     }
 
+/**
+ * placement policy affinity type
+ */
     public String getAffinityType() {
         return this.affinityType;
     }
+/**
+ * Display name of the placement policy
+ */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+/**
+ * The provisioning state
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Whether the placement policy is enabled or disabled
+ */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
+/**
+ * placement policy type
+Expected value is 'VmVm'.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Virtual machine members list
+ */
     public List<String> getVmMembers() {
         return this.vmMembers;
     }

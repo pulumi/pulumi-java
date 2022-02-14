@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceArgs Empty = new ServiceArgs();
 
+    /**
+     * The GEO location of the resource.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -24,6 +30,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Properties of the Service resource
+     */
     @InputImport(name="properties")
     private final @Nullable Input<ClusterResourcePropertiesArgs> properties;
 
@@ -31,6 +40,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -38,6 +50,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Service resource.
+     */
     @InputImport(name="serviceName")
     private final @Nullable Input<String> serviceName;
 
@@ -45,6 +60,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName == null ? Input.empty() : this.serviceName;
     }
 
+    /**
+     * Sku of the Service resource
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -52,6 +70,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Tags of the service which is a list of key value pairs that describe the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

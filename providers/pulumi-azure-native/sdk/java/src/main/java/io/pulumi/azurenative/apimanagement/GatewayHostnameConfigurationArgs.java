@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GatewayHostnameConfigurationArgs Empty = new GatewayHostnameConfigurationArgs();
 
+    /**
+     * Identifier of Certificate entity that will be used for TLS connection establishment
+     */
     @InputImport(name="certificateId")
     private final @Nullable Input<String> certificateId;
 
@@ -22,6 +28,9 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
         return this.certificateId == null ? Input.empty() : this.certificateId;
     }
 
+    /**
+     * Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'
+     */
     @InputImport(name="gatewayId", required=true)
     private final Input<String> gatewayId;
 
@@ -29,6 +38,9 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
         return this.gatewayId;
     }
 
+    /**
+     * Gateway hostname configuration identifier. Must be unique in the scope of parent Gateway entity.
+     */
     @InputImport(name="hcId")
     private final @Nullable Input<String> hcId;
 
@@ -36,6 +48,9 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
         return this.hcId == null ? Input.empty() : this.hcId;
     }
 
+    /**
+     * Hostname value. Supports valid domain name, partial or full wildcard
+     */
     @InputImport(name="hostname")
     private final @Nullable Input<String> hostname;
 
@@ -43,6 +58,9 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
         return this.hostname == null ? Input.empty() : this.hostname;
     }
 
+    /**
+     * Specifies if HTTP/2.0 is supported
+     */
     @InputImport(name="http2Enabled")
     private final @Nullable Input<Boolean> http2Enabled;
 
@@ -50,6 +68,9 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
         return this.http2Enabled == null ? Input.empty() : this.http2Enabled;
     }
 
+    /**
+     * Determines whether gateway requests client certificate
+     */
     @InputImport(name="negotiateClientCertificate")
     private final @Nullable Input<Boolean> negotiateClientCertificate;
 
@@ -57,6 +78,9 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
         return this.negotiateClientCertificate == null ? Input.empty() : this.negotiateClientCertificate;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -64,6 +88,9 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -71,6 +98,9 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
         return this.serviceName;
     }
 
+    /**
+     * Specifies if TLS 1.0 is supported
+     */
     @InputImport(name="tls10Enabled")
     private final @Nullable Input<Boolean> tls10Enabled;
 
@@ -78,6 +108,9 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
         return this.tls10Enabled == null ? Input.empty() : this.tls10Enabled;
     }
 
+    /**
+     * Specifies if TLS 1.1 is supported
+     */
     @InputImport(name="tls11Enabled")
     private final @Nullable Input<Boolean> tls11Enabled;
 

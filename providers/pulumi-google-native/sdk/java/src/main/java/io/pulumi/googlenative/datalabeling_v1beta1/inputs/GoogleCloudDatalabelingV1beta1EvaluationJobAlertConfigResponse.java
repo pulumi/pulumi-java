@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Provides details for how an evaluation job sends email alerts based on the results of a run.
+ */
 public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse Empty = new GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse();
 
+    /**
+     * An email address to send alerts to.
+     */
     @InputImport(name="email", required=true)
     private final String email;
 
@@ -20,6 +26,9 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigRespons
         return this.email;
     }
 
+    /**
+     * A number between 0 and 1 that describes a minimum mean average precision threshold. When the evaluation job runs, if it calculates that your model version's predictions from the recent interval have meanAveragePrecision below this threshold, then it sends an alert to your specified email.
+     */
     @InputImport(name="minAcceptableMeanAveragePrecision", required=true)
     private final Double minAcceptableMeanAveragePrecision;
 

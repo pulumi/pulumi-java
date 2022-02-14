@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetNotebookWorkspaceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNotebookWorkspaceArgs Empty = new GetNotebookWorkspaceArgs();
 
+    /**
+     * Cosmos DB database account name.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetNotebookWorkspaceArgs extends io.pulumi.resources.InvokeAr
         return this.accountName;
     }
 
+    /**
+     * The name of the notebook workspace resource.
+     */
     @InputImport(name="notebookWorkspaceName", required=true)
     private final String notebookWorkspaceName;
 
@@ -26,6 +35,9 @@ public final class GetNotebookWorkspaceArgs extends io.pulumi.resources.InvokeAr
         return this.notebookWorkspaceName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

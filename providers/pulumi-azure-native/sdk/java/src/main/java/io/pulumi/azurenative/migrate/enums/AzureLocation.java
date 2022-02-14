@@ -8,44 +8,158 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Target Azure location for which the machines should be assessed. These enums are the same as used by Compute API.
+ */
     @EnumType
     public enum AzureLocation {
+/**
+ * 
+ */
         Unknown("Unknown"),
+/**
+ * 
+ */
         EastAsia("EastAsia"),
+/**
+ * 
+ */
         SoutheastAsia("SoutheastAsia"),
+/**
+ * 
+ */
         AustraliaEast("AustraliaEast"),
+/**
+ * 
+ */
         AustraliaSoutheast("AustraliaSoutheast"),
+/**
+ * 
+ */
         BrazilSouth("BrazilSouth"),
+/**
+ * 
+ */
         CanadaCentral("CanadaCentral"),
+/**
+ * 
+ */
         CanadaEast("CanadaEast"),
+/**
+ * 
+ */
         WestEurope("WestEurope"),
+/**
+ * 
+ */
         NorthEurope("NorthEurope"),
+/**
+ * 
+ */
         CentralIndia("CentralIndia"),
+/**
+ * 
+ */
         SouthIndia("SouthIndia"),
+/**
+ * 
+ */
         WestIndia("WestIndia"),
+/**
+ * 
+ */
         JapanEast("JapanEast"),
+/**
+ * 
+ */
         JapanWest("JapanWest"),
+/**
+ * 
+ */
         KoreaCentral("KoreaCentral"),
+/**
+ * 
+ */
         KoreaSouth("KoreaSouth"),
+/**
+ * 
+ */
         UkWest("UkWest"),
+/**
+ * 
+ */
         UkSouth("UkSouth"),
+/**
+ * 
+ */
         NorthCentralUs("NorthCentralUs"),
+/**
+ * 
+ */
         EastUs("EastUs"),
+/**
+ * 
+ */
         WestUs2("WestUs2"),
+/**
+ * 
+ */
         SouthCentralUs("SouthCentralUs"),
+/**
+ * 
+ */
         CentralUs("CentralUs"),
+/**
+ * 
+ */
         EastUs2("EastUs2"),
+/**
+ * 
+ */
         WestUs("WestUs"),
+/**
+ * 
+ */
         WestCentralUs("WestCentralUs"),
+/**
+ * 
+ */
         GermanyCentral("GermanyCentral"),
+/**
+ * 
+ */
         GermanyNortheast("GermanyNortheast"),
+/**
+ * 
+ */
         ChinaNorth("ChinaNorth"),
+/**
+ * 
+ */
         ChinaEast("ChinaEast"),
+/**
+ * 
+ */
         USGovArizona("USGovArizona"),
+/**
+ * 
+ */
         USGovTexas("USGovTexas"),
+/**
+ * 
+ */
         USGovIowa("USGovIowa"),
+/**
+ * 
+ */
         USGovVirginia("USGovVirginia"),
+/**
+ * 
+ */
         USDoDCentral("USDoDCentral"),
+/**
+ * 
+ */
         USDoDEast("USDoDEast");
 
         private final String value;

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.RulesEngineArgs;
 import io.pulumi.azurenative.network.outputs.RulesEngineRuleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,33 +14,478 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A rules engine configuration containing a list of rules that will run to modify the runtime behavior of the request and response.
+API Version: 2020-05-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create or update a specific Rules Engine Configuration
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rulesEngine = new AzureNative.Network.RulesEngine("rulesEngine", new AzureNative.Network.RulesEngineArgs
+        {
+            FrontDoorName = "frontDoor1",
+            ResourceGroupName = "rg1",
+            Rules = 
+            {
+                new AzureNative.Network.Inputs.RulesEngineRuleArgs
+                {
+                    Action = new AzureNative.Network.Inputs.RulesEngineActionArgs
+                    {
+                        RouteConfigurationOverride = new AzureNative.Network.Inputs.RedirectConfigurationArgs
+                        {
+                            CustomFragment = "fragment",
+                            CustomHost = "www.bing.com",
+                            CustomPath = "/api",
+                            CustomQueryString = "a=b",
+                            OdataType = "#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration",
+                            RedirectProtocol = "HttpsOnly",
+                            RedirectType = "Moved",
+                        },
+                    },
+                    MatchConditions = 
+                    {
+                        new AzureNative.Network.Inputs.RulesEngineMatchConditionArgs
+                        {
+                            RulesEngineMatchValue = 
+                            {
+                                "CH",
+                            },
+                            RulesEngineMatchVariable = "RemoteAddr",
+                            RulesEngineOperator = "GeoMatch",
+                        },
+                    },
+                    MatchProcessingBehavior = "Stop",
+                    Name = "Rule1",
+                    Priority = 1,
+                },
+                new AzureNative.Network.Inputs.RulesEngineRuleArgs
+                {
+                    Action = new AzureNative.Network.Inputs.RulesEngineActionArgs
+                    {
+                        ResponseHeaderActions = 
+                        {
+                            new AzureNative.Network.Inputs.HeaderActionArgs
+                            {
+                                HeaderActionType = "Overwrite",
+                                HeaderName = "Cache-Control",
+                                Value = "public, max-age=31536000",
+                            },
+                        },
+                    },
+                    MatchConditions = 
+                    {
+                        new AzureNative.Network.Inputs.RulesEngineMatchConditionArgs
+                        {
+                            RulesEngineMatchValue = 
+                            {
+                                "jpg",
+                            },
+                            RulesEngineMatchVariable = "RequestFilenameExtension",
+                            RulesEngineOperator = "Equal",
+                            Transforms = 
+                            {
+                                "Lowercase",
+                            },
+                        },
+                    },
+                    Name = "Rule2",
+                    Priority = 2,
+                },
+                new AzureNative.Network.Inputs.RulesEngineRuleArgs
+                {
+                    Action = new AzureNative.Network.Inputs.RulesEngineActionArgs
+                    {
+                        RouteConfigurationOverride = new AzureNative.Network.Inputs.ForwardingConfigurationArgs
+                        {
+                            BackendPool = new AzureNative.Network.Inputs.SubResourceArgs
+                            {
+                                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
+                            },
+                            CacheConfiguration = new AzureNative.Network.Inputs.CacheConfigurationArgs
+                            {
+                                CacheDuration = "P1DT12H20M30S",
+                                DynamicCompression = "Disabled",
+                                QueryParameterStripDirective = "StripOnly",
+                                QueryParameters = "a=b,p=q",
+                            },
+                            ForwardingProtocol = "HttpsOnly",
+                            OdataType = "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
+                        },
+                    },
+                    MatchConditions = 
+                    {
+                        new AzureNative.Network.Inputs.RulesEngineMatchConditionArgs
+                        {
+                            NegateCondition = false,
+                            RulesEngineMatchValue = 
+                            {
+                                "allowoverride",
+                            },
+                            RulesEngineMatchVariable = "RequestHeader",
+                            RulesEngineOperator = "Equal",
+                            Selector = "Rules-Engine-Route-Forward",
+                            Transforms = 
+                            {
+                                "Lowercase",
+                            },
+                        },
+                    },
+                    Name = "Rule3",
+                    Priority = 3,
+                },
+            },
+            RulesEngineName = "rulesEngine1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewRulesEngine(ctx, "rulesEngine", &network.RulesEngineArgs{
+			FrontDoorName:     pulumi.String("frontDoor1"),
+			ResourceGroupName: pulumi.String("rg1"),
+			Rules: []network.RulesEngineRuleArgs{
+				&network.RulesEngineRuleArgs{
+					Action: &network.RulesEngineActionArgs{
+						RouteConfigurationOverride: network.RedirectConfiguration{
+							CustomFragment:    "fragment",
+							CustomHost:        "www.bing.com",
+							CustomPath:        "/api",
+							CustomQueryString: "a=b",
+							OdataType:         "#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration",
+							RedirectProtocol:  "HttpsOnly",
+							RedirectType:      "Moved",
+						},
+					},
+					MatchConditions: network.RulesEngineMatchConditionArray{
+						&network.RulesEngineMatchConditionArgs{
+							RulesEngineMatchValue: pulumi.StringArray{
+								pulumi.String("CH"),
+							},
+							RulesEngineMatchVariable: pulumi.String("RemoteAddr"),
+							RulesEngineOperator:      pulumi.String("GeoMatch"),
+						},
+					},
+					MatchProcessingBehavior: pulumi.String("Stop"),
+					Name:                    pulumi.String("Rule1"),
+					Priority:                pulumi.Int(1),
+				},
+				&network.RulesEngineRuleArgs{
+					Action: &network.RulesEngineActionArgs{
+						ResponseHeaderActions: network.HeaderActionArray{
+							&network.HeaderActionArgs{
+								HeaderActionType: pulumi.String("Overwrite"),
+								HeaderName:       pulumi.String("Cache-Control"),
+								Value:            pulumi.String("public, max-age=31536000"),
+							},
+						},
+					},
+					MatchConditions: network.RulesEngineMatchConditionArray{
+						&network.RulesEngineMatchConditionArgs{
+							RulesEngineMatchValue: pulumi.StringArray{
+								pulumi.String("jpg"),
+							},
+							RulesEngineMatchVariable: pulumi.String("RequestFilenameExtension"),
+							RulesEngineOperator:      pulumi.String("Equal"),
+							Transforms: pulumi.StringArray{
+								pulumi.String("Lowercase"),
+							},
+						},
+					},
+					Name:     pulumi.String("Rule2"),
+					Priority: pulumi.Int(2),
+				},
+				&network.RulesEngineRuleArgs{
+					Action: &network.RulesEngineActionArgs{
+						RouteConfigurationOverride: network.ForwardingConfiguration{
+							BackendPool: network.SubResource{
+								Id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
+							},
+							CacheConfiguration: network.CacheConfiguration{
+								CacheDuration:                "P1DT12H20M30S",
+								DynamicCompression:           "Disabled",
+								QueryParameterStripDirective: "StripOnly",
+								QueryParameters:              "a=b,p=q",
+							},
+							ForwardingProtocol: "HttpsOnly",
+							OdataType:          "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
+						},
+					},
+					MatchConditions: network.RulesEngineMatchConditionArray{
+						&network.RulesEngineMatchConditionArgs{
+							NegateCondition: pulumi.Bool(false),
+							RulesEngineMatchValue: pulumi.StringArray{
+								pulumi.String("allowoverride"),
+							},
+							RulesEngineMatchVariable: pulumi.String("RequestHeader"),
+							RulesEngineOperator:      pulumi.String("Equal"),
+							Selector:                 pulumi.String("Rules-Engine-Route-Forward"),
+							Transforms: pulumi.StringArray{
+								pulumi.String("Lowercase"),
+							},
+						},
+					},
+					Name:     pulumi.String("Rule3"),
+					Priority: pulumi.Int(3),
+				},
+			},
+			RulesEngineName: pulumi.String("rulesEngine1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const rulesEngine = new azure_native.network.RulesEngine("rulesEngine", {
+    frontDoorName: "frontDoor1",
+    resourceGroupName: "rg1",
+    rules: [
+        {
+            action: {
+                routeConfigurationOverride: {
+                    customFragment: "fragment",
+                    customHost: "www.bing.com",
+                    customPath: "/api",
+                    customQueryString: "a=b",
+                    odataType: "#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration",
+                    redirectProtocol: "HttpsOnly",
+                    redirectType: "Moved",
+                },
+            },
+            matchConditions: [{
+                rulesEngineMatchValue: ["CH"],
+                rulesEngineMatchVariable: "RemoteAddr",
+                rulesEngineOperator: "GeoMatch",
+            }],
+            matchProcessingBehavior: "Stop",
+            name: "Rule1",
+            priority: 1,
+        },
+        {
+            action: {
+                responseHeaderActions: [{
+                    headerActionType: "Overwrite",
+                    headerName: "Cache-Control",
+                    value: "public, max-age=31536000",
+                }],
+            },
+            matchConditions: [{
+                rulesEngineMatchValue: ["jpg"],
+                rulesEngineMatchVariable: "RequestFilenameExtension",
+                rulesEngineOperator: "Equal",
+                transforms: ["Lowercase"],
+            }],
+            name: "Rule2",
+            priority: 2,
+        },
+        {
+            action: {
+                routeConfigurationOverride: {
+                    backendPool: {
+                        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
+                    },
+                    cacheConfiguration: {
+                        cacheDuration: "P1DT12H20M30S",
+                        dynamicCompression: "Disabled",
+                        queryParameterStripDirective: "StripOnly",
+                        queryParameters: "a=b,p=q",
+                    },
+                    forwardingProtocol: "HttpsOnly",
+                    odataType: "#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
+                },
+            },
+            matchConditions: [{
+                negateCondition: false,
+                rulesEngineMatchValue: ["allowoverride"],
+                rulesEngineMatchVariable: "RequestHeader",
+                rulesEngineOperator: "Equal",
+                selector: "Rules-Engine-Route-Forward",
+                transforms: ["Lowercase"],
+            }],
+            name: "Rule3",
+            priority: 3,
+        },
+    ],
+    rulesEngineName: "rulesEngine1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+rules_engine = azure_native.network.RulesEngine("rulesEngine",
+    front_door_name="frontDoor1",
+    resource_group_name="rg1",
+    rules=[
+        azure_native.network.RulesEngineRuleArgs(
+            action=azure_native.network.RulesEngineActionArgs(
+                route_configuration_override=azure_native.network.RedirectConfigurationArgs(
+                    custom_fragment="fragment",
+                    custom_host="www.bing.com",
+                    custom_path="/api",
+                    custom_query_string="a=b",
+                    odata_type="#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration",
+                    redirect_protocol="HttpsOnly",
+                    redirect_type="Moved",
+                ),
+            ),
+            match_conditions=[azure_native.network.RulesEngineMatchConditionArgs(
+                rules_engine_match_value=["CH"],
+                rules_engine_match_variable="RemoteAddr",
+                rules_engine_operator="GeoMatch",
+            )],
+            match_processing_behavior="Stop",
+            name="Rule1",
+            priority=1,
+        ),
+        azure_native.network.RulesEngineRuleArgs(
+            action=azure_native.network.RulesEngineActionArgs(
+                response_header_actions=[azure_native.network.HeaderActionArgs(
+                    header_action_type="Overwrite",
+                    header_name="Cache-Control",
+                    value="public, max-age=31536000",
+                )],
+            ),
+            match_conditions=[azure_native.network.RulesEngineMatchConditionArgs(
+                rules_engine_match_value=["jpg"],
+                rules_engine_match_variable="RequestFilenameExtension",
+                rules_engine_operator="Equal",
+                transforms=["Lowercase"],
+            )],
+            name="Rule2",
+            priority=2,
+        ),
+        azure_native.network.RulesEngineRuleArgs(
+            action=azure_native.network.RulesEngineActionArgs(
+                route_configuration_override=azure_native.network.ForwardingConfigurationArgs(
+                    backend_pool=azure_native.network.SubResourceArgs(
+                        id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/backendPools/backendPool1",
+                    ),
+                    cache_configuration=azure_native.network.CacheConfigurationArgs(
+                        cache_duration="P1DT12H20M30S",
+                        dynamic_compression="Disabled",
+                        query_parameter_strip_directive="StripOnly",
+                        query_parameters="a=b,p=q",
+                    ),
+                    forwarding_protocol="HttpsOnly",
+                    odata_type="#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration",
+                ),
+            ),
+            match_conditions=[azure_native.network.RulesEngineMatchConditionArgs(
+                negate_condition=False,
+                rules_engine_match_value=["allowoverride"],
+                rules_engine_match_variable="RequestHeader",
+                rules_engine_operator="Equal",
+                selector="Rules-Engine-Route-Forward",
+                transforms=["Lowercase"],
+            )],
+            name="Rule3",
+            priority=3,
+        ),
+    ],
+    rules_engine_name="rulesEngine1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:RulesEngine rulesEngine1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/rulesEngines/rulesEngine1 
+```
+
+ */
 @ResourceType(type="azure-native:network:RulesEngine")
 public class RulesEngine extends io.pulumi.resources.CustomResource {
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Resource status.
+     */
     @OutputExport(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
+    /**
+     * @return Resource status.
+     */
     public Output<String> getResourceState() {
         return this.resourceState;
     }
+    /**
+     * A list of rules that define a particular Rules Engine Configuration.
+     */
     @OutputExport(name="rules", type=List.class, parameters={RulesEngineRuleResponse.class})
     private Output</* @Nullable */ List<RulesEngineRuleResponse>> rules;
 
+    /**
+     * @return A list of rules that define a particular Rules Engine Configuration.
+     */
     public Output</* @Nullable */ List<RulesEngineRuleResponse>> getRules() {
         return this.rules;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public RulesEngine(String name, RulesEngineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:RulesEngine", name, args == null ? RulesEngineArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -62,6 +506,14 @@ public class RulesEngine extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static RulesEngine get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RulesEngine(name, id, options);
     }

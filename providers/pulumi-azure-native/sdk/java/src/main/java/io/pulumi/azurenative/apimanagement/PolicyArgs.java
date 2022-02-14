@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PolicyArgs Empty = new PolicyArgs();
 
+    /**
+     * Format of the policyContent.
+     */
     @InputImport(name="format")
     private final @Nullable Input<Either<String,PolicyContentFormat>> format;
 
@@ -23,6 +29,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.format == null ? Input.empty() : this.format;
     }
 
+    /**
+     * The identifier of the Policy.
+     */
     @InputImport(name="policyId")
     private final @Nullable Input<String> policyId;
 
@@ -30,6 +39,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.policyId == null ? Input.empty() : this.policyId;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +49,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -44,6 +59,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
+    /**
+     * Contents of the Policy as defined by the format.
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

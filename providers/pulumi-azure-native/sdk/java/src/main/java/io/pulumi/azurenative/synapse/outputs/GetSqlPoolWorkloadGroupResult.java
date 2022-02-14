@@ -13,14 +13,41 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSqlPoolWorkloadGroupResult {
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     private final String id;
+/**
+ * The workload group importance level.
+ */
     private final @Nullable String importance;
+/**
+ * The workload group cap percentage resource.
+ */
     private final Integer maxResourcePercent;
+/**
+ * The workload group request maximum grant percentage.
+ */
     private final @Nullable Double maxResourcePercentPerRequest;
+/**
+ * The workload group minimum percentage resource.
+ */
     private final Integer minResourcePercent;
+/**
+ * The workload group request minimum grant percentage.
+ */
     private final Double minResourcePercentPerRequest;
+/**
+ * The name of the resource
+ */
     private final String name;
+/**
+ * The workload group query execution timeout.
+ */
     private final @Nullable Integer queryExecutionTimeout;
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","importance","maxResourcePercent","maxResourcePercentPerRequest","minResourcePercent","minResourcePercentPerRequest","name","queryExecutionTimeout","type"})
@@ -45,30 +72,57 @@ public final class GetSqlPoolWorkloadGroupResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The workload group importance level.
+ */
     public Optional<String> getImportance() {
         return Optional.ofNullable(this.importance);
     }
+/**
+ * The workload group cap percentage resource.
+ */
     public Integer getMaxResourcePercent() {
         return this.maxResourcePercent;
     }
+/**
+ * The workload group request maximum grant percentage.
+ */
     public Optional<Double> getMaxResourcePercentPerRequest() {
         return Optional.ofNullable(this.maxResourcePercentPerRequest);
     }
+/**
+ * The workload group minimum percentage resource.
+ */
     public Integer getMinResourcePercent() {
         return this.minResourcePercent;
     }
+/**
+ * The workload group request minimum grant percentage.
+ */
     public Double getMinResourcePercentPerRequest() {
         return this.minResourcePercentPerRequest;
     }
+/**
+ * The name of the resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The workload group query execution timeout.
+ */
     public Optional<Integer> getQueryExecutionTimeout() {
         return Optional.ofNullable(this.queryExecutionTimeout);
     }
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     public String getType() {
         return this.type;
     }

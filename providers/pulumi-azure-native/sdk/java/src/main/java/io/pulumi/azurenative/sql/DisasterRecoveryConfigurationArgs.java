@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DisasterRecoveryConfigurationArgs Empty = new DisasterRecoveryConfigurationArgs();
 
+    /**
+     * The name of the disaster recovery configuration to be created/updated.
+     */
     @InputImport(name="disasterRecoveryConfigurationName")
     private final @Nullable Input<String> disasterRecoveryConfigurationName;
 
@@ -21,6 +27,9 @@ public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources
         return this.disasterRecoveryConfigurationName == null ? Input.empty() : this.disasterRecoveryConfigurationName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -28,6 +37,9 @@ public final class DisasterRecoveryConfigurationArgs extends io.pulumi.resources
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 

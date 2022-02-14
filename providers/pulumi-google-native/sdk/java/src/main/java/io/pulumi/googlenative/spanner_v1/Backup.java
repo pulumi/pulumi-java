@@ -8,75 +8,143 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.spanner_v1.BackupArgs;
 import io.pulumi.googlenative.spanner_v1.outputs.EncryptionInfoResponse;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Starts creating a new Cloud Spanner Backup. The returned backup long-running operation will have a name of the format `projects//instances//backups//operations/` and can be used to track creation of the backup. The metadata field type is CreateBackupMetadata. The response field type is Backup, if successful. Cancelling the returned operation will stop the creation and delete the backup. There can be only one pending backup creation per database. Backup creation of different databases can run concurrently.
+ */
 @ResourceType(type="google-native:spanner/v1:Backup")
 public class Backup extends io.pulumi.resources.CustomResource {
+    /**
+     * The time the CreateBackup request is received. If the request does not specify `version_time`, the `version_time` of the backup will be equivalent to the `create_time`.
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return The time the CreateBackup request is received. If the request does not specify `version_time`, the `version_time` of the backup will be equivalent to the `create_time`.
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Required for the CreateBackup operation. Name of the database from which this backup was created. This needs to be in the same instance as the backup. Values are of the form `projects//instances//databases/`.
+     */
     @OutputExport(name="database", type=String.class, parameters={})
     private Output<String> database;
 
+    /**
+     * @return Required for the CreateBackup operation. Name of the database from which this backup was created. This needs to be in the same instance as the backup. Values are of the form `projects//instances//databases/`.
+     */
     public Output<String> getDatabase() {
         return this.database;
     }
+    /**
+     * The database dialect information for the backup.
+     */
     @OutputExport(name="databaseDialect", type=String.class, parameters={})
     private Output<String> databaseDialect;
 
+    /**
+     * @return The database dialect information for the backup.
+     */
     public Output<String> getDatabaseDialect() {
         return this.databaseDialect;
     }
+    /**
+     * The encryption information for the backup.
+     */
     @OutputExport(name="encryptionInfo", type=EncryptionInfoResponse.class, parameters={})
     private Output<EncryptionInfoResponse> encryptionInfo;
 
+    /**
+     * @return The encryption information for the backup.
+     */
     public Output<EncryptionInfoResponse> getEncryptionInfo() {
         return this.encryptionInfo;
     }
+    /**
+     * Required for the CreateBackup operation. The expiration time of the backup, with microseconds granularity that must be at least 6 hours and at most 366 days from the time the CreateBackup request is processed. Once the `expire_time` has passed, the backup is eligible to be automatically deleted by Cloud Spanner to free the resources used by the backup.
+     */
     @OutputExport(name="expireTime", type=String.class, parameters={})
     private Output<String> expireTime;
 
+    /**
+     * @return Required for the CreateBackup operation. The expiration time of the backup, with microseconds granularity that must be at least 6 hours and at most 366 days from the time the CreateBackup request is processed. Once the `expire_time` has passed, the backup is eligible to be automatically deleted by Cloud Spanner to free the resources used by the backup.
+     */
     public Output<String> getExpireTime() {
         return this.expireTime;
     }
+    /**
+     * Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally unique identifier for the backup which cannot be changed. Values are of the form `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and 60 characters in length. The backup is stored in the location(s) specified in the instance configuration of the instance containing the backup, identified by the prefix of the backup name of the form `projects//instances/`.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally unique identifier for the backup which cannot be changed. Values are of the form `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and 60 characters in length. The backup is stored in the location(s) specified in the instance configuration of the instance containing the backup, identified by the prefix of the backup name of the form `projects//instances/`.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The names of the restored databases that reference the backup. The database names are of the form `projects//instances//databases/`. Referencing databases may exist in different instances. The existence of any referencing database prevents the backup from being deleted. When a restored database from the backup enters the `READY` state, the reference to the backup is removed.
+     */
     @OutputExport(name="referencingDatabases", type=List.class, parameters={String.class})
     private Output<List<String>> referencingDatabases;
 
+    /**
+     * @return The names of the restored databases that reference the backup. The database names are of the form `projects//instances//databases/`. Referencing databases may exist in different instances. The existence of any referencing database prevents the backup from being deleted. When a restored database from the backup enters the `READY` state, the reference to the backup is removed.
+     */
     public Output<List<String>> getReferencingDatabases() {
         return this.referencingDatabases;
     }
+    /**
+     * Size of the backup in bytes.
+     */
     @OutputExport(name="sizeBytes", type=String.class, parameters={})
     private Output<String> sizeBytes;
 
+    /**
+     * @return Size of the backup in bytes.
+     */
     public Output<String> getSizeBytes() {
         return this.sizeBytes;
     }
+    /**
+     * The current state of the backup.
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return The current state of the backup.
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * The backup will contain an externally consistent copy of the database at the timestamp specified by `version_time`. If `version_time` is not specified, the system will set `version_time` to the `create_time` of the backup.
+     */
     @OutputExport(name="versionTime", type=String.class, parameters={})
     private Output<String> versionTime;
 
+    /**
+     * @return The backup will contain an externally consistent copy of the database at the timestamp specified by `version_time`. If `version_time` is not specified, the system will set `version_time` to the `create_time` of the backup.
+     */
     public Output<String> getVersionTime() {
         return this.versionTime;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Backup(String name, BackupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:spanner/v1:Backup", name, args == null ? BackupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -92,6 +160,14 @@ public class Backup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Backup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Backup(name, id, options);
     }

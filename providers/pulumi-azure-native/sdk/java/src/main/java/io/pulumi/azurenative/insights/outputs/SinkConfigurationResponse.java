@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SinkConfigurationResponse {
+/**
+ * 
+ */
     private final String kind;
 
     @OutputCustomType.Constructor({"kind"})
@@ -16,6 +19,9 @@ public final class SinkConfigurationResponse {
         this.kind = Objects.requireNonNull(kind);
     }
 
+/**
+ * 
+ */
     public String getKind() {
         return this.kind;
     }

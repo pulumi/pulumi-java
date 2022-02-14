@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRolloutArgs Empty = new GetRolloutArgs();
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -22,6 +28,9 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Rollout retry attempt ordinal to get the result of. If not specified, result of the latest attempt will be returned.
+     */
     @InputImport(name="retryAttempt")
     private final @Nullable Integer retryAttempt;
 
@@ -29,6 +38,9 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
         return this.retryAttempt == null ? Optional.empty() : Optional.ofNullable(this.retryAttempt);
     }
 
+    /**
+     * The rollout name.
+     */
     @InputImport(name="rolloutName", required=true)
     private final String rolloutName;
 

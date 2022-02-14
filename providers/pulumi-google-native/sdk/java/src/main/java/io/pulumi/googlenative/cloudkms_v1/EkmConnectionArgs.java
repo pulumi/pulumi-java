@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EkmConnectionArgs Empty = new EkmConnectionArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="ekmConnectionId", required=true)
     private final Input<String> ekmConnectionId;
 
@@ -23,6 +29,9 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.ekmConnectionId;
     }
 
+    /**
+     * This checksum is computed by the server based on the value of other fields, and may be sent on update requests to ensure the client has an up-to-date value before proceeding.
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -30,6 +39,9 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -37,6 +49,9 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -44,6 +59,9 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * A list of ServiceResolvers where the EKM can be reached. There should be one ServiceResolver per EKM replica. Currently, only a single ServiceResolver is supported.
+     */
     @InputImport(name="serviceResolvers")
     private final @Nullable Input<List<ServiceResolverArgs>> serviceResolvers;
 

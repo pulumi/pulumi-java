@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A feature for gallery image.
+ */
 public final class GalleryImageFeatureArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GalleryImageFeatureArgs Empty = new GalleryImageFeatureArgs();
 
+    /**
+     * The name of the gallery image feature.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +27,9 @@ public final class GalleryImageFeatureArgs extends io.pulumi.resources.ResourceA
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The value of the gallery image feature.
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

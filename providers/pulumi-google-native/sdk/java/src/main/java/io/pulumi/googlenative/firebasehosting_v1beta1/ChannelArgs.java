@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ChannelArgs Empty = new ChannelArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="channelId", required=true)
     private final Input<String> channelId;
 
@@ -23,6 +29,9 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.channelId;
     }
 
+    /**
+     * The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it's set directly or via the `ttl` field.
+     */
     @InputImport(name="expireTime")
     private final @Nullable Input<String> expireTime;
 
@@ -30,6 +39,9 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.expireTime == null ? Input.empty() : this.expireTime;
     }
 
+    /**
+     * Text labels used for extra metadata and/or filtering.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -37,6 +49,9 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -44,6 +59,9 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -51,6 +69,9 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The number of previous releases to retain on the channel for rollback or other purposes. Must be a number between 1-100. Defaults to 10 for new channels.
+     */
     @InputImport(name="retainedReleaseCount")
     private final @Nullable Input<Integer> retainedReleaseCount;
 
@@ -58,6 +79,9 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.retainedReleaseCount == null ? Input.empty() : this.retainedReleaseCount;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="siteId", required=true)
     private final Input<String> siteId;
 
@@ -65,6 +89,9 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.siteId;
     }
 
+    /**
+     * Input only. A time-to-live for this channel. Sets `expire_time` to the provided duration past the time of the request.
+     */
     @InputImport(name="ttl")
     private final @Nullable Input<String> ttl;
 

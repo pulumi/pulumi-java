@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RetentionPolicyResponse {
+/**
+ * The number of days for the retention in days. A value of 0 will retain the events indefinitely.
+ */
     private final Integer days;
+/**
+ * A value indicating whether the retention policy is enabled.
+ */
     private final Boolean enabled;
 
     @OutputCustomType.Constructor({"days","enabled"})
@@ -21,9 +27,15 @@ public final class RetentionPolicyResponse {
         this.enabled = Objects.requireNonNull(enabled);
     }
 
+/**
+ * The number of days for the retention in days. A value of 0 will retain the events indefinitely.
+ */
     public Integer getDays() {
         return this.days;
     }
+/**
+ * A value indicating whether the retention policy is enabled.
+ */
     public Boolean getEnabled() {
         return this.enabled;
     }

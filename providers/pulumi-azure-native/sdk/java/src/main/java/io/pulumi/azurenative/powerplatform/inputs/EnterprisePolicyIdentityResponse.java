@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The identity of the EnterprisePolicy.
+ */
 public final class EnterprisePolicyIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnterprisePolicyIdentityResponse Empty = new EnterprisePolicyIdentityResponse();
 
+    /**
+     * The principal id of EnterprisePolicy identity.
+     */
     @InputImport(name="systemAssignedIdentityPrincipalId", required=true)
     private final String systemAssignedIdentityPrincipalId;
 
@@ -21,6 +27,9 @@ public final class EnterprisePolicyIdentityResponse extends io.pulumi.resources.
         return this.systemAssignedIdentityPrincipalId;
     }
 
+    /**
+     * The tenant id associated with the EnterprisePolicy.
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -28,6 +37,9 @@ public final class EnterprisePolicyIdentityResponse extends io.pulumi.resources.
         return this.tenantId;
     }
 
+    /**
+     * The type of identity used for the EnterprisePolicy. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

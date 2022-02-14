@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExtensionResponse {
+/**
+ * The name of the extension.
+ */
     private final @Nullable String name;
+/**
+ * Extension Properties.
+ */
     private final @Nullable CloudServiceExtensionPropertiesResponse properties;
 
     @OutputCustomType.Constructor({"name","properties"})
@@ -23,9 +29,15 @@ public final class ExtensionResponse {
         this.properties = properties;
     }
 
+/**
+ * The name of the extension.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * Extension Properties.
+ */
     public Optional<CloudServiceExtensionPropertiesResponse> getProperties() {
         return Optional.ofNullable(this.properties);
     }

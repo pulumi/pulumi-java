@@ -10,10 +10,16 @@ import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2Notifi
 import java.util.Objects;
 
 
+/**
+ * Defines the Human Agent Assist to connect to a conversation.
+ */
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse Empty = new GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse();
 
+    /**
+     * Configuration for agent assistance of end user participant. Currently, this feature is not general available, please contact Google to get access.
+     */
     @InputImport(name="endUserSuggestionConfig", required=true)
     private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig;
 
@@ -21,6 +27,9 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse exte
         return this.endUserSuggestionConfig;
     }
 
+    /**
+     * Configuration for agent assistance of human agent participant.
+     */
     @InputImport(name="humanAgentSuggestionConfig", required=true)
     private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig;
 
@@ -28,6 +37,9 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse exte
         return this.humanAgentSuggestionConfig;
     }
 
+    /**
+     * Configuration for message analysis.
+     */
     @InputImport(name="messageAnalysisConfig", required=true)
     private final GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig;
 
@@ -35,6 +47,9 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse exte
         return this.messageAnalysisConfig;
     }
 
+    /**
+     * Pub/Sub topic on which to publish new agent assistant events.
+     */
     @InputImport(name="notificationConfig", required=true)
     private final GoogleCloudDialogflowV2NotificationConfigResponse notificationConfig;
 

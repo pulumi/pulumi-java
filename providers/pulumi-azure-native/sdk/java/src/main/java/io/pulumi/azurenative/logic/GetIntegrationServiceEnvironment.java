@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntegrationServiceEnvironment {
+/**
+ * The integration service environment.
+API Version: 2019-05-01.
+ *
+ * The integration service environment.
+ */
     public static CompletableFuture<GetIntegrationServiceEnvironmentResult> invokeAsync(GetIntegrationServiceEnvironmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationServiceEnvironment", TypeShape.of(GetIntegrationServiceEnvironmentResult.class), args == null ? GetIntegrationServiceEnvironmentArgs.Empty : args, Utilities.withVersion(options));
     }

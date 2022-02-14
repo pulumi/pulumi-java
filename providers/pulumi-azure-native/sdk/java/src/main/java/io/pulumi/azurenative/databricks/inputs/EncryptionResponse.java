@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The object that contains details of encryption used on the workspace.
+ */
 public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EncryptionResponse Empty = new EncryptionResponse();
 
+    /**
+     * The name of KeyVault key.
+     */
     @InputImport(name="keyName")
     private final @Nullable String keyName;
 
@@ -21,6 +27,9 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
         return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
     }
 
+    /**
+     * The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault
+     */
     @InputImport(name="keySource")
     private final @Nullable String keySource;
 
@@ -28,6 +37,9 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
         return this.keySource == null ? Optional.empty() : Optional.ofNullable(this.keySource);
     }
 
+    /**
+     * The Uri of KeyVault.
+     */
     @InputImport(name="keyVaultUri")
     private final @Nullable String keyVaultUri;
 
@@ -35,6 +47,9 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
         return this.keyVaultUri == null ? Optional.empty() : Optional.ofNullable(this.keyVaultUri);
     }
 
+    /**
+     * The version of KeyVault key.
+     */
     @InputImport(name="keyVersion")
     private final @Nullable String keyVersion;
 

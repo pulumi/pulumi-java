@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.storsimple;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.storsimple.StorageAccountCredentialArgs;
 import io.pulumi.azurenative.storsimple.outputs.AsymmetricEncryptedSecretResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,51 +15,215 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The storage account credential.
+API Version: 2017-06-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### StorageAccountCredentialsCreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var storageAccountCredential = new AzureNative.StorSimple.StorageAccountCredential("storageAccountCredential", new AzureNative.StorSimple.StorageAccountCredentialArgs
+        {
+            AccessKey = new AzureNative.StorSimple.Inputs.AsymmetricEncryptedSecretArgs
+            {
+                EncryptionAlgorithm = "RSAES_PKCS1_v_1_5",
+                EncryptionCertThumbprint = "A872A2DF196AC7682EE24791E7DE2E2A360F5926",
+                Value = "ATuJSkmrFk4h8r1jrZ4nd3nthLSddcguEO5QLO/NECUtTuB9kL4dNv3/jC4WOvFkeVr3x1UvfhlIeMmJBF1SMr6hR1JzD0xNU/TtQqUeXN7V3jk7I+2l67P9StuHWR6OMd3XOLwvznxOEQtEWpweDiobZU1ZiY03WafcGZFpV5j6tEoHeopoZ1J/GhPtkYmx+TqxzUN6qnir5rP3NSYiZciImP/qu8U9yUV/xpVRv39KvFc2Yr5SpKpMMRUj55XW10UnPer63M6KovF8X9Wi/fNnrZAs1Esl5XddZETGrW/e5B++VMJ6w0Q/uvPR+UBwrOU0804l0SzwdIe3qVVd0Q==",
+            },
+            EndPoint = "blob.core.windows.net",
+            ManagerName = "ManagerForSDKTest1",
+            ResourceGroupName = "ResourceGroupForSDKTest",
+            SslStatus = "Enabled",
+            StorageAccountCredentialName = "SACForTest",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	storsimple "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storsimple"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storsimple.NewStorageAccountCredential(ctx, "storageAccountCredential", &storsimple.StorageAccountCredentialArgs{
+			AccessKey: &storsimple.AsymmetricEncryptedSecretArgs{
+				EncryptionAlgorithm:      "RSAES_PKCS1_v_1_5",
+				EncryptionCertThumbprint: pulumi.String("A872A2DF196AC7682EE24791E7DE2E2A360F5926"),
+				Value:                    pulumi.String("ATuJSkmrFk4h8r1jrZ4nd3nthLSddcguEO5QLO/NECUtTuB9kL4dNv3/jC4WOvFkeVr3x1UvfhlIeMmJBF1SMr6hR1JzD0xNU/TtQqUeXN7V3jk7I+2l67P9StuHWR6OMd3XOLwvznxOEQtEWpweDiobZU1ZiY03WafcGZFpV5j6tEoHeopoZ1J/GhPtkYmx+TqxzUN6qnir5rP3NSYiZciImP/qu8U9yUV/xpVRv39KvFc2Yr5SpKpMMRUj55XW10UnPer63M6KovF8X9Wi/fNnrZAs1Esl5XddZETGrW/e5B++VMJ6w0Q/uvPR+UBwrOU0804l0SzwdIe3qVVd0Q=="),
+			},
+			EndPoint:                     pulumi.String("blob.core.windows.net"),
+			ManagerName:                  pulumi.String("ManagerForSDKTest1"),
+			ResourceGroupName:            pulumi.String("ResourceGroupForSDKTest"),
+			SslStatus:                    "Enabled",
+			StorageAccountCredentialName: pulumi.String("SACForTest"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const storageAccountCredential = new azure_native.storsimple.StorageAccountCredential("storageAccountCredential", {
+    accessKey: {
+        encryptionAlgorithm: "RSAES_PKCS1_v_1_5",
+        encryptionCertThumbprint: "A872A2DF196AC7682EE24791E7DE2E2A360F5926",
+        value: "ATuJSkmrFk4h8r1jrZ4nd3nthLSddcguEO5QLO/NECUtTuB9kL4dNv3/jC4WOvFkeVr3x1UvfhlIeMmJBF1SMr6hR1JzD0xNU/TtQqUeXN7V3jk7I+2l67P9StuHWR6OMd3XOLwvznxOEQtEWpweDiobZU1ZiY03WafcGZFpV5j6tEoHeopoZ1J/GhPtkYmx+TqxzUN6qnir5rP3NSYiZciImP/qu8U9yUV/xpVRv39KvFc2Yr5SpKpMMRUj55XW10UnPer63M6KovF8X9Wi/fNnrZAs1Esl5XddZETGrW/e5B++VMJ6w0Q/uvPR+UBwrOU0804l0SzwdIe3qVVd0Q==",
+    },
+    endPoint: "blob.core.windows.net",
+    managerName: "ManagerForSDKTest1",
+    resourceGroupName: "ResourceGroupForSDKTest",
+    sslStatus: "Enabled",
+    storageAccountCredentialName: "SACForTest",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+storage_account_credential = azure_native.storsimple.StorageAccountCredential("storageAccountCredential",
+    access_key=azure_native.storsimple.AsymmetricEncryptedSecretArgs(
+        encryption_algorithm="RSAES_PKCS1_v_1_5",
+        encryption_cert_thumbprint="A872A2DF196AC7682EE24791E7DE2E2A360F5926",
+        value="ATuJSkmrFk4h8r1jrZ4nd3nthLSddcguEO5QLO/NECUtTuB9kL4dNv3/jC4WOvFkeVr3x1UvfhlIeMmJBF1SMr6hR1JzD0xNU/TtQqUeXN7V3jk7I+2l67P9StuHWR6OMd3XOLwvznxOEQtEWpweDiobZU1ZiY03WafcGZFpV5j6tEoHeopoZ1J/GhPtkYmx+TqxzUN6qnir5rP3NSYiZciImP/qu8U9yUV/xpVRv39KvFc2Yr5SpKpMMRUj55XW10UnPer63M6KovF8X9Wi/fNnrZAs1Esl5XddZETGrW/e5B++VMJ6w0Q/uvPR+UBwrOU0804l0SzwdIe3qVVd0Q==",
+    ),
+    end_point="blob.core.windows.net",
+    manager_name="ManagerForSDKTest1",
+    resource_group_name="ResourceGroupForSDKTest",
+    ssl_status="Enabled",
+    storage_account_credential_name="SACForTest")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:storsimple:StorageAccountCredential SACForTest /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/storageAccountCredentials/SACForTest 
+```
+
+ */
 @ResourceType(type="azure-native:storsimple:StorageAccountCredential")
 public class StorageAccountCredential extends io.pulumi.resources.CustomResource {
+    /**
+     * The details of the storage account password.
+     */
     @OutputExport(name="accessKey", type=AsymmetricEncryptedSecretResponse.class, parameters={})
     private Output</* @Nullable */ AsymmetricEncryptedSecretResponse> accessKey;
 
+    /**
+     * @return The details of the storage account password.
+     */
     public Output</* @Nullable */ AsymmetricEncryptedSecretResponse> getAccessKey() {
         return this.accessKey;
     }
+    /**
+     * The storage endpoint
+     */
     @OutputExport(name="endPoint", type=String.class, parameters={})
     private Output<String> endPoint;
 
+    /**
+     * @return The storage endpoint
+     */
     public Output<String> getEndPoint() {
         return this.endPoint;
     }
+    /**
+     * The Kind of the object. Currently only Series8000 is supported
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return The Kind of the object. Currently only Series8000 is supported
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * The name of the object.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the object.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Signifies whether SSL needs to be enabled or not.
+     */
     @OutputExport(name="sslStatus", type=String.class, parameters={})
     private Output<String> sslStatus;
 
+    /**
+     * @return Signifies whether SSL needs to be enabled or not.
+     */
     public Output<String> getSslStatus() {
         return this.sslStatus;
     }
+    /**
+     * The hierarchical type of the object.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The hierarchical type of the object.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The count of volumes using this storage account credential.
+     */
     @OutputExport(name="volumesCount", type=Integer.class, parameters={})
     private Output<Integer> volumesCount;
 
+    /**
+     * @return The count of volumes using this storage account credential.
+     */
     public Output<Integer> getVolumesCount() {
         return this.volumesCount;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public StorageAccountCredential(String name, StorageAccountCredentialArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storsimple:StorageAccountCredential", name, args == null ? StorageAccountCredentialArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -80,6 +243,14 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static StorageAccountCredential get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StorageAccountCredential(name, id, options);
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse Empty = new SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse();
 
+    /**
+     * The name of the header to set.
+     */
     @InputImport(name="headerName", required=true)
     private final String headerName;
 
@@ -19,6 +25,9 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse ex
         return this.headerName;
     }
 
+    /**
+     * The value to set the named header to.
+     */
     @InputImport(name="headerValue", required=true)
     private final String headerValue;
 

@@ -8,14 +8,38 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Stored procedure parameter type.
+ */
     @EnumType
     public enum StoredProcedureParameterType {
+/**
+ * 
+ */
         String("String"),
+/**
+ * 
+ */
         Int("Int"),
+/**
+ * 
+ */
         Int64("Int64"),
+/**
+ * 
+ */
         Decimal("Decimal"),
+/**
+ * 
+ */
         Guid("Guid"),
+/**
+ * 
+ */
         Boolean("Boolean"),
+/**
+ * 
+ */
         Date("Date");
 
         private final String value;

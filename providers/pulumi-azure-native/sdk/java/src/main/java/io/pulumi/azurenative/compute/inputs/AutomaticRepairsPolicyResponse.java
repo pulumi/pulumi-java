@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies the configuration parameters for automatic repairs on the virtual machine scale set.
+ */
 public final class AutomaticRepairsPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutomaticRepairsPolicyResponse Empty = new AutomaticRepairsPolicyResponse();
 
+    /**
+     * Specifies whether automatic repairs should be enabled on the virtual machine scale set. The default value is false.
+     */
     @InputImport(name="enabled")
     private final @Nullable Boolean enabled;
 
@@ -22,6 +28,9 @@ public final class AutomaticRepairsPolicyResponse extends io.pulumi.resources.In
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
+    /**
+     * The amount of time for which automatic repairs are suspended due to a state change on VM. The grace time starts after the state change has completed. This helps avoid premature or accidental repairs. The time duration should be specified in ISO 8601 format. The minimum allowed grace period is 30 minutes (PT30M), which is also the default value. The maximum allowed grace period is 90 minutes (PT90M).
+     */
     @InputImport(name="gracePeriod")
     private final @Nullable String gracePeriod;
 

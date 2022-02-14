@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Workspaces resource specific properties.
+ */
 public final class WorkspaceResponseProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkspaceResponseProperties Empty = new WorkspaceResponseProperties();
 
+    /**
+     * The provisioning state.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

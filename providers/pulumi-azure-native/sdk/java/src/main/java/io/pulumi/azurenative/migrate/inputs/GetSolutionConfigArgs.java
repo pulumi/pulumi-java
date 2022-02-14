@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetSolutionConfigArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSolutionConfigArgs Empty = new GetSolutionConfigArgs();
 
+    /**
+     * Name of the Azure Migrate project.
+     */
     @InputImport(name="migrateProjectName", required=true)
     private final String migrateProjectName;
 
@@ -19,6 +25,9 @@ public final class GetSolutionConfigArgs extends io.pulumi.resources.InvokeArgs 
         return this.migrateProjectName;
     }
 
+    /**
+     * Name of the Azure Resource Group that migrate project is part of.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetSolutionConfigArgs extends io.pulumi.resources.InvokeArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * Unique name of a migration solution within a migrate project.
+     */
     @InputImport(name="solutionName", required=true)
     private final String solutionName;
 

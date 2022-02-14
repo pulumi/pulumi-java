@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.apimanagement.ApiTagDescriptionArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -14,51 +13,202 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Contract details.
+API Version: 2020-12-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### ApiManagementCreateApiTagDescription
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var apiTagDescription = new AzureNative.ApiManagement.ApiTagDescription("apiTagDescription", new AzureNative.ApiManagement.ApiTagDescriptionArgs
+        {
+            ApiId = "5931a75ae4bbd512a88c680b",
+            Description = "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API",
+            ExternalDocsDescription = "Description of the external docs resource",
+            ExternalDocsUrl = "http://some.url/additionaldoc",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            TagDescriptionId = "tagId1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := apimanagement.NewApiTagDescription(ctx, "apiTagDescription", &apimanagement.ApiTagDescriptionArgs{
+			ApiId:                   pulumi.String("5931a75ae4bbd512a88c680b"),
+			Description:             pulumi.String("Some description that will be displayed for operation's tag if the tag is assigned to operation of the API"),
+			ExternalDocsDescription: pulumi.String("Description of the external docs resource"),
+			ExternalDocsUrl:         pulumi.String("http://some.url/additionaldoc"),
+			ResourceGroupName:       pulumi.String("rg1"),
+			ServiceName:             pulumi.String("apimService1"),
+			TagDescriptionId:        pulumi.String("tagId1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const apiTagDescription = new azure_native.apimanagement.ApiTagDescription("apiTagDescription", {
+    apiId: "5931a75ae4bbd512a88c680b",
+    description: "Some description that will be displayed for operation's tag if the tag is assigned to operation of the API",
+    externalDocsDescription: "Description of the external docs resource",
+    externalDocsUrl: "http://some.url/additionaldoc",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    tagDescriptionId: "tagId1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+api_tag_description = azure_native.apimanagement.ApiTagDescription("apiTagDescription",
+    api_id="5931a75ae4bbd512a88c680b",
+    description="Some description that will be displayed for operation's tag if the tag is assigned to operation of the API",
+    external_docs_description="Description of the external docs resource",
+    external_docs_url="http://some.url/additionaldoc",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    tag_description_id="tagId1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:apimanagement:ApiTagDescription tagId1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/5931a75ae4bbd512a88c680b/tagDescriptions/tagId1 
+```
+
+ */
 @ResourceType(type="azure-native:apimanagement:ApiTagDescription")
 public class ApiTagDescription extends io.pulumi.resources.CustomResource {
+    /**
+     * Description of the Tag.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Description of the Tag.
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Tag name.
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
+    /**
+     * @return Tag name.
+     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Description of the external resources describing the tag.
+     */
     @OutputExport(name="externalDocsDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> externalDocsDescription;
 
+    /**
+     * @return Description of the external resources describing the tag.
+     */
     public Output</* @Nullable */ String> getExternalDocsDescription() {
         return this.externalDocsDescription;
     }
+    /**
+     * Absolute URL of external resources describing the tag.
+     */
     @OutputExport(name="externalDocsUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> externalDocsUrl;
 
+    /**
+     * @return Absolute URL of external resources describing the tag.
+     */
     public Output</* @Nullable */ String> getExternalDocsUrl() {
         return this.externalDocsUrl;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Identifier of the tag in the form of /tags/{tagId}
+     */
     @OutputExport(name="tagId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tagId;
 
+    /**
+     * @return Identifier of the tag in the form of /tags/{tagId}
+     */
     public Output</* @Nullable */ String> getTagId() {
         return this.tagId;
     }
+    /**
+     * Resource type for API Management resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type for API Management resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ApiTagDescription(String name, ApiTagDescriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:ApiTagDescription", name, args == null ? ApiTagDescriptionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -87,6 +237,14 @@ public class ApiTagDescription extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ApiTagDescription get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApiTagDescription(name, id, options);
     }

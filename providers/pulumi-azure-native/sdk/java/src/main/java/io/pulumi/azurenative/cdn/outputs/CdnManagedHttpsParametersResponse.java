@@ -12,9 +12,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CdnManagedHttpsParametersResponse {
+/**
+ * Defines the source of the SSL certificate.
+Expected value is 'Cdn'.
+ */
     private final String certificateSource;
+/**
+ * Defines the certificate source parameters using CDN managed certificate for enabling SSL.
+ */
     private final CdnCertificateSourceParametersResponse certificateSourceParameters;
+/**
+ * TLS protocol version that will be used for Https
+ */
     private final @Nullable String minimumTlsVersion;
+/**
+ * Defines the TLS extension protocol that is used for secure delivery.
+ */
     private final String protocolType;
 
     @OutputCustomType.Constructor({"certificateSource","certificateSourceParameters","minimumTlsVersion","protocolType"})
@@ -29,15 +42,28 @@ public final class CdnManagedHttpsParametersResponse {
         this.protocolType = Objects.requireNonNull(protocolType);
     }
 
+/**
+ * Defines the source of the SSL certificate.
+Expected value is 'Cdn'.
+ */
     public String getCertificateSource() {
         return this.certificateSource;
     }
+/**
+ * Defines the certificate source parameters using CDN managed certificate for enabling SSL.
+ */
     public CdnCertificateSourceParametersResponse getCertificateSourceParameters() {
         return this.certificateSourceParameters;
     }
+/**
+ * TLS protocol version that will be used for Https
+ */
     public Optional<String> getMinimumTlsVersion() {
         return Optional.ofNullable(this.minimumTlsVersion);
     }
+/**
+ * Defines the TLS extension protocol that is used for secure delivery.
+ */
     public String getProtocolType() {
         return this.protocolType;
     }

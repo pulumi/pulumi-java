@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Preferences related to the order
+ */
 public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PreferencesArgs Empty = new PreferencesArgs();
 
+    /**
+     * Preferences related to the Encryption.
+     */
     @InputImport(name="encryptionPreferences")
     private final @Nullable Input<EncryptionPreferencesArgs> encryptionPreferences;
 
@@ -24,6 +30,9 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryptionPreferences == null ? Input.empty() : this.encryptionPreferences;
     }
 
+    /**
+     * Preferred data center region.
+     */
     @InputImport(name="preferredDataCenterRegion")
     private final @Nullable Input<List<String>> preferredDataCenterRegion;
 
@@ -31,6 +40,9 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
         return this.preferredDataCenterRegion == null ? Input.empty() : this.preferredDataCenterRegion;
     }
 
+    /**
+     * Preferences related to the shipment logistics of the sku.
+     */
     @InputImport(name="transportPreferences")
     private final @Nullable Input<TransportPreferencesArgs> transportPreferences;
 

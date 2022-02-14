@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse {
+/**
+ * If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.
+ */
     private final Boolean enableInsightsExport;
 
     @OutputCustomType.Constructor({"enableInsightsExport"})
@@ -16,6 +19,9 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettin
         this.enableInsightsExport = Objects.requireNonNull(enableInsightsExport);
     }
 
+/**
+ * If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.
+ */
     public Boolean getEnableInsightsExport() {
         return this.enableInsightsExport;
     }

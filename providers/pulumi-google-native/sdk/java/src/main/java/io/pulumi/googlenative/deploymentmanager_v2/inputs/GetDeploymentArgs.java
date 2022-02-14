@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDeploymentArgs Empty = new GetDeploymentArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="deployment", required=true)
     private final String deployment;
 
@@ -21,6 +27,9 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
         return this.deployment;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.automation;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.automation.VariableArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -15,51 +14,202 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Definition of the variable.
+API Version: 2019-06-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create or update a variable
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var variable = new AzureNative.Automation.Variable("variable", new AzureNative.Automation.VariableArgs
+        {
+            AutomationAccountName = "sampleAccount9",
+            Description = "my description",
+            IsEncrypted = false,
+            Name = "sampleVariable",
+            ResourceGroupName = "rg",
+            Value = "\"ComputerName.domain.com\"",
+            VariableName = "sampleVariable",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	automation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/automation"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := automation.NewVariable(ctx, "variable", &automation.VariableArgs{
+			AutomationAccountName: pulumi.String("sampleAccount9"),
+			Description:           pulumi.String("my description"),
+			IsEncrypted:           pulumi.Bool(false),
+			Name:                  pulumi.String("sampleVariable"),
+			ResourceGroupName:     pulumi.String("rg"),
+			Value:                 pulumi.String("\"ComputerName.domain.com\""),
+			VariableName:          pulumi.String("sampleVariable"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const variable = new azure_native.automation.Variable("variable", {
+    automationAccountName: "sampleAccount9",
+    description: "my description",
+    isEncrypted: false,
+    name: "sampleVariable",
+    resourceGroupName: "rg",
+    value: "\"ComputerName.domain.com\"",
+    variableName: "sampleVariable",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+variable = azure_native.automation.Variable("variable",
+    automation_account_name="sampleAccount9",
+    description="my description",
+    is_encrypted=False,
+    name="sampleVariable",
+    resource_group_name="rg",
+    value="\"ComputerName.domain.com\"",
+    variable_name="sampleVariable")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:automation:Variable sampleVariable /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/sampleAccount9/variables/sampleVariable 
+```
+
+ */
 @ResourceType(type="azure-native:automation:Variable")
 public class Variable extends io.pulumi.resources.CustomResource {
+    /**
+     * Gets or sets the creation time.
+     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> creationTime;
 
+    /**
+     * @return Gets or sets the creation time.
+     */
     public Output</* @Nullable */ String> getCreationTime() {
         return this.creationTime;
     }
+    /**
+     * Gets or sets the description.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Gets or sets the description.
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Gets or sets the encrypted flag of the variable.
+     */
     @OutputExport(name="isEncrypted", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isEncrypted;
 
+    /**
+     * @return Gets or sets the encrypted flag of the variable.
+     */
     public Output</* @Nullable */ Boolean> getIsEncrypted() {
         return this.isEncrypted;
     }
+    /**
+     * Gets or sets the last modified time.
+     */
     @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedTime;
 
+    /**
+     * @return Gets or sets the last modified time.
+     */
     public Output</* @Nullable */ String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The type of the resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Gets or sets the value of the variable.
+     */
     @OutputExport(name="value", type=String.class, parameters={})
     private Output</* @Nullable */ String> value;
 
+    /**
+     * @return Gets or sets the value of the variable.
+     */
     public Output</* @Nullable */ String> getValue() {
         return this.value;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Variable(String name, VariableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:automation:Variable", name, args == null ? VariableArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -80,6 +230,14 @@ public class Variable extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Variable get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Variable(name, id, options);
     }

@@ -11,9 +11,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetIndexResult {
+/**
+ * The collection ID to which this index applies. Required.
+ */
     private final String collectionId;
+/**
+ * The fields to index.
+ */
     private final List<GoogleFirestoreAdminV1beta1IndexFieldResponse> fields;
+/**
+ * The resource name of the index. Output only.
+ */
     private final String name;
+/**
+ * The state of the index. Output only.
+ */
     private final String state;
 
     @OutputCustomType.Constructor({"collectionId","fields","name","state"})
@@ -28,15 +40,27 @@ public final class GetIndexResult {
         this.state = Objects.requireNonNull(state);
     }
 
+/**
+ * The collection ID to which this index applies. Required.
+ */
     public String getCollectionId() {
         return this.collectionId;
     }
+/**
+ * The fields to index.
+ */
     public List<GoogleFirestoreAdminV1beta1IndexFieldResponse> getFields() {
         return this.fields;
     }
+/**
+ * The resource name of the index. Output only.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The state of the index. Output only.
+ */
     public String getState() {
         return this.state;
     }

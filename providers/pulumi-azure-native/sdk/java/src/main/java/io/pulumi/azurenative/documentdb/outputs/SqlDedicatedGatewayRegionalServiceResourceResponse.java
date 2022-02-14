@@ -9,9 +9,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SqlDedicatedGatewayRegionalServiceResourceResponse {
+/**
+ * The location name.
+ */
     private final String location;
+/**
+ * The regional service name.
+ */
     private final String name;
+/**
+ * The regional endpoint for SqlDedicatedGateway.
+ */
     private final String sqlDedicatedGatewayEndpoint;
+/**
+ * Describes the status of a service.
+ */
     private final String status;
 
     @OutputCustomType.Constructor({"location","name","sqlDedicatedGatewayEndpoint","status"})
@@ -26,15 +38,27 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse {
         this.status = Objects.requireNonNull(status);
     }
 
+/**
+ * The location name.
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * The regional service name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The regional endpoint for SqlDedicatedGateway.
+ */
     public String getSqlDedicatedGatewayEndpoint() {
         return this.sqlDedicatedGatewayEndpoint;
     }
+/**
+ * Describes the status of a service.
+ */
     public String getStatus() {
         return this.status;
     }

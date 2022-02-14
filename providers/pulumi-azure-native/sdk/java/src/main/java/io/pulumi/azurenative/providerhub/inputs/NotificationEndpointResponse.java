@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class NotificationEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NotificationEndpointResponse Empty = new NotificationEndpointResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="locations")
     private final @Nullable List<String> locations;
 
@@ -22,6 +28,9 @@ public final class NotificationEndpointResponse extends io.pulumi.resources.Invo
         return this.locations == null ? List.of() : this.locations;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="notificationDestination")
     private final @Nullable String notificationDestination;
 

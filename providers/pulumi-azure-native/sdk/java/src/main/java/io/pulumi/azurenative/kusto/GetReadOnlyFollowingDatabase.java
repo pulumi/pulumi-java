@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReadOnlyFollowingDatabase {
+/**
+ * Class representing a read only following database.
+API Version: 2021-01-01.
+ *
+ * Class representing a read only following database.
+ */
     public static CompletableFuture<GetReadOnlyFollowingDatabaseResult> invokeAsync(GetReadOnlyFollowingDatabaseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getReadOnlyFollowingDatabase", TypeShape.of(GetReadOnlyFollowingDatabaseResult.class), args == null ? GetReadOnlyFollowingDatabaseArgs.Empty : args, Utilities.withVersion(options));
     }

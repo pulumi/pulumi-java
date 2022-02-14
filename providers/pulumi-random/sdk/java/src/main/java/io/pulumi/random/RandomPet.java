@@ -7,7 +7,6 @@ import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
-import io.pulumi.random.RandomPetArgs;
 import io.pulumi.random.Utilities;
 import io.pulumi.random.inputs.RandomPetState;
 import java.lang.Integer;
@@ -16,33 +15,152 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The resource `random.RandomPet` generates random pet names that are intended to be used as unique identifiers for other resources.
+
+This resource can be used in conjunction with resources that have the `create_before_destroy` lifecycle flag set, to avoid conflicts with unique names during the brief period where both the old and new resources exist concurrently.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as random from "@pulumi/random";
+
+// The following example shows how to generate a unique pet name
+// for an AWS EC2 instance that changes each time a new AMI id is
+// selected.
+const serverRandomPet = new random.RandomPet("serverRandomPet", {keepers: {
+    ami_id: _var.ami_id,
+}});
+const serverInstance = new aws.ec2.Instance("serverInstance", {
+    tags: {
+        Name: pulumi.interpolate`web-server-${serverRandomPet.id}`,
+    },
+    ami: serverRandomPet.keepers.apply(keepers => keepers?.amiId),
+});
+// ... (other aws_instance arguments) ...
+```
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_random as random
+
+# The following example shows how to generate a unique pet name
+# for an AWS EC2 instance that changes each time a new AMI id is
+# selected.
+server_random_pet = random.RandomPet("serverRandomPet", keepers={
+    "ami_id": var["ami_id"],
+})
+server_instance = aws.ec2.Instance("serverInstance",
+    tags={
+        "Name": server_random_pet.id.apply(lambda id: f"web-server-{id}"),
+    },
+    ami=server_random_pet.keepers["amiId"])
+# ... (other aws_instance arguments) ...
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // The following example shows how to generate a unique pet name
+        // for an AWS EC2 instance that changes each time a new AMI id is
+        // selected.
+        var serverRandomPet = new Random.RandomPet("serverRandomPet", new Random.RandomPetArgs
+        {
+            Keepers = 
+            {
+                { "ami_id", @var.Ami_id },
+            },
+        });
+        var serverInstance = new Aws.Ec2.Instance("serverInstance", new Aws.Ec2.InstanceArgs
+        {
+            Tags = 
+            {
+                { "Name", serverRandomPet.Id.Apply(id => $"web-server-{id}") },
+            },
+            Ami = serverRandomPet.Keepers.Apply(keepers => keepers?.AmiId),
+        });
+        // ... (other aws_instance arguments) ...
+    }
+
+}
+```
+{{% /example %}}
+{{% /examples %}}
+ */
 @ResourceType(type="random:index/randomPet:RandomPet")
 public class RandomPet extends io.pulumi.resources.CustomResource {
+    /**
+     * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+
+     */
     @OutputExport(name="keepers", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> keepers;
 
+    /**
+     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+
+     */
     public Output</* @Nullable */ Map<String,Object>> getKeepers() {
         return this.keepers;
     }
+    /**
+     * The length (in words) of the pet name.
+
+     */
     @OutputExport(name="length", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> length;
 
+    /**
+     * @return The length (in words) of the pet name.
+
+     */
     public Output</* @Nullable */ Integer> getLength() {
         return this.length;
     }
+    /**
+     * A string to prefix the name with.
+
+     */
     @OutputExport(name="prefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> prefix;
 
+    /**
+     * @return A string to prefix the name with.
+
+     */
     public Output</* @Nullable */ String> getPrefix() {
         return this.prefix;
     }
+    /**
+     * The character to separate words in the pet name.
+
+     */
     @OutputExport(name="separator", type=String.class, parameters={})
     private Output</* @Nullable */ String> separator;
 
+    /**
+     * @return The character to separate words in the pet name.
+
+     */
     public Output</* @Nullable */ String> getSeparator() {
         return this.separator;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public RandomPet(String name, @Nullable RandomPetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("random:index/randomPet:RandomPet", name, args == null ? RandomPetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -58,6 +176,15 @@ public class RandomPet extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static RandomPet get(String name, Input<String> id, @Nullable RandomPetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RandomPet(name, id, state, options);
     }

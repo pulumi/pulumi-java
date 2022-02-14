@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetADLSGen2FolderDataSet {
+/**
+ * An ADLS Gen 2 folder data set.
+API Version: 2020-09-01.
+ *
+ * An ADLS Gen 2 folder data set.
+ */
     public static CompletableFuture<GetADLSGen2FolderDataSetResult> invokeAsync(GetADLSGen2FolderDataSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getADLSGen2FolderDataSet", TypeShape.of(GetADLSGen2FolderDataSetResult.class), args == null ? GetADLSGen2FolderDataSetArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -9,9 +9,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetTrustedIdProviderResult {
+/**
+ * The resource identifier.
+ */
     private final String id;
+/**
+ * The URL of this trusted identity provider.
+ */
     private final String idProvider;
+/**
+ * The resource name.
+ */
     private final String name;
+/**
+ * The resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","idProvider","name","type"})
@@ -26,15 +38,27 @@ public final class GetTrustedIdProviderResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The resource identifier.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The URL of this trusted identity provider.
+ */
     public String getIdProvider() {
         return this.idProvider;
     }
+/**
+ * The resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The resource type.
+ */
     public String getType() {
         return this.type;
     }

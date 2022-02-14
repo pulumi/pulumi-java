@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of Cognitive Services account commitment plan.
+ */
 public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CommitmentPlanPropertiesResponse Empty = new CommitmentPlanPropertiesResponse();
 
+    /**
+     * AutoRenew commitment plan.
+     */
     @InputImport(name="autoRenew")
     private final @Nullable Boolean autoRenew;
 
@@ -23,6 +29,9 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
         return this.autoRenew == null ? Optional.empty() : Optional.ofNullable(this.autoRenew);
     }
 
+    /**
+     * Cognitive Services account commitment period.
+     */
     @InputImport(name="current")
     private final @Nullable CommitmentPeriodResponse current;
 
@@ -30,6 +39,9 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
         return this.current == null ? Optional.empty() : Optional.ofNullable(this.current);
     }
 
+    /**
+     * Account hosting model.
+     */
     @InputImport(name="hostingModel")
     private final @Nullable String hostingModel;
 
@@ -37,6 +49,9 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
         return this.hostingModel == null ? Optional.empty() : Optional.ofNullable(this.hostingModel);
     }
 
+    /**
+     * Cognitive Services account commitment period.
+     */
     @InputImport(name="last", required=true)
     private final CommitmentPeriodResponse last;
 
@@ -44,6 +59,9 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
         return this.last;
     }
 
+    /**
+     * Cognitive Services account commitment period.
+     */
     @InputImport(name="next")
     private final @Nullable CommitmentPeriodResponse next;
 
@@ -51,6 +69,9 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
         return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);
     }
 
+    /**
+     * Commitment plan type.
+     */
     @InputImport(name="planType")
     private final @Nullable String planType;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMachineLearningDatastore {
+/**
+ * Machine Learning datastore object wrapped into ARM resource envelope.
+API Version: 2020-05-01-preview.
+ *
+ * Machine Learning datastore object wrapped into ARM resource envelope.
+ */
     public static CompletableFuture<GetMachineLearningDatastoreResult> invokeAsync(GetMachineLearningDatastoreArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getMachineLearningDatastore", TypeShape.of(GetMachineLearningDatastoreResult.class), args == null ? GetMachineLearningDatastoreArgs.Empty : args, Utilities.withVersion(options));
     }

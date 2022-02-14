@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NetworkProfileResponseOutboundIPs {
+/**
+ * A list of public IP addresses.
+ */
     private final List<String> publicIPs;
 
     @OutputCustomType.Constructor({"publicIPs"})
@@ -17,6 +20,9 @@ public final class NetworkProfileResponseOutboundIPs {
         this.publicIPs = Objects.requireNonNull(publicIPs);
     }
 
+/**
+ * A list of public IP addresses.
+ */
     public List<String> getPublicIPs() {
         return this.publicIPs;
     }

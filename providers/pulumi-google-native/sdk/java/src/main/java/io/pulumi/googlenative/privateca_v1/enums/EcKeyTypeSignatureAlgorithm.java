@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Optional. A signature algorithm that must be used. If this is omitted, any EC-based signature algorithm will be allowed.
+ */
     @EnumType
     public enum EcKeyTypeSignatureAlgorithm {
+/**
+ * Not specified. Signifies that any signature algorithm may be used.
+ */
         EcSignatureAlgorithmUnspecified("EC_SIGNATURE_ALGORITHM_UNSPECIFIED"),
+/**
+ * Refers to the Elliptic Curve Digital Signature Algorithm over the NIST P-256 curve.
+ */
         EcdsaP256("ECDSA_P256"),
+/**
+ * Refers to the Elliptic Curve Digital Signature Algorithm over the NIST P-384 curve.
+ */
         EcdsaP384("ECDSA_P384"),
+/**
+ * Refers to the Edwards-curve Digital Signature Algorithm over curve 25519, as described in RFC 8410.
+ */
         Eddsa25519("EDDSA_25519");
 
         private final String value;

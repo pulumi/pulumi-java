@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * RCM based Azure migration specific policy details.
+ */
 public final class RcmAzureMigrationPolicyDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RcmAzureMigrationPolicyDetailsResponse Empty = new RcmAzureMigrationPolicyDetailsResponse();
 
+    /**
+     * The app consistent snapshot frequency in minutes.
+     */
     @InputImport(name="appConsistentFrequencyInMinutes")
     private final @Nullable Integer appConsistentFrequencyInMinutes;
 
@@ -22,6 +28,9 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends io.pulumi.reso
         return this.appConsistentFrequencyInMinutes == null ? Optional.empty() : Optional.ofNullable(this.appConsistentFrequencyInMinutes);
     }
 
+    /**
+     * The crash consistent snapshot frequency in minutes.
+     */
     @InputImport(name="crashConsistentFrequencyInMinutes")
     private final @Nullable Integer crashConsistentFrequencyInMinutes;
 
@@ -29,6 +38,10 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends io.pulumi.reso
         return this.crashConsistentFrequencyInMinutes == null ? Optional.empty() : Optional.ofNullable(this.crashConsistentFrequencyInMinutes);
     }
 
+    /**
+     * Gets the class type. Overridden in derived classes.
+Expected value is 'RcmAzureMigration'.
+     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -36,6 +49,9 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends io.pulumi.reso
         return this.instanceType;
     }
 
+    /**
+     * A value indicating whether multi-VM sync has to be enabled.
+     */
     @InputImport(name="multiVmSyncStatus")
     private final @Nullable String multiVmSyncStatus;
 
@@ -43,6 +59,9 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends io.pulumi.reso
         return this.multiVmSyncStatus == null ? Optional.empty() : Optional.ofNullable(this.multiVmSyncStatus);
     }
 
+    /**
+     * The duration in minutes until which the recovery points need to be stored.
+     */
     @InputImport(name="recoveryPointHistory")
     private final @Nullable Integer recoveryPointHistory;
 
@@ -50,6 +69,9 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends io.pulumi.reso
         return this.recoveryPointHistory == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointHistory);
     }
 
+    /**
+     * The recovery point threshold in minutes.
+     */
     @InputImport(name="recoveryPointThresholdInMinutes")
     private final @Nullable Integer recoveryPointThresholdInMinutes;
 

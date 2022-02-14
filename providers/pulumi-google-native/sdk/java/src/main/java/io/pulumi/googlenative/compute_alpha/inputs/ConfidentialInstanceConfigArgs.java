@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A set of Confidential Instance options.
+ */
 public final class ConfidentialInstanceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfidentialInstanceConfigArgs Empty = new ConfidentialInstanceConfigArgs();
 
+    /**
+     * Defines whether the instance should have confidential compute enabled.
+     */
     @InputImport(name="enableConfidentialCompute")
     private final @Nullable Input<Boolean> enableConfidentialCompute;
 

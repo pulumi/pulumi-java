@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The media services details
+ */
 public final class MediaServicesForPutRequestResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MediaServicesForPutRequestResponse Empty = new MediaServicesForPutRequestResponse();
 
+    /**
+     * The media services resource id
+     */
     @InputImport(name="resourceId")
     private final @Nullable String resourceId;
 
@@ -21,6 +27,9 @@ public final class MediaServicesForPutRequestResponse extends io.pulumi.resource
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 
+    /**
+     * The user assigned identity to be used to grant permissions
+     */
     @InputImport(name="userAssignedIdentity")
     private final @Nullable String userAssignedIdentity;
 

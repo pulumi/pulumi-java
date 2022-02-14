@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainOwnershipIdentifierArgs Empty = new DomainOwnershipIdentifierArgs();
 
+    /**
+     * Name of domain.
+     */
     @InputImport(name="domainName", required=true)
     private final Input<String> domainName;
 
@@ -21,6 +27,9 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
         return this.domainName;
     }
 
+    /**
+     * Kind of resource.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -28,6 +37,9 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of identifier.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +47,9 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Ownership Id.
+     */
     @InputImport(name="ownershipId")
     private final @Nullable Input<String> ownershipId;
 
@@ -42,6 +57,9 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
         return this.ownershipId == null ? Input.empty() : this.ownershipId;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

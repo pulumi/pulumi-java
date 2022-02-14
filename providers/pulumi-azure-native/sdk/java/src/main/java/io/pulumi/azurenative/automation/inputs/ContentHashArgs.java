@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Definition of the runbook property type.
+ */
 public final class ContentHashArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContentHashArgs Empty = new ContentHashArgs();
 
+    /**
+     * Gets or sets the content hash algorithm used to hash the content.
+     */
     @InputImport(name="algorithm", required=true)
     private final Input<String> algorithm;
 
@@ -20,6 +26,9 @@ public final class ContentHashArgs extends io.pulumi.resources.ResourceArgs {
         return this.algorithm;
     }
 
+    /**
+     * Gets or sets expected hash value of the content.
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

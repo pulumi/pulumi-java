@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetModelContainerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetModelContainerArgs Empty = new GetModelContainerArgs();
 
+    /**
+     * Container name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class GetModelContainerArgs extends io.pulumi.resources.InvokeArgs 
         return this.name;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetModelContainerArgs extends io.pulumi.resources.InvokeArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of Azure Machine Learning workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

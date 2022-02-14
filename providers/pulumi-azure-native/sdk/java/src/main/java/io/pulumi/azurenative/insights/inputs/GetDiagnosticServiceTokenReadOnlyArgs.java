@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetDiagnosticServiceTokenReadOnlyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDiagnosticServiceTokenReadOnlyArgs Empty = new GetDiagnosticServiceTokenReadOnlyArgs();
 
+    /**
+     * The identifier of the resource.
+     */
     @InputImport(name="resourceUri", required=true)
     private final String resourceUri;
 

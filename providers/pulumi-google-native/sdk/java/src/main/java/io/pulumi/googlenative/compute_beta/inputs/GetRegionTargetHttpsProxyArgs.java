@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetRegionTargetHttpsProxyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRegionTargetHttpsProxyArgs Empty = new GetRegionTargetHttpsProxyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -21,6 +27,9 @@ public final class GetRegionTargetHttpsProxyArgs extends io.pulumi.resources.Inv
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="region", required=true)
     private final String region;
 
@@ -28,6 +37,9 @@ public final class GetRegionTargetHttpsProxyArgs extends io.pulumi.resources.Inv
         return this.region;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="targetHttpsProxy", required=true)
     private final String targetHttpsProxy;
 

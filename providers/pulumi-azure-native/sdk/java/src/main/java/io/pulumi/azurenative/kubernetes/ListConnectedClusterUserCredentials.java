@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListConnectedClusterUserCredentials {
+/**
+ * The list of credential result response.
+API Version: 2021-04-01-preview.
+ *
+ * The list of credential result response.
+ */
     public static CompletableFuture<ListConnectedClusterUserCredentialsResult> invokeAsync(ListConnectedClusterUserCredentialsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetes:listConnectedClusterUserCredentials", TypeShape.of(ListConnectedClusterUserCredentialsResult.class), args == null ? ListConnectedClusterUserCredentialsArgs.Empty : args, Utilities.withVersion(options));
     }

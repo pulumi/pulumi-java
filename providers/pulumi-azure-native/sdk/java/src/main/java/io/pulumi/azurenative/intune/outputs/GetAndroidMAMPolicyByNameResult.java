@@ -13,30 +13,105 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAndroidMAMPolicyByNameResult {
+/**
+ * 
+ */
     private final @Nullable String accessRecheckOfflineTimeout;
+/**
+ * 
+ */
     private final @Nullable String accessRecheckOnlineTimeout;
+/**
+ * 
+ */
     private final @Nullable String appSharingFromLevel;
+/**
+ * 
+ */
     private final @Nullable String appSharingToLevel;
+/**
+ * 
+ */
     private final @Nullable String authentication;
+/**
+ * 
+ */
     private final @Nullable String clipboardSharingLevel;
+/**
+ * 
+ */
     private final @Nullable String dataBackup;
+/**
+ * 
+ */
     private final @Nullable String description;
+/**
+ * 
+ */
     private final @Nullable String deviceCompliance;
+/**
+ * 
+ */
     private final @Nullable String fileEncryption;
+/**
+ * 
+ */
     private final @Nullable String fileSharingSaveAs;
+/**
+ * 
+ */
     private final String friendlyName;
+/**
+ * 
+ */
     private final String groupStatus;
+/**
+ * Resource Id
+ */
     private final String id;
+/**
+ * 
+ */
     private final String lastModifiedTime;
+/**
+ * Resource Location
+ */
     private final @Nullable String location;
+/**
+ * 
+ */
     private final @Nullable String managedBrowser;
+/**
+ * Resource name
+ */
     private final String name;
+/**
+ * 
+ */
     private final Integer numOfApps;
+/**
+ * 
+ */
     private final @Nullable String offlineWipeTimeout;
+/**
+ * 
+ */
     private final @Nullable String pin;
+/**
+ * 
+ */
     private final @Nullable Integer pinNumRetry;
+/**
+ * 
+ */
     private final @Nullable String screenCapture;
+/**
+ * Resource Tags
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Resource type
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"accessRecheckOfflineTimeout","accessRecheckOnlineTimeout","appSharingFromLevel","appSharingToLevel","authentication","clipboardSharingLevel","dataBackup","description","deviceCompliance","fileEncryption","fileSharingSaveAs","friendlyName","groupStatus","id","lastModifiedTime","location","managedBrowser","name","numOfApps","offlineWipeTimeout","pin","pinNumRetry","screenCapture","tags","type"})
@@ -93,78 +168,153 @@ public final class GetAndroidMAMPolicyByNameResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * 
+ */
     public Optional<String> getAccessRecheckOfflineTimeout() {
         return Optional.ofNullable(this.accessRecheckOfflineTimeout);
     }
+/**
+ * 
+ */
     public Optional<String> getAccessRecheckOnlineTimeout() {
         return Optional.ofNullable(this.accessRecheckOnlineTimeout);
     }
+/**
+ * 
+ */
     public Optional<String> getAppSharingFromLevel() {
         return Optional.ofNullable(this.appSharingFromLevel);
     }
+/**
+ * 
+ */
     public Optional<String> getAppSharingToLevel() {
         return Optional.ofNullable(this.appSharingToLevel);
     }
+/**
+ * 
+ */
     public Optional<String> getAuthentication() {
         return Optional.ofNullable(this.authentication);
     }
+/**
+ * 
+ */
     public Optional<String> getClipboardSharingLevel() {
         return Optional.ofNullable(this.clipboardSharingLevel);
     }
+/**
+ * 
+ */
     public Optional<String> getDataBackup() {
         return Optional.ofNullable(this.dataBackup);
     }
+/**
+ * 
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * 
+ */
     public Optional<String> getDeviceCompliance() {
         return Optional.ofNullable(this.deviceCompliance);
     }
+/**
+ * 
+ */
     public Optional<String> getFileEncryption() {
         return Optional.ofNullable(this.fileEncryption);
     }
+/**
+ * 
+ */
     public Optional<String> getFileSharingSaveAs() {
         return Optional.ofNullable(this.fileSharingSaveAs);
     }
+/**
+ * 
+ */
     public String getFriendlyName() {
         return this.friendlyName;
     }
+/**
+ * 
+ */
     public String getGroupStatus() {
         return this.groupStatus;
     }
+/**
+ * Resource Id
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * 
+ */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
+/**
+ * Resource Location
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * 
+ */
     public Optional<String> getManagedBrowser() {
         return Optional.ofNullable(this.managedBrowser);
     }
+/**
+ * Resource name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * 
+ */
     public Integer getNumOfApps() {
         return this.numOfApps;
     }
+/**
+ * 
+ */
     public Optional<String> getOfflineWipeTimeout() {
         return Optional.ofNullable(this.offlineWipeTimeout);
     }
+/**
+ * 
+ */
     public Optional<String> getPin() {
         return Optional.ofNullable(this.pin);
     }
+/**
+ * 
+ */
     public Optional<Integer> getPinNumRetry() {
         return Optional.ofNullable(this.pinNumRetry);
     }
+/**
+ * 
+ */
     public Optional<String> getScreenCapture() {
         return Optional.ofNullable(this.screenCapture);
     }
+/**
+ * Resource Tags
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Resource type
+ */
     public String getType() {
         return this.type;
     }

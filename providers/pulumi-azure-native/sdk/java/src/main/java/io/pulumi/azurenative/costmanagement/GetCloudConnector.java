@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCloudConnector {
+/**
+ * The Connector model definition
+API Version: 2019-03-01-preview.
+ *
+ * The Connector model definition
+ */
     public static CompletableFuture<GetCloudConnectorResult> invokeAsync(GetCloudConnectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:costmanagement:getCloudConnector", TypeShape.of(GetCloudConnectorResult.class), args == null ? GetCloudConnectorArgs.Empty : args, Utilities.withVersion(options));
     }

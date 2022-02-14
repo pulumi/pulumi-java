@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetJobArgs Empty = new GetJobArgs();
 
+    /**
+     * The name and identifier for the Job.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -19,6 +25,9 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.id;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of Azure Machine Learning workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

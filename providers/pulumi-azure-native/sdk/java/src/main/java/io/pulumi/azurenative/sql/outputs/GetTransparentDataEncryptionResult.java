@@ -11,10 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetTransparentDataEncryptionResult {
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Resource location.
+ */
     private final String location;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * The status of the database transparent data encryption.
+ */
     private final @Nullable String status;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","location","name","status","type"})
@@ -31,18 +46,33 @@ public final class GetTransparentDataEncryptionResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource location.
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The status of the database transparent data encryption.
+ */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

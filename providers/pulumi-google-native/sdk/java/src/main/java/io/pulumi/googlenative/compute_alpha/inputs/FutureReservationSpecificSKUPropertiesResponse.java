@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class FutureReservationSpecificSKUPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FutureReservationSpecificSKUPropertiesResponse Empty = new FutureReservationSpecificSKUPropertiesResponse();
 
+    /**
+     * Properties of the SKU instances being reserved.
+     */
     @InputImport(name="instanceProperties", required=true)
     private final AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
 
@@ -20,6 +26,9 @@ public final class FutureReservationSpecificSKUPropertiesResponse extends io.pul
         return this.instanceProperties;
     }
 
+    /**
+     * Total number of instances for which capacity assurance is requested at a future time period.
+     */
     @InputImport(name="totalCount", required=true)
     private final String totalCount;
 

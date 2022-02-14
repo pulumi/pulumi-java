@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of a certificate used for authenticating a token.
+ */
 public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TokenCertificateArgs Empty = new TokenCertificateArgs();
 
+    /**
+     * Base 64 encoded string of the public certificate1 in PEM format that will be used for authenticating the token.
+     */
     @InputImport(name="encodedPemCertificate")
     private final @Nullable Input<String> encodedPemCertificate;
 
@@ -23,6 +29,9 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
         return this.encodedPemCertificate == null ? Input.empty() : this.encodedPemCertificate;
     }
 
+    /**
+     * The expiry datetime of the certificate.
+     */
     @InputImport(name="expiry")
     private final @Nullable Input<String> expiry;
 
@@ -30,6 +39,9 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
         return this.expiry == null ? Input.empty() : this.expiry;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<Either<String,TokenCertificateName>> name;
 
@@ -37,6 +49,9 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The thumbprint of the certificate.
+     */
     @InputImport(name="thumbprint")
     private final @Nullable Input<String> thumbprint;
 

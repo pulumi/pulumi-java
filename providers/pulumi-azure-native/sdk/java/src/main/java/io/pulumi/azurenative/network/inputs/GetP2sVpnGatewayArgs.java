@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetP2sVpnGatewayArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetP2sVpnGatewayArgs Empty = new GetP2sVpnGatewayArgs();
 
+    /**
+     * The name of the gateway.
+     */
     @InputImport(name="gatewayName", required=true)
     private final String gatewayName;
 
@@ -19,6 +25,9 @@ public final class GetP2sVpnGatewayArgs extends io.pulumi.resources.InvokeArgs {
         return this.gatewayName;
     }
 
+    /**
+     * The resource group name of the P2SVpnGateway.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

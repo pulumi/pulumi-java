@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne extends io.pulumi.resources.InvokeArgs {
 
     public static final DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne Empty = new DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne();
 
+    /**
+     * 
+     */
     @InputImport(name="regions")
     private final @Nullable List<String> regions;
 
@@ -22,6 +28,9 @@ public final class DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne ext
         return this.regions == null ? List.of() : this.regions;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="waitDuration")
     private final @Nullable String waitDuration;
 

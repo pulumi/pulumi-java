@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPartnerNamespace {
+/**
+ * EventGrid Partner Namespace.
+API Version: 2021-06-01-preview.
+ *
+ * EventGrid Partner Namespace.
+ */
     public static CompletableFuture<GetPartnerNamespaceResult> invokeAsync(GetPartnerNamespaceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getPartnerNamespace", TypeShape.of(GetPartnerNamespaceResult.class), args == null ? GetPartnerNamespaceArgs.Empty : args, Utilities.withVersion(options));
     }

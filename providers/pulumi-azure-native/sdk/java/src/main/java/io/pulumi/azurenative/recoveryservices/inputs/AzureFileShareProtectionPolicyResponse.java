@@ -18,10 +18,17 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * AzureStorage backup policy.
+ */
 public final class AzureFileShareProtectionPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureFileShareProtectionPolicyResponse Empty = new AzureFileShareProtectionPolicyResponse();
 
+    /**
+     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+Expected value is 'AzureStorage'.
+     */
     @InputImport(name="backupManagementType", required=true)
     private final String backupManagementType;
 
@@ -29,6 +36,9 @@ public final class AzureFileShareProtectionPolicyResponse extends io.pulumi.reso
         return this.backupManagementType;
     }
 
+    /**
+     * Number of items associated with this policy.
+     */
     @InputImport(name="protectedItemsCount")
     private final @Nullable Integer protectedItemsCount;
 
@@ -36,6 +46,9 @@ public final class AzureFileShareProtectionPolicyResponse extends io.pulumi.reso
         return this.protectedItemsCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemsCount);
     }
 
+    /**
+     * Retention policy with the details on backup copy retention ranges.
+     */
     @InputImport(name="retentionPolicy")
     private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
@@ -43,6 +56,9 @@ public final class AzureFileShareProtectionPolicyResponse extends io.pulumi.reso
         return this.retentionPolicy == null ? null : this.retentionPolicy;
     }
 
+    /**
+     * Backup schedule specified as part of backup policy.
+     */
     @InputImport(name="schedulePolicy")
     private final @Nullable Object schedulePolicy;
 
@@ -50,6 +66,9 @@ public final class AzureFileShareProtectionPolicyResponse extends io.pulumi.reso
         return this.schedulePolicy == null ? null : this.schedulePolicy;
     }
 
+    /**
+     * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
+     */
     @InputImport(name="timeZone")
     private final @Nullable String timeZone;
 
@@ -57,6 +76,9 @@ public final class AzureFileShareProtectionPolicyResponse extends io.pulumi.reso
         return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
     }
 
+    /**
+     * Type of workload for the backup management
+     */
     @InputImport(name="workLoadType")
     private final @Nullable String workLoadType;
 

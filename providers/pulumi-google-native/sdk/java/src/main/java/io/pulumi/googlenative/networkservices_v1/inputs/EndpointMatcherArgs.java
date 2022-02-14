@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A definition of a matcher that selects endpoints to which the policies should be applied.
+ */
 public final class EndpointMatcherArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EndpointMatcherArgs Empty = new EndpointMatcherArgs();
 
+    /**
+     * The matcher is based on node metadata presented by xDS clients.
+     */
     @InputImport(name="metadataLabelMatcher")
     private final @Nullable Input<EndpointMatcherMetadataLabelMatcherArgs> metadataLabelMatcher;
 

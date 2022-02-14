@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The role whose utterances the phrase matcher should be matched against. If the role is ROLE_UNSPECIFIED it will be matched against any utterances in the transcript.
+ */
     @EnumType
     public enum PhraseMatcherRoleMatch {
+/**
+ * Participant's role is not set.
+ */
         RoleUnspecified("ROLE_UNSPECIFIED"),
+/**
+ * Participant is a human agent.
+ */
         HumanAgent("HUMAN_AGENT"),
+/**
+ * Participant is an automated agent.
+ */
         AutomatedAgent("AUTOMATED_AGENT"),
+/**
+ * Participant is an end user who conversed with the contact center.
+ */
         EndUser("END_USER"),
+/**
+ * Participant is either a human or automated agent.
+ */
         AnyAgent("ANY_AGENT");
 
         private final String value;

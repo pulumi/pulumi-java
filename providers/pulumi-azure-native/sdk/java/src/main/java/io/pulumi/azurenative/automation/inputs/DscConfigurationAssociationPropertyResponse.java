@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Dsc configuration property associated with the entity.
+ */
 public final class DscConfigurationAssociationPropertyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DscConfigurationAssociationPropertyResponse Empty = new DscConfigurationAssociationPropertyResponse();
 
+    /**
+     * Gets or sets the name of the Dsc configuration.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

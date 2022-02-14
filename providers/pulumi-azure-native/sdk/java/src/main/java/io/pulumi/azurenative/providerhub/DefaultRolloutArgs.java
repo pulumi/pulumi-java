@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DefaultRolloutArgs Empty = new DefaultRolloutArgs();
 
+    /**
+     * Properties of the rollout.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<DefaultRolloutPropertiesArgs> properties;
 
@@ -22,6 +28,9 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource provider hosted within ProviderHub.
+     */
     @InputImport(name="providerNamespace", required=true)
     private final Input<String> providerNamespace;
 
@@ -29,6 +38,9 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.providerNamespace;
     }
 
+    /**
+     * The rollout name.
+     */
     @InputImport(name="rolloutName")
     private final @Nullable Input<String> rolloutName;
 

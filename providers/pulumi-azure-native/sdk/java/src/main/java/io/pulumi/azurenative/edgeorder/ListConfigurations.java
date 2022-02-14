@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListConfigurations {
+/**
+ * The list of configurations.
+API Version: 2021-12-01.
+ *
+ * The list of configurations.
+ */
     public static CompletableFuture<ListConfigurationsResult> invokeAsync(ListConfigurationsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:edgeorder:listConfigurations", TypeShape.of(ListConfigurationsResult.class), args == null ? ListConfigurationsArgs.Empty : args, Utilities.withVersion(options));
     }

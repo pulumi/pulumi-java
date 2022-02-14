@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateEndpointConnectionsForSCCPowershell {
+/**
+ * The Private Endpoint Connection resource.
+API Version: 2021-03-25-preview.
+ *
+ * The Private Endpoint Connection resource.
+ */
     public static CompletableFuture<GetPrivateEndpointConnectionsForSCCPowershellResult> invokeAsync(GetPrivateEndpointConnectionsForSCCPowershellArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:m365securityandcompliance:getPrivateEndpointConnectionsForSCCPowershell", TypeShape.of(GetPrivateEndpointConnectionsForSCCPowershellResult.class), args == null ? GetPrivateEndpointConnectionsForSCCPowershellArgs.Empty : args, Utilities.withVersion(options));
     }

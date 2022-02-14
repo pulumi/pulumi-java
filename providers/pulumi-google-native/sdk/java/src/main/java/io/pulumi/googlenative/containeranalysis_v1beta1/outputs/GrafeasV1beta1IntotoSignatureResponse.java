@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GrafeasV1beta1IntotoSignatureResponse {
+/**
+ * 
+ */
     private final String keyid;
+/**
+ * 
+ */
     private final String sig;
 
     @OutputCustomType.Constructor({"keyid","sig"})
@@ -20,9 +26,15 @@ public final class GrafeasV1beta1IntotoSignatureResponse {
         this.sig = Objects.requireNonNull(sig);
     }
 
+/**
+ * 
+ */
     public String getKeyid() {
         return this.keyid;
     }
+/**
+ * 
+ */
     public String getSig() {
         return this.sig;
     }

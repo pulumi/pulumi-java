@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CommonFeatureStateResponse {
+/**
+ * Appdevexperience specific state.
+ */
     private final AppDevExperienceFeatureStateResponse appdevexperience;
+/**
+ * The "running state" of the Feature in this Hub.
+ */
     private final FeatureStateResponse state;
 
     @OutputCustomType.Constructor({"appdevexperience","state"})
@@ -21,9 +27,15 @@ public final class CommonFeatureStateResponse {
         this.state = Objects.requireNonNull(state);
     }
 
+/**
+ * Appdevexperience specific state.
+ */
     public AppDevExperienceFeatureStateResponse getAppdevexperience() {
         return this.appdevexperience;
     }
+/**
+ * The "running state" of the Feature in this Hub.
+ */
     public FeatureStateResponse getState() {
         return this.state;
     }

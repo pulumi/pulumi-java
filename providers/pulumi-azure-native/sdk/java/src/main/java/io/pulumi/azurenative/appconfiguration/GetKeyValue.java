@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKeyValue {
+/**
+ * The key-value resource along with all resource properties.
+API Version: 2020-07-01-preview.
+ *
+ * The key-value resource along with all resource properties.
+ */
     public static CompletableFuture<GetKeyValueResult> invokeAsync(GetKeyValueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appconfiguration:getKeyValue", TypeShape.of(GetKeyValueResult.class), args == null ? GetKeyValueArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Routing Configuration indicating the associated and propagated route tables for this connection.
+ */
 public final class RoutingConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RoutingConfigurationArgs Empty = new RoutingConfigurationArgs();
 
+    /**
+     * The resource id RouteTable associated with this RoutingConfiguration.
+     */
     @InputImport(name="associatedRouteTable")
     private final @Nullable Input<SubResourceArgs> associatedRouteTable;
 
@@ -23,6 +29,9 @@ public final class RoutingConfigurationArgs extends io.pulumi.resources.Resource
         return this.associatedRouteTable == null ? Input.empty() : this.associatedRouteTable;
     }
 
+    /**
+     * The list of RouteTables to advertise the routes to.
+     */
     @InputImport(name="propagatedRouteTables")
     private final @Nullable Input<PropagatedRouteTableArgs> propagatedRouteTables;
 
@@ -30,6 +39,9 @@ public final class RoutingConfigurationArgs extends io.pulumi.resources.Resource
         return this.propagatedRouteTables == null ? Input.empty() : this.propagatedRouteTables;
     }
 
+    /**
+     * List of routes that control routing from VirtualHub into a virtual network connection.
+     */
     @InputImport(name="vnetRoutes")
     private final @Nullable Input<VnetRouteArgs> vnetRoutes;
 

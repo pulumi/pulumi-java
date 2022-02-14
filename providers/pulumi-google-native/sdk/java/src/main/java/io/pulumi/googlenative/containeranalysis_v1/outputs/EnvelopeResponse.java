@@ -11,8 +11,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EnvelopeResponse {
+/**
+ * 
+ */
     private final String payload;
+/**
+ * 
+ */
     private final String payloadType;
+/**
+ * 
+ */
     private final List<EnvelopeSignatureResponse> signatures;
 
     @OutputCustomType.Constructor({"payload","payloadType","signatures"})
@@ -25,12 +34,21 @@ public final class EnvelopeResponse {
         this.signatures = Objects.requireNonNull(signatures);
     }
 
+/**
+ * 
+ */
     public String getPayload() {
         return this.payload;
     }
+/**
+ * 
+ */
     public String getPayloadType() {
         return this.payloadType;
     }
+/**
+ * 
+ */
     public List<EnvelopeSignatureResponse> getSignatures() {
         return this.signatures;
     }

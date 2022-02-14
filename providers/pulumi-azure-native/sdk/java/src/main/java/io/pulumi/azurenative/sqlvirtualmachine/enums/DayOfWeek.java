@@ -8,14 +8,38 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Day of week to apply the patch on.
+ */
     @EnumType
     public enum DayOfWeek {
+/**
+ * 
+ */
         Monday("Monday"),
+/**
+ * 
+ */
         Tuesday("Tuesday"),
+/**
+ * 
+ */
         Wednesday("Wednesday"),
+/**
+ * 
+ */
         Thursday("Thursday"),
+/**
+ * 
+ */
         Friday("Friday"),
+/**
+ * 
+ */
         Saturday("Saturday"),
+/**
+ * 
+ */
         Sunday("Sunday");
 
         private final String value;

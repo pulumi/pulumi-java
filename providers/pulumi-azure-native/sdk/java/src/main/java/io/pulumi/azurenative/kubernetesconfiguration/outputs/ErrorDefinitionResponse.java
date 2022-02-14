@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ErrorDefinitionResponse {
+/**
+ * Service specific error code which serves as the substatus for the HTTP error code.
+ */
     private final String code;
+/**
+ * Description of the error.
+ */
     private final String message;
 
     @OutputCustomType.Constructor({"code","message"})
@@ -20,9 +26,15 @@ public final class ErrorDefinitionResponse {
         this.message = Objects.requireNonNull(message);
     }
 
+/**
+ * Service specific error code which serves as the substatus for the HTTP error code.
+ */
     public String getCode() {
         return this.code;
     }
+/**
+ * Description of the error.
+ */
     public String getMessage() {
         return this.message;
     }

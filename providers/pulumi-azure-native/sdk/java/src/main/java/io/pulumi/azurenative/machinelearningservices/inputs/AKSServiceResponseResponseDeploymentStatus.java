@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The deployment status.
+ */
 public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.resources.InvokeArgs {
 
     public static final AKSServiceResponseResponseDeploymentStatus Empty = new AKSServiceResponseResponseDeploymentStatus();
 
+    /**
+     * The number of available replicas.
+     */
     @InputImport(name="availableReplicas")
     private final @Nullable Integer availableReplicas;
 
@@ -22,6 +28,9 @@ public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.
         return this.availableReplicas == null ? Optional.empty() : Optional.ofNullable(this.availableReplicas);
     }
 
+    /**
+     * The desired number of replicas.
+     */
     @InputImport(name="desiredReplicas")
     private final @Nullable Integer desiredReplicas;
 
@@ -29,6 +38,9 @@ public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.
         return this.desiredReplicas == null ? Optional.empty() : Optional.ofNullable(this.desiredReplicas);
     }
 
+    /**
+     * The error details.
+     */
     @InputImport(name="error")
     private final @Nullable AKSReplicaStatusResponseError error;
 
@@ -36,6 +48,9 @@ public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
     }
 
+    /**
+     * The number of updated replicas.
+     */
     @InputImport(name="updatedReplicas")
     private final @Nullable Integer updatedReplicas;
 

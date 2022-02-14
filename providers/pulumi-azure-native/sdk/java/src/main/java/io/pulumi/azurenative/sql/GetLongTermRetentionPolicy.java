@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLongTermRetentionPolicy {
+/**
+ * A long term retention policy.
+API Version: 2020-11-01-preview.
+ *
+ * A long term retention policy.
+ */
     public static CompletableFuture<GetLongTermRetentionPolicyResult> invokeAsync(GetLongTermRetentionPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getLongTermRetentionPolicy", TypeShape.of(GetLongTermRetentionPolicyResult.class), args == null ? GetLongTermRetentionPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

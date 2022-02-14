@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A collective group of information about the record set information.
+ */
 public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RecordSetResponse Empty = new RecordSetResponse();
 
+    /**
+     * Fqdn that resolves to private endpoint ip address.
+     */
     @InputImport(name="fqdn")
     private final @Nullable String fqdn;
 
@@ -23,6 +29,9 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
         return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
     }
 
+    /**
+     * The private ip address of the private endpoint.
+     */
     @InputImport(name="ipAddresses")
     private final @Nullable List<String> ipAddresses;
 
@@ -30,6 +39,9 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
 
+    /**
+     * The provisioning state of the recordset.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -37,6 +49,9 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
         return this.provisioningState;
     }
 
+    /**
+     * Recordset name.
+     */
     @InputImport(name="recordSetName")
     private final @Nullable String recordSetName;
 
@@ -44,6 +59,9 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
         return this.recordSetName == null ? Optional.empty() : Optional.ofNullable(this.recordSetName);
     }
 
+    /**
+     * Resource record type.
+     */
     @InputImport(name="recordType")
     private final @Nullable String recordType;
 
@@ -51,6 +69,9 @@ public final class RecordSetResponse extends io.pulumi.resources.InvokeArgs {
         return this.recordType == null ? Optional.empty() : Optional.ofNullable(this.recordType);
     }
 
+    /**
+     * Recordset time to live.
+     */
     @InputImport(name="ttl")
     private final @Nullable Integer ttl;
 

@@ -10,8 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SdkHarnessContainerImageResponse {
+/**
+ * A docker container image that resides in Google Container Registry.
+ */
     private final String containerImage;
+/**
+ * Environment ID for the Beam runner API proto Environment that corresponds to the current SDK Harness.
+ */
     private final String environmentId;
+/**
+ * If true, recommends the Dataflow service to use only one core per SDK container instance with this image. If false (or unset) recommends using more than one core per SDK container instance with this image for efficiency. Note that Dataflow service may choose to override this property if needed.
+ */
     private final Boolean useSingleCorePerContainer;
 
     @OutputCustomType.Constructor({"containerImage","environmentId","useSingleCorePerContainer"})
@@ -24,12 +33,21 @@ public final class SdkHarnessContainerImageResponse {
         this.useSingleCorePerContainer = Objects.requireNonNull(useSingleCorePerContainer);
     }
 
+/**
+ * A docker container image that resides in Google Container Registry.
+ */
     public String getContainerImage() {
         return this.containerImage;
     }
+/**
+ * Environment ID for the Beam runner API proto Environment that corresponds to the current SDK Harness.
+ */
     public String getEnvironmentId() {
         return this.environmentId;
     }
+/**
+ * If true, recommends the Dataflow service to use only one core per SDK container instance with this image. If false (or unset) recommends using more than one core per SDK container instance with this image for efficiency. Note that Dataflow service may choose to override this property if needed.
+ */
     public Boolean getUseSingleCorePerContainer() {
         return this.useSingleCorePerContainer;
     }

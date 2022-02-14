@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Private endpoint connection item.
+ */
 public final class PrivateEndpointConnectionItemResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateEndpointConnectionItemResponse Empty = new PrivateEndpointConnectionItemResponse();
 
+    /**
+     * Modified whenever there is a change in the state of private endpoint connection.
+     */
     @InputImport(name="etag")
     private final @Nullable String etag;
 
@@ -23,6 +29,9 @@ public final class PrivateEndpointConnectionItemResponse extends io.pulumi.resou
         return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
     }
 
+    /**
+     * Id of private endpoint connection.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -30,6 +39,9 @@ public final class PrivateEndpointConnectionItemResponse extends io.pulumi.resou
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Properties of the private endpoint object.
+     */
     @InputImport(name="privateEndpoint")
     private final @Nullable PrivateEndpointResponse privateEndpoint;
 
@@ -37,6 +49,9 @@ public final class PrivateEndpointConnectionItemResponse extends io.pulumi.resou
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
     }
 
+    /**
+     * Approval state of the private link connection.
+     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
@@ -44,6 +59,9 @@ public final class PrivateEndpointConnectionItemResponse extends io.pulumi.resou
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
+    /**
+     * Provisioning state of the private endpoint connection.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

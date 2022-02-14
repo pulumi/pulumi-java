@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ParameterSpecificationResponse {
+/**
+ * Default value of parameter.
+ */
     private final @Nullable Object defaultValue;
+/**
+ * Parameter type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"defaultValue","type"})
@@ -23,9 +29,15 @@ public final class ParameterSpecificationResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Default value of parameter.
+ */
     public Optional<Object> getDefaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
+/**
+ * Parameter type.
+ */
     public String getType() {
         return this.type;
     }

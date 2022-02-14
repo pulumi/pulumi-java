@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * State of the auto-rollout process.
+ */
 public final class GoogleCloudDialogflowCxV3beta1RolloutStateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1RolloutStateResponse Empty = new GoogleCloudDialogflowCxV3beta1RolloutStateResponse();
 
+    /**
+     * Start time of the current step.
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 
@@ -20,6 +26,9 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateResponse extends io
         return this.startTime;
     }
 
+    /**
+     * Display name of the current auto rollout step.
+     */
     @InputImport(name="step", required=true)
     private final String step;
 
@@ -27,6 +36,9 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateResponse extends io
         return this.step;
     }
 
+    /**
+     * Index of the current step in the auto rollout steps list.
+     */
     @InputImport(name="stepIndex", required=true)
     private final Integer stepIndex;
 

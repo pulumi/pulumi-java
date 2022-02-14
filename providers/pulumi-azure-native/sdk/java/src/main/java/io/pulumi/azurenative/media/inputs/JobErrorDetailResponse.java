@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Details of JobOutput errors.
+ */
 public final class JobErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JobErrorDetailResponse Empty = new JobErrorDetailResponse();
 
+    /**
+     * Code describing the error detail.
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -19,6 +25,9 @@ public final class JobErrorDetailResponse extends io.pulumi.resources.InvokeArgs
         return this.code;
     }
 
+    /**
+     * A human-readable representation of the error.
+     */
     @InputImport(name="message", required=true)
     private final String message;
 

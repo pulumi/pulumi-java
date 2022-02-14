@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGcpUserAccessBinding {
+/**
+ * Gets the GcpUserAccessBinding with the given name.
+ */
     public static CompletableFuture<GetGcpUserAccessBindingResult> invokeAsync(GetGcpUserAccessBindingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:accesscontextmanager/v1:getGcpUserAccessBinding", TypeShape.of(GetGcpUserAccessBindingResult.class), args == null ? GetGcpUserAccessBindingArgs.Empty : args, Utilities.withVersion(options));
     }

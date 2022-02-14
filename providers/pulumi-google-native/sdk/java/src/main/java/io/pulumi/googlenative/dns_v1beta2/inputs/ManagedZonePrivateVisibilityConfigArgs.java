@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedZonePrivateVisibilityConfigArgs Empty = new ManagedZonePrivateVisibilityConfigArgs();
 
+    /**
+     * The list of Google Kubernetes Engine clusters that can see this zone.
+     */
     @InputImport(name="gkeClusters")
     private final @Nullable Input<List<ManagedZonePrivateVisibilityConfigGKEClusterArgs>> gkeClusters;
 
@@ -24,6 +30,9 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
         return this.gkeClusters == null ? Input.empty() : this.gkeClusters;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -31,6 +40,9 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The list of VPC networks that can see this zone.
+     */
     @InputImport(name="networks")
     private final @Nullable Input<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks;
 

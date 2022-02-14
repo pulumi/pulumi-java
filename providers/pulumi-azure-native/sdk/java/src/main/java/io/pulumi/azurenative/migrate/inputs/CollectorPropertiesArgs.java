@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class CollectorPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CollectorPropertiesArgs Empty = new CollectorPropertiesArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="agentProperties")
     private final @Nullable Input<CollectorAgentPropertiesArgs> agentProperties;
 
@@ -22,6 +28,9 @@ public final class CollectorPropertiesArgs extends io.pulumi.resources.ResourceA
         return this.agentProperties == null ? Input.empty() : this.agentProperties;
     }
 
+    /**
+     * The ARM id of the discovery service site.
+     */
     @InputImport(name="discoverySiteId")
     private final @Nullable Input<String> discoverySiteId;
 

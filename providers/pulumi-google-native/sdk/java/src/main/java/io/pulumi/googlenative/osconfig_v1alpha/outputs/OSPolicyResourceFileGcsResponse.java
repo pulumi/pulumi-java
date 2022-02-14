@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OSPolicyResourceFileGcsResponse {
+/**
+ * Bucket of the Cloud Storage object.
+ */
     private final String bucket;
+/**
+ * Generation number of the Cloud Storage object.
+ */
     private final String generation;
+/**
+ * Name of the Cloud Storage object.
+ */
     private final String object;
 
     @OutputCustomType.Constructor({"bucket","generation","object"})
@@ -23,12 +32,21 @@ public final class OSPolicyResourceFileGcsResponse {
         this.object = Objects.requireNonNull(object);
     }
 
+/**
+ * Bucket of the Cloud Storage object.
+ */
     public String getBucket() {
         return this.bucket;
     }
+/**
+ * Generation number of the Cloud Storage object.
+ */
     public String getGeneration() {
         return this.generation;
     }
+/**
+ * Name of the Cloud Storage object.
+ */
     public String getObject() {
         return this.object;
     }

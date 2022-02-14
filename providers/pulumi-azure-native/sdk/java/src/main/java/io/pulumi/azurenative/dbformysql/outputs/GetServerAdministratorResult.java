@@ -9,12 +9,33 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetServerAdministratorResult {
+/**
+ * The type of administrator.
+ */
     private final String administratorType;
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     private final String id;
+/**
+ * The server administrator login account name.
+ */
     private final String login;
+/**
+ * The name of the resource
+ */
     private final String name;
+/**
+ * The server administrator Sid (Secure ID).
+ */
     private final String sid;
+/**
+ * The server Active Directory Administrator tenant id.
+ */
     private final String tenantId;
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"administratorType","id","login","name","sid","tenantId","type"})
@@ -35,24 +56,45 @@ public final class GetServerAdministratorResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The type of administrator.
+ */
     public String getAdministratorType() {
         return this.administratorType;
     }
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The server administrator login account name.
+ */
     public String getLogin() {
         return this.login;
     }
+/**
+ * The name of the resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The server administrator Sid (Secure ID).
+ */
     public String getSid() {
         return this.sid;
     }
+/**
+ * The server Active Directory Administrator tenant id.
+ */
     public String getTenantId() {
         return this.tenantId;
     }
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     public String getType() {
         return this.type;
     }

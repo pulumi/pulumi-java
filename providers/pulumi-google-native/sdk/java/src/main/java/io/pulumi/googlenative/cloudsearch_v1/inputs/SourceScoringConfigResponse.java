@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Set the scoring configuration. This allows modifying the ranking of results for a source.
+ */
 public final class SourceScoringConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SourceScoringConfigResponse Empty = new SourceScoringConfigResponse();
 
+    /**
+     * Importance of the source.
+     */
     @InputImport(name="sourceImportance", required=true)
     private final String sourceImportance;
 

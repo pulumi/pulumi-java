@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DiskSecurityProfileResponse {
+/**
+ * Specifies the SecurityType of the VM. Applicable for OS disks only.
+ */
     private final @Nullable String securityType;
 
     @OutputCustomType.Constructor({"securityType"})
@@ -18,6 +21,9 @@ public final class DiskSecurityProfileResponse {
         this.securityType = securityType;
     }
 
+/**
+ * Specifies the SecurityType of the VM. Applicable for OS disks only.
+ */
     public Optional<String> getSecurityType() {
         return Optional.ofNullable(this.securityType);
     }

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity Azure MySql sink.
+ */
 public final class AzureMySqlSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureMySqlSinkArgs Empty = new AzureMySqlSinkArgs();
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -22,6 +28,9 @@ public final class AzureMySqlSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
+    /**
+     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -29,6 +38,9 @@ public final class AzureMySqlSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
+    /**
+     * A query to execute before starting the copy. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="preCopyScript")
     private final @Nullable Input<Object> preCopyScript;
 
@@ -36,6 +48,9 @@ public final class AzureMySqlSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.preCopyScript == null ? Input.empty() : this.preCopyScript;
     }
 
+    /**
+     * Sink retry count. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="sinkRetryCount")
     private final @Nullable Input<Object> sinkRetryCount;
 
@@ -43,6 +58,9 @@ public final class AzureMySqlSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.sinkRetryCount == null ? Input.empty() : this.sinkRetryCount;
     }
 
+    /**
+     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="sinkRetryWait")
     private final @Nullable Input<Object> sinkRetryWait;
 
@@ -50,6 +68,10 @@ public final class AzureMySqlSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.sinkRetryWait == null ? Input.empty() : this.sinkRetryWait;
     }
 
+    /**
+     * Copy sink type.
+Expected value is 'AzureMySqlSink'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -57,6 +79,9 @@ public final class AzureMySqlSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.type;
     }
 
+    /**
+     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     */
     @InputImport(name="writeBatchSize")
     private final @Nullable Input<Object> writeBatchSize;
 
@@ -64,6 +89,9 @@ public final class AzureMySqlSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.writeBatchSize == null ? Input.empty() : this.writeBatchSize;
     }
 
+    /**
+     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="writeBatchTimeout")
     private final @Nullable Input<Object> writeBatchTimeout;
 

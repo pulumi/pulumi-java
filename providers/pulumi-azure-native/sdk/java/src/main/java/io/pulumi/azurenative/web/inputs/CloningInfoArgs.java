@@ -12,10 +12,17 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information needed for cloning operation.
+ */
 public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CloningInfoArgs Empty = new CloningInfoArgs();
 
+    /**
+     * Application setting overrides for cloned app. If specified, these settings override the settings cloned 
+from source app. Otherwise, application settings from source app are retained.
+     */
     @InputImport(name="appSettingsOverrides")
     private final @Nullable Input<Map<String,String>> appSettingsOverrides;
 
@@ -23,6 +30,9 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.appSettingsOverrides == null ? Input.empty() : this.appSettingsOverrides;
     }
 
+    /**
+     * <code>true</code> to clone custom hostnames from source app; otherwise, <code>false</code>.
+     */
     @InputImport(name="cloneCustomHostNames")
     private final @Nullable Input<Boolean> cloneCustomHostNames;
 
@@ -30,6 +40,9 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.cloneCustomHostNames == null ? Input.empty() : this.cloneCustomHostNames;
     }
 
+    /**
+     * <code>true</code> to clone source control from source app; otherwise, <code>false</code>.
+     */
     @InputImport(name="cloneSourceControl")
     private final @Nullable Input<Boolean> cloneSourceControl;
 
@@ -37,6 +50,9 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.cloneSourceControl == null ? Input.empty() : this.cloneSourceControl;
     }
 
+    /**
+     * <code>true</code> to configure load balancing for source and destination app.
+     */
     @InputImport(name="configureLoadBalancing")
     private final @Nullable Input<Boolean> configureLoadBalancing;
 
@@ -44,6 +60,10 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.configureLoadBalancing == null ? Input.empty() : this.configureLoadBalancing;
     }
 
+    /**
+     * Correlation ID of cloning operation. This ID ties multiple cloning operations
+together to use the same snapshot.
+     */
     @InputImport(name="correlationId")
     private final @Nullable Input<String> correlationId;
 
@@ -51,6 +71,9 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.correlationId == null ? Input.empty() : this.correlationId;
     }
 
+    /**
+     * App Service Environment.
+     */
     @InputImport(name="hostingEnvironment")
     private final @Nullable Input<String> hostingEnvironment;
 
@@ -58,6 +81,9 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostingEnvironment == null ? Input.empty() : this.hostingEnvironment;
     }
 
+    /**
+     * <code>true</code> to overwrite destination app; otherwise, <code>false</code>.
+     */
     @InputImport(name="overwrite")
     private final @Nullable Input<Boolean> overwrite;
 
@@ -65,6 +91,11 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.overwrite == null ? Input.empty() : this.overwrite;
     }
 
+    /**
+     * ARM resource ID of the source app. App resource ID is of the form 
+/subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName} for production slots and 
+/subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName}/slots/{slotName} for other slots.
+     */
     @InputImport(name="sourceWebAppId", required=true)
     private final Input<String> sourceWebAppId;
 
@@ -72,6 +103,9 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceWebAppId;
     }
 
+    /**
+     * Location of source app ex: West US or North Europe
+     */
     @InputImport(name="sourceWebAppLocation")
     private final @Nullable Input<String> sourceWebAppLocation;
 
@@ -79,6 +113,10 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceWebAppLocation == null ? Input.empty() : this.sourceWebAppLocation;
     }
 
+    /**
+     * ARM resource ID of the Traffic Manager profile to use, if it exists. Traffic Manager resource ID is of the form 
+/subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{profileName}.
+     */
     @InputImport(name="trafficManagerProfileId")
     private final @Nullable Input<String> trafficManagerProfileId;
 
@@ -86,6 +124,9 @@ public final class CloningInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.trafficManagerProfileId == null ? Input.empty() : this.trafficManagerProfileId;
     }
 
+    /**
+     * Name of Traffic Manager profile to create. This is only needed if Traffic Manager profile does not already exist.
+     */
     @InputImport(name="trafficManagerProfileName")
     private final @Nullable Input<String> trafficManagerProfileName;
 

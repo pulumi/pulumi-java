@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Fields for tracking refresh job on the share or container.
+ */
 public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RefreshDetailsArgs Empty = new RefreshDetailsArgs();
 
+    /**
+     * Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.
+     */
     @InputImport(name="errorManifestFile")
     private final @Nullable Input<String> errorManifestFile;
 
@@ -21,6 +27,9 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.errorManifestFile == null ? Input.empty() : this.errorManifestFile;
     }
 
+    /**
+     * If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.
+     */
     @InputImport(name="inProgressRefreshJobId")
     private final @Nullable Input<String> inProgressRefreshJobId;
 
@@ -28,6 +37,9 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.inProgressRefreshJobId == null ? Input.empty() : this.inProgressRefreshJobId;
     }
 
+    /**
+     * Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.
+     */
     @InputImport(name="lastCompletedRefreshJobTimeInUTC")
     private final @Nullable Input<String> lastCompletedRefreshJobTimeInUTC;
 
@@ -35,6 +47,9 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastCompletedRefreshJobTimeInUTC == null ? Input.empty() : this.lastCompletedRefreshJobTimeInUTC;
     }
 
+    /**
+     * Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.
+     */
     @InputImport(name="lastJob")
     private final @Nullable Input<String> lastJob;
 

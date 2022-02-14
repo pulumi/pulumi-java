@@ -14,10 +14,17 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines a health policy used to evaluate the health of an application or one of its children entities.
+
+ */
 public final class ArmApplicationHealthPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ArmApplicationHealthPolicyResponse Empty = new ArmApplicationHealthPolicyResponse();
 
+    /**
+     * Indicates whether warnings are treated with the same severity as errors.
+     */
     @InputImport(name="considerWarningAsError")
     private final @Nullable Boolean considerWarningAsError;
 
@@ -25,6 +32,9 @@ public final class ArmApplicationHealthPolicyResponse extends io.pulumi.resource
         return this.considerWarningAsError == null ? Optional.empty() : Optional.ofNullable(this.considerWarningAsError);
     }
 
+    /**
+     * The health policy used by default to evaluate the health of a service type.
+     */
     @InputImport(name="defaultServiceTypeHealthPolicy")
     private final @Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy;
 
@@ -32,6 +42,13 @@ public final class ArmApplicationHealthPolicyResponse extends io.pulumi.resource
         return this.defaultServiceTypeHealthPolicy == null ? Optional.empty() : Optional.ofNullable(this.defaultServiceTypeHealthPolicy);
     }
 
+    /**
+     * The maximum allowed percentage of unhealthy deployed applications. Allowed values are Byte values from zero to 100.
+The percentage represents the maximum tolerated percentage of deployed applications that can be unhealthy before the application is considered in error.
+This is calculated by dividing the number of unhealthy deployed applications over the number of nodes where the application is currently deployed on in the cluster.
+The computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.
+
+     */
     @InputImport(name="maxPercentUnhealthyDeployedApplications")
     private final @Nullable Integer maxPercentUnhealthyDeployedApplications;
 
@@ -39,6 +56,9 @@ public final class ArmApplicationHealthPolicyResponse extends io.pulumi.resource
         return this.maxPercentUnhealthyDeployedApplications == null ? Optional.empty() : Optional.ofNullable(this.maxPercentUnhealthyDeployedApplications);
     }
 
+    /**
+     * The map with service type health policy per service type name. The map is empty by default.
+     */
     @InputImport(name="serviceTypeHealthPolicyMap")
     private final @Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap;
 

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.cdn;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.cdn.SecretArgs;
 import io.pulumi.azurenative.cdn.outputs.CustomerCertificateParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.ManagedCertificateParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
@@ -19,45 +18,226 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Friendly Secret name mapping to the any Secret or secret related information.
+API Version: 2020-09-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Secrets_Create
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var secret = new AzureNative.Cdn.Secret("secret", new AzureNative.Cdn.SecretArgs
+        {
+            Parameters = new AzureNative.Cdn.Inputs.CustomerCertificateParametersArgs
+            {
+                CertificateAuthority = "Symantec",
+                SecretSource = new AzureNative.Cdn.Inputs.ResourceReferenceArgs
+                {
+                    Id = "/subscriptions/subid/resourcegroups/RG/providers/Microsoft.KeyVault/vault/kvName/certificate/certName",
+                },
+                SecretVersion = "67c452f83c804aed80aa3a21e523c226",
+                SubjectAlternativeNames = 
+                {
+                    "foo.contoso.com",
+                    "www3.foo.contoso.com",
+                },
+                Type = "CustomerCertificate",
+                UseLatestVersion = false,
+            },
+            ProfileName = "profile1",
+            ResourceGroupName = "RG",
+            SecretName = "secret1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	cdn "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cdn"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cdn.NewSecret(ctx, "secret", &cdn.SecretArgs{
+			Parameters: cdn.CustomerCertificateParameters{
+				CertificateAuthority: "Symantec",
+				SecretSource: cdn.ResourceReference{
+					Id: "/subscriptions/subid/resourcegroups/RG/providers/Microsoft.KeyVault/vault/kvName/certificate/certName",
+				},
+				SecretVersion: "67c452f83c804aed80aa3a21e523c226",
+				SubjectAlternativeNames: []string{
+					"foo.contoso.com",
+					"www3.foo.contoso.com",
+				},
+				Type:             "CustomerCertificate",
+				UseLatestVersion: false,
+			},
+			ProfileName:       pulumi.String("profile1"),
+			ResourceGroupName: pulumi.String("RG"),
+			SecretName:        pulumi.String("secret1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const secret = new azure_native.cdn.Secret("secret", {
+    parameters: {
+        certificateAuthority: "Symantec",
+        secretSource: {
+            id: "/subscriptions/subid/resourcegroups/RG/providers/Microsoft.KeyVault/vault/kvName/certificate/certName",
+        },
+        secretVersion: "67c452f83c804aed80aa3a21e523c226",
+        subjectAlternativeNames: [
+            "foo.contoso.com",
+            "www3.foo.contoso.com",
+        ],
+        type: "CustomerCertificate",
+        useLatestVersion: false,
+    },
+    profileName: "profile1",
+    resourceGroupName: "RG",
+    secretName: "secret1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+secret = azure_native.cdn.Secret("secret",
+    parameters=azure_native.cdn.CustomerCertificateParametersArgs(
+        certificate_authority="Symantec",
+        secret_source=azure_native.cdn.ResourceReferenceArgs(
+            id="/subscriptions/subid/resourcegroups/RG/providers/Microsoft.KeyVault/vault/kvName/certificate/certName",
+        ),
+        secret_version="67c452f83c804aed80aa3a21e523c226",
+        subject_alternative_names=[
+            "foo.contoso.com",
+            "www3.foo.contoso.com",
+        ],
+        type="CustomerCertificate",
+        use_latest_version=False,
+    ),
+    profile_name="profile1",
+    resource_group_name="RG",
+    secret_name="secret1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:cdn:Secret secret1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/secrets/secret1 
+```
+
+ */
 @ResourceType(type="azure-native:cdn:Secret")
 public class Secret extends io.pulumi.resources.CustomResource {
+    /**
+     * 
+     */
     @OutputExport(name="deploymentStatus", type=String.class, parameters={})
     private Output<String> deploymentStatus;
 
     public Output<String> getDeploymentStatus() {
         return this.deploymentStatus;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * object which contains secret parameters
+     */
     @OutputExport(name="parameters", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> parameters;
 
+    /**
+     * @return object which contains secret parameters
+     */
     public Output</* @Nullable */ Object> getParameters() {
         return this.parameters;
     }
+    /**
+     * Provisioning status
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning status
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Read only system data
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Read only system data
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Secret(String name, SecretArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:cdn:Secret", name, args == null ? SecretArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -77,6 +257,14 @@ public class Secret extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Secret get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Secret(name, id, options);
     }

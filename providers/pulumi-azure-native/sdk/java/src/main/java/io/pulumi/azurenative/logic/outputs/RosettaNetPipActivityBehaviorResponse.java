@@ -11,13 +11,37 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RosettaNetPipActivityBehaviorResponse {
+/**
+ * The value indicating whether the RosettaNet PIP is used for a single action.
+ */
     private final String actionType;
+/**
+ * The value indicating whether authorization is required.
+ */
     private final Boolean isAuthorizationRequired;
+/**
+ * The value indicating whether secured transport is required.
+ */
     private final Boolean isSecuredTransportRequired;
+/**
+ * The value indicating whether non-repudiation is for origin and content.
+ */
     private final Boolean nonRepudiationOfOriginAndContent;
+/**
+ * The persistent confidentiality encryption scope.
+ */
     private final String persistentConfidentialityScope;
+/**
+ * The value indicating whether the RosettaNet PIP communication is synchronous.
+ */
     private final String responseType;
+/**
+ * The value indicating retry count.
+ */
     private final Integer retryCount;
+/**
+ * The time to perform in seconds.
+ */
     private final Integer timeToPerformInSeconds;
 
     @OutputCustomType.Constructor({"actionType","isAuthorizationRequired","isSecuredTransportRequired","nonRepudiationOfOriginAndContent","persistentConfidentialityScope","responseType","retryCount","timeToPerformInSeconds"})
@@ -40,27 +64,51 @@ public final class RosettaNetPipActivityBehaviorResponse {
         this.timeToPerformInSeconds = Objects.requireNonNull(timeToPerformInSeconds);
     }
 
+/**
+ * The value indicating whether the RosettaNet PIP is used for a single action.
+ */
     public String getActionType() {
         return this.actionType;
     }
+/**
+ * The value indicating whether authorization is required.
+ */
     public Boolean getIsAuthorizationRequired() {
         return this.isAuthorizationRequired;
     }
+/**
+ * The value indicating whether secured transport is required.
+ */
     public Boolean getIsSecuredTransportRequired() {
         return this.isSecuredTransportRequired;
     }
+/**
+ * The value indicating whether non-repudiation is for origin and content.
+ */
     public Boolean getNonRepudiationOfOriginAndContent() {
         return this.nonRepudiationOfOriginAndContent;
     }
+/**
+ * The persistent confidentiality encryption scope.
+ */
     public String getPersistentConfidentialityScope() {
         return this.persistentConfidentialityScope;
     }
+/**
+ * The value indicating whether the RosettaNet PIP communication is synchronous.
+ */
     public String getResponseType() {
         return this.responseType;
     }
+/**
+ * The value indicating retry count.
+ */
     public Integer getRetryCount() {
         return this.retryCount;
     }
+/**
+ * The time to perform in seconds.
+ */
     public Integer getTimeToPerformInSeconds() {
         return this.timeToPerformInSeconds;
     }

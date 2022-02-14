@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A KMapEstimationHistogramBucket message with the following values: min_anonymity: 3 max_anonymity: 5 frequency: 42 means that there are 42 records whose quasi-identifier values correspond to 3, 4 or 5 people in the overlying population. An important particular case is when min_anonymity = max_anonymity = 1: the frequency field then corresponds to the number of uniquely identifiable records.
+ */
 public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse Empty = new GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse();
 
+    /**
+     * Number of records within these anonymity bounds.
+     */
     @InputImport(name="bucketSize", required=true)
     private final String bucketSize;
 
@@ -21,6 +27,9 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
         return this.bucketSize;
     }
 
+    /**
+     * Total number of distinct quasi-identifier tuple values in this bucket.
+     */
     @InputImport(name="bucketValueCount", required=true)
     private final String bucketValueCount;
 
@@ -28,6 +37,9 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
         return this.bucketValueCount;
     }
 
+    /**
+     * Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
+     */
     @InputImport(name="bucketValues", required=true)
     private final List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues;
 
@@ -35,6 +47,9 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
         return this.bucketValues;
     }
 
+    /**
+     * Always greater than or equal to min_anonymity.
+     */
     @InputImport(name="maxAnonymity", required=true)
     private final String maxAnonymity;
 
@@ -42,6 +57,9 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
         return this.maxAnonymity;
     }
 
+    /**
+     * Always positive.
+     */
     @InputImport(name="minAnonymity", required=true)
     private final String minAnonymity;
 

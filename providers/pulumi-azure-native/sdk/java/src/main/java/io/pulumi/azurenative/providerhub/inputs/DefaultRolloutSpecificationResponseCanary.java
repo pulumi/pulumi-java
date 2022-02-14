@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DefaultRolloutSpecificationResponseCanary extends io.pulumi.resources.InvokeArgs {
 
     public static final DefaultRolloutSpecificationResponseCanary Empty = new DefaultRolloutSpecificationResponseCanary();
 
+    /**
+     * 
+     */
     @InputImport(name="regions")
     private final @Nullable List<String> regions;
 
@@ -22,6 +28,9 @@ public final class DefaultRolloutSpecificationResponseCanary extends io.pulumi.r
         return this.regions == null ? List.of() : this.regions;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="skipRegions")
     private final @Nullable List<String> skipRegions;
 

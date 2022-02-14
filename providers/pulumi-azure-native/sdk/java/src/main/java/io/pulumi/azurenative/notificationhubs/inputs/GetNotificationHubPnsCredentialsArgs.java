@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetNotificationHubPnsCredentialsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNotificationHubPnsCredentialsArgs Empty = new GetNotificationHubPnsCredentialsArgs();
 
+    /**
+     * The namespace name.
+     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -19,6 +25,9 @@ public final class GetNotificationHubPnsCredentialsArgs extends io.pulumi.resour
         return this.namespaceName;
     }
 
+    /**
+     * The notification hub name.
+     */
     @InputImport(name="notificationHubName", required=true)
     private final String notificationHubName;
 
@@ -26,6 +35,9 @@ public final class GetNotificationHubPnsCredentialsArgs extends io.pulumi.resour
         return this.notificationHubName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

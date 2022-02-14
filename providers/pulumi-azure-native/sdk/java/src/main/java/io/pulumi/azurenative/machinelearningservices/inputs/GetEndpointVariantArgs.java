@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetEndpointVariantArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEndpointVariantArgs Empty = new GetEndpointVariantArgs();
 
+    /**
+     * Set to True to include Model details.
+     */
     @InputImport(name="expand")
     private final @Nullable Boolean expand;
 
@@ -22,6 +28,9 @@ public final class GetEndpointVariantArgs extends io.pulumi.resources.InvokeArgs
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * Name of the resource group in which workspace is located.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -29,6 +38,9 @@ public final class GetEndpointVariantArgs extends io.pulumi.resources.InvokeArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the Azure Machine Learning service.
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 
@@ -36,6 +48,9 @@ public final class GetEndpointVariantArgs extends io.pulumi.resources.InvokeArgs
         return this.serviceName;
     }
 
+    /**
+     * Name of Azure Machine Learning workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

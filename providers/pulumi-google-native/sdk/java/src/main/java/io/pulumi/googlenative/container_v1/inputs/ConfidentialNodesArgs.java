@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ConfidentialNodes is configuration for the confidential nodes feature, which makes nodes run on confidential VMs.
+ */
 public final class ConfidentialNodesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfidentialNodesArgs Empty = new ConfidentialNodesArgs();
 
+    /**
+     * Whether Confidential Nodes feature is enabled for all nodes in this cluster.
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

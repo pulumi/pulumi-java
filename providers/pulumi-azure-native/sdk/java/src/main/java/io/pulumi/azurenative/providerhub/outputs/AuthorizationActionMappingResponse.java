@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AuthorizationActionMappingResponse {
+/**
+ * 
+ */
     private final @Nullable String desired;
+/**
+ * 
+ */
     private final @Nullable String original;
 
     @OutputCustomType.Constructor({"desired","original"})
@@ -22,9 +28,15 @@ public final class AuthorizationActionMappingResponse {
         this.original = original;
     }
 
+/**
+ * 
+ */
     public Optional<String> getDesired() {
         return Optional.ofNullable(this.desired);
     }
+/**
+ * 
+ */
     public Optional<String> getOriginal() {
         return Optional.ofNullable(this.original);
     }

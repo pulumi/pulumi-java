@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Gateway-related configuration and state.
+ */
 public final class GatewayConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GatewayConfigResponse Empty = new GatewayConfigResponse();
 
+    /**
+     * Indicates how to authorize and/or authenticate devices to access the gateway.
+     */
     @InputImport(name="gatewayAuthMethod", required=true)
     private final String gatewayAuthMethod;
 
@@ -19,6 +25,9 @@ public final class GatewayConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.gatewayAuthMethod;
     }
 
+    /**
+     * Indicates whether the device is a gateway.
+     */
     @InputImport(name="gatewayType", required=true)
     private final String gatewayType;
 
@@ -26,6 +35,9 @@ public final class GatewayConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.gatewayType;
     }
 
+    /**
+     * [Output only] The ID of the gateway the device accessed most recently.
+     */
     @InputImport(name="lastAccessedGatewayId", required=true)
     private final String lastAccessedGatewayId;
 
@@ -33,6 +45,9 @@ public final class GatewayConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.lastAccessedGatewayId;
     }
 
+    /**
+     * [Output only] The most recent time at which the device accessed the gateway specified in `last_accessed_gateway`.
+     */
     @InputImport(name="lastAccessedGatewayTime", required=true)
     private final String lastAccessedGatewayTime;
 

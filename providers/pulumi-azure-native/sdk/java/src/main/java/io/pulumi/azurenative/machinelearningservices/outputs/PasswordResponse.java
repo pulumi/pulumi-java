@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PasswordResponse {
+/**
+ * 
+ */
     private final String name;
+/**
+ * 
+ */
     private final String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -20,9 +26,15 @@ public final class PasswordResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * 
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * 
+ */
     public String getValue() {
         return this.value;
     }

@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DeleteRetentionPolicyResponse {
+/**
+ * Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.
+ */
     private final @Nullable Integer days;
+/**
+ * Indicates whether DeleteRetentionPolicy is enabled.
+ */
     private final @Nullable Boolean enabled;
 
     @OutputCustomType.Constructor({"days","enabled"})
@@ -23,9 +29,15 @@ public final class DeleteRetentionPolicyResponse {
         this.enabled = enabled;
     }
 
+/**
+ * Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.
+ */
     public Optional<Integer> getDays() {
         return Optional.ofNullable(this.days);
     }
+/**
+ * Indicates whether DeleteRetentionPolicy is enabled.
+ */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }

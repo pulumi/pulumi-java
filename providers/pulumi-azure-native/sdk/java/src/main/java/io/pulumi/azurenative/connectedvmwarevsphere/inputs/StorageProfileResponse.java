@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the resource properties.
+ */
 public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StorageProfileResponse Empty = new StorageProfileResponse();
 
+    /**
+     * Gets or sets the list of virtual disks associated with the virtual machine.
+     */
     @InputImport(name="disks")
     private final @Nullable List<VirtualDiskResponse> disks;
 
@@ -23,6 +29,9 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
         return this.disks == null ? List.of() : this.disks;
     }
 
+    /**
+     * Gets or sets the list of virtual SCSI controllers associated with the virtual machine.
+     */
     @InputImport(name="scsiControllers", required=true)
     private final List<VirtualSCSIControllerResponse> scsiControllers;
 

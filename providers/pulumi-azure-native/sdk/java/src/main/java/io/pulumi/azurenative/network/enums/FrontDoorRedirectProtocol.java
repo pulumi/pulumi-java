@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The protocol of the destination to where the traffic is redirected
+ */
     @EnumType
     public enum FrontDoorRedirectProtocol {
+/**
+ * 
+ */
         HttpOnly("HttpOnly"),
+/**
+ * 
+ */
         HttpsOnly("HttpsOnly"),
+/**
+ * 
+ */
         MatchRequest("MatchRequest");
 
         private final String value;

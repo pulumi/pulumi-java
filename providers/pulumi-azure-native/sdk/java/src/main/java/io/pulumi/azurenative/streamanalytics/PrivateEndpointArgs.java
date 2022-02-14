@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateEndpointArgs Empty = new PrivateEndpointArgs();
 
+    /**
+     * The name of the cluster.
+     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -22,6 +28,9 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
         return this.clusterName;
     }
 
+    /**
+     * The name of the private endpoint.
+     */
     @InputImport(name="privateEndpointName")
     private final @Nullable Input<String> privateEndpointName;
 
@@ -29,6 +38,9 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
         return this.privateEndpointName == null ? Input.empty() : this.privateEndpointName;
     }
 
+    /**
+     * The properties associated with a private endpoint.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<PrivateEndpointPropertiesArgs> properties;
 
@@ -36,6 +48,9 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Type of sensor
+ */
     @EnumType
     public enum SensorType {
+/**
+ * 
+ */
         Ot("Ot"),
+/**
+ * 
+ */
         Enterprise("Enterprise");
 
         private final String value;

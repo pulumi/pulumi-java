@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetInboundNatRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetInboundNatRuleArgs Empty = new GetInboundNatRuleArgs();
 
+    /**
+     * Expands referenced resources.
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +27,9 @@ public final class GetInboundNatRuleArgs extends io.pulumi.resources.InvokeArgs 
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the inbound nat rule.
+     */
     @InputImport(name="inboundNatRuleName", required=true)
     private final String inboundNatRuleName;
 
@@ -28,6 +37,9 @@ public final class GetInboundNatRuleArgs extends io.pulumi.resources.InvokeArgs 
         return this.inboundNatRuleName;
     }
 
+    /**
+     * The name of the load balancer.
+     */
     @InputImport(name="loadBalancerName", required=true)
     private final String loadBalancerName;
 
@@ -35,6 +47,9 @@ public final class GetInboundNatRuleArgs extends io.pulumi.resources.InvokeArgs 
         return this.loadBalancerName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

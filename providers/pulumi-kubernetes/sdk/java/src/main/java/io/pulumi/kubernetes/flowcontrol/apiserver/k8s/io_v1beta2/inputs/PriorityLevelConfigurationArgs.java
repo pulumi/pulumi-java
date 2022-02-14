@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * PriorityLevelConfiguration represents the configuration of a priority level.
+ */
 public final class PriorityLevelConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PriorityLevelConfigurationArgs Empty = new PriorityLevelConfigurationArgs();
 
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -24,6 +30,9 @@ public final class PriorityLevelConfigurationArgs extends io.pulumi.resources.Re
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -31,6 +40,9 @@ public final class PriorityLevelConfigurationArgs extends io.pulumi.resources.Re
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * `metadata` is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<ObjectMetaArgs> metadata;
 
@@ -38,6 +50,9 @@ public final class PriorityLevelConfigurationArgs extends io.pulumi.resources.Re
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * `spec` is the specification of the desired behavior of a "request-priority". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     */
     @InputImport(name="spec")
     private final @Nullable Input<PriorityLevelConfigurationSpecArgs> spec;
 
@@ -45,6 +60,9 @@ public final class PriorityLevelConfigurationArgs extends io.pulumi.resources.Re
         return this.spec == null ? Input.empty() : this.spec;
     }
 
+    /**
+     * `status` is the current status of a "request-priority". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     */
     @InputImport(name="status")
     private final @Nullable Input<PriorityLevelConfigurationStatusArgs> status;
 

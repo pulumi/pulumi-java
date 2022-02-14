@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OSPolicyResourceExecResourceResponse {
+/**
+ * What to run to bring this resource into the desired state. An exit code of 100 indicates "success", any other exit code indicates a failure running enforce.
+ */
     private final OSPolicyResourceExecResourceExecResponse enforce;
+/**
+ * What to run to validate this resource is in the desired state. An exit code of 100 indicates "in desired state", and exit code of 101 indicates "not in desired state". Any other exit code indicates a failure running validate.
+ */
     private final OSPolicyResourceExecResourceExecResponse validate;
 
     @OutputCustomType.Constructor({"enforce","validate"})
@@ -20,9 +26,15 @@ public final class OSPolicyResourceExecResourceResponse {
         this.validate = Objects.requireNonNull(validate);
     }
 
+/**
+ * What to run to bring this resource into the desired state. An exit code of 100 indicates "success", any other exit code indicates a failure running enforce.
+ */
     public OSPolicyResourceExecResourceExecResponse getEnforce() {
         return this.enforce;
     }
+/**
+ * What to run to validate this resource is in the desired state. An exit code of 100 indicates "in desired state", and exit code of 101 indicates "not in desired state". Any other exit code indicates a failure running validate.
+ */
     public OSPolicyResourceExecResourceExecResponse getValidate() {
         return this.validate;
     }

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIotDpsResourcePrivateEndpointConnection {
+/**
+ * The private endpoint connection of a provisioning service
+API Version: 2020-03-01.
+ *
+ * The private endpoint connection of a provisioning service
+ */
     public static CompletableFuture<GetIotDpsResourcePrivateEndpointConnectionResult> invokeAsync(GetIotDpsResourcePrivateEndpointConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devices:getIotDpsResourcePrivateEndpointConnection", TypeShape.of(GetIotDpsResourcePrivateEndpointConnectionResult.class), args == null ? GetIotDpsResourcePrivateEndpointConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

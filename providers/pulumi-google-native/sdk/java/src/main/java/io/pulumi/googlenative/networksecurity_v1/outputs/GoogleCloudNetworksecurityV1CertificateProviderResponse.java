@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudNetworksecurityV1CertificateProviderResponse {
+/**
+ * The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.
+ */
     private final CertificateProviderInstanceResponse certificateProviderInstance;
+/**
+ * gRPC specific configuration to access the gRPC server to obtain the cert and private key.
+ */
     private final GoogleCloudNetworksecurityV1GrpcEndpointResponse grpcEndpoint;
 
     @OutputCustomType.Constructor({"certificateProviderInstance","grpcEndpoint"})
@@ -21,9 +27,15 @@ public final class GoogleCloudNetworksecurityV1CertificateProviderResponse {
         this.grpcEndpoint = Objects.requireNonNull(grpcEndpoint);
     }
 
+/**
+ * The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.
+ */
     public CertificateProviderInstanceResponse getCertificateProviderInstance() {
         return this.certificateProviderInstance;
     }
+/**
+ * gRPC specific configuration to access the gRPC server to obtain the cert and private key.
+ */
     public GoogleCloudNetworksecurityV1GrpcEndpointResponse getGrpcEndpoint() {
         return this.grpcEndpoint;
     }

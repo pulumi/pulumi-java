@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The image reference properties.
+ */
 public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ImageReferenceResponse Empty = new ImageReferenceResponse();
 
+    /**
+     * Specifies in decimal numbers, the exact version of image used to create the virtual machine.
+     */
     @InputImport(name="exactVersion")
     private final @Nullable String exactVersion;
 
@@ -21,6 +27,9 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
         return this.exactVersion == null ? Optional.empty() : Optional.ofNullable(this.exactVersion);
     }
 
+    /**
+     * Specifies the offer of the image used to create the virtual machine.
+     */
     @InputImport(name="offer")
     private final @Nullable String offer;
 
@@ -28,6 +37,9 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
         return this.offer == null ? Optional.empty() : Optional.ofNullable(this.offer);
     }
 
+    /**
+     * The image publisher.
+     */
     @InputImport(name="publisher")
     private final @Nullable String publisher;
 
@@ -35,6 +47,9 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
         return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
     }
 
+    /**
+     * The image SKU.
+     */
     @InputImport(name="sku")
     private final @Nullable String sku;
 
@@ -42,6 +57,9 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
     }
 
+    /**
+     * Specifies the version of the image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.
+     */
     @InputImport(name="version")
     private final @Nullable String version;
 

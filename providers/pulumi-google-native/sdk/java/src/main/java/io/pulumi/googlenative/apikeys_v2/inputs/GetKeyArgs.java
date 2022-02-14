@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetKeyArgs Empty = new GetKeyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="keyId", required=true)
     private final String keyId;
 
@@ -21,6 +27,9 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
         return this.keyId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -28,6 +37,9 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

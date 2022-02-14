@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class StorageAccountCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageAccountCredentialArgs Empty = new StorageAccountCredentialArgs();
 
+    /**
+     * The details of the storage account password.
+     */
     @InputImport(name="accessKey")
     private final @Nullable Input<AsymmetricEncryptedSecretArgs> accessKey;
 
@@ -24,6 +30,9 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
         return this.accessKey == null ? Input.empty() : this.accessKey;
     }
 
+    /**
+     * The storage endpoint
+     */
     @InputImport(name="endPoint", required=true)
     private final Input<String> endPoint;
 
@@ -31,6 +40,9 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
         return this.endPoint;
     }
 
+    /**
+     * The Kind of the object. Currently only Series8000 is supported
+     */
     @InputImport(name="kind")
     private final @Nullable Input<Kind> kind;
 
@@ -38,6 +50,9 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The manager name
+     */
     @InputImport(name="managerName", required=true)
     private final Input<String> managerName;
 
@@ -45,6 +60,9 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
         return this.managerName;
     }
 
+    /**
+     * The resource group name
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -52,6 +70,9 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
         return this.resourceGroupName;
     }
 
+    /**
+     * Signifies whether SSL needs to be enabled or not.
+     */
     @InputImport(name="sslStatus", required=true)
     private final Input<SslStatus> sslStatus;
 
@@ -59,6 +80,9 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
         return this.sslStatus;
     }
 
+    /**
+     * The storage account credential name.
+     */
     @InputImport(name="storageAccountCredentialName")
     private final @Nullable Input<String> storageAccountCredentialName;
 

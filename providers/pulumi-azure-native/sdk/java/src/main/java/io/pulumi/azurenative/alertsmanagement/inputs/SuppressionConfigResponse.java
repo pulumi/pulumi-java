@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Suppression logic for a given action rule
+ */
 public final class SuppressionConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SuppressionConfigResponse Empty = new SuppressionConfigResponse();
 
+    /**
+     * Specifies when the suppression should be applied
+     */
     @InputImport(name="recurrenceType", required=true)
     private final String recurrenceType;
 
@@ -22,6 +28,9 @@ public final class SuppressionConfigResponse extends io.pulumi.resources.InvokeA
         return this.recurrenceType;
     }
 
+    /**
+     * suppression schedule configuration
+     */
     @InputImport(name="schedule")
     private final @Nullable SuppressionScheduleResponse schedule;
 

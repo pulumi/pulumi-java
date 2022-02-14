@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A CAA record.
+ */
 public final class CaaRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CaaRecordResponse Empty = new CaaRecordResponse();
 
+    /**
+     * The flags for this CAA record as an integer between 0 and 255.
+     */
     @InputImport(name="flags")
     private final @Nullable Integer flags;
 
@@ -22,6 +28,9 @@ public final class CaaRecordResponse extends io.pulumi.resources.InvokeArgs {
         return this.flags == null ? Optional.empty() : Optional.ofNullable(this.flags);
     }
 
+    /**
+     * The tag for this CAA record.
+     */
     @InputImport(name="tag")
     private final @Nullable String tag;
 
@@ -29,6 +38,9 @@ public final class CaaRecordResponse extends io.pulumi.resources.InvokeArgs {
         return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
     }
 
+    /**
+     * The value for this CAA record.
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

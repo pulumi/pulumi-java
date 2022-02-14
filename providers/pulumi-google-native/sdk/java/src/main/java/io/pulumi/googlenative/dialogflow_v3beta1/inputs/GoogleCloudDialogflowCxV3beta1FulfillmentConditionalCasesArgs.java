@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
+ */
 public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs Empty = new GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs();
 
+    /**
+     * A list of cascading if-else conditions.
+     */
     @InputImport(name="cases")
     private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs>> cases;
 

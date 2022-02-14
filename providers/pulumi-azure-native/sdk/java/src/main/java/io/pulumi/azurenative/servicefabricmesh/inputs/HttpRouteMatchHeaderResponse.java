@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes header information for http route matching.
+ */
 public final class HttpRouteMatchHeaderResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HttpRouteMatchHeaderResponse Empty = new HttpRouteMatchHeaderResponse();
 
+    /**
+     * Name of header to match in request.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -21,6 +27,9 @@ public final class HttpRouteMatchHeaderResponse extends io.pulumi.resources.Invo
         return this.name;
     }
 
+    /**
+     * how to match header value
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -28,6 +37,9 @@ public final class HttpRouteMatchHeaderResponse extends io.pulumi.resources.Invo
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
+    /**
+     * Value of header to match in request.
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

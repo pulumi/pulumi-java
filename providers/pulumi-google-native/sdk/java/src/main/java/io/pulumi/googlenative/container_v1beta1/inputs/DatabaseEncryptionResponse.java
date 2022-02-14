@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Configuration of etcd encryption.
+ */
 public final class DatabaseEncryptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatabaseEncryptionResponse Empty = new DatabaseEncryptionResponse();
 
+    /**
+     * Name of CloudKMS key to use for the encryption of secrets in etcd. Ex. projects/my-project/locations/global/keyRings/my-ring/cryptoKeys/my-key
+     */
     @InputImport(name="keyName", required=true)
     private final String keyName;
 
@@ -19,6 +25,9 @@ public final class DatabaseEncryptionResponse extends io.pulumi.resources.Invoke
         return this.keyName;
     }
 
+    /**
+     * Denotes the state of etcd encryption.
+     */
     @InputImport(name="state", required=true)
     private final String state;
 

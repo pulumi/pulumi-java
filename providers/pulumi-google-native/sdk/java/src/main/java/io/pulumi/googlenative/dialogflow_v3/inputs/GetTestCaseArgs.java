@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetTestCaseArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTestCaseArgs Empty = new GetTestCaseArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="agentId", required=true)
     private final String agentId;
 
@@ -21,6 +27,9 @@ public final class GetTestCaseArgs extends io.pulumi.resources.InvokeArgs {
         return this.agentId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -28,6 +37,9 @@ public final class GetTestCaseArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -35,6 +47,9 @@ public final class GetTestCaseArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="testCaseId", required=true)
     private final String testCaseId;
 

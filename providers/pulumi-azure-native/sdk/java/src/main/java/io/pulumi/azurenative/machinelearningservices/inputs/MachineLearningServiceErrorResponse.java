@@ -8,10 +8,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Wrapper for error response to follow ARM guidelines.
+ */
 public final class MachineLearningServiceErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MachineLearningServiceErrorResponse Empty = new MachineLearningServiceErrorResponse();
 
+    /**
+     * The error response.
+     */
     @InputImport(name="error", required=true)
     private final ErrorResponseResponse error;
 

@@ -14,11 +14,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RestorePointSourceVMDataDiskResponse {
+/**
+ * Gets the caching type.
+ */
     private final @Nullable String caching;
+/**
+ * Gets the disk restore point Id.
+ */
     private final @Nullable ApiEntityReferenceResponse diskRestorePoint;
+/**
+ * Gets the initial disk size in GB for blank data disks, and the new desired size for existing OS and Data disks.
+ */
     private final @Nullable Integer diskSizeGB;
+/**
+ * Gets the logical unit number.
+ */
     private final @Nullable Integer lun;
+/**
+ * Gets the managed disk details
+ */
     private final @Nullable ManagedDiskParametersResponse managedDisk;
+/**
+ * Gets the disk name.
+ */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"caching","diskRestorePoint","diskSizeGB","lun","managedDisk","name"})
@@ -37,21 +55,39 @@ public final class RestorePointSourceVMDataDiskResponse {
         this.name = name;
     }
 
+/**
+ * Gets the caching type.
+ */
     public Optional<String> getCaching() {
         return Optional.ofNullable(this.caching);
     }
+/**
+ * Gets the disk restore point Id.
+ */
     public Optional<ApiEntityReferenceResponse> getDiskRestorePoint() {
         return Optional.ofNullable(this.diskRestorePoint);
     }
+/**
+ * Gets the initial disk size in GB for blank data disks, and the new desired size for existing OS and Data disks.
+ */
     public Optional<Integer> getDiskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
+/**
+ * Gets the logical unit number.
+ */
     public Optional<Integer> getLun() {
         return Optional.ofNullable(this.lun);
     }
+/**
+ * Gets the managed disk details
+ */
     public Optional<ManagedDiskParametersResponse> getManagedDisk() {
         return Optional.ofNullable(this.managedDisk);
     }
+/**
+ * Gets the disk name.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

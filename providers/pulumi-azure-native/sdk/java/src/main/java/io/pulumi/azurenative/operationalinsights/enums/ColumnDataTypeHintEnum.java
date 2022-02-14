@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Column data type logical hint.
+ */
     @EnumType
     public enum ColumnDataTypeHintEnum {
+/**
+ * A string that matches the pattern of a URI, for example, scheme://username:password@host:1234/this/is/a/path?k1=v1&k2=v2#fragment
+ */
         Uri("uri"),
+/**
+ * A standard 128-bit GUID following the standard shape, xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+ */
         Guid("guid"),
+/**
+ * An Azure Resource Model (ARM) path: /subscriptions/{...}/resourceGroups/{...}/providers/Microsoft.{...}/{...}/{...}/{...}...
+ */
         ArmPath("armPath"),
+/**
+ * A standard V4/V6 ip address following the standard shape, x.x.x.x/y:y:y:y:y:y:y:y
+ */
         Ip("ip");
 
         private final String value;

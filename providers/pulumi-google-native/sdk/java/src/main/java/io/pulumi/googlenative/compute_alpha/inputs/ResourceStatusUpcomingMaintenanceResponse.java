@@ -8,10 +8,16 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ResourceStatusUpcomingMaintenanceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceStatusUpcomingMaintenanceResponse Empty = new ResourceStatusUpcomingMaintenanceResponse();
 
+    /**
+     * Indicates if the maintenance can be customer triggered. See go/sf-ctm-design for more details
+     */
     @InputImport(name="canReschedule", required=true)
     private final Boolean canReschedule;
 

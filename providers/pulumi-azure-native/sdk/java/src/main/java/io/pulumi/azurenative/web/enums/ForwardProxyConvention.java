@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The convention used to determine the url of the request made.
+ */
     @EnumType
     public enum ForwardProxyConvention {
+/**
+ * 
+ */
         NoProxy("NoProxy"),
+/**
+ * 
+ */
         Standard("Standard"),
+/**
+ * 
+ */
         Custom("Custom");
 
         private final String value;

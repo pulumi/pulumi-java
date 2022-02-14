@@ -11,10 +11,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetGatewayRouteConfigResult {
+/**
+ * Fully qualified resource Id for the resource.
+ */
     private final String id;
+/**
+ * The name of the resource.
+ */
     private final String name;
+/**
+ * API route config of the Spring Cloud Gateway
+ */
     private final GatewayRouteConfigPropertiesResponse properties;
+/**
+ * Metadata pertaining to creation and last modification of the resource.
+ */
     private final SystemDataResponse systemData;
+/**
+ * The type of the resource.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","properties","systemData","type"})
@@ -31,18 +46,33 @@ public final class GetGatewayRouteConfigResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Fully qualified resource Id for the resource.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The name of the resource.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * API route config of the Spring Cloud Gateway
+ */
     public GatewayRouteConfigPropertiesResponse getProperties() {
         return this.properties;
     }
+/**
+ * Metadata pertaining to creation and last modification of the resource.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * The type of the resource.
+ */
     public String getType() {
         return this.type;
     }

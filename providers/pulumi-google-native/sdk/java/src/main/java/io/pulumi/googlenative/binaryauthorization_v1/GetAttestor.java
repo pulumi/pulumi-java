@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAttestor {
+/**
+ * Gets an attestor. Returns NOT_FOUND if the attestor does not exist.
+ */
     public static CompletableFuture<GetAttestorResult> invokeAsync(GetAttestorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:binaryauthorization/v1:getAttestor", TypeShape.of(GetAttestorResult.class), args == null ? GetAttestorArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetContactArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetContactArgs Empty = new GetContactArgs();
 
+    /**
+     * Contact Name
+     */
     @InputImport(name="contactName", required=true)
     private final String contactName;
 
@@ -19,6 +25,9 @@ public final class GetContactArgs extends io.pulumi.resources.InvokeArgs {
         return this.contactName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetContactArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Spacecraft ID
+     */
     @InputImport(name="spacecraftName", required=true)
     private final String spacecraftName;
 

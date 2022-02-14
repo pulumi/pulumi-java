@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Container group diagnostic information.
+ */
 public final class ContainerGroupDiagnosticsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerGroupDiagnosticsResponse Empty = new ContainerGroupDiagnosticsResponse();
 
+    /**
+     * Container group log analytics information.
+     */
     @InputImport(name="logAnalytics")
     private final @Nullable LogAnalyticsResponse logAnalytics;
 

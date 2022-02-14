@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListNotebookProxyCredentials {
+/**
+ * Credentials and other properties of NotebookProxy resource
+API Version: 2019-10-11-preview.
+ *
+ * Credentials and other properties of NotebookProxy resource
+ */
     public static CompletableFuture<ListNotebookProxyCredentialsResult> invokeAsync(ListNotebookProxyCredentialsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:notebooks:listNotebookProxyCredentials", TypeShape.of(ListNotebookProxyCredentialsResult.class), args == null ? ListNotebookProxyCredentialsArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse {
+/**
+ * Action to take when a user taps on the button.
+ */
     private final GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse openUriAction;
+/**
+ * The title of the button.
+ */
     private final String title;
 
     @OutputCustomType.Constructor({"openUriAction","title"})
@@ -21,9 +27,15 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse {
         this.title = Objects.requireNonNull(title);
     }
 
+/**
+ * Action to take when a user taps on the button.
+ */
     public GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse getOpenUriAction() {
         return this.openUriAction;
     }
+/**
+ * The title of the button.
+ */
     public String getTitle() {
         return this.title;
     }

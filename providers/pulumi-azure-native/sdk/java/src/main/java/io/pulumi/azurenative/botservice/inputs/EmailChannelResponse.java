@@ -11,10 +11,17 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Email channel definition
+ */
 public final class EmailChannelResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EmailChannelResponse Empty = new EmailChannelResponse();
 
+    /**
+     * The channel name
+Expected value is 'EmailChannel'.
+     */
     @InputImport(name="channelName", required=true)
     private final String channelName;
 
@@ -22,6 +29,9 @@ public final class EmailChannelResponse extends io.pulumi.resources.InvokeArgs {
         return this.channelName;
     }
 
+    /**
+     * Entity Tag of the resource
+     */
     @InputImport(name="etag")
     private final @Nullable String etag;
 
@@ -29,6 +39,9 @@ public final class EmailChannelResponse extends io.pulumi.resources.InvokeArgs {
         return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
     }
 
+    /**
+     * Specifies the location of the resource.
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -36,6 +49,9 @@ public final class EmailChannelResponse extends io.pulumi.resources.InvokeArgs {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * The set of properties specific to email channel resource
+     */
     @InputImport(name="properties")
     private final @Nullable EmailChannelPropertiesResponse properties;
 
@@ -43,6 +59,9 @@ public final class EmailChannelResponse extends io.pulumi.resources.InvokeArgs {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
     }
 
+    /**
+     * Provisioning state of the resource
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

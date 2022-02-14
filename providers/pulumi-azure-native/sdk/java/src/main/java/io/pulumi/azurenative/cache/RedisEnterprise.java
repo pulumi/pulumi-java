@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.cache;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.cache.RedisEnterpriseArgs;
 import io.pulumi.azurenative.cache.outputs.EnterpriseSkuResponse;
 import io.pulumi.azurenative.cache.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.core.Alias;
@@ -17,81 +16,301 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Describes the RedisEnterprise cluster
+API Version: 2021-03-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### RedisEnterpriseCreate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var redisEnterprise = new AzureNative.Cache.RedisEnterprise("redisEnterprise", new AzureNative.Cache.RedisEnterpriseArgs
+        {
+            ClusterName = "cache1",
+            Location = "West US",
+            MinimumTlsVersion = "1.2",
+            ResourceGroupName = "rg1",
+            Sku = new AzureNative.Cache.Inputs.EnterpriseSkuArgs
+            {
+                Capacity = 3,
+                Name = "EnterpriseFlash_F300",
+            },
+            Tags = 
+            {
+                { "tag1", "value1" },
+            },
+            Zones = 
+            {
+                "1",
+                "2",
+                "3",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	cache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cache"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cache.NewRedisEnterprise(ctx, "redisEnterprise", &cache.RedisEnterpriseArgs{
+			ClusterName:       pulumi.String("cache1"),
+			Location:          pulumi.String("West US"),
+			MinimumTlsVersion: pulumi.String("1.2"),
+			ResourceGroupName: pulumi.String("rg1"),
+			Sku: &cache.EnterpriseSkuArgs{
+				Capacity: pulumi.Int(3),
+				Name:     pulumi.String("EnterpriseFlash_F300"),
+			},
+			Tags: pulumi.StringMap{
+				"tag1": pulumi.String("value1"),
+			},
+			Zones: pulumi.StringArray{
+				pulumi.String("1"),
+				pulumi.String("2"),
+				pulumi.String("3"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const redisEnterprise = new azure_native.cache.RedisEnterprise("redisEnterprise", {
+    clusterName: "cache1",
+    location: "West US",
+    minimumTlsVersion: "1.2",
+    resourceGroupName: "rg1",
+    sku: {
+        capacity: 3,
+        name: "EnterpriseFlash_F300",
+    },
+    tags: {
+        tag1: "value1",
+    },
+    zones: [
+        "1",
+        "2",
+        "3",
+    ],
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+redis_enterprise = azure_native.cache.RedisEnterprise("redisEnterprise",
+    cluster_name="cache1",
+    location="West US",
+    minimum_tls_version="1.2",
+    resource_group_name="rg1",
+    sku=azure_native.cache.EnterpriseSkuArgs(
+        capacity=3,
+        name="EnterpriseFlash_F300",
+    ),
+    tags={
+        "tag1": "value1",
+    },
+    zones=[
+        "1",
+        "2",
+        "3",
+    ])
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:cache:RedisEnterprise cache1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redisEnterprise/cache1 
+```
+
+ */
 @ResourceType(type="azure-native:cache:RedisEnterprise")
 public class RedisEnterprise extends io.pulumi.resources.CustomResource {
+    /**
+     * DNS name of the cluster endpoint
+     */
     @OutputExport(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
+    /**
+     * @return DNS name of the cluster endpoint
+     */
     public Output<String> getHostName() {
         return this.hostName;
     }
+    /**
+     * The geo-location where the resource lives
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The minimum TLS version for the cluster to support, e.g. '1.2'
+     */
     @OutputExport(name="minimumTlsVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> minimumTlsVersion;
 
+    /**
+     * @return The minimum TLS version for the cluster to support, e.g. '1.2'
+     */
     public Output</* @Nullable */ String> getMinimumTlsVersion() {
         return this.minimumTlsVersion;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * List of private endpoint connections associated with the specified RedisEnterprise cluster
+     */
     @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
+    /**
+     * @return List of private endpoint connections associated with the specified RedisEnterprise cluster
+     */
     public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
+    /**
+     * Current provisioning status of the cluster
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Current provisioning status of the cluster
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Version of redis the cluster supports, e.g. '6'
+     */
     @OutputExport(name="redisVersion", type=String.class, parameters={})
     private Output<String> redisVersion;
 
+    /**
+     * @return Version of redis the cluster supports, e.g. '6'
+     */
     public Output<String> getRedisVersion() {
         return this.redisVersion;
     }
+    /**
+     * Current resource status of the cluster
+     */
     @OutputExport(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
+    /**
+     * @return Current resource status of the cluster
+     */
     public Output<String> getResourceState() {
         return this.resourceState;
     }
+    /**
+     * The SKU to create, which affects price, performance, and features.
+     */
     @OutputExport(name="sku", type=EnterpriseSkuResponse.class, parameters={})
     private Output<EnterpriseSkuResponse> sku;
 
+    /**
+     * @return The SKU to create, which affects price, performance, and features.
+     */
     public Output<EnterpriseSkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The Availability Zones where this cluster will be deployed.
+     */
     @OutputExport(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
+    /**
+     * @return The Availability Zones where this cluster will be deployed.
+     */
     public Output</* @Nullable */ List<String>> getZones() {
         return this.zones;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public RedisEnterprise(String name, RedisEnterpriseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:cache:RedisEnterprise", name, args == null ? RedisEnterpriseArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -114,6 +333,14 @@ public class RedisEnterprise extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static RedisEnterprise get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RedisEnterprise(name, id, options);
     }

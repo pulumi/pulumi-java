@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ListGlobalUserEnvironmentsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListGlobalUserEnvironmentsArgs Empty = new ListGlobalUserEnvironmentsArgs();
 
+    /**
+     * The resource Id of the lab
+     */
     @InputImport(name="labId")
     private final @Nullable String labId;
 
@@ -21,6 +27,9 @@ public final class ListGlobalUserEnvironmentsArgs extends io.pulumi.resources.In
         return this.labId == null ? Optional.empty() : Optional.ofNullable(this.labId);
     }
 
+    /**
+     * The name of the user.
+     */
     @InputImport(name="userName", required=true)
     private final String userName;
 

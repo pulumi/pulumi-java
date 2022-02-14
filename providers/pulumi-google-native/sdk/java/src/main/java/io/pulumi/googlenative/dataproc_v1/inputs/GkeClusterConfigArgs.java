@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The cluster's GKE config.
+ */
 public final class GkeClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GkeClusterConfigArgs Empty = new GkeClusterConfigArgs();
 
+    /**
+     * Optional. A target for the deployment.
+     */
     @InputImport(name="namespacedGkeDeploymentTarget")
     private final @Nullable Input<NamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget;
 

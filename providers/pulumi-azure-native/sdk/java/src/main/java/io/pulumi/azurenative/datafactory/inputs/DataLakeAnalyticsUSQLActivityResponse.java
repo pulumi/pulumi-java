@@ -17,10 +17,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Data Lake Analytics U-SQL activity.
+ */
 public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataLakeAnalyticsUSQLActivityResponse Empty = new DataLakeAnalyticsUSQLActivityResponse();
 
+    /**
+     * Compilation mode of U-SQL. Must be one of these values : Semantic, Full and SingleBox. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="compilationMode")
     private final @Nullable Object compilationMode;
 
@@ -28,6 +34,9 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
         return this.compilationMode == null ? Optional.empty() : Optional.ofNullable(this.compilationMode);
     }
 
+    /**
+     * The maximum number of nodes simultaneously used to run the job. Default value is 1. Type: integer (or Expression with resultType integer), minimum: 1.
+     */
     @InputImport(name="degreeOfParallelism")
     private final @Nullable Object degreeOfParallelism;
 
@@ -35,6 +44,9 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
         return this.degreeOfParallelism == null ? Optional.empty() : Optional.ofNullable(this.degreeOfParallelism);
     }
 
+    /**
+     * Activity depends on condition.
+     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -42,6 +54,9 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -49,6 +64,9 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Linked service reference.
+     */
     @InputImport(name="linkedServiceName")
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
@@ -56,6 +74,9 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
+    /**
+     * Activity name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -63,6 +84,9 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
         return this.name;
     }
 
+    /**
+     * Parameters for U-SQL job request.
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,Object> parameters;
 
@@ -70,6 +94,9 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * Activity policy.
+     */
     @InputImport(name="policy")
     private final @Nullable ActivityPolicyResponse policy;
 
@@ -77,6 +104,9 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
+    /**
+     * Determines which jobs out of all that are queued should be selected to run first. The lower the number, the higher the priority. Default value is 1000. Type: integer (or Expression with resultType integer), minimum: 1.
+     */
     @InputImport(name="priority")
     private final @Nullable Object priority;
 
@@ -84,6 +114,9 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
+    /**
+     * Runtime version of the U-SQL engine to use. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="runtimeVersion")
     private final @Nullable Object runtimeVersion;
 
@@ -91,6 +124,9 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
         return this.runtimeVersion == null ? Optional.empty() : Optional.ofNullable(this.runtimeVersion);
     }
 
+    /**
+     * Script linked service reference.
+     */
     @InputImport(name="scriptLinkedService", required=true)
     private final LinkedServiceReferenceResponse scriptLinkedService;
 
@@ -98,6 +134,9 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
         return this.scriptLinkedService;
     }
 
+    /**
+     * Case-sensitive path to folder that contains the U-SQL script. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="scriptPath", required=true)
     private final Object scriptPath;
 
@@ -105,6 +144,10 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
         return this.scriptPath;
     }
 
+    /**
+     * Type of activity.
+Expected value is 'DataLakeAnalyticsU-SQL'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -112,6 +155,9 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackupRun {
+/**
+ * Retrieves a resource containing information about a backup run.
+ */
     public static CompletableFuture<GetBackupRunResult> invokeAsync(GetBackupRunArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:sqladmin/v1:getBackupRun", TypeShape.of(GetBackupRunResult.class), args == null ? GetBackupRunArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * IAM policy analysis query message.
+ */
 public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IamPolicyAnalysisQueryArgs Empty = new IamPolicyAnalysisQueryArgs();
 
+    /**
+     * Optional. Specifies roles or permissions for analysis. This is optional.
+     */
     @InputImport(name="accessSelector")
     private final @Nullable Input<AccessSelectorArgs> accessSelector;
 
@@ -26,6 +32,9 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
         return this.accessSelector == null ? Input.empty() : this.accessSelector;
     }
 
+    /**
+     * Optional. The hypothetical context for IAM conditions evaluation.
+     */
     @InputImport(name="conditionContext")
     private final @Nullable Input<ConditionContextArgs> conditionContext;
 
@@ -33,6 +42,9 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
         return this.conditionContext == null ? Input.empty() : this.conditionContext;
     }
 
+    /**
+     * Optional. Specifies an identity for analysis.
+     */
     @InputImport(name="identitySelector")
     private final @Nullable Input<IdentitySelectorArgs> identitySelector;
 
@@ -40,6 +52,9 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
         return this.identitySelector == null ? Input.empty() : this.identitySelector;
     }
 
+    /**
+     * Optional. The query options.
+     */
     @InputImport(name="options")
     private final @Nullable Input<OptionsArgs> options;
 
@@ -47,6 +62,9 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
         return this.options == null ? Input.empty() : this.options;
     }
 
+    /**
+     * Optional. Specifies a resource for analysis.
+     */
     @InputImport(name="resourceSelector")
     private final @Nullable Input<ResourceSelectorArgs> resourceSelector;
 
@@ -54,6 +72,9 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
         return this.resourceSelector == null ? Input.empty() : this.resourceSelector;
     }
 
+    /**
+     * The relative name of the root asset. Only resources and IAM policies within the scope will be analyzed. This can only be an organization number (such as "organizations/123"), a folder number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or a project number (such as "projects/12345"). To know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how to get folder or project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
+     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RealmArgs Empty = new RealmArgs();
 
+    /**
+     * Human readable description of the realm.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +28,9 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * ETag of the resource.
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -29,6 +38,9 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * The labels associated with this realm. Each label is a key-value pair.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -36,6 +48,9 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -43,6 +58,9 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource name of the realm, in the following form: `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-project/locations/{location}/realms/my-realm`.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -50,6 +68,9 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -57,6 +78,9 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="realmId", required=true)
     private final Input<String> realmId;
 
@@ -64,6 +88,9 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
         return this.realmId;
     }
 
+    /**
+     * Time zone where all policies targeting this realm are evaluated. The value of this field must be from the IANA time zone database: https://www.iana.org/time-zones.
+     */
     @InputImport(name="timeZone", required=true)
     private final Input<String> timeZone;
 

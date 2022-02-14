@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkloadNetworkDhcpArgs Empty = new WorkloadNetworkDhcpArgs();
 
+    /**
+     * NSX DHCP identifier. Generally the same as the DHCP display name
+     */
     @InputImport(name="dhcpId")
     private final @Nullable Input<String> dhcpId;
 
@@ -24,6 +30,9 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
         return this.dhcpId == null ? Input.empty() : this.dhcpId;
     }
 
+    /**
+     * Type of DHCP: SERVER or RELAY.
+     */
     @InputImport(name="dhcpType", required=true)
     private final Input<Either<String,DhcpTypeEnum>> dhcpType;
 
@@ -31,6 +40,9 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
         return this.dhcpType;
     }
 
+    /**
+     * Display name of the DHCP entity.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -38,6 +50,9 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Name of the private cloud
+     */
     @InputImport(name="privateCloudName", required=true)
     private final Input<String> privateCloudName;
 
@@ -45,6 +60,9 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
         return this.privateCloudName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -52,6 +70,9 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
+    /**
+     * NSX revision number.
+     */
     @InputImport(name="revision")
     private final @Nullable Input<Double> revision;
 

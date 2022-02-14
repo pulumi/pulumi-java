@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SkuZoneDetailResponse {
+/**
+ * 
+ */
     private final @Nullable List<SkuCapabilityResponse> capabilities;
+/**
+ * 
+ */
     private final @Nullable List<String> name;
 
     @OutputCustomType.Constructor({"capabilities","name"})
@@ -23,9 +29,15 @@ public final class SkuZoneDetailResponse {
         this.name = name;
     }
 
+/**
+ * 
+ */
     public List<SkuCapabilityResponse> getCapabilities() {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
+/**
+ * 
+ */
     public List<String> getName() {
         return this.name == null ? List.of() : this.name;
     }

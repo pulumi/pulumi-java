@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Message encapsulating a value that can be either absolute ("fixed") or relative ("percent") to a value.
+ */
 public final class FixedOrPercentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FixedOrPercentArgs Empty = new FixedOrPercentArgs();
 
+    /**
+     * Specifies a fixed value.
+     */
     @InputImport(name="fixed")
     private final @Nullable Input<Integer> fixed;
 
@@ -21,6 +27,9 @@ public final class FixedOrPercentArgs extends io.pulumi.resources.ResourceArgs {
         return this.fixed == null ? Input.empty() : this.fixed;
     }
 
+    /**
+     * Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
+     */
     @InputImport(name="percent")
     private final @Nullable Input<Integer> percent;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Instance view status.
+ */
 public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.resources.InvokeArgs {
 
     public static final MachineExtensionInstanceViewResponseStatus Empty = new MachineExtensionInstanceViewResponseStatus();
 
+    /**
+     * The status code.
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -19,6 +25,9 @@ public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.
         return this.code;
     }
 
+    /**
+     * The short localizable label for the status.
+     */
     @InputImport(name="displayStatus", required=true)
     private final String displayStatus;
 
@@ -26,6 +35,9 @@ public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.
         return this.displayStatus;
     }
 
+    /**
+     * The level code.
+     */
     @InputImport(name="level", required=true)
     private final String level;
 
@@ -33,6 +45,9 @@ public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.
         return this.level;
     }
 
+    /**
+     * The detailed status message, including for alerts and error messages.
+     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -40,6 +55,9 @@ public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.
         return this.message;
     }
 
+    /**
+     * The time of the status.
+     */
     @InputImport(name="time", required=true)
     private final String time;
 

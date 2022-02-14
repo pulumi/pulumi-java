@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity Azure Blob source.
+ */
 public final class BlobSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BlobSourceResponse Empty = new BlobSourceResponse();
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -22,6 +28,9 @@ public final class BlobSourceResponse extends io.pulumi.resources.InvokeArgs {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
+    /**
+     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -29,6 +38,9 @@ public final class BlobSourceResponse extends io.pulumi.resources.InvokeArgs {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
+    /**
+     * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="recursive")
     private final @Nullable Object recursive;
 
@@ -36,6 +48,9 @@ public final class BlobSourceResponse extends io.pulumi.resources.InvokeArgs {
         return this.recursive == null ? Optional.empty() : Optional.ofNullable(this.recursive);
     }
 
+    /**
+     * Number of header lines to skip from each blob. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="skipHeaderLineCount")
     private final @Nullable Object skipHeaderLineCount;
 
@@ -43,6 +58,9 @@ public final class BlobSourceResponse extends io.pulumi.resources.InvokeArgs {
         return this.skipHeaderLineCount == null ? Optional.empty() : Optional.ofNullable(this.skipHeaderLineCount);
     }
 
+    /**
+     * Source retry count. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="sourceRetryCount")
     private final @Nullable Object sourceRetryCount;
 
@@ -50,6 +68,9 @@ public final class BlobSourceResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
     }
 
+    /**
+     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="sourceRetryWait")
     private final @Nullable Object sourceRetryWait;
 
@@ -57,6 +78,9 @@ public final class BlobSourceResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
     }
 
+    /**
+     * Treat empty as null. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="treatEmptyAsNull")
     private final @Nullable Object treatEmptyAsNull;
 
@@ -64,6 +88,10 @@ public final class BlobSourceResponse extends io.pulumi.resources.InvokeArgs {
         return this.treatEmptyAsNull == null ? Optional.empty() : Optional.ofNullable(this.treatEmptyAsNull);
     }
 
+    /**
+     * Copy source type.
+Expected value is 'BlobSource'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDiskPool {
+/**
+ * Response for Disk pool request.
+API Version: 2020-03-15-preview.
+ *
+ * Response for Disk pool request.
+ */
     public static CompletableFuture<GetDiskPoolResult> invokeAsync(GetDiskPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagepool:getDiskPool", TypeShape.of(GetDiskPoolResult.class), args == null ? GetDiskPoolArgs.Empty : args, Utilities.withVersion(options));
     }

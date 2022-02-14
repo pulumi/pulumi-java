@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetConfigurationAssignmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConfigurationAssignmentArgs Empty = new GetConfigurationAssignmentArgs();
 
+    /**
+     * Configuration assignment name
+     */
     @InputImport(name="configurationAssignmentName", required=true)
     private final String configurationAssignmentName;
 
@@ -19,6 +25,9 @@ public final class GetConfigurationAssignmentArgs extends io.pulumi.resources.In
         return this.configurationAssignmentName;
     }
 
+    /**
+     * Resource provider name
+     */
     @InputImport(name="providerName", required=true)
     private final String providerName;
 
@@ -26,6 +35,9 @@ public final class GetConfigurationAssignmentArgs extends io.pulumi.resources.In
         return this.providerName;
     }
 
+    /**
+     * Resource group name
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,9 @@ public final class GetConfigurationAssignmentArgs extends io.pulumi.resources.In
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource identifier
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 
@@ -40,6 +55,9 @@ public final class GetConfigurationAssignmentArgs extends io.pulumi.resources.In
         return this.resourceName;
     }
 
+    /**
+     * Resource type
+     */
     @InputImport(name="resourceType", required=true)
     private final String resourceType;
 

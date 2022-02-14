@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.RouteFilterRuleArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -14,51 +13,211 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Route Filter Rule Resource.
+API Version: 2020-11-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### RouteFilterRuleCreate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var routeFilterRule = new AzureNative.Network.RouteFilterRule("routeFilterRule", new AzureNative.Network.RouteFilterRuleArgs
+        {
+            Access = "Allow",
+            Communities = 
+            {
+                "12076:5030",
+                "12076:5040",
+            },
+            ResourceGroupName = "rg1",
+            RouteFilterName = "filterName",
+            RouteFilterRuleType = "Community",
+            RuleName = "ruleName",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewRouteFilterRule(ctx, "routeFilterRule", &network.RouteFilterRuleArgs{
+			Access: pulumi.String("Allow"),
+			Communities: pulumi.StringArray{
+				pulumi.String("12076:5030"),
+				pulumi.String("12076:5040"),
+			},
+			ResourceGroupName:   pulumi.String("rg1"),
+			RouteFilterName:     pulumi.String("filterName"),
+			RouteFilterRuleType: pulumi.String("Community"),
+			RuleName:            pulumi.String("ruleName"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const routeFilterRule = new azure_native.network.RouteFilterRule("routeFilterRule", {
+    access: "Allow",
+    communities: [
+        "12076:5030",
+        "12076:5040",
+    ],
+    resourceGroupName: "rg1",
+    routeFilterName: "filterName",
+    routeFilterRuleType: "Community",
+    ruleName: "ruleName",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+route_filter_rule = azure_native.network.RouteFilterRule("routeFilterRule",
+    access="Allow",
+    communities=[
+        "12076:5030",
+        "12076:5040",
+    ],
+    resource_group_name="rg1",
+    route_filter_name="filterName",
+    route_filter_rule_type="Community",
+    rule_name="ruleName")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:RouteFilterRule ruleName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/routeFilters/filterName/routeFilterRules/ruleName 
+```
+
+ */
 @ResourceType(type="azure-native:network:RouteFilterRule")
 public class RouteFilterRule extends io.pulumi.resources.CustomResource {
+    /**
+     * The access type of the rule.
+     */
     @OutputExport(name="access", type=String.class, parameters={})
     private Output<String> access;
 
+    /**
+     * @return The access type of the rule.
+     */
     public Output<String> getAccess() {
         return this.access;
     }
+    /**
+     * The collection for bgp community values to filter on. e.g. ['12076:5010','12076:5020'].
+     */
     @OutputExport(name="communities", type=List.class, parameters={String.class})
     private Output<List<String>> communities;
 
+    /**
+     * @return The collection for bgp community values to filter on. e.g. ['12076:5010','12076:5020'].
+     */
     public Output<List<String>> getCommunities() {
         return this.communities;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the route filter rule resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the route filter rule resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The rule type of the rule.
+     */
     @OutputExport(name="routeFilterRuleType", type=String.class, parameters={})
     private Output<String> routeFilterRuleType;
 
+    /**
+     * @return The rule type of the rule.
+     */
     public Output<String> getRouteFilterRuleType() {
         return this.routeFilterRuleType;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public RouteFilterRule(String name, RouteFilterRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:RouteFilterRule", name, args == null ? RouteFilterRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -110,6 +269,14 @@ public class RouteFilterRule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static RouteFilterRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RouteFilterRule(name, id, options);
     }

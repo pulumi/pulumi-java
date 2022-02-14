@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SshPublicKeyArgs Empty = new SshPublicKeyArgs();
 
+    /**
+     * Optional. It is used to store the function/usage of the key
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +27,9 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Ssh public key base64 encoded. The format should be: '<keyType> <keyData>', e.g. ssh-rsa AAAABBBB
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNatRule {
+/**
+ * VpnGatewayNatRule Resource.
+API Version: 2020-11-01.
+ *
+ * VpnGatewayNatRule Resource.
+ */
     public static CompletableFuture<GetNatRuleResult> invokeAsync(GetNatRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNatRule", TypeShape.of(GetNatRuleResult.class), args == null ? GetNatRuleArgs.Empty : args, Utilities.withVersion(options));
     }

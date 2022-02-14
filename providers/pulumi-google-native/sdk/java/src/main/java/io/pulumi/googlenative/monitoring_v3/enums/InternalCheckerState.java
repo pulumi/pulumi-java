@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The current operational state of the internal checker.
+ */
     @EnumType
     public enum InternalCheckerState {
+/**
+ * An internal checker should never be in the unspecified state.
+ */
         Unspecified("UNSPECIFIED"),
+/**
+ * The checker is being created, provisioned, and configured. A checker in this state can be returned by ListInternalCheckers or GetInternalChecker, as well as by examining the long running Operation (https://cloud.google.com/apis/design/design_patterns#long_running_operations) that created it.
+ */
         Creating("CREATING"),
+/**
+ * The checker is running and available for use. A checker in this state can be returned by ListInternalCheckers or GetInternalChecker as well as by examining the long running Operation (https://cloud.google.com/apis/design/design_patterns#long_running_operations) that created it. If a checker is being torn down, it is neither visible nor usable, so there is no "deleting" or "down" state.
+ */
         Running("RUNNING");
 
         private final String value;

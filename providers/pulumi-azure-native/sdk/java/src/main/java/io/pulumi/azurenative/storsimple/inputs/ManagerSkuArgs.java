@@ -9,10 +9,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The Sku.
+ */
 public final class ManagerSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagerSkuArgs Empty = new ManagerSkuArgs();
 
+    /**
+     * Refers to the sku name which should be "Standard"
+     */
     @InputImport(name="name", required=true)
     private final Input<ManagerSkuType> name;
 

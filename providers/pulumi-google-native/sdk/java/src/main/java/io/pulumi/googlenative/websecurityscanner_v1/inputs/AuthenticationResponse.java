@@ -10,10 +10,16 @@ import io.pulumi.googlenative.websecurityscanner_v1.inputs.IapCredentialResponse
 import java.util.Objects;
 
 
+/**
+ * Scan authentication configuration.
+ */
 public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AuthenticationResponse Empty = new AuthenticationResponse();
 
+    /**
+     * Authentication using a custom account.
+     */
     @InputImport(name="customAccount", required=true)
     private final CustomAccountResponse customAccount;
 
@@ -21,6 +27,9 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
         return this.customAccount;
     }
 
+    /**
+     * Authentication using a Google account.
+     */
     @InputImport(name="googleAccount", required=true)
     private final GoogleAccountResponse googleAccount;
 
@@ -28,6 +37,9 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
         return this.googleAccount;
     }
 
+    /**
+     * Authentication using Identity-Aware-Proxy (IAP).
+     */
     @InputImport(name="iapCredential", required=true)
     private final IapCredentialResponse iapCredential;
 

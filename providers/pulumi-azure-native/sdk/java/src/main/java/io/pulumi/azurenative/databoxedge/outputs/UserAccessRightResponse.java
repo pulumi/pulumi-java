@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UserAccessRightResponse {
+/**
+ * Type of access to be allowed for the user.
+ */
     private final String accessType;
+/**
+ * User ID (already existing in the device).
+ */
     private final String userId;
 
     @OutputCustomType.Constructor({"accessType","userId"})
@@ -20,9 +26,15 @@ public final class UserAccessRightResponse {
         this.userId = Objects.requireNonNull(userId);
     }
 
+/**
+ * Type of access to be allowed for the user.
+ */
     public String getAccessType() {
         return this.accessType;
     }
+/**
+ * User ID (already existing in the device).
+ */
     public String getUserId() {
         return this.userId;
     }

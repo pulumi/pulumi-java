@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of encryption being used. Currently the only supported type is 'SystemAssigned'.
+ */
     @EnumType
     public enum EncryptionIdentityType {
+/**
+ * 
+ */
         SystemAssigned("SystemAssigned");
 
         private final String value;

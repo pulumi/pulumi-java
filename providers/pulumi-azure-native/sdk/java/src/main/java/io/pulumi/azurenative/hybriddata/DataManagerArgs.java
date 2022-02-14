@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DataManagerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataManagerArgs Empty = new DataManagerArgs();
 
+    /**
+     * The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+     */
     @InputImport(name="dataManagerName")
     private final @Nullable Input<String> dataManagerName;
 
@@ -23,6 +29,11 @@ public final class DataManagerArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataManagerName == null ? Input.empty() : this.dataManagerName;
     }
 
+    /**
+     * The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
+US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
+region is specified on update the request will succeed.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -30,6 +41,9 @@ public final class DataManagerArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The Resource Group Name
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +51,9 @@ public final class DataManagerArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The sku type.
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -44,6 +61,10 @@ public final class DataManagerArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource
+(across resource groups).
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -10,9 +10,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ContactSettingsResponse {
+/**
+ * The administrative contact for the `Registration`.
+ */
     private final ContactResponse adminContact;
+/**
+ * Privacy setting for the contacts associated with the `Registration`.
+ */
     private final String privacy;
+/**
+ * The registrant contact for the `Registration`. *Caution: Anyone with access to this email address, phone number, and/or postal address can take control of the domain.* *Warning: For new `Registration`s, the registrant receives an email confirmation that they must complete within 15 days to avoid domain suspension.*
+ */
     private final ContactResponse registrantContact;
+/**
+ * The technical contact for the `Registration`.
+ */
     private final ContactResponse technicalContact;
 
     @OutputCustomType.Constructor({"adminContact","privacy","registrantContact","technicalContact"})
@@ -27,15 +39,27 @@ public final class ContactSettingsResponse {
         this.technicalContact = Objects.requireNonNull(technicalContact);
     }
 
+/**
+ * The administrative contact for the `Registration`.
+ */
     public ContactResponse getAdminContact() {
         return this.adminContact;
     }
+/**
+ * Privacy setting for the contacts associated with the `Registration`.
+ */
     public String getPrivacy() {
         return this.privacy;
     }
+/**
+ * The registrant contact for the `Registration`. *Caution: Anyone with access to this email address, phone number, and/or postal address can take control of the domain.* *Warning: For new `Registration`s, the registrant receives an email confirmation that they must complete within 15 days to avoid domain suspension.*
+ */
     public ContactResponse getRegistrantContact() {
         return this.registrantContact;
     }
+/**
+ * The technical contact for the `Registration`.
+ */
     public ContactResponse getTechnicalContact() {
         return this.technicalContact;
     }

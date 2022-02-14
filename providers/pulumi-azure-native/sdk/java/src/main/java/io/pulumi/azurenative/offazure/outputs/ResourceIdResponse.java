@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourceIdResponse {
+/**
+ * 
+ */
     private final String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -16,6 +19,9 @@ public final class ResourceIdResponse {
         this.id = Objects.requireNonNull(id);
     }
 
+/**
+ * 
+ */
     public String getId() {
         return this.id;
     }

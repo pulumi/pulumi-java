@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.ScopeConnectionArgs;
 import io.pulumi.azurenative.network.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,51 +14,198 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The Scope Connections resource
+API Version: 2021-05-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create or Update Network Manager Scope Connection
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var scopeConnection = new AzureNative.Network.ScopeConnection("scopeConnection", new AzureNative.Network.ScopeConnectionArgs
+        {
+            Description = "This is a scope connection to a cross tenant subscription.",
+            NetworkManagerName = "testNetworkManager",
+            ResourceGroupName = "rg1",
+            ResourceId = "subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b",
+            ScopeConnectionName = "TestScopeConnection",
+            TenantId = "6babcaad-604b-40ac-a9d7-9fd97c0b779f",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewScopeConnection(ctx, "scopeConnection", &network.ScopeConnectionArgs{
+			Description:         pulumi.String("This is a scope connection to a cross tenant subscription."),
+			NetworkManagerName:  pulumi.String("testNetworkManager"),
+			ResourceGroupName:   pulumi.String("rg1"),
+			ResourceId:          pulumi.String("subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b"),
+			ScopeConnectionName: pulumi.String("TestScopeConnection"),
+			TenantId:            pulumi.String("6babcaad-604b-40ac-a9d7-9fd97c0b779f"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const scopeConnection = new azure_native.network.ScopeConnection("scopeConnection", {
+    description: "This is a scope connection to a cross tenant subscription.",
+    networkManagerName: "testNetworkManager",
+    resourceGroupName: "rg1",
+    resourceId: "subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b",
+    scopeConnectionName: "TestScopeConnection",
+    tenantId: "6babcaad-604b-40ac-a9d7-9fd97c0b779f",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+scope_connection = azure_native.network.ScopeConnection("scopeConnection",
+    description="This is a scope connection to a cross tenant subscription.",
+    network_manager_name="testNetworkManager",
+    resource_group_name="rg1",
+    resource_id="subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b",
+    scope_connection_name="TestScopeConnection",
+    tenant_id="6babcaad-604b-40ac-a9d7-9fd97c0b779f")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:ScopeConnection TestScopeConnection /subscriptions/subscriptionC/resourceGroup/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager/scopeConnections/TestScopeConnection 
+```
+
+ */
 @ResourceType(type="azure-native:network:ScopeConnection")
 public class ScopeConnection extends io.pulumi.resources.CustomResource {
+    /**
+     * A description of the scope connection.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return A description of the scope connection.
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Resource ID.
+     */
     @OutputExport(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
+    /**
+     * @return Resource ID.
+     */
     public Output</* @Nullable */ String> getResourceId() {
         return this.resourceId;
     }
+    /**
+     * The system metadata related to this resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system metadata related to this resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Tenant ID.
+     */
     @OutputExport(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
+    /**
+     * @return Tenant ID.
+     */
     public Output</* @Nullable */ String> getTenantId() {
         return this.tenantId;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ScopeConnection(String name, ScopeConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:ScopeConnection", name, args == null ? ScopeConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -78,6 +224,14 @@ public class ScopeConnection extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ScopeConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ScopeConnection(name, id, options);
     }

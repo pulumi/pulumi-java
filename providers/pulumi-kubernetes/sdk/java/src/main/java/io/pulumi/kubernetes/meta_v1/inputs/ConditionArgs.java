@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Condition contains details for one aspect of the current state of this API Resource.
+ */
 public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConditionArgs Empty = new ConditionArgs();
 
+    /**
+     * lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.
+     */
     @InputImport(name="lastTransitionTime", required=true)
     private final Input<String> lastTransitionTime;
 
@@ -22,6 +28,9 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastTransitionTime;
     }
 
+    /**
+     * message is a human readable message indicating details about the transition. This may be an empty string.
+     */
     @InputImport(name="message", required=true)
     private final Input<String> message;
 
@@ -29,6 +38,9 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.message;
     }
 
+    /**
+     * observedGeneration represents the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.
+     */
     @InputImport(name="observedGeneration")
     private final @Nullable Input<Integer> observedGeneration;
 
@@ -36,6 +48,9 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
     }
 
+    /**
+     * reason contains a programmatic identifier indicating the reason for the condition's last transition. Producers of specific condition types may define expected values and meanings for this field, and whether the values are considered a guaranteed API. The value should be a CamelCase string. This field may not be empty.
+     */
     @InputImport(name="reason", required=true)
     private final Input<String> reason;
 
@@ -43,6 +58,9 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.reason;
     }
 
+    /**
+     * status of the condition, one of True, False, Unknown.
+     */
     @InputImport(name="status", required=true)
     private final Input<String> status;
 
@@ -50,6 +68,9 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
         return this.status;
     }
 
+    /**
+     * type of condition in CamelCase or in foo.example.com/CamelCase.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

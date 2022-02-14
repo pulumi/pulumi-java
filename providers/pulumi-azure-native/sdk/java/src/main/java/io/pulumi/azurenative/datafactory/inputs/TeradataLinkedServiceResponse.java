@@ -18,10 +18,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Linked service for Teradata data source.
+ */
 public final class TeradataLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TeradataLinkedServiceResponse Empty = new TeradataLinkedServiceResponse();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -29,6 +35,9 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * AuthenticationType to be used for connection.
+     */
     @InputImport(name="authenticationType")
     private final @Nullable String authenticationType;
 
@@ -36,6 +45,9 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -43,6 +55,9 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
+    /**
+     * Teradata ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+     */
     @InputImport(name="connectionString")
     private final @Nullable Object connectionString;
 
@@ -50,6 +65,9 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -57,6 +75,9 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -64,6 +85,9 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -71,6 +95,9 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * Password for authentication.
+     */
     @InputImport(name="password")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
@@ -78,6 +105,9 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.password == null ? null : this.password;
     }
 
+    /**
+     * Server name for connection. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="server")
     private final @Nullable Object server;
 
@@ -85,6 +115,10 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.server == null ? Optional.empty() : Optional.ofNullable(this.server);
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'Teradata'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -92,6 +126,9 @@ public final class TeradataLinkedServiceResponse extends io.pulumi.resources.Inv
         return this.type;
     }
 
+    /**
+     * Username for authentication. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="username")
     private final @Nullable Object username;
 

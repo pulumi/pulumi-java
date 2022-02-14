@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListConnectionKeysArgs Empty = new ListConnectionKeysArgs();
 
+    /**
+     * The connection name.
+     */
     @InputImport(name="connectionName", required=true)
     private final String connectionName;
 
@@ -22,6 +28,9 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
         return this.connectionName;
     }
 
+    /**
+     * Resource Id
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -29,6 +38,9 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Kind of resource
+     */
     @InputImport(name="kind")
     private final @Nullable String kind;
 
@@ -36,6 +48,9 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
+    /**
+     * Resource Location
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -43,6 +58,9 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * Resource Name
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -50,6 +68,9 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -57,6 +78,9 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags
+     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 
@@ -64,6 +88,9 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
         return this.tags == null ? Map.of() : this.tags;
     }
 
+    /**
+     * Resource type
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -71,6 +98,9 @@ public final class ListConnectionKeysArgs extends io.pulumi.resources.InvokeArgs
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
+    /**
+     * time span for how long the keys will be valid
+     */
     @InputImport(name="validityTimeSpan")
     private final @Nullable String validityTimeSpan;
 

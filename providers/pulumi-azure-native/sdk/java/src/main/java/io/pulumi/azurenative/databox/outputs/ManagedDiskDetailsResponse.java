@@ -9,8 +9,18 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ManagedDiskDetailsResponse {
+/**
+ * Account Type of the data to be transferred.
+Expected value is 'ManagedDisk'.
+ */
     private final String dataAccountType;
+/**
+ * Resource Group Id of the compute disks.
+ */
     private final String resourceGroupId;
+/**
+ * Resource Id of the storage account that can be used to copy the vhd for staging.
+ */
     private final String stagingStorageAccountId;
 
     @OutputCustomType.Constructor({"dataAccountType","resourceGroupId","stagingStorageAccountId"})
@@ -23,12 +33,22 @@ public final class ManagedDiskDetailsResponse {
         this.stagingStorageAccountId = Objects.requireNonNull(stagingStorageAccountId);
     }
 
+/**
+ * Account Type of the data to be transferred.
+Expected value is 'ManagedDisk'.
+ */
     public String getDataAccountType() {
         return this.dataAccountType;
     }
+/**
+ * Resource Group Id of the compute disks.
+ */
     public String getResourceGroupId() {
         return this.resourceGroupId;
     }
+/**
+ * Resource Id of the storage account that can be used to copy the vhd for staging.
+ */
     public String getStagingStorageAccountId() {
         return this.stagingStorageAccountId;
     }

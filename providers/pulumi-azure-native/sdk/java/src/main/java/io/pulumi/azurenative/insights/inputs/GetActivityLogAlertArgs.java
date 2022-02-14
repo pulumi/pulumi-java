@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetActivityLogAlertArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetActivityLogAlertArgs Empty = new GetActivityLogAlertArgs();
 
+    /**
+     * The name of the Activity Log Alert rule.
+     */
     @InputImport(name="activityLogAlertName", required=true)
     private final String activityLogAlertName;
 
@@ -19,6 +25,9 @@ public final class GetActivityLogAlertArgs extends io.pulumi.resources.InvokeArg
         return this.activityLogAlertName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

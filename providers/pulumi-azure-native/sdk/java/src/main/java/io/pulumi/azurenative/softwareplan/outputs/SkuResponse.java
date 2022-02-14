@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SkuResponse {
+/**
+ * Name of the SKU to be applied
+ */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -18,6 +21,9 @@ public final class SkuResponse {
         this.name = name;
     }
 
+/**
+ * Name of the SKU to be applied
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

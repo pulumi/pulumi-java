@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * VmwareVmDetails describes a VM in vCenter.
+ */
 public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VmwareVmDetailsArgs Empty = new VmwareVmDetailsArgs();
 
+    /**
+     * The total size of the storage allocated to the VM in MB.
+     */
     @InputImport(name="committedStorageMb")
     private final @Nullable Input<String> committedStorageMb;
 
@@ -23,6 +29,9 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.committedStorageMb == null ? Input.empty() : this.committedStorageMb;
     }
 
+    /**
+     * The number of cpus in the VM.
+     */
     @InputImport(name="cpuCount")
     private final @Nullable Input<Integer> cpuCount;
 
@@ -30,6 +39,9 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.cpuCount == null ? Input.empty() : this.cpuCount;
     }
 
+    /**
+     * The descriptive name of the vCenter's datacenter this VM is contained in.
+     */
     @InputImport(name="datacenterDescription")
     private final @Nullable Input<String> datacenterDescription;
 
@@ -37,6 +49,9 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.datacenterDescription == null ? Input.empty() : this.datacenterDescription;
     }
 
+    /**
+     * The id of the vCenter's datacenter this VM is contained in.
+     */
     @InputImport(name="datacenterId")
     private final @Nullable Input<String> datacenterId;
 
@@ -44,6 +59,9 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.datacenterId == null ? Input.empty() : this.datacenterId;
     }
 
+    /**
+     * The number of disks the VM has.
+     */
     @InputImport(name="diskCount")
     private final @Nullable Input<Integer> diskCount;
 
@@ -51,6 +69,9 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.diskCount == null ? Input.empty() : this.diskCount;
     }
 
+    /**
+     * The display name of the VM. Note that this is not necessarily unique.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -58,6 +79,9 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The VM's OS. See for example https://pubs.vmware.com/vi-sdk/visdk250/ReferenceGuide/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html for types of strings this might hold.
+     */
     @InputImport(name="guestDescription")
     private final @Nullable Input<String> guestDescription;
 
@@ -65,6 +89,9 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.guestDescription == null ? Input.empty() : this.guestDescription;
     }
 
+    /**
+     * The size of the memory of the VM in MB.
+     */
     @InputImport(name="memoryMb")
     private final @Nullable Input<Integer> memoryMb;
 
@@ -72,6 +99,9 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.memoryMb == null ? Input.empty() : this.memoryMb;
     }
 
+    /**
+     * The power state of the VM at the moment list was taken.
+     */
     @InputImport(name="powerState")
     private final @Nullable Input<VmwareVmDetailsPowerState> powerState;
 
@@ -79,6 +109,9 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.powerState == null ? Input.empty() : this.powerState;
     }
 
+    /**
+     * The unique identifier of the VM in vCenter.
+     */
     @InputImport(name="uuid")
     private final @Nullable Input<String> uuid;
 
@@ -86,6 +119,9 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
         return this.uuid == null ? Input.empty() : this.uuid;
     }
 
+    /**
+     * The VM's id in the source (note that this is not the MigratingVm's id). This is the moref id of the VM.
+     */
     @InputImport(name="vmId")
     private final @Nullable Input<String> vmId;
 

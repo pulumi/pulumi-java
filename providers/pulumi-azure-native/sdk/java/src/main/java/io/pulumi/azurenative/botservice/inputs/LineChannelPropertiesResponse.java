@@ -11,10 +11,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The parameters to provide for the Line channel.
+ */
 public final class LineChannelPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LineChannelPropertiesResponse Empty = new LineChannelPropertiesResponse();
 
+    /**
+     * Callback Url to enter in line registration.
+     */
     @InputImport(name="callbackUrl", required=true)
     private final String callbackUrl;
 
@@ -22,6 +28,9 @@ public final class LineChannelPropertiesResponse extends io.pulumi.resources.Inv
         return this.callbackUrl;
     }
 
+    /**
+     * Whether this channel is validated for the bot
+     */
     @InputImport(name="isValidated", required=true)
     private final Boolean isValidated;
 
@@ -29,6 +38,9 @@ public final class LineChannelPropertiesResponse extends io.pulumi.resources.Inv
         return this.isValidated;
     }
 
+    /**
+     * The list of line channel registrations
+     */
     @InputImport(name="lineRegistrations", required=true)
     private final List<LineRegistrationResponse> lineRegistrations;
 

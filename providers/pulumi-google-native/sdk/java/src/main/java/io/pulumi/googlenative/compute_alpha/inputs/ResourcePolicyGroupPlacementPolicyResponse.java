@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A GroupPlacementPolicy specifies resource placement configuration. It specifies the failure bucket separation as well as network locality
+ */
 public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourcePolicyGroupPlacementPolicyResponse Empty = new ResourcePolicyGroupPlacementPolicyResponse();
 
+    /**
+     * The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
+     */
     @InputImport(name="availabilityDomainCount", required=true)
     private final Integer availabilityDomainCount;
 
@@ -20,6 +26,9 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
         return this.availabilityDomainCount;
     }
 
+    /**
+     * Specifies network collocation
+     */
     @InputImport(name="collocation", required=true)
     private final String collocation;
 
@@ -27,6 +36,9 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
         return this.collocation;
     }
 
+    /**
+     * Specifies network locality
+     */
     @InputImport(name="locality", required=true)
     private final String locality;
 
@@ -34,6 +46,9 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
         return this.locality;
     }
 
+    /**
+     * Scope specifies the availability domain to which the VMs should be spread.
+     */
     @InputImport(name="scope", required=true)
     private final String scope;
 
@@ -41,6 +56,9 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
         return this.scope;
     }
 
+    /**
+     * Specifies instances to hosts placement relationship
+     */
     @InputImport(name="style", required=true)
     private final String style;
 
@@ -48,6 +66,9 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
         return this.style;
     }
 
+    /**
+     * Number of vms in this placement group
+     */
     @InputImport(name="vmCount", required=true)
     private final Integer vmCount;
 

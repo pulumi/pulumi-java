@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class MaintenanceConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MaintenanceConfigurationArgs Empty = new MaintenanceConfigurationArgs();
 
+    /**
+     * The name of the maintenance configuration.
+     */
     @InputImport(name="configName")
     private final @Nullable Input<String> configName;
 
@@ -24,6 +30,9 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
         return this.configName == null ? Input.empty() : this.configName;
     }
 
+    /**
+     * Time slots on which upgrade is not allowed.
+     */
     @InputImport(name="notAllowedTime")
     private final @Nullable Input<List<TimeSpanArgs>> notAllowedTime;
 
@@ -31,6 +40,9 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
         return this.notAllowedTime == null ? Input.empty() : this.notAllowedTime;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -38,6 +50,9 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the managed cluster resource.
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 
@@ -45,6 +60,9 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
         return this.resourceName;
     }
 
+    /**
+     * Weekday time slots allowed to upgrade.
+     */
     @InputImport(name="timeInWeek")
     private final @Nullable Input<List<TimeInWeekArgs>> timeInWeek;
 

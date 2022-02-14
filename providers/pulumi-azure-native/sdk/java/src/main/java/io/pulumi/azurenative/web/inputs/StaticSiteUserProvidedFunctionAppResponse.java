@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A static site user provided function.
+ */
 public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StaticSiteUserProvidedFunctionAppResponse Empty = new StaticSiteUserProvidedFunctionAppResponse();
 
+    /**
+     * The date and time on which the function app was registered with the static site.
+     */
     @InputImport(name="createdOn", required=true)
     private final String createdOn;
 
@@ -21,6 +27,9 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
         return this.createdOn;
     }
 
+    /**
+     * The region of the function app registered with the static site
+     */
     @InputImport(name="functionAppRegion")
     private final @Nullable String functionAppRegion;
 
@@ -28,6 +37,9 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
         return this.functionAppRegion == null ? Optional.empty() : Optional.ofNullable(this.functionAppRegion);
     }
 
+    /**
+     * The resource id of the function app registered with the static site
+     */
     @InputImport(name="functionAppResourceId")
     private final @Nullable String functionAppResourceId;
 
@@ -35,6 +47,9 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
         return this.functionAppResourceId == null ? Optional.empty() : Optional.ofNullable(this.functionAppResourceId);
     }
 
+    /**
+     * Resource Id.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -42,6 +57,9 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
         return this.id;
     }
 
+    /**
+     * Kind of resource.
+     */
     @InputImport(name="kind")
     private final @Nullable String kind;
 
@@ -49,6 +67,9 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
+    /**
+     * Resource Name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -56,6 +77,9 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
         return this.name;
     }
 
+    /**
+     * Resource type.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -6,6 +6,9 @@ package io.pulumi.googlenative.cloudtasks_v2beta2.inputs;
 import java.util.Objects;
 
 
+/**
+ * Pull target.
+ */
 public final class PullTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PullTargetArgs Empty = new PullTargetArgs();

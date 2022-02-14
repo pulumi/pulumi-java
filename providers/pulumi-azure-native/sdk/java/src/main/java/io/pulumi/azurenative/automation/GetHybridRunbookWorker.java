@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHybridRunbookWorker {
+/**
+ * Definition of hybrid runbook worker.
+API Version: 2021-06-22.
+ *
+ * Definition of hybrid runbook worker.
+ */
     public static CompletableFuture<GetHybridRunbookWorkerResult> invokeAsync(GetHybridRunbookWorkerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:automation:getHybridRunbookWorker", TypeShape.of(GetHybridRunbookWorkerResult.class), args == null ? GetHybridRunbookWorkerArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,13 +13,37 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetJobResult {
+/**
+ * [Required] Describes the job configuration.
+ */
     private final JobConfigurationResponse configuration;
+/**
+ * A hash of this resource.
+ */
     private final String etag;
+/**
+ * [Optional] Reference describing the unique-per-user name of the job.
+ */
     private final JobReferenceResponse jobReference;
+/**
+ * The type of the resource.
+ */
     private final String kind;
+/**
+ * A URL that can be used to access this resource again.
+ */
     private final String selfLink;
+/**
+ * Information about the job, including starting time and ending time of the job.
+ */
     private final JobStatisticsResponse statistics;
+/**
+ * The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
+ */
     private final JobStatusResponse status;
+/**
+ * Email address of the user who ran the job.
+ */
     private final String userEmail;
 
     @OutputCustomType.Constructor({"configuration","etag","jobReference","kind","selfLink","statistics","status","userEmail"})
@@ -42,27 +66,51 @@ public final class GetJobResult {
         this.userEmail = Objects.requireNonNull(userEmail);
     }
 
+/**
+ * [Required] Describes the job configuration.
+ */
     public JobConfigurationResponse getConfiguration() {
         return this.configuration;
     }
+/**
+ * A hash of this resource.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * [Optional] Reference describing the unique-per-user name of the job.
+ */
     public JobReferenceResponse getJobReference() {
         return this.jobReference;
     }
+/**
+ * The type of the resource.
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * A URL that can be used to access this resource again.
+ */
     public String getSelfLink() {
         return this.selfLink;
     }
+/**
+ * Information about the job, including starting time and ending time of the job.
+ */
     public JobStatisticsResponse getStatistics() {
         return this.statistics;
     }
+/**
+ * The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
+ */
     public JobStatusResponse getStatus() {
         return this.status;
     }
+/**
+ * Email address of the user who ran the job.
+ */
     public String getUserEmail() {
         return this.userEmail;
     }

@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration for compute binding.
+ */
 public final class ComputeConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ComputeConfigurationResponse Empty = new ComputeConfigurationResponse();
 
+    /**
+     * Number of instances or nodes.
+     */
     @InputImport(name="instanceCount")
     private final @Nullable Integer instanceCount;
 
@@ -24,6 +30,9 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
         return this.instanceCount == null ? Optional.empty() : Optional.ofNullable(this.instanceCount);
     }
 
+    /**
+     * SKU type to run on.
+     */
     @InputImport(name="instanceType")
     private final @Nullable String instanceType;
 
@@ -31,6 +40,9 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
         return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
     }
 
+    /**
+     * Set to true for jobs running on local compute.
+     */
     @InputImport(name="isLocal")
     private final @Nullable Boolean isLocal;
 
@@ -38,6 +50,9 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
         return this.isLocal == null ? Optional.empty() : Optional.ofNullable(this.isLocal);
     }
 
+    /**
+     * Location for virtual cluster run.
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -45,6 +60,9 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * Additional properties.
+     */
     @InputImport(name="properties")
     private final @Nullable Map<String,String> properties;
 
@@ -52,6 +70,9 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
         return this.properties == null ? Map.of() : this.properties;
     }
 
+    /**
+     * ARM resource ID of the compute resource.
+     */
     @InputImport(name="target")
     private final @Nullable String target;
 

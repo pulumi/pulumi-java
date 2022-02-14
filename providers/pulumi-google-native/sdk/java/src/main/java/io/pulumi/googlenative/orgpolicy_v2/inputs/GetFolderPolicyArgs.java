@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetFolderPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFolderPolicyArgs Empty = new GetFolderPolicyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="folderId", required=true)
     private final String folderId;
 
@@ -19,6 +25,9 @@ public final class GetFolderPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.folderId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="policyId", required=true)
     private final String policyId;
 

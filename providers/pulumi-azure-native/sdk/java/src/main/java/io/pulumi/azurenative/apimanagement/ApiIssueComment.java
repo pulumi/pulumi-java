@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.apimanagement.ApiIssueCommentArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -14,39 +13,182 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Issue Comment Contract details.
+API Version: 2020-12-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### ApiManagementCreateApiIssueComment
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var apiIssueComment = new AzureNative.ApiManagement.ApiIssueComment("apiIssueComment", new AzureNative.ApiManagement.ApiIssueCommentArgs
+        {
+            ApiId = "57d1f7558aa04f15146d9d8a",
+            CommentId = "599e29ab193c3c0bd0b3e2fb",
+            CreatedDate = "2018-02-01T22:21:20.467Z",
+            IssueId = "57d2ef278aa04f0ad01d6cdc",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Text = "Issue comment.",
+            UserId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := apimanagement.NewApiIssueComment(ctx, "apiIssueComment", &apimanagement.ApiIssueCommentArgs{
+			ApiId:             pulumi.String("57d1f7558aa04f15146d9d8a"),
+			CommentId:         pulumi.String("599e29ab193c3c0bd0b3e2fb"),
+			CreatedDate:       pulumi.String("2018-02-01T22:21:20.467Z"),
+			IssueId:           pulumi.String("57d2ef278aa04f0ad01d6cdc"),
+			ResourceGroupName: pulumi.String("rg1"),
+			ServiceName:       pulumi.String("apimService1"),
+			Text:              pulumi.String("Issue comment."),
+			UserId:            pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const apiIssueComment = new azure_native.apimanagement.ApiIssueComment("apiIssueComment", {
+    apiId: "57d1f7558aa04f15146d9d8a",
+    commentId: "599e29ab193c3c0bd0b3e2fb",
+    createdDate: "2018-02-01T22:21:20.467Z",
+    issueId: "57d2ef278aa04f0ad01d6cdc",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    text: "Issue comment.",
+    userId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+api_issue_comment = azure_native.apimanagement.ApiIssueComment("apiIssueComment",
+    api_id="57d1f7558aa04f15146d9d8a",
+    comment_id="599e29ab193c3c0bd0b3e2fb",
+    created_date="2018-02-01T22:21:20.467Z",
+    issue_id="57d2ef278aa04f0ad01d6cdc",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    text="Issue comment.",
+    user_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:apimanagement:ApiIssueComment 599e29ab193c3c0bd0b3e2fb /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/57d1f7558aa04f15146d9d8a/issues/57d2ef278aa04f0ad01d6cdc/comments/599e29ab193c3c0bd0b3e2fb 
+```
+
+ */
 @ResourceType(type="azure-native:apimanagement:ApiIssueComment")
 public class ApiIssueComment extends io.pulumi.resources.CustomResource {
+    /**
+     * Date and time when the comment was created.
+     */
     @OutputExport(name="createdDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdDate;
 
+    /**
+     * @return Date and time when the comment was created.
+     */
     public Output</* @Nullable */ String> getCreatedDate() {
         return this.createdDate;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Comment text.
+     */
     @OutputExport(name="text", type=String.class, parameters={})
     private Output<String> text;
 
+    /**
+     * @return Comment text.
+     */
     public Output<String> getText() {
         return this.text;
     }
+    /**
+     * Resource type for API Management resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type for API Management resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * A resource identifier for the user who left the comment.
+     */
     @OutputExport(name="userId", type=String.class, parameters={})
     private Output<String> userId;
 
+    /**
+     * @return A resource identifier for the user who left the comment.
+     */
     public Output<String> getUserId() {
         return this.userId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ApiIssueComment(String name, ApiIssueCommentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:ApiIssueComment", name, args == null ? ApiIssueCommentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -75,6 +217,14 @@ public class ApiIssueComment extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ApiIssueComment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApiIssueComment(name, id, options);
     }

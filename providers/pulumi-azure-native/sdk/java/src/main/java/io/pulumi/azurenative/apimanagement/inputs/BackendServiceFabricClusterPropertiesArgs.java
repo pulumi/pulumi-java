@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of the Service Fabric Type Backend.
+ */
 public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackendServiceFabricClusterPropertiesArgs Empty = new BackendServiceFabricClusterPropertiesArgs();
 
+    /**
+     * The client certificate id for the management endpoint.
+     */
     @InputImport(name="clientCertificateId")
     private final @Nullable Input<String> clientCertificateId;
 
@@ -24,6 +30,9 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
         return this.clientCertificateId == null ? Input.empty() : this.clientCertificateId;
     }
 
+    /**
+     * The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided
+     */
     @InputImport(name="clientCertificatethumbprint")
     private final @Nullable Input<String> clientCertificatethumbprint;
 
@@ -31,6 +40,9 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
         return this.clientCertificatethumbprint == null ? Input.empty() : this.clientCertificatethumbprint;
     }
 
+    /**
+     * The cluster management endpoint.
+     */
     @InputImport(name="managementEndpoints", required=true)
     private final Input<List<String>> managementEndpoints;
 
@@ -38,6 +50,9 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
         return this.managementEndpoints;
     }
 
+    /**
+     * Maximum number of retries while attempting resolve the partition.
+     */
     @InputImport(name="maxPartitionResolutionRetries")
     private final @Nullable Input<Integer> maxPartitionResolutionRetries;
 
@@ -45,6 +60,9 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
         return this.maxPartitionResolutionRetries == null ? Input.empty() : this.maxPartitionResolutionRetries;
     }
 
+    /**
+     * Thumbprints of certificates cluster management service uses for tls communication
+     */
     @InputImport(name="serverCertificateThumbprints")
     private final @Nullable Input<List<String>> serverCertificateThumbprints;
 
@@ -52,6 +70,9 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
         return this.serverCertificateThumbprints == null ? Input.empty() : this.serverCertificateThumbprints;
     }
 
+    /**
+     * Server X509 Certificate Names Collection
+     */
     @InputImport(name="serverX509Names")
     private final @Nullable Input<List<X509CertificateNameArgs>> serverX509Names;
 

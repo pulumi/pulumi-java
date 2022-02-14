@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetSqlPoolWorkloadClassifierArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSqlPoolWorkloadClassifierArgs Empty = new GetSqlPoolWorkloadClassifierArgs();
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class GetSqlPoolWorkloadClassifierArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
+    /**
+     * SQL pool name
+     */
     @InputImport(name="sqlPoolName", required=true)
     private final String sqlPoolName;
 
@@ -26,6 +35,9 @@ public final class GetSqlPoolWorkloadClassifierArgs extends io.pulumi.resources.
         return this.sqlPoolName;
     }
 
+    /**
+     * The name of the workload classifier.
+     */
     @InputImport(name="workloadClassifierName", required=true)
     private final String workloadClassifierName;
 
@@ -33,6 +45,9 @@ public final class GetSqlPoolWorkloadClassifierArgs extends io.pulumi.resources.
         return this.workloadClassifierName;
     }
 
+    /**
+     * The name of the workload group.
+     */
     @InputImport(name="workloadGroupName", required=true)
     private final String workloadGroupName;
 
@@ -40,6 +55,9 @@ public final class GetSqlPoolWorkloadClassifierArgs extends io.pulumi.resources.
         return this.workloadGroupName;
     }
 
+    /**
+     * The name of the workspace
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

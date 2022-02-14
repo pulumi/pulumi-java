@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class NetworkExperimentProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkExperimentProfileArgs Empty = new NetworkExperimentProfileArgs();
 
+    /**
+     * The state of the Experiment
+     */
     @InputImport(name="enabledState")
     private final @Nullable Input<Either<String,State>> enabledState;
 
@@ -24,6 +30,9 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
         return this.enabledState == null ? Input.empty() : this.enabledState;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -31,6 +40,9 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the Profile
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,6 +50,9 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The Profile identifier associated with the Tenant and Partner
+     */
     @InputImport(name="profileName")
     private final @Nullable Input<String> profileName;
 
@@ -45,6 +60,9 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
         return this.profileName == null ? Input.empty() : this.profileName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -52,6 +70,9 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

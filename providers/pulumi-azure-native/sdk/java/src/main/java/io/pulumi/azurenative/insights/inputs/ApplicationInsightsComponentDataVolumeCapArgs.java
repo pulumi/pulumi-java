@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An Application Insights component daily data volume cap
+ */
 public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationInsightsComponentDataVolumeCapArgs Empty = new ApplicationInsightsComponentDataVolumeCapArgs();
 
+    /**
+     * Daily data volume cap in GB.
+     */
     @InputImport(name="cap")
     private final @Nullable Input<Double> cap;
 
@@ -23,6 +29,9 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
         return this.cap == null ? Input.empty() : this.cap;
     }
 
+    /**
+     * Do not send a notification email when the daily data volume cap is met.
+     */
     @InputImport(name="stopSendNotificationWhenHitCap")
     private final @Nullable Input<Boolean> stopSendNotificationWhenHitCap;
 
@@ -30,6 +39,9 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
         return this.stopSendNotificationWhenHitCap == null ? Input.empty() : this.stopSendNotificationWhenHitCap;
     }
 
+    /**
+     * Reserved, not used for now.
+     */
     @InputImport(name="stopSendNotificationWhenHitThreshold")
     private final @Nullable Input<Boolean> stopSendNotificationWhenHitThreshold;
 
@@ -37,6 +49,9 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
         return this.stopSendNotificationWhenHitThreshold == null ? Input.empty() : this.stopSendNotificationWhenHitThreshold;
     }
 
+    /**
+     * Reserved, not used for now.
+     */
     @InputImport(name="warningThreshold")
     private final @Nullable Input<Integer> warningThreshold;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes the CIS benchmark version that is applicable to a given OS and os version.
+ */
 public final class ComplianceVersionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ComplianceVersionResponse Empty = new ComplianceVersionResponse();
 
+    /**
+     * The CPE URI (https://cpe.mitre.org/specification/) this benchmark is applicable to.
+     */
     @InputImport(name="cpeUri", required=true)
     private final String cpeUri;
 
@@ -19,6 +25,9 @@ public final class ComplianceVersionResponse extends io.pulumi.resources.InvokeA
         return this.cpeUri;
     }
 
+    /**
+     * The version of the benchmark. This is set to the version of the OS-specific CIS document the benchmark is defined in.
+     */
     @InputImport(name="version", required=true)
     private final String version;
 

@@ -13,11 +13,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MatchConditionResponse {
+/**
+ * List of possible match values.
+ */
     private final List<String> matchValue;
+/**
+ * Match variable to compare against.
+ */
     private final String matchVariable;
+/**
+ * Describes if the result of this condition should be negated.
+ */
     private final @Nullable Boolean negateCondition;
+/**
+ * Describes operator to be matched
+ */
     private final String operator;
+/**
+ * Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.
+ */
     private final @Nullable String selector;
+/**
+ * List of transforms.
+ */
     private final @Nullable List<String> transforms;
 
     @OutputCustomType.Constructor({"matchValue","matchVariable","negateCondition","operator","selector","transforms"})
@@ -36,21 +54,39 @@ public final class MatchConditionResponse {
         this.transforms = transforms;
     }
 
+/**
+ * List of possible match values.
+ */
     public List<String> getMatchValue() {
         return this.matchValue;
     }
+/**
+ * Match variable to compare against.
+ */
     public String getMatchVariable() {
         return this.matchVariable;
     }
+/**
+ * Describes if the result of this condition should be negated.
+ */
     public Optional<Boolean> getNegateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
+/**
+ * Describes operator to be matched
+ */
     public String getOperator() {
         return this.operator;
     }
+/**
+ * Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.
+ */
     public Optional<String> getSelector() {
         return Optional.ofNullable(this.selector);
     }
+/**
+ * List of transforms.
+ */
     public List<String> getTransforms() {
         return this.transforms == null ? List.of() : this.transforms;
     }

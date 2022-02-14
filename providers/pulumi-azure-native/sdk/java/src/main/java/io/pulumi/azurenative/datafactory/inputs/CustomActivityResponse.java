@@ -18,10 +18,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Custom activity type.
+ */
 public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomActivityResponse Empty = new CustomActivityResponse();
 
+    /**
+     * Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).
+     */
     @InputImport(name="autoUserSpecification")
     private final @Nullable Object autoUserSpecification;
 
@@ -29,6 +35,9 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.autoUserSpecification == null ? Optional.empty() : Optional.ofNullable(this.autoUserSpecification);
     }
 
+    /**
+     * Command for custom activity Type: string (or Expression with resultType string).
+     */
     @InputImport(name="command", required=true)
     private final Object command;
 
@@ -36,6 +45,9 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.command;
     }
 
+    /**
+     * Activity depends on condition.
+     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -43,6 +55,9 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -50,6 +65,9 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * User defined property bag. There is no restriction on the keys or values that can be used. The user specified custom activity has the full responsibility to consume and interpret the content defined.
+     */
     @InputImport(name="extendedProperties")
     private final @Nullable Map<String,Object> extendedProperties;
 
@@ -57,6 +75,9 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.extendedProperties == null ? Map.of() : this.extendedProperties;
     }
 
+    /**
+     * Folder path for resource files Type: string (or Expression with resultType string).
+     */
     @InputImport(name="folderPath")
     private final @Nullable Object folderPath;
 
@@ -64,6 +85,9 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
     }
 
+    /**
+     * Linked service reference.
+     */
     @InputImport(name="linkedServiceName")
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
@@ -71,6 +95,9 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
+    /**
+     * Activity name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -78,6 +105,9 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.name;
     }
 
+    /**
+     * Activity policy.
+     */
     @InputImport(name="policy")
     private final @Nullable ActivityPolicyResponse policy;
 
@@ -85,6 +115,9 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
+    /**
+     * Reference objects
+     */
     @InputImport(name="referenceObjects")
     private final @Nullable CustomActivityReferenceObjectResponse referenceObjects;
 
@@ -92,6 +125,9 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.referenceObjects == null ? Optional.empty() : Optional.ofNullable(this.referenceObjects);
     }
 
+    /**
+     * Resource linked service reference.
+     */
     @InputImport(name="resourceLinkedService")
     private final @Nullable LinkedServiceReferenceResponse resourceLinkedService;
 
@@ -99,6 +135,9 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.resourceLinkedService == null ? Optional.empty() : Optional.ofNullable(this.resourceLinkedService);
     }
 
+    /**
+     * The retention time for the files submitted for custom activity. Type: double (or Expression with resultType double).
+     */
     @InputImport(name="retentionTimeInDays")
     private final @Nullable Object retentionTimeInDays;
 
@@ -106,6 +145,10 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.retentionTimeInDays == null ? Optional.empty() : Optional.ofNullable(this.retentionTimeInDays);
     }
 
+    /**
+     * Type of activity.
+Expected value is 'Custom'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -113,6 +156,9 @@ public final class CustomActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

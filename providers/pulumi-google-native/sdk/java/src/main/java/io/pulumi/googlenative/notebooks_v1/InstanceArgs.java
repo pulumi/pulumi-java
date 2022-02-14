@@ -23,10 +23,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceArgs Empty = new InstanceArgs();
 
+    /**
+     * The hardware accelerator used on this instance. If you use accelerators, make sure that your configuration has [enough vCPUs and memory to support the `machine_type` you have selected](/compute/docs/gpus/#gpus-list).
+     */
     @InputImport(name="acceleratorConfig")
     private final @Nullable Input<AcceleratorConfigArgs> acceleratorConfig;
 
@@ -34,6 +40,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.acceleratorConfig == null ? Input.empty() : this.acceleratorConfig;
     }
 
+    /**
+     * Input only. The size of the boot disk in GB attached to this instance, up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB. If not specified, this defaults to 100.
+     */
     @InputImport(name="bootDiskSizeGb")
     private final @Nullable Input<String> bootDiskSizeGb;
 
@@ -41,6 +50,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.bootDiskSizeGb == null ? Input.empty() : this.bootDiskSizeGb;
     }
 
+    /**
+     * Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).
+     */
     @InputImport(name="bootDiskType")
     private final @Nullable Input<InstanceBootDiskType> bootDiskType;
 
@@ -48,6 +60,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.bootDiskType == null ? Input.empty() : this.bootDiskType;
     }
 
+    /**
+     * Use a container image to start the notebook instance.
+     */
     @InputImport(name="containerImage")
     private final @Nullable Input<ContainerImageArgs> containerImage;
 
@@ -55,6 +70,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerImage == null ? Input.empty() : this.containerImage;
     }
 
+    /**
+     * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.
+     */
     @InputImport(name="customGpuDriverPath")
     private final @Nullable Input<String> customGpuDriverPath;
 
@@ -62,6 +80,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.customGpuDriverPath == null ? Input.empty() : this.customGpuDriverPath;
     }
 
+    /**
+     * Input only. The size of the data disk in GB attached to this instance, up to a maximum of 64000 GB (64 TB). You can choose the size of the data disk based on how big your notebooks and data are. If not specified, this defaults to 100.
+     */
     @InputImport(name="dataDiskSizeGb")
     private final @Nullable Input<String> dataDiskSizeGb;
 
@@ -69,6 +90,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataDiskSizeGb == null ? Input.empty() : this.dataDiskSizeGb;
     }
 
+    /**
+     * Input only. The type of the data disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).
+     */
     @InputImport(name="dataDiskType")
     private final @Nullable Input<InstanceDataDiskType> dataDiskType;
 
@@ -76,6 +100,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataDiskType == null ? Input.empty() : this.dataDiskType;
     }
 
+    /**
+     * Input only. Disk encryption method used on the boot and data disks, defaults to GMEK.
+     */
     @InputImport(name="diskEncryption")
     private final @Nullable Input<InstanceDiskEncryption> diskEncryption;
 
@@ -83,6 +110,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskEncryption == null ? Input.empty() : this.diskEncryption;
     }
 
+    /**
+     * Whether the end user authorizes Google Cloud to install GPU driver on this instance. If this field is empty or set to false, the GPU driver won't be installed. Only applicable to instances with GPUs.
+     */
     @InputImport(name="installGpuDriver")
     private final @Nullable Input<Boolean> installGpuDriver;
 
@@ -90,6 +120,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.installGpuDriver == null ? Input.empty() : this.installGpuDriver;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="instanceId", required=true)
     private final Input<String> instanceId;
 
@@ -97,6 +130,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceId;
     }
 
+    /**
+     * Input only. The owner of this instance after creation. Format: `alias@example.com` Currently supports one owner only. If not specified, all of the service account users of your VM instance's service account can use the instance.
+     */
     @InputImport(name="instanceOwners")
     private final @Nullable Input<List<String>> instanceOwners;
 
@@ -104,6 +140,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceOwners == null ? Input.empty() : this.instanceOwners;
     }
 
+    /**
+     * Input only. The KMS key used to encrypt the disks, only applicable if disk_encryption is CMEK. Format: `projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}` Learn more about [using your own encryption keys](/kms/docs/quickstart).
+     */
     @InputImport(name="kmsKey")
     private final @Nullable Input<String> kmsKey;
 
@@ -111,6 +150,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.kmsKey == null ? Input.empty() : this.kmsKey;
     }
 
+    /**
+     * Labels to apply to this instance. These can be later modified by the setLabels method.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -118,6 +160,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -125,6 +170,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The [Compute Engine machine type](/compute/docs/machine-types) of this instance.
+     */
     @InputImport(name="machineType", required=true)
     private final Input<String> machineType;
 
@@ -132,6 +180,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.machineType;
     }
 
+    /**
+     * Custom metadata to apply to this instance.
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -139,6 +190,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The name of the VPC that this instance is in. Format: `projects/{project_id}/global/networks/{network_id}`
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -146,6 +200,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
+     */
     @InputImport(name="nicType")
     private final @Nullable Input<InstanceNicType> nicType;
 
@@ -153,6 +210,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.nicType == null ? Input.empty() : this.nicType;
     }
 
+    /**
+     * If true, the notebook instance will not register with the proxy.
+     */
     @InputImport(name="noProxyAccess")
     private final @Nullable Input<Boolean> noProxyAccess;
 
@@ -160,6 +220,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.noProxyAccess == null ? Input.empty() : this.noProxyAccess;
     }
 
+    /**
+     * If true, no public IP will be assigned to this instance.
+     */
     @InputImport(name="noPublicIp")
     private final @Nullable Input<Boolean> noPublicIp;
 
@@ -167,6 +230,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.noPublicIp == null ? Input.empty() : this.noPublicIp;
     }
 
+    /**
+     * Input only. If true, the data disk will not be auto deleted when deleting the instance.
+     */
     @InputImport(name="noRemoveDataDisk")
     private final @Nullable Input<Boolean> noRemoveDataDisk;
 
@@ -174,6 +240,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.noRemoveDataDisk == null ? Input.empty() : this.noRemoveDataDisk;
     }
 
+    /**
+     * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
+     */
     @InputImport(name="postStartupScript")
     private final @Nullable Input<String> postStartupScript;
 
@@ -181,6 +250,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.postStartupScript == null ? Input.empty() : this.postStartupScript;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -188,6 +260,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Optional. The optional reservation affinity. Setting this field will apply the specified [Zonal Compute Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this notebook instance.
+     */
     @InputImport(name="reservationAffinity")
     private final @Nullable Input<ReservationAffinityArgs> reservationAffinity;
 
@@ -195,6 +270,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.reservationAffinity == null ? Input.empty() : this.reservationAffinity;
     }
 
+    /**
+     * The service account on this instance, giving access to other Google Cloud services. You can use any service account within the same project, but you must have the service account user permission to use the instance. If not specified, the [Compute Engine default service account](https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.
+     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<String> serviceAccount;
 
@@ -202,6 +280,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
+    /**
+     * Optional. The URIs of service account scopes to be included in Compute Engine instances. If not specified, the following [scopes](https://cloud.google.com/compute/docs/access/service-accounts#accesscopesiam) are defined: - https://www.googleapis.com/auth/cloud-platform - https://www.googleapis.com/auth/userinfo.email If not using default scopes, you need at least: https://www.googleapis.com/auth/compute
+     */
     @InputImport(name="serviceAccountScopes")
     private final @Nullable Input<List<String>> serviceAccountScopes;
 
@@ -209,6 +290,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceAccountScopes == null ? Input.empty() : this.serviceAccountScopes;
     }
 
+    /**
+     * Optional. Shielded VM configuration. [Images using supported Shielded VM features](https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
+     */
     @InputImport(name="shieldedInstanceConfig")
     private final @Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
@@ -216,6 +300,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
     }
 
+    /**
+     * The name of the subnet that this instance is in. Format: `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
+     */
     @InputImport(name="subnet")
     private final @Nullable Input<String> subnet;
 
@@ -223,6 +310,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.subnet == null ? Input.empty() : this.subnet;
     }
 
+    /**
+     * Optional. The Compute Engine tags to add to runtime (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 
@@ -230,6 +320,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The upgrade history of this instance.
+     */
     @InputImport(name="upgradeHistory")
     private final @Nullable Input<List<UpgradeHistoryEntryArgs>> upgradeHistory;
 
@@ -237,6 +330,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.upgradeHistory == null ? Input.empty() : this.upgradeHistory;
     }
 
+    /**
+     * Use a Compute Engine VM image to start the notebook instance.
+     */
     @InputImport(name="vmImage")
     private final @Nullable Input<VmImageArgs> vmImage;
 

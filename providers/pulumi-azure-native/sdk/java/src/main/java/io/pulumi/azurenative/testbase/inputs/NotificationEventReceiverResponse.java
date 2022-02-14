@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A notification event receivers.
+ */
 public final class NotificationEventReceiverResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NotificationEventReceiverResponse Empty = new NotificationEventReceiverResponse();
 
+    /**
+     * The type of the notification event receiver.
+     */
     @InputImport(name="receiverType")
     private final @Nullable String receiverType;
 
@@ -22,6 +28,9 @@ public final class NotificationEventReceiverResponse extends io.pulumi.resources
         return this.receiverType == null ? Optional.empty() : Optional.ofNullable(this.receiverType);
     }
 
+    /**
+     * The notification event receiver value.
+     */
     @InputImport(name="receiverValue")
     private final @Nullable NotificationReceiverValueResponse receiverValue;
 

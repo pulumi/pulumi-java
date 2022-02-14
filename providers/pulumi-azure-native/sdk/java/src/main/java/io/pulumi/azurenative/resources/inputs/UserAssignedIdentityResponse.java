@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * User-assigned managed identity.
+ */
 public final class UserAssignedIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UserAssignedIdentityResponse Empty = new UserAssignedIdentityResponse();
 
+    /**
+     * Client App Id associated with this identity.
+     */
     @InputImport(name="clientId", required=true)
     private final String clientId;
 
@@ -19,6 +25,9 @@ public final class UserAssignedIdentityResponse extends io.pulumi.resources.Invo
         return this.clientId;
     }
 
+    /**
+     * Azure Active Directory principal ID associated with this identity.
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 

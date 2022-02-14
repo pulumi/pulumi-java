@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDiagnosticSetting {
+/**
+ * The diagnostic setting resource.
+API Version: 2017-05-01-preview.
+ *
+ * The diagnostic setting resource.
+ */
     public static CompletableFuture<GetDiagnosticSettingResult> invokeAsync(GetDiagnosticSettingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getDiagnosticSetting", TypeShape.of(GetDiagnosticSettingResult.class), args == null ? GetDiagnosticSettingArgs.Empty : args, Utilities.withVersion(options));
     }

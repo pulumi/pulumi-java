@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.logic;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.logic.IntegrationAccountSchemaArgs;
 import io.pulumi.azurenative.logic.outputs.ContentLinkResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -17,93 +16,771 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The integration account schema.
+API Version: 2019-05-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create or update schema
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var integrationAccountSchema = new AzureNative.Logic.IntegrationAccountSchema("integrationAccountSchema", new AzureNative.Logic.IntegrationAccountSchemaArgs
+        {
+            Content = @"<?xml version=""1.0"" encoding=""utf-16""?>
+<xs:schema xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" xmlns=""http://Inbound_EDI.OrderFile"" targetNamespace=""http://Inbound_EDI.OrderFile"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"">
+  <xs:annotation>
+    <xs:appinfo>
+      <b:schemaInfo default_pad_char="" "" count_positions_by_byte=""false"" parser_optimization=""speed"" lookahead_depth=""3"" suppress_empty_nodes=""false"" generate_empty_nodes=""true"" allow_early_termination=""false"" early_terminate_optional_fields=""false"" allow_message_breakup_of_infix_root=""false"" compile_parse_tables=""false"" standard=""Flat File"" root_reference=""OrderFile"" />
+      <schemaEditorExtension:schemaInfo namespaceAlias=""b"" extensionClass=""Microsoft.BizTalk.FlatFileExtension.FlatFileExtension"" standardName=""Flat File"" xmlns:schemaEditorExtension=""http://schemas.microsoft.com/BizTalk/2003/SchemaEditorExtensions"" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name=""OrderFile"">
+    <xs:annotation>
+      <xs:appinfo>
+        <b:recordInfo structure=""delimited"" preserve_delimiter_for_empty_data=""true"" suppress_trailing_delimiters=""false"" sequence_number=""1"" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:annotation>
+          <xs:appinfo>
+            <b:groupInfo sequence_number=""0"" />
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:element name=""Order"">
+          <xs:annotation>
+            <xs:appinfo>
+              <b:recordInfo sequence_number=""1"" structure=""delimited"" preserve_delimiter_for_empty_data=""true"" suppress_trailing_delimiters=""false"" child_delimiter_type=""hex"" child_delimiter=""0x0D 0x0A"" child_order=""infix"" />
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:annotation>
+                <xs:appinfo>
+                  <b:groupInfo sequence_number=""0"" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:element name=""Header"">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:recordInfo sequence_number=""1"" structure=""delimited"" preserve_delimiter_for_empty_data=""true"" suppress_trailing_delimiters=""false"" child_delimiter_type=""char"" child_delimiter=""|"" child_order=""infix"" tag_name=""HDR|"" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:annotation>
+                      <xs:appinfo>
+                        <b:groupInfo sequence_number=""0"" />
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:element name=""PODate"" type=""xs:string"">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number=""1"" justification=""left"" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name=""PONumber"" type=""xs:string"">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo justification=""left"" sequence_number=""2"" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name=""CustomerID"" type=""xs:string"">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number=""3"" justification=""left"" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name=""CustomerContactName"" type=""xs:string"">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number=""4"" justification=""left"" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name=""CustomerContactPhone"" type=""xs:string"">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number=""5"" justification=""left"" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs=""1"" maxOccurs=""unbounded"" name=""LineItems"">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:recordInfo sequence_number=""2"" structure=""delimited"" preserve_delimiter_for_empty_data=""true"" suppress_trailing_delimiters=""false"" child_delimiter_type=""char"" child_delimiter=""|"" child_order=""infix"" tag_name=""DTL|"" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:annotation>
+                      <xs:appinfo>
+                        <b:groupInfo sequence_number=""0"" />
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:element name=""PONumber"" type=""xs:string"">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number=""1"" justification=""left"" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name=""ItemOrdered"" type=""xs:string"">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number=""2"" justification=""left"" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name=""Quantity"" type=""xs:string"">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number=""3"" justification=""left"" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name=""UOM"" type=""xs:string"">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number=""4"" justification=""left"" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name=""Price"" type=""xs:string"">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number=""5"" justification=""left"" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name=""ExtendedPrice"" type=""xs:string"">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number=""6"" justification=""left"" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name=""Description"" type=""xs:string"">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number=""7"" justification=""left"" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>",
+            ContentType = "application/xml",
+            IntegrationAccountName = "testIntegrationAccount",
+            Location = "westus",
+            Metadata = ,
+            ResourceGroupName = "testResourceGroup",
+            SchemaName = "testSchema",
+            SchemaType = "Xml",
+            Tags = 
+            {
+                { "integrationAccountSchemaName", "IntegrationAccountSchema8120" },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	logic "github.com/pulumi/pulumi-azure-native/sdk/go/azure/logic"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := logic.NewIntegrationAccountSchema(ctx, "integrationAccountSchema", &logic.IntegrationAccountSchemaArgs{
+			Content: pulumi.String("<?xml version=\"1.0\" encoding=\"utf-16\"?>\n<xs:schema xmlns:b=\"http://schemas.microsoft.com/BizTalk/2003\" xmlns=\"http://Inbound_EDI.OrderFile\" targetNamespace=\"http://Inbound_EDI.OrderFile\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n  <xs:annotation>\n    <xs:appinfo>\n      <b:schemaInfo default_pad_char=\" \" count_positions_by_byte=\"false\" parser_optimization=\"speed\" lookahead_depth=\"3\" suppress_empty_nodes=\"false\" generate_empty_nodes=\"true\" allow_early_termination=\"false\" early_terminate_optional_fields=\"false\" allow_message_breakup_of_infix_root=\"false\" compile_parse_tables=\"false\" standard=\"Flat File\" root_reference=\"OrderFile\" />\n      <schemaEditorExtension:schemaInfo namespaceAlias=\"b\" extensionClass=\"Microsoft.BizTalk.FlatFileExtension.FlatFileExtension\" standardName=\"Flat File\" xmlns:schemaEditorExtension=\"http://schemas.microsoft.com/BizTalk/2003/SchemaEditorExtensions\" />\n    </xs:appinfo>\n  </xs:annotation>\n  <xs:element name=\"OrderFile\">\n    <xs:annotation>\n      <xs:appinfo>\n        <b:recordInfo structure=\"delimited\" preserve_delimiter_for_empty_data=\"true\" suppress_trailing_delimiters=\"false\" sequence_number=\"1\" />\n      </xs:appinfo>\n    </xs:annotation>\n    <xs:complexType>\n      <xs:sequence>\n        <xs:annotation>\n          <xs:appinfo>\n            <b:groupInfo sequence_number=\"0\" />\n          </xs:appinfo>\n        </xs:annotation>\n        <xs:element name=\"Order\">\n          <xs:annotation>\n            <xs:appinfo>\n              <b:recordInfo sequence_number=\"1\" structure=\"delimited\" preserve_delimiter_for_empty_data=\"true\" suppress_trailing_delimiters=\"false\" child_delimiter_type=\"hex\" child_delimiter=\"0x0D 0x0A\" child_order=\"infix\" />\n            </xs:appinfo>\n          </xs:annotation>\n          <xs:complexType>\n            <xs:sequence>\n              <xs:annotation>\n                <xs:appinfo>\n                  <b:groupInfo sequence_number=\"0\" />\n                </xs:appinfo>\n              </xs:annotation>\n              <xs:element name=\"Header\">\n                <xs:annotation>\n                  <xs:appinfo>\n                    <b:recordInfo sequence_number=\"1\" structure=\"delimited\" preserve_delimiter_for_empty_data=\"true\" suppress_trailing_delimiters=\"false\" child_delimiter_type=\"char\" child_delimiter=\"|\" child_order=\"infix\" tag_name=\"HDR|\" />\n                  </xs:appinfo>\n                </xs:annotation>\n                <xs:complexType>\n                  <xs:sequence>\n                    <xs:annotation>\n                      <xs:appinfo>\n                        <b:groupInfo sequence_number=\"0\" />\n                      </xs:appinfo>\n                    </xs:annotation>\n                    <xs:element name=\"PODate\" type=\"xs:string\">\n                      <xs:annotation>\n                        <xs:appinfo>\n                          <b:fieldInfo sequence_number=\"1\" justification=\"left\" />\n                        </xs:appinfo>\n                      </xs:annotation>\n                    </xs:element>\n                    <xs:element name=\"PONumber\" type=\"xs:string\">\n                      <xs:annotation>\n                        <xs:appinfo>\n                          <b:fieldInfo justification=\"left\" sequence_number=\"2\" />\n                        </xs:appinfo>\n                      </xs:annotation>\n                    </xs:element>\n                    <xs:element name=\"CustomerID\" type=\"xs:string\">\n                      <xs:annotation>\n                        <xs:appinfo>\n                          <b:fieldInfo sequence_number=\"3\" justification=\"left\" />\n                        </xs:appinfo>\n                      </xs:annotation>\n                    </xs:element>\n                    <xs:element name=\"CustomerContactName\" type=\"xs:string\">\n                      <xs:annotation>\n                        <xs:appinfo>\n                          <b:fieldInfo sequence_number=\"4\" justification=\"left\" />\n                        </xs:appinfo>\n                      </xs:annotation>\n                    </xs:element>\n                    <xs:element name=\"CustomerContactPhone\" type=\"xs:string\">\n                      <xs:annotation>\n                        <xs:appinfo>\n                          <b:fieldInfo sequence_number=\"5\" justification=\"left\" />\n                        </xs:appinfo>\n                      </xs:annotation>\n                    </xs:element>\n                  </xs:sequence>\n                </xs:complexType>\n              </xs:element>\n              <xs:element minOccurs=\"1\" maxOccurs=\"unbounded\" name=\"LineItems\">\n                <xs:annotation>\n                  <xs:appinfo>\n                    <b:recordInfo sequence_number=\"2\" structure=\"delimited\" preserve_delimiter_for_empty_data=\"true\" suppress_trailing_delimiters=\"false\" child_delimiter_type=\"char\" child_delimiter=\"|\" child_order=\"infix\" tag_name=\"DTL|\" />\n                  </xs:appinfo>\n                </xs:annotation>\n                <xs:complexType>\n                  <xs:sequence>\n                    <xs:annotation>\n                      <xs:appinfo>\n                        <b:groupInfo sequence_number=\"0\" />\n                      </xs:appinfo>\n                    </xs:annotation>\n                    <xs:element name=\"PONumber\" type=\"xs:string\">\n                      <xs:annotation>\n                        <xs:appinfo>\n                          <b:fieldInfo sequence_number=\"1\" justification=\"left\" />\n                        </xs:appinfo>\n                      </xs:annotation>\n                    </xs:element>\n                    <xs:element name=\"ItemOrdered\" type=\"xs:string\">\n                      <xs:annotation>\n                        <xs:appinfo>\n                          <b:fieldInfo sequence_number=\"2\" justification=\"left\" />\n                        </xs:appinfo>\n                      </xs:annotation>\n                    </xs:element>\n                    <xs:element name=\"Quantity\" type=\"xs:string\">\n                      <xs:annotation>\n                        <xs:appinfo>\n                          <b:fieldInfo sequence_number=\"3\" justification=\"left\" />\n                        </xs:appinfo>\n                      </xs:annotation>\n                    </xs:element>\n                    <xs:element name=\"UOM\" type=\"xs:string\">\n                      <xs:annotation>\n                        <xs:appinfo>\n                          <b:fieldInfo sequence_number=\"4\" justification=\"left\" />\n                        </xs:appinfo>\n                      </xs:annotation>\n                    </xs:element>\n                    <xs:element name=\"Price\" type=\"xs:string\">\n                      <xs:annotation>\n                        <xs:appinfo>\n                          <b:fieldInfo sequence_number=\"5\" justification=\"left\" />\n                        </xs:appinfo>\n                      </xs:annotation>\n                    </xs:element>\n                    <xs:element name=\"ExtendedPrice\" type=\"xs:string\">\n                      <xs:annotation>\n                        <xs:appinfo>\n                          <b:fieldInfo sequence_number=\"6\" justification=\"left\" />\n                        </xs:appinfo>\n                      </xs:annotation>\n                    </xs:element>\n                    <xs:element name=\"Description\" type=\"xs:string\">\n                      <xs:annotation>\n                        <xs:appinfo>\n                          <b:fieldInfo sequence_number=\"7\" justification=\"left\" />\n                        </xs:appinfo>\n                      </xs:annotation>\n                    </xs:element>\n                  </xs:sequence>\n                </xs:complexType>\n              </xs:element>\n            </xs:sequence>\n          </xs:complexType>\n        </xs:element>\n      </xs:sequence>\n    </xs:complexType>\n  </xs:element>\n</xs:schema>"),
+			ContentType:            pulumi.String("application/xml"),
+			IntegrationAccountName: pulumi.String("testIntegrationAccount"),
+			Location:               pulumi.String("westus"),
+			Metadata:               nil,
+			ResourceGroupName:      pulumi.String("testResourceGroup"),
+			SchemaName:             pulumi.String("testSchema"),
+			SchemaType:             pulumi.String("Xml"),
+			Tags: pulumi.StringMap{
+				"integrationAccountSchemaName": pulumi.String("IntegrationAccountSchema8120"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const integrationAccountSchema = new azure_native.logic.IntegrationAccountSchema("integrationAccountSchema", {
+    content: `<?xml version="1.0" encoding="utf-16"?>
+<xs:schema xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns="http://Inbound_EDI.OrderFile" targetNamespace="http://Inbound_EDI.OrderFile" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo>
+      <b:schemaInfo default_pad_char=" " count_positions_by_byte="false" parser_optimization="speed" lookahead_depth="3" suppress_empty_nodes="false" generate_empty_nodes="true" allow_early_termination="false" early_terminate_optional_fields="false" allow_message_breakup_of_infix_root="false" compile_parse_tables="false" standard="Flat File" root_reference="OrderFile" />
+      <schemaEditorExtension:schemaInfo namespaceAlias="b" extensionClass="Microsoft.BizTalk.FlatFileExtension.FlatFileExtension" standardName="Flat File" xmlns:schemaEditorExtension="http://schemas.microsoft.com/BizTalk/2003/SchemaEditorExtensions" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OrderFile">
+    <xs:annotation>
+      <xs:appinfo>
+        <b:recordInfo structure="delimited" preserve_delimiter_for_empty_data="true" suppress_trailing_delimiters="false" sequence_number="1" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:annotation>
+          <xs:appinfo>
+            <b:groupInfo sequence_number="0" />
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:element name="Order">
+          <xs:annotation>
+            <xs:appinfo>
+              <b:recordInfo sequence_number="1" structure="delimited" preserve_delimiter_for_empty_data="true" suppress_trailing_delimiters="false" child_delimiter_type="hex" child_delimiter="0x0D 0x0A" child_order="infix" />
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:annotation>
+                <xs:appinfo>
+                  <b:groupInfo sequence_number="0" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:element name="Header">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:recordInfo sequence_number="1" structure="delimited" preserve_delimiter_for_empty_data="true" suppress_trailing_delimiters="false" child_delimiter_type="char" child_delimiter="|" child_order="infix" tag_name="HDR|" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:annotation>
+                      <xs:appinfo>
+                        <b:groupInfo sequence_number="0" />
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:element name="PODate" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="1" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="PONumber" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo justification="left" sequence_number="2" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="CustomerID" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="3" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="CustomerContactName" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="4" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="CustomerContactPhone" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="5" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="1" maxOccurs="unbounded" name="LineItems">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:recordInfo sequence_number="2" structure="delimited" preserve_delimiter_for_empty_data="true" suppress_trailing_delimiters="false" child_delimiter_type="char" child_delimiter="|" child_order="infix" tag_name="DTL|" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:annotation>
+                      <xs:appinfo>
+                        <b:groupInfo sequence_number="0" />
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:element name="PONumber" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="1" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ItemOrdered" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="2" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Quantity" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="3" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="UOM" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="4" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Price" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="5" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ExtendedPrice" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="6" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Description" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="7" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>`,
+    contentType: "application/xml",
+    integrationAccountName: "testIntegrationAccount",
+    location: "westus",
+    metadata: {},
+    resourceGroupName: "testResourceGroup",
+    schemaName: "testSchema",
+    schemaType: "Xml",
+    tags: {
+        integrationAccountSchemaName: "IntegrationAccountSchema8120",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+integration_account_schema = azure_native.logic.IntegrationAccountSchema("integrationAccountSchema",
+    content="""<?xml version="1.0" encoding="utf-16"?>
+<xs:schema xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns="http://Inbound_EDI.OrderFile" targetNamespace="http://Inbound_EDI.OrderFile" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo>
+      <b:schemaInfo default_pad_char=" " count_positions_by_byte="false" parser_optimization="speed" lookahead_depth="3" suppress_empty_nodes="false" generate_empty_nodes="true" allow_early_termination="false" early_terminate_optional_fields="false" allow_message_breakup_of_infix_root="false" compile_parse_tables="false" standard="Flat File" root_reference="OrderFile" />
+      <schemaEditorExtension:schemaInfo namespaceAlias="b" extensionClass="Microsoft.BizTalk.FlatFileExtension.FlatFileExtension" standardName="Flat File" xmlns:schemaEditorExtension="http://schemas.microsoft.com/BizTalk/2003/SchemaEditorExtensions" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OrderFile">
+    <xs:annotation>
+      <xs:appinfo>
+        <b:recordInfo structure="delimited" preserve_delimiter_for_empty_data="true" suppress_trailing_delimiters="false" sequence_number="1" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:annotation>
+          <xs:appinfo>
+            <b:groupInfo sequence_number="0" />
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:element name="Order">
+          <xs:annotation>
+            <xs:appinfo>
+              <b:recordInfo sequence_number="1" structure="delimited" preserve_delimiter_for_empty_data="true" suppress_trailing_delimiters="false" child_delimiter_type="hex" child_delimiter="0x0D 0x0A" child_order="infix" />
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:annotation>
+                <xs:appinfo>
+                  <b:groupInfo sequence_number="0" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:element name="Header">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:recordInfo sequence_number="1" structure="delimited" preserve_delimiter_for_empty_data="true" suppress_trailing_delimiters="false" child_delimiter_type="char" child_delimiter="|" child_order="infix" tag_name="HDR|" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:annotation>
+                      <xs:appinfo>
+                        <b:groupInfo sequence_number="0" />
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:element name="PODate" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="1" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="PONumber" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo justification="left" sequence_number="2" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="CustomerID" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="3" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="CustomerContactName" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="4" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="CustomerContactPhone" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="5" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="1" maxOccurs="unbounded" name="LineItems">
+                <xs:annotation>
+                  <xs:appinfo>
+                    <b:recordInfo sequence_number="2" structure="delimited" preserve_delimiter_for_empty_data="true" suppress_trailing_delimiters="false" child_delimiter_type="char" child_delimiter="|" child_order="infix" tag_name="DTL|" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:annotation>
+                      <xs:appinfo>
+                        <b:groupInfo sequence_number="0" />
+                      </xs:appinfo>
+                    </xs:annotation>
+                    <xs:element name="PONumber" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="1" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ItemOrdered" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="2" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Quantity" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="3" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="UOM" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="4" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Price" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="5" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ExtendedPrice" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="6" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Description" type="xs:string">
+                      <xs:annotation>
+                        <xs:appinfo>
+                          <b:fieldInfo sequence_number="7" justification="left" />
+                        </xs:appinfo>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>""",
+    content_type="application/xml",
+    integration_account_name="testIntegrationAccount",
+    location="westus",
+    metadata={},
+    resource_group_name="testResourceGroup",
+    schema_name="testSchema",
+    schema_type="Xml",
+    tags={
+        "integrationAccountSchemaName": "IntegrationAccountSchema8120",
+    })
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:logic:IntegrationAccountSchema IntegrationAccountSchema5349 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/testIntegrationAccount/schemas/testSchema 
+```
+
+ */
 @ResourceType(type="azure-native:logic:IntegrationAccountSchema")
 public class IntegrationAccountSchema extends io.pulumi.resources.CustomResource {
+    /**
+     * The changed time.
+     */
     @OutputExport(name="changedTime", type=String.class, parameters={})
     private Output<String> changedTime;
 
+    /**
+     * @return The changed time.
+     */
     public Output<String> getChangedTime() {
         return this.changedTime;
     }
+    /**
+     * The content.
+     */
     @OutputExport(name="content", type=String.class, parameters={})
     private Output</* @Nullable */ String> content;
 
+    /**
+     * @return The content.
+     */
     public Output</* @Nullable */ String> getContent() {
         return this.content;
     }
+    /**
+     * The content link.
+     */
     @OutputExport(name="contentLink", type=ContentLinkResponse.class, parameters={})
     private Output<ContentLinkResponse> contentLink;
 
+    /**
+     * @return The content link.
+     */
     public Output<ContentLinkResponse> getContentLink() {
         return this.contentLink;
     }
+    /**
+     * The content type.
+     */
     @OutputExport(name="contentType", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentType;
 
+    /**
+     * @return The content type.
+     */
     public Output</* @Nullable */ String> getContentType() {
         return this.contentType;
     }
+    /**
+     * The created time.
+     */
     @OutputExport(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
+    /**
+     * @return The created time.
+     */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
+    /**
+     * The document name.
+     */
     @OutputExport(name="documentName", type=String.class, parameters={})
     private Output</* @Nullable */ String> documentName;
 
+    /**
+     * @return The document name.
+     */
     public Output</* @Nullable */ String> getDocumentName() {
         return this.documentName;
     }
+    /**
+     * The file name.
+     */
     @OutputExport(name="fileName", type=String.class, parameters={})
     private Output</* @Nullable */ String> fileName;
 
+    /**
+     * @return The file name.
+     */
     public Output</* @Nullable */ String> getFileName() {
         return this.fileName;
     }
+    /**
+     * The resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The resource location.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The metadata.
+     */
     @OutputExport(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
+    /**
+     * @return The metadata.
+     */
     public Output</* @Nullable */ Object> getMetadata() {
         return this.metadata;
     }
+    /**
+     * Gets the resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Gets the resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The schema type.
+     */
     @OutputExport(name="schemaType", type=String.class, parameters={})
     private Output<String> schemaType;
 
+    /**
+     * @return The schema type.
+     */
     public Output<String> getSchemaType() {
         return this.schemaType;
     }
+    /**
+     * The resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The target namespace of the schema.
+     */
     @OutputExport(name="targetNamespace", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetNamespace;
 
+    /**
+     * @return The target namespace of the schema.
+     */
     public Output</* @Nullable */ String> getTargetNamespace() {
         return this.targetNamespace;
     }
+    /**
+     * Gets the resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Gets the resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public IntegrationAccountSchema(String name, IntegrationAccountSchemaArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:logic:IntegrationAccountSchema", name, args == null ? IntegrationAccountSchemaArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -125,6 +802,14 @@ public class IntegrationAccountSchema extends io.pulumi.resources.CustomResource
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static IntegrationAccountSchema get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IntegrationAccountSchema(name, id, options);
     }

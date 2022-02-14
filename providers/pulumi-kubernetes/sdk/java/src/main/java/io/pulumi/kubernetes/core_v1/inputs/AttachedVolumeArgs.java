@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * AttachedVolume describes a volume attached to a node
+ */
 public final class AttachedVolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AttachedVolumeArgs Empty = new AttachedVolumeArgs();
 
+    /**
+     * DevicePath represents the device path where the volume should be available
+     */
     @InputImport(name="devicePath", required=true)
     private final Input<String> devicePath;
 
@@ -20,6 +26,9 @@ public final class AttachedVolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.devicePath;
     }
 
+    /**
+     * Name of the attached volume
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

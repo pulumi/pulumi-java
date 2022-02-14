@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LabelingJobInstructionsResponse {
+/**
+ * The link to a page with detailed labeling instructions for labelers.
+ */
     private final @Nullable String uri;
 
     @OutputCustomType.Constructor({"uri"})
@@ -18,6 +21,9 @@ public final class LabelingJobInstructionsResponse {
         this.uri = uri;
     }
 
+/**
+ * The link to a page with detailed labeling instructions for labelers.
+ */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }

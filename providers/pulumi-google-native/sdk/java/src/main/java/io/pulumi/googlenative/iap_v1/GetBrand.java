@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBrand {
+/**
+ * Retrieves the OAuth brand of the project.
+ */
     public static CompletableFuture<GetBrandResult> invokeAsync(GetBrandArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iap/v1:getBrand", TypeShape.of(GetBrandResult.class), args == null ? GetBrandArgs.Empty : args, Utilities.withVersion(options));
     }

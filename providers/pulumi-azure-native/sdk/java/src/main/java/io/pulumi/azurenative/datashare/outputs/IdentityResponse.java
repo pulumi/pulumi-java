@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IdentityResponse {
+/**
+ * service principal Id
+ */
     private final String principalId;
+/**
+ * Tenant Id
+ */
     private final String tenantId;
+/**
+ * Identity Type
+ */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type"})
@@ -25,12 +34,21 @@ public final class IdentityResponse {
         this.type = type;
     }
 
+/**
+ * service principal Id
+ */
     public String getPrincipalId() {
         return this.principalId;
     }
+/**
+ * Tenant Id
+ */
     public String getTenantId() {
         return this.tenantId;
     }
+/**
+ * Identity Type
+ */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Git repository property payload for Application Configuration Service
+ */
 public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfigurationServiceGitRepositoryArgs Empty = new ConfigurationServiceGitRepositoryArgs();
 
+    /**
+     * Public sshKey of git repository.
+     */
     @InputImport(name="hostKey")
     private final @Nullable Input<String> hostKey;
 
@@ -23,6 +29,9 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
         return this.hostKey == null ? Input.empty() : this.hostKey;
     }
 
+    /**
+     * SshKey algorithm of git repository.
+     */
     @InputImport(name="hostKeyAlgorithm")
     private final @Nullable Input<String> hostKeyAlgorithm;
 
@@ -30,6 +39,9 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
         return this.hostKeyAlgorithm == null ? Input.empty() : this.hostKeyAlgorithm;
     }
 
+    /**
+     * Label of the repository
+     */
     @InputImport(name="label", required=true)
     private final Input<String> label;
 
@@ -37,6 +49,9 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
         return this.label;
     }
 
+    /**
+     * Name of the repository
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -44,6 +59,9 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
         return this.name;
     }
 
+    /**
+     * Password of git repository basic auth.
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -51,6 +69,9 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * Collection of patterns of the repository
+     */
     @InputImport(name="patterns", required=true)
     private final Input<List<String>> patterns;
 
@@ -58,6 +79,9 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
         return this.patterns;
     }
 
+    /**
+     * Private sshKey algorithm of git repository.
+     */
     @InputImport(name="privateKey")
     private final @Nullable Input<String> privateKey;
 
@@ -65,6 +89,9 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
         return this.privateKey == null ? Input.empty() : this.privateKey;
     }
 
+    /**
+     * Searching path of the repository
+     */
     @InputImport(name="searchPaths")
     private final @Nullable Input<List<String>> searchPaths;
 
@@ -72,6 +99,9 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
         return this.searchPaths == null ? Input.empty() : this.searchPaths;
     }
 
+    /**
+     * Strict host key checking or not.
+     */
     @InputImport(name="strictHostKeyChecking")
     private final @Nullable Input<Boolean> strictHostKeyChecking;
 
@@ -79,6 +109,9 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
         return this.strictHostKeyChecking == null ? Input.empty() : this.strictHostKeyChecking;
     }
 
+    /**
+     * URI of the repository
+     */
     @InputImport(name="uri", required=true)
     private final Input<String> uri;
 
@@ -86,6 +119,9 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
         return this.uri;
     }
 
+    /**
+     * Username of git repository basic auth.
+     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 

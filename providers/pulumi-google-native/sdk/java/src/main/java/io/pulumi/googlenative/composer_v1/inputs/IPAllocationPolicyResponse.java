@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Configuration for controlling how IPs are allocated in the GKE cluster running the Apache Airflow software.
+ */
 public final class IPAllocationPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IPAllocationPolicyResponse Empty = new IPAllocationPolicyResponse();
 
+    /**
+     * Optional. The IP address range used to allocate IP addresses to pods in the GKE cluster. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true. Set to blank to have GKE choose a range with the default size. Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
+     */
     @InputImport(name="clusterIpv4CidrBlock", required=true)
     private final String clusterIpv4CidrBlock;
 
@@ -20,6 +26,9 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
         return this.clusterIpv4CidrBlock;
     }
 
+    /**
+     * Optional. The name of the GKE cluster's secondary range used to allocate IP addresses to pods. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true.
+     */
     @InputImport(name="clusterSecondaryRangeName", required=true)
     private final String clusterSecondaryRangeName;
 
@@ -27,6 +36,9 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
         return this.clusterSecondaryRangeName;
     }
 
+    /**
+     * Optional. The IP address range of the services IP addresses in this GKE cluster. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true. Set to blank to have GKE choose a range with the default size. Set to /netmask (e.g. `/14`) to have GKE choose a range with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
+     */
     @InputImport(name="servicesIpv4CidrBlock", required=true)
     private final String servicesIpv4CidrBlock;
 
@@ -34,6 +46,9 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
         return this.servicesIpv4CidrBlock;
     }
 
+    /**
+     * Optional. The name of the services' secondary range used to allocate IP addresses to the GKE cluster. For Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*, this field is applicable only when `use_ip_aliases` is true.
+     */
     @InputImport(name="servicesSecondaryRangeName", required=true)
     private final String servicesSecondaryRangeName;
 
@@ -41,6 +56,9 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
         return this.servicesSecondaryRangeName;
     }
 
+    /**
+     * Optional. Whether or not to enable Alias IPs in the GKE cluster. If `true`, a VPC-native cluster is created. This field is only supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*. Environments in newer versions always use VPC-native GKE clusters.
+     */
     @InputImport(name="useIpAliases", required=true)
     private final Boolean useIpAliases;
 

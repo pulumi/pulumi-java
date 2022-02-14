@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AccessReviewReviewerResponse {
+/**
+ * The id of the reviewer(user/servicePrincipal)
+ */
     private final @Nullable String principalId;
+/**
+ * The identity type : user/servicePrincipal
+ */
     private final String principalType;
 
     @OutputCustomType.Constructor({"principalId","principalType"})
@@ -22,9 +28,15 @@ public final class AccessReviewReviewerResponse {
         this.principalType = Objects.requireNonNull(principalType);
     }
 
+/**
+ * The id of the reviewer(user/servicePrincipal)
+ */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }
+/**
+ * The identity type : user/servicePrincipal
+ */
     public String getPrincipalType() {
         return this.principalType;
     }

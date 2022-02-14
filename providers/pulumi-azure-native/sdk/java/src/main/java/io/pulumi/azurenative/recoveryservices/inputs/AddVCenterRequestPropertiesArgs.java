@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of an add vCenter request.
+ */
 public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AddVCenterRequestPropertiesArgs Empty = new AddVCenterRequestPropertiesArgs();
 
+    /**
+     * The friendly name of the vCenter.
+     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -21,6 +27,9 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
+    /**
+     * The IP address of the vCenter to be discovered.
+     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<String> ipAddress;
 
@@ -28,6 +37,9 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
+    /**
+     * The port number for discovery.
+     */
     @InputImport(name="port")
     private final @Nullable Input<String> port;
 
@@ -35,6 +47,9 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * The process server Id from where the discovery is orchestrated.
+     */
     @InputImport(name="processServerId")
     private final @Nullable Input<String> processServerId;
 
@@ -42,6 +57,9 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
         return this.processServerId == null ? Input.empty() : this.processServerId;
     }
 
+    /**
+     * The account Id which has privileges to discover the vCenter.
+     */
     @InputImport(name="runAsAccountId")
     private final @Nullable Input<String> runAsAccountId;
 

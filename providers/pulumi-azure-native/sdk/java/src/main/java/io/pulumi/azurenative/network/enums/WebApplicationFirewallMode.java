@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The mode of the policy.
+ */
     @EnumType
     public enum WebApplicationFirewallMode {
+/**
+ * 
+ */
         Prevention("Prevention"),
+/**
+ * 
+ */
         Detection("Detection");
 
         private final String value;

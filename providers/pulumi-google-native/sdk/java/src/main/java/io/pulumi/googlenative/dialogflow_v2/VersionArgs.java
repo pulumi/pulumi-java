@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VersionArgs Empty = new VersionArgs();
 
+    /**
+     * Optional. The developer-provided description of this version.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +27,9 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -28,6 +37,9 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

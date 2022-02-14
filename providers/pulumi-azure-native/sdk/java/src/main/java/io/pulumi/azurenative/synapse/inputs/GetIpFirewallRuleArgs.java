@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetIpFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIpFirewallRuleArgs Empty = new GetIpFirewallRuleArgs();
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class GetIpFirewallRuleArgs extends io.pulumi.resources.InvokeArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The IP firewall rule name
+     */
     @InputImport(name="ruleName", required=true)
     private final String ruleName;
 
@@ -26,6 +35,9 @@ public final class GetIpFirewallRuleArgs extends io.pulumi.resources.InvokeArgs 
         return this.ruleName;
     }
 
+    /**
+     * The name of the workspace
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

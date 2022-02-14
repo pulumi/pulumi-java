@@ -24,10 +24,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EventSubscriptionArgs Empty = new EventSubscriptionArgs();
 
+    /**
+     * The DeadLetter destination of the event subscription.
+     */
     @InputImport(name="deadLetterDestination")
     private final @Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
 
@@ -35,6 +41,9 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
         return this.deadLetterDestination == null ? Input.empty() : this.deadLetterDestination;
     }
 
+    /**
+     * Information about the destination where events have to be delivered for the event subscription.
+     */
     @InputImport(name="destination")
     private final @Nullable Input<Object> destination;
 
@@ -42,6 +51,9 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
         return this.destination == null ? Input.empty() : this.destination;
     }
 
+    /**
+     * The event delivery schema for the event subscription.
+     */
     @InputImport(name="eventDeliverySchema")
     private final @Nullable Input<Either<String,EventDeliverySchema>> eventDeliverySchema;
 
@@ -49,6 +61,9 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
         return this.eventDeliverySchema == null ? Input.empty() : this.eventDeliverySchema;
     }
 
+    /**
+     * Name of the event subscription. Event subscription names must be between 3 and 64 characters in length and should use alphanumeric letters only.
+     */
     @InputImport(name="eventSubscriptionName")
     private final @Nullable Input<String> eventSubscriptionName;
 
@@ -56,6 +71,9 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
         return this.eventSubscriptionName == null ? Input.empty() : this.eventSubscriptionName;
     }
 
+    /**
+     * Expiration time of the event subscription.
+     */
     @InputImport(name="expirationTimeUtc")
     private final @Nullable Input<String> expirationTimeUtc;
 
@@ -63,6 +81,9 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
         return this.expirationTimeUtc == null ? Input.empty() : this.expirationTimeUtc;
     }
 
+    /**
+     * Information about the filter for the event subscription.
+     */
     @InputImport(name="filter")
     private final @Nullable Input<EventSubscriptionFilterArgs> filter;
 
@@ -70,6 +91,9 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
         return this.filter == null ? Input.empty() : this.filter;
     }
 
+    /**
+     * List of user defined labels.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<List<String>> labels;
 
@@ -77,6 +101,9 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
+     */
     @InputImport(name="retryPolicy")
     private final @Nullable Input<RetryPolicyArgs> retryPolicy;
 
@@ -84,6 +111,9 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
         return this.retryPolicy == null ? Input.empty() : this.retryPolicy;
     }
 
+    /**
+     * The identifier of the resource to which the event subscription needs to be created or updated. The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic. For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.
+     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 

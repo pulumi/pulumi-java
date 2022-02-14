@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateEndpointConnectionArgs Empty = new PrivateEndpointConnectionArgs();
 
+    /**
+     * The name of Cognitive Services account.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -22,6 +28,9 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.accountName;
     }
 
+    /**
+     * The location of the private endpoint connection
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -29,6 +38,9 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the private endpoint connection associated with the Cognitive Services Account
+     */
     @InputImport(name="privateEndpointConnectionName")
     private final @Nullable Input<String> privateEndpointConnectionName;
 
@@ -36,6 +48,9 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
+    /**
+     * Resource properties.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<PrivateEndpointConnectionPropertiesArgs> properties;
 
@@ -43,6 +58,9 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

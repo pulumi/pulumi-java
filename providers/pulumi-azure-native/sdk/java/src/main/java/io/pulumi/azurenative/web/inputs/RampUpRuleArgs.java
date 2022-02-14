@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Routing rules for ramp up testing. This rule allows to redirect static traffic % to a slot or to gradually change routing % based on performance.
+ */
 public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RampUpRuleArgs Empty = new RampUpRuleArgs();
 
+    /**
+     * Hostname of a slot to which the traffic will be redirected if decided to. E.g. myapp-stage.azurewebsites.net.
+     */
     @InputImport(name="actionHostName")
     private final @Nullable Input<String> actionHostName;
 
@@ -23,6 +29,10 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.actionHostName == null ? Input.empty() : this.actionHostName;
     }
 
+    /**
+     * Custom decision algorithm can be provided in TiPCallback site extension which URL can be specified. See TiPCallback site extension for the scaffold and contracts.
+https://www.siteextensions.net/packages/TiPCallback/
+     */
     @InputImport(name="changeDecisionCallbackUrl")
     private final @Nullable Input<String> changeDecisionCallbackUrl;
 
@@ -30,6 +40,9 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.changeDecisionCallbackUrl == null ? Input.empty() : this.changeDecisionCallbackUrl;
     }
 
+    /**
+     * Specifies interval in minutes to reevaluate ReroutePercentage.
+     */
     @InputImport(name="changeIntervalInMinutes")
     private final @Nullable Input<Integer> changeIntervalInMinutes;
 
@@ -37,6 +50,11 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.changeIntervalInMinutes == null ? Input.empty() : this.changeIntervalInMinutes;
     }
 
+    /**
+     * In auto ramp up scenario this is the step to add/remove from <code>ReroutePercentage</code> until it reaches \n<code>MinReroutePercentage</code> or 
+<code>MaxReroutePercentage</code>. Site metrics are checked every N minutes specified in <code>ChangeIntervalInMinutes</code>.\nCustom decision algorithm 
+can be provided in TiPCallback site extension which URL can be specified in <code>ChangeDecisionCallbackUrl</code>.
+     */
     @InputImport(name="changeStep")
     private final @Nullable Input<Double> changeStep;
 
@@ -44,6 +62,9 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.changeStep == null ? Input.empty() : this.changeStep;
     }
 
+    /**
+     * Specifies upper boundary below which ReroutePercentage will stay.
+     */
     @InputImport(name="maxReroutePercentage")
     private final @Nullable Input<Double> maxReroutePercentage;
 
@@ -51,6 +72,9 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxReroutePercentage == null ? Input.empty() : this.maxReroutePercentage;
     }
 
+    /**
+     * Specifies lower boundary above which ReroutePercentage will stay.
+     */
     @InputImport(name="minReroutePercentage")
     private final @Nullable Input<Double> minReroutePercentage;
 
@@ -58,6 +82,9 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.minReroutePercentage == null ? Input.empty() : this.minReroutePercentage;
     }
 
+    /**
+     * Name of the routing rule. The recommended name would be to point to the slot which will receive the traffic in the experiment.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -65,6 +92,9 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Percentage of the traffic which will be redirected to <code>ActionHostName</code>.
+     */
     @InputImport(name="reroutePercentage")
     private final @Nullable Input<Double> reroutePercentage;
 

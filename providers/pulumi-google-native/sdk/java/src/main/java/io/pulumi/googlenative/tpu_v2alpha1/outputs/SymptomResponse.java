@@ -9,9 +9,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SymptomResponse {
+/**
+ * Timestamp when the Symptom is created.
+ */
     private final String createTime;
+/**
+ * Detailed information of the current Symptom.
+ */
     private final String details;
+/**
+ * Type of the Symptom.
+ */
     private final String symptomType;
+/**
+ * A string used to uniquely distinguish a worker within a TPU node.
+ */
     private final String workerId;
 
     @OutputCustomType.Constructor({"createTime","details","symptomType","workerId"})
@@ -26,15 +38,27 @@ public final class SymptomResponse {
         this.workerId = Objects.requireNonNull(workerId);
     }
 
+/**
+ * Timestamp when the Symptom is created.
+ */
     public String getCreateTime() {
         return this.createTime;
     }
+/**
+ * Detailed information of the current Symptom.
+ */
     public String getDetails() {
         return this.details;
     }
+/**
+ * Type of the Symptom.
+ */
     public String getSymptomType() {
         return this.symptomType;
     }
+/**
+ * A string used to uniquely distinguish a worker within a TPU node.
+ */
     public String getWorkerId() {
         return this.workerId;
     }

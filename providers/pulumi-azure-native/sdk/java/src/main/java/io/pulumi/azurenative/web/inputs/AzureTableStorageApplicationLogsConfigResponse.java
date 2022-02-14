@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Application logs to Azure table storage configuration.
+ */
 public final class AzureTableStorageApplicationLogsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureTableStorageApplicationLogsConfigResponse Empty = new AzureTableStorageApplicationLogsConfigResponse();
 
+    /**
+     * Log level.
+     */
     @InputImport(name="level")
     private final @Nullable String level;
 
@@ -21,6 +27,9 @@ public final class AzureTableStorageApplicationLogsConfigResponse extends io.pul
         return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
     }
 
+    /**
+     * SAS URL to an Azure table with add/query/delete permissions.
+     */
     @InputImport(name="sasUrl", required=true)
     private final String sasUrl;
 

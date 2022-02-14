@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BucketObjectCustomerEncryptionResponse {
+/**
+ * The encryption algorithm.
+ */
     private final String encryptionAlgorithm;
+/**
+ * SHA256 hash value of the encryption key.
+ */
     private final String keySha256;
 
     @OutputCustomType.Constructor({"encryptionAlgorithm","keySha256"})
@@ -20,9 +26,15 @@ public final class BucketObjectCustomerEncryptionResponse {
         this.keySha256 = Objects.requireNonNull(keySha256);
     }
 
+/**
+ * The encryption algorithm.
+ */
     public String getEncryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
+/**
+ * SHA256 hash value of the encryption key.
+ */
     public String getKeySha256() {
         return this.keySha256;
     }

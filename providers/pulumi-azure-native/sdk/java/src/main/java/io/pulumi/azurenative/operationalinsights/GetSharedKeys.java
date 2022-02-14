@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSharedKeys {
+/**
+ * The shared keys for a workspace.
+API Version: 2020-08-01.
+ *
+ * The shared keys for a workspace.
+ */
     public static CompletableFuture<GetSharedKeysResult> invokeAsync(GetSharedKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getSharedKeys", TypeShape.of(GetSharedKeysResult.class), args == null ? GetSharedKeysArgs.Empty : args, Utilities.withVersion(options));
     }

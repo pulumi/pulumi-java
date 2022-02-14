@@ -9,10 +9,16 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Contains runtime daemon metrics, such as OS and kernels and sessions stats.
+ */
 public final class RuntimeMetricsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RuntimeMetricsResponse Empty = new RuntimeMetricsResponse();
 
+    /**
+     * The system metrics.
+     */
     @InputImport(name="systemMetrics", required=true)
     private final Map<String,String> systemMetrics;
 

@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a load balancing rule.
+ */
 public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoadBalancingRuleArgs Empty = new LoadBalancingRuleArgs();
 
+    /**
+     * The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
+     */
     @InputImport(name="backendPort", required=true)
     private final Input<Integer> backendPort;
 
@@ -25,6 +31,9 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
         return this.backendPort;
     }
 
+    /**
+     * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
+     */
     @InputImport(name="frontendPort", required=true)
     private final Input<Integer> frontendPort;
 
@@ -32,6 +41,9 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
         return this.frontendPort;
     }
 
+    /**
+     * the reference to the load balancer probe used by the load balancing rule.
+     */
     @InputImport(name="probeProtocol", required=true)
     private final Input<Either<String,ProbeProtocol>> probeProtocol;
 
@@ -39,6 +51,9 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
         return this.probeProtocol;
     }
 
+    /**
+     * The probe request path. Only supported for HTTP/HTTPS probes.
+     */
     @InputImport(name="probeRequestPath")
     private final @Nullable Input<String> probeRequestPath;
 
@@ -46,6 +61,9 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
         return this.probeRequestPath == null ? Input.empty() : this.probeRequestPath;
     }
 
+    /**
+     * The reference to the transport protocol used by the load balancing rule.
+     */
     @InputImport(name="protocol", required=true)
     private final Input<Either<String,Protocol>> protocol;
 

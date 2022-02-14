@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetCompositeTypeArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCompositeTypeArgs Empty = new GetCompositeTypeArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="compositeType", required=true)
     private final String compositeType;
 
@@ -21,6 +27,9 @@ public final class GetCompositeTypeArgs extends io.pulumi.resources.InvokeArgs {
         return this.compositeType;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

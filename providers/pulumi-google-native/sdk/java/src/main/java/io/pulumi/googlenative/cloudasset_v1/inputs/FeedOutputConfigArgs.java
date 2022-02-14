@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Output configuration for asset feed destination.
+ */
 public final class FeedOutputConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FeedOutputConfigArgs Empty = new FeedOutputConfigArgs();
 
+    /**
+     * Destination on Pub/Sub.
+     */
     @InputImport(name="pubsubDestination")
     private final @Nullable Input<PubsubDestinationArgs> pubsubDestination;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetBookmarkRelationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBookmarkRelationArgs Empty = new GetBookmarkRelationArgs();
 
+    /**
+     * Bookmark ID
+     */
     @InputImport(name="bookmarkId", required=true)
     private final String bookmarkId;
 
@@ -19,6 +25,9 @@ public final class GetBookmarkRelationArgs extends io.pulumi.resources.InvokeArg
         return this.bookmarkId;
     }
 
+    /**
+     * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
     private final String operationalInsightsResourceProvider;
 
@@ -26,6 +35,9 @@ public final class GetBookmarkRelationArgs extends io.pulumi.resources.InvokeArg
         return this.operationalInsightsResourceProvider;
     }
 
+    /**
+     * Relation Name
+     */
     @InputImport(name="relationName", required=true)
     private final String relationName;
 
@@ -33,6 +45,9 @@ public final class GetBookmarkRelationArgs extends io.pulumi.resources.InvokeArg
         return this.relationName;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -40,6 +55,9 @@ public final class GetBookmarkRelationArgs extends io.pulumi.resources.InvokeArg
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

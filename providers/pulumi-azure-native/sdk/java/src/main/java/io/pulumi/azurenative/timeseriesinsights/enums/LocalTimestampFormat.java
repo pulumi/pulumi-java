@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * An enum that represents the format of the local timestamp property that needs to be set.
+ */
     @EnumType
     public enum LocalTimestampFormat {
+/**
+ * 
+ */
         Embedded("Embedded");
 
         private final String value;

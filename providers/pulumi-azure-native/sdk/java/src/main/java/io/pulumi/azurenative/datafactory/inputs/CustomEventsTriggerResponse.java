@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Trigger that runs every time a custom event is received.
+ */
 public final class CustomEventsTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomEventsTriggerResponse Empty = new CustomEventsTriggerResponse();
 
+    /**
+     * List of tags that can be used for describing the trigger.
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -24,6 +30,9 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * Trigger description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -31,6 +40,9 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The list of event types that cause this trigger to fire.
+     */
     @InputImport(name="events", required=true)
     private final List<Object> events;
 
@@ -38,6 +50,9 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
         return this.events;
     }
 
+    /**
+     * Pipelines that need to be started.
+     */
     @InputImport(name="pipelines")
     private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
 
@@ -45,6 +60,9 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
         return this.pipelines == null ? List.of() : this.pipelines;
     }
 
+    /**
+     * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+     */
     @InputImport(name="runtimeState", required=true)
     private final String runtimeState;
 
@@ -52,6 +70,9 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
         return this.runtimeState;
     }
 
+    /**
+     * The ARM resource ID of the Azure Event Grid Topic.
+     */
     @InputImport(name="scope", required=true)
     private final String scope;
 
@@ -59,6 +80,9 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
         return this.scope;
     }
 
+    /**
+     * The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
+     */
     @InputImport(name="subjectBeginsWith")
     private final @Nullable String subjectBeginsWith;
 
@@ -66,6 +90,9 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
         return this.subjectBeginsWith == null ? Optional.empty() : Optional.ofNullable(this.subjectBeginsWith);
     }
 
+    /**
+     * The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
+     */
     @InputImport(name="subjectEndsWith")
     private final @Nullable String subjectEndsWith;
 
@@ -73,6 +100,10 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
         return this.subjectEndsWith == null ? Optional.empty() : Optional.ofNullable(this.subjectEndsWith);
     }
 
+    /**
+     * Trigger type.
+Expected value is 'CustomEventsTrigger'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

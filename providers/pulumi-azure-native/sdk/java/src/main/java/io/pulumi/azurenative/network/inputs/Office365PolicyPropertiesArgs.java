@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network Virtual Appliance Sku Properties.
+ */
 public final class Office365PolicyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final Office365PolicyPropertiesArgs Empty = new Office365PolicyPropertiesArgs();
 
+    /**
+     * Office 365 breakout categories.
+     */
     @InputImport(name="breakOutCategories")
     private final @Nullable Input<BreakOutCategoryPoliciesArgs> breakOutCategories;
 

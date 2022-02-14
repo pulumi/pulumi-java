@@ -11,10 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ImageReferenceResponse {
+/**
+ * This property is mutually exclusive with other properties. The Shared Image Gallery image must have replicas in the same region as the Azure Batch account. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
+ */
     private final @Nullable String id;
+/**
+ * For example, UbuntuServer or WindowsServer.
+ */
     private final @Nullable String offer;
+/**
+ * For example, Canonical or MicrosoftWindowsServer.
+ */
     private final @Nullable String publisher;
+/**
+ * For example, 18.04-LTS or 2019-Datacenter.
+ */
     private final @Nullable String sku;
+/**
+ * A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
+ */
     private final @Nullable String version;
 
     @OutputCustomType.Constructor({"id","offer","publisher","sku","version"})
@@ -31,18 +46,33 @@ public final class ImageReferenceResponse {
         this.version = version;
     }
 
+/**
+ * This property is mutually exclusive with other properties. The Shared Image Gallery image must have replicas in the same region as the Azure Batch account. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * For example, UbuntuServer or WindowsServer.
+ */
     public Optional<String> getOffer() {
         return Optional.ofNullable(this.offer);
     }
+/**
+ * For example, Canonical or MicrosoftWindowsServer.
+ */
     public Optional<String> getPublisher() {
         return Optional.ofNullable(this.publisher);
     }
+/**
+ * For example, 18.04-LTS or 2019-Datacenter.
+ */
     public Optional<String> getSku() {
         return Optional.ofNullable(this.sku);
     }
+/**
+ * A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
+ */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

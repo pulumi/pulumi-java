@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomDomainArgs Empty = new CustomDomainArgs();
 
+    /**
+     * Name of the custom domain within an endpoint.
+     */
     @InputImport(name="customDomainName")
     private final @Nullable Input<String> customDomainName;
 
@@ -21,6 +27,9 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.customDomainName == null ? Input.empty() : this.customDomainName;
     }
 
+    /**
+     * Name of the endpoint under the profile which is unique globally.
+     */
     @InputImport(name="endpointName", required=true)
     private final Input<String> endpointName;
 
@@ -28,6 +37,9 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpointName;
     }
 
+    /**
+     * The host name of the custom domain. Must be a domain name.
+     */
     @InputImport(name="hostName", required=true)
     private final Input<String> hostName;
 
@@ -35,6 +47,9 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostName;
     }
 
+    /**
+     * Name of the CDN profile which is unique within the resource group.
+     */
     @InputImport(name="profileName", required=true)
     private final Input<String> profileName;
 
@@ -42,6 +57,9 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
         return this.profileName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

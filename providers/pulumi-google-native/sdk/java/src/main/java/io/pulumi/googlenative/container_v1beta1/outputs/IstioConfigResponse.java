@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IstioConfigResponse {
+/**
+ * The specified Istio auth mode, either none, or mutual TLS.
+ */
     private final String auth;
+/**
+ * Whether Istio is enabled for this cluster.
+ */
     private final Boolean disabled;
 
     @OutputCustomType.Constructor({"auth","disabled"})
@@ -21,9 +27,15 @@ public final class IstioConfigResponse {
         this.disabled = Objects.requireNonNull(disabled);
     }
 
+/**
+ * The specified Istio auth mode, either none, or mutual TLS.
+ */
     public String getAuth() {
         return this.auth;
     }
+/**
+ * Whether Istio is enabled for this cluster.
+ */
     public Boolean getDisabled() {
         return this.disabled;
     }

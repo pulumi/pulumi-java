@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DdosProtectionPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DdosProtectionPlanArgs Empty = new DdosProtectionPlanArgs();
 
+    /**
+     * The name of the DDoS protection plan.
+     */
     @InputImport(name="ddosProtectionPlanName")
     private final @Nullable Input<String> ddosProtectionPlanName;
 
@@ -22,6 +28,9 @@ public final class DdosProtectionPlanArgs extends io.pulumi.resources.ResourceAr
         return this.ddosProtectionPlanName == null ? Input.empty() : this.ddosProtectionPlanName;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -29,6 +38,9 @@ public final class DdosProtectionPlanArgs extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,9 @@ public final class DdosProtectionPlanArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

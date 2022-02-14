@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configs for the input data used to create the issue model.
+ */
 public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs Empty = new GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs();
 
+    /**
+     * A filter to reduce the conversations used for training the model to a specific subset.
+     */
     @InputImport(name="filter")
     private final @Nullable Input<String> filter;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigAr
         return this.filter == null ? Input.empty() : this.filter;
     }
 
+    /**
+     * Medium of conversations used in training data. This field is being deprecated. To specify the medium to be used in training a new issue model, set the `medium` field on `filter`.
+     */
     @InputImport(name="medium")
     private final @Nullable Input<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium;
 

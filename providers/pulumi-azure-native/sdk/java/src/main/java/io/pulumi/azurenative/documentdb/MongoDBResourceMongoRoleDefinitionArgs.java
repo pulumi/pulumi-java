@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MongoDBResourceMongoRoleDefinitionArgs Empty = new MongoDBResourceMongoRoleDefinitionArgs();
 
+    /**
+     * Cosmos DB database account name.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -25,6 +31,9 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
         return this.accountName;
     }
 
+    /**
+     * The database name for which access is being granted for this Role Definition.
+     */
     @InputImport(name="databaseName")
     private final @Nullable Input<String> databaseName;
 
@@ -32,6 +41,9 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
         return this.databaseName == null ? Input.empty() : this.databaseName;
     }
 
+    /**
+     * The ID for the Role Definition {dbName.roleName}.
+     */
     @InputImport(name="mongoRoleDefinitionId")
     private final @Nullable Input<String> mongoRoleDefinitionId;
 
@@ -39,6 +51,9 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
         return this.mongoRoleDefinitionId == null ? Input.empty() : this.mongoRoleDefinitionId;
     }
 
+    /**
+     * A set of privileges contained by the Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Scopes higher than Database are not enforceable as privilege.
+     */
     @InputImport(name="privileges")
     private final @Nullable Input<List<PrivilegeArgs>> privileges;
 
@@ -46,6 +61,9 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
         return this.privileges == null ? Input.empty() : this.privileges;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -53,6 +71,9 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
         return this.resourceGroupName;
     }
 
+    /**
+     * A user-friendly name for the Role Definition. Must be unique for the database account.
+     */
     @InputImport(name="roleName")
     private final @Nullable Input<String> roleName;
 
@@ -60,6 +81,9 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
         return this.roleName == null ? Input.empty() : this.roleName;
     }
 
+    /**
+     * The set of roles inherited by this Role Definition.
+     */
     @InputImport(name="roles")
     private final @Nullable Input<List<RoleArgs>> roles;
 
@@ -67,6 +91,9 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends io.pulumi.reso
         return this.roles == null ? Input.empty() : this.roles;
     }
 
+    /**
+     * Indicates whether the Role Definition was built-in or user created.
+     */
     @InputImport(name="type")
     private final @Nullable Input<MongoRoleDefinitionType> type;
 

@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Firewall Policy Insights.
+ */
 public final class FirewallPolicyInsightsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallPolicyInsightsArgs Empty = new FirewallPolicyInsightsArgs();
 
+    /**
+     * A flag to indicate if the insights are enabled on the policy.
+     */
     @InputImport(name="isEnabled")
     private final @Nullable Input<Boolean> isEnabled;
 
@@ -23,6 +29,9 @@ public final class FirewallPolicyInsightsArgs extends io.pulumi.resources.Resour
         return this.isEnabled == null ? Input.empty() : this.isEnabled;
     }
 
+    /**
+     * Workspaces needed to configure the Firewall Policy Insights.
+     */
     @InputImport(name="logAnalyticsResources")
     private final @Nullable Input<FirewallPolicyLogAnalyticsResourcesArgs> logAnalyticsResources;
 
@@ -30,6 +39,9 @@ public final class FirewallPolicyInsightsArgs extends io.pulumi.resources.Resour
         return this.logAnalyticsResources == null ? Input.empty() : this.logAnalyticsResources;
     }
 
+    /**
+     * Number of days the insights should be enabled on the policy.
+     */
     @InputImport(name="retentionDays")
     private final @Nullable Input<Integer> retentionDays;
 

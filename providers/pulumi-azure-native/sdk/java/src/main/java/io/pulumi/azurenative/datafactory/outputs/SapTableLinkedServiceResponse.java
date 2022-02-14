@@ -19,26 +19,90 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SapTableLinkedServiceResponse {
+/**
+ * List of tags that can be used for describing the linked service.
+ */
     private final @Nullable List<Object> annotations;
+/**
+ * Client ID of the client on the SAP system where the table is located. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object clientId;
+/**
+ * The integration runtime reference.
+ */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+/**
+ * Linked service description.
+ */
     private final @Nullable String description;
+/**
+ * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object encryptedCredential;
+/**
+ * Language of the SAP system where the table is located. The default value is EN. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object language;
+/**
+ * The Logon Group for the SAP System. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object logonGroup;
+/**
+ * The hostname of the SAP Message Server. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object messageServer;
+/**
+ * The service name or port number of the Message Server. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object messageServerService;
+/**
+ * Parameters for linked service.
+ */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+/**
+ * Password to access the SAP server where the table is located.
+ */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+/**
+ * Host name of the SAP instance where the table is located. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object server;
+/**
+ * External security product's library to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object sncLibraryPath;
+/**
+ * SNC activation indicator to access the SAP server where the table is located. Must be either 0 (off) or 1 (on). Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object sncMode;
+/**
+ * Initiator's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object sncMyName;
+/**
+ * Communication partner's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object sncPartnerName;
+/**
+ * SNC Quality of Protection. Allowed value include: 1, 2, 3, 8, 9. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object sncQop;
+/**
+ * SystemID of the SAP system where the table is located. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object systemId;
+/**
+ * System number of the SAP system where the table is located. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object systemNumber;
+/**
+ * Type of linked service.
+Expected value is 'SapTable'.
+ */
     private final String type;
+/**
+ * Username to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object userName;
 
     @OutputCustomType.Constructor({"annotations","clientId","connectVia","description","encryptedCredential","language","logonGroup","messageServer","messageServerService","parameters","password","server","sncLibraryPath","sncMode","sncMyName","sncPartnerName","sncQop","systemId","systemNumber","type","userName"})
@@ -87,66 +151,130 @@ public final class SapTableLinkedServiceResponse {
         this.userName = userName;
     }
 
+/**
+ * List of tags that can be used for describing the linked service.
+ */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
+/**
+ * Client ID of the client on the SAP system where the table is located. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
+/**
+ * The integration runtime reference.
+ */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
+/**
+ * Linked service description.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
+/**
+ * Language of the SAP system where the table is located. The default value is EN. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getLanguage() {
         return Optional.ofNullable(this.language);
     }
+/**
+ * The Logon Group for the SAP System. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getLogonGroup() {
         return Optional.ofNullable(this.logonGroup);
     }
+/**
+ * The hostname of the SAP Message Server. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getMessageServer() {
         return Optional.ofNullable(this.messageServer);
     }
+/**
+ * The service name or port number of the Message Server. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getMessageServerService() {
         return Optional.ofNullable(this.messageServerService);
     }
+/**
+ * Parameters for linked service.
+ */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+/**
+ * Password to access the SAP server where the table is located.
+ */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
+/**
+ * Host name of the SAP instance where the table is located. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getServer() {
         return Optional.ofNullable(this.server);
     }
+/**
+ * External security product's library to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getSncLibraryPath() {
         return Optional.ofNullable(this.sncLibraryPath);
     }
+/**
+ * SNC activation indicator to access the SAP server where the table is located. Must be either 0 (off) or 1 (on). Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getSncMode() {
         return Optional.ofNullable(this.sncMode);
     }
+/**
+ * Initiator's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getSncMyName() {
         return Optional.ofNullable(this.sncMyName);
     }
+/**
+ * Communication partner's SNC name to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getSncPartnerName() {
         return Optional.ofNullable(this.sncPartnerName);
     }
+/**
+ * SNC Quality of Protection. Allowed value include: 1, 2, 3, 8, 9. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getSncQop() {
         return Optional.ofNullable(this.sncQop);
     }
+/**
+ * SystemID of the SAP system where the table is located. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getSystemId() {
         return Optional.ofNullable(this.systemId);
     }
+/**
+ * System number of the SAP system where the table is located. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getSystemNumber() {
         return Optional.ofNullable(this.systemNumber);
     }
+/**
+ * Type of linked service.
+Expected value is 'SapTable'.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Username to access the SAP server where the table is located. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getUserName() {
         return Optional.ofNullable(this.userName);
     }

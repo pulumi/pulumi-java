@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details of a Reference Vm
+ */
 public final class ReferenceVmArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReferenceVmArgs Empty = new ReferenceVmArgs();
 
+    /**
+     * The password of the virtual machine. This will be set to null in GET resource API
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -21,6 +27,9 @@ public final class ReferenceVmArgs extends io.pulumi.resources.ResourceArgs {
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * The username of the virtual machine
+     */
     @InputImport(name="userName", required=true)
     private final Input<String> userName;
 

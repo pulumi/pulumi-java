@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlossary {
+/**
+ * Gets a glossary. Returns NOT_FOUND, if the glossary doesn't exist.
+ */
     public static CompletableFuture<GetGlossaryResult> invokeAsync(GetGlossaryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:translate/v3:getGlossary", TypeShape.of(GetGlossaryResult.class), args == null ? GetGlossaryArgs.Empty : args, Utilities.withVersion(options));
     }

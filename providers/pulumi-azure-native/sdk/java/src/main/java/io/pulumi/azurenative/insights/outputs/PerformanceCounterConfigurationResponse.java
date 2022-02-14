@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PerformanceCounterConfigurationResponse {
+/**
+ * 
+ */
     private final @Nullable String instance;
+/**
+ * 
+ */
     private final String name;
+/**
+ * 
+ */
     private final String samplingPeriod;
 
     @OutputCustomType.Constructor({"instance","name","samplingPeriod"})
@@ -25,12 +34,21 @@ public final class PerformanceCounterConfigurationResponse {
         this.samplingPeriod = Objects.requireNonNull(samplingPeriod);
     }
 
+/**
+ * 
+ */
     public Optional<String> getInstance() {
         return Optional.ofNullable(this.instance);
     }
+/**
+ * 
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * 
+ */
     public String getSamplingPeriod() {
         return this.samplingPeriod;
     }

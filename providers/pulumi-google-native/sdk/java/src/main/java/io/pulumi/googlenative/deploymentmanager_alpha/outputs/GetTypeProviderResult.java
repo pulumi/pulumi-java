@@ -15,16 +15,49 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetTypeProviderResult {
+/**
+ * Allows resource handling overrides for specific collections
+ */
     private final List<CollectionOverrideResponse> collectionOverrides;
+/**
+ * Credential used when interacting with this type.
+ */
     private final CredentialResponse credential;
+/**
+ * List of up to 2 custom certificate authority roots to use for TLS authentication when making calls on behalf of this type provider. If set, TLS authentication will exclusively use these roots instead of relying on publicly trusted certificate authorities when validating TLS certificate authenticity. The certificates must be in base64-encoded PEM format. The maximum size of each certificate must not exceed 10KB.
+ */
     private final List<String> customCertificateAuthorityRoots;
+/**
+ * An optional textual description of the resource; provided by the client when the resource is created.
+ */
     private final String description;
+/**
+ * Descriptor Url for the this type provider.
+ */
     private final String descriptorUrl;
+/**
+ * Creation timestamp in RFC3339 text format.
+ */
     private final String insertTime;
+/**
+ * Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`
+ */
     private final List<TypeProviderLabelEntryResponse> labels;
+/**
+ * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+ */
     private final String name;
+/**
+ * The Operation that most recently ran, or is currently running, on this type provider.
+ */
     private final OperationResponse operation;
+/**
+ * Options to apply when handling any resources in this service.
+ */
     private final OptionsResponse options;
+/**
+ * Self link for the type provider.
+ */
     private final String selfLink;
 
     @OutputCustomType.Constructor({"collectionOverrides","credential","customCertificateAuthorityRoots","description","descriptorUrl","insertTime","labels","name","operation","options","selfLink"})
@@ -53,36 +86,69 @@ public final class GetTypeProviderResult {
         this.selfLink = Objects.requireNonNull(selfLink);
     }
 
+/**
+ * Allows resource handling overrides for specific collections
+ */
     public List<CollectionOverrideResponse> getCollectionOverrides() {
         return this.collectionOverrides;
     }
+/**
+ * Credential used when interacting with this type.
+ */
     public CredentialResponse getCredential() {
         return this.credential;
     }
+/**
+ * List of up to 2 custom certificate authority roots to use for TLS authentication when making calls on behalf of this type provider. If set, TLS authentication will exclusively use these roots instead of relying on publicly trusted certificate authorities when validating TLS certificate authenticity. The certificates must be in base64-encoded PEM format. The maximum size of each certificate must not exceed 10KB.
+ */
     public List<String> getCustomCertificateAuthorityRoots() {
         return this.customCertificateAuthorityRoots;
     }
+/**
+ * An optional textual description of the resource; provided by the client when the resource is created.
+ */
     public String getDescription() {
         return this.description;
     }
+/**
+ * Descriptor Url for the this type provider.
+ */
     public String getDescriptorUrl() {
         return this.descriptorUrl;
     }
+/**
+ * Creation timestamp in RFC3339 text format.
+ */
     public String getInsertTime() {
         return this.insertTime;
     }
+/**
+ * Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`
+ */
     public List<TypeProviderLabelEntryResponse> getLabels() {
         return this.labels;
     }
+/**
+ * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The Operation that most recently ran, or is currently running, on this type provider.
+ */
     public OperationResponse getOperation() {
         return this.operation;
     }
+/**
+ * Options to apply when handling any resources in this service.
+ */
     public OptionsResponse getOptions() {
         return this.options;
     }
+/**
+ * Self link for the type provider.
+ */
     public String getSelfLink() {
         return this.selfLink;
     }

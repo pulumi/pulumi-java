@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Type of authentication used to connect to the web table source.
+ */
     @EnumType
     public enum WebAuthenticationType {
+/**
+ * 
+ */
         Basic("Basic"),
+/**
+ * 
+ */
         Anonymous("Anonymous"),
+/**
+ * 
+ */
         ClientCertificate("ClientCertificate");
 
         private final String value;

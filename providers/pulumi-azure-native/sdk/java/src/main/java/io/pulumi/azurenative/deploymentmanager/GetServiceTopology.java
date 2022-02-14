@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServiceTopology {
+/**
+ * The resource representation of a service topology.
+API Version: 2019-11-01-preview.
+ *
+ * The resource representation of a service topology.
+ */
     public static CompletableFuture<GetServiceTopologyResult> invokeAsync(GetServiceTopologyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:deploymentmanager:getServiceTopology", TypeShape.of(GetServiceTopologyResult.class), args == null ? GetServiceTopologyArgs.Empty : args, Utilities.withVersion(options));
     }

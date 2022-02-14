@@ -10,10 +10,17 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains information used to connect to a Kubernetes cluster
+ */
 public final class KubernetesConnectionDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KubernetesConnectionDetailsResponse Empty = new KubernetesConnectionDetailsResponse();
 
+    /**
+     * Gets the Instance type.
+Expected value is 'Kubernetes'.
+     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -21,6 +28,9 @@ public final class KubernetesConnectionDetailsResponse extends io.pulumi.resourc
         return this.instanceType;
     }
 
+    /**
+     * Gets the kubeconfig for the cluster.
+     */
     @InputImport(name="kubeConfig")
     private final @Nullable String kubeConfig;
 

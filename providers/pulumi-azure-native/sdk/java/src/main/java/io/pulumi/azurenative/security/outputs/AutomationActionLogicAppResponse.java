@@ -11,8 +11,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutomationActionLogicAppResponse {
+/**
+ * The type of the action that will be triggered by the Automation
+Expected value is 'LogicApp'.
+ */
     private final String actionType;
+/**
+ * The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App
+ */
     private final @Nullable String logicAppResourceId;
+/**
+ * The Logic App trigger URI endpoint (it will not be included in any response).
+ */
     private final @Nullable String uri;
 
     @OutputCustomType.Constructor({"actionType","logicAppResourceId","uri"})
@@ -25,12 +35,22 @@ public final class AutomationActionLogicAppResponse {
         this.uri = uri;
     }
 
+/**
+ * The type of the action that will be triggered by the Automation
+Expected value is 'LogicApp'.
+ */
     public String getActionType() {
         return this.actionType;
     }
+/**
+ * The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App
+ */
     public Optional<String> getLogicAppResourceId() {
         return Optional.ofNullable(this.logicAppResourceId);
     }
+/**
+ * The Logic App trigger URI endpoint (it will not be included in any response).
+ */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }

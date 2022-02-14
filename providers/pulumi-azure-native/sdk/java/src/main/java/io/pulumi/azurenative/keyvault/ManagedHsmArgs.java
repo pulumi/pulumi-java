@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedHsmArgs Empty = new ManagedHsmArgs();
 
+    /**
+     * The supported Azure location where the managed HSM Pool should be created.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -24,6 +30,9 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of the managed HSM Pool
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -31,6 +40,9 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Properties of the managed HSM
+     */
     @InputImport(name="properties")
     private final @Nullable Input<ManagedHsmPropertiesArgs> properties;
 
@@ -38,6 +50,9 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Name of the resource group that contains the managed HSM pool.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -45,6 +60,9 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * SKU details
+     */
     @InputImport(name="sku")
     private final @Nullable Input<ManagedHsmSkuArgs> sku;
 
@@ -52,6 +70,9 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Resource tags
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

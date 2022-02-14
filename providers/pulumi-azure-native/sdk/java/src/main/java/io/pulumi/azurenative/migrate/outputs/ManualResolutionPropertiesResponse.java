@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManualResolutionPropertiesResponse {
+/**
+ * Gets or sets the target resource ARM ID of the dependent resource if the resource type is Manual.
+ */
     private final @Nullable String targetId;
 
     @OutputCustomType.Constructor({"targetId"})
@@ -18,6 +21,9 @@ public final class ManualResolutionPropertiesResponse {
         this.targetId = targetId;
     }
 
+/**
+ * Gets or sets the target resource ARM ID of the dependent resource if the resource type is Manual.
+ */
     public Optional<String> getTargetId() {
         return Optional.ofNullable(this.targetId);
     }

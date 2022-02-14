@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.customproviders;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.customproviders.AssociationArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -14,33 +13,150 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The resource definition of this association.
+API Version: 2018-09-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create or update an association
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var association = new AzureNative.CustomProviders.Association("association", new AzureNative.CustomProviders.AssociationArgs
+        {
+            AssociationName = "associationName",
+            Scope = "scope",
+            TargetResourceId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/appRG/providers/Microsoft.Solutions/applications/applicationName",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	customproviders "github.com/pulumi/pulumi-azure-native/sdk/go/azure/customproviders"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := customproviders.NewAssociation(ctx, "association", &customproviders.AssociationArgs{
+			AssociationName:  pulumi.String("associationName"),
+			Scope:            pulumi.String("scope"),
+			TargetResourceId: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/appRG/providers/Microsoft.Solutions/applications/applicationName"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const association = new azure_native.customproviders.Association("association", {
+    associationName: "associationName",
+    scope: "scope",
+    targetResourceId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/appRG/providers/Microsoft.Solutions/applications/applicationName",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+association = azure_native.customproviders.Association("association",
+    association_name="associationName",
+    scope="scope",
+    target_resource_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/appRG/providers/Microsoft.Solutions/applications/applicationName")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:customproviders:Association associationName /scope/providers/Microsoft.CustomProviders/associations/associationName 
+```
+
+ */
 @ResourceType(type="azure-native:customproviders:Association")
 public class Association extends io.pulumi.resources.CustomResource {
+    /**
+     * The association name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The association name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the association.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the association.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The REST resource instance of the target resource for this association.
+     */
     @OutputExport(name="targetResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetResourceId;
 
+    /**
+     * @return The REST resource instance of the target resource for this association.
+     */
     public Output</* @Nullable */ String> getTargetResourceId() {
         return this.targetResourceId;
     }
+    /**
+     * The association type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The association type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Association(String name, AssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:customproviders:Association", name, args == null ? AssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -59,6 +175,14 @@ public class Association extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Association get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Association(name, id, options);
     }

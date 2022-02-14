@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetDataCollectorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDataCollectorArgs Empty = new GetDataCollectorArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="datacollectorId", required=true)
     private final String datacollectorId;
 
@@ -19,6 +25,9 @@ public final class GetDataCollectorArgs extends io.pulumi.resources.InvokeArgs {
         return this.datacollectorId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 

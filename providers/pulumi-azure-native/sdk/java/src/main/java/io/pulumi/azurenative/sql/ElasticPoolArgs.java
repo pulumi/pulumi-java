@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ElasticPoolArgs Empty = new ElasticPoolArgs();
 
+    /**
+     * The name of the elastic pool.
+     */
     @InputImport(name="elasticPoolName")
     private final @Nullable Input<String> elasticPoolName;
 
@@ -28,6 +34,9 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.elasticPoolName == null ? Input.empty() : this.elasticPoolName;
     }
 
+    /**
+     * The license type to apply for this elastic pool.
+     */
     @InputImport(name="licenseType")
     private final @Nullable Input<Either<String,ElasticPoolLicenseType>> licenseType;
 
@@ -35,6 +44,9 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.licenseType == null ? Input.empty() : this.licenseType;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -42,6 +54,9 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Maintenance configuration id assigned to the elastic pool. This configuration defines the period when the maintenance updates will will occur.
+     */
     @InputImport(name="maintenanceConfigurationId")
     private final @Nullable Input<String> maintenanceConfigurationId;
 
@@ -49,6 +64,9 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.maintenanceConfigurationId == null ? Input.empty() : this.maintenanceConfigurationId;
     }
 
+    /**
+     * The storage limit for the database elastic pool in bytes.
+     */
     @InputImport(name="maxSizeBytes")
     private final @Nullable Input<Double> maxSizeBytes;
 
@@ -56,6 +74,9 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxSizeBytes == null ? Input.empty() : this.maxSizeBytes;
     }
 
+    /**
+     * The per database settings for the elastic pool.
+     */
     @InputImport(name="perDatabaseSettings")
     private final @Nullable Input<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings;
 
@@ -63,6 +84,9 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.perDatabaseSettings == null ? Input.empty() : this.perDatabaseSettings;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -70,6 +94,9 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -77,6 +104,16 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.serverName;
     }
 
+    /**
+     * The elastic pool SKU.
+
+The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or the following command:
+
+```azurecli
+az sql elastic-pool list-editions -l <location> -o table
+````
+
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -84,6 +121,9 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -91,6 +131,9 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Whether or not this elastic pool is zone redundant, which means the replicas of this elastic pool will be spread across multiple availability zones.
+     */
     @InputImport(name="zoneRedundant")
     private final @Nullable Input<Boolean> zoneRedundant;
 

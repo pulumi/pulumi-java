@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetFluidRelayServerKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFluidRelayServerKeysArgs Empty = new GetFluidRelayServerKeysArgs();
 
+    /**
+     * The resource name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class GetFluidRelayServerKeysArgs extends io.pulumi.resources.Invok
         return this.name;
     }
 
+    /**
+     * The resource group containing the resource.
+     */
     @InputImport(name="resourceGroup", required=true)
     private final String resourceGroup;
 

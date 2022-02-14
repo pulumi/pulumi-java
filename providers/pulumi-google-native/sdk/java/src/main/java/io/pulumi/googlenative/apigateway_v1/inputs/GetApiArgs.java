@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetApiArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApiArgs Empty = new GetApiArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="apiId", required=true)
     private final String apiId;
 
@@ -21,6 +27,9 @@ public final class GetApiArgs extends io.pulumi.resources.InvokeArgs {
         return this.apiId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -28,6 +37,9 @@ public final class GetApiArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

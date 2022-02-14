@@ -14,8 +14,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LabelCategoryResponse {
+/**
+ * Indicates whether it is allowed to select multiple classes in this category.
+ */
     private final @Nullable Boolean allowMultiSelect;
+/**
+ * Dictionary of label classes in this category.
+ */
     private final Map<String,LabelClassResponse> classes;
+/**
+ * Display name of the label category.
+ */
     private final @Nullable String displayName;
 
     @OutputCustomType.Constructor({"allowMultiSelect","classes","displayName"})
@@ -28,12 +37,21 @@ public final class LabelCategoryResponse {
         this.displayName = displayName;
     }
 
+/**
+ * Indicates whether it is allowed to select multiple classes in this category.
+ */
     public Optional<Boolean> getAllowMultiSelect() {
         return Optional.ofNullable(this.allowMultiSelect);
     }
+/**
+ * Dictionary of label classes in this category.
+ */
     public Map<String,LabelClassResponse> getClasses() {
         return this.classes;
     }
+/**
+ * Display name of the label category.
+ */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }

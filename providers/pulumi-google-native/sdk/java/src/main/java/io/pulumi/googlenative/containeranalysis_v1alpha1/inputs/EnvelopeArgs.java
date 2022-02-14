@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * MUST match https://github.com/secure-systems-lab/dsse/blob/master/envelope.proto. An authenticated message of arbitrary type.
+ */
 public final class EnvelopeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvelopeArgs Empty = new EnvelopeArgs();
 
+    /**
+     * The bytes being signed
+     */
     @InputImport(name="payload")
     private final @Nullable Input<String> payload;
 
@@ -23,6 +29,9 @@ public final class EnvelopeArgs extends io.pulumi.resources.ResourceArgs {
         return this.payload == null ? Input.empty() : this.payload;
     }
 
+    /**
+     * The type of payload being signed
+     */
     @InputImport(name="payloadType")
     private final @Nullable Input<String> payloadType;
 
@@ -30,6 +39,9 @@ public final class EnvelopeArgs extends io.pulumi.resources.ResourceArgs {
         return this.payloadType == null ? Input.empty() : this.payloadType;
     }
 
+    /**
+     * The signatures over the payload
+     */
     @InputImport(name="signatures")
     private final @Nullable Input<List<EnvelopeSignatureArgs>> signatures;
 

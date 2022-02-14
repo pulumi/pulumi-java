@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SkuZoneDetailResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuZoneDetailResponse Empty = new SkuZoneDetailResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="capabilities")
     private final @Nullable List<SkuCapabilityResponse> capabilities;
 
@@ -23,6 +29,9 @@ public final class SkuZoneDetailResponse extends io.pulumi.resources.InvokeArgs 
         return this.capabilities == null ? List.of() : this.capabilities;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable List<String> name;
 

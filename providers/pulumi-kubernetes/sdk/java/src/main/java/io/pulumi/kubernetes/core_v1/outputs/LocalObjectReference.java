@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LocalObjectReference {
+/**
+ * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+ */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -18,6 +21,9 @@ public final class LocalObjectReference {
         this.name = name;
     }
 
+/**
+ * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

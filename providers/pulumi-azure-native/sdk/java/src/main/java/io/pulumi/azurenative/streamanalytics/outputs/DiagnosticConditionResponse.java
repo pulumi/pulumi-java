@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DiagnosticConditionResponse {
+/**
+ * The opaque diagnostic code.
+ */
     private final String code;
+/**
+ * The human-readable message describing the condition in detail. Localized in the Accept-Language of the client request.
+ */
     private final String message;
+/**
+ * The UTC timestamp of when the condition started. Customers should be able to find a corresponding event in the ops log around this time.
+ */
     private final String since;
 
     @OutputCustomType.Constructor({"code","message","since"})
@@ -23,12 +32,21 @@ public final class DiagnosticConditionResponse {
         this.since = Objects.requireNonNull(since);
     }
 
+/**
+ * The opaque diagnostic code.
+ */
     public String getCode() {
         return this.code;
     }
+/**
+ * The human-readable message describing the condition in detail. Localized in the Accept-Language of the client request.
+ */
     public String getMessage() {
         return this.message;
     }
+/**
+ * The UTC timestamp of when the condition started. Customers should be able to find a corresponding event in the ops log around this time.
+ */
     public String getSince() {
         return this.since;
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetNamespaceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNamespaceArgs Empty = new GetNamespaceArgs();
 
+    /**
+     * The Namespace name
+     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -19,6 +25,9 @@ public final class GetNamespaceArgs extends io.pulumi.resources.InvokeArgs {
         return this.namespaceName;
     }
 
+    /**
+     * Name of the resource group within the azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

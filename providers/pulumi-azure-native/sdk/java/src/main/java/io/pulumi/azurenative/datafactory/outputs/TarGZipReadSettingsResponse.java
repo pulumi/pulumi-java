@@ -12,7 +12,14 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TarGZipReadSettingsResponse {
+/**
+ * Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
+ */
     private final @Nullable Object preserveCompressionFileNameAsFolder;
+/**
+ * The Compression setting type.
+Expected value is 'TarGZipReadSettings'.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"preserveCompressionFileNameAsFolder","type"})
@@ -23,9 +30,16 @@ public final class TarGZipReadSettingsResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
+ */
     public Optional<Object> getPreserveCompressionFileNameAsFolder() {
         return Optional.ofNullable(this.preserveCompressionFileNameAsFolder);
     }
+/**
+ * The Compression setting type.
+Expected value is 'TarGZipReadSettings'.
+ */
     public String getType() {
         return this.type;
     }

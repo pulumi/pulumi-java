@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlDBTableDataSetMappingArgs Empty = new SqlDBTableDataSetMappingArgs();
 
+    /**
+     * The name of the share account.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -21,6 +27,9 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
         return this.accountName;
     }
 
+    /**
+     * The id of the source data set.
+     */
     @InputImport(name="dataSetId", required=true)
     private final Input<String> dataSetId;
 
@@ -28,6 +37,9 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
         return this.dataSetId;
     }
 
+    /**
+     * The name of the data set mapping to be created.
+     */
     @InputImport(name="dataSetMappingName")
     private final @Nullable Input<String> dataSetMappingName;
 
@@ -35,6 +47,9 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
         return this.dataSetMappingName == null ? Input.empty() : this.dataSetMappingName;
     }
 
+    /**
+     * DatabaseName name of the sink data set
+     */
     @InputImport(name="databaseName", required=true)
     private final Input<String> databaseName;
 
@@ -42,6 +57,10 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
         return this.databaseName;
     }
 
+    /**
+     * Kind of data set mapping.
+Expected value is 'SqlDBTable'.
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -49,6 +68,9 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
         return this.kind;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -56,6 +78,9 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
         return this.resourceGroupName;
     }
 
+    /**
+     * Schema of the table. Default value is dbo.
+     */
     @InputImport(name="schemaName", required=true)
     private final Input<String> schemaName;
 
@@ -63,6 +88,9 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
         return this.schemaName;
     }
 
+    /**
+     * The name of the share subscription which will hold the data set sink.
+     */
     @InputImport(name="shareSubscriptionName", required=true)
     private final Input<String> shareSubscriptionName;
 
@@ -70,6 +98,9 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
         return this.shareSubscriptionName;
     }
 
+    /**
+     * Resource id of SQL server
+     */
     @InputImport(name="sqlServerResourceId", required=true)
     private final Input<String> sqlServerResourceId;
 
@@ -77,6 +108,9 @@ public final class SqlDBTableDataSetMappingArgs extends io.pulumi.resources.Reso
         return this.sqlServerResourceId;
     }
 
+    /**
+     * SQL DB table name.
+     */
     @InputImport(name="tableName", required=true)
     private final Input<String> tableName;
 

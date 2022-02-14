@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetConsentStoreArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConsentStoreArgs Empty = new GetConsentStoreArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="consentStoreId", required=true)
     private final String consentStoreId;
 
@@ -21,6 +27,9 @@ public final class GetConsentStoreArgs extends io.pulumi.resources.InvokeArgs {
         return this.consentStoreId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="datasetId", required=true)
     private final String datasetId;
 
@@ -28,6 +37,9 @@ public final class GetConsentStoreArgs extends io.pulumi.resources.InvokeArgs {
         return this.datasetId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -35,6 +47,9 @@ public final class GetConsentStoreArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

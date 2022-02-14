@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServerAdministratorsResponse {
+/**
+ * An array of administrator user identities.
+ */
     private final @Nullable List<String> members;
 
     @OutputCustomType.Constructor({"members"})
@@ -18,6 +21,9 @@ public final class ServerAdministratorsResponse {
         this.members = members;
     }
 
+/**
+ * An array of administrator user identities.
+ */
     public List<String> getMembers() {
         return this.members == null ? List.of() : this.members;
     }

@@ -16,26 +16,89 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetProfileResult {
+/**
+ * The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
+ */
     private final @Nullable String apiEntitySetName;
+/**
+ * The attributes for the Type.
+ */
     private final @Nullable Map<String,List<String>> attributes;
+/**
+ * Localized descriptions for the property.
+ */
     private final @Nullable Map<String,String> description;
+/**
+ * Localized display names for the property.
+ */
     private final @Nullable Map<String,String> displayName;
+/**
+ * Type of entity.
+ */
     private final @Nullable String entityType;
+/**
+ * The properties of the Profile.
+ */
     private final @Nullable List<PropertyDefinitionResponse> fields;
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * The instance count.
+ */
     private final @Nullable Integer instancesCount;
+/**
+ * Large Image associated with the Property or EntityType.
+ */
     private final @Nullable String largeImage;
+/**
+ * The last changed time for the type definition.
+ */
     private final String lastChangedUtc;
+/**
+ * Any custom localized attributes for the Type.
+ */
     private final @Nullable Map<String,Map<String,String>> localizedAttributes;
+/**
+ * Medium Image associated with the Property or EntityType.
+ */
     private final @Nullable String mediumImage;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * Provisioning state.
+ */
     private final String provisioningState;
+/**
+ * The schema org link. This helps ACI identify and suggest semantic models.
+ */
     private final @Nullable String schemaItemTypeLink;
+/**
+ * Small Image associated with the Property or EntityType.
+ */
     private final @Nullable String smallImage;
+/**
+ * The strong IDs.
+ */
     private final @Nullable List<StrongIdResponse> strongIds;
+/**
+ * The hub name.
+ */
     private final String tenantId;
+/**
+ * The timestamp property name. Represents the time when the interaction or profile update happened.
+ */
     private final @Nullable String timestampFieldName;
+/**
+ * Resource type.
+ */
     private final String type;
+/**
+ * The name of the entity.
+ */
     private final @Nullable String typeName;
 
     @OutputCustomType.Constructor({"apiEntitySetName","attributes","description","displayName","entityType","fields","id","instancesCount","largeImage","lastChangedUtc","localizedAttributes","mediumImage","name","provisioningState","schemaItemTypeLink","smallImage","strongIds","tenantId","timestampFieldName","type","typeName"})
@@ -84,66 +147,129 @@ public final class GetProfileResult {
         this.typeName = typeName;
     }
 
+/**
+ * The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
+ */
     public Optional<String> getApiEntitySetName() {
         return Optional.ofNullable(this.apiEntitySetName);
     }
+/**
+ * The attributes for the Type.
+ */
     public Map<String,List<String>> getAttributes() {
         return this.attributes == null ? Map.of() : this.attributes;
     }
+/**
+ * Localized descriptions for the property.
+ */
     public Map<String,String> getDescription() {
         return this.description == null ? Map.of() : this.description;
     }
+/**
+ * Localized display names for the property.
+ */
     public Map<String,String> getDisplayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
+/**
+ * Type of entity.
+ */
     public Optional<String> getEntityType() {
         return Optional.ofNullable(this.entityType);
     }
+/**
+ * The properties of the Profile.
+ */
     public List<PropertyDefinitionResponse> getFields() {
         return this.fields == null ? List.of() : this.fields;
     }
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The instance count.
+ */
     public Optional<Integer> getInstancesCount() {
         return Optional.ofNullable(this.instancesCount);
     }
+/**
+ * Large Image associated with the Property or EntityType.
+ */
     public Optional<String> getLargeImage() {
         return Optional.ofNullable(this.largeImage);
     }
+/**
+ * The last changed time for the type definition.
+ */
     public String getLastChangedUtc() {
         return this.lastChangedUtc;
     }
+/**
+ * Any custom localized attributes for the Type.
+ */
     public Map<String,Map<String,String>> getLocalizedAttributes() {
         return this.localizedAttributes == null ? Map.of() : this.localizedAttributes;
     }
+/**
+ * Medium Image associated with the Property or EntityType.
+ */
     public Optional<String> getMediumImage() {
         return Optional.ofNullable(this.mediumImage);
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Provisioning state.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * The schema org link. This helps ACI identify and suggest semantic models.
+ */
     public Optional<String> getSchemaItemTypeLink() {
         return Optional.ofNullable(this.schemaItemTypeLink);
     }
+/**
+ * Small Image associated with the Property or EntityType.
+ */
     public Optional<String> getSmallImage() {
         return Optional.ofNullable(this.smallImage);
     }
+/**
+ * The strong IDs.
+ */
     public List<StrongIdResponse> getStrongIds() {
         return this.strongIds == null ? List.of() : this.strongIds;
     }
+/**
+ * The hub name.
+ */
     public String getTenantId() {
         return this.tenantId;
     }
+/**
+ * The timestamp property name. Represents the time when the interaction or profile update happened.
+ */
     public Optional<String> getTimestampFieldName() {
         return Optional.ofNullable(this.timestampFieldName);
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * The name of the entity.
+ */
     public Optional<String> getTypeName() {
         return Optional.ofNullable(this.typeName);
     }

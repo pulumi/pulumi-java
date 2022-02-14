@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetDeploymentAtManagementGroupScopeArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDeploymentAtManagementGroupScopeArgs Empty = new GetDeploymentAtManagementGroupScopeArgs();
 
+    /**
+     * The name of the deployment.
+     */
     @InputImport(name="deploymentName", required=true)
     private final String deploymentName;
 
@@ -19,6 +25,9 @@ public final class GetDeploymentAtManagementGroupScopeArgs extends io.pulumi.res
         return this.deploymentName;
     }
 
+    /**
+     * The management group ID.
+     */
     @InputImport(name="groupId", required=true)
     private final String groupId;
 

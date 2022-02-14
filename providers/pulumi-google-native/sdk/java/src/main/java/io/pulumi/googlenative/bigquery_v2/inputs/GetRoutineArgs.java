@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetRoutineArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRoutineArgs Empty = new GetRoutineArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="datasetId", required=true)
     private final String datasetId;
 
@@ -21,6 +27,9 @@ public final class GetRoutineArgs extends io.pulumi.resources.InvokeArgs {
         return this.datasetId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -28,6 +37,9 @@ public final class GetRoutineArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="readMask")
     private final @Nullable String readMask;
 
@@ -35,6 +47,9 @@ public final class GetRoutineArgs extends io.pulumi.resources.InvokeArgs {
         return this.readMask == null ? Optional.empty() : Optional.ofNullable(this.readMask);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="routineId", required=true)
     private final String routineId;
 

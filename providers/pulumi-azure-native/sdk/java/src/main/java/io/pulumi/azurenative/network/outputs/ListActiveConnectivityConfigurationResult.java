@@ -13,7 +13,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListActiveConnectivityConfigurationResult {
+/**
+ * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+ */
     private final @Nullable String skipToken;
+/**
+ * Gets a page of active connectivity configurations.
+ */
     private final @Nullable List<ActiveConnectivityConfigurationResponse> value;
 
     @OutputCustomType.Constructor({"skipToken","value"})
@@ -24,9 +30,15 @@ public final class ListActiveConnectivityConfigurationResult {
         this.value = value;
     }
 
+/**
+ * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+ */
     public Optional<String> getSkipToken() {
         return Optional.ofNullable(this.skipToken);
     }
+/**
+ * Gets a page of active connectivity configurations.
+ */
     public List<ActiveConnectivityConfigurationResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

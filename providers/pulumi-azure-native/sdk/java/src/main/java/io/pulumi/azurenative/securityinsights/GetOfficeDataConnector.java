@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOfficeDataConnector {
+/**
+ * Represents office data connector.
+API Version: 2020-01-01.
+ *
+ * Represents office data connector.
+ */
     public static CompletableFuture<GetOfficeDataConnectorResult> invokeAsync(GetOfficeDataConnectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getOfficeDataConnector", TypeShape.of(GetOfficeDataConnectorResult.class), args == null ? GetOfficeDataConnectorArgs.Empty : args, Utilities.withVersion(options));
     }

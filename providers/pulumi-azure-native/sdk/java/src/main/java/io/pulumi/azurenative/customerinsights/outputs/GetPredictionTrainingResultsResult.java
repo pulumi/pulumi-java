@@ -13,10 +13,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetPredictionTrainingResultsResult {
+/**
+ * Canonical profiles.
+ */
     private final List<CanonicalProfileDefinitionResponse> canonicalProfiles;
+/**
+ * Prediction distribution.
+ */
     private final PredictionDistributionDefinitionResponse predictionDistribution;
+/**
+ * Instance count of the primary profile.
+ */
     private final Double primaryProfileInstanceCount;
+/**
+ * Score name.
+ */
     private final String scoreName;
+/**
+ * The hub name.
+ */
     private final String tenantId;
 
     @OutputCustomType.Constructor({"canonicalProfiles","predictionDistribution","primaryProfileInstanceCount","scoreName","tenantId"})
@@ -33,18 +48,33 @@ public final class GetPredictionTrainingResultsResult {
         this.tenantId = Objects.requireNonNull(tenantId);
     }
 
+/**
+ * Canonical profiles.
+ */
     public List<CanonicalProfileDefinitionResponse> getCanonicalProfiles() {
         return this.canonicalProfiles;
     }
+/**
+ * Prediction distribution.
+ */
     public PredictionDistributionDefinitionResponse getPredictionDistribution() {
         return this.predictionDistribution;
     }
+/**
+ * Instance count of the primary profile.
+ */
     public Double getPrimaryProfileInstanceCount() {
         return this.primaryProfileInstanceCount;
     }
+/**
+ * Score name.
+ */
     public String getScoreName() {
         return this.scoreName;
     }
+/**
+ * The hub name.
+ */
     public String getTenantId() {
         return this.tenantId;
     }

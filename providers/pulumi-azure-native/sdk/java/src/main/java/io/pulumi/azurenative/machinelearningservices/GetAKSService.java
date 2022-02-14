@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAKSService {
+/**
+ * Machine Learning service object wrapped into ARM resource envelope.
+API Version: 2021-01-01.
+ *
+ * Machine Learning service object wrapped into ARM resource envelope.
+ */
     public static CompletableFuture<GetAKSServiceResult> invokeAsync(GetAKSServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getAKSService", TypeShape.of(GetAKSServiceResult.class), args == null ? GetAKSServiceArgs.Empty : args, Utilities.withVersion(options));
     }

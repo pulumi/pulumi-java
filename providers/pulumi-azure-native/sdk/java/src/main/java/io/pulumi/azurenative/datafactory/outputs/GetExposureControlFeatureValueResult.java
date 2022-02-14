@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetExposureControlFeatureValueResult {
+/**
+ * The feature name.
+ */
     private final String featureName;
+/**
+ * The feature value.
+ */
     private final String value;
 
     @OutputCustomType.Constructor({"featureName","value"})
@@ -20,9 +26,15 @@ public final class GetExposureControlFeatureValueResult {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * The feature name.
+ */
     public String getFeatureName() {
         return this.featureName;
     }
+/**
+ * The feature value.
+ */
     public String getValue() {
         return this.value;
     }

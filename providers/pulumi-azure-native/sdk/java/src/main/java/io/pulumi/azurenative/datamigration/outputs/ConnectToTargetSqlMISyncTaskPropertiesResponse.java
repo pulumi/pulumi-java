@@ -18,11 +18,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConnectToTargetSqlMISyncTaskPropertiesResponse {
+/**
+ * Array of command properties.
+ */
     private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
+/**
+ * Array of errors. This is ignored if submitted.
+ */
     private final List<ODataErrorResponse> errors;
+/**
+ * Task input
+ */
     private final @Nullable ConnectToTargetSqlMISyncTaskInputResponse input;
+/**
+ * Task output. This is ignored if submitted.
+ */
     private final List<ConnectToTargetSqlMISyncTaskOutputResponse> output;
+/**
+ * The state of the task. This is ignored if submitted.
+ */
     private final String state;
+/**
+ * Task type.
+Expected value is 'ConnectToTarget.AzureSqlDbMI.Sync.LRS'.
+ */
     private final String taskType;
 
     @OutputCustomType.Constructor({"commands","errors","input","output","state","taskType"})
@@ -41,21 +60,40 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesResponse {
         this.taskType = Objects.requireNonNull(taskType);
     }
 
+/**
+ * Array of command properties.
+ */
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
         return this.commands;
     }
+/**
+ * Array of errors. This is ignored if submitted.
+ */
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
     }
+/**
+ * Task input
+ */
     public Optional<ConnectToTargetSqlMISyncTaskInputResponse> getInput() {
         return Optional.ofNullable(this.input);
     }
+/**
+ * Task output. This is ignored if submitted.
+ */
     public List<ConnectToTargetSqlMISyncTaskOutputResponse> getOutput() {
         return this.output;
     }
+/**
+ * The state of the task. This is ignored if submitted.
+ */
     public String getState() {
         return this.state;
     }
+/**
+ * Task type.
+Expected value is 'ConnectToTarget.AzureSqlDbMI.Sync.LRS'.
+ */
     public String getTaskType() {
         return this.taskType;
     }

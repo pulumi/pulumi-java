@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.webpubsub;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.webpubsub.WebPubSubHubArgs;
 import io.pulumi.azurenative.webpubsub.outputs.SystemDataResponse;
 import io.pulumi.azurenative.webpubsub.outputs.WebPubSubHubPropertiesResponse;
 import io.pulumi.core.Alias;
@@ -16,33 +15,224 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A hub setting
+API Version: 2021-10-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### WebPubSubHubs_CreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var webPubSubHub = new AzureNative.WebPubSub.WebPubSubHub("webPubSubHub", new AzureNative.WebPubSub.WebPubSubHubArgs
+        {
+            HubName = "exampleHub",
+            Properties = new AzureNative.WebPubSub.Inputs.WebPubSubHubPropertiesArgs
+            {
+                EventHandlers = 
+                {
+                    new AzureNative.WebPubSub.Inputs.EventHandlerArgs
+                    {
+                        Auth = new AzureNative.WebPubSub.Inputs.UpstreamAuthSettingsArgs
+                        {
+                            ManagedIdentity = new AzureNative.WebPubSub.Inputs.ManagedIdentitySettingsArgs
+                            {
+                                Resource = "abc",
+                            },
+                            Type = "ManagedIdentity",
+                        },
+                        SystemEvents = 
+                        {
+                            "connect",
+                            "connected",
+                        },
+                        UrlTemplate = "http://host.com",
+                        UserEventPattern = "*",
+                    },
+                },
+            },
+            ResourceGroupName = "myResourceGroup",
+            ResourceName = "myWebPubSubService",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	webpubsub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/webpubsub"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := webpubsub.NewWebPubSubHub(ctx, "webPubSubHub", &webpubsub.WebPubSubHubArgs{
+			HubName: pulumi.String("exampleHub"),
+			Properties: &webpubsub.WebPubSubHubPropertiesArgs{
+				EventHandlers: webpubsub.EventHandlerArray{
+					&webpubsub.EventHandlerArgs{
+						Auth: &webpubsub.UpstreamAuthSettingsArgs{
+							ManagedIdentity: &webpubsub.ManagedIdentitySettingsArgs{
+								Resource: pulumi.String("abc"),
+							},
+							Type: pulumi.String("ManagedIdentity"),
+						},
+						SystemEvents: pulumi.StringArray{
+							pulumi.String("connect"),
+							pulumi.String("connected"),
+						},
+						UrlTemplate:      pulumi.String("http://host.com"),
+						UserEventPattern: pulumi.String("*"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			ResourceName:      pulumi.String("myWebPubSubService"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const webPubSubHub = new azure_native.webpubsub.WebPubSubHub("webPubSubHub", {
+    hubName: "exampleHub",
+    properties: {
+        eventHandlers: [{
+            auth: {
+                managedIdentity: {
+                    resource: "abc",
+                },
+                type: "ManagedIdentity",
+            },
+            systemEvents: [
+                "connect",
+                "connected",
+            ],
+            urlTemplate: "http://host.com",
+            userEventPattern: "*",
+        }],
+    },
+    resourceGroupName: "myResourceGroup",
+    resourceName: "myWebPubSubService",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+web_pub_sub_hub = azure_native.webpubsub.WebPubSubHub("webPubSubHub",
+    hub_name="exampleHub",
+    properties=azure_native.webpubsub.WebPubSubHubPropertiesArgs(
+        event_handlers=[azure_native.webpubsub.EventHandlerArgs(
+            auth=azure_native.webpubsub.UpstreamAuthSettingsArgs(
+                managed_identity=azure_native.webpubsub.ManagedIdentitySettingsArgs(
+                    resource="abc",
+                ),
+                type="ManagedIdentity",
+            ),
+            system_events=[
+                "connect",
+                "connected",
+            ],
+            url_template="http://host.com",
+            user_event_pattern="*",
+        )],
+    ),
+    resource_group_name="myResourceGroup",
+    resource_name="myWebPubSubService")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:webpubsub:WebPubSubHub exampleHub /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.SignalRService/WebPubSub/myWebPubSubService/hubs/exampleHub 
+```
+
+ */
 @ResourceType(type="azure-native:webpubsub:WebPubSubHub")
 public class WebPubSubHub extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Properties of a hub.
+     */
     @OutputExport(name="properties", type=WebPubSubHubPropertiesResponse.class, parameters={})
     private Output<WebPubSubHubPropertiesResponse> properties;
 
+    /**
+     * @return Properties of a hub.
+     */
     public Output<WebPubSubHubPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Metadata pertaining to creation and last modification of the resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public WebPubSubHub(String name, WebPubSubHubArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:webpubsub:WebPubSubHub", name, args == null ? WebPubSubHubArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -61,6 +251,14 @@ public class WebPubSubHub extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static WebPubSubHub get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebPubSubHub(name, id, options);
     }

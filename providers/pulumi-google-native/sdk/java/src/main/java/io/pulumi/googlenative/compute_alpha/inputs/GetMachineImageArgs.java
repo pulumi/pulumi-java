@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetMachineImageArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMachineImageArgs Empty = new GetMachineImageArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="machineImage", required=true)
     private final String machineImage;
 
@@ -21,6 +27,9 @@ public final class GetMachineImageArgs extends io.pulumi.resources.InvokeArgs {
         return this.machineImage;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

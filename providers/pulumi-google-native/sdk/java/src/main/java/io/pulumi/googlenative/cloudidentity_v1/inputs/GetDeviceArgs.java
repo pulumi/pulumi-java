@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDeviceArgs Empty = new GetDeviceArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="customer")
     private final @Nullable String customer;
 
@@ -21,6 +27,9 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
         return this.customer == null ? Optional.empty() : Optional.ofNullable(this.customer);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="deviceId", required=true)
     private final String deviceId;
 

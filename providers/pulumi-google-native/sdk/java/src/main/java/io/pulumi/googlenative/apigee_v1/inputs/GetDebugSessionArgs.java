@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetDebugSessionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDebugSessionArgs Empty = new GetDebugSessionArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="apiId", required=true)
     private final String apiId;
 
@@ -19,6 +25,9 @@ public final class GetDebugSessionArgs extends io.pulumi.resources.InvokeArgs {
         return this.apiId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="debugsessionId", required=true)
     private final String debugsessionId;
 
@@ -26,6 +35,9 @@ public final class GetDebugSessionArgs extends io.pulumi.resources.InvokeArgs {
         return this.debugsessionId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="environmentId", required=true)
     private final String environmentId;
 
@@ -33,6 +45,9 @@ public final class GetDebugSessionArgs extends io.pulumi.resources.InvokeArgs {
         return this.environmentId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 
@@ -40,6 +55,9 @@ public final class GetDebugSessionArgs extends io.pulumi.resources.InvokeArgs {
         return this.organizationId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="revisionId", required=true)
     private final String revisionId;
 

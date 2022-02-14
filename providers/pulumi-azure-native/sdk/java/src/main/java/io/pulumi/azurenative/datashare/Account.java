@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.datashare;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.datashare.AccountArgs;
 import io.pulumi.azurenative.datashare.outputs.IdentityResponse;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
@@ -17,69 +16,252 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * An account data transfer object.
+API Version: 2020-09-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Accounts_Create
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var account = new AzureNative.DataShare.Account("account", new AzureNative.DataShare.AccountArgs
+        {
+            AccountName = "Account1",
+            Identity = new AzureNative.DataShare.Inputs.IdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Location = "West US 2",
+            ResourceGroupName = "SampleResourceGroup",
+            Tags = 
+            {
+                { "tag1", "Red" },
+                { "tag2", "White" },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datashare.NewAccount(ctx, "account", &datashare.AccountArgs{
+			AccountName: pulumi.String("Account1"),
+			Identity: &datashare.IdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+			Location:          pulumi.String("West US 2"),
+			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+			Tags: pulumi.StringMap{
+				"tag1": pulumi.String("Red"),
+				"tag2": pulumi.String("White"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const account = new azure_native.datashare.Account("account", {
+    accountName: "Account1",
+    identity: {
+        type: "SystemAssigned",
+    },
+    location: "West US 2",
+    resourceGroupName: "SampleResourceGroup",
+    tags: {
+        tag1: "Red",
+        tag2: "White",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+account = azure_native.datashare.Account("account",
+    account_name="Account1",
+    identity=azure_native.datashare.IdentityArgs(
+        type="SystemAssigned",
+    ),
+    location="West US 2",
+    resource_group_name="SampleResourceGroup",
+    tags={
+        "tag1": "Red",
+        "tag2": "White",
+    })
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:datashare:Account Account1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1 
+```
+
+ */
 @ResourceType(type="azure-native:datashare:Account")
 public class Account extends io.pulumi.resources.CustomResource {
+    /**
+     * Time at which the account was created.
+     */
     @OutputExport(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
+    /**
+     * @return Time at which the account was created.
+     */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
+    /**
+     * Identity Info on the Account
+     */
     @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
     private Output<IdentityResponse> identity;
 
+    /**
+     * @return Identity Info on the Account
+     */
     public Output<IdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * Location of the azure resource.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Location of the azure resource.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Name of the azure resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the azure resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Provisioning state of the Account
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state of the Account
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * System Data of the Azure resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return System Data of the Azure resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Tags on the azure resource.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Tags on the azure resource.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Type of the azure resource
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of the azure resource
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Email of the user who created the resource
+     */
     @OutputExport(name="userEmail", type=String.class, parameters={})
     private Output<String> userEmail;
 
+    /**
+     * @return Email of the user who created the resource
+     */
     public Output<String> getUserEmail() {
         return this.userEmail;
     }
+    /**
+     * Name of the user who created the resource
+     */
     @OutputExport(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
+    /**
+     * @return Name of the user who created the resource
+     */
     public Output<String> getUserName() {
         return this.userName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Account(String name, AccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datashare:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -102,6 +284,14 @@ public class Account extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Account get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Account(name, id, options);
     }

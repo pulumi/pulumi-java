@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes Forwarding Route.
+ */
 public final class ForwardingConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ForwardingConfigurationResponse Empty = new ForwardingConfigurationResponse();
 
+    /**
+     * A reference to the BackendPool which this rule routes to.
+     */
     @InputImport(name="backendPool")
     private final @Nullable SubResourceResponse backendPool;
 
@@ -23,6 +29,9 @@ public final class ForwardingConfigurationResponse extends io.pulumi.resources.I
         return this.backendPool == null ? Optional.empty() : Optional.ofNullable(this.backendPool);
     }
 
+    /**
+     * The caching configuration associated with this rule.
+     */
     @InputImport(name="cacheConfiguration")
     private final @Nullable CacheConfigurationResponse cacheConfiguration;
 
@@ -30,6 +39,9 @@ public final class ForwardingConfigurationResponse extends io.pulumi.resources.I
         return this.cacheConfiguration == null ? Optional.empty() : Optional.ofNullable(this.cacheConfiguration);
     }
 
+    /**
+     * A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
+     */
     @InputImport(name="customForwardingPath")
     private final @Nullable String customForwardingPath;
 
@@ -37,6 +49,9 @@ public final class ForwardingConfigurationResponse extends io.pulumi.resources.I
         return this.customForwardingPath == null ? Optional.empty() : Optional.ofNullable(this.customForwardingPath);
     }
 
+    /**
+     * Protocol this rule will use when forwarding traffic to backends.
+     */
     @InputImport(name="forwardingProtocol")
     private final @Nullable String forwardingProtocol;
 
@@ -44,6 +59,10 @@ public final class ForwardingConfigurationResponse extends io.pulumi.resources.I
         return this.forwardingProtocol == null ? Optional.empty() : Optional.ofNullable(this.forwardingProtocol);
     }
 
+    /**
+     * 
+Expected value is '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration'.
+     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 

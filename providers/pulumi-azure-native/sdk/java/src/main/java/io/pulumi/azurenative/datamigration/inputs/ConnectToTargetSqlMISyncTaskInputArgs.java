@@ -10,10 +10,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Input for the task that validates connection to Azure SQL Database Managed Instance online scenario.
+ */
 public final class ConnectToTargetSqlMISyncTaskInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectToTargetSqlMISyncTaskInputArgs Empty = new ConnectToTargetSqlMISyncTaskInputArgs();
 
+    /**
+     * Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
+     */
     @InputImport(name="azureApp", required=true)
     private final Input<AzureActiveDirectoryAppArgs> azureApp;
 
@@ -21,6 +27,9 @@ public final class ConnectToTargetSqlMISyncTaskInputArgs extends io.pulumi.resou
         return this.azureApp;
     }
 
+    /**
+     * Connection information for Azure SQL Database Managed Instance
+     */
     @InputImport(name="targetConnectionInfo", required=true)
     private final Input<MiSqlConnectionInfoArgs> targetConnectionInfo;
 

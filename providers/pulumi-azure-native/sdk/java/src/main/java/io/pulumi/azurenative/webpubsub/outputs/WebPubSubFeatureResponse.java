@@ -11,8 +11,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WebPubSubFeatureResponse {
+/**
+ * FeatureFlags is the supported features of Azure SignalR service.
+ - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.
+ - EnableMessagingLogs: "true"/"false", to enable/disable the connectivity log category respectively.
+ - EnableLiveTrace: Live Trace allows you to know what's happening inside Azure SignalR service, it will give you live traces in real time, it will be helpful when you developing your own Azure SignalR based web application or self-troubleshooting some issues. Please note that live traces are counted as outbound messages that will be charged. Values allowed: "true"/"false", to enable/disable live trace feature.
+ 
+ */
     private final String flag;
+/**
+ * Optional properties related to this feature.
+ */
     private final @Nullable Map<String,String> properties;
+/**
+ * Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
+ */
     private final String value;
 
     @OutputCustomType.Constructor({"flag","properties","value"})
@@ -25,12 +38,25 @@ public final class WebPubSubFeatureResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * FeatureFlags is the supported features of Azure SignalR service.
+ - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.
+ - EnableMessagingLogs: "true"/"false", to enable/disable the connectivity log category respectively.
+ - EnableLiveTrace: Live Trace allows you to know what's happening inside Azure SignalR service, it will give you live traces in real time, it will be helpful when you developing your own Azure SignalR based web application or self-troubleshooting some issues. Please note that live traces are counted as outbound messages that will be charged. Values allowed: "true"/"false", to enable/disable live trace feature.
+ 
+ */
     public String getFlag() {
         return this.flag;
     }
+/**
+ * Optional properties related to this feature.
+ */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
+/**
+ * Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
+ */
     public String getValue() {
         return this.value;
     }

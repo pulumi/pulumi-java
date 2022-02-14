@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The SKU of the cognitive services account.
+ */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuResponse Empty = new SkuResponse();
 
+    /**
+     * Gets or sets the sku name. Required for account creation, optional for update.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * Gets the sku tier. This is based on the SKU name.
+     */
     @InputImport(name="tier", required=true)
     private final String tier;
 

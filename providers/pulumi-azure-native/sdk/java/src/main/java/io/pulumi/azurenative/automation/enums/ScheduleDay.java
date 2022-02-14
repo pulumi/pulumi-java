@@ -8,14 +8,38 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+ */
     @EnumType
     public enum ScheduleDay {
+/**
+ * 
+ */
         Monday("Monday"),
+/**
+ * 
+ */
         Tuesday("Tuesday"),
+/**
+ * 
+ */
         Wednesday("Wednesday"),
+/**
+ * 
+ */
         Thursday("Thursday"),
+/**
+ * 
+ */
         Friday("Friday"),
+/**
+ * 
+ */
         Saturday("Saturday"),
+/**
+ * 
+ */
         Sunday("Sunday");
 
         private final String value;

@@ -29,10 +29,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes all the settings to be used when encoding the input video with the Standard Encoder.
+ */
 public final class StandardEncoderPresetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StandardEncoderPresetResponse Empty = new StandardEncoderPresetResponse();
 
+    /**
+     * The list of codecs to be used when encoding the input video.
+     */
     @InputImport(name="codecs", required=true)
     private final List<Object> codecs;
 
@@ -40,6 +46,9 @@ public final class StandardEncoderPresetResponse extends io.pulumi.resources.Inv
         return this.codecs;
     }
 
+    /**
+     * One or more filtering operations that are applied to the input media before encoding.
+     */
     @InputImport(name="filters")
     private final @Nullable FiltersResponse filters;
 
@@ -47,6 +56,9 @@ public final class StandardEncoderPresetResponse extends io.pulumi.resources.Inv
         return this.filters == null ? Optional.empty() : Optional.ofNullable(this.filters);
     }
 
+    /**
+     * The list of outputs to be produced by the encoder.
+     */
     @InputImport(name="formats", required=true)
     private final List<Object> formats;
 
@@ -54,6 +66,10 @@ public final class StandardEncoderPresetResponse extends io.pulumi.resources.Inv
         return this.formats;
     }
 
+    /**
+     * The discriminator for derived types.
+Expected value is '#Microsoft.Media.StandardEncoderPreset'.
+     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 

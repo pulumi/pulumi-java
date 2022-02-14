@@ -14,9 +14,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TaggingCriteriaResponse {
+/**
+ * Criteria which decides whether the tag can be applied to a triggered backup.
+ */
     private final @Nullable List<ScheduleBasedBackupCriteriaResponse> criteria;
+/**
+ * Specifies if tag is default.
+ */
     private final Boolean isDefault;
+/**
+ * Retention tag information
+ */
     private final RetentionTagResponse tagInfo;
+/**
+ * Retention Tag priority.
+ */
     private final Double taggingPriority;
 
     @OutputCustomType.Constructor({"criteria","isDefault","tagInfo","taggingPriority"})
@@ -31,15 +43,27 @@ public final class TaggingCriteriaResponse {
         this.taggingPriority = Objects.requireNonNull(taggingPriority);
     }
 
+/**
+ * Criteria which decides whether the tag can be applied to a triggered backup.
+ */
     public List<ScheduleBasedBackupCriteriaResponse> getCriteria() {
         return this.criteria == null ? List.of() : this.criteria;
     }
+/**
+ * Specifies if tag is default.
+ */
     public Boolean getIsDefault() {
         return this.isDefault;
     }
+/**
+ * Retention tag information
+ */
     public RetentionTagResponse getTagInfo() {
         return this.tagInfo;
     }
+/**
+ * Retention Tag priority.
+ */
     public Double getTaggingPriority() {
         return this.taggingPriority;
     }

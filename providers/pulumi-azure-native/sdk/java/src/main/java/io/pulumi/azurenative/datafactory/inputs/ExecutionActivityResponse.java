@@ -15,10 +15,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Base class for all execution activities.
+ */
 public final class ExecutionActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExecutionActivityResponse Empty = new ExecutionActivityResponse();
 
+    /**
+     * Activity depends on condition.
+     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -26,6 +32,9 @@ public final class ExecutionActivityResponse extends io.pulumi.resources.InvokeA
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -33,6 +42,9 @@ public final class ExecutionActivityResponse extends io.pulumi.resources.InvokeA
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Linked service reference.
+     */
     @InputImport(name="linkedServiceName")
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
@@ -40,6 +52,9 @@ public final class ExecutionActivityResponse extends io.pulumi.resources.InvokeA
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
+    /**
+     * Activity name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -47,6 +62,9 @@ public final class ExecutionActivityResponse extends io.pulumi.resources.InvokeA
         return this.name;
     }
 
+    /**
+     * Activity policy.
+     */
     @InputImport(name="policy")
     private final @Nullable ActivityPolicyResponse policy;
 
@@ -54,6 +72,10 @@ public final class ExecutionActivityResponse extends io.pulumi.resources.InvokeA
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
+    /**
+     * Type of activity.
+Expected value is 'Execution'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -61,6 +83,9 @@ public final class ExecutionActivityResponse extends io.pulumi.resources.InvokeA
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

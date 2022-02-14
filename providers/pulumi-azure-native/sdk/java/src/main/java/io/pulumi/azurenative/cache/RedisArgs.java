@@ -19,10 +19,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RedisArgs Empty = new RedisArgs();
 
+    /**
+     * Specifies whether the non-ssl Redis server port (6379) is enabled.
+     */
     @InputImport(name="enableNonSslPort")
     private final @Nullable Input<Boolean> enableNonSslPort;
 
@@ -30,6 +36,9 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableNonSslPort == null ? Input.empty() : this.enableNonSslPort;
     }
 
+    /**
+     * The geo-location where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -37,6 +46,9 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Optional: requires clients to use a specified TLS version (or higher) to connect (e,g, '1.0', '1.1', '1.2')
+     */
     @InputImport(name="minimumTlsVersion")
     private final @Nullable Input<Either<String,TlsVersion>> minimumTlsVersion;
 
@@ -44,6 +56,9 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
         return this.minimumTlsVersion == null ? Input.empty() : this.minimumTlsVersion;
     }
 
+    /**
+     * The name of the Redis cache.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -51,6 +66,9 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Whether or not public endpoint access is allowed for this cache.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'. If 'Disabled', private endpoints are the exclusive access method. Default value is 'Enabled'
+     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
@@ -58,6 +76,9 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
     }
 
+    /**
+     * All Redis Settings. Few possible keys: rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta,maxmemory-policy,notify-keyspace-events,maxmemory-samples,slowlog-log-slower-than,slowlog-max-len,list-max-ziplist-entries,list-max-ziplist-value,hash-max-ziplist-entries,hash-max-ziplist-value,set-max-intset-entries,zset-max-ziplist-entries,zset-max-ziplist-value etc.
+     */
     @InputImport(name="redisConfiguration")
     private final @Nullable Input<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration;
 
@@ -65,6 +86,9 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
         return this.redisConfiguration == null ? Input.empty() : this.redisConfiguration;
     }
 
+    /**
+     * The number of replicas to be created per master.
+     */
     @InputImport(name="replicasPerMaster")
     private final @Nullable Input<Integer> replicasPerMaster;
 
@@ -72,6 +96,9 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
         return this.replicasPerMaster == null ? Input.empty() : this.replicasPerMaster;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -79,6 +106,9 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The number of shards to be created on a Premium Cluster Cache.
+     */
     @InputImport(name="shardCount")
     private final @Nullable Input<Integer> shardCount;
 
@@ -86,6 +116,9 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
         return this.shardCount == null ? Input.empty() : this.shardCount;
     }
 
+    /**
+     * The SKU of the Redis cache to deploy.
+     */
     @InputImport(name="sku", required=true)
     private final Input<SkuArgs> sku;
 
@@ -93,6 +126,9 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku;
     }
 
+    /**
+     * Static IP address. Optionally, may be specified when deploying a Redis cache inside an existing Azure Virtual Network; auto assigned by default.
+     */
     @InputImport(name="staticIP")
     private final @Nullable Input<String> staticIP;
 
@@ -100,6 +136,9 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
         return this.staticIP == null ? Input.empty() : this.staticIP;
     }
 
+    /**
+     * The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1
+     */
     @InputImport(name="subnetId")
     private final @Nullable Input<String> subnetId;
 
@@ -107,6 +146,9 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
         return this.subnetId == null ? Input.empty() : this.subnetId;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -114,6 +156,9 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * A dictionary of tenant settings
+     */
     @InputImport(name="tenantSettings")
     private final @Nullable Input<Map<String,String>> tenantSettings;
 
@@ -121,6 +166,9 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
         return this.tenantSettings == null ? Input.empty() : this.tenantSettings;
     }
 
+    /**
+     * A list of availability zones denoting where the resource needs to come from.
+     */
     @InputImport(name="zones")
     private final @Nullable Input<List<String>> zones;
 

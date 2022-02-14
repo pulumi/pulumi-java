@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListContainerAppSecretsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListContainerAppSecretsArgs Empty = new ListContainerAppSecretsArgs();
 
+    /**
+     * Name of the Container App.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

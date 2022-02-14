@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Sampling settings for Diagnostic.
+ */
 public final class SamplingSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SamplingSettingsResponse Empty = new SamplingSettingsResponse();
 
+    /**
+     * Rate of sampling for fixed-rate sampling.
+     */
     @InputImport(name="percentage")
     private final @Nullable Double percentage;
 
@@ -22,6 +28,9 @@ public final class SamplingSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.percentage == null ? Optional.empty() : Optional.ofNullable(this.percentage);
     }
 
+    /**
+     * Sampling type.
+     */
     @InputImport(name="samplingType")
     private final @Nullable String samplingType;
 

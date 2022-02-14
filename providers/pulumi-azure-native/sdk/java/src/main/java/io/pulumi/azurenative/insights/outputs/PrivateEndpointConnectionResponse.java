@@ -13,11 +13,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PrivateEndpointConnectionResponse {
+/**
+ * Azure resource Id
+ */
     private final String id;
+/**
+ * Azure resource name
+ */
     private final String name;
+/**
+ * Private endpoint which the connection belongs to.
+ */
     private final @Nullable PrivateEndpointPropertyResponse privateEndpoint;
+/**
+ * Connection state of the private endpoint connection.
+ */
     private final @Nullable PrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState;
+/**
+ * State of the private endpoint connection.
+ */
     private final String provisioningState;
+/**
+ * Azure resource type
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","privateEndpoint","privateLinkServiceConnectionState","provisioningState","type"})
@@ -36,21 +54,39 @@ public final class PrivateEndpointConnectionResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Azure resource Id
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Azure resource name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Private endpoint which the connection belongs to.
+ */
     public Optional<PrivateEndpointPropertyResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
+/**
+ * Connection state of the private endpoint connection.
+ */
     public Optional<PrivateLinkServiceConnectionStatePropertyResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
+/**
+ * State of the private endpoint connection.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Azure resource type
+ */
     public String getType() {
         return this.type;
     }

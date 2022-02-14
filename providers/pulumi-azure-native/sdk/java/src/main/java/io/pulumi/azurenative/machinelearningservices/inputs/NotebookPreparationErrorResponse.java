@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class NotebookPreparationErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NotebookPreparationErrorResponse Empty = new NotebookPreparationErrorResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="errorMessage")
     private final @Nullable String errorMessage;
 
@@ -22,6 +28,9 @@ public final class NotebookPreparationErrorResponse extends io.pulumi.resources.
         return this.errorMessage == null ? Optional.empty() : Optional.ofNullable(this.errorMessage);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="statusCode")
     private final @Nullable Integer statusCode;
 

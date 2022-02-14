@@ -10,10 +10,17 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information about the event hub destination for an event subscription.
+ */
 public final class EventHubEventSubscriptionDestinationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EventHubEventSubscriptionDestinationResponse Empty = new EventHubEventSubscriptionDestinationResponse();
 
+    /**
+     * Type of the endpoint for the event subscription destination.
+Expected value is 'EventHub'.
+     */
     @InputImport(name="endpointType", required=true)
     private final String endpointType;
 
@@ -21,6 +28,9 @@ public final class EventHubEventSubscriptionDestinationResponse extends io.pulum
         return this.endpointType;
     }
 
+    /**
+     * The Azure Resource Id that represents the endpoint of an Event Hub destination of an event subscription.
+     */
     @InputImport(name="resourceId")
     private final @Nullable String resourceId;
 

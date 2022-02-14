@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A node selector requirement is a selector that contains values, a key, and an operator that relates the key and values.
+ */
 public final class NodeSelectorRequirementArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NodeSelectorRequirementArgs Empty = new NodeSelectorRequirementArgs();
 
+    /**
+     * The label key that the selector applies to.
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -22,6 +28,17 @@ public final class NodeSelectorRequirementArgs extends io.pulumi.resources.Resou
         return this.key;
     }
 
+    /**
+     * Represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.
+
+Possible enum values:
+ - `"DoesNotExist"`
+ - `"Exists"`
+ - `"Gt"`
+ - `"In"`
+ - `"Lt"`
+ - `"NotIn"`
+     */
     @InputImport(name="operator", required=true)
     private final Input<String> operator;
 
@@ -29,6 +46,9 @@ public final class NodeSelectorRequirementArgs extends io.pulumi.resources.Resou
         return this.operator;
     }
 
+    /**
+     * An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch.
+     */
     @InputImport(name="values")
     private final @Nullable Input<List<String>> values;
 

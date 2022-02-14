@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * ScmMinTlsVersion: configures the minimum version of TLS required for SSL requests for SCM site
+ */
     @EnumType
     public enum SupportedTlsVersions {
+/**
+ * 
+ */
         SupportedTlsVersions_1_0("1.0"),
+/**
+ * 
+ */
         SupportedTlsVersions_1_1("1.1"),
+/**
+ * 
+ */
         SupportedTlsVersions_1_2("1.2");
 
         private final String value;

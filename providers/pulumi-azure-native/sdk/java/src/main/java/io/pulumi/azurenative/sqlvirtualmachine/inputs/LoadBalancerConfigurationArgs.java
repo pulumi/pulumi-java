@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A load balancer configuration for an availability group listener.
+ */
 public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoadBalancerConfigurationArgs Empty = new LoadBalancerConfigurationArgs();
 
+    /**
+     * Resource id of the load balancer.
+     */
     @InputImport(name="loadBalancerResourceId")
     private final @Nullable Input<String> loadBalancerResourceId;
 
@@ -24,6 +30,9 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
         return this.loadBalancerResourceId == null ? Input.empty() : this.loadBalancerResourceId;
     }
 
+    /**
+     * Private IP address.
+     */
     @InputImport(name="privateIpAddress")
     private final @Nullable Input<PrivateIPAddressArgs> privateIpAddress;
 
@@ -31,6 +40,9 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
         return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
     }
 
+    /**
+     * Probe port.
+     */
     @InputImport(name="probePort")
     private final @Nullable Input<Integer> probePort;
 
@@ -38,6 +50,9 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
         return this.probePort == null ? Input.empty() : this.probePort;
     }
 
+    /**
+     * Resource id of the public IP.
+     */
     @InputImport(name="publicIpAddressResourceId")
     private final @Nullable Input<String> publicIpAddressResourceId;
 
@@ -45,6 +60,9 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
         return this.publicIpAddressResourceId == null ? Input.empty() : this.publicIpAddressResourceId;
     }
 
+    /**
+     * List of the SQL virtual machine instance resource id's that are enrolled into the availability group listener.
+     */
     @InputImport(name="sqlVirtualMachineInstances")
     private final @Nullable Input<List<String>> sqlVirtualMachineInstances;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetADCCatalog {
+/**
+ * Azure Data Catalog.
+API Version: 2016-03-30.
+ *
+ * Azure Data Catalog.
+ */
     public static CompletableFuture<GetADCCatalogResult> invokeAsync(GetADCCatalogArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datacatalog:getADCCatalog", TypeShape.of(GetADCCatalogResult.class), args == null ? GetADCCatalogArgs.Empty : args, Utilities.withVersion(options));
     }

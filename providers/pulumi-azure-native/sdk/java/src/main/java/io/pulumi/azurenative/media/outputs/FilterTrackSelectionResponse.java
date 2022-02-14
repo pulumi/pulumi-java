@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FilterTrackSelectionResponse {
+/**
+ * The track selections.
+ */
     private final List<FilterTrackPropertyConditionResponse> trackSelections;
 
     @OutputCustomType.Constructor({"trackSelections"})
@@ -17,6 +20,9 @@ public final class FilterTrackSelectionResponse {
         this.trackSelections = Objects.requireNonNull(trackSelections);
     }
 
+/**
+ * The track selections.
+ */
     public List<FilterTrackPropertyConditionResponse> getTrackSelections() {
         return this.trackSelections;
     }

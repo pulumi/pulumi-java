@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings concerning the virtual network.
+ */
 public final class VirtualNetworkPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualNetworkPropertiesResponse Empty = new VirtualNetworkPropertiesResponse();
 
+    /**
+     * Uri of the virtual network.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -22,6 +28,9 @@ public final class VirtualNetworkPropertiesResponse extends io.pulumi.resources.
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Properties of a subnet.
+     */
     @InputImport(name="subnet")
     private final @Nullable SubnetPropertiesResponse subnet;
 

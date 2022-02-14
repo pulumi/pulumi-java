@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.providerhub;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.providerhub.ResourceTypeRegistrationArgs;
 import io.pulumi.azurenative.providerhub.outputs.ResourceTypeRegistrationResponseProperties;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,27 +14,228 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * 
+API Version: 2020-11-20.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### ResourceTypeRegistrations_CreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var resourceTypeRegistration = new AzureNative.ProviderHub.ResourceTypeRegistration("resourceTypeRegistration", new AzureNative.ProviderHub.ResourceTypeRegistrationArgs
+        {
+            Properties = new AzureNative.ProviderHub.Inputs.ResourceTypeRegistrationPropertiesArgs
+            {
+                Endpoints = 
+                {
+                    new AzureNative.ProviderHub.Inputs.ResourceTypeEndpointArgs
+                    {
+                        ApiVersions = 
+                        {
+                            "2020-06-01-preview",
+                        },
+                        Locations = 
+                        {
+                            "West US",
+                            "East US",
+                            "North Europe",
+                        },
+                        RequiredFeatures = 
+                        {
+                            "<feature flag>",
+                        },
+                    },
+                },
+                Regionality = "Regional",
+                RoutingType = "Default",
+                SwaggerSpecifications = 
+                {
+                    new AzureNative.ProviderHub.Inputs.SwaggerSpecificationArgs
+                    {
+                        ApiVersions = 
+                        {
+                            "2020-06-01-preview",
+                        },
+                        SwaggerSpecFolderUri = "https://github.com/Azure/azure-rest-api-specs/blob/feature/azure/contoso/specification/contoso/resource-manager/Microsoft.SampleRP/",
+                    },
+                },
+            },
+            ProviderNamespace = "Microsoft.Contoso",
+            ResourceType = "employees",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	providerhub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/providerhub"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := providerhub.NewResourceTypeRegistration(ctx, "resourceTypeRegistration", &providerhub.ResourceTypeRegistrationArgs{
+			Properties: &providerhub.ResourceTypeRegistrationPropertiesArgs{
+				Endpoints: providerhub.ResourceTypeEndpointArray{
+					&providerhub.ResourceTypeEndpointArgs{
+						ApiVersions: pulumi.StringArray{
+							pulumi.String("2020-06-01-preview"),
+						},
+						Locations: pulumi.StringArray{
+							pulumi.String("West US"),
+							pulumi.String("East US"),
+							pulumi.String("North Europe"),
+						},
+						RequiredFeatures: pulumi.StringArray{
+							pulumi.String("<feature flag>"),
+						},
+					},
+				},
+				Regionality: pulumi.String("Regional"),
+				RoutingType: pulumi.String("Default"),
+				SwaggerSpecifications: providerhub.SwaggerSpecificationArray{
+					&providerhub.SwaggerSpecificationArgs{
+						ApiVersions: pulumi.StringArray{
+							pulumi.String("2020-06-01-preview"),
+						},
+						SwaggerSpecFolderUri: pulumi.String("https://github.com/Azure/azure-rest-api-specs/blob/feature/azure/contoso/specification/contoso/resource-manager/Microsoft.SampleRP/"),
+					},
+				},
+			},
+			ProviderNamespace: pulumi.String("Microsoft.Contoso"),
+			ResourceType:      pulumi.String("employees"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const resourceTypeRegistration = new azure_native.providerhub.ResourceTypeRegistration("resourceTypeRegistration", {
+    properties: {
+        endpoints: [{
+            apiVersions: ["2020-06-01-preview"],
+            locations: [
+                "West US",
+                "East US",
+                "North Europe",
+            ],
+            requiredFeatures: ["<feature flag>"],
+        }],
+        regionality: "Regional",
+        routingType: "Default",
+        swaggerSpecifications: [{
+            apiVersions: ["2020-06-01-preview"],
+            swaggerSpecFolderUri: "https://github.com/Azure/azure-rest-api-specs/blob/feature/azure/contoso/specification/contoso/resource-manager/Microsoft.SampleRP/",
+        }],
+    },
+    providerNamespace: "Microsoft.Contoso",
+    resourceType: "employees",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+resource_type_registration = azure_native.providerhub.ResourceTypeRegistration("resourceTypeRegistration",
+    properties=azure_native.providerhub.ResourceTypeRegistrationPropertiesArgs(
+        endpoints=[azure_native.providerhub.ResourceTypeEndpointArgs(
+            api_versions=["2020-06-01-preview"],
+            locations=[
+                "West US",
+                "East US",
+                "North Europe",
+            ],
+            required_features=["<feature flag>"],
+        )],
+        regionality="Regional",
+        routing_type="Default",
+        swagger_specifications=[azure_native.providerhub.SwaggerSpecificationArgs(
+            api_versions=["2020-06-01-preview"],
+            swagger_spec_folder_uri="https://github.com/Azure/azure-rest-api-specs/blob/feature/azure/contoso/specification/contoso/resource-manager/Microsoft.SampleRP/",
+        )],
+    ),
+    provider_namespace="Microsoft.Contoso",
+    resource_type="employees")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:providerhub:ResourceTypeRegistration employees /subscriptions/{subscriptionId}/providers/Microsoft.ProviderHub/providerRegistrations/{providerNamespace}/resourcetypeRegistrations/{resourceType} 
+```
+
+ */
 @ResourceType(type="azure-native:providerhub:ResourceTypeRegistration")
 public class ResourceTypeRegistration extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * 
+     */
     @OutputExport(name="properties", type=ResourceTypeRegistrationResponseProperties.class, parameters={})
     private Output<ResourceTypeRegistrationResponseProperties> properties;
 
     public Output<ResourceTypeRegistrationResponseProperties> getProperties() {
         return this.properties;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ResourceTypeRegistration(String name, ResourceTypeRegistrationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:providerhub:ResourceTypeRegistration", name, args == null ? ResourceTypeRegistrationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -57,6 +257,14 @@ public class ResourceTypeRegistration extends io.pulumi.resources.CustomResource
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ResourceTypeRegistration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ResourceTypeRegistration(name, id, options);
     }

@@ -14,16 +14,49 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetNetworkGroupResult {
+/**
+ * Network group conditional filter.
+ */
     private final @Nullable String conditionalMembership;
+/**
+ * A description of the network group.
+ */
     private final @Nullable String description;
+/**
+ * A friendly name for the network group.
+ */
     private final @Nullable String displayName;
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     private final String etag;
+/**
+ * Group members of network group.
+ */
     private final @Nullable List<GroupMembersItemResponse> groupMembers;
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Group member type.
+ */
     private final @Nullable String memberType;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * The provisioning state of the scope assignment resource.
+ */
     private final String provisioningState;
+/**
+ * The system metadata related to this resource.
+ */
     private final SystemDataResponse systemData;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"conditionalMembership","description","displayName","etag","groupMembers","id","memberType","name","provisioningState","systemData","type"})
@@ -52,36 +85,69 @@ public final class GetNetworkGroupResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Network group conditional filter.
+ */
     public Optional<String> getConditionalMembership() {
         return Optional.ofNullable(this.conditionalMembership);
     }
+/**
+ * A description of the network group.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * A friendly name for the network group.
+ */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * Group members of network group.
+ */
     public List<GroupMembersItemResponse> getGroupMembers() {
         return this.groupMembers == null ? List.of() : this.groupMembers;
     }
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Group member type.
+ */
     public Optional<String> getMemberType() {
         return Optional.ofNullable(this.memberType);
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The provisioning state of the scope assignment resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * The system metadata related to this resource.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

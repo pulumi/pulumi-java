@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Device Secrets
+ */
 public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeviceSecretsResponse Empty = new DeviceSecretsResponse();
 
+    /**
+     * Keyvault Id of BMCDefaultUserPassword
+     */
     @InputImport(name="bmcDefaultUserPassword")
     private final @Nullable SecretResponse bmcDefaultUserPassword;
 
@@ -21,6 +27,9 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
         return this.bmcDefaultUserPassword == null ? Optional.empty() : Optional.ofNullable(this.bmcDefaultUserPassword);
     }
 
+    /**
+     * Keyvault Id of HcsDataVolumeBitLockerExternalKey
+     */
     @InputImport(name="hcsDataVolumeBitLockerExternalKey")
     private final @Nullable SecretResponse hcsDataVolumeBitLockerExternalKey;
 
@@ -28,6 +37,9 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
         return this.hcsDataVolumeBitLockerExternalKey == null ? Optional.empty() : Optional.ofNullable(this.hcsDataVolumeBitLockerExternalKey);
     }
 
+    /**
+     * Keyvault Id of HcsInternalVolumeBitLockerExternalKey
+     */
     @InputImport(name="hcsInternalVolumeBitLockerExternalKey")
     private final @Nullable SecretResponse hcsInternalVolumeBitLockerExternalKey;
 
@@ -35,6 +47,9 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
         return this.hcsInternalVolumeBitLockerExternalKey == null ? Optional.empty() : Optional.ofNullable(this.hcsInternalVolumeBitLockerExternalKey);
     }
 
+    /**
+     * Keyvault Id of RotateKeyForDataVolumeBitlocker
+     */
     @InputImport(name="rotateKeyForDataVolumeBitlocker")
     private final @Nullable SecretResponse rotateKeyForDataVolumeBitlocker;
 
@@ -42,6 +57,9 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
         return this.rotateKeyForDataVolumeBitlocker == null ? Optional.empty() : Optional.ofNullable(this.rotateKeyForDataVolumeBitlocker);
     }
 
+    /**
+     * Keyvault Id of RotateKeysForSedDrivesSerialized
+     */
     @InputImport(name="rotateKeysForSedDrivesSerialized")
     private final @Nullable SecretResponse rotateKeysForSedDrivesSerialized;
 
@@ -49,6 +67,9 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
         return this.rotateKeysForSedDrivesSerialized == null ? Optional.empty() : Optional.ofNullable(this.rotateKeysForSedDrivesSerialized);
     }
 
+    /**
+     * Keyvault Id of SEDEncryptionExternalKey
+     */
     @InputImport(name="sedEncryptionExternalKey")
     private final @Nullable SecretResponse sedEncryptionExternalKey;
 
@@ -56,6 +77,9 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
         return this.sedEncryptionExternalKey == null ? Optional.empty() : Optional.ofNullable(this.sedEncryptionExternalKey);
     }
 
+    /**
+     * Keyvault Id of SEDEncryptionExternalKeyId
+     */
     @InputImport(name="sedEncryptionExternalKeyId")
     private final @Nullable SecretResponse sedEncryptionExternalKeyId;
 
@@ -63,6 +87,9 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
         return this.sedEncryptionExternalKeyId == null ? Optional.empty() : Optional.ofNullable(this.sedEncryptionExternalKeyId);
     }
 
+    /**
+     * Keyvault Id of SystemVolumeBitLockerRecoveryKey
+     */
     @InputImport(name="systemVolumeBitLockerRecoveryKey")
     private final @Nullable SecretResponse systemVolumeBitLockerRecoveryKey;
 

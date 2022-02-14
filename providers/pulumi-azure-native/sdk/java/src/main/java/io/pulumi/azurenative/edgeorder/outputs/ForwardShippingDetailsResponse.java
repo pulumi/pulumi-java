@@ -9,9 +9,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ForwardShippingDetailsResponse {
+/**
+ * Carrier Name for display purpose. Not to be used for any processing.
+ */
     private final String carrierDisplayName;
+/**
+ * Name of the carrier.
+ */
     private final String carrierName;
+/**
+ * TrackingId of the package
+ */
     private final String trackingId;
+/**
+ * TrackingUrl of the package.
+ */
     private final String trackingUrl;
 
     @OutputCustomType.Constructor({"carrierDisplayName","carrierName","trackingId","trackingUrl"})
@@ -26,15 +38,27 @@ public final class ForwardShippingDetailsResponse {
         this.trackingUrl = Objects.requireNonNull(trackingUrl);
     }
 
+/**
+ * Carrier Name for display purpose. Not to be used for any processing.
+ */
     public String getCarrierDisplayName() {
         return this.carrierDisplayName;
     }
+/**
+ * Name of the carrier.
+ */
     public String getCarrierName() {
         return this.carrierName;
     }
+/**
+ * TrackingId of the package
+ */
     public String getTrackingId() {
         return this.trackingId;
     }
+/**
+ * TrackingUrl of the package.
+ */
     public String getTrackingUrl() {
         return this.trackingUrl;
     }

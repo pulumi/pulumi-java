@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PacketMirroringMirroredResourceInfoInstanceInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PacketMirroringMirroredResourceInfoInstanceInfoArgs Empty = new PacketMirroringMirroredResourceInfoInstanceInfoArgs();
 
+    /**
+     * Resource URL to the virtual machine instance which is being mirrored.
+     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * URL pattern and description of how the URL should be handled. App Engine can handle URLs by executing application code or by serving static files uploaded with the version, such as images, CSS, or JavaScript.
+ */
 public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UrlMapArgs Empty = new UrlMapArgs();
 
+    /**
+     * Uses API Endpoints to handle requests.
+     */
     @InputImport(name="apiEndpoint")
     private final @Nullable Input<ApiEndpointHandlerArgs> apiEndpoint;
 
@@ -28,6 +34,9 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiEndpoint == null ? Input.empty() : this.apiEndpoint;
     }
 
+    /**
+     * Action to take when users access resources that require authentication. Defaults to redirect.
+     */
     @InputImport(name="authFailAction")
     private final @Nullable Input<UrlMapAuthFailAction> authFailAction;
 
@@ -35,6 +44,9 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.authFailAction == null ? Input.empty() : this.authFailAction;
     }
 
+    /**
+     * Level of login required to access this resource. Not supported for Node.js in the App Engine standard environment.
+     */
     @InputImport(name="login")
     private final @Nullable Input<UrlMapLogin> login;
 
@@ -42,6 +54,9 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.login == null ? Input.empty() : this.login;
     }
 
+    /**
+     * 30x code to use when performing redirects for the secure field. Defaults to 302.
+     */
     @InputImport(name="redirectHttpResponseCode")
     private final @Nullable Input<UrlMapRedirectHttpResponseCode> redirectHttpResponseCode;
 
@@ -49,6 +64,9 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.redirectHttpResponseCode == null ? Input.empty() : this.redirectHttpResponseCode;
     }
 
+    /**
+     * Executes a script to handle the requests that match this URL pattern. Only the auto value is supported for Node.js in the App Engine standard environment, for example "script": "auto".
+     */
     @InputImport(name="script")
     private final @Nullable Input<ScriptHandlerArgs> script;
 
@@ -56,6 +74,9 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.script == null ? Input.empty() : this.script;
     }
 
+    /**
+     * Security (HTTPS) enforcement for this URL.
+     */
     @InputImport(name="securityLevel")
     private final @Nullable Input<UrlMapSecurityLevel> securityLevel;
 
@@ -63,6 +84,9 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.securityLevel == null ? Input.empty() : this.securityLevel;
     }
 
+    /**
+     * Returns the contents of a file, such as an image, as the response.
+     */
     @InputImport(name="staticFiles")
     private final @Nullable Input<StaticFilesHandlerArgs> staticFiles;
 
@@ -70,6 +94,9 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.staticFiles == null ? Input.empty() : this.staticFiles;
     }
 
+    /**
+     * URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings. All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
+     */
     @InputImport(name="urlRegex")
     private final @Nullable Input<String> urlRegex;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlPoolWorkloadGroup {
+/**
+ * Workload group operations for a sql pool
+API Version: 2021-03-01.
+ *
+ * Workload group operations for a sql pool
+ */
     public static CompletableFuture<GetSqlPoolWorkloadGroupResult> invokeAsync(GetSqlPoolWorkloadGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPoolWorkloadGroup", TypeShape.of(GetSqlPoolWorkloadGroupResult.class), args == null ? GetSqlPoolWorkloadGroupArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceArgs Empty = new ServiceArgs();
 
+    /**
+     * Cosmos DB database account name.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -25,6 +31,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * Instance count for the service.
+     */
     @InputImport(name="instanceCount")
     private final @Nullable Input<Integer> instanceCount;
 
@@ -32,6 +41,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceCount == null ? Input.empty() : this.instanceCount;
     }
 
+    /**
+     * Instance type for the service.
+     */
     @InputImport(name="instanceSize")
     private final @Nullable Input<Either<String,ServiceSize>> instanceSize;
 
@@ -39,6 +51,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceSize == null ? Input.empty() : this.instanceSize;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -46,6 +61,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Cosmos DB service name.
+     */
     @InputImport(name="serviceName")
     private final @Nullable Input<String> serviceName;
 
@@ -53,6 +71,9 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName == null ? Input.empty() : this.serviceName;
     }
 
+    /**
+     * ServiceType for the service.
+     */
     @InputImport(name="serviceType")
     private final @Nullable Input<Either<String,ServiceType>> serviceType;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerTrustGroup {
+/**
+ * A server trust group.
+API Version: 2020-11-01-preview.
+ *
+ * A server trust group.
+ */
     public static CompletableFuture<GetServerTrustGroupResult> invokeAsync(GetServerTrustGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerTrustGroup", TypeShape.of(GetServerTrustGroupResult.class), args == null ? GetServerTrustGroupArgs.Empty : args, Utilities.withVersion(options));
     }

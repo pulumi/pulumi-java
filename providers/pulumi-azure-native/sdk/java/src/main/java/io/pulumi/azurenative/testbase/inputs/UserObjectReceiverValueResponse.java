@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The user object receiver value.
+ */
 public final class UserObjectReceiverValueResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UserObjectReceiverValueResponse Empty = new UserObjectReceiverValueResponse();
 
+    /**
+     * user object ids.
+     */
     @InputImport(name="userObjectIds")
     private final @Nullable List<String> userObjectIds;
 

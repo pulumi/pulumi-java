@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CdnCertificateSourceParametersResponse {
+/**
+ * Type of certificate used
+ */
     private final String certificateType;
+/**
+ * 
+ */
     private final String odataType;
 
     @OutputCustomType.Constructor({"certificateType","odataType"})
@@ -20,9 +26,15 @@ public final class CdnCertificateSourceParametersResponse {
         this.odataType = Objects.requireNonNull(odataType);
     }
 
+/**
+ * Type of certificate used
+ */
     public String getCertificateType() {
         return this.certificateType;
     }
+/**
+ * 
+ */
     public String getOdataType() {
         return this.odataType;
     }

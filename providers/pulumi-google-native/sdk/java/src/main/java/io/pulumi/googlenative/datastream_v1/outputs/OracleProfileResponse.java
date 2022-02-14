@@ -11,11 +11,29 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OracleProfileResponse {
+/**
+ * Connection string attributes
+ */
     private final Map<String,String> connectionAttributes;
+/**
+ * Database for the Oracle connection.
+ */
     private final String databaseService;
+/**
+ * Hostname for the Oracle connection.
+ */
     private final String hostname;
+/**
+ * Password for the Oracle connection.
+ */
     private final String password;
+/**
+ * Port for the Oracle connection, default value is 1521.
+ */
     private final Integer port;
+/**
+ * Username for the Oracle connection.
+ */
     private final String username;
 
     @OutputCustomType.Constructor({"connectionAttributes","databaseService","hostname","password","port","username"})
@@ -34,21 +52,39 @@ public final class OracleProfileResponse {
         this.username = Objects.requireNonNull(username);
     }
 
+/**
+ * Connection string attributes
+ */
     public Map<String,String> getConnectionAttributes() {
         return this.connectionAttributes;
     }
+/**
+ * Database for the Oracle connection.
+ */
     public String getDatabaseService() {
         return this.databaseService;
     }
+/**
+ * Hostname for the Oracle connection.
+ */
     public String getHostname() {
         return this.hostname;
     }
+/**
+ * Password for the Oracle connection.
+ */
     public String getPassword() {
         return this.password;
     }
+/**
+ * Port for the Oracle connection, default value is 1521.
+ */
     public Integer getPort() {
         return this.port;
     }
+/**
+ * Username for the Oracle connection.
+ */
     public String getUsername() {
         return this.username;
     }

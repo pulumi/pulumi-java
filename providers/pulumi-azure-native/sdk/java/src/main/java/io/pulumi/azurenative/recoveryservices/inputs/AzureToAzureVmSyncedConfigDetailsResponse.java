@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure to Azure VM synced configuration details.
+ */
 public final class AzureToAzureVmSyncedConfigDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureToAzureVmSyncedConfigDetailsResponse Empty = new AzureToAzureVmSyncedConfigDetailsResponse();
 
+    /**
+     * The Azure VM input endpoints.
+     */
     @InputImport(name="inputEndpoints")
     private final @Nullable List<InputEndpointResponse> inputEndpoints;
 
@@ -24,6 +30,9 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse extends io.pulumi.r
         return this.inputEndpoints == null ? List.of() : this.inputEndpoints;
     }
 
+    /**
+     * The Azure VM tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 

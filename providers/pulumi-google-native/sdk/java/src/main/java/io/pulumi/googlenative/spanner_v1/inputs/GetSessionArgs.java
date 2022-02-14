@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetSessionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSessionArgs Empty = new GetSessionArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="databaseId", required=true)
     private final String databaseId;
 
@@ -21,6 +27,9 @@ public final class GetSessionArgs extends io.pulumi.resources.InvokeArgs {
         return this.databaseId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="instanceId", required=true)
     private final String instanceId;
 
@@ -28,6 +37,9 @@ public final class GetSessionArgs extends io.pulumi.resources.InvokeArgs {
         return this.instanceId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -35,6 +47,9 @@ public final class GetSessionArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="sessionId", required=true)
     private final String sessionId;
 

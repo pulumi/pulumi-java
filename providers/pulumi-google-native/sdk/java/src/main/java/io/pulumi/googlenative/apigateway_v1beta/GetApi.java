@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApi {
+/**
+ * Gets details of a single Api.
+ */
     public static CompletableFuture<GetApiResult> invokeAsync(GetApiArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigateway/v1beta:getApi", TypeShape.of(GetApiResult.class), args == null ? GetApiArgs.Empty : args, Utilities.withVersion(options));
     }

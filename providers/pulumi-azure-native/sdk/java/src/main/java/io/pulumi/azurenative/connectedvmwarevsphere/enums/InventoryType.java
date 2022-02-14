@@ -8,14 +8,38 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * They inventory type.
+ */
     @EnumType
     public enum InventoryType {
+/**
+ * 
+ */
         ResourcePool("ResourcePool"),
+/**
+ * 
+ */
         VirtualMachine("VirtualMachine"),
+/**
+ * 
+ */
         VirtualMachineTemplate("VirtualMachineTemplate"),
+/**
+ * 
+ */
         VirtualNetwork("VirtualNetwork"),
+/**
+ * 
+ */
         Cluster("Cluster"),
+/**
+ * 
+ */
         Datastore("Datastore"),
+/**
+ * 
+ */
         Host("Host");
 
         private final String value;

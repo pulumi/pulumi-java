@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BuildpackPropertiesResponse {
+/**
+ * Id of the buildpack
+ */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -18,6 +21,9 @@ public final class BuildpackPropertiesResponse {
         this.id = id;
     }
 
+/**
+ * Id of the buildpack
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

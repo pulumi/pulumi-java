@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * General identifier of a data field in a storage service.
+ */
 public final class GooglePrivacyDlpV2FieldIdArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2FieldIdArgs Empty = new GooglePrivacyDlpV2FieldIdArgs();
 
+    /**
+     * Name describing the field.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

@@ -18,10 +18,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of a service instance.
+ */
 public final class ServicesPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServicesPropertiesResponse Empty = new ServicesPropertiesResponse();
 
+    /**
+     * The access policies of the service instance.
+     */
     @InputImport(name="accessPolicies")
     private final @Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies;
 
@@ -29,6 +35,9 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
         return this.accessPolicies == null ? List.of() : this.accessPolicies;
     }
 
+    /**
+     * The azure container registry settings used for convert data operation of the service instance.
+     */
     @InputImport(name="acrConfiguration")
     private final @Nullable ServiceAcrConfigurationInfoResponse acrConfiguration;
 
@@ -36,6 +45,9 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
         return this.acrConfiguration == null ? Optional.empty() : Optional.ofNullable(this.acrConfiguration);
     }
 
+    /**
+     * The authentication configuration for the service instance.
+     */
     @InputImport(name="authenticationConfiguration")
     private final @Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration;
 
@@ -43,6 +55,9 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
         return this.authenticationConfiguration == null ? Optional.empty() : Optional.ofNullable(this.authenticationConfiguration);
     }
 
+    /**
+     * The settings for the CORS configuration of the service instance.
+     */
     @InputImport(name="corsConfiguration")
     private final @Nullable ServiceCorsConfigurationInfoResponse corsConfiguration;
 
@@ -50,6 +65,9 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
         return this.corsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.corsConfiguration);
     }
 
+    /**
+     * The settings for the Cosmos DB database backing the service.
+     */
     @InputImport(name="cosmosDbConfiguration")
     private final @Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration;
 
@@ -57,6 +75,9 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
         return this.cosmosDbConfiguration == null ? Optional.empty() : Optional.ofNullable(this.cosmosDbConfiguration);
     }
 
+    /**
+     * The settings for the export operation of the service instance.
+     */
     @InputImport(name="exportConfiguration")
     private final @Nullable ServiceExportConfigurationInfoResponse exportConfiguration;
 
@@ -64,6 +85,9 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
         return this.exportConfiguration == null ? Optional.empty() : Optional.ofNullable(this.exportConfiguration);
     }
 
+    /**
+     * The list of private endpoint connections that are set up for this resource.
+     */
     @InputImport(name="privateEndpointConnections")
     private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
@@ -71,6 +95,9 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
 
+    /**
+     * The provisioning state.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -78,6 +105,9 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
         return this.provisioningState;
     }
 
+    /**
+     * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
+     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable String publicNetworkAccess;
 

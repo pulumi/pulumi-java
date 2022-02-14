@@ -12,10 +12,16 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * A SourceContext is a reference to a tree of files. A SourceContext together with a path point to a unique revision of a single file or directory.
+ */
 public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SourceContextResponse Empty = new SourceContextResponse();
 
+    /**
+     * A SourceContext referring to a revision in a Google Cloud Source Repo.
+     */
     @InputImport(name="cloudRepo", required=true)
     private final CloudRepoSourceContextResponse cloudRepo;
 
@@ -23,6 +29,9 @@ public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs 
         return this.cloudRepo;
     }
 
+    /**
+     * A SourceContext referring to a Gerrit project.
+     */
     @InputImport(name="gerrit", required=true)
     private final GerritSourceContextResponse gerrit;
 
@@ -30,6 +39,9 @@ public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs 
         return this.gerrit;
     }
 
+    /**
+     * A SourceContext referring to any third party Git repo (e.g., GitHub).
+     */
     @InputImport(name="git", required=true)
     private final GitSourceContextResponse git;
 
@@ -37,6 +49,9 @@ public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs 
         return this.git;
     }
 
+    /**
+     * Labels with user defined metadata.
+     */
     @InputImport(name="labels", required=true)
     private final Map<String,String> labels;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetAATPDataConnectorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAATPDataConnectorArgs Empty = new GetAATPDataConnectorArgs();
 
+    /**
+     * Connector ID
+     */
     @InputImport(name="dataConnectorId", required=true)
     private final String dataConnectorId;
 
@@ -19,6 +25,9 @@ public final class GetAATPDataConnectorArgs extends io.pulumi.resources.InvokeAr
         return this.dataConnectorId;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetAATPDataConnectorArgs extends io.pulumi.resources.InvokeAr
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

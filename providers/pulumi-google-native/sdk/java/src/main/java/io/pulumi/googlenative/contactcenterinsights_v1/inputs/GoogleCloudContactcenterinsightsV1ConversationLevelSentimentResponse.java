@@ -9,10 +9,16 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * One channel of conversation-level sentiment data.
+ */
 public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse Empty = new GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse();
 
+    /**
+     * The channel of the audio that the data applies to.
+     */
     @InputImport(name="channelTag", required=true)
     private final Integer channelTag;
 
@@ -20,6 +26,9 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
         return this.channelTag;
     }
 
+    /**
+     * Data specifying sentiment.
+     */
     @InputImport(name="sentimentData", required=true)
     private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData;
 

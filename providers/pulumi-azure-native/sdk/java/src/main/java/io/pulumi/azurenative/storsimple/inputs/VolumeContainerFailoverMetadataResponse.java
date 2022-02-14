@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The metadata of the volume container, that is being considered as part of a failover set.
+ */
 public final class VolumeContainerFailoverMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VolumeContainerFailoverMetadataResponse Empty = new VolumeContainerFailoverMetadataResponse();
 
+    /**
+     * The path ID of the volume container.
+     */
     @InputImport(name="volumeContainerId")
     private final @Nullable String volumeContainerId;
 
@@ -23,6 +29,9 @@ public final class VolumeContainerFailoverMetadataResponse extends io.pulumi.res
         return this.volumeContainerId == null ? Optional.empty() : Optional.ofNullable(this.volumeContainerId);
     }
 
+    /**
+     * The list of metadata of volumes inside the volume container, which contains valid cloud snapshots.
+     */
     @InputImport(name="volumes")
     private final @Nullable List<VolumeFailoverMetadataResponse> volumes;
 

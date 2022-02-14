@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFavoriteProcess {
+/**
+ * A favorite process identifier.
+API Version: 2020-12-16-preview.
+ *
+ * A favorite process identifier.
+ */
     public static CompletableFuture<GetFavoriteProcessResult> invokeAsync(GetFavoriteProcessArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:testbase:getFavoriteProcess", TypeShape.of(GetFavoriteProcessResult.class), args == null ? GetFavoriteProcessArgs.Empty : args, Utilities.withVersion(options));
     }

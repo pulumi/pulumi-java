@@ -11,9 +11,22 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DiscreteActionResponse {
+/**
+ * String that represents a Capability URN.
+ */
     private final String name;
+/**
+ * List of key value pairs.
+ */
     private final List<KeyValuePairResponse> parameters;
+/**
+ * String that represents a selector.
+ */
     private final String selectorId;
+/**
+ * Enum that discriminates between action models.
+Expected value is 'discrete'.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"name","parameters","selectorId","type"})
@@ -28,15 +41,28 @@ public final class DiscreteActionResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * String that represents a Capability URN.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * List of key value pairs.
+ */
     public List<KeyValuePairResponse> getParameters() {
         return this.parameters;
     }
+/**
+ * String that represents a selector.
+ */
     public String getSelectorId() {
         return this.selectorId;
     }
+/**
+ * Enum that discriminates between action models.
+Expected value is 'discrete'.
+ */
     public String getType() {
         return this.type;
     }

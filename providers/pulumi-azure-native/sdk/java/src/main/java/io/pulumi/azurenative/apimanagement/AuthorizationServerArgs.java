@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AuthorizationServerArgs Empty = new AuthorizationServerArgs();
 
+    /**
+     * OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.
+     */
     @InputImport(name="authorizationEndpoint", required=true)
     private final Input<String> authorizationEndpoint;
 
@@ -29,6 +35,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
         return this.authorizationEndpoint;
     }
 
+    /**
+     * HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.
+     */
     @InputImport(name="authorizationMethods")
     private final @Nullable Input<List<AuthorizationMethod>> authorizationMethods;
 
@@ -36,6 +45,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
         return this.authorizationMethods == null ? Input.empty() : this.authorizationMethods;
     }
 
+    /**
+     * Identifier of the authorization server.
+     */
     @InputImport(name="authsid")
     private final @Nullable Input<String> authsid;
 
@@ -43,6 +55,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
         return this.authsid == null ? Input.empty() : this.authsid;
     }
 
+    /**
+     * Specifies the mechanism by which access token is passed to the API. 
+     */
     @InputImport(name="bearerTokenSendingMethods")
     private final @Nullable Input<List<Either<String,BearerTokenSendingMethod>>> bearerTokenSendingMethods;
 
@@ -50,6 +65,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
         return this.bearerTokenSendingMethods == null ? Input.empty() : this.bearerTokenSendingMethods;
     }
 
+    /**
+     * Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.
+     */
     @InputImport(name="clientAuthenticationMethod")
     private final @Nullable Input<List<Either<String,ClientAuthenticationMethod>>> clientAuthenticationMethod;
 
@@ -57,6 +75,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
         return this.clientAuthenticationMethod == null ? Input.empty() : this.clientAuthenticationMethod;
     }
 
+    /**
+     * Client or app id registered with this authorization server.
+     */
     @InputImport(name="clientId", required=true)
     private final Input<String> clientId;
 
@@ -64,6 +85,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
         return this.clientId;
     }
 
+    /**
+     * Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.
+     */
     @InputImport(name="clientRegistrationEndpoint", required=true)
     private final Input<String> clientRegistrationEndpoint;
 
@@ -71,6 +95,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
         return this.clientRegistrationEndpoint;
     }
 
+    /**
+     * Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     */
     @InputImport(name="clientSecret")
     private final @Nullable Input<String> clientSecret;
 
@@ -78,6 +105,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
     }
 
+    /**
+     * Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.
+     */
     @InputImport(name="defaultScope")
     private final @Nullable Input<String> defaultScope;
 
@@ -85,6 +115,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
         return this.defaultScope == null ? Input.empty() : this.defaultScope;
     }
 
+    /**
+     * Description of the authorization server. Can contain HTML formatting tags.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -92,6 +125,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * User-friendly authorization server name.
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -99,6 +135,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
         return this.displayName;
     }
 
+    /**
+     * Form of an authorization grant, which the client uses to request the access token.
+     */
     @InputImport(name="grantTypes", required=true)
     private final Input<List<Either<String,GrantType>>> grantTypes;
 
@@ -106,6 +145,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
         return this.grantTypes;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -113,6 +155,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
+    /**
+     * Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.
+     */
     @InputImport(name="resourceOwnerPassword")
     private final @Nullable Input<String> resourceOwnerPassword;
 
@@ -120,6 +165,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
         return this.resourceOwnerPassword == null ? Input.empty() : this.resourceOwnerPassword;
     }
 
+    /**
+     * Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
+     */
     @InputImport(name="resourceOwnerUsername")
     private final @Nullable Input<String> resourceOwnerUsername;
 
@@ -127,6 +175,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
         return this.resourceOwnerUsername == null ? Input.empty() : this.resourceOwnerUsername;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -134,6 +185,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
         return this.serviceName;
     }
 
+    /**
+     * If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.
+     */
     @InputImport(name="supportState")
     private final @Nullable Input<Boolean> supportState;
 
@@ -141,6 +195,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
         return this.supportState == null ? Input.empty() : this.supportState;
     }
 
+    /**
+     * Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.
+     */
     @InputImport(name="tokenBodyParameters")
     private final @Nullable Input<List<TokenBodyParameterContractArgs>> tokenBodyParameters;
 
@@ -148,6 +205,9 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
         return this.tokenBodyParameters == null ? Input.empty() : this.tokenBodyParameters;
     }
 
+    /**
+     * OAuth token endpoint. Contains absolute URI to entity being referenced.
+     */
     @InputImport(name="tokenEndpoint")
     private final @Nullable Input<String> tokenEndpoint;
 

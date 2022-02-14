@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListIdentityProviderSecretsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListIdentityProviderSecretsArgs Empty = new ListIdentityProviderSecretsArgs();
 
+    /**
+     * Identity Provider Type identifier.
+     */
     @InputImport(name="identityProviderName", required=true)
     private final String identityProviderName;
 
@@ -19,6 +25,9 @@ public final class ListIdentityProviderSecretsArgs extends io.pulumi.resources.I
         return this.identityProviderName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class ListIdentityProviderSecretsArgs extends io.pulumi.resources.I
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

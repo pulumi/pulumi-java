@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetDatastoreArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDatastoreArgs Empty = new GetDatastoreArgs();
 
+    /**
+     * Name of the datastore.
+     */
     @InputImport(name="datastoreName", required=true)
     private final String datastoreName;
 
@@ -19,6 +25,9 @@ public final class GetDatastoreArgs extends io.pulumi.resources.InvokeArgs {
         return this.datastoreName;
     }
 
+    /**
+     * The Resource Group Name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

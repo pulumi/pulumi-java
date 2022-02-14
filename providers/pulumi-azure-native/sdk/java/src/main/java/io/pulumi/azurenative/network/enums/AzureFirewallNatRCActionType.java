@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of action.
+ */
     @EnumType
     public enum AzureFirewallNatRCActionType {
+/**
+ * 
+ */
         Snat("Snat"),
+/**
+ * 
+ */
         Dnat("Dnat");
 
         private final String value;

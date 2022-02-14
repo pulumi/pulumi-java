@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum Expander {
+/**
+ * 
+ */
         Leastwaste("least-waste"),
+/**
+ * 
+ */
         Mostpods("most-pods"),
+/**
+ * 
+ */
         Priority("priority"),
+/**
+ * 
+ */
         Random("random");
 
         private final String value;

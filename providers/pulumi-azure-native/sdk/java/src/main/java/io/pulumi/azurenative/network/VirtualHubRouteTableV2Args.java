@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualHubRouteTableV2Args Empty = new VirtualHubRouteTableV2Args();
 
+    /**
+     * List of all connections attached to this route table v2.
+     */
     @InputImport(name="attachedConnections")
     private final @Nullable Input<List<String>> attachedConnections;
 
@@ -23,6 +29,9 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
         return this.attachedConnections == null ? Input.empty() : this.attachedConnections;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -30,6 +39,9 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,6 +49,9 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The resource group name of the VirtualHub.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +59,9 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the VirtualHubRouteTableV2.
+     */
     @InputImport(name="routeTableName")
     private final @Nullable Input<String> routeTableName;
 
@@ -51,6 +69,9 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
         return this.routeTableName == null ? Input.empty() : this.routeTableName;
     }
 
+    /**
+     * List of all routes.
+     */
     @InputImport(name="routes")
     private final @Nullable Input<List<VirtualHubRouteV2Args>> routes;
 
@@ -58,6 +79,9 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
         return this.routes == null ? Input.empty() : this.routes;
     }
 
+    /**
+     * The name of the VirtualHub.
+     */
     @InputImport(name="virtualHubName", required=true)
     private final Input<String> virtualHubName;
 

@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TIDataConnectorDataTypesResponseIndicators {
+/**
+ * Describe whether this data type connection is enabled or not.
+ */
     private final @Nullable String state;
 
     @OutputCustomType.Constructor({"state"})
@@ -18,6 +21,9 @@ public final class TIDataConnectorDataTypesResponseIndicators {
         this.state = state;
     }
 
+/**
+ * Describe whether this data type connection is enabled or not.
+ */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }

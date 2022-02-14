@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PerformanceCounterConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PerformanceCounterConfigurationResponse Empty = new PerformanceCounterConfigurationResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="instance")
     private final @Nullable String instance;
 
@@ -21,6 +27,9 @@ public final class PerformanceCounterConfigurationResponse extends io.pulumi.res
         return this.instance == null ? Optional.empty() : Optional.ofNullable(this.instance);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,6 +37,9 @@ public final class PerformanceCounterConfigurationResponse extends io.pulumi.res
         return this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="samplingPeriod", required=true)
     private final String samplingPeriod;
 

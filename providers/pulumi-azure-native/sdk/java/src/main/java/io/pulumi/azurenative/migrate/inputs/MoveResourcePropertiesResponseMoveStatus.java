@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the move resource status.
+ */
 public final class MoveResourcePropertiesResponseMoveStatus extends io.pulumi.resources.InvokeArgs {
 
     public static final MoveResourcePropertiesResponseMoveStatus Empty = new MoveResourcePropertiesResponseMoveStatus();
 
+    /**
+     * An error response from the azure resource mover service.
+     */
     @InputImport(name="errors")
     private final @Nullable MoveResourceErrorResponse errors;
 
@@ -23,6 +29,9 @@ public final class MoveResourcePropertiesResponseMoveStatus extends io.pulumi.re
         return this.errors == null ? Optional.empty() : Optional.ofNullable(this.errors);
     }
 
+    /**
+     * Defines the job status.
+     */
     @InputImport(name="jobStatus")
     private final @Nullable JobStatusResponse jobStatus;
 
@@ -30,6 +39,9 @@ public final class MoveResourcePropertiesResponseMoveStatus extends io.pulumi.re
         return this.jobStatus == null ? Optional.empty() : Optional.ofNullable(this.jobStatus);
     }
 
+    /**
+     * Defines the MoveResource states.
+     */
     @InputImport(name="moveState", required=true)
     private final String moveState;
 

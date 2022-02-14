@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Volume describes a Docker container volume which is mounted into build steps in order to persist files across build step execution.
+ */
 public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VolumeResponse Empty = new VolumeResponse();
 
+    /**
+     * Name of the volume to mount. Volume names must be unique per build step and must be valid names for Docker volumes. Each named volume must be used by at least two build steps.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * Path at which to mount the volume. Paths must be absolute and cannot conflict with other volume paths on the same build step or with certain reserved volume paths.
+     */
     @InputImport(name="path", required=true)
     private final String path;
 

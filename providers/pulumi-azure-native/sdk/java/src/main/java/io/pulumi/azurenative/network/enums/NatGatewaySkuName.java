@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Name of Nat Gateway SKU.
+ */
     @EnumType
     public enum NatGatewaySkuName {
+/**
+ * 
+ */
         Standard("Standard");
 
         private final String value;

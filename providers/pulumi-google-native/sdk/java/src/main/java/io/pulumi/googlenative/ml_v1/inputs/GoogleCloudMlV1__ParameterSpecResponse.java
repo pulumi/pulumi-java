@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Represents a single hyperparameter to optimize.
+ */
 public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudMlV1__ParameterSpecResponse Empty = new GoogleCloudMlV1__ParameterSpecResponse();
 
+    /**
+     * Required if type is `CATEGORICAL`. The list of possible categories.
+     */
     @InputImport(name="categoricalValues", required=true)
     private final List<String> categoricalValues;
 
@@ -21,6 +27,9 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
         return this.categoricalValues;
     }
 
+    /**
+     * Required if type is `DISCRETE`. A list of feasible points. The list should be in strictly increasing order. For instance, this parameter might have possible settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000 values.
+     */
     @InputImport(name="discreteValues", required=true)
     private final List<Double> discreteValues;
 
@@ -28,6 +37,9 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
         return this.discreteValues;
     }
 
+    /**
+     * Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is `INTEGER`.
+     */
     @InputImport(name="maxValue", required=true)
     private final Double maxValue;
 
@@ -35,6 +47,9 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
         return this.maxValue;
     }
 
+    /**
+     * Required if type is `DOUBLE` or `INTEGER`. This field should be unset if type is `CATEGORICAL`. This value should be integers if type is INTEGER.
+     */
     @InputImport(name="minValue", required=true)
     private final Double minValue;
 
@@ -42,6 +57,9 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
         return this.minValue;
     }
 
+    /**
+     * The parameter name must be unique amongst all ParameterConfigs in a HyperparameterSpec message. E.g., "learning_rate".
+     */
     @InputImport(name="parameterName", required=true)
     private final String parameterName;
 
@@ -49,6 +67,9 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
         return this.parameterName;
     }
 
+    /**
+     * Optional. How the parameter should be scaled to the hypercube. Leave unset for categorical parameters. Some kind of scaling is strongly recommended for real or integral parameters (e.g., `UNIT_LINEAR_SCALE`).
+     */
     @InputImport(name="scaleType", required=true)
     private final String scaleType;
 
@@ -56,6 +77,9 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
         return this.scaleType;
     }
 
+    /**
+     * The type of the parameter.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

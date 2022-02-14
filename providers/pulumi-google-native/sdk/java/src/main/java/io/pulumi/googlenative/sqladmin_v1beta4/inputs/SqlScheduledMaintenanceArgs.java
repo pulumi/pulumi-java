@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Any scheduled maintenancce for this instance.
+ */
 public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlScheduledMaintenanceArgs Empty = new SqlScheduledMaintenanceArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="canDefer")
     private final @Nullable Input<Boolean> canDefer;
 
@@ -22,6 +28,9 @@ public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.Resou
         return this.canDefer == null ? Input.empty() : this.canDefer;
     }
 
+    /**
+     * If the scheduled maintenance can be rescheduled.
+     */
     @InputImport(name="canReschedule")
     private final @Nullable Input<Boolean> canReschedule;
 
@@ -29,6 +38,9 @@ public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.Resou
         return this.canReschedule == null ? Input.empty() : this.canReschedule;
     }
 
+    /**
+     * Maintenance cannot be rescheduled to start beyond this deadline.
+     */
     @InputImport(name="scheduleDeadlineTime")
     private final @Nullable Input<String> scheduleDeadlineTime;
 
@@ -36,6 +48,9 @@ public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.Resou
         return this.scheduleDeadlineTime == null ? Input.empty() : this.scheduleDeadlineTime;
     }
 
+    /**
+     * The start time of any upcoming scheduled maintenance for this instance.
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 

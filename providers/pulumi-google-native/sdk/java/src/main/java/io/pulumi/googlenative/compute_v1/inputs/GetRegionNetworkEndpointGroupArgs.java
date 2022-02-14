@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetRegionNetworkEndpointGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRegionNetworkEndpointGroupArgs Empty = new GetRegionNetworkEndpointGroupArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="networkEndpointGroup", required=true)
     private final String networkEndpointGroup;
 
@@ -21,6 +27,9 @@ public final class GetRegionNetworkEndpointGroupArgs extends io.pulumi.resources
         return this.networkEndpointGroup;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -28,6 +37,9 @@ public final class GetRegionNetworkEndpointGroupArgs extends io.pulumi.resources
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="region", required=true)
     private final String region;
 

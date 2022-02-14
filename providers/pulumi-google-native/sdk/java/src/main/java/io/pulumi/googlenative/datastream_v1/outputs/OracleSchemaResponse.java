@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OracleSchemaResponse {
+/**
+ * Tables in the schema.
+ */
     private final List<OracleTableResponse> oracleTables;
+/**
+ * Schema name.
+ */
     private final String schema;
 
     @OutputCustomType.Constructor({"oracleTables","schema"})
@@ -22,9 +28,15 @@ public final class OracleSchemaResponse {
         this.schema = Objects.requireNonNull(schema);
     }
 
+/**
+ * Tables in the schema.
+ */
     public List<OracleTableResponse> getOracleTables() {
         return this.oracleTables;
     }
+/**
+ * Schema name.
+ */
     public String getSchema() {
         return this.schema;
     }

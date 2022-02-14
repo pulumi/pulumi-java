@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The integration service environment sku.
+ */
 public final class IntegrationServiceEnvironmentSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IntegrationServiceEnvironmentSkuResponse Empty = new IntegrationServiceEnvironmentSkuResponse();
 
+    /**
+     * The sku capacity.
+     */
     @InputImport(name="capacity")
     private final @Nullable Integer capacity;
 
@@ -22,6 +28,9 @@ public final class IntegrationServiceEnvironmentSkuResponse extends io.pulumi.re
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
+    /**
+     * The sku name.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

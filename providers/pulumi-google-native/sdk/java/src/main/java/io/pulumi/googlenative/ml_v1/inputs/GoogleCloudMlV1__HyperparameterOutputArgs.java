@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents the result of a single hyperparameter tuning trial from a training job. The TrainingOutput object that is returned on successful completion of a training job with hyperparameter tuning includes a list of HyperparameterOutput objects, one for each successful trial.
+ */
 public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudMlV1__HyperparameterOutputArgs Empty = new GoogleCloudMlV1__HyperparameterOutputArgs();
 
+    /**
+     * All recorded object metrics for this trial. This field is not currently populated.
+     */
     @InputImport(name="allMetrics")
     private final @Nullable Input<List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs>> allMetrics;
 
@@ -26,6 +32,9 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
         return this.allMetrics == null ? Input.empty() : this.allMetrics;
     }
 
+    /**
+     * Details related to built-in algorithms jobs. Only set for trials of built-in algorithms jobs that have succeeded.
+     */
     @InputImport(name="builtInAlgorithmOutput")
     private final @Nullable Input<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs> builtInAlgorithmOutput;
 
@@ -33,6 +42,9 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
         return this.builtInAlgorithmOutput == null ? Input.empty() : this.builtInAlgorithmOutput;
     }
 
+    /**
+     * The final objective metric seen for this trial.
+     */
     @InputImport(name="finalMetric")
     private final @Nullable Input<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs> finalMetric;
 
@@ -40,6 +52,9 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
         return this.finalMetric == null ? Input.empty() : this.finalMetric;
     }
 
+    /**
+     * The hyperparameters given to this trial.
+     */
     @InputImport(name="hyperparameters")
     private final @Nullable Input<Map<String,String>> hyperparameters;
 
@@ -47,6 +62,9 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
         return this.hyperparameters == null ? Input.empty() : this.hyperparameters;
     }
 
+    /**
+     * True if the trial is stopped early.
+     */
     @InputImport(name="isTrialStoppedEarly")
     private final @Nullable Input<Boolean> isTrialStoppedEarly;
 
@@ -54,6 +72,9 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
         return this.isTrialStoppedEarly == null ? Input.empty() : this.isTrialStoppedEarly;
     }
 
+    /**
+     * The trial id for these results.
+     */
     @InputImport(name="trialId")
     private final @Nullable Input<String> trialId;
 
@@ -61,6 +82,9 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
         return this.trialId == null ? Input.empty() : this.trialId;
     }
 
+    /**
+     * URIs for accessing [interactive shells](https://cloud.google.com/ai-platform/training/docs/monitor-debug-interactive-shell) (one URI for each training node). Only available if this trial is part of a hyperparameter tuning job and the job's training_input.enable_web_access is `true`. The keys are names of each node in the training job; for example, `master-replica-0` for the master node, `worker-replica-0` for the first worker, and `ps-replica-0` for the first parameter server. The values are the URIs for each node's interactive shell.
+     */
     @InputImport(name="webAccessUris")
     private final @Nullable Input<Map<String,String>> webAccessUris;
 

@@ -8,15 +8,42 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Match Variable.
+ */
     @EnumType
     public enum WebApplicationFirewallMatchVariable {
+/**
+ * 
+ */
         RemoteAddr("RemoteAddr"),
+/**
+ * 
+ */
         RequestMethod("RequestMethod"),
+/**
+ * 
+ */
         QueryString("QueryString"),
+/**
+ * 
+ */
         PostArgs("PostArgs"),
+/**
+ * 
+ */
         RequestUri("RequestUri"),
+/**
+ * 
+ */
         RequestHeaders("RequestHeaders"),
+/**
+ * 
+ */
         RequestBody("RequestBody"),
+/**
+ * 
+ */
         RequestCookies("RequestCookies");
 
         private final String value;

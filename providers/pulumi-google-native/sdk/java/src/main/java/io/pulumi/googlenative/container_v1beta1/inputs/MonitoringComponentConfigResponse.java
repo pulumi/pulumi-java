@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * MonitoringComponentConfig is cluster monitoring component configuration.
+ */
 public final class MonitoringComponentConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MonitoringComponentConfigResponse Empty = new MonitoringComponentConfigResponse();
 
+    /**
+     * Select components to collect metrics. An empty set would disable all monitoring.
+     */
     @InputImport(name="enableComponents", required=true)
     private final List<String> enableComponents;
 

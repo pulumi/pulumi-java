@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFactory {
+/**
+ * Factory resource type.
+API Version: 2018-06-01.
+ *
+ * Factory resource type.
+ */
     public static CompletableFuture<GetFactoryResult> invokeAsync(GetFactoryArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getFactory", TypeShape.of(GetFactoryResult.class), args == null ? GetFactoryArgs.Empty : args, Utilities.withVersion(options));
     }

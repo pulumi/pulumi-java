@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class PacketMirroringMirroredResourceInfoSubnetInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PacketMirroringMirroredResourceInfoSubnetInfoResponse Empty = new PacketMirroringMirroredResourceInfoSubnetInfoResponse();
 
+    /**
+     * Unique identifier for the subnetwork; defined by the server.
+     */
     @InputImport(name="canonicalUrl", required=true)
     private final String canonicalUrl;
 
@@ -19,6 +25,9 @@ public final class PacketMirroringMirroredResourceInfoSubnetInfoResponse extends
         return this.canonicalUrl;
     }
 
+    /**
+     * Resource URL to the subnetwork for which traffic from/to all VM instances will be mirrored.
+     */
     @InputImport(name="url", required=true)
     private final String url;
 

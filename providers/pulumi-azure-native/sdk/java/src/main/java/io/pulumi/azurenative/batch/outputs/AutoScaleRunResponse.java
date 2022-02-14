@@ -12,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutoScaleRunResponse {
+/**
+ * 
+ */
     private final @Nullable AutoScaleRunErrorResponse error;
+/**
+ * 
+ */
     private final String evaluationTime;
+/**
+ * Each variable value is returned in the form $variable=value, and variables are separated by semicolons.
+ */
     private final @Nullable String results;
 
     @OutputCustomType.Constructor({"error","evaluationTime","results"})
@@ -26,12 +35,21 @@ public final class AutoScaleRunResponse {
         this.results = results;
     }
 
+/**
+ * 
+ */
     public Optional<AutoScaleRunErrorResponse> getError() {
         return Optional.ofNullable(this.error);
     }
+/**
+ * 
+ */
     public String getEvaluationTime() {
         return this.evaluationTime;
     }
+/**
+ * Each variable value is returned in the form $variable=value, and variables are separated by semicolons.
+ */
     public Optional<String> getResults() {
         return Optional.ofNullable(this.results);
     }

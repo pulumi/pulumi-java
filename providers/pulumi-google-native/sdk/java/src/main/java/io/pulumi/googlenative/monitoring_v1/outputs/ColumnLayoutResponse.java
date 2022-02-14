@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ColumnLayoutResponse {
+/**
+ * The columns of content to display.
+ */
     private final List<ColumnResponse> columns;
 
     @OutputCustomType.Constructor({"columns"})
@@ -17,6 +20,9 @@ public final class ColumnLayoutResponse {
         this.columns = Objects.requireNonNull(columns);
     }
 
+/**
+ * The columns of content to display.
+ */
     public List<ColumnResponse> getColumns() {
         return this.columns;
     }

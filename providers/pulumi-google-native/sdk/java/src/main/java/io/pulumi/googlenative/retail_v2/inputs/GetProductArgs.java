@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetProductArgs Empty = new GetProductArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="branchId", required=true)
     private final String branchId;
 
@@ -21,6 +27,9 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
         return this.branchId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="catalogId", required=true)
     private final String catalogId;
 
@@ -28,6 +37,9 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
         return this.catalogId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -35,6 +47,9 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="productId", required=true)
     private final String productId;
 
@@ -42,6 +57,9 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
         return this.productId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

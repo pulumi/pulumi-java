@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.migrate.MoveResourceArgs;
 import io.pulumi.azurenative.migrate.outputs.MoveResourcePropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,27 +14,198 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Defines the move resource.
+API Version: 2021-01-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### MoveResources_Create
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var moveResource = new AzureNative.Migrate.MoveResource("moveResource", new AzureNative.Migrate.MoveResourceArgs
+        {
+            MoveCollectionName = "movecollection1",
+            MoveResourceName = "moveresourcename1",
+            Properties = new AzureNative.Migrate.Inputs.MoveResourcePropertiesArgs
+            {
+                DependsOnOverrides = 
+                {
+                    new AzureNative.Migrate.Inputs.MoveResourceDependencyOverrideArgs
+                    {
+                        Id = "/subscriptions/c4488a3f-a7f7-4ad4-aa72-0e1f4d9c0756/resourceGroups/eastusRG/providers/Microsoft.Network/networkInterfaces/eastusvm140",
+                        TargetId = "/subscriptions/c4488a3f-a7f7-4ad4-aa72-0e1f4d9c0756/resourceGroups/westusRG/providers/Microsoft.Network/networkInterfaces/eastusvm140",
+                    },
+                },
+                ResourceSettings = new AzureNative.Migrate.Inputs.VirtualMachineResourceSettingsArgs
+                {
+                    ResourceType = "Microsoft.Compute/virtualMachines",
+                    TargetAvailabilitySetId = "/subscriptions/subid/resourceGroups/eastusRG/providers/Microsoft.Compute/availabilitySets/avset1",
+                    TargetAvailabilityZone = "2",
+                    TargetResourceName = "westusvm1",
+                },
+                SourceId = "/subscriptions/subid/resourceGroups/eastusRG/providers/Microsoft.Compute/virtualMachines/eastusvm1",
+            },
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	migrate "github.com/pulumi/pulumi-azure-native/sdk/go/azure/migrate"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := migrate.NewMoveResource(ctx, "moveResource", &migrate.MoveResourceArgs{
+			MoveCollectionName: pulumi.String("movecollection1"),
+			MoveResourceName:   pulumi.String("moveresourcename1"),
+			Properties: &migrate.MoveResourcePropertiesArgs{
+				DependsOnOverrides: migrate.MoveResourceDependencyOverrideArray{
+					&migrate.MoveResourceDependencyOverrideArgs{
+						Id:       pulumi.String("/subscriptions/c4488a3f-a7f7-4ad4-aa72-0e1f4d9c0756/resourceGroups/eastusRG/providers/Microsoft.Network/networkInterfaces/eastusvm140"),
+						TargetId: pulumi.String("/subscriptions/c4488a3f-a7f7-4ad4-aa72-0e1f4d9c0756/resourceGroups/westusRG/providers/Microsoft.Network/networkInterfaces/eastusvm140"),
+					},
+				},
+				ResourceSettings: migrate.VirtualMachineResourceSettings{
+					ResourceType:            "Microsoft.Compute/virtualMachines",
+					TargetAvailabilitySetId: "/subscriptions/subid/resourceGroups/eastusRG/providers/Microsoft.Compute/availabilitySets/avset1",
+					TargetAvailabilityZone:  "2",
+					TargetResourceName:      "westusvm1",
+				},
+				SourceId: pulumi.String("/subscriptions/subid/resourceGroups/eastusRG/providers/Microsoft.Compute/virtualMachines/eastusvm1"),
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const moveResource = new azure_native.migrate.MoveResource("moveResource", {
+    moveCollectionName: "movecollection1",
+    moveResourceName: "moveresourcename1",
+    properties: {
+        dependsOnOverrides: [{
+            id: "/subscriptions/c4488a3f-a7f7-4ad4-aa72-0e1f4d9c0756/resourceGroups/eastusRG/providers/Microsoft.Network/networkInterfaces/eastusvm140",
+            targetId: "/subscriptions/c4488a3f-a7f7-4ad4-aa72-0e1f4d9c0756/resourceGroups/westusRG/providers/Microsoft.Network/networkInterfaces/eastusvm140",
+        }],
+        resourceSettings: {
+            resourceType: "Microsoft.Compute/virtualMachines",
+            targetAvailabilitySetId: "/subscriptions/subid/resourceGroups/eastusRG/providers/Microsoft.Compute/availabilitySets/avset1",
+            targetAvailabilityZone: "2",
+            targetResourceName: "westusvm1",
+        },
+        sourceId: "/subscriptions/subid/resourceGroups/eastusRG/providers/Microsoft.Compute/virtualMachines/eastusvm1",
+    },
+    resourceGroupName: "rg1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+move_resource = azure_native.migrate.MoveResource("moveResource",
+    move_collection_name="movecollection1",
+    move_resource_name="moveresourcename1",
+    properties=azure_native.migrate.MoveResourcePropertiesArgs(
+        depends_on_overrides=[azure_native.migrate.MoveResourceDependencyOverrideArgs(
+            id="/subscriptions/c4488a3f-a7f7-4ad4-aa72-0e1f4d9c0756/resourceGroups/eastusRG/providers/Microsoft.Network/networkInterfaces/eastusvm140",
+            target_id="/subscriptions/c4488a3f-a7f7-4ad4-aa72-0e1f4d9c0756/resourceGroups/westusRG/providers/Microsoft.Network/networkInterfaces/eastusvm140",
+        )],
+        resource_settings=azure_native.migrate.VirtualMachineResourceSettingsArgs(
+            resource_type="Microsoft.Compute/virtualMachines",
+            target_availability_set_id="/subscriptions/subid/resourceGroups/eastusRG/providers/Microsoft.Compute/availabilitySets/avset1",
+            target_availability_zone="2",
+            target_resource_name="westusvm1",
+        ),
+        source_id="/subscriptions/subid/resourceGroups/eastusRG/providers/Microsoft.Compute/virtualMachines/eastusvm1",
+    ),
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:migrate:MoveResource moveresourcename1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Migrate/MoveCollections/movecollection1/MoveResources/moveresource1 
+```
+
+ */
 @ResourceType(type="azure-native:migrate:MoveResource")
 public class MoveResource extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Defines the move resource properties.
+     */
     @OutputExport(name="properties", type=MoveResourcePropertiesResponse.class, parameters={})
     private Output<MoveResourcePropertiesResponse> properties;
 
+    /**
+     * @return Defines the move resource properties.
+     */
     public Output<MoveResourcePropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * The type of the resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public MoveResource(String name, MoveResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:migrate:MoveResource", name, args == null ? MoveResourceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -56,6 +226,14 @@ public class MoveResource extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static MoveResource get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MoveResource(name, id, options);
     }

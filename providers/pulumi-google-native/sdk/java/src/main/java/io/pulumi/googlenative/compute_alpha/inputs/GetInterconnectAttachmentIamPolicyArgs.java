@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetInterconnectAttachmentIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetInterconnectAttachmentIamPolicyArgs Empty = new GetInterconnectAttachmentIamPolicyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="optionsRequestedPolicyVersion")
     private final @Nullable String optionsRequestedPolicyVersion;
 
@@ -21,6 +27,9 @@ public final class GetInterconnectAttachmentIamPolicyArgs extends io.pulumi.reso
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -28,6 +37,9 @@ public final class GetInterconnectAttachmentIamPolicyArgs extends io.pulumi.reso
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="region", required=true)
     private final String region;
 
@@ -35,6 +47,9 @@ public final class GetInterconnectAttachmentIamPolicyArgs extends io.pulumi.reso
         return this.region;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="resource", required=true)
     private final String resource;
 

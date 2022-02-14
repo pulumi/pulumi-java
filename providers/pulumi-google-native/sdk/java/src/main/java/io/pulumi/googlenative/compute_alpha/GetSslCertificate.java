@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSslCertificate {
+/**
+ * Returns the specified SslCertificate resource. Gets a list of available SSL certificates by making a list() request.
+ */
     public static CompletableFuture<GetSslCertificateResult> invokeAsync(GetSslCertificateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getSslCertificate", TypeShape.of(GetSslCertificateResult.class), args == null ? GetSslCertificateArgs.Empty : args, Utilities.withVersion(options));
     }

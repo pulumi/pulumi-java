@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Dataset reference type.
+ */
 public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetReferenceArgs Empty = new DatasetReferenceArgs();
 
+    /**
+     * Arguments for dataset.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,Object>> parameters;
 
@@ -23,6 +29,9 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Reference dataset name.
+     */
     @InputImport(name="referenceName", required=true)
     private final Input<String> referenceName;
 
@@ -30,6 +39,9 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
         return this.referenceName;
     }
 
+    /**
+     * Dataset reference type.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

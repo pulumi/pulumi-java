@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes Forwarding Route.
+ */
 public final class ForwardingConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ForwardingConfigurationArgs Empty = new ForwardingConfigurationArgs();
 
+    /**
+     * A reference to the BackendPool which this rule routes to.
+     */
     @InputImport(name="backendPool")
     private final @Nullable Input<SubResourceArgs> backendPool;
 
@@ -25,6 +31,9 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
         return this.backendPool == null ? Input.empty() : this.backendPool;
     }
 
+    /**
+     * The caching configuration associated with this rule.
+     */
     @InputImport(name="cacheConfiguration")
     private final @Nullable Input<CacheConfigurationArgs> cacheConfiguration;
 
@@ -32,6 +41,9 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
         return this.cacheConfiguration == null ? Input.empty() : this.cacheConfiguration;
     }
 
+    /**
+     * A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
+     */
     @InputImport(name="customForwardingPath")
     private final @Nullable Input<String> customForwardingPath;
 
@@ -39,6 +51,9 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
         return this.customForwardingPath == null ? Input.empty() : this.customForwardingPath;
     }
 
+    /**
+     * Protocol this rule will use when forwarding traffic to backends.
+     */
     @InputImport(name="forwardingProtocol")
     private final @Nullable Input<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol;
 
@@ -46,6 +61,10 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
         return this.forwardingProtocol == null ? Input.empty() : this.forwardingProtocol;
     }
 
+    /**
+     * 
+Expected value is '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration'.
+     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 

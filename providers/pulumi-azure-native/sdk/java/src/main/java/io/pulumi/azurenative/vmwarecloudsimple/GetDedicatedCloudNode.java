@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDedicatedCloudNode {
+/**
+ * Dedicated cloud node model
+API Version: 2019-04-01.
+ *
+ * Dedicated cloud node model
+ */
     public static CompletableFuture<GetDedicatedCloudNodeResult> invokeAsync(GetDedicatedCloudNodeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:vmwarecloudsimple:getDedicatedCloudNode", TypeShape.of(GetDedicatedCloudNodeResult.class), args == null ? GetDedicatedCloudNodeArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum NotificationConfigEventTypesItem {
+/**
+ * Illegal value, to avoid allowing a default.
+ */
         EventTypeUnspecified("EVENT_TYPE_UNSPECIFIED"),
+/**
+ * `TransferOperation` completed with status SUCCESS.
+ */
         TransferOperationSuccess("TRANSFER_OPERATION_SUCCESS"),
+/**
+ * `TransferOperation` completed with status FAILED.
+ */
         TransferOperationFailed("TRANSFER_OPERATION_FAILED"),
+/**
+ * `TransferOperation` completed with status ABORTED.
+ */
         TransferOperationAborted("TRANSFER_OPERATION_ABORTED");
 
         private final String value;

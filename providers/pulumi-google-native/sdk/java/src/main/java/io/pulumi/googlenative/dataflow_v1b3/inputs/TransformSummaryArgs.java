@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Description of the type, names/ids, and input/outputs for a transform.
+ */
 public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TransformSummaryArgs Empty = new TransformSummaryArgs();
 
+    /**
+     * Transform-specific display data.
+     */
     @InputImport(name="displayData")
     private final @Nullable Input<List<DisplayDataArgs>> displayData;
 
@@ -24,6 +30,9 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
         return this.displayData == null ? Input.empty() : this.displayData;
     }
 
+    /**
+     * SDK generated id of this transform instance.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -31,6 +40,9 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * User names for all collection inputs to this transform.
+     */
     @InputImport(name="inputCollectionName")
     private final @Nullable Input<List<String>> inputCollectionName;
 
@@ -38,6 +50,9 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
         return this.inputCollectionName == null ? Input.empty() : this.inputCollectionName;
     }
 
+    /**
+     * Type of transform.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<TransformSummaryKind> kind;
 
@@ -45,6 +60,9 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * User provided name for this transform instance.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +70,9 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * User names for all collection outputs to this transform.
+     */
     @InputImport(name="outputCollectionName")
     private final @Nullable Input<List<String>> outputCollectionName;
 

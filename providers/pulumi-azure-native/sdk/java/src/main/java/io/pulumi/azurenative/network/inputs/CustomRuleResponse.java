@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines contents of a web application rule
+ */
 public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomRuleResponse Empty = new CustomRuleResponse();
 
+    /**
+     * Describes what action to be applied when rule matches.
+     */
     @InputImport(name="action", required=true)
     private final String action;
 
@@ -24,6 +30,9 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.action;
     }
 
+    /**
+     * Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
+     */
     @InputImport(name="enabledState")
     private final @Nullable String enabledState;
 
@@ -31,6 +40,9 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
     }
 
+    /**
+     * List of match conditions.
+     */
     @InputImport(name="matchConditions", required=true)
     private final List<FrontDoorMatchConditionResponse> matchConditions;
 
@@ -38,6 +50,9 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.matchConditions;
     }
 
+    /**
+     * Describes the name of the rule.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -45,6 +60,9 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Describes priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
+     */
     @InputImport(name="priority", required=true)
     private final Integer priority;
 
@@ -52,6 +70,9 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.priority;
     }
 
+    /**
+     * Time window for resetting the rate limit count. Default is 1 minute.
+     */
     @InputImport(name="rateLimitDurationInMinutes")
     private final @Nullable Integer rateLimitDurationInMinutes;
 
@@ -59,6 +80,9 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.rateLimitDurationInMinutes == null ? Optional.empty() : Optional.ofNullable(this.rateLimitDurationInMinutes);
     }
 
+    /**
+     * Number of allowed requests per client within the time window.
+     */
     @InputImport(name="rateLimitThreshold")
     private final @Nullable Integer rateLimitThreshold;
 
@@ -66,6 +90,9 @@ public final class CustomRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.rateLimitThreshold == null ? Optional.empty() : Optional.ofNullable(this.rateLimitThreshold);
     }
 
+    /**
+     * Describes type of rule.
+     */
     @InputImport(name="ruleType", required=true)
     private final String ruleType;
 

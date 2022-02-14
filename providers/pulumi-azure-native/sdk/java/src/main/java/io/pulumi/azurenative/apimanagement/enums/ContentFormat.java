@@ -8,17 +8,50 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Format of the Content in which the API is getting imported.
+ */
     @EnumType
     public enum ContentFormat {
+/**
+ * The contents are inline and Content type is a WADL document.
+ */
         Wadlxml("wadl-xml"),
+/**
+ * The WADL document is hosted on a publicly accessible internet address.
+ */
         Wadllinkjson("wadl-link-json"),
+/**
+ * The contents are inline and Content Type is a OpenAPI 2.0 JSON Document.
+ */
         Swaggerjson("swagger-json"),
+/**
+ * The OpenAPI 2.0 JSON document is hosted on a publicly accessible internet address.
+ */
         Swaggerlinkjson("swagger-link-json"),
+/**
+ * The contents are inline and the document is a WSDL/Soap document.
+ */
         Wsdl("wsdl"),
+/**
+ * The WSDL document is hosted on a publicly accessible internet address.
+ */
         Wsdllink("wsdl-link"),
+/**
+ * The contents are inline and Content Type is a OpenAPI 3.0 YAML Document.
+ */
         Openapi("openapi"),
+/**
+ * The contents are inline and Content Type is a OpenAPI 3.0 JSON Document.
+ */
         Openapi_json("openapi+json"),
+/**
+ * The OpenAPI 3.0 YAML document is hosted on a publicly accessible internet address.
+ */
         Openapilink("openapi-link"),
+/**
+ * The OpenAPI 3.0 JSON document is hosted on a publicly accessible internet address.
+ */
         Openapi_jsonlink("openapi+json-link");
 
         private final String value;

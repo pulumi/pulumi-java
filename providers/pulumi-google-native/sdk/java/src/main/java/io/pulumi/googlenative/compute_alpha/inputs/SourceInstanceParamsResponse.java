@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A specification of the parameters to use when creating the instance template from a source instance.
+ */
 public final class SourceInstanceParamsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SourceInstanceParamsResponse Empty = new SourceInstanceParamsResponse();
 
+    /**
+     * Attached disks configuration. If not provided, defaults are applied: For boot disk and any other R/W disks, new custom images will be created from each disk. For read-only disks, they will be attached in read-only mode. Local SSD disks will be created as blank volumes.
+     */
     @InputImport(name="diskConfigs", required=true)
     private final List<DiskInstantiationConfigResponse> diskConfigs;
 

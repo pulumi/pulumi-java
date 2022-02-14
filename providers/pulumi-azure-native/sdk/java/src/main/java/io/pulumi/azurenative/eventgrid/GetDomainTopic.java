@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomainTopic {
+/**
+ * Domain Topic.
+API Version: 2020-06-01.
+ *
+ * Domain Topic.
+ */
     public static CompletableFuture<GetDomainTopicResult> invokeAsync(GetDomainTopicArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getDomainTopic", TypeShape.of(GetDomainTopicResult.class), args == null ? GetDomainTopicArgs.Empty : args, Utilities.withVersion(options));
     }

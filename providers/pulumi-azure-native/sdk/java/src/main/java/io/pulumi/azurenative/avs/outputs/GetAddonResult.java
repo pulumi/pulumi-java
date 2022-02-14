@@ -11,11 +11,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAddonResult {
+/**
+ * The type of private cloud addon
+ */
     private final @Nullable String addonType;
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * The SRM license
+ */
     private final @Nullable String licenseKey;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * The state of the addon provisioning
+ */
     private final String provisioningState;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"addonType","id","licenseKey","name","provisioningState","type"})
@@ -34,21 +52,39 @@ public final class GetAddonResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The type of private cloud addon
+ */
     public Optional<String> getAddonType() {
         return Optional.ofNullable(this.addonType);
     }
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The SRM license
+ */
     public Optional<String> getLicenseKey() {
         return Optional.ofNullable(this.licenseKey);
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The state of the addon provisioning
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

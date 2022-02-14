@@ -16,20 +16,65 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetHanaInstanceResult {
+/**
+ * Specifies the HANA instance unique ID.
+ */
     private final String hanaInstanceId;
+/**
+ * Specifies the hardware settings for the HANA instance.
+ */
     private final @Nullable HardwareProfileResponse hardwareProfile;
+/**
+ * Hardware revision of a HANA instance
+ */
     private final String hwRevision;
+/**
+ * Resource ID
+ */
     private final String id;
+/**
+ * Resource location
+ */
     private final @Nullable String location;
+/**
+ * Resource name
+ */
     private final String name;
+/**
+ * Specifies the network settings for the HANA instance.
+ */
     private final @Nullable NetworkProfileResponse networkProfile;
+/**
+ * Specifies the operating system settings for the HANA instance.
+ */
     private final @Nullable OSProfileResponse osProfile;
+/**
+ * ARM ID of another HanaInstance that will share a network with this HanaInstance
+ */
     private final @Nullable String partnerNodeId;
+/**
+ * Resource power state
+ */
     private final String powerState;
+/**
+ * State of provisioning of the HanaInstance
+ */
     private final String provisioningState;
+/**
+ * Resource proximity placement group
+ */
     private final String proximityPlacementGroup;
+/**
+ * Specifies the storage settings for the HANA instance disks.
+ */
     private final @Nullable StorageProfileResponse storageProfile;
+/**
+ * Resource tags
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Resource type
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"hanaInstanceId","hardwareProfile","hwRevision","id","location","name","networkProfile","osProfile","partnerNodeId","powerState","provisioningState","proximityPlacementGroup","storageProfile","tags","type"})
@@ -66,48 +111,93 @@ public final class GetHanaInstanceResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Specifies the HANA instance unique ID.
+ */
     public String getHanaInstanceId() {
         return this.hanaInstanceId;
     }
+/**
+ * Specifies the hardware settings for the HANA instance.
+ */
     public Optional<HardwareProfileResponse> getHardwareProfile() {
         return Optional.ofNullable(this.hardwareProfile);
     }
+/**
+ * Hardware revision of a HANA instance
+ */
     public String getHwRevision() {
         return this.hwRevision;
     }
+/**
+ * Resource ID
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource location
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * Resource name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Specifies the network settings for the HANA instance.
+ */
     public Optional<NetworkProfileResponse> getNetworkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
+/**
+ * Specifies the operating system settings for the HANA instance.
+ */
     public Optional<OSProfileResponse> getOsProfile() {
         return Optional.ofNullable(this.osProfile);
     }
+/**
+ * ARM ID of another HanaInstance that will share a network with this HanaInstance
+ */
     public Optional<String> getPartnerNodeId() {
         return Optional.ofNullable(this.partnerNodeId);
     }
+/**
+ * Resource power state
+ */
     public String getPowerState() {
         return this.powerState;
     }
+/**
+ * State of provisioning of the HanaInstance
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Resource proximity placement group
+ */
     public String getProximityPlacementGroup() {
         return this.proximityPlacementGroup;
     }
+/**
+ * Specifies the storage settings for the HANA instance disks.
+ */
     public Optional<StorageProfileResponse> getStorageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
+/**
+ * Resource tags
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Resource type
+ */
     public String getType() {
         return this.type;
     }

@@ -3,7 +3,6 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
-import io.pulumi.azurenative.deploymentmanager.inputs.RestResponseResponseRegex;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -12,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties that make up the expected REST response
+ */
 public final class RestResponseResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RestResponseResponse Empty = new RestResponseResponse();
 
+    /**
+     * The regular expressions to match the response content with.
+     */
     @InputImport(name="regex")
     private final @Nullable RestResponseResponseRegex regex;
 
@@ -23,6 +28,9 @@ public final class RestResponseResponse extends io.pulumi.resources.InvokeArgs {
         return this.regex == null ? Optional.empty() : Optional.ofNullable(this.regex);
     }
 
+    /**
+     * The HTTP status codes expected in a successful health check response. The response is expected to match one of the given status codes. If no expected status codes are provided, default expected status code is 200 OK.
+     */
     @InputImport(name="successStatusCodes")
     private final @Nullable List<String> successStatusCodes;
 

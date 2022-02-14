@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class KubeClientSettingsArgs {
+/**
+ * Maximum burst for throttle. Default value is 10.
+ */
     private final @Nullable Input<Integer> burst;
+/**
+ * Maximum queries per second (QPS) to the API server from this client. Default value is 5.
+ */
     private final @Nullable Input<Double> qps;
 
     @OutputCustomType.Constructor({"burst","qps"})
@@ -23,9 +29,15 @@ public final class KubeClientSettingsArgs {
         this.qps = qps;
     }
 
+/**
+ * Maximum burst for throttle. Default value is 10.
+ */
     public @Nullable Input<Integer> getBurst() {
         return this.burst;
     }
+/**
+ * Maximum queries per second (QPS) to the API server from this client. Default value is 5.
+ */
     public @Nullable Input<Double> getQps() {
         return this.qps;
     }

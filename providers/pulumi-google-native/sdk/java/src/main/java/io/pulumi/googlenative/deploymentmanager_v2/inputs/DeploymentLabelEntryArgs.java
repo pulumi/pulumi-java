@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Label object for Deployments
+ */
 public final class DeploymentLabelEntryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeploymentLabelEntryArgs Empty = new DeploymentLabelEntryArgs();
 
+    /**
+     * Key of the label
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -21,6 +27,9 @@ public final class DeploymentLabelEntryArgs extends io.pulumi.resources.Resource
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * Value of the label
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

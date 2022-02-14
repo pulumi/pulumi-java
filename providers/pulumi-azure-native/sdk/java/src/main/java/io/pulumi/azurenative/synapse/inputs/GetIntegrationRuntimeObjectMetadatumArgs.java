@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIntegrationRuntimeObjectMetadatumArgs Empty = new GetIntegrationRuntimeObjectMetadatumArgs();
 
+    /**
+     * Integration runtime name
+     */
     @InputImport(name="integrationRuntimeName", required=true)
     private final String integrationRuntimeName;
 
@@ -21,6 +27,9 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
         return this.integrationRuntimeName;
     }
 
+    /**
+     * Metadata path.
+     */
     @InputImport(name="metadataPath")
     private final @Nullable String metadataPath;
 
@@ -28,6 +37,9 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
         return this.metadataPath == null ? Optional.empty() : Optional.ofNullable(this.metadataPath);
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,6 +47,9 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

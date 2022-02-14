@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserAccountArgs Empty = new UserAccountArgs();
 
+    /**
+     * nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin.
+     */
     @InputImport(name="elevationLevel")
     private final @Nullable Input<ElevationLevel> elevationLevel;
 
@@ -24,6 +30,9 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.elevationLevel == null ? Input.empty() : this.elevationLevel;
     }
 
+    /**
+     * This property is ignored if specified on a Windows pool. If not specified, the user is created with the default options.
+     */
     @InputImport(name="linuxUserConfiguration")
     private final @Nullable Input<LinuxUserConfigurationArgs> linuxUserConfiguration;
 
@@ -31,6 +40,9 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.linuxUserConfiguration == null ? Input.empty() : this.linuxUserConfiguration;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -38,6 +50,9 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="password", required=true)
     private final Input<String> password;
 
@@ -45,6 +60,9 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.password;
     }
 
+    /**
+     * This property can only be specified if the user is on a Windows pool. If not specified and on a Windows pool, the user is created with the default options.
+     */
     @InputImport(name="windowsUserConfiguration")
     private final @Nullable Input<WindowsUserConfigurationArgs> windowsUserConfiguration;
 

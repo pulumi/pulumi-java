@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.
+ */
     @EnumType
     public enum LargeFileSharesState {
+/**
+ * 
+ */
         Disabled("Disabled"),
+/**
+ * 
+ */
         Enabled("Enabled");
 
         private final String value;

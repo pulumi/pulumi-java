@@ -12,10 +12,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudChannelV1ValueResponse {
+/**
+ * Represents a boolean value.
+ */
     private final Boolean boolValue;
+/**
+ * Represents a double value.
+ */
     private final Double doubleValue;
+/**
+ * Represents an int64 value.
+ */
     private final String int64Value;
+/**
+ * Represents an 'Any' proto value.
+ */
     private final Map<String,String> protoValue;
+/**
+ * Represents a string value.
+ */
     private final String stringValue;
 
     @OutputCustomType.Constructor({"boolValue","doubleValue","int64Value","protoValue","stringValue"})
@@ -32,18 +47,33 @@ public final class GoogleCloudChannelV1ValueResponse {
         this.stringValue = Objects.requireNonNull(stringValue);
     }
 
+/**
+ * Represents a boolean value.
+ */
     public Boolean getBoolValue() {
         return this.boolValue;
     }
+/**
+ * Represents a double value.
+ */
     public Double getDoubleValue() {
         return this.doubleValue;
     }
+/**
+ * Represents an int64 value.
+ */
     public String getInt64Value() {
         return this.int64Value;
     }
+/**
+ * Represents an 'Any' proto value.
+ */
     public Map<String,String> getProtoValue() {
         return this.protoValue;
     }
+/**
+ * Represents a string value.
+ */
     public String getStringValue() {
         return this.stringValue;
     }

@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A table that displays time series data.
+ */
 public final class TimeSeriesTableResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TimeSeriesTableResponse Empty = new TimeSeriesTableResponse();
 
+    /**
+     * The data displayed in this table.
+     */
     @InputImport(name="dataSets", required=true)
     private final List<TableDataSetResponse> dataSets;
 

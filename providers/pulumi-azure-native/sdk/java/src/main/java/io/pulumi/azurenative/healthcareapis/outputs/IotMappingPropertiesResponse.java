@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IotMappingPropertiesResponse {
+/**
+ * The mapping.
+ */
     private final @Nullable Object content;
 
     @OutputCustomType.Constructor({"content"})
@@ -18,6 +21,9 @@ public final class IotMappingPropertiesResponse {
         this.content = content;
     }
 
+/**
+ * The mapping.
+ */
     public Optional<Object> getContent() {
         return Optional.ofNullable(this.content);
     }

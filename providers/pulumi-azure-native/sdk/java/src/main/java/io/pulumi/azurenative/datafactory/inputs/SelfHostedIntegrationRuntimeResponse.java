@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Self-hosted integration runtime.
+ */
 public final class SelfHostedIntegrationRuntimeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SelfHostedIntegrationRuntimeResponse Empty = new SelfHostedIntegrationRuntimeResponse();
 
+    /**
+     * Integration runtime description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -24,6 +30,9 @@ public final class SelfHostedIntegrationRuntimeResponse extends io.pulumi.resour
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The base definition of a linked integration runtime.
+     */
     @InputImport(name="linkedInfo")
     private final @Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> linkedInfo;
 
@@ -31,6 +40,10 @@ public final class SelfHostedIntegrationRuntimeResponse extends io.pulumi.resour
         return this.linkedInfo == null ? null : this.linkedInfo;
     }
 
+    /**
+     * The type of integration runtime.
+Expected value is 'SelfHosted'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

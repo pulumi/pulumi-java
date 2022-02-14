@@ -12,10 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LeaseSpec {
+/**
+ * acquireTime is a time when the current lease was acquired.
+ */
     private final @Nullable String acquireTime;
+/**
+ * holderIdentity contains the identity of the holder of a current lease.
+ */
     private final @Nullable String holderIdentity;
+/**
+ * leaseDurationSeconds is a duration that candidates for a lease need to wait to force acquire it. This is measure against time of last observed RenewTime.
+ */
     private final @Nullable Integer leaseDurationSeconds;
+/**
+ * leaseTransitions is the number of transitions of a lease between holders.
+ */
     private final @Nullable Integer leaseTransitions;
+/**
+ * renewTime is a time when the current holder of a lease has last updated the lease.
+ */
     private final @Nullable String renewTime;
 
     @OutputCustomType.Constructor({"acquireTime","holderIdentity","leaseDurationSeconds","leaseTransitions","renewTime"})
@@ -32,18 +47,33 @@ public final class LeaseSpec {
         this.renewTime = renewTime;
     }
 
+/**
+ * acquireTime is a time when the current lease was acquired.
+ */
     public Optional<String> getAcquireTime() {
         return Optional.ofNullable(this.acquireTime);
     }
+/**
+ * holderIdentity contains the identity of the holder of a current lease.
+ */
     public Optional<String> getHolderIdentity() {
         return Optional.ofNullable(this.holderIdentity);
     }
+/**
+ * leaseDurationSeconds is a duration that candidates for a lease need to wait to force acquire it. This is measure against time of last observed RenewTime.
+ */
     public Optional<Integer> getLeaseDurationSeconds() {
         return Optional.ofNullable(this.leaseDurationSeconds);
     }
+/**
+ * leaseTransitions is the number of transitions of a lease between holders.
+ */
     public Optional<Integer> getLeaseTransitions() {
         return Optional.ofNullable(this.leaseTransitions);
     }
+/**
+ * renewTime is a time when the current holder of a lease has last updated the lease.
+ */
     public Optional<String> getRenewTime() {
         return Optional.ofNullable(this.renewTime);
     }

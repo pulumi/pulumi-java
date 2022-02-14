@@ -12,9 +12,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetPlacementPolicyResult {
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * placement policy properties
+ */
     private final Either<VmHostPlacementPolicyPropertiesResponse,VmVmPlacementPolicyPropertiesResponse> properties;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","properties","type"})
@@ -29,15 +41,27 @@ public final class GetPlacementPolicyResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * placement policy properties
+ */
     public Either<VmHostPlacementPolicyPropertiesResponse,VmVmPlacementPolicyPropertiesResponse> getProperties() {
         return this.properties;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

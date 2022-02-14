@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetEvaluationJobArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEvaluationJobArgs Empty = new GetEvaluationJobArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="evaluationJobId", required=true)
     private final String evaluationJobId;
 
@@ -21,6 +27,9 @@ public final class GetEvaluationJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.evaluationJobId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * VM inventory details.
+ */
 public final class OSPolicyAssignmentInstanceFilterInventoryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OSPolicyAssignmentInstanceFilterInventoryResponse Empty = new OSPolicyAssignmentInstanceFilterInventoryResponse();
 
+    /**
+     * The OS short name
+     */
     @InputImport(name="osShortName", required=true)
     private final String osShortName;
 
@@ -19,6 +25,9 @@ public final class OSPolicyAssignmentInstanceFilterInventoryResponse extends io.
         return this.osShortName;
     }
 
+    /**
+     * The OS version Prefix matches are supported if asterisk(*) is provided as the last character. For example, to match all versions with a major version of `7`, specify the following value for this field `7.*` An empty string matches all OS versions.
+     */
     @InputImport(name="osVersion", required=true)
     private final String osVersion;
 

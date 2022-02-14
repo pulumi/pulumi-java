@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Matches events based on exact matches on the CloudEvents attributes.
+ */
 public final class MatchingCriteriaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MatchingCriteriaArgs Empty = new MatchingCriteriaArgs();
 
+    /**
+     * The name of a CloudEvents attribute. Currently, only a subset of attributes can be specified. All triggers MUST provide a matching criteria for the 'type' attribute.
+     */
     @InputImport(name="attribute", required=true)
     private final Input<String> attribute;
 
@@ -20,6 +26,9 @@ public final class MatchingCriteriaArgs extends io.pulumi.resources.ResourceArgs
         return this.attribute;
     }
 
+    /**
+     * The value for the attribute.
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

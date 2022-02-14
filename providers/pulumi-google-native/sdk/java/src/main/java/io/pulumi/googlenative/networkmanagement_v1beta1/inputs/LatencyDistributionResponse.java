@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Describes measured latency distribution.
+ */
 public final class LatencyDistributionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LatencyDistributionResponse Empty = new LatencyDistributionResponse();
 
+    /**
+     * Representative latency percentiles.
+     */
     @InputImport(name="latencyPercentiles", required=true)
     private final List<LatencyPercentileResponse> latencyPercentiles;
 

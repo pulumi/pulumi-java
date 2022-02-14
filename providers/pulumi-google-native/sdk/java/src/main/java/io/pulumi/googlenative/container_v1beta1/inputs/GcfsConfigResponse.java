@@ -8,10 +8,16 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * GcfsConfig contains configurations of Google Container File System.
+ */
 public final class GcfsConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GcfsConfigResponse Empty = new GcfsConfigResponse();
 
+    /**
+     * Whether to use GCFS.
+     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

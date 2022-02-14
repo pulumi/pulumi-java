@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListIntegrationAccountAssemblyContentCallbackUrlArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListIntegrationAccountAssemblyContentCallbackUrlArgs Empty = new ListIntegrationAccountAssemblyContentCallbackUrlArgs();
 
+    /**
+     * The assembly artifact name.
+     */
     @InputImport(name="assemblyArtifactName", required=true)
     private final String assemblyArtifactName;
 
@@ -19,6 +25,9 @@ public final class ListIntegrationAccountAssemblyContentCallbackUrlArgs extends 
         return this.assemblyArtifactName;
     }
 
+    /**
+     * The integration account name.
+     */
     @InputImport(name="integrationAccountName", required=true)
     private final String integrationAccountName;
 
@@ -26,6 +35,9 @@ public final class ListIntegrationAccountAssemblyContentCallbackUrlArgs extends 
         return this.integrationAccountName;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

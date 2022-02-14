@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A configuration for running an Apache SparkR (https://spark.apache.org/docs/latest/sparkr.html) batch workload.
+ */
 public final class SparkRBatchResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SparkRBatchResponse Empty = new SparkRBatchResponse();
 
+    /**
+     * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
+     */
     @InputImport(name="archiveUris", required=true)
     private final List<String> archiveUris;
 
@@ -20,6 +26,9 @@ public final class SparkRBatchResponse extends io.pulumi.resources.InvokeArgs {
         return this.archiveUris;
     }
 
+    /**
+     * Optional. The arguments to pass to the Spark driver. Do not include arguments that can be set as batch properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
+     */
     @InputImport(name="args", required=true)
     private final List<String> args;
 
@@ -27,6 +36,9 @@ public final class SparkRBatchResponse extends io.pulumi.resources.InvokeArgs {
         return this.args;
     }
 
+    /**
+     * Optional. HCFS URIs of files to be placed in the working directory of each executor.
+     */
     @InputImport(name="fileUris", required=true)
     private final List<String> fileUris;
 
@@ -34,6 +46,9 @@ public final class SparkRBatchResponse extends io.pulumi.resources.InvokeArgs {
         return this.fileUris;
     }
 
+    /**
+     * The HCFS URI of the main R file to use as the driver. Must be a .R or .r file.
+     */
     @InputImport(name="mainRFileUri", required=true)
     private final String mainRFileUri;
 

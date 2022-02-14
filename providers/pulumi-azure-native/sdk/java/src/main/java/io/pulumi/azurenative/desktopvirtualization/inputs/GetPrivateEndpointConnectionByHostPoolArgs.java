@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetPrivateEndpointConnectionByHostPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPrivateEndpointConnectionByHostPoolArgs Empty = new GetPrivateEndpointConnectionByHostPoolArgs();
 
+    /**
+     * The name of the host pool within the specified resource group
+     */
     @InputImport(name="hostPoolName", required=true)
     private final String hostPoolName;
 
@@ -19,6 +25,9 @@ public final class GetPrivateEndpointConnectionByHostPoolArgs extends io.pulumi.
         return this.hostPoolName;
     }
 
+    /**
+     * The name of the private endpoint connection associated with the Azure resource
+     */
     @InputImport(name="privateEndpointConnectionName", required=true)
     private final String privateEndpointConnectionName;
 
@@ -26,6 +35,9 @@ public final class GetPrivateEndpointConnectionByHostPoolArgs extends io.pulumi.
         return this.privateEndpointConnectionName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

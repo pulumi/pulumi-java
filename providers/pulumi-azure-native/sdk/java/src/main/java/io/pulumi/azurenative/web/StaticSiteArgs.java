@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StaticSiteArgs Empty = new StaticSiteArgs();
 
+    /**
+     * <code>false</code> if config file is locked for this static web app; otherwise, <code>true</code>.
+     */
     @InputImport(name="allowConfigFileUpdates")
     private final @Nullable Input<Boolean> allowConfigFileUpdates;
 
@@ -28,6 +34,9 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowConfigFileUpdates == null ? Input.empty() : this.allowConfigFileUpdates;
     }
 
+    /**
+     * The target branch in the repository.
+     */
     @InputImport(name="branch")
     private final @Nullable Input<String> branch;
 
@@ -35,6 +44,9 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.branch == null ? Input.empty() : this.branch;
     }
 
+    /**
+     * Build properties to configure on the repository.
+     */
     @InputImport(name="buildProperties")
     private final @Nullable Input<StaticSiteBuildPropertiesArgs> buildProperties;
 
@@ -42,6 +54,9 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.buildProperties == null ? Input.empty() : this.buildProperties;
     }
 
+    /**
+     * Managed service identity.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<ManagedServiceIdentityArgs> identity;
 
@@ -49,6 +64,9 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * Kind of resource.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -56,6 +74,9 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Resource Location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -63,6 +84,9 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of the static site to create or update.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -70,6 +94,9 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A user's github repository token. This is used to setup the Github Actions workflow file and API secrets.
+     */
     @InputImport(name="repositoryToken")
     private final @Nullable Input<String> repositoryToken;
 
@@ -77,6 +104,9 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.repositoryToken == null ? Input.empty() : this.repositoryToken;
     }
 
+    /**
+     * URL for the repository of the static site.
+     */
     @InputImport(name="repositoryUrl")
     private final @Nullable Input<String> repositoryUrl;
 
@@ -84,6 +114,9 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.repositoryUrl == null ? Input.empty() : this.repositoryUrl;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -91,6 +124,9 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Description of a SKU for a scalable resource.
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuDescriptionArgs> sku;
 
@@ -98,6 +134,9 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * State indicating whether staging environments are allowed or not allowed for a static web app.
+     */
     @InputImport(name="stagingEnvironmentPolicy")
     private final @Nullable Input<StagingEnvironmentPolicy> stagingEnvironmentPolicy;
 
@@ -105,6 +144,9 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.stagingEnvironmentPolicy == null ? Input.empty() : this.stagingEnvironmentPolicy;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -112,6 +154,9 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Template options for generating a new repository.
+     */
     @InputImport(name="templateProperties")
     private final @Nullable Input<StaticSiteTemplateOptionsArgs> templateProperties;
 

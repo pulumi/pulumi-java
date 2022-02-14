@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetGlobalUserEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGlobalUserEnvironmentArgs Empty = new GetGlobalUserEnvironmentArgs();
 
+    /**
+     * The resourceId of the environment
+     */
     @InputImport(name="environmentId", required=true)
     private final String environmentId;
 
@@ -21,6 +27,9 @@ public final class GetGlobalUserEnvironmentArgs extends io.pulumi.resources.Invo
         return this.environmentId;
     }
 
+    /**
+     * Specify the $expand query. Example: 'properties($expand=environment)'
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -28,6 +37,9 @@ public final class GetGlobalUserEnvironmentArgs extends io.pulumi.resources.Invo
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the user.
+     */
     @InputImport(name="userName", required=true)
     private final String userName;
 

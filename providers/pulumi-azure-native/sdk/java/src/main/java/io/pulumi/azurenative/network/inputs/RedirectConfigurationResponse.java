@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes Redirect Route.
+ */
 public final class RedirectConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RedirectConfigurationResponse Empty = new RedirectConfigurationResponse();
 
+    /**
+     * Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
+     */
     @InputImport(name="customFragment")
     private final @Nullable String customFragment;
 
@@ -21,6 +27,9 @@ public final class RedirectConfigurationResponse extends io.pulumi.resources.Inv
         return this.customFragment == null ? Optional.empty() : Optional.ofNullable(this.customFragment);
     }
 
+    /**
+     * Host to redirect. Leave empty to use the incoming host as the destination host.
+     */
     @InputImport(name="customHost")
     private final @Nullable String customHost;
 
@@ -28,6 +37,9 @@ public final class RedirectConfigurationResponse extends io.pulumi.resources.Inv
         return this.customHost == null ? Optional.empty() : Optional.ofNullable(this.customHost);
     }
 
+    /**
+     * The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
+     */
     @InputImport(name="customPath")
     private final @Nullable String customPath;
 
@@ -35,6 +47,9 @@ public final class RedirectConfigurationResponse extends io.pulumi.resources.Inv
         return this.customPath == null ? Optional.empty() : Optional.ofNullable(this.customPath);
     }
 
+    /**
+     * The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.
+     */
     @InputImport(name="customQueryString")
     private final @Nullable String customQueryString;
 
@@ -42,6 +57,10 @@ public final class RedirectConfigurationResponse extends io.pulumi.resources.Inv
         return this.customQueryString == null ? Optional.empty() : Optional.ofNullable(this.customQueryString);
     }
 
+    /**
+     * 
+Expected value is '#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration'.
+     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -49,6 +68,9 @@ public final class RedirectConfigurationResponse extends io.pulumi.resources.Inv
         return this.odataType;
     }
 
+    /**
+     * The protocol of the destination to where the traffic is redirected
+     */
     @InputImport(name="redirectProtocol")
     private final @Nullable String redirectProtocol;
 
@@ -56,6 +78,9 @@ public final class RedirectConfigurationResponse extends io.pulumi.resources.Inv
         return this.redirectProtocol == null ? Optional.empty() : Optional.ofNullable(this.redirectProtocol);
     }
 
+    /**
+     * The redirect type the rule will use when redirecting traffic.
+     */
     @InputImport(name="redirectType")
     private final @Nullable String redirectType;
 

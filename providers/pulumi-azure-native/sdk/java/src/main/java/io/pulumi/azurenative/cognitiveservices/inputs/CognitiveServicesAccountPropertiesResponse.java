@@ -19,10 +19,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of Cognitive Services account.
+ */
 public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CognitiveServicesAccountPropertiesResponse Empty = new CognitiveServicesAccountPropertiesResponse();
 
+    /**
+     * The api properties for special APIs.
+     */
     @InputImport(name="apiProperties")
     private final @Nullable CognitiveServicesAccountApiPropertiesResponse apiProperties;
 
@@ -30,6 +36,9 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
         return this.apiProperties == null ? Optional.empty() : Optional.ofNullable(this.apiProperties);
     }
 
+    /**
+     * Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.
+     */
     @InputImport(name="capabilities", required=true)
     private final List<SkuCapabilityResponse> capabilities;
 
@@ -37,6 +46,9 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
         return this.capabilities;
     }
 
+    /**
+     * Optional subdomain name used for token-based authentication.
+     */
     @InputImport(name="customSubDomainName")
     private final @Nullable String customSubDomainName;
 
@@ -44,6 +56,9 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
         return this.customSubDomainName == null ? Optional.empty() : Optional.ofNullable(this.customSubDomainName);
     }
 
+    /**
+     * Gets the date of cognitive services account creation.
+     */
     @InputImport(name="dateCreated", required=true)
     private final String dateCreated;
 
@@ -51,6 +66,9 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
         return this.dateCreated;
     }
 
+    /**
+     * The encryption properties for this resource.
+     */
     @InputImport(name="encryption")
     private final @Nullable EncryptionResponse encryption;
 
@@ -58,6 +76,9 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
     }
 
+    /**
+     * Endpoint of the created account.
+     */
     @InputImport(name="endpoint", required=true)
     private final String endpoint;
 
@@ -65,6 +86,9 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
         return this.endpoint;
     }
 
+    /**
+     * The internal identifier.
+     */
     @InputImport(name="internalId", required=true)
     private final String internalId;
 
@@ -72,6 +96,9 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
         return this.internalId;
     }
 
+    /**
+     * If the resource is migrated from an existing key.
+     */
     @InputImport(name="isMigrated", required=true)
     private final Boolean isMigrated;
 
@@ -79,6 +106,9 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
         return this.isMigrated;
     }
 
+    /**
+     * A collection of rules governing the accessibility from specific network locations.
+     */
     @InputImport(name="networkAcls")
     private final @Nullable NetworkRuleSetResponse networkAcls;
 
@@ -86,6 +116,9 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
         return this.networkAcls == null ? Optional.empty() : Optional.ofNullable(this.networkAcls);
     }
 
+    /**
+     * The private endpoint connection associated with the Cognitive Services account.
+     */
     @InputImport(name="privateEndpointConnections")
     private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
@@ -93,6 +126,9 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
 
+    /**
+     * Gets the status of the cognitive services account at the time the operation was called.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -100,6 +136,9 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
         return this.provisioningState;
     }
 
+    /**
+     * Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable String publicNetworkAccess;
 
@@ -107,6 +146,9 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
         return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
     }
 
+    /**
+     * Sku change info of account.
+     */
     @InputImport(name="skuChangeInfo", required=true)
     private final CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo;
 
@@ -114,6 +156,9 @@ public final class CognitiveServicesAccountPropertiesResponse extends io.pulumi.
         return this.skuChangeInfo;
     }
 
+    /**
+     * The storage accounts for this resource.
+     */
     @InputImport(name="userOwnedStorage")
     private final @Nullable List<UserOwnedStorageResponse> userOwnedStorage;
 

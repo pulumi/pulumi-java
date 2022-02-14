@@ -12,9 +12,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExternalMetricStatus {
+/**
+ * currentAverageValue is the current value of metric averaged over autoscaled pods.
+ */
     private final @Nullable String currentAverageValue;
+/**
+ * currentValue is the current value of the metric (as a quantity)
+ */
     private final String currentValue;
+/**
+ * metricName is the name of a metric used for autoscaling in metric system.
+ */
     private final String metricName;
+/**
+ * metricSelector is used to identify a specific time series within a given metric.
+ */
     private final @Nullable LabelSelector metricSelector;
 
     @OutputCustomType.Constructor({"currentAverageValue","currentValue","metricName","metricSelector"})
@@ -29,15 +41,27 @@ public final class ExternalMetricStatus {
         this.metricSelector = metricSelector;
     }
 
+/**
+ * currentAverageValue is the current value of metric averaged over autoscaled pods.
+ */
     public Optional<String> getCurrentAverageValue() {
         return Optional.ofNullable(this.currentAverageValue);
     }
+/**
+ * currentValue is the current value of the metric (as a quantity)
+ */
     public String getCurrentValue() {
         return this.currentValue;
     }
+/**
+ * metricName is the name of a metric used for autoscaling in metric system.
+ */
     public String getMetricName() {
         return this.metricName;
     }
+/**
+ * metricSelector is used to identify a specific time series within a given metric.
+ */
     public Optional<LabelSelector> getMetricSelector() {
         return Optional.ofNullable(this.metricSelector);
     }

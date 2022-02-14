@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ADLSGen2FileDataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ADLSGen2FileDataSetMappingArgs Empty = new ADLSGen2FileDataSetMappingArgs();
 
+    /**
+     * The name of the share account.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -23,6 +29,9 @@ public final class ADLSGen2FileDataSetMappingArgs extends io.pulumi.resources.Re
         return this.accountName;
     }
 
+    /**
+     * The id of the source data set.
+     */
     @InputImport(name="dataSetId", required=true)
     private final Input<String> dataSetId;
 
@@ -30,6 +39,9 @@ public final class ADLSGen2FileDataSetMappingArgs extends io.pulumi.resources.Re
         return this.dataSetId;
     }
 
+    /**
+     * The name of the data set mapping to be created.
+     */
     @InputImport(name="dataSetMappingName")
     private final @Nullable Input<String> dataSetMappingName;
 
@@ -37,6 +49,9 @@ public final class ADLSGen2FileDataSetMappingArgs extends io.pulumi.resources.Re
         return this.dataSetMappingName == null ? Input.empty() : this.dataSetMappingName;
     }
 
+    /**
+     * File path within the file system.
+     */
     @InputImport(name="filePath", required=true)
     private final Input<String> filePath;
 
@@ -44,6 +59,9 @@ public final class ADLSGen2FileDataSetMappingArgs extends io.pulumi.resources.Re
         return this.filePath;
     }
 
+    /**
+     * File system to which the file belongs.
+     */
     @InputImport(name="fileSystem", required=true)
     private final Input<String> fileSystem;
 
@@ -51,6 +69,10 @@ public final class ADLSGen2FileDataSetMappingArgs extends io.pulumi.resources.Re
         return this.fileSystem;
     }
 
+    /**
+     * Kind of data set mapping.
+Expected value is 'AdlsGen2File'.
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -58,6 +80,9 @@ public final class ADLSGen2FileDataSetMappingArgs extends io.pulumi.resources.Re
         return this.kind;
     }
 
+    /**
+     * Type of output file
+     */
     @InputImport(name="outputType")
     private final @Nullable Input<Either<String,OutputType>> outputType;
 
@@ -65,6 +90,9 @@ public final class ADLSGen2FileDataSetMappingArgs extends io.pulumi.resources.Re
         return this.outputType == null ? Input.empty() : this.outputType;
     }
 
+    /**
+     * Resource group of storage account.
+     */
     @InputImport(name="resourceGroup", required=true)
     private final Input<String> resourceGroup;
 
@@ -72,6 +100,9 @@ public final class ADLSGen2FileDataSetMappingArgs extends io.pulumi.resources.Re
         return this.resourceGroup;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -79,6 +110,9 @@ public final class ADLSGen2FileDataSetMappingArgs extends io.pulumi.resources.Re
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the share subscription which will hold the data set sink.
+     */
     @InputImport(name="shareSubscriptionName", required=true)
     private final Input<String> shareSubscriptionName;
 
@@ -86,6 +120,9 @@ public final class ADLSGen2FileDataSetMappingArgs extends io.pulumi.resources.Re
         return this.shareSubscriptionName;
     }
 
+    /**
+     * Storage account name of the source data set.
+     */
     @InputImport(name="storageAccountName", required=true)
     private final Input<String> storageAccountName;
 
@@ -93,6 +130,9 @@ public final class ADLSGen2FileDataSetMappingArgs extends io.pulumi.resources.Re
         return this.storageAccountName;
     }
 
+    /**
+     * Subscription id of storage account.
+     */
     @InputImport(name="subscriptionId", required=true)
     private final Input<String> subscriptionId;
 

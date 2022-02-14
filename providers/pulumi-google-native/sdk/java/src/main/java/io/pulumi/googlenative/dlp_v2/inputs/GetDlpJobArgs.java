@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetDlpJobArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDlpJobArgs Empty = new GetDlpJobArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="dlpJobId", required=true)
     private final String dlpJobId;
 
@@ -21,6 +27,9 @@ public final class GetDlpJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.dlpJobId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -28,6 +37,9 @@ public final class GetDlpJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

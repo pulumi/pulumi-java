@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Version related details.
+ */
 public final class VersionDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VersionDetailsResponse Empty = new VersionDetailsResponse();
 
+    /**
+     * Version expiry date.
+     */
     @InputImport(name="expiryDate")
     private final @Nullable String expiryDate;
 
@@ -21,6 +27,9 @@ public final class VersionDetailsResponse extends io.pulumi.resources.InvokeArgs
         return this.expiryDate == null ? Optional.empty() : Optional.ofNullable(this.expiryDate);
     }
 
+    /**
+     * A value indicating whether security update required.
+     */
     @InputImport(name="status")
     private final @Nullable String status;
 
@@ -28,6 +37,9 @@ public final class VersionDetailsResponse extends io.pulumi.resources.InvokeArgs
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
+    /**
+     * The agent version.
+     */
     @InputImport(name="version")
     private final @Nullable String version;
 

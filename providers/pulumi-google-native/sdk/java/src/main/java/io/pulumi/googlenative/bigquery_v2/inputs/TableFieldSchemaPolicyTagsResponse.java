@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class TableFieldSchemaPolicyTagsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TableFieldSchemaPolicyTagsResponse Empty = new TableFieldSchemaPolicyTagsResponse();
 
+    /**
+     * A list of category resource names. For example, "projects/1/location/eu/taxonomies/2/policyTags/3". At most 1 policy tag is allowed.
+     */
     @InputImport(name="names", required=true)
     private final List<String> names;
 

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class EventLogConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EventLogConfigurationArgs Empty = new EventLogConfigurationArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="filter")
     private final @Nullable Input<String> filter;
 
@@ -21,6 +27,9 @@ public final class EventLogConfigurationArgs extends io.pulumi.resources.Resourc
         return this.filter == null ? Input.empty() : this.filter;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="logName", required=true)
     private final Input<String> logName;
 

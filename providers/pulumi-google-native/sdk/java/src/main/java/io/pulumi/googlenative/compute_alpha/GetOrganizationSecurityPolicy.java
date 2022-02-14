@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrganizationSecurityPolicy {
+/**
+ * List all of the ordered rules present in a single specified policy.
+ */
     public static CompletableFuture<GetOrganizationSecurityPolicyResult> invokeAsync(GetOrganizationSecurityPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getOrganizationSecurityPolicy", TypeShape.of(GetOrganizationSecurityPolicyResult.class), args == null ? GetOrganizationSecurityPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

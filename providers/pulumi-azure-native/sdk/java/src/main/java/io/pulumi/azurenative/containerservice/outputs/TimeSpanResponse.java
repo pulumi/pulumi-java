@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TimeSpanResponse {
+/**
+ * The end of a time span
+ */
     private final @Nullable String end;
+/**
+ * The start of a time span
+ */
     private final @Nullable String start;
 
     @OutputCustomType.Constructor({"end","start"})
@@ -22,9 +28,15 @@ public final class TimeSpanResponse {
         this.start = start;
     }
 
+/**
+ * The end of a time span
+ */
     public Optional<String> getEnd() {
         return Optional.ofNullable(this.end);
     }
+/**
+ * The start of a time span
+ */
     public Optional<String> getStart() {
         return Optional.ofNullable(this.start);
     }

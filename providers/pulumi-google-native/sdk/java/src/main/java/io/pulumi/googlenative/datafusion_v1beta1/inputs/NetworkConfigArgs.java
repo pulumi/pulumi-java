@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network configuration for a Data Fusion instance. These configurations are used for peering with the customer network. Configurations are optional when a public Data Fusion instance is to be created. However, providing these configurations allows several benefits, such as reduced network latency while accessing the customer resources from managed Data Fusion instance nodes, as well as access to the customer on-prem resources.
+ */
 public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkConfigArgs Empty = new NetworkConfigArgs();
 
+    /**
+     * The IP range in CIDR notation to use for the managed Data Fusion instance nodes. This range must not overlap with any other ranges used in the Data Fusion instance network.
+     */
     @InputImport(name="ipAllocation")
     private final @Nullable Input<String> ipAllocation;
 
@@ -21,6 +27,9 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipAllocation == null ? Input.empty() : this.ipAllocation;
     }
 
+    /**
+     * Name of the network in the customer project with which the Tenant Project will be peered for executing pipelines. In case of shared VPC where the network resides in another host project the network should specified in the form of projects/{host-project-id}/global/networks/{network}
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 

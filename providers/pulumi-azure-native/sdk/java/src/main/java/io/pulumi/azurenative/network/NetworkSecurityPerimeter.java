@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.NetworkSecurityPerimeterArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -15,57 +14,202 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The Network Security Perimeter resource
+API Version: 2021-02-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Put Network Security Perimeter
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var networkSecurityPerimeter = new AzureNative.Network.NetworkSecurityPerimeter("networkSecurityPerimeter", new AzureNative.Network.NetworkSecurityPerimeterArgs
+        {
+            Description = "Description of TestNetworkSecurityPerimeter",
+            DisplayName = "TestNetworkSecurityPerimeter",
+            NetworkSecurityPerimeterName = "nsp1",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewNetworkSecurityPerimeter(ctx, "networkSecurityPerimeter", &network.NetworkSecurityPerimeterArgs{
+			Description:                  pulumi.String("Description of TestNetworkSecurityPerimeter"),
+			DisplayName:                  pulumi.String("TestNetworkSecurityPerimeter"),
+			NetworkSecurityPerimeterName: pulumi.String("nsp1"),
+			ResourceGroupName:            pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const networkSecurityPerimeter = new azure_native.network.NetworkSecurityPerimeter("networkSecurityPerimeter", {
+    description: "Description of TestNetworkSecurityPerimeter",
+    displayName: "TestNetworkSecurityPerimeter",
+    networkSecurityPerimeterName: "nsp1",
+    resourceGroupName: "rg1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+network_security_perimeter = azure_native.network.NetworkSecurityPerimeter("networkSecurityPerimeter",
+    description="Description of TestNetworkSecurityPerimeter",
+    display_name="TestNetworkSecurityPerimeter",
+    network_security_perimeter_name="nsp1",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:NetworkSecurityPerimeter TestNetworkSecurityPerimeter /subscriptions/subId/resourceGroup/rg1/providers/Microsoft.Network/networkSecurityPerimeters/TestNetworkSecurityPerimeter 
+```
+
+ */
 @ResourceType(type="azure-native:network:NetworkSecurityPerimeter")
 public class NetworkSecurityPerimeter extends io.pulumi.resources.CustomResource {
+    /**
+     * A description of the network security perimeter.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return A description of the network security perimeter.
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * A friendly name for the network security perimeter.
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
+    /**
+     * @return A friendly name for the network security perimeter.
+     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the scope assignment resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the scope assignment resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public NetworkSecurityPerimeter(String name, NetworkSecurityPerimeterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:NetworkSecurityPerimeter", name, args == null ? NetworkSecurityPerimeterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -85,6 +229,14 @@ public class NetworkSecurityPerimeter extends io.pulumi.resources.CustomResource
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static NetworkSecurityPerimeter get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NetworkSecurityPerimeter(name, id, options);
     }

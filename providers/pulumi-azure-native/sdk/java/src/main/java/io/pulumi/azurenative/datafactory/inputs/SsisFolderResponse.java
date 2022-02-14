@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Ssis folder.
+ */
 public final class SsisFolderResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SsisFolderResponse Empty = new SsisFolderResponse();
 
+    /**
+     * Metadata description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -22,6 +28,9 @@ public final class SsisFolderResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Metadata id.
+     */
     @InputImport(name="id")
     private final @Nullable Double id;
 
@@ -29,6 +38,9 @@ public final class SsisFolderResponse extends io.pulumi.resources.InvokeArgs {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Metadata name.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -36,6 +48,10 @@ public final class SsisFolderResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The type of SSIS object metadata.
+Expected value is 'Folder'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

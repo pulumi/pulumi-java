@@ -18,17 +18,55 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EncodedTaskRunRequestResponse {
+/**
+ * The machine configuration of the run agent.
+ */
     private final @Nullable AgentPropertiesResponse agentConfiguration;
+/**
+ * The dedicated agent pool for the run.
+ */
     private final @Nullable String agentPoolName;
+/**
+ * The properties that describes a set of credentials that will be used when this run is invoked.
+ */
     private final @Nullable CredentialsResponse credentials;
+/**
+ * Base64 encoded value of the template/definition file content.
+ */
     private final String encodedTaskContent;
+/**
+ * Base64 encoded value of the parameters/values file content.
+ */
     private final @Nullable String encodedValuesContent;
+/**
+ * The value that indicates whether archiving is enabled for the run or not.
+ */
     private final @Nullable Boolean isArchiveEnabled;
+/**
+ * The template that describes the repository and tag information for run log artifact.
+ */
     private final @Nullable String logTemplate;
+/**
+ * The platform properties against which the run has to happen.
+ */
     private final PlatformPropertiesResponse platform;
+/**
+ * The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
+If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
+ */
     private final @Nullable String sourceLocation;
+/**
+ * Run timeout in seconds.
+ */
     private final @Nullable Integer timeout;
+/**
+ * The type of the run request.
+Expected value is 'EncodedTaskRunRequest'.
+ */
     private final String type;
+/**
+ * The collection of overridable values that can be passed when running a task.
+ */
     private final @Nullable List<SetValueResponse> values;
 
     @OutputCustomType.Constructor({"agentConfiguration","agentPoolName","credentials","encodedTaskContent","encodedValuesContent","isArchiveEnabled","logTemplate","platform","sourceLocation","timeout","type","values"})
@@ -59,39 +97,77 @@ public final class EncodedTaskRunRequestResponse {
         this.values = values;
     }
 
+/**
+ * The machine configuration of the run agent.
+ */
     public Optional<AgentPropertiesResponse> getAgentConfiguration() {
         return Optional.ofNullable(this.agentConfiguration);
     }
+/**
+ * The dedicated agent pool for the run.
+ */
     public Optional<String> getAgentPoolName() {
         return Optional.ofNullable(this.agentPoolName);
     }
+/**
+ * The properties that describes a set of credentials that will be used when this run is invoked.
+ */
     public Optional<CredentialsResponse> getCredentials() {
         return Optional.ofNullable(this.credentials);
     }
+/**
+ * Base64 encoded value of the template/definition file content.
+ */
     public String getEncodedTaskContent() {
         return this.encodedTaskContent;
     }
+/**
+ * Base64 encoded value of the parameters/values file content.
+ */
     public Optional<String> getEncodedValuesContent() {
         return Optional.ofNullable(this.encodedValuesContent);
     }
+/**
+ * The value that indicates whether archiving is enabled for the run or not.
+ */
     public Optional<Boolean> getIsArchiveEnabled() {
         return Optional.ofNullable(this.isArchiveEnabled);
     }
+/**
+ * The template that describes the repository and tag information for run log artifact.
+ */
     public Optional<String> getLogTemplate() {
         return Optional.ofNullable(this.logTemplate);
     }
+/**
+ * The platform properties against which the run has to happen.
+ */
     public PlatformPropertiesResponse getPlatform() {
         return this.platform;
     }
+/**
+ * The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
+If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
+ */
     public Optional<String> getSourceLocation() {
         return Optional.ofNullable(this.sourceLocation);
     }
+/**
+ * Run timeout in seconds.
+ */
     public Optional<Integer> getTimeout() {
         return Optional.ofNullable(this.timeout);
     }
+/**
+ * The type of the run request.
+Expected value is 'EncodedTaskRunRequest'.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * The collection of overridable values that can be passed when running a task.
+ */
     public List<SetValueResponse> getValues() {
         return this.values == null ? List.of() : this.values;
     }

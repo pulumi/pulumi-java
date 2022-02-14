@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Rule condition of type application.
+ */
 public final class ApplicationRuleConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationRuleConditionResponse Empty = new ApplicationRuleConditionResponse();
 
+    /**
+     * Description of the rule condition.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -23,6 +29,9 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * List of destination IP addresses or Service Tags.
+     */
     @InputImport(name="destinationAddresses")
     private final @Nullable List<String> destinationAddresses;
 
@@ -30,6 +39,9 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
 
+    /**
+     * List of FQDN Tags for this rule condition.
+     */
     @InputImport(name="fqdnTags")
     private final @Nullable List<String> fqdnTags;
 
@@ -37,6 +49,9 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
         return this.fqdnTags == null ? List.of() : this.fqdnTags;
     }
 
+    /**
+     * Name of the rule condition.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -44,6 +59,9 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Array of Application Protocols.
+     */
     @InputImport(name="protocols")
     private final @Nullable List<FirewallPolicyRuleConditionApplicationProtocolResponse> protocols;
 
@@ -51,6 +69,10 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
         return this.protocols == null ? List.of() : this.protocols;
     }
 
+    /**
+     * Rule Condition Type.
+Expected value is 'ApplicationRuleCondition'.
+     */
     @InputImport(name="ruleConditionType", required=true)
     private final String ruleConditionType;
 
@@ -58,6 +80,9 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
         return this.ruleConditionType;
     }
 
+    /**
+     * List of source IP addresses for this rule.
+     */
     @InputImport(name="sourceAddresses")
     private final @Nullable List<String> sourceAddresses;
 
@@ -65,6 +90,9 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
 
+    /**
+     * List of source IpGroups for this rule.
+     */
     @InputImport(name="sourceIpGroups")
     private final @Nullable List<String> sourceIpGroups;
 
@@ -72,6 +100,9 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }
 
+    /**
+     * List of FQDNs for this rule condition.
+     */
     @InputImport(name="targetFqdns")
     private final @Nullable List<String> targetFqdns;
 

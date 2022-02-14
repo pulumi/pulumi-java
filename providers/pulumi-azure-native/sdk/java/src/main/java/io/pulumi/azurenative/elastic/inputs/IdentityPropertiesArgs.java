@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Identity properties.
+ */
 public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IdentityPropertiesArgs Empty = new IdentityPropertiesArgs();
 
+    /**
+     * Managed identity type.
+     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,ManagedIdentityTypes>> type;
 

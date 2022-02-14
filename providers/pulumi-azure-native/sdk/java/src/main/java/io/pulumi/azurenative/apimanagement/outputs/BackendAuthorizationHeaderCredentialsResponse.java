@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BackendAuthorizationHeaderCredentialsResponse {
+/**
+ * Authentication Parameter value.
+ */
     private final String parameter;
+/**
+ * Authentication Scheme name.
+ */
     private final String scheme;
 
     @OutputCustomType.Constructor({"parameter","scheme"})
@@ -20,9 +26,15 @@ public final class BackendAuthorizationHeaderCredentialsResponse {
         this.scheme = Objects.requireNonNull(scheme);
     }
 
+/**
+ * Authentication Parameter value.
+ */
     public String getParameter() {
         return this.parameter;
     }
+/**
+ * Authentication Scheme name.
+ */
     public String getScheme() {
         return this.scheme;
     }

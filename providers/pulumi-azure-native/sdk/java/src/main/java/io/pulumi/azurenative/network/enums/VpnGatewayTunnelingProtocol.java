@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * VPN protocol enabled for the VpnServerConfiguration.
+ */
     @EnumType
     public enum VpnGatewayTunnelingProtocol {
+/**
+ * 
+ */
         IkeV2("IkeV2"),
+/**
+ * 
+ */
         OpenVPN("OpenVPN");
 
         private final String value;

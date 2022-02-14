@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class JobStatusResponse {
+/**
+ * Defines the job name.
+ */
     private final String jobName;
+/**
+ * Gets or sets the monitoring job percentage.
+ */
     private final String jobProgress;
 
     @OutputCustomType.Constructor({"jobName","jobProgress"})
@@ -20,9 +26,15 @@ public final class JobStatusResponse {
         this.jobProgress = Objects.requireNonNull(jobProgress);
     }
 
+/**
+ * Defines the job name.
+ */
     public String getJobName() {
         return this.jobName;
     }
+/**
+ * Gets or sets the monitoring job percentage.
+ */
     public String getJobProgress() {
         return this.jobProgress;
     }

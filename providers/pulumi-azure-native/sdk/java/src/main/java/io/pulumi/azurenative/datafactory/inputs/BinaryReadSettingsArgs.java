@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Binary read settings.
+ */
 public final class BinaryReadSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BinaryReadSettingsArgs Empty = new BinaryReadSettingsArgs();
 
+    /**
+     * Compression settings.
+     */
     @InputImport(name="compressionProperties")
     private final @Nullable Input<Object> compressionProperties;
 
@@ -25,6 +31,10 @@ public final class BinaryReadSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.compressionProperties == null ? Input.empty() : this.compressionProperties;
     }
 
+    /**
+     * The read setting type.
+Expected value is 'BinaryReadSettings'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetSystemTopicEventSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSystemTopicEventSubscriptionArgs Empty = new GetSystemTopicEventSubscriptionArgs();
 
+    /**
+     * Name of the event subscription to be created. Event subscription names must be between 3 and 100 characters in length and use alphanumeric letters only.
+     */
     @InputImport(name="eventSubscriptionName", required=true)
     private final String eventSubscriptionName;
 
@@ -19,6 +25,9 @@ public final class GetSystemTopicEventSubscriptionArgs extends io.pulumi.resourc
         return this.eventSubscriptionName;
     }
 
+    /**
+     * The name of the resource group within the user's subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetSystemTopicEventSubscriptionArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the system topic.
+     */
     @InputImport(name="systemTopicName", required=true)
     private final String systemTopicName;
 

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class UpgradeSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UpgradeSettingsArgs Empty = new UpgradeSettingsArgs();
 
+    /**
+     * The maximum number of nodes that can be created beyond the current size of the node pool during the upgrade process.
+     */
     @InputImport(name="maxSurge")
     private final @Nullable Input<Integer> maxSurge;
 
@@ -21,6 +27,9 @@ public final class UpgradeSettingsArgs extends io.pulumi.resources.ResourceArgs 
         return this.maxSurge == null ? Input.empty() : this.maxSurge;
     }
 
+    /**
+     * The maximum number of nodes that can be simultaneously unavailable during the upgrade process. A node is considered available if its status is Ready.
+     */
     @InputImport(name="maxUnavailable")
     private final @Nullable Input<Integer> maxUnavailable;
 

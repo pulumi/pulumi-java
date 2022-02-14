@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSearchApplication {
+/**
+ * Gets the specified search application. **Note:** This API requires an admin account to execute.
+ */
     public static CompletableFuture<GetSearchApplicationResult> invokeAsync(GetSearchApplicationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudsearch/v1:getSearchApplication", TypeShape.of(GetSearchApplicationResult.class), args == null ? GetSearchApplicationArgs.Empty : args, Utilities.withVersion(options));
     }

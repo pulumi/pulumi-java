@@ -8,10 +8,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The delivery information associated with a report.
+ */
 public final class ReportDeliveryInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReportDeliveryInfoResponse Empty = new ReportDeliveryInfoResponse();
 
+    /**
+     * Has destination for the report being delivered.
+     */
     @InputImport(name="destination", required=true)
     private final ReportDeliveryDestinationResponse destination;
 

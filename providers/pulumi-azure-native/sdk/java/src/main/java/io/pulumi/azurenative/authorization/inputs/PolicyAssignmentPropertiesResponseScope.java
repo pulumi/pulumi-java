@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details of the resource scope
+ */
 public final class PolicyAssignmentPropertiesResponseScope extends io.pulumi.resources.InvokeArgs {
 
     public static final PolicyAssignmentPropertiesResponseScope Empty = new PolicyAssignmentPropertiesResponseScope();
 
+    /**
+     * Display name of the resource
+     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -21,6 +27,9 @@ public final class PolicyAssignmentPropertiesResponseScope extends io.pulumi.res
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * Scope id of the resource
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -28,6 +37,9 @@ public final class PolicyAssignmentPropertiesResponseScope extends io.pulumi.res
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Type of the resource
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

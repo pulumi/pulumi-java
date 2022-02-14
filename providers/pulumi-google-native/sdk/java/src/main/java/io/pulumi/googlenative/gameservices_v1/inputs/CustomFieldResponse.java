@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Custom fields. These can be used to create a counter with arbitrary field/value pairs. See: go/rpcsp-custom-fields.
+ */
 public final class CustomFieldResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomFieldResponse Empty = new CustomFieldResponse();
 
+    /**
+     * Name is the field name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class CustomFieldResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * Value is the field value. It is important that in contrast to the CounterOptions.field, the value here is a constant that is not derived from the IAMContext.
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

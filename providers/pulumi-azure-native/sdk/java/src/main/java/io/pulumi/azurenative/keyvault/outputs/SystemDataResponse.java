@@ -11,11 +11,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SystemDataResponse {
+/**
+ * The timestamp of the key vault resource creation (UTC).
+ */
     private final @Nullable String createdAt;
+/**
+ * The identity that created the key vault resource.
+ */
     private final @Nullable String createdBy;
+/**
+ * The type of identity that created the key vault resource.
+ */
     private final @Nullable String createdByType;
+/**
+ * The timestamp of the key vault resource last modification (UTC).
+ */
     private final @Nullable String lastModifiedAt;
+/**
+ * The identity that last modified the key vault resource.
+ */
     private final @Nullable String lastModifiedBy;
+/**
+ * The type of identity that last modified the key vault resource.
+ */
     private final @Nullable String lastModifiedByType;
 
     @OutputCustomType.Constructor({"createdAt","createdBy","createdByType","lastModifiedAt","lastModifiedBy","lastModifiedByType"})
@@ -34,21 +52,39 @@ public final class SystemDataResponse {
         this.lastModifiedByType = lastModifiedByType;
     }
 
+/**
+ * The timestamp of the key vault resource creation (UTC).
+ */
     public Optional<String> getCreatedAt() {
         return Optional.ofNullable(this.createdAt);
     }
+/**
+ * The identity that created the key vault resource.
+ */
     public Optional<String> getCreatedBy() {
         return Optional.ofNullable(this.createdBy);
     }
+/**
+ * The type of identity that created the key vault resource.
+ */
     public Optional<String> getCreatedByType() {
         return Optional.ofNullable(this.createdByType);
     }
+/**
+ * The timestamp of the key vault resource last modification (UTC).
+ */
     public Optional<String> getLastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
+/**
+ * The identity that last modified the key vault resource.
+ */
     public Optional<String> getLastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
+/**
+ * The type of identity that last modified the key vault resource.
+ */
     public Optional<String> getLastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }

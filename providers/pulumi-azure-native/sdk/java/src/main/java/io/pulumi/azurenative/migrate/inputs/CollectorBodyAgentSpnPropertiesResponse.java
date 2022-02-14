@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class CollectorBodyAgentSpnPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CollectorBodyAgentSpnPropertiesResponse Empty = new CollectorBodyAgentSpnPropertiesResponse();
 
+    /**
+     * Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     */
     @InputImport(name="applicationId")
     private final @Nullable String applicationId;
 
@@ -21,6 +27,9 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends io.pulumi.res
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
     }
 
+    /**
+     * Intended audience for the service principal.
+     */
     @InputImport(name="audience")
     private final @Nullable String audience;
 
@@ -28,6 +37,9 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends io.pulumi.res
         return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
     }
 
+    /**
+     * AAD Authority URL which was used to request the token for the service principal.
+     */
     @InputImport(name="authority")
     private final @Nullable String authority;
 
@@ -35,6 +47,9 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends io.pulumi.res
         return this.authority == null ? Optional.empty() : Optional.ofNullable(this.authority);
     }
 
+    /**
+     * Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     */
     @InputImport(name="objectId")
     private final @Nullable String objectId;
 
@@ -42,6 +57,9 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends io.pulumi.res
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
     }
 
+    /**
+     * Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     */
     @InputImport(name="tenantId")
     private final @Nullable String tenantId;
 

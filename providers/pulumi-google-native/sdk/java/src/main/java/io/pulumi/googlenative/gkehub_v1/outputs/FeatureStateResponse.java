@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FeatureStateResponse {
+/**
+ * The high-level, machine-readable status of this Feature.
+ */
     private final String code;
+/**
+ * A human-readable description of the current status.
+ */
     private final String description;
+/**
+ * The time this status and any related Feature-specific details were updated.
+ */
     private final String updateTime;
 
     @OutputCustomType.Constructor({"code","description","updateTime"})
@@ -23,12 +32,21 @@ public final class FeatureStateResponse {
         this.updateTime = Objects.requireNonNull(updateTime);
     }
 
+/**
+ * The high-level, machine-readable status of this Feature.
+ */
     public String getCode() {
         return this.code;
     }
+/**
+ * A human-readable description of the current status.
+ */
     public String getDescription() {
         return this.description;
     }
+/**
+ * The time this status and any related Feature-specific details were updated.
+ */
     public String getUpdateTime() {
         return this.updateTime;
     }

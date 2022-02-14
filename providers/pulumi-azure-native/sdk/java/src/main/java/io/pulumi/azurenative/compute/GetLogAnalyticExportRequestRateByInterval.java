@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLogAnalyticExportRequestRateByInterval {
+/**
+ * LogAnalytics operation status response
+API Version: 2020-12-01.
+ *
+ * LogAnalytics operation status response
+ */
     public static CompletableFuture<GetLogAnalyticExportRequestRateByIntervalResult> invokeAsync(GetLogAnalyticExportRequestRateByIntervalArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getLogAnalyticExportRequestRateByInterval", TypeShape.of(GetLogAnalyticExportRequestRateByIntervalResult.class), args == null ? GetLogAnalyticExportRequestRateByIntervalArgs.Empty : args, Utilities.withVersion(options));
     }

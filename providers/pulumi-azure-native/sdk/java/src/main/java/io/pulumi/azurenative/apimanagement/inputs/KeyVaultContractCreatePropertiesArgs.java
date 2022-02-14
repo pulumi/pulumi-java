@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Create keyVault contract details.
+ */
 public final class KeyVaultContractCreatePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyVaultContractCreatePropertiesArgs Empty = new KeyVaultContractCreatePropertiesArgs();
 
+    /**
+     * SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
+     */
     @InputImport(name="identityClientId")
     private final @Nullable Input<String> identityClientId;
 
@@ -21,6 +27,9 @@ public final class KeyVaultContractCreatePropertiesArgs extends io.pulumi.resour
         return this.identityClientId == null ? Input.empty() : this.identityClientId;
     }
 
+    /**
+     * Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires Api Management service to be configured with aka.ms/apimmsi
+     */
     @InputImport(name="secretIdentifier")
     private final @Nullable Input<String> secretIdentifier;
 

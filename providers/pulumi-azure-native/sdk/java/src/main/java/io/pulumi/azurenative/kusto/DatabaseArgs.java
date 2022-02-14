@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabaseArgs Empty = new DatabaseArgs();
 
+    /**
+     * The name of the Kusto cluster.
+     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -23,6 +29,9 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterName;
     }
 
+    /**
+     * The name of the database in the Kusto cluster.
+     */
     @InputImport(name="databaseName")
     private final @Nullable Input<String> databaseName;
 
@@ -30,6 +39,9 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseName == null ? Input.empty() : this.databaseName;
     }
 
+    /**
+     * Kind of the database
+     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,Kind>> kind;
 
@@ -37,6 +49,9 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -44,6 +59,9 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group containing the Kusto cluster.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

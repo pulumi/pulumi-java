@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSpatialAnchorsAccount {
+/**
+ * SpatialAnchorsAccount Response.
+API Version: 2021-01-01.
+ *
+ * SpatialAnchorsAccount Response.
+ */
     public static CompletableFuture<GetSpatialAnchorsAccountResult> invokeAsync(GetSpatialAnchorsAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mixedreality:getSpatialAnchorsAccount", TypeShape.of(GetSpatialAnchorsAccountResult.class), args == null ? GetSpatialAnchorsAccountArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetInstanceGroupManagerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetInstanceGroupManagerArgs Empty = new GetInstanceGroupManagerArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="instanceGroupManager", required=true)
     private final String instanceGroupManager;
 
@@ -21,6 +27,9 @@ public final class GetInstanceGroupManagerArgs extends io.pulumi.resources.Invok
         return this.instanceGroupManager;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -28,6 +37,9 @@ public final class GetInstanceGroupManagerArgs extends io.pulumi.resources.Invok
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="zone", required=true)
     private final String zone;
 

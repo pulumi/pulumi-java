@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Library/package information of a Big Data pool powered by Apache Spark
+ */
 public final class LibraryInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LibraryInfoArgs Empty = new LibraryInfoArgs();
 
+    /**
+     * Storage blob container name.
+     */
     @InputImport(name="containerName")
     private final @Nullable Input<String> containerName;
 
@@ -21,6 +27,9 @@ public final class LibraryInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerName == null ? Input.empty() : this.containerName;
     }
 
+    /**
+     * Name of the library.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -28,6 +37,9 @@ public final class LibraryInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Storage blob path of library.
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -35,6 +47,9 @@ public final class LibraryInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.path == null ? Input.empty() : this.path;
     }
 
+    /**
+     * Type of the library.
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

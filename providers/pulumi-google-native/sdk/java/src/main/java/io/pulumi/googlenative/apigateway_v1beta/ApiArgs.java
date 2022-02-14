@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiArgs Empty = new ApiArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="apiId", required=true)
     private final Input<String> apiId;
 
@@ -22,6 +28,9 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiId;
     }
 
+    /**
+     * Optional. Display name.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -29,6 +38,9 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -36,6 +48,9 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -43,6 +58,9 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Optional. Immutable. The name of a Google Managed Service ( https://cloud.google.com/service-infrastructure/docs/glossary#managed). If not specified, a new Service will automatically be created in the same project as this API.
+     */
     @InputImport(name="managedService")
     private final @Nullable Input<String> managedService;
 
@@ -50,6 +68,9 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedService == null ? Input.empty() : this.managedService;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

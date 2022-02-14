@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class JobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobArgs Empty = new JobArgs();
 
+    /**
+     * The configuration for this job.
+     */
     @InputImport(name="config")
     private final @Nullable Input<JobConfigArgs> config;
 
@@ -23,6 +29,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.config == null ? Input.empty() : this.config;
     }
 
+    /**
+     * Input only. Specify the `input_uri` to populate empty `uri` fields in each element of `Job.config.inputs` or `JobTemplate.config.inputs` when using template. URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`).
+     */
     @InputImport(name="inputUri")
     private final @Nullable Input<String> inputUri;
 
@@ -30,6 +39,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.inputUri == null ? Input.empty() : this.inputUri;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -37,6 +49,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource name of the job. Format: `projects/{project_number}/locations/{location}/jobs/{job}`
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -44,6 +59,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Input only. Specify the `output_uri` to populate an empty `Job.config.output.uri` or `JobTemplate.config.output.uri` when using template. URI for the output file(s). For example, `gs://my-bucket/outputs/`.
+     */
     @InputImport(name="outputUri")
     private final @Nullable Input<String> outputUri;
 
@@ -51,6 +69,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.outputUri == null ? Input.empty() : this.outputUri;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -58,6 +79,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Input only. Specify the `template_id` to use for populating `Job.config`. The default is `preset/web-hd`. Preset Transcoder templates: - `preset/{preset_id}` - User defined JobTemplate: `{job_template_id}`
+     */
     @InputImport(name="templateId")
     private final @Nullable Input<String> templateId;
 
@@ -65,6 +89,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         return this.templateId == null ? Input.empty() : this.templateId;
     }
 
+    /**
+     * Job time to live value in days, which will be effective after job completion. Job should be deleted automatically after the given TTL. Enter a value between 1 and 90. The default is 30.
+     */
     @InputImport(name="ttlAfterCompletionDays")
     private final @Nullable Input<Integer> ttlAfterCompletionDays;
 

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ServiceTopologyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceTopologyArgs Empty = new ServiceTopologyArgs();
 
+    /**
+     * The resource Id of the artifact source that contains the artifacts that can be referenced in the service units.
+     */
     @InputImport(name="artifactSourceId")
     private final @Nullable Input<String> artifactSourceId;
 
@@ -22,6 +28,9 @@ public final class ServiceTopologyArgs extends io.pulumi.resources.ResourceArgs 
         return this.artifactSourceId == null ? Input.empty() : this.artifactSourceId;
     }
 
+    /**
+     * The geo-location where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -29,6 +38,9 @@ public final class ServiceTopologyArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,9 @@ public final class ServiceTopologyArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the service topology .
+     */
     @InputImport(name="serviceTopologyName")
     private final @Nullable Input<String> serviceTopologyName;
 
@@ -43,6 +58,9 @@ public final class ServiceTopologyArgs extends io.pulumi.resources.ResourceArgs 
         return this.serviceTopologyName == null ? Input.empty() : this.serviceTopologyName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

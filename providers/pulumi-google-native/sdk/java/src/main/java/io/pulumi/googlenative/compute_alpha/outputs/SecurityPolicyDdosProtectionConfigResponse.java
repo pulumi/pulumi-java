@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SecurityPolicyDdosProtectionConfigResponse {
+/**
+ * 
+ */
     private final String ddosProtection;
 
     @OutputCustomType.Constructor({"ddosProtection"})
@@ -16,6 +19,9 @@ public final class SecurityPolicyDdosProtectionConfigResponse {
         this.ddosProtection = Objects.requireNonNull(ddosProtection);
     }
 
+/**
+ * 
+ */
     public String getDdosProtection() {
         return this.ddosProtection;
     }

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The IAM conditions context.
+ */
 public final class ConditionContextArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConditionContextArgs Empty = new ConditionContextArgs();
 
+    /**
+     * The hypothetical access timestamp to evaluate IAM conditions. Note that this value must not be earlier than the current time; otherwise, an INVALID_ARGUMENT error will be returned.
+     */
     @InputImport(name="accessTime")
     private final @Nullable Input<String> accessTime;
 

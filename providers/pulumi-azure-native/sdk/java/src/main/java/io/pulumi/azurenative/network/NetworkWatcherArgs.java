@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class NetworkWatcherArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkWatcherArgs Empty = new NetworkWatcherArgs();
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -22,6 +28,9 @@ public final class NetworkWatcherArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -29,6 +38,9 @@ public final class NetworkWatcherArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the network watcher.
+     */
     @InputImport(name="networkWatcherName")
     private final @Nullable Input<String> networkWatcherName;
 
@@ -36,6 +48,9 @@ public final class NetworkWatcherArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkWatcherName == null ? Input.empty() : this.networkWatcherName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +58,9 @@ public final class NetworkWatcherArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

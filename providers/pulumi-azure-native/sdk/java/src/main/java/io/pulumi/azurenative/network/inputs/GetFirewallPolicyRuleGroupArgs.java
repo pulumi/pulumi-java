@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetFirewallPolicyRuleGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFirewallPolicyRuleGroupArgs Empty = new GetFirewallPolicyRuleGroupArgs();
 
+    /**
+     * The name of the Firewall Policy.
+     */
     @InputImport(name="firewallPolicyName", required=true)
     private final String firewallPolicyName;
 
@@ -19,6 +25,9 @@ public final class GetFirewallPolicyRuleGroupArgs extends io.pulumi.resources.In
         return this.firewallPolicyName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetFirewallPolicyRuleGroupArgs extends io.pulumi.resources.In
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the FirewallPolicyRuleGroup.
+     */
     @InputImport(name="ruleGroupName", required=true)
     private final String ruleGroupName;
 

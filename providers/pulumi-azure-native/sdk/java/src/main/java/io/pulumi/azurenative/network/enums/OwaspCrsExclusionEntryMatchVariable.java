@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The variable to be excluded.
+ */
     @EnumType
     public enum OwaspCrsExclusionEntryMatchVariable {
+/**
+ * 
+ */
         RequestHeaderNames("RequestHeaderNames"),
+/**
+ * 
+ */
         RequestCookieNames("RequestCookieNames"),
+/**
+ * 
+ */
         RequestArgNames("RequestArgNames");
 
         private final String value;

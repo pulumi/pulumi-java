@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Virtual Network configuration.
+ */
 public final class VirtualNetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualNetworkConfigArgs Empty = new VirtualNetworkConfigArgs();
 
+    /**
+     * Resource id of a pre-existing subnet.
+     */
     @InputImport(name="subnetId")
     private final @Nullable Input<String> subnetId;
 

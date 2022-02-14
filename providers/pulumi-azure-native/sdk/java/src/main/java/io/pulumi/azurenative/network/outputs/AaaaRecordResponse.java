@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AaaaRecordResponse {
+/**
+ * The IPv6 address of this AAAA record.
+ */
     private final @Nullable String ipv6Address;
 
     @OutputCustomType.Constructor({"ipv6Address"})
@@ -18,6 +21,9 @@ public final class AaaaRecordResponse {
         this.ipv6Address = ipv6Address;
     }
 
+/**
+ * The IPv6 address of this AAAA record.
+ */
     public Optional<String> getIpv6Address() {
         return Optional.ofNullable(this.ipv6Address);
     }

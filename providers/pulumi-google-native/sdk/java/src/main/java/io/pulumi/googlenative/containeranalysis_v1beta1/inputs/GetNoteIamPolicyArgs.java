@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetNoteIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNoteIamPolicyArgs Empty = new GetNoteIamPolicyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="noteId", required=true)
     private final String noteId;
 
@@ -21,6 +27,9 @@ public final class GetNoteIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.noteId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

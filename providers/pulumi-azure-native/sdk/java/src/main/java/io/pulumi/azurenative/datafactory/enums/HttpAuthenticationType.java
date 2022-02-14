@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The authentication type to be used to connect to the HTTP server.
+ */
     @EnumType
     public enum HttpAuthenticationType {
+/**
+ * 
+ */
         Basic("Basic"),
+/**
+ * 
+ */
         Anonymous("Anonymous"),
+/**
+ * 
+ */
         Digest("Digest"),
+/**
+ * 
+ */
         Windows("Windows"),
+/**
+ * 
+ */
         ClientCertificate("ClientCertificate");
 
         private final String value;

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiIssueCommentArgs Empty = new ApiIssueCommentArgs();
 
+    /**
+     * API identifier. Must be unique in the current API Management service instance.
+     */
     @InputImport(name="apiId", required=true)
     private final Input<String> apiId;
 
@@ -21,6 +27,9 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
         return this.apiId;
     }
 
+    /**
+     * Comment identifier within an Issue. Must be unique in the current Issue.
+     */
     @InputImport(name="commentId")
     private final @Nullable Input<String> commentId;
 
@@ -28,6 +37,9 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
         return this.commentId == null ? Input.empty() : this.commentId;
     }
 
+    /**
+     * Date and time when the comment was created.
+     */
     @InputImport(name="createdDate")
     private final @Nullable Input<String> createdDate;
 
@@ -35,6 +47,9 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
         return this.createdDate == null ? Input.empty() : this.createdDate;
     }
 
+    /**
+     * Issue identifier. Must be unique in the current API Management service instance.
+     */
     @InputImport(name="issueId", required=true)
     private final Input<String> issueId;
 
@@ -42,6 +57,9 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
         return this.issueId;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -49,6 +67,9 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -56,6 +77,9 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
         return this.serviceName;
     }
 
+    /**
+     * Comment text.
+     */
     @InputImport(name="text", required=true)
     private final Input<String> text;
 
@@ -63,6 +87,9 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
         return this.text;
     }
 
+    /**
+     * A resource identifier for the user who left the comment.
+     */
     @InputImport(name="userId", required=true)
     private final Input<String> userId;
 

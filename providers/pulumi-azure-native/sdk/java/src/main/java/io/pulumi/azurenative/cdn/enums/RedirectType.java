@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The redirect type the rule will use when redirecting traffic.
+ */
     @EnumType
     public enum RedirectType {
+/**
+ * 
+ */
         Moved("Moved"),
+/**
+ * 
+ */
         Found("Found"),
+/**
+ * 
+ */
         TemporaryRedirect("TemporaryRedirect"),
+/**
+ * 
+ */
         PermanentRedirect("PermanentRedirect");
 
         private final String value;

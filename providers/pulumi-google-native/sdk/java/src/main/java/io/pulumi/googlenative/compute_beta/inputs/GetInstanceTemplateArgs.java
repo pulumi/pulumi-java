@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetInstanceTemplateArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetInstanceTemplateArgs Empty = new GetInstanceTemplateArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="instanceTemplate", required=true)
     private final String instanceTemplate;
 
@@ -21,6 +27,9 @@ public final class GetInstanceTemplateArgs extends io.pulumi.resources.InvokeArg
         return this.instanceTemplate;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

@@ -8,9 +8,19 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of the secret object which determines how the value of the secret object has to be
+interpreted.
+ */
     @EnumType
     public enum SecretObjectType {
+/**
+ * 
+ */
         Opaque("Opaque"),
+/**
+ * 
+ */
         Vaultsecret("Vaultsecret");
 
         private final String value;

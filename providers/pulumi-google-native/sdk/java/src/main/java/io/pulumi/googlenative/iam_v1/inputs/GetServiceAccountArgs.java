@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetServiceAccountArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServiceAccountArgs Empty = new GetServiceAccountArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -21,6 +27,9 @@ public final class GetServiceAccountArgs extends io.pulumi.resources.InvokeArgs 
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="serviceAccountId", required=true)
     private final String serviceAccountId;
 

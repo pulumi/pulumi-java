@@ -12,11 +12,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetWebServiceResult {
+/**
+ * Specifies the resource ID.
+ */
     private final String id;
+/**
+ * Specifies the location of the resource.
+ */
     private final String location;
+/**
+ * Specifies the name of the resource.
+ */
     private final String name;
+/**
+ * Contains the property payload that describes the web service.
+ */
     private final WebServicePropertiesForGraphResponse properties;
+/**
+ * Contains resource tags defined as key/value pairs.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Specifies the type of the resource.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","location","name","properties","tags","type"})
@@ -35,21 +53,39 @@ public final class GetWebServiceResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Specifies the resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Specifies the location of the resource.
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * Specifies the name of the resource.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Contains the property payload that describes the web service.
+ */
     public WebServicePropertiesForGraphResponse getProperties() {
         return this.properties;
     }
+/**
+ * Contains resource tags defined as key/value pairs.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Specifies the type of the resource.
+ */
     public String getType() {
         return this.type;
     }

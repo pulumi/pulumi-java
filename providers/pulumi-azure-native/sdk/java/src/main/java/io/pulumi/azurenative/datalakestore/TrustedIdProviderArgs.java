@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TrustedIdProviderArgs Empty = new TrustedIdProviderArgs();
 
+    /**
+     * The name of the Data Lake Store account.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -21,6 +27,9 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
         return this.accountName;
     }
 
+    /**
+     * The URL of this trusted identity provider.
+     */
     @InputImport(name="idProvider", required=true)
     private final Input<String> idProvider;
 
@@ -28,6 +37,9 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
         return this.idProvider;
     }
 
+    /**
+     * The name of the Azure resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -35,6 +47,9 @@ public final class TrustedIdProviderArgs extends io.pulumi.resources.ResourceArg
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the trusted identity provider. This is used for differentiation of providers in the account.
+     */
     @InputImport(name="trustedIdProviderName")
     private final @Nullable Input<String> trustedIdProviderName;
 

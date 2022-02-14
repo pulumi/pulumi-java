@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Provides information about the scan status of a discovered resource.
+ */
 public final class DiscoveredResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DiscoveredResponse Empty = new DiscoveredResponse();
 
+    /**
+     * The status of discovery for the resource.
+     */
     @InputImport(name="analysisStatus", required=true)
     private final String analysisStatus;
 
@@ -20,6 +26,9 @@ public final class DiscoveredResponse extends io.pulumi.resources.InvokeArgs {
         return this.analysisStatus;
     }
 
+    /**
+     * When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage output only and populated by the API.
+     */
     @InputImport(name="analysisStatusError", required=true)
     private final StatusResponse analysisStatusError;
 
@@ -27,6 +36,9 @@ public final class DiscoveredResponse extends io.pulumi.resources.InvokeArgs {
         return this.analysisStatusError;
     }
 
+    /**
+     * Whether the resource is continuously analyzed.
+     */
     @InputImport(name="continuousAnalysis", required=true)
     private final String continuousAnalysis;
 
@@ -34,6 +46,9 @@ public final class DiscoveredResponse extends io.pulumi.resources.InvokeArgs {
         return this.continuousAnalysis;
     }
 
+    /**
+     * The CPE of the resource being scanned.
+     */
     @InputImport(name="cpe", required=true)
     private final String cpe;
 

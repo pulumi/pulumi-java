@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Defines what this IP filter will be used for. This is to support IP filtering on proxies.
+ */
     @EnumType
     public enum IpFilterTag {
+/**
+ * 
+ */
         Default("Default"),
+/**
+ * 
+ */
         XffProxy("XffProxy"),
+/**
+ * 
+ */
         ServiceTag("ServiceTag");
 
         private final String value;

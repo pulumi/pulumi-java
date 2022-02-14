@@ -11,10 +11,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A DeltaPresenceEstimationHistogramBucket message with the following values: min_probability: 0.1 max_probability: 0.2 frequency: 42 means that there are 42 records for which δ is in [0.1, 0.2). An important particular case is when min_probability = max_probability = 1: then, every individual who shares this quasi-identifier combination is in the dataset.
+ */
 public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse Empty = new GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse();
 
+    /**
+     * Number of records within these probability bounds.
+     */
     @InputImport(name="bucketSize", required=true)
     private final String bucketSize;
 
@@ -22,6 +28,9 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
         return this.bucketSize;
     }
 
+    /**
+     * Total number of distinct quasi-identifier tuple values in this bucket.
+     */
     @InputImport(name="bucketValueCount", required=true)
     private final String bucketValueCount;
 
@@ -29,6 +38,9 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
         return this.bucketValueCount;
     }
 
+    /**
+     * Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
+     */
     @InputImport(name="bucketValues", required=true)
     private final List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues;
 
@@ -36,6 +48,9 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
         return this.bucketValues;
     }
 
+    /**
+     * Always greater than or equal to min_probability.
+     */
     @InputImport(name="maxProbability", required=true)
     private final Double maxProbability;
 
@@ -43,6 +58,9 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
         return this.maxProbability;
     }
 
+    /**
+     * Between 0 and 1.
+     */
     @InputImport(name="minProbability", required=true)
     private final Double minProbability;
 

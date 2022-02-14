@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.storsimple;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.storsimple.AccessControlRecordArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -15,39 +14,166 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The access control record.
+API Version: 2017-06-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### AccessControlRecordsCreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var accessControlRecord = new AzureNative.StorSimple.AccessControlRecord("accessControlRecord", new AzureNative.StorSimple.AccessControlRecordArgs
+        {
+            AccessControlRecordName = "ACRForTest",
+            InitiatorName = "iqn.2017-06.com.contoso:ForTest",
+            ManagerName = "ManagerForSDKTest1",
+            ResourceGroupName = "ResourceGroupForSDKTest",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	storsimple "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storsimple"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storsimple.NewAccessControlRecord(ctx, "accessControlRecord", &storsimple.AccessControlRecordArgs{
+			AccessControlRecordName: pulumi.String("ACRForTest"),
+			InitiatorName:           pulumi.String("iqn.2017-06.com.contoso:ForTest"),
+			ManagerName:             pulumi.String("ManagerForSDKTest1"),
+			ResourceGroupName:       pulumi.String("ResourceGroupForSDKTest"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const accessControlRecord = new azure_native.storsimple.AccessControlRecord("accessControlRecord", {
+    accessControlRecordName: "ACRForTest",
+    initiatorName: "iqn.2017-06.com.contoso:ForTest",
+    managerName: "ManagerForSDKTest1",
+    resourceGroupName: "ResourceGroupForSDKTest",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+access_control_record = azure_native.storsimple.AccessControlRecord("accessControlRecord",
+    access_control_record_name="ACRForTest",
+    initiator_name="iqn.2017-06.com.contoso:ForTest",
+    manager_name="ManagerForSDKTest1",
+    resource_group_name="ResourceGroupForSDKTest")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:storsimple:AccessControlRecord ACRForTest /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/accessControlRecords/ACRForTest 
+```
+
+ */
 @ResourceType(type="azure-native:storsimple:AccessControlRecord")
 public class AccessControlRecord extends io.pulumi.resources.CustomResource {
+    /**
+     * The iSCSI initiator name (IQN).
+     */
     @OutputExport(name="initiatorName", type=String.class, parameters={})
     private Output<String> initiatorName;
 
+    /**
+     * @return The iSCSI initiator name (IQN).
+     */
     public Output<String> getInitiatorName() {
         return this.initiatorName;
     }
+    /**
+     * The Kind of the object. Currently only Series8000 is supported
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return The Kind of the object. Currently only Series8000 is supported
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * The name of the object.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the object.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The hierarchical type of the object.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The hierarchical type of the object.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The number of volumes using the access control record.
+     */
     @OutputExport(name="volumeCount", type=Integer.class, parameters={})
     private Output<Integer> volumeCount;
 
+    /**
+     * @return The number of volumes using the access control record.
+     */
     public Output<Integer> getVolumeCount() {
         return this.volumeCount;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AccessControlRecord(String name, AccessControlRecordArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storsimple:AccessControlRecord", name, args == null ? AccessControlRecordArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -67,6 +193,14 @@ public class AccessControlRecord extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AccessControlRecord get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AccessControlRecord(name, id, options);
     }

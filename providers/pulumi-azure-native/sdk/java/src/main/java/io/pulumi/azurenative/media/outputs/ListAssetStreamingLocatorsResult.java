@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListAssetStreamingLocatorsResult {
+/**
+ * The list of Streaming Locators.
+ */
     private final List<AssetStreamingLocatorResponse> streamingLocators;
 
     @OutputCustomType.Constructor({"streamingLocators"})
@@ -17,6 +20,9 @@ public final class ListAssetStreamingLocatorsResult {
         this.streamingLocators = Objects.requireNonNull(streamingLocators);
     }
 
+/**
+ * The list of Streaming Locators.
+ */
     public List<AssetStreamingLocatorResponse> getStreamingLocators() {
         return this.streamingLocators;
     }

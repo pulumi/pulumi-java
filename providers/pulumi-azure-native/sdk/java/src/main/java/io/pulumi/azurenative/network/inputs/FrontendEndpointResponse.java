@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A frontend endpoint used for routing.
+ */
 public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FrontendEndpointResponse Empty = new FrontendEndpointResponse();
 
+    /**
+     * The configuration specifying how to enable HTTPS
+     */
     @InputImport(name="customHttpsConfiguration", required=true)
     private final CustomHttpsConfigurationResponse customHttpsConfiguration;
 
@@ -24,6 +30,9 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
         return this.customHttpsConfiguration;
     }
 
+    /**
+     * Provisioning status of Custom Https of the frontendEndpoint.
+     */
     @InputImport(name="customHttpsProvisioningState", required=true)
     private final String customHttpsProvisioningState;
 
@@ -31,6 +40,9 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
         return this.customHttpsProvisioningState;
     }
 
+    /**
+     * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
+     */
     @InputImport(name="customHttpsProvisioningSubstate", required=true)
     private final String customHttpsProvisioningSubstate;
 
@@ -38,6 +50,9 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
         return this.customHttpsProvisioningSubstate;
     }
 
+    /**
+     * The host name of the frontendEndpoint. Must be a domain name.
+     */
     @InputImport(name="hostName")
     private final @Nullable String hostName;
 
@@ -45,6 +60,9 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
         return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -52,6 +70,9 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Resource name.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -59,6 +80,9 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Resource status.
+     */
     @InputImport(name="resourceState", required=true)
     private final String resourceState;
 
@@ -66,6 +90,9 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
         return this.resourceState;
     }
 
+    /**
+     * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
+     */
     @InputImport(name="sessionAffinityEnabledState")
     private final @Nullable String sessionAffinityEnabledState;
 
@@ -73,6 +100,9 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
         return this.sessionAffinityEnabledState == null ? Optional.empty() : Optional.ofNullable(this.sessionAffinityEnabledState);
     }
 
+    /**
+     * UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
+     */
     @InputImport(name="sessionAffinityTtlSeconds")
     private final @Nullable Integer sessionAffinityTtlSeconds;
 
@@ -80,6 +110,9 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
         return this.sessionAffinityTtlSeconds == null ? Optional.empty() : Optional.ofNullable(this.sessionAffinityTtlSeconds);
     }
 
+    /**
+     * Resource type.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -87,6 +120,9 @@ public final class FrontendEndpointResponse extends io.pulumi.resources.InvokeAr
         return this.type;
     }
 
+    /**
+     * Defines the Web Application Firewall policy for each host (if applicable)
+     */
     @InputImport(name="webApplicationFirewallPolicyLink")
     private final @Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
 

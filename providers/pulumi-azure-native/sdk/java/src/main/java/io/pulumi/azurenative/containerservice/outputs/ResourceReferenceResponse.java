@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceReferenceResponse {
+/**
+ * The fully qualified Azure resource id.
+ */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -18,6 +21,9 @@ public final class ResourceReferenceResponse {
         this.id = id;
     }
 
+/**
+ * The fully qualified Azure resource id.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

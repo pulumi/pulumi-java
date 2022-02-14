@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ClusterProfile represents a cluster profile.
+ */
 public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterProfileArgs Empty = new ClusterProfileArgs();
 
+    /**
+     * The domain for the cluster (immutable).
+     */
     @InputImport(name="domain")
     private final @Nullable Input<String> domain;
 
@@ -21,6 +27,9 @@ public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.domain == null ? Input.empty() : this.domain;
     }
 
+    /**
+     * The pull secret for the cluster (immutable).
+     */
     @InputImport(name="pullSecret")
     private final @Nullable Input<String> pullSecret;
 
@@ -28,6 +37,9 @@ public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.pullSecret == null ? Input.empty() : this.pullSecret;
     }
 
+    /**
+     * The ID of the cluster resource group (immutable).
+     */
     @InputImport(name="resourceGroupId")
     private final @Nullable Input<String> resourceGroupId;
 
@@ -35,6 +47,9 @@ public final class ClusterProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupId == null ? Input.empty() : this.resourceGroupId;
     }
 
+    /**
+     * The version of the cluster (immutable).
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

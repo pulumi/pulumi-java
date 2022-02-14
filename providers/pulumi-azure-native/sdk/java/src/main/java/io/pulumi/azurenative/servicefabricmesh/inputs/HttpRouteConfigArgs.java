@@ -11,10 +11,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes the hostname properties for http routing.
+ */
 public final class HttpRouteConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpRouteConfigArgs Empty = new HttpRouteConfigArgs();
 
+    /**
+     * Describes destination endpoint for routing traffic.
+     */
     @InputImport(name="destination", required=true)
     private final Input<GatewayDestinationArgs> destination;
 
@@ -22,6 +28,9 @@ public final class HttpRouteConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.destination;
     }
 
+    /**
+     * Describes a rule for http route matching.
+     */
     @InputImport(name="match", required=true)
     private final Input<HttpRouteMatchRuleArgs> match;
 
@@ -29,6 +38,9 @@ public final class HttpRouteConfigArgs extends io.pulumi.resources.ResourceArgs 
         return this.match;
     }
 
+    /**
+     * http route name.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

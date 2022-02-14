@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings concerning key vault encryption for a configuration store.
+ */
 public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyVaultPropertiesArgs Empty = new KeyVaultPropertiesArgs();
 
+    /**
+     * Uri of KeyVault
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -22,6 +28,9 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Identity of the secret that includes name and version.
+     */
     @InputImport(name="key")
     private final @Nullable Input<KeyPropertiesArgs> key;
 

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetVersionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVersionArgs Empty = new GetVersionArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="appId", required=true)
     private final String appId;
 
@@ -21,6 +27,9 @@ public final class GetVersionArgs extends io.pulumi.resources.InvokeArgs {
         return this.appId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="serviceId", required=true)
     private final String serviceId;
 
@@ -28,6 +37,9 @@ public final class GetVersionArgs extends io.pulumi.resources.InvokeArgs {
         return this.serviceId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="versionId", required=true)
     private final String versionId;
 
@@ -35,6 +47,9 @@ public final class GetVersionArgs extends io.pulumi.resources.InvokeArgs {
         return this.versionId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="view")
     private final @Nullable String view;
 

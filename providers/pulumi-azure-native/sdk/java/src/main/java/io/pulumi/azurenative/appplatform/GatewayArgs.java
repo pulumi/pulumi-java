@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GatewayArgs Empty = new GatewayArgs();
 
+    /**
+     * The name of Spring Cloud Gateway.
+     */
     @InputImport(name="gatewayName")
     private final @Nullable Input<String> gatewayName;
 
@@ -23,6 +29,9 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.gatewayName == null ? Input.empty() : this.gatewayName;
     }
 
+    /**
+     * Spring Cloud Gateway properties payload
+     */
     @InputImport(name="properties")
     private final @Nullable Input<GatewayPropertiesArgs> properties;
 
@@ -30,6 +39,9 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +49,9 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Service resource.
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -44,6 +59,9 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
+    /**
+     * Sku of the Spring Cloud Gateway resource
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 

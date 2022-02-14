@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScheduledSynchronizationSettingArgs Empty = new ScheduledSynchronizationSettingArgs();
 
+    /**
+     * The name of the share account.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -23,6 +29,10 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
         return this.accountName;
     }
 
+    /**
+     * Kind of synchronization setting.
+Expected value is 'ScheduleBased'.
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -30,6 +40,9 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
         return this.kind;
     }
 
+    /**
+     * Recurrence Interval
+     */
     @InputImport(name="recurrenceInterval", required=true)
     private final Input<Either<String,RecurrenceInterval>> recurrenceInterval;
 
@@ -37,6 +50,9 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
         return this.recurrenceInterval;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +60,9 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the share to add the synchronization setting to.
+     */
     @InputImport(name="shareName", required=true)
     private final Input<String> shareName;
 
@@ -51,6 +70,9 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
         return this.shareName;
     }
 
+    /**
+     * The name of the synchronizationSetting.
+     */
     @InputImport(name="synchronizationSettingName")
     private final @Nullable Input<String> synchronizationSettingName;
 
@@ -58,6 +80,9 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
         return this.synchronizationSettingName == null ? Input.empty() : this.synchronizationSettingName;
     }
 
+    /**
+     * Synchronization time
+     */
     @InputImport(name="synchronizationTime", required=true)
     private final Input<String> synchronizationTime;
 

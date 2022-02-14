@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * CollectionOverride allows resource handling overrides for specific resources within a BaseType
+ */
 public final class CollectionOverrideResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CollectionOverrideResponse Empty = new CollectionOverrideResponse();
 
+    /**
+     * The collection that identifies this resource within its service.
+     */
     @InputImport(name="collection", required=true)
     private final String collection;
 
@@ -20,6 +26,9 @@ public final class CollectionOverrideResponse extends io.pulumi.resources.Invoke
         return this.collection;
     }
 
+    /**
+     * The options to apply to this resource-level override
+     */
     @InputImport(name="options", required=true)
     private final OptionsResponse options;
 

@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccountArgs Empty = new AccountArgs();
 
+    /**
+     * The name of the share account.
+     */
     @InputImport(name="accountName")
     private final @Nullable Input<String> accountName;
 
@@ -23,6 +29,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName == null ? Input.empty() : this.accountName;
     }
 
+    /**
+     * Identity Info on the Account
+     */
     @InputImport(name="identity", required=true)
     private final Input<IdentityArgs> identity;
 
@@ -30,6 +39,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity;
     }
 
+    /**
+     * Location of the azure resource.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -37,6 +49,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +59,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Tags on the azure resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

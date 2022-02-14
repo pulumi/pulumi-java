@@ -15,16 +15,49 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ISCSIPersistentVolumeSource {
+/**
+ * whether support iSCSI Discovery CHAP authentication
+ */
     private final @Nullable Boolean chapAuthDiscovery;
+/**
+ * whether support iSCSI Session CHAP authentication
+ */
     private final @Nullable Boolean chapAuthSession;
+/**
+ * Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi
+ */
     private final @Nullable String fsType;
+/**
+ * Custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface <target portal>:<volume name> will be created for the connection.
+ */
     private final @Nullable String initiatorName;
+/**
+ * Target iSCSI Qualified Name.
+ */
     private final String iqn;
+/**
+ * iSCSI Interface Name that uses an iSCSI transport. Defaults to 'default' (tcp).
+ */
     private final @Nullable String iscsiInterface;
+/**
+ * iSCSI Target Lun number.
+ */
     private final Integer lun;
+/**
+ * iSCSI Target Portal List. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+ */
     private final @Nullable List<String> portals;
+/**
+ * ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.
+ */
     private final @Nullable Boolean readOnly;
+/**
+ * CHAP Secret for iSCSI target and initiator authentication
+ */
     private final @Nullable SecretReference secretRef;
+/**
+ * iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+ */
     private final String targetPortal;
 
     @OutputCustomType.Constructor({"chapAuthDiscovery","chapAuthSession","fsType","initiatorName","iqn","iscsiInterface","lun","portals","readOnly","secretRef","targetPortal"})
@@ -53,36 +86,69 @@ public final class ISCSIPersistentVolumeSource {
         this.targetPortal = Objects.requireNonNull(targetPortal);
     }
 
+/**
+ * whether support iSCSI Discovery CHAP authentication
+ */
     public Optional<Boolean> getChapAuthDiscovery() {
         return Optional.ofNullable(this.chapAuthDiscovery);
     }
+/**
+ * whether support iSCSI Session CHAP authentication
+ */
     public Optional<Boolean> getChapAuthSession() {
         return Optional.ofNullable(this.chapAuthSession);
     }
+/**
+ * Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi
+ */
     public Optional<String> getFsType() {
         return Optional.ofNullable(this.fsType);
     }
+/**
+ * Custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface <target portal>:<volume name> will be created for the connection.
+ */
     public Optional<String> getInitiatorName() {
         return Optional.ofNullable(this.initiatorName);
     }
+/**
+ * Target iSCSI Qualified Name.
+ */
     public String getIqn() {
         return this.iqn;
     }
+/**
+ * iSCSI Interface Name that uses an iSCSI transport. Defaults to 'default' (tcp).
+ */
     public Optional<String> getIscsiInterface() {
         return Optional.ofNullable(this.iscsiInterface);
     }
+/**
+ * iSCSI Target Lun number.
+ */
     public Integer getLun() {
         return this.lun;
     }
+/**
+ * iSCSI Target Portal List. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+ */
     public List<String> getPortals() {
         return this.portals == null ? List.of() : this.portals;
     }
+/**
+ * ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.
+ */
     public Optional<Boolean> getReadOnly() {
         return Optional.ofNullable(this.readOnly);
     }
+/**
+ * CHAP Secret for iSCSI target and initiator authentication
+ */
     public Optional<SecretReference> getSecretRef() {
         return Optional.ofNullable(this.secretRef);
     }
+/**
+ * iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
+ */
     public String getTargetPortal() {
         return this.targetPortal;
     }

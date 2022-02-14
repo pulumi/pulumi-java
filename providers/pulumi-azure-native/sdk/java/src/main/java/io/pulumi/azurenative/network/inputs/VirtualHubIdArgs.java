@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Virtual Hub identifier.
+ */
 public final class VirtualHubIdArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualHubIdArgs Empty = new VirtualHubIdArgs();
 
+    /**
+     * The resource URI for the Virtual Hub where the ExpressRoute gateway is or will be deployed. The Virtual Hub resource and the ExpressRoute gateway resource reside in the same subscription.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetGlobalForwardingRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGlobalForwardingRuleArgs Empty = new GetGlobalForwardingRuleArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="forwardingRule", required=true)
     private final String forwardingRule;
 
@@ -21,6 +27,9 @@ public final class GetGlobalForwardingRuleArgs extends io.pulumi.resources.Invok
         return this.forwardingRule;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

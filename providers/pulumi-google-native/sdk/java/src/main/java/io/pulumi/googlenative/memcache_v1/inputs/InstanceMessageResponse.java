@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class InstanceMessageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InstanceMessageResponse Empty = new InstanceMessageResponse();
 
+    /**
+     * A code that correspond to one type of user-facing message.
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -19,6 +25,9 @@ public final class InstanceMessageResponse extends io.pulumi.resources.InvokeArg
         return this.code;
     }
 
+    /**
+     * Message on memcached instance which will be exposed to users.
+     */
     @InputImport(name="message", required=true)
     private final String message;
 

@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlobalForwardingRule {
+/**
+ * Returns the specified GlobalForwardingRule resource. Gets a list of available forwarding rules by making a list() request.
+ */
     public static CompletableFuture<GetGlobalForwardingRuleResult> invokeAsync(GetGlobalForwardingRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getGlobalForwardingRule", TypeShape.of(GetGlobalForwardingRuleResult.class), args == null ? GetGlobalForwardingRuleArgs.Empty : args, Utilities.withVersion(options));
     }

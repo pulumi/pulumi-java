@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The kinesis to s3 connection configuration
+ */
 public final class DefenderForContainersAwsOfferingResponseKinesisToS3 extends io.pulumi.resources.InvokeArgs {
 
     public static final DefenderForContainersAwsOfferingResponseKinesisToS3 Empty = new DefenderForContainersAwsOfferingResponseKinesisToS3();
 
+    /**
+     * The cloud role ARN in AWS for this feature
+     */
     @InputImport(name="cloudRoleArn")
     private final @Nullable String cloudRoleArn;
 

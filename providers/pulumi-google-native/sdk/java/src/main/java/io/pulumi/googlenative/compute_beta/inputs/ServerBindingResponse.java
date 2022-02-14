@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ServerBindingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServerBindingResponse Empty = new ServerBindingResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

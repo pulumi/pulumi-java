@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The information of the target OS to be tested.
+ */
 public final class TargetOSInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TargetOSInfoArgs Empty = new TargetOSInfoArgs();
 
+    /**
+     * Specifies the OS update type to test against, e.g., 'Security updates' or 'Feature updates'.
+     */
     @InputImport(name="osUpdateType", required=true)
     private final Input<String> osUpdateType;
 
@@ -21,6 +27,9 @@ public final class TargetOSInfoArgs extends io.pulumi.resources.ResourceArgs {
         return this.osUpdateType;
     }
 
+    /**
+     * Specifies the target OSs to be tested.
+     */
     @InputImport(name="targetOSs", required=true)
     private final Input<List<String>> targetOSs;
 

@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Specify the type of this network endpoint group. Only LOAD_BALANCING is valid for now.
+ */
     @EnumType
     public enum RegionNetworkEndpointGroupType {
+/**
+ * The network endpoint group is a backend of a load balancer.
+ */
         LoadBalancing("LOAD_BALANCING");
 
         private final String value;

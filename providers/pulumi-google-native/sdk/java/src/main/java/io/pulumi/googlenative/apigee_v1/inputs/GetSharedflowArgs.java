@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetSharedflowArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSharedflowArgs Empty = new GetSharedflowArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 
@@ -19,6 +25,9 @@ public final class GetSharedflowArgs extends io.pulumi.resources.InvokeArgs {
         return this.organizationId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="sharedflowId", required=true)
     private final String sharedflowId;
 

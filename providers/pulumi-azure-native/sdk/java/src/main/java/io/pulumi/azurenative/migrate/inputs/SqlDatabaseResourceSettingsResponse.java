@@ -10,10 +10,17 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the Sql Database resource settings.
+ */
 public final class SqlDatabaseResourceSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SqlDatabaseResourceSettingsResponse Empty = new SqlDatabaseResourceSettingsResponse();
 
+    /**
+     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+Expected value is 'Microsoft.Sql/servers/databases'.
+     */
     @InputImport(name="resourceType", required=true)
     private final String resourceType;
 
@@ -21,6 +28,9 @@ public final class SqlDatabaseResourceSettingsResponse extends io.pulumi.resourc
         return this.resourceType;
     }
 
+    /**
+     * Gets or sets the target Resource name.
+     */
     @InputImport(name="targetResourceName", required=true)
     private final String targetResourceName;
 
@@ -28,6 +38,9 @@ public final class SqlDatabaseResourceSettingsResponse extends io.pulumi.resourc
         return this.targetResourceName;
     }
 
+    /**
+     * Defines the zone redundant resource setting.
+     */
     @InputImport(name="zoneRedundant")
     private final @Nullable String zoneRedundant;
 

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Track property type
+ */
     @EnumType
     public enum TrackPropertyType {
+/**
+ * Unknown track property
+ */
         Unknown("Unknown"),
+/**
+ * Track FourCC
+ */
         FourCC("FourCC");
 
         private final String value;

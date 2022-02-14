@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWorkflowRunActionRepetitionExpressionTraces {
+/**
+ * The expression traces.
+API Version: 2019-05-01.
+ *
+ * The expression traces.
+ */
     public static CompletableFuture<ListWorkflowRunActionRepetitionExpressionTracesResult> invokeAsync(ListWorkflowRunActionRepetitionExpressionTracesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:listWorkflowRunActionRepetitionExpressionTraces", TypeShape.of(ListWorkflowRunActionRepetitionExpressionTracesResult.class), args == null ? ListWorkflowRunActionRepetitionExpressionTracesArgs.Empty : args, Utilities.withVersion(options));
     }

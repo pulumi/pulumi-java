@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * SQL Server edition type.
+ */
     @EnumType
     public enum SqlImageSku {
+/**
+ * 
+ */
         Developer("Developer"),
+/**
+ * 
+ */
         Express("Express"),
+/**
+ * 
+ */
         Standard("Standard"),
+/**
+ * 
+ */
         Enterprise("Enterprise"),
+/**
+ * 
+ */
         Web("Web");
 
         private final String value;

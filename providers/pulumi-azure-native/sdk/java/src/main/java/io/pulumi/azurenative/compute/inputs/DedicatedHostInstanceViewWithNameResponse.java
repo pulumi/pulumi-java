@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The instance view of a dedicated host that includes the name of the dedicated host. It is used for the response to the instance view of a dedicated host group.
+ */
 public final class DedicatedHostInstanceViewWithNameResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DedicatedHostInstanceViewWithNameResponse Empty = new DedicatedHostInstanceViewWithNameResponse();
 
+    /**
+     * Specifies the unique id of the dedicated physical machine on which the dedicated host resides.
+     */
     @InputImport(name="assetId", required=true)
     private final String assetId;
 
@@ -24,6 +30,9 @@ public final class DedicatedHostInstanceViewWithNameResponse extends io.pulumi.r
         return this.assetId;
     }
 
+    /**
+     * Unutilized capacity of the dedicated host.
+     */
     @InputImport(name="availableCapacity")
     private final @Nullable DedicatedHostAvailableCapacityResponse availableCapacity;
 
@@ -31,6 +40,9 @@ public final class DedicatedHostInstanceViewWithNameResponse extends io.pulumi.r
         return this.availableCapacity == null ? Optional.empty() : Optional.ofNullable(this.availableCapacity);
     }
 
+    /**
+     * The name of the dedicated host.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -38,6 +50,9 @@ public final class DedicatedHostInstanceViewWithNameResponse extends io.pulumi.r
         return this.name;
     }
 
+    /**
+     * The resource status information.
+     */
     @InputImport(name="statuses")
     private final @Nullable List<InstanceViewStatusResponse> statuses;
 

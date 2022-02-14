@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The Source NAT direction of a VPN NAT.
+ */
     @EnumType
     public enum VpnNatRuleMode {
+/**
+ * 
+ */
         EgressSnat("EgressSnat"),
+/**
+ * 
+ */
         IngressSnat("IngressSnat");
 
         private final String value;

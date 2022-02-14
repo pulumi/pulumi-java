@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contact information for a customer account.
+ */
 public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudChannelV1ContactInfoArgs Empty = new GoogleCloudChannelV1ContactInfoArgs();
 
+    /**
+     * The customer account's contact email. Required for entitlements that create admin.google.com accounts, and serves as the customer's username for those accounts. Use this email to invite Team customers.
+     */
     @InputImport(name="email")
     private final @Nullable Input<String> email;
 
@@ -21,6 +27,9 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
         return this.email == null ? Input.empty() : this.email;
     }
 
+    /**
+     * The customer account contact's first name. Optional for Team customers.
+     */
     @InputImport(name="firstName")
     private final @Nullable Input<String> firstName;
 
@@ -28,6 +37,9 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
         return this.firstName == null ? Input.empty() : this.firstName;
     }
 
+    /**
+     * The customer account contact's last name. Optional for Team customers.
+     */
     @InputImport(name="lastName")
     private final @Nullable Input<String> lastName;
 
@@ -35,6 +47,9 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
         return this.lastName == null ? Input.empty() : this.lastName;
     }
 
+    /**
+     * The customer account's contact phone number.
+     */
     @InputImport(name="phone")
     private final @Nullable Input<String> phone;
 
@@ -42,6 +57,9 @@ public final class GoogleCloudChannelV1ContactInfoArgs extends io.pulumi.resourc
         return this.phone == null ? Input.empty() : this.phone;
     }
 
+    /**
+     * Optional. The customer account contact's job title.
+     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 

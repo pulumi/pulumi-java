@@ -12,9 +12,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UrlRewriteActionParametersResponse {
+/**
+ * Define the relative URL to which the above requests will be rewritten by.
+ */
     private final String destination;
+/**
+ * 
+ */
     private final String odataType;
+/**
+ * Whether to preserve unmatched path. Default value is true.
+ */
     private final @Nullable Boolean preserveUnmatchedPath;
+/**
+ * define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.
+ */
     private final String sourcePattern;
 
     @OutputCustomType.Constructor({"destination","odataType","preserveUnmatchedPath","sourcePattern"})
@@ -29,15 +41,27 @@ public final class UrlRewriteActionParametersResponse {
         this.sourcePattern = Objects.requireNonNull(sourcePattern);
     }
 
+/**
+ * Define the relative URL to which the above requests will be rewritten by.
+ */
     public String getDestination() {
         return this.destination;
     }
+/**
+ * 
+ */
     public String getOdataType() {
         return this.odataType;
     }
+/**
+ * Whether to preserve unmatched path. Default value is true.
+ */
     public Optional<Boolean> getPreserveUnmatchedPath() {
         return Optional.ofNullable(this.preserveUnmatchedPath);
     }
+/**
+ * define a request URI pattern that identifies the type of requests that may be rewritten. If value is blank, all strings are matched.
+ */
     public String getSourcePattern() {
         return this.sourcePattern;
     }

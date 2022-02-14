@@ -11,8 +11,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CommonFeatureStateResponse {
+/**
+ * Appdevexperience specific state.
+ */
     private final AppDevExperienceFeatureStateResponse appdevexperience;
+/**
+ * Service Mesh-specific state.
+ */
     private final ServiceMeshFeatureStateResponse servicemesh;
+/**
+ * The "running state" of the Feature in this Hub.
+ */
     private final FeatureStateResponse state;
 
     @OutputCustomType.Constructor({"appdevexperience","servicemesh","state"})
@@ -25,12 +34,21 @@ public final class CommonFeatureStateResponse {
         this.state = Objects.requireNonNull(state);
     }
 
+/**
+ * Appdevexperience specific state.
+ */
     public AppDevExperienceFeatureStateResponse getAppdevexperience() {
         return this.appdevexperience;
     }
+/**
+ * Service Mesh-specific state.
+ */
     public ServiceMeshFeatureStateResponse getServicemesh() {
         return this.servicemesh;
     }
+/**
+ * The "running state" of the Feature in this Hub.
+ */
     public FeatureStateResponse getState() {
         return this.state;
     }

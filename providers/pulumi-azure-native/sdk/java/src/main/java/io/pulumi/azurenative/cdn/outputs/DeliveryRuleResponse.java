@@ -17,7 +17,6 @@ import io.pulumi.azurenative.cdn.outputs.DeliveryRuleRequestHeaderConditionRespo
 import io.pulumi.azurenative.cdn.outputs.DeliveryRuleRequestMethodConditionResponse;
 import io.pulumi.azurenative.cdn.outputs.DeliveryRuleRequestSchemeConditionResponse;
 import io.pulumi.azurenative.cdn.outputs.DeliveryRuleRequestUriConditionResponse;
-import io.pulumi.azurenative.cdn.outputs.DeliveryRuleResponseHeaderActionResponse;
 import io.pulumi.azurenative.cdn.outputs.DeliveryRuleUrlFileExtensionConditionResponse;
 import io.pulumi.azurenative.cdn.outputs.DeliveryRuleUrlFileNameConditionResponse;
 import io.pulumi.azurenative.cdn.outputs.DeliveryRuleUrlPathConditionResponse;
@@ -36,9 +35,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DeliveryRuleResponse {
+/**
+ * A list of actions that are executed when all the conditions of a rule are satisfied.
+ */
     private final List<Object> actions;
+/**
+ * A list of conditions that must be matched for the actions to be executed
+ */
     private final @Nullable List<Object> conditions;
+/**
+ * Name of the rule
+ */
     private final @Nullable String name;
+/**
+ * The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
+ */
     private final Integer order;
 
     @OutputCustomType.Constructor({"actions","conditions","name","order"})
@@ -53,15 +64,27 @@ public final class DeliveryRuleResponse {
         this.order = Objects.requireNonNull(order);
     }
 
+/**
+ * A list of actions that are executed when all the conditions of a rule are satisfied.
+ */
     public List<Object> getActions() {
         return this.actions;
     }
+/**
+ * A list of conditions that must be matched for the actions to be executed
+ */
     public List<Object> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
+/**
+ * Name of the rule
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
+ */
     public Integer getOrder() {
         return this.order;
     }

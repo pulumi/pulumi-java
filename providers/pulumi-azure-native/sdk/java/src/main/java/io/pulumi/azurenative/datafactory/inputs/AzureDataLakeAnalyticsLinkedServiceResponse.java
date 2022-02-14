@@ -18,10 +18,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure Data Lake Analytics linked service.
+ */
 public final class AzureDataLakeAnalyticsLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureDataLakeAnalyticsLinkedServiceResponse Empty = new AzureDataLakeAnalyticsLinkedServiceResponse();
 
+    /**
+     * The Azure Data Lake Analytics account name. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="accountName", required=true)
     private final Object accountName;
 
@@ -29,6 +35,9 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends io.pulumi
         return this.accountName;
     }
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -36,6 +45,9 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends io.pulumi
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -43,6 +55,9 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends io.pulumi
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
+    /**
+     * Azure Data Lake Analytics URI Type: string (or Expression with resultType string).
+     */
     @InputImport(name="dataLakeAnalyticsUri")
     private final @Nullable Object dataLakeAnalyticsUri;
 
@@ -50,6 +65,9 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends io.pulumi
         return this.dataLakeAnalyticsUri == null ? Optional.empty() : Optional.ofNullable(this.dataLakeAnalyticsUri);
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -57,6 +75,9 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends io.pulumi
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -64,6 +85,9 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends io.pulumi
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -71,6 +95,9 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends io.pulumi
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * Data Lake Analytics account resource group name (if different from Data Factory account). Type: string (or Expression with resultType string).
+     */
     @InputImport(name="resourceGroupName")
     private final @Nullable Object resourceGroupName;
 
@@ -78,6 +105,9 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends io.pulumi
         return this.resourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupName);
     }
 
+    /**
+     * The ID of the application used to authenticate against the Azure Data Lake Analytics account. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="servicePrincipalId")
     private final @Nullable Object servicePrincipalId;
 
@@ -85,6 +115,9 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends io.pulumi
         return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
     }
 
+    /**
+     * The Key of the application used to authenticate against the Azure Data Lake Analytics account.
+     */
     @InputImport(name="servicePrincipalKey")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
@@ -92,6 +125,9 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends io.pulumi
         return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
     }
 
+    /**
+     * Data Lake Analytics account subscription ID (if different from Data Factory account). Type: string (or Expression with resultType string).
+     */
     @InputImport(name="subscriptionId")
     private final @Nullable Object subscriptionId;
 
@@ -99,6 +135,9 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends io.pulumi
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
     }
 
+    /**
+     * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="tenant", required=true)
     private final Object tenant;
 
@@ -106,6 +145,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends io.pulumi
         return this.tenant;
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'AzureDataLakeAnalytics'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

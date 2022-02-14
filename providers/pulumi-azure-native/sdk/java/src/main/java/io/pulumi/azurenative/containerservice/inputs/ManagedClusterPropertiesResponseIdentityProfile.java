@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ManagedClusterPropertiesResponseIdentityProfile extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedClusterPropertiesResponseIdentityProfile Empty = new ManagedClusterPropertiesResponseIdentityProfile();
 
+    /**
+     * The client id of the user assigned identity.
+     */
     @InputImport(name="clientId")
     private final @Nullable String clientId;
 
@@ -21,6 +27,9 @@ public final class ManagedClusterPropertiesResponseIdentityProfile extends io.pu
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
+    /**
+     * The object id of the user assigned identity.
+     */
     @InputImport(name="objectId")
     private final @Nullable String objectId;
 
@@ -28,6 +37,9 @@ public final class ManagedClusterPropertiesResponseIdentityProfile extends io.pu
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
     }
 
+    /**
+     * The resource id of the user assigned identity.
+     */
     @InputImport(name="resourceId")
     private final @Nullable String resourceId;
 

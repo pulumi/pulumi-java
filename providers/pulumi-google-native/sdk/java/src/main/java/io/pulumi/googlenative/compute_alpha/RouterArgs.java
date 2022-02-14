@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RouterArgs Empty = new RouterArgs();
 
+    /**
+     * BGP information specific to this router.
+     */
     @InputImport(name="bgp")
     private final @Nullable Input<RouterBgpArgs> bgp;
 
@@ -28,6 +34,9 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.bgp == null ? Input.empty() : this.bgp;
     }
 
+    /**
+     * BGP information that must be configured into the routing stack to establish BGP peering. This information must specify the peer ASN and either the interface name, IP address, or peer IP address. Please refer to RFC4273.
+     */
     @InputImport(name="bgpPeers")
     private final @Nullable Input<List<RouterBgpPeerArgs>> bgpPeers;
 
@@ -35,6 +44,9 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.bgpPeers == null ? Input.empty() : this.bgpPeers;
     }
 
+    /**
+     * An optional description of this resource. Provide this property when you create the resource.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -42,6 +54,9 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments). Not currently available publicly. 
+     */
     @InputImport(name="encryptedInterconnectRouter")
     private final @Nullable Input<Boolean> encryptedInterconnectRouter;
 
@@ -49,6 +64,9 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryptedInterconnectRouter == null ? Input.empty() : this.encryptedInterconnectRouter;
     }
 
+    /**
+     * Router interfaces. Each interface requires either one linked resource, (for example, linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both.
+     */
     @InputImport(name="interfaces")
     private final @Nullable Input<List<RouterInterfaceArgs>> interfaces;
 
@@ -56,6 +74,9 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.interfaces == null ? Input.empty() : this.interfaces;
     }
 
+    /**
+     * Keys used for MD5 authentication.
+     */
     @InputImport(name="md5AuthenticationKeys")
     private final @Nullable Input<List<RouterMd5AuthenticationKeyArgs>> md5AuthenticationKeys;
 
@@ -63,6 +84,9 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.md5AuthenticationKeys == null ? Input.empty() : this.md5AuthenticationKeys;
     }
 
+    /**
+     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -70,6 +94,9 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A list of NAT services created in this router.
+     */
     @InputImport(name="nats")
     private final @Nullable Input<List<RouterNatArgs>> nats;
 
@@ -77,6 +104,9 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.nats == null ? Input.empty() : this.nats;
     }
 
+    /**
+     * URI of the network to which this router belongs.
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -84,6 +114,9 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -91,6 +124,9 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="region", required=true)
     private final Input<String> region;
 
@@ -98,6 +134,9 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
         return this.region;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 

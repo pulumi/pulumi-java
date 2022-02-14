@@ -9,10 +9,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The Edifact agreement content.
+ */
 public final class EdifactAgreementContentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EdifactAgreementContentArgs Empty = new EdifactAgreementContentArgs();
 
+    /**
+     * The EDIFACT one-way receive agreement.
+     */
     @InputImport(name="receiveAgreement", required=true)
     private final Input<EdifactOneWayAgreementArgs> receiveAgreement;
 
@@ -20,6 +26,9 @@ public final class EdifactAgreementContentArgs extends io.pulumi.resources.Resou
         return this.receiveAgreement;
     }
 
+    /**
+     * The EDIFACT one-way send agreement.
+     */
     @InputImport(name="sendAgreement", required=true)
     private final Input<EdifactOneWayAgreementArgs> sendAgreement;
 

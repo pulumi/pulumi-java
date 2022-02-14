@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagementLockByScope {
+/**
+ * The lock information.
+API Version: 2017-04-01.
+ *
+ * The lock information.
+ */
     public static CompletableFuture<GetManagementLockByScopeResult> invokeAsync(GetManagementLockByScopeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getManagementLockByScope", TypeShape.of(GetManagementLockByScopeResult.class), args == null ? GetManagementLockByScopeArgs.Empty : args, Utilities.withVersion(options));
     }

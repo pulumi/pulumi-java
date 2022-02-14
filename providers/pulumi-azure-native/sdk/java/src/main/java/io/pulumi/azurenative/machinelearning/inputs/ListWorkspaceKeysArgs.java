@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListWorkspaceKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListWorkspaceKeysArgs Empty = new ListWorkspaceKeysArgs();
 
+    /**
+     * The name of the resource group to which the machine learning workspace belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class ListWorkspaceKeysArgs extends io.pulumi.resources.InvokeArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the machine learning workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

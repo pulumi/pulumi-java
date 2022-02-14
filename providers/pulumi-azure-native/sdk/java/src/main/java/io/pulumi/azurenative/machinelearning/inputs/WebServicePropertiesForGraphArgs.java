@@ -24,10 +24,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties specific to a Graph based web service.
+ */
 public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebServicePropertiesForGraphArgs Empty = new WebServicePropertiesForGraphArgs();
 
+    /**
+     * Contains user defined properties describing web service assets. Properties are expressed as Key/Value pairs.
+     */
     @InputImport(name="assets")
     private final @Nullable Input<Map<String,AssetItemArgs>> assets;
 
@@ -35,6 +41,9 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         return this.assets == null ? Input.empty() : this.assets;
     }
 
+    /**
+     * Contains the commitment plan associated with this web service. Set at creation time. Once set, this value cannot be changed. Note: The commitment plan is not returned from calls to GET operations.
+     */
     @InputImport(name="commitmentPlan")
     private final @Nullable Input<CommitmentPlanArgs> commitmentPlan;
 
@@ -42,6 +51,9 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         return this.commitmentPlan == null ? Input.empty() : this.commitmentPlan;
     }
 
+    /**
+     * The description of the web service.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -49,6 +61,9 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Settings controlling the diagnostics traces collection for the web service.
+     */
     @InputImport(name="diagnostics")
     private final @Nullable Input<DiagnosticsConfigurationArgs> diagnostics;
 
@@ -56,6 +71,9 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         return this.diagnostics == null ? Input.empty() : this.diagnostics;
     }
 
+    /**
+     * Defines sample input data for one or more of the service's inputs.
+     */
     @InputImport(name="exampleRequest")
     private final @Nullable Input<ExampleRequestArgs> exampleRequest;
 
@@ -63,6 +81,9 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         return this.exampleRequest == null ? Input.empty() : this.exampleRequest;
     }
 
+    /**
+     * When set to true, sample data is included in the web service's swagger definition. The default value is true.
+     */
     @InputImport(name="exposeSampleData")
     private final @Nullable Input<Boolean> exposeSampleData;
 
@@ -70,6 +91,9 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         return this.exposeSampleData == null ? Input.empty() : this.exposeSampleData;
     }
 
+    /**
+     * Contains the Swagger 2.0 schema describing one or more of the web service's inputs. For more information, see the Swagger specification.
+     */
     @InputImport(name="input")
     private final @Nullable Input<ServiceInputOutputSpecificationArgs> input;
 
@@ -77,6 +101,9 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         return this.input == null ? Input.empty() : this.input;
     }
 
+    /**
+     * Contains the web service provisioning keys. If you do not specify provisioning keys, the Azure Machine Learning system generates them for you. Note: The keys are not returned from calls to GET operations.
+     */
     @InputImport(name="keys")
     private final @Nullable Input<WebServiceKeysArgs> keys;
 
@@ -84,6 +111,9 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         return this.keys == null ? Input.empty() : this.keys;
     }
 
+    /**
+     * Specifies the Machine Learning workspace containing the experiment that is source for the web service.
+     */
     @InputImport(name="machineLearningWorkspace")
     private final @Nullable Input<MachineLearningWorkspaceArgs> machineLearningWorkspace;
 
@@ -91,6 +121,9 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         return this.machineLearningWorkspace == null ? Input.empty() : this.machineLearningWorkspace;
     }
 
+    /**
+     * Contains the Swagger 2.0 schema describing one or more of the web service's outputs. For more information, see the Swagger specification.
+     */
     @InputImport(name="output")
     private final @Nullable Input<ServiceInputOutputSpecificationArgs> output;
 
@@ -98,6 +131,9 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         return this.output == null ? Input.empty() : this.output;
     }
 
+    /**
+     * The definition of the graph package making up this web service.
+     */
     @InputImport(name="package")
     private final @Nullable Input<GraphPackageArgs> $package;
 
@@ -105,6 +141,10 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         return this.$package == null ? Input.empty() : this.$package;
     }
 
+    /**
+     * Specifies the package type. Valid values are Graph (Specifies a web service published through the Machine Learning Studio) and Code (Specifies a web service published using code such as Python). Note: Code is not supported at this time.
+Expected value is 'Graph'.
+     */
     @InputImport(name="packageType", required=true)
     private final Input<String> packageType;
 
@@ -112,6 +152,9 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         return this.packageType;
     }
 
+    /**
+     * The set of global parameters values defined for the web service, given as a global parameter name to default value map. If no default value is specified, the parameter is considered to be required.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,WebServiceParameterArgs>> parameters;
 
@@ -119,6 +162,9 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * When set to true, indicates that the payload size is larger than 3 MB. Otherwise false. If the payload size exceed 3 MB, the payload is stored in a blob and the PayloadsLocation parameter contains the URI of the blob. Otherwise, this will be set to false and Assets, Input, Output, Package, Parameters, ExampleRequest are inline. The Payload sizes is determined by adding the size of the Assets, Input, Output, Package, Parameters, and the ExampleRequest.
+     */
     @InputImport(name="payloadsInBlobStorage")
     private final @Nullable Input<Boolean> payloadsInBlobStorage;
 
@@ -126,6 +172,9 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         return this.payloadsInBlobStorage == null ? Input.empty() : this.payloadsInBlobStorage;
     }
 
+    /**
+     * The URI of the payload blob. This parameter contains a value only if the payloadsInBlobStorage parameter is set to true. Otherwise is set to null.
+     */
     @InputImport(name="payloadsLocation")
     private final @Nullable Input<BlobLocationArgs> payloadsLocation;
 
@@ -133,6 +182,9 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         return this.payloadsLocation == null ? Input.empty() : this.payloadsLocation;
     }
 
+    /**
+     * When set to true, indicates that the web service is read-only and can no longer be updated or patched, only removed. Default, is false. Note: Once set to true, you cannot change its value.
+     */
     @InputImport(name="readOnly")
     private final @Nullable Input<Boolean> readOnly;
 
@@ -140,6 +192,9 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         return this.readOnly == null ? Input.empty() : this.readOnly;
     }
 
+    /**
+     * Contains the configuration settings for the web service endpoint.
+     */
     @InputImport(name="realtimeConfiguration")
     private final @Nullable Input<RealtimeConfigurationArgs> realtimeConfiguration;
 
@@ -147,6 +202,9 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         return this.realtimeConfiguration == null ? Input.empty() : this.realtimeConfiguration;
     }
 
+    /**
+     * Specifies the storage account that Azure Machine Learning uses to store information about the web service. Only the name of the storage account is returned from calls to GET operations. When updating the storage account information, you must ensure that all necessary assets are available in the new storage account or calls to your web service will fail.
+     */
     @InputImport(name="storageAccount")
     private final @Nullable Input<StorageAccountArgs> storageAccount;
 
@@ -154,6 +212,9 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
         return this.storageAccount == null ? Input.empty() : this.storageAccount;
     }
 
+    /**
+     * The title of the web service.
+     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GoogleCloudApigeeV1ApiProductRefResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudApigeeV1ApiProductRefResponse Empty = new GoogleCloudApigeeV1ApiProductRefResponse();
 
+    /**
+     * Name of the API product.
+     */
     @InputImport(name="apiproduct", required=true)
     private final String apiproduct;
 
@@ -19,6 +25,9 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse extends io.pulumi.re
         return this.apiproduct;
     }
 
+    /**
+     * Status of the API product. Valid values are `approved` or `revoked`.
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

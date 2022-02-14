@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Compute OS Type
+ */
     @EnumType
     public enum OsType {
+/**
+ * 
+ */
         Linux("Linux"),
+/**
+ * 
+ */
         Windows("Windows");
 
         private final String value;

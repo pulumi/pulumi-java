@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Description-tagged IP ranges for the router to advertise.
+ */
 public final class RouterAdvertisedIpRangeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RouterAdvertisedIpRangeResponse Empty = new RouterAdvertisedIpRangeResponse();
 
+    /**
+     * User-specified description for the IP range.
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -19,6 +25,9 @@ public final class RouterAdvertisedIpRangeResponse extends io.pulumi.resources.I
         return this.description;
     }
 
+    /**
+     * The IP range to advertise. The value must be a CIDR-formatted string.
+     */
     @InputImport(name="range", required=true)
     private final String range;
 

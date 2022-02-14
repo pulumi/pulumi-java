@@ -9,10 +9,16 @@ import io.pulumi.googlenative.networksecurity_v1beta1.inputs.GoogleCloudNetworks
 import java.util.Objects;
 
 
+/**
+ * Specification of ValidationCA. Defines the mechanism to obtain the Certificate Authority certificate to validate the peer certificate.
+ */
 public final class ValidationCAResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ValidationCAResponse Empty = new ValidationCAResponse();
 
+    /**
+     * The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.
+     */
     @InputImport(name="certificateProviderInstance", required=true)
     private final CertificateProviderInstanceResponse certificateProviderInstance;
 
@@ -20,6 +26,9 @@ public final class ValidationCAResponse extends io.pulumi.resources.InvokeArgs {
         return this.certificateProviderInstance;
     }
 
+    /**
+     * gRPC specific configuration to access the gRPC server to obtain the CA certificate.
+     */
     @InputImport(name="grpcEndpoint", required=true)
     private final GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse grpcEndpoint;
 

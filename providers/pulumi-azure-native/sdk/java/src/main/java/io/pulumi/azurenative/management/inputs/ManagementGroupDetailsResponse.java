@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The details of a management group.
+ */
 public final class ManagementGroupDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagementGroupDetailsResponse Empty = new ManagementGroupDetailsResponse();
 
+    /**
+     * (Optional) The ID of the parent management group.
+     */
     @InputImport(name="parent")
     private final @Nullable ParentGroupInfoResponse parent;
 
@@ -25,6 +31,9 @@ public final class ManagementGroupDetailsResponse extends io.pulumi.resources.In
         return this.parent == null ? Optional.empty() : Optional.ofNullable(this.parent);
     }
 
+    /**
+     * The path from the root to the current group.
+     */
     @InputImport(name="path")
     private final @Nullable List<ManagementGroupPathElementResponse> path;
 
@@ -32,6 +41,9 @@ public final class ManagementGroupDetailsResponse extends io.pulumi.resources.In
         return this.path == null ? List.of() : this.path;
     }
 
+    /**
+     * The identity of the principal or process that updated the object.
+     */
     @InputImport(name="updatedBy")
     private final @Nullable String updatedBy;
 
@@ -39,6 +51,9 @@ public final class ManagementGroupDetailsResponse extends io.pulumi.resources.In
         return this.updatedBy == null ? Optional.empty() : Optional.ofNullable(this.updatedBy);
     }
 
+    /**
+     * The date and time when this object was last updated.
+     */
     @InputImport(name="updatedTime")
     private final @Nullable String updatedTime;
 
@@ -46,6 +61,9 @@ public final class ManagementGroupDetailsResponse extends io.pulumi.resources.In
         return this.updatedTime == null ? Optional.empty() : Optional.ofNullable(this.updatedTime);
     }
 
+    /**
+     * The version number of the object.
+     */
     @InputImport(name="version")
     private final @Nullable Double version;
 

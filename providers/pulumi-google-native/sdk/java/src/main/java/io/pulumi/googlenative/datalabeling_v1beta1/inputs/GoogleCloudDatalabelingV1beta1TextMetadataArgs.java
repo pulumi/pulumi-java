@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Metadata for the text.
+ */
 public final class GoogleCloudDatalabelingV1beta1TextMetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatalabelingV1beta1TextMetadataArgs Empty = new GoogleCloudDatalabelingV1beta1TextMetadataArgs();
 
+    /**
+     * The language of this text, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US.
+     */
     @InputImport(name="languageCode")
     private final @Nullable Input<String> languageCode;
 

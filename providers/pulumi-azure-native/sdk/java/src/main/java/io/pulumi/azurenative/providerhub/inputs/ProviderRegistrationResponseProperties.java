@@ -21,10 +21,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ProviderRegistrationResponseProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final ProviderRegistrationResponseProperties Empty = new ProviderRegistrationResponseProperties();
 
+    /**
+     * 
+     */
     @InputImport(name="capabilities")
     private final @Nullable List<ResourceProviderCapabilitiesResponse> capabilities;
 
@@ -32,6 +38,9 @@ public final class ProviderRegistrationResponseProperties extends io.pulumi.reso
         return this.capabilities == null ? List.of() : this.capabilities;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="featuresRule")
     private final @Nullable ResourceProviderManifestPropertiesResponseFeaturesRule featuresRule;
 
@@ -39,6 +48,9 @@ public final class ProviderRegistrationResponseProperties extends io.pulumi.reso
         return this.featuresRule == null ? Optional.empty() : Optional.ofNullable(this.featuresRule);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="management")
     private final @Nullable ResourceProviderManifestPropertiesResponseManagement management;
 
@@ -46,6 +58,9 @@ public final class ProviderRegistrationResponseProperties extends io.pulumi.reso
         return this.management == null ? Optional.empty() : Optional.ofNullable(this.management);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="metadata")
     private final @Nullable Object metadata;
 
@@ -53,6 +68,9 @@ public final class ProviderRegistrationResponseProperties extends io.pulumi.reso
         return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="namespace")
     private final @Nullable String namespace;
 
@@ -60,6 +78,9 @@ public final class ProviderRegistrationResponseProperties extends io.pulumi.reso
         return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="providerAuthentication")
     private final @Nullable ResourceProviderManifestPropertiesResponseProviderAuthentication providerAuthentication;
 
@@ -67,6 +88,9 @@ public final class ProviderRegistrationResponseProperties extends io.pulumi.reso
         return this.providerAuthentication == null ? Optional.empty() : Optional.ofNullable(this.providerAuthentication);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="providerAuthorizations")
     private final @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations;
 
@@ -74,6 +98,9 @@ public final class ProviderRegistrationResponseProperties extends io.pulumi.reso
         return this.providerAuthorizations == null ? List.of() : this.providerAuthorizations;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="providerHubMetadata")
     private final @Nullable ProviderRegistrationPropertiesResponseProviderHubMetadata providerHubMetadata;
 
@@ -81,6 +108,9 @@ public final class ProviderRegistrationResponseProperties extends io.pulumi.reso
         return this.providerHubMetadata == null ? Optional.empty() : Optional.ofNullable(this.providerHubMetadata);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="providerType")
     private final @Nullable String providerType;
 
@@ -88,6 +118,9 @@ public final class ProviderRegistrationResponseProperties extends io.pulumi.reso
         return this.providerType == null ? Optional.empty() : Optional.ofNullable(this.providerType);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="providerVersion")
     private final @Nullable String providerVersion;
 
@@ -95,6 +128,9 @@ public final class ProviderRegistrationResponseProperties extends io.pulumi.reso
         return this.providerVersion == null ? Optional.empty() : Optional.ofNullable(this.providerVersion);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="provisioningState")
     private final @Nullable String provisioningState;
 
@@ -102,6 +138,9 @@ public final class ProviderRegistrationResponseProperties extends io.pulumi.reso
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requestHeaderOptions")
     private final @Nullable ResourceProviderManifestPropertiesResponseRequestHeaderOptions requestHeaderOptions;
 
@@ -109,6 +148,9 @@ public final class ProviderRegistrationResponseProperties extends io.pulumi.reso
         return this.requestHeaderOptions == null ? Optional.empty() : Optional.ofNullable(this.requestHeaderOptions);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requiredFeatures")
     private final @Nullable List<String> requiredFeatures;
 
@@ -116,6 +158,9 @@ public final class ProviderRegistrationResponseProperties extends io.pulumi.reso
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="subscriptionLifecycleNotificationSpecifications")
     private final @Nullable ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications;
 
@@ -123,6 +168,9 @@ public final class ProviderRegistrationResponseProperties extends io.pulumi.reso
         return this.subscriptionLifecycleNotificationSpecifications == null ? Optional.empty() : Optional.ofNullable(this.subscriptionLifecycleNotificationSpecifications);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="templateDeploymentOptions")
     private final @Nullable ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions;
 

@@ -10,39 +10,71 @@ import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
-import io.pulumi.kubernetes.storage.k8s.io_v1.CSINodeArgs;
 import io.pulumi.kubernetes.storage.k8s.io_v1.outputs.CSINodeSpec;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * CSINode holds information about all CSI drivers installed on a node. CSI drivers do not need to create the CSINode object directly. As long as they use the node-driver-registrar sidecar container, the kubelet will automatically populate the CSINode object for the CSI driver as part of kubelet plugin registration. CSINode has the same name as a node. If the object is missing, it means either there are no CSI Drivers available on the node, or the Kubelet version is low enough that it doesn't create this object. CSINode has an OwnerReference that points to the corresponding node object.
+ */
 @ResourceType(type="kubernetes:storage.k8s.io/v1:CSINode")
 public class CSINode extends io.pulumi.resources.CustomResource {
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     */
     @OutputExport(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
+    /**
+     * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * metadata.name must be the Kubernetes node name.
+     */
     @OutputExport(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
+    /**
+     * @return metadata.name must be the Kubernetes node name.
+     */
     public Output</* @Nullable */ ObjectMeta> getMetadata() {
         return this.metadata;
     }
+    /**
+     * spec is the specification of CSINode
+     */
     @OutputExport(name="spec", type=CSINodeSpec.class, parameters={})
     private Output<CSINodeSpec> spec;
 
+    /**
+     * @return spec is the specification of CSINode
+     */
     public Output<CSINodeSpec> getSpec() {
         return this.spec;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public CSINode(String name, CSINodeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("kubernetes:storage.k8s.io/v1:CSINode", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -69,6 +101,14 @@ public class CSINode extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static CSINode get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CSINode(name, id, options);
     }

@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFirewallPolicy {
+/**
+ * Returns the specified firewall policy.
+ */
     public static CompletableFuture<GetFirewallPolicyResult> invokeAsync(GetFirewallPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getFirewallPolicy", TypeShape.of(GetFirewallPolicyResult.class), args == null ? GetFirewallPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

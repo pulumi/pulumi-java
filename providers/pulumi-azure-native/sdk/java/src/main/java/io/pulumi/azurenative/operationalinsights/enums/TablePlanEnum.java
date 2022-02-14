@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The table plan.
+ */
     @EnumType
     public enum TablePlanEnum {
+/**
+ * Basic - logs that are adjusted to support high volume / low value verbose logs.
+ */
         Basic("Basic"),
+/**
+ * Analytics - logs that allow monitoring and analytics.
+ */
         Analytics("Analytics");
 
         private final String value;

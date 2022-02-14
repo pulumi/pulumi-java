@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The custom setup of running cmdkey commands.
+ */
 public final class CmdkeySetupResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CmdkeySetupResponse Empty = new CmdkeySetupResponse();
 
+    /**
+     * The password of data source access.
+     */
     @InputImport(name="password", required=true)
     private final SecureStringResponse password;
 
@@ -21,6 +27,9 @@ public final class CmdkeySetupResponse extends io.pulumi.resources.InvokeArgs {
         return this.password;
     }
 
+    /**
+     * The server name of data source access.
+     */
     @InputImport(name="targetName", required=true)
     private final Object targetName;
 
@@ -28,6 +37,10 @@ public final class CmdkeySetupResponse extends io.pulumi.resources.InvokeArgs {
         return this.targetName;
     }
 
+    /**
+     * The type of custom setup.
+Expected value is 'CmdkeySetup'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -35,6 +48,9 @@ public final class CmdkeySetupResponse extends io.pulumi.resources.InvokeArgs {
         return this.type;
     }
 
+    /**
+     * The user name of data source access.
+     */
     @InputImport(name="userName", required=true)
     private final Object userName;
 

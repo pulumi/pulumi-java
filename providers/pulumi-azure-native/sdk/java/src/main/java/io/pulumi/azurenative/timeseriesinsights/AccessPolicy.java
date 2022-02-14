@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.timeseriesinsights;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.timeseriesinsights.AccessPolicyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -14,39 +13,179 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An access policy is used to grant users and applications access to the environment. Roles are assigned to service principals in Azure Active Directory. These roles define the actions the principal can perform through the Time Series Insights data plane APIs.
+API Version: 2020-05-15.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### AccessPoliciesCreate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var accessPolicy = new AzureNative.TimeSeriesInsights.AccessPolicy("accessPolicy", new AzureNative.TimeSeriesInsights.AccessPolicyArgs
+        {
+            AccessPolicyName = "ap1",
+            Description = "some description",
+            EnvironmentName = "env1",
+            PrincipalObjectId = "aGuid",
+            ResourceGroupName = "rg1",
+            Roles = 
+            {
+                "Reader",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	timeseriesinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/timeseriesinsights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := timeseriesinsights.NewAccessPolicy(ctx, "accessPolicy", &timeseriesinsights.AccessPolicyArgs{
+			AccessPolicyName:  pulumi.String("ap1"),
+			Description:       pulumi.String("some description"),
+			EnvironmentName:   pulumi.String("env1"),
+			PrincipalObjectId: pulumi.String("aGuid"),
+			ResourceGroupName: pulumi.String("rg1"),
+			Roles: pulumi.StringArray{
+				pulumi.String("Reader"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const accessPolicy = new azure_native.timeseriesinsights.AccessPolicy("accessPolicy", {
+    accessPolicyName: "ap1",
+    description: "some description",
+    environmentName: "env1",
+    principalObjectId: "aGuid",
+    resourceGroupName: "rg1",
+    roles: ["Reader"],
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+access_policy = azure_native.timeseriesinsights.AccessPolicy("accessPolicy",
+    access_policy_name="ap1",
+    description="some description",
+    environment_name="env1",
+    principal_object_id="aGuid",
+    resource_group_name="rg1",
+    roles=["Reader"])
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:timeseriesinsights:AccessPolicy ap1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.TimeSeriesInsights/Environments/env1/accessPolicies/ap1 
+```
+
+ */
 @ResourceType(type="azure-native:timeseriesinsights:AccessPolicy")
 public class AccessPolicy extends io.pulumi.resources.CustomResource {
+    /**
+     * An description of the access policy.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return An description of the access policy.
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The objectId of the principal in Azure Active Directory.
+     */
     @OutputExport(name="principalObjectId", type=String.class, parameters={})
     private Output</* @Nullable */ String> principalObjectId;
 
+    /**
+     * @return The objectId of the principal in Azure Active Directory.
+     */
     public Output</* @Nullable */ String> getPrincipalObjectId() {
         return this.principalObjectId;
     }
+    /**
+     * The list of roles the principal is assigned on the environment.
+     */
     @OutputExport(name="roles", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> roles;
 
+    /**
+     * @return The list of roles the principal is assigned on the environment.
+     */
     public Output</* @Nullable */ List<String>> getRoles() {
         return this.roles;
     }
+    /**
+     * Resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AccessPolicy(String name, AccessPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:timeseriesinsights:AccessPolicy", name, args == null ? AccessPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -70,6 +209,14 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AccessPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AccessPolicy(name, id, options);
     }

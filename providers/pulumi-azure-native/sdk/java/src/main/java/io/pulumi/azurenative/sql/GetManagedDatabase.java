@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagedDatabase {
+/**
+ * A managed database resource.
+API Version: 2020-11-01-preview.
+ *
+ * A managed database resource.
+ */
     public static CompletableFuture<GetManagedDatabaseResult> invokeAsync(GetManagedDatabaseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getManagedDatabase", TypeShape.of(GetManagedDatabaseResult.class), args == null ? GetManagedDatabaseArgs.Empty : args, Utilities.withVersion(options));
     }

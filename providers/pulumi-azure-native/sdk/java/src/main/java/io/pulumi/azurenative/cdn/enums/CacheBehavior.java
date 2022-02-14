@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Caching behavior for the requests
+ */
     @EnumType
     public enum CacheBehavior {
+/**
+ * 
+ */
         BypassCache("BypassCache"),
+/**
+ * 
+ */
         Override("Override"),
+/**
+ * 
+ */
         SetIfMissing("SetIfMissing");
 
         private final String value;

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The user object receiver value.
+ */
 public final class DistributionGroupListReceiverValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DistributionGroupListReceiverValueArgs Empty = new DistributionGroupListReceiverValueArgs();
 
+    /**
+     * The list of distribution groups.
+     */
     @InputImport(name="distributionGroups")
     private final @Nullable Input<List<String>> distributionGroups;
 

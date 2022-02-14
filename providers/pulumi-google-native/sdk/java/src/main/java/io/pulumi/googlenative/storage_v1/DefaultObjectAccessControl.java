@@ -8,86 +8,189 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.storage_v1.DefaultObjectAccessControlArgs;
 import io.pulumi.googlenative.storage_v1.outputs.DefaultObjectAccessControlProjectTeamResponse;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a new default object ACL entry on the specified bucket.
+Auto-naming is currently not supported for this resource.
+ */
 @ResourceType(type="google-native:storage/v1:DefaultObjectAccessControl")
 public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the bucket.
+     */
     @OutputExport(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
+    /**
+     * @return The name of the bucket.
+     */
     public Output<String> getBucket() {
         return this.bucket;
     }
+    /**
+     * The domain associated with the entity, if any.
+     */
     @OutputExport(name="domain", type=String.class, parameters={})
     private Output<String> domain;
 
+    /**
+     * @return The domain associated with the entity, if any.
+     */
     public Output<String> getDomain() {
         return this.domain;
     }
+    /**
+     * The email address associated with the entity, if any.
+     */
     @OutputExport(name="email", type=String.class, parameters={})
     private Output<String> email;
 
+    /**
+     * @return The email address associated with the entity, if any.
+     */
     public Output<String> getEmail() {
         return this.email;
     }
+    /**
+     * The entity holding the permission, in one of the following forms: 
+- user-userId 
+- user-email 
+- group-groupId 
+- group-email 
+- domain-domain 
+- project-team-projectId 
+- allUsers 
+- allAuthenticatedUsers Examples: 
+- The user liz@example.com would be user-liz@example.com. 
+- The group example@googlegroups.com would be group-example@googlegroups.com. 
+- To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
+     */
     @OutputExport(name="entity", type=String.class, parameters={})
     private Output<String> entity;
 
+    /**
+     * @return The entity holding the permission, in one of the following forms: 
+- user-userId 
+- user-email 
+- group-groupId 
+- group-email 
+- domain-domain 
+- project-team-projectId 
+- allUsers 
+- allAuthenticatedUsers Examples: 
+- The user liz@example.com would be user-liz@example.com. 
+- The group example@googlegroups.com would be group-example@googlegroups.com. 
+- To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
+     */
     public Output<String> getEntity() {
         return this.entity;
     }
+    /**
+     * The ID for the entity, if any.
+     */
     @OutputExport(name="entityId", type=String.class, parameters={})
     private Output<String> entityId;
 
+    /**
+     * @return The ID for the entity, if any.
+     */
     public Output<String> getEntityId() {
         return this.entityId;
     }
+    /**
+     * HTTP 1.1 Entity tag for the access-control entry.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return HTTP 1.1 Entity tag for the access-control entry.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The content generation of the object, if applied to an object.
+     */
     @OutputExport(name="generation", type=String.class, parameters={})
     private Output<String> generation;
 
+    /**
+     * @return The content generation of the object, if applied to an object.
+     */
     public Output<String> getGeneration() {
         return this.generation;
     }
+    /**
+     * The kind of item this is. For object access control entries, this is always storage#objectAccessControl.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return The kind of item this is. For object access control entries, this is always storage#objectAccessControl.
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * The name of the object, if applied to an object.
+     */
     @OutputExport(name="object", type=String.class, parameters={})
     private Output<String> object;
 
+    /**
+     * @return The name of the object, if applied to an object.
+     */
     public Output<String> getObject() {
         return this.object;
     }
+    /**
+     * The project team associated with the entity, if any.
+     */
     @OutputExport(name="projectTeam", type=DefaultObjectAccessControlProjectTeamResponse.class, parameters={})
     private Output<DefaultObjectAccessControlProjectTeamResponse> projectTeam;
 
+    /**
+     * @return The project team associated with the entity, if any.
+     */
     public Output<DefaultObjectAccessControlProjectTeamResponse> getProjectTeam() {
         return this.projectTeam;
     }
+    /**
+     * The access permission for the entity.
+     */
     @OutputExport(name="role", type=String.class, parameters={})
     private Output<String> role;
 
+    /**
+     * @return The access permission for the entity.
+     */
     public Output<String> getRole() {
         return this.role;
     }
+    /**
+     * The link to this access-control entry.
+     */
     @OutputExport(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
+    /**
+     * @return The link to this access-control entry.
+     */
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DefaultObjectAccessControl(String name, DefaultObjectAccessControlArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:storage/v1:DefaultObjectAccessControl", name, args == null ? DefaultObjectAccessControlArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -103,6 +206,14 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DefaultObjectAccessControl get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DefaultObjectAccessControl(name, id, options);
     }

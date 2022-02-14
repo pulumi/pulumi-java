@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The segment terminator suffix.
+ */
     @EnumType
     public enum SegmentTerminatorSuffix {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         None("None"),
+/**
+ * 
+ */
         CR("CR"),
+/**
+ * 
+ */
         LF("LF"),
+/**
+ * 
+ */
         CRLF("CRLF");
 
         private final String value;

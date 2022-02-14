@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetKeyArgs Empty = new GetKeyArgs();
 
+    /**
+     * The name of the workspace key
+     */
     @InputImport(name="keyName", required=true)
     private final String keyName;
 
@@ -19,6 +25,9 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
         return this.keyName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the workspace
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

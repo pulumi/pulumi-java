@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a virtual machine scale set extension profile.
+ */
 public final class VirtualMachineScaleSetExtensionProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineScaleSetExtensionProfileResponse Empty = new VirtualMachineScaleSetExtensionProfileResponse();
 
+    /**
+     * The virtual machine scale set child extension resources.
+     */
     @InputImport(name="extensions")
     private final @Nullable List<VirtualMachineScaleSetExtensionResponse> extensions;
 
@@ -23,6 +29,9 @@ public final class VirtualMachineScaleSetExtensionProfileResponse extends io.pul
         return this.extensions == null ? List.of() : this.extensions;
     }
 
+    /**
+     * Specifies the time alloted for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. The default value is 90 minutes (PT1H30M). <br><br> Minimum api-version: 2020-06-01
+     */
     @InputImport(name="extensionsTimeBudget")
     private final @Nullable String extensionsTimeBudget;
 

@@ -8,19 +8,33 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.pubsub_v1beta1a.TopicArgs;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Creates the given topic with the given name.
+ */
 @ResourceType(type="google-native:pubsub/v1beta1a:Topic")
 public class Topic extends io.pulumi.resources.CustomResource {
+    /**
+     * Name of the topic.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the topic.
+     */
     public Output<String> getName() {
         return this.name;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Topic(String name, @Nullable TopicArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:pubsub/v1beta1a:Topic", name, args == null ? TopicArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -36,6 +50,14 @@ public class Topic extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Topic get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Topic(name, id, options);
     }

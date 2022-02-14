@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppVnetConnection {
+/**
+ * Virtual Network information contract.
+API Version: 2020-12-01.
+ *
+ * Virtual Network information contract.
+ */
     public static CompletableFuture<GetWebAppVnetConnectionResult> invokeAsync(GetWebAppVnetConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppVnetConnection", TypeShape.of(GetWebAppVnetConnectionResult.class), args == null ? GetWebAppVnetConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

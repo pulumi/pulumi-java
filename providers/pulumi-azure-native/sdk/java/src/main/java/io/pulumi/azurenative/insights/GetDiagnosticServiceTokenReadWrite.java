@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDiagnosticServiceTokenReadWrite {
+/**
+ * The response to a diagnostic services token query.
+API Version: 2021-03-03-preview.
+ *
+ * The response to a diagnostic services token query.
+ */
     public static CompletableFuture<GetDiagnosticServiceTokenReadWriteResult> invokeAsync(GetDiagnosticServiceTokenReadWriteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getDiagnosticServiceTokenReadWrite", TypeShape.of(GetDiagnosticServiceTokenReadWriteResult.class), args == null ? GetDiagnosticServiceTokenReadWriteArgs.Empty : args, Utilities.withVersion(options));
     }

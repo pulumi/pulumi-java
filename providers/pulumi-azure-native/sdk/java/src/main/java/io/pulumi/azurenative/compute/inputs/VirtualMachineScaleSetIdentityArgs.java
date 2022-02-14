@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Identity for the virtual machine scale set.
+ */
 public final class VirtualMachineScaleSetIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineScaleSetIdentityArgs Empty = new VirtualMachineScaleSetIdentityArgs();
 
+    /**
+     * The type of identity used for the virtual machine scale set. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine scale set.
+     */
     @InputImport(name="type")
     private final @Nullable Input<ResourceIdentityType> type;
 
@@ -24,6 +30,9 @@ public final class VirtualMachineScaleSetIdentityArgs extends io.pulumi.resource
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * The list of user identities associated with the virtual machine scale set. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
 

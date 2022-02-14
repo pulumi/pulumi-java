@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GroupArgs Empty = new GroupArgs();
 
+    /**
+     * User-provided description of the group.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +27,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Display name is a user defined name for this group which can be updated.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -28,6 +37,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="groupId", required=true)
     private final Input<String> groupId;
 
@@ -35,6 +47,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.groupId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -42,6 +57,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The Group name.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -49,6 +67,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -56,6 +77,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 

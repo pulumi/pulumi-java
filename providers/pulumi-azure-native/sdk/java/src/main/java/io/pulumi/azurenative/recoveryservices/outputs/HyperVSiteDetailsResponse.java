@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HyperVSiteDetailsResponse {
+/**
+ * Gets the class type. Overridden in derived classes.
+Expected value is 'HyperVSite'.
+ */
     private final String instanceType;
 
     @OutputCustomType.Constructor({"instanceType"})
@@ -16,6 +20,10 @@ public final class HyperVSiteDetailsResponse {
         this.instanceType = Objects.requireNonNull(instanceType);
     }
 
+/**
+ * Gets the class type. Overridden in derived classes.
+Expected value is 'HyperVSite'.
+ */
     public String getInstanceType() {
         return this.instanceType;
     }

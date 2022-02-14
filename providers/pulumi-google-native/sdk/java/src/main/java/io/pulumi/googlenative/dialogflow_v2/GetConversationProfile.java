@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConversationProfile {
+/**
+ * Retrieves the specified conversation profile.
+ */
     public static CompletableFuture<GetConversationProfileResult> invokeAsync(GetConversationProfileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2:getConversationProfile", TypeShape.of(GetConversationProfileResult.class), args == null ? GetConversationProfileArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes properties of a network resource.
+ */
 public final class NetworkResourcePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkResourcePropertiesArgs Empty = new NetworkResourcePropertiesArgs();
 
+    /**
+     * User readable description of the network.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +27,10 @@ public final class NetworkResourcePropertiesArgs extends io.pulumi.resources.Res
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The type of a Service Fabric container network.
+Expected value is 'NetworkResourceProperties'.
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 

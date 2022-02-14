@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3TestConfigResponse {
+/**
+ * Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
+ */
     private final String flow;
+/**
+ * Session parameters to be compared when calculating differences.
+ */
     private final List<String> trackingParameters;
 
     @OutputCustomType.Constructor({"flow","trackingParameters"})
@@ -21,9 +27,15 @@ public final class GoogleCloudDialogflowCxV3TestConfigResponse {
         this.trackingParameters = Objects.requireNonNull(trackingParameters);
     }
 
+/**
+ * Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
+ */
     public String getFlow() {
         return this.flow;
     }
+/**
+ * Session parameters to be compared when calculating differences.
+ */
     public List<String> getTrackingParameters() {
         return this.trackingParameters;
     }

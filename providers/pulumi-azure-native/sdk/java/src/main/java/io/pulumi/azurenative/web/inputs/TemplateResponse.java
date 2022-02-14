@@ -14,10 +14,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Container App versioned application definition.
+Defines the desired state of an immutable revision.
+Any changes to this section Will result in a new revision being created
+ */
 public final class TemplateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TemplateResponse Empty = new TemplateResponse();
 
+    /**
+     * List of container definitions for the Container App.
+     */
     @InputImport(name="containers")
     private final @Nullable List<ContainerResponse> containers;
 
@@ -25,6 +33,9 @@ public final class TemplateResponse extends io.pulumi.resources.InvokeArgs {
         return this.containers == null ? List.of() : this.containers;
     }
 
+    /**
+     * Dapr configuration for the Container App.
+     */
     @InputImport(name="dapr")
     private final @Nullable DaprResponse dapr;
 
@@ -32,6 +43,9 @@ public final class TemplateResponse extends io.pulumi.resources.InvokeArgs {
         return this.dapr == null ? Optional.empty() : Optional.ofNullable(this.dapr);
     }
 
+    /**
+     * User friendly suffix that is appended to the revision name
+     */
     @InputImport(name="revisionSuffix")
     private final @Nullable String revisionSuffix;
 
@@ -39,6 +53,9 @@ public final class TemplateResponse extends io.pulumi.resources.InvokeArgs {
         return this.revisionSuffix == null ? Optional.empty() : Optional.ofNullable(this.revisionSuffix);
     }
 
+    /**
+     * Scaling properties for the Container App.
+     */
     @InputImport(name="scale")
     private final @Nullable ScaleResponse scale;
 

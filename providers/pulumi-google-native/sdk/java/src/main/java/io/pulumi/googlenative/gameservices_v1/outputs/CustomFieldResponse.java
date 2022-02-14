@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CustomFieldResponse {
+/**
+ * Name is the field name.
+ */
     private final String name;
+/**
+ * Value is the field value. It is important that in contrast to the CounterOptions.field, the value here is a constant that is not derived from the IAMContext.
+ */
     private final String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -20,9 +26,15 @@ public final class CustomFieldResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * Name is the field name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Value is the field value. It is important that in contrast to the CounterOptions.field, the value here is a constant that is not derived from the IAMContext.
+ */
     public String getValue() {
         return this.value;
     }

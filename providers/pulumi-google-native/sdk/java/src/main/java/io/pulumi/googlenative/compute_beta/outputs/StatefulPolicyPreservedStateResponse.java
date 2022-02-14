@@ -10,8 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StatefulPolicyPreservedStateResponse {
+/**
+ * Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
+ */
     private final Map<String,String> disks;
+/**
+ * External network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
+ */
     private final Map<String,String> externalIPs;
+/**
+ * Internal network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
+ */
     private final Map<String,String> internalIPs;
 
     @OutputCustomType.Constructor({"disks","externalIPs","internalIPs"})
@@ -24,12 +33,21 @@ public final class StatefulPolicyPreservedStateResponse {
         this.internalIPs = Objects.requireNonNull(internalIPs);
     }
 
+/**
+ * Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
+ */
     public Map<String,String> getDisks() {
         return this.disks;
     }
+/**
+ * External network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
+ */
     public Map<String,String> getExternalIPs() {
         return this.externalIPs;
     }
+/**
+ * Internal network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
+ */
     public Map<String,String> getInternalIPs() {
         return this.internalIPs;
     }

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Type of Ssl Policy.
+ */
     @EnumType
     public enum ApplicationGatewaySslPolicyType {
+/**
+ * 
+ */
         Predefined("Predefined"),
+/**
+ * 
+ */
         Custom("Custom");
 
         private final String value;

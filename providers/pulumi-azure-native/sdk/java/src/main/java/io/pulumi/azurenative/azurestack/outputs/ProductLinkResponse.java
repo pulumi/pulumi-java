@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ProductLinkResponse {
+/**
+ * The description of the link.
+ */
     private final @Nullable String displayName;
+/**
+ * The URI corresponding to the link.
+ */
     private final @Nullable String uri;
 
     @OutputCustomType.Constructor({"displayName","uri"})
@@ -22,9 +28,15 @@ public final class ProductLinkResponse {
         this.uri = uri;
     }
 
+/**
+ * The description of the link.
+ */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+/**
+ * The URI corresponding to the link.
+ */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }

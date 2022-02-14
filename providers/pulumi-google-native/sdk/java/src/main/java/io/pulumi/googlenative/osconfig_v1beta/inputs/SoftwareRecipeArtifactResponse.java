@@ -10,10 +10,16 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Specifies a resource to be used in the recipe.
+ */
 public final class SoftwareRecipeArtifactResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SoftwareRecipeArtifactResponse Empty = new SoftwareRecipeArtifactResponse();
 
+    /**
+     * Defaults to false. When false, recipes are subject to validations based on the artifact type: Remote: A checksum must be specified, and only protocols with transport-layer security are permitted. GCS: An object generation number must be specified.
+     */
     @InputImport(name="allowInsecure", required=true)
     private final Boolean allowInsecure;
 
@@ -21,6 +27,9 @@ public final class SoftwareRecipeArtifactResponse extends io.pulumi.resources.In
         return this.allowInsecure;
     }
 
+    /**
+     * A Google Cloud Storage artifact.
+     */
     @InputImport(name="gcs", required=true)
     private final SoftwareRecipeArtifactGcsResponse gcs;
 
@@ -28,6 +37,9 @@ public final class SoftwareRecipeArtifactResponse extends io.pulumi.resources.In
         return this.gcs;
     }
 
+    /**
+     * A generic remote artifact.
+     */
     @InputImport(name="remote", required=true)
     private final SoftwareRecipeArtifactRemoteResponse remote;
 

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration of Cloud SQL instance that is used by the Apache Airflow software. Supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+ */
 public final class DatabaseConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabaseConfigArgs Empty = new DatabaseConfigArgs();
 
+    /**
+     * Optional. Cloud SQL machine type used by Airflow database. It has to be one of: db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. If not specified, db-n1-standard-2 will be used.
+     */
     @InputImport(name="machineType")
     private final @Nullable Input<String> machineType;
 

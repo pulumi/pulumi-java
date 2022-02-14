@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for the task that validates connection to SQL Server and also validates source server requirements
+ */
 public final class ConnectToSourceSqlServerTaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectToSourceSqlServerTaskPropertiesArgs Empty = new ConnectToSourceSqlServerTaskPropertiesArgs();
 
+    /**
+     * Task input
+     */
     @InputImport(name="input")
     private final @Nullable Input<ConnectToSourceSqlServerTaskInputArgs> input;
 
@@ -22,6 +28,10 @@ public final class ConnectToSourceSqlServerTaskPropertiesArgs extends io.pulumi.
         return this.input == null ? Input.empty() : this.input;
     }
 
+    /**
+     * Task type.
+Expected value is 'ConnectToSource.SqlServer'.
+     */
     @InputImport(name="taskType", required=true)
     private final Input<String> taskType;
 

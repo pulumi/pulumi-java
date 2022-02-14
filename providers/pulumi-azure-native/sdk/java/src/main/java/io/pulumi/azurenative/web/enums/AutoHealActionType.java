@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Predefined action to be taken.
+ */
     @EnumType
     public enum AutoHealActionType {
+/**
+ * 
+ */
         Recycle("Recycle"),
+/**
+ * 
+ */
         LogEvent("LogEvent"),
+/**
+ * 
+ */
         CustomAction("CustomAction");
 
         private final String value;

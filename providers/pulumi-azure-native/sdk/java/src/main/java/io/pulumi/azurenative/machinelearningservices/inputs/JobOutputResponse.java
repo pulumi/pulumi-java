@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Job output definition container information on where to find job output/logs.
+ */
 public final class JobOutputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JobOutputResponse Empty = new JobOutputResponse();
 
+    /**
+     * ARM ID of the datastore where the job logs and artifacts are stored, or null for the default container ("azureml") in the workspace's storage account.
+     */
     @InputImport(name="datastoreId", required=true)
     private final String datastoreId;
 
@@ -19,6 +25,9 @@ public final class JobOutputResponse extends io.pulumi.resources.InvokeArgs {
         return this.datastoreId;
     }
 
+    /**
+     * Path within the datastore to the job logs and artifacts.
+     */
     @InputImport(name="path", required=true)
     private final String path;
 

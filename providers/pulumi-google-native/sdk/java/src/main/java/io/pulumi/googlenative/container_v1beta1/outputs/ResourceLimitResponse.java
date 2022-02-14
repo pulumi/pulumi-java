@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourceLimitResponse {
+/**
+ * Maximum amount of the resource in the cluster.
+ */
     private final String maximum;
+/**
+ * Minimum amount of the resource in the cluster.
+ */
     private final String minimum;
+/**
+ * Resource name "cpu", "memory" or gpu-specific string.
+ */
     private final String resourceType;
 
     @OutputCustomType.Constructor({"maximum","minimum","resourceType"})
@@ -23,12 +32,21 @@ public final class ResourceLimitResponse {
         this.resourceType = Objects.requireNonNull(resourceType);
     }
 
+/**
+ * Maximum amount of the resource in the cluster.
+ */
     public String getMaximum() {
         return this.maximum;
     }
+/**
+ * Minimum amount of the resource in the cluster.
+ */
     public String getMinimum() {
         return this.minimum;
     }
+/**
+ * Resource name "cpu", "memory" or gpu-specific string.
+ */
     public String getPropResourceType() {
         return this.resourceType;
     }

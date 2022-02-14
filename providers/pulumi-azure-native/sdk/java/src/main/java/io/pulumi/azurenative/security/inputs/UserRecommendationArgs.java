@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a user that is recommended to be allowed for a certain rule
+ */
 public final class UserRecommendationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserRecommendationArgs Empty = new UserRecommendationArgs();
 
+    /**
+     * The recommendation action of the machine or rule
+     */
     @InputImport(name="recommendationAction")
     private final @Nullable Input<String> recommendationAction;
 
@@ -21,6 +27,9 @@ public final class UserRecommendationArgs extends io.pulumi.resources.ResourceAr
         return this.recommendationAction == null ? Input.empty() : this.recommendationAction;
     }
 
+    /**
+     * Represents a user that is recommended to be allowed for a certain rule
+     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 

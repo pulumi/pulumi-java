@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Backup Vault
+ */
 public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackupVaultArgs Empty = new BackupVaultArgs();
 
+    /**
+     * Storage Settings
+     */
     @InputImport(name="storageSettings", required=true)
     private final Input<List<StorageSettingArgs>> storageSettings;
 

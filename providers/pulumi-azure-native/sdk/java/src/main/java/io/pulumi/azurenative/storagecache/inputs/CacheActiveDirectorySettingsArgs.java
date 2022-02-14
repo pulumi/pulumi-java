@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Active Directory settings used to join a cache to a domain.
+ */
 public final class CacheActiveDirectorySettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CacheActiveDirectorySettingsArgs Empty = new CacheActiveDirectorySettingsArgs();
 
+    /**
+     * The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].
+     */
     @InputImport(name="cacheNetBiosName", required=true)
     private final Input<String> cacheNetBiosName;
 
@@ -22,6 +28,9 @@ public final class CacheActiveDirectorySettingsArgs extends io.pulumi.resources.
         return this.cacheNetBiosName;
     }
 
+    /**
+     * Active Directory admin credentials used to join the HPC Cache to a domain.
+     */
     @InputImport(name="credentials")
     private final @Nullable Input<CacheActiveDirectorySettingsCredentialsArgs> credentials;
 
@@ -29,6 +38,9 @@ public final class CacheActiveDirectorySettingsArgs extends io.pulumi.resources.
         return this.credentials == null ? Input.empty() : this.credentials;
     }
 
+    /**
+     * The fully qualified domain name of the Active Directory domain controller.
+     */
     @InputImport(name="domainName", required=true)
     private final Input<String> domainName;
 
@@ -36,6 +48,9 @@ public final class CacheActiveDirectorySettingsArgs extends io.pulumi.resources.
         return this.domainName;
     }
 
+    /**
+     * The Active Directory domain's NetBIOS name.
+     */
     @InputImport(name="domainNetBiosName", required=true)
     private final Input<String> domainNetBiosName;
 
@@ -43,6 +58,9 @@ public final class CacheActiveDirectorySettingsArgs extends io.pulumi.resources.
         return this.domainNetBiosName;
     }
 
+    /**
+     * Primary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
+     */
     @InputImport(name="primaryDnsIpAddress", required=true)
     private final Input<String> primaryDnsIpAddress;
 
@@ -50,6 +68,9 @@ public final class CacheActiveDirectorySettingsArgs extends io.pulumi.resources.
         return this.primaryDnsIpAddress;
     }
 
+    /**
+     * Secondary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
+     */
     @InputImport(name="secondaryDnsIpAddress")
     private final @Nullable Input<String> secondaryDnsIpAddress;
 

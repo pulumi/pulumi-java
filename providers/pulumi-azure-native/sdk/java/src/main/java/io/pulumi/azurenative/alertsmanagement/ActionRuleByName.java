@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.alertsmanagement;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.alertsmanagement.ActionRuleByNameArgs;
 import io.pulumi.azurenative.alertsmanagement.outputs.ActionGroupResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.DiagnosticsResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.SuppressionResponse;
@@ -19,39 +18,360 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Action rule object containing target scope, conditions and suppression logic
+API Version: 2019-05-05-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### PutActionRule
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var actionRuleByName = new AzureNative.AlertsManagement.ActionRuleByName("actionRuleByName", new AzureNative.AlertsManagement.ActionRuleByNameArgs
+        {
+            ActionRuleName = "DailySuppression",
+            Location = "Global",
+            Properties = new AzureNative.AlertsManagement.Inputs.SuppressionArgs
+            {
+                Conditions = new AzureNative.AlertsManagement.Inputs.ConditionsArgs
+                {
+                    MonitorCondition = new AzureNative.AlertsManagement.Inputs.ConditionArgs
+                    {
+                        Operator = "Equals",
+                        Values = 
+                        {
+                            "Fired",
+                        },
+                    },
+                    MonitorService = new AzureNative.AlertsManagement.Inputs.ConditionArgs
+                    {
+                        Operator = "Equals",
+                        Values = 
+                        {
+                            "Platform",
+                            "Application Insights",
+                        },
+                    },
+                    Severity = new AzureNative.AlertsManagement.Inputs.ConditionArgs
+                    {
+                        Operator = "Equals",
+                        Values = 
+                        {
+                            "Sev0",
+                            "Sev2",
+                        },
+                    },
+                    TargetResourceType = new AzureNative.AlertsManagement.Inputs.ConditionArgs
+                    {
+                        Operator = "NotEquals",
+                        Values = 
+                        {
+                            "Microsoft.Compute/VirtualMachines",
+                        },
+                    },
+                },
+                Description = "Action rule on resource group for daily suppression",
+                Scope = new AzureNative.AlertsManagement.Inputs.ScopeArgs
+                {
+                    ScopeType = "ResourceGroup",
+                    Values = 
+                    {
+                        "/subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg",
+                    },
+                },
+                Status = "Enabled",
+                SuppressionConfig = new AzureNative.AlertsManagement.Inputs.SuppressionConfigArgs
+                {
+                    RecurrenceType = "Daily",
+                    Schedule = new AzureNative.AlertsManagement.Inputs.SuppressionScheduleArgs
+                    {
+                        EndDate = "12/18/2018",
+                        EndTime = "14:00:00",
+                        StartDate = "12/09/2018",
+                        StartTime = "06:00:00",
+                    },
+                },
+                Type = "Suppression",
+            },
+            ResourceGroupName = "alertscorrelationrg",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	alertsmanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/alertsmanagement"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := alertsmanagement.NewActionRuleByName(ctx, "actionRuleByName", &alertsmanagement.ActionRuleByNameArgs{
+			ActionRuleName: pulumi.String("DailySuppression"),
+			Location:       pulumi.String("Global"),
+			Properties: alertsmanagement.Suppression{
+				Conditions: alertsmanagement.Conditions{
+					MonitorCondition: alertsmanagement.Condition{
+						Operator: "Equals",
+						Values: []string{
+							"Fired",
+						},
+					},
+					MonitorService: alertsmanagement.Condition{
+						Operator: "Equals",
+						Values: []string{
+							"Platform",
+							"Application Insights",
+						},
+					},
+					Severity: alertsmanagement.Condition{
+						Operator: "Equals",
+						Values: []string{
+							"Sev0",
+							"Sev2",
+						},
+					},
+					TargetResourceType: alertsmanagement.Condition{
+						Operator: "NotEquals",
+						Values: []string{
+							"Microsoft.Compute/VirtualMachines",
+						},
+					},
+				},
+				Description: "Action rule on resource group for daily suppression",
+				Scope: alertsmanagement.Scope{
+					ScopeType: "ResourceGroup",
+					Values: []string{
+						"/subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg",
+					},
+				},
+				Status: "Enabled",
+				SuppressionConfig: alertsmanagement.SuppressionConfig{
+					RecurrenceType: "Daily",
+					Schedule: alertsmanagement.SuppressionSchedule{
+						EndDate:   "12/18/2018",
+						EndTime:   "14:00:00",
+						StartDate: "12/09/2018",
+						StartTime: "06:00:00",
+					},
+				},
+				Type: "Suppression",
+			},
+			ResourceGroupName: pulumi.String("alertscorrelationrg"),
+			Tags:              nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const actionRuleByName = new azure_native.alertsmanagement.ActionRuleByName("actionRuleByName", {
+    actionRuleName: "DailySuppression",
+    location: "Global",
+    properties: {
+        conditions: {
+            monitorCondition: {
+                operator: "Equals",
+                values: ["Fired"],
+            },
+            monitorService: {
+                operator: "Equals",
+                values: [
+                    "Platform",
+                    "Application Insights",
+                ],
+            },
+            severity: {
+                operator: "Equals",
+                values: [
+                    "Sev0",
+                    "Sev2",
+                ],
+            },
+            targetResourceType: {
+                operator: "NotEquals",
+                values: ["Microsoft.Compute/VirtualMachines"],
+            },
+        },
+        description: "Action rule on resource group for daily suppression",
+        scope: {
+            scopeType: "ResourceGroup",
+            values: ["/subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg"],
+        },
+        status: "Enabled",
+        suppressionConfig: {
+            recurrenceType: "Daily",
+            schedule: {
+                endDate: "12/18/2018",
+                endTime: "14:00:00",
+                startDate: "12/09/2018",
+                startTime: "06:00:00",
+            },
+        },
+        type: "Suppression",
+    },
+    resourceGroupName: "alertscorrelationrg",
+    tags: {},
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+action_rule_by_name = azure_native.alertsmanagement.ActionRuleByName("actionRuleByName",
+    action_rule_name="DailySuppression",
+    location="Global",
+    properties=azure_native.alertsmanagement.SuppressionArgs(
+        conditions=azure_native.alertsmanagement.ConditionsArgs(
+            monitor_condition=azure_native.alertsmanagement.ConditionArgs(
+                operator="Equals",
+                values=["Fired"],
+            ),
+            monitor_service=azure_native.alertsmanagement.ConditionArgs(
+                operator="Equals",
+                values=[
+                    "Platform",
+                    "Application Insights",
+                ],
+            ),
+            severity=azure_native.alertsmanagement.ConditionArgs(
+                operator="Equals",
+                values=[
+                    "Sev0",
+                    "Sev2",
+                ],
+            ),
+            target_resource_type=azure_native.alertsmanagement.ConditionArgs(
+                operator="NotEquals",
+                values=["Microsoft.Compute/VirtualMachines"],
+            ),
+        ),
+        description="Action rule on resource group for daily suppression",
+        scope=azure_native.alertsmanagement.ScopeArgs(
+            scope_type="ResourceGroup",
+            values=["/subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg"],
+        ),
+        status="Enabled",
+        suppression_config=azure_native.alertsmanagement.SuppressionConfigArgs(
+            recurrence_type="Daily",
+            schedule=azure_native.alertsmanagement.SuppressionScheduleArgs(
+                end_date="12/18/2018",
+                end_time="14:00:00",
+                start_date="12/09/2018",
+                start_time="06:00:00",
+            ),
+        ),
+        type="Suppression",
+    ),
+    resource_group_name="alertscorrelationrg",
+    tags={})
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:alertsmanagement:ActionRuleByName DailySuppression /subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg/providers/Microsoft.AlertsManagement/actionRules/DailySuppression 
+```
+
+ */
 @ResourceType(type="azure-native:alertsmanagement:ActionRuleByName")
 public class ActionRuleByName extends io.pulumi.resources.CustomResource {
+    /**
+     * Resource location
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Azure resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Azure resource name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * action rule properties
+     */
     @OutputExport(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
+    /**
+     * @return action rule properties
+     */
     public Output<Object> getProperties() {
         return this.properties;
     }
+    /**
+     * Resource tags
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Azure resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Azure resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ActionRuleByName(String name, ActionRuleByNameArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:alertsmanagement:ActionRuleByName", name, args == null ? ActionRuleByNameArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -73,6 +393,14 @@ public class ActionRuleByName extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ActionRuleByName get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ActionRuleByName(name, id, options);
     }

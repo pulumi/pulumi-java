@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KubeEnvironmentArgs Empty = new KubeEnvironmentArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="aksResourceID")
     private final @Nullable Input<String> aksResourceID;
 
@@ -26,6 +32,11 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.aksResourceID == null ? Input.empty() : this.aksResourceID;
     }
 
+    /**
+     * Cluster configuration which enables the log daemon to export
+app logs to a destination. Currently only "log-analytics" is
+supported
+     */
     @InputImport(name="appLogsConfiguration")
     private final @Nullable Input<AppLogsConfigurationArgs> appLogsConfiguration;
 
@@ -33,6 +44,11 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.appLogsConfiguration == null ? Input.empty() : this.appLogsConfiguration;
     }
 
+    /**
+     * Cluster configuration which determines the ARC cluster
+components types. Eg: Choosing between BuildService kind,
+FrontEnd Service ArtifactsStorageType etc.
+     */
     @InputImport(name="arcConfiguration")
     private final @Nullable Input<ArcConfigurationArgs> arcConfiguration;
 
@@ -40,6 +56,9 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.arcConfiguration == null ? Input.empty() : this.arcConfiguration;
     }
 
+    /**
+     * Extended Location.
+     */
     @InputImport(name="extendedLocation")
     private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
@@ -47,6 +66,9 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
     }
 
+    /**
+     * Only visible within Vnet/Subnet
+     */
     @InputImport(name="internalLoadBalancerEnabled")
     private final @Nullable Input<Boolean> internalLoadBalancerEnabled;
 
@@ -54,6 +76,9 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.internalLoadBalancerEnabled == null ? Input.empty() : this.internalLoadBalancerEnabled;
     }
 
+    /**
+     * Kind of resource.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -61,6 +86,9 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Resource Location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -68,6 +96,9 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of the Kubernetes Environment.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -75,6 +106,9 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -82,6 +116,9 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * Static IP of the KubeEnvironment
+     */
     @InputImport(name="staticIp")
     private final @Nullable Input<String> staticIp;
 
@@ -89,6 +126,9 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
         return this.staticIp == null ? Input.empty() : this.staticIp;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CustomerManagedKeyDetailsResponse {
+/**
+ * The key object of the workspace
+ */
     private final @Nullable WorkspaceKeyDetailsResponse key;
+/**
+ * The customer managed key status on the workspace
+ */
     private final String status;
 
     @OutputCustomType.Constructor({"key","status"})
@@ -23,9 +29,15 @@ public final class CustomerManagedKeyDetailsResponse {
         this.status = Objects.requireNonNull(status);
     }
 
+/**
+ * The key object of the workspace
+ */
     public Optional<WorkspaceKeyDetailsResponse> getKey() {
         return Optional.ofNullable(this.key);
     }
+/**
+ * The customer managed key status on the workspace
+ */
     public String getStatus() {
         return this.status;
     }

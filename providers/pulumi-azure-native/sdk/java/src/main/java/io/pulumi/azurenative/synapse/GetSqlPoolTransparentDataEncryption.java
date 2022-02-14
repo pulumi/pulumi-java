@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlPoolTransparentDataEncryption {
+/**
+ * Represents a Sql pool transparent data encryption configuration.
+API Version: 2021-03-01.
+ *
+ * Represents a Sql pool transparent data encryption configuration.
+ */
     public static CompletableFuture<GetSqlPoolTransparentDataEncryptionResult> invokeAsync(GetSqlPoolTransparentDataEncryptionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:synapse:getSqlPoolTransparentDataEncryption", TypeShape.of(GetSqlPoolTransparentDataEncryptionResult.class), args == null ? GetSqlPoolTransparentDataEncryptionArgs.Empty : args, Utilities.withVersion(options));
     }

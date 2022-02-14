@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Support information for the content item.
+ */
 public final class MetadataSupportResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MetadataSupportResponse Empty = new MetadataSupportResponse();
 
+    /**
+     * Email of support contact
+     */
     @InputImport(name="email")
     private final @Nullable String email;
 
@@ -21,6 +27,9 @@ public final class MetadataSupportResponse extends io.pulumi.resources.InvokeArg
         return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
     }
 
+    /**
+     * Link for support help, like to support page to open a ticket etc.
+     */
     @InputImport(name="link")
     private final @Nullable String link;
 
@@ -28,6 +37,9 @@ public final class MetadataSupportResponse extends io.pulumi.resources.InvokeArg
         return this.link == null ? Optional.empty() : Optional.ofNullable(this.link);
     }
 
+    /**
+     * Name of the support contact. Company or person.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -35,6 +47,9 @@ public final class MetadataSupportResponse extends io.pulumi.resources.InvokeArg
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Type of support for content item
+     */
     @InputImport(name="tier", required=true)
     private final String tier;
 

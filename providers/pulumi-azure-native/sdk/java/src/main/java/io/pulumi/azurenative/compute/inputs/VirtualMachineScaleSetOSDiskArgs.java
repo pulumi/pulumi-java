@@ -20,10 +20,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a virtual machine scale set operating system disk.
+ */
 public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineScaleSetOSDiskArgs Empty = new VirtualMachineScaleSetOSDiskArgs();
 
+    /**
+     * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
+     */
     @InputImport(name="caching")
     private final @Nullable Input<CachingTypes> caching;
 
@@ -31,6 +37,9 @@ public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.
         return this.caching == null ? Input.empty() : this.caching;
     }
 
+    /**
+     * Specifies how the virtual machines in the scale set should be created.<br><br> The only allowed value is: **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
+     */
     @InputImport(name="createOption", required=true)
     private final Input<Either<String,DiskCreateOptionTypes>> createOption;
 
@@ -38,6 +47,9 @@ public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.
         return this.createOption;
     }
 
+    /**
+     * Specifies the ephemeral disk Settings for the operating system disk used by the virtual machine scale set.
+     */
     @InputImport(name="diffDiskSettings")
     private final @Nullable Input<DiffDiskSettingsArgs> diffDiskSettings;
 
@@ -45,6 +57,9 @@ public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.
         return this.diffDiskSettings == null ? Input.empty() : this.diffDiskSettings;
     }
 
+    /**
+     * Specifies the size of the operating system disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
+     */
     @InputImport(name="diskSizeGB")
     private final @Nullable Input<Integer> diskSizeGB;
 
@@ -52,6 +67,9 @@ public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.
         return this.diskSizeGB == null ? Input.empty() : this.diskSizeGB;
     }
 
+    /**
+     * Specifies information about the unmanaged user image to base the scale set on.
+     */
     @InputImport(name="image")
     private final @Nullable Input<VirtualHardDiskArgs> image;
 
@@ -59,6 +77,9 @@ public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.
         return this.image == null ? Input.empty() : this.image;
     }
 
+    /**
+     * The managed disk parameters.
+     */
     @InputImport(name="managedDisk")
     private final @Nullable Input<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk;
 
@@ -66,6 +87,9 @@ public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.
         return this.managedDisk == null ? Input.empty() : this.managedDisk;
     }
 
+    /**
+     * The disk name.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -73,6 +97,9 @@ public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
+     */
     @InputImport(name="osType")
     private final @Nullable Input<OperatingSystemTypes> osType;
 
@@ -80,6 +107,9 @@ public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.
         return this.osType == null ? Input.empty() : this.osType;
     }
 
+    /**
+     * Specifies the container urls that are used to store operating system disks for the scale set.
+     */
     @InputImport(name="vhdContainers")
     private final @Nullable Input<List<String>> vhdContainers;
 
@@ -87,6 +117,9 @@ public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.
         return this.vhdContainers == null ? Input.empty() : this.vhdContainers;
     }
 
+    /**
+     * Specifies whether writeAccelerator should be enabled or disabled on the disk.
+     */
     @InputImport(name="writeAcceleratorEnabled")
     private final @Nullable Input<Boolean> writeAcceleratorEnabled;
 

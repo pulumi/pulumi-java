@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AKSReplicaStatusResponseError {
+/**
+ * The error response.
+ */
     private final ErrorResponseResponse error;
 
     @OutputCustomType.Constructor({"error"})
@@ -16,6 +19,9 @@ public final class AKSReplicaStatusResponseError {
         this.error = Objects.requireNonNull(error);
     }
 
+/**
+ * The error response.
+ */
     public ErrorResponseResponse getError() {
         return this.error;
     }

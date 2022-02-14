@@ -12,9 +12,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AvailabilitySetResourceSettingsResponse {
+/**
+ * Gets or sets the target fault domain.
+ */
     private final @Nullable Integer faultDomain;
+/**
+ * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+Expected value is 'Microsoft.Compute/availabilitySets'.
+ */
     private final String resourceType;
+/**
+ * Gets or sets the target Resource name.
+ */
     private final String targetResourceName;
+/**
+ * Gets or sets the target update domain.
+ */
     private final @Nullable Integer updateDomain;
 
     @OutputCustomType.Constructor({"faultDomain","resourceType","targetResourceName","updateDomain"})
@@ -29,15 +42,28 @@ public final class AvailabilitySetResourceSettingsResponse {
         this.updateDomain = updateDomain;
     }
 
+/**
+ * Gets or sets the target fault domain.
+ */
     public Optional<Integer> getFaultDomain() {
         return Optional.ofNullable(this.faultDomain);
     }
+/**
+ * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+Expected value is 'Microsoft.Compute/availabilitySets'.
+ */
     public String getPropResourceType() {
         return this.resourceType;
     }
+/**
+ * Gets or sets the target Resource name.
+ */
     public String getTargetResourceName() {
         return this.targetResourceName;
     }
+/**
+ * Gets or sets the target update domain.
+ */
     public Optional<Integer> getUpdateDomain() {
         return Optional.ofNullable(this.updateDomain);
     }

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Gets or sets the guest agent provisioning action.
+ */
     @EnumType
     public enum ProvisioningAction {
+/**
+ * 
+ */
         Install("install"),
+/**
+ * 
+ */
         Uninstall("uninstall"),
+/**
+ * 
+ */
         Repair("repair");
 
         private final String value;

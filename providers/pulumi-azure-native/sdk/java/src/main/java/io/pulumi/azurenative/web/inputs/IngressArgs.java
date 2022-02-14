@@ -16,10 +16,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Container App Ingress configuration.
+ */
 public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IngressArgs Empty = new IngressArgs();
 
+    /**
+     * Bool indicating if HTTP connections to is allowed. If set to false HTTP connections are automatically redirected to HTTPS connections
+     */
     @InputImport(name="allowInsecure")
     private final @Nullable Input<Boolean> allowInsecure;
 
@@ -27,6 +33,9 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowInsecure == null ? Input.empty() : this.allowInsecure;
     }
 
+    /**
+     * Bool indicating if app exposes an external http endpoint
+     */
     @InputImport(name="external")
     private final @Nullable Input<Boolean> external;
 
@@ -34,6 +43,9 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
         return this.external == null ? Input.empty() : this.external;
     }
 
+    /**
+     * Target Port in containers for traffic from ingress
+     */
     @InputImport(name="targetPort")
     private final @Nullable Input<Integer> targetPort;
 
@@ -41,6 +53,9 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetPort == null ? Input.empty() : this.targetPort;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="traffic")
     private final @Nullable Input<List<TrafficWeightArgs>> traffic;
 
@@ -48,6 +63,9 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
         return this.traffic == null ? Input.empty() : this.traffic;
     }
 
+    /**
+     * Ingress transport protocol
+     */
     @InputImport(name="transport")
     private final @Nullable Input<Either<String,IngressTransportMethod>> transport;
 

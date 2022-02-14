@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VirtualHubRouteTableResponse {
+/**
+ * List of all routes.
+ */
     private final @Nullable List<VirtualHubRouteResponse> routes;
 
     @OutputCustomType.Constructor({"routes"})
@@ -18,6 +21,9 @@ public final class VirtualHubRouteTableResponse {
         this.routes = routes;
     }
 
+/**
+ * List of all routes.
+ */
     public List<VirtualHubRouteResponse> getRoutes() {
         return this.routes == null ? List.of() : this.routes;
     }

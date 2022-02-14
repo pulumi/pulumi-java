@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Static Site User ARM resource.
+ */
 public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StaticSiteUserARMResourceResponse Empty = new StaticSiteUserARMResourceResponse();
 
+    /**
+     * The display name for the static site user.
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -21,6 +27,9 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
         return this.displayName;
     }
 
+    /**
+     * Resource Id.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -28,6 +37,9 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
         return this.id;
     }
 
+    /**
+     * Kind of resource.
+     */
     @InputImport(name="kind")
     private final @Nullable String kind;
 
@@ -35,6 +47,9 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
+    /**
+     * Resource Name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -42,6 +57,9 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
         return this.name;
     }
 
+    /**
+     * The identity provider for the static site user.
+     */
     @InputImport(name="provider", required=true)
     private final String provider;
 
@@ -49,6 +67,9 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
         return this.provider;
     }
 
+    /**
+     * The roles for the static site user, in free-form string format
+     */
     @InputImport(name="roles")
     private final @Nullable String roles;
 
@@ -56,6 +77,9 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
         return this.roles == null ? Optional.empty() : Optional.ofNullable(this.roles);
     }
 
+    /**
+     * Resource type.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -63,6 +87,9 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
         return this.type;
     }
 
+    /**
+     * The user id for the static site user.
+     */
     @InputImport(name="userId", required=true)
     private final String userId;
 

@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CrossVersionObjectReference {
+/**
+ * API version of the referent
+ */
     private final @Nullable String apiVersion;
+/**
+ * Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds"
+ */
     private final String kind;
+/**
+ * Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names
+ */
     private final String name;
 
     @OutputCustomType.Constructor({"apiVersion","kind","name"})
@@ -25,12 +34,21 @@ public final class CrossVersionObjectReference {
         this.name = Objects.requireNonNull(name);
     }
 
+/**
+ * API version of the referent
+ */
     public Optional<String> getApiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
+/**
+ * Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds"
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names
+ */
     public String getName() {
         return this.name;
     }

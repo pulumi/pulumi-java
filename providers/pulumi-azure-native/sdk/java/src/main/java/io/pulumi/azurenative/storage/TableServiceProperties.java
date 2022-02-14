@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.storage.TableServicePropertiesArgs;
 import io.pulumi.azurenative.storage.outputs.CorsRulesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,27 +14,375 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The properties of a storage account’s Table service.
+API Version: 2021-02-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### TableServicesPut
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tableServiceProperties = new AzureNative.Storage.TableServiceProperties("tableServiceProperties", new AzureNative.Storage.TableServicePropertiesArgs
+        {
+            AccountName = "sto8607",
+            Cors = new AzureNative.Storage.Inputs.CorsRulesArgs
+            {
+                CorsRules = 
+                {
+                    new AzureNative.Storage.Inputs.CorsRuleArgs
+                    {
+                        AllowedHeaders = 
+                        {
+                            "x-ms-meta-abc",
+                            "x-ms-meta-data*",
+                            "x-ms-meta-target*",
+                        },
+                        AllowedMethods = 
+                        {
+                            "GET",
+                            "HEAD",
+                            "POST",
+                            "OPTIONS",
+                            "MERGE",
+                            "PUT",
+                        },
+                        AllowedOrigins = 
+                        {
+                            "http://www.contoso.com",
+                            "http://www.fabrikam.com",
+                        },
+                        ExposedHeaders = 
+                        {
+                            "x-ms-meta-*",
+                        },
+                        MaxAgeInSeconds = 100,
+                    },
+                    new AzureNative.Storage.Inputs.CorsRuleArgs
+                    {
+                        AllowedHeaders = 
+                        {
+                            "*",
+                        },
+                        AllowedMethods = 
+                        {
+                            "GET",
+                        },
+                        AllowedOrigins = 
+                        {
+                            "*",
+                        },
+                        ExposedHeaders = 
+                        {
+                            "*",
+                        },
+                        MaxAgeInSeconds = 2,
+                    },
+                    new AzureNative.Storage.Inputs.CorsRuleArgs
+                    {
+                        AllowedHeaders = 
+                        {
+                            "x-ms-meta-12345675754564*",
+                        },
+                        AllowedMethods = 
+                        {
+                            "GET",
+                            "PUT",
+                        },
+                        AllowedOrigins = 
+                        {
+                            "http://www.abc23.com",
+                            "https://www.fabrikam.com/*",
+                        },
+                        ExposedHeaders = 
+                        {
+                            "x-ms-meta-abc",
+                            "x-ms-meta-data*",
+                            "x-ms-meta-target*",
+                        },
+                        MaxAgeInSeconds = 2000,
+                    },
+                },
+            },
+            ResourceGroupName = "res4410",
+            TableServiceName = "default",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storage.NewTableServiceProperties(ctx, "tableServiceProperties", &storage.TableServicePropertiesArgs{
+			AccountName: pulumi.String("sto8607"),
+			Cors: &storage.CorsRulesArgs{
+				CorsRules: storage.CorsRuleArray{
+					&storage.CorsRuleArgs{
+						AllowedHeaders: pulumi.StringArray{
+							pulumi.String("x-ms-meta-abc"),
+							pulumi.String("x-ms-meta-data*"),
+							pulumi.String("x-ms-meta-target*"),
+						},
+						AllowedMethods: pulumi.StringArray{
+							pulumi.String("GET"),
+							pulumi.String("HEAD"),
+							pulumi.String("POST"),
+							pulumi.String("OPTIONS"),
+							pulumi.String("MERGE"),
+							pulumi.String("PUT"),
+						},
+						AllowedOrigins: pulumi.StringArray{
+							pulumi.String("http://www.contoso.com"),
+							pulumi.String("http://www.fabrikam.com"),
+						},
+						ExposedHeaders: pulumi.StringArray{
+							pulumi.String("x-ms-meta-*"),
+						},
+						MaxAgeInSeconds: pulumi.Int(100),
+					},
+					&storage.CorsRuleArgs{
+						AllowedHeaders: pulumi.StringArray{
+							pulumi.String("*"),
+						},
+						AllowedMethods: pulumi.StringArray{
+							pulumi.String("GET"),
+						},
+						AllowedOrigins: pulumi.StringArray{
+							pulumi.String("*"),
+						},
+						ExposedHeaders: pulumi.StringArray{
+							pulumi.String("*"),
+						},
+						MaxAgeInSeconds: pulumi.Int(2),
+					},
+					&storage.CorsRuleArgs{
+						AllowedHeaders: pulumi.StringArray{
+							pulumi.String("x-ms-meta-12345675754564*"),
+						},
+						AllowedMethods: pulumi.StringArray{
+							pulumi.String("GET"),
+							pulumi.String("PUT"),
+						},
+						AllowedOrigins: pulumi.StringArray{
+							pulumi.String("http://www.abc23.com"),
+							pulumi.String("https://www.fabrikam.com/*"),
+						},
+						ExposedHeaders: pulumi.StringArray{
+							pulumi.String("x-ms-meta-abc"),
+							pulumi.String("x-ms-meta-data*"),
+							pulumi.String("x-ms-meta-target*"),
+						},
+						MaxAgeInSeconds: pulumi.Int(2000),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("res4410"),
+			TableServiceName:  pulumi.String("default"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const tableServiceProperties = new azure_native.storage.TableServiceProperties("tableServiceProperties", {
+    accountName: "sto8607",
+    cors: {
+        corsRules: [
+            {
+                allowedHeaders: [
+                    "x-ms-meta-abc",
+                    "x-ms-meta-data*",
+                    "x-ms-meta-target*",
+                ],
+                allowedMethods: [
+                    "GET",
+                    "HEAD",
+                    "POST",
+                    "OPTIONS",
+                    "MERGE",
+                    "PUT",
+                ],
+                allowedOrigins: [
+                    "http://www.contoso.com",
+                    "http://www.fabrikam.com",
+                ],
+                exposedHeaders: ["x-ms-meta-*"],
+                maxAgeInSeconds: 100,
+            },
+            {
+                allowedHeaders: ["*"],
+                allowedMethods: ["GET"],
+                allowedOrigins: ["*"],
+                exposedHeaders: ["*"],
+                maxAgeInSeconds: 2,
+            },
+            {
+                allowedHeaders: ["x-ms-meta-12345675754564*"],
+                allowedMethods: [
+                    "GET",
+                    "PUT",
+                ],
+                allowedOrigins: [
+                    "http://www.abc23.com",
+                    "https://www.fabrikam.com/*",
+                ],
+                exposedHeaders: [
+                    "x-ms-meta-abc",
+                    "x-ms-meta-data*",
+                    "x-ms-meta-target*",
+                ],
+                maxAgeInSeconds: 2000,
+            },
+        ],
+    },
+    resourceGroupName: "res4410",
+    tableServiceName: "default",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+table_service_properties = azure_native.storage.TableServiceProperties("tableServiceProperties",
+    account_name="sto8607",
+    cors=azure_native.storage.CorsRulesArgs(
+        cors_rules=[
+            azure_native.storage.CorsRuleArgs(
+                allowed_headers=[
+                    "x-ms-meta-abc",
+                    "x-ms-meta-data*",
+                    "x-ms-meta-target*",
+                ],
+                allowed_methods=[
+                    "GET",
+                    "HEAD",
+                    "POST",
+                    "OPTIONS",
+                    "MERGE",
+                    "PUT",
+                ],
+                allowed_origins=[
+                    "http://www.contoso.com",
+                    "http://www.fabrikam.com",
+                ],
+                exposed_headers=["x-ms-meta-*"],
+                max_age_in_seconds=100,
+            ),
+            azure_native.storage.CorsRuleArgs(
+                allowed_headers=["*"],
+                allowed_methods=["GET"],
+                allowed_origins=["*"],
+                exposed_headers=["*"],
+                max_age_in_seconds=2,
+            ),
+            azure_native.storage.CorsRuleArgs(
+                allowed_headers=["x-ms-meta-12345675754564*"],
+                allowed_methods=[
+                    "GET",
+                    "PUT",
+                ],
+                allowed_origins=[
+                    "http://www.abc23.com",
+                    "https://www.fabrikam.com/*",
+                ],
+                exposed_headers=[
+                    "x-ms-meta-abc",
+                    "x-ms-meta-data*",
+                    "x-ms-meta-target*",
+                ],
+                max_age_in_seconds=2000,
+            ),
+        ],
+    ),
+    resource_group_name="res4410",
+    table_service_name="default")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:storage:TableServiceProperties default /subscriptions/{subscription-id}/resourceGroups/res4410/providers/Microsoft.Storage/storageAccounts/sto8607/tableServices/default 
+```
+
+ */
 @ResourceType(type="azure-native:storage:TableServiceProperties")
 public class TableServiceProperties extends io.pulumi.resources.CustomResource {
+    /**
+     * Specifies CORS rules for the Table service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Table service.
+     */
     @OutputExport(name="cors", type=CorsRulesResponse.class, parameters={})
     private Output</* @Nullable */ CorsRulesResponse> cors;
 
+    /**
+     * @return Specifies CORS rules for the Table service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Table service.
+     */
     public Output</* @Nullable */ CorsRulesResponse> getCors() {
         return this.cors;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public TableServiceProperties(String name, TableServicePropertiesArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storage:TableServiceProperties", name, args == null ? TableServicePropertiesArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -60,6 +407,14 @@ public class TableServiceProperties extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static TableServiceProperties get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TableServiceProperties(name, id, options);
     }

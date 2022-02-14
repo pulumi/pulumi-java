@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * VolumeAttachmentStatus is the status of a VolumeAttachment request.
+ */
 public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VolumeAttachmentStatusArgs Empty = new VolumeAttachmentStatusArgs();
 
+    /**
+     * The last error encountered during attach operation, if any. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
+     */
     @InputImport(name="attachError")
     private final @Nullable Input<VolumeErrorArgs> attachError;
 
@@ -24,6 +30,9 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
         return this.attachError == null ? Input.empty() : this.attachError;
     }
 
+    /**
+     * Indicates the volume is successfully attached. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
+     */
     @InputImport(name="attached", required=true)
     private final Input<Boolean> attached;
 
@@ -31,6 +40,9 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
         return this.attached;
     }
 
+    /**
+     * Upon successful attach, this field is populated with any information returned by the attach operation that must be passed into subsequent WaitForAttach or Mount calls. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
+     */
     @InputImport(name="attachmentMetadata")
     private final @Nullable Input<Map<String,String>> attachmentMetadata;
 
@@ -38,6 +50,9 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
         return this.attachmentMetadata == null ? Input.empty() : this.attachmentMetadata;
     }
 
+    /**
+     * The last error encountered during detach operation, if any. This field must only be set by the entity completing the detach operation, i.e. the external-attacher.
+     */
     @InputImport(name="detachError")
     private final @Nullable Input<VolumeErrorArgs> detachError;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListAccountKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListAccountKeysArgs Empty = new ListAccountKeysArgs();
 
+    /**
+     * The name of the Maps Account.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class ListAccountKeysArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the Azure Resource Group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

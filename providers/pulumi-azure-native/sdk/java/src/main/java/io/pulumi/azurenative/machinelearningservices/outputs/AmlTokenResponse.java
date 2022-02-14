@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AmlTokenResponse {
+/**
+ * Enum to determine identity framework.
+Expected value is 'AMLToken'.
+ */
     private final String identityType;
 
     @OutputCustomType.Constructor({"identityType"})
@@ -16,6 +20,10 @@ public final class AmlTokenResponse {
         this.identityType = Objects.requireNonNull(identityType);
     }
 
+/**
+ * Enum to determine identity framework.
+Expected value is 'AMLToken'.
+ */
     public String getIdentityType() {
         return this.identityType;
     }

@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Referenced tumbling window trigger dependency.
+ */
 public final class TumblingWindowTriggerDependencyReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TumblingWindowTriggerDependencyReferenceResponse Empty = new TumblingWindowTriggerDependencyReferenceResponse();
 
+    /**
+     * Timespan applied to the start time of a tumbling window when evaluating dependency.
+     */
     @InputImport(name="offset")
     private final @Nullable String offset;
 
@@ -22,6 +28,9 @@ public final class TumblingWindowTriggerDependencyReferenceResponse extends io.p
         return this.offset == null ? Optional.empty() : Optional.ofNullable(this.offset);
     }
 
+    /**
+     * Referenced trigger.
+     */
     @InputImport(name="referenceTrigger", required=true)
     private final TriggerReferenceResponse referenceTrigger;
 
@@ -29,6 +38,9 @@ public final class TumblingWindowTriggerDependencyReferenceResponse extends io.p
         return this.referenceTrigger;
     }
 
+    /**
+     * The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
+     */
     @InputImport(name="size")
     private final @Nullable String size;
 
@@ -36,6 +48,10 @@ public final class TumblingWindowTriggerDependencyReferenceResponse extends io.p
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 
+    /**
+     * The type of dependency reference.
+Expected value is 'TumblingWindowTriggerDependencyReference'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

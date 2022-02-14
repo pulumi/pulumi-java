@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Common field for data type in data connectors.
+ */
 public final class DataConnectorDataTypeCommonArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataConnectorDataTypeCommonArgs Empty = new DataConnectorDataTypeCommonArgs();
 
+    /**
+     * Describe whether this data type connection is enabled or not.
+     */
     @InputImport(name="state")
     private final @Nullable Input<Either<String,DataTypeState>> state;
 

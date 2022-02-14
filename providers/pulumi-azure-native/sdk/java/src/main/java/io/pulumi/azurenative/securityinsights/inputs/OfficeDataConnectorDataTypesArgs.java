@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The available data types for office data connector.
+ */
 public final class OfficeDataConnectorDataTypesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OfficeDataConnectorDataTypesArgs Empty = new OfficeDataConnectorDataTypesArgs();
 
+    /**
+     * Exchange data type connection.
+     */
     @InputImport(name="exchange")
     private final @Nullable Input<OfficeDataConnectorDataTypesExchangeArgs> exchange;
 
@@ -23,6 +29,9 @@ public final class OfficeDataConnectorDataTypesArgs extends io.pulumi.resources.
         return this.exchange == null ? Input.empty() : this.exchange;
     }
 
+    /**
+     * SharePoint data type connection.
+     */
     @InputImport(name="sharePoint")
     private final @Nullable Input<OfficeDataConnectorDataTypesSharePointArgs> sharePoint;
 
@@ -30,6 +39,9 @@ public final class OfficeDataConnectorDataTypesArgs extends io.pulumi.resources.
         return this.sharePoint == null ? Input.empty() : this.sharePoint;
     }
 
+    /**
+     * Teams data type connection.
+     */
     @InputImport(name="teams")
     private final @Nullable Input<OfficeDataConnectorDataTypesTeamsArgs> teams;
 

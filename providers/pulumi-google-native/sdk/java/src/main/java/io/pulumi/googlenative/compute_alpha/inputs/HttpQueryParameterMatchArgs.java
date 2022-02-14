@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * HttpRouteRuleMatch criteria for a request's query parameter.
+ */
 public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpQueryParameterMatchArgs Empty = new HttpQueryParameterMatchArgs();
 
+    /**
+     * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch, or regexMatch must be set. 
+     */
     @InputImport(name="exactMatch")
     private final @Nullable Input<String> exactMatch;
 
@@ -22,6 +28,9 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
         return this.exactMatch == null ? Input.empty() : this.exactMatch;
     }
 
+    /**
+     * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +38,9 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not. Only one of presentMatch, exactMatch, or regexMatch must be set. 
+     */
     @InputImport(name="presentMatch")
     private final @Nullable Input<Boolean> presentMatch;
 
@@ -36,6 +48,9 @@ public final class HttpQueryParameterMatchArgs extends io.pulumi.resources.Resou
         return this.presentMatch == null ? Input.empty() : this.presentMatch;
     }
 
+    /**
+     * The queryParameterMatch matches if the value of the parameter matches the regular expression specified by regexMatch. For more information about regular expression syntax, see Syntax. Only one of presentMatch, exactMatch, or regexMatch must be set. regexMatch only applies when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED. 
+     */
     @InputImport(name="regexMatch")
     private final @Nullable Input<String> regexMatch;
 

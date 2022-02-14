@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Office365 linked service.
+ */
 public final class Office365LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final Office365LinkedServiceArgs Empty = new Office365LinkedServiceArgs();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -29,6 +35,9 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -36,6 +45,9 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -43,6 +55,9 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -50,6 +65,9 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
+    /**
+     * Azure tenant ID to which the Office 365 account belongs. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="office365TenantId", required=true)
     private final Input<Object> office365TenantId;
 
@@ -57,6 +75,9 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
         return this.office365TenantId;
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -64,6 +85,9 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Specify the application's client ID. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="servicePrincipalId", required=true)
     private final Input<Object> servicePrincipalId;
 
@@ -71,6 +95,9 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
         return this.servicePrincipalId;
     }
 
+    /**
+     * Specify the application's key.
+     */
     @InputImport(name="servicePrincipalKey", required=true)
     private final Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
@@ -78,6 +105,9 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
         return this.servicePrincipalKey;
     }
 
+    /**
+     * Specify the tenant information under which your Azure AD web application resides. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="servicePrincipalTenantId", required=true)
     private final Input<Object> servicePrincipalTenantId;
 
@@ -85,6 +115,10 @@ public final class Office365LinkedServiceArgs extends io.pulumi.resources.Resour
         return this.servicePrincipalTenantId;
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'Office365'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

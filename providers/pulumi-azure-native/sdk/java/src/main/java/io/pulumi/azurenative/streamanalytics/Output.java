@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.streamanalytics;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.streamanalytics.OutputArgs;
 import io.pulumi.azurenative.streamanalytics.outputs.AvroSerializationResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.AzureDataLakeStoreOutputDataSourceResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.AzureSqlDatabaseOutputDataSourceResponse;
@@ -27,45 +26,1217 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An output object, containing all information associated with the named output. All outputs are contained under a streaming job.
+API Version: 2016-03-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create a DocumentDB output
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var output = new AzureNative.StreamAnalytics.Output("output", new AzureNative.StreamAnalytics.OutputArgs
+        {
+            Datasource = new AzureNative.StreamAnalytics.Inputs.DocumentDbOutputDataSourceArgs
+            {
+                AccountId = "someAccountId",
+                AccountKey = "accountKey==",
+                CollectionNamePattern = "collection",
+                Database = "db01",
+                DocumentId = "documentId",
+                PartitionKey = "key",
+                Type = "Microsoft.Storage/DocumentDB",
+            },
+            JobName = "sj2331",
+            OutputName = "output3022",
+            ResourceGroupName = "sjrg7983",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewOutput(ctx, "output", &streamanalytics.OutputArgs{
+			Datasource: streamanalytics.DocumentDbOutputDataSource{
+				AccountId:             "someAccountId",
+				AccountKey:            "accountKey==",
+				CollectionNamePattern: "collection",
+				Database:              "db01",
+				DocumentId:            "documentId",
+				PartitionKey:          "key",
+				Type:                  "Microsoft.Storage/DocumentDB",
+			},
+			JobName:           pulumi.String("sj2331"),
+			OutputName:        pulumi.String("output3022"),
+			ResourceGroupName: pulumi.String("sjrg7983"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const output = new azure_native.streamanalytics.Output("output", {
+    datasource: {
+        accountId: "someAccountId",
+        accountKey: "accountKey==",
+        collectionNamePattern: "collection",
+        database: "db01",
+        documentId: "documentId",
+        partitionKey: "key",
+        type: "Microsoft.Storage/DocumentDB",
+    },
+    jobName: "sj2331",
+    outputName: "output3022",
+    resourceGroupName: "sjrg7983",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+output = azure_native.streamanalytics.Output("output",
+    datasource=azure_native.streamanalytics.DocumentDbOutputDataSourceArgs(
+        account_id="someAccountId",
+        account_key="accountKey==",
+        collection_name_pattern="collection",
+        database="db01",
+        document_id="documentId",
+        partition_key="key",
+        type="Microsoft.Storage/DocumentDB",
+    ),
+    job_name="sj2331",
+    output_name="output3022",
+    resource_group_name="sjrg7983")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create a Power BI output
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var output = new AzureNative.StreamAnalytics.Output("output", new AzureNative.StreamAnalytics.OutputArgs
+        {
+            Datasource = new AzureNative.StreamAnalytics.Inputs.PowerBIOutputDataSourceArgs
+            {
+                Dataset = "someDataset",
+                GroupId = "ac40305e-3e8d-43ac-8161-c33799f43e95",
+                GroupName = "MyPowerBIGroup",
+                RefreshToken = "someRefreshToken==",
+                Table = "someTable",
+                TokenUserDisplayName = "Bob Smith",
+                TokenUserPrincipalName = "bobsmith@contoso.com",
+                Type = "PowerBI",
+            },
+            JobName = "sj2331",
+            OutputName = "output3022",
+            ResourceGroupName = "sjrg7983",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewOutput(ctx, "output", &streamanalytics.OutputArgs{
+			Datasource: streamanalytics.PowerBIOutputDataSource{
+				Dataset:                "someDataset",
+				GroupId:                "ac40305e-3e8d-43ac-8161-c33799f43e95",
+				GroupName:              "MyPowerBIGroup",
+				RefreshToken:           "someRefreshToken==",
+				Table:                  "someTable",
+				TokenUserDisplayName:   "Bob Smith",
+				TokenUserPrincipalName: "bobsmith@contoso.com",
+				Type:                   "PowerBI",
+			},
+			JobName:           pulumi.String("sj2331"),
+			OutputName:        pulumi.String("output3022"),
+			ResourceGroupName: pulumi.String("sjrg7983"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const output = new azure_native.streamanalytics.Output("output", {
+    datasource: {
+        dataset: "someDataset",
+        groupId: "ac40305e-3e8d-43ac-8161-c33799f43e95",
+        groupName: "MyPowerBIGroup",
+        refreshToken: "someRefreshToken==",
+        table: "someTable",
+        tokenUserDisplayName: "Bob Smith",
+        tokenUserPrincipalName: "bobsmith@contoso.com",
+        type: "PowerBI",
+    },
+    jobName: "sj2331",
+    outputName: "output3022",
+    resourceGroupName: "sjrg7983",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+output = azure_native.streamanalytics.Output("output",
+    datasource=azure_native.streamanalytics.PowerBIOutputDataSourceArgs(
+        dataset="someDataset",
+        group_id="ac40305e-3e8d-43ac-8161-c33799f43e95",
+        group_name="MyPowerBIGroup",
+        refresh_token="someRefreshToken==",
+        table="someTable",
+        token_user_display_name="Bob Smith",
+        token_user_principal_name="bobsmith@contoso.com",
+        type="PowerBI",
+    ),
+    job_name="sj2331",
+    output_name="output3022",
+    resource_group_name="sjrg7983")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create a Service Bus Queue output with Avro serialization
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var output = new AzureNative.StreamAnalytics.Output("output", new AzureNative.StreamAnalytics.OutputArgs
+        {
+            Datasource = new AzureNative.StreamAnalytics.Inputs.ServiceBusQueueOutputDataSourceArgs
+            {
+                PropertyColumns = 
+                {
+                    "column1",
+                    "column2",
+                },
+                QueueName = "sdkqueue",
+                ServiceBusNamespace = "sdktest",
+                SharedAccessPolicyKey = "sharedAccessPolicyKey=",
+                SharedAccessPolicyName = "RootManageSharedAccessKey",
+                Type = "Microsoft.ServiceBus/Queue",
+            },
+            JobName = "sj5095",
+            OutputName = "output3456",
+            ResourceGroupName = "sjrg3410",
+            Serialization = new AzureNative.StreamAnalytics.Inputs.AvroSerializationArgs
+            {
+                Type = "Avro",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewOutput(ctx, "output", &streamanalytics.OutputArgs{
+			Datasource: streamanalytics.ServiceBusQueueOutputDataSource{
+				PropertyColumns: []string{
+					"column1",
+					"column2",
+				},
+				QueueName:              "sdkqueue",
+				ServiceBusNamespace:    "sdktest",
+				SharedAccessPolicyKey:  "sharedAccessPolicyKey=",
+				SharedAccessPolicyName: "RootManageSharedAccessKey",
+				Type:                   "Microsoft.ServiceBus/Queue",
+			},
+			JobName:           pulumi.String("sj5095"),
+			OutputName:        pulumi.String("output3456"),
+			ResourceGroupName: pulumi.String("sjrg3410"),
+			Serialization: streamanalytics.AvroSerialization{
+				Type: "Avro",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const output = new azure_native.streamanalytics.Output("output", {
+    datasource: {
+        propertyColumns: [
+            "column1",
+            "column2",
+        ],
+        queueName: "sdkqueue",
+        serviceBusNamespace: "sdktest",
+        sharedAccessPolicyKey: "sharedAccessPolicyKey=",
+        sharedAccessPolicyName: "RootManageSharedAccessKey",
+        type: "Microsoft.ServiceBus/Queue",
+    },
+    jobName: "sj5095",
+    outputName: "output3456",
+    resourceGroupName: "sjrg3410",
+    serialization: {
+        type: "Avro",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+output = azure_native.streamanalytics.Output("output",
+    datasource=azure_native.streamanalytics.ServiceBusQueueOutputDataSourceArgs(
+        property_columns=[
+            "column1",
+            "column2",
+        ],
+        queue_name="sdkqueue",
+        service_bus_namespace="sdktest",
+        shared_access_policy_key="sharedAccessPolicyKey=",
+        shared_access_policy_name="RootManageSharedAccessKey",
+        type="Microsoft.ServiceBus/Queue",
+    ),
+    job_name="sj5095",
+    output_name="output3456",
+    resource_group_name="sjrg3410",
+    serialization=azure_native.streamanalytics.AvroSerializationArgs(
+        type="Avro",
+    ))
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create a Service Bus Topic output with CSV serialization
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var output = new AzureNative.StreamAnalytics.Output("output", new AzureNative.StreamAnalytics.OutputArgs
+        {
+            Datasource = new AzureNative.StreamAnalytics.Inputs.ServiceBusTopicOutputDataSourceArgs
+            {
+                PropertyColumns = 
+                {
+                    "column1",
+                    "column2",
+                },
+                ServiceBusNamespace = "sdktest",
+                SharedAccessPolicyKey = "sharedAccessPolicyKey=",
+                SharedAccessPolicyName = "RootManageSharedAccessKey",
+                TopicName = "sdktopic",
+                Type = "Microsoft.ServiceBus/Topic",
+            },
+            JobName = "sj7094",
+            OutputName = "output7886",
+            ResourceGroupName = "sjrg6450",
+            Serialization = new AzureNative.StreamAnalytics.Inputs.CsvSerializationArgs
+            {
+                Encoding = "UTF8",
+                FieldDelimiter = ",",
+                Type = "Csv",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewOutput(ctx, "output", &streamanalytics.OutputArgs{
+			Datasource: streamanalytics.ServiceBusTopicOutputDataSource{
+				PropertyColumns: []string{
+					"column1",
+					"column2",
+				},
+				ServiceBusNamespace:    "sdktest",
+				SharedAccessPolicyKey:  "sharedAccessPolicyKey=",
+				SharedAccessPolicyName: "RootManageSharedAccessKey",
+				TopicName:              "sdktopic",
+				Type:                   "Microsoft.ServiceBus/Topic",
+			},
+			JobName:           pulumi.String("sj7094"),
+			OutputName:        pulumi.String("output7886"),
+			ResourceGroupName: pulumi.String("sjrg6450"),
+			Serialization: streamanalytics.CsvSerialization{
+				Encoding:       "UTF8",
+				FieldDelimiter: ",",
+				Type:           "Csv",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const output = new azure_native.streamanalytics.Output("output", {
+    datasource: {
+        propertyColumns: [
+            "column1",
+            "column2",
+        ],
+        serviceBusNamespace: "sdktest",
+        sharedAccessPolicyKey: "sharedAccessPolicyKey=",
+        sharedAccessPolicyName: "RootManageSharedAccessKey",
+        topicName: "sdktopic",
+        type: "Microsoft.ServiceBus/Topic",
+    },
+    jobName: "sj7094",
+    outputName: "output7886",
+    resourceGroupName: "sjrg6450",
+    serialization: {
+        encoding: "UTF8",
+        fieldDelimiter: ",",
+        type: "Csv",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+output = azure_native.streamanalytics.Output("output",
+    datasource=azure_native.streamanalytics.ServiceBusTopicOutputDataSourceArgs(
+        property_columns=[
+            "column1",
+            "column2",
+        ],
+        service_bus_namespace="sdktest",
+        shared_access_policy_key="sharedAccessPolicyKey=",
+        shared_access_policy_name="RootManageSharedAccessKey",
+        topic_name="sdktopic",
+        type="Microsoft.ServiceBus/Topic",
+    ),
+    job_name="sj7094",
+    output_name="output7886",
+    resource_group_name="sjrg6450",
+    serialization=azure_native.streamanalytics.CsvSerializationArgs(
+        encoding="UTF8",
+        field_delimiter=",",
+        type="Csv",
+    ))
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create a blob output with CSV serialization
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var output = new AzureNative.StreamAnalytics.Output("output", new AzureNative.StreamAnalytics.OutputArgs
+        {
+            Datasource = new AzureNative.StreamAnalytics.Inputs.BlobOutputDataSourceArgs
+            {
+                Container = "state",
+                DateFormat = "yyyy/MM/dd",
+                PathPattern = "{date}/{time}",
+                StorageAccounts = 
+                {
+                    new AzureNative.StreamAnalytics.Inputs.StorageAccountArgs
+                    {
+                        AccountKey = "accountKey==",
+                        AccountName = "someAccountName",
+                    },
+                },
+                TimeFormat = "HH",
+                Type = "Microsoft.Storage/Blob",
+            },
+            JobName = "sj900",
+            OutputName = "output1623",
+            ResourceGroupName = "sjrg5023",
+            Serialization = new AzureNative.StreamAnalytics.Inputs.CsvSerializationArgs
+            {
+                Encoding = "UTF8",
+                FieldDelimiter = ",",
+                Type = "Csv",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewOutput(ctx, "output", &streamanalytics.OutputArgs{
+			Datasource: streamanalytics.BlobOutputDataSource{
+				Container:   "state",
+				DateFormat:  "yyyy/MM/dd",
+				PathPattern: "{date}/{time}",
+				StorageAccounts: []streamanalytics.StorageAccount{
+					streamanalytics.StorageAccount{
+						AccountKey:  "accountKey==",
+						AccountName: "someAccountName",
+					},
+				},
+				TimeFormat: "HH",
+				Type:       "Microsoft.Storage/Blob",
+			},
+			JobName:           pulumi.String("sj900"),
+			OutputName:        pulumi.String("output1623"),
+			ResourceGroupName: pulumi.String("sjrg5023"),
+			Serialization: streamanalytics.CsvSerialization{
+				Encoding:       "UTF8",
+				FieldDelimiter: ",",
+				Type:           "Csv",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const output = new azure_native.streamanalytics.Output("output", {
+    datasource: {
+        container: "state",
+        dateFormat: "yyyy/MM/dd",
+        pathPattern: "{date}/{time}",
+        storageAccounts: [{
+            accountKey: "accountKey==",
+            accountName: "someAccountName",
+        }],
+        timeFormat: "HH",
+        type: "Microsoft.Storage/Blob",
+    },
+    jobName: "sj900",
+    outputName: "output1623",
+    resourceGroupName: "sjrg5023",
+    serialization: {
+        encoding: "UTF8",
+        fieldDelimiter: ",",
+        type: "Csv",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+output = azure_native.streamanalytics.Output("output",
+    datasource=azure_native.streamanalytics.BlobOutputDataSourceArgs(
+        container="state",
+        date_format="yyyy/MM/dd",
+        path_pattern="{date}/{time}",
+        storage_accounts=[azure_native.streamanalytics.StorageAccountArgs(
+            account_key="accountKey==",
+            account_name="someAccountName",
+        )],
+        time_format="HH",
+        type="Microsoft.Storage/Blob",
+    ),
+    job_name="sj900",
+    output_name="output1623",
+    resource_group_name="sjrg5023",
+    serialization=azure_native.streamanalytics.CsvSerializationArgs(
+        encoding="UTF8",
+        field_delimiter=",",
+        type="Csv",
+    ))
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create an Azure Data Lake Store output with JSON serialization
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var output = new AzureNative.StreamAnalytics.Output("output", new AzureNative.StreamAnalytics.OutputArgs
+        {
+            Datasource = new AzureNative.StreamAnalytics.Inputs.AzureDataLakeStoreOutputDataSourceArgs
+            {
+                AccountName = "someaccount",
+                DateFormat = "yyyy/MM/dd",
+                FilePathPrefix = "{date}/{time}",
+                RefreshToken = "someRefreshToken==",
+                TenantId = "cea4e98b-c798-49e7-8c40-4a2b3beb47dd",
+                TimeFormat = "HH",
+                TokenUserDisplayName = "Bob Smith",
+                TokenUserPrincipalName = "bobsmith@contoso.com",
+                Type = "Microsoft.DataLake/Accounts",
+            },
+            JobName = "sj3310",
+            OutputName = "output5195",
+            ResourceGroupName = "sjrg6912",
+            Serialization = new AzureNative.StreamAnalytics.Inputs.JsonSerializationArgs
+            {
+                Encoding = "UTF8",
+                Format = "Array",
+                Type = "Json",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewOutput(ctx, "output", &streamanalytics.OutputArgs{
+			Datasource: streamanalytics.AzureDataLakeStoreOutputDataSource{
+				AccountName:            "someaccount",
+				DateFormat:             "yyyy/MM/dd",
+				FilePathPrefix:         "{date}/{time}",
+				RefreshToken:           "someRefreshToken==",
+				TenantId:               "cea4e98b-c798-49e7-8c40-4a2b3beb47dd",
+				TimeFormat:             "HH",
+				TokenUserDisplayName:   "Bob Smith",
+				TokenUserPrincipalName: "bobsmith@contoso.com",
+				Type:                   "Microsoft.DataLake/Accounts",
+			},
+			JobName:           pulumi.String("sj3310"),
+			OutputName:        pulumi.String("output5195"),
+			ResourceGroupName: pulumi.String("sjrg6912"),
+			Serialization: streamanalytics.JsonSerialization{
+				Encoding: "UTF8",
+				Format:   "Array",
+				Type:     "Json",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const output = new azure_native.streamanalytics.Output("output", {
+    datasource: {
+        accountName: "someaccount",
+        dateFormat: "yyyy/MM/dd",
+        filePathPrefix: "{date}/{time}",
+        refreshToken: "someRefreshToken==",
+        tenantId: "cea4e98b-c798-49e7-8c40-4a2b3beb47dd",
+        timeFormat: "HH",
+        tokenUserDisplayName: "Bob Smith",
+        tokenUserPrincipalName: "bobsmith@contoso.com",
+        type: "Microsoft.DataLake/Accounts",
+    },
+    jobName: "sj3310",
+    outputName: "output5195",
+    resourceGroupName: "sjrg6912",
+    serialization: {
+        encoding: "UTF8",
+        format: "Array",
+        type: "Json",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+output = azure_native.streamanalytics.Output("output",
+    datasource=azure_native.streamanalytics.AzureDataLakeStoreOutputDataSourceArgs(
+        account_name="someaccount",
+        date_format="yyyy/MM/dd",
+        file_path_prefix="{date}/{time}",
+        refresh_token="someRefreshToken==",
+        tenant_id="cea4e98b-c798-49e7-8c40-4a2b3beb47dd",
+        time_format="HH",
+        token_user_display_name="Bob Smith",
+        token_user_principal_name="bobsmith@contoso.com",
+        type="Microsoft.DataLake/Accounts",
+    ),
+    job_name="sj3310",
+    output_name="output5195",
+    resource_group_name="sjrg6912",
+    serialization=azure_native.streamanalytics.JsonSerializationArgs(
+        encoding="UTF8",
+        format="Array",
+        type="Json",
+    ))
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create an Azure SQL database output
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var output = new AzureNative.StreamAnalytics.Output("output", new AzureNative.StreamAnalytics.OutputArgs
+        {
+            Datasource = new AzureNative.StreamAnalytics.Inputs.AzureSqlDatabaseOutputDataSourceArgs
+            {
+                Database = "someDatabase",
+                Password = "somePassword",
+                Server = "someServer",
+                Table = "someTable",
+                Type = "Microsoft.Sql/Server/Database",
+                User = "<user>",
+            },
+            JobName = "sj6458",
+            OutputName = "output1755",
+            ResourceGroupName = "sjrg2157",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewOutput(ctx, "output", &streamanalytics.OutputArgs{
+			Datasource: streamanalytics.AzureSqlDatabaseOutputDataSource{
+				Database: "someDatabase",
+				Password: "somePassword",
+				Server:   "someServer",
+				Table:    "someTable",
+				Type:     "Microsoft.Sql/Server/Database",
+				User:     "<user>",
+			},
+			JobName:           pulumi.String("sj6458"),
+			OutputName:        pulumi.String("output1755"),
+			ResourceGroupName: pulumi.String("sjrg2157"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const output = new azure_native.streamanalytics.Output("output", {
+    datasource: {
+        database: "someDatabase",
+        password: "somePassword",
+        server: "someServer",
+        table: "someTable",
+        type: "Microsoft.Sql/Server/Database",
+        user: "<user>",
+    },
+    jobName: "sj6458",
+    outputName: "output1755",
+    resourceGroupName: "sjrg2157",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+output = azure_native.streamanalytics.Output("output",
+    datasource=azure_native.streamanalytics.AzureSqlDatabaseOutputDataSourceArgs(
+        database="someDatabase",
+        password="somePassword",
+        server="someServer",
+        table="someTable",
+        type="Microsoft.Sql/Server/Database",
+        user="<user>",
+    ),
+    job_name="sj6458",
+    output_name="output1755",
+    resource_group_name="sjrg2157")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create an Azure Table output
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var output = new AzureNative.StreamAnalytics.Output("output", new AzureNative.StreamAnalytics.OutputArgs
+        {
+            Datasource = new AzureNative.StreamAnalytics.Inputs.AzureTableOutputDataSourceArgs
+            {
+                AccountKey = "accountKey==",
+                AccountName = "someAccountName",
+                BatchSize = 25,
+                ColumnsToRemove = 
+                {
+                    "column1",
+                    "column2",
+                },
+                PartitionKey = "partitionKey",
+                RowKey = "rowKey",
+                Table = "samples",
+                Type = "Microsoft.Storage/Table",
+            },
+            JobName = "sj2790",
+            OutputName = "output958",
+            ResourceGroupName = "sjrg5176",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewOutput(ctx, "output", &streamanalytics.OutputArgs{
+			Datasource: streamanalytics.AzureTableOutputDataSource{
+				AccountKey:  "accountKey==",
+				AccountName: "someAccountName",
+				BatchSize:   25,
+				ColumnsToRemove: []string{
+					"column1",
+					"column2",
+				},
+				PartitionKey: "partitionKey",
+				RowKey:       "rowKey",
+				Table:        "samples",
+				Type:         "Microsoft.Storage/Table",
+			},
+			JobName:           pulumi.String("sj2790"),
+			OutputName:        pulumi.String("output958"),
+			ResourceGroupName: pulumi.String("sjrg5176"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const output = new azure_native.streamanalytics.Output("output", {
+    datasource: {
+        accountKey: "accountKey==",
+        accountName: "someAccountName",
+        batchSize: 25,
+        columnsToRemove: [
+            "column1",
+            "column2",
+        ],
+        partitionKey: "partitionKey",
+        rowKey: "rowKey",
+        table: "samples",
+        type: "Microsoft.Storage/Table",
+    },
+    jobName: "sj2790",
+    outputName: "output958",
+    resourceGroupName: "sjrg5176",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+output = azure_native.streamanalytics.Output("output",
+    datasource=azure_native.streamanalytics.AzureTableOutputDataSourceArgs(
+        account_key="accountKey==",
+        account_name="someAccountName",
+        batch_size=25,
+        columns_to_remove=[
+            "column1",
+            "column2",
+        ],
+        partition_key="partitionKey",
+        row_key="rowKey",
+        table="samples",
+        type="Microsoft.Storage/Table",
+    ),
+    job_name="sj2790",
+    output_name="output958",
+    resource_group_name="sjrg5176")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create an Event Hub output with JSON serialization
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var output = new AzureNative.StreamAnalytics.Output("output", new AzureNative.StreamAnalytics.OutputArgs
+        {
+            Datasource = new AzureNative.StreamAnalytics.Inputs.EventHubOutputDataSourceArgs
+            {
+                EventHubName = "sdkeventhub",
+                PartitionKey = "partitionKey",
+                ServiceBusNamespace = "sdktest",
+                SharedAccessPolicyKey = "sharedAccessPolicyKey=",
+                SharedAccessPolicyName = "RootManageSharedAccessKey",
+                Type = "Microsoft.ServiceBus/EventHub",
+            },
+            JobName = "sj3310",
+            OutputName = "output5195",
+            ResourceGroupName = "sjrg6912",
+            Serialization = new AzureNative.StreamAnalytics.Inputs.JsonSerializationArgs
+            {
+                Encoding = "UTF8",
+                Format = "Array",
+                Type = "Json",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewOutput(ctx, "output", &streamanalytics.OutputArgs{
+			Datasource: streamanalytics.EventHubOutputDataSource{
+				EventHubName:           "sdkeventhub",
+				PartitionKey:           "partitionKey",
+				ServiceBusNamespace:    "sdktest",
+				SharedAccessPolicyKey:  "sharedAccessPolicyKey=",
+				SharedAccessPolicyName: "RootManageSharedAccessKey",
+				Type:                   "Microsoft.ServiceBus/EventHub",
+			},
+			JobName:           pulumi.String("sj3310"),
+			OutputName:        pulumi.String("output5195"),
+			ResourceGroupName: pulumi.String("sjrg6912"),
+			Serialization: streamanalytics.JsonSerialization{
+				Encoding: "UTF8",
+				Format:   "Array",
+				Type:     "Json",
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const output = new azure_native.streamanalytics.Output("output", {
+    datasource: {
+        eventHubName: "sdkeventhub",
+        partitionKey: "partitionKey",
+        serviceBusNamespace: "sdktest",
+        sharedAccessPolicyKey: "sharedAccessPolicyKey=",
+        sharedAccessPolicyName: "RootManageSharedAccessKey",
+        type: "Microsoft.ServiceBus/EventHub",
+    },
+    jobName: "sj3310",
+    outputName: "output5195",
+    resourceGroupName: "sjrg6912",
+    serialization: {
+        encoding: "UTF8",
+        format: "Array",
+        type: "Json",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+output = azure_native.streamanalytics.Output("output",
+    datasource=azure_native.streamanalytics.EventHubOutputDataSourceArgs(
+        event_hub_name="sdkeventhub",
+        partition_key="partitionKey",
+        service_bus_namespace="sdktest",
+        shared_access_policy_key="sharedAccessPolicyKey=",
+        shared_access_policy_name="RootManageSharedAccessKey",
+        type="Microsoft.ServiceBus/EventHub",
+    ),
+    job_name="sj3310",
+    output_name="output5195",
+    resource_group_name="sjrg6912",
+    serialization=azure_native.streamanalytics.JsonSerializationArgs(
+        encoding="UTF8",
+        format="Array",
+        type="Json",
+    ))
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:streamanalytics:Output output5195 /subscriptions/56b5e0a9-b645-407d-99b0-c64f86013e3d/resourceGroups/sjrg6912/providers/Microsoft.StreamAnalytics/streamingjobs/sj3310/outputs/output5195 
+```
+
+ */
 @ResourceType(type="azure-native:streamanalytics:Output")
 public class Output extends io.pulumi.resources.CustomResource {
+    /**
+     * Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
+     */
     @OutputExport(name="datasource", type=Object.class, parameters={})
     private io.pulumi.core.Output</* @Nullable */ Object> datasource;
 
+    /**
+     * @return Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
+     */
     public io.pulumi.core.Output</* @Nullable */ Object> getDatasource() {
         return this.datasource;
     }
+    /**
+     * Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
+     */
     @OutputExport(name="diagnostics", type=DiagnosticsResponse.class, parameters={})
     private io.pulumi.core.Output<DiagnosticsResponse> diagnostics;
 
+    /**
+     * @return Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
+     */
     public io.pulumi.core.Output<DiagnosticsResponse> getDiagnostics() {
         return this.diagnostics;
     }
+    /**
+     * The current entity tag for the output. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private io.pulumi.core.Output<String> etag;
 
+    /**
+     * @return The current entity tag for the output. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
+     */
     public io.pulumi.core.Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private io.pulumi.core.Output</* @Nullable */ String> name;
 
+    /**
+     * @return Resource name
+     */
     public io.pulumi.core.Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
+     */
     @OutputExport(name="serialization", type=Object.class, parameters={})
     private io.pulumi.core.Output</* @Nullable */ Object> serialization;
 
+    /**
+     * @return Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
+     */
     public io.pulumi.core.Output</* @Nullable */ Object> getSerialization() {
         return this.serialization;
     }
+    /**
+     * Resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private io.pulumi.core.Output<String> type;
 
+    /**
+     * @return Resource type
+     */
     public io.pulumi.core.Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Output(String name, OutputArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:streamanalytics:Output", name, args == null ? OutputArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -87,6 +1258,14 @@ public class Output extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Output get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Output(name, id, options);
     }

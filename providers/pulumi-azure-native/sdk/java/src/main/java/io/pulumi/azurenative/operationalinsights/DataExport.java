@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.operationalinsights;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.operationalinsights.DataExportArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -15,63 +14,223 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The top level data export resource container.
+API Version: 2020-08-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### DataExportCreate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataExport = new AzureNative.OperationalInsights.DataExport("dataExport", new AzureNative.OperationalInsights.DataExportArgs
+        {
+            DataExportName = "export1",
+            ResourceGroupName = "RgTest1",
+            ResourceId = "/subscriptions/192b9f85-a39a-4276-b96d-d5cd351703f9/resourceGroups/OIAutoRest1234/providers/Microsoft.EventHub/namespaces/test",
+            TableNames = 
+            {
+                "Heartbeat",
+            },
+            WorkspaceName = "DeWnTest1234",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	operationalinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/operationalinsights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := operationalinsights.NewDataExport(ctx, "dataExport", &operationalinsights.DataExportArgs{
+			DataExportName:    pulumi.String("export1"),
+			ResourceGroupName: pulumi.String("RgTest1"),
+			ResourceId:        pulumi.String("/subscriptions/192b9f85-a39a-4276-b96d-d5cd351703f9/resourceGroups/OIAutoRest1234/providers/Microsoft.EventHub/namespaces/test"),
+			TableNames: pulumi.StringArray{
+				pulumi.String("Heartbeat"),
+			},
+			WorkspaceName: pulumi.String("DeWnTest1234"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const dataExport = new azure_native.operationalinsights.DataExport("dataExport", {
+    dataExportName: "export1",
+    resourceGroupName: "RgTest1",
+    resourceId: "/subscriptions/192b9f85-a39a-4276-b96d-d5cd351703f9/resourceGroups/OIAutoRest1234/providers/Microsoft.EventHub/namespaces/test",
+    tableNames: ["Heartbeat"],
+    workspaceName: "DeWnTest1234",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+data_export = azure_native.operationalinsights.DataExport("dataExport",
+    data_export_name="export1",
+    resource_group_name="RgTest1",
+    resource_id="/subscriptions/192b9f85-a39a-4276-b96d-d5cd351703f9/resourceGroups/OIAutoRest1234/providers/Microsoft.EventHub/namespaces/test",
+    table_names=["Heartbeat"],
+    workspace_name="DeWnTest1234")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:operationalinsights:DataExport export1 /subscriptions/00000000-0000-0000-0000-00000000000/resourcegroups/RgTest1/providers/microsoft.operationalinsights/workspaces/DeWnTest1234/export/export1 
+```
+
+ */
 @ResourceType(type="azure-native:operationalinsights:DataExport")
 public class DataExport extends io.pulumi.resources.CustomResource {
+    /**
+     * The latest data export rule modification time.
+     */
     @OutputExport(name="createdDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdDate;
 
+    /**
+     * @return The latest data export rule modification time.
+     */
     public Output</* @Nullable */ String> getCreatedDate() {
         return this.createdDate;
     }
+    /**
+     * The data export rule ID.
+     */
     @OutputExport(name="dataExportId", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataExportId;
 
+    /**
+     * @return The data export rule ID.
+     */
     public Output</* @Nullable */ String> getDataExportId() {
         return this.dataExportId;
     }
+    /**
+     * Active when enabled.
+     */
     @OutputExport(name="enable", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enable;
 
+    /**
+     * @return Active when enabled.
+     */
     public Output</* @Nullable */ Boolean> getEnable() {
         return this.enable;
     }
+    /**
+     * Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
+     */
     @OutputExport(name="eventHubName", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventHubName;
 
+    /**
+     * @return Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
+     */
     public Output</* @Nullable */ String> getEventHubName() {
         return this.eventHubName;
     }
+    /**
+     * Date and time when the export was last modified.
+     */
     @OutputExport(name="lastModifiedDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedDate;
 
+    /**
+     * @return Date and time when the export was last modified.
+     */
     public Output</* @Nullable */ String> getLastModifiedDate() {
         return this.lastModifiedDate;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
+     */
     @OutputExport(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
+    /**
+     * @return The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
+     */
     public Output<String> getResourceId() {
         return this.resourceId;
     }
+    /**
+     * An array of tables to export, for example: [“Heartbeat, SecurityEvent”].
+     */
     @OutputExport(name="tableNames", type=List.class, parameters={String.class})
     private Output<List<String>> tableNames;
 
+    /**
+     * @return An array of tables to export, for example: [“Heartbeat, SecurityEvent”].
+     */
     public Output<List<String>> getTableNames() {
         return this.tableNames;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DataExport(String name, DataExportArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:operationalinsights:DataExport", name, args == null ? DataExportArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -92,6 +251,14 @@ public class DataExport extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DataExport get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DataExport(name, id, options);
     }

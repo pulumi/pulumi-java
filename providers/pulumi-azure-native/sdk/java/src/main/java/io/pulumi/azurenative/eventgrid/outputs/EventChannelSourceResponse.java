@@ -11,6 +11,10 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EventChannelSourceResponse {
+/**
+ * The identifier of the resource that's the source of the events.
+This represents a unique resource in the partner's resource model.
+ */
     private final @Nullable String source;
 
     @OutputCustomType.Constructor({"source"})
@@ -18,6 +22,10 @@ public final class EventChannelSourceResponse {
         this.source = source;
     }
 
+/**
+ * The identifier of the resource that's the source of the events.
+This represents a unique resource in the partner's resource model.
+ */
     public Optional<String> getSource() {
         return Optional.ofNullable(this.source);
     }

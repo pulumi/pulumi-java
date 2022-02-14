@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetVirtualMachineScaleSetExtensionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVirtualMachineScaleSetExtensionArgs Empty = new GetVirtualMachineScaleSetExtensionArgs();
 
+    /**
+     * The expand expression to apply on the operation.
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +27,9 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends io.pulumi.reso
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -28,6 +37,9 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends io.pulumi.reso
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the VM scale set containing the extension.
+     */
     @InputImport(name="vmScaleSetName", required=true)
     private final String vmScaleSetName;
 
@@ -35,6 +47,9 @@ public final class GetVirtualMachineScaleSetExtensionArgs extends io.pulumi.reso
         return this.vmScaleSetName;
     }
 
+    /**
+     * The name of the VM scale set extension.
+     */
     @InputImport(name="vmssExtensionName", required=true)
     private final String vmssExtensionName;
 

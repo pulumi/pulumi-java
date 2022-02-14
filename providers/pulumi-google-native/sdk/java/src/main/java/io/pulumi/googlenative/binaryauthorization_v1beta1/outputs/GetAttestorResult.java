@@ -10,9 +10,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetAttestorResult {
+/**
+ * Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
+ */
     private final String description;
+/**
+ * The resource name, in the format: `projects//{@literal /}attestors/*`. This field may not be updated.
+ */
     private final String name;
+/**
+ * Time when the attestor was last updated.
+ */
     private final String updateTime;
+/**
+ * A Drydock ATTESTATION_AUTHORITY Note, created by the user.
+ */
     private final UserOwnedDrydockNoteResponse userOwnedDrydockNote;
 
     @OutputCustomType.Constructor({"description","name","updateTime","userOwnedDrydockNote"})
@@ -27,15 +39,27 @@ public final class GetAttestorResult {
         this.userOwnedDrydockNote = Objects.requireNonNull(userOwnedDrydockNote);
     }
 
+/**
+ * Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
+ */
     public String getDescription() {
         return this.description;
     }
+/**
+ * The resource name, in the format: `projects//{@literal /}attestors/*`. This field may not be updated.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Time when the attestor was last updated.
+ */
     public String getUpdateTime() {
         return this.updateTime;
     }
+/**
+ * A Drydock ATTESTATION_AUTHORITY Note, created by the user.
+ */
     public UserOwnedDrydockNoteResponse getUserOwnedDrydockNote() {
         return this.userOwnedDrydockNote;
     }

@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Policy Info in backupInstance
+ */
 public final class PolicyInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PolicyInfoResponse Empty = new PolicyInfoResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="policyId", required=true)
     private final String policyId;
 
@@ -22,6 +28,9 @@ public final class PolicyInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.policyId;
     }
 
+    /**
+     * Policy parameters for the backup instance
+     */
     @InputImport(name="policyParameters")
     private final @Nullable PolicyParametersResponse policyParameters;
 
@@ -29,6 +38,9 @@ public final class PolicyInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.policyParameters == null ? Optional.empty() : Optional.ofNullable(this.policyParameters);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="policyVersion", required=true)
     private final String policyVersion;
 

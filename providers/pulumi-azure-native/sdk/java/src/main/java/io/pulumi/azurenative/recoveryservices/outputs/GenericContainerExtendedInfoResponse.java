@@ -13,8 +13,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GenericContainerExtendedInfoResponse {
+/**
+ * Container identity information
+ */
     private final @Nullable ContainerIdentityInfoResponse containerIdentityInfo;
+/**
+ * Public key of container cert
+ */
     private final @Nullable String rawCertData;
+/**
+ * Azure Backup Service Endpoints for the container
+ */
     private final @Nullable Map<String,String> serviceEndpoints;
 
     @OutputCustomType.Constructor({"containerIdentityInfo","rawCertData","serviceEndpoints"})
@@ -27,12 +36,21 @@ public final class GenericContainerExtendedInfoResponse {
         this.serviceEndpoints = serviceEndpoints;
     }
 
+/**
+ * Container identity information
+ */
     public Optional<ContainerIdentityInfoResponse> getContainerIdentityInfo() {
         return Optional.ofNullable(this.containerIdentityInfo);
     }
+/**
+ * Public key of container cert
+ */
     public Optional<String> getRawCertData() {
         return Optional.ofNullable(this.rawCertData);
     }
+/**
+ * Azure Backup Service Endpoints for the container
+ */
     public Map<String,String> getServiceEndpoints() {
         return this.serviceEndpoints == null ? Map.of() : this.serviceEndpoints;
     }

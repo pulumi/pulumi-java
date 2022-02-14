@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.ExpressRouteCircuitArgs;
 import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitAuthorizationResponse;
 import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitPeeringResponse;
 import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitServiceProviderPropertiesResponse;
@@ -23,129 +22,504 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * ExpressRouteCircuit resource.
+API Version: 2020-11-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create ExpressRouteCircuit
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var expressRouteCircuit = new AzureNative.Network.ExpressRouteCircuit("expressRouteCircuit", new AzureNative.Network.ExpressRouteCircuitArgs
+        {
+            AllowClassicOperations = false,
+            Authorizations = {},
+            CircuitName = "circuitName",
+            Location = "Brazil South",
+            Peerings = {},
+            ResourceGroupName = "rg1",
+            ServiceProviderProperties = new AzureNative.Network.Inputs.ExpressRouteCircuitServiceProviderPropertiesArgs
+            {
+                BandwidthInMbps = 200,
+                PeeringLocation = "Silicon Valley",
+                ServiceProviderName = "Equinix",
+            },
+            Sku = new AzureNative.Network.Inputs.ExpressRouteCircuitSkuArgs
+            {
+                Family = "MeteredData",
+                Name = "Standard_MeteredData",
+                Tier = "Standard",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewExpressRouteCircuit(ctx, "expressRouteCircuit", &network.ExpressRouteCircuitArgs{
+			AllowClassicOperations: pulumi.Bool(false),
+			Authorizations:         network.ExpressRouteCircuitAuthorizationArray{},
+			CircuitName:            pulumi.String("circuitName"),
+			Location:               pulumi.String("Brazil South"),
+			Peerings:               network.ExpressRouteCircuitPeeringArray{},
+			ResourceGroupName:      pulumi.String("rg1"),
+			ServiceProviderProperties: &network.ExpressRouteCircuitServiceProviderPropertiesArgs{
+				BandwidthInMbps:     pulumi.Int(200),
+				PeeringLocation:     pulumi.String("Silicon Valley"),
+				ServiceProviderName: pulumi.String("Equinix"),
+			},
+			Sku: &network.ExpressRouteCircuitSkuArgs{
+				Family: pulumi.String("MeteredData"),
+				Name:   pulumi.String("Standard_MeteredData"),
+				Tier:   pulumi.String("Standard"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const expressRouteCircuit = new azure_native.network.ExpressRouteCircuit("expressRouteCircuit", {
+    allowClassicOperations: false,
+    authorizations: [],
+    circuitName: "circuitName",
+    location: "Brazil South",
+    peerings: [],
+    resourceGroupName: "rg1",
+    serviceProviderProperties: {
+        bandwidthInMbps: 200,
+        peeringLocation: "Silicon Valley",
+        serviceProviderName: "Equinix",
+    },
+    sku: {
+        family: "MeteredData",
+        name: "Standard_MeteredData",
+        tier: "Standard",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+express_route_circuit = azure_native.network.ExpressRouteCircuit("expressRouteCircuit",
+    allow_classic_operations=False,
+    authorizations=[],
+    circuit_name="circuitName",
+    location="Brazil South",
+    peerings=[],
+    resource_group_name="rg1",
+    service_provider_properties=azure_native.network.ExpressRouteCircuitServiceProviderPropertiesArgs(
+        bandwidth_in_mbps=200,
+        peering_location="Silicon Valley",
+        service_provider_name="Equinix",
+    ),
+    sku=azure_native.network.ExpressRouteCircuitSkuArgs(
+        family="MeteredData",
+        name="Standard_MeteredData",
+        tier="Standard",
+    ))
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create ExpressRouteCircuit on ExpressRoutePort
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var expressRouteCircuit = new AzureNative.Network.ExpressRouteCircuit("expressRouteCircuit", new AzureNative.Network.ExpressRouteCircuitArgs
+        {
+            BandwidthInGbps = 10,
+            CircuitName = "expressRouteCircuit1",
+            ExpressRoutePort = new AzureNative.Network.Inputs.SubResourceArgs
+            {
+                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRoutePorts/portName",
+            },
+            Location = "westus",
+            ResourceGroupName = "rg1",
+            Sku = new AzureNative.Network.Inputs.ExpressRouteCircuitSkuArgs
+            {
+                Family = "MeteredData",
+                Name = "Premium_MeteredData",
+                Tier = "Premium",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewExpressRouteCircuit(ctx, "expressRouteCircuit", &network.ExpressRouteCircuitArgs{
+			BandwidthInGbps: pulumi.Float64(10),
+			CircuitName:     pulumi.String("expressRouteCircuit1"),
+			ExpressRoutePort: &network.SubResourceArgs{
+				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRoutePorts/portName"),
+			},
+			Location:          pulumi.String("westus"),
+			ResourceGroupName: pulumi.String("rg1"),
+			Sku: &network.ExpressRouteCircuitSkuArgs{
+				Family: pulumi.String("MeteredData"),
+				Name:   pulumi.String("Premium_MeteredData"),
+				Tier:   pulumi.String("Premium"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const expressRouteCircuit = new azure_native.network.ExpressRouteCircuit("expressRouteCircuit", {
+    bandwidthInGbps: 10,
+    circuitName: "expressRouteCircuit1",
+    expressRoutePort: {
+        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRoutePorts/portName",
+    },
+    location: "westus",
+    resourceGroupName: "rg1",
+    sku: {
+        family: "MeteredData",
+        name: "Premium_MeteredData",
+        tier: "Premium",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+express_route_circuit = azure_native.network.ExpressRouteCircuit("expressRouteCircuit",
+    bandwidth_in_gbps=10,
+    circuit_name="expressRouteCircuit1",
+    express_route_port=azure_native.network.SubResourceArgs(
+        id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRoutePorts/portName",
+    ),
+    location="westus",
+    resource_group_name="rg1",
+    sku=azure_native.network.ExpressRouteCircuitSkuArgs(
+        family="MeteredData",
+        name="Premium_MeteredData",
+        tier="Premium",
+    ))
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:ExpressRouteCircuit expressRouteCircuit1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRouteCircuits/expressRouteCircuit1 
+```
+
+ */
 @ResourceType(type="azure-native:network:ExpressRouteCircuit")
 public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
+    /**
+     * Allow classic operations.
+     */
     @OutputExport(name="allowClassicOperations", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowClassicOperations;
 
+    /**
+     * @return Allow classic operations.
+     */
     public Output</* @Nullable */ Boolean> getAllowClassicOperations() {
         return this.allowClassicOperations;
     }
+    /**
+     * The list of authorizations.
+     */
     @OutputExport(name="authorizations", type=List.class, parameters={ExpressRouteCircuitAuthorizationResponse.class})
     private Output</* @Nullable */ List<ExpressRouteCircuitAuthorizationResponse>> authorizations;
 
+    /**
+     * @return The list of authorizations.
+     */
     public Output</* @Nullable */ List<ExpressRouteCircuitAuthorizationResponse>> getAuthorizations() {
         return this.authorizations;
     }
+    /**
+     * The bandwidth of the circuit when the circuit is provisioned on an ExpressRoutePort resource.
+     */
     @OutputExport(name="bandwidthInGbps", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> bandwidthInGbps;
 
+    /**
+     * @return The bandwidth of the circuit when the circuit is provisioned on an ExpressRoutePort resource.
+     */
     public Output</* @Nullable */ Double> getBandwidthInGbps() {
         return this.bandwidthInGbps;
     }
+    /**
+     * The CircuitProvisioningState state of the resource.
+     */
     @OutputExport(name="circuitProvisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> circuitProvisioningState;
 
+    /**
+     * @return The CircuitProvisioningState state of the resource.
+     */
     public Output</* @Nullable */ String> getCircuitProvisioningState() {
         return this.circuitProvisioningState;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The reference to the ExpressRoutePort resource when the circuit is provisioned on an ExpressRoutePort resource.
+     */
     @OutputExport(name="expressRoutePort", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> expressRoutePort;
 
+    /**
+     * @return The reference to the ExpressRoutePort resource when the circuit is provisioned on an ExpressRoutePort resource.
+     */
     public Output</* @Nullable */ SubResourceResponse> getExpressRoutePort() {
         return this.expressRoutePort;
     }
+    /**
+     * The GatewayManager Etag.
+     */
     @OutputExport(name="gatewayManagerEtag", type=String.class, parameters={})
     private Output</* @Nullable */ String> gatewayManagerEtag;
 
+    /**
+     * @return The GatewayManager Etag.
+     */
     public Output</* @Nullable */ String> getGatewayManagerEtag() {
         return this.gatewayManagerEtag;
     }
+    /**
+     * Flag denoting global reach status.
+     */
     @OutputExport(name="globalReachEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> globalReachEnabled;
 
+    /**
+     * @return Flag denoting global reach status.
+     */
     public Output</* @Nullable */ Boolean> getGlobalReachEnabled() {
         return this.globalReachEnabled;
     }
+    /**
+     * Resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The list of peerings.
+     */
     @OutputExport(name="peerings", type=List.class, parameters={ExpressRouteCircuitPeeringResponse.class})
     private Output</* @Nullable */ List<ExpressRouteCircuitPeeringResponse>> peerings;
 
+    /**
+     * @return The list of peerings.
+     */
     public Output</* @Nullable */ List<ExpressRouteCircuitPeeringResponse>> getPeerings() {
         return this.peerings;
     }
+    /**
+     * The provisioning state of the express route circuit resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the express route circuit resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The ServiceKey.
+     */
     @OutputExport(name="serviceKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceKey;
 
+    /**
+     * @return The ServiceKey.
+     */
     public Output</* @Nullable */ String> getServiceKey() {
         return this.serviceKey;
     }
+    /**
+     * The ServiceProviderNotes.
+     */
     @OutputExport(name="serviceProviderNotes", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceProviderNotes;
 
+    /**
+     * @return The ServiceProviderNotes.
+     */
     public Output</* @Nullable */ String> getServiceProviderNotes() {
         return this.serviceProviderNotes;
     }
+    /**
+     * The ServiceProviderProperties.
+     */
     @OutputExport(name="serviceProviderProperties", type=ExpressRouteCircuitServiceProviderPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ ExpressRouteCircuitServiceProviderPropertiesResponse> serviceProviderProperties;
 
+    /**
+     * @return The ServiceProviderProperties.
+     */
     public Output</* @Nullable */ ExpressRouteCircuitServiceProviderPropertiesResponse> getServiceProviderProperties() {
         return this.serviceProviderProperties;
     }
+    /**
+     * The ServiceProviderProvisioningState state of the resource.
+     */
     @OutputExport(name="serviceProviderProvisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceProviderProvisioningState;
 
+    /**
+     * @return The ServiceProviderProvisioningState state of the resource.
+     */
     public Output</* @Nullable */ String> getServiceProviderProvisioningState() {
         return this.serviceProviderProvisioningState;
     }
+    /**
+     * The SKU.
+     */
     @OutputExport(name="sku", type=ExpressRouteCircuitSkuResponse.class, parameters={})
     private Output</* @Nullable */ ExpressRouteCircuitSkuResponse> sku;
 
+    /**
+     * @return The SKU.
+     */
     public Output</* @Nullable */ ExpressRouteCircuitSkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * The identifier of the circuit traffic. Outer tag for QinQ encapsulation.
+     */
     @OutputExport(name="stag", type=Integer.class, parameters={})
     private Output<Integer> stag;
 
+    /**
+     * @return The identifier of the circuit traffic. Outer tag for QinQ encapsulation.
+     */
     public Output<Integer> getStag() {
         return this.stag;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ExpressRouteCircuit(String name, ExpressRouteCircuitArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:ExpressRouteCircuit", name, args == null ? ExpressRouteCircuitArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -202,6 +576,14 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ExpressRouteCircuit get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ExpressRouteCircuit(name, id, options);
     }

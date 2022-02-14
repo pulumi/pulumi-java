@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UniqueKeyResponse {
+/**
+ * List of paths must be unique for each document in the Azure Cosmos DB service
+ */
     private final @Nullable List<String> paths;
 
     @OutputCustomType.Constructor({"paths"})
@@ -18,6 +21,9 @@ public final class UniqueKeyResponse {
         this.paths = paths;
     }
 
+/**
+ * List of paths must be unique for each document in the Azure Cosmos DB service
+ */
     public List<String> getPaths() {
         return this.paths == null ? List.of() : this.paths;
     }

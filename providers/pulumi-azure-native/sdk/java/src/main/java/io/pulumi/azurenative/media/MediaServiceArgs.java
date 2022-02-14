@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MediaServiceArgs Empty = new MediaServiceArgs();
 
+    /**
+     * The Media Services account name.
+     */
     @InputImport(name="accountName")
     private final @Nullable Input<String> accountName;
 
@@ -28,6 +34,9 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName == null ? Input.empty() : this.accountName;
     }
 
+    /**
+     * The account encryption properties.
+     */
     @InputImport(name="encryption")
     private final @Nullable Input<AccountEncryptionArgs> encryption;
 
@@ -35,6 +44,9 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryption == null ? Input.empty() : this.encryption;
     }
 
+    /**
+     * The Managed Identity for the Media Services account.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<MediaServiceIdentityArgs> identity;
 
@@ -42,6 +54,9 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * The geo-location where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -49,6 +64,9 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group within the Azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -56,6 +74,9 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The storage accounts for this resource.
+     */
     @InputImport(name="storageAccounts")
     private final @Nullable Input<List<StorageAccountArgs>> storageAccounts;
 
@@ -63,6 +84,9 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageAccounts == null ? Input.empty() : this.storageAccounts;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="storageAuthentication")
     private final @Nullable Input<Either<String,StorageAuthentication>> storageAuthentication;
 
@@ -70,6 +94,9 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageAuthentication == null ? Input.empty() : this.storageAuthentication;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

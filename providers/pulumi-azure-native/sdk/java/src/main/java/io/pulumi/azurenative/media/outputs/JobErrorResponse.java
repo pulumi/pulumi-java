@@ -11,10 +11,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class JobErrorResponse {
+/**
+ * Helps with categorization of errors.
+ */
     private final String category;
+/**
+ * Error code describing the error.
+ */
     private final String code;
+/**
+ * An array of details about specific errors that led to this reported error.
+ */
     private final List<JobErrorDetailResponse> details;
+/**
+ * A human-readable language-dependent representation of the error.
+ */
     private final String message;
+/**
+ * Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.
+ */
     private final String retry;
 
     @OutputCustomType.Constructor({"category","code","details","message","retry"})
@@ -31,18 +46,33 @@ public final class JobErrorResponse {
         this.retry = Objects.requireNonNull(retry);
     }
 
+/**
+ * Helps with categorization of errors.
+ */
     public String getCategory() {
         return this.category;
     }
+/**
+ * Error code describing the error.
+ */
     public String getCode() {
         return this.code;
     }
+/**
+ * An array of details about specific errors that led to this reported error.
+ */
     public List<JobErrorDetailResponse> getDetails() {
         return this.details;
     }
+/**
+ * A human-readable language-dependent representation of the error.
+ */
     public String getMessage() {
         return this.message;
     }
+/**
+ * Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.
+ */
     public String getRetry() {
         return this.retry;
     }

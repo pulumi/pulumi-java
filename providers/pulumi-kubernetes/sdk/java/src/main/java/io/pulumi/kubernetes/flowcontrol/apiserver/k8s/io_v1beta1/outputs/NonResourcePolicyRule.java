@@ -10,7 +10,19 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NonResourcePolicyRule {
+/**
+ * `nonResourceURLs` is a set of url prefixes that a user should have access to and may not be empty. For example:
+  - "/healthz" is legal
+  - "/hea*" is illegal
+  - "/hea" is legal but matches nothing
+  - "/hea/*" also matches nothing
+  - "/healthz/*" matches all per-component health checks.
+"*" matches all non-resource urls. if it is present, it must be the only entry. Required.
+ */
     private final List<String> nonResourceURLs;
+/**
+ * `verbs` is a list of matching verbs and may not be empty. "*" matches all verbs. If it is present, it must be the only entry. Required.
+ */
     private final List<String> verbs;
 
     @OutputCustomType.Constructor({"nonResourceURLs","verbs"})
@@ -21,9 +33,21 @@ public final class NonResourcePolicyRule {
         this.verbs = Objects.requireNonNull(verbs);
     }
 
+/**
+ * `nonResourceURLs` is a set of url prefixes that a user should have access to and may not be empty. For example:
+  - "/healthz" is legal
+  - "/hea*" is illegal
+  - "/hea" is legal but matches nothing
+  - "/hea/*" also matches nothing
+  - "/healthz/*" matches all per-component health checks.
+"*" matches all non-resource urls. if it is present, it must be the only entry. Required.
+ */
     public List<String> getNonResourceURLs() {
         return this.nonResourceURLs;
     }
+/**
+ * `verbs` is a list of matching verbs and may not be empty. "*" matches all verbs. If it is present, it must be the only entry. Required.
+ */
     public List<String> getVerbs() {
         return this.verbs;
     }

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetPrivateEndpointArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPrivateEndpointArgs Empty = new GetPrivateEndpointArgs();
 
+    /**
+     * Expands referenced resources.
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +27,9 @@ public final class GetPrivateEndpointArgs extends io.pulumi.resources.InvokeArgs
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the private endpoint.
+     */
     @InputImport(name="privateEndpointName", required=true)
     private final String privateEndpointName;
 
@@ -28,6 +37,9 @@ public final class GetPrivateEndpointArgs extends io.pulumi.resources.InvokeArgs
         return this.privateEndpointName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

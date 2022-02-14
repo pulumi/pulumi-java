@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IscsiLunResponse {
+/**
+ * Azure Resource ID of the Managed Disk.
+ */
     private final String managedDiskAzureResourceId;
+/**
+ * User defined name for iSCSI LUN; example: "lun0"
+ */
     private final String name;
 
     @OutputCustomType.Constructor({"managedDiskAzureResourceId","name"})
@@ -20,9 +26,15 @@ public final class IscsiLunResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+/**
+ * Azure Resource ID of the Managed Disk.
+ */
     public String getManagedDiskAzureResourceId() {
         return this.managedDiskAzureResourceId;
     }
+/**
+ * User defined name for iSCSI LUN; example: "lun0"
+ */
     public String getName() {
         return this.name;
     }

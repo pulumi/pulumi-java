@@ -10,9 +10,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AzureBlobStorageDataResponse {
+/**
+ * Input only. Credentials used to authenticate API requests to Azure. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).
+ */
     private final AzureCredentialsResponse azureCredentials;
+/**
+ * The container to transfer from the Azure Storage account.
+ */
     private final String container;
+/**
+ * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
+ */
     private final String path;
+/**
+ * The name of the Azure Storage account.
+ */
     private final String storageAccount;
 
     @OutputCustomType.Constructor({"azureCredentials","container","path","storageAccount"})
@@ -27,15 +39,27 @@ public final class AzureBlobStorageDataResponse {
         this.storageAccount = Objects.requireNonNull(storageAccount);
     }
 
+/**
+ * Input only. Credentials used to authenticate API requests to Azure. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).
+ */
     public AzureCredentialsResponse getAzureCredentials() {
         return this.azureCredentials;
     }
+/**
+ * The container to transfer from the Azure Storage account.
+ */
     public String getContainer() {
         return this.container;
     }
+/**
+ * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
+ */
     public String getPath() {
         return this.path;
     }
+/**
+ * The name of the Azure Storage account.
+ */
     public String getStorageAccount() {
         return this.storageAccount;
     }

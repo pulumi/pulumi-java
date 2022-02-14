@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Result of listing the execution history of an export.
+ */
 public final class ExportExecutionListResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExportExecutionListResultResponse Empty = new ExportExecutionListResultResponse();
 
+    /**
+     * A list of export executions.
+     */
     @InputImport(name="value", required=true)
     private final List<ExportExecutionResponse> value;
 

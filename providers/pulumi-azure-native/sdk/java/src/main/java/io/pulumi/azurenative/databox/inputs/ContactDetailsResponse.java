@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contact Details.
+ */
 public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContactDetailsResponse Empty = new ContactDetailsResponse();
 
+    /**
+     * Contact name of the person.
+     */
     @InputImport(name="contactName", required=true)
     private final String contactName;
 
@@ -23,6 +29,9 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
         return this.contactName;
     }
 
+    /**
+     * List of Email-ids to be notified about job progress.
+     */
     @InputImport(name="emailList", required=true)
     private final List<String> emailList;
 
@@ -30,6 +39,9 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
         return this.emailList;
     }
 
+    /**
+     * Mobile number of the contact person.
+     */
     @InputImport(name="mobile")
     private final @Nullable String mobile;
 
@@ -37,6 +49,9 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
         return this.mobile == null ? Optional.empty() : Optional.ofNullable(this.mobile);
     }
 
+    /**
+     * Notification preference for a job stage.
+     */
     @InputImport(name="notificationPreference")
     private final @Nullable List<NotificationPreferenceResponse> notificationPreference;
 
@@ -44,6 +59,9 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
         return this.notificationPreference == null ? List.of() : this.notificationPreference;
     }
 
+    /**
+     * Phone number of the contact person.
+     */
     @InputImport(name="phone", required=true)
     private final String phone;
 
@@ -51,6 +69,9 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
         return this.phone;
     }
 
+    /**
+     * Phone extension number of the contact person.
+     */
     @InputImport(name="phoneExtension")
     private final @Nullable String phoneExtension;
 

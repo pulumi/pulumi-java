@@ -16,10 +16,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PolicyArgs Empty = new PolicyArgs();
 
+    /**
+     * Describes custom rules inside the policy.
+     */
     @InputImport(name="customRules")
     private final @Nullable Input<CustomRuleListArgs> customRules;
 
@@ -27,6 +33,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.customRules == null ? Input.empty() : this.customRules;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -34,6 +43,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Describes managed rules inside the policy.
+     */
     @InputImport(name="managedRules")
     private final @Nullable Input<ManagedRuleSetListArgs> managedRules;
 
@@ -41,6 +53,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedRules == null ? Input.empty() : this.managedRules;
     }
 
+    /**
+     * The name of the CdnWebApplicationFirewallPolicy.
+     */
     @InputImport(name="policyName")
     private final @Nullable Input<String> policyName;
 
@@ -48,6 +63,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.policyName == null ? Input.empty() : this.policyName;
     }
 
+    /**
+     * Describes  policySettings for policy
+     */
     @InputImport(name="policySettings")
     private final @Nullable Input<PolicySettingsArgs> policySettings;
 
@@ -55,6 +73,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.policySettings == null ? Input.empty() : this.policySettings;
     }
 
+    /**
+     * Describes rate limit rules inside the policy.
+     */
     @InputImport(name="rateLimitRules")
     private final @Nullable Input<RateLimitRuleListArgs> rateLimitRules;
 
@@ -62,6 +83,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.rateLimitRules == null ? Input.empty() : this.rateLimitRules;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -69,6 +93,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The pricing tier (defines a CDN provider, feature list and rate) of the CdnWebApplicationFirewallPolicy.
+     */
     @InputImport(name="sku", required=true)
     private final Input<SkuArgs> sku;
 
@@ -76,6 +103,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

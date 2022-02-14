@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DefaultRolloutSpecificationMediumTrafficArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DefaultRolloutSpecificationMediumTrafficArgs Empty = new DefaultRolloutSpecificationMediumTrafficArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="regions")
     private final @Nullable Input<List<String>> regions;
 
@@ -22,6 +28,9 @@ public final class DefaultRolloutSpecificationMediumTrafficArgs extends io.pulum
         return this.regions == null ? Input.empty() : this.regions;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="waitDuration")
     private final @Nullable Input<String> waitDuration;
 

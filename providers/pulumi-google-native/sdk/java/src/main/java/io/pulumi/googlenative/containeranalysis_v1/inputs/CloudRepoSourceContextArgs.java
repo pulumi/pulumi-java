@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A CloudRepoSourceContext denotes a particular revision in a Google Cloud Source Repo.
+ */
 public final class CloudRepoSourceContextArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CloudRepoSourceContextArgs Empty = new CloudRepoSourceContextArgs();
 
+    /**
+     * An alias, which may be a branch or tag.
+     */
     @InputImport(name="aliasContext")
     private final @Nullable Input<AliasContextArgs> aliasContext;
 
@@ -23,6 +29,9 @@ public final class CloudRepoSourceContextArgs extends io.pulumi.resources.Resour
         return this.aliasContext == null ? Input.empty() : this.aliasContext;
     }
 
+    /**
+     * The ID of the repo.
+     */
     @InputImport(name="repoId")
     private final @Nullable Input<RepoIdArgs> repoId;
 
@@ -30,6 +39,9 @@ public final class CloudRepoSourceContextArgs extends io.pulumi.resources.Resour
         return this.repoId == null ? Input.empty() : this.repoId;
     }
 
+    /**
+     * A revision ID.
+     */
     @InputImport(name="revisionId")
     private final @Nullable Input<String> revisionId;
 

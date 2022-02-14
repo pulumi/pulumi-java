@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GitRepoVolumeResponse {
+/**
+ * Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
+ */
     private final @Nullable String directory;
+/**
+ * Repository URL
+ */
     private final String repository;
+/**
+ * Commit hash for the specified revision.
+ */
     private final @Nullable String revision;
 
     @OutputCustomType.Constructor({"directory","repository","revision"})
@@ -25,12 +34,21 @@ public final class GitRepoVolumeResponse {
         this.revision = revision;
     }
 
+/**
+ * Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
+ */
     public Optional<String> getDirectory() {
         return Optional.ofNullable(this.directory);
     }
+/**
+ * Repository URL
+ */
     public String getRepository() {
         return this.repository;
     }
+/**
+ * Commit hash for the specified revision.
+ */
     public Optional<String> getRevision() {
         return Optional.ofNullable(this.revision);
     }

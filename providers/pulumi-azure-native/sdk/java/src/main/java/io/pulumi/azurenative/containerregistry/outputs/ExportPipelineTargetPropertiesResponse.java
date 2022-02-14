@@ -11,8 +11,19 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExportPipelineTargetPropertiesResponse {
+/**
+ * They key vault secret uri to obtain the target storage SAS token.
+ */
     private final String keyVaultUri;
+/**
+ * The type of target for the export pipeline.
+ */
     private final @Nullable String type;
+/**
+ * The target uri of the export pipeline.
+When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
+When 'AzureStorageBlobContainer':  "https://accountName.blob.core.windows.net/containerName"
+ */
     private final @Nullable String uri;
 
     @OutputCustomType.Constructor({"keyVaultUri","type","uri"})
@@ -25,12 +36,23 @@ public final class ExportPipelineTargetPropertiesResponse {
         this.uri = uri;
     }
 
+/**
+ * They key vault secret uri to obtain the target storage SAS token.
+ */
     public String getKeyVaultUri() {
         return this.keyVaultUri;
     }
+/**
+ * The type of target for the export pipeline.
+ */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
+/**
+ * The target uri of the export pipeline.
+When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
+When 'AzureStorageBlobContainer':  "https://accountName.blob.core.windows.net/containerName"
+ */
     public Optional<String> getUri() {
         return Optional.ofNullable(this.uri);
     }

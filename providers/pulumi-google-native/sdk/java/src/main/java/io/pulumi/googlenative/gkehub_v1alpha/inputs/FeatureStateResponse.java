@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * FeatureState describes the high-level state of a Feature. It may be used to describe a Feature's state at the environ-level, or per-membershop, depending on the context.
+ */
 public final class FeatureStateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FeatureStateResponse Empty = new FeatureStateResponse();
 
+    /**
+     * The high-level, machine-readable status of this Feature.
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -19,6 +25,9 @@ public final class FeatureStateResponse extends io.pulumi.resources.InvokeArgs {
         return this.code;
     }
 
+    /**
+     * A human-readable description of the current status.
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -26,6 +35,9 @@ public final class FeatureStateResponse extends io.pulumi.resources.InvokeArgs {
         return this.description;
     }
 
+    /**
+     * The time this status and any related Feature-specific details were updated.
+     */
     @InputImport(name="updateTime", required=true)
     private final String updateTime;
 

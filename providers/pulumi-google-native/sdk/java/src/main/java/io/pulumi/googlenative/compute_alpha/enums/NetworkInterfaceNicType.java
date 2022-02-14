@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
+ */
     @EnumType
     public enum NetworkInterfaceNicType {
+/**
+ * GVNIC
+ */
         Gvnic("GVNIC"),
+/**
+ * No type specified.
+ */
         UnspecifiedNicType("UNSPECIFIED_NIC_TYPE"),
+/**
+ * VIRTIO
+ */
         VirtioNet("VIRTIO_NET");
 
         private final String value;

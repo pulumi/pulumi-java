@@ -10,16 +10,50 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetBlobDataSetResult {
+/**
+ * Container that has the file path.
+ */
     private final String containerName;
+/**
+ * Unique id for identifying a data set resource
+ */
     private final String dataSetId;
+/**
+ * File path within the source data set
+ */
     private final String filePath;
+/**
+ * The resource id of the azure resource
+ */
     private final String id;
+/**
+ * Kind of data set.
+Expected value is 'Blob'.
+ */
     private final String kind;
+/**
+ * Name of the azure resource
+ */
     private final String name;
+/**
+ * Resource group of storage account
+ */
     private final String resourceGroup;
+/**
+ * Storage account name of the source data set
+ */
     private final String storageAccountName;
+/**
+ * Subscription id of storage account
+ */
     private final String subscriptionId;
+/**
+ * System Data of the Azure resource.
+ */
     private final SystemDataResponse systemData;
+/**
+ * Type of the azure resource
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"containerName","dataSetId","filePath","id","kind","name","resourceGroup","storageAccountName","subscriptionId","systemData","type"})
@@ -48,36 +82,70 @@ public final class GetBlobDataSetResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Container that has the file path.
+ */
     public String getContainerName() {
         return this.containerName;
     }
+/**
+ * Unique id for identifying a data set resource
+ */
     public String getDataSetId() {
         return this.dataSetId;
     }
+/**
+ * File path within the source data set
+ */
     public String getFilePath() {
         return this.filePath;
     }
+/**
+ * The resource id of the azure resource
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Kind of data set.
+Expected value is 'Blob'.
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * Name of the azure resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Resource group of storage account
+ */
     public String getResourceGroup() {
         return this.resourceGroup;
     }
+/**
+ * Storage account name of the source data set
+ */
     public String getStorageAccountName() {
         return this.storageAccountName;
     }
+/**
+ * Subscription id of storage account
+ */
     public String getSubscriptionId() {
         return this.subscriptionId;
     }
+/**
+ * System Data of the Azure resource.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * Type of the azure resource
+ */
     public String getType() {
         return this.type;
     }

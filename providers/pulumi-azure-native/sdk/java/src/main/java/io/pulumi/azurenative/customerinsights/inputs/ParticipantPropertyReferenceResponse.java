@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The participant property reference.
+ */
 public final class ParticipantPropertyReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ParticipantPropertyReferenceResponse Empty = new ParticipantPropertyReferenceResponse();
 
+    /**
+     * The source property that maps to the target property.
+     */
     @InputImport(name="sourcePropertyName", required=true)
     private final String sourcePropertyName;
 
@@ -19,6 +25,9 @@ public final class ParticipantPropertyReferenceResponse extends io.pulumi.resour
         return this.sourcePropertyName;
     }
 
+    /**
+     * The target property that maps to the source property.
+     */
     @InputImport(name="targetPropertyName", required=true)
     private final String targetPropertyName;
 

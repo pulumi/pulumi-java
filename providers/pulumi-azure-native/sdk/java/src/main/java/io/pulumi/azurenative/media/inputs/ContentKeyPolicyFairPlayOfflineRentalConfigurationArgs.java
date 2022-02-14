@@ -9,10 +9,16 @@ import java.lang.Double;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs Empty = new ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs();
 
+    /**
+     * Playback duration
+     */
     @InputImport(name="playbackDurationSeconds", required=true)
     private final Input<Double> playbackDurationSeconds;
 
@@ -20,6 +26,9 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extend
         return this.playbackDurationSeconds;
     }
 
+    /**
+     * Storage duration
+     */
     @InputImport(name="storageDurationSeconds", required=true)
     private final Input<Double> storageDurationSeconds;
 

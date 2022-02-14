@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Collation of the metadata catalog.
+ */
     @EnumType
     public enum CatalogCollationType {
+/**
+ * 
+ */
         DATABASE_DEFAULT("DATABASE_DEFAULT"),
+/**
+ * 
+ */
         SQL_Latin1_General_CP1_CI_AS("SQL_Latin1_General_CP1_CI_AS");
 
         private final String value;

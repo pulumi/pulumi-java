@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Authorization Profile
+ */
 public final class AuthorizationProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AuthorizationProfileResponse Empty = new AuthorizationProfileResponse();
 
+    /**
+     * The approved time
+     */
     @InputImport(name="approvedTime", required=true)
     private final String approvedTime;
 
@@ -19,6 +25,9 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
         return this.approvedTime;
     }
 
+    /**
+     * The approver
+     */
     @InputImport(name="approver", required=true)
     private final String approver;
 
@@ -26,6 +35,9 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
         return this.approver;
     }
 
+    /**
+     * The requested time
+     */
     @InputImport(name="requestedTime", required=true)
     private final String requestedTime;
 
@@ -33,6 +45,9 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
         return this.requestedTime;
     }
 
+    /**
+     * The requester
+     */
     @InputImport(name="requester", required=true)
     private final String requester;
 
@@ -40,6 +55,9 @@ public final class AuthorizationProfileResponse extends io.pulumi.resources.Invo
         return this.requester;
     }
 
+    /**
+     * The requester object id
+     */
     @InputImport(name="requesterObjectId", required=true)
     private final String requesterObjectId;
 

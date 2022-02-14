@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A load balancer configuration for an availability group listener.
+ */
 public final class LoadBalancerConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LoadBalancerConfigurationResponse Empty = new LoadBalancerConfigurationResponse();
 
+    /**
+     * Resource id of the load balancer.
+     */
     @InputImport(name="loadBalancerResourceId")
     private final @Nullable String loadBalancerResourceId;
 
@@ -24,6 +30,9 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
         return this.loadBalancerResourceId == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerResourceId);
     }
 
+    /**
+     * Private IP address.
+     */
     @InputImport(name="privateIpAddress")
     private final @Nullable PrivateIPAddressResponse privateIpAddress;
 
@@ -31,6 +40,9 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
         return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
     }
 
+    /**
+     * Probe port.
+     */
     @InputImport(name="probePort")
     private final @Nullable Integer probePort;
 
@@ -38,6 +50,9 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
         return this.probePort == null ? Optional.empty() : Optional.ofNullable(this.probePort);
     }
 
+    /**
+     * Resource id of the public IP.
+     */
     @InputImport(name="publicIpAddressResourceId")
     private final @Nullable String publicIpAddressResourceId;
 
@@ -45,6 +60,9 @@ public final class LoadBalancerConfigurationResponse extends io.pulumi.resources
         return this.publicIpAddressResourceId == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddressResourceId);
     }
 
+    /**
+     * List of the SQL virtual machine instance resource id's that are enrolled into the availability group listener.
+     */
     @InputImport(name="sqlVirtualMachineInstances")
     private final @Nullable List<String> sqlVirtualMachineInstances;
 

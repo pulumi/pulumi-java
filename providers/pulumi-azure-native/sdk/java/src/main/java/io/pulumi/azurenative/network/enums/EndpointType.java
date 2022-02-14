@@ -8,13 +8,34 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The endpoint type.
+ */
     @EnumType
     public enum EndpointType {
+/**
+ * 
+ */
         AzureVM("AzureVM"),
+/**
+ * 
+ */
         AzureVNet("AzureVNet"),
+/**
+ * 
+ */
         AzureSubnet("AzureSubnet"),
+/**
+ * 
+ */
         ExternalAddress("ExternalAddress"),
+/**
+ * 
+ */
         MMAWorkspaceMachine("MMAWorkspaceMachine"),
+/**
+ * 
+ */
         MMAWorkspaceNetwork("MMAWorkspaceNetwork");
 
         private final String value;

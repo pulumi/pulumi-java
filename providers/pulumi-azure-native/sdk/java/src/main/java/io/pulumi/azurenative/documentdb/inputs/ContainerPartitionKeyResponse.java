@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration of the partition key to be used for partitioning data into multiple partitions
+ */
 public final class ContainerPartitionKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerPartitionKeyResponse Empty = new ContainerPartitionKeyResponse();
 
+    /**
+     * Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
+     */
     @InputImport(name="kind")
     private final @Nullable String kind;
 
@@ -24,6 +30,9 @@ public final class ContainerPartitionKeyResponse extends io.pulumi.resources.Inv
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
+    /**
+     * List of paths using which data within the container can be partitioned
+     */
     @InputImport(name="paths")
     private final @Nullable List<String> paths;
 
@@ -31,6 +40,9 @@ public final class ContainerPartitionKeyResponse extends io.pulumi.resources.Inv
         return this.paths == null ? List.of() : this.paths;
     }
 
+    /**
+     * Indicates if the container is using a system generated partition key
+     */
     @InputImport(name="systemKey", required=true)
     private final Boolean systemKey;
 
@@ -38,6 +50,9 @@ public final class ContainerPartitionKeyResponse extends io.pulumi.resources.Inv
         return this.systemKey;
     }
 
+    /**
+     * Indicates the version of the partition key definition
+     */
     @InputImport(name="version")
     private final @Nullable Integer version;
 

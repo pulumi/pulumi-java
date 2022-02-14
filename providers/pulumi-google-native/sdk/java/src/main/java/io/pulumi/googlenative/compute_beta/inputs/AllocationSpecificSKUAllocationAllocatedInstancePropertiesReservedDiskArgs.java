@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs Empty = new AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs();
 
+    /**
+     * Specifies the size of the disk in base-2 GB.
+     */
     @InputImport(name="diskSizeGb")
     private final @Nullable Input<String> diskSizeGb;
 
@@ -22,6 +28,9 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
     }
 
+    /**
+     * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
+     */
     @InputImport(name="interface")
     private final @Nullable Input<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> $interface;
 

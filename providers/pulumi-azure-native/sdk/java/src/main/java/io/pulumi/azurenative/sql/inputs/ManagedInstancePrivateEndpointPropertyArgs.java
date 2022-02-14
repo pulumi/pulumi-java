@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ManagedInstancePrivateEndpointPropertyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedInstancePrivateEndpointPropertyArgs Empty = new ManagedInstancePrivateEndpointPropertyArgs();
 
+    /**
+     * Resource id of the private endpoint.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 

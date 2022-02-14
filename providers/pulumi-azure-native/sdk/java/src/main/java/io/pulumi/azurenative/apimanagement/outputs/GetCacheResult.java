@@ -11,12 +11,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetCacheResult {
+/**
+ * Runtime connection string to cache
+ */
     private final String connectionString;
+/**
+ * Cache description
+ */
     private final @Nullable String description;
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * Original uri of entity in external system cache points to
+ */
     private final @Nullable String resourceId;
+/**
+ * Resource type for API Management resource.
+ */
     private final String type;
+/**
+ * Location identifier to use cache from (should be either 'default' or valid Azure region identifier)
+ */
     private final String useFromLocation;
 
     @OutputCustomType.Constructor({"connectionString","description","id","name","resourceId","type","useFromLocation"})
@@ -37,24 +58,45 @@ public final class GetCacheResult {
         this.useFromLocation = Objects.requireNonNull(useFromLocation);
     }
 
+/**
+ * Runtime connection string to cache
+ */
     public String getConnectionString() {
         return this.connectionString;
     }
+/**
+ * Cache description
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Original uri of entity in external system cache points to
+ */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
+/**
+ * Resource type for API Management resource.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Location identifier to use cache from (should be either 'default' or valid Azure region identifier)
+ */
     public String getUseFromLocation() {
         return this.useFromLocation;
     }

@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VirtualNetworkConfigurationResponse {
+/**
+ * Data management's service public IP address resource id.
+ */
     private final String dataManagementPublicIpId;
+/**
+ * Engine service's public IP address resource id.
+ */
     private final String enginePublicIpId;
+/**
+ * The subnet resource id.
+ */
     private final String subnetId;
 
     @OutputCustomType.Constructor({"dataManagementPublicIpId","enginePublicIpId","subnetId"})
@@ -23,12 +32,21 @@ public final class VirtualNetworkConfigurationResponse {
         this.subnetId = Objects.requireNonNull(subnetId);
     }
 
+/**
+ * Data management's service public IP address resource id.
+ */
     public String getDataManagementPublicIpId() {
         return this.dataManagementPublicIpId;
     }
+/**
+ * Engine service's public IP address resource id.
+ */
     public String getEnginePublicIpId() {
         return this.enginePublicIpId;
     }
+/**
+ * The subnet resource id.
+ */
     public String getSubnetId() {
         return this.subnetId;
     }

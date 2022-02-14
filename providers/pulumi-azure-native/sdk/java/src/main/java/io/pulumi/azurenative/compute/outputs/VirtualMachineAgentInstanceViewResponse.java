@@ -14,8 +14,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VirtualMachineAgentInstanceViewResponse {
+/**
+ * The virtual machine extension handler instance view.
+ */
     private final @Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers;
+/**
+ * The resource status information.
+ */
     private final @Nullable List<InstanceViewStatusResponse> statuses;
+/**
+ * The VM Agent full version.
+ */
     private final @Nullable String vmAgentVersion;
 
     @OutputCustomType.Constructor({"extensionHandlers","statuses","vmAgentVersion"})
@@ -28,12 +37,21 @@ public final class VirtualMachineAgentInstanceViewResponse {
         this.vmAgentVersion = vmAgentVersion;
     }
 
+/**
+ * The virtual machine extension handler instance view.
+ */
     public List<VirtualMachineExtensionHandlerInstanceViewResponse> getExtensionHandlers() {
         return this.extensionHandlers == null ? List.of() : this.extensionHandlers;
     }
+/**
+ * The resource status information.
+ */
     public List<InstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
     }
+/**
+ * The VM Agent full version.
+ */
     public Optional<String> getVmAgentVersion() {
         return Optional.ofNullable(this.vmAgentVersion);
     }

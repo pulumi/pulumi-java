@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Determines the type of application which send the create user request. Default is legacy portal.
+ */
     @EnumType
     public enum AppType {
+/**
+ * User create request was sent by legacy developer portal.
+ */
         Portal("portal"),
+/**
+ * User create request was sent by new developer portal.
+ */
         DeveloperPortal("developerPortal");
 
         private final String value;

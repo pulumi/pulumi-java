@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Definition of CMK for the factory.
+ */
 public final class EncryptionConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EncryptionConfigurationResponse Empty = new EncryptionConfigurationResponse();
 
+    /**
+     * User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.
+     */
     @InputImport(name="identity")
     private final @Nullable CMKIdentityDefinitionResponse identity;
 
@@ -22,6 +28,9 @@ public final class EncryptionConfigurationResponse extends io.pulumi.resources.I
         return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
     }
 
+    /**
+     * The name of the key in Azure Key Vault to use as Customer Managed Key.
+     */
     @InputImport(name="keyName", required=true)
     private final String keyName;
 
@@ -29,6 +38,9 @@ public final class EncryptionConfigurationResponse extends io.pulumi.resources.I
         return this.keyName;
     }
 
+    /**
+     * The version of the key used for CMK. If not provided, latest version will be used.
+     */
     @InputImport(name="keyVersion")
     private final @Nullable String keyVersion;
 
@@ -36,6 +48,9 @@ public final class EncryptionConfigurationResponse extends io.pulumi.resources.I
         return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
     }
 
+    /**
+     * The url of the Azure Key Vault used for CMK.
+     */
     @InputImport(name="vaultBaseUrl", required=true)
     private final String vaultBaseUrl;
 

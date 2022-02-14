@@ -16,10 +16,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfigArgs Empty = new ConfigArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="apiConfigId", required=true)
     private final Input<String> apiConfigId;
 
@@ -27,6 +33,9 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiConfigId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="apiId", required=true)
     private final Input<String> apiId;
 
@@ -34,6 +43,9 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiId;
     }
 
+    /**
+     * Optional. Display name.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -41,6 +53,9 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Immutable. Gateway specific configuration.
+     */
     @InputImport(name="gatewayConfig")
     private final @Nullable Input<ApigatewayGatewayConfigArgs> gatewayConfig;
 
@@ -48,6 +63,9 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.gatewayConfig == null ? Input.empty() : this.gatewayConfig;
     }
 
+    /**
+     * Immutable. The Google Cloud IAM Service Account that Gateways serving this config should use to authenticate to other services. This may either be the Service Account's email (`{ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com`) or its full resource name (`projects/{PROJECT}/accounts/{UNIQUE_ID}`). This is most often used when the service is a GCP resource such as a Cloud Run Service or an IAP-secured service.
+     */
     @InputImport(name="gatewayServiceAccount")
     private final @Nullable Input<String> gatewayServiceAccount;
 
@@ -55,6 +73,9 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.gatewayServiceAccount == null ? Input.empty() : this.gatewayServiceAccount;
     }
 
+    /**
+     * Optional. gRPC service definition files. If specified, openapi_documents must not be included.
+     */
     @InputImport(name="grpcServices")
     private final @Nullable Input<List<ApigatewayApiConfigGrpcServiceDefinitionArgs>> grpcServices;
 
@@ -62,6 +83,9 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.grpcServices == null ? Input.empty() : this.grpcServices;
     }
 
+    /**
+     * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -69,6 +93,9 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -76,6 +103,9 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Optional. Service Configuration files. At least one must be included when using gRPC service definitions. See https://cloud.google.com/endpoints/docs/grpc/grpc-service-config#service_configuration_overview for the expected file contents. If multiple files are specified, the files are merged with the following rules: * All singular scalar fields are merged using "last one wins" semantics in the order of the files uploaded. * Repeated fields are concatenated. * Singular embedded messages are merged using these rules for nested fields.
+     */
     @InputImport(name="managedServiceConfigs")
     private final @Nullable Input<List<ApigatewayApiConfigFileArgs>> managedServiceConfigs;
 
@@ -83,6 +113,9 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedServiceConfigs == null ? Input.empty() : this.managedServiceConfigs;
     }
 
+    /**
+     * Optional. OpenAPI specification documents. If specified, grpc_services and managed_service_configs must not be included.
+     */
     @InputImport(name="openapiDocuments")
     private final @Nullable Input<List<ApigatewayApiConfigOpenApiDocumentArgs>> openapiDocuments;
 
@@ -90,6 +123,9 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.openapiDocuments == null ? Input.empty() : this.openapiDocuments;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

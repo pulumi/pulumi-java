@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The map type.
+ */
     @EnumType
     public enum MapType {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         Xslt("Xslt"),
+/**
+ * 
+ */
         Xslt20("Xslt20"),
+/**
+ * 
+ */
         Xslt30("Xslt30"),
+/**
+ * 
+ */
         Liquid("Liquid");
 
         private final String value;

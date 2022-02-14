@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DaprMetadataResponse {
+/**
+ * Metadata property name.
+ */
     private final @Nullable String name;
+/**
+ * Name of the Container App secret from which to pull the metadata property value.
+ */
     private final @Nullable String secretRef;
+/**
+ * Metadata property value.
+ */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"name","secretRef","value"})
@@ -25,12 +34,21 @@ public final class DaprMetadataResponse {
         this.value = value;
     }
 
+/**
+ * Metadata property name.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * Name of the Container App secret from which to pull the metadata property value.
+ */
     public Optional<String> getSecretRef() {
         return Optional.ofNullable(this.secretRef);
     }
+/**
+ * Metadata property value.
+ */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

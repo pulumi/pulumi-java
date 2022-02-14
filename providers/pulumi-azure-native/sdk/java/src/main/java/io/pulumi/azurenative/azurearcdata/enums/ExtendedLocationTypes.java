@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of the extended location.
+ */
     @EnumType
     public enum ExtendedLocationTypes {
+/**
+ * 
+ */
         CustomLocation("CustomLocation");
 
         private final String value;

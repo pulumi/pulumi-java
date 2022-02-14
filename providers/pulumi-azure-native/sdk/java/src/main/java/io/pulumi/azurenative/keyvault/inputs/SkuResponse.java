@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * SKU details
+ */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuResponse Empty = new SkuResponse();
 
+    /**
+     * SKU family name
+     */
     @InputImport(name="family", required=true)
     private final String family;
 
@@ -19,6 +25,9 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.family;
     }
 
+    /**
+     * SKU name to specify whether the key vault is a standard vault or a premium vault.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

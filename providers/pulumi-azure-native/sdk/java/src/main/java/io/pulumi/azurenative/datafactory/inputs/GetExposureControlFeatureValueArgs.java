@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetExposureControlFeatureValueArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetExposureControlFeatureValueArgs Empty = new GetExposureControlFeatureValueArgs();
 
+    /**
+     * The feature name.
+     */
     @InputImport(name="featureName")
     private final @Nullable String featureName;
 
@@ -21,6 +27,9 @@ public final class GetExposureControlFeatureValueArgs extends io.pulumi.resource
         return this.featureName == null ? Optional.empty() : Optional.ofNullable(this.featureName);
     }
 
+    /**
+     * The feature type.
+     */
     @InputImport(name="featureType")
     private final @Nullable String featureType;
 
@@ -28,6 +37,9 @@ public final class GetExposureControlFeatureValueArgs extends io.pulumi.resource
         return this.featureType == null ? Optional.empty() : Optional.ofNullable(this.featureType);
     }
 
+    /**
+     * The location identifier.
+     */
     @InputImport(name="locationId", required=true)
     private final String locationId;
 

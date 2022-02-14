@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of container to retrieve logs from.
+ */
     @EnumType
     public enum ContainerType {
+/**
+ * 
+ */
         StorageInitializer("StorageInitializer"),
+/**
+ * 
+ */
         InferenceServer("InferenceServer");
 
         private final String value;

@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration of input data, including data type, location, etc.
+ */
 public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatalabelingV1beta1InputConfigArgs Empty = new GoogleCloudDatalabelingV1beta1InputConfigArgs();
 
+    /**
+     * Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.
+     */
     @InputImport(name="annotationType")
     private final @Nullable Input<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> annotationType;
 
@@ -26,6 +32,9 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
         return this.annotationType == null ? Input.empty() : this.annotationType;
     }
 
+    /**
+     * Source located in BigQuery. You must specify this field if you are using this InputConfig in an EvaluationJob.
+     */
     @InputImport(name="bigquerySource")
     private final @Nullable Input<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> bigquerySource;
 
@@ -33,6 +42,9 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
         return this.bigquerySource == null ? Input.empty() : this.bigquerySource;
     }
 
+    /**
+     * Optional. Metadata about annotations for the input. You must specify this field if you are using this InputConfig in an EvaluationJob for a model version that performs classification.
+     */
     @InputImport(name="classificationMetadata")
     private final @Nullable Input<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> classificationMetadata;
 
@@ -40,6 +52,9 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
         return this.classificationMetadata == null ? Input.empty() : this.classificationMetadata;
     }
 
+    /**
+     * Data type must be specifed when user tries to import data.
+     */
     @InputImport(name="dataType", required=true)
     private final Input<GoogleCloudDatalabelingV1beta1InputConfigDataType> dataType;
 
@@ -47,6 +62,9 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
         return this.dataType;
     }
 
+    /**
+     * Source located in Cloud Storage.
+     */
     @InputImport(name="gcsSource")
     private final @Nullable Input<GoogleCloudDatalabelingV1beta1GcsSourceArgs> gcsSource;
 
@@ -54,6 +72,9 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
         return this.gcsSource == null ? Input.empty() : this.gcsSource;
     }
 
+    /**
+     * Required for text import, as language code must be specified.
+     */
     @InputImport(name="textMetadata")
     private final @Nullable Input<GoogleCloudDatalabelingV1beta1TextMetadataArgs> textMetadata;
 

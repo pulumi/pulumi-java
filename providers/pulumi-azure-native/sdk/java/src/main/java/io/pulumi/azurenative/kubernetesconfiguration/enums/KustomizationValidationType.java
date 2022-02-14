@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Specify whether to validate the Kubernetes objects referenced in the Kustomization before applying them to the cluster.
+ */
     @EnumType
     public enum KustomizationValidationType {
+/**
+ * 
+ */
         None("none"),
+/**
+ * 
+ */
         Client("client"),
+/**
+ * 
+ */
         Server("server");
 
         private final String value;

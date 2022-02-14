@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of the schema definition.
+ */
     @EnumType
     public enum SchemaType {
+/**
+ * Default value. This value is unused.
+ */
         TypeUnspecified("TYPE_UNSPECIFIED"),
+/**
+ * A Protocol Buffer schema definition.
+ */
         ProtocolBuffer("PROTOCOL_BUFFER"),
+/**
+ * An Avro schema definition.
+ */
         Avro("AVRO");
 
         private final String value;

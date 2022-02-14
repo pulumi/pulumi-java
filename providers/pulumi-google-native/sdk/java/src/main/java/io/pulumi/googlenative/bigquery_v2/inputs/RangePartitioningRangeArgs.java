@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * [TrustedTester] [Required] Defines the ranges for range partitioning.
+ */
 public final class RangePartitioningRangeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RangePartitioningRangeArgs Empty = new RangePartitioningRangeArgs();
 
+    /**
+     * [TrustedTester] [Required] The end of range partitioning, exclusive.
+     */
     @InputImport(name="end")
     private final @Nullable Input<String> end;
 
@@ -21,6 +27,9 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
         return this.end == null ? Input.empty() : this.end;
     }
 
+    /**
+     * [TrustedTester] [Required] The width of each interval.
+     */
     @InputImport(name="interval")
     private final @Nullable Input<String> interval;
 
@@ -28,6 +37,9 @@ public final class RangePartitioningRangeArgs extends io.pulumi.resources.Resour
         return this.interval == null ? Input.empty() : this.interval;
     }
 
+    /**
+     * [TrustedTester] [Required] The start of range partitioning, inclusive.
+     */
     @InputImport(name="start")
     private final @Nullable Input<String> start;
 

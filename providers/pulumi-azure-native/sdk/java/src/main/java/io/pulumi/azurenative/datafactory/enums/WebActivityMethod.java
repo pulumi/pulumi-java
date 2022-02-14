@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Rest API method for target endpoint.
+ */
     @EnumType
     public enum WebActivityMethod {
+/**
+ * 
+ */
         GET("GET"),
+/**
+ * 
+ */
         POST("POST"),
+/**
+ * 
+ */
         PUT("PUT"),
+/**
+ * 
+ */
         DELETE("DELETE");
 
         private final String value;

@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PacketMirroringFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PacketMirroringFilterArgs Empty = new PacketMirroringFilterArgs();
 
+    /**
+     * IP CIDR ranges that apply as filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported. If no ranges are specified, all traffic that matches the specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.
+     */
     @InputImport(name="cidrRanges")
     private final @Nullable Input<List<String>> cidrRanges;
 
@@ -23,6 +29,9 @@ public final class PacketMirroringFilterArgs extends io.pulumi.resources.Resourc
         return this.cidrRanges == null ? Input.empty() : this.cidrRanges;
     }
 
+    /**
+     * Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.
+     */
     @InputImport(name="direction")
     private final @Nullable Input<PacketMirroringFilterDirection> direction;
 
@@ -30,6 +39,9 @@ public final class PacketMirroringFilterArgs extends io.pulumi.resources.Resourc
         return this.direction == null ? Input.empty() : this.direction;
     }
 
+    /**
+     * Protocols that apply as filter on mirrored traffic. If no protocols are specified, all traffic that matches the specified CIDR ranges is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.
+     */
     @InputImport(name="ipProtocols")
     private final @Nullable Input<List<String>> ipProtocols;
 

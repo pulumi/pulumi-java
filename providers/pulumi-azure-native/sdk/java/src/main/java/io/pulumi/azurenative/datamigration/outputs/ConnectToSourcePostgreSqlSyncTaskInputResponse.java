@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectToSourcePostgreSqlSyncTaskInputResponse {
+/**
+ * Connection information for source PostgreSQL server
+ */
     private final PostgreSqlConnectionInfoResponse sourceConnectionInfo;
 
     @OutputCustomType.Constructor({"sourceConnectionInfo"})
@@ -16,6 +19,9 @@ public final class ConnectToSourcePostgreSqlSyncTaskInputResponse {
         this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
     }
 
+/**
+ * Connection information for source PostgreSQL server
+ */
     public PostgreSqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }

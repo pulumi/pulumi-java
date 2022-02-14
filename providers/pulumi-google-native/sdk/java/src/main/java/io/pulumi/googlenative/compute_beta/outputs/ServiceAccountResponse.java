@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServiceAccountResponse {
+/**
+ * Email address of the service account.
+ */
     private final String email;
+/**
+ * The list of scopes to be made available for this service account.
+ */
     private final List<String> scopes;
 
     @OutputCustomType.Constructor({"email","scopes"})
@@ -21,9 +27,15 @@ public final class ServiceAccountResponse {
         this.scopes = Objects.requireNonNull(scopes);
     }
 
+/**
+ * Email address of the service account.
+ */
     public String getEmail() {
         return this.email;
     }
+/**
+ * The list of scopes to be made available for this service account.
+ */
     public List<String> getScopes() {
         return this.scopes;
     }

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHubVirtualNetworkConnection {
+/**
+ * HubVirtualNetworkConnection Resource.
+API Version: 2020-11-01.
+ *
+ * HubVirtualNetworkConnection Resource.
+ */
     public static CompletableFuture<GetHubVirtualNetworkConnectionResult> invokeAsync(GetHubVirtualNetworkConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getHubVirtualNetworkConnection", TypeShape.of(GetHubVirtualNetworkConnectionResult.class), args == null ? GetHubVirtualNetworkConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

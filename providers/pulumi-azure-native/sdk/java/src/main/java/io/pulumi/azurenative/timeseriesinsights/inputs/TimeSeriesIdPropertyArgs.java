@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The structure of the property that a time series id can have. An environment can have multiple such properties.
+ */
 public final class TimeSeriesIdPropertyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TimeSeriesIdPropertyArgs Empty = new TimeSeriesIdPropertyArgs();
 
+    /**
+     * The name of the property.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -23,6 +29,9 @@ public final class TimeSeriesIdPropertyArgs extends io.pulumi.resources.Resource
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The type of the property.
+     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,PropertyType>> type;
 

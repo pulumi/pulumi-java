@@ -11,13 +11,37 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class KeyVaultCertificateSourceParametersResponse {
+/**
+ * Describes the action that shall be taken when the certificate is removed from Key Vault.
+ */
     private final String deleteRule;
+/**
+ * 
+ */
     private final String odataType;
+/**
+ * Resource group of the user's Key Vault containing the SSL certificate
+ */
     private final String resourceGroupName;
+/**
+ * The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.
+ */
     private final String secretName;
+/**
+ * The version(GUID) of Key Vault Secret in Key Vault.
+ */
     private final @Nullable String secretVersion;
+/**
+ * Subscription Id of the user's Key Vault containing the SSL certificate
+ */
     private final String subscriptionId;
+/**
+ * Describes the action that shall be taken when the certificate is updated in Key Vault.
+ */
     private final String updateRule;
+/**
+ * The name of the user's Key Vault containing the SSL certificate
+ */
     private final String vaultName;
 
     @OutputCustomType.Constructor({"deleteRule","odataType","resourceGroupName","secretName","secretVersion","subscriptionId","updateRule","vaultName"})
@@ -40,27 +64,51 @@ public final class KeyVaultCertificateSourceParametersResponse {
         this.vaultName = Objects.requireNonNull(vaultName);
     }
 
+/**
+ * Describes the action that shall be taken when the certificate is removed from Key Vault.
+ */
     public String getDeleteRule() {
         return this.deleteRule;
     }
+/**
+ * 
+ */
     public String getOdataType() {
         return this.odataType;
     }
+/**
+ * Resource group of the user's Key Vault containing the SSL certificate
+ */
     public String getResourceGroupName() {
         return this.resourceGroupName;
     }
+/**
+ * The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.
+ */
     public String getSecretName() {
         return this.secretName;
     }
+/**
+ * The version(GUID) of Key Vault Secret in Key Vault.
+ */
     public Optional<String> getSecretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
+/**
+ * Subscription Id of the user's Key Vault containing the SSL certificate
+ */
     public String getSubscriptionId() {
         return this.subscriptionId;
     }
+/**
+ * Describes the action that shall be taken when the certificate is updated in Key Vault.
+ */
     public String getUpdateRule() {
         return this.updateRule;
     }
+/**
+ * The name of the user's Key Vault containing the SSL certificate
+ */
     public String getVaultName() {
         return this.vaultName;
     }

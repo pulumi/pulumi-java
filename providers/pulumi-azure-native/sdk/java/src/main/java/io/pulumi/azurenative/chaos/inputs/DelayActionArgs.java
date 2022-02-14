@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Model that represents a delay action.
+ */
 public final class DelayActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DelayActionArgs Empty = new DelayActionArgs();
 
+    /**
+     * ISO8601 formatted string that represents a duration.
+     */
     @InputImport(name="duration", required=true)
     private final Input<String> duration;
 
@@ -20,6 +26,9 @@ public final class DelayActionArgs extends io.pulumi.resources.ResourceArgs {
         return this.duration;
     }
 
+    /**
+     * String that represents a Capability URN.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -27,6 +36,10 @@ public final class DelayActionArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * Enum that discriminates between action models.
+Expected value is 'delay'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

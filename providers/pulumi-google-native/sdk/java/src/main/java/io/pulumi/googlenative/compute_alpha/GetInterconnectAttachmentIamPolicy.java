@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInterconnectAttachmentIamPolicy {
+/**
+ * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+ */
     public static CompletableFuture<GetInterconnectAttachmentIamPolicyResult> invokeAsync(GetInterconnectAttachmentIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getInterconnectAttachmentIamPolicy", TypeShape.of(GetInterconnectAttachmentIamPolicyResult.class), args == null ? GetInterconnectAttachmentIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

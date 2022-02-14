@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of identity used for the connected cluster. The type 'SystemAssigned, includes a system created identity. The type 'None' means no identity is assigned to the connected cluster.
+ */
     @EnumType
     public enum ResourceIdentityType {
+/**
+ * 
+ */
         None("None"),
+/**
+ * 
+ */
         SystemAssigned("SystemAssigned");
 
         private final String value;

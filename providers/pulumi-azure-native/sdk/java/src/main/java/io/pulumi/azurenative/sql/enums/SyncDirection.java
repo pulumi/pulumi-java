@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Sync direction of the sync member.
+ */
     @EnumType
     public enum SyncDirection {
+/**
+ * 
+ */
         Bidirectional("Bidirectional"),
+/**
+ * 
+ */
         OneWayMemberToHub("OneWayMemberToHub"),
+/**
+ * 
+ */
         OneWayHubToMember("OneWayHubToMember");
 
         private final String value;

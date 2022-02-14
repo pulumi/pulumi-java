@@ -14,10 +14,17 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The response for an AKS variant.
+ */
 public final class AKSVariantResponseResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AKSVariantResponseResponse Empty = new AKSVariantResponseResponse();
 
+    /**
+     * The compute environment type for the service.
+Expected value is 'Custom'.
+     */
     @InputImport(name="computeType", required=true)
     private final String computeType;
 
@@ -25,6 +32,9 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
         return this.computeType;
     }
 
+    /**
+     * The deployment type for the service.
+     */
     @InputImport(name="deploymentType")
     private final @Nullable String deploymentType;
 
@@ -32,6 +42,9 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
         return this.deploymentType == null ? Optional.empty() : Optional.ofNullable(this.deploymentType);
     }
 
+    /**
+     * The service description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -39,6 +52,9 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The error details.
+     */
     @InputImport(name="error", required=true)
     private final ServiceResponseBaseResponseError error;
 
@@ -46,6 +62,9 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
         return this.error;
     }
 
+    /**
+     * Is this the default variant.
+     */
     @InputImport(name="isDefault")
     private final @Nullable Boolean isDefault;
 
@@ -53,6 +72,9 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
         return this.isDefault == null ? Optional.empty() : Optional.ofNullable(this.isDefault);
     }
 
+    /**
+     * The service tag dictionary. Tags are mutable.
+     */
     @InputImport(name="kvTags")
     private final @Nullable Map<String,String> kvTags;
 
@@ -60,6 +82,9 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
         return this.kvTags == null ? Map.of() : this.kvTags;
     }
 
+    /**
+     * The service property dictionary. Properties are immutable.
+     */
     @InputImport(name="properties")
     private final @Nullable Map<String,String> properties;
 
@@ -67,6 +92,9 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
         return this.properties == null ? Map.of() : this.properties;
     }
 
+    /**
+     * The current state of the service.
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -74,6 +102,9 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
         return this.state;
     }
 
+    /**
+     * The amount of traffic variant receives.
+     */
     @InputImport(name="trafficPercentile")
     private final @Nullable Double trafficPercentile;
 
@@ -81,6 +112,9 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
         return this.trafficPercentile == null ? Optional.empty() : Optional.ofNullable(this.trafficPercentile);
     }
 
+    /**
+     * The type of the variant.
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

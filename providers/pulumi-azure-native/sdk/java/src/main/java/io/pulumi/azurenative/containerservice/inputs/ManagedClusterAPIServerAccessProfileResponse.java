@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Access profile for managed cluster API server.
+ */
 public final class ManagedClusterAPIServerAccessProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedClusterAPIServerAccessProfileResponse Empty = new ManagedClusterAPIServerAccessProfileResponse();
 
+    /**
+     * Authorized IP Ranges to kubernetes API server.
+     */
     @InputImport(name="authorizedIPRanges")
     private final @Nullable List<String> authorizedIPRanges;
 
@@ -23,6 +29,9 @@ public final class ManagedClusterAPIServerAccessProfileResponse extends io.pulum
         return this.authorizedIPRanges == null ? List.of() : this.authorizedIPRanges;
     }
 
+    /**
+     * Whether to create the cluster as a private cluster or not.
+     */
     @InputImport(name="enablePrivateCluster")
     private final @Nullable Boolean enablePrivateCluster;
 
@@ -30,6 +39,9 @@ public final class ManagedClusterAPIServerAccessProfileResponse extends io.pulum
         return this.enablePrivateCluster == null ? Optional.empty() : Optional.ofNullable(this.enablePrivateCluster);
     }
 
+    /**
+     * Private dns zone mode for private cluster. 
+     */
     @InputImport(name="privateDNSZone")
     private final @Nullable String privateDNSZone;
 

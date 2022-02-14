@@ -11,10 +11,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class MediaServiceIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MediaServiceIdentityArgs Empty = new MediaServiceIdentityArgs();
 
+    /**
+     * The identity type.
+     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,ManagedIdentityType>> type;
 

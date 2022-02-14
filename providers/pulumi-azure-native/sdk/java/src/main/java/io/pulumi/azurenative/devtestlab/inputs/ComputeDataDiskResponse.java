@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A data disks attached to a virtual machine.
+ */
 public final class ComputeDataDiskResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ComputeDataDiskResponse Empty = new ComputeDataDiskResponse();
 
+    /**
+     * Gets data disk size in GiB.
+     */
     @InputImport(name="diskSizeGiB")
     private final @Nullable Integer diskSizeGiB;
 
@@ -22,6 +28,9 @@ public final class ComputeDataDiskResponse extends io.pulumi.resources.InvokeArg
         return this.diskSizeGiB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGiB);
     }
 
+    /**
+     * When backed by a blob, the URI of underlying blob.
+     */
     @InputImport(name="diskUri")
     private final @Nullable String diskUri;
 
@@ -29,6 +38,9 @@ public final class ComputeDataDiskResponse extends io.pulumi.resources.InvokeArg
         return this.diskUri == null ? Optional.empty() : Optional.ofNullable(this.diskUri);
     }
 
+    /**
+     * When backed by managed disk, this is the ID of the compute disk resource.
+     */
     @InputImport(name="managedDiskId")
     private final @Nullable String managedDiskId;
 
@@ -36,6 +48,9 @@ public final class ComputeDataDiskResponse extends io.pulumi.resources.InvokeArg
         return this.managedDiskId == null ? Optional.empty() : Optional.ofNullable(this.managedDiskId);
     }
 
+    /**
+     * Gets data disk name.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

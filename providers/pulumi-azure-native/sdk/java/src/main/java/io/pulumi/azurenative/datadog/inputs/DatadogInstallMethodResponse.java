@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DatadogInstallMethodResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatadogInstallMethodResponse Empty = new DatadogInstallMethodResponse();
 
+    /**
+     * The installer version.
+     */
     @InputImport(name="installerVersion")
     private final @Nullable String installerVersion;
 
@@ -21,6 +27,9 @@ public final class DatadogInstallMethodResponse extends io.pulumi.resources.Invo
         return this.installerVersion == null ? Optional.empty() : Optional.ofNullable(this.installerVersion);
     }
 
+    /**
+     * The tool.
+     */
     @InputImport(name="tool")
     private final @Nullable String tool;
 
@@ -28,6 +37,9 @@ public final class DatadogInstallMethodResponse extends io.pulumi.resources.Invo
         return this.tool == null ? Optional.empty() : Optional.ofNullable(this.tool);
     }
 
+    /**
+     * The tool version.
+     */
     @InputImport(name="toolVersion")
     private final @Nullable String toolVersion;
 

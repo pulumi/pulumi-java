@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A POSIX filesystem resource.
+ */
 public final class PosixFilesystemResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PosixFilesystemResponse Empty = new PosixFilesystemResponse();
 
+    /**
+     * Root directory path to the filesystem.
+     */
     @InputImport(name="rootDirectory", required=true)
     private final String rootDirectory;
 

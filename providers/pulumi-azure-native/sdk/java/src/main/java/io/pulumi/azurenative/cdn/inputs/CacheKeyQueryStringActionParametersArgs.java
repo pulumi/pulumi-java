@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the parameters for the cache-key query string action.
+ */
 public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CacheKeyQueryStringActionParametersArgs Empty = new CacheKeyQueryStringActionParametersArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 
@@ -23,6 +29,9 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
         return this.odataType;
     }
 
+    /**
+     * query parameters to include or exclude (comma separated).
+     */
     @InputImport(name="queryParameters")
     private final @Nullable Input<String> queryParameters;
 
@@ -30,6 +39,9 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
         return this.queryParameters == null ? Input.empty() : this.queryParameters;
     }
 
+    /**
+     * Caching behavior for the requests
+     */
     @InputImport(name="queryStringBehavior", required=true)
     private final Input<Either<String,QueryStringBehavior>> queryStringBehavior;
 

@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CompositeTypeLabelEntryResponse {
+/**
+ * Key of the label
+ */
     private final String key;
+/**
+ * Value of the label
+ */
     private final String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -20,9 +26,15 @@ public final class CompositeTypeLabelEntryResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * Key of the label
+ */
     public String getKey() {
         return this.key;
     }
+/**
+ * Value of the label
+ */
     public String getValue() {
         return this.value;
     }

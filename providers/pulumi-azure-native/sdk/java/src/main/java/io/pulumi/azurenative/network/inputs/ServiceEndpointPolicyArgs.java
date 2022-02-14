@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Service End point policy resource.
+ */
 public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceEndpointPolicyArgs Empty = new ServiceEndpointPolicyArgs();
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -24,6 +30,9 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -31,6 +40,9 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * A collection of service endpoint policy definitions of the service endpoint policy.
+     */
     @InputImport(name="serviceEndpointPolicyDefinitions")
     private final @Nullable Input<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions;
 
@@ -38,6 +50,9 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
         return this.serviceEndpointPolicyDefinitions == null ? Input.empty() : this.serviceEndpointPolicyDefinitions;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

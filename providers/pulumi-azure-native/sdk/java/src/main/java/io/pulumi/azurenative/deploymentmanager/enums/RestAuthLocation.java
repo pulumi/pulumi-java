@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The location of the authentication key/value pair in the request.
+ */
     @EnumType
     public enum RestAuthLocation {
+/**
+ * 
+ */
         Query("Query"),
+/**
+ * 
+ */
         Header("Header");
 
         private final String value;

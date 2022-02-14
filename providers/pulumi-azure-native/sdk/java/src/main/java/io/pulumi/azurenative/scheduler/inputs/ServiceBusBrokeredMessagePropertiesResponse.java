@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceBusBrokeredMessagePropertiesResponse Empty = new ServiceBusBrokeredMessagePropertiesResponse();
 
+    /**
+     * Gets or sets the content type.
+     */
     @InputImport(name="contentType")
     private final @Nullable String contentType;
 
@@ -22,6 +28,9 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
         return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
     }
 
+    /**
+     * Gets or sets the correlation ID.
+     */
     @InputImport(name="correlationId")
     private final @Nullable String correlationId;
 
@@ -29,6 +38,9 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
         return this.correlationId == null ? Optional.empty() : Optional.ofNullable(this.correlationId);
     }
 
+    /**
+     * Gets or sets the force persistence.
+     */
     @InputImport(name="forcePersistence")
     private final @Nullable Boolean forcePersistence;
 
@@ -36,6 +48,9 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
         return this.forcePersistence == null ? Optional.empty() : Optional.ofNullable(this.forcePersistence);
     }
 
+    /**
+     * Gets or sets the label.
+     */
     @InputImport(name="label")
     private final @Nullable String label;
 
@@ -43,6 +58,9 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
     }
 
+    /**
+     * Gets or sets the message ID.
+     */
     @InputImport(name="messageId")
     private final @Nullable String messageId;
 
@@ -50,6 +68,9 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
         return this.messageId == null ? Optional.empty() : Optional.ofNullable(this.messageId);
     }
 
+    /**
+     * Gets or sets the partition key.
+     */
     @InputImport(name="partitionKey")
     private final @Nullable String partitionKey;
 
@@ -57,6 +78,9 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
         return this.partitionKey == null ? Optional.empty() : Optional.ofNullable(this.partitionKey);
     }
 
+    /**
+     * Gets or sets the reply to.
+     */
     @InputImport(name="replyTo")
     private final @Nullable String replyTo;
 
@@ -64,6 +88,9 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
         return this.replyTo == null ? Optional.empty() : Optional.ofNullable(this.replyTo);
     }
 
+    /**
+     * Gets or sets the reply to session ID.
+     */
     @InputImport(name="replyToSessionId")
     private final @Nullable String replyToSessionId;
 
@@ -71,6 +98,9 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
         return this.replyToSessionId == null ? Optional.empty() : Optional.ofNullable(this.replyToSessionId);
     }
 
+    /**
+     * Gets or sets the scheduled enqueue time UTC.
+     */
     @InputImport(name="scheduledEnqueueTimeUtc")
     private final @Nullable String scheduledEnqueueTimeUtc;
 
@@ -78,6 +108,9 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
         return this.scheduledEnqueueTimeUtc == null ? Optional.empty() : Optional.ofNullable(this.scheduledEnqueueTimeUtc);
     }
 
+    /**
+     * Gets or sets the session ID.
+     */
     @InputImport(name="sessionId")
     private final @Nullable String sessionId;
 
@@ -85,6 +118,9 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
         return this.sessionId == null ? Optional.empty() : Optional.ofNullable(this.sessionId);
     }
 
+    /**
+     * Gets or sets the time to live.
+     */
     @InputImport(name="timeToLive")
     private final @Nullable String timeToLive;
 
@@ -92,6 +128,9 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
         return this.timeToLive == null ? Optional.empty() : Optional.ofNullable(this.timeToLive);
     }
 
+    /**
+     * Gets or sets the to.
+     */
     @InputImport(name="to")
     private final @Nullable String to;
 
@@ -99,6 +138,9 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
         return this.to == null ? Optional.empty() : Optional.ofNullable(this.to);
     }
 
+    /**
+     * Gets or sets the via partition key.
+     */
     @InputImport(name="viaPartitionKey")
     private final @Nullable String viaPartitionKey;
 

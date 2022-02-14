@@ -11,11 +11,29 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse {
+/**
+ * The system's confidence score that this article is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+ */
     private final Double confidenceScore;
+/**
+ * Map that contains metadata about the Article Suggestion and the document that it originates from.
+ */
     private final Map<String,String> metadata;
+/**
+ * Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
+ */
     private final String queryRecord;
+/**
+ * The knowledge document that this answer was extracted from. Format: projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}
+ */
     private final String source;
+/**
+ * Article title.
+ */
     private final String title;
+/**
+ * Article URI.
+ */
     private final String uri;
 
     @OutputCustomType.Constructor({"confidenceScore","metadata","queryRecord","source","title","uri"})
@@ -34,21 +52,39 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
         this.uri = Objects.requireNonNull(uri);
     }
 
+/**
+ * The system's confidence score that this article is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+ */
     public Double getConfidenceScore() {
         return this.confidenceScore;
     }
+/**
+ * Map that contains metadata about the Article Suggestion and the document that it originates from.
+ */
     public Map<String,String> getMetadata() {
         return this.metadata;
     }
+/**
+ * Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
+ */
     public String getQueryRecord() {
         return this.queryRecord;
     }
+/**
+ * The knowledge document that this answer was extracted from. Format: projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}
+ */
     public String getSource() {
         return this.source;
     }
+/**
+ * Article title.
+ */
     public String getTitle() {
         return this.title;
     }
+/**
+ * Article URI.
+ */
     public String getUri() {
         return this.uri;
     }

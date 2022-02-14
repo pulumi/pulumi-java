@@ -14,17 +14,54 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationRuleResponse {
+/**
+ * Description of the rule.
+ */
     private final @Nullable String description;
+/**
+ * List of destination IP addresses or Service Tags.
+ */
     private final @Nullable List<String> destinationAddresses;
+/**
+ * List of FQDN Tags for this rule.
+ */
     private final @Nullable List<String> fqdnTags;
+/**
+ * Name of the rule.
+ */
     private final @Nullable String name;
+/**
+ * Array of Application Protocols.
+ */
     private final @Nullable List<FirewallPolicyRuleApplicationProtocolResponse> protocols;
+/**
+ * Rule Type.
+Expected value is 'ApplicationRule'.
+ */
     private final String ruleType;
+/**
+ * List of source IP addresses for this rule.
+ */
     private final @Nullable List<String> sourceAddresses;
+/**
+ * List of source IpGroups for this rule.
+ */
     private final @Nullable List<String> sourceIpGroups;
+/**
+ * List of FQDNs for this rule.
+ */
     private final @Nullable List<String> targetFqdns;
+/**
+ * List of Urls for this rule condition.
+ */
     private final @Nullable List<String> targetUrls;
+/**
+ * Terminate TLS connections for this rule.
+ */
     private final @Nullable Boolean terminateTLS;
+/**
+ * List of destination azure web categories.
+ */
     private final @Nullable List<String> webCategories;
 
     @OutputCustomType.Constructor({"description","destinationAddresses","fqdnTags","name","protocols","ruleType","sourceAddresses","sourceIpGroups","targetFqdns","targetUrls","terminateTLS","webCategories"})
@@ -55,39 +92,76 @@ public final class ApplicationRuleResponse {
         this.webCategories = webCategories;
     }
 
+/**
+ * Description of the rule.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * List of destination IP addresses or Service Tags.
+ */
     public List<String> getDestinationAddresses() {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
+/**
+ * List of FQDN Tags for this rule.
+ */
     public List<String> getFqdnTags() {
         return this.fqdnTags == null ? List.of() : this.fqdnTags;
     }
+/**
+ * Name of the rule.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * Array of Application Protocols.
+ */
     public List<FirewallPolicyRuleApplicationProtocolResponse> getProtocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
+/**
+ * Rule Type.
+Expected value is 'ApplicationRule'.
+ */
     public String getRuleType() {
         return this.ruleType;
     }
+/**
+ * List of source IP addresses for this rule.
+ */
     public List<String> getSourceAddresses() {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
+/**
+ * List of source IpGroups for this rule.
+ */
     public List<String> getSourceIpGroups() {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }
+/**
+ * List of FQDNs for this rule.
+ */
     public List<String> getTargetFqdns() {
         return this.targetFqdns == null ? List.of() : this.targetFqdns;
     }
+/**
+ * List of Urls for this rule condition.
+ */
     public List<String> getTargetUrls() {
         return this.targetUrls == null ? List.of() : this.targetUrls;
     }
+/**
+ * Terminate TLS connections for this rule.
+ */
     public Optional<Boolean> getTerminateTLS() {
         return Optional.ofNullable(this.terminateTLS);
     }
+/**
+ * List of destination azure web categories.
+ */
     public List<String> getWebCategories() {
         return this.webCategories == null ? List.of() : this.webCategories;
     }

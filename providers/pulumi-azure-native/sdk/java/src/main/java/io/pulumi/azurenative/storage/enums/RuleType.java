@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The valid value is Lifecycle
+ */
     @EnumType
     public enum RuleType {
+/**
+ * 
+ */
         Lifecycle("Lifecycle");
 
         private final String value;

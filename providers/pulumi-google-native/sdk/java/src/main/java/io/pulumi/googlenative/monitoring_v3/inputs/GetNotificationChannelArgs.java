@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetNotificationChannelArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNotificationChannelArgs Empty = new GetNotificationChannelArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="notificationChannelId", required=true)
     private final String notificationChannelId;
 
@@ -21,6 +27,9 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
         return this.notificationChannelId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

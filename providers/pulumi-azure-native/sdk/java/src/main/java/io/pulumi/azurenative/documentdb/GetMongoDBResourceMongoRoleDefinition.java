@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMongoDBResourceMongoRoleDefinition {
+/**
+ * An Azure Cosmos DB Mongo Role Definition.
+API Version: 2021-10-15-preview.
+ *
+ * An Azure Cosmos DB Mongo Role Definition.
+ */
     public static CompletableFuture<GetMongoDBResourceMongoRoleDefinitionResult> invokeAsync(GetMongoDBResourceMongoRoleDefinitionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getMongoDBResourceMongoRoleDefinition", TypeShape.of(GetMongoDBResourceMongoRoleDefinitionResult.class), args == null ? GetMongoDBResourceMongoRoleDefinitionArgs.Empty : args, Utilities.withVersion(options));
     }

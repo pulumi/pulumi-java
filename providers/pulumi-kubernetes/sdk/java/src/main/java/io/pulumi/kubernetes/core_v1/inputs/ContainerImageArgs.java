@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describe a container image
+ */
 public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerImageArgs Empty = new ContainerImageArgs();
 
+    /**
+     * Names by which this image is known. e.g. ["k8s.gcr.io/hyperkube:v1.0.7", "dockerhub.io/google_containers/hyperkube:v1.0.7"]
+     */
     @InputImport(name="names", required=true)
     private final Input<List<String>> names;
 
@@ -23,6 +29,9 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
         return this.names;
     }
 
+    /**
+     * The size of the image in bytes.
+     */
     @InputImport(name="sizeBytes")
     private final @Nullable Input<Integer> sizeBytes;
 

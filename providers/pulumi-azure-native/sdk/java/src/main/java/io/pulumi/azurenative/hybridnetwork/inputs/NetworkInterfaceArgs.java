@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network interface properties.
+ */
 public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkInterfaceArgs Empty = new NetworkInterfaceArgs();
 
+    /**
+     * A list of IP configurations of the network interface.
+     */
     @InputImport(name="ipConfigurations")
     private final @Nullable Input<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations;
 
@@ -25,6 +31,9 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.ipConfigurations == null ? Input.empty() : this.ipConfigurations;
     }
 
+    /**
+     * The MAC address of the network interface.
+     */
     @InputImport(name="macAddress")
     private final @Nullable Input<String> macAddress;
 
@@ -32,6 +41,9 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.macAddress == null ? Input.empty() : this.macAddress;
     }
 
+    /**
+     * The name of the network interface.
+     */
     @InputImport(name="networkInterfaceName")
     private final @Nullable Input<String> networkInterfaceName;
 
@@ -39,6 +51,9 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
         return this.networkInterfaceName == null ? Input.empty() : this.networkInterfaceName;
     }
 
+    /**
+     * The type of the VM switch.
+     */
     @InputImport(name="vmSwitchType")
     private final @Nullable Input<Either<String,VMSwitchType>> vmSwitchType;
 

@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Enum type definition.
+ */
 public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnumArgs Empty = new EnumArgs();
 
+    /**
+     * Enum value definitions.
+     */
     @InputImport(name="enumvalue")
     private final @Nullable Input<List<EnumValueArgs>> enumvalue;
 
@@ -26,6 +32,9 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
         return this.enumvalue == null ? Input.empty() : this.enumvalue;
     }
 
+    /**
+     * Enum type name.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -33,6 +42,9 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Protocol buffer options.
+     */
     @InputImport(name="options")
     private final @Nullable Input<List<OptionArgs>> options;
 
@@ -40,6 +52,9 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
         return this.options == null ? Input.empty() : this.options;
     }
 
+    /**
+     * The source context.
+     */
     @InputImport(name="sourceContext")
     private final @Nullable Input<SourceContextArgs> sourceContext;
 
@@ -47,6 +62,9 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceContext == null ? Input.empty() : this.sourceContext;
     }
 
+    /**
+     * The source syntax.
+     */
     @InputImport(name="syntax")
     private final @Nullable Input<EnumSyntax> syntax;
 

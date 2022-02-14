@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork {
+/**
+ * The Id of the remote virtual network.
+ */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -18,6 +21,9 @@ public final class VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNet
         this.id = id;
     }
 
+/**
+ * The Id of the remote virtual network.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

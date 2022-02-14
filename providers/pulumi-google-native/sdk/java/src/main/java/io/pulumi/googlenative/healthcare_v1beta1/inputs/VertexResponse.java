@@ -8,10 +8,16 @@ import java.lang.Double;
 import java.util.Objects;
 
 
+/**
+ * A 2D coordinate in an image. The origin is the top-left.
+ */
 public final class VertexResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VertexResponse Empty = new VertexResponse();
 
+    /**
+     * X coordinate.
+     */
     @InputImport(name="x", required=true)
     private final Double x;
 
@@ -19,6 +25,9 @@ public final class VertexResponse extends io.pulumi.resources.InvokeArgs {
         return this.x;
     }
 
+    /**
+     * Y coordinate.
+     */
     @InputImport(name="y", required=true)
     private final Double y;
 

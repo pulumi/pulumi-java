@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Agent disk details.
+ */
 public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AgentDiskDetailsResponse Empty = new AgentDiskDetailsResponse();
 
+    /**
+     * The disk capacity in bytes.
+     */
     @InputImport(name="capacityInBytes", required=true)
     private final Double capacityInBytes;
 
@@ -21,6 +27,9 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
         return this.capacityInBytes;
     }
 
+    /**
+     * The disk Id.
+     */
     @InputImport(name="diskId", required=true)
     private final String diskId;
 
@@ -28,6 +37,9 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
         return this.diskId;
     }
 
+    /**
+     * The disk name.
+     */
     @InputImport(name="diskName", required=true)
     private final String diskName;
 
@@ -35,6 +47,9 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
         return this.diskName;
     }
 
+    /**
+     * A value indicating whether the disk is the OS disk.
+     */
     @InputImport(name="isOSDisk", required=true)
     private final String isOSDisk;
 
@@ -42,6 +57,9 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
         return this.isOSDisk;
     }
 
+    /**
+     * The lun of disk.
+     */
     @InputImport(name="lunId", required=true)
     private final Integer lunId;
 

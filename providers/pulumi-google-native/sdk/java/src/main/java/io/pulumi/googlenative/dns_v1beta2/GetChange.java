@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetChange {
+/**
+ * Fetches the representation of an existing Change.
+ */
     public static CompletableFuture<GetChangeResult> invokeAsync(GetChangeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dns/v1beta2:getChange", TypeShape.of(GetChangeResult.class), args == null ? GetChangeArgs.Empty : args, Utilities.withVersion(options));
     }

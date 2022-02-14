@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CertificateResponse Empty = new CertificateResponse();
 
+    /**
+     * PEM formatted public key.
+     */
     @InputImport(name="pem")
     private final @Nullable String pem;
 

@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SkuResponse {
+/**
+ * Name of the sku
+ */
     private final @Nullable String name;
+/**
+ * Tier of the sku like Basic or Enterprise
+ */
     private final @Nullable String tier;
 
     @OutputCustomType.Constructor({"name","tier"})
@@ -22,9 +28,15 @@ public final class SkuResponse {
         this.tier = tier;
     }
 
+/**
+ * Name of the sku
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * Tier of the sku like Basic or Enterprise
+ */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }

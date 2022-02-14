@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.devtestlab;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.devtestlab.ServiceFabricArgs;
 import io.pulumi.azurenative.devtestlab.outputs.ApplicableScheduleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,63 +15,239 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A Service Fabric.
+API Version: 2018-09-15.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### ServiceFabrics_CreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceFabric = new AzureNative.DevTestLab.ServiceFabric("serviceFabric", new AzureNative.DevTestLab.ServiceFabricArgs
+        {
+            EnvironmentId = "{environmentId}",
+            ExternalServiceFabricId = "{serviceFabricId}",
+            LabName = "{labName}",
+            Location = "{location}",
+            Name = "{serviceFabricName}",
+            ResourceGroupName = "resourceGroupName",
+            Tags = 
+            {
+                { "tagName1", "tagValue1" },
+            },
+            UserName = "{userName}",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devtestlab.NewServiceFabric(ctx, "serviceFabric", &devtestlab.ServiceFabricArgs{
+			EnvironmentId:           pulumi.String("{environmentId}"),
+			ExternalServiceFabricId: pulumi.String("{serviceFabricId}"),
+			LabName:                 pulumi.String("{labName}"),
+			Location:                pulumi.String("{location}"),
+			Name:                    pulumi.String("{serviceFabricName}"),
+			ResourceGroupName:       pulumi.String("resourceGroupName"),
+			Tags: pulumi.StringMap{
+				"tagName1": pulumi.String("tagValue1"),
+			},
+			UserName: pulumi.String("{userName}"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const serviceFabric = new azure_native.devtestlab.ServiceFabric("serviceFabric", {
+    environmentId: "{environmentId}",
+    externalServiceFabricId: "{serviceFabricId}",
+    labName: "{labName}",
+    location: "{location}",
+    name: "{serviceFabricName}",
+    resourceGroupName: "resourceGroupName",
+    tags: {
+        tagName1: "tagValue1",
+    },
+    userName: "{userName}",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+service_fabric = azure_native.devtestlab.ServiceFabric("serviceFabric",
+    environment_id="{environmentId}",
+    external_service_fabric_id="{serviceFabricId}",
+    lab_name="{labName}",
+    location="{location}",
+    name="{serviceFabricName}",
+    resource_group_name="resourceGroupName",
+    tags={
+        "tagName1": "tagValue1",
+    },
+    user_name="{userName}")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devtestlab:ServiceFabric {serviceFabricName} /subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/users/{userName}/servicefabrics/{serviceFabricName} 
+```
+
+ */
 @ResourceType(type="azure-native:devtestlab:ServiceFabric")
 public class ServiceFabric extends io.pulumi.resources.CustomResource {
+    /**
+     * The applicable schedule for the virtual machine.
+     */
     @OutputExport(name="applicableSchedule", type=ApplicableScheduleResponse.class, parameters={})
     private Output<ApplicableScheduleResponse> applicableSchedule;
 
+    /**
+     * @return The applicable schedule for the virtual machine.
+     */
     public Output<ApplicableScheduleResponse> getApplicableSchedule() {
         return this.applicableSchedule;
     }
+    /**
+     * The resource id of the environment under which the service fabric resource is present
+     */
     @OutputExport(name="environmentId", type=String.class, parameters={})
     private Output</* @Nullable */ String> environmentId;
 
+    /**
+     * @return The resource id of the environment under which the service fabric resource is present
+     */
     public Output</* @Nullable */ String> getEnvironmentId() {
         return this.environmentId;
     }
+    /**
+     * The backing service fabric resource's id
+     */
     @OutputExport(name="externalServiceFabricId", type=String.class, parameters={})
     private Output</* @Nullable */ String> externalServiceFabricId;
 
+    /**
+     * @return The backing service fabric resource's id
+     */
     public Output</* @Nullable */ String> getExternalServiceFabricId() {
         return this.externalServiceFabricId;
     }
+    /**
+     * The location of the resource.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The location of the resource.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning status of the resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning status of the resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The tags of the resource.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The unique immutable identifier of a resource (Guid).
+     */
     @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
+    /**
+     * @return The unique immutable identifier of a resource (Guid).
+     */
     public Output<String> getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ServiceFabric(String name, ServiceFabricArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:devtestlab:ServiceFabric", name, args == null ? ServiceFabricArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -91,6 +266,14 @@ public class ServiceFabric extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ServiceFabric get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServiceFabric(name, id, options);
     }

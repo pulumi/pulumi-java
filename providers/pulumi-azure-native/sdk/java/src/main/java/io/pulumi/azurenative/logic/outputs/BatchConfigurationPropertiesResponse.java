@@ -13,10 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BatchConfigurationPropertiesResponse {
+/**
+ * The name of the batch group.
+ */
     private final String batchGroupName;
+/**
+ * The artifact changed time.
+ */
     private final @Nullable String changedTime;
+/**
+ * The artifact creation time.
+ */
     private final @Nullable String createdTime;
+/**
+ * 
+ */
     private final @Nullable Object metadata;
+/**
+ * The batch release criteria.
+ */
     private final BatchReleaseCriteriaResponse releaseCriteria;
 
     @OutputCustomType.Constructor({"batchGroupName","changedTime","createdTime","metadata","releaseCriteria"})
@@ -33,18 +48,33 @@ public final class BatchConfigurationPropertiesResponse {
         this.releaseCriteria = Objects.requireNonNull(releaseCriteria);
     }
 
+/**
+ * The name of the batch group.
+ */
     public String getBatchGroupName() {
         return this.batchGroupName;
     }
+/**
+ * The artifact changed time.
+ */
     public Optional<String> getChangedTime() {
         return Optional.ofNullable(this.changedTime);
     }
+/**
+ * The artifact creation time.
+ */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
+/**
+ * 
+ */
     public Optional<Object> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
+/**
+ * The batch release criteria.
+ */
     public BatchReleaseCriteriaResponse getReleaseCriteria() {
         return this.releaseCriteria;
     }

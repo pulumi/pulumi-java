@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum PreflightOption {
+/**
+ * 
+ */
         None("None"),
+/**
+ * 
+ */
         ContinueDeploymentOnFailure("ContinueDeploymentOnFailure"),
+/**
+ * 
+ */
         DefaultValidationOnly("DefaultValidationOnly");
 
         private final String value;

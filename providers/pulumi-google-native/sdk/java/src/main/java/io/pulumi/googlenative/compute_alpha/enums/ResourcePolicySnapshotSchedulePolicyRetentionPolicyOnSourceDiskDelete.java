@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Specifies the behavior to apply to scheduled snapshots when the source disk is deleted.
+ */
     @EnumType
     public enum ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete {
+/**
+ * 
+ */
         ApplyRetentionPolicy("APPLY_RETENTION_POLICY"),
+/**
+ * 
+ */
         KeepAutoSnapshots("KEEP_AUTO_SNAPSHOTS"),
+/**
+ * 
+ */
         UnspecifiedOnSourceDiskDelete("UNSPECIFIED_ON_SOURCE_DISK_DELETE");
 
         private final String value;

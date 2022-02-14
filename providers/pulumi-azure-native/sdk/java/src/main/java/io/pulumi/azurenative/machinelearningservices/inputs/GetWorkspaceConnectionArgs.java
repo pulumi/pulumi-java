@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetWorkspaceConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWorkspaceConnectionArgs Empty = new GetWorkspaceConnectionArgs();
 
+    /**
+     * Friendly name of the workspace connection
+     */
     @InputImport(name="connectionName", required=true)
     private final String connectionName;
 
@@ -19,6 +25,9 @@ public final class GetWorkspaceConnectionArgs extends io.pulumi.resources.Invoke
         return this.connectionName;
     }
 
+    /**
+     * Name of the resource group in which workspace is located.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetWorkspaceConnectionArgs extends io.pulumi.resources.Invoke
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of Azure Machine Learning workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

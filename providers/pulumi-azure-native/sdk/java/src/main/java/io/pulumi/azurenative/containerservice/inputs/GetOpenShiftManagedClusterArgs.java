@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetOpenShiftManagedClusterArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetOpenShiftManagedClusterArgs Empty = new GetOpenShiftManagedClusterArgs();
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class GetOpenShiftManagedClusterArgs extends io.pulumi.resources.In
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the OpenShift managed cluster resource.
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

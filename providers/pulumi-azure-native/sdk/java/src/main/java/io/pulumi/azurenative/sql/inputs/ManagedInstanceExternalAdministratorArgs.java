@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of a active directory administrator.
+ */
 public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedInstanceExternalAdministratorArgs Empty = new ManagedInstanceExternalAdministratorArgs();
 
+    /**
+     * Type of the sever administrator.
+     */
     @InputImport(name="administratorType")
     private final @Nullable Input<Either<String,AdministratorType>> administratorType;
 
@@ -25,6 +31,9 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
         return this.administratorType == null ? Input.empty() : this.administratorType;
     }
 
+    /**
+     * Azure Active Directory only Authentication enabled.
+     */
     @InputImport(name="azureADOnlyAuthentication")
     private final @Nullable Input<Boolean> azureADOnlyAuthentication;
 
@@ -32,6 +41,9 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
         return this.azureADOnlyAuthentication == null ? Input.empty() : this.azureADOnlyAuthentication;
     }
 
+    /**
+     * Login name of the server administrator.
+     */
     @InputImport(name="login")
     private final @Nullable Input<String> login;
 
@@ -39,6 +51,9 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
         return this.login == null ? Input.empty() : this.login;
     }
 
+    /**
+     * Principal Type of the sever administrator.
+     */
     @InputImport(name="principalType")
     private final @Nullable Input<Either<String,PrincipalType>> principalType;
 
@@ -46,6 +61,9 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
         return this.principalType == null ? Input.empty() : this.principalType;
     }
 
+    /**
+     * SID (object ID) of the server administrator.
+     */
     @InputImport(name="sid")
     private final @Nullable Input<String> sid;
 
@@ -53,6 +71,9 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
         return this.sid == null ? Input.empty() : this.sid;
     }
 
+    /**
+     * Tenant ID of the administrator.
+     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 

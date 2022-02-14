@@ -10,17 +10,53 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CVSSResponse {
+/**
+ * 
+ */
     private final String attackComplexity;
+/**
+ * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
+ */
     private final String attackVector;
+/**
+ * 
+ */
     private final String authentication;
+/**
+ * 
+ */
     private final String availabilityImpact;
+/**
+ * The base score is a function of the base metric scores.
+ */
     private final Double baseScore;
+/**
+ * 
+ */
     private final String confidentialityImpact;
+/**
+ * 
+ */
     private final Double exploitabilityScore;
+/**
+ * 
+ */
     private final Double impactScore;
+/**
+ * 
+ */
     private final String integrityImpact;
+/**
+ * 
+ */
     private final String privilegesRequired;
+/**
+ * 
+ */
     private final String scope;
+/**
+ * 
+ */
     private final String userInteraction;
 
     @OutputCustomType.Constructor({"attackComplexity","attackVector","authentication","availabilityImpact","baseScore","confidentialityImpact","exploitabilityScore","impactScore","integrityImpact","privilegesRequired","scope","userInteraction"})
@@ -51,39 +87,75 @@ public final class CVSSResponse {
         this.userInteraction = Objects.requireNonNull(userInteraction);
     }
 
+/**
+ * 
+ */
     public String getAttackComplexity() {
         return this.attackComplexity;
     }
+/**
+ * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
+ */
     public String getAttackVector() {
         return this.attackVector;
     }
+/**
+ * 
+ */
     public String getAuthentication() {
         return this.authentication;
     }
+/**
+ * 
+ */
     public String getAvailabilityImpact() {
         return this.availabilityImpact;
     }
+/**
+ * The base score is a function of the base metric scores.
+ */
     public Double getBaseScore() {
         return this.baseScore;
     }
+/**
+ * 
+ */
     public String getConfidentialityImpact() {
         return this.confidentialityImpact;
     }
+/**
+ * 
+ */
     public Double getExploitabilityScore() {
         return this.exploitabilityScore;
     }
+/**
+ * 
+ */
     public Double getImpactScore() {
         return this.impactScore;
     }
+/**
+ * 
+ */
     public String getIntegrityImpact() {
         return this.integrityImpact;
     }
+/**
+ * 
+ */
     public String getPrivilegesRequired() {
         return this.privilegesRequired;
     }
+/**
+ * 
+ */
     public String getScope() {
         return this.scope;
     }
+/**
+ * 
+ */
     public String getUserInteraction() {
         return this.userInteraction;
     }

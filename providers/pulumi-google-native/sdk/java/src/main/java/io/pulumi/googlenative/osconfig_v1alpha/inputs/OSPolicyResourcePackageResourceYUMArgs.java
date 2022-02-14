@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A package managed by YUM. - install: `yum -y install package` - remove: `yum -y remove package`
+ */
 public final class OSPolicyResourcePackageResourceYUMArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OSPolicyResourcePackageResourceYUMArgs Empty = new OSPolicyResourcePackageResourceYUMArgs();
 
+    /**
+     * Package name.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

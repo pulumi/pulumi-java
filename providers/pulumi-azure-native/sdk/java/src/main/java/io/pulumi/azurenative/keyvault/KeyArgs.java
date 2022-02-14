@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyArgs Empty = new KeyArgs();
 
+    /**
+     * The name of the key to be created.
+     */
     @InputImport(name="keyName")
     private final @Nullable Input<String> keyName;
 
@@ -23,6 +29,9 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyName == null ? Input.empty() : this.keyName;
     }
 
+    /**
+     * The properties of the key to be created.
+     */
     @InputImport(name="properties", required=true)
     private final Input<KeyPropertiesArgs> properties;
 
@@ -30,6 +39,9 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
+    /**
+     * The name of the resource group which contains the specified key vault.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +49,9 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The tags that will be assigned to the key.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -44,6 +59,9 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The name of the key vault which contains the key to be created.
+     */
     @InputImport(name="vaultName", required=true)
     private final Input<String> vaultName;
 

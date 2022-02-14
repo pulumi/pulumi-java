@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The value that indicates whether the policy is enabled or not.
+ */
     @EnumType
     public enum PolicyStatus {
+/**
+ * 
+ */
         Enabled("enabled"),
+/**
+ * 
+ */
         Disabled("disabled");
 
         private final String value;

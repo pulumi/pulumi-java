@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReferenceImage {
+/**
+ * Gets information associated with a ReferenceImage. Possible errors: * Returns NOT_FOUND if the specified image does not exist.
+ */
     public static CompletableFuture<GetReferenceImageResult> invokeAsync(GetReferenceImageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vision/v1:getReferenceImage", TypeShape.of(GetReferenceImageResult.class), args == null ? GetReferenceImageArgs.Empty : args, Utilities.withVersion(options));
     }

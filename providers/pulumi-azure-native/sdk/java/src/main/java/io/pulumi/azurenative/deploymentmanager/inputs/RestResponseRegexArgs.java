@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The regular expressions to match the response content with.
+ */
 public final class RestResponseRegexArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RestResponseRegexArgs Empty = new RestResponseRegexArgs();
 
+    /**
+     * Indicates whether any or all of the expressions should match with the response content.
+     */
     @InputImport(name="matchQuantifier")
     private final @Nullable Input<RestMatchQuantifier> matchQuantifier;
 
@@ -23,6 +29,9 @@ public final class RestResponseRegexArgs extends io.pulumi.resources.ResourceArg
         return this.matchQuantifier == null ? Input.empty() : this.matchQuantifier;
     }
 
+    /**
+     * The list of regular expressions.
+     */
     @InputImport(name="matches")
     private final @Nullable Input<List<String>> matches;
 

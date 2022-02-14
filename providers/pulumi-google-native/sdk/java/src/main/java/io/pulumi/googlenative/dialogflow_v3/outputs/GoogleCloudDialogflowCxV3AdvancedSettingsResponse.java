@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3AdvancedSettingsResponse {
+/**
+ * Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels: - Agent level.
+ */
     private final GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse loggingSettings;
 
     @OutputCustomType.Constructor({"loggingSettings"})
@@ -16,6 +19,9 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsResponse {
         this.loggingSettings = Objects.requireNonNull(loggingSettings);
     }
 
+/**
+ * Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels: - Agent level.
+ */
     public GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse getLoggingSettings() {
         return this.loggingSettings;
     }

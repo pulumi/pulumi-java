@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Mobility Service update details.
+ */
 public final class MobilityServiceUpdateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MobilityServiceUpdateResponse Empty = new MobilityServiceUpdateResponse();
 
+    /**
+     * The OS type.
+     */
     @InputImport(name="osType")
     private final @Nullable String osType;
 
@@ -21,6 +27,9 @@ public final class MobilityServiceUpdateResponse extends io.pulumi.resources.Inv
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
     }
 
+    /**
+     * The reboot status of the update - whether it is required or not.
+     */
     @InputImport(name="rebootStatus")
     private final @Nullable String rebootStatus;
 
@@ -28,6 +37,9 @@ public final class MobilityServiceUpdateResponse extends io.pulumi.resources.Inv
         return this.rebootStatus == null ? Optional.empty() : Optional.ofNullable(this.rebootStatus);
     }
 
+    /**
+     * The version of the latest update.
+     */
     @InputImport(name="version")
     private final @Nullable String version;
 

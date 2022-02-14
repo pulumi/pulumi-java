@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.timeseriesinsights;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.timeseriesinsights.EventHubEventSourceArgs;
 import io.pulumi.azurenative.timeseriesinsights.outputs.LocalTimestampResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,99 +15,438 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * An event source that receives its data from an Azure EventHub.
+API Version: 2020-05-15.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### CreateEventHubEventSource
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var eventHubEventSource = new AzureNative.TimeSeriesInsights.EventHubEventSource("eventHubEventSource", new AzureNative.TimeSeriesInsights.EventHubEventSourceArgs
+        {
+            ConsumerGroupName = "cgn",
+            EnvironmentName = "env1",
+            EventHubName = "ehn",
+            EventSourceName = "es1",
+            EventSourceResourceId = "somePathInArm",
+            KeyName = "managementKey",
+            Kind = "Microsoft.EventHub",
+            Location = "West US",
+            ResourceGroupName = "rg1",
+            ServiceBusNamespace = "sbn",
+            SharedAccessKey = "someSecretvalue",
+            TimestampPropertyName = "someTimestampProperty",
+            Type = "EarliestAvailable",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	timeseriesinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/timeseriesinsights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := timeseriesinsights.NewEventHubEventSource(ctx, "eventHubEventSource", &timeseriesinsights.EventHubEventSourceArgs{
+			ConsumerGroupName:     pulumi.String("cgn"),
+			EnvironmentName:       pulumi.String("env1"),
+			EventHubName:          pulumi.String("ehn"),
+			EventSourceName:       pulumi.String("es1"),
+			EventSourceResourceId: pulumi.String("somePathInArm"),
+			KeyName:               pulumi.String("managementKey"),
+			Kind:                  pulumi.String("Microsoft.EventHub"),
+			Location:              pulumi.String("West US"),
+			ResourceGroupName:     pulumi.String("rg1"),
+			ServiceBusNamespace:   pulumi.String("sbn"),
+			SharedAccessKey:       pulumi.String("someSecretvalue"),
+			TimestampPropertyName: pulumi.String("someTimestampProperty"),
+			Type:                  pulumi.String("EarliestAvailable"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const eventHubEventSource = new azure_native.timeseriesinsights.EventHubEventSource("eventHubEventSource", {
+    consumerGroupName: "cgn",
+    environmentName: "env1",
+    eventHubName: "ehn",
+    eventSourceName: "es1",
+    eventSourceResourceId: "somePathInArm",
+    keyName: "managementKey",
+    kind: "Microsoft.EventHub",
+    location: "West US",
+    resourceGroupName: "rg1",
+    serviceBusNamespace: "sbn",
+    sharedAccessKey: "someSecretvalue",
+    timestampPropertyName: "someTimestampProperty",
+    type: "EarliestAvailable",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+event_hub_event_source = azure_native.timeseriesinsights.EventHubEventSource("eventHubEventSource",
+    consumer_group_name="cgn",
+    environment_name="env1",
+    event_hub_name="ehn",
+    event_source_name="es1",
+    event_source_resource_id="somePathInArm",
+    key_name="managementKey",
+    kind="Microsoft.EventHub",
+    location="West US",
+    resource_group_name="rg1",
+    service_bus_namespace="sbn",
+    shared_access_key="someSecretvalue",
+    timestamp_property_name="someTimestampProperty",
+    type="EarliestAvailable")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### EventSourcesCreateEventHubWithCustomEnquedTime
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var eventHubEventSource = new AzureNative.TimeSeriesInsights.EventHubEventSource("eventHubEventSource", new AzureNative.TimeSeriesInsights.EventHubEventSourceArgs
+        {
+            ConsumerGroupName = "cgn",
+            EnvironmentName = "env1",
+            EventHubName = "ehn",
+            EventSourceName = "es1",
+            EventSourceResourceId = "somePathInArm",
+            KeyName = "managementKey",
+            Kind = "Microsoft.EventHub",
+            Location = "West US",
+            ResourceGroupName = "rg1",
+            ServiceBusNamespace = "sbn",
+            SharedAccessKey = "someSecretvalue",
+            Time = "2017-04-01T19:20:33.2288820Z",
+            TimestampPropertyName = "someTimestampProperty",
+            Type = "CustomEnqueuedTime",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	timeseriesinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/timeseriesinsights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := timeseriesinsights.NewEventHubEventSource(ctx, "eventHubEventSource", &timeseriesinsights.EventHubEventSourceArgs{
+			ConsumerGroupName:     pulumi.String("cgn"),
+			EnvironmentName:       pulumi.String("env1"),
+			EventHubName:          pulumi.String("ehn"),
+			EventSourceName:       pulumi.String("es1"),
+			EventSourceResourceId: pulumi.String("somePathInArm"),
+			KeyName:               pulumi.String("managementKey"),
+			Kind:                  pulumi.String("Microsoft.EventHub"),
+			Location:              pulumi.String("West US"),
+			ResourceGroupName:     pulumi.String("rg1"),
+			ServiceBusNamespace:   pulumi.String("sbn"),
+			SharedAccessKey:       pulumi.String("someSecretvalue"),
+			Time:                  pulumi.String("2017-04-01T19:20:33.2288820Z"),
+			TimestampPropertyName: pulumi.String("someTimestampProperty"),
+			Type:                  pulumi.String("CustomEnqueuedTime"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const eventHubEventSource = new azure_native.timeseriesinsights.EventHubEventSource("eventHubEventSource", {
+    consumerGroupName: "cgn",
+    environmentName: "env1",
+    eventHubName: "ehn",
+    eventSourceName: "es1",
+    eventSourceResourceId: "somePathInArm",
+    keyName: "managementKey",
+    kind: "Microsoft.EventHub",
+    location: "West US",
+    resourceGroupName: "rg1",
+    serviceBusNamespace: "sbn",
+    sharedAccessKey: "someSecretvalue",
+    time: "2017-04-01T19:20:33.2288820Z",
+    timestampPropertyName: "someTimestampProperty",
+    type: "CustomEnqueuedTime",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+event_hub_event_source = azure_native.timeseriesinsights.EventHubEventSource("eventHubEventSource",
+    consumer_group_name="cgn",
+    environment_name="env1",
+    event_hub_name="ehn",
+    event_source_name="es1",
+    event_source_resource_id="somePathInArm",
+    key_name="managementKey",
+    kind="Microsoft.EventHub",
+    location="West US",
+    resource_group_name="rg1",
+    service_bus_namespace="sbn",
+    shared_access_key="someSecretvalue",
+    time="2017-04-01T19:20:33.2288820Z",
+    timestamp_property_name="someTimestampProperty",
+    type="CustomEnqueuedTime")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:timeseriesinsights:EventHubEventSource es1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.TimeSeriesInsights/Environments/env1/eventSources/es1 
+```
+
+ */
 @ResourceType(type="azure-native:timeseriesinsights:EventHubEventSource")
 public class EventHubEventSource extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the event hub's consumer group that holds the partitions from which events will be read.
+     */
     @OutputExport(name="consumerGroupName", type=String.class, parameters={})
     private Output<String> consumerGroupName;
 
+    /**
+     * @return The name of the event hub's consumer group that holds the partitions from which events will be read.
+     */
     public Output<String> getConsumerGroupName() {
         return this.consumerGroupName;
     }
+    /**
+     * The time the resource was created.
+     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
+    /**
+     * @return The time the resource was created.
+     */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
+    /**
+     * The name of the event hub.
+     */
     @OutputExport(name="eventHubName", type=String.class, parameters={})
     private Output<String> eventHubName;
 
+    /**
+     * @return The name of the event hub.
+     */
     public Output<String> getEventHubName() {
         return this.eventHubName;
     }
+    /**
+     * The resource id of the event source in Azure Resource Manager.
+     */
     @OutputExport(name="eventSourceResourceId", type=String.class, parameters={})
     private Output<String> eventSourceResourceId;
 
+    /**
+     * @return The resource id of the event source in Azure Resource Manager.
+     */
     public Output<String> getEventSourceResourceId() {
         return this.eventSourceResourceId;
     }
+    /**
+     * The name of the SAS key that grants the Time Series Insights service access to the event hub. The shared access policies for this key must grant 'Listen' permissions to the event hub.
+     */
     @OutputExport(name="keyName", type=String.class, parameters={})
     private Output<String> keyName;
 
+    /**
+     * @return The name of the SAS key that grants the Time Series Insights service access to the event hub. The shared access policies for this key must grant 'Listen' permissions to the event hub.
+     */
     public Output<String> getKeyName() {
         return this.keyName;
     }
+    /**
+     * The kind of the event source.
+Expected value is 'Microsoft.EventHub'.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return The kind of the event source.
+Expected value is 'Microsoft.EventHub'.
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
+     */
     @OutputExport(name="localTimestamp", type=LocalTimestampResponse.class, parameters={})
     private Output</* @Nullable */ LocalTimestampResponse> localTimestamp;
 
+    /**
+     * @return An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
+     */
     public Output</* @Nullable */ LocalTimestampResponse> getLocalTimestamp() {
         return this.localTimestamp;
     }
+    /**
+     * Resource location
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Provisioning state of the resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state of the resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The name of the service bus that contains the event hub.
+     */
     @OutputExport(name="serviceBusNamespace", type=String.class, parameters={})
     private Output<String> serviceBusNamespace;
 
+    /**
+     * @return The name of the service bus that contains the event hub.
+     */
     public Output<String> getServiceBusNamespace() {
         return this.serviceBusNamespace;
     }
+    /**
+     * Resource tags
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.
+     */
     @OutputExport(name="time", type=String.class, parameters={})
     private Output</* @Nullable */ String> time;
 
+    /**
+     * @return ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.
+     */
     public Output</* @Nullable */ String> getTime() {
         return this.time;
     }
+    /**
+     * The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
+     */
     @OutputExport(name="timestampPropertyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> timestampPropertyName;
 
+    /**
+     * @return The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
+     */
     public Output</* @Nullable */ String> getTimestampPropertyName() {
         return this.timestampPropertyName;
     }
+    /**
+     * Resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public EventHubEventSource(String name, EventHubEventSourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:timeseriesinsights:EventHubEventSource", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -139,6 +477,14 @@ public class EventHubEventSource extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static EventHubEventSource get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EventHubEventSource(name, id, options);
     }

@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The parameters used to create a new compute policy while creating a new Data Lake Analytics account.
+ */
 public final class CreateComputePolicyWithAccountParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CreateComputePolicyWithAccountParametersArgs Empty = new CreateComputePolicyWithAccountParametersArgs();
 
+    /**
+     * The maximum degree of parallelism per job this user can use to submit jobs. This property, the min priority per job property, or both must be passed.
+     */
     @InputImport(name="maxDegreeOfParallelismPerJob")
     private final @Nullable Input<Integer> maxDegreeOfParallelismPerJob;
 
@@ -24,6 +30,9 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
         return this.maxDegreeOfParallelismPerJob == null ? Input.empty() : this.maxDegreeOfParallelismPerJob;
     }
 
+    /**
+     * The minimum priority per job this user can use to submit jobs. This property, the max degree of parallelism per job property, or both must be passed.
+     */
     @InputImport(name="minPriorityPerJob")
     private final @Nullable Input<Integer> minPriorityPerJob;
 
@@ -31,6 +40,9 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
         return this.minPriorityPerJob == null ? Input.empty() : this.minPriorityPerJob;
     }
 
+    /**
+     * The unique name of the compute policy to create.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -38,6 +50,9 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
         return this.name;
     }
 
+    /**
+     * The AAD object identifier for the entity to create a policy for.
+     */
     @InputImport(name="objectId", required=true)
     private final Input<String> objectId;
 
@@ -45,6 +60,9 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
         return this.objectId;
     }
 
+    /**
+     * The type of AAD object the object identifier refers to.
+     */
     @InputImport(name="objectType", required=true)
     private final Input<Either<String,AADObjectType>> objectType;
 

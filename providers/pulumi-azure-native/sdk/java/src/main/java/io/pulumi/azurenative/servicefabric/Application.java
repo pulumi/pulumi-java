@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.servicefabric;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.servicefabric.ApplicationArgs;
 import io.pulumi.azurenative.servicefabric.outputs.ApplicationMetricDescriptionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.ApplicationUpgradePolicyResponse;
 import io.pulumi.azurenative.servicefabric.outputs.ApplicationUserAssignedIdentityResponse;
@@ -21,105 +20,531 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The application resource.
+API Version: 2020-03-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Put an application with maximum parameters
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var application = new AzureNative.ServiceFabric.Application("application", new AzureNative.ServiceFabric.ApplicationArgs
+        {
+            ApplicationName = "myApp",
+            ClusterName = "myCluster",
+            MaximumNodes = 3,
+            Metrics = 
+            {
+                new AzureNative.ServiceFabric.Inputs.ApplicationMetricDescriptionArgs
+                {
+                    MaximumCapacity = 3,
+                    Name = "metric1",
+                    ReservationCapacity = 1,
+                    TotalApplicationCapacity = 5,
+                },
+            },
+            MinimumNodes = 1,
+            Parameters = 
+            {
+                { "param1", "value1" },
+            },
+            RemoveApplicationCapacity = false,
+            ResourceGroupName = "resRg",
+            TypeName = "myAppType",
+            TypeVersion = "1.0",
+            UpgradePolicy = new AzureNative.ServiceFabric.Inputs.ApplicationUpgradePolicyArgs
+            {
+                ApplicationHealthPolicy = new AzureNative.ServiceFabric.Inputs.ArmApplicationHealthPolicyArgs
+                {
+                    ConsiderWarningAsError = true,
+                    DefaultServiceTypeHealthPolicy = new AzureNative.ServiceFabric.Inputs.ArmServiceTypeHealthPolicyArgs
+                    {
+                        MaxPercentUnhealthyPartitionsPerService = 0,
+                        MaxPercentUnhealthyReplicasPerPartition = 0,
+                        MaxPercentUnhealthyServices = 0,
+                    },
+                    MaxPercentUnhealthyDeployedApplications = 0,
+                },
+                ForceRestart = false,
+                RollingUpgradeMonitoringPolicy = new AzureNative.ServiceFabric.Inputs.ArmRollingUpgradeMonitoringPolicyArgs
+                {
+                    FailureAction = "Rollback",
+                    HealthCheckRetryTimeout = "00:10:00",
+                    HealthCheckStableDuration = "00:05:00",
+                    HealthCheckWaitDuration = "00:02:00",
+                    UpgradeDomainTimeout = "1.06:00:00",
+                    UpgradeTimeout = "01:00:00",
+                },
+                UpgradeMode = "Monitored",
+                UpgradeReplicaSetCheckTimeout = "01:00:00",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	servicefabric "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabric"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := servicefabric.NewApplication(ctx, "application", &servicefabric.ApplicationArgs{
+			ApplicationName: pulumi.String("myApp"),
+			ClusterName:     pulumi.String("myCluster"),
+			MaximumNodes:    pulumi.Float64(3),
+			Metrics: []servicefabric.ApplicationMetricDescriptionArgs{
+				&servicefabric.ApplicationMetricDescriptionArgs{
+					MaximumCapacity:          pulumi.Float64(3),
+					Name:                     pulumi.String("metric1"),
+					ReservationCapacity:      pulumi.Float64(1),
+					TotalApplicationCapacity: pulumi.Float64(5),
+				},
+			},
+			MinimumNodes: pulumi.Float64(1),
+			Parameters: pulumi.StringMap{
+				"param1": pulumi.String("value1"),
+			},
+			RemoveApplicationCapacity: pulumi.Bool(false),
+			ResourceGroupName:         pulumi.String("resRg"),
+			TypeName:                  pulumi.String("myAppType"),
+			TypeVersion:               pulumi.String("1.0"),
+			UpgradePolicy: &servicefabric.ApplicationUpgradePolicyArgs{
+				ApplicationHealthPolicy: &servicefabric.ArmApplicationHealthPolicyArgs{
+					ConsiderWarningAsError: pulumi.Bool(true),
+					DefaultServiceTypeHealthPolicy: &servicefabric.ArmServiceTypeHealthPolicyArgs{
+						MaxPercentUnhealthyPartitionsPerService: pulumi.Int(0),
+						MaxPercentUnhealthyReplicasPerPartition: pulumi.Int(0),
+						MaxPercentUnhealthyServices:             pulumi.Int(0),
+					},
+					MaxPercentUnhealthyDeployedApplications: pulumi.Int(0),
+				},
+				ForceRestart: pulumi.Bool(false),
+				RollingUpgradeMonitoringPolicy: &servicefabric.ArmRollingUpgradeMonitoringPolicyArgs{
+					FailureAction:             pulumi.String("Rollback"),
+					HealthCheckRetryTimeout:   pulumi.String("00:10:00"),
+					HealthCheckStableDuration: pulumi.String("00:05:00"),
+					HealthCheckWaitDuration:   pulumi.String("00:02:00"),
+					UpgradeDomainTimeout:      pulumi.String("1.06:00:00"),
+					UpgradeTimeout:            pulumi.String("01:00:00"),
+				},
+				UpgradeMode:                   pulumi.String("Monitored"),
+				UpgradeReplicaSetCheckTimeout: pulumi.String("01:00:00"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const application = new azure_native.servicefabric.Application("application", {
+    applicationName: "myApp",
+    clusterName: "myCluster",
+    maximumNodes: 3,
+    metrics: [{
+        maximumCapacity: 3,
+        name: "metric1",
+        reservationCapacity: 1,
+        totalApplicationCapacity: 5,
+    }],
+    minimumNodes: 1,
+    parameters: {
+        param1: "value1",
+    },
+    removeApplicationCapacity: false,
+    resourceGroupName: "resRg",
+    typeName: "myAppType",
+    typeVersion: "1.0",
+    upgradePolicy: {
+        applicationHealthPolicy: {
+            considerWarningAsError: true,
+            defaultServiceTypeHealthPolicy: {
+                maxPercentUnhealthyPartitionsPerService: 0,
+                maxPercentUnhealthyReplicasPerPartition: 0,
+                maxPercentUnhealthyServices: 0,
+            },
+            maxPercentUnhealthyDeployedApplications: 0,
+        },
+        forceRestart: false,
+        rollingUpgradeMonitoringPolicy: {
+            failureAction: "Rollback",
+            healthCheckRetryTimeout: "00:10:00",
+            healthCheckStableDuration: "00:05:00",
+            healthCheckWaitDuration: "00:02:00",
+            upgradeDomainTimeout: "1.06:00:00",
+            upgradeTimeout: "01:00:00",
+        },
+        upgradeMode: "Monitored",
+        upgradeReplicaSetCheckTimeout: "01:00:00",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+application = azure_native.servicefabric.Application("application",
+    application_name="myApp",
+    cluster_name="myCluster",
+    maximum_nodes=3,
+    metrics=[azure_native.servicefabric.ApplicationMetricDescriptionArgs(
+        maximum_capacity=3,
+        name="metric1",
+        reservation_capacity=1,
+        total_application_capacity=5,
+    )],
+    minimum_nodes=1,
+    parameters={
+        "param1": "value1",
+    },
+    remove_application_capacity=False,
+    resource_group_name="resRg",
+    type_name="myAppType",
+    type_version="1.0",
+    upgrade_policy=azure_native.servicefabric.ApplicationUpgradePolicyArgs(
+        application_health_policy=azure_native.servicefabric.ArmApplicationHealthPolicyArgs(
+            consider_warning_as_error=True,
+            default_service_type_health_policy=azure_native.servicefabric.ArmServiceTypeHealthPolicyArgs(
+                max_percent_unhealthy_partitions_per_service=0,
+                max_percent_unhealthy_replicas_per_partition=0,
+                max_percent_unhealthy_services=0,
+            ),
+            max_percent_unhealthy_deployed_applications=0,
+        ),
+        force_restart=False,
+        rolling_upgrade_monitoring_policy=azure_native.servicefabric.ArmRollingUpgradeMonitoringPolicyArgs(
+            failure_action="Rollback",
+            health_check_retry_timeout="00:10:00",
+            health_check_stable_duration="00:05:00",
+            health_check_wait_duration="00:02:00",
+            upgrade_domain_timeout="1.06:00:00",
+            upgrade_timeout="01:00:00",
+        ),
+        upgrade_mode="Monitored",
+        upgrade_replica_set_check_timeout="01:00:00",
+    ))
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Put an application with minimum parameters
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var application = new AzureNative.ServiceFabric.Application("application", new AzureNative.ServiceFabric.ApplicationArgs
+        {
+            ApplicationName = "myApp",
+            ClusterName = "myCluster",
+            RemoveApplicationCapacity = false,
+            ResourceGroupName = "resRg",
+            TypeName = "myAppType",
+            TypeVersion = "1.0",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	servicefabric "github.com/pulumi/pulumi-azure-native/sdk/go/azure/servicefabric"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := servicefabric.NewApplication(ctx, "application", &servicefabric.ApplicationArgs{
+			ApplicationName:           pulumi.String("myApp"),
+			ClusterName:               pulumi.String("myCluster"),
+			RemoveApplicationCapacity: pulumi.Bool(false),
+			ResourceGroupName:         pulumi.String("resRg"),
+			TypeName:                  pulumi.String("myAppType"),
+			TypeVersion:               pulumi.String("1.0"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const application = new azure_native.servicefabric.Application("application", {
+    applicationName: "myApp",
+    clusterName: "myCluster",
+    removeApplicationCapacity: false,
+    resourceGroupName: "resRg",
+    typeName: "myAppType",
+    typeVersion: "1.0",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+application = azure_native.servicefabric.Application("application",
+    application_name="myApp",
+    cluster_name="myCluster",
+    remove_application_capacity=False,
+    resource_group_name="resRg",
+    type_name="myAppType",
+    type_version="1.0")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:servicefabric:Application myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp 
+```
+
+ */
 @ResourceType(type="azure-native:servicefabric:Application")
 public class Application extends io.pulumi.resources.CustomResource {
+    /**
+     * Azure resource etag.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return Azure resource etag.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Describes the managed identities for an Azure resource.
+     */
     @OutputExport(name="identity", type=ManagedIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedIdentityResponse> identity;
 
+    /**
+     * @return Describes the managed identities for an Azure resource.
+     */
     public Output</* @Nullable */ ManagedIdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * It will be deprecated in New API, resource location depends on the parent resource.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return It will be deprecated in New API, resource location depends on the parent resource.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * List of user assigned identities for the application, each mapped to a friendly name.
+     */
     @OutputExport(name="managedIdentities", type=List.class, parameters={ApplicationUserAssignedIdentityResponse.class})
     private Output</* @Nullable */ List<ApplicationUserAssignedIdentityResponse>> managedIdentities;
 
+    /**
+     * @return List of user assigned identities for the application, each mapped to a friendly name.
+     */
     public Output</* @Nullable */ List<ApplicationUserAssignedIdentityResponse>> getManagedIdentities() {
         return this.managedIdentities;
     }
+    /**
+     * The maximum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. By default, the value of this property is zero and it means that the services can be placed on any node.
+     */
     @OutputExport(name="maximumNodes", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> maximumNodes;
 
+    /**
+     * @return The maximum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. By default, the value of this property is zero and it means that the services can be placed on any node.
+     */
     public Output</* @Nullable */ Double> getMaximumNodes() {
         return this.maximumNodes;
     }
+    /**
+     * List of application capacity metric description.
+     */
     @OutputExport(name="metrics", type=List.class, parameters={ApplicationMetricDescriptionResponse.class})
     private Output</* @Nullable */ List<ApplicationMetricDescriptionResponse>> metrics;
 
+    /**
+     * @return List of application capacity metric description.
+     */
     public Output</* @Nullable */ List<ApplicationMetricDescriptionResponse>> getMetrics() {
         return this.metrics;
     }
+    /**
+     * The minimum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. If this property is set to zero, no capacity will be reserved. The value of this property cannot be more than the value of the MaximumNodes property.
+     */
     @OutputExport(name="minimumNodes", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> minimumNodes;
 
+    /**
+     * @return The minimum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. If this property is set to zero, no capacity will be reserved. The value of this property cannot be more than the value of the MaximumNodes property.
+     */
     public Output</* @Nullable */ Double> getMinimumNodes() {
         return this.minimumNodes;
     }
+    /**
+     * Azure resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Azure resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * List of application parameters with overridden values from their default values specified in the application manifest.
+     */
     @OutputExport(name="parameters", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> parameters;
 
+    /**
+     * @return List of application parameters with overridden values from their default values specified in the application manifest.
+     */
     public Output</* @Nullable */ Map<String,String>> getParameters() {
         return this.parameters;
     }
+    /**
+     * The current deployment or provisioning state, which only appears in the response
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The current deployment or provisioning state, which only appears in the response
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Remove the current application capacity settings.
+     */
     @OutputExport(name="removeApplicationCapacity", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> removeApplicationCapacity;
 
+    /**
+     * @return Remove the current application capacity settings.
+     */
     public Output</* @Nullable */ Boolean> getRemoveApplicationCapacity() {
         return this.removeApplicationCapacity;
     }
+    /**
+     * Azure resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Azure resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Azure resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Azure resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The application type name as defined in the application manifest.
+     */
     @OutputExport(name="typeName", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeName;
 
+    /**
+     * @return The application type name as defined in the application manifest.
+     */
     public Output</* @Nullable */ String> getTypeName() {
         return this.typeName;
     }
+    /**
+     * The version of the application type as defined in the application manifest.
+     */
     @OutputExport(name="typeVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeVersion;
 
+    /**
+     * @return The version of the application type as defined in the application manifest.
+     */
     public Output</* @Nullable */ String> getTypeVersion() {
         return this.typeVersion;
     }
+    /**
+     * Describes the policy for a monitored application upgrade.
+     */
     @OutputExport(name="upgradePolicy", type=ApplicationUpgradePolicyResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationUpgradePolicyResponse> upgradePolicy;
 
+    /**
+     * @return Describes the policy for a monitored application upgrade.
+     */
     public Output</* @Nullable */ ApplicationUpgradePolicyResponse> getUpgradePolicy() {
         return this.upgradePolicy;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Application(String name, ApplicationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:servicefabric:Application", name, args == null ? ApplicationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -145,6 +570,14 @@ public class Application extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Application get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Application(name, id, options);
     }

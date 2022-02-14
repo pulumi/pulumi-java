@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProcessor {
+/**
+ * Gets a processor detail.
+ */
     public static CompletableFuture<GetProcessorResult> invokeAsync(GetProcessorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:documentai/v1beta3:getProcessor", TypeShape.of(GetProcessorResult.class), args == null ? GetProcessorArgs.Empty : args, Utilities.withVersion(options));
     }

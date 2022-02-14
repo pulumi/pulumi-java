@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specification of a port-based selector.
+ */
 public final class TrafficPortSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TrafficPortSelectorArgs Empty = new TrafficPortSelectorArgs();
 
+    /**
+     * Optional. A list of ports. Can be port numbers or port range (example, [80-90] specifies all ports from 80 to 90, including 80 and 90) or named ports or * to specify all ports. If the list is empty, all ports are selected.
+     */
     @InputImport(name="ports")
     private final @Nullable Input<List<String>> ports;
 

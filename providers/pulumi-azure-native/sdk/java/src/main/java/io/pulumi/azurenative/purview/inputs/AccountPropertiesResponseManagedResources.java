@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Gets the resource identifiers of the managed resources.
+ */
 public final class AccountPropertiesResponseManagedResources extends io.pulumi.resources.InvokeArgs {
 
     public static final AccountPropertiesResponseManagedResources Empty = new AccountPropertiesResponseManagedResources();
 
+    /**
+     * Gets the managed event hub namespace resource identifier.
+     */
     @InputImport(name="eventHubNamespace", required=true)
     private final String eventHubNamespace;
 
@@ -19,6 +25,9 @@ public final class AccountPropertiesResponseManagedResources extends io.pulumi.r
         return this.eventHubNamespace;
     }
 
+    /**
+     * Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.
+     */
     @InputImport(name="resourceGroup", required=true)
     private final String resourceGroup;
 
@@ -26,6 +35,9 @@ public final class AccountPropertiesResponseManagedResources extends io.pulumi.r
         return this.resourceGroup;
     }
 
+    /**
+     * Gets the managed storage account resource identifier.
+     */
     @InputImport(name="storageAccount", required=true)
     private final String storageAccount;
 

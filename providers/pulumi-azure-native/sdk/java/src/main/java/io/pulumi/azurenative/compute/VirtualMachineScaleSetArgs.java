@@ -26,10 +26,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineScaleSetArgs Empty = new VirtualMachineScaleSetArgs();
 
+    /**
+     * Specifies additional capabilities enabled or disabled on the Virtual Machines in the Virtual Machine Scale Set. For instance: whether the Virtual Machines have the capability to support attaching managed data disks with UltraSSD_LRS storage account type.
+     */
     @InputImport(name="additionalCapabilities")
     private final @Nullable Input<AdditionalCapabilitiesArgs> additionalCapabilities;
 
@@ -37,6 +43,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
         return this.additionalCapabilities == null ? Input.empty() : this.additionalCapabilities;
     }
 
+    /**
+     * Policy for automatic repairs.
+     */
     @InputImport(name="automaticRepairsPolicy")
     private final @Nullable Input<AutomaticRepairsPolicyArgs> automaticRepairsPolicy;
 
@@ -44,6 +53,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
         return this.automaticRepairsPolicy == null ? Input.empty() : this.automaticRepairsPolicy;
     }
 
+    /**
+     * When Overprovision is enabled, extensions are launched only on the requested number of VMs which are finally kept. This property will hence ensure that the extensions do not run on the extra overprovisioned VMs.
+     */
     @InputImport(name="doNotRunExtensionsOnOverprovisionedVMs")
     private final @Nullable Input<Boolean> doNotRunExtensionsOnOverprovisionedVMs;
 
@@ -51,6 +63,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
         return this.doNotRunExtensionsOnOverprovisionedVMs == null ? Input.empty() : this.doNotRunExtensionsOnOverprovisionedVMs;
     }
 
+    /**
+     * The extended location of the Virtual Machine Scale Set.
+     */
     @InputImport(name="extendedLocation")
     private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
@@ -58,6 +73,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
     }
 
+    /**
+     * Specifies information about the dedicated host group that the virtual machine scale set resides in. <br><br>Minimum api-version: 2020-06-01.
+     */
     @InputImport(name="hostGroup")
     private final @Nullable Input<SubResourceArgs> hostGroup;
 
@@ -65,6 +83,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
         return this.hostGroup == null ? Input.empty() : this.hostGroup;
     }
 
+    /**
+     * The identity of the virtual machine scale set, if configured.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<VirtualMachineScaleSetIdentityArgs> identity;
 
@@ -72,6 +93,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * Resource location
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -79,6 +103,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Specifies the orchestration mode for the virtual machine scale set.
+     */
     @InputImport(name="orchestrationMode")
     private final @Nullable Input<Either<String,OrchestrationMode>> orchestrationMode;
 
@@ -86,6 +113,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
         return this.orchestrationMode == null ? Input.empty() : this.orchestrationMode;
     }
 
+    /**
+     * Specifies whether the Virtual Machine Scale Set should be overprovisioned.
+     */
     @InputImport(name="overprovision")
     private final @Nullable Input<Boolean> overprovision;
 
@@ -93,6 +123,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
         return this.overprovision == null ? Input.empty() : this.overprovision;
     }
 
+    /**
+     * Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.
+     */
     @InputImport(name="plan")
     private final @Nullable Input<PlanArgs> plan;
 
@@ -100,6 +133,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
         return this.plan == null ? Input.empty() : this.plan;
     }
 
+    /**
+     * Fault Domain count for each placement group.
+     */
     @InputImport(name="platformFaultDomainCount")
     private final @Nullable Input<Integer> platformFaultDomainCount;
 
@@ -107,6 +143,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
         return this.platformFaultDomainCount == null ? Input.empty() : this.platformFaultDomainCount;
     }
 
+    /**
+     * Specifies information about the proximity placement group that the virtual machine scale set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
+     */
     @InputImport(name="proximityPlacementGroup")
     private final @Nullable Input<SubResourceArgs> proximityPlacementGroup;
 
@@ -114,6 +153,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
         return this.proximityPlacementGroup == null ? Input.empty() : this.proximityPlacementGroup;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -121,6 +163,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
         return this.resourceGroupName;
     }
 
+    /**
+     * Specifies the scale-in policy that decides which virtual machines are chosen for removal when a Virtual Machine Scale Set is scaled-in.
+     */
     @InputImport(name="scaleInPolicy")
     private final @Nullable Input<ScaleInPolicyArgs> scaleInPolicy;
 
@@ -128,6 +173,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
         return this.scaleInPolicy == null ? Input.empty() : this.scaleInPolicy;
     }
 
+    /**
+     * When true this limits the scale set to a single placement group, of max size 100 virtual machines. NOTE: If singlePlacementGroup is true, it may be modified to false. However, if singlePlacementGroup is false, it may not be modified to true.
+     */
     @InputImport(name="singlePlacementGroup")
     private final @Nullable Input<Boolean> singlePlacementGroup;
 
@@ -135,6 +183,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
         return this.singlePlacementGroup == null ? Input.empty() : this.singlePlacementGroup;
     }
 
+    /**
+     * The virtual machine scale set sku.
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -142,6 +193,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Resource tags
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -149,6 +203,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The upgrade policy.
+     */
     @InputImport(name="upgradePolicy")
     private final @Nullable Input<UpgradePolicyArgs> upgradePolicy;
 
@@ -156,6 +213,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
         return this.upgradePolicy == null ? Input.empty() : this.upgradePolicy;
     }
 
+    /**
+     * The virtual machine profile.
+     */
     @InputImport(name="virtualMachineProfile")
     private final @Nullable Input<VirtualMachineScaleSetVMProfileArgs> virtualMachineProfile;
 
@@ -163,6 +223,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
         return this.virtualMachineProfile == null ? Input.empty() : this.virtualMachineProfile;
     }
 
+    /**
+     * The name of the VM scale set to create or update.
+     */
     @InputImport(name="vmScaleSetName")
     private final @Nullable Input<String> vmScaleSetName;
 
@@ -170,6 +233,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
         return this.vmScaleSetName == null ? Input.empty() : this.vmScaleSetName;
     }
 
+    /**
+     * Whether to force strictly even Virtual Machine distribution cross x-zones in case there is zone outage.
+     */
     @InputImport(name="zoneBalance")
     private final @Nullable Input<Boolean> zoneBalance;
 
@@ -177,6 +243,9 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
         return this.zoneBalance == null ? Input.empty() : this.zoneBalance;
     }
 
+    /**
+     * The virtual machine scale set zones. NOTE: Availability zones can only be set when you create the scale set
+     */
     @InputImport(name="zones")
     private final @Nullable Input<List<String>> zones;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNetworkInterfaceTapConfiguration {
+/**
+ * Tap configuration in a Network Interface.
+API Version: 2020-11-01.
+ *
+ * Tap configuration in a Network Interface.
+ */
     public static CompletableFuture<GetNetworkInterfaceTapConfigurationResult> invokeAsync(GetNetworkInterfaceTapConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getNetworkInterfaceTapConfiguration", TypeShape.of(GetNetworkInterfaceTapConfigurationResult.class), args == null ? GetNetworkInterfaceTapConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The field indicating if Microsoft provides session ip addresses.
+ */
     @EnumType
     public enum SessionAddressProvider {
+/**
+ * 
+ */
         Microsoft("Microsoft"),
+/**
+ * 
+ */
         Peer("Peer");
 
         private final String value;

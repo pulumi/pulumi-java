@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetModuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetModuleArgs Empty = new GetModuleArgs();
 
+    /**
+     * The name of the automation account.
+     */
     @InputImport(name="automationAccountName", required=true)
     private final String automationAccountName;
 
@@ -19,6 +25,9 @@ public final class GetModuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.automationAccountName;
     }
 
+    /**
+     * The module name.
+     */
     @InputImport(name="moduleName", required=true)
     private final String moduleName;
 
@@ -26,6 +35,9 @@ public final class GetModuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.moduleName;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

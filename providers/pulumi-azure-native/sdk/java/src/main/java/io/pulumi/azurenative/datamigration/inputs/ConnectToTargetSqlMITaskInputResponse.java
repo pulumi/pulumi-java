@@ -8,10 +8,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Input for the task that validates connection to Azure SQL Database Managed Instance.
+ */
 public final class ConnectToTargetSqlMITaskInputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectToTargetSqlMITaskInputResponse Empty = new ConnectToTargetSqlMITaskInputResponse();
 
+    /**
+     * Connection information for target SQL Server
+     */
     @InputImport(name="targetConnectionInfo", required=true)
     private final SqlConnectionInfoResponse targetConnectionInfo;
 

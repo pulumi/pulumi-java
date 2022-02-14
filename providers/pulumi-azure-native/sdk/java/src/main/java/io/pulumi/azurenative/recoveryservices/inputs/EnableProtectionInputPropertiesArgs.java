@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Enable protection input properties.
+ */
 public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnableProtectionInputPropertiesArgs Empty = new EnableProtectionInputPropertiesArgs();
 
+    /**
+     * The Policy Id.
+     */
     @InputImport(name="policyId")
     private final @Nullable Input<String> policyId;
 
@@ -28,6 +34,9 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
         return this.policyId == null ? Input.empty() : this.policyId;
     }
 
+    /**
+     * The protectable item Id.
+     */
     @InputImport(name="protectableItemId")
     private final @Nullable Input<String> protectableItemId;
 
@@ -35,6 +44,9 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
         return this.protectableItemId == null ? Input.empty() : this.protectableItemId;
     }
 
+    /**
+     * The ReplicationProviderInput. For HyperVReplicaAzure provider, it will be AzureEnableProtectionInput object. For San provider, it will be SanEnableProtectionInput object. For HyperVReplicaAzure provider, it can be null.
+     */
     @InputImport(name="providerSpecificDetails")
     private final @Nullable Input<Object> providerSpecificDetails;
 

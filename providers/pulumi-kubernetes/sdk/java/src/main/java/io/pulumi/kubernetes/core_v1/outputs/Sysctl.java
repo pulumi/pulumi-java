@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class Sysctl {
+/**
+ * Name of a property to set
+ */
     private final String name;
+/**
+ * Value of a property to set
+ */
     private final String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -20,9 +26,15 @@ public final class Sysctl {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * Name of a property to set
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Value of a property to set
+ */
     public String getValue() {
         return this.value;
     }

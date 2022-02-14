@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Skip error file.
+ */
 public final class SkipErrorFileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkipErrorFileArgs Empty = new SkipErrorFileArgs();
 
+    /**
+     * Skip if source/sink file changed by other concurrent write. Default is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="dataInconsistency")
     private final @Nullable Input<Object> dataInconsistency;
 
@@ -21,6 +27,9 @@ public final class SkipErrorFileArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataInconsistency == null ? Input.empty() : this.dataInconsistency;
     }
 
+    /**
+     * Skip if file is deleted by other client during copy. Default is true. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="fileMissing")
     private final @Nullable Input<Object> fileMissing;
 

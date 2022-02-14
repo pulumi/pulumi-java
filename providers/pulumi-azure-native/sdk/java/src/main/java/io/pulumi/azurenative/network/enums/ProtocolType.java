@@ -8,16 +8,46 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * RNM supported protocol types.
+ */
     @EnumType
     public enum ProtocolType {
+/**
+ * 
+ */
         DoNotUse("DoNotUse"),
+/**
+ * 
+ */
         Icmp("Icmp"),
+/**
+ * 
+ */
         Tcp("Tcp"),
+/**
+ * 
+ */
         Udp("Udp"),
+/**
+ * 
+ */
         Gre("Gre"),
+/**
+ * 
+ */
         Esp("Esp"),
+/**
+ * 
+ */
         Ah("Ah"),
+/**
+ * 
+ */
         Vxlan("Vxlan"),
+/**
+ * 
+ */
         All("All");
 
         private final String value;

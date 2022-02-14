@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetHttpHealthCheckArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetHttpHealthCheckArgs Empty = new GetHttpHealthCheckArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="httpHealthCheck", required=true)
     private final String httpHealthCheck;
 
@@ -21,6 +27,9 @@ public final class GetHttpHealthCheckArgs extends io.pulumi.resources.InvokeArgs
         return this.httpHealthCheck;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

@@ -11,9 +11,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OSProfileResponse {
+/**
+ * Specifies the host OS name of the HANA instance.
+ */
     private final @Nullable String computerName;
+/**
+ * This property allows you to specify the type of the OS.
+ */
     private final String osType;
+/**
+ * Specifies the SSH public key used to access the operating system.
+ */
     private final @Nullable String sshPublicKey;
+/**
+ * Specifies version of operating system.
+ */
     private final String version;
 
     @OutputCustomType.Constructor({"computerName","osType","sshPublicKey","version"})
@@ -28,15 +40,27 @@ public final class OSProfileResponse {
         this.version = Objects.requireNonNull(version);
     }
 
+/**
+ * Specifies the host OS name of the HANA instance.
+ */
     public Optional<String> getComputerName() {
         return Optional.ofNullable(this.computerName);
     }
+/**
+ * This property allows you to specify the type of the OS.
+ */
     public String getOsType() {
         return this.osType;
     }
+/**
+ * Specifies the SSH public key used to access the operating system.
+ */
     public Optional<String> getSshPublicKey() {
         return Optional.ofNullable(this.sshPublicKey);
     }
+/**
+ * Specifies version of operating system.
+ */
     public String getVersion() {
         return this.version;
     }

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDiskEncryptionSet {
+/**
+ * disk encryption set resource.
+API Version: 2020-12-01.
+ *
+ * disk encryption set resource.
+ */
     public static CompletableFuture<GetDiskEncryptionSetResult> invokeAsync(GetDiskEncryptionSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getDiskEncryptionSet", TypeShape.of(GetDiskEncryptionSetResult.class), args == null ? GetDiskEncryptionSetArgs.Empty : args, Utilities.withVersion(options));
     }

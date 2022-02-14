@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The TLS settings for the server.
+ */
 public final class ServerTlsSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServerTlsSettingsResponse Empty = new ServerTlsSettingsResponse();
 
+    /**
+     * Configures the mechanism to obtain security certificates and identity information.
+     */
     @InputImport(name="proxyTlsContext", required=true)
     private final TlsContextResponse proxyTlsContext;
 
@@ -21,6 +27,9 @@ public final class ServerTlsSettingsResponse extends io.pulumi.resources.InvokeA
         return this.proxyTlsContext;
     }
 
+    /**
+     * A list of alternate names to verify the subject identity in the certificate presented by the client.
+     */
     @InputImport(name="subjectAltNames", required=true)
     private final List<String> subjectAltNames;
 
@@ -28,6 +37,9 @@ public final class ServerTlsSettingsResponse extends io.pulumi.resources.InvokeA
         return this.subjectAltNames;
     }
 
+    /**
+     * Indicates whether connections should be secured using TLS. The value of this field determines how TLS is enforced. This field can be set to one of the following: - SIMPLE Secure connections with standard TLS semantics. - MUTUAL Secure connections to the backends using mutual TLS by presenting client certificates for authentication. 
+     */
     @InputImport(name="tlsMode", required=true)
     private final String tlsMode;
 

@@ -10,10 +10,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetCertificateResult {
+/**
+ * The entity tag.
+ */
     private final String etag;
+/**
+ * The resource identifier.
+ */
     private final String id;
+/**
+ * The name of the certificate.
+ */
     private final String name;
+/**
+ * The description of an X509 CA Certificate.
+ */
     private final CertificatePropertiesResponse properties;
+/**
+ * The resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","name","properties","type"})
@@ -30,18 +45,33 @@ public final class GetCertificateResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The entity tag.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * The resource identifier.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The name of the certificate.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The description of an X509 CA Certificate.
+ */
     public CertificatePropertiesResponse getProperties() {
         return this.properties;
     }
+/**
+ * The resource type.
+ */
     public String getType() {
         return this.type;
     }

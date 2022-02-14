@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RetentionPolicyParametersResponse {
+/**
+ * Number of days to retain flow log records.
+ */
     private final @Nullable Integer days;
+/**
+ * Flag to enable/disable retention.
+ */
     private final @Nullable Boolean enabled;
 
     @OutputCustomType.Constructor({"days","enabled"})
@@ -23,9 +29,15 @@ public final class RetentionPolicyParametersResponse {
         this.enabled = enabled;
     }
 
+/**
+ * Number of days to retain flow log records.
+ */
     public Optional<Integer> getDays() {
         return Optional.ofNullable(this.days);
     }
+/**
+ * Flag to enable/disable retention.
+ */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }

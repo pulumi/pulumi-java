@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A DataFactory compute.
+ */
 public final class DataFactoryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DataFactoryResponse Empty = new DataFactoryResponse();
 
+    /**
+     * Location for the underlying compute
+     */
     @InputImport(name="computeLocation")
     private final @Nullable String computeLocation;
 
@@ -24,6 +30,10 @@ public final class DataFactoryResponse extends io.pulumi.resources.InvokeArgs {
         return this.computeLocation == null ? Optional.empty() : Optional.ofNullable(this.computeLocation);
     }
 
+    /**
+     * The type of compute
+Expected value is 'DataFactory'.
+     */
     @InputImport(name="computeType", required=true)
     private final String computeType;
 
@@ -31,6 +41,9 @@ public final class DataFactoryResponse extends io.pulumi.resources.InvokeArgs {
         return this.computeType;
     }
 
+    /**
+     * The description of the Machine Learning compute.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -38,6 +51,9 @@ public final class DataFactoryResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
+     */
     @InputImport(name="isAttachedCompute", required=true)
     private final Boolean isAttachedCompute;
 
@@ -45,6 +61,9 @@ public final class DataFactoryResponse extends io.pulumi.resources.InvokeArgs {
         return this.isAttachedCompute;
     }
 
+    /**
+     * Errors during provisioning
+     */
     @InputImport(name="provisioningErrors", required=true)
     private final List<MachineLearningServiceErrorResponse> provisioningErrors;
 
@@ -52,6 +71,9 @@ public final class DataFactoryResponse extends io.pulumi.resources.InvokeArgs {
         return this.provisioningErrors;
     }
 
+    /**
+     * The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -59,6 +81,9 @@ public final class DataFactoryResponse extends io.pulumi.resources.InvokeArgs {
         return this.provisioningState;
     }
 
+    /**
+     * ARM resource id of the underlying compute
+     */
     @InputImport(name="resourceId")
     private final @Nullable String resourceId;
 

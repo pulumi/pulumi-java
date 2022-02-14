@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * We currently only support backup retention by specifying the number of backups we will retain.
+ */
 public final class BackupRetentionSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BackupRetentionSettingsResponse Empty = new BackupRetentionSettingsResponse();
 
+    /**
+     * Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is 'COUNT', we will retain this many backups.
+     */
     @InputImport(name="retainedBackups", required=true)
     private final Integer retainedBackups;
 
@@ -20,6 +26,9 @@ public final class BackupRetentionSettingsResponse extends io.pulumi.resources.I
         return this.retainedBackups;
     }
 
+    /**
+     * The unit that 'retained_backups' represents.
+     */
     @InputImport(name="retentionUnit", required=true)
     private final String retentionUnit;
 

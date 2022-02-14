@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Redirect incompatible row settings
+ */
 public final class RedirectIncompatibleRowSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RedirectIncompatibleRowSettingsResponse Empty = new RedirectIncompatibleRowSettingsResponse();
 
+    /**
+     * Name of the Azure Storage, Storage SAS, or Azure Data Lake Store linked service used for redirecting incompatible row. Must be specified if redirectIncompatibleRowSettings is specified. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="linkedServiceName", required=true)
     private final Object linkedServiceName;
 
@@ -21,6 +27,9 @@ public final class RedirectIncompatibleRowSettingsResponse extends io.pulumi.res
         return this.linkedServiceName;
     }
 
+    /**
+     * The path for storing the redirect incompatible row data. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="path")
     private final @Nullable Object path;
 

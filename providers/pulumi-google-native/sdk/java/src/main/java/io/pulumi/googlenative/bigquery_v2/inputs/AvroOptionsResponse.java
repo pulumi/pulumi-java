@@ -8,10 +8,16 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class AvroOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AvroOptionsResponse Empty = new AvroOptionsResponse();
 
+    /**
+     * [Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).
+     */
     @InputImport(name="useAvroLogicalTypes", required=true)
     private final Boolean useAvroLogicalTypes;
 

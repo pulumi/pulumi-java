@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Set the access level and network port settings for SQL Server.
+ */
 public final class SqlConnectivityUpdateSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SqlConnectivityUpdateSettingsResponse Empty = new SqlConnectivityUpdateSettingsResponse();
 
+    /**
+     * SQL Server connectivity option.
+     */
     @InputImport(name="connectivityType")
     private final @Nullable String connectivityType;
 
@@ -22,6 +28,9 @@ public final class SqlConnectivityUpdateSettingsResponse extends io.pulumi.resou
         return this.connectivityType == null ? Optional.empty() : Optional.ofNullable(this.connectivityType);
     }
 
+    /**
+     * SQL Server port.
+     */
     @InputImport(name="port")
     private final @Nullable Integer port;
 

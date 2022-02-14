@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ManagedZonePeeringConfigResponse {
+/**
+ * 
+ */
     private final String kind;
+/**
+ * The network with which to peer.
+ */
     private final ManagedZonePeeringConfigTargetNetworkResponse targetNetwork;
 
     @OutputCustomType.Constructor({"kind","targetNetwork"})
@@ -21,9 +27,15 @@ public final class ManagedZonePeeringConfigResponse {
         this.targetNetwork = Objects.requireNonNull(targetNetwork);
     }
 
+/**
+ * 
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * The network with which to peer.
+ */
     public ManagedZonePeeringConfigTargetNetworkResponse getTargetNetwork() {
         return this.targetNetwork;
     }

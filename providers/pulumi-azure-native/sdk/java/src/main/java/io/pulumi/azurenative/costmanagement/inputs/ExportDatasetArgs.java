@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The definition for data in the export.
+ */
 public final class ExportDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExportDatasetArgs Empty = new ExportDatasetArgs();
 
+    /**
+     * The export dataset configuration.
+     */
     @InputImport(name="configuration")
     private final @Nullable Input<ExportDatasetConfigurationArgs> configuration;
 
@@ -24,6 +30,9 @@ public final class ExportDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.configuration == null ? Input.empty() : this.configuration;
     }
 
+    /**
+     * The granularity of rows in the export. Currently only 'Daily' is supported.
+     */
     @InputImport(name="granularity")
     private final @Nullable Input<Either<String,GranularityType>> granularity;
 

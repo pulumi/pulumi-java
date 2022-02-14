@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class StorageQueueMessageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StorageQueueMessageResponse Empty = new StorageQueueMessageResponse();
 
+    /**
+     * Gets or sets the message.
+     */
     @InputImport(name="message")
     private final @Nullable String message;
 
@@ -21,6 +27,9 @@ public final class StorageQueueMessageResponse extends io.pulumi.resources.Invok
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
+    /**
+     * Gets or sets the queue name.
+     */
     @InputImport(name="queueName")
     private final @Nullable String queueName;
 
@@ -28,6 +37,9 @@ public final class StorageQueueMessageResponse extends io.pulumi.resources.Invok
         return this.queueName == null ? Optional.empty() : Optional.ofNullable(this.queueName);
     }
 
+    /**
+     * Gets or sets the SAS key.
+     */
     @InputImport(name="sasToken")
     private final @Nullable String sasToken;
 
@@ -35,6 +47,9 @@ public final class StorageQueueMessageResponse extends io.pulumi.resources.Invok
         return this.sasToken == null ? Optional.empty() : Optional.ofNullable(this.sasToken);
     }
 
+    /**
+     * Gets or sets the storage account name.
+     */
     @InputImport(name="storageAccount")
     private final @Nullable String storageAccount;
 

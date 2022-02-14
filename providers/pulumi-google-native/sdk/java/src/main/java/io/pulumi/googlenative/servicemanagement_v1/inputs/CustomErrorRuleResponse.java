@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A custom error rule.
+ */
 public final class CustomErrorRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomErrorRuleResponse Empty = new CustomErrorRuleResponse();
 
+    /**
+     * Mark this message as possible payload in error response. Otherwise, objects of this type will be filtered when they appear in error payload.
+     */
     @InputImport(name="isErrorType", required=true)
     private final Boolean isErrorType;
 
@@ -20,6 +26,9 @@ public final class CustomErrorRuleResponse extends io.pulumi.resources.InvokeArg
         return this.isErrorType;
     }
 
+    /**
+     * Selects messages to which this rule applies. Refer to selector for syntax details.
+     */
     @InputImport(name="selector", required=true)
     private final String selector;
 

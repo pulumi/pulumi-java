@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Date range of the data to export.
+ */
 public final class GoogleCloudApigeeV1DateRangeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudApigeeV1DateRangeArgs Empty = new GoogleCloudApigeeV1DateRangeArgs();
 
+    /**
+     * End date (exclusive) of the data to export in the format `yyyy-mm-dd`. The date range ends at 00:00:00 UTC on the end date- which will not be in the output.
+     */
     @InputImport(name="end", required=true)
     private final Input<String> end;
 
@@ -20,6 +26,9 @@ public final class GoogleCloudApigeeV1DateRangeArgs extends io.pulumi.resources.
         return this.end;
     }
 
+    /**
+     * Start date of the data to export in the format `yyyy-mm-dd`. The date range begins at 00:00:00 UTC on the start date.
+     */
     @InputImport(name="start", required=true)
     private final Input<String> start;
 

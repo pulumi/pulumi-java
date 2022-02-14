@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMSIXPackage {
+/**
+ * Schema for MSIX Package properties.
+API Version: 2021-02-01-preview.
+ *
+ * Schema for MSIX Package properties.
+ */
     public static CompletableFuture<GetMSIXPackageResult> invokeAsync(GetMSIXPackageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getMSIXPackage", TypeShape.of(GetMSIXPackageResult.class), args == null ? GetMSIXPackageArgs.Empty : args, Utilities.withVersion(options));
     }

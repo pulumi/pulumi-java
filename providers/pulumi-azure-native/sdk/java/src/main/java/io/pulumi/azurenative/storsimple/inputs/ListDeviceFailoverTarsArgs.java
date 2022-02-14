@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListDeviceFailoverTarsArgs Empty = new ListDeviceFailoverTarsArgs();
 
+    /**
+     * The manager name
+     */
     @InputImport(name="managerName", required=true)
     private final String managerName;
 
@@ -22,6 +28,9 @@ public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.Invoke
         return this.managerName;
     }
 
+    /**
+     * The resource group name
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -29,6 +38,9 @@ public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.Invoke
         return this.resourceGroupName;
     }
 
+    /**
+     * The source device name on which failover is performed.
+     */
     @InputImport(name="sourceDeviceName", required=true)
     private final String sourceDeviceName;
 
@@ -36,6 +48,9 @@ public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.Invoke
         return this.sourceDeviceName;
     }
 
+    /**
+     * The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.
+     */
     @InputImport(name="volumeContainers")
     private final @Nullable List<String> volumeContainers;
 

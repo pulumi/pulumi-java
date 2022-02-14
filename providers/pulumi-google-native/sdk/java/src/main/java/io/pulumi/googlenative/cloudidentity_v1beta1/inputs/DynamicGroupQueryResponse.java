@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines a query on a resource.
+ */
 public final class DynamicGroupQueryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DynamicGroupQueryResponse Empty = new DynamicGroupQueryResponse();
 
+    /**
+     * Query that determines the memberships of the dynamic group. Examples: All users with at least one `organizations.department` of engineering. `user.organizations.exists(org, org.department=='engineering')` All users with at least one location that has `area` of `foo` and `building_id` of `bar`. `user.locations.exists(loc, loc.area=='foo' && loc.building_id=='bar')` All users with any variation of the name John Doe (case-insensitive queries add `equalsIgnoreCase()` to the value being queried). `user.name.value.equalsIgnoreCase('jOhn DoE')`
+     */
     @InputImport(name="query", required=true)
     private final String query;
 
@@ -19,6 +25,9 @@ public final class DynamicGroupQueryResponse extends io.pulumi.resources.InvokeA
         return this.query;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="resourceType", required=true)
     private final String resourceType;
 

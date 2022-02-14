@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * RuleWithOperations is a tuple of Operations and Resources. It is recommended to make sure that all the tuple expansions are valid.
+ */
 public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuleWithOperationsArgs Empty = new RuleWithOperationsArgs();
 
+    /**
+     * APIGroups is the API groups the resources belong to. '*' is all groups. If '*' is present, the length of the slice must be one. Required.
+     */
     @InputImport(name="apiGroups")
     private final @Nullable Input<List<String>> apiGroups;
 
@@ -22,6 +28,9 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
         return this.apiGroups == null ? Input.empty() : this.apiGroups;
     }
 
+    /**
+     * APIVersions is the API versions the resources belong to. '*' is all versions. If '*' is present, the length of the slice must be one. Required.
+     */
     @InputImport(name="apiVersions")
     private final @Nullable Input<List<String>> apiVersions;
 
@@ -29,6 +38,9 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
         return this.apiVersions == null ? Input.empty() : this.apiVersions;
     }
 
+    /**
+     * Operations is the operations the admission hook cares about - CREATE, UPDATE, or * for all operations. If '*' is present, the length of the slice must be one. Required.
+     */
     @InputImport(name="operations")
     private final @Nullable Input<List<String>> operations;
 
@@ -36,6 +48,15 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
         return this.operations == null ? Input.empty() : this.operations;
     }
 
+    /**
+     * Resources is a list of resources this rule applies to.
+
+For example: 'pods' means pods. 'pods/log' means the log subresource of pods. '*' means all resources, but not subresources. 'pods/*' means all subresources of pods. '/{@literal /}scale' means all scale subresources. '/{@literal /}*' means all resources and their subresources.
+
+If wildcard is present, the validation rule will ensure resources do not overlap with each other.
+
+Depending on the enclosing object, subresources might not be allowed. Required.
+     */
     @InputImport(name="resources")
     private final @Nullable Input<List<String>> resources;
 
@@ -43,6 +64,9 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
         return this.resources == null ? Input.empty() : this.resources;
     }
 
+    /**
+     * scope specifies the scope of this rule. Valid values are "Cluster", "Namespaced", and "*" "Cluster" means that only cluster-scoped resources will match this rule. Namespace API objects are cluster-scoped. "Namespaced" means that only namespaced resources will match this rule. "*" means that there are no scope restrictions. Subresources match the scope of their parent resource. Default is "*".
+     */
     @InputImport(name="scope")
     private final @Nullable Input<String> scope;
 

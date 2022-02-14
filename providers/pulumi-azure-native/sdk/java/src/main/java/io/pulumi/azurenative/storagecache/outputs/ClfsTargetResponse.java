@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClfsTargetResponse {
+/**
+ * Resource ID of storage container.
+ */
     private final @Nullable String target;
 
     @OutputCustomType.Constructor({"target"})
@@ -18,6 +21,9 @@ public final class ClfsTargetResponse {
         this.target = target;
     }
 
+/**
+ * Resource ID of storage container.
+ */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }

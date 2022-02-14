@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHost {
+/**
+ * Define the host.
+API Version: 2020-10-01-preview.
+ *
+ * Define the host.
+ */
     public static CompletableFuture<GetHostResult> invokeAsync(GetHostArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getHost", TypeShape.of(GetHostResult.class), args == null ? GetHostArgs.Empty : args, Utilities.withVersion(options));
     }

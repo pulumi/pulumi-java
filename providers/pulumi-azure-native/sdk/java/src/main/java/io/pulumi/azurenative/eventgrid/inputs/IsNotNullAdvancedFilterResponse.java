@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * IsNotNull Advanced Filter.
+ */
 public final class IsNotNullAdvancedFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IsNotNullAdvancedFilterResponse Empty = new IsNotNullAdvancedFilterResponse();
 
+    /**
+     * The field/property in the event based on which you want to filter.
+     */
     @InputImport(name="key")
     private final @Nullable String key;
 
@@ -21,6 +27,10 @@ public final class IsNotNullAdvancedFilterResponse extends io.pulumi.resources.I
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
+    /**
+     * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+Expected value is 'IsNotNull'.
+     */
     @InputImport(name="operatorType", required=true)
     private final String operatorType;
 

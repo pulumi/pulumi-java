@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class LoadBalancerFrontendIPConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LoadBalancerFrontendIPConfigurationResponse Empty = new LoadBalancerFrontendIPConfigurationResponse();
 
+    /**
+     * The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -20,6 +26,9 @@ public final class LoadBalancerFrontendIPConfigurationResponse extends io.pulumi
         return this.name;
     }
 
+    /**
+     * Properties of load balancer frontend ip configuration.
+     */
     @InputImport(name="properties", required=true)
     private final LoadBalancerFrontendIPConfigurationPropertiesResponse properties;
 

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of identity used for the cache
+ */
     @EnumType
     public enum CacheIdentityType {
+/**
+ * 
+ */
         SystemAssigned("SystemAssigned"),
+/**
+ * 
+ */
         None("None");
 
         private final String value;

@@ -15,15 +15,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAutoScaleVCoreResult {
+/**
+ * The maximum capacity of an auto scale v-core resource.
+ */
     private final @Nullable Integer capacityLimit;
+/**
+ * The object ID of the capacity resource associated with the auto scale v-core resource.
+ */
     private final @Nullable String capacityObjectId;
+/**
+ * An identifier that represents the PowerBI Dedicated resource.
+ */
     private final String id;
+/**
+ * Location of the PowerBI Dedicated resource.
+ */
     private final String location;
+/**
+ * The name of the PowerBI Dedicated resource.
+ */
     private final String name;
+/**
+ * The current deployment state of an auto scale v-core resource. The provisioningState is to indicate states for resource provisioning.
+ */
     private final String provisioningState;
+/**
+ * The SKU of the auto scale v-core resource.
+ */
     private final AutoScaleVCoreSkuResponse sku;
+/**
+ * Metadata pertaining to creation and last modification of the resource.
+ */
     private final @Nullable SystemDataResponse systemData;
+/**
+ * Key-value pairs of additional resource provisioning properties.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * The type of the PowerBI Dedicated resource.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"capacityLimit","capacityObjectId","id","location","name","provisioningState","sku","systemData","tags","type"})
@@ -50,33 +80,63 @@ public final class GetAutoScaleVCoreResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The maximum capacity of an auto scale v-core resource.
+ */
     public Optional<Integer> getCapacityLimit() {
         return Optional.ofNullable(this.capacityLimit);
     }
+/**
+ * The object ID of the capacity resource associated with the auto scale v-core resource.
+ */
     public Optional<String> getCapacityObjectId() {
         return Optional.ofNullable(this.capacityObjectId);
     }
+/**
+ * An identifier that represents the PowerBI Dedicated resource.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Location of the PowerBI Dedicated resource.
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * The name of the PowerBI Dedicated resource.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The current deployment state of an auto scale v-core resource. The provisioningState is to indicate states for resource provisioning.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * The SKU of the auto scale v-core resource.
+ */
     public AutoScaleVCoreSkuResponse getSku() {
         return this.sku;
     }
+/**
+ * Metadata pertaining to creation and last modification of the resource.
+ */
     public Optional<SystemDataResponse> getSystemData() {
         return Optional.ofNullable(this.systemData);
     }
+/**
+ * Key-value pairs of additional resource provisioning properties.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * The type of the PowerBI Dedicated resource.
+ */
     public String getType() {
         return this.type;
     }

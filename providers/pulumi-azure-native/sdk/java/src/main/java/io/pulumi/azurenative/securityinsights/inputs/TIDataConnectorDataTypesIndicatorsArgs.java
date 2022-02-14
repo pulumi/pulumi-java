@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Data type for indicators connection.
+ */
 public final class TIDataConnectorDataTypesIndicatorsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TIDataConnectorDataTypesIndicatorsArgs Empty = new TIDataConnectorDataTypesIndicatorsArgs();
 
+    /**
+     * Describe whether this data type connection is enabled or not.
+     */
     @InputImport(name="state")
     private final @Nullable Input<Either<String,DataTypeState>> state;
 

@@ -11,10 +11,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * An Upgrade Note represents a potential upgrade of a package to a given version. For each package version combination (i.e. bash 4.0, bash 4.1, bash 4.1.2), there will be a Upgrade Note.
+ */
 public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UpgradeNoteResponse Empty = new UpgradeNoteResponse();
 
+    /**
+     * Metadata about the upgrade for each specific operating system.
+     */
     @InputImport(name="distributions", required=true)
     private final List<UpgradeDistributionResponse> distributions;
 
@@ -22,6 +28,9 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
         return this.distributions;
     }
 
+    /**
+     * Required - The package this Upgrade is for.
+     */
     @InputImport(name="package", required=true)
     private final String $package;
 
@@ -29,6 +38,9 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
         return this.$package;
     }
 
+    /**
+     * Required - The version of the package in machine + human readable form.
+     */
     @InputImport(name="version", required=true)
     private final VersionResponse version;
 

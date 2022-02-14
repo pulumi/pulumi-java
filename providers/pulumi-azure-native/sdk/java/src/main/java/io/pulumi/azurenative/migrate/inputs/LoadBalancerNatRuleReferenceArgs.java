@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines reference to load balancer NAT rules.
+ */
 public final class LoadBalancerNatRuleReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoadBalancerNatRuleReferenceArgs Empty = new LoadBalancerNatRuleReferenceArgs();
 
+    /**
+     * Gets the name of the proxy resource on the target side.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +27,9 @@ public final class LoadBalancerNatRuleReferenceArgs extends io.pulumi.resources.
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Gets the ARM resource ID of the tracked resource being referenced.
+     */
     @InputImport(name="sourceArmResourceId", required=true)
     private final Input<String> sourceArmResourceId;
 

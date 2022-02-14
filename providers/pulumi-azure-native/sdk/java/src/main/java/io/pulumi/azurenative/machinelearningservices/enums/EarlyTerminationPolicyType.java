@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Name of policy configuration
+ */
     @EnumType
     public enum EarlyTerminationPolicyType {
+/**
+ * 
+ */
         Bandit("Bandit"),
+/**
+ * 
+ */
         MedianStopping("MedianStopping"),
+/**
+ * 
+ */
         TruncationSelection("TruncationSelection");
 
         private final String value;

@@ -22,10 +22,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class MachineLearningComputeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MachineLearningComputeArgs Empty = new MachineLearningComputeArgs();
 
+    /**
+     * Name of the Azure Machine Learning compute.
+     */
     @InputImport(name="computeName")
     private final @Nullable Input<String> computeName;
 
@@ -33,6 +39,9 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
         return this.computeName == null ? Input.empty() : this.computeName;
     }
 
+    /**
+     * The identity of the resource.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityArgs> identity;
 
@@ -40,6 +49,9 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * Specifies the location of the resource.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -47,6 +59,9 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Compute properties
+     */
     @InputImport(name="properties")
     private final @Nullable Input<Object> properties;
 
@@ -54,6 +69,9 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Name of the resource group in which workspace is located.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -61,6 +79,9 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
         return this.resourceGroupName;
     }
 
+    /**
+     * The sku of the workspace.
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -68,6 +89,9 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Contains resource tags defined as key/value pairs.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -75,6 +99,9 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Name of Azure Machine Learning workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

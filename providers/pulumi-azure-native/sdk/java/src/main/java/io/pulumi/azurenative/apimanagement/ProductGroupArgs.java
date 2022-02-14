@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ProductGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProductGroupArgs Empty = new ProductGroupArgs();
 
+    /**
+     * Group identifier. Must be unique in the current API Management service instance.
+     */
     @InputImport(name="groupId")
     private final @Nullable Input<String> groupId;
 
@@ -21,6 +27,9 @@ public final class ProductGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.groupId == null ? Input.empty() : this.groupId;
     }
 
+    /**
+     * Product identifier. Must be unique in the current API Management service instance.
+     */
     @InputImport(name="productId", required=true)
     private final Input<String> productId;
 
@@ -28,6 +37,9 @@ public final class ProductGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.productId;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -35,6 +47,9 @@ public final class ProductGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

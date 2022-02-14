@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The protocol used for the probe.
+ */
     @EnumType
     public enum ApplicationGatewayProtocol {
+/**
+ * 
+ */
         Http("Http"),
+/**
+ * 
+ */
         Https("Https");
 
         private final String value;

@@ -11,11 +11,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SettingsPropertiesResponseCache {
+/**
+ * Indicates the account type. Allowed values include: EA, PAYG, Modern, Internal, Unknown.
+ */
     private final String channel;
+/**
+ * Resource ID used by Resource Manager to uniquely identify the scope.
+ */
     private final String id;
+/**
+ * Display name for the scope.
+ */
     private final String name;
+/**
+ * Resource ID of the parent scope. For instance, subscription's resource ID for a resource group or a management group resource ID for a subscription.
+ */
     private final @Nullable String parent;
+/**
+ * Indicates the status of the scope. Status only applies to subscriptions and billing accounts.
+ */
     private final @Nullable String status;
+/**
+ * Indicates the type of modern account. Allowed values include: Individual, Enterprise, Partner, Indirect, NotApplicable
+ */
     private final String subchannel;
 
     @OutputCustomType.Constructor({"channel","id","name","parent","status","subchannel"})
@@ -34,21 +52,39 @@ public final class SettingsPropertiesResponseCache {
         this.subchannel = Objects.requireNonNull(subchannel);
     }
 
+/**
+ * Indicates the account type. Allowed values include: EA, PAYG, Modern, Internal, Unknown.
+ */
     public String getChannel() {
         return this.channel;
     }
+/**
+ * Resource ID used by Resource Manager to uniquely identify the scope.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Display name for the scope.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Resource ID of the parent scope. For instance, subscription's resource ID for a resource group or a management group resource ID for a subscription.
+ */
     public Optional<String> getParent() {
         return Optional.ofNullable(this.parent);
     }
+/**
+ * Indicates the status of the scope. Status only applies to subscriptions and billing accounts.
+ */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
+/**
+ * Indicates the type of modern account. Allowed values include: Individual, Enterprise, Partner, Indirect, NotApplicable
+ */
     public String getSubchannel() {
         return this.subchannel;
     }

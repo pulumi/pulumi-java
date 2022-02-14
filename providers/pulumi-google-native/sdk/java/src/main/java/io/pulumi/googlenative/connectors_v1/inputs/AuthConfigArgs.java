@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * AuthConfig defines details of a authentication type.
+ */
 public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AuthConfigArgs Empty = new AuthConfigArgs();
 
+    /**
+     * List containing additional auth configs.
+     */
     @InputImport(name="additionalVariables")
     private final @Nullable Input<List<ConfigVariableArgs>> additionalVariables;
 
@@ -26,6 +32,9 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.additionalVariables == null ? Input.empty() : this.additionalVariables;
     }
 
+    /**
+     * The type of authentication configured.
+     */
     @InputImport(name="authType")
     private final @Nullable Input<AuthConfigAuthType> authType;
 
@@ -33,6 +42,9 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.authType == null ? Input.empty() : this.authType;
     }
 
+    /**
+     * Oauth2ClientCredentials.
+     */
     @InputImport(name="oauth2ClientCredentials")
     private final @Nullable Input<Oauth2ClientCredentialsArgs> oauth2ClientCredentials;
 
@@ -40,6 +52,9 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.oauth2ClientCredentials == null ? Input.empty() : this.oauth2ClientCredentials;
     }
 
+    /**
+     * Oauth2JwtBearer.
+     */
     @InputImport(name="oauth2JwtBearer")
     private final @Nullable Input<Oauth2JwtBearerArgs> oauth2JwtBearer;
 
@@ -47,6 +62,9 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.oauth2JwtBearer == null ? Input.empty() : this.oauth2JwtBearer;
     }
 
+    /**
+     * UserPassword.
+     */
     @InputImport(name="userPassword")
     private final @Nullable Input<UserPasswordArgs> userPassword;
 

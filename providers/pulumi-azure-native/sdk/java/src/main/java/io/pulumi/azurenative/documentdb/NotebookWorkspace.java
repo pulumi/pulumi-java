@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.documentdb.NotebookWorkspaceArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -14,33 +13,150 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A notebook workspace resource
+API Version: 2021-03-15.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### CosmosDBNotebookWorkspaceCreate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var notebookWorkspace = new AzureNative.DocumentDB.NotebookWorkspace("notebookWorkspace", new AzureNative.DocumentDB.NotebookWorkspaceArgs
+        {
+            AccountName = "ddb1",
+            NotebookWorkspaceName = "default",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := documentdb.NewNotebookWorkspace(ctx, "notebookWorkspace", &documentdb.NotebookWorkspaceArgs{
+			AccountName:           pulumi.String("ddb1"),
+			NotebookWorkspaceName: pulumi.String("default"),
+			ResourceGroupName:     pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const notebookWorkspace = new azure_native.documentdb.NotebookWorkspace("notebookWorkspace", {
+    accountName: "ddb1",
+    notebookWorkspaceName: "default",
+    resourceGroupName: "rg1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+notebook_workspace = azure_native.documentdb.NotebookWorkspace("notebookWorkspace",
+    account_name="ddb1",
+    notebook_workspace_name="default",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:documentdb:NotebookWorkspace default /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/notebookWorkspaces/default 
+```
+
+ */
 @ResourceType(type="azure-native:documentdb:NotebookWorkspace")
 public class NotebookWorkspace extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the database account.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the database account.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Specifies the endpoint of Notebook server.
+     */
     @OutputExport(name="notebookServerEndpoint", type=String.class, parameters={})
     private Output<String> notebookServerEndpoint;
 
+    /**
+     * @return Specifies the endpoint of Notebook server.
+     */
     public Output<String> getNotebookServerEndpoint() {
         return this.notebookServerEndpoint;
     }
+    /**
+     * Status of the notebook workspace. Possible values are: Creating, Online, Deleting, Failed, Updating.
+     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
+    /**
+     * @return Status of the notebook workspace. Possible values are: Creating, Online, Deleting, Failed, Updating.
+     */
     public Output<String> getStatus() {
         return this.status;
     }
+    /**
+     * The type of Azure resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of Azure resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public NotebookWorkspace(String name, NotebookWorkspaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:documentdb:NotebookWorkspace", name, args == null ? NotebookWorkspaceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -74,6 +190,14 @@ public class NotebookWorkspace extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static NotebookWorkspace get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NotebookWorkspace(name, id, options);
     }

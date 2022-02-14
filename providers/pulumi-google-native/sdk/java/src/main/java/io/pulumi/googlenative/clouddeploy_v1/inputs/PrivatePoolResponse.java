@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Execution using a private Cloud Build pool.
+ */
 public final class PrivatePoolResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivatePoolResponse Empty = new PrivatePoolResponse();
 
+    /**
+     * Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified, a default bucket located in the same region will be used.
+     */
     @InputImport(name="artifactStorage", required=true)
     private final String artifactStorage;
 
@@ -19,6 +25,9 @@ public final class PrivatePoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.artifactStorage;
     }
 
+    /**
+     * Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
+     */
     @InputImport(name="serviceAccount", required=true)
     private final String serviceAccount;
 
@@ -26,6 +35,9 @@ public final class PrivatePoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.serviceAccount;
     }
 
+    /**
+     * Resource name of the Cloud Build worker pool to use. The format is `projects/{project}/locations/{location}/workerPools/{pool}`.
+     */
     @InputImport(name="workerPool", required=true)
     private final String workerPool;
 

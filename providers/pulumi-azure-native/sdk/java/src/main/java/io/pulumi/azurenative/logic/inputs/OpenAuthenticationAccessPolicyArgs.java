@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Open authentication access policy defined by user.
+ */
 public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OpenAuthenticationAccessPolicyArgs Empty = new OpenAuthenticationAccessPolicyArgs();
 
+    /**
+     * The access policy claims.
+     */
     @InputImport(name="claims")
     private final @Nullable Input<List<OpenAuthenticationPolicyClaimArgs>> claims;
 
@@ -25,6 +31,9 @@ public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resource
         return this.claims == null ? Input.empty() : this.claims;
     }
 
+    /**
+     * Type of provider for OAuth.
+     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,OpenAuthenticationProviderType>> type;
 

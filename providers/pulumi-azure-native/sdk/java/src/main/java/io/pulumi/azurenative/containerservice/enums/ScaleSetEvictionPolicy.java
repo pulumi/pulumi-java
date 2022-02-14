@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
+ */
     @EnumType
     public enum ScaleSetEvictionPolicy {
+/**
+ * 
+ */
         Delete("Delete"),
+/**
+ * 
+ */
         Deallocate("Deallocate");
 
         private final String value;

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStreamingPolicy {
+/**
+ * A Streaming Policy resource
+API Version: 2020-05-01.
+ *
+ * A Streaming Policy resource
+ */
     public static CompletableFuture<GetStreamingPolicyResult> invokeAsync(GetStreamingPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getStreamingPolicy", TypeShape.of(GetStreamingPolicyResult.class), args == null ? GetStreamingPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

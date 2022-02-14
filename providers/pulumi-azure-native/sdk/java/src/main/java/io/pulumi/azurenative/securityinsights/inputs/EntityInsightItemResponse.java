@@ -3,7 +3,6 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.azurenative.securityinsights.inputs.EntityInsightItemResponseQueryTimeInterval;
 import io.pulumi.azurenative.securityinsights.inputs.InsightsTableResultResponse;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
@@ -13,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Entity insight Item.
+ */
 public final class EntityInsightItemResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EntityInsightItemResponse Empty = new EntityInsightItemResponse();
 
+    /**
+     * Query results for table insights query.
+     */
     @InputImport(name="chartQueryResults")
     private final @Nullable List<InsightsTableResultResponse> chartQueryResults;
 
@@ -24,6 +29,9 @@ public final class EntityInsightItemResponse extends io.pulumi.resources.InvokeA
         return this.chartQueryResults == null ? List.of() : this.chartQueryResults;
     }
 
+    /**
+     * The query id of the insight
+     */
     @InputImport(name="queryId")
     private final @Nullable String queryId;
 
@@ -31,6 +39,9 @@ public final class EntityInsightItemResponse extends io.pulumi.resources.InvokeA
         return this.queryId == null ? Optional.empty() : Optional.ofNullable(this.queryId);
     }
 
+    /**
+     * The Time interval that the query actually executed on.
+     */
     @InputImport(name="queryTimeInterval")
     private final @Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval;
 
@@ -38,6 +49,9 @@ public final class EntityInsightItemResponse extends io.pulumi.resources.InvokeA
         return this.queryTimeInterval == null ? Optional.empty() : Optional.ofNullable(this.queryTimeInterval);
     }
 
+    /**
+     * Query results for table insights query.
+     */
     @InputImport(name="tableQueryResults")
     private final @Nullable InsightsTableResultResponse tableQueryResults;
 

@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UrlMapTestHeaderResponse {
+/**
+ * Header name.
+ */
     private final String name;
+/**
+ * Header value.
+ */
     private final String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -20,9 +26,15 @@ public final class UrlMapTestHeaderResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * Header name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Header value.
+ */
     public String getValue() {
         return this.value;
     }

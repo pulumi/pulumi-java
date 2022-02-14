@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SSL configuration. If configured data-plane calls to user services will be exposed over SSL only.
+ */
 public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SslConfigurationArgs Empty = new SslConfigurationArgs();
 
+    /**
+     * The SSL cert data in PEM format.
+     */
     @InputImport(name="cert")
     private final @Nullable Input<String> cert;
 
@@ -23,6 +29,9 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.cert == null ? Input.empty() : this.cert;
     }
 
+    /**
+     * The CName of the certificate.
+     */
     @InputImport(name="cname")
     private final @Nullable Input<String> cname;
 
@@ -30,6 +39,9 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.cname == null ? Input.empty() : this.cname;
     }
 
+    /**
+     * The SSL key data in PEM format. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -37,6 +49,9 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * SSL status. Allowed values are Enabled and Disabled.
+     */
     @InputImport(name="status")
     private final @Nullable Input<Either<String,Status>> status;
 

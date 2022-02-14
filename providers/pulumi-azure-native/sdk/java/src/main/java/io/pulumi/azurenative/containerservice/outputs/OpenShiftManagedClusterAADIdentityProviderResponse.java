@@ -11,10 +11,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OpenShiftManagedClusterAADIdentityProviderResponse {
+/**
+ * The clientId password associated with the provider.
+ */
     private final @Nullable String clientId;
+/**
+ * The groupId to be granted cluster admin role.
+ */
     private final @Nullable String customerAdminGroupId;
+/**
+ * The kind of the provider.
+Expected value is 'AADIdentityProvider'.
+ */
     private final String kind;
+/**
+ * The secret password associated with the provider.
+ */
     private final @Nullable String secret;
+/**
+ * The tenantId associated with the provider.
+ */
     private final @Nullable String tenantId;
 
     @OutputCustomType.Constructor({"clientId","customerAdminGroupId","kind","secret","tenantId"})
@@ -31,18 +47,34 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse {
         this.tenantId = tenantId;
     }
 
+/**
+ * The clientId password associated with the provider.
+ */
     public Optional<String> getClientId() {
         return Optional.ofNullable(this.clientId);
     }
+/**
+ * The groupId to be granted cluster admin role.
+ */
     public Optional<String> getCustomerAdminGroupId() {
         return Optional.ofNullable(this.customerAdminGroupId);
     }
+/**
+ * The kind of the provider.
+Expected value is 'AADIdentityProvider'.
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * The secret password associated with the provider.
+ */
     public Optional<String> getSecret() {
         return Optional.ofNullable(this.secret);
     }
+/**
+ * The tenantId associated with the provider.
+ */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }

@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RelationshipNoteResponse {
+/**
+ * The type of relationship between the source and target SPDX elements
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -16,6 +19,9 @@ public final class RelationshipNoteResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The type of relationship between the source and target SPDX elements
+ */
     public String getType() {
         return this.type;
     }

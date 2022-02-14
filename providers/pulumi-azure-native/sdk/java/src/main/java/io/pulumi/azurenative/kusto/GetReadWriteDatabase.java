@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReadWriteDatabase {
+/**
+ * Class representing a read write database.
+API Version: 2021-01-01.
+ *
+ * Class representing a read write database.
+ */
     public static CompletableFuture<GetReadWriteDatabaseResult> invokeAsync(GetReadWriteDatabaseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kusto:getReadWriteDatabase", TypeShape.of(GetReadWriteDatabaseResult.class), args == null ? GetReadWriteDatabaseArgs.Empty : args, Utilities.withVersion(options));
     }

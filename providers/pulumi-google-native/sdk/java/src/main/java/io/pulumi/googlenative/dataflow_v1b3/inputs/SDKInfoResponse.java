@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * SDK Information.
+ */
 public final class SDKInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SDKInfoResponse Empty = new SDKInfoResponse();
 
+    /**
+     * The SDK Language.
+     */
     @InputImport(name="language", required=true)
     private final String language;
 
@@ -19,6 +25,9 @@ public final class SDKInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.language;
     }
 
+    /**
+     * Optional. The SDK version.
+     */
     @InputImport(name="version", required=true)
     private final String version;
 

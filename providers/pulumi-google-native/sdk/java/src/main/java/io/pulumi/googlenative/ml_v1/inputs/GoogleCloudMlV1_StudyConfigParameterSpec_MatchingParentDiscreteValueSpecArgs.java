@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents the spec to match discrete values from parent parameter.
+ */
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecArgs Empty = new GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecArgs();
 
+    /**
+     * Matches values of the parent parameter with type 'DISCRETE'. All values must exist in `discrete_value_spec` of parent parameter.
+     */
     @InputImport(name="values")
     private final @Nullable Input<List<Double>> values;
 

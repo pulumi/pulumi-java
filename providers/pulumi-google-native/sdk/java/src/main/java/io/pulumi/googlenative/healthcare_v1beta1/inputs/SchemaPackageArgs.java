@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A schema package contains a set of schemas and type definitions.
+ */
 public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SchemaPackageArgs Empty = new SchemaPackageArgs();
 
+    /**
+     * Flag to ignore all min_occurs restrictions in the schema. This means that incoming messages can omit any group, segment, field, component, or subcomponent.
+     */
     @InputImport(name="ignoreMinOccurs")
     private final @Nullable Input<Boolean> ignoreMinOccurs;
 
@@ -26,6 +32,9 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.ignoreMinOccurs == null ? Input.empty() : this.ignoreMinOccurs;
     }
 
+    /**
+     * Schema configs that are layered based on their VersionSources that match the incoming message. Schema configs present in higher indices override those in lower indices with the same message type and trigger event if their VersionSources all match an incoming message.
+     */
     @InputImport(name="schemas")
     private final @Nullable Input<List<Hl7SchemaConfigArgs>> schemas;
 
@@ -33,6 +42,9 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.schemas == null ? Input.empty() : this.schemas;
     }
 
+    /**
+     * Determines how messages that fail to parse are handled.
+     */
     @InputImport(name="schematizedParsingType")
     private final @Nullable Input<SchemaPackageSchematizedParsingType> schematizedParsingType;
 
@@ -40,6 +52,9 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.schematizedParsingType == null ? Input.empty() : this.schematizedParsingType;
     }
 
+    /**
+     * Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.
+     */
     @InputImport(name="types")
     private final @Nullable Input<List<Hl7TypesConfigArgs>> types;
 
@@ -47,6 +62,9 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.types == null ? Input.empty() : this.types;
     }
 
+    /**
+     * Determines how unexpected segments (segments not matched to the schema) are handled.
+     */
     @InputImport(name="unexpectedSegmentHandling")
     private final @Nullable Input<SchemaPackageUnexpectedSegmentHandling> unexpectedSegmentHandling;
 

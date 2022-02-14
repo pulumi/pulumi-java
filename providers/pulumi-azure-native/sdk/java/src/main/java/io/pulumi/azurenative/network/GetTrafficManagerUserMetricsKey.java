@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTrafficManagerUserMetricsKey {
+/**
+ * Class representing Traffic Manager User Metrics.
+API Version: 2018-08-01.
+ *
+ * Class representing Traffic Manager User Metrics.
+ */
     public static CompletableFuture<GetTrafficManagerUserMetricsKeyResult> invokeAsync(@Nullable GetTrafficManagerUserMetricsKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getTrafficManagerUserMetricsKey", TypeShape.of(GetTrafficManagerUserMetricsKeyResult.class), args == null ? GetTrafficManagerUserMetricsKeyArgs.Empty : args, Utilities.withVersion(options));
     }

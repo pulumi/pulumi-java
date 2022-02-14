@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetWebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWebPubSubSharedPrivateLinkResourceArgs Empty = new GetWebPubSubSharedPrivateLinkResourceArgs();
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class GetWebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.r
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the resource.
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 
@@ -26,6 +35,9 @@ public final class GetWebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.r
         return this.resourceName;
     }
 
+    /**
+     * The name of the shared private link resource
+     */
     @InputImport(name="sharedPrivateLinkResourceName", required=true)
     private final String sharedPrivateLinkResourceName;
 

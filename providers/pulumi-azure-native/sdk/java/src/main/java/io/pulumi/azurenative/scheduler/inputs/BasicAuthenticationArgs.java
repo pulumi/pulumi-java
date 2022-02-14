@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class BasicAuthenticationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BasicAuthenticationArgs Empty = new BasicAuthenticationArgs();
 
+    /**
+     * Gets or sets the password, return value will always be empty.
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -21,6 +27,10 @@ public final class BasicAuthenticationArgs extends io.pulumi.resources.ResourceA
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * Gets or sets the HTTP authentication type.
+Expected value is 'Basic'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -28,6 +38,9 @@ public final class BasicAuthenticationArgs extends io.pulumi.resources.ResourceA
         return this.type;
     }
 
+    /**
+     * Gets or sets the username.
+     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 

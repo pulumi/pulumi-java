@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionProfileArgs Empty = new ConnectionProfileArgs();
 
+    /**
+     * A CloudSQL database connection profile.
+     */
     @InputImport(name="cloudsql")
     private final @Nullable Input<CloudSqlConnectionProfileArgs> cloudsql;
 
@@ -26,6 +32,9 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
         return this.cloudsql == null ? Input.empty() : this.cloudsql;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="connectionProfileId", required=true)
     private final Input<String> connectionProfileId;
 
@@ -33,6 +42,9 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
         return this.connectionProfileId;
     }
 
+    /**
+     * The connection profile display name.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -40,6 +52,9 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The resource labels for connection profile to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -47,6 +62,9 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -54,6 +72,9 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * A MySQL database connection profile.
+     */
     @InputImport(name="mysql")
     private final @Nullable Input<MySqlConnectionProfileArgs> mysql;
 
@@ -61,6 +82,9 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
         return this.mysql == null ? Input.empty() : this.mysql;
     }
 
+    /**
+     * The name of this connection profile resource in the form of projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -68,6 +92,9 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -75,6 +102,9 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The database provider.
+     */
     @InputImport(name="provider")
     private final @Nullable Input<ConnectionProfileProvider> provider;
 
@@ -82,6 +112,9 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
         return this.provider == null ? Input.empty() : this.provider;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -89,6 +122,9 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * The current connection profile state (e.g. DRAFT, READY, or FAILED).
+     */
     @InputImport(name="state")
     private final @Nullable Input<ConnectionProfileState> state;
 

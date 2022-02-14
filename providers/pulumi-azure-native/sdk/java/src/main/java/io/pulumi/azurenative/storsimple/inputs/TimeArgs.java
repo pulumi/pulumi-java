@@ -9,10 +9,16 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * The time.
+ */
 public final class TimeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TimeArgs Empty = new TimeArgs();
 
+    /**
+     * The hour.
+     */
     @InputImport(name="hours", required=true)
     private final Input<Integer> hours;
 
@@ -20,6 +26,9 @@ public final class TimeArgs extends io.pulumi.resources.ResourceArgs {
         return this.hours;
     }
 
+    /**
+     * The minute.
+     */
     @InputImport(name="minutes", required=true)
     private final Input<Integer> minutes;
 
@@ -27,6 +36,9 @@ public final class TimeArgs extends io.pulumi.resources.ResourceArgs {
         return this.minutes;
     }
 
+    /**
+     * The second.
+     */
     @InputImport(name="seconds", required=true)
     private final Input<Integer> seconds;
 

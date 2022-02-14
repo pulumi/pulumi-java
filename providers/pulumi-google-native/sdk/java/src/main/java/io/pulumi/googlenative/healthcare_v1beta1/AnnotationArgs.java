@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AnnotationArgs Empty = new AnnotationArgs();
 
+    /**
+     * Details of the source.
+     */
     @InputImport(name="annotationSource")
     private final @Nullable Input<AnnotationSourceArgs> annotationSource;
 
@@ -26,6 +32,9 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
         return this.annotationSource == null ? Input.empty() : this.annotationSource;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="annotationStoreId", required=true)
     private final Input<String> annotationStoreId;
 
@@ -33,6 +42,9 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
         return this.annotationStoreId;
     }
 
+    /**
+     * Additional information for this annotation record, such as annotator and verifier information or study campaign.
+     */
     @InputImport(name="customData")
     private final @Nullable Input<Map<String,String>> customData;
 
@@ -40,6 +52,9 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
         return this.customData == null ? Input.empty() : this.customData;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="datasetId", required=true)
     private final Input<String> datasetId;
 
@@ -47,6 +62,9 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
         return this.datasetId;
     }
 
+    /**
+     * Annotations for images. For example, bounding polygons.
+     */
     @InputImport(name="imageAnnotation")
     private final @Nullable Input<ImageAnnotationArgs> imageAnnotation;
 
@@ -54,6 +72,9 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
         return this.imageAnnotation == null ? Input.empty() : this.imageAnnotation;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -61,6 +82,9 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -68,6 +92,9 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -75,6 +102,9 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Annotations for resource. For example, classification tags.
+     */
     @InputImport(name="resourceAnnotation")
     private final @Nullable Input<ResourceAnnotationArgs> resourceAnnotation;
 
@@ -82,6 +112,9 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceAnnotation == null ? Input.empty() : this.resourceAnnotation;
     }
 
+    /**
+     * Annotations for sensitive texts. For example, a range that describes the location of sensitive text.
+     */
     @InputImport(name="textAnnotation")
     private final @Nullable Input<SensitiveTextAnnotationArgs> textAnnotation;
 

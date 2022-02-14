@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Storage account keys creation time.
+ */
 public final class KeyCreationTimeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyCreationTimeResponse Empty = new KeyCreationTimeResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="key1")
     private final @Nullable String key1;
 
@@ -21,6 +27,9 @@ public final class KeyCreationTimeResponse extends io.pulumi.resources.InvokeArg
         return this.key1 == null ? Optional.empty() : Optional.ofNullable(this.key1);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="key2")
     private final @Nullable String key2;
 

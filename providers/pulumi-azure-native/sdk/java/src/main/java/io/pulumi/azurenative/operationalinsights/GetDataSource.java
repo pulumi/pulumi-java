@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataSource {
+/**
+ * Datasources under OMS Workspace.
+API Version: 2020-08-01.
+ *
+ * Datasources under OMS Workspace.
+ */
     public static CompletableFuture<GetDataSourceResult> invokeAsync(GetDataSourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:operationalinsights:getDataSource", TypeShape.of(GetDataSourceResult.class), args == null ? GetDataSourceArgs.Empty : args, Utilities.withVersion(options));
     }

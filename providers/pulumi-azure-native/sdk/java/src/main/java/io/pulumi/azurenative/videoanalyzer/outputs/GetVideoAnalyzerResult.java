@@ -18,15 +18,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetVideoAnalyzerResult {
+/**
+ * The account encryption properties.
+ */
     private final AccountEncryptionResponse encryption;
+/**
+ * The list of endpoints associated with this resource.
+ */
     private final List<EndpointResponse> endpoints;
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     private final String id;
+/**
+ * The set of managed identities associated with the Video Analyzer resource.
+ */
     private final @Nullable VideoAnalyzerIdentityResponse identity;
+/**
+ * The geo-location where the resource lives
+ */
     private final String location;
+/**
+ * The name of the resource
+ */
     private final String name;
+/**
+ * The storage accounts for this resource.
+ */
     private final List<StorageAccountResponse> storageAccounts;
+/**
+ * The system data of the Video Analyzer account.
+ */
     private final SystemDataResponse systemData;
+/**
+ * Resource tags.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"encryption","endpoints","id","identity","location","name","storageAccounts","systemData","tags","type"})
@@ -53,33 +83,63 @@ public final class GetVideoAnalyzerResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The account encryption properties.
+ */
     public AccountEncryptionResponse getEncryption() {
         return this.encryption;
     }
+/**
+ * The list of endpoints associated with this resource.
+ */
     public List<EndpointResponse> getEndpoints() {
         return this.endpoints;
     }
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The set of managed identities associated with the Video Analyzer resource.
+ */
     public Optional<VideoAnalyzerIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
+/**
+ * The geo-location where the resource lives
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * The name of the resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The storage accounts for this resource.
+ */
     public List<StorageAccountResponse> getStorageAccounts() {
         return this.storageAccounts;
     }
+/**
+ * The system data of the Video Analyzer account.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * Resource tags.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     public String getType() {
         return this.type;
     }

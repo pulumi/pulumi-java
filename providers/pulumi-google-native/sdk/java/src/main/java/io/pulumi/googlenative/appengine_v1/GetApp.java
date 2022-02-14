@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApp {
+/**
+ * Gets information about an application.
+ */
     public static CompletableFuture<GetAppResult> invokeAsync(GetAppArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:appengine/v1:getApp", TypeShape.of(GetAppResult.class), args == null ? GetAppArgs.Empty : args, Utilities.withVersion(options));
     }

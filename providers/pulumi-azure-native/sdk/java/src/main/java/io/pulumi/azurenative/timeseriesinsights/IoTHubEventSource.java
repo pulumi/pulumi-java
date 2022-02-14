@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.timeseriesinsights;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.timeseriesinsights.IoTHubEventSourceArgs;
 import io.pulumi.azurenative.timeseriesinsights.outputs.LocalTimestampResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,93 +15,342 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * An event source that receives its data from an Azure IoTHub.
+API Version: 2020-05-15.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### CreateEventHubEventSource
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ioTHubEventSource = new AzureNative.TimeSeriesInsights.IoTHubEventSource("ioTHubEventSource", new AzureNative.TimeSeriesInsights.IoTHubEventSourceArgs
+        {
+            EnvironmentName = "env1",
+            EventSourceName = "es1",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	timeseriesinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/timeseriesinsights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := timeseriesinsights.NewIoTHubEventSource(ctx, "ioTHubEventSource", &timeseriesinsights.IoTHubEventSourceArgs{
+			EnvironmentName:   pulumi.String("env1"),
+			EventSourceName:   pulumi.String("es1"),
+			ResourceGroupName: pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const ioTHubEventSource = new azure_native.timeseriesinsights.IoTHubEventSource("ioTHubEventSource", {
+    environmentName: "env1",
+    eventSourceName: "es1",
+    resourceGroupName: "rg1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+io_t_hub_event_source = azure_native.timeseriesinsights.IoTHubEventSource("ioTHubEventSource",
+    environment_name="env1",
+    event_source_name="es1",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### EventSourcesCreateEventHubWithCustomEnquedTime
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ioTHubEventSource = new AzureNative.TimeSeriesInsights.IoTHubEventSource("ioTHubEventSource", new AzureNative.TimeSeriesInsights.IoTHubEventSourceArgs
+        {
+            EnvironmentName = "env1",
+            EventSourceName = "es1",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	timeseriesinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/timeseriesinsights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := timeseriesinsights.NewIoTHubEventSource(ctx, "ioTHubEventSource", &timeseriesinsights.IoTHubEventSourceArgs{
+			EnvironmentName:   pulumi.String("env1"),
+			EventSourceName:   pulumi.String("es1"),
+			ResourceGroupName: pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const ioTHubEventSource = new azure_native.timeseriesinsights.IoTHubEventSource("ioTHubEventSource", {
+    environmentName: "env1",
+    eventSourceName: "es1",
+    resourceGroupName: "rg1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+io_t_hub_event_source = azure_native.timeseriesinsights.IoTHubEventSource("ioTHubEventSource",
+    environment_name="env1",
+    event_source_name="es1",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:timeseriesinsights:IoTHubEventSource es1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.TimeSeriesInsights/Environments/env1/eventSources/es1 
+```
+
+ */
 @ResourceType(type="azure-native:timeseriesinsights:IoTHubEventSource")
 public class IoTHubEventSource extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the iot hub's consumer group that holds the partitions from which events will be read.
+     */
     @OutputExport(name="consumerGroupName", type=String.class, parameters={})
     private Output<String> consumerGroupName;
 
+    /**
+     * @return The name of the iot hub's consumer group that holds the partitions from which events will be read.
+     */
     public Output<String> getConsumerGroupName() {
         return this.consumerGroupName;
     }
+    /**
+     * The time the resource was created.
+     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
+    /**
+     * @return The time the resource was created.
+     */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
+    /**
+     * The resource id of the event source in Azure Resource Manager.
+     */
     @OutputExport(name="eventSourceResourceId", type=String.class, parameters={})
     private Output<String> eventSourceResourceId;
 
+    /**
+     * @return The resource id of the event source in Azure Resource Manager.
+     */
     public Output<String> getEventSourceResourceId() {
         return this.eventSourceResourceId;
     }
+    /**
+     * The name of the iot hub.
+     */
     @OutputExport(name="iotHubName", type=String.class, parameters={})
     private Output<String> iotHubName;
 
+    /**
+     * @return The name of the iot hub.
+     */
     public Output<String> getIotHubName() {
         return this.iotHubName;
     }
+    /**
+     * The name of the Shared Access Policy key that grants the Time Series Insights service access to the iot hub. This shared access policy key must grant 'service connect' permissions to the iot hub.
+     */
     @OutputExport(name="keyName", type=String.class, parameters={})
     private Output<String> keyName;
 
+    /**
+     * @return The name of the Shared Access Policy key that grants the Time Series Insights service access to the iot hub. This shared access policy key must grant 'service connect' permissions to the iot hub.
+     */
     public Output<String> getKeyName() {
         return this.keyName;
     }
+    /**
+     * The kind of the event source.
+Expected value is 'Microsoft.IoTHub'.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return The kind of the event source.
+Expected value is 'Microsoft.IoTHub'.
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
+     */
     @OutputExport(name="localTimestamp", type=LocalTimestampResponse.class, parameters={})
     private Output</* @Nullable */ LocalTimestampResponse> localTimestamp;
 
+    /**
+     * @return An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
+     */
     public Output</* @Nullable */ LocalTimestampResponse> getLocalTimestamp() {
         return this.localTimestamp;
     }
+    /**
+     * Resource location
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Provisioning state of the resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state of the resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource tags
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.
+     */
     @OutputExport(name="time", type=String.class, parameters={})
     private Output</* @Nullable */ String> time;
 
+    /**
+     * @return ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.
+     */
     public Output</* @Nullable */ String> getTime() {
         return this.time;
     }
+    /**
+     * The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
+     */
     @OutputExport(name="timestampPropertyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> timestampPropertyName;
 
+    /**
+     * @return The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
+     */
     public Output</* @Nullable */ String> getTimestampPropertyName() {
         return this.timestampPropertyName;
     }
+    /**
+     * Resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public IoTHubEventSource(String name, IoTHubEventSourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:timeseriesinsights:IoTHubEventSource", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -133,6 +381,14 @@ public class IoTHubEventSource extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static IoTHubEventSource get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IoTHubEventSource(name, id, options);
     }

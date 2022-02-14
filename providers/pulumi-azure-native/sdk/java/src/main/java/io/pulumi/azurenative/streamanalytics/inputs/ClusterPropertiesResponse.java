@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The properties associated with a Stream Analytics cluster.
+ */
 public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClusterPropertiesResponse Empty = new ClusterPropertiesResponse();
 
+    /**
+     * Represents the number of streaming units currently being used on the cluster.
+     */
     @InputImport(name="capacityAllocated", required=true)
     private final Integer capacityAllocated;
 
@@ -20,6 +26,9 @@ public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.capacityAllocated;
     }
 
+    /**
+     * Represents the sum of the SUs of all streaming jobs associated with the cluster. If all of the jobs were running, this would be the capacity allocated.
+     */
     @InputImport(name="capacityAssigned", required=true)
     private final Integer capacityAssigned;
 
@@ -27,6 +36,9 @@ public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.capacityAssigned;
     }
 
+    /**
+     * Unique identifier for the cluster.
+     */
     @InputImport(name="clusterId", required=true)
     private final String clusterId;
 
@@ -34,6 +46,9 @@ public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.clusterId;
     }
 
+    /**
+     * The date this cluster was created.
+     */
     @InputImport(name="createdDate", required=true)
     private final String createdDate;
 
@@ -41,6 +56,9 @@ public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeA
         return this.createdDate;
     }
 
+    /**
+     * The status of the cluster provisioning. The three terminal states are: Succeeded, Failed and Canceled
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

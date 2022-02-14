@@ -9,10 +9,26 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RsaTokenKeyResponse {
+/**
+ * RSA algorithm to be used: RS256, RS384 or RS512.
+ */
     private final String alg;
+/**
+ * RSA public key exponent.
+ */
     private final String e;
+/**
+ * JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
+ */
     private final String kid;
+/**
+ * RSA public key modulus.
+ */
     private final String n;
+/**
+ * The discriminator for derived types.
+Expected value is '#Microsoft.VideoAnalyzer.RsaTokenKey'.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"alg","e","kid","n","type"})
@@ -29,18 +45,34 @@ public final class RsaTokenKeyResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * RSA algorithm to be used: RS256, RS384 or RS512.
+ */
     public String getAlg() {
         return this.alg;
     }
+/**
+ * RSA public key exponent.
+ */
     public String getE() {
         return this.e;
     }
+/**
+ * JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
+ */
     public String getKid() {
         return this.kid;
     }
+/**
+ * RSA public key modulus.
+ */
     public String getN() {
         return this.n;
     }
+/**
+ * The discriminator for derived types.
+Expected value is '#Microsoft.VideoAnalyzer.RsaTokenKey'.
+ */
     public String getType() {
         return this.type;
     }

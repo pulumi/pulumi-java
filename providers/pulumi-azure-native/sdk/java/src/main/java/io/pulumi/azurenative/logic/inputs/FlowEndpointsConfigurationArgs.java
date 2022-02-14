@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The endpoints configuration.
+ */
 public final class FlowEndpointsConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FlowEndpointsConfigurationArgs Empty = new FlowEndpointsConfigurationArgs();
 
+    /**
+     * The connector endpoints.
+     */
     @InputImport(name="connector")
     private final @Nullable Input<FlowEndpointsArgs> connector;
 
@@ -21,6 +27,9 @@ public final class FlowEndpointsConfigurationArgs extends io.pulumi.resources.Re
         return this.connector == null ? Input.empty() : this.connector;
     }
 
+    /**
+     * The workflow endpoints.
+     */
     @InputImport(name="workflow")
     private final @Nullable Input<FlowEndpointsArgs> workflow;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListSiteIdentifiersAssignedToHostName {
+/**
+ * Collection of identifiers.
+API Version: 2020-12-01.
+ *
+ * Collection of identifiers.
+ */
     public static CompletableFuture<ListSiteIdentifiersAssignedToHostNameResult> invokeAsync(@Nullable ListSiteIdentifiersAssignedToHostNameArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listSiteIdentifiersAssignedToHostName", TypeShape.of(ListSiteIdentifiersAssignedToHostNameResult.class), args == null ? ListSiteIdentifiersAssignedToHostNameArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateEndpointConnection {
+/**
+ * Describes an existing Private Endpoint connection to the Azure Cognitive Search service.
+API Version: 2020-08-01.
+ *
+ * Describes an existing Private Endpoint connection to the Azure Cognitive Search service.
+ */
     public static CompletableFuture<GetPrivateEndpointConnectionResult> invokeAsync(GetPrivateEndpointConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:search:getPrivateEndpointConnection", TypeShape.of(GetPrivateEndpointConnectionResult.class), args == null ? GetPrivateEndpointConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

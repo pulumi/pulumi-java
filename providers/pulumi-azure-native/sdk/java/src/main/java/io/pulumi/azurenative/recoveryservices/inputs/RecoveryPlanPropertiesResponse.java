@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Recovery plan custom details.
+ */
 public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RecoveryPlanPropertiesResponse Empty = new RecoveryPlanPropertiesResponse();
 
+    /**
+     * The list of allowed operations.
+     */
     @InputImport(name="allowedOperations")
     private final @Nullable List<String> allowedOperations;
 
@@ -25,6 +31,9 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
         return this.allowedOperations == null ? List.of() : this.allowedOperations;
     }
 
+    /**
+     * The current scenario details.
+     */
     @InputImport(name="currentScenario")
     private final @Nullable CurrentScenarioDetailsResponse currentScenario;
 
@@ -32,6 +41,9 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
         return this.currentScenario == null ? Optional.empty() : Optional.ofNullable(this.currentScenario);
     }
 
+    /**
+     * The recovery plan status.
+     */
     @InputImport(name="currentScenarioStatus")
     private final @Nullable String currentScenarioStatus;
 
@@ -39,6 +51,9 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
         return this.currentScenarioStatus == null ? Optional.empty() : Optional.ofNullable(this.currentScenarioStatus);
     }
 
+    /**
+     * The recovery plan status description.
+     */
     @InputImport(name="currentScenarioStatusDescription")
     private final @Nullable String currentScenarioStatusDescription;
 
@@ -46,6 +61,9 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
         return this.currentScenarioStatusDescription == null ? Optional.empty() : Optional.ofNullable(this.currentScenarioStatusDescription);
     }
 
+    /**
+     * The failover deployment model.
+     */
     @InputImport(name="failoverDeploymentModel")
     private final @Nullable String failoverDeploymentModel;
 
@@ -53,6 +71,9 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
         return this.failoverDeploymentModel == null ? Optional.empty() : Optional.ofNullable(this.failoverDeploymentModel);
     }
 
+    /**
+     * The friendly name.
+     */
     @InputImport(name="friendlyName")
     private final @Nullable String friendlyName;
 
@@ -60,6 +81,9 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
+    /**
+     * The recovery plan groups.
+     */
     @InputImport(name="groups")
     private final @Nullable List<RecoveryPlanGroupResponse> groups;
 
@@ -67,6 +91,9 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
         return this.groups == null ? List.of() : this.groups;
     }
 
+    /**
+     * The start time of the last planned failover.
+     */
     @InputImport(name="lastPlannedFailoverTime")
     private final @Nullable String lastPlannedFailoverTime;
 
@@ -74,6 +101,9 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
         return this.lastPlannedFailoverTime == null ? Optional.empty() : Optional.ofNullable(this.lastPlannedFailoverTime);
     }
 
+    /**
+     * The start time of the last test failover.
+     */
     @InputImport(name="lastTestFailoverTime")
     private final @Nullable String lastTestFailoverTime;
 
@@ -81,6 +111,9 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
         return this.lastTestFailoverTime == null ? Optional.empty() : Optional.ofNullable(this.lastTestFailoverTime);
     }
 
+    /**
+     * The start time of the last unplanned failover.
+     */
     @InputImport(name="lastUnplannedFailoverTime")
     private final @Nullable String lastUnplannedFailoverTime;
 
@@ -88,6 +121,9 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
         return this.lastUnplannedFailoverTime == null ? Optional.empty() : Optional.ofNullable(this.lastUnplannedFailoverTime);
     }
 
+    /**
+     * The primary fabric friendly name.
+     */
     @InputImport(name="primaryFabricFriendlyName")
     private final @Nullable String primaryFabricFriendlyName;
 
@@ -95,6 +131,9 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
         return this.primaryFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.primaryFabricFriendlyName);
     }
 
+    /**
+     * The primary fabric Id.
+     */
     @InputImport(name="primaryFabricId")
     private final @Nullable String primaryFabricId;
 
@@ -102,6 +141,9 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
         return this.primaryFabricId == null ? Optional.empty() : Optional.ofNullable(this.primaryFabricId);
     }
 
+    /**
+     * The provider id and provider specific details.
+     */
     @InputImport(name="providerSpecificDetails", required=true)
     private final List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails;
 
@@ -109,6 +151,9 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
         return this.providerSpecificDetails;
     }
 
+    /**
+     * The recovery fabric friendly name.
+     */
     @InputImport(name="recoveryFabricFriendlyName")
     private final @Nullable String recoveryFabricFriendlyName;
 
@@ -116,6 +161,9 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
         return this.recoveryFabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricFriendlyName);
     }
 
+    /**
+     * The recovery fabric Id.
+     */
     @InputImport(name="recoveryFabricId")
     private final @Nullable String recoveryFabricId;
 
@@ -123,6 +171,9 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
         return this.recoveryFabricId == null ? Optional.empty() : Optional.ofNullable(this.recoveryFabricId);
     }
 
+    /**
+     * The list of replication providers.
+     */
     @InputImport(name="replicationProviders")
     private final @Nullable List<String> replicationProviders;
 

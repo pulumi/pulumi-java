@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Identity for the resource.
+ */
 public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IdentityResponse Empty = new IdentityResponse();
 
+    /**
+     * The principal ID of resource identity.
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -19,6 +25,9 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
         return this.principalId;
     }
 
+    /**
+     * The tenant ID of resource.
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -26,6 +35,9 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
         return this.tenantId;
     }
 
+    /**
+     * The identity type.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

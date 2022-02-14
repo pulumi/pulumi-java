@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * MetricIdentifier defines the name and optionally selector for a metric
+ */
 public final class MetricIdentifierArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetricIdentifierArgs Empty = new MetricIdentifierArgs();
 
+    /**
+     * name is the name of the given metric
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -22,6 +28,9 @@ public final class MetricIdentifierArgs extends io.pulumi.resources.ResourceArgs
         return this.name;
     }
 
+    /**
+     * selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.
+     */
     @InputImport(name="selector")
     private final @Nullable Input<LabelSelectorArgs> selector;
 

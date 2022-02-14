@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class TopicAuthorizationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TopicAuthorizationRuleArgs Empty = new TopicAuthorizationRuleArgs();
 
+    /**
+     * The authorization rule name.
+     */
     @InputImport(name="authorizationRuleName")
     private final @Nullable Input<String> authorizationRuleName;
 
@@ -23,6 +29,9 @@ public final class TopicAuthorizationRuleArgs extends io.pulumi.resources.Resour
         return this.authorizationRuleName == null ? Input.empty() : this.authorizationRuleName;
     }
 
+    /**
+     * The namespace name
+     */
     @InputImport(name="namespaceName", required=true)
     private final Input<String> namespaceName;
 
@@ -30,6 +39,9 @@ public final class TopicAuthorizationRuleArgs extends io.pulumi.resources.Resour
         return this.namespaceName;
     }
 
+    /**
+     * Name of the Resource group within the Azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +49,9 @@ public final class TopicAuthorizationRuleArgs extends io.pulumi.resources.Resour
         return this.resourceGroupName;
     }
 
+    /**
+     * The rights associated with the rule.
+     */
     @InputImport(name="rights", required=true)
     private final Input<List<AccessRights>> rights;
 
@@ -44,6 +59,9 @@ public final class TopicAuthorizationRuleArgs extends io.pulumi.resources.Resour
         return this.rights;
     }
 
+    /**
+     * The topic name.
+     */
     @InputImport(name="topicName", required=true)
     private final Input<String> topicName;
 

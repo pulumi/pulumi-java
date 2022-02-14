@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSapMonitor {
+/**
+ * SAP monitor info on Azure (ARM properties and SAP monitor properties)
+API Version: 2020-02-07-preview.
+ *
+ * SAP monitor info on Azure (ARM properties and SAP monitor properties)
+ */
     public static CompletableFuture<GetSapMonitorResult> invokeAsync(GetSapMonitorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hanaonazure:getSapMonitor", TypeShape.of(GetSapMonitorResult.class), args == null ? GetSapMonitorArgs.Empty : args, Utilities.withVersion(options));
     }

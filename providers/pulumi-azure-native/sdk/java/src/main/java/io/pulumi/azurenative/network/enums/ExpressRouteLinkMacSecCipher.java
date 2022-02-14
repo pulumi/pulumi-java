@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Mac security cipher.
+ */
     @EnumType
     public enum ExpressRouteLinkMacSecCipher {
+/**
+ * 
+ */
         GcmAes256("GcmAes256"),
+/**
+ * 
+ */
         GcmAes128("GcmAes128"),
+/**
+ * 
+ */
         GcmAesXpn128("GcmAesXpn128"),
+/**
+ * 
+ */
         GcmAesXpn256("GcmAesXpn256");
 
         private final String value;

@@ -8,10 +8,16 @@ import java.lang.Double;
 import java.util.Objects;
 
 
+/**
+ * Object to define the number of days after creation.
+ */
 public final class DateAfterCreationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DateAfterCreationResponse Empty = new DateAfterCreationResponse();
 
+    /**
+     * Value indicating the age in days after creation
+     */
     @InputImport(name="daysAfterCreationGreaterThan", required=true)
     private final Double daysAfterCreationGreaterThan;
 

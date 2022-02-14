@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.migrate.ImportCollectorArgs;
 import io.pulumi.azurenative.migrate.outputs.ImportCollectorPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,26 +14,125 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * 
+API Version: 2019-10-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### ImportCollectors_Create
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var importCollector = new AzureNative.Migrate.ImportCollector("importCollector", new AzureNative.Migrate.ImportCollectorArgs
+        {
+            ImportCollectorName = "importCollector2952",
+            ProjectName = "rajoshCCY9671project",
+            ResourceGroupName = "markusavstestrg",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	migrate "github.com/pulumi/pulumi-azure-native/sdk/go/azure/migrate"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := migrate.NewImportCollector(ctx, "importCollector", &migrate.ImportCollectorArgs{
+			ImportCollectorName: pulumi.String("importCollector2952"),
+			ProjectName:         pulumi.String("rajoshCCY9671project"),
+			ResourceGroupName:   pulumi.String("markusavstestrg"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const importCollector = new azure_native.migrate.ImportCollector("importCollector", {
+    importCollectorName: "importCollector2952",
+    projectName: "rajoshCCY9671project",
+    resourceGroupName: "markusavstestrg",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+import_collector = azure_native.migrate.ImportCollector("importCollector",
+    import_collector_name="importCollector2952",
+    project_name="rajoshCCY9671project",
+    resource_group_name="markusavstestrg")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:migrate:ImportCollector importCollector2952 /subscriptions/31be0ff4-c932-4cb3-8efc-efa411d79280/resourceGroups/markusavstestrg/providers/Microsoft.Migrate/assessmentprojects/rajoshCCY9671project/importcollectors/importCollector2952 
+```
+
+ */
 @ResourceType(type="azure-native:migrate:ImportCollector")
 public class ImportCollector extends io.pulumi.resources.CustomResource {
+    /**
+     * 
+     */
     @OutputExport(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     public Output</* @Nullable */ String> getETag() {
         return this.eTag;
     }
+    /**
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * 
+     */
     @OutputExport(name="properties", type=ImportCollectorPropertiesResponse.class, parameters={})
     private Output<ImportCollectorPropertiesResponse> properties;
 
     public Output<ImportCollectorPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
@@ -42,6 +140,12 @@ public class ImportCollector extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ImportCollector(String name, ImportCollectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:migrate:ImportCollector", name, args == null ? ImportCollectorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -60,6 +164,14 @@ public class ImportCollector extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ImportCollector get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ImportCollector(name, id, options);
     }

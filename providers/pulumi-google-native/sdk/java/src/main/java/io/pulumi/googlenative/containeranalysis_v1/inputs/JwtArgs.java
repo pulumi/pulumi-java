@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class JwtArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JwtArgs Empty = new JwtArgs();
 
+    /**
+     * The compact encoding of a JWS, which is always three base64 encoded strings joined by periods. For details, see: https://tools.ietf.org/html/rfc7515.html#section-3.1
+     */
     @InputImport(name="compactJwt")
     private final @Nullable Input<String> compactJwt;
 

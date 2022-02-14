@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ManagedZoneForwardingConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedZoneForwardingConfigResponse Empty = new ManagedZoneForwardingConfigResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -21,6 +27,9 @@ public final class ManagedZoneForwardingConfigResponse extends io.pulumi.resourc
         return this.kind;
     }
 
+    /**
+     * List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given.
+     */
     @InputImport(name="targetNameServers", required=true)
     private final List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers;
 

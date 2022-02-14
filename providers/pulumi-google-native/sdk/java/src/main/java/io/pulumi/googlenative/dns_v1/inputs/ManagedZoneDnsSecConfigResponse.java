@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ManagedZoneDnsSecConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedZoneDnsSecConfigResponse Empty = new ManagedZoneDnsSecConfigResponse();
 
+    /**
+     * Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.
+     */
     @InputImport(name="defaultKeySpecs", required=true)
     private final List<DnsKeySpecResponse> defaultKeySpecs;
 
@@ -21,6 +27,9 @@ public final class ManagedZoneDnsSecConfigResponse extends io.pulumi.resources.I
         return this.defaultKeySpecs;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -28,6 +37,9 @@ public final class ManagedZoneDnsSecConfigResponse extends io.pulumi.resources.I
         return this.kind;
     }
 
+    /**
+     * Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.
+     */
     @InputImport(name="nonExistence", required=true)
     private final String nonExistence;
 
@@ -35,6 +47,9 @@ public final class ManagedZoneDnsSecConfigResponse extends io.pulumi.resources.I
         return this.nonExistence;
     }
 
+    /**
+     * Specifies whether DNSSEC is enabled, and what mode it is in.
+     */
     @InputImport(name="state", required=true)
     private final String state;
 

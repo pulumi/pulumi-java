@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum ResourceDeletionPolicy {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         CascadeDeleteAll("CascadeDeleteAll"),
+/**
+ * 
+ */
         CascadeDeleteProxyOnlyChildren("CascadeDeleteProxyOnlyChildren");
 
         private final String value;

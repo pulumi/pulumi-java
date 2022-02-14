@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration that controls how the data will change.
+ */
 public final class GooglePrivacyDlpV2DeidentifyConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2DeidentifyConfigArgs Empty = new GooglePrivacyDlpV2DeidentifyConfigArgs();
 
+    /**
+     * Treat the dataset as free-form text and apply the same free text transformation everywhere.
+     */
     @InputImport(name="infoTypeTransformations")
     private final @Nullable Input<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations;
 
@@ -23,6 +29,9 @@ public final class GooglePrivacyDlpV2DeidentifyConfigArgs extends io.pulumi.reso
         return this.infoTypeTransformations == null ? Input.empty() : this.infoTypeTransformations;
     }
 
+    /**
+     * Treat the dataset as structured. Transformations can be applied to specific locations within structured datasets, such as transforming a column within a table.
+     */
     @InputImport(name="recordTransformations")
     private final @Nullable Input<GooglePrivacyDlpV2RecordTransformationsArgs> recordTransformations;
 
@@ -30,6 +39,9 @@ public final class GooglePrivacyDlpV2DeidentifyConfigArgs extends io.pulumi.reso
         return this.recordTransformations == null ? Input.empty() : this.recordTransformations;
     }
 
+    /**
+     * Mode for handling transformation errors. If left unspecified, the default mode is `TransformationErrorHandling.ThrowError`.
+     */
     @InputImport(name="transformationErrorHandling")
     private final @Nullable Input<GooglePrivacyDlpV2TransformationErrorHandlingArgs> transformationErrorHandling;
 

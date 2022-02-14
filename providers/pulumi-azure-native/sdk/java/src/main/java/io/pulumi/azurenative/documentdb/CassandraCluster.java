@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.documentdb.CassandraClusterArgs;
 import io.pulumi.azurenative.documentdb.outputs.ClusterResourceResponseProperties;
 import io.pulumi.azurenative.documentdb.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.core.Alias;
@@ -17,45 +16,307 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Representation of a managed Cassandra cluster.
+API Version: 2021-03-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### CosmosDBManagedCassandraClusterCreate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cassandraCluster = new AzureNative.DocumentDB.CassandraCluster("cassandraCluster", new AzureNative.DocumentDB.CassandraClusterArgs
+        {
+            ClusterName = "cassandra-prod",
+            Location = "West US",
+            Properties = new AzureNative.DocumentDB.Inputs.ClusterResourcePropertiesArgs
+            {
+                AuthenticationMethod = "Cassandra",
+                CassandraVersion = "3.11",
+                ClientCertificates = 
+                {
+                    new AzureNative.DocumentDB.Inputs.CertificateArgs
+                    {
+                        Pem = @"-----BEGIN CERTIFICATE-----
+...Base64 encoded certificate...
+-----END CERTIFICATE-----",
+                    },
+                },
+                ClusterNameOverride = "ClusterNameIllegalForAzureResource",
+                DelegatedManagementSubnetId = "/subscriptions/536e130b-d7d6-4ac7-98a5-de20d69588d2/resourceGroups/customer-vnet-rg/providers/Microsoft.Network/virtualNetworks/customer-vnet/subnets/management",
+                ExternalGossipCertificates = 
+                {
+                    new AzureNative.DocumentDB.Inputs.CertificateArgs
+                    {
+                        Pem = @"-----BEGIN CERTIFICATE-----
+...Base64 encoded certificate...
+-----END CERTIFICATE-----",
+                    },
+                },
+                ExternalSeedNodes = 
+                {
+                    new AzureNative.DocumentDB.Inputs.SeedNodeArgs
+                    {
+                        IpAddress = "10.52.221.2",
+                    },
+                    new AzureNative.DocumentDB.Inputs.SeedNodeArgs
+                    {
+                        IpAddress = "10.52.221.3",
+                    },
+                    new AzureNative.DocumentDB.Inputs.SeedNodeArgs
+                    {
+                        IpAddress = "10.52.221.4",
+                    },
+                },
+                HoursBetweenBackups = 24,
+                InitialCassandraAdminPassword = "mypassword",
+            },
+            ResourceGroupName = "cassandra-prod-rg",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	documentdb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/documentdb"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := documentdb.NewCassandraCluster(ctx, "cassandraCluster", &documentdb.CassandraClusterArgs{
+			ClusterName: pulumi.String("cassandra-prod"),
+			Location:    pulumi.String("West US"),
+			Properties: &documentdb.ClusterResourcePropertiesArgs{
+				AuthenticationMethod: pulumi.String("Cassandra"),
+				CassandraVersion:     pulumi.String("3.11"),
+				ClientCertificates: documentdb.CertificateArray{
+					&documentdb.CertificateArgs{
+						Pem: pulumi.String("-----BEGIN CERTIFICATE-----\n...Base64 encoded certificate...\n-----END CERTIFICATE-----"),
+					},
+				},
+				ClusterNameOverride:         pulumi.String("ClusterNameIllegalForAzureResource"),
+				DelegatedManagementSubnetId: pulumi.String("/subscriptions/536e130b-d7d6-4ac7-98a5-de20d69588d2/resourceGroups/customer-vnet-rg/providers/Microsoft.Network/virtualNetworks/customer-vnet/subnets/management"),
+				ExternalGossipCertificates: documentdb.CertificateArray{
+					&documentdb.CertificateArgs{
+						Pem: pulumi.String("-----BEGIN CERTIFICATE-----\n...Base64 encoded certificate...\n-----END CERTIFICATE-----"),
+					},
+				},
+				ExternalSeedNodes: documentdb.SeedNodeArray{
+					&documentdb.SeedNodeArgs{
+						IpAddress: pulumi.String("10.52.221.2"),
+					},
+					&documentdb.SeedNodeArgs{
+						IpAddress: pulumi.String("10.52.221.3"),
+					},
+					&documentdb.SeedNodeArgs{
+						IpAddress: pulumi.String("10.52.221.4"),
+					},
+				},
+				HoursBetweenBackups:           pulumi.Int(24),
+				InitialCassandraAdminPassword: pulumi.String("mypassword"),
+			},
+			ResourceGroupName: pulumi.String("cassandra-prod-rg"),
+			Tags:              nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const cassandraCluster = new azure_native.documentdb.CassandraCluster("cassandraCluster", {
+    clusterName: "cassandra-prod",
+    location: "West US",
+    properties: {
+        authenticationMethod: "Cassandra",
+        cassandraVersion: "3.11",
+        clientCertificates: [{
+            pem: `-----BEGIN CERTIFICATE-----
+...Base64 encoded certificate...
+-----END CERTIFICATE-----`,
+        }],
+        clusterNameOverride: "ClusterNameIllegalForAzureResource",
+        delegatedManagementSubnetId: "/subscriptions/536e130b-d7d6-4ac7-98a5-de20d69588d2/resourceGroups/customer-vnet-rg/providers/Microsoft.Network/virtualNetworks/customer-vnet/subnets/management",
+        externalGossipCertificates: [{
+            pem: `-----BEGIN CERTIFICATE-----
+...Base64 encoded certificate...
+-----END CERTIFICATE-----`,
+        }],
+        externalSeedNodes: [
+            {
+                ipAddress: "10.52.221.2",
+            },
+            {
+                ipAddress: "10.52.221.3",
+            },
+            {
+                ipAddress: "10.52.221.4",
+            },
+        ],
+        hoursBetweenBackups: 24,
+        initialCassandraAdminPassword: "mypassword",
+    },
+    resourceGroupName: "cassandra-prod-rg",
+    tags: {},
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+cassandra_cluster = azure_native.documentdb.CassandraCluster("cassandraCluster",
+    cluster_name="cassandra-prod",
+    location="West US",
+    properties=azure_native.documentdb.ClusterResourcePropertiesArgs(
+        authentication_method="Cassandra",
+        cassandra_version="3.11",
+        client_certificates=[azure_native.documentdb.CertificateArgs(
+            pem="""-----BEGIN CERTIFICATE-----
+...Base64 encoded certificate...
+-----END CERTIFICATE-----""",
+        )],
+        cluster_name_override="ClusterNameIllegalForAzureResource",
+        delegated_management_subnet_id="/subscriptions/536e130b-d7d6-4ac7-98a5-de20d69588d2/resourceGroups/customer-vnet-rg/providers/Microsoft.Network/virtualNetworks/customer-vnet/subnets/management",
+        external_gossip_certificates=[azure_native.documentdb.CertificateArgs(
+            pem="""-----BEGIN CERTIFICATE-----
+...Base64 encoded certificate...
+-----END CERTIFICATE-----""",
+        )],
+        external_seed_nodes=[
+            azure_native.documentdb.SeedNodeArgs(
+                ip_address="10.52.221.2",
+            ),
+            azure_native.documentdb.SeedNodeArgs(
+                ip_address="10.52.221.3",
+            ),
+            azure_native.documentdb.SeedNodeArgs(
+                ip_address="10.52.221.4",
+            ),
+        ],
+        hours_between_backups=24,
+        initial_cassandra_admin_password="mypassword",
+    ),
+    resource_group_name="cassandra-prod-rg",
+    tags={})
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:documentdb:CassandraCluster cassandra-prod /subscriptions/subid/resourceGroups/cassandra-prod-rg/providers/Microsoft.DocumentDB/cassandraClusters/cassandra-prod 
+```
+
+ */
 @ResourceType(type="azure-native:documentdb:CassandraCluster")
 public class CassandraCluster extends io.pulumi.resources.CustomResource {
+    /**
+     * Identity for the resource.
+     */
     @OutputExport(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
+    /**
+     * @return Identity for the resource.
+     */
     public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * The location of the resource group to which the resource belongs.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The location of the resource group to which the resource belongs.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the ARM resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the ARM resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Properties of a managed Cassandra cluster.
+     */
     @OutputExport(name="properties", type=ClusterResourceResponseProperties.class, parameters={})
     private Output<ClusterResourceResponseProperties> properties;
 
+    /**
+     * @return Properties of a managed Cassandra cluster.
+     */
     public Output<ClusterResourceResponseProperties> getProperties() {
         return this.properties;
     }
+    /**
+     * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of Azure resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of Azure resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public CassandraCluster(String name, CassandraClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:documentdb:CassandraCluster", name, args == null ? CassandraClusterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -78,6 +339,14 @@ public class CassandraCluster extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static CassandraCluster get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CassandraCluster(name, id, options);
     }

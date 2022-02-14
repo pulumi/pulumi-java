@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * EnvVarSource represents a source for the value of an EnvVar.
+ */
 public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvVarSourceArgs Empty = new EnvVarSourceArgs();
 
+    /**
+     * (Optional) Not supported by Cloud Run Selects a key of a ConfigMap.
+     */
     @InputImport(name="configMapKeyRef")
     private final @Nullable Input<ConfigMapKeySelectorArgs> configMapKeyRef;
 
@@ -22,6 +28,9 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.configMapKeyRef == null ? Input.empty() : this.configMapKeyRef;
     }
 
+    /**
+     * (Optional) Selects a key (version) of a secret in Secret Manager.
+     */
     @InputImport(name="secretKeyRef")
     private final @Nullable Input<SecretKeySelectorArgs> secretKeyRef;
 

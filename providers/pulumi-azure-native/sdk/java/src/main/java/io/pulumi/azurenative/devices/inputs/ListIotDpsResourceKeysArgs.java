@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListIotDpsResourceKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListIotDpsResourceKeysArgs Empty = new ListIotDpsResourceKeysArgs();
 
+    /**
+     * The provisioning service name to get the shared access keys for.
+     */
     @InputImport(name="provisioningServiceName", required=true)
     private final String provisioningServiceName;
 
@@ -19,6 +25,9 @@ public final class ListIotDpsResourceKeysArgs extends io.pulumi.resources.Invoke
         return this.provisioningServiceName;
     }
 
+    /**
+     * resource group name
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

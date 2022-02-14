@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse {
+/**
+ * Playback duration
+ */
     private final Double playbackDurationSeconds;
+/**
+ * Storage duration
+ */
     private final Double storageDurationSeconds;
 
     @OutputCustomType.Constructor({"playbackDurationSeconds","storageDurationSeconds"})
@@ -20,9 +26,15 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse {
         this.storageDurationSeconds = Objects.requireNonNull(storageDurationSeconds);
     }
 
+/**
+ * Playback duration
+ */
     public Double getPlaybackDurationSeconds() {
         return this.playbackDurationSeconds;
     }
+/**
+ * Storage duration
+ */
     public Double getStorageDurationSeconds() {
         return this.storageDurationSeconds;
     }

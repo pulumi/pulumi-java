@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListAuthorizationServerSecretsResult {
+/**
+ * oAuth Authorization Server Secrets.
+ */
     private final @Nullable String clientSecret;
+/**
+ * Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.
+ */
     private final @Nullable String resourceOwnerPassword;
+/**
+ * Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
+ */
     private final @Nullable String resourceOwnerUsername;
 
     @OutputCustomType.Constructor({"clientSecret","resourceOwnerPassword","resourceOwnerUsername"})
@@ -25,12 +34,21 @@ public final class ListAuthorizationServerSecretsResult {
         this.resourceOwnerUsername = resourceOwnerUsername;
     }
 
+/**
+ * oAuth Authorization Server Secrets.
+ */
     public Optional<String> getClientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
+/**
+ * Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.
+ */
     public Optional<String> getResourceOwnerPassword() {
         return Optional.ofNullable(this.resourceOwnerPassword);
     }
+/**
+ * Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
+ */
     public Optional<String> getResourceOwnerUsername() {
         return Optional.ofNullable(this.resourceOwnerUsername);
     }

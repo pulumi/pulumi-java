@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Scaling plan reference to hostpool.
+ */
 public final class ScalingHostPoolReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScalingHostPoolReferenceArgs Empty = new ScalingHostPoolReferenceArgs();
 
+    /**
+     * Arm path of referenced hostpool.
+     */
     @InputImport(name="hostPoolArmPath")
     private final @Nullable Input<String> hostPoolArmPath;
 
@@ -22,6 +28,9 @@ public final class ScalingHostPoolReferenceArgs extends io.pulumi.resources.Reso
         return this.hostPoolArmPath == null ? Input.empty() : this.hostPoolArmPath;
     }
 
+    /**
+     * Is the scaling plan enabled for this hostpool.
+     */
     @InputImport(name="scalingPlanEnabled")
     private final @Nullable Input<Boolean> scalingPlanEnabled;
 

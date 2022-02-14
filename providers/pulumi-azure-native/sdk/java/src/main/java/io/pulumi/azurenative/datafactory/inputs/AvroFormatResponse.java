@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The data stored in Avro format.
+ */
 public final class AvroFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AvroFormatResponse Empty = new AvroFormatResponse();
 
+    /**
+     * Deserializer. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="deserializer")
     private final @Nullable Object deserializer;
 
@@ -22,6 +28,9 @@ public final class AvroFormatResponse extends io.pulumi.resources.InvokeArgs {
         return this.deserializer == null ? Optional.empty() : Optional.ofNullable(this.deserializer);
     }
 
+    /**
+     * Serializer. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="serializer")
     private final @Nullable Object serializer;
 
@@ -29,6 +38,10 @@ public final class AvroFormatResponse extends io.pulumi.resources.InvokeArgs {
         return this.serializer == null ? Optional.empty() : Optional.ofNullable(this.serializer);
     }
 
+    /**
+     * Type of dataset storage format.
+Expected value is 'AvroFormat'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

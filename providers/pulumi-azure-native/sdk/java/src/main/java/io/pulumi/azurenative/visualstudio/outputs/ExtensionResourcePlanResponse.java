@@ -11,10 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExtensionResourcePlanResponse {
+/**
+ * Name of the plan.
+ */
     private final @Nullable String name;
+/**
+ * Product name.
+ */
     private final @Nullable String product;
+/**
+ * Optional: the promotion code associated with the plan.
+ */
     private final @Nullable String promotionCode;
+/**
+ * Name of the extension publisher.
+ */
     private final @Nullable String publisher;
+/**
+ * A string that uniquely identifies the plan version.
+ */
     private final @Nullable String version;
 
     @OutputCustomType.Constructor({"name","product","promotionCode","publisher","version"})
@@ -31,18 +46,33 @@ public final class ExtensionResourcePlanResponse {
         this.version = version;
     }
 
+/**
+ * Name of the plan.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * Product name.
+ */
     public Optional<String> getProduct() {
         return Optional.ofNullable(this.product);
     }
+/**
+ * Optional: the promotion code associated with the plan.
+ */
     public Optional<String> getPromotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
+/**
+ * Name of the extension publisher.
+ */
     public Optional<String> getPublisher() {
         return Optional.ofNullable(this.publisher);
     }
+/**
+ * A string that uniquely identifies the plan version.
+ */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

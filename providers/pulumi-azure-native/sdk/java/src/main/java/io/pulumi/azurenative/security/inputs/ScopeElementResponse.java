@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A more specific scope used to identify the alerts to suppress.
+ */
 public final class ScopeElementResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScopeElementResponse Empty = new ScopeElementResponse();
 
+    /**
+     * The alert entity type to suppress by.
+     */
     @InputImport(name="field")
     private final @Nullable String field;
 

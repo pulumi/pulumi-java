@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * iOS app information
+ */
 public final class IosAppInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IosAppInfoArgs Empty = new IosAppInfoArgs();
 
+    /**
+     * The name of the app. Required
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

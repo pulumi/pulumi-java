@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An Image asset.
+ */
 public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageAssetArgs Empty = new ImageAssetArgs();
 
+    /**
+     * The Asset Id.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -22,6 +28,9 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The mime type.
+     */
     @InputImport(name="mimeType")
     private final @Nullable Input<String> mimeType;
 
@@ -29,6 +38,9 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.mimeType == null ? Input.empty() : this.mimeType;
     }
 
+    /**
+     * Whether the Asset is unpacked.
+     */
     @InputImport(name="unpack")
     private final @Nullable Input<Boolean> unpack;
 
@@ -36,6 +48,9 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
         return this.unpack == null ? Input.empty() : this.unpack;
     }
 
+    /**
+     * The Url of the Asset.
+     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

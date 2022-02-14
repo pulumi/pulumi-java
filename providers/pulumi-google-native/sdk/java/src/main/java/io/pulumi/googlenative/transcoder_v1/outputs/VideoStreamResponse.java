@@ -11,8 +11,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VideoStreamResponse {
+/**
+ * H264 codec settings.
+ */
     private final H264CodecSettingsResponse h264;
+/**
+ * H265 codec settings.
+ */
     private final H265CodecSettingsResponse h265;
+/**
+ * VP9 codec settings.
+ */
     private final Vp9CodecSettingsResponse vp9;
 
     @OutputCustomType.Constructor({"h264","h265","vp9"})
@@ -25,12 +34,21 @@ public final class VideoStreamResponse {
         this.vp9 = Objects.requireNonNull(vp9);
     }
 
+/**
+ * H264 codec settings.
+ */
     public H264CodecSettingsResponse getH264() {
         return this.h264;
     }
+/**
+ * H265 codec settings.
+ */
     public H265CodecSettingsResponse getH265() {
         return this.h265;
     }
+/**
+ * VP9 codec settings.
+ */
     public Vp9CodecSettingsResponse getVp9() {
         return this.vp9;
     }

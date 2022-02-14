@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The detail of firewall rule.
+ */
 public final class IPv4FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IPv4FirewallRuleArgs Empty = new IPv4FirewallRuleArgs();
 
+    /**
+     * The rule name.
+     */
     @InputImport(name="firewallRuleName")
     private final @Nullable Input<String> firewallRuleName;
 
@@ -21,6 +27,9 @@ public final class IPv4FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
         return this.firewallRuleName == null ? Input.empty() : this.firewallRuleName;
     }
 
+    /**
+     * The end range of IPv4.
+     */
     @InputImport(name="rangeEnd")
     private final @Nullable Input<String> rangeEnd;
 
@@ -28,6 +37,9 @@ public final class IPv4FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
         return this.rangeEnd == null ? Input.empty() : this.rangeEnd;
     }
 
+    /**
+     * The start range of IPv4.
+     */
     @InputImport(name="rangeStart")
     private final @Nullable Input<String> rangeStart;
 

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.securityinsights.WatchlistItemArgs;
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
 import io.pulumi.azurenative.securityinsights.outputs.WatchlistUserInfoResponse;
 import io.pulumi.core.Alias;
@@ -18,93 +17,277 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Represents a Watchlist item in Azure Security Insights.
+API Version: 2021-03-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Creates or updates a watchlist item.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var watchlistItem = new AzureNative.SecurityInsights.WatchlistItem("watchlistItem", new AzureNative.SecurityInsights.WatchlistItemArgs
+        {
+            ItemsKeyValue = 
+            {
+                { "Business tier", "10.0.2.0/24" },
+                { "Data tier", "10.0.2.0/24" },
+                { "Gateway subnet", "10.0.255.224/27" },
+                { "Private DMZ in", "10.0.0.0/27" },
+                { "Public DMZ out", "10.0.0.96/27" },
+                { "Web Tier", "10.0.1.0/24" },
+            },
+            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
+            ResourceGroupName = "myRg",
+            WatchlistAlias = "highValueAsset",
+            WatchlistItemId = "82ba292c-dc97-4dfc-969d-d4dd9e666842",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const watchlistItem = new azure_native.securityinsights.WatchlistItem("watchlistItem", {
+    itemsKeyValue: {
+        "Business tier": "10.0.2.0/24",
+        "Data tier": "10.0.2.0/24",
+        "Gateway subnet": "10.0.255.224/27",
+        "Private DMZ in": "10.0.0.0/27",
+        "Public DMZ out": "10.0.0.96/27",
+        "Web Tier": "10.0.1.0/24",
+    },
+    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
+    resourceGroupName: "myRg",
+    watchlistAlias: "highValueAsset",
+    watchlistItemId: "82ba292c-dc97-4dfc-969d-d4dd9e666842",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+watchlist_item = azure_native.securityinsights.WatchlistItem("watchlistItem",
+    items_key_value={
+        "Business tier": "10.0.2.0/24",
+        "Data tier": "10.0.2.0/24",
+        "Gateway subnet": "10.0.255.224/27",
+        "Private DMZ in": "10.0.0.0/27",
+        "Public DMZ out": "10.0.0.96/27",
+        "Web Tier": "10.0.1.0/24",
+    },
+    operational_insights_resource_provider="Microsoft.OperationalInsights",
+    resource_group_name="myRg",
+    watchlist_alias="highValueAsset",
+    watchlist_item_id="82ba292c-dc97-4dfc-969d-d4dd9e666842",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:securityinsights:WatchlistItem myresource1 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/Watchlists/highValueAsset/WatchlistItems/82ba292c-dc97-4dfc-969d-d4dd9e666842 
+```
+
+ */
 @ResourceType(type="azure-native:securityinsights:WatchlistItem")
 public class WatchlistItem extends io.pulumi.resources.CustomResource {
+    /**
+     * The time the watchlist item was created
+     */
     @OutputExport(name="created", type=String.class, parameters={})
     private Output</* @Nullable */ String> created;
 
+    /**
+     * @return The time the watchlist item was created
+     */
     public Output</* @Nullable */ String> getCreated() {
         return this.created;
     }
+    /**
+     * Describes a user that created the watchlist item
+     */
     @OutputExport(name="createdBy", type=WatchlistUserInfoResponse.class, parameters={})
     private Output</* @Nullable */ WatchlistUserInfoResponse> createdBy;
 
+    /**
+     * @return Describes a user that created the watchlist item
+     */
     public Output</* @Nullable */ WatchlistUserInfoResponse> getCreatedBy() {
         return this.createdBy;
     }
+    /**
+     * key-value pairs for a watchlist item entity mapping
+     */
     @OutputExport(name="entityMapping", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> entityMapping;
 
+    /**
+     * @return key-value pairs for a watchlist item entity mapping
+     */
     public Output</* @Nullable */ Object> getEntityMapping() {
         return this.entityMapping;
     }
+    /**
+     * Etag of the azure resource
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return Etag of the azure resource
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * A flag that indicates if the watchlist item is deleted or not
+     */
     @OutputExport(name="isDeleted", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isDeleted;
 
+    /**
+     * @return A flag that indicates if the watchlist item is deleted or not
+     */
     public Output</* @Nullable */ Boolean> getIsDeleted() {
         return this.isDeleted;
     }
+    /**
+     * key-value pairs for a watchlist item
+     */
     @OutputExport(name="itemsKeyValue", type=Object.class, parameters={})
     private Output<Object> itemsKeyValue;
 
+    /**
+     * @return key-value pairs for a watchlist item
+     */
     public Output<Object> getItemsKeyValue() {
         return this.itemsKeyValue;
     }
+    /**
+     * Azure resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Azure resource name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The tenantId to which the watchlist item belongs to
+     */
     @OutputExport(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
+    /**
+     * @return The tenantId to which the watchlist item belongs to
+     */
     public Output</* @Nullable */ String> getTenantId() {
         return this.tenantId;
     }
+    /**
+     * Azure resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Azure resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The last time the watchlist item was updated
+     */
     @OutputExport(name="updated", type=String.class, parameters={})
     private Output</* @Nullable */ String> updated;
 
+    /**
+     * @return The last time the watchlist item was updated
+     */
     public Output</* @Nullable */ String> getUpdated() {
         return this.updated;
     }
+    /**
+     * Describes a user that updated the watchlist item
+     */
     @OutputExport(name="updatedBy", type=WatchlistUserInfoResponse.class, parameters={})
     private Output</* @Nullable */ WatchlistUserInfoResponse> updatedBy;
 
+    /**
+     * @return Describes a user that updated the watchlist item
+     */
     public Output</* @Nullable */ WatchlistUserInfoResponse> getUpdatedBy() {
         return this.updatedBy;
     }
+    /**
+     * The id (a Guid) of the watchlist item
+     */
     @OutputExport(name="watchlistItemId", type=String.class, parameters={})
     private Output</* @Nullable */ String> watchlistItemId;
 
+    /**
+     * @return The id (a Guid) of the watchlist item
+     */
     public Output</* @Nullable */ String> getWatchlistItemId() {
         return this.watchlistItemId;
     }
+    /**
+     * The type of the watchlist item
+     */
     @OutputExport(name="watchlistItemType", type=String.class, parameters={})
     private Output</* @Nullable */ String> watchlistItemType;
 
+    /**
+     * @return The type of the watchlist item
+     */
     public Output</* @Nullable */ String> getWatchlistItemType() {
         return this.watchlistItemType;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public WatchlistItem(String name, WatchlistItemArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:securityinsights:WatchlistItem", name, args == null ? WatchlistItemArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -126,6 +309,14 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static WatchlistItem get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WatchlistItem(name, id, options);
     }

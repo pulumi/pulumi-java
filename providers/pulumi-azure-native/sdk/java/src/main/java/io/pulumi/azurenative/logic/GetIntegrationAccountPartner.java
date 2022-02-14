@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntegrationAccountPartner {
+/**
+ * The integration account partner.
+API Version: 2019-05-01.
+ *
+ * The integration account partner.
+ */
     public static CompletableFuture<GetIntegrationAccountPartnerResult> invokeAsync(GetIntegrationAccountPartnerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountPartner", TypeShape.of(GetIntegrationAccountPartnerResult.class), args == null ? GetIntegrationAccountPartnerArgs.Empty : args, Utilities.withVersion(options));
     }

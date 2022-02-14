@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RegistrationArgs Empty = new RegistrationArgs();
 
+    /**
+     * Location of the resource.
+     */
     @InputImport(name="location")
     private final @Nullable Input<Either<String,Location>> location;
 
@@ -23,6 +29,9 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of the Azure Stack registration.
+     */
     @InputImport(name="registrationName")
     private final @Nullable Input<String> registrationName;
 
@@ -30,6 +39,9 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
         return this.registrationName == null ? Input.empty() : this.registrationName;
     }
 
+    /**
+     * The token identifying registered Azure Stack
+     */
     @InputImport(name="registrationToken", required=true)
     private final Input<String> registrationToken;
 
@@ -37,6 +49,9 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
         return this.registrationToken;
     }
 
+    /**
+     * Name of the resource group.
+     */
     @InputImport(name="resourceGroup", required=true)
     private final Input<String> resourceGroup;
 

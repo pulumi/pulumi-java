@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CustomRPValidationsResponse {
+/**
+ * A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.
+ */
     private final String specification;
+/**
+ * The type of validation to run against a matching request.
+ */
     private final @Nullable String validationType;
 
     @OutputCustomType.Constructor({"specification","validationType"})
@@ -22,9 +28,15 @@ public final class CustomRPValidationsResponse {
         this.validationType = validationType;
     }
 
+/**
+ * A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.
+ */
     public String getSpecification() {
         return this.specification;
     }
+/**
+ * The type of validation to run against a matching request.
+ */
     public Optional<String> getValidationType() {
         return Optional.ofNullable(this.validationType);
     }

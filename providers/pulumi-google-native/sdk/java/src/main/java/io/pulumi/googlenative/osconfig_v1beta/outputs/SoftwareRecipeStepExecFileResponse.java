@@ -11,9 +11,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SoftwareRecipeStepExecFileResponse {
+/**
+ * Defaults to [0]. A list of possible return values that the program can return to indicate a success.
+ */
     private final List<Integer> allowedExitCodes;
+/**
+ * Arguments to be passed to the provided executable.
+ */
     private final List<String> args;
+/**
+ * The id of the relevant artifact in the recipe.
+ */
     private final String artifactId;
+/**
+ * The absolute path of the file on the local filesystem.
+ */
     private final String localPath;
 
     @OutputCustomType.Constructor({"allowedExitCodes","args","artifactId","localPath"})
@@ -28,15 +40,27 @@ public final class SoftwareRecipeStepExecFileResponse {
         this.localPath = Objects.requireNonNull(localPath);
     }
 
+/**
+ * Defaults to [0]. A list of possible return values that the program can return to indicate a success.
+ */
     public List<Integer> getAllowedExitCodes() {
         return this.allowedExitCodes;
     }
+/**
+ * Arguments to be passed to the provided executable.
+ */
     public List<String> getArgs() {
         return this.args;
     }
+/**
+ * The id of the relevant artifact in the recipe.
+ */
     public String getArtifactId() {
         return this.artifactId;
     }
+/**
+ * The absolute path of the file on the local filesystem.
+ */
     public String getLocalPath() {
         return this.localPath;
     }

@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ReplicationStatusResponse {
+/**
+ * This is the aggregated replication status based on all the regional replication status flags.
+ */
     private final String aggregatedState;
+/**
+ * This is a summary of replication status for each region.
+ */
     private final List<RegionalReplicationStatusResponse> summary;
 
     @OutputCustomType.Constructor({"aggregatedState","summary"})
@@ -22,9 +28,15 @@ public final class ReplicationStatusResponse {
         this.summary = Objects.requireNonNull(summary);
     }
 
+/**
+ * This is the aggregated replication status based on all the regional replication status flags.
+ */
     public String getAggregatedState() {
         return this.aggregatedState;
     }
+/**
+ * This is a summary of replication status for each region.
+ */
     public List<RegionalReplicationStatusResponse> getSummary() {
         return this.summary;
     }

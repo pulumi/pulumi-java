@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A SourceContext is a reference to a tree of files. A SourceContext together with a path point to a unique revision of a single file or directory.
+ */
 public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs Empty = new GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs();
 
+    /**
+     * A SourceContext referring to a revision in a Google Cloud Source Repo.
+     */
     @InputImport(name="cloudRepo")
     private final @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs> cloudRepo;
 
@@ -25,6 +31,9 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
         return this.cloudRepo == null ? Input.empty() : this.cloudRepo;
     }
 
+    /**
+     * A SourceContext referring to a Gerrit project.
+     */
     @InputImport(name="gerrit")
     private final @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> gerrit;
 
@@ -32,6 +41,9 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
         return this.gerrit == null ? Input.empty() : this.gerrit;
     }
 
+    /**
+     * A SourceContext referring to any third party Git repo (e.g., GitHub).
+     */
     @InputImport(name="git")
     private final @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> git;
 
@@ -39,6 +51,9 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
         return this.git == null ? Input.empty() : this.git;
     }
 
+    /**
+     * Labels with user defined metadata.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 

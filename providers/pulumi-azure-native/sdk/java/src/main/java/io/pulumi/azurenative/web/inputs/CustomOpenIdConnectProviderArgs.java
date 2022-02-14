@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration settings of the custom Open ID Connect provider.
+ */
 public final class CustomOpenIdConnectProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomOpenIdConnectProviderArgs Empty = new CustomOpenIdConnectProviderArgs();
 
+    /**
+     * <code>false</code> if the custom Open ID provider provider should not be enabled; otherwise, <code>true</code>.
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -23,6 +29,9 @@ public final class CustomOpenIdConnectProviderArgs extends io.pulumi.resources.R
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * The configuration settings of the login flow of the custom Open ID Connect provider.
+     */
     @InputImport(name="login")
     private final @Nullable Input<OpenIdConnectLoginArgs> login;
 
@@ -30,6 +39,9 @@ public final class CustomOpenIdConnectProviderArgs extends io.pulumi.resources.R
         return this.login == null ? Input.empty() : this.login;
     }
 
+    /**
+     * The configuration settings of the app registration for the custom Open ID Connect provider.
+     */
     @InputImport(name="registration")
     private final @Nullable Input<OpenIdConnectRegistrationArgs> registration;
 

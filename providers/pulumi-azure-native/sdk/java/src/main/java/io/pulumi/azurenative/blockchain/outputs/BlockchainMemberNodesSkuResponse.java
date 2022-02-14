@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BlockchainMemberNodesSkuResponse {
+/**
+ * Gets or sets the nodes capacity.
+ */
     private final @Nullable Integer capacity;
 
     @OutputCustomType.Constructor({"capacity"})
@@ -18,6 +21,9 @@ public final class BlockchainMemberNodesSkuResponse {
         this.capacity = capacity;
     }
 
+/**
+ * Gets or sets the nodes capacity.
+ */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }

@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * [Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.
+ */
 public final class BqmlTrainingRunTrainingOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BqmlTrainingRunTrainingOptionsArgs Empty = new BqmlTrainingRunTrainingOptionsArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="earlyStop")
     private final @Nullable Input<Boolean> earlyStop;
 
@@ -23,6 +29,9 @@ public final class BqmlTrainingRunTrainingOptionsArgs extends io.pulumi.resource
         return this.earlyStop == null ? Input.empty() : this.earlyStop;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="l1Reg")
     private final @Nullable Input<Double> l1Reg;
 
@@ -30,6 +39,9 @@ public final class BqmlTrainingRunTrainingOptionsArgs extends io.pulumi.resource
         return this.l1Reg == null ? Input.empty() : this.l1Reg;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="l2Reg")
     private final @Nullable Input<Double> l2Reg;
 
@@ -37,6 +49,9 @@ public final class BqmlTrainingRunTrainingOptionsArgs extends io.pulumi.resource
         return this.l2Reg == null ? Input.empty() : this.l2Reg;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="learnRate")
     private final @Nullable Input<Double> learnRate;
 
@@ -44,6 +59,9 @@ public final class BqmlTrainingRunTrainingOptionsArgs extends io.pulumi.resource
         return this.learnRate == null ? Input.empty() : this.learnRate;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="learnRateStrategy")
     private final @Nullable Input<String> learnRateStrategy;
 
@@ -51,6 +69,9 @@ public final class BqmlTrainingRunTrainingOptionsArgs extends io.pulumi.resource
         return this.learnRateStrategy == null ? Input.empty() : this.learnRateStrategy;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="lineSearchInitLearnRate")
     private final @Nullable Input<Double> lineSearchInitLearnRate;
 
@@ -58,6 +79,9 @@ public final class BqmlTrainingRunTrainingOptionsArgs extends io.pulumi.resource
         return this.lineSearchInitLearnRate == null ? Input.empty() : this.lineSearchInitLearnRate;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="maxIteration")
     private final @Nullable Input<String> maxIteration;
 
@@ -65,6 +89,9 @@ public final class BqmlTrainingRunTrainingOptionsArgs extends io.pulumi.resource
         return this.maxIteration == null ? Input.empty() : this.maxIteration;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="minRelProgress")
     private final @Nullable Input<Double> minRelProgress;
 
@@ -72,6 +99,9 @@ public final class BqmlTrainingRunTrainingOptionsArgs extends io.pulumi.resource
         return this.minRelProgress == null ? Input.empty() : this.minRelProgress;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="warmStart")
     private final @Nullable Input<Boolean> warmStart;
 

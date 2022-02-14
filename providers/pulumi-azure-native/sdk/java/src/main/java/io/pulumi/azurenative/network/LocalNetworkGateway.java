@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.LocalNetworkGatewayArgs;
 import io.pulumi.azurenative.network.outputs.AddressSpaceResponse;
 import io.pulumi.azurenative.network.outputs.BgpSettingsResponse;
 import io.pulumi.core.Alias;
@@ -17,75 +16,260 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A common class for general resource information.
+API Version: 2020-11-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### CreateLocalNetworkGateway
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var localNetworkGateway = new AzureNative.Network.LocalNetworkGateway("localNetworkGateway", new AzureNative.Network.LocalNetworkGatewayArgs
+        {
+            Fqdn = "site1.contoso.com",
+            GatewayIpAddress = "11.12.13.14",
+            LocalNetworkAddressSpace = new AzureNative.Network.Inputs.AddressSpaceArgs
+            {
+                AddressPrefixes = 
+                {
+                    "10.1.0.0/16",
+                },
+            },
+            LocalNetworkGatewayName = "localgw",
+            Location = "Central US",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewLocalNetworkGateway(ctx, "localNetworkGateway", &network.LocalNetworkGatewayArgs{
+			Fqdn:             pulumi.String("site1.contoso.com"),
+			GatewayIpAddress: pulumi.String("11.12.13.14"),
+			LocalNetworkAddressSpace: &network.AddressSpaceArgs{
+				AddressPrefixes: pulumi.StringArray{
+					pulumi.String("10.1.0.0/16"),
+				},
+			},
+			LocalNetworkGatewayName: pulumi.String("localgw"),
+			Location:                pulumi.String("Central US"),
+			ResourceGroupName:       pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const localNetworkGateway = new azure_native.network.LocalNetworkGateway("localNetworkGateway", {
+    fqdn: "site1.contoso.com",
+    gatewayIpAddress: "11.12.13.14",
+    localNetworkAddressSpace: {
+        addressPrefixes: ["10.1.0.0/16"],
+    },
+    localNetworkGatewayName: "localgw",
+    location: "Central US",
+    resourceGroupName: "rg1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+local_network_gateway = azure_native.network.LocalNetworkGateway("localNetworkGateway",
+    fqdn="site1.contoso.com",
+    gateway_ip_address="11.12.13.14",
+    local_network_address_space=azure_native.network.AddressSpaceArgs(
+        address_prefixes=["10.1.0.0/16"],
+    ),
+    local_network_gateway_name="localgw",
+    location="Central US",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:LocalNetworkGateway localgw /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/localNetworkGateways/localgw 
+```
+
+ */
 @ResourceType(type="azure-native:network:LocalNetworkGateway")
 public class LocalNetworkGateway extends io.pulumi.resources.CustomResource {
+    /**
+     * Local network gateway's BGP speaker settings.
+     */
     @OutputExport(name="bgpSettings", type=BgpSettingsResponse.class, parameters={})
     private Output</* @Nullable */ BgpSettingsResponse> bgpSettings;
 
+    /**
+     * @return Local network gateway's BGP speaker settings.
+     */
     public Output</* @Nullable */ BgpSettingsResponse> getBgpSettings() {
         return this.bgpSettings;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * FQDN of local network gateway.
+     */
     @OutputExport(name="fqdn", type=String.class, parameters={})
     private Output</* @Nullable */ String> fqdn;
 
+    /**
+     * @return FQDN of local network gateway.
+     */
     public Output</* @Nullable */ String> getFqdn() {
         return this.fqdn;
     }
+    /**
+     * IP address of local network gateway.
+     */
     @OutputExport(name="gatewayIpAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> gatewayIpAddress;
 
+    /**
+     * @return IP address of local network gateway.
+     */
     public Output</* @Nullable */ String> getGatewayIpAddress() {
         return this.gatewayIpAddress;
     }
+    /**
+     * Local network site address space.
+     */
     @OutputExport(name="localNetworkAddressSpace", type=AddressSpaceResponse.class, parameters={})
     private Output</* @Nullable */ AddressSpaceResponse> localNetworkAddressSpace;
 
+    /**
+     * @return Local network site address space.
+     */
     public Output</* @Nullable */ AddressSpaceResponse> getLocalNetworkAddressSpace() {
         return this.localNetworkAddressSpace;
     }
+    /**
+     * Resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the local network gateway resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the local network gateway resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The resource GUID property of the local network gateway resource.
+     */
     @OutputExport(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
+    /**
+     * @return The resource GUID property of the local network gateway resource.
+     */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public LocalNetworkGateway(String name, LocalNetworkGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:LocalNetworkGateway", name, args == null ? LocalNetworkGatewayArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -141,6 +325,14 @@ public class LocalNetworkGateway extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static LocalNetworkGateway get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LocalNetworkGateway(name, id, options);
     }

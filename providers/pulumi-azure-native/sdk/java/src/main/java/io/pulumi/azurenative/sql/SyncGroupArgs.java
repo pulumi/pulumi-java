@@ -16,10 +16,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SyncGroupArgs Empty = new SyncGroupArgs();
 
+    /**
+     * Conflict logging retention period.
+     */
     @InputImport(name="conflictLoggingRetentionInDays")
     private final @Nullable Input<Integer> conflictLoggingRetentionInDays;
 
@@ -27,6 +33,9 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.conflictLoggingRetentionInDays == null ? Input.empty() : this.conflictLoggingRetentionInDays;
     }
 
+    /**
+     * Conflict resolution policy of the sync group.
+     */
     @InputImport(name="conflictResolutionPolicy")
     private final @Nullable Input<Either<String,SyncConflictResolutionPolicy>> conflictResolutionPolicy;
 
@@ -34,6 +43,9 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.conflictResolutionPolicy == null ? Input.empty() : this.conflictResolutionPolicy;
     }
 
+    /**
+     * The name of the database on which the sync group is hosted.
+     */
     @InputImport(name="databaseName", required=true)
     private final Input<String> databaseName;
 
@@ -41,6 +53,9 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseName;
     }
 
+    /**
+     * If conflict logging is enabled.
+     */
     @InputImport(name="enableConflictLogging")
     private final @Nullable Input<Boolean> enableConflictLogging;
 
@@ -48,6 +63,9 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableConflictLogging == null ? Input.empty() : this.enableConflictLogging;
     }
 
+    /**
+     * Password for the sync group hub database credential.
+     */
     @InputImport(name="hubDatabasePassword")
     private final @Nullable Input<String> hubDatabasePassword;
 
@@ -55,6 +73,9 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.hubDatabasePassword == null ? Input.empty() : this.hubDatabasePassword;
     }
 
+    /**
+     * User name for the sync group hub database credential.
+     */
     @InputImport(name="hubDatabaseUserName")
     private final @Nullable Input<String> hubDatabaseUserName;
 
@@ -62,6 +83,9 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.hubDatabaseUserName == null ? Input.empty() : this.hubDatabaseUserName;
     }
 
+    /**
+     * Sync interval of the sync group.
+     */
     @InputImport(name="interval")
     private final @Nullable Input<Integer> interval;
 
@@ -69,6 +93,9 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.interval == null ? Input.empty() : this.interval;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -76,6 +103,9 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Sync schema of the sync group.
+     */
     @InputImport(name="schema")
     private final @Nullable Input<SyncGroupSchemaArgs> schema;
 
@@ -83,6 +113,9 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.schema == null ? Input.empty() : this.schema;
     }
 
+    /**
+     * The name of the server.
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -90,6 +123,9 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.serverName;
     }
 
+    /**
+     * The name and capacity of the SKU.
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -97,6 +133,9 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * ARM resource id of the sync database in the sync group.
+     */
     @InputImport(name="syncDatabaseId")
     private final @Nullable Input<String> syncDatabaseId;
 
@@ -104,6 +143,9 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.syncDatabaseId == null ? Input.empty() : this.syncDatabaseId;
     }
 
+    /**
+     * The name of the sync group.
+     */
     @InputImport(name="syncGroupName")
     private final @Nullable Input<String> syncGroupName;
 
@@ -111,6 +153,9 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.syncGroupName == null ? Input.empty() : this.syncGroupName;
     }
 
+    /**
+     * If use private link connection is enabled.
+     */
     @InputImport(name="usePrivateLinkConnection")
     private final @Nullable Input<Boolean> usePrivateLinkConnection;
 

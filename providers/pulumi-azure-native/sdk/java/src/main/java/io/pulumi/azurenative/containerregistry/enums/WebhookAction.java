@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum WebhookAction {
+/**
+ * 
+ */
         Push("push"),
+/**
+ * 
+ */
         Delete("delete"),
+/**
+ * 
+ */
         Quarantine("quarantine"),
+/**
+ * 
+ */
         Chart_push("chart_push"),
+/**
+ * 
+ */
         Chart_delete("chart_delete");
 
         private final String value;

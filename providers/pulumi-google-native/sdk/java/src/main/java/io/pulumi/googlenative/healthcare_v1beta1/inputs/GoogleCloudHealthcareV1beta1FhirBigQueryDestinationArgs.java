@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration for exporting to BigQuery.
+ */
 public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs Empty = new GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs();
 
+    /**
+     * BigQuery URI to an existing dataset, up to 2000 characters long, in the format `bq://projectId.bqDatasetId`.
+     */
     @InputImport(name="datasetUri")
     private final @Nullable Input<String> datasetUri;
 
@@ -24,6 +30,9 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs exten
         return this.datasetUri == null ? Input.empty() : this.datasetUri;
     }
 
+    /**
+     * Use `write_disposition` instead. If `write_disposition` is specified, this parameter is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is equivalent to write_disposition=WRITE_TRUNCATE.
+     */
     @InputImport(name="force")
     private final @Nullable Input<Boolean> force;
 
@@ -31,6 +40,9 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs exten
         return this.force == null ? Input.empty() : this.force;
     }
 
+    /**
+     * The configuration for the exported BigQuery schema.
+     */
     @InputImport(name="schemaConfig")
     private final @Nullable Input<SchemaConfigArgs> schemaConfig;
 
@@ -38,6 +50,9 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs exten
         return this.schemaConfig == null ? Input.empty() : this.schemaConfig;
     }
 
+    /**
+     * Determines if existing data in the destination dataset is overwritten, appended to, or not written if the tables contain data. If a write_disposition is specified, the `force` parameter is ignored.
+     */
     @InputImport(name="writeDisposition")
     private final @Nullable Input<GoogleCloudHealthcareV1beta1FhirBigQueryDestinationWriteDisposition> writeDisposition;
 

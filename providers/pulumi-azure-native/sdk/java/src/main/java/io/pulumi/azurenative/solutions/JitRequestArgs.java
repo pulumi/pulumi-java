@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JitRequestArgs Empty = new JitRequestArgs();
 
+    /**
+     * The parent application id.
+     */
     @InputImport(name="applicationResourceId", required=true)
     private final Input<String> applicationResourceId;
 
@@ -25,6 +31,9 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationResourceId;
     }
 
+    /**
+     * The JIT authorization policies.
+     */
     @InputImport(name="jitAuthorizationPolicies", required=true)
     private final Input<List<JitAuthorizationPoliciesArgs>> jitAuthorizationPolicies;
 
@@ -32,6 +41,9 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
         return this.jitAuthorizationPolicies;
     }
 
+    /**
+     * The name of the JIT request.
+     */
     @InputImport(name="jitRequestName")
     private final @Nullable Input<String> jitRequestName;
 
@@ -39,6 +51,9 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
         return this.jitRequestName == null ? Input.empty() : this.jitRequestName;
     }
 
+    /**
+     * The JIT request properties.
+     */
     @InputImport(name="jitSchedulingPolicy", required=true)
     private final Input<JitSchedulingPolicyArgs> jitSchedulingPolicy;
 
@@ -46,6 +61,9 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
         return this.jitSchedulingPolicy;
     }
 
+    /**
+     * Resource location
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -53,6 +71,9 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -60,6 +81,9 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

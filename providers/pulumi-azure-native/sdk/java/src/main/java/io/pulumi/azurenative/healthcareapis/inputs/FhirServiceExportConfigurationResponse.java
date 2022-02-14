@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Export operation configuration information
+ */
 public final class FhirServiceExportConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FhirServiceExportConfigurationResponse Empty = new FhirServiceExportConfigurationResponse();
 
+    /**
+     * The name of the default export storage account.
+     */
     @InputImport(name="storageAccountName")
     private final @Nullable String storageAccountName;
 

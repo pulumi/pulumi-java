@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Distribute via Shared Image Gallery.
+ */
 public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageTemplateSharedImageDistributorArgs Empty = new ImageTemplateSharedImageDistributorArgs();
 
+    /**
+     * Tags that will be applied to the artifact once it has been created/updated by the distributor.
+     */
     @InputImport(name="artifactTags")
     private final @Nullable Input<Map<String,String>> artifactTags;
 
@@ -26,6 +32,9 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
         return this.artifactTags == null ? Input.empty() : this.artifactTags;
     }
 
+    /**
+     * Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).
+     */
     @InputImport(name="excludeFromLatest")
     private final @Nullable Input<Boolean> excludeFromLatest;
 
@@ -33,6 +42,9 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
         return this.excludeFromLatest == null ? Input.empty() : this.excludeFromLatest;
     }
 
+    /**
+     * Resource Id of the Shared Image Gallery image
+     */
     @InputImport(name="galleryImageId", required=true)
     private final Input<String> galleryImageId;
 
@@ -40,6 +52,9 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
         return this.galleryImageId;
     }
 
+    /**
+     * A list of regions that the image will be replicated to
+     */
     @InputImport(name="replicationRegions", required=true)
     private final Input<List<String>> replicationRegions;
 
@@ -47,6 +62,9 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
         return this.replicationRegions;
     }
 
+    /**
+     * The name to be used for the associated RunOutput.
+     */
     @InputImport(name="runOutputName", required=true)
     private final Input<String> runOutputName;
 
@@ -54,6 +72,9 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
         return this.runOutputName;
     }
 
+    /**
+     * Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).
+     */
     @InputImport(name="storageAccountType")
     private final @Nullable Input<Either<String,SharedImageStorageAccountType>> storageAccountType;
 
@@ -61,6 +82,10 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
         return this.storageAccountType == null ? Input.empty() : this.storageAccountType;
     }
 
+    /**
+     * Type of distribution.
+Expected value is 'SharedImage'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

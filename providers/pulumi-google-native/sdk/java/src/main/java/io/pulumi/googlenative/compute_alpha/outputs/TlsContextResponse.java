@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TlsContextResponse {
+/**
+ * Defines the mechanism to obtain the client or server certificate.
+ */
     private final TlsCertificateContextResponse certificateContext;
+/**
+ * Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate. If omitted, the proxy will not validate the server or client certificate.
+ */
     private final TlsValidationContextResponse validationContext;
 
     @OutputCustomType.Constructor({"certificateContext","validationContext"})
@@ -21,9 +27,15 @@ public final class TlsContextResponse {
         this.validationContext = Objects.requireNonNull(validationContext);
     }
 
+/**
+ * Defines the mechanism to obtain the client or server certificate.
+ */
     public TlsCertificateContextResponse getCertificateContext() {
         return this.certificateContext;
     }
+/**
+ * Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate. If omitted, the proxy will not validate the server or client certificate.
+ */
     public TlsValidationContextResponse getValidationContext() {
         return this.validationContext;
     }

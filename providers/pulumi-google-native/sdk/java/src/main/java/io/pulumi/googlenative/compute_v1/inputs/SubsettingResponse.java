@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Subsetting configuration for this BackendService. Currently this is applicable only for Internal TCP/UDP load balancing, Internal HTTP(S) load balancing and Traffic Director.
+ */
 public final class SubsettingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubsettingResponse Empty = new SubsettingResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="policy", required=true)
     private final String policy;
 

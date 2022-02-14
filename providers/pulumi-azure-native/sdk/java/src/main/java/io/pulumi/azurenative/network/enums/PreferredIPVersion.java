@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The preferred IP version to use in test evaluation. The connection monitor may choose to use a different version depending on other parameters.
+ */
     @EnumType
     public enum PreferredIPVersion {
+/**
+ * 
+ */
         IPv4("IPv4"),
+/**
+ * 
+ */
         IPv6("IPv6");
 
         private final String value;

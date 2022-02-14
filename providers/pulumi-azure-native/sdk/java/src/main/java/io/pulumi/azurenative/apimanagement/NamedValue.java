@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.apimanagement.NamedValueArgs;
 import io.pulumi.azurenative.apimanagement.outputs.KeyVaultContractPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,51 +15,327 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * NamedValue details.
+API Version: 2020-12-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### ApiManagementCreateNamedValue
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var namedValue = new AzureNative.ApiManagement.NamedValue("namedValue", new AzureNative.ApiManagement.NamedValueArgs
+        {
+            DisplayName = "prop3name",
+            NamedValueId = "testprop2",
+            ResourceGroupName = "rg1",
+            Secret = false,
+            ServiceName = "apimService1",
+            Tags = 
+            {
+                "foo",
+                "bar",
+            },
+            Value = "propValue",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := apimanagement.NewNamedValue(ctx, "namedValue", &apimanagement.NamedValueArgs{
+			DisplayName:       pulumi.String("prop3name"),
+			NamedValueId:      pulumi.String("testprop2"),
+			ResourceGroupName: pulumi.String("rg1"),
+			Secret:            pulumi.Bool(false),
+			ServiceName:       pulumi.String("apimService1"),
+			Tags: pulumi.StringArray{
+				pulumi.String("foo"),
+				pulumi.String("bar"),
+			},
+			Value: pulumi.String("propValue"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const namedValue = new azure_native.apimanagement.NamedValue("namedValue", {
+    displayName: "prop3name",
+    namedValueId: "testprop2",
+    resourceGroupName: "rg1",
+    secret: false,
+    serviceName: "apimService1",
+    tags: [
+        "foo",
+        "bar",
+    ],
+    value: "propValue",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+named_value = azure_native.apimanagement.NamedValue("namedValue",
+    display_name="prop3name",
+    named_value_id="testprop2",
+    resource_group_name="rg1",
+    secret=False,
+    service_name="apimService1",
+    tags=[
+        "foo",
+        "bar",
+    ],
+    value="propValue")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### ApiManagementCreateNamedValueWithKeyVault
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var namedValue = new AzureNative.ApiManagement.NamedValue("namedValue", new AzureNative.ApiManagement.NamedValueArgs
+        {
+            DisplayName = "prop6namekv",
+            KeyVault = new AzureNative.ApiManagement.Inputs.KeyVaultContractCreatePropertiesArgs
+            {
+                IdentityClientId = "ceaa6b06-c00f-43ef-99ac-f53d1fe876a0",
+                SecretIdentifier = "https://contoso.vault.azure.net/secrets/aadSecret",
+            },
+            NamedValueId = "testprop6",
+            ResourceGroupName = "rg1",
+            Secret = true,
+            ServiceName = "apimService1",
+            Tags = 
+            {
+                "foo",
+                "bar",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := apimanagement.NewNamedValue(ctx, "namedValue", &apimanagement.NamedValueArgs{
+			DisplayName: pulumi.String("prop6namekv"),
+			KeyVault: &apimanagement.KeyVaultContractCreatePropertiesArgs{
+				IdentityClientId: pulumi.String("ceaa6b06-c00f-43ef-99ac-f53d1fe876a0"),
+				SecretIdentifier: pulumi.String("https://contoso.vault.azure.net/secrets/aadSecret"),
+			},
+			NamedValueId:      pulumi.String("testprop6"),
+			ResourceGroupName: pulumi.String("rg1"),
+			Secret:            pulumi.Bool(true),
+			ServiceName:       pulumi.String("apimService1"),
+			Tags: pulumi.StringArray{
+				pulumi.String("foo"),
+				pulumi.String("bar"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const namedValue = new azure_native.apimanagement.NamedValue("namedValue", {
+    displayName: "prop6namekv",
+    keyVault: {
+        identityClientId: "ceaa6b06-c00f-43ef-99ac-f53d1fe876a0",
+        secretIdentifier: "https://contoso.vault.azure.net/secrets/aadSecret",
+    },
+    namedValueId: "testprop6",
+    resourceGroupName: "rg1",
+    secret: true,
+    serviceName: "apimService1",
+    tags: [
+        "foo",
+        "bar",
+    ],
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+named_value = azure_native.apimanagement.NamedValue("namedValue",
+    display_name="prop6namekv",
+    key_vault=azure_native.apimanagement.KeyVaultContractCreatePropertiesArgs(
+        identity_client_id="ceaa6b06-c00f-43ef-99ac-f53d1fe876a0",
+        secret_identifier="https://contoso.vault.azure.net/secrets/aadSecret",
+    ),
+    named_value_id="testprop6",
+    resource_group_name="rg1",
+    secret=True,
+    service_name="apimService1",
+    tags=[
+        "foo",
+        "bar",
+    ])
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:apimanagement:NamedValue testprop6 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/namedValues/testprop6 
+```
+
+ */
 @ResourceType(type="azure-native:apimanagement:NamedValue")
 public class NamedValue extends io.pulumi.resources.CustomResource {
+    /**
+     * Unique name of NamedValue. It may contain only letters, digits, period, dash, and underscore characters.
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return Unique name of NamedValue. It may contain only letters, digits, period, dash, and underscore characters.
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * KeyVault location details of the namedValue.
+     */
     @OutputExport(name="keyVault", type=KeyVaultContractPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ KeyVaultContractPropertiesResponse> keyVault;
 
+    /**
+     * @return KeyVault location details of the namedValue.
+     */
     public Output</* @Nullable */ KeyVaultContractPropertiesResponse> getKeyVault() {
         return this.keyVault;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Determines whether the value is a secret and should be encrypted or not. Default value is false.
+     */
     @OutputExport(name="secret", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> secret;
 
+    /**
+     * @return Determines whether the value is a secret and should be encrypted or not. Default value is false.
+     */
     public Output</* @Nullable */ Boolean> getSecret() {
         return this.secret;
     }
+    /**
+     * Optional tags that when provided can be used to filter the NamedValue list.
+     */
     @OutputExport(name="tags", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> tags;
 
+    /**
+     * @return Optional tags that when provided can be used to filter the NamedValue list.
+     */
     public Output</* @Nullable */ List<String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type for API Management resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type for API Management resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Value of the NamedValue. Can contain policy expressions. It may not be empty or consist only of whitespace. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     */
     @OutputExport(name="value", type=String.class, parameters={})
     private Output</* @Nullable */ String> value;
 
+    /**
+     * @return Value of the NamedValue. Can contain policy expressions. It may not be empty or consist only of whitespace. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     */
     public Output</* @Nullable */ String> getValue() {
         return this.value;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public NamedValue(String name, NamedValueArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:NamedValue", name, args == null ? NamedValueArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -85,6 +360,14 @@ public class NamedValue extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static NamedValue get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NamedValue(name, id, options);
     }

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.machinelearningservices;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.machinelearningservices.CodeVersionArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.CodeVersionResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
@@ -16,33 +15,221 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Azure Resource Manager resource envelope.
+API Version: 2021-03-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### CreateOrUpdate Code Version.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var codeVersion = new AzureNative.MachineLearningServices.CodeVersion("codeVersion", new AzureNative.MachineLearningServices.CodeVersionArgs
+        {
+            Name = "testContainer",
+            Properties = new AzureNative.MachineLearningServices.Inputs.CodeVersionArgs
+            {
+                DatastoreId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/datastores/mydatastore",
+                Description = "string",
+                IsAnonymous = true,
+                Path = "path/to/file.py",
+                Properties = 
+                {
+                    { "additionalProp1", "string" },
+                    { "additionalProp2", "string" },
+                    { "additionalProp3", "string" },
+                },
+                Tags = 
+                {
+                    { "additionalProp1", "string" },
+                    { "additionalProp2", "string" },
+                    { "additionalProp3", "string" },
+                },
+            },
+            ResourceGroupName = "testrg123",
+            Version = "1",
+            WorkspaceName = "testworkspace",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewCodeVersion(ctx, "codeVersion", &machinelearningservices.CodeVersionArgs{
+			Name: pulumi.String("testContainer"),
+			Properties: &machinelearningservices.CodeVersionArgs{
+				DatastoreId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/datastores/mydatastore"),
+				Description: pulumi.String("string"),
+				IsAnonymous: pulumi.Bool(true),
+				Path:        pulumi.String("path/to/file.py"),
+				Properties: pulumi.StringMap{
+					"additionalProp1": pulumi.String("string"),
+					"additionalProp2": pulumi.String("string"),
+					"additionalProp3": pulumi.String("string"),
+				},
+				Tags: pulumi.StringMap{
+					"additionalProp1": pulumi.String("string"),
+					"additionalProp2": pulumi.String("string"),
+					"additionalProp3": pulumi.String("string"),
+				},
+			},
+			ResourceGroupName: pulumi.String("testrg123"),
+			Version:           pulumi.String("1"),
+			WorkspaceName:     pulumi.String("testworkspace"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const codeVersion = new azure_native.machinelearningservices.CodeVersion("codeVersion", {
+    name: "testContainer",
+    properties: {
+        datastoreId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/datastores/mydatastore",
+        description: "string",
+        isAnonymous: true,
+        path: "path/to/file.py",
+        properties: {
+            additionalProp1: "string",
+            additionalProp2: "string",
+            additionalProp3: "string",
+        },
+        tags: {
+            additionalProp1: "string",
+            additionalProp2: "string",
+            additionalProp3: "string",
+        },
+    },
+    resourceGroupName: "testrg123",
+    version: "1",
+    workspaceName: "testworkspace",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+code_version = azure_native.machinelearningservices.CodeVersion("codeVersion",
+    name="testContainer",
+    properties=azure_native.machinelearningservices.CodeVersionArgs(
+        datastore_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1234/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/datastores/mydatastore",
+        description="string",
+        is_anonymous=True,
+        path="path/to/file.py",
+        properties={
+            "additionalProp1": "string",
+            "additionalProp2": "string",
+            "additionalProp3": "string",
+        },
+        tags={
+            "additionalProp1": "string",
+            "additionalProp2": "string",
+            "additionalProp3": "string",
+        },
+    ),
+    resource_group_name="testrg123",
+    version="1",
+    workspace_name="testworkspace")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:machinelearningservices:CodeVersion 1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg123/providers/Microsoft.MachineLearningServices/workspaces/testworkspace/codes/testContainer/versions/1 
+```
+
+ */
 @ResourceType(type="azure-native:machinelearningservices:CodeVersion")
 public class CodeVersion extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Additional attributes of the entity.
+     */
     @OutputExport(name="properties", type=CodeVersionResponse.class, parameters={})
     private Output<CodeVersionResponse> properties;
 
+    /**
+     * @return Additional attributes of the entity.
+     */
     public Output<CodeVersionResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * System data associated with resource provider
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return System data associated with resource provider
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public CodeVersion(String name, CodeVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:machinelearningservices:CodeVersion", name, args == null ? CodeVersionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -61,6 +248,14 @@ public class CodeVersion extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static CodeVersion get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CodeVersion(name, id, options);
     }

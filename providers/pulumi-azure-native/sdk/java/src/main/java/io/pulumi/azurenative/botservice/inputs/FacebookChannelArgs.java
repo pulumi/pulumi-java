@@ -11,10 +11,17 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Facebook channel definition
+ */
 public final class FacebookChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FacebookChannelArgs Empty = new FacebookChannelArgs();
 
+    /**
+     * The channel name
+Expected value is 'FacebookChannel'.
+     */
     @InputImport(name="channelName", required=true)
     private final Input<String> channelName;
 
@@ -22,6 +29,9 @@ public final class FacebookChannelArgs extends io.pulumi.resources.ResourceArgs 
         return this.channelName;
     }
 
+    /**
+     * Entity Tag of the resource
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -29,6 +39,9 @@ public final class FacebookChannelArgs extends io.pulumi.resources.ResourceArgs 
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * Specifies the location of the resource.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -36,6 +49,9 @@ public final class FacebookChannelArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The set of properties specific to bot facebook channel
+     */
     @InputImport(name="properties")
     private final @Nullable Input<FacebookChannelPropertiesArgs> properties;
 

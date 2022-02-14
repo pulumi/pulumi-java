@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EndpointHints {
+/**
+ * forZones indicates the zone(s) this endpoint should be consumed by to enable topology aware routing. May contain a maximum of 8 entries.
+ */
     private final @Nullable List<ForZone> forZones;
 
     @OutputCustomType.Constructor({"forZones"})
@@ -18,6 +21,9 @@ public final class EndpointHints {
         this.forZones = forZones;
     }
 
+/**
+ * forZones indicates the zone(s) this endpoint should be consumed by to enable topology aware routing. May contain a maximum of 8 entries.
+ */
     public List<ForZone> getForZones() {
         return this.forZones == null ? List.of() : this.forZones;
     }

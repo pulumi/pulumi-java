@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum SchemaCompatibility {
+/**
+ * 
+ */
         None("None"),
+/**
+ * 
+ */
         Backward("Backward"),
+/**
+ * 
+ */
         Forward("Forward");
 
         private final String value;

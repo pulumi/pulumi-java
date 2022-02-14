@@ -9,10 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetViewResult {
+/**
+ * The time at which this view was created.
+ */
     private final String createTime;
+/**
+ * The human-readable display name of the view.
+ */
     private final String displayName;
+/**
+ * Immutable. The resource name of the view. Format: projects/{project}/locations/{location}/views/{view}
+ */
     private final String name;
+/**
+ * The most recent time at which the view was updated.
+ */
     private final String updateTime;
+/**
+ * String with specific view properties.
+ */
     private final String value;
 
     @OutputCustomType.Constructor({"createTime","displayName","name","updateTime","value"})
@@ -29,18 +44,33 @@ public final class GetViewResult {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * The time at which this view was created.
+ */
     public String getCreateTime() {
         return this.createTime;
     }
+/**
+ * The human-readable display name of the view.
+ */
     public String getDisplayName() {
         return this.displayName;
     }
+/**
+ * Immutable. The resource name of the view. Format: projects/{project}/locations/{location}/views/{view}
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The most recent time at which the view was updated.
+ */
     public String getUpdateTime() {
         return this.updateTime;
     }
+/**
+ * String with specific view properties.
+ */
     public String getValue() {
         return this.value;
     }

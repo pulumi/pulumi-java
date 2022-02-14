@@ -14,13 +14,38 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ImageTemplatePowerShellCustomizerResponse {
+/**
+ * Array of PowerShell commands to execute
+ */
     private final @Nullable List<String> inline;
+/**
+ * Friendly Name to provide context on what this customization step does
+ */
     private final @Nullable String name;
+/**
+ * If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.
+ */
     private final @Nullable Boolean runAsSystem;
+/**
+ * If specified, the PowerShell script will be run with elevated privileges
+ */
     private final @Nullable Boolean runElevated;
+/**
+ * URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
+ */
     private final @Nullable String scriptUri;
+/**
+ * SHA256 checksum of the power shell script provided in the scriptUri field above
+ */
     private final @Nullable String sha256Checksum;
+/**
+ * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
+Expected value is 'PowerShell'.
+ */
     private final String type;
+/**
+ * Valid exit codes for the PowerShell script. [Default: 0]
+ */
     private final @Nullable List<Integer> validExitCodes;
 
     @OutputCustomType.Constructor({"inline","name","runAsSystem","runElevated","scriptUri","sha256Checksum","type","validExitCodes"})
@@ -43,27 +68,52 @@ public final class ImageTemplatePowerShellCustomizerResponse {
         this.validExitCodes = validExitCodes;
     }
 
+/**
+ * Array of PowerShell commands to execute
+ */
     public List<String> getInline() {
         return this.inline == null ? List.of() : this.inline;
     }
+/**
+ * Friendly Name to provide context on what this customization step does
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.
+ */
     public Optional<Boolean> getRunAsSystem() {
         return Optional.ofNullable(this.runAsSystem);
     }
+/**
+ * If specified, the PowerShell script will be run with elevated privileges
+ */
     public Optional<Boolean> getRunElevated() {
         return Optional.ofNullable(this.runElevated);
     }
+/**
+ * URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
+ */
     public Optional<String> getScriptUri() {
         return Optional.ofNullable(this.scriptUri);
     }
+/**
+ * SHA256 checksum of the power shell script provided in the scriptUri field above
+ */
     public Optional<String> getSha256Checksum() {
         return Optional.ofNullable(this.sha256Checksum);
     }
+/**
+ * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
+Expected value is 'PowerShell'.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Valid exit codes for the PowerShell script. [Default: 0]
+ */
     public List<Integer> getValidExitCodes() {
         return this.validExitCodes == null ? List.of() : this.validExitCodes;
     }

@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RRSetRoutingPolicyWrrPolicyResponse {
+/**
+ * 
+ */
     private final List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items;
+/**
+ * 
+ */
     private final String kind;
 
     @OutputCustomType.Constructor({"items","kind"})
@@ -22,9 +28,15 @@ public final class RRSetRoutingPolicyWrrPolicyResponse {
         this.kind = Objects.requireNonNull(kind);
     }
 
+/**
+ * 
+ */
     public List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> getItems() {
         return this.items;
     }
+/**
+ * 
+ */
     public String getKind() {
         return this.kind;
     }

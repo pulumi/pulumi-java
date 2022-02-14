@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MSIXPackageArgs Empty = new MSIXPackageArgs();
 
+    /**
+     * User friendly Name to be displayed in the portal. 
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -25,6 +31,9 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The name of the host pool within the specified resource group
+     */
     @InputImport(name="hostPoolName", required=true)
     private final Input<String> hostPoolName;
 
@@ -32,6 +41,9 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostPoolName;
     }
 
+    /**
+     * VHD/CIM image path on Network Share.
+     */
     @InputImport(name="imagePath")
     private final @Nullable Input<String> imagePath;
 
@@ -39,6 +51,9 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.imagePath == null ? Input.empty() : this.imagePath;
     }
 
+    /**
+     * Make this version of the package the active one across the hostpool. 
+     */
     @InputImport(name="isActive")
     private final @Nullable Input<Boolean> isActive;
 
@@ -46,6 +61,9 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.isActive == null ? Input.empty() : this.isActive;
     }
 
+    /**
+     * Specifies how to register Package in feed.
+     */
     @InputImport(name="isRegularRegistration")
     private final @Nullable Input<Boolean> isRegularRegistration;
 
@@ -53,6 +71,9 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.isRegularRegistration == null ? Input.empty() : this.isRegularRegistration;
     }
 
+    /**
+     * Date Package was last updated, found in the appxmanifest.xml. 
+     */
     @InputImport(name="lastUpdated")
     private final @Nullable Input<String> lastUpdated;
 
@@ -60,6 +81,9 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.lastUpdated == null ? Input.empty() : this.lastUpdated;
     }
 
+    /**
+     * The version specific package full name of the MSIX package within specified hostpool
+     */
     @InputImport(name="msixPackageFullName")
     private final @Nullable Input<String> msixPackageFullName;
 
@@ -67,6 +91,9 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.msixPackageFullName == null ? Input.empty() : this.msixPackageFullName;
     }
 
+    /**
+     * List of package applications. 
+     */
     @InputImport(name="packageApplications")
     private final @Nullable Input<List<MsixPackageApplicationsArgs>> packageApplications;
 
@@ -74,6 +101,9 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.packageApplications == null ? Input.empty() : this.packageApplications;
     }
 
+    /**
+     * List of package dependencies. 
+     */
     @InputImport(name="packageDependencies")
     private final @Nullable Input<List<MsixPackageDependenciesArgs>> packageDependencies;
 
@@ -81,6 +111,9 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.packageDependencies == null ? Input.empty() : this.packageDependencies;
     }
 
+    /**
+     * Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name. 
+     */
     @InputImport(name="packageFamilyName")
     private final @Nullable Input<String> packageFamilyName;
 
@@ -88,6 +121,9 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.packageFamilyName == null ? Input.empty() : this.packageFamilyName;
     }
 
+    /**
+     * Package Name from appxmanifest.xml. 
+     */
     @InputImport(name="packageName")
     private final @Nullable Input<String> packageName;
 
@@ -95,6 +131,9 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.packageName == null ? Input.empty() : this.packageName;
     }
 
+    /**
+     * Relative Path to the package inside the image. 
+     */
     @InputImport(name="packageRelativePath")
     private final @Nullable Input<String> packageRelativePath;
 
@@ -102,6 +141,9 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.packageRelativePath == null ? Input.empty() : this.packageRelativePath;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -109,6 +151,9 @@ public final class MSIXPackageArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Package Version found in the appxmanifest.xml. 
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

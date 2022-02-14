@@ -10,10 +10,17 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines the origin group override action for the delivery rule.
+ */
 public final class OriginGroupOverrideActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OriginGroupOverrideActionArgs Empty = new OriginGroupOverrideActionArgs();
 
+    /**
+     * The name of the action for the delivery rule.
+Expected value is 'OriginGroupOverride'.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +28,9 @@ public final class OriginGroupOverrideActionArgs extends io.pulumi.resources.Res
         return this.name;
     }
 
+    /**
+     * Defines the parameters for the action.
+     */
     @InputImport(name="parameters", required=true)
     private final Input<OriginGroupOverrideActionParametersArgs> parameters;
 

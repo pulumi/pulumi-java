@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetExecutionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetExecutionArgs Empty = new GetExecutionArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="executionId", required=true)
     private final String executionId;
 
@@ -21,6 +27,9 @@ public final class GetExecutionArgs extends io.pulumi.resources.InvokeArgs {
         return this.executionId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -28,6 +37,9 @@ public final class GetExecutionArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -35,6 +47,9 @@ public final class GetExecutionArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="view")
     private final @Nullable String view;
 
@@ -42,6 +57,9 @@ public final class GetExecutionArgs extends io.pulumi.resources.InvokeArgs {
         return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="workflowId", required=true)
     private final String workflowId;
 

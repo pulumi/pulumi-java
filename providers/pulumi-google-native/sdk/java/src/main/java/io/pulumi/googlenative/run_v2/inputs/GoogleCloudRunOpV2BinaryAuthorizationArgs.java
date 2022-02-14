@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings for Binary Authorization feature.
+ */
 public final class GoogleCloudRunOpV2BinaryAuthorizationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudRunOpV2BinaryAuthorizationArgs Empty = new GoogleCloudRunOpV2BinaryAuthorizationArgs();
 
+    /**
+     * If present, indicates to use Breakglass using this justification. If use_default is False, then it must be empty. For more information on breakglass, see https://cloud.google.com/binary-authorization/docs/using-breakglass
+     */
     @InputImport(name="breakglassJustification")
     private final @Nullable Input<String> breakglassJustification;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationArgs extends io.pulumi.r
         return this.breakglassJustification == null ? Input.empty() : this.breakglassJustification;
     }
 
+    /**
+     * If True, indicates to use the default project's binary authorization policy. If False, binary authorization will be disabled.
+     */
     @InputImport(name="useDefault")
     private final @Nullable Input<Boolean> useDefault;
 

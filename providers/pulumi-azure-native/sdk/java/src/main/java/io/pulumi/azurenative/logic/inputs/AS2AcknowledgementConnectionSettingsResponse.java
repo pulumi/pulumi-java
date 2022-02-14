@@ -8,10 +8,16 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * The AS2 agreement acknowledgement connection settings.
+ */
 public final class AS2AcknowledgementConnectionSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AS2AcknowledgementConnectionSettingsResponse Empty = new AS2AcknowledgementConnectionSettingsResponse();
 
+    /**
+     * Indicates whether to ignore mismatch in certificate name.
+     */
     @InputImport(name="ignoreCertificateNameMismatch", required=true)
     private final Boolean ignoreCertificateNameMismatch;
 
@@ -19,6 +25,9 @@ public final class AS2AcknowledgementConnectionSettingsResponse extends io.pulum
         return this.ignoreCertificateNameMismatch;
     }
 
+    /**
+     * Indicates whether to keep the connection alive.
+     */
     @InputImport(name="keepHttpConnectionAlive", required=true)
     private final Boolean keepHttpConnectionAlive;
 
@@ -26,6 +35,9 @@ public final class AS2AcknowledgementConnectionSettingsResponse extends io.pulum
         return this.keepHttpConnectionAlive;
     }
 
+    /**
+     * Indicates whether to support HTTP status code 'CONTINUE'.
+     */
     @InputImport(name="supportHttpStatusCodeContinue", required=true)
     private final Boolean supportHttpStatusCodeContinue;
 
@@ -33,6 +45,9 @@ public final class AS2AcknowledgementConnectionSettingsResponse extends io.pulum
         return this.supportHttpStatusCodeContinue;
     }
 
+    /**
+     * Indicates whether to unfold the HTTP headers.
+     */
     @InputImport(name="unfoldHttpHeaders", required=true)
     private final Boolean unfoldHttpHeaders;
 

@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCatalogItem {
+/**
+ * Gets a specific catalog item.
+ */
     public static CompletableFuture<GetCatalogItemResult> invokeAsync(GetCatalogItemArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:recommendationengine/v1beta1:getCatalogItem", TypeShape.of(GetCatalogItemResult.class), args == null ? GetCatalogItemArgs.Empty : args, Utilities.withVersion(options));
     }

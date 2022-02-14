@@ -12,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MabFileFolderProtectedItemExtendedInfoResponse {
+/**
+ * Last time when the agent data synced to service.
+ */
     private final @Nullable String lastRefreshedAt;
+/**
+ * The oldest backup copy available.
+ */
     private final @Nullable String oldestRecoveryPoint;
+/**
+ * Number of backup copies associated with the backup item.
+ */
     private final @Nullable Integer recoveryPointCount;
 
     @OutputCustomType.Constructor({"lastRefreshedAt","oldestRecoveryPoint","recoveryPointCount"})
@@ -26,12 +35,21 @@ public final class MabFileFolderProtectedItemExtendedInfoResponse {
         this.recoveryPointCount = recoveryPointCount;
     }
 
+/**
+ * Last time when the agent data synced to service.
+ */
     public Optional<String> getLastRefreshedAt() {
         return Optional.ofNullable(this.lastRefreshedAt);
     }
+/**
+ * The oldest backup copy available.
+ */
     public Optional<String> getOldestRecoveryPoint() {
         return Optional.ofNullable(this.oldestRecoveryPoint);
     }
+/**
+ * Number of backup copies associated with the backup item.
+ */
     public Optional<Integer> getRecoveryPointCount() {
         return Optional.ofNullable(this.recoveryPointCount);
     }

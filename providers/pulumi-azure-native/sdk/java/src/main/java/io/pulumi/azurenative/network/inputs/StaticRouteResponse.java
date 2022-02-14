@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * List of all Static Routes.
+ */
 public final class StaticRouteResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StaticRouteResponse Empty = new StaticRouteResponse();
 
+    /**
+     * List of all address prefixes.
+     */
     @InputImport(name="addressPrefixes")
     private final @Nullable List<String> addressPrefixes;
 
@@ -22,6 +28,9 @@ public final class StaticRouteResponse extends io.pulumi.resources.InvokeArgs {
         return this.addressPrefixes == null ? List.of() : this.addressPrefixes;
     }
 
+    /**
+     * The name of the StaticRoute that is unique within a VnetRoute.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -29,6 +38,9 @@ public final class StaticRouteResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The ip address of the next hop.
+     */
     @InputImport(name="nextHopIpAddress")
     private final @Nullable String nextHopIpAddress;
 

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkEdgeSecurityServiceArgs Empty = new NetworkEdgeSecurityServiceArgs();
 
+    /**
+     * An optional description of this resource. Provide this property when you create the resource.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +27,9 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -28,6 +37,9 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +47,9 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -42,6 +57,9 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="region", required=true)
     private final Input<String> region;
 
@@ -49,6 +67,9 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
         return this.region;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -56,6 +77,9 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * The resource URL for the network edge security service associated with this network edge security service.
+     */
     @InputImport(name="securityPolicy")
     private final @Nullable Input<String> securityPolicy;
 
@@ -63,6 +87,9 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
         return this.securityPolicy == null ? Input.empty() : this.securityPolicy;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="validateOnly")
     private final @Nullable Input<String> validateOnly;
 

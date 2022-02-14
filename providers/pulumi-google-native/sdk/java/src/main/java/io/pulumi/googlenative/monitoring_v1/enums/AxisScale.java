@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The axis scale. By default, a linear scale is used.
+ */
     @EnumType
     public enum AxisScale {
+/**
+ * Scale is unspecified. The view will default to LINEAR.
+ */
         ScaleUnspecified("SCALE_UNSPECIFIED"),
+/**
+ * Linear scale.
+ */
         Linear("LINEAR"),
+/**
+ * Logarithmic scale (base 10).
+ */
         Log10("LOG10");
 
         private final String value;

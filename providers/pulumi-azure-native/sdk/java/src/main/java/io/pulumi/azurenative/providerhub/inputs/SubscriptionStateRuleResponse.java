@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SubscriptionStateRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubscriptionStateRuleResponse Empty = new SubscriptionStateRuleResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="allowedActions")
     private final @Nullable List<String> allowedActions;
 
@@ -22,6 +28,9 @@ public final class SubscriptionStateRuleResponse extends io.pulumi.resources.Inv
         return this.allowedActions == null ? List.of() : this.allowedActions;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="state")
     private final @Nullable String state;
 

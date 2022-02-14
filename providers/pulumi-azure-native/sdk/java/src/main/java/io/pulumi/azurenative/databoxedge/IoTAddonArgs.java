@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IoTAddonArgs Empty = new IoTAddonArgs();
 
+    /**
+     * The addon name.
+     */
     @InputImport(name="addonName")
     private final @Nullable Input<String> addonName;
 
@@ -22,6 +28,9 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.addonName == null ? Input.empty() : this.addonName;
     }
 
+    /**
+     * The device name.
+     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -29,6 +38,9 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceName;
     }
 
+    /**
+     * IoT device metadata to which appliance needs to be connected.
+     */
     @InputImport(name="ioTDeviceDetails", required=true)
     private final Input<IoTDeviceInfoArgs> ioTDeviceDetails;
 
@@ -36,6 +48,9 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.ioTDeviceDetails;
     }
 
+    /**
+     * IoT edge device to which the IoT Addon needs to be configured.
+     */
     @InputImport(name="ioTEdgeDeviceDetails", required=true)
     private final Input<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
 
@@ -43,6 +58,10 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.ioTEdgeDeviceDetails;
     }
 
+    /**
+     * Addon type.
+Expected value is 'IotEdge'.
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -50,6 +69,9 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -57,6 +79,9 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The role name.
+     */
     @InputImport(name="roleName", required=true)
     private final Input<String> roleName;
 

@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Class for site properties.
+ */
 public final class SitePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SitePropertiesResponse Empty = new SitePropertiesResponse();
 
+    /**
+     * On-premises agent details.
+     */
     @InputImport(name="agentDetails")
     private final @Nullable SiteAgentPropertiesResponse agentDetails;
 
@@ -23,6 +29,9 @@ public final class SitePropertiesResponse extends io.pulumi.resources.InvokeArgs
         return this.agentDetails == null ? Optional.empty() : Optional.ofNullable(this.agentDetails);
     }
 
+    /**
+     * Appliance Name.
+     */
     @InputImport(name="applianceName")
     private final @Nullable String applianceName;
 
@@ -30,6 +39,9 @@ public final class SitePropertiesResponse extends io.pulumi.resources.InvokeArgs
         return this.applianceName == null ? Optional.empty() : Optional.ofNullable(this.applianceName);
     }
 
+    /**
+     * ARM ID of migration hub solution for SDS.
+     */
     @InputImport(name="discoverySolutionId")
     private final @Nullable String discoverySolutionId;
 
@@ -37,6 +49,9 @@ public final class SitePropertiesResponse extends io.pulumi.resources.InvokeArgs
         return this.discoverySolutionId == null ? Optional.empty() : Optional.ofNullable(this.discoverySolutionId);
     }
 
+    /**
+     * Service endpoint.
+     */
     @InputImport(name="serviceEndpoint", required=true)
     private final String serviceEndpoint;
 
@@ -44,6 +59,9 @@ public final class SitePropertiesResponse extends io.pulumi.resources.InvokeArgs
         return this.serviceEndpoint;
     }
 
+    /**
+     * Service principal identity details used by agent for communication to the service.
+     */
     @InputImport(name="servicePrincipalIdentityDetails")
     private final @Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails;
 

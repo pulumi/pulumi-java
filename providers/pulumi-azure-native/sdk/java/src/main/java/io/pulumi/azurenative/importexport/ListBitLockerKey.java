@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListBitLockerKey {
+/**
+ * GetBitLockerKeys response
+API Version: 2020-08-01.
+ *
+ * GetBitLockerKeys response
+ */
     public static CompletableFuture<ListBitLockerKeyResult> invokeAsync(ListBitLockerKeyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:importexport:listBitLockerKey", TypeShape.of(ListBitLockerKeyResult.class), args == null ? ListBitLockerKeyArgs.Empty : args, Utilities.withVersion(options));
     }

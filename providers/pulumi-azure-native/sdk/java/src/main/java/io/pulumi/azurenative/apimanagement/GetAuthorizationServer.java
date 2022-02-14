@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAuthorizationServer {
+/**
+ * External OAuth authorization server settings.
+API Version: 2020-12-01.
+ *
+ * External OAuth authorization server settings.
+ */
     public static CompletableFuture<GetAuthorizationServerResult> invokeAsync(GetAuthorizationServerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getAuthorizationServer", TypeShape.of(GetAuthorizationServerResult.class), args == null ? GetAuthorizationServerArgs.Empty : args, Utilities.withVersion(options));
     }

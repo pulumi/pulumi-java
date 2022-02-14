@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetEnvgroupAttachmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEnvgroupAttachmentArgs Empty = new GetEnvgroupAttachmentArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="attachmentId", required=true)
     private final String attachmentId;
 
@@ -19,6 +25,9 @@ public final class GetEnvgroupAttachmentArgs extends io.pulumi.resources.InvokeA
         return this.attachmentId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="envgroupId", required=true)
     private final String envgroupId;
 
@@ -26,6 +35,9 @@ public final class GetEnvgroupAttachmentArgs extends io.pulumi.resources.InvokeA
         return this.envgroupId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 

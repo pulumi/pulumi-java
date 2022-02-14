@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IDRange {
+/**
+ * max is the end of the range, inclusive.
+ */
     private final Integer max;
+/**
+ * min is the start of the range, inclusive.
+ */
     private final Integer min;
 
     @OutputCustomType.Constructor({"max","min"})
@@ -20,9 +26,15 @@ public final class IDRange {
         this.min = Objects.requireNonNull(min);
     }
 
+/**
+ * max is the end of the range, inclusive.
+ */
     public Integer getMax() {
         return this.max;
     }
+/**
+ * min is the start of the range, inclusive.
+ */
     public Integer getMin() {
         return this.min;
     }

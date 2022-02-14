@@ -8,14 +8,38 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Required. The type of the archive to extract.
+ */
     @EnumType
     public enum SoftwareRecipeStepExtractArchiveType {
+/**
+ * Indicates that the archive type isn't specified.
+ */
         ArchiveTypeUnspecified("ARCHIVE_TYPE_UNSPECIFIED"),
+/**
+ * Indicates that the archive is a tar archive with no encryption.
+ */
         Tar("TAR"),
+/**
+ * Indicates that the archive is a tar archive with gzip encryption.
+ */
         TarGzip("TAR_GZIP"),
+/**
+ * Indicates that the archive is a tar archive with bzip encryption.
+ */
         TarBzip("TAR_BZIP"),
+/**
+ * Indicates that the archive is a tar archive with lzma encryption.
+ */
         TarLzma("TAR_LZMA"),
+/**
+ * Indicates that the archive is a tar archive with xz encryption.
+ */
         TarXz("TAR_XZ"),
+/**
+ * Indicates that the archive is a zip archive.
+ */
         Zip("ZIP");
 
         private final String value;

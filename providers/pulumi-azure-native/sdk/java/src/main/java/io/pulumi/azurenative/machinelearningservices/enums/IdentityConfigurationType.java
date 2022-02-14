@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Specifies the type of identity framework.
+ */
     @EnumType
     public enum IdentityConfigurationType {
+/**
+ * 
+ */
         Managed("Managed"),
+/**
+ * 
+ */
         AMLToken("AMLToken");
 
         private final String value;

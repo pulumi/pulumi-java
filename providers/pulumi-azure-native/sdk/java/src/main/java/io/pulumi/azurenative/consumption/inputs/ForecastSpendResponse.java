@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The forecasted cost which is being tracked for a budget.
+ */
 public final class ForecastSpendResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ForecastSpendResponse Empty = new ForecastSpendResponse();
 
+    /**
+     * The forecasted cost for the total time period which is being tracked by the budget. This value is only provided if the budget contains a forecast alert type.
+     */
     @InputImport(name="amount", required=true)
     private final Double amount;
 
@@ -20,6 +26,9 @@ public final class ForecastSpendResponse extends io.pulumi.resources.InvokeArgs 
         return this.amount;
     }
 
+    /**
+     * The unit of measure for the budget amount.
+     */
     @InputImport(name="unit", required=true)
     private final String unit;
 

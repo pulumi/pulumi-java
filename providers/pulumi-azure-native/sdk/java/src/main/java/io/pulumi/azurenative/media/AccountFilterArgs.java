@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccountFilterArgs Empty = new AccountFilterArgs();
 
+    /**
+     * The Media Services account name.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -25,6 +31,9 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * The Account Filter name
+     */
     @InputImport(name="filterName")
     private final @Nullable Input<String> filterName;
 
@@ -32,6 +41,9 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
         return this.filterName == null ? Input.empty() : this.filterName;
     }
 
+    /**
+     * The first quality.
+     */
     @InputImport(name="firstQuality")
     private final @Nullable Input<FirstQualityArgs> firstQuality;
 
@@ -39,6 +51,9 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
         return this.firstQuality == null ? Input.empty() : this.firstQuality;
     }
 
+    /**
+     * The presentation time range.
+     */
     @InputImport(name="presentationTimeRange")
     private final @Nullable Input<PresentationTimeRangeArgs> presentationTimeRange;
 
@@ -46,6 +61,9 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
         return this.presentationTimeRange == null ? Input.empty() : this.presentationTimeRange;
     }
 
+    /**
+     * The name of the resource group within the Azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -53,6 +71,9 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The tracks selection conditions.
+     */
     @InputImport(name="tracks")
     private final @Nullable Input<List<FilterTrackSelectionArgs>> tracks;
 

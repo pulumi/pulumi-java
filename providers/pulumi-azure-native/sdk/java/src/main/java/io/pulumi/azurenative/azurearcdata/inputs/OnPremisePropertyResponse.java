@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties from the Kubernetes data controller
+ */
 public final class OnPremisePropertyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OnPremisePropertyResponse Empty = new OnPremisePropertyResponse();
 
+    /**
+     * A globally unique ID identifying the associated Kubernetes cluster
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -21,6 +27,9 @@ public final class OnPremisePropertyResponse extends io.pulumi.resources.InvokeA
         return this.id;
     }
 
+    /**
+     * Certificate that contains the Kubernetes cluster public key used to verify signing
+     */
     @InputImport(name="publicSigningKey", required=true)
     private final String publicSigningKey;
 
@@ -28,6 +37,9 @@ public final class OnPremisePropertyResponse extends io.pulumi.resources.InvokeA
         return this.publicSigningKey;
     }
 
+    /**
+     * Unique thumbprint returned to customer to verify the certificate being uploaded
+     */
     @InputImport(name="signingCertificateThumbprint")
     private final @Nullable String signingCertificateThumbprint;
 

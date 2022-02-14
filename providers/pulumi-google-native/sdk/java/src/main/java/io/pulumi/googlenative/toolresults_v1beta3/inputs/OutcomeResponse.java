@@ -12,10 +12,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Interprets a result so that humans and machines can act on it.
+ */
 public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OutcomeResponse Empty = new OutcomeResponse();
 
+    /**
+     * More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE. Optional
+     */
     @InputImport(name="failureDetail", required=true)
     private final FailureDetailResponse failureDetail;
 
@@ -23,6 +29,9 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
         return this.failureDetail;
     }
 
+    /**
+     * More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not INCONCLUSIVE. Optional
+     */
     @InputImport(name="inconclusiveDetail", required=true)
     private final InconclusiveDetailResponse inconclusiveDetail;
 
@@ -30,6 +39,9 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
         return this.inconclusiveDetail;
     }
 
+    /**
+     * More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SKIPPED. Optional
+     */
     @InputImport(name="skippedDetail", required=true)
     private final SkippedDetailResponse skippedDetail;
 
@@ -37,6 +49,9 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
         return this.skippedDetail;
     }
 
+    /**
+     * More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SUCCESS. Optional
+     */
     @InputImport(name="successDetail", required=true)
     private final SuccessDetailResponse successDetail;
 
@@ -44,6 +59,9 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
         return this.successDetail;
     }
 
+    /**
+     * The simplest way to interpret a result. Required
+     */
     @InputImport(name="summary", required=true)
     private final String summary;
 

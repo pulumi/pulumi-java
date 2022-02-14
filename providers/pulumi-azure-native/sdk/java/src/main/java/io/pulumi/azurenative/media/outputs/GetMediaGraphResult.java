@@ -14,14 +14,41 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetMediaGraphResult {
+/**
+ * Date the Media Graph was created.
+ */
     private final String created;
+/**
+ * Media Graph description.
+ */
     private final @Nullable String description;
+/**
+ * Fully qualified resource ID for the resource.
+ */
     private final String id;
+/**
+ * Date the Media Graph was last modified.
+ */
     private final String lastModified;
+/**
+ * The name of the resource.
+ */
     private final String name;
+/**
+ * Media Graph sinks.
+ */
     private final List<MediaGraphAssetSinkResponse> sinks;
+/**
+ * Media Graph sources.
+ */
     private final List<MediaGraphRtspSourceResponse> sources;
+/**
+ * Media Graph state which indicates the resource allocation status for running the media graph pipeline.
+ */
     private final String state;
+/**
+ * The type of the resource.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"created","description","id","lastModified","name","sinks","sources","state","type"})
@@ -46,30 +73,57 @@ public final class GetMediaGraphResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Date the Media Graph was created.
+ */
     public String getCreated() {
         return this.created;
     }
+/**
+ * Media Graph description.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * Fully qualified resource ID for the resource.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Date the Media Graph was last modified.
+ */
     public String getLastModified() {
         return this.lastModified;
     }
+/**
+ * The name of the resource.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Media Graph sinks.
+ */
     public List<MediaGraphAssetSinkResponse> getSinks() {
         return this.sinks;
     }
+/**
+ * Media Graph sources.
+ */
     public List<MediaGraphRtspSourceResponse> getSources() {
         return this.sources;
     }
+/**
+ * Media Graph state which indicates the resource allocation status for running the media graph pipeline.
+ */
     public String getState() {
         return this.state;
     }
+/**
+ * The type of the resource.
+ */
     public String getType() {
         return this.type;
     }

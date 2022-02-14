@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GatewayOperatorPropertiesResponse {
+/**
+ * Collection of instances belong to Spring Cloud Gateway operator.
+ */
     private final List<GatewayInstanceResponse> instances;
+/**
+ * The requested resource quantity for required CPU and Memory.
+ */
     private final GatewayOperatorResourceRequestsResponse resourceRequests;
 
     @OutputCustomType.Constructor({"instances","resourceRequests"})
@@ -22,9 +28,15 @@ public final class GatewayOperatorPropertiesResponse {
         this.resourceRequests = Objects.requireNonNull(resourceRequests);
     }
 
+/**
+ * Collection of instances belong to Spring Cloud Gateway operator.
+ */
     public List<GatewayInstanceResponse> getInstances() {
         return this.instances;
     }
+/**
+ * The requested resource quantity for required CPU and Memory.
+ */
     public GatewayOperatorResourceRequestsResponse getResourceRequests() {
         return this.resourceRequests;
     }

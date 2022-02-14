@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications Empty = new ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications();
 
+    /**
+     * 
+     */
     @InputImport(name="enableDefaultValidation")
     private final @Nullable Boolean enableDefaultValidation;
 
@@ -23,6 +29,9 @@ public final class ResourceTypeRegistrationPropertiesResponseCheckNameAvailabili
         return this.enableDefaultValidation == null ? Optional.empty() : Optional.ofNullable(this.enableDefaultValidation);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="resourceTypesWithCustomValidation")
     private final @Nullable List<String> resourceTypesWithCustomValidation;
 

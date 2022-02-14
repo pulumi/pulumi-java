@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class StandardSqlStructTypeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StandardSqlStructTypeResponse Empty = new StandardSqlStructTypeResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="fields", required=true)
     private final List<StandardSqlFieldResponse> fields;
 

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TargetArgs Empty = new TargetArgs();
 
+    /**
+     * Location of the target resource.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -22,6 +28,9 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * String that represents a resource provider namespace.
+     */
     @InputImport(name="parentProviderNamespace", required=true)
     private final Input<String> parentProviderNamespace;
 
@@ -29,6 +38,9 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.parentProviderNamespace;
     }
 
+    /**
+     * String that represents a resource name.
+     */
     @InputImport(name="parentResourceName", required=true)
     private final Input<String> parentResourceName;
 
@@ -36,6 +48,9 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.parentResourceName;
     }
 
+    /**
+     * String that represents a resource type.
+     */
     @InputImport(name="parentResourceType", required=true)
     private final Input<String> parentResourceType;
 
@@ -43,6 +58,9 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.parentResourceType;
     }
 
+    /**
+     * The properties of the target resource.
+     */
     @InputImport(name="properties", required=true)
     private final Input<Object> properties;
 
@@ -50,6 +68,9 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
+    /**
+     * String that represents an Azure resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -57,6 +78,9 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * String that represents a Target resource name.
+     */
     @InputImport(name="targetName")
     private final @Nullable Input<String> targetName;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServiceArgs Empty = new GetServiceArgs();
 
+    /**
+     * The name of the Windows IoT Device Service.
+     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -19,6 +25,9 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.deviceName;
     }
 
+    /**
+     * The name of the resource group that contains the Windows IoT Device Service.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

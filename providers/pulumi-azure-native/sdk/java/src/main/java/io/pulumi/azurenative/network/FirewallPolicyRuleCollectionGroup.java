@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.FirewallPolicyRuleCollectionGroupArgs;
 import io.pulumi.azurenative.network.outputs.FirewallPolicyFilterRuleCollectionResponse;
 import io.pulumi.azurenative.network.outputs.FirewallPolicyNatRuleCollectionResponse;
 import io.pulumi.core.Alias;
@@ -18,45 +17,816 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Rule Collection Group resource.
+API Version: 2020-11-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create FirewallPolicyNatRuleCollectionGroup
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var firewallPolicyRuleCollectionGroup = new AzureNative.Network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNative.Network.FirewallPolicyRuleCollectionGroupArgs
+        {
+            FirewallPolicyName = "firewallPolicy",
+            Priority = 100,
+            ResourceGroupName = "rg1",
+            RuleCollectionGroupName = "ruleCollectionGroup1",
+            RuleCollections = 
+            {
+                new AzureNative.Network.Inputs.FirewallPolicyNatRuleCollectionArgs
+                {
+                    Action = new AzureNative.Network.Inputs.FirewallPolicyNatRuleCollectionActionArgs
+                    {
+                        Type = "DNAT",
+                    },
+                    Name = "Example-Nat-Rule-Collection",
+                    Priority = 100,
+                    RuleCollectionType = "FirewallPolicyNatRuleCollection",
+                    Rules = 
+                    {
+                        new AzureNative.Network.Inputs.NatRuleArgs
+                        {
+                            DestinationAddresses = 
+                            {
+                                "152.23.32.23",
+                            },
+                            DestinationPorts = 
+                            {
+                                "8080",
+                            },
+                            IpProtocols = 
+                            {
+                                "TCP",
+                                "UDP",
+                            },
+                            Name = "nat-rule1",
+                            RuleType = "NatRule",
+                            SourceAddresses = 
+                            {
+                                "2.2.2.2",
+                            },
+                            SourceIpGroups = {},
+                            TranslatedFqdn = "internalhttp.server.net",
+                            TranslatedPort = "8080",
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewFirewallPolicyRuleCollectionGroup(ctx, "firewallPolicyRuleCollectionGroup", &network.FirewallPolicyRuleCollectionGroupArgs{
+			FirewallPolicyName:      pulumi.String("firewallPolicy"),
+			Priority:                pulumi.Int(100),
+			ResourceGroupName:       pulumi.String("rg1"),
+			RuleCollectionGroupName: pulumi.String("ruleCollectionGroup1"),
+			RuleCollections: pulumi.AnyArray{
+				network.FirewallPolicyNatRuleCollection{
+					Action: network.FirewallPolicyNatRuleCollectionAction{
+						Type: "DNAT",
+					},
+					Name:               "Example-Nat-Rule-Collection",
+					Priority:           100,
+					RuleCollectionType: "FirewallPolicyNatRuleCollection",
+					Rules: []interface{}{
+						network.NatRule{
+							DestinationAddresses: []string{
+								"152.23.32.23",
+							},
+							DestinationPorts: []string{
+								"8080",
+							},
+							IpProtocols: []string{
+								"TCP",
+								"UDP",
+							},
+							Name:     "nat-rule1",
+							RuleType: "NatRule",
+							SourceAddresses: []string{
+								"2.2.2.2",
+							},
+							SourceIpGroups: []interface{}{},
+							TranslatedFqdn: "internalhttp.server.net",
+							TranslatedPort: "8080",
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const firewallPolicyRuleCollectionGroup = new azure_native.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
+    firewallPolicyName: "firewallPolicy",
+    priority: 100,
+    resourceGroupName: "rg1",
+    ruleCollectionGroupName: "ruleCollectionGroup1",
+    ruleCollections: [{
+        action: {
+            type: "DNAT",
+        },
+        name: "Example-Nat-Rule-Collection",
+        priority: 100,
+        ruleCollectionType: "FirewallPolicyNatRuleCollection",
+        rules: [{
+            destinationAddresses: ["152.23.32.23"],
+            destinationPorts: ["8080"],
+            ipProtocols: [
+                "TCP",
+                "UDP",
+            ],
+            name: "nat-rule1",
+            ruleType: "NatRule",
+            sourceAddresses: ["2.2.2.2"],
+            sourceIpGroups: [],
+            translatedFqdn: "internalhttp.server.net",
+            translatedPort: "8080",
+        }],
+    }],
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+firewall_policy_rule_collection_group = azure_native.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
+    firewall_policy_name="firewallPolicy",
+    priority=100,
+    resource_group_name="rg1",
+    rule_collection_group_name="ruleCollectionGroup1",
+    rule_collections=[azure_native.network.FirewallPolicyNatRuleCollectionArgs(
+        action=azure_native.network.FirewallPolicyNatRuleCollectionActionArgs(
+            type="DNAT",
+        ),
+        name="Example-Nat-Rule-Collection",
+        priority=100,
+        rule_collection_type="FirewallPolicyNatRuleCollection",
+        rules=[azure_native.network.NatRuleArgs(
+            destination_addresses=["152.23.32.23"],
+            destination_ports=["8080"],
+            ip_protocols=[
+                "TCP",
+                "UDP",
+            ],
+            name="nat-rule1",
+            rule_type="NatRule",
+            source_addresses=["2.2.2.2"],
+            source_ip_groups=[],
+            translated_fqdn="internalhttp.server.net",
+            translated_port="8080",
+        )],
+    )])
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create FirewallPolicyRuleCollectionGroup
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var firewallPolicyRuleCollectionGroup = new AzureNative.Network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNative.Network.FirewallPolicyRuleCollectionGroupArgs
+        {
+            FirewallPolicyName = "firewallPolicy",
+            Priority = 100,
+            ResourceGroupName = "rg1",
+            RuleCollectionGroupName = "ruleCollectionGroup1",
+            RuleCollections = 
+            {
+                new AzureNative.Network.Inputs.FirewallPolicyFilterRuleCollectionArgs
+                {
+                    Action = new AzureNative.Network.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
+                    {
+                        Type = "Deny",
+                    },
+                    Name = "Example-Filter-Rule-Collection",
+                    Priority = 100,
+                    RuleCollectionType = "FirewallPolicyFilterRuleCollection",
+                    Rules = 
+                    {
+                        new AzureNative.Network.Inputs.NetworkRuleArgs
+                        {
+                            DestinationAddresses = 
+                            {
+                                "*",
+                            },
+                            DestinationPorts = 
+                            {
+                                "*",
+                            },
+                            IpProtocols = 
+                            {
+                                "TCP",
+                            },
+                            Name = "network-rule1",
+                            RuleType = "NetworkRule",
+                            SourceAddresses = 
+                            {
+                                "10.1.25.0/24",
+                            },
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewFirewallPolicyRuleCollectionGroup(ctx, "firewallPolicyRuleCollectionGroup", &network.FirewallPolicyRuleCollectionGroupArgs{
+			FirewallPolicyName:      pulumi.String("firewallPolicy"),
+			Priority:                pulumi.Int(100),
+			ResourceGroupName:       pulumi.String("rg1"),
+			RuleCollectionGroupName: pulumi.String("ruleCollectionGroup1"),
+			RuleCollections: pulumi.AnyArray{
+				network.FirewallPolicyFilterRuleCollection{
+					Action: network.FirewallPolicyFilterRuleCollectionAction{
+						Type: "Deny",
+					},
+					Name:               "Example-Filter-Rule-Collection",
+					Priority:           100,
+					RuleCollectionType: "FirewallPolicyFilterRuleCollection",
+					Rules: []interface{}{
+						network.NetworkRule{
+							DestinationAddresses: []string{
+								"*",
+							},
+							DestinationPorts: []string{
+								"*",
+							},
+							IpProtocols: []string{
+								"TCP",
+							},
+							Name:     "network-rule1",
+							RuleType: "NetworkRule",
+							SourceAddresses: []string{
+								"10.1.25.0/24",
+							},
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const firewallPolicyRuleCollectionGroup = new azure_native.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
+    firewallPolicyName: "firewallPolicy",
+    priority: 100,
+    resourceGroupName: "rg1",
+    ruleCollectionGroupName: "ruleCollectionGroup1",
+    ruleCollections: [{
+        action: {
+            type: "Deny",
+        },
+        name: "Example-Filter-Rule-Collection",
+        priority: 100,
+        ruleCollectionType: "FirewallPolicyFilterRuleCollection",
+        rules: [{
+            destinationAddresses: ["*"],
+            destinationPorts: ["*"],
+            ipProtocols: ["TCP"],
+            name: "network-rule1",
+            ruleType: "NetworkRule",
+            sourceAddresses: ["10.1.25.0/24"],
+        }],
+    }],
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+firewall_policy_rule_collection_group = azure_native.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
+    firewall_policy_name="firewallPolicy",
+    priority=100,
+    resource_group_name="rg1",
+    rule_collection_group_name="ruleCollectionGroup1",
+    rule_collections=[azure_native.network.FirewallPolicyFilterRuleCollectionArgs(
+        action=azure_native.network.FirewallPolicyFilterRuleCollectionActionArgs(
+            type="Deny",
+        ),
+        name="Example-Filter-Rule-Collection",
+        priority=100,
+        rule_collection_type="FirewallPolicyFilterRuleCollection",
+        rules=[azure_native.network.NetworkRuleArgs(
+            destination_addresses=["*"],
+            destination_ports=["*"],
+            ip_protocols=["TCP"],
+            name="network-rule1",
+            rule_type="NetworkRule",
+            source_addresses=["10.1.25.0/24"],
+        )],
+    )])
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create FirewallPolicyRuleCollectionGroup With IpGroups
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var firewallPolicyRuleCollectionGroup = new AzureNative.Network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNative.Network.FirewallPolicyRuleCollectionGroupArgs
+        {
+            FirewallPolicyName = "firewallPolicy",
+            Priority = 110,
+            ResourceGroupName = "rg1",
+            RuleCollectionGroupName = "ruleCollectionGroup1",
+            RuleCollections = 
+            {
+                new AzureNative.Network.Inputs.FirewallPolicyFilterRuleCollectionArgs
+                {
+                    Action = new AzureNative.Network.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
+                    {
+                        Type = "Deny",
+                    },
+                    Name = "Example-Filter-Rule-Collection",
+                    RuleCollectionType = "FirewallPolicyFilterRuleCollection",
+                    Rules = 
+                    {
+                        new AzureNative.Network.Inputs.NetworkRuleArgs
+                        {
+                            DestinationIpGroups = 
+                            {
+                                "/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2",
+                            },
+                            DestinationPorts = 
+                            {
+                                "*",
+                            },
+                            IpProtocols = 
+                            {
+                                "TCP",
+                            },
+                            Name = "network-1",
+                            RuleType = "NetworkRule",
+                            SourceIpGroups = 
+                            {
+                                "/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1",
+                            },
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewFirewallPolicyRuleCollectionGroup(ctx, "firewallPolicyRuleCollectionGroup", &network.FirewallPolicyRuleCollectionGroupArgs{
+			FirewallPolicyName:      pulumi.String("firewallPolicy"),
+			Priority:                pulumi.Int(110),
+			ResourceGroupName:       pulumi.String("rg1"),
+			RuleCollectionGroupName: pulumi.String("ruleCollectionGroup1"),
+			RuleCollections: pulumi.AnyArray{
+				network.FirewallPolicyFilterRuleCollection{
+					Action: network.FirewallPolicyFilterRuleCollectionAction{
+						Type: "Deny",
+					},
+					Name:               "Example-Filter-Rule-Collection",
+					RuleCollectionType: "FirewallPolicyFilterRuleCollection",
+					Rules: []interface{}{
+						network.NetworkRule{
+							DestinationIpGroups: []string{
+								"/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2",
+							},
+							DestinationPorts: []string{
+								"*",
+							},
+							IpProtocols: []string{
+								"TCP",
+							},
+							Name:     "network-1",
+							RuleType: "NetworkRule",
+							SourceIpGroups: []string{
+								"/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1",
+							},
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const firewallPolicyRuleCollectionGroup = new azure_native.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
+    firewallPolicyName: "firewallPolicy",
+    priority: 110,
+    resourceGroupName: "rg1",
+    ruleCollectionGroupName: "ruleCollectionGroup1",
+    ruleCollections: [{
+        action: {
+            type: "Deny",
+        },
+        name: "Example-Filter-Rule-Collection",
+        ruleCollectionType: "FirewallPolicyFilterRuleCollection",
+        rules: [{
+            destinationIpGroups: ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],
+            destinationPorts: ["*"],
+            ipProtocols: ["TCP"],
+            name: "network-1",
+            ruleType: "NetworkRule",
+            sourceIpGroups: ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1"],
+        }],
+    }],
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+firewall_policy_rule_collection_group = azure_native.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
+    firewall_policy_name="firewallPolicy",
+    priority=110,
+    resource_group_name="rg1",
+    rule_collection_group_name="ruleCollectionGroup1",
+    rule_collections=[azure_native.network.FirewallPolicyFilterRuleCollectionArgs(
+        action=azure_native.network.FirewallPolicyFilterRuleCollectionActionArgs(
+            type="Deny",
+        ),
+        name="Example-Filter-Rule-Collection",
+        rule_collection_type="FirewallPolicyFilterRuleCollection",
+        rules=[azure_native.network.NetworkRuleArgs(
+            destination_ip_groups=["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],
+            destination_ports=["*"],
+            ip_protocols=["TCP"],
+            name="network-1",
+            rule_type="NetworkRule",
+            source_ip_groups=["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups1"],
+        )],
+    )])
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create FirewallPolicyRuleCollectionGroup With Web Categories
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var firewallPolicyRuleCollectionGroup = new AzureNative.Network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", new AzureNative.Network.FirewallPolicyRuleCollectionGroupArgs
+        {
+            FirewallPolicyName = "firewallPolicy",
+            Priority = 110,
+            ResourceGroupName = "rg1",
+            RuleCollectionGroupName = "ruleCollectionGroup1",
+            RuleCollections = 
+            {
+                new AzureNative.Network.Inputs.FirewallPolicyFilterRuleCollectionArgs
+                {
+                    Action = new AzureNative.Network.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
+                    {
+                        Type = "Deny",
+                    },
+                    Name = "Example-Filter-Rule-Collection",
+                    RuleCollectionType = "FirewallPolicyFilterRuleCollection",
+                    Rules = 
+                    {
+                        new AzureNative.Network.Inputs.ApplicationRuleArgs
+                        {
+                            Description = "Deny inbound rule",
+                            Name = "rule1",
+                            Protocols = 
+                            {
+                                new AzureNative.Network.Inputs.FirewallPolicyRuleApplicationProtocolArgs
+                                {
+                                    Port = 443,
+                                    ProtocolType = "Https",
+                                },
+                            },
+                            RuleType = "ApplicationRule",
+                            SourceAddresses = 
+                            {
+                                "216.58.216.164",
+                                "10.0.0.0/24",
+                            },
+                            WebCategories = 
+                            {
+                                "Hacking",
+                            },
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewFirewallPolicyRuleCollectionGroup(ctx, "firewallPolicyRuleCollectionGroup", &network.FirewallPolicyRuleCollectionGroupArgs{
+			FirewallPolicyName:      pulumi.String("firewallPolicy"),
+			Priority:                pulumi.Int(110),
+			ResourceGroupName:       pulumi.String("rg1"),
+			RuleCollectionGroupName: pulumi.String("ruleCollectionGroup1"),
+			RuleCollections: pulumi.AnyArray{
+				network.FirewallPolicyFilterRuleCollection{
+					Action: network.FirewallPolicyFilterRuleCollectionAction{
+						Type: "Deny",
+					},
+					Name:               "Example-Filter-Rule-Collection",
+					RuleCollectionType: "FirewallPolicyFilterRuleCollection",
+					Rules: []interface{}{
+						network.ApplicationRule{
+							Description: "Deny inbound rule",
+							Name:        "rule1",
+							Protocols: []network.FirewallPolicyRuleApplicationProtocol{
+								network.FirewallPolicyRuleApplicationProtocol{
+									Port:         443,
+									ProtocolType: "Https",
+								},
+							},
+							RuleType: "ApplicationRule",
+							SourceAddresses: []string{
+								"216.58.216.164",
+								"10.0.0.0/24",
+							},
+							WebCategories: []string{
+								"Hacking",
+							},
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const firewallPolicyRuleCollectionGroup = new azure_native.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup", {
+    firewallPolicyName: "firewallPolicy",
+    priority: 110,
+    resourceGroupName: "rg1",
+    ruleCollectionGroupName: "ruleCollectionGroup1",
+    ruleCollections: [{
+        action: {
+            type: "Deny",
+        },
+        name: "Example-Filter-Rule-Collection",
+        ruleCollectionType: "FirewallPolicyFilterRuleCollection",
+        rules: [{
+            description: "Deny inbound rule",
+            name: "rule1",
+            protocols: [{
+                port: 443,
+                protocolType: "Https",
+            }],
+            ruleType: "ApplicationRule",
+            sourceAddresses: [
+                "216.58.216.164",
+                "10.0.0.0/24",
+            ],
+            webCategories: ["Hacking"],
+        }],
+    }],
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+firewall_policy_rule_collection_group = azure_native.network.FirewallPolicyRuleCollectionGroup("firewallPolicyRuleCollectionGroup",
+    firewall_policy_name="firewallPolicy",
+    priority=110,
+    resource_group_name="rg1",
+    rule_collection_group_name="ruleCollectionGroup1",
+    rule_collections=[azure_native.network.FirewallPolicyFilterRuleCollectionArgs(
+        action=azure_native.network.FirewallPolicyFilterRuleCollectionActionArgs(
+            type="Deny",
+        ),
+        name="Example-Filter-Rule-Collection",
+        rule_collection_type="FirewallPolicyFilterRuleCollection",
+        rules=[azure_native.network.ApplicationRuleArgs(
+            description="Deny inbound rule",
+            name="rule1",
+            protocols=[azure_native.network.FirewallPolicyRuleApplicationProtocolArgs(
+                port=443,
+                protocol_type="Https",
+            )],
+            rule_type="ApplicationRule",
+            source_addresses=[
+                "216.58.216.164",
+                "10.0.0.0/24",
+            ],
+            web_categories=["Hacking"],
+        )],
+    )])
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:FirewallPolicyRuleCollectionGroup ruleCollectionGroup1 /subscriptions/e747cc13-97d4-4a79-b463-42d7f4e558f2/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy/ruleCollectionGroups/ruleCollectionGroup1 
+```
+
+ */
 @ResourceType(type="azure-native:network:FirewallPolicyRuleCollectionGroup")
 public class FirewallPolicyRuleCollectionGroup extends io.pulumi.resources.CustomResource {
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * Priority of the Firewall Policy Rule Collection Group resource.
+     */
     @OutputExport(name="priority", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> priority;
 
+    /**
+     * @return Priority of the Firewall Policy Rule Collection Group resource.
+     */
     public Output</* @Nullable */ Integer> getPriority() {
         return this.priority;
     }
+    /**
+     * The provisioning state of the firewall policy rule collection group resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the firewall policy rule collection group resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Group of Firewall Policy rule collections.
+     */
     @OutputExport(name="ruleCollections", type=List.class, parameters={Either.class})
     private Output</* @Nullable */ List<Either<FirewallPolicyFilterRuleCollectionResponse,FirewallPolicyNatRuleCollectionResponse>>> ruleCollections;
 
+    /**
+     * @return Group of Firewall Policy rule collections.
+     */
     public Output</* @Nullable */ List<Either<FirewallPolicyFilterRuleCollectionResponse,FirewallPolicyNatRuleCollectionResponse>>> getRuleCollections() {
         return this.ruleCollections;
     }
+    /**
+     * Rule Group type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Rule Group type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public FirewallPolicyRuleCollectionGroup(String name, FirewallPolicyRuleCollectionGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:FirewallPolicyRuleCollectionGroup", name, args == null ? FirewallPolicyRuleCollectionGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -82,6 +852,14 @@ public class FirewallPolicyRuleCollectionGroup extends io.pulumi.resources.Custo
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static FirewallPolicyRuleCollectionGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FirewallPolicyRuleCollectionGroup(name, id, options);
     }

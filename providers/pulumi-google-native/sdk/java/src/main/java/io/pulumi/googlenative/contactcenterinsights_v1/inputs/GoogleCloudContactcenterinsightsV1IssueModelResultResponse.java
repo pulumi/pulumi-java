@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Issue Modeling result on a conversation.
+ */
 public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudContactcenterinsightsV1IssueModelResultResponse Empty = new GoogleCloudContactcenterinsightsV1IssueModelResultResponse();
 
+    /**
+     * Issue model that generates the result. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
+     */
     @InputImport(name="issueModel", required=true)
     private final String issueModel;
 
@@ -21,6 +27,9 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse ex
         return this.issueModel;
     }
 
+    /**
+     * All the matched issues.
+     */
     @InputImport(name="issues", required=true)
     private final List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues;
 

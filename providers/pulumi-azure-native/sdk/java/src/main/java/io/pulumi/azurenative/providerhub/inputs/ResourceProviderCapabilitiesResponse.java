@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResourceProviderCapabilitiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceProviderCapabilitiesResponse Empty = new ResourceProviderCapabilitiesResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="effect", required=true)
     private final String effect;
 
@@ -22,6 +28,9 @@ public final class ResourceProviderCapabilitiesResponse extends io.pulumi.resour
         return this.effect;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="quotaId", required=true)
     private final String quotaId;
 
@@ -29,6 +38,9 @@ public final class ResourceProviderCapabilitiesResponse extends io.pulumi.resour
         return this.quotaId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requiredFeatures")
     private final @Nullable List<String> requiredFeatures;
 

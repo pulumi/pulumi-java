@@ -13,9 +13,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceIdentityResponse {
+/**
+ * Service Principal Id backing the Msi
+ */
     private final String principalId;
+/**
+ * Home Tenant Id
+ */
     private final String tenantId;
+/**
+ * Identity type
+ */
     private final @Nullable String type;
+/**
+ * User Assigned Identities
+ */
     private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type","userAssignedIdentities"})
@@ -30,15 +42,27 @@ public final class ResourceIdentityResponse {
         this.userAssignedIdentities = userAssignedIdentities;
     }
 
+/**
+ * Service Principal Id backing the Msi
+ */
     public String getPrincipalId() {
         return this.principalId;
     }
+/**
+ * Home Tenant Id
+ */
     public String getTenantId() {
         return this.tenantId;
     }
+/**
+ * Identity type
+ */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }
+/**
+ * User Assigned Identities
+ */
     public Map<String,UserAssignedIdentityResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

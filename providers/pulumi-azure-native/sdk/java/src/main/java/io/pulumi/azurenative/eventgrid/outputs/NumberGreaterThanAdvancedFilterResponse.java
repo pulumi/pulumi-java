@@ -12,8 +12,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NumberGreaterThanAdvancedFilterResponse {
+/**
+ * The field/property in the event based on which you want to filter.
+ */
     private final @Nullable String key;
+/**
+ * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+Expected value is 'NumberGreaterThan'.
+ */
     private final String operatorType;
+/**
+ * The filter value.
+ */
     private final @Nullable Double value;
 
     @OutputCustomType.Constructor({"key","operatorType","value"})
@@ -26,12 +36,22 @@ public final class NumberGreaterThanAdvancedFilterResponse {
         this.value = value;
     }
 
+/**
+ * The field/property in the event based on which you want to filter.
+ */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
+/**
+ * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+Expected value is 'NumberGreaterThan'.
+ */
     public String getOperatorType() {
         return this.operatorType;
     }
+/**
+ * The filter value.
+ */
     public Optional<Double> getValue() {
         return Optional.ofNullable(this.value);
     }

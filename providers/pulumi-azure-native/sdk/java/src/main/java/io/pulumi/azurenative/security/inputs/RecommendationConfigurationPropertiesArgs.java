@@ -12,10 +12,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The type of IoT Security recommendation.
+ */
 public final class RecommendationConfigurationPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RecommendationConfigurationPropertiesArgs Empty = new RecommendationConfigurationPropertiesArgs();
 
+    /**
+     * The type of IoT Security recommendation.
+     */
     @InputImport(name="recommendationType", required=true)
     private final Input<Either<String,RecommendationType>> recommendationType;
 
@@ -23,6 +29,9 @@ public final class RecommendationConfigurationPropertiesArgs extends io.pulumi.r
         return this.recommendationType;
     }
 
+    /**
+     * Recommendation status. When the recommendation status is disabled recommendations are not generated.
+     */
     @InputImport(name="status", required=true)
     private final Input<Either<String,RecommendationConfigStatus>> status;
 

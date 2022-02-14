@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.datamigration;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.datamigration.TaskArgs;
 import io.pulumi.azurenative.datamigration.outputs.ConnectToSourcePostgreSqlSyncTaskPropertiesResponse;
 import io.pulumi.azurenative.datamigration.outputs.ConnectToSourceSqlServerSyncTaskPropertiesResponse;
 import io.pulumi.azurenative.datamigration.outputs.ConnectToSourceSqlServerTaskPropertiesResponse;
@@ -36,33 +35,213 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A task resource
+API Version: 2018-04-19.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Tasks_CreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var task = new AzureNative.DataMigration.Task("task", new AzureNative.DataMigration.TaskArgs
+        {
+            GroupName = "DmsSdkRg",
+            ProjectName = "DmsSdkProject",
+            Properties = new AzureNative.DataMigration.Inputs.ConnectToTargetSqlDbTaskPropertiesArgs
+            {
+                Input = new AzureNative.DataMigration.Inputs.ConnectToTargetSqlDbTaskInputArgs
+                {
+                    TargetConnectionInfo = new AzureNative.DataMigration.Inputs.SqlConnectionInfoArgs
+                    {
+                        Authentication = "SqlAuthentication",
+                        DataSource = "ssma-test-server.database.windows.net",
+                        EncryptConnection = true,
+                        Password = "testpassword",
+                        TrustServerCertificate = true,
+                        Type = "SqlConnectionInfo",
+                        UserName = "testuser",
+                    },
+                },
+                TaskType = "ConnectToTarget.SqlDb",
+            },
+            ServiceName = "DmsSdkService",
+            TaskName = "DmsSdkTask",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	datamigration "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datamigration"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datamigration.NewTask(ctx, "task", &datamigration.TaskArgs{
+			GroupName:   pulumi.String("DmsSdkRg"),
+			ProjectName: pulumi.String("DmsSdkProject"),
+			Properties: datamigration.ConnectToTargetSqlDbTaskProperties{
+				Input: datamigration.ConnectToTargetSqlDbTaskInput{
+					TargetConnectionInfo: datamigration.SqlConnectionInfo{
+						Authentication:         "SqlAuthentication",
+						DataSource:             "ssma-test-server.database.windows.net",
+						EncryptConnection:      true,
+						Password:               "testpassword",
+						TrustServerCertificate: true,
+						Type:                   "SqlConnectionInfo",
+						UserName:               "testuser",
+					},
+				},
+				TaskType: "ConnectToTarget.SqlDb",
+			},
+			ServiceName: pulumi.String("DmsSdkService"),
+			TaskName:    pulumi.String("DmsSdkTask"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const task = new azure_native.datamigration.Task("task", {
+    groupName: "DmsSdkRg",
+    projectName: "DmsSdkProject",
+    properties: {
+        input: {
+            targetConnectionInfo: {
+                authentication: "SqlAuthentication",
+                dataSource: "ssma-test-server.database.windows.net",
+                encryptConnection: true,
+                password: "testpassword",
+                trustServerCertificate: true,
+                type: "SqlConnectionInfo",
+                userName: "testuser",
+            },
+        },
+        taskType: "ConnectToTarget.SqlDb",
+    },
+    serviceName: "DmsSdkService",
+    taskName: "DmsSdkTask",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+task = azure_native.datamigration.Task("task",
+    group_name="DmsSdkRg",
+    project_name="DmsSdkProject",
+    properties=azure_native.datamigration.ConnectToTargetSqlDbTaskPropertiesArgs(
+        input=azure_native.datamigration.ConnectToTargetSqlDbTaskInputArgs(
+            target_connection_info=azure_native.datamigration.SqlConnectionInfoArgs(
+                authentication="SqlAuthentication",
+                data_source="ssma-test-server.database.windows.net",
+                encrypt_connection=True,
+                password="testpassword",
+                trust_server_certificate=True,
+                type="SqlConnectionInfo",
+                user_name="testuser",
+            ),
+        ),
+        task_type="ConnectToTarget.SqlDb",
+    ),
+    service_name="DmsSdkService",
+    task_name="DmsSdkTask")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:datamigration:Task DmsSdkTask /subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkRg/providers/Microsoft.DataMigration/services/DmsSdkService/projects/DmsSdkProject/tasks/DmsSdkTask 
+```
+
+ */
 @ResourceType(type="azure-native:datamigration:Task")
 public class Task extends io.pulumi.resources.CustomResource {
+    /**
+     * HTTP strong entity tag value. This is ignored if submitted.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return HTTP strong entity tag value. This is ignored if submitted.
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Custom task properties
+     */
     @OutputExport(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
+    /**
+     * @return Custom task properties
+     */
     public Output<Object> getProperties() {
         return this.properties;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Task(String name, TaskArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datamigration:Task", name, args == null ? TaskArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -87,6 +266,14 @@ public class Task extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Task get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Task(name, id, options);
     }

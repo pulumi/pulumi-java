@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f).
+ */
     @EnumType
     public enum Services {
+/**
+ * 
+ */
         B("b"),
+/**
+ * 
+ */
         Q("q"),
+/**
+ * 
+ */
         T("t"),
+/**
+ * 
+ */
         F("f");
 
         private final String value;

@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * BGP settings details.
+ */
 public final class BgpSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BgpSettingsResponse Empty = new BgpSettingsResponse();
 
+    /**
+     * The BGP speaker's ASN.
+     */
     @InputImport(name="asn")
     private final @Nullable Double asn;
 
@@ -25,6 +31,9 @@ public final class BgpSettingsResponse extends io.pulumi.resources.InvokeArgs {
         return this.asn == null ? Optional.empty() : Optional.ofNullable(this.asn);
     }
 
+    /**
+     * The BGP peering address and BGP identifier of this BGP speaker.
+     */
     @InputImport(name="bgpPeeringAddress")
     private final @Nullable String bgpPeeringAddress;
 
@@ -32,6 +41,9 @@ public final class BgpSettingsResponse extends io.pulumi.resources.InvokeArgs {
         return this.bgpPeeringAddress == null ? Optional.empty() : Optional.ofNullable(this.bgpPeeringAddress);
     }
 
+    /**
+     * BGP peering address with IP configuration ID for virtual network gateway.
+     */
     @InputImport(name="bgpPeeringAddresses")
     private final @Nullable List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses;
 
@@ -39,6 +51,9 @@ public final class BgpSettingsResponse extends io.pulumi.resources.InvokeArgs {
         return this.bgpPeeringAddresses == null ? List.of() : this.bgpPeeringAddresses;
     }
 
+    /**
+     * The weight added to routes learned from this BGP speaker.
+     */
     @InputImport(name="peerWeight")
     private final @Nullable Integer peerWeight;
 

@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AllowedCSIDriver {
+/**
+ * Name is the registered name of the CSI driver
+ */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +19,9 @@ public final class AllowedCSIDriver {
         this.name = Objects.requireNonNull(name);
     }
 
+/**
+ * Name is the registered name of the CSI driver
+ */
     public String getName() {
         return this.name;
     }

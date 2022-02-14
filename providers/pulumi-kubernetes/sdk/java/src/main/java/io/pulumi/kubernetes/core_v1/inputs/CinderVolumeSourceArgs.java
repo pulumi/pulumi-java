@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a cinder volume resource in Openstack. A Cinder volume must exist before mounting to a container. The volume must also be in the same region as the kubelet. Cinder volumes support ownership management and SELinux relabeling.
+ */
 public final class CinderVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CinderVolumeSourceArgs Empty = new CinderVolumeSourceArgs();
 
+    /**
+     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     */
     @InputImport(name="fsType")
     private final @Nullable Input<String> fsType;
 
@@ -23,6 +29,9 @@ public final class CinderVolumeSourceArgs extends io.pulumi.resources.ResourceAr
         return this.fsType == null ? Input.empty() : this.fsType;
     }
 
+    /**
+     * Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     */
     @InputImport(name="readOnly")
     private final @Nullable Input<Boolean> readOnly;
 
@@ -30,6 +39,9 @@ public final class CinderVolumeSourceArgs extends io.pulumi.resources.ResourceAr
         return this.readOnly == null ? Input.empty() : this.readOnly;
     }
 
+    /**
+     * Optional: points to a secret object containing parameters used to connect to OpenStack.
+     */
     @InputImport(name="secretRef")
     private final @Nullable Input<LocalObjectReferenceArgs> secretRef;
 
@@ -37,6 +49,9 @@ public final class CinderVolumeSourceArgs extends io.pulumi.resources.ResourceAr
         return this.secretRef == null ? Input.empty() : this.secretRef;
     }
 
+    /**
+     * volume id used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
+     */
     @InputImport(name="volumeID", required=true)
     private final Input<String> volumeID;
 

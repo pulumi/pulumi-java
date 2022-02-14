@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class StepLabelsEntryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StepLabelsEntryArgs Empty = new StepLabelsEntryArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -21,6 +27,9 @@ public final class StepLabelsEntryArgs extends io.pulumi.resources.ResourceArgs 
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

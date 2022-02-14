@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RangePartitioningRangeResponse {
+/**
+ * [TrustedTester] [Required] The end of range partitioning, exclusive.
+ */
     private final String end;
+/**
+ * [TrustedTester] [Required] The width of each interval.
+ */
     private final String interval;
+/**
+ * [TrustedTester] [Required] The start of range partitioning, inclusive.
+ */
     private final String start;
 
     @OutputCustomType.Constructor({"end","interval","start"})
@@ -23,12 +32,21 @@ public final class RangePartitioningRangeResponse {
         this.start = Objects.requireNonNull(start);
     }
 
+/**
+ * [TrustedTester] [Required] The end of range partitioning, exclusive.
+ */
     public String getEnd() {
         return this.end;
     }
+/**
+ * [TrustedTester] [Required] The width of each interval.
+ */
     public String getInterval() {
         return this.interval;
     }
+/**
+ * [TrustedTester] [Required] The start of range partitioning, inclusive.
+ */
     public String getStart() {
         return this.start;
     }

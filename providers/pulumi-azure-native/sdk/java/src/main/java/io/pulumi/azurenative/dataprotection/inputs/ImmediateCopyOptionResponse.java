@@ -8,10 +8,17 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Immediate copy Option
+ */
 public final class ImmediateCopyOptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ImmediateCopyOptionResponse Empty = new ImmediateCopyOptionResponse();
 
+    /**
+     * Type of the specific object - used for deserializing
+Expected value is 'ImmediateCopyOption'.
+     */
     @InputImport(name="objectType", required=true)
     private final String objectType;
 

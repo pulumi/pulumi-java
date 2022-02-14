@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FilterResponse {
+/**
+ * Event types to allowlist.
+ */
     private final List<String> eventType;
 
     @OutputCustomType.Constructor({"eventType"})
@@ -17,6 +20,9 @@ public final class FilterResponse {
         this.eventType = Objects.requireNonNull(eventType);
     }
 
+/**
+ * Event types to allowlist.
+ */
     public List<String> getEventType() {
         return this.eventType;
     }

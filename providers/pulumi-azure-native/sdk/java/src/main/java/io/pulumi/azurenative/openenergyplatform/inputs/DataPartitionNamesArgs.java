@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The list of Energy services resource's Data Partition Names.
+ */
 public final class DataPartitionNamesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataPartitionNamesArgs Empty = new DataPartitionNamesArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

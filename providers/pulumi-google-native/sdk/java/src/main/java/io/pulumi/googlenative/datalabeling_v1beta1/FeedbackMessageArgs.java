@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FeedbackMessageArgs Empty = new FeedbackMessageArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="annotatedDatasetId", required=true)
     private final Input<String> annotatedDatasetId;
 
@@ -23,6 +29,9 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
         return this.annotatedDatasetId;
     }
 
+    /**
+     * String content of the feedback. Maximum of 10000 characters.
+     */
     @InputImport(name="body")
     private final @Nullable Input<String> body;
 
@@ -30,6 +39,9 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
         return this.body == null ? Input.empty() : this.body;
     }
 
+    /**
+     * Create time.
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -37,6 +49,9 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="datasetId", required=true)
     private final Input<String> datasetId;
 
@@ -44,6 +59,9 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
         return this.datasetId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="feedbackThreadId", required=true)
     private final Input<String> feedbackThreadId;
 
@@ -51,6 +69,9 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
         return this.feedbackThreadId;
     }
 
+    /**
+     * The image storing this feedback if the feedback is an image representing operator's comments.
+     */
     @InputImport(name="image")
     private final @Nullable Input<String> image;
 
@@ -58,6 +79,9 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
         return this.image == null ? Input.empty() : this.image;
     }
 
+    /**
+     * Name of the feedback message in a feedback thread. Format: 'project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}'
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -65,6 +89,9 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="operatorFeedbackMetadata")
     private final @Nullable Input<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> operatorFeedbackMetadata;
 
@@ -72,6 +99,9 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
         return this.operatorFeedbackMetadata == null ? Input.empty() : this.operatorFeedbackMetadata;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -79,6 +109,9 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requesterFeedbackMetadata")
     private final @Nullable Input<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> requesterFeedbackMetadata;
 

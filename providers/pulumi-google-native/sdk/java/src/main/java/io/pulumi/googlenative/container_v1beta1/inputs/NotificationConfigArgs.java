@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * NotificationConfig is the configuration of notifications.
+ */
 public final class NotificationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NotificationConfigArgs Empty = new NotificationConfigArgs();
 
+    /**
+     * Notification config for Pub/Sub.
+     */
     @InputImport(name="pubsub")
     private final @Nullable Input<PubSubArgs> pubsub;
 

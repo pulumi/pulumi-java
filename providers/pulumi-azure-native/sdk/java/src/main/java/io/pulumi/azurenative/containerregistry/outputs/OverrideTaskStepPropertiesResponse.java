@@ -14,11 +14,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OverrideTaskStepPropertiesResponse {
+/**
+ * Gets or sets the collection of override arguments to be used when
+executing a build step.
+ */
     private final @Nullable List<ArgumentResponse> arguments;
+/**
+ * The source context against which run has to be queued.
+ */
     private final @Nullable String contextPath;
+/**
+ * The file against which run has to be queued.
+ */
     private final @Nullable String file;
+/**
+ * The name of the target build stage for the docker build.
+ */
     private final @Nullable String target;
+/**
+ * Base64 encoded update trigger token that will be attached with the base image trigger webhook.
+ */
     private final @Nullable String updateTriggerToken;
+/**
+ * The collection of overridable values that can be passed when running a Task.
+ */
     private final @Nullable List<SetValueResponse> values;
 
     @OutputCustomType.Constructor({"arguments","contextPath","file","target","updateTriggerToken","values"})
@@ -37,21 +56,40 @@ public final class OverrideTaskStepPropertiesResponse {
         this.values = values;
     }
 
+/**
+ * Gets or sets the collection of override arguments to be used when
+executing a build step.
+ */
     public List<ArgumentResponse> getArguments() {
         return this.arguments == null ? List.of() : this.arguments;
     }
+/**
+ * The source context against which run has to be queued.
+ */
     public Optional<String> getContextPath() {
         return Optional.ofNullable(this.contextPath);
     }
+/**
+ * The file against which run has to be queued.
+ */
     public Optional<String> getFile() {
         return Optional.ofNullable(this.file);
     }
+/**
+ * The name of the target build stage for the docker build.
+ */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }
+/**
+ * Base64 encoded update trigger token that will be attached with the base image trigger webhook.
+ */
     public Optional<String> getUpdateTriggerToken() {
         return Optional.ofNullable(this.updateTriggerToken);
     }
+/**
+ * The collection of overridable values that can be passed when running a Task.
+ */
     public List<SetValueResponse> getValues() {
         return this.values == null ? List.of() : this.values;
     }

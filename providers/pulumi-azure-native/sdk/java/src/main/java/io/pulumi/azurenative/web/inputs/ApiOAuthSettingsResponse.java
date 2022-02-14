@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * OAuth settings for the connection provider
+ */
 public final class ApiOAuthSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiOAuthSettingsResponse Empty = new ApiOAuthSettingsResponse();
 
+    /**
+     * Resource provider client id
+     */
     @InputImport(name="clientId")
     private final @Nullable String clientId;
 
@@ -25,6 +31,9 @@ public final class ApiOAuthSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
+    /**
+     * Client Secret needed for OAuth
+     */
     @InputImport(name="clientSecret")
     private final @Nullable String clientSecret;
 
@@ -32,6 +41,9 @@ public final class ApiOAuthSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
     }
 
+    /**
+     * OAuth parameters key is the name of parameter
+     */
     @InputImport(name="customParameters")
     private final @Nullable Map<String,ApiOAuthSettingsParameterResponse> customParameters;
 
@@ -39,6 +51,9 @@ public final class ApiOAuthSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.customParameters == null ? Map.of() : this.customParameters;
     }
 
+    /**
+     * Identity provider
+     */
     @InputImport(name="identityProvider")
     private final @Nullable String identityProvider;
 
@@ -46,6 +61,9 @@ public final class ApiOAuthSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.identityProvider == null ? Optional.empty() : Optional.ofNullable(this.identityProvider);
     }
 
+    /**
+     * Read only properties for this oauth setting.
+     */
     @InputImport(name="properties")
     private final @Nullable Object properties;
 
@@ -53,6 +71,9 @@ public final class ApiOAuthSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
     }
 
+    /**
+     * Url
+     */
     @InputImport(name="redirectUrl")
     private final @Nullable String redirectUrl;
 
@@ -60,6 +81,9 @@ public final class ApiOAuthSettingsResponse extends io.pulumi.resources.InvokeAr
         return this.redirectUrl == null ? Optional.empty() : Optional.ofNullable(this.redirectUrl);
     }
 
+    /**
+     * OAuth scopes
+     */
     @InputImport(name="scopes")
     private final @Nullable List<String> scopes;
 

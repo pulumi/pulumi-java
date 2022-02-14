@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Information about the configuration.
+ */
 public final class ConfigurationInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfigurationInfoResponse Empty = new ConfigurationInfoResponse();
 
+    /**
+     * Name of the configuration.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class ConfigurationInfoResponse extends io.pulumi.resources.InvokeA
         return this.name;
     }
 
+    /**
+     * Version of the configuration.
+     */
     @InputImport(name="version", required=true)
     private final String version;
 

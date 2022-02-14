@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterSkuResponse {
+/**
+ * The capacity value
+ */
     private final @Nullable Double capacity;
+/**
+ * The name of the SKU.
+ */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"capacity","name"})
@@ -23,9 +29,15 @@ public final class ClusterSkuResponse {
         this.name = name;
     }
 
+/**
+ * The capacity value
+ */
     public Optional<Double> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
+/**
+ * The name of the SKU.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

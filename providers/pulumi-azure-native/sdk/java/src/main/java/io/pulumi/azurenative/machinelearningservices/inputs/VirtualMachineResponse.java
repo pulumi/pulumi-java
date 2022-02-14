@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.MachineLearningServiceErrorResponse;
-import io.pulumi.azurenative.machinelearningservices.inputs.VirtualMachineResponseProperties;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -14,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A Machine Learning compute based on Azure Virtual Machines.
+ */
 public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineResponse Empty = new VirtualMachineResponse();
 
+    /**
+     * Location for the underlying compute
+     */
     @InputImport(name="computeLocation")
     private final @Nullable String computeLocation;
 
@@ -25,6 +30,10 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
         return this.computeLocation == null ? Optional.empty() : Optional.ofNullable(this.computeLocation);
     }
 
+    /**
+     * The type of compute
+Expected value is 'VirtualMachine'.
+     */
     @InputImport(name="computeType", required=true)
     private final String computeType;
 
@@ -32,6 +41,9 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
         return this.computeType;
     }
 
+    /**
+     * The description of the Machine Learning compute.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -39,6 +51,9 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
+     */
     @InputImport(name="isAttachedCompute", required=true)
     private final Boolean isAttachedCompute;
 
@@ -46,6 +61,9 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
         return this.isAttachedCompute;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable VirtualMachineResponseProperties properties;
 
@@ -53,6 +71,9 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
     }
 
+    /**
+     * Errors during provisioning
+     */
     @InputImport(name="provisioningErrors", required=true)
     private final List<MachineLearningServiceErrorResponse> provisioningErrors;
 
@@ -60,6 +81,9 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
         return this.provisioningErrors;
     }
 
+    /**
+     * The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -67,6 +91,9 @@ public final class VirtualMachineResponse extends io.pulumi.resources.InvokeArgs
         return this.provisioningState;
     }
 
+    /**
+     * ARM resource id of the underlying compute
+     */
     @InputImport(name="resourceId")
     private final @Nullable String resourceId;
 

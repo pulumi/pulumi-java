@@ -12,13 +12,37 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VirtualNetworkGatewayIPConfigurationResponse {
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     private final String etag;
+/**
+ * Resource ID.
+ */
     private final @Nullable String id;
+/**
+ * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+ */
     private final @Nullable String name;
+/**
+ * Private IP Address for this gateway.
+ */
     private final String privateIPAddress;
+/**
+ * The private IP address allocation method.
+ */
     private final @Nullable String privateIPAllocationMethod;
+/**
+ * The provisioning state of the virtual network gateway IP configuration resource.
+ */
     private final String provisioningState;
+/**
+ * The reference to the public IP resource.
+ */
     private final @Nullable SubResourceResponse publicIPAddress;
+/**
+ * The reference to the subnet resource.
+ */
     private final @Nullable SubResourceResponse subnet;
 
     @OutputCustomType.Constructor({"etag","id","name","privateIPAddress","privateIPAllocationMethod","provisioningState","publicIPAddress","subnet"})
@@ -41,27 +65,51 @@ public final class VirtualNetworkGatewayIPConfigurationResponse {
         this.subnet = subnet;
     }
 
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * Resource ID.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * Private IP Address for this gateway.
+ */
     public String getPrivateIPAddress() {
         return this.privateIPAddress;
     }
+/**
+ * The private IP address allocation method.
+ */
     public Optional<String> getPrivateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
+/**
+ * The provisioning state of the virtual network gateway IP configuration resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * The reference to the public IP resource.
+ */
     public Optional<SubResourceResponse> getPublicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
+/**
+ * The reference to the subnet resource.
+ */
     public Optional<SubResourceResponse> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }

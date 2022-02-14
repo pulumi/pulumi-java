@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Batch endpoint configuration.
+ */
 public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BatchEndpointResponse Empty = new BatchEndpointResponse();
 
+    /**
+     * Enum to determine endpoint authentication mode.
+     */
     @InputImport(name="authMode")
     private final @Nullable String authMode;
 
@@ -23,6 +29,9 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
         return this.authMode == null ? Optional.empty() : Optional.ofNullable(this.authMode);
     }
 
+    /**
+     * Description of the inference endpoint.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -30,6 +39,9 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Property dictionary. Properties can be added, but not removed or altered.
+     */
     @InputImport(name="properties")
     private final @Nullable Map<String,String> properties;
 
@@ -37,6 +49,9 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
         return this.properties == null ? Map.of() : this.properties;
     }
 
+    /**
+     * Endpoint URI.
+     */
     @InputImport(name="scoringUri", required=true)
     private final String scoringUri;
 
@@ -44,6 +59,9 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
         return this.scoringUri;
     }
 
+    /**
+     * Endpoint Swagger URI.
+     */
     @InputImport(name="swaggerUri", required=true)
     private final String swaggerUri;
 
@@ -51,6 +69,9 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
         return this.swaggerUri;
     }
 
+    /**
+     * Traffic rules on how the traffic will be routed across deployments.
+     */
     @InputImport(name="traffic")
     private final @Nullable Map<String,Integer> traffic;
 

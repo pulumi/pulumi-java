@@ -8,10 +8,16 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * An attribution method that approximates Shapley values for features that contribute to the label being predicted. A sampling strategy is used to approximate the value rather than considering all subsets of features.
+ */
 public final class GoogleCloudMlV1__SampledShapleyAttributionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudMlV1__SampledShapleyAttributionResponse Empty = new GoogleCloudMlV1__SampledShapleyAttributionResponse();
 
+    /**
+     * The number of feature permutations to consider when approximating the Shapley values.
+     */
     @InputImport(name="numPaths", required=true)
     private final Integer numPaths;
 

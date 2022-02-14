@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FormulaPropertiesFromVmResponse {
+/**
+ * The identifier of the VM from which a formula is to be created.
+ */
     private final @Nullable String labVmId;
 
     @OutputCustomType.Constructor({"labVmId"})
@@ -18,6 +21,9 @@ public final class FormulaPropertiesFromVmResponse {
         this.labVmId = labVmId;
     }
 
+/**
+ * The identifier of the VM from which a formula is to be created.
+ */
     public Optional<String> getLabVmId() {
         return Optional.ofNullable(this.labVmId);
     }

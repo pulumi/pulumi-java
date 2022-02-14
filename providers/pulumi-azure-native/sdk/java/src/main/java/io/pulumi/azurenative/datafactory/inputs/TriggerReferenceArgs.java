@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Trigger reference type.
+ */
 public final class TriggerReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TriggerReferenceArgs Empty = new TriggerReferenceArgs();
 
+    /**
+     * Reference trigger name.
+     */
     @InputImport(name="referenceName", required=true)
     private final Input<String> referenceName;
 
@@ -20,6 +26,9 @@ public final class TriggerReferenceArgs extends io.pulumi.resources.ResourceArgs
         return this.referenceName;
     }
 
+    /**
+     * Trigger reference type.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

@@ -10,15 +10,45 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetExtensionResult {
+/**
+ * The ETag value to implement optimistic concurrency.
+ */
     private final String eTag;
+/**
+ * Extension api docs link.
+ */
     private final String extensionApiDocsLink;
+/**
+ * Extension auth link.
+ */
     private final String extensionAuthLink;
+/**
+ * Extension category. e.g. weather/sensor/satellite.
+ */
     private final String extensionCategory;
+/**
+ * Extension Id.
+ */
     private final String extensionId;
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     private final String id;
+/**
+ * Installed extension version.
+ */
     private final String installedExtensionVersion;
+/**
+ * The name of the resource
+ */
     private final String name;
+/**
+ * Metadata pertaining to creation and last modification of the resource.
+ */
     private final SystemDataResponse systemData;
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"eTag","extensionApiDocsLink","extensionAuthLink","extensionCategory","extensionId","id","installedExtensionVersion","name","systemData","type"})
@@ -45,33 +75,63 @@ public final class GetExtensionResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The ETag value to implement optimistic concurrency.
+ */
     public String getETag() {
         return this.eTag;
     }
+/**
+ * Extension api docs link.
+ */
     public String getExtensionApiDocsLink() {
         return this.extensionApiDocsLink;
     }
+/**
+ * Extension auth link.
+ */
     public String getExtensionAuthLink() {
         return this.extensionAuthLink;
     }
+/**
+ * Extension category. e.g. weather/sensor/satellite.
+ */
     public String getExtensionCategory() {
         return this.extensionCategory;
     }
+/**
+ * Extension Id.
+ */
     public String getExtensionId() {
         return this.extensionId;
     }
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Installed extension version.
+ */
     public String getInstalledExtensionVersion() {
         return this.installedExtensionVersion;
     }
+/**
+ * The name of the resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Metadata pertaining to creation and last modification of the resource.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     public String getType() {
         return this.type;
     }

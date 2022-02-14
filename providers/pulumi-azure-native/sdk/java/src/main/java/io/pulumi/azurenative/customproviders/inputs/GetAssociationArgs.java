@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetAssociationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAssociationArgs Empty = new GetAssociationArgs();
 
+    /**
+     * The name of the association.
+     */
     @InputImport(name="associationName", required=true)
     private final String associationName;
 
@@ -19,6 +25,9 @@ public final class GetAssociationArgs extends io.pulumi.resources.InvokeArgs {
         return this.associationName;
     }
 
+    /**
+     * The scope of the association.
+     */
     @InputImport(name="scope", required=true)
     private final String scope;
 

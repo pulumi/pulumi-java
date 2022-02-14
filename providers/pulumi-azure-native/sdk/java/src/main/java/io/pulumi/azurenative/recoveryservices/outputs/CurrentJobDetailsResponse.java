@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CurrentJobDetailsResponse {
+/**
+ * The ARM Id of the job being executed.
+ */
     private final @Nullable String jobId;
+/**
+ * The job name.
+ */
     private final @Nullable String jobName;
+/**
+ * The start time of the job.
+ */
     private final @Nullable String startTime;
 
     @OutputCustomType.Constructor({"jobId","jobName","startTime"})
@@ -25,12 +34,21 @@ public final class CurrentJobDetailsResponse {
         this.startTime = startTime;
     }
 
+/**
+ * The ARM Id of the job being executed.
+ */
     public Optional<String> getJobId() {
         return Optional.ofNullable(this.jobId);
     }
+/**
+ * The job name.
+ */
     public Optional<String> getJobName() {
         return Optional.ofNullable(this.jobName);
     }
+/**
+ * The start time of the job.
+ */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }

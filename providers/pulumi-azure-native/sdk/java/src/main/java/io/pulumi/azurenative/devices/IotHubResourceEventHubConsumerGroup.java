@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.devices;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.devices.IotHubResourceEventHubConsumerGroupArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -15,33 +14,167 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The properties of the EventHubConsumerGroupInfo object.
+API Version: 2020-08-31.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### IotHubResource_CreateEventHubConsumerGroup
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var iotHubResourceEventHubConsumerGroup = new AzureNative.Devices.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup", new AzureNative.Devices.IotHubResourceEventHubConsumerGroupArgs
+        {
+            EventHubEndpointName = "events",
+            Name = "test",
+            Properties = new AzureNative.Devices.Inputs.EventHubConsumerGroupNameArgs
+            {
+                Name = "test",
+            },
+            ResourceGroupName = "myResourceGroup",
+            ResourceName = "testHub",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	devices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devices.NewIotHubResourceEventHubConsumerGroup(ctx, "iotHubResourceEventHubConsumerGroup", &devices.IotHubResourceEventHubConsumerGroupArgs{
+			EventHubEndpointName: pulumi.String("events"),
+			Name:                 pulumi.String("test"),
+			Properties: &devices.EventHubConsumerGroupNameArgs{
+				Name: pulumi.String("test"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			ResourceName:      pulumi.String("testHub"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const iotHubResourceEventHubConsumerGroup = new azure_native.devices.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup", {
+    eventHubEndpointName: "events",
+    name: "test",
+    properties: {
+        name: "test",
+    },
+    resourceGroupName: "myResourceGroup",
+    resourceName: "testHub",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+iot_hub_resource_event_hub_consumer_group = azure_native.devices.IotHubResourceEventHubConsumerGroup("iotHubResourceEventHubConsumerGroup",
+    event_hub_endpoint_name="events",
+    name="test",
+    properties=azure_native.devices.EventHubConsumerGroupNameArgs(
+        name="test",
+    ),
+    resource_group_name="myResourceGroup",
+    resource_name="testHub")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devices:IotHubResourceEventHubConsumerGroup test /subscriptions/cmd-sub-1/resourceGroups/cmd-rg-1/providers/Microsoft.Devices/IotHubs/test-hub-2/eventHubEndpoints/events/ConsumerGroups/%24Default 
+```
+
+ */
 @ResourceType(type="azure-native:devices:IotHubResourceEventHubConsumerGroup")
 public class IotHubResourceEventHubConsumerGroup extends io.pulumi.resources.CustomResource {
+    /**
+     * The etag.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return The etag.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The Event Hub-compatible consumer group name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The Event Hub-compatible consumer group name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The tags.
+     */
     @OutputExport(name="properties", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> properties;
 
+    /**
+     * @return The tags.
+     */
     public Output<Map<String,String>> getProperties() {
         return this.properties;
     }
+    /**
+     * the resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return the resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public IotHubResourceEventHubConsumerGroup(String name, IotHubResourceEventHubConsumerGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:devices:IotHubResourceEventHubConsumerGroup", name, args == null ? IotHubResourceEventHubConsumerGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -83,6 +216,14 @@ public class IotHubResourceEventHubConsumerGroup extends io.pulumi.resources.Cus
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static IotHubResourceEventHubConsumerGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IotHubResourceEventHubConsumerGroup(name, id, options);
     }

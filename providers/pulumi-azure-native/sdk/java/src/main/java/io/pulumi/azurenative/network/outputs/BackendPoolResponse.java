@@ -14,12 +14,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BackendPoolResponse {
+/**
+ * The set of backends for this pool
+ */
     private final @Nullable List<BackendResponse> backends;
+/**
+ * L7 health probe settings for a backend pool
+ */
     private final @Nullable SubResourceResponse healthProbeSettings;
+/**
+ * Resource ID.
+ */
     private final @Nullable String id;
+/**
+ * Load balancing settings for a backend pool
+ */
     private final @Nullable SubResourceResponse loadBalancingSettings;
+/**
+ * Resource name.
+ */
     private final @Nullable String name;
+/**
+ * Resource status.
+ */
     private final String resourceState;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"backends","healthProbeSettings","id","loadBalancingSettings","name","resourceState","type"})
@@ -40,24 +61,45 @@ public final class BackendPoolResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The set of backends for this pool
+ */
     public List<BackendResponse> getBackends() {
         return this.backends == null ? List.of() : this.backends;
     }
+/**
+ * L7 health probe settings for a backend pool
+ */
     public Optional<SubResourceResponse> getHealthProbeSettings() {
         return Optional.ofNullable(this.healthProbeSettings);
     }
+/**
+ * Resource ID.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * Load balancing settings for a backend pool
+ */
     public Optional<SubResourceResponse> getLoadBalancingSettings() {
         return Optional.ofNullable(this.loadBalancingSettings);
     }
+/**
+ * Resource name.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * Resource status.
+ */
     public String getResourceState() {
         return this.resourceState;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

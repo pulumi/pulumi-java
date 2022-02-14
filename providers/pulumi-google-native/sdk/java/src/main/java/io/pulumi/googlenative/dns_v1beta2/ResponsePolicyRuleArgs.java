@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResponsePolicyRuleArgs Empty = new ResponsePolicyRuleArgs();
 
+    /**
+     * Answer this query with a behavior rather than DNS data.
+     */
     @InputImport(name="behavior")
     private final @Nullable Input<ResponsePolicyRuleBehavior> behavior;
 
@@ -23,6 +29,9 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.behavior == null ? Input.empty() : this.behavior;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="clientOperationId")
     private final @Nullable Input<String> clientOperationId;
 
@@ -30,6 +39,9 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.clientOperationId == null ? Input.empty() : this.clientOperationId;
     }
 
+    /**
+     * The DNS name (wildcard or exact) to apply this rule to. Must be unique within the Response Policy Rule.
+     */
     @InputImport(name="dnsName")
     private final @Nullable Input<String> dnsName;
 
@@ -37,6 +49,9 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.dnsName == null ? Input.empty() : this.dnsName;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -44,6 +59,9 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Answer this query directly with DNS data. These ResourceRecordSets override any other DNS behavior for the matched name; in particular they override private zones, the public internet, and GCP internal DNS. No SOA nor NS types are allowed.
+     */
     @InputImport(name="localData")
     private final @Nullable Input<ResponsePolicyRuleLocalDataArgs> localData;
 
@@ -51,6 +69,9 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.localData == null ? Input.empty() : this.localData;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -58,6 +79,9 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="responsePolicy", required=true)
     private final Input<String> responsePolicy;
 
@@ -65,6 +89,9 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
         return this.responsePolicy;
     }
 
+    /**
+     * An identifier for this rule. Must be unique with the ResponsePolicy.
+     */
     @InputImport(name="ruleName")
     private final @Nullable Input<String> ruleName;
 

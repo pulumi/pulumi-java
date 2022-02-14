@@ -11,10 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class KeyVaultPropertiesResponse {
+/**
+ * The object identifier of the current versioned Key Vault Key in use.
+ */
     private final String currentVersionedKeyIdentifier;
+/**
+ * The name of KeyVault key.
+ */
     private final @Nullable String keyName;
+/**
+ * The Uri of KeyVault.
+ */
     private final @Nullable String keyVaultUri;
+/**
+ * The version of KeyVault key.
+ */
     private final @Nullable String keyVersion;
+/**
+ * Timestamp of last rotation of the Key Vault Key.
+ */
     private final String lastKeyRotationTimestamp;
 
     @OutputCustomType.Constructor({"currentVersionedKeyIdentifier","keyName","keyVaultUri","keyVersion","lastKeyRotationTimestamp"})
@@ -31,18 +46,33 @@ public final class KeyVaultPropertiesResponse {
         this.lastKeyRotationTimestamp = Objects.requireNonNull(lastKeyRotationTimestamp);
     }
 
+/**
+ * The object identifier of the current versioned Key Vault Key in use.
+ */
     public String getCurrentVersionedKeyIdentifier() {
         return this.currentVersionedKeyIdentifier;
     }
+/**
+ * The name of KeyVault key.
+ */
     public Optional<String> getKeyName() {
         return Optional.ofNullable(this.keyName);
     }
+/**
+ * The Uri of KeyVault.
+ */
     public Optional<String> getKeyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
+/**
+ * The version of KeyVault key.
+ */
     public Optional<String> getKeyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
+/**
+ * Timestamp of last rotation of the Key Vault Key.
+ */
     public String getLastKeyRotationTimestamp() {
         return this.lastKeyRotationTimestamp;
     }

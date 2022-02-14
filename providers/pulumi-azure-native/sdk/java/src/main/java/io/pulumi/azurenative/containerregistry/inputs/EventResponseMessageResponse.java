@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The event response message received from the service URI.
+ */
 public final class EventResponseMessageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EventResponseMessageResponse Empty = new EventResponseMessageResponse();
 
+    /**
+     * The content of the event response message.
+     */
     @InputImport(name="content")
     private final @Nullable String content;
 
@@ -22,6 +28,9 @@ public final class EventResponseMessageResponse extends io.pulumi.resources.Invo
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
     }
 
+    /**
+     * The headers of the event response message.
+     */
     @InputImport(name="headers")
     private final @Nullable Map<String,String> headers;
 
@@ -29,6 +38,9 @@ public final class EventResponseMessageResponse extends io.pulumi.resources.Invo
         return this.headers == null ? Map.of() : this.headers;
     }
 
+    /**
+     * The reason phrase of the event response message.
+     */
     @InputImport(name="reasonPhrase")
     private final @Nullable String reasonPhrase;
 
@@ -36,6 +48,9 @@ public final class EventResponseMessageResponse extends io.pulumi.resources.Invo
         return this.reasonPhrase == null ? Optional.empty() : Optional.ofNullable(this.reasonPhrase);
     }
 
+    /**
+     * The status code of the event response message.
+     */
     @InputImport(name="statusCode")
     private final @Nullable String statusCode;
 
@@ -43,6 +58,9 @@ public final class EventResponseMessageResponse extends io.pulumi.resources.Invo
         return this.statusCode == null ? Optional.empty() : Optional.ofNullable(this.statusCode);
     }
 
+    /**
+     * The HTTP message version.
+     */
     @InputImport(name="version")
     private final @Nullable String version;
 

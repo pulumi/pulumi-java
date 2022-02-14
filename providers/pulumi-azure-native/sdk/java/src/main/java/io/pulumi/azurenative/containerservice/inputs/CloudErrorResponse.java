@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An error response from the Container service.
+ */
 public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CloudErrorResponse Empty = new CloudErrorResponse();
 
+    /**
+     * Details about the error.
+     */
     @InputImport(name="error")
     private final @Nullable CloudErrorBodyResponse error;
 

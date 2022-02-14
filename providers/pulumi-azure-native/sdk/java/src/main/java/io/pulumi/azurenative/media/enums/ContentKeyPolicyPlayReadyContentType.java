@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The PlayReady content type.
+ */
     @EnumType
     public enum ContentKeyPolicyPlayReadyContentType {
+/**
+ * Represents a ContentKeyPolicyPlayReadyContentType that is unavailable in current API version.
+ */
         Unknown("Unknown"),
+/**
+ * Unspecified content type.
+ */
         Unspecified("Unspecified"),
+/**
+ * Ultraviolet download content type.
+ */
         UltraVioletDownload("UltraVioletDownload"),
+/**
+ * Ultraviolet streaming content type.
+ */
         UltraVioletStreaming("UltraVioletStreaming");
 
         private final String value;

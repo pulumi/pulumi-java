@@ -8,16 +8,46 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum RoutingType {
+/**
+ * 
+ */
         Default("Default"),
+/**
+ * 
+ */
         ProxyOnly("ProxyOnly"),
+/**
+ * 
+ */
         HostBased("HostBased"),
+/**
+ * 
+ */
         Extension("Extension"),
+/**
+ * 
+ */
         Tenant("Tenant"),
+/**
+ * 
+ */
         Fanout("Fanout"),
+/**
+ * 
+ */
         LocationBased("LocationBased"),
+/**
+ * 
+ */
         Failover("Failover"),
+/**
+ * 
+ */
         CascadeExtension("CascadeExtension");
 
         private final String value;

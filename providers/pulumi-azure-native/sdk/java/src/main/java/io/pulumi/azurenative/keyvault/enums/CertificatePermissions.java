@@ -8,24 +8,78 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum CertificatePermissions {
+/**
+ * 
+ */
         All("all"),
+/**
+ * 
+ */
         Get("get"),
+/**
+ * 
+ */
         List("list"),
+/**
+ * 
+ */
         Delete("delete"),
+/**
+ * 
+ */
         Create("create"),
+/**
+ * 
+ */
         $Import("import"),
+/**
+ * 
+ */
         Update("update"),
+/**
+ * 
+ */
         Managecontacts("managecontacts"),
+/**
+ * 
+ */
         Getissuers("getissuers"),
+/**
+ * 
+ */
         Listissuers("listissuers"),
+/**
+ * 
+ */
         Setissuers("setissuers"),
+/**
+ * 
+ */
         Deleteissuers("deleteissuers"),
+/**
+ * 
+ */
         Manageissuers("manageissuers"),
+/**
+ * 
+ */
         Recover("recover"),
+/**
+ * 
+ */
         Purge("purge"),
+/**
+ * 
+ */
         Backup("backup"),
+/**
+ * 
+ */
         Restore("restore");
 
         private final String value;

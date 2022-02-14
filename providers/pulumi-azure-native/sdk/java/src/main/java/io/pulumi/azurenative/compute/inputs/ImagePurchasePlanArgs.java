@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the gallery image definition purchase plan. This is used by marketplace images.
+ */
 public final class ImagePurchasePlanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImagePurchasePlanArgs Empty = new ImagePurchasePlanArgs();
 
+    /**
+     * The plan ID.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +27,9 @@ public final class ImagePurchasePlanArgs extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The product ID.
+     */
     @InputImport(name="product")
     private final @Nullable Input<String> product;
 
@@ -28,6 +37,9 @@ public final class ImagePurchasePlanArgs extends io.pulumi.resources.ResourceArg
         return this.product == null ? Input.empty() : this.product;
     }
 
+    /**
+     * The publisher ID.
+     */
     @InputImport(name="publisher")
     private final @Nullable Input<String> publisher;
 

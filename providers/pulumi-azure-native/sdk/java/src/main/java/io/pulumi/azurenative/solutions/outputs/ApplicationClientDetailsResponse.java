@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationClientDetailsResponse {
+/**
+ * The client application Id.
+ */
     private final @Nullable String applicationId;
+/**
+ * The client Oid.
+ */
     private final @Nullable String oid;
+/**
+ * The client Puid
+ */
     private final @Nullable String puid;
 
     @OutputCustomType.Constructor({"applicationId","oid","puid"})
@@ -25,12 +34,21 @@ public final class ApplicationClientDetailsResponse {
         this.puid = puid;
     }
 
+/**
+ * The client application Id.
+ */
     public Optional<String> getApplicationId() {
         return Optional.ofNullable(this.applicationId);
     }
+/**
+ * The client Oid.
+ */
     public Optional<String> getOid() {
         return Optional.ofNullable(this.oid);
     }
+/**
+ * The client Puid
+ */
     public Optional<String> getPuid() {
         return Optional.ofNullable(this.puid);
     }

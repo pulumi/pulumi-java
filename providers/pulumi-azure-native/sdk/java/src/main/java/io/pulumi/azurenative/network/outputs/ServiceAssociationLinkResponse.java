@@ -13,14 +13,41 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceAssociationLinkResponse {
+/**
+ * If true, the resource can be deleted.
+ */
     private final @Nullable Boolean allowDelete;
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     private final String etag;
+/**
+ * Resource ID.
+ */
     private final @Nullable String id;
+/**
+ * Link to the external resource.
+ */
     private final @Nullable String link;
+/**
+ * Resource type of the linked resource.
+ */
     private final @Nullable String linkedResourceType;
+/**
+ * A list of locations.
+ */
     private final @Nullable List<String> locations;
+/**
+ * Name of the resource that is unique within a resource group. This name can be used to access the resource.
+ */
     private final @Nullable String name;
+/**
+ * The provisioning state of the service association link resource.
+ */
     private final String provisioningState;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"allowDelete","etag","id","link","linkedResourceType","locations","name","provisioningState","type"})
@@ -45,30 +72,57 @@ public final class ServiceAssociationLinkResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * If true, the resource can be deleted.
+ */
     public Optional<Boolean> getAllowDelete() {
         return Optional.ofNullable(this.allowDelete);
     }
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * Resource ID.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * Link to the external resource.
+ */
     public Optional<String> getLink() {
         return Optional.ofNullable(this.link);
     }
+/**
+ * Resource type of the linked resource.
+ */
     public Optional<String> getLinkedResourceType() {
         return Optional.ofNullable(this.linkedResourceType);
     }
+/**
+ * A list of locations.
+ */
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }
+/**
+ * Name of the resource that is unique within a resource group. This name can be used to access the resource.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * The provisioning state of the service association link resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

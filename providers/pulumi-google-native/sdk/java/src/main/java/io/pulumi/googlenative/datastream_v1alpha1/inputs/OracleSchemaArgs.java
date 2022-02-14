@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Oracle schema.
+ */
 public final class OracleSchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OracleSchemaArgs Empty = new OracleSchemaArgs();
 
+    /**
+     * Tables in the schema.
+     */
     @InputImport(name="oracleTables")
     private final @Nullable Input<List<OracleTableArgs>> oracleTables;
 
@@ -23,6 +29,9 @@ public final class OracleSchemaArgs extends io.pulumi.resources.ResourceArgs {
         return this.oracleTables == null ? Input.empty() : this.oracleTables;
     }
 
+    /**
+     * Schema name.
+     */
     @InputImport(name="schemaName")
     private final @Nullable Input<String> schemaName;
 

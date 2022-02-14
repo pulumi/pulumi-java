@@ -13,10 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListWebAppAzureStorageAccountsResult {
+/**
+ * Resource Id.
+ */
     private final String id;
+/**
+ * Kind of resource.
+ */
     private final @Nullable String kind;
+/**
+ * Resource Name.
+ */
     private final String name;
+/**
+ * Azure storage accounts.
+ */
     private final Map<String,AzureStorageInfoValueResponse> properties;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","kind","name","properties","type"})
@@ -33,18 +48,33 @@ public final class ListWebAppAzureStorageAccountsResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Resource Id.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Kind of resource.
+ */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
+/**
+ * Resource Name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Azure storage accounts.
+ */
     public Map<String,AzureStorageInfoValueResponse> getProperties() {
         return this.properties;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

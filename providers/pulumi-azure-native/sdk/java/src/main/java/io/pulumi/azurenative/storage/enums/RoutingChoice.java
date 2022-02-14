@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Routing Choice defines the kind of network routing opted by the user.
+ */
     @EnumType
     public enum RoutingChoice {
+/**
+ * 
+ */
         MicrosoftRouting("MicrosoftRouting"),
+/**
+ * 
+ */
         InternetRouting("InternetRouting");
 
         private final String value;

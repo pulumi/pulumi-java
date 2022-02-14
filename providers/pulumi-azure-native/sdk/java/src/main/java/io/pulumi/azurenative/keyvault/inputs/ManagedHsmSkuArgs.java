@@ -12,10 +12,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * SKU details
+ */
 public final class ManagedHsmSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedHsmSkuArgs Empty = new ManagedHsmSkuArgs();
 
+    /**
+     * SKU Family of the managed HSM Pool
+     */
     @InputImport(name="family", required=true)
     private final Input<Either<String,ManagedHsmSkuFamily>> family;
 
@@ -23,6 +29,9 @@ public final class ManagedHsmSkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.family;
     }
 
+    /**
+     * SKU of the managed HSM Pool
+     */
     @InputImport(name="name", required=true)
     private final Input<ManagedHsmSkuName> name;
 

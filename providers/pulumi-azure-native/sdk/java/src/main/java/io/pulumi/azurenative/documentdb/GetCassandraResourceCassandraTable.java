@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCassandraResourceCassandraTable {
+/**
+ * An Azure Cosmos DB Cassandra table.
+API Version: 2021-03-15.
+ *
+ * An Azure Cosmos DB Cassandra table.
+ */
     public static CompletableFuture<GetCassandraResourceCassandraTableResult> invokeAsync(GetCassandraResourceCassandraTableArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getCassandraResourceCassandraTable", TypeShape.of(GetCassandraResourceCassandraTableResult.class), args == null ? GetCassandraResourceCassandraTableArgs.Empty : args, Utilities.withVersion(options));
     }

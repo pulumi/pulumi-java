@@ -16,10 +16,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The integration service environment properties.
+ */
 public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IntegrationServiceEnvironmentPropertiesArgs Empty = new IntegrationServiceEnvironmentPropertiesArgs();
 
+    /**
+     * The encryption configuration.
+     */
     @InputImport(name="encryptionConfiguration")
     private final @Nullable Input<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration;
 
@@ -27,6 +33,9 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
         return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
     }
 
+    /**
+     * The endpoints configuration.
+     */
     @InputImport(name="endpointsConfiguration")
     private final @Nullable Input<FlowEndpointsConfigurationArgs> endpointsConfiguration;
 
@@ -34,6 +43,9 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
         return this.endpointsConfiguration == null ? Input.empty() : this.endpointsConfiguration;
     }
 
+    /**
+     * Gets the tracking id.
+     */
     @InputImport(name="integrationServiceEnvironmentId")
     private final @Nullable Input<String> integrationServiceEnvironmentId;
 
@@ -41,6 +53,9 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
         return this.integrationServiceEnvironmentId == null ? Input.empty() : this.integrationServiceEnvironmentId;
     }
 
+    /**
+     * The network configuration.
+     */
     @InputImport(name="networkConfiguration")
     private final @Nullable Input<NetworkConfigurationArgs> networkConfiguration;
 
@@ -48,6 +63,9 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
         return this.networkConfiguration == null ? Input.empty() : this.networkConfiguration;
     }
 
+    /**
+     * The provisioning state.
+     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<Either<String,WorkflowProvisioningState>> provisioningState;
 
@@ -55,6 +73,9 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
+    /**
+     * The integration service environment state.
+     */
     @InputImport(name="state")
     private final @Nullable Input<Either<String,WorkflowState>> state;
 

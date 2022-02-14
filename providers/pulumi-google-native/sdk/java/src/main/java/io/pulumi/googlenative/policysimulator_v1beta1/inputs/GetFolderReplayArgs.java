@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetFolderReplayArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFolderReplayArgs Empty = new GetFolderReplayArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="folderId", required=true)
     private final String folderId;
 
@@ -19,6 +25,9 @@ public final class GetFolderReplayArgs extends io.pulumi.resources.InvokeArgs {
         return this.folderId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -26,6 +35,9 @@ public final class GetFolderReplayArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="replayId", required=true)
     private final String replayId;
 

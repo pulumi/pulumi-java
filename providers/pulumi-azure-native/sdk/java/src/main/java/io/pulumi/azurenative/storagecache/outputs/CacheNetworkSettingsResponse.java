@@ -13,10 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CacheNetworkSettingsResponse {
+/**
+ * DNS search domain
+ */
     private final @Nullable String dnsSearchDomain;
+/**
+ * DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.
+ */
     private final @Nullable List<String> dnsServers;
+/**
+ * The IPv4 maximum transmission unit configured for the subnet.
+ */
     private final @Nullable Integer mtu;
+/**
+ * NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.
+ */
     private final @Nullable String ntpServer;
+/**
+ * Array of additional IP addresses used by this Cache.
+ */
     private final List<String> utilityAddresses;
 
     @OutputCustomType.Constructor({"dnsSearchDomain","dnsServers","mtu","ntpServer","utilityAddresses"})
@@ -33,18 +48,33 @@ public final class CacheNetworkSettingsResponse {
         this.utilityAddresses = Objects.requireNonNull(utilityAddresses);
     }
 
+/**
+ * DNS search domain
+ */
     public Optional<String> getDnsSearchDomain() {
         return Optional.ofNullable(this.dnsSearchDomain);
     }
+/**
+ * DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.
+ */
     public List<String> getDnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }
+/**
+ * The IPv4 maximum transmission unit configured for the subnet.
+ */
     public Optional<Integer> getMtu() {
         return Optional.ofNullable(this.mtu);
     }
+/**
+ * NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.
+ */
     public Optional<String> getNtpServer() {
         return Optional.ofNullable(this.ntpServer);
     }
+/**
+ * Array of additional IP addresses used by this Cache.
+ */
     public List<String> getUtilityAddresses() {
         return this.utilityAddresses;
     }

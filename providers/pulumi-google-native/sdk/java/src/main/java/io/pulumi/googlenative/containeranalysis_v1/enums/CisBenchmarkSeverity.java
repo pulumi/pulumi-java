@@ -8,13 +8,34 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum CisBenchmarkSeverity {
+/**
+ * Unknown.
+ */
         SeverityUnspecified("SEVERITY_UNSPECIFIED"),
+/**
+ * Minimal severity.
+ */
         Minimal("MINIMAL"),
+/**
+ * Low severity.
+ */
         Low("LOW"),
+/**
+ * Medium severity.
+ */
         Medium("MEDIUM"),
+/**
+ * High severity.
+ */
         High("HIGH"),
+/**
+ * Critical severity.
+ */
         Critical("CRITICAL");
 
         private final String value;

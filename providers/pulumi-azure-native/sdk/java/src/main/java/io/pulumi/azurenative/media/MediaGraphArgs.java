@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MediaGraphArgs Empty = new MediaGraphArgs();
 
+    /**
+     * The Media Services account name.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -24,6 +30,9 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * Media Graph description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +40,9 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The Media Graph name.
+     */
     @InputImport(name="mediaGraphName")
     private final @Nullable Input<String> mediaGraphName;
 
@@ -38,6 +50,9 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
         return this.mediaGraphName == null ? Input.empty() : this.mediaGraphName;
     }
 
+    /**
+     * The name of the resource group within the Azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -45,6 +60,9 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Media Graph sinks.
+     */
     @InputImport(name="sinks", required=true)
     private final Input<List<MediaGraphAssetSinkArgs>> sinks;
 
@@ -52,6 +70,9 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
         return this.sinks;
     }
 
+    /**
+     * Media Graph sources.
+     */
     @InputImport(name="sources", required=true)
     private final Input<List<MediaGraphRtspSourceArgs>> sources;
 

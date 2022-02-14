@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CapacityCommitmentArgs Empty = new CapacityCommitmentArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="capacityCommitmentId")
     private final @Nullable Input<String> capacityCommitmentId;
 
@@ -23,6 +29,9 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
         return this.capacityCommitmentId == null ? Input.empty() : this.capacityCommitmentId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="enforceSingleAdminProjectPerOrg")
     private final @Nullable Input<String> enforceSingleAdminProjectPerOrg;
 
@@ -30,6 +39,9 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
         return this.enforceSingleAdminProjectPerOrg == null ? Input.empty() : this.enforceSingleAdminProjectPerOrg;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -37,6 +49,9 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Capacity commitment commitment plan.
+     */
     @InputImport(name="plan")
     private final @Nullable Input<CapacityCommitmentPlan> plan;
 
@@ -44,6 +59,9 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
         return this.plan == null ? Input.empty() : this.plan;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -51,6 +69,9 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL commitments.
+     */
     @InputImport(name="renewalPlan")
     private final @Nullable Input<CapacityCommitmentRenewalPlan> renewalPlan;
 
@@ -58,6 +79,9 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
         return this.renewalPlan == null ? Input.empty() : this.renewalPlan;
     }
 
+    /**
+     * Number of slots in this commitment.
+     */
     @InputImport(name="slotCount")
     private final @Nullable Input<String> slotCount;
 

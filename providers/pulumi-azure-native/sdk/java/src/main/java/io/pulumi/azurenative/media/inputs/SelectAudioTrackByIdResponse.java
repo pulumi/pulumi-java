@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Select audio tracks from the input by specifying a track identifier.
+ */
 public final class SelectAudioTrackByIdResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SelectAudioTrackByIdResponse Empty = new SelectAudioTrackByIdResponse();
 
+    /**
+     * Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+     */
     @InputImport(name="channelMapping")
     private final @Nullable String channelMapping;
 
@@ -22,6 +28,10 @@ public final class SelectAudioTrackByIdResponse extends io.pulumi.resources.Invo
         return this.channelMapping == null ? Optional.empty() : Optional.ofNullable(this.channelMapping);
     }
 
+    /**
+     * The discriminator for derived types.
+Expected value is '#Microsoft.Media.SelectAudioTrackById'.
+     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -29,6 +39,9 @@ public final class SelectAudioTrackByIdResponse extends io.pulumi.resources.Invo
         return this.odataType;
     }
 
+    /**
+     * Track identifier to select
+     */
     @InputImport(name="trackId", required=true)
     private final Double trackId;
 

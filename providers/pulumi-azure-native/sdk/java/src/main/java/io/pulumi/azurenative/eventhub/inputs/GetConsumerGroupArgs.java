@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetConsumerGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConsumerGroupArgs Empty = new GetConsumerGroupArgs();
 
+    /**
+     * The consumer group name
+     */
     @InputImport(name="consumerGroupName", required=true)
     private final String consumerGroupName;
 
@@ -19,6 +25,9 @@ public final class GetConsumerGroupArgs extends io.pulumi.resources.InvokeArgs {
         return this.consumerGroupName;
     }
 
+    /**
+     * The Event Hub name
+     */
     @InputImport(name="eventHubName", required=true)
     private final String eventHubName;
 
@@ -26,6 +35,9 @@ public final class GetConsumerGroupArgs extends io.pulumi.resources.InvokeArgs {
         return this.eventHubName;
     }
 
+    /**
+     * The Namespace name
+     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -33,6 +45,9 @@ public final class GetConsumerGroupArgs extends io.pulumi.resources.InvokeArgs {
         return this.namespaceName;
     }
 
+    /**
+     * Name of the resource group within the azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

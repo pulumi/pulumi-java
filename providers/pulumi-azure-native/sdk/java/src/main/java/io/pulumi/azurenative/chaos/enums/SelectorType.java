@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Enum of the selector type.
+ */
     @EnumType
     public enum SelectorType {
+/**
+ * 
+ */
         Percent("Percent"),
+/**
+ * 
+ */
         Random("Random"),
+/**
+ * 
+ */
         Tag("Tag"),
+/**
+ * 
+ */
         List("List");
 
         private final String value;

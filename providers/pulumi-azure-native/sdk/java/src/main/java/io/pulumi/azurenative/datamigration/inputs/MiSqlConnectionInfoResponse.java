@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties required to create a connection to Azure SQL database Managed instance
+ */
 public final class MiSqlConnectionInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MiSqlConnectionInfoResponse Empty = new MiSqlConnectionInfoResponse();
 
+    /**
+     * Resource id for Azure SQL database Managed instance
+     */
     @InputImport(name="managedInstanceResourceId", required=true)
     private final String managedInstanceResourceId;
 
@@ -21,6 +27,9 @@ public final class MiSqlConnectionInfoResponse extends io.pulumi.resources.Invok
         return this.managedInstanceResourceId;
     }
 
+    /**
+     * Password credential.
+     */
     @InputImport(name="password")
     private final @Nullable String password;
 
@@ -28,6 +37,10 @@ public final class MiSqlConnectionInfoResponse extends io.pulumi.resources.Invok
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
+    /**
+     * Type of connection info
+Expected value is 'MiSqlConnectionInfo'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -35,6 +48,9 @@ public final class MiSqlConnectionInfoResponse extends io.pulumi.resources.Invok
         return this.type;
     }
 
+    /**
+     * User name
+     */
     @InputImport(name="userName")
     private final @Nullable String userName;
 

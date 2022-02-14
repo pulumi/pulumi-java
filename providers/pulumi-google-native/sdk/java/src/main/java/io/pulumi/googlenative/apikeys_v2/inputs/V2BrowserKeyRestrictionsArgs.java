@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The HTTP referrers (websites) that are allowed to use the key.
+ */
 public final class V2BrowserKeyRestrictionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final V2BrowserKeyRestrictionsArgs Empty = new V2BrowserKeyRestrictionsArgs();
 
+    /**
+     * A list of regular expressions for the referrer URLs that are allowed to make API calls with this key.
+     */
     @InputImport(name="allowedReferrers")
     private final @Nullable Input<List<String>> allowedReferrers;
 

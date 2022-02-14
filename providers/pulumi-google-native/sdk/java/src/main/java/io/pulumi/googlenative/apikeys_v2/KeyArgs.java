@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyArgs Empty = new KeyArgs();
 
+    /**
+     * Human-readable display name of this key that you can modify. The maximum length is 63 characters.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -22,6 +28,9 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="keyId")
     private final @Nullable Input<String> keyId;
 
@@ -29,6 +38,9 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyId == null ? Input.empty() : this.keyId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -36,6 +48,9 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -43,6 +58,9 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Key restrictions.
+     */
     @InputImport(name="restrictions")
     private final @Nullable Input<V2RestrictionsArgs> restrictions;
 

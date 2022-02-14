@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListBuildTaskSourceRepositoryPropertiesArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListBuildTaskSourceRepositoryPropertiesArgs Empty = new ListBuildTaskSourceRepositoryPropertiesArgs();
 
+    /**
+     * The name of the container registry build task.
+     */
     @InputImport(name="buildTaskName", required=true)
     private final String buildTaskName;
 
@@ -19,6 +25,9 @@ public final class ListBuildTaskSourceRepositoryPropertiesArgs extends io.pulumi
         return this.buildTaskName;
     }
 
+    /**
+     * The name of the container registry.
+     */
     @InputImport(name="registryName", required=true)
     private final String registryName;
 
@@ -26,6 +35,9 @@ public final class ListBuildTaskSourceRepositoryPropertiesArgs extends io.pulumi
         return this.registryName;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

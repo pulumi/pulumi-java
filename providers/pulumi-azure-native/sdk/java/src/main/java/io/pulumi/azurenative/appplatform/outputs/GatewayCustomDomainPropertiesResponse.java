@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GatewayCustomDomainPropertiesResponse {
+/**
+ * The thumbprint of bound certificate.
+ */
     private final @Nullable String thumbprint;
 
     @OutputCustomType.Constructor({"thumbprint"})
@@ -18,6 +21,9 @@ public final class GatewayCustomDomainPropertiesResponse {
         this.thumbprint = thumbprint;
     }
 
+/**
+ * The thumbprint of bound certificate.
+ */
     public Optional<String> getThumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }

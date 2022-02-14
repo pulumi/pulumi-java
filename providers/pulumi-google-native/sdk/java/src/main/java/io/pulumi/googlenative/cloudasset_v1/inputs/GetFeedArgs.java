@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetFeedArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFeedArgs Empty = new GetFeedArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="feedId", required=true)
     private final String feedId;
 
@@ -19,6 +25,9 @@ public final class GetFeedArgs extends io.pulumi.resources.InvokeArgs {
         return this.feedId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="v1Id", required=true)
     private final String v1Id;
 
@@ -26,6 +35,9 @@ public final class GetFeedArgs extends io.pulumi.resources.InvokeArgs {
         return this.v1Id;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="v1Id1", required=true)
     private final String v1Id1;
 

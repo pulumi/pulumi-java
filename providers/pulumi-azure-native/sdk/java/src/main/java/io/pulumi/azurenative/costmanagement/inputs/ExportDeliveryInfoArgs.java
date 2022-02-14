@@ -9,10 +9,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The delivery information associated with a export.
+ */
 public final class ExportDeliveryInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExportDeliveryInfoArgs Empty = new ExportDeliveryInfoArgs();
 
+    /**
+     * Has destination for the export being delivered.
+     */
     @InputImport(name="destination", required=true)
     private final Input<ExportDeliveryDestinationArgs> destination;
 

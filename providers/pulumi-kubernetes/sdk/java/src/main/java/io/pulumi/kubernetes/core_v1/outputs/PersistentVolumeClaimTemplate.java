@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PersistentVolumeClaimTemplate {
+/**
+ * May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.
+ */
     private final @Nullable ObjectMeta metadata;
+/**
+ * The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here.
+ */
     private final PersistentVolumeClaimSpec spec;
 
     @OutputCustomType.Constructor({"metadata","spec"})
@@ -23,9 +29,15 @@ public final class PersistentVolumeClaimTemplate {
         this.spec = Objects.requireNonNull(spec);
     }
 
+/**
+ * May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.
+ */
     public Optional<ObjectMeta> getMetadata() {
         return Optional.ofNullable(this.metadata);
     }
+/**
+ * The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here.
+ */
     public PersistentVolumeClaimSpec getSpec() {
         return this.spec;
     }

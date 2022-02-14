@@ -11,13 +11,37 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetApiVersionSetResult {
+/**
+ * Description of API Version Set.
+ */
     private final @Nullable String description;
+/**
+ * Name of API Version Set
+ */
     private final String displayName;
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * Resource type for API Management resource.
+ */
     private final String type;
+/**
+ * Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
+ */
     private final @Nullable String versionHeaderName;
+/**
+ * Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
+ */
     private final @Nullable String versionQueryName;
+/**
+ * An value that determines where the API Version identifier will be located in a HTTP request.
+ */
     private final String versioningScheme;
 
     @OutputCustomType.Constructor({"description","displayName","id","name","type","versionHeaderName","versionQueryName","versioningScheme"})
@@ -40,27 +64,51 @@ public final class GetApiVersionSetResult {
         this.versioningScheme = Objects.requireNonNull(versioningScheme);
     }
 
+/**
+ * Description of API Version Set.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * Name of API Version Set
+ */
     public String getDisplayName() {
         return this.displayName;
     }
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Resource type for API Management resource.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
+ */
     public Optional<String> getVersionHeaderName() {
         return Optional.ofNullable(this.versionHeaderName);
     }
+/**
+ * Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
+ */
     public Optional<String> getVersionQueryName() {
         return Optional.ofNullable(this.versionQueryName);
     }
+/**
+ * An value that determines where the API Version identifier will be located in a HTTP request.
+ */
     public String getVersioningScheme() {
         return this.versioningScheme;
     }

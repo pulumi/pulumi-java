@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUptimeCheckConfig {
+/**
+ * Gets a single Uptime check configuration.
+ */
     public static CompletableFuture<GetUptimeCheckConfigResult> invokeAsync(GetUptimeCheckConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:monitoring/v3:getUptimeCheckConfig", TypeShape.of(GetUptimeCheckConfigResult.class), args == null ? GetUptimeCheckConfigArgs.Empty : args, Utilities.withVersion(options));
     }

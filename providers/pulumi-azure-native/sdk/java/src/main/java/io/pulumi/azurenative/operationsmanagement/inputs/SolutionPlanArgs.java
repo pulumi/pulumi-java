@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Plan for solution object supported by the OperationsManagement resource provider.
+ */
 public final class SolutionPlanArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SolutionPlanArgs Empty = new SolutionPlanArgs();
 
+    /**
+     * name of the solution to be created. For Microsoft published solution it should be in the format of solutionType(workspaceName). SolutionType part is case sensitive. For third party solution, it can be anything.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +27,9 @@ public final class SolutionPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/<solutionType>. This is case sensitive
+     */
     @InputImport(name="product")
     private final @Nullable Input<String> product;
 
@@ -28,6 +37,9 @@ public final class SolutionPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.product == null ? Input.empty() : this.product;
     }
 
+    /**
+     * promotionCode, Not really used now, can you left as empty
+     */
     @InputImport(name="promotionCode")
     private final @Nullable Input<String> promotionCode;
 
@@ -35,6 +47,9 @@ public final class SolutionPlanArgs extends io.pulumi.resources.ResourceArgs {
         return this.promotionCode == null ? Input.empty() : this.promotionCode;
     }
 
+    /**
+     * Publisher name. For gallery solution, it is Microsoft.
+     */
     @InputImport(name="publisher")
     private final @Nullable Input<String> publisher;
 

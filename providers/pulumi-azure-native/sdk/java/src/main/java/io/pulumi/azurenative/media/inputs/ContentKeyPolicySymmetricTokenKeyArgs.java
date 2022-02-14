@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specifies a symmetric key for token validation.
+ */
 public final class ContentKeyPolicySymmetricTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContentKeyPolicySymmetricTokenKeyArgs Empty = new ContentKeyPolicySymmetricTokenKeyArgs();
 
+    /**
+     * The key value of the key
+     */
     @InputImport(name="keyValue", required=true)
     private final Input<String> keyValue;
 
@@ -20,6 +26,10 @@ public final class ContentKeyPolicySymmetricTokenKeyArgs extends io.pulumi.resou
         return this.keyValue;
     }
 
+    /**
+     * The discriminator for derived types.
+Expected value is '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'.
+     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 

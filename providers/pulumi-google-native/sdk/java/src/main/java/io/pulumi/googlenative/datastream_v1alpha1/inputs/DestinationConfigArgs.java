@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration of the stream destination.
+ */
 public final class DestinationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DestinationConfigArgs Empty = new DestinationConfigArgs();
 
+    /**
+     * Destination connection profile identifier.
+     */
     @InputImport(name="destinationConnectionProfileName", required=true)
     private final Input<String> destinationConnectionProfileName;
 
@@ -22,6 +28,9 @@ public final class DestinationConfigArgs extends io.pulumi.resources.ResourceArg
         return this.destinationConnectionProfileName;
     }
 
+    /**
+     * GCS destination configuration.
+     */
     @InputImport(name="gcsDestinationConfig")
     private final @Nullable Input<GcsDestinationConfigArgs> gcsDestinationConfig;
 

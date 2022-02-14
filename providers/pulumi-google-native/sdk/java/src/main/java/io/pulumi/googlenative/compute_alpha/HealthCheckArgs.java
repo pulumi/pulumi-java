@@ -20,10 +20,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HealthCheckArgs Empty = new HealthCheckArgs();
 
+    /**
+     * How often (in seconds) to send a health check. The default value is 5 seconds.
+     */
     @InputImport(name="checkIntervalSec")
     private final @Nullable Input<Integer> checkIntervalSec;
 
@@ -31,6 +37,9 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.checkIntervalSec == null ? Input.empty() : this.checkIntervalSec;
     }
 
+    /**
+     * An optional description of this resource. Provide this property when you create the resource.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -38,6 +47,9 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="grpcHealthCheck")
     private final @Nullable Input<GRPCHealthCheckArgs> grpcHealthCheck;
 
@@ -45,6 +57,9 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.grpcHealthCheck == null ? Input.empty() : this.grpcHealthCheck;
     }
 
+    /**
+     * A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
+     */
     @InputImport(name="healthyThreshold")
     private final @Nullable Input<Integer> healthyThreshold;
 
@@ -52,6 +67,9 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.healthyThreshold == null ? Input.empty() : this.healthyThreshold;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="http2HealthCheck")
     private final @Nullable Input<HTTP2HealthCheckArgs> http2HealthCheck;
 
@@ -59,6 +77,9 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.http2HealthCheck == null ? Input.empty() : this.http2HealthCheck;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="httpHealthCheck")
     private final @Nullable Input<HTTPHealthCheckArgs> httpHealthCheck;
 
@@ -66,6 +87,9 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.httpHealthCheck == null ? Input.empty() : this.httpHealthCheck;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="httpsHealthCheck")
     private final @Nullable Input<HTTPSHealthCheckArgs> httpsHealthCheck;
 
@@ -73,6 +97,9 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.httpsHealthCheck == null ? Input.empty() : this.httpsHealthCheck;
     }
 
+    /**
+     * Type of the resource.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -80,6 +107,9 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Configure logging on this health check.
+     */
     @InputImport(name="logConfig")
     private final @Nullable Input<HealthCheckLogConfigArgs> logConfig;
 
@@ -87,6 +117,9 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.logConfig == null ? Input.empty() : this.logConfig;
     }
 
+    /**
+     * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. For example, a name that is 1-63 characters long, matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with RFC1035. This regular expression describes a name where the first character is a lowercase letter, and all following characters are a dash, lowercase letter, or digit, except the last character, which isn't a dash.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -94,6 +127,9 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -101,6 +137,9 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -108,6 +147,9 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="sslHealthCheck")
     private final @Nullable Input<SSLHealthCheckArgs> sslHealthCheck;
 
@@ -115,6 +157,9 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.sslHealthCheck == null ? Input.empty() : this.sslHealthCheck;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="tcpHealthCheck")
     private final @Nullable Input<TCPHealthCheckArgs> tcpHealthCheck;
 
@@ -122,6 +167,9 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.tcpHealthCheck == null ? Input.empty() : this.tcpHealthCheck;
     }
 
+    /**
+     * How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have greater value than checkIntervalSec.
+     */
     @InputImport(name="timeoutSec")
     private final @Nullable Input<Integer> timeoutSec;
 
@@ -129,6 +177,9 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.timeoutSec == null ? Input.empty() : this.timeoutSec;
     }
 
+    /**
+     * Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS or HTTP2. Exactly one of the protocol-specific health check field must be specified, which must match type field.
+     */
     @InputImport(name="type")
     private final @Nullable Input<HealthCheckType> type;
 
@@ -136,6 +187,9 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="udpHealthCheck")
     private final @Nullable Input<UDPHealthCheckArgs> udpHealthCheck;
 
@@ -143,6 +197,9 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.udpHealthCheck == null ? Input.empty() : this.udpHealthCheck;
     }
 
+    /**
+     * A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
+     */
     @InputImport(name="unhealthyThreshold")
     private final @Nullable Input<Integer> unhealthyThreshold;
 

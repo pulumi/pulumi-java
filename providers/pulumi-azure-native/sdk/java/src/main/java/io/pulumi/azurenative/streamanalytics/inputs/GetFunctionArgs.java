@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFunctionArgs Empty = new GetFunctionArgs();
 
+    /**
+     * The name of the function.
+     */
     @InputImport(name="functionName", required=true)
     private final String functionName;
 
@@ -19,6 +25,9 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
         return this.functionName;
     }
 
+    /**
+     * The name of the streaming job.
+     */
     @InputImport(name="jobName", required=true)
     private final String jobName;
 
@@ -26,6 +35,9 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
         return this.jobName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

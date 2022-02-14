@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum InstanceGroupManagerAutoHealingPolicyUpdateInstances {
+/**
+ * Autohealer always updates instances with a new version for both PROACTIVE and OPPORTUNISTIC updates.
+ */
         Always("ALWAYS"),
+/**
+ * (Default) Autohealer updates instance with new version according to update policy constraints: - OPPORTUNISTIC: autohealing does not perform updates. - PROACTIVE: autohealing performs updates according to maxSurge and maxUnavailable constraints. 
+ */
         FollowUpdatePolicy("FOLLOW_UPDATE_POLICY");
 
         private final String value;

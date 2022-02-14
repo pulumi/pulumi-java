@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse {
+/**
+ * Whether to consider case sensitivity when performing an exact match.
+ */
     private final Boolean caseSensitive;
 
     @OutputCustomType.Constructor({"caseSensitive"})
@@ -16,6 +19,9 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse {
         this.caseSensitive = Objects.requireNonNull(caseSensitive);
     }
 
+/**
+ * Whether to consider case sensitivity when performing an exact match.
+ */
     public Boolean getCaseSensitive() {
         return this.caseSensitive;
     }

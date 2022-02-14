@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExportArgs Empty = new ExportArgs();
 
+    /**
+     * Optional. Delimiter used in the CSV file, if `outputFormat` is set to `csv`. Defaults to the `,` (comma) character. Supported delimiter characters include comma (`,`), pipe (`|`), and tab (`\t`).
+     */
     @InputImport(name="csvDelimiter")
     private final @Nullable Input<String> csvDelimiter;
 
@@ -22,6 +28,9 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.csvDelimiter == null ? Input.empty() : this.csvDelimiter;
     }
 
+    /**
+     * Name of the preconfigured datastore.
+     */
     @InputImport(name="datastoreName", required=true)
     private final Input<String> datastoreName;
 
@@ -29,6 +38,9 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.datastoreName;
     }
 
+    /**
+     * Date range of the data to export.
+     */
     @InputImport(name="dateRange", required=true)
     private final Input<GoogleCloudApigeeV1DateRangeArgs> dateRange;
 
@@ -36,6 +48,9 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.dateRange;
     }
 
+    /**
+     * Optional. Description of the export job.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -43,6 +58,9 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="environmentId", required=true)
     private final Input<String> environmentId;
 
@@ -50,6 +68,9 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentId;
     }
 
+    /**
+     * Display name of the export job.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -57,6 +78,9 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 
@@ -64,6 +88,9 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
         return this.organizationId;
     }
 
+    /**
+     * Optional. Output format of the export. Valid values include: `csv` or `json`. Defaults to `json`. Note: Configure the delimiter for CSV output using the `csvDelimiter` property.
+     */
     @InputImport(name="outputFormat")
     private final @Nullable Input<String> outputFormat;
 

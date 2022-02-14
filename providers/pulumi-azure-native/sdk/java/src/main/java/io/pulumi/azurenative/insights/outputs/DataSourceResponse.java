@@ -12,8 +12,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataSourceResponse {
+/**
+ * 
+ */
     private final DataSourceConfigurationResponse configuration;
+/**
+ * Datasource kind
+ */
     private final String kind;
+/**
+ * 
+ */
     private final List<SinkConfigurationResponse> sinks;
 
     @OutputCustomType.Constructor({"configuration","kind","sinks"})
@@ -26,12 +35,21 @@ public final class DataSourceResponse {
         this.sinks = Objects.requireNonNull(sinks);
     }
 
+/**
+ * 
+ */
     public DataSourceConfigurationResponse getConfiguration() {
         return this.configuration;
     }
+/**
+ * Datasource kind
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * 
+ */
     public List<SinkConfigurationResponse> getSinks() {
         return this.sinks;
     }

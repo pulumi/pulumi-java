@@ -10,11 +10,29 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourcePolicyGroupPlacementPolicyResponse {
+/**
+ * The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
+ */
     private final Integer availabilityDomainCount;
+/**
+ * Specifies network collocation
+ */
     private final String collocation;
+/**
+ * Specifies network locality
+ */
     private final String locality;
+/**
+ * Scope specifies the availability domain to which the VMs should be spread.
+ */
     private final String scope;
+/**
+ * Specifies instances to hosts placement relationship
+ */
     private final String style;
+/**
+ * Number of vms in this placement group
+ */
     private final Integer vmCount;
 
     @OutputCustomType.Constructor({"availabilityDomainCount","collocation","locality","scope","style","vmCount"})
@@ -33,21 +51,39 @@ public final class ResourcePolicyGroupPlacementPolicyResponse {
         this.vmCount = Objects.requireNonNull(vmCount);
     }
 
+/**
+ * The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
+ */
     public Integer getAvailabilityDomainCount() {
         return this.availabilityDomainCount;
     }
+/**
+ * Specifies network collocation
+ */
     public String getCollocation() {
         return this.collocation;
     }
+/**
+ * Specifies network locality
+ */
     public String getLocality() {
         return this.locality;
     }
+/**
+ * Scope specifies the availability domain to which the VMs should be spread.
+ */
     public String getScope() {
         return this.scope;
     }
+/**
+ * Specifies instances to hosts placement relationship
+ */
     public String getStyle() {
         return this.style;
     }
+/**
+ * Number of vms in this placement group
+ */
     public Integer getVmCount() {
         return this.vmCount;
     }

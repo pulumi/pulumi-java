@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes an upgrade policy - automatic, manual, or rolling.
+ */
 public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UpgradePolicyArgs Empty = new UpgradePolicyArgs();
 
+    /**
+     * Configuration parameters used for performing automatic OS Upgrade.
+     */
     @InputImport(name="automaticOSUpgradePolicy")
     private final @Nullable Input<AutomaticOSUpgradePolicyArgs> automaticOSUpgradePolicy;
 
@@ -23,6 +29,9 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.automaticOSUpgradePolicy == null ? Input.empty() : this.automaticOSUpgradePolicy;
     }
 
+    /**
+     * Specifies the mode of an upgrade to virtual machines in the scale set.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.<br /><br /> **Automatic** - All virtual machines in the scale set are  automatically updated at the same time.
+     */
     @InputImport(name="mode")
     private final @Nullable Input<UpgradeMode> mode;
 
@@ -30,6 +39,9 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.mode == null ? Input.empty() : this.mode;
     }
 
+    /**
+     * The configuration parameters used while performing a rolling upgrade.
+     */
     @InputImport(name="rollingUpgradePolicy")
     private final @Nullable Input<RollingUpgradePolicyArgs> rollingUpgradePolicy;
 

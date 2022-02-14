@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity source for an Office 365 service.
+ */
 public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final Office365SourceArgs Empty = new Office365SourceArgs();
 
+    /**
+     * The groups containing all the users. Type: array of strings (or Expression with resultType array of strings).
+     */
     @InputImport(name="allowedGroups")
     private final @Nullable Input<Object> allowedGroups;
 
@@ -22,6 +28,9 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.allowedGroups == null ? Input.empty() : this.allowedGroups;
     }
 
+    /**
+     * The Column to apply the <paramref name="StartTime"/> and <paramref name="EndTime"/>. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="dateFilterColumn")
     private final @Nullable Input<Object> dateFilterColumn;
 
@@ -29,6 +38,9 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.dateFilterColumn == null ? Input.empty() : this.dateFilterColumn;
     }
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -36,6 +48,9 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
+    /**
+     * End time of the requested range for this dataset. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="endTime")
     private final @Nullable Input<Object> endTime;
 
@@ -43,6 +58,9 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
+    /**
+     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -50,6 +68,9 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
+    /**
+     * The columns to be read out from the Office 365 table. Type: array of objects (or Expression with resultType array of objects). Example: [ { "name": "Id" }, { "name": "CreatedDateTime" } ]
+     */
     @InputImport(name="outputColumns")
     private final @Nullable Input<Object> outputColumns;
 
@@ -57,6 +78,9 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.outputColumns == null ? Input.empty() : this.outputColumns;
     }
 
+    /**
+     * Source retry count. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="sourceRetryCount")
     private final @Nullable Input<Object> sourceRetryCount;
 
@@ -64,6 +88,9 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
     }
 
+    /**
+     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="sourceRetryWait")
     private final @Nullable Input<Object> sourceRetryWait;
 
@@ -71,6 +98,9 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
     }
 
+    /**
+     * Start time of the requested range for this dataset. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<Object> startTime;
 
@@ -78,6 +108,10 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
+    /**
+     * Copy source type.
+Expected value is 'Office365Source'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -85,6 +119,9 @@ public final class Office365SourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.type;
     }
 
+    /**
+     * The user scope uri. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="userScopeFilterUri")
     private final @Nullable Input<Object> userScopeFilterUri;
 

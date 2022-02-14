@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The workflow trigger recurrence.
+ */
 public final class ScheduleTriggerRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScheduleTriggerRecurrenceArgs Empty = new ScheduleTriggerRecurrenceArgs();
 
+    /**
+     * The end time.
+     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -25,6 +31,9 @@ public final class ScheduleTriggerRecurrenceArgs extends io.pulumi.resources.Res
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
+    /**
+     * The frequency.
+     */
     @InputImport(name="frequency")
     private final @Nullable Input<Either<String,RecurrenceFrequency>> frequency;
 
@@ -32,6 +41,9 @@ public final class ScheduleTriggerRecurrenceArgs extends io.pulumi.resources.Res
         return this.frequency == null ? Input.empty() : this.frequency;
     }
 
+    /**
+     * The interval.
+     */
     @InputImport(name="interval")
     private final @Nullable Input<Integer> interval;
 
@@ -39,6 +51,9 @@ public final class ScheduleTriggerRecurrenceArgs extends io.pulumi.resources.Res
         return this.interval == null ? Input.empty() : this.interval;
     }
 
+    /**
+     * The recurrence schedule.
+     */
     @InputImport(name="schedule")
     private final @Nullable Input<RecurrenceScheduleArgs> schedule;
 
@@ -46,6 +61,9 @@ public final class ScheduleTriggerRecurrenceArgs extends io.pulumi.resources.Res
         return this.schedule == null ? Input.empty() : this.schedule;
     }
 
+    /**
+     * The start time.
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -53,6 +71,9 @@ public final class ScheduleTriggerRecurrenceArgs extends io.pulumi.resources.Res
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
+    /**
+     * The time zone.
+     */
     @InputImport(name="timeZone")
     private final @Nullable Input<String> timeZone;
 

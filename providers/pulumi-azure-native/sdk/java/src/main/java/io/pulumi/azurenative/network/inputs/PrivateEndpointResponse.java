@@ -17,10 +17,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Private endpoint resource.
+ */
 public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateEndpointResponse Empty = new PrivateEndpointResponse();
 
+    /**
+     * An array of custom dns configurations.
+     */
     @InputImport(name="customDnsConfigs")
     private final @Nullable List<CustomDnsConfigPropertiesFormatResponse> customDnsConfigs;
 
@@ -28,6 +34,9 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
         return this.customDnsConfigs == null ? List.of() : this.customDnsConfigs;
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -35,6 +44,9 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
         return this.etag;
     }
 
+    /**
+     * The extended location of the load balancer.
+     */
     @InputImport(name="extendedLocation")
     private final @Nullable ExtendedLocationResponse extendedLocation;
 
@@ -42,6 +54,9 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
         return this.extendedLocation == null ? Optional.empty() : Optional.ofNullable(this.extendedLocation);
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -49,6 +64,9 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -56,6 +74,9 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.
+     */
     @InputImport(name="manualPrivateLinkServiceConnections")
     private final @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
 
@@ -63,6 +84,9 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
         return this.manualPrivateLinkServiceConnections == null ? List.of() : this.manualPrivateLinkServiceConnections;
     }
 
+    /**
+     * Resource name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -70,6 +94,9 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
         return this.name;
     }
 
+    /**
+     * An array of references to the network interfaces created for this private endpoint.
+     */
     @InputImport(name="networkInterfaces", required=true)
     private final List<NetworkInterfaceResponse> networkInterfaces;
 
@@ -77,6 +104,9 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
         return this.networkInterfaces;
     }
 
+    /**
+     * A grouping of information about the connection to the remote resource.
+     */
     @InputImport(name="privateLinkServiceConnections")
     private final @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections;
 
@@ -84,6 +114,9 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
         return this.privateLinkServiceConnections == null ? List.of() : this.privateLinkServiceConnections;
     }
 
+    /**
+     * The provisioning state of the private endpoint resource.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -91,6 +124,9 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
         return this.provisioningState;
     }
 
+    /**
+     * The ID of the subnet from which the private IP will be allocated.
+     */
     @InputImport(name="subnet")
     private final @Nullable SubnetResponse subnet;
 
@@ -98,6 +134,9 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 
@@ -105,6 +144,9 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
         return this.tags == null ? Map.of() : this.tags;
     }
 
+    /**
+     * Resource type.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

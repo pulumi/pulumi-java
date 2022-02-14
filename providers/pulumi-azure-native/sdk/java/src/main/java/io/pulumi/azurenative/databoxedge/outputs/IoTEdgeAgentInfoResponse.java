@@ -12,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IoTEdgeAgentInfoResponse {
+/**
+ * Name of the IoT edge agent image.
+ */
     private final String imageName;
+/**
+ * Image repository details.
+ */
     private final @Nullable ImageRepositoryCredentialResponse imageRepository;
+/**
+ * Image Tag.
+ */
     private final String tag;
 
     @OutputCustomType.Constructor({"imageName","imageRepository","tag"})
@@ -26,12 +35,21 @@ public final class IoTEdgeAgentInfoResponse {
         this.tag = Objects.requireNonNull(tag);
     }
 
+/**
+ * Name of the IoT edge agent image.
+ */
     public String getImageName() {
         return this.imageName;
     }
+/**
+ * Image repository details.
+ */
     public Optional<ImageRepositoryCredentialResponse> getImageRepository() {
         return Optional.ofNullable(this.imageRepository);
     }
+/**
+ * Image Tag.
+ */
     public String getTag() {
         return this.tag;
     }

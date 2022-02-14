@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DatadogOrganizationPropertiesResponse {
+/**
+ * Id of the Datadog organization.
+ */
     private final String id;
+/**
+ * Name of the Datadog organization.
+ */
     private final String name;
 
     @OutputCustomType.Constructor({"id","name"})
@@ -20,9 +26,15 @@ public final class DatadogOrganizationPropertiesResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+/**
+ * Id of the Datadog organization.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Name of the Datadog organization.
+ */
     public String getName() {
         return this.name;
     }

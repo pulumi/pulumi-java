@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ArtifactHashesResponse {
+/**
+ * 
+ */
     private final String sha256;
 
     @OutputCustomType.Constructor({"sha256"})
@@ -16,6 +19,9 @@ public final class ArtifactHashesResponse {
         this.sha256 = Objects.requireNonNull(sha256);
     }
 
+/**
+ * 
+ */
     public String getSha256() {
         return this.sha256;
     }

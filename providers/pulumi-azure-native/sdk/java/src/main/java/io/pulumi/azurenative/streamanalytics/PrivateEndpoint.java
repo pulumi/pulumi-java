@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.streamanalytics;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.streamanalytics.PrivateEndpointArgs;
 import io.pulumi.azurenative.streamanalytics.outputs.PrivateEndpointPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,33 +14,186 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Complete information about the private endpoint.
+API Version: 2020-03-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create a private endpoint
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpoint = new AzureNative.StreamAnalytics.PrivateEndpoint("privateEndpoint", new AzureNative.StreamAnalytics.PrivateEndpointArgs
+        {
+            ClusterName = "testcluster",
+            PrivateEndpointName = "testpe",
+            Properties = new AzureNative.StreamAnalytics.Inputs.PrivateEndpointPropertiesArgs
+            {
+                ManualPrivateLinkServiceConnections = 
+                {
+                    new AzureNative.StreamAnalytics.Inputs.PrivateLinkServiceConnectionArgs
+                    {
+                        GroupIds = 
+                        {
+                            "groupIdFromResource",
+                        },
+                        PrivateLinkServiceId = "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
+                    },
+                },
+            },
+            ResourceGroupName = "sjrg",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	streamanalytics "github.com/pulumi/pulumi-azure-native/sdk/go/azure/streamanalytics"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := streamanalytics.NewPrivateEndpoint(ctx, "privateEndpoint", &streamanalytics.PrivateEndpointArgs{
+			ClusterName:         pulumi.String("testcluster"),
+			PrivateEndpointName: pulumi.String("testpe"),
+			Properties: &streamanalytics.PrivateEndpointPropertiesArgs{
+				ManualPrivateLinkServiceConnections: streamanalytics.PrivateLinkServiceConnectionArray{
+					&streamanalytics.PrivateLinkServiceConnectionArgs{
+						GroupIds: pulumi.StringArray{
+							pulumi.String("groupIdFromResource"),
+						},
+						PrivateLinkServiceId: pulumi.String("/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("sjrg"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const privateEndpoint = new azure_native.streamanalytics.PrivateEndpoint("privateEndpoint", {
+    clusterName: "testcluster",
+    privateEndpointName: "testpe",
+    properties: {
+        manualPrivateLinkServiceConnections: [{
+            groupIds: ["groupIdFromResource"],
+            privateLinkServiceId: "/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
+        }],
+    },
+    resourceGroupName: "sjrg",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+private_endpoint = azure_native.streamanalytics.PrivateEndpoint("privateEndpoint",
+    cluster_name="testcluster",
+    private_endpoint_name="testpe",
+    properties=azure_native.streamanalytics.PrivateEndpointPropertiesArgs(
+        manual_private_link_service_connections=[azure_native.streamanalytics.PrivateLinkServiceConnectionArgs(
+            group_ids=["groupIdFromResource"],
+            private_link_service_id="/subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/privateLinkServices/testPls",
+        )],
+    ),
+    resource_group_name="sjrg")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:streamanalytics:PrivateEndpoint An Example Private Endpoint /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/sjrg/providers/Microsoft.StreamAnalytics/clusters/testcluster/privateEndpoints/AnExamplePrivateEndpoint 
+```
+
+ */
 @ResourceType(type="azure-native:streamanalytics:PrivateEndpoint")
 public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
+    /**
+     * Unique opaque string (generally a GUID) that represents the metadata state of the resource (private endpoint) and changes whenever the resource is updated. Required on PUT (CreateOrUpdate) requests.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return Unique opaque string (generally a GUID) that represents the metadata state of the resource (private endpoint) and changes whenever the resource is updated. Required on PUT (CreateOrUpdate) requests.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The properties associated with a private endpoint.
+     */
     @OutputExport(name="properties", type=PrivateEndpointPropertiesResponse.class, parameters={})
     private Output<PrivateEndpointPropertiesResponse> properties;
 
+    /**
+     * @return The properties associated with a private endpoint.
+     */
     public Output<PrivateEndpointPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public PrivateEndpoint(String name, PrivateEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:streamanalytics:PrivateEndpoint", name, args == null ? PrivateEndpointArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -61,6 +213,14 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static PrivateEndpoint get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateEndpoint(name, id, options);
     }

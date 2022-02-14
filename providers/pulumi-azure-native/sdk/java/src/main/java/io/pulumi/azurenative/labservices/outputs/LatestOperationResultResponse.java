@@ -9,11 +9,29 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LatestOperationResultResponse {
+/**
+ * Error code on failure.
+ */
     private final String errorCode;
+/**
+ * The error message.
+ */
     private final String errorMessage;
+/**
+ * The HttpMethod - PUT/POST/DELETE for the operation.
+ */
     private final String httpMethod;
+/**
+ * The URL to use to check long-running operation status
+ */
     private final String operationUrl;
+/**
+ * Request URI of the operation.
+ */
     private final String requestUri;
+/**
+ * The current status of the operation.
+ */
     private final String status;
 
     @OutputCustomType.Constructor({"errorCode","errorMessage","httpMethod","operationUrl","requestUri","status"})
@@ -32,21 +50,39 @@ public final class LatestOperationResultResponse {
         this.status = Objects.requireNonNull(status);
     }
 
+/**
+ * Error code on failure.
+ */
     public String getErrorCode() {
         return this.errorCode;
     }
+/**
+ * The error message.
+ */
     public String getErrorMessage() {
         return this.errorMessage;
     }
+/**
+ * The HttpMethod - PUT/POST/DELETE for the operation.
+ */
     public String getHttpMethod() {
         return this.httpMethod;
     }
+/**
+ * The URL to use to check long-running operation status
+ */
     public String getOperationUrl() {
         return this.operationUrl;
     }
+/**
+ * Request URI of the operation.
+ */
     public String getRequestUri() {
         return this.requestUri;
     }
+/**
+ * The current status of the operation.
+ */
     public String getStatus() {
         return this.status;
     }

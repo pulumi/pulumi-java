@@ -9,10 +9,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Results for query analysis comparison between the source and target
+ */
 public final class QueryAnalysisValidationResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final QueryAnalysisValidationResultResponse Empty = new QueryAnalysisValidationResultResponse();
 
+    /**
+     * List of queries executed and it's execution results in source and target
+     */
     @InputImport(name="queryResults", required=true)
     private final QueryExecutionResultResponse queryResults;
 
@@ -20,6 +26,9 @@ public final class QueryAnalysisValidationResultResponse extends io.pulumi.resou
         return this.queryResults;
     }
 
+    /**
+     * Errors that are part of the execution
+     */
     @InputImport(name="validationErrors", required=true)
     private final ValidationErrorResponse validationErrors;
 

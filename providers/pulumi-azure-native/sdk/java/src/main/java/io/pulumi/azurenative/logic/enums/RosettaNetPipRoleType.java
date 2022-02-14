@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The RosettaNet ProcessConfiguration role type.
+ */
     @EnumType
     public enum RosettaNetPipRoleType {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         Functional("Functional"),
+/**
+ * 
+ */
         Organizational("Organizational"),
+/**
+ * 
+ */
         Employee("Employee");
 
         private final String value;

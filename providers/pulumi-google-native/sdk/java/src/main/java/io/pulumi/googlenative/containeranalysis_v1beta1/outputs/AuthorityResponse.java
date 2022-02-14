@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AuthorityResponse {
+/**
+ * Hint hints at the purpose of the attestation authority.
+ */
     private final HintResponse hint;
 
     @OutputCustomType.Constructor({"hint"})
@@ -16,6 +19,9 @@ public final class AuthorityResponse {
         this.hint = Objects.requireNonNull(hint);
     }
 
+/**
+ * Hint hints at the purpose of the attestation authority.
+ */
     public HintResponse getHint() {
         return this.hint;
     }

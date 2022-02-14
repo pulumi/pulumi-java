@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * RunAsGroupStrategyOptions defines the strategy type and any options used to create the strategy. Deprecated: use RunAsGroupStrategyOptions from policy API Group instead.
+ */
 public final class RunAsGroupStrategyOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RunAsGroupStrategyOptionsArgs Empty = new RunAsGroupStrategyOptionsArgs();
 
+    /**
+     * ranges are the allowed ranges of gids that may be used. If you would like to force a single gid then supply a single range with the same start and end. Required for MustRunAs.
+     */
     @InputImport(name="ranges")
     private final @Nullable Input<List<IDRangeArgs>> ranges;
 
@@ -23,6 +29,9 @@ public final class RunAsGroupStrategyOptionsArgs extends io.pulumi.resources.Res
         return this.ranges == null ? Input.empty() : this.ranges;
     }
 
+    /**
+     * rule is the strategy that will dictate the allowable RunAsGroup values that may be set.
+     */
     @InputImport(name="rule", required=true)
     private final Input<String> rule;
 

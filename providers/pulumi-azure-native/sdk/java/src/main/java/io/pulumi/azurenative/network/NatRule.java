@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.NatRuleArgs;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VpnNatRuleMappingResponse;
 import io.pulumi.core.Alias;
@@ -16,69 +15,270 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * VpnGatewayNatRule Resource.
+API Version: 2020-11-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### NatRulePut
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var natRule = new AzureNative.Network.NatRule("natRule", new AzureNative.Network.NatRuleArgs
+        {
+            ExternalMappings = 
+            {
+                new AzureNative.Network.Inputs.VpnNatRuleMappingArgs
+                {
+                    AddressSpace = "192.168.21.0/24",
+                },
+            },
+            GatewayName = "gateway1",
+            InternalMappings = 
+            {
+                new AzureNative.Network.Inputs.VpnNatRuleMappingArgs
+                {
+                    AddressSpace = "10.4.0.0/24",
+                },
+            },
+            IpConfigurationId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/cloudnet1-VNG/ipConfigurations/default",
+            Mode = "EgressSnat",
+            NatRuleName = "natRule1",
+            ResourceGroupName = "rg1",
+            Type = "Static",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewNatRule(ctx, "natRule", &network.NatRuleArgs{
+			ExternalMappings: []network.VpnNatRuleMappingArgs{
+				&network.VpnNatRuleMappingArgs{
+					AddressSpace: pulumi.String("192.168.21.0/24"),
+				},
+			},
+			GatewayName: pulumi.String("gateway1"),
+			InternalMappings: []network.VpnNatRuleMappingArgs{
+				&network.VpnNatRuleMappingArgs{
+					AddressSpace: pulumi.String("10.4.0.0/24"),
+				},
+			},
+			IpConfigurationId: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/cloudnet1-VNG/ipConfigurations/default"),
+			Mode:              pulumi.String("EgressSnat"),
+			NatRuleName:       pulumi.String("natRule1"),
+			ResourceGroupName: pulumi.String("rg1"),
+			Type:              pulumi.String("Static"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const natRule = new azure_native.network.NatRule("natRule", {
+    externalMappings: [{
+        addressSpace: "192.168.21.0/24",
+    }],
+    gatewayName: "gateway1",
+    internalMappings: [{
+        addressSpace: "10.4.0.0/24",
+    }],
+    ipConfigurationId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/cloudnet1-VNG/ipConfigurations/default",
+    mode: "EgressSnat",
+    natRuleName: "natRule1",
+    resourceGroupName: "rg1",
+    type: "Static",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+nat_rule = azure_native.network.NatRule("natRule",
+    external_mappings=[azure_native.network.VpnNatRuleMappingArgs(
+        address_space="192.168.21.0/24",
+    )],
+    gateway_name="gateway1",
+    internal_mappings=[azure_native.network.VpnNatRuleMappingArgs(
+        address_space="10.4.0.0/24",
+    )],
+    ip_configuration_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/cloudnet1-VNG/ipConfigurations/default",
+    mode="EgressSnat",
+    nat_rule_name="natRule1",
+    resource_group_name="rg1",
+    type="Static")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:NatRule natRule1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1/natRules/natRule1 
+```
+
+ */
 @ResourceType(type="azure-native:network:NatRule")
 public class NatRule extends io.pulumi.resources.CustomResource {
+    /**
+     * List of egress VpnSiteLinkConnections.
+     */
     @OutputExport(name="egressVpnSiteLinkConnections", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> egressVpnSiteLinkConnections;
 
+    /**
+     * @return List of egress VpnSiteLinkConnections.
+     */
     public Output<List<SubResourceResponse>> getEgressVpnSiteLinkConnections() {
         return this.egressVpnSiteLinkConnections;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The private IP address external mapping for NAT.
+     */
     @OutputExport(name="externalMappings", type=List.class, parameters={VpnNatRuleMappingResponse.class})
     private Output</* @Nullable */ List<VpnNatRuleMappingResponse>> externalMappings;
 
+    /**
+     * @return The private IP address external mapping for NAT.
+     */
     public Output</* @Nullable */ List<VpnNatRuleMappingResponse>> getExternalMappings() {
         return this.externalMappings;
     }
+    /**
+     * List of ingress VpnSiteLinkConnections.
+     */
     @OutputExport(name="ingressVpnSiteLinkConnections", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> ingressVpnSiteLinkConnections;
 
+    /**
+     * @return List of ingress VpnSiteLinkConnections.
+     */
     public Output<List<SubResourceResponse>> getIngressVpnSiteLinkConnections() {
         return this.ingressVpnSiteLinkConnections;
     }
+    /**
+     * The private IP address internal mapping for NAT.
+     */
     @OutputExport(name="internalMappings", type=List.class, parameters={VpnNatRuleMappingResponse.class})
     private Output</* @Nullable */ List<VpnNatRuleMappingResponse>> internalMappings;
 
+    /**
+     * @return The private IP address internal mapping for NAT.
+     */
     public Output</* @Nullable */ List<VpnNatRuleMappingResponse>> getInternalMappings() {
         return this.internalMappings;
     }
+    /**
+     * The IP Configuration ID this NAT rule applies to.
+     */
     @OutputExport(name="ipConfigurationId", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipConfigurationId;
 
+    /**
+     * @return The IP Configuration ID this NAT rule applies to.
+     */
     public Output</* @Nullable */ String> getIpConfigurationId() {
         return this.ipConfigurationId;
     }
+    /**
+     * The Source NAT direction of a VPN NAT.
+     */
     @OutputExport(name="mode", type=String.class, parameters={})
     private Output</* @Nullable */ String> mode;
 
+    /**
+     * @return The Source NAT direction of a VPN NAT.
+     */
     public Output</* @Nullable */ String> getMode() {
         return this.mode;
     }
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the NAT Rule resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the NAT Rule resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public NatRule(String name, NatRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:NatRule", name, args == null ? NatRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -101,6 +301,14 @@ public class NatRule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static NatRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NatRule(name, id, options);
     }

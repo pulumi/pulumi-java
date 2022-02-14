@@ -25,30 +25,105 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetVirtualMachineScaleSetResult {
+/**
+ * Specifies additional capabilities enabled or disabled on the Virtual Machines in the Virtual Machine Scale Set. For instance: whether the Virtual Machines have the capability to support attaching managed data disks with UltraSSD_LRS storage account type.
+ */
     private final @Nullable AdditionalCapabilitiesResponse additionalCapabilities;
+/**
+ * Policy for automatic repairs.
+ */
     private final @Nullable AutomaticRepairsPolicyResponse automaticRepairsPolicy;
+/**
+ * When Overprovision is enabled, extensions are launched only on the requested number of VMs which are finally kept. This property will hence ensure that the extensions do not run on the extra overprovisioned VMs.
+ */
     private final @Nullable Boolean doNotRunExtensionsOnOverprovisionedVMs;
+/**
+ * The extended location of the Virtual Machine Scale Set.
+ */
     private final @Nullable ExtendedLocationResponse extendedLocation;
+/**
+ * Specifies information about the dedicated host group that the virtual machine scale set resides in. <br><br>Minimum api-version: 2020-06-01.
+ */
     private final @Nullable SubResourceResponse hostGroup;
+/**
+ * Resource Id
+ */
     private final String id;
+/**
+ * The identity of the virtual machine scale set, if configured.
+ */
     private final @Nullable VirtualMachineScaleSetIdentityResponse identity;
+/**
+ * Resource location
+ */
     private final String location;
+/**
+ * Resource name
+ */
     private final String name;
+/**
+ * Specifies the orchestration mode for the virtual machine scale set.
+ */
     private final @Nullable String orchestrationMode;
+/**
+ * Specifies whether the Virtual Machine Scale Set should be overprovisioned.
+ */
     private final @Nullable Boolean overprovision;
+/**
+ * Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.
+ */
     private final @Nullable PlanResponse plan;
+/**
+ * Fault Domain count for each placement group.
+ */
     private final @Nullable Integer platformFaultDomainCount;
+/**
+ * The provisioning state, which only appears in the response.
+ */
     private final String provisioningState;
+/**
+ * Specifies information about the proximity placement group that the virtual machine scale set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
+ */
     private final @Nullable SubResourceResponse proximityPlacementGroup;
+/**
+ * Specifies the scale-in policy that decides which virtual machines are chosen for removal when a Virtual Machine Scale Set is scaled-in.
+ */
     private final @Nullable ScaleInPolicyResponse scaleInPolicy;
+/**
+ * When true this limits the scale set to a single placement group, of max size 100 virtual machines. NOTE: If singlePlacementGroup is true, it may be modified to false. However, if singlePlacementGroup is false, it may not be modified to true.
+ */
     private final @Nullable Boolean singlePlacementGroup;
+/**
+ * The virtual machine scale set sku.
+ */
     private final @Nullable SkuResponse sku;
+/**
+ * Resource tags
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Resource type
+ */
     private final String type;
+/**
+ * Specifies the ID which uniquely identifies a Virtual Machine Scale Set.
+ */
     private final String uniqueId;
+/**
+ * The upgrade policy.
+ */
     private final @Nullable UpgradePolicyResponse upgradePolicy;
+/**
+ * The virtual machine profile.
+ */
     private final @Nullable VirtualMachineScaleSetVMProfileResponse virtualMachineProfile;
+/**
+ * Whether to force strictly even Virtual Machine distribution cross x-zones in case there is zone outage.
+ */
     private final @Nullable Boolean zoneBalance;
+/**
+ * The virtual machine scale set zones. NOTE: Availability zones can only be set when you create the scale set
+ */
     private final @Nullable List<String> zones;
 
     @OutputCustomType.Constructor({"additionalCapabilities","automaticRepairsPolicy","doNotRunExtensionsOnOverprovisionedVMs","extendedLocation","hostGroup","id","identity","location","name","orchestrationMode","overprovision","plan","platformFaultDomainCount","provisioningState","proximityPlacementGroup","scaleInPolicy","singlePlacementGroup","sku","tags","type","uniqueId","upgradePolicy","virtualMachineProfile","zoneBalance","zones"})
@@ -105,78 +180,153 @@ public final class GetVirtualMachineScaleSetResult {
         this.zones = zones;
     }
 
+/**
+ * Specifies additional capabilities enabled or disabled on the Virtual Machines in the Virtual Machine Scale Set. For instance: whether the Virtual Machines have the capability to support attaching managed data disks with UltraSSD_LRS storage account type.
+ */
     public Optional<AdditionalCapabilitiesResponse> getAdditionalCapabilities() {
         return Optional.ofNullable(this.additionalCapabilities);
     }
+/**
+ * Policy for automatic repairs.
+ */
     public Optional<AutomaticRepairsPolicyResponse> getAutomaticRepairsPolicy() {
         return Optional.ofNullable(this.automaticRepairsPolicy);
     }
+/**
+ * When Overprovision is enabled, extensions are launched only on the requested number of VMs which are finally kept. This property will hence ensure that the extensions do not run on the extra overprovisioned VMs.
+ */
     public Optional<Boolean> getDoNotRunExtensionsOnOverprovisionedVMs() {
         return Optional.ofNullable(this.doNotRunExtensionsOnOverprovisionedVMs);
     }
+/**
+ * The extended location of the Virtual Machine Scale Set.
+ */
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
+/**
+ * Specifies information about the dedicated host group that the virtual machine scale set resides in. <br><br>Minimum api-version: 2020-06-01.
+ */
     public Optional<SubResourceResponse> getHostGroup() {
         return Optional.ofNullable(this.hostGroup);
     }
+/**
+ * Resource Id
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The identity of the virtual machine scale set, if configured.
+ */
     public Optional<VirtualMachineScaleSetIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
+/**
+ * Resource location
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * Resource name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Specifies the orchestration mode for the virtual machine scale set.
+ */
     public Optional<String> getOrchestrationMode() {
         return Optional.ofNullable(this.orchestrationMode);
     }
+/**
+ * Specifies whether the Virtual Machine Scale Set should be overprovisioned.
+ */
     public Optional<Boolean> getOverprovision() {
         return Optional.ofNullable(this.overprovision);
     }
+/**
+ * Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.
+ */
     public Optional<PlanResponse> getPlan() {
         return Optional.ofNullable(this.plan);
     }
+/**
+ * Fault Domain count for each placement group.
+ */
     public Optional<Integer> getPlatformFaultDomainCount() {
         return Optional.ofNullable(this.platformFaultDomainCount);
     }
+/**
+ * The provisioning state, which only appears in the response.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Specifies information about the proximity placement group that the virtual machine scale set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
+ */
     public Optional<SubResourceResponse> getProximityPlacementGroup() {
         return Optional.ofNullable(this.proximityPlacementGroup);
     }
+/**
+ * Specifies the scale-in policy that decides which virtual machines are chosen for removal when a Virtual Machine Scale Set is scaled-in.
+ */
     public Optional<ScaleInPolicyResponse> getScaleInPolicy() {
         return Optional.ofNullable(this.scaleInPolicy);
     }
+/**
+ * When true this limits the scale set to a single placement group, of max size 100 virtual machines. NOTE: If singlePlacementGroup is true, it may be modified to false. However, if singlePlacementGroup is false, it may not be modified to true.
+ */
     public Optional<Boolean> getSinglePlacementGroup() {
         return Optional.ofNullable(this.singlePlacementGroup);
     }
+/**
+ * The virtual machine scale set sku.
+ */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
+/**
+ * Resource tags
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Resource type
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Specifies the ID which uniquely identifies a Virtual Machine Scale Set.
+ */
     public String getUniqueId() {
         return this.uniqueId;
     }
+/**
+ * The upgrade policy.
+ */
     public Optional<UpgradePolicyResponse> getUpgradePolicy() {
         return Optional.ofNullable(this.upgradePolicy);
     }
+/**
+ * The virtual machine profile.
+ */
     public Optional<VirtualMachineScaleSetVMProfileResponse> getVirtualMachineProfile() {
         return Optional.ofNullable(this.virtualMachineProfile);
     }
+/**
+ * Whether to force strictly even Virtual Machine distribution cross x-zones in case there is zone outage.
+ */
     public Optional<Boolean> getZoneBalance() {
         return Optional.ofNullable(this.zoneBalance);
     }
+/**
+ * The virtual machine scale set zones. NOTE: Availability zones can only be set when you create the scale set
+ */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }

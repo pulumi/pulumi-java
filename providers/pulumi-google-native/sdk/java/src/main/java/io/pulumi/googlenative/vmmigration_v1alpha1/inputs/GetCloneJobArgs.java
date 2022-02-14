@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetCloneJobArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCloneJobArgs Empty = new GetCloneJobArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="cloneJobId", required=true)
     private final String cloneJobId;
 
@@ -21,6 +27,9 @@ public final class GetCloneJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.cloneJobId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -28,6 +37,9 @@ public final class GetCloneJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="migratingVmId", required=true)
     private final String migratingVmId;
 
@@ -35,6 +47,9 @@ public final class GetCloneJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.migratingVmId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -42,6 +57,9 @@ public final class GetCloneJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="sourceId", required=true)
     private final String sourceId;
 

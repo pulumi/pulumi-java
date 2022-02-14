@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PipelineArgs Empty = new PipelineArgs();
 
+    /**
+     * Configuration used to bootstrap the Pipeline.
+     */
     @InputImport(name="bootstrapConfiguration", required=true)
     private final Input<BootstrapConfigurationArgs> bootstrapConfiguration;
 
@@ -25,6 +31,9 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.bootstrapConfiguration;
     }
 
+    /**
+     * Resource Location
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -32,6 +41,9 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the Pipeline resource in ARM.
+     */
     @InputImport(name="pipelineName")
     private final @Nullable Input<String> pipelineName;
 
@@ -39,6 +51,9 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.pipelineName == null ? Input.empty() : this.pipelineName;
     }
 
+    /**
+     * Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
+     */
     @InputImport(name="pipelineType", required=true)
     private final Input<Either<String,PipelineTypeEnum>> pipelineType;
 
@@ -46,6 +61,9 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.pipelineType;
     }
 
+    /**
+     * Name of the resource group within the Azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -53,6 +71,9 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource Tags
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

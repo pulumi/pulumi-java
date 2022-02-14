@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackup {
+/**
+ * Gets the details of a specific backup.
+ */
     public static CompletableFuture<GetBackupResult> invokeAsync(GetBackupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:file/v1beta1:getBackup", TypeShape.of(GetBackupResult.class), args == null ? GetBackupArgs.Empty : args, Utilities.withVersion(options));
     }

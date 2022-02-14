@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A compliance check that is a CIS benchmark.
+ */
 public final class CisBenchmarkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CisBenchmarkArgs Empty = new CisBenchmarkArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="profileLevel")
     private final @Nullable Input<Integer> profileLevel;
 
@@ -22,6 +28,9 @@ public final class CisBenchmarkArgs extends io.pulumi.resources.ResourceArgs {
         return this.profileLevel == null ? Input.empty() : this.profileLevel;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="severity")
     private final @Nullable Input<CisBenchmarkSeverity> severity;
 

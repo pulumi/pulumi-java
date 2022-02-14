@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AuthorizationLoggingOptionsResponse {
+/**
+ * This is deprecated and has no effect. Do not use.
+ */
     private final String permissionType;
 
     @OutputCustomType.Constructor({"permissionType"})
@@ -16,6 +19,9 @@ public final class AuthorizationLoggingOptionsResponse {
         this.permissionType = Objects.requireNonNull(permissionType);
     }
 
+/**
+ * This is deprecated and has no effect. Do not use.
+ */
     public String getPermissionType() {
         return this.permissionType;
     }

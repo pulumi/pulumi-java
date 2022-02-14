@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Name of the pricing tier.
+ */
     @EnumType
     public enum SkuName {
+/**
+ * 
+ */
         Classic_AzureFrontDoor("Classic_AzureFrontDoor"),
+/**
+ * 
+ */
         Standard_AzureFrontDoor("Standard_AzureFrontDoor"),
+/**
+ * 
+ */
         Premium_AzureFrontDoor("Premium_AzureFrontDoor");
 
         private final String value;

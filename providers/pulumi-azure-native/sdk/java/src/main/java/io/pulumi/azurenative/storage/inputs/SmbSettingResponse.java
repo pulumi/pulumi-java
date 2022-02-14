@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Setting for SMB protocol
+ */
 public final class SmbSettingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SmbSettingResponse Empty = new SmbSettingResponse();
 
+    /**
+     * SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter ';'.
+     */
     @InputImport(name="authenticationMethods")
     private final @Nullable String authenticationMethods;
 
@@ -22,6 +28,9 @@ public final class SmbSettingResponse extends io.pulumi.resources.InvokeArgs {
         return this.authenticationMethods == null ? Optional.empty() : Optional.ofNullable(this.authenticationMethods);
     }
 
+    /**
+     * SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter ';'.
+     */
     @InputImport(name="channelEncryption")
     private final @Nullable String channelEncryption;
 
@@ -29,6 +38,9 @@ public final class SmbSettingResponse extends io.pulumi.resources.InvokeArgs {
         return this.channelEncryption == null ? Optional.empty() : Optional.ofNullable(this.channelEncryption);
     }
 
+    /**
+     * Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter ';'
+     */
     @InputImport(name="kerberosTicketEncryption")
     private final @Nullable String kerberosTicketEncryption;
 
@@ -36,6 +48,9 @@ public final class SmbSettingResponse extends io.pulumi.resources.InvokeArgs {
         return this.kerberosTicketEncryption == null ? Optional.empty() : Optional.ofNullable(this.kerberosTicketEncryption);
     }
 
+    /**
+     * Multichannel setting. Applies to Premium FileStorage only.
+     */
     @InputImport(name="multichannel")
     private final @Nullable MultichannelResponse multichannel;
 
@@ -43,6 +58,9 @@ public final class SmbSettingResponse extends io.pulumi.resources.InvokeArgs {
         return this.multichannel == null ? Optional.empty() : Optional.ofNullable(this.multichannel);
     }
 
+    /**
+     * SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter ';'.
+     */
     @InputImport(name="versions")
     private final @Nullable String versions;
 

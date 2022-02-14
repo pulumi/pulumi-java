@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Managed Identity of the resource
+ */
 public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IdentityResponse Empty = new IdentityResponse();
 
+    /**
+     * Service principal object Id
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -21,6 +27,9 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
         return this.principalId;
     }
 
+    /**
+     * Tenant Id
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -28,6 +37,9 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
         return this.tenantId;
     }
 
+    /**
+     * Identity Type
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

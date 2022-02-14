@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A test of an android application that explores the application on a virtual or physical Android device, finding culprits and crashes as it goes.
+ */
 public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AndroidRoboTestArgs Empty = new AndroidRoboTestArgs();
 
+    /**
+     * The initial activity that should be used to start the app. Optional
+     */
     @InputImport(name="appInitialActivity")
     private final @Nullable Input<String> appInitialActivity;
 
@@ -22,6 +28,9 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
         return this.appInitialActivity == null ? Input.empty() : this.appInitialActivity;
     }
 
+    /**
+     * The java package for the bootstrap. Optional
+     */
     @InputImport(name="bootstrapPackageId")
     private final @Nullable Input<String> bootstrapPackageId;
 
@@ -29,6 +38,9 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
         return this.bootstrapPackageId == null ? Input.empty() : this.bootstrapPackageId;
     }
 
+    /**
+     * The runner class for the bootstrap. Optional
+     */
     @InputImport(name="bootstrapRunnerClass")
     private final @Nullable Input<String> bootstrapRunnerClass;
 
@@ -36,6 +48,9 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
         return this.bootstrapRunnerClass == null ? Input.empty() : this.bootstrapRunnerClass;
     }
 
+    /**
+     * The max depth of the traversal stack Robo can explore. Optional
+     */
     @InputImport(name="maxDepth")
     private final @Nullable Input<Integer> maxDepth;
 
@@ -43,6 +58,9 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
         return this.maxDepth == null ? Input.empty() : this.maxDepth;
     }
 
+    /**
+     * The max number of steps/actions Robo can execute. Default is no limit (0). Optional
+     */
     @InputImport(name="maxSteps")
     private final @Nullable Input<Integer> maxSteps;
 

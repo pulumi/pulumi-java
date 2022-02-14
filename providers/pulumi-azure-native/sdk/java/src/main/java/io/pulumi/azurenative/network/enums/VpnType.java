@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of this virtual network gateway.
+ */
     @EnumType
     public enum VpnType {
+/**
+ * 
+ */
         PolicyBased("PolicyBased"),
+/**
+ * 
+ */
         RouteBased("RouteBased");
 
         private final String value;

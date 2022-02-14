@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * DocumentNote represents an SPDX Document Creation Infromation section: https://spdx.github.io/spdx-spec/2-document-creation-information/
+ */
 public final class DocumentNoteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DocumentNoteArgs Empty = new DocumentNoteArgs();
 
+    /**
+     * Compliance with the SPDX specification includes populating the SPDX fields therein with data related to such fields ("SPDX-Metadata")
+     */
     @InputImport(name="dataLicence")
     private final @Nullable Input<String> dataLicence;
 
@@ -21,6 +27,9 @@ public final class DocumentNoteArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataLicence == null ? Input.empty() : this.dataLicence;
     }
 
+    /**
+     * Provide a reference number that can be used to understand how to parse and interpret the rest of the file
+     */
     @InputImport(name="spdxVersion")
     private final @Nullable Input<String> spdxVersion;
 

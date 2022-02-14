@@ -10,17 +10,53 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VpnClientConnectionHealthDetailResponse {
+/**
+ * The egress bytes per second.
+ */
     private final Double egressBytesTransferred;
+/**
+ * The egress packets per second.
+ */
     private final Double egressPacketsTransferred;
+/**
+ * The ingress bytes per second.
+ */
     private final Double ingressBytesTransferred;
+/**
+ * The ingress packets per second.
+ */
     private final Double ingressPacketsTransferred;
+/**
+ * The max band width.
+ */
     private final Double maxBandwidth;
+/**
+ * The max packets transferred per second.
+ */
     private final Double maxPacketsPerSecond;
+/**
+ * The assigned private Ip of a connected vpn client.
+ */
     private final String privateIpAddress;
+/**
+ * The public Ip of a connected vpn client.
+ */
     private final String publicIpAddress;
+/**
+ * The duration time of a connected vpn client.
+ */
     private final Double vpnConnectionDuration;
+/**
+ * The vpn client Id.
+ */
     private final String vpnConnectionId;
+/**
+ * The start time of a connected vpn client.
+ */
     private final String vpnConnectionTime;
+/**
+ * The user name of a connected vpn client.
+ */
     private final String vpnUserName;
 
     @OutputCustomType.Constructor({"egressBytesTransferred","egressPacketsTransferred","ingressBytesTransferred","ingressPacketsTransferred","maxBandwidth","maxPacketsPerSecond","privateIpAddress","publicIpAddress","vpnConnectionDuration","vpnConnectionId","vpnConnectionTime","vpnUserName"})
@@ -51,39 +87,75 @@ public final class VpnClientConnectionHealthDetailResponse {
         this.vpnUserName = Objects.requireNonNull(vpnUserName);
     }
 
+/**
+ * The egress bytes per second.
+ */
     public Double getEgressBytesTransferred() {
         return this.egressBytesTransferred;
     }
+/**
+ * The egress packets per second.
+ */
     public Double getEgressPacketsTransferred() {
         return this.egressPacketsTransferred;
     }
+/**
+ * The ingress bytes per second.
+ */
     public Double getIngressBytesTransferred() {
         return this.ingressBytesTransferred;
     }
+/**
+ * The ingress packets per second.
+ */
     public Double getIngressPacketsTransferred() {
         return this.ingressPacketsTransferred;
     }
+/**
+ * The max band width.
+ */
     public Double getMaxBandwidth() {
         return this.maxBandwidth;
     }
+/**
+ * The max packets transferred per second.
+ */
     public Double getMaxPacketsPerSecond() {
         return this.maxPacketsPerSecond;
     }
+/**
+ * The assigned private Ip of a connected vpn client.
+ */
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
     }
+/**
+ * The public Ip of a connected vpn client.
+ */
     public String getPublicIpAddress() {
         return this.publicIpAddress;
     }
+/**
+ * The duration time of a connected vpn client.
+ */
     public Double getVpnConnectionDuration() {
         return this.vpnConnectionDuration;
     }
+/**
+ * The vpn client Id.
+ */
     public String getVpnConnectionId() {
         return this.vpnConnectionId;
     }
+/**
+ * The start time of a connected vpn client.
+ */
     public String getVpnConnectionTime() {
         return this.vpnConnectionTime;
     }
+/**
+ * The user name of a connected vpn client.
+ */
     public String getVpnUserName() {
         return this.vpnUserName;
     }

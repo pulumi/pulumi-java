@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebAppRelayServiceConnectionSlotArgs Empty = new WebAppRelayServiceConnectionSlotArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="biztalkUri")
     private final @Nullable Input<String> biztalkUri;
 
@@ -22,6 +28,9 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
         return this.biztalkUri == null ? Input.empty() : this.biztalkUri;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="entityConnectionString")
     private final @Nullable Input<String> entityConnectionString;
 
@@ -29,6 +38,9 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
         return this.entityConnectionString == null ? Input.empty() : this.entityConnectionString;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="entityName")
     private final @Nullable Input<String> entityName;
 
@@ -36,6 +48,9 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
         return this.entityName == null ? Input.empty() : this.entityName;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="hostname")
     private final @Nullable Input<String> hostname;
 
@@ -43,6 +58,9 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
         return this.hostname == null ? Input.empty() : this.hostname;
     }
 
+    /**
+     * Kind of resource.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -50,6 +68,9 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the app.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -57,6 +78,9 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
         return this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -64,6 +88,9 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="resourceConnectionString")
     private final @Nullable Input<String> resourceConnectionString;
 
@@ -71,6 +98,9 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
         return this.resourceConnectionString == null ? Input.empty() : this.resourceConnectionString;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -78,6 +108,9 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
         return this.resourceGroupName;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="resourceType")
     private final @Nullable Input<String> resourceType;
 
@@ -85,6 +118,9 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
         return this.resourceType == null ? Input.empty() : this.resourceType;
     }
 
+    /**
+     * Name of the deployment slot. If a slot is not specified, the API will create or update a hybrid connection for the production slot.
+     */
     @InputImport(name="slot", required=true)
     private final Input<String> slot;
 

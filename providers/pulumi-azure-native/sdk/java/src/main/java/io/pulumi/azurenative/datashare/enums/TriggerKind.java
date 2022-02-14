@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Kind of synchronization on trigger.
+ */
     @EnumType
     public enum TriggerKind {
+/**
+ * 
+ */
         ScheduleBased("ScheduleBased");
 
         private final String value;

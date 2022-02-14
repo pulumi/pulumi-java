@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JobStatusResponse Empty = new JobStatusResponse();
 
+    /**
+     * Final error result of the job. If present, indicates that the job has completed and was unsuccessful.
+     */
     @InputImport(name="errorResult", required=true)
     private final ErrorProtoResponse errorResult;
 
@@ -21,6 +27,9 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
         return this.errorResult;
     }
 
+    /**
+     * The first errors encountered during the running of the job. The final message includes the number of errors that caused the process to stop. Errors here do not necessarily mean that the job has completed or was unsuccessful.
+     */
     @InputImport(name="errors", required=true)
     private final List<ErrorProtoResponse> errors;
 
@@ -28,6 +37,9 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
         return this.errors;
     }
 
+    /**
+     * Running state of the job.
+     */
     @InputImport(name="state", required=true)
     private final String state;
 

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * VPN client protocol enabled for the virtual network gateway.
+ */
     @EnumType
     public enum VpnClientProtocol {
+/**
+ * 
+ */
         IkeV2("IkeV2"),
+/**
+ * 
+ */
         SSTP("SSTP"),
+/**
+ * 
+ */
         OpenVPN("OpenVPN");
 
         private final String value;

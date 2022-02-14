@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the disallowed disk types.
+ */
 public final class DisallowedArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DisallowedArgs Empty = new DisallowedArgs();
 
+    /**
+     * A list of disk types.
+     */
     @InputImport(name="diskTypes")
     private final @Nullable Input<List<String>> diskTypes;
 

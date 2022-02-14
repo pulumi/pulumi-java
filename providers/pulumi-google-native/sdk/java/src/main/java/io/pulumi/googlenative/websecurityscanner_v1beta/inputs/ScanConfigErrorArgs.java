@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines a custom error message used by CreateScanConfig and UpdateScanConfig APIs when scan configuration validation fails. It is also reported as part of a ScanRunErrorTrace message if scan validation fails due to a scan configuration error.
+ */
 public final class ScanConfigErrorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScanConfigErrorArgs Empty = new ScanConfigErrorArgs();
 
+    /**
+     * Indicates the reason code for a configuration failure.
+     */
     @InputImport(name="code")
     private final @Nullable Input<ScanConfigErrorCode> code;
 
@@ -22,6 +28,9 @@ public final class ScanConfigErrorArgs extends io.pulumi.resources.ResourceArgs 
         return this.code == null ? Input.empty() : this.code;
     }
 
+    /**
+     * Indicates the full name of the ScanConfig field that triggers this error, for example "scan_config.max_qps". This field is provided for troubleshooting purposes only and its actual value can change in the future.
+     */
     @InputImport(name="fieldName")
     private final @Nullable Input<String> fieldName;
 

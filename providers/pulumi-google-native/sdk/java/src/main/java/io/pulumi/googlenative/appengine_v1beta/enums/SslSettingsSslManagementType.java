@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * SSL management type for this domain. If AUTOMATIC, a managed certificate is automatically provisioned. If MANUAL, certificate_id must be manually specified in order to configure SSL for this domain.
+ */
     @EnumType
     public enum SslSettingsSslManagementType {
+/**
+ * SSL support for this domain is configured automatically. The mapped SSL certificate will be automatically renewed.
+ */
         Automatic("AUTOMATIC"),
+/**
+ * SSL support for this domain is configured manually by the user. Either the domain has no SSL support or a user-obtained SSL certificate has been explictly mapped to this domain.
+ */
         Manual("MANUAL");
 
         private final String value;

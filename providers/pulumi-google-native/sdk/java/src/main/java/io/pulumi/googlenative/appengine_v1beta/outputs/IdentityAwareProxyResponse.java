@@ -10,9 +10,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IdentityAwareProxyResponse {
+/**
+ * Whether the serving infrastructure will authenticate and authorize all incoming requests.If true, the oauth2_client_id and oauth2_client_secret fields must be non-empty.
+ */
     private final Boolean enabled;
+/**
+ * OAuth2 client ID to use for the authentication flow.
+ */
     private final String oauth2ClientId;
+/**
+ * OAuth2 client secret to use for the authentication flow.For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2_client_secret_sha256 field.@InputOnly
+ */
     private final String oauth2ClientSecret;
+/**
+ * Hex-encoded SHA-256 hash of the client secret.
+ */
     private final String oauth2ClientSecretSha256;
 
     @OutputCustomType.Constructor({"enabled","oauth2ClientId","oauth2ClientSecret","oauth2ClientSecretSha256"})
@@ -27,15 +39,27 @@ public final class IdentityAwareProxyResponse {
         this.oauth2ClientSecretSha256 = Objects.requireNonNull(oauth2ClientSecretSha256);
     }
 
+/**
+ * Whether the serving infrastructure will authenticate and authorize all incoming requests.If true, the oauth2_client_id and oauth2_client_secret fields must be non-empty.
+ */
     public Boolean getEnabled() {
         return this.enabled;
     }
+/**
+ * OAuth2 client ID to use for the authentication flow.
+ */
     public String getOauth2ClientId() {
         return this.oauth2ClientId;
     }
+/**
+ * OAuth2 client secret to use for the authentication flow.For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2_client_secret_sha256 field.@InputOnly
+ */
     public String getOauth2ClientSecret() {
         return this.oauth2ClientSecret;
     }
+/**
+ * Hex-encoded SHA-256 hash of the client secret.
+ */
     public String getOauth2ClientSecretSha256() {
         return this.oauth2ClientSecretSha256;
     }

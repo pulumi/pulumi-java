@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MongoIndexResponse {
+/**
+ * Cosmos DB MongoDB collection index keys
+ */
     private final @Nullable MongoIndexKeysResponse key;
+/**
+ * Cosmos DB MongoDB collection index key options
+ */
     private final @Nullable MongoIndexOptionsResponse options;
 
     @OutputCustomType.Constructor({"key","options"})
@@ -23,9 +29,15 @@ public final class MongoIndexResponse {
         this.options = options;
     }
 
+/**
+ * Cosmos DB MongoDB collection index keys
+ */
     public Optional<MongoIndexKeysResponse> getKey() {
         return Optional.ofNullable(this.key);
     }
+/**
+ * Cosmos DB MongoDB collection index key options
+ */
     public Optional<MongoIndexOptionsResponse> getOptions() {
         return Optional.ofNullable(this.options);
     }

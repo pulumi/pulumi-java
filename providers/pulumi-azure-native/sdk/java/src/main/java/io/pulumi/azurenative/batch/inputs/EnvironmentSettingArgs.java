@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentSettingArgs Empty = new EnvironmentSettingArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +27,9 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
         return this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

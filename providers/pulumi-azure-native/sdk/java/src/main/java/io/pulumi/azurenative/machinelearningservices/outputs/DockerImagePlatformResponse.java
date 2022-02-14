@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DockerImagePlatformResponse {
+/**
+ * The OS type the Environment.
+ */
     private final @Nullable String operatingSystemType;
 
     @OutputCustomType.Constructor({"operatingSystemType"})
@@ -18,6 +21,9 @@ public final class DockerImagePlatformResponse {
         this.operatingSystemType = operatingSystemType;
     }
 
+/**
+ * The OS type the Environment.
+ */
     public Optional<String> getOperatingSystemType() {
         return Optional.ofNullable(this.operatingSystemType);
     }

@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes automation rule triggering logic
+ */
 public final class AutomationRuleTriggeringLogicResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutomationRuleTriggeringLogicResponse Empty = new AutomationRuleTriggeringLogicResponse();
 
+    /**
+     * The conditions to evaluate to determine if the automation rule should be triggered on a given object
+     */
     @InputImport(name="conditions")
     private final @Nullable List<AutomationRulePropertyValuesConditionResponse> conditions;
 
@@ -24,6 +30,9 @@ public final class AutomationRuleTriggeringLogicResponse extends io.pulumi.resou
         return this.conditions == null ? List.of() : this.conditions;
     }
 
+    /**
+     * Determines when the automation rule should automatically expire and be disabled.
+     */
     @InputImport(name="expirationTimeUtc")
     private final @Nullable String expirationTimeUtc;
 
@@ -31,6 +40,9 @@ public final class AutomationRuleTriggeringLogicResponse extends io.pulumi.resou
         return this.expirationTimeUtc == null ? Optional.empty() : Optional.ofNullable(this.expirationTimeUtc);
     }
 
+    /**
+     * Determines whether the automation rule is enabled or disabled.
+     */
     @InputImport(name="isEnabled", required=true)
     private final Boolean isEnabled;
 
@@ -38,6 +50,9 @@ public final class AutomationRuleTriggeringLogicResponse extends io.pulumi.resou
         return this.isEnabled;
     }
 
+    /**
+     * The type of object the automation rule triggers on
+     */
     @InputImport(name="triggersOn", required=true)
     private final String triggersOn;
 
@@ -45,6 +60,9 @@ public final class AutomationRuleTriggeringLogicResponse extends io.pulumi.resou
         return this.triggersOn;
     }
 
+    /**
+     * The type of event the automation rule triggers on
+     */
     @InputImport(name="triggersWhen", required=true)
     private final String triggersWhen;
 

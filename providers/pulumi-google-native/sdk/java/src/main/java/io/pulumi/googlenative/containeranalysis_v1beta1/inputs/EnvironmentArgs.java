@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines an object for the environment field in in-toto links. The suggested fields are "variables", "filesystem", and "workdir".
+ */
 public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentArgs Empty = new EnvironmentArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="customValues")
     private final @Nullable Input<Map<String,String>> customValues;
 

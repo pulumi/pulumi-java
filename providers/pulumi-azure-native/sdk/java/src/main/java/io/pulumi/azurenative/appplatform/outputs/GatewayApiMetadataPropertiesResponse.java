@@ -11,10 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GatewayApiMetadataPropertiesResponse {
+/**
+ * Detailed description of the APIs available on the Gateway instance (default: `Generated OpenAPI 3 document that describes the API routes configured.`)
+ */
     private final @Nullable String description;
+/**
+ * Location of additional documentation for the APIs available on the Gateway instance
+ */
     private final @Nullable String documentation;
+/**
+ * Base URL that API consumers will use to access APIs on the Gateway instance.
+ */
     private final @Nullable String serverUrl;
+/**
+ * Title describing the context of the APIs available on the Gateway instance (default: `Spring Cloud Gateway for K8S`)
+ */
     private final @Nullable String title;
+/**
+ * Version of APIs available on this Gateway instance (default: `unspecified`).
+ */
     private final @Nullable String version;
 
     @OutputCustomType.Constructor({"description","documentation","serverUrl","title","version"})
@@ -31,18 +46,33 @@ public final class GatewayApiMetadataPropertiesResponse {
         this.version = version;
     }
 
+/**
+ * Detailed description of the APIs available on the Gateway instance (default: `Generated OpenAPI 3 document that describes the API routes configured.`)
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * Location of additional documentation for the APIs available on the Gateway instance
+ */
     public Optional<String> getDocumentation() {
         return Optional.ofNullable(this.documentation);
     }
+/**
+ * Base URL that API consumers will use to access APIs on the Gateway instance.
+ */
     public Optional<String> getServerUrl() {
         return Optional.ofNullable(this.serverUrl);
     }
+/**
+ * Title describing the context of the APIs available on the Gateway instance (default: `Spring Cloud Gateway for K8S`)
+ */
     public Optional<String> getTitle() {
         return Optional.ofNullable(this.title);
     }
+/**
+ * Version of APIs available on this Gateway instance (default: `unspecified`).
+ */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

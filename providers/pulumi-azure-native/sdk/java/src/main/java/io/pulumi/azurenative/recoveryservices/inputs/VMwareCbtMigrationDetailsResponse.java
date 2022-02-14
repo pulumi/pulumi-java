@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * VMwareCbt provider specific settings
+ */
 public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VMwareCbtMigrationDetailsResponse Empty = new VMwareCbtMigrationDetailsResponse();
 
+    /**
+     * The data mover RunAs account Id.
+     */
     @InputImport(name="dataMoverRunAsAccountId", required=true)
     private final String dataMoverRunAsAccountId;
 
@@ -24,6 +30,10 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
         return this.dataMoverRunAsAccountId;
     }
 
+    /**
+     * Gets the instance type.
+Expected value is 'VMwareCbt'.
+     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -31,6 +41,9 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
         return this.instanceType;
     }
 
+    /**
+     * The last recovery point received time.
+     */
     @InputImport(name="lastRecoveryPointReceived", required=true)
     private final String lastRecoveryPointReceived;
 
@@ -38,6 +51,9 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
         return this.lastRecoveryPointReceived;
     }
 
+    /**
+     * License Type of the VM to be used.
+     */
     @InputImport(name="licenseType")
     private final @Nullable String licenseType;
 
@@ -45,6 +61,9 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
         return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
     }
 
+    /**
+     * The recovery point Id to which the VM was migrated.
+     */
     @InputImport(name="migrationRecoveryPointId", required=true)
     private final String migrationRecoveryPointId;
 
@@ -52,6 +71,9 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
         return this.migrationRecoveryPointId;
     }
 
+    /**
+     * The type of the OS on the VM.
+     */
     @InputImport(name="osType", required=true)
     private final String osType;
 
@@ -59,6 +81,9 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
         return this.osType;
     }
 
+    /**
+     * The list of protected disks.
+     */
     @InputImport(name="protectedDisks")
     private final @Nullable List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks;
 
@@ -66,6 +91,9 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
         return this.protectedDisks == null ? List.of() : this.protectedDisks;
     }
 
+    /**
+     * The snapshot RunAs account Id.
+     */
     @InputImport(name="snapshotRunAsAccountId", required=true)
     private final String snapshotRunAsAccountId;
 
@@ -73,6 +101,9 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
         return this.snapshotRunAsAccountId;
     }
 
+    /**
+     * The target availability set Id.
+     */
     @InputImport(name="targetAvailabilitySetId")
     private final @Nullable String targetAvailabilitySetId;
 
@@ -80,6 +111,9 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
         return this.targetAvailabilitySetId == null ? Optional.empty() : Optional.ofNullable(this.targetAvailabilitySetId);
     }
 
+    /**
+     * The target boot diagnostics storage account ARM Id.
+     */
     @InputImport(name="targetBootDiagnosticsStorageAccountId")
     private final @Nullable String targetBootDiagnosticsStorageAccountId;
 
@@ -87,6 +121,9 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
         return this.targetBootDiagnosticsStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.targetBootDiagnosticsStorageAccountId);
     }
 
+    /**
+     * The target location.
+     */
     @InputImport(name="targetLocation", required=true)
     private final String targetLocation;
 
@@ -94,6 +131,9 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
         return this.targetLocation;
     }
 
+    /**
+     * The target network Id.
+     */
     @InputImport(name="targetNetworkId")
     private final @Nullable String targetNetworkId;
 
@@ -101,6 +141,9 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
         return this.targetNetworkId == null ? Optional.empty() : Optional.ofNullable(this.targetNetworkId);
     }
 
+    /**
+     * The target resource group Id.
+     */
     @InputImport(name="targetResourceGroupId")
     private final @Nullable String targetResourceGroupId;
 
@@ -108,6 +151,9 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
         return this.targetResourceGroupId == null ? Optional.empty() : Optional.ofNullable(this.targetResourceGroupId);
     }
 
+    /**
+     * Target VM name.
+     */
     @InputImport(name="targetVmName")
     private final @Nullable String targetVmName;
 
@@ -115,6 +161,9 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
         return this.targetVmName == null ? Optional.empty() : Optional.ofNullable(this.targetVmName);
     }
 
+    /**
+     * The target VM size.
+     */
     @InputImport(name="targetVmSize")
     private final @Nullable String targetVmSize;
 
@@ -122,6 +171,9 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
         return this.targetVmSize == null ? Optional.empty() : Optional.ofNullable(this.targetVmSize);
     }
 
+    /**
+     * The network details.
+     */
     @InputImport(name="vmNics")
     private final @Nullable List<VMwareCbtNicDetailsResponse> vmNics;
 
@@ -129,6 +181,9 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
         return this.vmNics == null ? List.of() : this.vmNics;
     }
 
+    /**
+     * The ARM Id of the VM discovered in VMware.
+     */
     @InputImport(name="vmwareMachineId", required=true)
     private final String vmwareMachineId;
 

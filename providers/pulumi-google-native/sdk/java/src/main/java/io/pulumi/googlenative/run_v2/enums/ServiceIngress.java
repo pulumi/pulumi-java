@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Provides the ingress settings for this Service. On output, returns the currently observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
+ */
     @EnumType
     public enum ServiceIngress {
+/**
+ * Unspecified
+ */
         IngressTrafficUnspecified("INGRESS_TRAFFIC_UNSPECIFIED"),
+/**
+ * All inbound traffic is allowed.
+ */
         IngressTrafficAll("INGRESS_TRAFFIC_ALL"),
+/**
+ * Only internal traffic is allowed.
+ */
         IngressTrafficInternalOnly("INGRESS_TRAFFIC_INTERNAL_ONLY"),
+/**
+ * Both internal and Google Cloud Load Balancer traffic is allowed.
+ */
         IngressTrafficInternalLoadBalancer("INGRESS_TRAFFIC_INTERNAL_LOAD_BALANCER");
 
         private final String value;

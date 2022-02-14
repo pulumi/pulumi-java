@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, restricted/unrestricted service lists as well as access lists must be empty.
+ */
     @EnumType
     public enum ServicePerimeterPerimeterType {
+/**
+ * Regular Perimeter.
+ */
         PerimeterTypeRegular("PERIMETER_TYPE_REGULAR"),
+/**
+ * Perimeter Bridge.
+ */
         PerimeterTypeBridge("PERIMETER_TYPE_BRIDGE");
 
         private final String value;

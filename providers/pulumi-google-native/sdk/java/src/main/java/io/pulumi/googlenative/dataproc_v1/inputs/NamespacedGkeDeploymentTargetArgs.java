@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A full, namespace-isolated deployment target for an existing GKE cluster.
+ */
 public final class NamespacedGkeDeploymentTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NamespacedGkeDeploymentTargetArgs Empty = new NamespacedGkeDeploymentTargetArgs();
 
+    /**
+     * Optional. A namespace within the GKE cluster to deploy into.
+     */
     @InputImport(name="clusterNamespace")
     private final @Nullable Input<String> clusterNamespace;
 
@@ -21,6 +27,9 @@ public final class NamespacedGkeDeploymentTargetArgs extends io.pulumi.resources
         return this.clusterNamespace == null ? Input.empty() : this.clusterNamespace;
     }
 
+    /**
+     * Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'
+     */
     @InputImport(name="targetGkeCluster")
     private final @Nullable Input<String> targetGkeCluster;
 

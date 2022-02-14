@@ -12,16 +12,49 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DetailResponse {
+/**
+ * The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar. This field can be used as a filter in list requests.
+ */
     private final String cpeUri;
+/**
+ * A vendor-specific description of this note.
+ */
     private final String description;
+/**
+ * The fix for this specific package version.
+ */
     private final VulnerabilityLocationResponse fixedLocation;
+/**
+ * Whether this Detail is obsolete. Occurrences are expected not to point to obsolete details.
+ */
     private final Boolean isObsolete;
+/**
+ * The max version of the package in which the vulnerability exists.
+ */
     private final VersionResponse maxAffectedVersion;
+/**
+ * The min version of the package in which the vulnerability exists.
+ */
     private final VersionResponse minAffectedVersion;
+/**
+ * The name of the package where the vulnerability was found. This field can be used as a filter in list requests.
+ */
     private final String $package;
+/**
+ * The type of package; whether native or non native(ruby gems, node.js packages etc)
+ */
     private final String packageType;
+/**
+ * The severity (eg: distro assigned severity) for this vulnerability.
+ */
     private final String severityName;
+/**
+ * The source from which the information in this Detail was obtained.
+ */
     private final String source;
+/**
+ * The vendor of the product. e.g. "google"
+ */
     private final String vendor;
 
     @OutputCustomType.Constructor({"cpeUri","description","fixedLocation","isObsolete","maxAffectedVersion","minAffectedVersion","$package","packageType","severityName","source","vendor"})
@@ -50,36 +83,69 @@ public final class DetailResponse {
         this.vendor = Objects.requireNonNull(vendor);
     }
 
+/**
+ * The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar. This field can be used as a filter in list requests.
+ */
     public String getCpeUri() {
         return this.cpeUri;
     }
+/**
+ * A vendor-specific description of this note.
+ */
     public String getDescription() {
         return this.description;
     }
+/**
+ * The fix for this specific package version.
+ */
     public VulnerabilityLocationResponse getFixedLocation() {
         return this.fixedLocation;
     }
+/**
+ * Whether this Detail is obsolete. Occurrences are expected not to point to obsolete details.
+ */
     public Boolean getIsObsolete() {
         return this.isObsolete;
     }
+/**
+ * The max version of the package in which the vulnerability exists.
+ */
     public VersionResponse getMaxAffectedVersion() {
         return this.maxAffectedVersion;
     }
+/**
+ * The min version of the package in which the vulnerability exists.
+ */
     public VersionResponse getMinAffectedVersion() {
         return this.minAffectedVersion;
     }
+/**
+ * The name of the package where the vulnerability was found. This field can be used as a filter in list requests.
+ */
     public String get$package() {
         return this.$package;
     }
+/**
+ * The type of package; whether native or non native(ruby gems, node.js packages etc)
+ */
     public String getPackageType() {
         return this.packageType;
     }
+/**
+ * The severity (eg: distro assigned severity) for this vulnerability.
+ */
     public String getSeverityName() {
         return this.severityName;
     }
+/**
+ * The source from which the information in this Detail was obtained.
+ */
     public String getSource() {
         return this.source;
     }
+/**
+ * The vendor of the product. e.g. "google"
+ */
     public String getVendor() {
         return this.vendor;
     }

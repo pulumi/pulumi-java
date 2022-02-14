@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.sqlvirtualmachine;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.sqlvirtualmachine.SqlVirtualMachineGroupArgs;
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.WsfcDomainProfileResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,75 +15,292 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A SQL virtual machine group.
+API Version: 2017-03-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Creates or updates a SQL virtual machine group.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sqlVirtualMachineGroup = new AzureNative.SqlVirtualMachine.SqlVirtualMachineGroup("sqlVirtualMachineGroup", new AzureNative.SqlVirtualMachine.SqlVirtualMachineGroupArgs
+        {
+            Location = "northeurope",
+            ResourceGroupName = "testrg",
+            SqlImageOffer = "SQL2016-WS2016",
+            SqlImageSku = "Enterprise",
+            SqlVirtualMachineGroupName = "testvmgroup",
+            Tags = 
+            {
+                { "mytag", "myval" },
+            },
+            WsfcDomainProfile = new AzureNative.SqlVirtualMachine.Inputs.WsfcDomainProfileArgs
+            {
+                ClusterBootstrapAccount = "testrpadmin",
+                ClusterOperatorAccount = "testrp@testdomain.com",
+                DomainFqdn = "testdomain.com",
+                OuPath = "OU=WSCluster,DC=testdomain,DC=com",
+                SqlServiceAccount = "sqlservice@testdomain.com",
+                StorageAccountPrimaryKey = "<primary storage access key>",
+                StorageAccountUrl = "https://storgact.blob.core.windows.net/",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sqlvirtualmachine "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sqlvirtualmachine"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sqlvirtualmachine.NewSqlVirtualMachineGroup(ctx, "sqlVirtualMachineGroup", &sqlvirtualmachine.SqlVirtualMachineGroupArgs{
+			Location:                   pulumi.String("northeurope"),
+			ResourceGroupName:          pulumi.String("testrg"),
+			SqlImageOffer:              pulumi.String("SQL2016-WS2016"),
+			SqlImageSku:                pulumi.String("Enterprise"),
+			SqlVirtualMachineGroupName: pulumi.String("testvmgroup"),
+			Tags: pulumi.StringMap{
+				"mytag": pulumi.String("myval"),
+			},
+			WsfcDomainProfile: &sqlvirtualmachine.WsfcDomainProfileArgs{
+				ClusterBootstrapAccount:  pulumi.String("testrpadmin"),
+				ClusterOperatorAccount:   pulumi.String("testrp@testdomain.com"),
+				DomainFqdn:               pulumi.String("testdomain.com"),
+				OuPath:                   pulumi.String("OU=WSCluster,DC=testdomain,DC=com"),
+				SqlServiceAccount:        pulumi.String("sqlservice@testdomain.com"),
+				StorageAccountPrimaryKey: pulumi.String("<primary storage access key>"),
+				StorageAccountUrl:        pulumi.String("https://storgact.blob.core.windows.net/"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const sqlVirtualMachineGroup = new azure_native.sqlvirtualmachine.SqlVirtualMachineGroup("sqlVirtualMachineGroup", {
+    location: "northeurope",
+    resourceGroupName: "testrg",
+    sqlImageOffer: "SQL2016-WS2016",
+    sqlImageSku: "Enterprise",
+    sqlVirtualMachineGroupName: "testvmgroup",
+    tags: {
+        mytag: "myval",
+    },
+    wsfcDomainProfile: {
+        clusterBootstrapAccount: "testrpadmin",
+        clusterOperatorAccount: "testrp@testdomain.com",
+        domainFqdn: "testdomain.com",
+        ouPath: "OU=WSCluster,DC=testdomain,DC=com",
+        sqlServiceAccount: "sqlservice@testdomain.com",
+        storageAccountPrimaryKey: "<primary storage access key>",
+        storageAccountUrl: "https://storgact.blob.core.windows.net/",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+sql_virtual_machine_group = azure_native.sqlvirtualmachine.SqlVirtualMachineGroup("sqlVirtualMachineGroup",
+    location="northeurope",
+    resource_group_name="testrg",
+    sql_image_offer="SQL2016-WS2016",
+    sql_image_sku="Enterprise",
+    sql_virtual_machine_group_name="testvmgroup",
+    tags={
+        "mytag": "myval",
+    },
+    wsfc_domain_profile=azure_native.sqlvirtualmachine.WsfcDomainProfileArgs(
+        cluster_bootstrap_account="testrpadmin",
+        cluster_operator_account="testrp@testdomain.com",
+        domain_fqdn="testdomain.com",
+        ou_path="OU=WSCluster,DC=testdomain,DC=com",
+        sql_service_account="sqlservice@testdomain.com",
+        storage_account_primary_key="<primary storage access key>",
+        storage_account_url="https://storgact.blob.core.windows.net/",
+    ))
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:sqlvirtualmachine:SqlVirtualMachineGroup testvmgroup /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/testvmgroup 
+```
+
+ */
 @ResourceType(type="azure-native:sqlvirtualmachine:SqlVirtualMachineGroup")
 public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
+    /**
+     * Cluster type.
+     */
     @OutputExport(name="clusterConfiguration", type=String.class, parameters={})
     private Output<String> clusterConfiguration;
 
+    /**
+     * @return Cluster type.
+     */
     public Output<String> getClusterConfiguration() {
         return this.clusterConfiguration;
     }
+    /**
+     * Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type.
+     */
     @OutputExport(name="clusterManagerType", type=String.class, parameters={})
     private Output<String> clusterManagerType;
 
+    /**
+     * @return Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type.
+     */
     public Output<String> getClusterManagerType() {
         return this.clusterManagerType;
     }
+    /**
+     * Resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location.
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Provisioning state to track the async operation status.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state to track the async operation status.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Scale type.
+     */
     @OutputExport(name="scaleType", type=String.class, parameters={})
     private Output<String> scaleType;
 
+    /**
+     * @return Scale type.
+     */
     public Output<String> getScaleType() {
         return this.scaleType;
     }
+    /**
+     * SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.
+     */
     @OutputExport(name="sqlImageOffer", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlImageOffer;
 
+    /**
+     * @return SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.
+     */
     public Output</* @Nullable */ String> getSqlImageOffer() {
         return this.sqlImageOffer;
     }
+    /**
+     * SQL image sku.
+     */
     @OutputExport(name="sqlImageSku", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlImageSku;
 
+    /**
+     * @return SQL image sku.
+     */
     public Output</* @Nullable */ String> getSqlImageSku() {
         return this.sqlImageSku;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Cluster Active Directory domain profile.
+     */
     @OutputExport(name="wsfcDomainProfile", type=WsfcDomainProfileResponse.class, parameters={})
     private Output</* @Nullable */ WsfcDomainProfileResponse> wsfcDomainProfile;
 
+    /**
+     * @return Cluster Active Directory domain profile.
+     */
     public Output</* @Nullable */ WsfcDomainProfileResponse> getWsfcDomainProfile() {
         return this.wsfcDomainProfile;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SqlVirtualMachineGroup(String name, SqlVirtualMachineGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sqlvirtualmachine:SqlVirtualMachineGroup", name, args == null ? SqlVirtualMachineGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -103,6 +319,14 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SqlVirtualMachineGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SqlVirtualMachineGroup(name, id, options);
     }

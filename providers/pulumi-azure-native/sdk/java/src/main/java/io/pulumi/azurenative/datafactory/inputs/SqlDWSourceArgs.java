@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity SQL Data Warehouse source.
+ */
 public final class SqlDWSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlDWSourceArgs Empty = new SqlDWSourceArgs();
 
+    /**
+     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+     */
     @InputImport(name="additionalColumns")
     private final @Nullable Input<Object> additionalColumns;
 
@@ -23,6 +29,9 @@ public final class SqlDWSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.additionalColumns == null ? Input.empty() : this.additionalColumns;
     }
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -30,6 +39,9 @@ public final class SqlDWSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
+    /**
+     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -37,6 +49,9 @@ public final class SqlDWSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
+    /**
+     * The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
+     */
     @InputImport(name="partitionOption")
     private final @Nullable Input<Object> partitionOption;
 
@@ -44,6 +59,9 @@ public final class SqlDWSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.partitionOption == null ? Input.empty() : this.partitionOption;
     }
 
+    /**
+     * The settings that will be leveraged for Sql source partitioning.
+     */
     @InputImport(name="partitionSettings")
     private final @Nullable Input<SqlPartitionSettingsArgs> partitionSettings;
 
@@ -51,6 +69,9 @@ public final class SqlDWSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.partitionSettings == null ? Input.empty() : this.partitionSettings;
     }
 
+    /**
+     * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="queryTimeout")
     private final @Nullable Input<Object> queryTimeout;
 
@@ -58,6 +79,9 @@ public final class SqlDWSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.queryTimeout == null ? Input.empty() : this.queryTimeout;
     }
 
+    /**
+     * Source retry count. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="sourceRetryCount")
     private final @Nullable Input<Object> sourceRetryCount;
 
@@ -65,6 +89,9 @@ public final class SqlDWSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
     }
 
+    /**
+     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="sourceRetryWait")
     private final @Nullable Input<Object> sourceRetryWait;
 
@@ -72,6 +99,9 @@ public final class SqlDWSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
     }
 
+    /**
+     * SQL Data Warehouse reader query. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="sqlReaderQuery")
     private final @Nullable Input<Object> sqlReaderQuery;
 
@@ -79,6 +109,9 @@ public final class SqlDWSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sqlReaderQuery == null ? Input.empty() : this.sqlReaderQuery;
     }
 
+    /**
+     * Name of the stored procedure for a SQL Data Warehouse source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="sqlReaderStoredProcedureName")
     private final @Nullable Input<Object> sqlReaderStoredProcedureName;
 
@@ -86,6 +119,9 @@ public final class SqlDWSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sqlReaderStoredProcedureName == null ? Input.empty() : this.sqlReaderStoredProcedureName;
     }
 
+    /**
+     * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}". Type: object (or Expression with resultType object), itemType: StoredProcedureParameter.
+     */
     @InputImport(name="storedProcedureParameters")
     private final @Nullable Input<Object> storedProcedureParameters;
 
@@ -93,6 +129,10 @@ public final class SqlDWSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.storedProcedureParameters == null ? Input.empty() : this.storedProcedureParameters;
     }
 
+    /**
+     * Copy source type.
+Expected value is 'SqlDWSource'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

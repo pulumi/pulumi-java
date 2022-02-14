@@ -8,10 +8,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Address details for an order item.
+ */
 public final class AddressDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AddressDetailsResponse Empty = new AddressDetailsResponse();
 
+    /**
+     * Customer address and contact details. It should be address resource
+     */
     @InputImport(name="forwardAddress", required=true)
     private final AddressPropertiesResponse forwardAddress;
 
@@ -19,6 +25,9 @@ public final class AddressDetailsResponse extends io.pulumi.resources.InvokeArgs
         return this.forwardAddress;
     }
 
+    /**
+     * Return shipping address
+     */
     @InputImport(name="returnAddress", required=true)
     private final AddressPropertiesResponse returnAddress;
 

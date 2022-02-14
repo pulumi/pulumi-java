@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Collection and ingestion information
+ */
 public final class ConnectorCollectionInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectorCollectionInfoResponse Empty = new ConnectorCollectionInfoResponse();
 
+    /**
+     * Error information of last collection
+     */
     @InputImport(name="error")
     private final @Nullable ConnectorCollectionErrorInfoResponse error;
 
@@ -22,6 +28,9 @@ public final class ConnectorCollectionInfoResponse extends io.pulumi.resources.I
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
     }
 
+    /**
+     * Last time the data acquisition process initiated connecting to the external provider
+     */
     @InputImport(name="lastChecked", required=true)
     private final String lastChecked;
 
@@ -29,6 +38,9 @@ public final class ConnectorCollectionInfoResponse extends io.pulumi.resources.I
         return this.lastChecked;
     }
 
+    /**
+     * Last time the external data was updated into Azure
+     */
     @InputImport(name="lastUpdated", required=true)
     private final String lastUpdated;
 
@@ -36,6 +48,9 @@ public final class ConnectorCollectionInfoResponse extends io.pulumi.resources.I
         return this.lastUpdated;
     }
 
+    /**
+     * Source timestamp of external data currently available in Azure (eg AWS last processed CUR file timestamp)
+     */
     @InputImport(name="sourceLastUpdated", required=true)
     private final String sourceLastUpdated;
 

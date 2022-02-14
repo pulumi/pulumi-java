@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.desktopvirtualization;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.desktopvirtualization.ScalingPlanArgs;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponseIdentity;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponsePlan;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponseSku;
@@ -21,123 +20,491 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Represents a scaling plan definition.
+API Version: 2021-02-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### ScalingPlans_Create
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var scalingPlan = new AzureNative.DesktopVirtualization.ScalingPlan("scalingPlan", new AzureNative.DesktopVirtualization.ScalingPlanArgs
+        {
+            Description = "des1",
+            ExclusionTag = "value",
+            FriendlyName = "friendly",
+            HostPoolReferences = 
+            {
+                new AzureNative.DesktopVirtualization.Inputs.ScalingHostPoolReferenceArgs
+                {
+                    HostPoolArmPath = "/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1",
+                    ScalingPlanEnabled = true,
+                },
+            },
+            HostPoolType = "Personal",
+            Location = "centralus",
+            ResourceGroupName = "resourceGroup1",
+            Ring = 1,
+            ScalingPlanName = "scalingPlan1",
+            Schedules = 
+            {
+                new AzureNative.DesktopVirtualization.Inputs.ScalingScheduleArgs
+                {
+                    DaysOfWeek = 
+                    {
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday",
+                    },
+                    Name = "schedule1",
+                    OffPeakLoadBalancingAlgorithm = "DepthFirst",
+                    OffPeakStartTime = "2020-11-10T20:00:00.000Z",
+                    PeakLoadBalancingAlgorithm = "BreadthFirst",
+                    PeakStartTime = "2020-11-10T08:00:00.000Z",
+                    RampDownCapacityThresholdPct = 50,
+                    RampDownForceLogoffUsers = true,
+                    RampDownLoadBalancingAlgorithm = "DepthFirst",
+                    RampDownMinimumHostsPct = 20,
+                    RampDownNotificationMessage = "message",
+                    RampDownStartTime = "2020-11-10T18:00:00.000Z",
+                    RampDownWaitTimeMinutes = 30,
+                    RampUpCapacityThresholdPct = 80,
+                    RampUpLoadBalancingAlgorithm = "DepthFirst",
+                    RampUpMinimumHostsPct = 20,
+                    RampUpStartTime = "2020-11-10T06:00:00.000Z",
+                },
+            },
+            Tags = 
+            {
+                { "tag1", "value1" },
+                { "tag2", "value2" },
+            },
+            TimeZone = "",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	desktopvirtualization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/desktopvirtualization"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := desktopvirtualization.NewScalingPlan(ctx, "scalingPlan", &desktopvirtualization.ScalingPlanArgs{
+			Description:  pulumi.String("des1"),
+			ExclusionTag: pulumi.String("value"),
+			FriendlyName: pulumi.String("friendly"),
+			HostPoolReferences: []desktopvirtualization.ScalingHostPoolReferenceArgs{
+				&desktopvirtualization.ScalingHostPoolReferenceArgs{
+					HostPoolArmPath:    pulumi.String("/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1"),
+					ScalingPlanEnabled: pulumi.Bool(true),
+				},
+			},
+			HostPoolType:      pulumi.String("Personal"),
+			Location:          pulumi.String("centralus"),
+			ResourceGroupName: pulumi.String("resourceGroup1"),
+			Ring:              pulumi.Int(1),
+			ScalingPlanName:   pulumi.String("scalingPlan1"),
+			Schedules: []desktopvirtualization.ScalingScheduleArgs{
+				&desktopvirtualization.ScalingScheduleArgs{
+					DaysOfWeek: pulumi.StringArray{
+						pulumi.String("Monday"),
+						pulumi.String("Tuesday"),
+						pulumi.String("Wednesday"),
+						pulumi.String("Thursday"),
+						pulumi.String("Friday"),
+					},
+					Name:                           pulumi.String("schedule1"),
+					OffPeakLoadBalancingAlgorithm:  pulumi.String("DepthFirst"),
+					OffPeakStartTime:               pulumi.String("2020-11-10T20:00:00.000Z"),
+					PeakLoadBalancingAlgorithm:     pulumi.String("BreadthFirst"),
+					PeakStartTime:                  pulumi.String("2020-11-10T08:00:00.000Z"),
+					RampDownCapacityThresholdPct:   pulumi.Int(50),
+					RampDownForceLogoffUsers:       pulumi.Bool(true),
+					RampDownLoadBalancingAlgorithm: pulumi.String("DepthFirst"),
+					RampDownMinimumHostsPct:        pulumi.Int(20),
+					RampDownNotificationMessage:    pulumi.String("message"),
+					RampDownStartTime:              pulumi.String("2020-11-10T18:00:00.000Z"),
+					RampDownWaitTimeMinutes:        pulumi.Int(30),
+					RampUpCapacityThresholdPct:     pulumi.Int(80),
+					RampUpLoadBalancingAlgorithm:   pulumi.String("DepthFirst"),
+					RampUpMinimumHostsPct:          pulumi.Int(20),
+					RampUpStartTime:                pulumi.String("2020-11-10T06:00:00.000Z"),
+				},
+			},
+			Tags: pulumi.StringMap{
+				"tag1": pulumi.String("value1"),
+				"tag2": pulumi.String("value2"),
+			},
+			TimeZone: pulumi.String(""),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const scalingPlan = new azure_native.desktopvirtualization.ScalingPlan("scalingPlan", {
+    description: "des1",
+    exclusionTag: "value",
+    friendlyName: "friendly",
+    hostPoolReferences: [{
+        hostPoolArmPath: "/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1",
+        scalingPlanEnabled: true,
+    }],
+    hostPoolType: "Personal",
+    location: "centralus",
+    resourceGroupName: "resourceGroup1",
+    ring: 1,
+    scalingPlanName: "scalingPlan1",
+    schedules: [{
+        daysOfWeek: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+        ],
+        name: "schedule1",
+        offPeakLoadBalancingAlgorithm: "DepthFirst",
+        offPeakStartTime: "2020-11-10T20:00:00.000Z",
+        peakLoadBalancingAlgorithm: "BreadthFirst",
+        peakStartTime: "2020-11-10T08:00:00.000Z",
+        rampDownCapacityThresholdPct: 50,
+        rampDownForceLogoffUsers: true,
+        rampDownLoadBalancingAlgorithm: "DepthFirst",
+        rampDownMinimumHostsPct: 20,
+        rampDownNotificationMessage: "message",
+        rampDownStartTime: "2020-11-10T18:00:00.000Z",
+        rampDownWaitTimeMinutes: 30,
+        rampUpCapacityThresholdPct: 80,
+        rampUpLoadBalancingAlgorithm: "DepthFirst",
+        rampUpMinimumHostsPct: 20,
+        rampUpStartTime: "2020-11-10T06:00:00.000Z",
+    }],
+    tags: {
+        tag1: "value1",
+        tag2: "value2",
+    },
+    timeZone: "",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+scaling_plan = azure_native.desktopvirtualization.ScalingPlan("scalingPlan",
+    description="des1",
+    exclusion_tag="value",
+    friendly_name="friendly",
+    host_pool_references=[azure_native.desktopvirtualization.ScalingHostPoolReferenceArgs(
+        host_pool_arm_path="/subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostPools/hostPool1",
+        scaling_plan_enabled=True,
+    )],
+    host_pool_type="Personal",
+    location="centralus",
+    resource_group_name="resourceGroup1",
+    ring=1,
+    scaling_plan_name="scalingPlan1",
+    schedules=[azure_native.desktopvirtualization.ScalingScheduleArgs(
+        days_of_week=[
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+        ],
+        name="schedule1",
+        off_peak_load_balancing_algorithm="DepthFirst",
+        off_peak_start_time="2020-11-10T20:00:00.000Z",
+        peak_load_balancing_algorithm="BreadthFirst",
+        peak_start_time="2020-11-10T08:00:00.000Z",
+        ramp_down_capacity_threshold_pct=50,
+        ramp_down_force_logoff_users=True,
+        ramp_down_load_balancing_algorithm="DepthFirst",
+        ramp_down_minimum_hosts_pct=20,
+        ramp_down_notification_message="message",
+        ramp_down_start_time="2020-11-10T18:00:00.000Z",
+        ramp_down_wait_time_minutes=30,
+        ramp_up_capacity_threshold_pct=80,
+        ramp_up_load_balancing_algorithm="DepthFirst",
+        ramp_up_minimum_hosts_pct=20,
+        ramp_up_start_time="2020-11-10T06:00:00.000Z",
+    )],
+    tags={
+        "tag1": "value1",
+        "tag2": "value2",
+    },
+    time_zone="")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:desktopvirtualization:ScalingPlan scalingPlan1 /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/scalingPlans/scalingPlan1 
+```
+
+ */
 @ResourceType(type="azure-native:desktopvirtualization:ScalingPlan")
 public class ScalingPlan extends io.pulumi.resources.CustomResource {
+    /**
+     * Description of scaling plan.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Description of scaling plan.
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. 
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. 
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Exclusion tag for scaling plan.
+     */
     @OutputExport(name="exclusionTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> exclusionTag;
 
+    /**
+     * @return Exclusion tag for scaling plan.
+     */
     public Output</* @Nullable */ String> getExclusionTag() {
         return this.exclusionTag;
     }
+    /**
+     * User friendly name of scaling plan.
+     */
     @OutputExport(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
+    /**
+     * @return User friendly name of scaling plan.
+     */
     public Output</* @Nullable */ String> getFriendlyName() {
         return this.friendlyName;
     }
+    /**
+     * List of ScalingHostPoolReference definitions.
+     */
     @OutputExport(name="hostPoolReferences", type=List.class, parameters={ScalingHostPoolReferenceResponse.class})
     private Output</* @Nullable */ List<ScalingHostPoolReferenceResponse>> hostPoolReferences;
 
+    /**
+     * @return List of ScalingHostPoolReference definitions.
+     */
     public Output</* @Nullable */ List<ScalingHostPoolReferenceResponse>> getHostPoolReferences() {
         return this.hostPoolReferences;
     }
+    /**
+     * HostPool type for desktop.
+     */
     @OutputExport(name="hostPoolType", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostPoolType;
 
+    /**
+     * @return HostPool type for desktop.
+     */
     public Output</* @Nullable */ String> getHostPoolType() {
         return this.hostPoolType;
     }
+    /**
+     * 
+     */
     @OutputExport(name="identity", type=ResourceModelWithAllowedPropertySetResponseIdentity.class, parameters={})
     private Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseIdentity> identity;
 
     public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseIdentity> getIdentity() {
         return this.identity;
     }
+    /**
+     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * The geo-location where the resource lives
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
+     */
     @OutputExport(name="managedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedBy;
 
+    /**
+     * @return The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
+     */
     public Output</* @Nullable */ String> getManagedBy() {
         return this.managedBy;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * ObjectId of scaling plan. (internal use)
+     */
     @OutputExport(name="objectId", type=String.class, parameters={})
     private Output<String> objectId;
 
+    /**
+     * @return ObjectId of scaling plan. (internal use)
+     */
     public Output<String> getObjectId() {
         return this.objectId;
     }
+    /**
+     * 
+     */
     @OutputExport(name="plan", type=ResourceModelWithAllowedPropertySetResponsePlan.class, parameters={})
     private Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponsePlan> plan;
 
     public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponsePlan> getPlan() {
         return this.plan;
     }
+    /**
+     * The ring number of scaling plan.
+     */
     @OutputExport(name="ring", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> ring;
 
+    /**
+     * @return The ring number of scaling plan.
+     */
     public Output</* @Nullable */ Integer> getRing() {
         return this.ring;
     }
+    /**
+     * List of ScalingSchedule definitions.
+     */
     @OutputExport(name="schedules", type=List.class, parameters={ScalingScheduleResponse.class})
     private Output</* @Nullable */ List<ScalingScheduleResponse>> schedules;
 
+    /**
+     * @return List of ScalingSchedule definitions.
+     */
     public Output</* @Nullable */ List<ScalingScheduleResponse>> getSchedules() {
         return this.schedules;
     }
+    /**
+     * 
+     */
     @OutputExport(name="sku", type=ResourceModelWithAllowedPropertySetResponseSku.class, parameters={})
     private Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseSku> sku;
 
     public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseSku> getSku() {
         return this.sku;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Timezone of the scaling plan.
+     */
     @OutputExport(name="timeZone", type=String.class, parameters={})
     private Output</* @Nullable */ String> timeZone;
 
+    /**
+     * @return Timezone of the scaling plan.
+     */
     public Output</* @Nullable */ String> getTimeZone() {
         return this.timeZone;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ScalingPlan(String name, ScalingPlanArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:desktopvirtualization:ScalingPlan", name, args == null ? ScalingPlanArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -162,6 +529,14 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ScalingPlan get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ScalingPlan(name, id, options);
     }

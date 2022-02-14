@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Not supported by Cloud Run Selects a key from a ConfigMap.
+ */
 public final class ConfigMapKeySelectorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfigMapKeySelectorResponse Empty = new ConfigMapKeySelectorResponse();
 
+    /**
+     * The key to select.
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -21,6 +27,9 @@ public final class ConfigMapKeySelectorResponse extends io.pulumi.resources.Invo
         return this.key;
     }
 
+    /**
+     * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
+     */
     @InputImport(name="localObjectReference", required=true)
     private final LocalObjectReferenceResponse localObjectReference;
 
@@ -28,6 +37,9 @@ public final class ConfigMapKeySelectorResponse extends io.pulumi.resources.Invo
         return this.localObjectReference;
     }
 
+    /**
+     * The ConfigMap to select from.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,6 +47,9 @@ public final class ConfigMapKeySelectorResponse extends io.pulumi.resources.Invo
         return this.name;
     }
 
+    /**
+     * (Optional) Specify whether the ConfigMap or its key must be defined
+     */
     @InputImport(name="optional", required=true)
     private final Boolean optional;
 

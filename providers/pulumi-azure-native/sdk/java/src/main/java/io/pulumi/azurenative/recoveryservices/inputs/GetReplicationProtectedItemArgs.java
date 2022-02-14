@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetReplicationProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetReplicationProtectedItemArgs Empty = new GetReplicationProtectedItemArgs();
 
+    /**
+     * Fabric unique name.
+     */
     @InputImport(name="fabricName", required=true)
     private final String fabricName;
 
@@ -19,6 +25,9 @@ public final class GetReplicationProtectedItemArgs extends io.pulumi.resources.I
         return this.fabricName;
     }
 
+    /**
+     * Protection container name.
+     */
     @InputImport(name="protectionContainerName", required=true)
     private final String protectionContainerName;
 
@@ -26,6 +35,9 @@ public final class GetReplicationProtectedItemArgs extends io.pulumi.resources.I
         return this.protectionContainerName;
     }
 
+    /**
+     * Replication protected item name.
+     */
     @InputImport(name="replicatedProtectedItemName", required=true)
     private final String replicatedProtectedItemName;
 
@@ -33,6 +45,9 @@ public final class GetReplicationProtectedItemArgs extends io.pulumi.resources.I
         return this.replicatedProtectedItemName;
     }
 
+    /**
+     * The name of the resource group where the recovery services vault is present.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -40,6 +55,9 @@ public final class GetReplicationProtectedItemArgs extends io.pulumi.resources.I
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the recovery services vault.
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

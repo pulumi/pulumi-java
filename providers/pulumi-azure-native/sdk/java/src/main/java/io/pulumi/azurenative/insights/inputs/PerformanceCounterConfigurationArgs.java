@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PerformanceCounterConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PerformanceCounterConfigurationArgs Empty = new PerformanceCounterConfigurationArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="instance")
     private final @Nullable Input<String> instance;
 
@@ -21,6 +27,9 @@ public final class PerformanceCounterConfigurationArgs extends io.pulumi.resourc
         return this.instance == null ? Input.empty() : this.instance;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -28,6 +37,9 @@ public final class PerformanceCounterConfigurationArgs extends io.pulumi.resourc
         return this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="samplingPeriod", required=true)
     private final Input<String> samplingPeriod;
 

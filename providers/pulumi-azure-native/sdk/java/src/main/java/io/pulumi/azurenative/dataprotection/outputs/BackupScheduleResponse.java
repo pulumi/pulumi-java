@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BackupScheduleResponse {
+/**
+ * ISO 8601 repeating time interval format
+ */
     private final List<String> repeatingTimeIntervals;
 
     @OutputCustomType.Constructor({"repeatingTimeIntervals"})
@@ -17,6 +20,9 @@ public final class BackupScheduleResponse {
         this.repeatingTimeIntervals = Objects.requireNonNull(repeatingTimeIntervals);
     }
 
+/**
+ * ISO 8601 repeating time interval format
+ */
     public List<String> getRepeatingTimeIntervals() {
         return this.repeatingTimeIntervals;
     }

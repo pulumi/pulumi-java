@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetProviderNoteIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetProviderNoteIamPolicyArgs Empty = new GetProviderNoteIamPolicyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="noteId", required=true)
     private final String noteId;
 
@@ -19,6 +25,9 @@ public final class GetProviderNoteIamPolicyArgs extends io.pulumi.resources.Invo
         return this.noteId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="providerId", required=true)
     private final String providerId;
 

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.keyvault;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.keyvault.VaultArgs;
 import io.pulumi.azurenative.keyvault.outputs.VaultPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,39 +15,596 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Resource information with extended details.
+API Version: 2019-09-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create a new vault or update an existing vault
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vault = new AzureNative.KeyVault.Vault("vault", new AzureNative.KeyVault.VaultArgs
+        {
+            Location = "westus",
+            Properties = new AzureNative.KeyVault.Inputs.VaultPropertiesArgs
+            {
+                AccessPolicies = 
+                {
+                    new AzureNative.KeyVault.Inputs.AccessPolicyEntryArgs
+                    {
+                        ObjectId = "00000000-0000-0000-0000-000000000000",
+                        Permissions = new AzureNative.KeyVault.Inputs.PermissionsArgs
+                        {
+                            Certificates = 
+                            {
+                                "get",
+                                "list",
+                                "delete",
+                                "create",
+                                "import",
+                                "update",
+                                "managecontacts",
+                                "getissuers",
+                                "listissuers",
+                                "setissuers",
+                                "deleteissuers",
+                                "manageissuers",
+                                "recover",
+                                "purge",
+                            },
+                            Keys = 
+                            {
+                                "encrypt",
+                                "decrypt",
+                                "wrapKey",
+                                "unwrapKey",
+                                "sign",
+                                "verify",
+                                "get",
+                                "list",
+                                "create",
+                                "update",
+                                "import",
+                                "delete",
+                                "backup",
+                                "restore",
+                                "recover",
+                                "purge",
+                            },
+                            Secrets = 
+                            {
+                                "get",
+                                "list",
+                                "set",
+                                "delete",
+                                "backup",
+                                "restore",
+                                "recover",
+                                "purge",
+                            },
+                        },
+                        TenantId = "00000000-0000-0000-0000-000000000000",
+                    },
+                },
+                EnabledForDeployment = true,
+                EnabledForDiskEncryption = true,
+                EnabledForTemplateDeployment = true,
+                Sku = new AzureNative.KeyVault.Inputs.SkuArgs
+                {
+                    Family = "A",
+                    Name = "standard",
+                },
+                TenantId = "00000000-0000-0000-0000-000000000000",
+            },
+            ResourceGroupName = "sample-resource-group",
+            VaultName = "sample-vault",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	keyvault "github.com/pulumi/pulumi-azure-native/sdk/go/azure/keyvault"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := keyvault.NewVault(ctx, "vault", &keyvault.VaultArgs{
+			Location: pulumi.String("westus"),
+			Properties: &keyvault.VaultPropertiesArgs{
+				AccessPolicies: keyvault.AccessPolicyEntryArray{
+					&keyvault.AccessPolicyEntryArgs{
+						ObjectId: pulumi.String("00000000-0000-0000-0000-000000000000"),
+						Permissions: &keyvault.PermissionsArgs{
+							Certificates: pulumi.StringArray{
+								pulumi.String("get"),
+								pulumi.String("list"),
+								pulumi.String("delete"),
+								pulumi.String("create"),
+								pulumi.String("import"),
+								pulumi.String("update"),
+								pulumi.String("managecontacts"),
+								pulumi.String("getissuers"),
+								pulumi.String("listissuers"),
+								pulumi.String("setissuers"),
+								pulumi.String("deleteissuers"),
+								pulumi.String("manageissuers"),
+								pulumi.String("recover"),
+								pulumi.String("purge"),
+							},
+							Keys: pulumi.StringArray{
+								pulumi.String("encrypt"),
+								pulumi.String("decrypt"),
+								pulumi.String("wrapKey"),
+								pulumi.String("unwrapKey"),
+								pulumi.String("sign"),
+								pulumi.String("verify"),
+								pulumi.String("get"),
+								pulumi.String("list"),
+								pulumi.String("create"),
+								pulumi.String("update"),
+								pulumi.String("import"),
+								pulumi.String("delete"),
+								pulumi.String("backup"),
+								pulumi.String("restore"),
+								pulumi.String("recover"),
+								pulumi.String("purge"),
+							},
+							Secrets: pulumi.StringArray{
+								pulumi.String("get"),
+								pulumi.String("list"),
+								pulumi.String("set"),
+								pulumi.String("delete"),
+								pulumi.String("backup"),
+								pulumi.String("restore"),
+								pulumi.String("recover"),
+								pulumi.String("purge"),
+							},
+						},
+						TenantId: pulumi.String("00000000-0000-0000-0000-000000000000"),
+					},
+				},
+				EnabledForDeployment:         pulumi.Bool(true),
+				EnabledForDiskEncryption:     pulumi.Bool(true),
+				EnabledForTemplateDeployment: pulumi.Bool(true),
+				Sku: &keyvault.SkuArgs{
+					Family: pulumi.String("A"),
+					Name:   "standard",
+				},
+				TenantId: pulumi.String("00000000-0000-0000-0000-000000000000"),
+			},
+			ResourceGroupName: pulumi.String("sample-resource-group"),
+			VaultName:         pulumi.String("sample-vault"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const vault = new azure_native.keyvault.Vault("vault", {
+    location: "westus",
+    properties: {
+        accessPolicies: [{
+            objectId: "00000000-0000-0000-0000-000000000000",
+            permissions: {
+                certificates: [
+                    "get",
+                    "list",
+                    "delete",
+                    "create",
+                    "import",
+                    "update",
+                    "managecontacts",
+                    "getissuers",
+                    "listissuers",
+                    "setissuers",
+                    "deleteissuers",
+                    "manageissuers",
+                    "recover",
+                    "purge",
+                ],
+                keys: [
+                    "encrypt",
+                    "decrypt",
+                    "wrapKey",
+                    "unwrapKey",
+                    "sign",
+                    "verify",
+                    "get",
+                    "list",
+                    "create",
+                    "update",
+                    "import",
+                    "delete",
+                    "backup",
+                    "restore",
+                    "recover",
+                    "purge",
+                ],
+                secrets: [
+                    "get",
+                    "list",
+                    "set",
+                    "delete",
+                    "backup",
+                    "restore",
+                    "recover",
+                    "purge",
+                ],
+            },
+            tenantId: "00000000-0000-0000-0000-000000000000",
+        }],
+        enabledForDeployment: true,
+        enabledForDiskEncryption: true,
+        enabledForTemplateDeployment: true,
+        sku: {
+            family: "A",
+            name: "standard",
+        },
+        tenantId: "00000000-0000-0000-0000-000000000000",
+    },
+    resourceGroupName: "sample-resource-group",
+    vaultName: "sample-vault",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+vault = azure_native.keyvault.Vault("vault",
+    location="westus",
+    properties=azure_native.keyvault.VaultPropertiesArgs(
+        access_policies=[azure_native.keyvault.AccessPolicyEntryArgs(
+            object_id="00000000-0000-0000-0000-000000000000",
+            permissions=azure_native.keyvault.PermissionsArgs(
+                certificates=[
+                    "get",
+                    "list",
+                    "delete",
+                    "create",
+                    "import",
+                    "update",
+                    "managecontacts",
+                    "getissuers",
+                    "listissuers",
+                    "setissuers",
+                    "deleteissuers",
+                    "manageissuers",
+                    "recover",
+                    "purge",
+                ],
+                keys=[
+                    "encrypt",
+                    "decrypt",
+                    "wrapKey",
+                    "unwrapKey",
+                    "sign",
+                    "verify",
+                    "get",
+                    "list",
+                    "create",
+                    "update",
+                    "import",
+                    "delete",
+                    "backup",
+                    "restore",
+                    "recover",
+                    "purge",
+                ],
+                secrets=[
+                    "get",
+                    "list",
+                    "set",
+                    "delete",
+                    "backup",
+                    "restore",
+                    "recover",
+                    "purge",
+                ],
+            ),
+            tenant_id="00000000-0000-0000-0000-000000000000",
+        )],
+        enabled_for_deployment=True,
+        enabled_for_disk_encryption=True,
+        enabled_for_template_deployment=True,
+        sku=azure_native.keyvault.SkuArgs(
+            family="A",
+            name="standard",
+        ),
+        tenant_id="00000000-0000-0000-0000-000000000000",
+    ),
+    resource_group_name="sample-resource-group",
+    vault_name="sample-vault")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create or update a vault with network acls
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vault = new AzureNative.KeyVault.Vault("vault", new AzureNative.KeyVault.VaultArgs
+        {
+            Location = "westus",
+            Properties = new AzureNative.KeyVault.Inputs.VaultPropertiesArgs
+            {
+                EnabledForDeployment = true,
+                EnabledForDiskEncryption = true,
+                EnabledForTemplateDeployment = true,
+                NetworkAcls = new AzureNative.KeyVault.Inputs.NetworkRuleSetArgs
+                {
+                    Bypass = "AzureServices",
+                    DefaultAction = "Deny",
+                    IpRules = 
+                    {
+                        new AzureNative.KeyVault.Inputs.IPRuleArgs
+                        {
+                            Value = "124.56.78.91",
+                        },
+                        new AzureNative.KeyVault.Inputs.IPRuleArgs
+                        {
+                            Value = "'10.91.4.0/24'",
+                        },
+                    },
+                    VirtualNetworkRules = 
+                    {
+                        new AzureNative.KeyVault.Inputs.VirtualNetworkRuleArgs
+                        {
+                            Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1",
+                        },
+                    },
+                },
+                Sku = new AzureNative.KeyVault.Inputs.SkuArgs
+                {
+                    Family = "A",
+                    Name = "standard",
+                },
+                TenantId = "00000000-0000-0000-0000-000000000000",
+            },
+            ResourceGroupName = "sample-resource-group",
+            VaultName = "sample-vault",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	keyvault "github.com/pulumi/pulumi-azure-native/sdk/go/azure/keyvault"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := keyvault.NewVault(ctx, "vault", &keyvault.VaultArgs{
+			Location: pulumi.String("westus"),
+			Properties: &keyvault.VaultPropertiesArgs{
+				EnabledForDeployment:         pulumi.Bool(true),
+				EnabledForDiskEncryption:     pulumi.Bool(true),
+				EnabledForTemplateDeployment: pulumi.Bool(true),
+				NetworkAcls: &keyvault.NetworkRuleSetArgs{
+					Bypass:        pulumi.String("AzureServices"),
+					DefaultAction: pulumi.String("Deny"),
+					IpRules: keyvault.IPRuleArray{
+						&keyvault.IPRuleArgs{
+							Value: pulumi.String("124.56.78.91"),
+						},
+						&keyvault.IPRuleArgs{
+							Value: pulumi.String("'10.91.4.0/24'"),
+						},
+					},
+					VirtualNetworkRules: keyvault.VirtualNetworkRuleArray{
+						&keyvault.VirtualNetworkRuleArgs{
+							Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1"),
+						},
+					},
+				},
+				Sku: &keyvault.SkuArgs{
+					Family: pulumi.String("A"),
+					Name:   "standard",
+				},
+				TenantId: pulumi.String("00000000-0000-0000-0000-000000000000"),
+			},
+			ResourceGroupName: pulumi.String("sample-resource-group"),
+			VaultName:         pulumi.String("sample-vault"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const vault = new azure_native.keyvault.Vault("vault", {
+    location: "westus",
+    properties: {
+        enabledForDeployment: true,
+        enabledForDiskEncryption: true,
+        enabledForTemplateDeployment: true,
+        networkAcls: {
+            bypass: "AzureServices",
+            defaultAction: "Deny",
+            ipRules: [
+                {
+                    value: "124.56.78.91",
+                },
+                {
+                    value: "'10.91.4.0/24'",
+                },
+            ],
+            virtualNetworkRules: [{
+                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1",
+            }],
+        },
+        sku: {
+            family: "A",
+            name: "standard",
+        },
+        tenantId: "00000000-0000-0000-0000-000000000000",
+    },
+    resourceGroupName: "sample-resource-group",
+    vaultName: "sample-vault",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+vault = azure_native.keyvault.Vault("vault",
+    location="westus",
+    properties=azure_native.keyvault.VaultPropertiesArgs(
+        enabled_for_deployment=True,
+        enabled_for_disk_encryption=True,
+        enabled_for_template_deployment=True,
+        network_acls=azure_native.keyvault.NetworkRuleSetArgs(
+            bypass="AzureServices",
+            default_action="Deny",
+            ip_rules=[
+                azure_native.keyvault.IPRuleArgs(
+                    value="124.56.78.91",
+                ),
+                azure_native.keyvault.IPRuleArgs(
+                    value="'10.91.4.0/24'",
+                ),
+            ],
+            virtual_network_rules=[azure_native.keyvault.VirtualNetworkRuleArgs(
+                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1",
+            )],
+        ),
+        sku=azure_native.keyvault.SkuArgs(
+            family="A",
+            name="standard",
+        ),
+        tenant_id="00000000-0000-0000-0000-000000000000",
+    ),
+    resource_group_name="sample-resource-group",
+    vault_name="sample-vault")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:keyvault:Vault sample-vault /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/sample-resource-group/providers/Microsoft.KeyVault/vaults/sample-vault 
+```
+
+ */
 @ResourceType(type="azure-native:keyvault:Vault")
 public class Vault extends io.pulumi.resources.CustomResource {
+    /**
+     * Azure location of the key vault resource.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Azure location of the key vault resource.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Name of the key vault resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the key vault resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Properties of the vault
+     */
     @OutputExport(name="properties", type=VaultPropertiesResponse.class, parameters={})
     private Output<VaultPropertiesResponse> properties;
 
+    /**
+     * @return Properties of the vault
+     */
     public Output<VaultPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Tags assigned to the key vault resource.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Tags assigned to the key vault resource.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type of the key vault resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type of the key vault resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Vault(String name, VaultArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:keyvault:Vault", name, args == null ? VaultArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -76,6 +632,14 @@ public class Vault extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Vault get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Vault(name, id, options);
     }

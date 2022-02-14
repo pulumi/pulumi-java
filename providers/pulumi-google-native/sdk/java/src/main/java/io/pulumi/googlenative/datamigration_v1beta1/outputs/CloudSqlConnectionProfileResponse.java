@@ -10,9 +10,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CloudSqlConnectionProfileResponse {
+/**
+ * The Cloud SQL instance ID that this connection profile is associated with.
+ */
     private final String cloudSqlId;
+/**
+ * The Cloud SQL database instance's private IP.
+ */
     private final String privateIp;
+/**
+ * The Cloud SQL database instance's public IP.
+ */
     private final String publicIp;
+/**
+ * Immutable. Metadata used to create the destination Cloud SQL database.
+ */
     private final CloudSqlSettingsResponse settings;
 
     @OutputCustomType.Constructor({"cloudSqlId","privateIp","publicIp","settings"})
@@ -27,15 +39,27 @@ public final class CloudSqlConnectionProfileResponse {
         this.settings = Objects.requireNonNull(settings);
     }
 
+/**
+ * The Cloud SQL instance ID that this connection profile is associated with.
+ */
     public String getCloudSqlId() {
         return this.cloudSqlId;
     }
+/**
+ * The Cloud SQL database instance's private IP.
+ */
     public String getPrivateIp() {
         return this.privateIp;
     }
+/**
+ * The Cloud SQL database instance's public IP.
+ */
     public String getPublicIp() {
         return this.publicIp;
     }
+/**
+ * Immutable. Metadata used to create the destination Cloud SQL database.
+ */
     public CloudSqlSettingsResponse getSettings() {
         return this.settings;
     }

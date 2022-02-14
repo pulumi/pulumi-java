@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.apimanagement.NotificationRecipientEmailArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -14,27 +13,142 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Recipient Email details.
+API Version: 2020-12-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### ApiManagementCreateNotificationRecipientEmail
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var notificationRecipientEmail = new AzureNative.ApiManagement.NotificationRecipientEmail("notificationRecipientEmail", new AzureNative.ApiManagement.NotificationRecipientEmailArgs
+        {
+            Email = "foobar@live.com",
+            NotificationName = "RequestPublisherNotificationMessage",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := apimanagement.NewNotificationRecipientEmail(ctx, "notificationRecipientEmail", &apimanagement.NotificationRecipientEmailArgs{
+			Email:             pulumi.String("foobar@live.com"),
+			NotificationName:  pulumi.String("RequestPublisherNotificationMessage"),
+			ResourceGroupName: pulumi.String("rg1"),
+			ServiceName:       pulumi.String("apimService1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const notificationRecipientEmail = new azure_native.apimanagement.NotificationRecipientEmail("notificationRecipientEmail", {
+    email: "foobar@live.com",
+    notificationName: "RequestPublisherNotificationMessage",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+notification_recipient_email = azure_native.apimanagement.NotificationRecipientEmail("notificationRecipientEmail",
+    email="foobar@live.com",
+    notification_name="RequestPublisherNotificationMessage",
+    resource_group_name="rg1",
+    service_name="apimService1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:apimanagement:NotificationRecipientEmail foobar@live.com /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/notifications/RequestPublisherNotificationMessage/recipientEmails/foobar@live.com 
+```
+
+ */
 @ResourceType(type="azure-native:apimanagement:NotificationRecipientEmail")
 public class NotificationRecipientEmail extends io.pulumi.resources.CustomResource {
+    /**
+     * User Email subscribed to notification.
+     */
     @OutputExport(name="email", type=String.class, parameters={})
     private Output</* @Nullable */ String> email;
 
+    /**
+     * @return User Email subscribed to notification.
+     */
     public Output</* @Nullable */ String> getEmail() {
         return this.email;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Resource type for API Management resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type for API Management resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public NotificationRecipientEmail(String name, NotificationRecipientEmailArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:NotificationRecipientEmail", name, args == null ? NotificationRecipientEmailArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -63,6 +177,14 @@ public class NotificationRecipientEmail extends io.pulumi.resources.CustomResour
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static NotificationRecipientEmail get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NotificationRecipientEmail(name, id, options);
     }

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Image repository credential.
+ */
 public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageRepositoryCredentialArgs Empty = new ImageRepositoryCredentialArgs();
 
+    /**
+     * Image repository url (e.g.: mcr.microsoft.com).
+     */
     @InputImport(name="imageRepositoryUrl", required=true)
     private final Input<String> imageRepositoryUrl;
 
@@ -22,6 +28,9 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
         return this.imageRepositoryUrl;
     }
 
+    /**
+     * Repository user password.
+     */
     @InputImport(name="password")
     private final @Nullable Input<AsymmetricEncryptedSecretArgs> password;
 
@@ -29,6 +38,9 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * Repository user name.
+     */
     @InputImport(name="userName", required=true)
     private final Input<String> userName;
 

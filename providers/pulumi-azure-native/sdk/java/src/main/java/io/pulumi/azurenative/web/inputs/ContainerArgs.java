@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Container App container definition.
+ */
 public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerArgs Empty = new ContainerArgs();
 
+    /**
+     * Container start command arguments.
+     */
     @InputImport(name="args")
     private final @Nullable Input<List<String>> args;
 
@@ -24,6 +30,9 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.args == null ? Input.empty() : this.args;
     }
 
+    /**
+     * Container start command.
+     */
     @InputImport(name="command")
     private final @Nullable Input<List<String>> command;
 
@@ -31,6 +40,9 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.command == null ? Input.empty() : this.command;
     }
 
+    /**
+     * Container environment variables.
+     */
     @InputImport(name="env")
     private final @Nullable Input<List<EnvironmentVarArgs>> env;
 
@@ -38,6 +50,9 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.env == null ? Input.empty() : this.env;
     }
 
+    /**
+     * Container image tag.
+     */
     @InputImport(name="image")
     private final @Nullable Input<String> image;
 
@@ -45,6 +60,9 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.image == null ? Input.empty() : this.image;
     }
 
+    /**
+     * Custom container name.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +70,9 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Container resource requirements.
+     */
     @InputImport(name="resources")
     private final @Nullable Input<ContainerResourcesArgs> resources;
 

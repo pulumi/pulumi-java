@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure SQL workload-specific backup item.
+ */
 public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureSqlProtectedItemArgs Empty = new AzureSqlProtectedItemArgs();
 
+    /**
+     * Type of backup management for the backed up item.
+     */
     @InputImport(name="backupManagementType")
     private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
@@ -28,6 +34,9 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
     }
 
+    /**
+     * Name of the backup set the backup item belongs to
+     */
     @InputImport(name="backupSetName")
     private final @Nullable Input<String> backupSetName;
 
@@ -35,6 +44,9 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
         return this.backupSetName == null ? Input.empty() : this.backupSetName;
     }
 
+    /**
+     * Unique name of container
+     */
     @InputImport(name="containerName")
     private final @Nullable Input<String> containerName;
 
@@ -42,6 +54,9 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
         return this.containerName == null ? Input.empty() : this.containerName;
     }
 
+    /**
+     * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
+     */
     @InputImport(name="createMode")
     private final @Nullable Input<Either<String,CreateMode>> createMode;
 
@@ -49,6 +64,9 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
         return this.createMode == null ? Input.empty() : this.createMode;
     }
 
+    /**
+     * Time for deferred deletion in UTC
+     */
     @InputImport(name="deferredDeleteTimeInUTC")
     private final @Nullable Input<String> deferredDeleteTimeInUTC;
 
@@ -56,6 +74,9 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
         return this.deferredDeleteTimeInUTC == null ? Input.empty() : this.deferredDeleteTimeInUTC;
     }
 
+    /**
+     * Time remaining before the DS marked for deferred delete is permanently deleted
+     */
     @InputImport(name="deferredDeleteTimeRemaining")
     private final @Nullable Input<String> deferredDeleteTimeRemaining;
 
@@ -63,6 +84,9 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
         return this.deferredDeleteTimeRemaining == null ? Input.empty() : this.deferredDeleteTimeRemaining;
     }
 
+    /**
+     * Additional information for this backup item.
+     */
     @InputImport(name="extendedInfo")
     private final @Nullable Input<AzureSqlProtectedItemExtendedInfoArgs> extendedInfo;
 
@@ -70,6 +94,9 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
         return this.extendedInfo == null ? Input.empty() : this.extendedInfo;
     }
 
+    /**
+     * Flag to identify whether the deferred deleted DS is to be purged soon
+     */
     @InputImport(name="isDeferredDeleteScheduleUpcoming")
     private final @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming;
 
@@ -77,6 +104,9 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
         return this.isDeferredDeleteScheduleUpcoming == null ? Input.empty() : this.isDeferredDeleteScheduleUpcoming;
     }
 
+    /**
+     * Flag to identify that deferred deleted DS is to be moved into Pause state
+     */
     @InputImport(name="isRehydrate")
     private final @Nullable Input<Boolean> isRehydrate;
 
@@ -84,6 +114,9 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
         return this.isRehydrate == null ? Input.empty() : this.isRehydrate;
     }
 
+    /**
+     * Flag to identify whether the DS is scheduled for deferred delete
+     */
     @InputImport(name="isScheduledForDeferredDelete")
     private final @Nullable Input<Boolean> isScheduledForDeferredDelete;
 
@@ -91,6 +124,9 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
         return this.isScheduledForDeferredDelete == null ? Input.empty() : this.isScheduledForDeferredDelete;
     }
 
+    /**
+     * Timestamp when the last (latest) backup copy was created for this backup item.
+     */
     @InputImport(name="lastRecoveryPoint")
     private final @Nullable Input<String> lastRecoveryPoint;
 
@@ -98,6 +134,9 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
         return this.lastRecoveryPoint == null ? Input.empty() : this.lastRecoveryPoint;
     }
 
+    /**
+     * ID of the backup policy with which this item is backed up.
+     */
     @InputImport(name="policyId")
     private final @Nullable Input<String> policyId;
 
@@ -105,6 +144,9 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
         return this.policyId == null ? Input.empty() : this.policyId;
     }
 
+    /**
+     * Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.
+     */
     @InputImport(name="protectedItemDataId")
     private final @Nullable Input<String> protectedItemDataId;
 
@@ -112,6 +154,10 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
         return this.protectedItemDataId == null ? Input.empty() : this.protectedItemDataId;
     }
 
+    /**
+     * backup item type.
+Expected value is 'Microsoft.Sql/servers/databases'.
+     */
     @InputImport(name="protectedItemType", required=true)
     private final Input<String> protectedItemType;
 
@@ -119,6 +165,9 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
         return this.protectedItemType;
     }
 
+    /**
+     * Backup state of the backed up item.
+     */
     @InputImport(name="protectionState")
     private final @Nullable Input<Either<String,ProtectedItemState>> protectionState;
 
@@ -126,6 +175,9 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
         return this.protectionState == null ? Input.empty() : this.protectionState;
     }
 
+    /**
+     * ARM ID of the resource to be backed up.
+     */
     @InputImport(name="sourceResourceId")
     private final @Nullable Input<String> sourceResourceId;
 
@@ -133,6 +185,9 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
         return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
     }
 
+    /**
+     * Type of workload this item represents.
+     */
     @InputImport(name="workloadType")
     private final @Nullable Input<Either<String,DataSourceType>> workloadType;
 

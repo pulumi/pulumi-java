@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetSettingArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSettingArgs Empty = new GetSettingArgs();
 
+    /**
+     * Name of the setting. Allowed values: myscope
+     */
     @InputImport(name="settingName", required=true)
     private final String settingName;
 

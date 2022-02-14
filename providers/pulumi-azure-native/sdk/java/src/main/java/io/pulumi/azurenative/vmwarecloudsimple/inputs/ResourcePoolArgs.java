@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Resource pool model
+ */
 public final class ResourcePoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourcePoolArgs Empty = new ResourcePoolArgs();
 
+    /**
+     * resource pool id (privateCloudId:vsphereId)
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 

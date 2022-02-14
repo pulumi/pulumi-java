@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Parameters for DnsKey key generation. Used for generating initial keys for a new ManagedZone and as default when adding a new DnsKey.
+ */
 public final class DnsKeySpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DnsKeySpecResponse Empty = new DnsKeySpecResponse();
 
+    /**
+     * String mnemonic specifying the DNSSEC algorithm of this key.
+     */
     @InputImport(name="algorithm", required=true)
     private final String algorithm;
 
@@ -20,6 +26,9 @@ public final class DnsKeySpecResponse extends io.pulumi.resources.InvokeArgs {
         return this.algorithm;
     }
 
+    /**
+     * Length of the keys in bits.
+     */
     @InputImport(name="keyLength", required=true)
     private final Integer keyLength;
 
@@ -27,6 +36,9 @@ public final class DnsKeySpecResponse extends io.pulumi.resources.InvokeArgs {
         return this.keyLength;
     }
 
+    /**
+     * Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys have the Secure Entry Point flag set and, when active, are only used to sign resource record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and are used to sign all other types of resource record sets.
+     */
     @InputImport(name="keyType", required=true)
     private final String keyType;
 
@@ -34,6 +46,9 @@ public final class DnsKeySpecResponse extends io.pulumi.resources.InvokeArgs {
         return this.keyType;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 

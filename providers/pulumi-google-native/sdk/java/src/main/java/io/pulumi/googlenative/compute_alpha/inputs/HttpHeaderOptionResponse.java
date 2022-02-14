@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specification determining how headers are added to requests or responses.
+ */
 public final class HttpHeaderOptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HttpHeaderOptionResponse Empty = new HttpHeaderOptionResponse();
 
+    /**
+     * The name of the header.
+     */
     @InputImport(name="headerName", required=true)
     private final String headerName;
 
@@ -20,6 +26,9 @@ public final class HttpHeaderOptionResponse extends io.pulumi.resources.InvokeAr
         return this.headerName;
     }
 
+    /**
+     * The value of the header to add.
+     */
     @InputImport(name="headerValue", required=true)
     private final String headerValue;
 
@@ -27,6 +36,9 @@ public final class HttpHeaderOptionResponse extends io.pulumi.resources.InvokeAr
         return this.headerValue;
     }
 
+    /**
+     * If false, headerValue is appended to any values that already exist for the header. If true, headerValue is set for the header, discarding any values that were set for that header. The default value is false. 
+     */
     @InputImport(name="replace", required=true)
     private final Boolean replace;
 

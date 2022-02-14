@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Url and version of the KeyVault Secret
+ */
 public final class KeyPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyPropertiesResponse Empty = new KeyPropertiesResponse();
 
+    /**
+     * The identifier of the key vault key used to encrypt data.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +27,9 @@ public final class KeyPropertiesResponse extends io.pulumi.resources.InvokeArgs 
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The version of the identity which will be used to access key vault.
+     */
     @InputImport(name="version")
     private final @Nullable String version;
 

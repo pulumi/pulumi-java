@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetPrivateEndpointConnectionProxyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPrivateEndpointConnectionProxyArgs Empty = new GetPrivateEndpointConnectionProxyArgs();
 
+    /**
+     * Account name.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetPrivateEndpointConnectionProxyArgs extends io.pulumi.resou
         return this.accountName;
     }
 
+    /**
+     * The ID of the private endpoint connection proxy object.
+     */
     @InputImport(name="privateEndpointConnectionProxyId", required=true)
     private final String privateEndpointConnectionProxyId;
 
@@ -26,6 +35,9 @@ public final class GetPrivateEndpointConnectionProxyArgs extends io.pulumi.resou
         return this.privateEndpointConnectionProxyId;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

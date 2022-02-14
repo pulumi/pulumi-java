@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The type of the pattern for an alias path.
+ */
 public final class AliasPatternResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AliasPatternResponse Empty = new AliasPatternResponse();
 
+    /**
+     * The alias pattern phrase.
+     */
     @InputImport(name="phrase")
     private final @Nullable String phrase;
 
@@ -21,6 +27,9 @@ public final class AliasPatternResponse extends io.pulumi.resources.InvokeArgs {
         return this.phrase == null ? Optional.empty() : Optional.ofNullable(this.phrase);
     }
 
+    /**
+     * The type of alias pattern
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -28,6 +37,9 @@ public final class AliasPatternResponse extends io.pulumi.resources.InvokeArgs {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
+    /**
+     * The alias pattern variable.
+     */
     @InputImport(name="variable")
     private final @Nullable String variable;
 

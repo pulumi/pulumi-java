@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class LabArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LabArgs Empty = new LabArgs();
 
+    /**
+     * The properties of any lab announcement associated with this lab
+     */
     @InputImport(name="announcement")
     private final @Nullable Input<LabAnnouncementPropertiesArgs> announcement;
 
@@ -29,6 +35,9 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
         return this.announcement == null ? Input.empty() : this.announcement;
     }
 
+    /**
+     * The access rights to be granted to the user when provisioning an environment
+     */
     @InputImport(name="environmentPermission")
     private final @Nullable Input<Either<String,EnvironmentPermission>> environmentPermission;
 
@@ -36,6 +45,9 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentPermission == null ? Input.empty() : this.environmentPermission;
     }
 
+    /**
+     * Extended properties of the lab used for experimental features
+     */
     @InputImport(name="extendedProperties")
     private final @Nullable Input<Map<String,String>> extendedProperties;
 
@@ -43,6 +55,9 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
         return this.extendedProperties == null ? Input.empty() : this.extendedProperties;
     }
 
+    /**
+     * Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.
+     */
     @InputImport(name="labStorageType")
     private final @Nullable Input<Either<String,StorageType>> labStorageType;
 
@@ -50,6 +65,9 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
         return this.labStorageType == null ? Input.empty() : this.labStorageType;
     }
 
+    /**
+     * The location of the resource.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -57,6 +75,9 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.
+     */
     @InputImport(name="mandatoryArtifactsResourceIdsLinux")
     private final @Nullable Input<List<String>> mandatoryArtifactsResourceIdsLinux;
 
@@ -64,6 +85,9 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
         return this.mandatoryArtifactsResourceIdsLinux == null ? Input.empty() : this.mandatoryArtifactsResourceIdsLinux;
     }
 
+    /**
+     * The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.
+     */
     @InputImport(name="mandatoryArtifactsResourceIdsWindows")
     private final @Nullable Input<List<String>> mandatoryArtifactsResourceIdsWindows;
 
@@ -71,6 +95,9 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
         return this.mandatoryArtifactsResourceIdsWindows == null ? Input.empty() : this.mandatoryArtifactsResourceIdsWindows;
     }
 
+    /**
+     * The name of the lab.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -78,6 +105,11 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The setting to enable usage of premium data disks.
+When its value is 'Enabled', creation of standard or premium data disks is allowed.
+When its value is 'Disabled', only creation of standard data disks is allowed.
+     */
     @InputImport(name="premiumDataDisks")
     private final @Nullable Input<Either<String,PremiumDataDisk>> premiumDataDisks;
 
@@ -85,6 +117,9 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
         return this.premiumDataDisks == null ? Input.empty() : this.premiumDataDisks;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -92,6 +127,9 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The properties of any lab support message associated with this lab
+     */
     @InputImport(name="support")
     private final @Nullable Input<LabSupportPropertiesArgs> support;
 
@@ -99,6 +137,9 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
         return this.support == null ? Input.empty() : this.support;
     }
 
+    /**
+     * The tags of the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppDiagnosticLogsConfiguration {
+/**
+ * Configuration of App Service site logs.
+API Version: 2020-12-01.
+ *
+ * Configuration of App Service site logs.
+ */
     public static CompletableFuture<GetWebAppDiagnosticLogsConfigurationResult> invokeAsync(GetWebAppDiagnosticLogsConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppDiagnosticLogsConfiguration", TypeShape.of(GetWebAppDiagnosticLogsConfigurationResult.class), args == null ? GetWebAppDiagnosticLogsConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

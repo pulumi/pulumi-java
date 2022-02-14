@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatasetStateResponseDeprecatedBy {
+/**
+ * Unique Dataset identifier.
+ */
     private final String datasetId;
+/**
+ * Definition Version
+ */
     private final @Nullable String definitionVersion;
 
     @OutputCustomType.Constructor({"datasetId","definitionVersion"})
@@ -22,9 +28,15 @@ public final class DatasetStateResponseDeprecatedBy {
         this.definitionVersion = definitionVersion;
     }
 
+/**
+ * Unique Dataset identifier.
+ */
     public String getDatasetId() {
         return this.datasetId;
     }
+/**
+ * Definition Version
+ */
     public Optional<String> getDefinitionVersion() {
         return Optional.ofNullable(this.definitionVersion);
     }

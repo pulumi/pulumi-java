@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetADLSGen2FileSystemDataSetMapping {
+/**
+ * An ADLS Gen2 file system data set mapping.
+API Version: 2020-09-01.
+ *
+ * An ADLS Gen2 file system data set mapping.
+ */
     public static CompletableFuture<GetADLSGen2FileSystemDataSetMappingResult> invokeAsync(GetADLSGen2FileSystemDataSetMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getADLSGen2FileSystemDataSetMapping", TypeShape.of(GetADLSGen2FileSystemDataSetMappingResult.class), args == null ? GetADLSGen2FileSystemDataSetMappingArgs.Empty : args, Utilities.withVersion(options));
     }

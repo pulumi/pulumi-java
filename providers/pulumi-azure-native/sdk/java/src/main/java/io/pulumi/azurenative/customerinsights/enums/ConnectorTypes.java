@@ -8,13 +8,34 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Type of connector.
+ */
     @EnumType
     public enum ConnectorTypes {
+/**
+ * 
+ */
         None("None"),
+/**
+ * 
+ */
         CRM("CRM"),
+/**
+ * 
+ */
         AzureBlob("AzureBlob"),
+/**
+ * 
+ */
         Salesforce("Salesforce"),
+/**
+ * 
+ */
         ExchangeOnline("ExchangeOnline"),
+/**
+ * 
+ */
         Outbound("Outbound");
 
         private final String value;

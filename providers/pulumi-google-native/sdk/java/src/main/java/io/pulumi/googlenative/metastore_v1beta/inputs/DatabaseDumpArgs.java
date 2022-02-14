@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A specification of the location of and metadata about a database dump from a relational database management system.
+ */
 public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabaseDumpArgs Empty = new DatabaseDumpArgs();
 
+    /**
+     * The type of the database.
+     */
     @InputImport(name="databaseType")
     private final @Nullable Input<DatabaseDumpDatabaseType> databaseType;
 
@@ -23,6 +29,9 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseType == null ? Input.empty() : this.databaseType;
     }
 
+    /**
+     * A Cloud Storage object or folder URI that specifies the source from which to import metadata. It must begin with gs://.
+     */
     @InputImport(name="gcsUri")
     private final @Nullable Input<String> gcsUri;
 
@@ -30,6 +39,9 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
         return this.gcsUri == null ? Input.empty() : this.gcsUri;
     }
 
+    /**
+     * The name of the source database.
+     */
     @InputImport(name="sourceDatabase")
     private final @Nullable Input<String> sourceDatabase;
 
@@ -37,6 +49,9 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceDatabase == null ? Input.empty() : this.sourceDatabase;
     }
 
+    /**
+     * Optional. The type of the database dump. If unspecified, defaults to MYSQL.
+     */
     @InputImport(name="type")
     private final @Nullable Input<DatabaseDumpType> type;
 

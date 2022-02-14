@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the Resource ID for a Frontend Endpoint.
+ */
 public final class FrontendEndpointLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FrontendEndpointLinkResponse Empty = new FrontendEndpointLinkResponse();
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 

@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PubsubDestinationResponse {
+/**
+ * The name of the Pub/Sub topic to publish job completion notification to. For example: `projects/{project}/topics/{topic}`.
+ */
     private final String topic;
 
     @OutputCustomType.Constructor({"topic"})
@@ -16,6 +19,9 @@ public final class PubsubDestinationResponse {
         this.topic = Objects.requireNonNull(topic);
     }
 
+/**
+ * The name of the Pub/Sub topic to publish job completion notification to. For example: `projects/{project}/topics/{topic}`.
+ */
     public String getTopic() {
         return this.topic;
     }

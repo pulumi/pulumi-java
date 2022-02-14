@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A CNAME record.
+ */
 public final class CnameRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CnameRecordArgs Empty = new CnameRecordArgs();
 
+    /**
+     * The canonical name for this CNAME record.
+     */
     @InputImport(name="cname")
     private final @Nullable Input<String> cname;
 

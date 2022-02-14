@@ -11,10 +11,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Describes the http configuration for external connectivity for this network.
+ */
 public final class HttpConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HttpConfigResponse Empty = new HttpConfigResponse();
 
+    /**
+     * description for routing.
+     */
     @InputImport(name="hosts", required=true)
     private final List<HttpHostConfigResponse> hosts;
 
@@ -22,6 +28,9 @@ public final class HttpConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.hosts;
     }
 
+    /**
+     * http gateway config name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -29,6 +38,9 @@ public final class HttpConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * Specifies the port at which the service endpoint below needs to be exposed.
+     */
     @InputImport(name="port", required=true)
     private final Integer port;
 

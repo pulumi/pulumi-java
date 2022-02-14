@@ -15,18 +15,57 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetStandardResult {
+/**
+ * category of the standard provided
+ */
     private final @Nullable String category;
+/**
+ * List of component objects containing component unique keys (such as assessment keys) to apply to standard scope.  Currently only supports assessment keys.
+ */
     private final @Nullable List<StandardComponentPropertiesResponse> components;
+/**
+ * description of the standard
+ */
     private final @Nullable String description;
+/**
+ * display name of the standard, equivalent to the standardId
+ */
     private final @Nullable String displayName;
+/**
+ * Entity tag is used for comparing two or more entities from the same requested resource.
+ */
     private final @Nullable String etag;
+/**
+ * Resource Id
+ */
     private final String id;
+/**
+ * Kind of the resource
+ */
     private final @Nullable String kind;
+/**
+ * Location where the resource is stored
+ */
     private final @Nullable String location;
+/**
+ * Resource name
+ */
     private final String name;
+/**
+ * standard type (Custom or BuiltIn only currently)
+ */
     private final String standardType;
+/**
+ * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+ */
     private final SystemDataResponse systemData;
+/**
+ * A list of key value pairs that describe the resource.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Resource type
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"category","components","description","displayName","etag","id","kind","location","name","standardType","systemData","tags","type"})
@@ -59,42 +98,81 @@ public final class GetStandardResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * category of the standard provided
+ */
     public Optional<String> getCategory() {
         return Optional.ofNullable(this.category);
     }
+/**
+ * List of component objects containing component unique keys (such as assessment keys) to apply to standard scope.  Currently only supports assessment keys.
+ */
     public List<StandardComponentPropertiesResponse> getComponents() {
         return this.components == null ? List.of() : this.components;
     }
+/**
+ * description of the standard
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * display name of the standard, equivalent to the standardId
+ */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+/**
+ * Entity tag is used for comparing two or more entities from the same requested resource.
+ */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+/**
+ * Resource Id
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Kind of the resource
+ */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
+/**
+ * Location where the resource is stored
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * Resource name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * standard type (Custom or BuiltIn only currently)
+ */
     public String getStandardType() {
         return this.standardType;
     }
+/**
+ * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * A list of key value pairs that describe the resource.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Resource type
+ */
     public String getType() {
         return this.type;
     }

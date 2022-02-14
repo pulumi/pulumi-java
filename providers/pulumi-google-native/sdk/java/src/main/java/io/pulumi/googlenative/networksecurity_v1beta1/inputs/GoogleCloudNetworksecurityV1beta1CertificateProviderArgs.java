@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specification of certificate provider. Defines the mechanism to obtain the certificate and private key for peer to peer authentication.
+ */
 public final class GoogleCloudNetworksecurityV1beta1CertificateProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudNetworksecurityV1beta1CertificateProviderArgs Empty = new GoogleCloudNetworksecurityV1beta1CertificateProviderArgs();
 
+    /**
+     * The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.
+     */
     @InputImport(name="certificateProviderInstance")
     private final @Nullable Input<CertificateProviderInstanceArgs> certificateProviderInstance;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudNetworksecurityV1beta1CertificateProviderArgs exte
         return this.certificateProviderInstance == null ? Input.empty() : this.certificateProviderInstance;
     }
 
+    /**
+     * gRPC specific configuration to access the gRPC server to obtain the cert and private key.
+     */
     @InputImport(name="grpcEndpoint")
     private final @Nullable Input<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> grpcEndpoint;
 

@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Not supported by Cloud Run SecretEnvSource selects a Secret to populate the environment variables with. The contents of the target Secret's Data field will represent the key-value pairs as environment variables.
+ */
 public final class SecretEnvSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecretEnvSourceArgs Empty = new SecretEnvSourceArgs();
 
+    /**
+     * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
+     */
     @InputImport(name="localObjectReference")
     private final @Nullable Input<LocalObjectReferenceArgs> localObjectReference;
 
@@ -23,6 +29,9 @@ public final class SecretEnvSourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.localObjectReference == null ? Input.empty() : this.localObjectReference;
     }
 
+    /**
+     * The Secret to select from.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -30,6 +39,9 @@ public final class SecretEnvSourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * (Optional) Specify whether the Secret must be defined
+     */
     @InputImport(name="optional")
     private final @Nullable Input<Boolean> optional;
 

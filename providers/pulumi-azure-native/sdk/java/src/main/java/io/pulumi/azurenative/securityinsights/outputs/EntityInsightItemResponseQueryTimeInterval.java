@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EntityInsightItemResponseQueryTimeInterval {
+/**
+ * Insight query end time
+ */
     private final @Nullable String endTime;
+/**
+ * Insight query start time
+ */
     private final @Nullable String startTime;
 
     @OutputCustomType.Constructor({"endTime","startTime"})
@@ -22,9 +28,15 @@ public final class EntityInsightItemResponseQueryTimeInterval {
         this.startTime = startTime;
     }
 
+/**
+ * Insight query end time
+ */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
+/**
+ * Insight query start time
+ */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Description of an input or output of an execution stage.
+ */
 public final class StageSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StageSourceArgs Empty = new StageSourceArgs();
 
+    /**
+     * Dataflow service generated name for this source.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +27,9 @@ public final class StageSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * User name for the original user transform or collection with which this source is most closely associated.
+     */
     @InputImport(name="originalTransformOrCollection")
     private final @Nullable Input<String> originalTransformOrCollection;
 
@@ -28,6 +37,9 @@ public final class StageSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.originalTransformOrCollection == null ? Input.empty() : this.originalTransformOrCollection;
     }
 
+    /**
+     * Size of the source, if measurable.
+     */
     @InputImport(name="sizeBytes")
     private final @Nullable Input<String> sizeBytes;
 
@@ -35,6 +47,9 @@ public final class StageSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sizeBytes == null ? Input.empty() : this.sizeBytes;
     }
 
+    /**
+     * Human-readable name for this source; may be user or system generated.
+     */
     @InputImport(name="userName")
     private final @Nullable Input<String> userName;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetPrivateStoreOfferArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPrivateStoreOfferArgs Empty = new GetPrivateStoreOfferArgs();
 
+    /**
+     * The offer ID to update or delete
+     */
     @InputImport(name="offerId", required=true)
     private final String offerId;
 
@@ -19,6 +25,9 @@ public final class GetPrivateStoreOfferArgs extends io.pulumi.resources.InvokeAr
         return this.offerId;
     }
 
+    /**
+     * The store ID - must use the tenant ID
+     */
     @InputImport(name="privateStoreId", required=true)
     private final String privateStoreId;
 

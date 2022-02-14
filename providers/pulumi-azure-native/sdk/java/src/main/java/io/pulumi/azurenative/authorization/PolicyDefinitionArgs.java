@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PolicyDefinitionArgs Empty = new PolicyDefinitionArgs();
 
+    /**
+     * The policy definition description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -26,6 +32,9 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The display name of the policy definition.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -33,6 +42,9 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Object> metadata;
 
@@ -40,6 +52,9 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
+     */
     @InputImport(name="mode")
     private final @Nullable Input<String> mode;
 
@@ -47,6 +62,9 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
         return this.mode == null ? Input.empty() : this.mode;
     }
 
+    /**
+     * The parameter definitions for parameters used in the policy rule. The keys are the parameter names.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterDefinitionsValueArgs>> parameters;
 
@@ -54,6 +72,9 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * The name of the policy definition to create.
+     */
     @InputImport(name="policyDefinitionName")
     private final @Nullable Input<String> policyDefinitionName;
 
@@ -61,6 +82,9 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
         return this.policyDefinitionName == null ? Input.empty() : this.policyDefinitionName;
     }
 
+    /**
+     * The policy rule.
+     */
     @InputImport(name="policyRule")
     private final @Nullable Input<Object> policyRule;
 
@@ -68,6 +92,9 @@ public final class PolicyDefinitionArgs extends io.pulumi.resources.ResourceArgs
         return this.policyRule == null ? Input.empty() : this.policyRule;
     }
 
+    /**
+     * The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
+     */
     @InputImport(name="policyType")
     private final @Nullable Input<Either<String,PolicyType>> policyType;
 

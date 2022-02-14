@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RedisAccessKeysResponse {
+/**
+ * The current primary key that clients can use to authenticate with Redis cache.
+ */
     private final String primaryKey;
+/**
+ * The current secondary key that clients can use to authenticate with Redis cache.
+ */
     private final String secondaryKey;
 
     @OutputCustomType.Constructor({"primaryKey","secondaryKey"})
@@ -20,9 +26,15 @@ public final class RedisAccessKeysResponse {
         this.secondaryKey = Objects.requireNonNull(secondaryKey);
     }
 
+/**
+ * The current primary key that clients can use to authenticate with Redis cache.
+ */
     public String getPrimaryKey() {
         return this.primaryKey;
     }
+/**
+ * The current secondary key that clients can use to authenticate with Redis cache.
+ */
     public String getSecondaryKey() {
         return this.secondaryKey;
     }

@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResourceProviderManifestPropertiesManagementArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceProviderManifestPropertiesManagementArgs Empty = new ResourceProviderManifestPropertiesManagementArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="incidentContactEmail")
     private final @Nullable Input<String> incidentContactEmail;
 
@@ -24,6 +30,9 @@ public final class ResourceProviderManifestPropertiesManagementArgs extends io.p
         return this.incidentContactEmail == null ? Input.empty() : this.incidentContactEmail;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="incidentRoutingService")
     private final @Nullable Input<String> incidentRoutingService;
 
@@ -31,6 +40,9 @@ public final class ResourceProviderManifestPropertiesManagementArgs extends io.p
         return this.incidentRoutingService == null ? Input.empty() : this.incidentRoutingService;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="incidentRoutingTeam")
     private final @Nullable Input<String> incidentRoutingTeam;
 
@@ -38,6 +50,9 @@ public final class ResourceProviderManifestPropertiesManagementArgs extends io.p
         return this.incidentRoutingTeam == null ? Input.empty() : this.incidentRoutingTeam;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="manifestOwners")
     private final @Nullable Input<List<String>> manifestOwners;
 
@@ -45,6 +60,9 @@ public final class ResourceProviderManifestPropertiesManagementArgs extends io.p
         return this.manifestOwners == null ? Input.empty() : this.manifestOwners;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="resourceAccessPolicy")
     private final @Nullable Input<String> resourceAccessPolicy;
 
@@ -52,6 +70,9 @@ public final class ResourceProviderManifestPropertiesManagementArgs extends io.p
         return this.resourceAccessPolicy == null ? Input.empty() : this.resourceAccessPolicy;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="resourceAccessRoles")
     private final @Nullable Input<List<Object>> resourceAccessRoles;
 
@@ -59,6 +80,9 @@ public final class ResourceProviderManifestPropertiesManagementArgs extends io.p
         return this.resourceAccessRoles == null ? Input.empty() : this.resourceAccessRoles;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="schemaOwners")
     private final @Nullable Input<List<String>> schemaOwners;
 
@@ -66,6 +90,9 @@ public final class ResourceProviderManifestPropertiesManagementArgs extends io.p
         return this.schemaOwners == null ? Input.empty() : this.schemaOwners;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="serviceTreeInfos")
     private final @Nullable Input<List<ServiceTreeInfoArgs>> serviceTreeInfos;
 

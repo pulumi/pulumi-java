@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVirtualNetworkRuleArgs Empty = new GetVirtualNetworkRuleArgs();
 
+    /**
+     * The name of the Data Lake Store account.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeA
         return this.accountName;
     }
 
+    /**
+     * The name of the Azure resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeA
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the virtual network rule to retrieve.
+     */
     @InputImport(name="virtualNetworkRuleName", required=true)
     private final String virtualNetworkRuleName;
 

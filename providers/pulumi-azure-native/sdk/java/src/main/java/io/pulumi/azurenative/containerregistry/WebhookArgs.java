@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebhookArgs Empty = new WebhookArgs();
 
+    /**
+     * The list of actions that trigger the webhook to post notifications.
+     */
     @InputImport(name="actions", required=true)
     private final Input<List<Either<String,WebhookAction>>> actions;
 
@@ -26,6 +32,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.actions;
     }
 
+    /**
+     * Custom headers that will be added to the webhook notifications.
+     */
     @InputImport(name="customHeaders")
     private final @Nullable Input<Map<String,String>> customHeaders;
 
@@ -33,6 +42,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.customHeaders == null ? Input.empty() : this.customHeaders;
     }
 
+    /**
+     * The location of the webhook. This cannot be changed after the resource is created.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -40,6 +52,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the container registry.
+     */
     @InputImport(name="registryName", required=true)
     private final Input<String> registryName;
 
@@ -47,6 +62,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.registryName;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -54,6 +72,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means all events.
+     */
     @InputImport(name="scope")
     private final @Nullable Input<String> scope;
 
@@ -61,6 +82,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.scope == null ? Input.empty() : this.scope;
     }
 
+    /**
+     * The service URI for the webhook to post notifications.
+     */
     @InputImport(name="serviceUri", required=true)
     private final Input<String> serviceUri;
 
@@ -68,6 +92,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceUri;
     }
 
+    /**
+     * The status of the webhook at the time the operation was called.
+     */
     @InputImport(name="status")
     private final @Nullable Input<Either<String,WebhookStatus>> status;
 
@@ -75,6 +102,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * The tags for the webhook.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -82,6 +112,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The name of the webhook.
+     */
     @InputImport(name="webhookName")
     private final @Nullable Input<String> webhookName;
 

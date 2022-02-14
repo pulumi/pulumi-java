@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetJobArgs Empty = new GetJobArgs();
 
+    /**
+     * The Media Services account name.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * The Job name.
+     */
     @InputImport(name="jobName", required=true)
     private final String jobName;
 
@@ -26,6 +35,9 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.jobName;
     }
 
+    /**
+     * The name of the resource group within the Azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,9 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The Transform name.
+     */
     @InputImport(name="transformName", required=true)
     private final String transformName;
 

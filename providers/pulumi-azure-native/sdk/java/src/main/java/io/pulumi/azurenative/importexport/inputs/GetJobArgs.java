@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetJobArgs Empty = new GetJobArgs();
 
+    /**
+     * The name of the import/export job.
+     */
     @InputImport(name="jobName", required=true)
     private final String jobName;
 
@@ -19,6 +25,9 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.jobName;
     }
 
+    /**
+     * The resource group name uniquely identifies the resource group within the user subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

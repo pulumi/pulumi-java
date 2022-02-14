@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Enum of the Target reference type.
+ */
     @EnumType
     public enum TargetReferenceType {
+/**
+ * 
+ */
         ChaosTarget("ChaosTarget");
 
         private final String value;

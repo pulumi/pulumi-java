@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Profile for how to handle shutting down virtual machines.
+ */
 public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutoShutdownProfileArgs Empty = new AutoShutdownProfileArgs();
 
+    /**
+     * The amount of time a VM will stay running after a user disconnects if this behavior is enabled.
+     */
     @InputImport(name="disconnectDelay")
     private final @Nullable Input<String> disconnectDelay;
 
@@ -23,6 +29,9 @@ public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceA
         return this.disconnectDelay == null ? Input.empty() : this.disconnectDelay;
     }
 
+    /**
+     * The amount of time a VM will idle before it is shutdown if this behavior is enabled.
+     */
     @InputImport(name="idleDelay")
     private final @Nullable Input<String> idleDelay;
 
@@ -30,6 +39,9 @@ public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceA
         return this.idleDelay == null ? Input.empty() : this.idleDelay;
     }
 
+    /**
+     * The amount of time a VM will stay running before it is shutdown if no connection is made and this behavior is enabled.
+     */
     @InputImport(name="noConnectDelay")
     private final @Nullable Input<String> noConnectDelay;
 
@@ -37,6 +49,9 @@ public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceA
         return this.noConnectDelay == null ? Input.empty() : this.noConnectDelay;
     }
 
+    /**
+     * Whether shutdown on disconnect is enabled
+     */
     @InputImport(name="shutdownOnDisconnect")
     private final @Nullable Input<EnableState> shutdownOnDisconnect;
 
@@ -44,6 +59,9 @@ public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceA
         return this.shutdownOnDisconnect == null ? Input.empty() : this.shutdownOnDisconnect;
     }
 
+    /**
+     * Whether a VM will get shutdown when it has idled for a period of time.
+     */
     @InputImport(name="shutdownOnIdle")
     private final @Nullable Input<ShutdownOnIdleMode> shutdownOnIdle;
 
@@ -51,6 +69,9 @@ public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceA
         return this.shutdownOnIdle == null ? Input.empty() : this.shutdownOnIdle;
     }
 
+    /**
+     * Whether a VM will get shutdown when it hasn't been connected to after a period of time.
+     */
     @InputImport(name="shutdownWhenNotConnected")
     private final @Nullable Input<EnableState> shutdownWhenNotConnected;
 

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The RosettaNet ProcessConfiguration business document settings.
+ */
 public final class RosettaNetPipBusinessDocumentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RosettaNetPipBusinessDocumentResponse Empty = new RosettaNetPipBusinessDocumentResponse();
 
+    /**
+     * The business document description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -21,6 +27,9 @@ public final class RosettaNetPipBusinessDocumentResponse extends io.pulumi.resou
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The business document name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,6 +37,9 @@ public final class RosettaNetPipBusinessDocumentResponse extends io.pulumi.resou
         return this.name;
     }
 
+    /**
+     * The business document version.
+     */
     @InputImport(name="version", required=true)
     private final String version;
 

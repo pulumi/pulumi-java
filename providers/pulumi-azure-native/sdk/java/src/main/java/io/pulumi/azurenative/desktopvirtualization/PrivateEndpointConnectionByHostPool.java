@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.desktopvirtualization;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.desktopvirtualization.PrivateEndpointConnectionByHostPoolArgs;
 import io.pulumi.azurenative.desktopvirtualization.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.desktopvirtualization.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.desktopvirtualization.outputs.SystemDataResponse;
@@ -17,45 +16,195 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The Private Endpoint Connection resource.
+API Version: 2021-04-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### PrivateEndpointConnection_UpdateByHostPool
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpointConnectionByHostPool = new AzureNative.DesktopVirtualization.PrivateEndpointConnectionByHostPool("privateEndpointConnectionByHostPool", new AzureNative.DesktopVirtualization.PrivateEndpointConnectionByHostPoolArgs
+        {
+            HostPoolName = "hostPool1",
+            PrivateEndpointConnectionName = "hostPool1.377103f1-5179-4bdf-8556-4cdd3207cc5b",
+            PrivateLinkServiceConnectionState = new AzureNative.DesktopVirtualization.Inputs.PrivateLinkServiceConnectionStateArgs
+            {
+                ActionsRequired = "None",
+                Description = "Approved by admin@consoto.com",
+                Status = "Approved",
+            },
+            ResourceGroupName = "resourceGroup1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	desktopvirtualization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/desktopvirtualization"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := desktopvirtualization.NewPrivateEndpointConnectionByHostPool(ctx, "privateEndpointConnectionByHostPool", &desktopvirtualization.PrivateEndpointConnectionByHostPoolArgs{
+			HostPoolName:                  pulumi.String("hostPool1"),
+			PrivateEndpointConnectionName: pulumi.String("hostPool1.377103f1-5179-4bdf-8556-4cdd3207cc5b"),
+			PrivateLinkServiceConnectionState: &desktopvirtualization.PrivateLinkServiceConnectionStateArgs{
+				ActionsRequired: pulumi.String("None"),
+				Description:     pulumi.String("Approved by admin@consoto.com"),
+				Status:          pulumi.String("Approved"),
+			},
+			ResourceGroupName: pulumi.String("resourceGroup1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const privateEndpointConnectionByHostPool = new azure_native.desktopvirtualization.PrivateEndpointConnectionByHostPool("privateEndpointConnectionByHostPool", {
+    hostPoolName: "hostPool1",
+    privateEndpointConnectionName: "hostPool1.377103f1-5179-4bdf-8556-4cdd3207cc5b",
+    privateLinkServiceConnectionState: {
+        actionsRequired: "None",
+        description: "Approved by admin@consoto.com",
+        status: "Approved",
+    },
+    resourceGroupName: "resourceGroup1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+private_endpoint_connection_by_host_pool = azure_native.desktopvirtualization.PrivateEndpointConnectionByHostPool("privateEndpointConnectionByHostPool",
+    host_pool_name="hostPool1",
+    private_endpoint_connection_name="hostPool1.377103f1-5179-4bdf-8556-4cdd3207cc5b",
+    private_link_service_connection_state=azure_native.desktopvirtualization.PrivateLinkServiceConnectionStateArgs(
+        actions_required="None",
+        description="Approved by admin@consoto.com",
+        status="Approved",
+    ),
+    resource_group_name="resourceGroup1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:desktopvirtualization:PrivateEndpointConnectionByHostPool hostPool1.377103f1-5179-4bdf-8556-4cdd3207cc5b /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/hostpools/hostPool1/privateEndpointConnections/hostPool1.377103f1-5179-4bdf-8556-4cdd3207cc5b 
+```
+
+ */
 @ResourceType(type="azure-native:desktopvirtualization:PrivateEndpointConnectionByHostPool")
 public class PrivateEndpointConnectionByHostPool extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The resource of private end point.
+     */
     @OutputExport(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint;
 
+    /**
+     * @return The resource of private end point.
+     */
     public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
+    /**
+     * A collection of information about the state of the connection between service consumer and provider.
+     */
     @OutputExport(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
+    /**
+     * @return A collection of information about the state of the connection between service consumer and provider.
+     */
     public Output<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
+    /**
+     * The provisioning state of the private endpoint connection resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the private endpoint connection resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Metadata pertaining to creation and last modification of the resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public PrivateEndpointConnectionByHostPool(String name, PrivateEndpointConnectionByHostPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:desktopvirtualization:PrivateEndpointConnectionByHostPool", name, args == null ? PrivateEndpointConnectionByHostPoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -75,6 +224,14 @@ public class PrivateEndpointConnectionByHostPool extends io.pulumi.resources.Cus
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static PrivateEndpointConnectionByHostPool get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateEndpointConnectionByHostPool(name, id, options);
     }

@@ -11,11 +11,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SyncPropertiesResponse {
+/**
+ * The gateway endpoint used by the connected registry to communicate with its parent.
+ */
     private final String gatewayEndpoint;
+/**
+ * The last time a sync occurred between the connected registry and its parent.
+ */
     private final String lastSyncTime;
+/**
+ * The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.
+ */
     private final String messageTtl;
+/**
+ * The cron expression indicating the schedule that the connected registry will sync with its parent.
+ */
     private final @Nullable String schedule;
+/**
+ * The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.
+ */
     private final @Nullable String syncWindow;
+/**
+ * The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.
+ */
     private final String tokenId;
 
     @OutputCustomType.Constructor({"gatewayEndpoint","lastSyncTime","messageTtl","schedule","syncWindow","tokenId"})
@@ -34,21 +52,39 @@ public final class SyncPropertiesResponse {
         this.tokenId = Objects.requireNonNull(tokenId);
     }
 
+/**
+ * The gateway endpoint used by the connected registry to communicate with its parent.
+ */
     public String getGatewayEndpoint() {
         return this.gatewayEndpoint;
     }
+/**
+ * The last time a sync occurred between the connected registry and its parent.
+ */
     public String getLastSyncTime() {
         return this.lastSyncTime;
     }
+/**
+ * The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.
+ */
     public String getMessageTtl() {
         return this.messageTtl;
     }
+/**
+ * The cron expression indicating the schedule that the connected registry will sync with its parent.
+ */
     public Optional<String> getSchedule() {
         return Optional.ofNullable(this.schedule);
     }
+/**
+ * The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.
+ */
     public Optional<String> getSyncWindow() {
         return Optional.ofNullable(this.syncWindow);
     }
+/**
+ * The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.
+ */
     public String getTokenId() {
         return this.tokenId;
     }

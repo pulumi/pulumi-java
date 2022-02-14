@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum StorageAuthentication {
+/**
+ * System authentication.
+ */
         System("System"),
+/**
+ * Managed Identity authentication.
+ */
         ManagedIdentity("ManagedIdentity");
 
         private final String value;

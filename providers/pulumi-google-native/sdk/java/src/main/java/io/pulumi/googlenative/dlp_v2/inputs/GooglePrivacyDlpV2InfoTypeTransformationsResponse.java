@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A type of transformation that will scan unstructured text and apply various `PrimitiveTransformation`s to each finding, where the transformation is applied to only values that were identified as a specific info_type.
+ */
 public final class GooglePrivacyDlpV2InfoTypeTransformationsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2InfoTypeTransformationsResponse Empty = new GooglePrivacyDlpV2InfoTypeTransformationsResponse();
 
+    /**
+     * Transformation for each infoType. Cannot specify more than one for a given infoType.
+     */
     @InputImport(name="transformations", required=true)
     private final List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations;
 

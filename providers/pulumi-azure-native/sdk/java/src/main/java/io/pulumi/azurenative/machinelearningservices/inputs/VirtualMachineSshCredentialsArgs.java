@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Admin credentials for virtual machine
+ */
 public final class VirtualMachineSshCredentialsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualMachineSshCredentialsArgs Empty = new VirtualMachineSshCredentialsArgs();
 
+    /**
+     * Password of admin account
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -21,6 +27,9 @@ public final class VirtualMachineSshCredentialsArgs extends io.pulumi.resources.
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * Private key data
+     */
     @InputImport(name="privateKeyData")
     private final @Nullable Input<String> privateKeyData;
 
@@ -28,6 +37,9 @@ public final class VirtualMachineSshCredentialsArgs extends io.pulumi.resources.
         return this.privateKeyData == null ? Input.empty() : this.privateKeyData;
     }
 
+    /**
+     * Public key data
+     */
     @InputImport(name="publicKeyData")
     private final @Nullable Input<String> publicKeyData;
 
@@ -35,6 +47,9 @@ public final class VirtualMachineSshCredentialsArgs extends io.pulumi.resources.
         return this.publicKeyData == null ? Input.empty() : this.publicKeyData;
     }
 
+    /**
+     * Username of admin account
+     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 

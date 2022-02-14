@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobReferenceArgs Empty = new JobReferenceArgs();
 
+    /**
+     * [Required] The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
+     */
     @InputImport(name="jobId")
     private final @Nullable Input<String> jobId;
 
@@ -21,6 +27,9 @@ public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.jobId == null ? Input.empty() : this.jobId;
     }
 
+    /**
+     * The geographic location of the job. See details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -28,6 +37,9 @@ public final class JobReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * [Required] The ID of the project containing this job.
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Metadata pertaining to the geographic location of the resource.
+ */
 public final class LocationDataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LocationDataArgs Empty = new LocationDataArgs();
 
+    /**
+     * The city or locality where the resource is located.
+     */
     @InputImport(name="city")
     private final @Nullable Input<String> city;
 
@@ -21,6 +27,9 @@ public final class LocationDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.city == null ? Input.empty() : this.city;
     }
 
+    /**
+     * The country or region where the resource is located
+     */
     @InputImport(name="countryOrRegion")
     private final @Nullable Input<String> countryOrRegion;
 
@@ -28,6 +37,9 @@ public final class LocationDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.countryOrRegion == null ? Input.empty() : this.countryOrRegion;
     }
 
+    /**
+     * The district, state, or province where the resource is located.
+     */
     @InputImport(name="district")
     private final @Nullable Input<String> district;
 
@@ -35,6 +47,9 @@ public final class LocationDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.district == null ? Input.empty() : this.district;
     }
 
+    /**
+     * A canonical name for the geographic or physical location.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

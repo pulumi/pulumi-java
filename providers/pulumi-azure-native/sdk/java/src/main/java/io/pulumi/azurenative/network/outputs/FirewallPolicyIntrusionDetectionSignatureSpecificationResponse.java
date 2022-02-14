@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FirewallPolicyIntrusionDetectionSignatureSpecificationResponse {
+/**
+ * Signature id.
+ */
     private final @Nullable String id;
+/**
+ * The signature state.
+ */
     private final @Nullable String mode;
 
     @OutputCustomType.Constructor({"id","mode"})
@@ -22,9 +28,15 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
         this.mode = mode;
     }
 
+/**
+ * Signature id.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * The signature state.
+ */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }

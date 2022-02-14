@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Define the role of the AgentPoolProfile.
+ */
     @EnumType
     public enum OpenShiftAgentPoolProfileRole {
+/**
+ * 
+ */
         Compute("compute"),
+/**
+ * 
+ */
         Infra("infra");
 
         private final String value;

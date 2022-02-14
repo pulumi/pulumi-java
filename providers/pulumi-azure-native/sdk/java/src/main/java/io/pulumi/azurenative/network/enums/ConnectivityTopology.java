@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Connectivity topology type.
+ */
     @EnumType
     public enum ConnectivityTopology {
+/**
+ * 
+ */
         HubAndSpoke("HubAndSpoke"),
+/**
+ * 
+ */
         Mesh("Mesh");
 
         private final String value;

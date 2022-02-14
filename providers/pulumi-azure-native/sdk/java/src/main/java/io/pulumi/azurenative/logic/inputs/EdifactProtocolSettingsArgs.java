@@ -21,10 +21,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Edifact agreement protocol settings.
+ */
 public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EdifactProtocolSettingsArgs Empty = new EdifactProtocolSettingsArgs();
 
+    /**
+     * The EDIFACT acknowledgement settings.
+     */
     @InputImport(name="acknowledgementSettings", required=true)
     private final Input<EdifactAcknowledgementSettingsArgs> acknowledgementSettings;
 
@@ -32,6 +38,9 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
         return this.acknowledgementSettings;
     }
 
+    /**
+     * The EDIFACT delimiter override settings.
+     */
     @InputImport(name="edifactDelimiterOverrides")
     private final @Nullable Input<List<EdifactDelimiterOverrideArgs>> edifactDelimiterOverrides;
 
@@ -39,6 +48,9 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
         return this.edifactDelimiterOverrides == null ? Input.empty() : this.edifactDelimiterOverrides;
     }
 
+    /**
+     * The EDIFACT envelope override settings.
+     */
     @InputImport(name="envelopeOverrides")
     private final @Nullable Input<List<EdifactEnvelopeOverrideArgs>> envelopeOverrides;
 
@@ -46,6 +58,9 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
         return this.envelopeOverrides == null ? Input.empty() : this.envelopeOverrides;
     }
 
+    /**
+     * The EDIFACT envelope settings.
+     */
     @InputImport(name="envelopeSettings", required=true)
     private final Input<EdifactEnvelopeSettingsArgs> envelopeSettings;
 
@@ -53,6 +68,9 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
         return this.envelopeSettings;
     }
 
+    /**
+     * The EDIFACT framing settings.
+     */
     @InputImport(name="framingSettings", required=true)
     private final Input<EdifactFramingSettingsArgs> framingSettings;
 
@@ -60,6 +78,9 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
         return this.framingSettings;
     }
 
+    /**
+     * The EDIFACT message filter.
+     */
     @InputImport(name="messageFilter", required=true)
     private final Input<EdifactMessageFilterArgs> messageFilter;
 
@@ -67,6 +88,9 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
         return this.messageFilter;
     }
 
+    /**
+     * The EDIFACT message filter list.
+     */
     @InputImport(name="messageFilterList")
     private final @Nullable Input<List<EdifactMessageIdentifierArgs>> messageFilterList;
 
@@ -74,6 +98,9 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
         return this.messageFilterList == null ? Input.empty() : this.messageFilterList;
     }
 
+    /**
+     * The EDIFACT processing Settings.
+     */
     @InputImport(name="processingSettings", required=true)
     private final Input<EdifactProcessingSettingsArgs> processingSettings;
 
@@ -81,6 +108,9 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
         return this.processingSettings;
     }
 
+    /**
+     * The EDIFACT schema references.
+     */
     @InputImport(name="schemaReferences", required=true)
     private final Input<List<EdifactSchemaReferenceArgs>> schemaReferences;
 
@@ -88,6 +118,9 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
         return this.schemaReferences;
     }
 
+    /**
+     * The EDIFACT validation override settings.
+     */
     @InputImport(name="validationOverrides")
     private final @Nullable Input<List<EdifactValidationOverrideArgs>> validationOverrides;
 
@@ -95,6 +128,9 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
         return this.validationOverrides == null ? Input.empty() : this.validationOverrides;
     }
 
+    /**
+     * The EDIFACT validation settings.
+     */
     @InputImport(name="validationSettings", required=true)
     private final Input<EdifactValidationSettingsArgs> validationSettings;
 

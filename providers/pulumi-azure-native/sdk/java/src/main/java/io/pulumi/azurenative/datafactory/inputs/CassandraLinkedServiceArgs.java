@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Linked service for Cassandra data source.
+ */
 public final class CassandraLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CassandraLinkedServiceArgs Empty = new CassandraLinkedServiceArgs();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -29,6 +35,9 @@ public final class CassandraLinkedServiceArgs extends io.pulumi.resources.Resour
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * AuthenticationType to be used for connection. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="authenticationType")
     private final @Nullable Input<Object> authenticationType;
 
@@ -36,6 +45,9 @@ public final class CassandraLinkedServiceArgs extends io.pulumi.resources.Resour
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -43,6 +55,9 @@ public final class CassandraLinkedServiceArgs extends io.pulumi.resources.Resour
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -50,6 +65,9 @@ public final class CassandraLinkedServiceArgs extends io.pulumi.resources.Resour
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -57,6 +75,9 @@ public final class CassandraLinkedServiceArgs extends io.pulumi.resources.Resour
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
+    /**
+     * Host name for connection. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="host", required=true)
     private final Input<Object> host;
 
@@ -64,6 +85,9 @@ public final class CassandraLinkedServiceArgs extends io.pulumi.resources.Resour
         return this.host;
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -71,6 +95,9 @@ public final class CassandraLinkedServiceArgs extends io.pulumi.resources.Resour
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Password for authentication.
+     */
     @InputImport(name="password")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
@@ -78,6 +105,9 @@ public final class CassandraLinkedServiceArgs extends io.pulumi.resources.Resour
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * The port for the connection. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="port")
     private final @Nullable Input<Object> port;
 
@@ -85,6 +115,10 @@ public final class CassandraLinkedServiceArgs extends io.pulumi.resources.Resour
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'Cassandra'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -92,6 +126,9 @@ public final class CassandraLinkedServiceArgs extends io.pulumi.resources.Resour
         return this.type;
     }
 
+    /**
+     * Username for authentication. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="username")
     private final @Nullable Input<Object> username;
 

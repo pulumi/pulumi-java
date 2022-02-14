@@ -12,10 +12,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Represents configuration of a study.
+ */
 public final class GoogleCloudMlV1__StudyConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudMlV1__StudyConfigResponse Empty = new GoogleCloudMlV1__StudyConfigResponse();
 
+    /**
+     * The search algorithm specified for the study.
+     */
     @InputImport(name="algorithm", required=true)
     private final String algorithm;
 
@@ -23,6 +29,9 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends io.pulumi.resour
         return this.algorithm;
     }
 
+    /**
+     * Configuration for automated stopping of unpromising Trials.
+     */
     @InputImport(name="automatedStoppingConfig", required=true)
     private final GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig;
 
@@ -30,6 +39,9 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends io.pulumi.resour
         return this.automatedStoppingConfig;
     }
 
+    /**
+     * Metric specs for the study.
+     */
     @InputImport(name="metrics", required=true)
     private final List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics;
 
@@ -37,6 +49,9 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends io.pulumi.resour
         return this.metrics;
     }
 
+    /**
+     * The set of parameters to tune.
+     */
     @InputImport(name="parameters", required=true)
     private final List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters;
 

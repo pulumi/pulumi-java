@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The status of the port
+ */
     @EnumType
     public enum Status {
+/**
+ * 
+ */
         Revoked("Revoked"),
+/**
+ * 
+ */
         Initiated("Initiated");
 
         private final String value;

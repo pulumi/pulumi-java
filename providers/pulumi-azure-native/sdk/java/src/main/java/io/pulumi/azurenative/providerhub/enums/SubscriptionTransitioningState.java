@@ -8,20 +8,62 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum SubscriptionTransitioningState {
+/**
+ * 
+ */
         Registered("Registered"),
+/**
+ * 
+ */
         Unregistered("Unregistered"),
+/**
+ * 
+ */
         Warned("Warned"),
+/**
+ * 
+ */
         Suspended("Suspended"),
+/**
+ * 
+ */
         Deleted("Deleted"),
+/**
+ * 
+ */
         WarnedToRegistered("WarnedToRegistered"),
+/**
+ * 
+ */
         WarnedToSuspended("WarnedToSuspended"),
+/**
+ * 
+ */
         WarnedToDeleted("WarnedToDeleted"),
+/**
+ * 
+ */
         WarnedToUnregistered("WarnedToUnregistered"),
+/**
+ * 
+ */
         SuspendedToRegistered("SuspendedToRegistered"),
+/**
+ * 
+ */
         SuspendedToWarned("SuspendedToWarned"),
+/**
+ * 
+ */
         SuspendedToDeleted("SuspendedToDeleted"),
+/**
+ * 
+ */
         SuspendedToUnregistered("SuspendedToUnregistered");
 
         private final String value;

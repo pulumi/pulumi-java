@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeviceArgs Empty = new DeviceArgs();
 
+    /**
+     * Resource name for the device resource.
+     */
     @InputImport(name="deviceName")
     private final @Nullable Input<String> deviceName;
 
@@ -24,6 +30,9 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceName == null ? Input.empty() : this.deviceName;
     }
 
+    /**
+     * The type of the device.
+     */
     @InputImport(name="deviceType", required=true)
     private final Input<Either<String,DeviceType>> deviceType;
 
@@ -31,6 +40,9 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceType;
     }
 
+    /**
+     * The geo-location where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -38,6 +50,9 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -45,6 +60,9 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

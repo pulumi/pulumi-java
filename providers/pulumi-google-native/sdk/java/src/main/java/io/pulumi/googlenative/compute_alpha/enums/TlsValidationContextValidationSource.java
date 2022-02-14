@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Defines how TLS certificates are obtained.
+ */
     @EnumType
     public enum TlsValidationContextValidationSource {
+/**
+ * 
+ */
         Invalid("INVALID"),
+/**
+ * USE_PATH specifies that the certificates and private key are obtained from a locally mounted filesystem path.
+ */
         UsePath("USE_PATH"),
+/**
+ * USE_SDS specifies that the certificates and private key are obtained from a SDS server.
+ */
         UseSds("USE_SDS");
 
         private final String value;

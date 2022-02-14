@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GrafeasV1beta1IntotoArtifactResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GrafeasV1beta1IntotoArtifactResponse Empty = new GrafeasV1beta1IntotoArtifactResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="hashes", required=true)
     private final ArtifactHashesResponse hashes;
 
@@ -20,6 +26,9 @@ public final class GrafeasV1beta1IntotoArtifactResponse extends io.pulumi.resour
         return this.hashes;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="resourceUri", required=true)
     private final String resourceUri;
 

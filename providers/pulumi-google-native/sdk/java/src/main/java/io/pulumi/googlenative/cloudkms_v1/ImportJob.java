@@ -8,75 +8,146 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.cloudkms_v1.ImportJobArgs;
 import io.pulumi.googlenative.cloudkms_v1.outputs.KeyOperationAttestationResponse;
 import io.pulumi.googlenative.cloudkms_v1.outputs.WrappingPublicKeyResponse;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Create a new ImportJob within a KeyRing. ImportJob.import_method is required.
+Auto-naming is currently not supported for this resource.
+Note - this resource's API doesn't support deletion. When deleted, the resource will persist
+on Google Cloud even though it will be deleted from Pulumi state.
+ */
 @ResourceType(type="google-native:cloudkms/v1:ImportJob")
 public class ImportJob extends io.pulumi.resources.CustomResource {
+    /**
+     * Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen ImportMethod is one with a protection level of HSM.
+     */
     @OutputExport(name="attestation", type=KeyOperationAttestationResponse.class, parameters={})
     private Output<KeyOperationAttestationResponse> attestation;
 
+    /**
+     * @return Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen ImportMethod is one with a protection level of HSM.
+     */
     public Output<KeyOperationAttestationResponse> getAttestation() {
         return this.attestation;
     }
+    /**
+     * The time at which this ImportJob was created.
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return The time at which this ImportJob was created.
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * The time this ImportJob expired. Only present if state is EXPIRED.
+     */
     @OutputExport(name="expireEventTime", type=String.class, parameters={})
     private Output<String> expireEventTime;
 
+    /**
+     * @return The time this ImportJob expired. Only present if state is EXPIRED.
+     */
     public Output<String> getExpireEventTime() {
         return this.expireEventTime;
     }
+    /**
+     * The time at which this ImportJob is scheduled for expiration and can no longer be used to import key material.
+     */
     @OutputExport(name="expireTime", type=String.class, parameters={})
     private Output<String> expireTime;
 
+    /**
+     * @return The time at which this ImportJob is scheduled for expiration and can no longer be used to import key material.
+     */
     public Output<String> getExpireTime() {
         return this.expireTime;
     }
+    /**
+     * The time this ImportJob's key material was generated.
+     */
     @OutputExport(name="generateTime", type=String.class, parameters={})
     private Output<String> generateTime;
 
+    /**
+     * @return The time this ImportJob's key material was generated.
+     */
     public Output<String> getGenerateTime() {
         return this.generateTime;
     }
+    /**
+     * Immutable. The wrapping method to be used for incoming key material.
+     */
     @OutputExport(name="importMethod", type=String.class, parameters={})
     private Output<String> importMethod;
 
+    /**
+     * @return Immutable. The wrapping method to be used for incoming key material.
+     */
     public Output<String> getImportMethod() {
         return this.importMethod;
     }
+    /**
+     * The resource name for this ImportJob in the format `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}importJobs/*`.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name for this ImportJob in the format `projects//{@literal /}locations//{@literal /}keyRings//{@literal /}importJobs/*`.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Immutable. The protection level of the ImportJob. This must match the protection_level of the version_template on the CryptoKey you attempt to import into.
+     */
     @OutputExport(name="protectionLevel", type=String.class, parameters={})
     private Output<String> protectionLevel;
 
+    /**
+     * @return Immutable. The protection level of the ImportJob. This must match the protection_level of the version_template on the CryptoKey you attempt to import into.
+     */
     public Output<String> getProtectionLevel() {
         return this.protectionLevel;
     }
+    /**
+     * The public key with which to wrap key material prior to import. Only returned if state is ACTIVE.
+     */
     @OutputExport(name="publicKey", type=WrappingPublicKeyResponse.class, parameters={})
     private Output<WrappingPublicKeyResponse> publicKey;
 
+    /**
+     * @return The public key with which to wrap key material prior to import. Only returned if state is ACTIVE.
+     */
     public Output<WrappingPublicKeyResponse> getPublicKey() {
         return this.publicKey;
     }
+    /**
+     * The current state of the ImportJob, indicating if it can be used.
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return The current state of the ImportJob, indicating if it can be used.
+     */
     public Output<String> getState() {
         return this.state;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ImportJob(String name, ImportJobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:cloudkms/v1:ImportJob", name, args == null ? ImportJobArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -92,6 +163,14 @@ public class ImportJob extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ImportJob get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ImportJob(name, id, options);
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An alias to a repo revision.
+ */
 public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse Empty = new GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse();
 
+    /**
+     * The alias kind.
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -19,6 +25,9 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse e
         return this.kind;
     }
 
+    /**
+     * The alias name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

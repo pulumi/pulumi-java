@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * VmwareSourceDetails message describes a specific source details for the vmware source type.
+ */
 public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VmwareSourceDetailsArgs Empty = new VmwareSourceDetailsArgs();
 
+    /**
+     * Input only. The credentials password. This is write only and can not be read in a GET operation.
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -21,6 +27,9 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * The thumbprint representing the certificate for the vcenter.
+     */
     @InputImport(name="thumbprint")
     private final @Nullable Input<String> thumbprint;
 
@@ -28,6 +37,9 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
         return this.thumbprint == null ? Input.empty() : this.thumbprint;
     }
 
+    /**
+     * The credentials username.
+     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 
@@ -35,6 +47,9 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
         return this.username == null ? Input.empty() : this.username;
     }
 
+    /**
+     * The ip address of the vcenter this Source represents.
+     */
     @InputImport(name="vcenterIp")
     private final @Nullable Input<String> vcenterIp;
 

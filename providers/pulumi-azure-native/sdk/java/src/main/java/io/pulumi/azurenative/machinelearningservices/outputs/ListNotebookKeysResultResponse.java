@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListNotebookKeysResultResponse {
+/**
+ * 
+ */
     private final String primaryAccessKey;
+/**
+ * 
+ */
     private final String secondaryAccessKey;
 
     @OutputCustomType.Constructor({"primaryAccessKey","secondaryAccessKey"})
@@ -20,9 +26,15 @@ public final class ListNotebookKeysResultResponse {
         this.secondaryAccessKey = Objects.requireNonNull(secondaryAccessKey);
     }
 
+/**
+ * 
+ */
     public String getPrimaryAccessKey() {
         return this.primaryAccessKey;
     }
+/**
+ * 
+ */
     public String getSecondaryAccessKey() {
         return this.secondaryAccessKey;
     }

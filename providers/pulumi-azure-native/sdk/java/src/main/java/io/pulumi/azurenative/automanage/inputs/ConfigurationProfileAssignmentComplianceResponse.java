@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The compliance status for the configuration profile assignment.
+ */
 public final class ConfigurationProfileAssignmentComplianceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfigurationProfileAssignmentComplianceResponse Empty = new ConfigurationProfileAssignmentComplianceResponse();
 
+    /**
+     * The state of compliance, which only appears in the response.
+     */
     @InputImport(name="updateStatus", required=true)
     private final String updateStatus;
 

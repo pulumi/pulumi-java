@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Represents period in days/months/years.
+ */
 public final class GoogleCloudChannelV1PeriodResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudChannelV1PeriodResponse Empty = new GoogleCloudChannelV1PeriodResponse();
 
+    /**
+     * Total duration of Period Type defined.
+     */
     @InputImport(name="duration", required=true)
     private final Integer duration;
 
@@ -20,6 +26,9 @@ public final class GoogleCloudChannelV1PeriodResponse extends io.pulumi.resource
         return this.duration;
     }
 
+    /**
+     * Period Type.
+     */
     @InputImport(name="periodType", required=true)
     private final String periodType;
 

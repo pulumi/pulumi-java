@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebhookEvents {
+/**
+ * The result of a request to list events for a webhook.
+API Version: 2019-05-01.
+ *
+ * The result of a request to list events for a webhook.
+ */
     public static CompletableFuture<ListWebhookEventsResult> invokeAsync(ListWebhookEventsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listWebhookEvents", TypeShape.of(ListWebhookEventsResult.class), args == null ? ListWebhookEventsArgs.Empty : args, Utilities.withVersion(options));
     }

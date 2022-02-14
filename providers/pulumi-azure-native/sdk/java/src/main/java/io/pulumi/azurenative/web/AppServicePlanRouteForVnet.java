@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.web.AppServicePlanRouteForVnetArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -14,45 +13,109 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Virtual Network route contract used to pass routing information for a Virtual Network.
+API Version: 2020-12-01.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:web:AppServicePlanRouteForVnet myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/serverfarms/{name}/virtualNetworkConnections/{vnetName}/routes/{routeName} 
+```
+
+ */
 @ResourceType(type="azure-native:web:AppServicePlanRouteForVnet")
 public class AppServicePlanRouteForVnet extends io.pulumi.resources.CustomResource {
+    /**
+     * The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
+     */
     @OutputExport(name="endAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> endAddress;
 
+    /**
+     * @return The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
+     */
     public Output</* @Nullable */ String> getEndAddress() {
         return this.endAddress;
     }
+    /**
+     * Kind of resource.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return Kind of resource.
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * Resource Name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource Name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The type of route this is:
+DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
+INHERITED - Routes inherited from the real Virtual Network routes
+STATIC - Static route set on the app only
+
+These values will be used for syncing an app's routes with those from a Virtual Network.
+     */
     @OutputExport(name="routeType", type=String.class, parameters={})
     private Output</* @Nullable */ String> routeType;
 
+    /**
+     * @return The type of route this is:
+DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
+INHERITED - Routes inherited from the real Virtual Network routes
+STATIC - Static route set on the app only
+
+These values will be used for syncing an app's routes with those from a Virtual Network.
+     */
     public Output</* @Nullable */ String> getRouteType() {
         return this.routeType;
     }
+    /**
+     * The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
+     */
     @OutputExport(name="startAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> startAddress;
 
+    /**
+     * @return The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
+     */
     public Output</* @Nullable */ String> getStartAddress() {
         return this.startAddress;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AppServicePlanRouteForVnet(String name, AppServicePlanRouteForVnetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:AppServicePlanRouteForVnet", name, args == null ? AppServicePlanRouteForVnetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -82,6 +145,14 @@ public class AppServicePlanRouteForVnet extends io.pulumi.resources.CustomResour
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AppServicePlanRouteForVnet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AppServicePlanRouteForVnet(name, id, options);
     }

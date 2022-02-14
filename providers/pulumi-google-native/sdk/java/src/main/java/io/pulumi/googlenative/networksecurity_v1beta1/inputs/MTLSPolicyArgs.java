@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specification of the MTLSPolicy.
+ */
 public final class MTLSPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MTLSPolicyArgs Empty = new MTLSPolicyArgs();
 
+    /**
+     *  Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.
+     */
     @InputImport(name="clientValidationCa")
     private final @Nullable Input<List<ValidationCAArgs>> clientValidationCa;
 

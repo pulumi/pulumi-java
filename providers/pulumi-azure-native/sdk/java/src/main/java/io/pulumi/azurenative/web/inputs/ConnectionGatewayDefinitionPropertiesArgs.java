@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionGatewayDefinitionPropertiesArgs Empty = new ConnectionGatewayDefinitionPropertiesArgs();
 
+    /**
+     * The URI of the backend
+     */
     @InputImport(name="backendUri")
     private final @Nullable Input<String> backendUri;
 
@@ -24,6 +30,9 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
         return this.backendUri == null ? Input.empty() : this.backendUri;
     }
 
+    /**
+     * The gateway installation reference
+     */
     @InputImport(name="connectionGatewayInstallation")
     private final @Nullable Input<ConnectionGatewayReferenceArgs> connectionGatewayInstallation;
 
@@ -31,6 +40,9 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
         return this.connectionGatewayInstallation == null ? Input.empty() : this.connectionGatewayInstallation;
     }
 
+    /**
+     * The gateway admin
+     */
     @InputImport(name="contactInformation")
     private final @Nullable Input<List<String>> contactInformation;
 
@@ -38,6 +50,9 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
         return this.contactInformation == null ? Input.empty() : this.contactInformation;
     }
 
+    /**
+     * The gateway description
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -45,6 +60,9 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The gateway display name
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -52,6 +70,9 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The machine name of the gateway
+     */
     @InputImport(name="machineName")
     private final @Nullable Input<String> machineName;
 
@@ -59,6 +80,9 @@ public final class ConnectionGatewayDefinitionPropertiesArgs extends io.pulumi.r
         return this.machineName == null ? Input.empty() : this.machineName;
     }
 
+    /**
+     * The gateway status
+     */
     @InputImport(name="status")
     private final @Nullable Input<Object> status;
 

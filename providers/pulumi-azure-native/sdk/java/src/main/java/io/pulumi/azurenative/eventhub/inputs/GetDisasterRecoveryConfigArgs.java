@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetDisasterRecoveryConfigArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDisasterRecoveryConfigArgs Empty = new GetDisasterRecoveryConfigArgs();
 
+    /**
+     * The Disaster Recovery configuration name
+     */
     @InputImport(name="alias", required=true)
     private final String alias;
 
@@ -19,6 +25,9 @@ public final class GetDisasterRecoveryConfigArgs extends io.pulumi.resources.Inv
         return this.alias;
     }
 
+    /**
+     * The Namespace name
+     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -26,6 +35,9 @@ public final class GetDisasterRecoveryConfigArgs extends io.pulumi.resources.Inv
         return this.namespaceName;
     }
 
+    /**
+     * Name of the resource group within the azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

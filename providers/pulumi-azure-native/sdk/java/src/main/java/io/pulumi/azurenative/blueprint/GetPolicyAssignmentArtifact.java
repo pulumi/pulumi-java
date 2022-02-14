@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPolicyAssignmentArtifact {
+/**
+ * Blueprint artifact that applies a Policy assignment.
+API Version: 2018-11-01-preview.
+ *
+ * Blueprint artifact that applies a Policy assignment.
+ */
     public static CompletableFuture<GetPolicyAssignmentArtifactResult> invokeAsync(GetPolicyAssignmentArtifactArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blueprint:getPolicyAssignmentArtifact", TypeShape.of(GetPolicyAssignmentArtifactResult.class), args == null ? GetPolicyAssignmentArtifactArgs.Empty : args, Utilities.withVersion(options));
     }

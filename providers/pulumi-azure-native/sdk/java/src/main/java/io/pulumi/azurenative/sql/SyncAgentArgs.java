@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SyncAgentArgs Empty = new SyncAgentArgs();
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -21,6 +27,9 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server on which the sync agent is hosted.
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -28,6 +37,9 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.serverName;
     }
 
+    /**
+     * The name of the sync agent.
+     */
     @InputImport(name="syncAgentName")
     private final @Nullable Input<String> syncAgentName;
 
@@ -35,6 +47,9 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
         return this.syncAgentName == null ? Input.empty() : this.syncAgentName;
     }
 
+    /**
+     * ARM resource id of the sync database in the sync agent.
+     */
     @InputImport(name="syncDatabaseId")
     private final @Nullable Input<String> syncDatabaseId;
 

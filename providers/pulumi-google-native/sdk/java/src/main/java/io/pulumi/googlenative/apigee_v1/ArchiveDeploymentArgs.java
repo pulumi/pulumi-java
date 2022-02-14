@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ArchiveDeploymentArgs Empty = new ArchiveDeploymentArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="environmentId", required=true)
     private final Input<String> environmentId;
 
@@ -22,6 +28,9 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
         return this.environmentId;
     }
 
+    /**
+     * Input only. The Google Cloud Storage signed URL returned from GenerateUploadUrl and used to upload the Archive zip file.
+     */
     @InputImport(name="gcsUri")
     private final @Nullable Input<String> gcsUri;
 
@@ -29,6 +38,9 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
         return this.gcsUri == null ? Input.empty() : this.gcsUri;
     }
 
+    /**
+     * User-supplied key-value pairs used to organize ArchiveDeployments. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -36,6 +48,9 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * Name of the Archive Deployment in the following format: `organizations/{org}/environments/{env}/archiveDeployments/{id}`.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -43,6 +58,9 @@ public final class ArchiveDeploymentArgs extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 

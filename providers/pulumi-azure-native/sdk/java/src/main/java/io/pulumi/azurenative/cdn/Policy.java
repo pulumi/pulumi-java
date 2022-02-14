@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.cdn;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.cdn.PolicyArgs;
 import io.pulumi.azurenative.cdn.outputs.CdnEndpointResponse;
 import io.pulumi.azurenative.cdn.outputs.CustomRuleListResponse;
 import io.pulumi.azurenative.cdn.outputs.ManagedRuleSetListResponse;
@@ -22,93 +21,670 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Defines web application firewall policy for Azure CDN.
+API Version: 2020-09-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Creates specific policy
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var policy = new AzureNative.Cdn.Policy("policy", new AzureNative.Cdn.PolicyArgs
+        {
+            CustomRules = new AzureNative.Cdn.Inputs.CustomRuleListArgs
+            {
+                Rules = 
+                {
+                    new AzureNative.Cdn.Inputs.CustomRuleArgs
+                    {
+                        Action = "Block",
+                        EnabledState = "Enabled",
+                        MatchConditions = 
+                        {
+                            new AzureNative.Cdn.Inputs.MatchConditionArgs
+                            {
+                                MatchValue = 
+                                {
+                                    "CH",
+                                },
+                                MatchVariable = "RemoteAddr",
+                                NegateCondition = false,
+                                Operator = "GeoMatch",
+                                Transforms = {},
+                            },
+                            new AzureNative.Cdn.Inputs.MatchConditionArgs
+                            {
+                                MatchValue = 
+                                {
+                                    "windows",
+                                },
+                                MatchVariable = "RequestHeader",
+                                NegateCondition = false,
+                                Operator = "Contains",
+                                Selector = "UserAgent",
+                                Transforms = {},
+                            },
+                            new AzureNative.Cdn.Inputs.MatchConditionArgs
+                            {
+                                MatchValue = 
+                                {
+                                    "<?php",
+                                    "?>",
+                                },
+                                MatchVariable = "QueryString",
+                                NegateCondition = false,
+                                Operator = "Contains",
+                                Selector = "search",
+                                Transforms = 
+                                {
+                                    "UrlDecode",
+                                    "Lowercase",
+                                },
+                            },
+                        },
+                        Name = "CustomRule1",
+                        Priority = 2,
+                    },
+                },
+            },
+            Location = "WestUs",
+            ManagedRules = new AzureNative.Cdn.Inputs.ManagedRuleSetListArgs
+            {
+                ManagedRuleSets = 
+                {
+                    new AzureNative.Cdn.Inputs.ManagedRuleSetArgs
+                    {
+                        RuleGroupOverrides = 
+                        {
+                            new AzureNative.Cdn.Inputs.ManagedRuleGroupOverrideArgs
+                            {
+                                RuleGroupName = "Group1",
+                                Rules = 
+                                {
+                                    new AzureNative.Cdn.Inputs.ManagedRuleOverrideArgs
+                                    {
+                                        Action = "Redirect",
+                                        EnabledState = "Enabled",
+                                        RuleId = "GROUP1-0001",
+                                    },
+                                    new AzureNative.Cdn.Inputs.ManagedRuleOverrideArgs
+                                    {
+                                        EnabledState = "Disabled",
+                                        RuleId = "GROUP1-0002",
+                                    },
+                                },
+                            },
+                        },
+                        RuleSetType = "DefaultRuleSet",
+                        RuleSetVersion = "preview-1.0",
+                    },
+                },
+            },
+            PolicyName = "MicrosoftCdnWafPolicy",
+            PolicySettings = new AzureNative.Cdn.Inputs.PolicySettingsArgs
+            {
+                DefaultCustomBlockResponseBody = "PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
+                DefaultCustomBlockResponseStatusCode = 200,
+                DefaultRedirectUrl = "http://www.bing.com",
+            },
+            RateLimitRules = new AzureNative.Cdn.Inputs.RateLimitRuleListArgs
+            {
+                Rules = 
+                {
+                    new AzureNative.Cdn.Inputs.RateLimitRuleArgs
+                    {
+                        Action = "Block",
+                        EnabledState = "Enabled",
+                        MatchConditions = 
+                        {
+                            new AzureNative.Cdn.Inputs.MatchConditionArgs
+                            {
+                                MatchValue = 
+                                {
+                                    "192.168.1.0/24",
+                                    "10.0.0.0/24",
+                                },
+                                MatchVariable = "RemoteAddr",
+                                NegateCondition = false,
+                                Operator = "IPMatch",
+                                Transforms = {},
+                            },
+                        },
+                        Name = "RateLimitRule1",
+                        Priority = 1,
+                        RateLimitDurationInMinutes = 0,
+                        RateLimitThreshold = 1000,
+                    },
+                },
+            },
+            ResourceGroupName = "rg1",
+            Sku = new AzureNative.Cdn.Inputs.SkuArgs
+            {
+                Name = "Standard_Microsoft",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	cdn "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cdn"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cdn.NewPolicy(ctx, "policy", &cdn.PolicyArgs{
+			CustomRules: &cdn.CustomRuleListArgs{
+				Rules: cdn.CustomRuleArray{
+					&cdn.CustomRuleArgs{
+						Action:       pulumi.String("Block"),
+						EnabledState: pulumi.String("Enabled"),
+						MatchConditions: cdn.MatchConditionArray{
+							&cdn.MatchConditionArgs{
+								MatchValue: pulumi.StringArray{
+									pulumi.String("CH"),
+								},
+								MatchVariable:   pulumi.String("RemoteAddr"),
+								NegateCondition: pulumi.Bool(false),
+								Operator:        pulumi.String("GeoMatch"),
+								Transforms:      pulumi.StringArray{},
+							},
+							&cdn.MatchConditionArgs{
+								MatchValue: pulumi.StringArray{
+									pulumi.String("windows"),
+								},
+								MatchVariable:   pulumi.String("RequestHeader"),
+								NegateCondition: pulumi.Bool(false),
+								Operator:        pulumi.String("Contains"),
+								Selector:        pulumi.String("UserAgent"),
+								Transforms:      pulumi.StringArray{},
+							},
+							&cdn.MatchConditionArgs{
+								MatchValue: pulumi.StringArray{
+									pulumi.String("<?php"),
+									pulumi.String("?>"),
+								},
+								MatchVariable:   pulumi.String("QueryString"),
+								NegateCondition: pulumi.Bool(false),
+								Operator:        pulumi.String("Contains"),
+								Selector:        pulumi.String("search"),
+								Transforms: pulumi.StringArray{
+									pulumi.String("UrlDecode"),
+									pulumi.String("Lowercase"),
+								},
+							},
+						},
+						Name:     pulumi.String("CustomRule1"),
+						Priority: pulumi.Int(2),
+					},
+				},
+			},
+			Location: pulumi.String("WestUs"),
+			ManagedRules: &cdn.ManagedRuleSetListArgs{
+				ManagedRuleSets: cdn.ManagedRuleSetArray{
+					&cdn.ManagedRuleSetArgs{
+						RuleGroupOverrides: cdn.ManagedRuleGroupOverrideArray{
+							&cdn.ManagedRuleGroupOverrideArgs{
+								RuleGroupName: pulumi.String("Group1"),
+								Rules: cdn.ManagedRuleOverrideArray{
+									&cdn.ManagedRuleOverrideArgs{
+										Action:       pulumi.String("Redirect"),
+										EnabledState: pulumi.String("Enabled"),
+										RuleId:       pulumi.String("GROUP1-0001"),
+									},
+									&cdn.ManagedRuleOverrideArgs{
+										EnabledState: pulumi.String("Disabled"),
+										RuleId:       pulumi.String("GROUP1-0002"),
+									},
+								},
+							},
+						},
+						RuleSetType:    pulumi.String("DefaultRuleSet"),
+						RuleSetVersion: pulumi.String("preview-1.0"),
+					},
+				},
+			},
+			PolicyName: pulumi.String("MicrosoftCdnWafPolicy"),
+			PolicySettings: &cdn.PolicySettingsArgs{
+				DefaultCustomBlockResponseBody:       pulumi.String("PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg=="),
+				DefaultCustomBlockResponseStatusCode: pulumi.Int(200),
+				DefaultRedirectUrl:                   pulumi.String("http://www.bing.com"),
+			},
+			RateLimitRules: &cdn.RateLimitRuleListArgs{
+				Rules: cdn.RateLimitRuleArray{
+					&cdn.RateLimitRuleArgs{
+						Action:       pulumi.String("Block"),
+						EnabledState: pulumi.String("Enabled"),
+						MatchConditions: cdn.MatchConditionArray{
+							&cdn.MatchConditionArgs{
+								MatchValue: pulumi.StringArray{
+									pulumi.String("192.168.1.0/24"),
+									pulumi.String("10.0.0.0/24"),
+								},
+								MatchVariable:   pulumi.String("RemoteAddr"),
+								NegateCondition: pulumi.Bool(false),
+								Operator:        pulumi.String("IPMatch"),
+								Transforms:      pulumi.StringArray{},
+							},
+						},
+						Name:                       pulumi.String("RateLimitRule1"),
+						Priority:                   pulumi.Int(1),
+						RateLimitDurationInMinutes: pulumi.Int(0),
+						RateLimitThreshold:         pulumi.Int(1000),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			Sku: &cdn.SkuArgs{
+				Name: pulumi.String("Standard_Microsoft"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const policy = new azure_native.cdn.Policy("policy", {
+    customRules: {
+        rules: [{
+            action: "Block",
+            enabledState: "Enabled",
+            matchConditions: [
+                {
+                    matchValue: ["CH"],
+                    matchVariable: "RemoteAddr",
+                    negateCondition: false,
+                    operator: "GeoMatch",
+                    transforms: [],
+                },
+                {
+                    matchValue: ["windows"],
+                    matchVariable: "RequestHeader",
+                    negateCondition: false,
+                    operator: "Contains",
+                    selector: "UserAgent",
+                    transforms: [],
+                },
+                {
+                    matchValue: [
+                        "<?php",
+                        "?>",
+                    ],
+                    matchVariable: "QueryString",
+                    negateCondition: false,
+                    operator: "Contains",
+                    selector: "search",
+                    transforms: [
+                        "UrlDecode",
+                        "Lowercase",
+                    ],
+                },
+            ],
+            name: "CustomRule1",
+            priority: 2,
+        }],
+    },
+    location: "WestUs",
+    managedRules: {
+        managedRuleSets: [{
+            ruleGroupOverrides: [{
+                ruleGroupName: "Group1",
+                rules: [
+                    {
+                        action: "Redirect",
+                        enabledState: "Enabled",
+                        ruleId: "GROUP1-0001",
+                    },
+                    {
+                        enabledState: "Disabled",
+                        ruleId: "GROUP1-0002",
+                    },
+                ],
+            }],
+            ruleSetType: "DefaultRuleSet",
+            ruleSetVersion: "preview-1.0",
+        }],
+    },
+    policyName: "MicrosoftCdnWafPolicy",
+    policySettings: {
+        defaultCustomBlockResponseBody: "PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
+        defaultCustomBlockResponseStatusCode: 200,
+        defaultRedirectUrl: "http://www.bing.com",
+    },
+    rateLimitRules: {
+        rules: [{
+            action: "Block",
+            enabledState: "Enabled",
+            matchConditions: [{
+                matchValue: [
+                    "192.168.1.0/24",
+                    "10.0.0.0/24",
+                ],
+                matchVariable: "RemoteAddr",
+                negateCondition: false,
+                operator: "IPMatch",
+                transforms: [],
+            }],
+            name: "RateLimitRule1",
+            priority: 1,
+            rateLimitDurationInMinutes: 0,
+            rateLimitThreshold: 1000,
+        }],
+    },
+    resourceGroupName: "rg1",
+    sku: {
+        name: "Standard_Microsoft",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+policy = azure_native.cdn.Policy("policy",
+    custom_rules=azure_native.cdn.CustomRuleListArgs(
+        rules=[azure_native.cdn.CustomRuleArgs(
+            action="Block",
+            enabled_state="Enabled",
+            match_conditions=[
+                azure_native.cdn.MatchConditionArgs(
+                    match_value=["CH"],
+                    match_variable="RemoteAddr",
+                    negate_condition=False,
+                    operator="GeoMatch",
+                    transforms=[],
+                ),
+                azure_native.cdn.MatchConditionArgs(
+                    match_value=["windows"],
+                    match_variable="RequestHeader",
+                    negate_condition=False,
+                    operator="Contains",
+                    selector="UserAgent",
+                    transforms=[],
+                ),
+                azure_native.cdn.MatchConditionArgs(
+                    match_value=[
+                        "<?php",
+                        "?>",
+                    ],
+                    match_variable="QueryString",
+                    negate_condition=False,
+                    operator="Contains",
+                    selector="search",
+                    transforms=[
+                        "UrlDecode",
+                        "Lowercase",
+                    ],
+                ),
+            ],
+            name="CustomRule1",
+            priority=2,
+        )],
+    ),
+    location="WestUs",
+    managed_rules=azure_native.cdn.ManagedRuleSetListArgs(
+        managed_rule_sets=[azure_native.cdn.ManagedRuleSetArgs(
+            rule_group_overrides=[azure_native.cdn.ManagedRuleGroupOverrideArgs(
+                rule_group_name="Group1",
+                rules=[
+                    azure_native.cdn.ManagedRuleOverrideArgs(
+                        action="Redirect",
+                        enabled_state="Enabled",
+                        rule_id="GROUP1-0001",
+                    ),
+                    azure_native.cdn.ManagedRuleOverrideArgs(
+                        enabled_state="Disabled",
+                        rule_id="GROUP1-0002",
+                    ),
+                ],
+            )],
+            rule_set_type="DefaultRuleSet",
+            rule_set_version="preview-1.0",
+        )],
+    ),
+    policy_name="MicrosoftCdnWafPolicy",
+    policy_settings=azure_native.cdn.PolicySettingsArgs(
+        default_custom_block_response_body="PGh0bWw+CjxoZWFkZXI+PHRpdGxlPkhlbGxvPC90aXRsZT48L2hlYWRlcj4KPGJvZHk+CkhlbGxvIHdvcmxkCjwvYm9keT4KPC9odG1sPg==",
+        default_custom_block_response_status_code=200,
+        default_redirect_url="http://www.bing.com",
+    ),
+    rate_limit_rules=azure_native.cdn.RateLimitRuleListArgs(
+        rules=[azure_native.cdn.RateLimitRuleArgs(
+            action="Block",
+            enabled_state="Enabled",
+            match_conditions=[azure_native.cdn.MatchConditionArgs(
+                match_value=[
+                    "192.168.1.0/24",
+                    "10.0.0.0/24",
+                ],
+                match_variable="RemoteAddr",
+                negate_condition=False,
+                operator="IPMatch",
+                transforms=[],
+            )],
+            name="RateLimitRule1",
+            priority=1,
+            rate_limit_duration_in_minutes=0,
+            rate_limit_threshold=1000,
+        )],
+    ),
+    resource_group_name="rg1",
+    sku=azure_native.cdn.SkuArgs(
+        name="Standard_Microsoft",
+    ))
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:cdn:Policy MicrosoftCdnWafPolicy /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cdn/CdnWebApplicationFirewallPolicies/MicrosoftCdnWafPolicy 
+```
+
+ */
 @ResourceType(type="azure-native:cdn:Policy")
 public class Policy extends io.pulumi.resources.CustomResource {
+    /**
+     * Describes custom rules inside the policy.
+     */
     @OutputExport(name="customRules", type=CustomRuleListResponse.class, parameters={})
     private Output</* @Nullable */ CustomRuleListResponse> customRules;
 
+    /**
+     * @return Describes custom rules inside the policy.
+     */
     public Output</* @Nullable */ CustomRuleListResponse> getCustomRules() {
         return this.customRules;
     }
+    /**
+     * Describes Azure CDN endpoints associated with this Web Application Firewall policy.
+     */
     @OutputExport(name="endpointLinks", type=List.class, parameters={CdnEndpointResponse.class})
     private Output<List<CdnEndpointResponse>> endpointLinks;
 
+    /**
+     * @return Describes Azure CDN endpoints associated with this Web Application Firewall policy.
+     */
     public Output<List<CdnEndpointResponse>> getEndpointLinks() {
         return this.endpointLinks;
     }
+    /**
+     * Gets a unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return Gets a unique read-only string that changes whenever the resource is updated.
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * Resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location.
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Describes managed rules inside the policy.
+     */
     @OutputExport(name="managedRules", type=ManagedRuleSetListResponse.class, parameters={})
     private Output</* @Nullable */ ManagedRuleSetListResponse> managedRules;
 
+    /**
+     * @return Describes managed rules inside the policy.
+     */
     public Output</* @Nullable */ ManagedRuleSetListResponse> getManagedRules() {
         return this.managedRules;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Describes  policySettings for policy
+     */
     @OutputExport(name="policySettings", type=PolicySettingsResponse.class, parameters={})
     private Output</* @Nullable */ PolicySettingsResponse> policySettings;
 
+    /**
+     * @return Describes  policySettings for policy
+     */
     public Output</* @Nullable */ PolicySettingsResponse> getPolicySettings() {
         return this.policySettings;
     }
+    /**
+     * Provisioning state of the WebApplicationFirewallPolicy.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state of the WebApplicationFirewallPolicy.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Describes rate limit rules inside the policy.
+     */
     @OutputExport(name="rateLimitRules", type=RateLimitRuleListResponse.class, parameters={})
     private Output</* @Nullable */ RateLimitRuleListResponse> rateLimitRules;
 
+    /**
+     * @return Describes rate limit rules inside the policy.
+     */
     public Output</* @Nullable */ RateLimitRuleListResponse> getRateLimitRules() {
         return this.rateLimitRules;
     }
+    /**
+     * 
+     */
     @OutputExport(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     public Output<String> getResourceState() {
         return this.resourceState;
     }
+    /**
+     * The pricing tier (defines a CDN provider, feature list and rate) of the CdnWebApplicationFirewallPolicy.
+     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
+    /**
+     * @return The pricing tier (defines a CDN provider, feature list and rate) of the CdnWebApplicationFirewallPolicy.
+     */
     public Output<SkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * Read only system data
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Read only system data
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Policy(String name, PolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:cdn:Policy", name, args == null ? PolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -132,6 +708,14 @@ public class Policy extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Policy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Policy(name, id, options);
     }

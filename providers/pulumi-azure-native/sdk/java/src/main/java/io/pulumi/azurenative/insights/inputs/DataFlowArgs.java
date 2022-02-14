@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Definition of which streams are sent to which destinations.
+ */
 public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataFlowArgs Empty = new DataFlowArgs();
 
+    /**
+     * List of destinations for this data flow.
+     */
     @InputImport(name="destinations")
     private final @Nullable Input<List<String>> destinations;
 
@@ -24,6 +30,9 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinations == null ? Input.empty() : this.destinations;
     }
 
+    /**
+     * List of streams for this data flow.
+     */
     @InputImport(name="streams")
     private final @Nullable Input<List<Either<String,KnownDataFlowStreams>>> streams;
 

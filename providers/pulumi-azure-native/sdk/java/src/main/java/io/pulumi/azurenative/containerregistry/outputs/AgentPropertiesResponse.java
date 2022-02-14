@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AgentPropertiesResponse {
+/**
+ * The CPU configuration in terms of number of cores required for the run.
+ */
     private final @Nullable Integer cpu;
 
     @OutputCustomType.Constructor({"cpu"})
@@ -18,6 +21,9 @@ public final class AgentPropertiesResponse {
         this.cpu = cpu;
     }
 
+/**
+ * The CPU configuration in terms of number of cores required for the run.
+ */
     public Optional<Integer> getCpu() {
         return Optional.ofNullable(this.cpu);
     }

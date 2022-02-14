@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ACL for a private endpoint
+ */
 public final class PrivateEndpointACLArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateEndpointACLArgs Empty = new PrivateEndpointACLArgs();
 
+    /**
+     * Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+     */
     @InputImport(name="allow")
     private final @Nullable Input<List<Either<String,WebPubSubRequestType>>> allow;
 
@@ -24,6 +30,9 @@ public final class PrivateEndpointACLArgs extends io.pulumi.resources.ResourceAr
         return this.allow == null ? Input.empty() : this.allow;
     }
 
+    /**
+     * Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+     */
     @InputImport(name="deny")
     private final @Nullable Input<List<Either<String,WebPubSubRequestType>>> deny;
 
@@ -31,6 +40,9 @@ public final class PrivateEndpointACLArgs extends io.pulumi.resources.ResourceAr
         return this.deny == null ? Input.empty() : this.deny;
     }
 
+    /**
+     * Name of the private endpoint connection
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

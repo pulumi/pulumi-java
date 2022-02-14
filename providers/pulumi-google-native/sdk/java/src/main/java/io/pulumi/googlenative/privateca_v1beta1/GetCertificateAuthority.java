@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCertificateAuthority {
+/**
+ * Returns a CertificateAuthority.
+ */
     public static CompletableFuture<GetCertificateAuthorityResult> invokeAsync(GetCertificateAuthorityArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:privateca/v1beta1:getCertificateAuthority", TypeShape.of(GetCertificateAuthorityResult.class), args == null ? GetCertificateAuthorityArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The subnet in which to house the connector
+ */
 public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubnetArgs Empty = new SubnetArgs();
 
+    /**
+     * Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +27,9 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Project in which the subnet exists. If not set, this project is assumed to be the project for which the connector create request was issued.
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

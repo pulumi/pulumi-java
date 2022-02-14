@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetVirtualHubRouteTableV2Args extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVirtualHubRouteTableV2Args Empty = new GetVirtualHubRouteTableV2Args();
 
+    /**
+     * The resource group name of the VirtualHubRouteTableV2.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class GetVirtualHubRouteTableV2Args extends io.pulumi.resources.Inv
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the VirtualHubRouteTableV2.
+     */
     @InputImport(name="routeTableName", required=true)
     private final String routeTableName;
 
@@ -26,6 +35,9 @@ public final class GetVirtualHubRouteTableV2Args extends io.pulumi.resources.Inv
         return this.routeTableName;
     }
 
+    /**
+     * The name of the VirtualHub.
+     */
     @InputImport(name="virtualHubName", required=true)
     private final String virtualHubName;
 

@@ -8,10 +8,16 @@ import java.lang.Double;
 import java.util.Objects;
 
 
+/**
+ * A floating point interval.
+ */
 public final class GoogleCloudRetailV2alphaIntervalResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRetailV2alphaIntervalResponse Empty = new GoogleCloudRetailV2alphaIntervalResponse();
 
+    /**
+     * Exclusive upper bound.
+     */
     @InputImport(name="exclusiveMaximum", required=true)
     private final Double exclusiveMaximum;
 
@@ -19,6 +25,9 @@ public final class GoogleCloudRetailV2alphaIntervalResponse extends io.pulumi.re
         return this.exclusiveMaximum;
     }
 
+    /**
+     * Exclusive lower bound.
+     */
     @InputImport(name="exclusiveMinimum", required=true)
     private final Double exclusiveMinimum;
 
@@ -26,6 +35,9 @@ public final class GoogleCloudRetailV2alphaIntervalResponse extends io.pulumi.re
         return this.exclusiveMinimum;
     }
 
+    /**
+     * Inclusive upper bound.
+     */
     @InputImport(name="maximum", required=true)
     private final Double maximum;
 
@@ -33,6 +45,9 @@ public final class GoogleCloudRetailV2alphaIntervalResponse extends io.pulumi.re
         return this.maximum;
     }
 
+    /**
+     * Inclusive lower bound.
+     */
     @InputImport(name="minimum", required=true)
     private final Double minimum;
 

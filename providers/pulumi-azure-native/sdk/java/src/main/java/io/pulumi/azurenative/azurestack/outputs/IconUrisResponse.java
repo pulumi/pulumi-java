@@ -11,10 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IconUrisResponse {
+/**
+ * URI to hero icon.
+ */
     private final @Nullable String hero;
+/**
+ * URI to large icon.
+ */
     private final @Nullable String large;
+/**
+ * URI to medium icon.
+ */
     private final @Nullable String medium;
+/**
+ * URI to small icon.
+ */
     private final @Nullable String small;
+/**
+ * URI to wide icon.
+ */
     private final @Nullable String wide;
 
     @OutputCustomType.Constructor({"hero","large","medium","small","wide"})
@@ -31,18 +46,33 @@ public final class IconUrisResponse {
         this.wide = wide;
     }
 
+/**
+ * URI to hero icon.
+ */
     public Optional<String> getHero() {
         return Optional.ofNullable(this.hero);
     }
+/**
+ * URI to large icon.
+ */
     public Optional<String> getLarge() {
         return Optional.ofNullable(this.large);
     }
+/**
+ * URI to medium icon.
+ */
     public Optional<String> getMedium() {
         return Optional.ofNullable(this.medium);
     }
+/**
+ * URI to small icon.
+ */
     public Optional<String> getSmall() {
         return Optional.ofNullable(this.small);
     }
+/**
+ * URI to wide icon.
+ */
     public Optional<String> getWide() {
         return Optional.ofNullable(this.wide);
     }

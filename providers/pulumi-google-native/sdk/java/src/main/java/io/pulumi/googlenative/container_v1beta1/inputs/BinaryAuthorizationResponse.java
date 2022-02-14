@@ -8,10 +8,16 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Configuration for Binary Authorization.
+ */
 public final class BinaryAuthorizationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BinaryAuthorizationResponse Empty = new BinaryAuthorizationResponse();
 
+    /**
+     * Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Google Binauthz.
+     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

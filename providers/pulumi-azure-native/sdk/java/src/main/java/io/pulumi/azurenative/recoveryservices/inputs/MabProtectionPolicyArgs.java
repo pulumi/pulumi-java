@@ -18,10 +18,17 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Mab container-specific backup policy.
+ */
 public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MabProtectionPolicyArgs Empty = new MabProtectionPolicyArgs();
 
+    /**
+     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+Expected value is 'MAB'.
+     */
     @InputImport(name="backupManagementType", required=true)
     private final Input<String> backupManagementType;
 
@@ -29,6 +36,9 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
         return this.backupManagementType;
     }
 
+    /**
+     * Number of items associated with this policy.
+     */
     @InputImport(name="protectedItemsCount")
     private final @Nullable Input<Integer> protectedItemsCount;
 
@@ -36,6 +46,9 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
         return this.protectedItemsCount == null ? Input.empty() : this.protectedItemsCount;
     }
 
+    /**
+     * Retention policy details.
+     */
     @InputImport(name="retentionPolicy")
     private final @Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
@@ -43,6 +56,9 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
         return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
     }
 
+    /**
+     * Backup schedule of backup policy.
+     */
     @InputImport(name="schedulePolicy")
     private final @Nullable Input<Object> schedulePolicy;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetViewArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetViewArgs Empty = new GetViewArgs();
 
+    /**
+     * The name of the hub.
+     */
     @InputImport(name="hubName", required=true)
     private final String hubName;
 
@@ -19,6 +25,9 @@ public final class GetViewArgs extends io.pulumi.resources.InvokeArgs {
         return this.hubName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetViewArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The user ID. Use * to retrieve hub level view.
+     */
     @InputImport(name="userId", required=true)
     private final String userId;
 
@@ -33,6 +45,9 @@ public final class GetViewArgs extends io.pulumi.resources.InvokeArgs {
         return this.userId;
     }
 
+    /**
+     * The name of the view.
+     */
     @InputImport(name="viewName", required=true)
     private final String viewName;
 

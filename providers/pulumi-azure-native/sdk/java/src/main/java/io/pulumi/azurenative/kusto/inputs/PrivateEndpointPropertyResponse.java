@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Private endpoint which the connection belongs to.
+ */
 public final class PrivateEndpointPropertyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateEndpointPropertyResponse Empty = new PrivateEndpointPropertyResponse();
 
+    /**
+     * Resource id of the private endpoint.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

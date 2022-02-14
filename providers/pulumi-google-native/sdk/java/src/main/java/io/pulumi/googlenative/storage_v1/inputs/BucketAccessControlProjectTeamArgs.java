@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The project team associated with the entity, if any.
+ */
 public final class BucketAccessControlProjectTeamArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketAccessControlProjectTeamArgs Empty = new BucketAccessControlProjectTeamArgs();
 
+    /**
+     * The project number.
+     */
     @InputImport(name="projectNumber")
     private final @Nullable Input<String> projectNumber;
 
@@ -21,6 +27,9 @@ public final class BucketAccessControlProjectTeamArgs extends io.pulumi.resource
         return this.projectNumber == null ? Input.empty() : this.projectNumber;
     }
 
+    /**
+     * The team.
+     */
     @InputImport(name="team")
     private final @Nullable Input<String> team;
 

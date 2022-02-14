@@ -9,10 +9,16 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * A class that contains the optimized auto scale definition.
+ */
 public final class OptimizedAutoscaleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OptimizedAutoscaleResponse Empty = new OptimizedAutoscaleResponse();
 
+    /**
+     * A boolean value that indicate if the optimized autoscale feature is enabled or not.
+     */
     @InputImport(name="isEnabled", required=true)
     private final Boolean isEnabled;
 
@@ -20,6 +26,9 @@ public final class OptimizedAutoscaleResponse extends io.pulumi.resources.Invoke
         return this.isEnabled;
     }
 
+    /**
+     * Maximum allowed instances count.
+     */
     @InputImport(name="maximum", required=true)
     private final Integer maximum;
 
@@ -27,6 +36,9 @@ public final class OptimizedAutoscaleResponse extends io.pulumi.resources.Invoke
         return this.maximum;
     }
 
+    /**
+     * Minimum allowed instances count.
+     */
     @InputImport(name="minimum", required=true)
     private final Integer minimum;
 
@@ -34,6 +46,9 @@ public final class OptimizedAutoscaleResponse extends io.pulumi.resources.Invoke
         return this.minimum;
     }
 
+    /**
+     * The version of the template defined, for instance 1.
+     */
     @InputImport(name="version", required=true)
     private final Integer version;
 

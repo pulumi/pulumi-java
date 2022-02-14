@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourceRequestsResponse {
+/**
+ * Requested number of CPU cores. At present, only full cores are supported.
+ */
     private final Double cpu;
+/**
+ * The memory request in GB for this container.
+ */
     private final Double memoryInGB;
 
     @OutputCustomType.Constructor({"cpu","memoryInGB"})
@@ -20,9 +26,15 @@ public final class ResourceRequestsResponse {
         this.memoryInGB = Objects.requireNonNull(memoryInGB);
     }
 
+/**
+ * Requested number of CPU cores. At present, only full cores are supported.
+ */
     public Double getCpu() {
         return this.cpu;
     }
+/**
+ * The memory request in GB for this container.
+ */
     public Double getMemoryInGB() {
         return this.memoryInGB;
     }

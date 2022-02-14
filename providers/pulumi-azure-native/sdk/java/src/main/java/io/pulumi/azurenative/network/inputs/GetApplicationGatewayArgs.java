@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetApplicationGatewayArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApplicationGatewayArgs Empty = new GetApplicationGatewayArgs();
 
+    /**
+     * The name of the application gateway.
+     */
     @InputImport(name="applicationGatewayName", required=true)
     private final String applicationGatewayName;
 
@@ -19,6 +25,9 @@ public final class GetApplicationGatewayArgs extends io.pulumi.resources.InvokeA
         return this.applicationGatewayName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -11,9 +11,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSupportPlanTypeResult {
+/**
+ * The id of the ARM resource, e.g. "/subscriptions/{id}/providers/Microsoft.Addons/supportProvider/{supportProviderName}/supportPlanTypes/{planTypeName}".
+ */
     private final String id;
+/**
+ * The name of the Canonical support plan, i.e. "essential", "standard" or "advanced".
+ */
     private final String name;
+/**
+ * The provisioning state of the resource.
+ */
     private final @Nullable String provisioningState;
+/**
+ * Microsoft.Addons/supportProvider
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","provisioningState","type"})
@@ -28,15 +40,27 @@ public final class GetSupportPlanTypeResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The id of the ARM resource, e.g. "/subscriptions/{id}/providers/Microsoft.Addons/supportProvider/{supportProviderName}/supportPlanTypes/{planTypeName}".
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The name of the Canonical support plan, i.e. "essential", "standard" or "advanced".
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The provisioning state of the resource.
+ */
     public Optional<String> getProvisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
+/**
+ * Microsoft.Addons/supportProvider
+ */
     public String getType() {
         return this.type;
     }

@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * VMwareCbt specific enable migration input.
+ */
 public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VMwareCbtEnableMigrationInputArgs Empty = new VMwareCbtEnableMigrationInputArgs();
 
+    /**
+     * The data mover RunAs account Id.
+     */
     @InputImport(name="dataMoverRunAsAccountId", required=true)
     private final Input<String> dataMoverRunAsAccountId;
 
@@ -25,6 +31,9 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
         return this.dataMoverRunAsAccountId;
     }
 
+    /**
+     * The disks to include list.
+     */
     @InputImport(name="disksToInclude", required=true)
     private final Input<List<VMwareCbtDiskInputArgs>> disksToInclude;
 
@@ -32,6 +41,10 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
         return this.disksToInclude;
     }
 
+    /**
+     * The class type.
+Expected value is 'VMwareCbt'.
+     */
     @InputImport(name="instanceType", required=true)
     private final Input<String> instanceType;
 
@@ -39,6 +52,9 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
         return this.instanceType;
     }
 
+    /**
+     * License type.
+     */
     @InputImport(name="licenseType")
     private final @Nullable Input<Either<String,LicenseType>> licenseType;
 
@@ -46,6 +62,9 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
         return this.licenseType == null ? Input.empty() : this.licenseType;
     }
 
+    /**
+     * The snapshot RunAs account Id.
+     */
     @InputImport(name="snapshotRunAsAccountId", required=true)
     private final Input<String> snapshotRunAsAccountId;
 
@@ -53,6 +72,9 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
         return this.snapshotRunAsAccountId;
     }
 
+    /**
+     * The target availability set ARM Id.
+     */
     @InputImport(name="targetAvailabilitySetId")
     private final @Nullable Input<String> targetAvailabilitySetId;
 
@@ -60,6 +82,9 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
         return this.targetAvailabilitySetId == null ? Input.empty() : this.targetAvailabilitySetId;
     }
 
+    /**
+     * The target boot diagnostics storage account ARM Id.
+     */
     @InputImport(name="targetBootDiagnosticsStorageAccountId")
     private final @Nullable Input<String> targetBootDiagnosticsStorageAccountId;
 
@@ -67,6 +92,9 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
         return this.targetBootDiagnosticsStorageAccountId == null ? Input.empty() : this.targetBootDiagnosticsStorageAccountId;
     }
 
+    /**
+     * The target network ARM Id.
+     */
     @InputImport(name="targetNetworkId", required=true)
     private final Input<String> targetNetworkId;
 
@@ -74,6 +102,9 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
         return this.targetNetworkId;
     }
 
+    /**
+     * The target resource group ARM Id.
+     */
     @InputImport(name="targetResourceGroupId", required=true)
     private final Input<String> targetResourceGroupId;
 
@@ -81,6 +112,9 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
         return this.targetResourceGroupId;
     }
 
+    /**
+     * The target subnet name.
+     */
     @InputImport(name="targetSubnetName")
     private final @Nullable Input<String> targetSubnetName;
 
@@ -88,6 +122,9 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
         return this.targetSubnetName == null ? Input.empty() : this.targetSubnetName;
     }
 
+    /**
+     * The target VM name.
+     */
     @InputImport(name="targetVmName")
     private final @Nullable Input<String> targetVmName;
 
@@ -95,6 +132,9 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
         return this.targetVmName == null ? Input.empty() : this.targetVmName;
     }
 
+    /**
+     * The target VM size.
+     */
     @InputImport(name="targetVmSize")
     private final @Nullable Input<String> targetVmSize;
 
@@ -102,6 +142,9 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
         return this.targetVmSize == null ? Input.empty() : this.targetVmSize;
     }
 
+    /**
+     * The ARM Id of the VM discovered in VMware.
+     */
     @InputImport(name="vmwareMachineId", required=true)
     private final Input<String> vmwareMachineId;
 

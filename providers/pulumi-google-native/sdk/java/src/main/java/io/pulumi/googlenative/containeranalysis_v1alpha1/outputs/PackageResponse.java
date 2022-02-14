@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PackageResponse {
+/**
+ * The various channels by which a package is distributed.
+ */
     private final List<DistributionResponse> distribution;
+/**
+ * The name of the package.
+ */
     private final String name;
 
     @OutputCustomType.Constructor({"distribution","name"})
@@ -22,9 +28,15 @@ public final class PackageResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+/**
+ * The various channels by which a package is distributed.
+ */
     public List<DistributionResponse> getDistribution() {
         return this.distribution;
     }
+/**
+ * The name of the package.
+ */
     public String getName() {
         return this.name;
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A DNS resource record.
+ */
 public final class ResourceRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceRecordResponse Empty = new ResourceRecordResponse();
 
+    /**
+     * Relative name of the object affected by this record. Only applicable for CNAME records. Example: 'www'.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class ResourceRecordResponse extends io.pulumi.resources.InvokeArgs
         return this.name;
     }
 
+    /**
+     * Data for this record. Values vary by record type, as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1).
+     */
     @InputImport(name="rrdata", required=true)
     private final String rrdata;
 
@@ -26,6 +35,9 @@ public final class ResourceRecordResponse extends io.pulumi.resources.InvokeArgs
         return this.rrdata;
     }
 
+    /**
+     * Resource record type. Example: AAAA.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -13,14 +13,42 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServersProjectSummaryResponse {
+/**
+ * Gets or sets the count of entities assessed.
+ */
     private final @Nullable Integer assessedCount;
+/**
+ * Gets or sets the count of entities discovered.
+ */
     private final @Nullable Integer discoveredCount;
+/**
+ * Gets or sets the extended summary.
+ */
     private final @Nullable Map<String,String> extendedSummary;
+/**
+ * Gets the Instance type.
+Expected value is 'Servers'.
+ */
     private final String instanceType;
+/**
+ * Gets or sets the time when summary was last refreshed.
+ */
     private final @Nullable String lastSummaryRefreshedTime;
+/**
+ * Gets or sets the count of entities migrated.
+ */
     private final @Nullable Integer migratedCount;
+/**
+ * Gets or sets the state of refresh summary.
+ */
     private final @Nullable String refreshSummaryState;
+/**
+ * Gets or sets the count of entities being replicated.
+ */
     private final @Nullable Integer replicatingCount;
+/**
+ * Gets or sets the count of entities test migrated.
+ */
     private final @Nullable Integer testMigratedCount;
 
     @OutputCustomType.Constructor({"assessedCount","discoveredCount","extendedSummary","instanceType","lastSummaryRefreshedTime","migratedCount","refreshSummaryState","replicatingCount","testMigratedCount"})
@@ -45,30 +73,58 @@ public final class ServersProjectSummaryResponse {
         this.testMigratedCount = testMigratedCount;
     }
 
+/**
+ * Gets or sets the count of entities assessed.
+ */
     public Optional<Integer> getAssessedCount() {
         return Optional.ofNullable(this.assessedCount);
     }
+/**
+ * Gets or sets the count of entities discovered.
+ */
     public Optional<Integer> getDiscoveredCount() {
         return Optional.ofNullable(this.discoveredCount);
     }
+/**
+ * Gets or sets the extended summary.
+ */
     public Map<String,String> getExtendedSummary() {
         return this.extendedSummary == null ? Map.of() : this.extendedSummary;
     }
+/**
+ * Gets the Instance type.
+Expected value is 'Servers'.
+ */
     public String getInstanceType() {
         return this.instanceType;
     }
+/**
+ * Gets or sets the time when summary was last refreshed.
+ */
     public Optional<String> getLastSummaryRefreshedTime() {
         return Optional.ofNullable(this.lastSummaryRefreshedTime);
     }
+/**
+ * Gets or sets the count of entities migrated.
+ */
     public Optional<Integer> getMigratedCount() {
         return Optional.ofNullable(this.migratedCount);
     }
+/**
+ * Gets or sets the state of refresh summary.
+ */
     public Optional<String> getRefreshSummaryState() {
         return Optional.ofNullable(this.refreshSummaryState);
     }
+/**
+ * Gets or sets the count of entities being replicated.
+ */
     public Optional<Integer> getReplicatingCount() {
         return Optional.ofNullable(this.replicatingCount);
     }
+/**
+ * Gets or sets the count of entities test migrated.
+ */
     public Optional<Integer> getTestMigratedCount() {
         return Optional.ofNullable(this.testMigratedCount);
     }

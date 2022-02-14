@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse {
+/**
+ * The maximum product price.
+ */
     private final Double max;
+/**
+ * The minimum product price.
+ */
     private final Double min;
 
     @OutputCustomType.Constructor({"max","min"})
@@ -20,9 +26,15 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
         this.min = Objects.requireNonNull(min);
     }
 
+/**
+ * The maximum product price.
+ */
     public Double getMax() {
         return this.max;
     }
+/**
+ * The minimum product price.
+ */
     public Double getMin() {
         return this.min;
     }

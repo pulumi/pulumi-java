@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Timestamps associated with this resource in a particular system.
+ */
 public final class GoogleCloudDatacatalogV1SystemTimestampsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1SystemTimestampsArgs Empty = new GoogleCloudDatacatalogV1SystemTimestampsArgs();
 
+    /**
+     * Creation timestamp of the resource within the given system.
+     */
     @InputImport(name="createTime")
     private final @Nullable Input<String> createTime;
 
@@ -21,6 +27,9 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsArgs extends io.pulum
         return this.createTime == null ? Input.empty() : this.createTime;
     }
 
+    /**
+     * Timestamp of the last modification of the resource or its metadata within a given system. Note: Depending on the source system, not every modification updates this timestamp. For example, BigQuery timestamps every metadata modification but not data or permission changes.
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceAccountArgs Empty = new ServiceAccountArgs();
 
+    /**
+     * The account id that is used to generate the service account email address and a stable unique id. It is unique within a project, must be 6-30 characters long, and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])` to comply with RFC1035.
+     */
     @InputImport(name="accountId", required=true)
     private final Input<String> accountId;
 
@@ -21,6 +27,9 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountId;
     }
 
+    /**
+     * Optional. A user-specified, human-readable description of the service account. The maximum length is 256 UTF-8 bytes.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -28,6 +37,9 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Optional. A user-specified, human-readable name for the service account. The maximum length is 100 UTF-8 bytes.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -35,6 +47,9 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The resource name of the service account. Use one of the following formats: * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}` * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}` As an alternative, you can use the `-` wildcard character instead of the project ID: * `projects/-/serviceAccounts/{EMAIL_ADDRESS}` * `projects/-/serviceAccounts/{UNIQUE_ID}` When possible, avoid using the `-` wildcard character, because it can cause response messages to contain misleading error codes. For example, if you try to get the service account `projects/-/serviceAccounts/fake@example.com`, which does not exist, the response contains an HTTP `403 Forbidden` error instead of a `404 Not Found` error.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -42,6 +57,9 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

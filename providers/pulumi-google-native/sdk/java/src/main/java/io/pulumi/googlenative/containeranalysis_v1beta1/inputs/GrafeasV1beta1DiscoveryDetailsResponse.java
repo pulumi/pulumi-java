@@ -8,10 +8,16 @@ import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.DiscoveredRespons
 import java.util.Objects;
 
 
+/**
+ * Details of a discovery occurrence.
+ */
 public final class GrafeasV1beta1DiscoveryDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GrafeasV1beta1DiscoveryDetailsResponse Empty = new GrafeasV1beta1DiscoveryDetailsResponse();
 
+    /**
+     * Analysis status for the discovered resource.
+     */
     @InputImport(name="discovered", required=true)
     private final DiscoveredResponse discovered;
 

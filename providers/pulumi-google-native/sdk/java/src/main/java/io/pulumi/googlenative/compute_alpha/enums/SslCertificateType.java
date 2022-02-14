@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not specified, the certificate is self-managed and the fields certificate and private_key are used.
+ */
     @EnumType
     public enum SslCertificateType {
+/**
+ * Google-managed SSLCertificate.
+ */
         Managed("MANAGED"),
+/**
+ * Certificate uploaded by user.
+ */
         SelfManaged("SELF_MANAGED"),
+/**
+ * 
+ */
         TypeUnspecified("TYPE_UNSPECIFIED");
 
         private final String value;

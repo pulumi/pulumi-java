@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServiceRegistryInstanceResponse {
+/**
+ * Name of the Service Registry instance
+ */
     private final String name;
+/**
+ * Status of the Service Registry instance
+ */
     private final String status;
 
     @OutputCustomType.Constructor({"name","status"})
@@ -20,9 +26,15 @@ public final class ServiceRegistryInstanceResponse {
         this.status = Objects.requireNonNull(status);
     }
 
+/**
+ * Name of the Service Registry instance
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Status of the Service Registry instance
+ */
     public String getStatus() {
         return this.status;
     }

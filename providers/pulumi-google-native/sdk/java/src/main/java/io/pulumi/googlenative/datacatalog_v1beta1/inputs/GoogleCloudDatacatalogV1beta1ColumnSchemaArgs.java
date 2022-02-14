@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Representation of a column within a schema. Columns could be nested inside other columns.
+ */
 public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1beta1ColumnSchemaArgs Empty = new GoogleCloudDatacatalogV1beta1ColumnSchemaArgs();
 
+    /**
+     * Name of the column.
+     */
     @InputImport(name="column", required=true)
     private final Input<String> column;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
         return this.column;
     }
 
+    /**
+     * Optional. Description of the column. Default value is an empty string.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +38,9 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Optional. A column's mode indicates whether the values in this column are required, nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported. Default mode is `NULLABLE`.
+     */
     @InputImport(name="mode")
     private final @Nullable Input<String> mode;
 
@@ -36,6 +48,9 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
         return this.mode == null ? Input.empty() : this.mode;
     }
 
+    /**
+     * Optional. Schema of sub-columns. A column can have zero or more sub-columns.
+     */
     @InputImport(name="subcolumns")
     private final @Nullable Input<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> subcolumns;
 
@@ -43,6 +58,9 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
         return this.subcolumns == null ? Input.empty() : this.subcolumns;
     }
 
+    /**
+     * Type of the column.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

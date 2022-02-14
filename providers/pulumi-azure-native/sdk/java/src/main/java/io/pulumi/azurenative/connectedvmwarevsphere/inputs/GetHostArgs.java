@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetHostArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetHostArgs Empty = new GetHostArgs();
 
+    /**
+     * Name of the host.
+     */
     @InputImport(name="hostName", required=true)
     private final String hostName;
 
@@ -19,6 +25,9 @@ public final class GetHostArgs extends io.pulumi.resources.InvokeArgs {
         return this.hostName;
     }
 
+    /**
+     * The Resource Group Name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

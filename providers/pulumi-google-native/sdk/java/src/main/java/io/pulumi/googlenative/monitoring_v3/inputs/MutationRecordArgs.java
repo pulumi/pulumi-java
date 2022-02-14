@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a change made to a configuration.
+ */
 public final class MutationRecordArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MutationRecordArgs Empty = new MutationRecordArgs();
 
+    /**
+     * When the change occurred.
+     */
     @InputImport(name="mutateTime")
     private final @Nullable Input<String> mutateTime;
 
@@ -21,6 +27,9 @@ public final class MutationRecordArgs extends io.pulumi.resources.ResourceArgs {
         return this.mutateTime == null ? Input.empty() : this.mutateTime;
     }
 
+    /**
+     * The email address of the user making the change.
+     */
     @InputImport(name="mutatedBy")
     private final @Nullable Input<String> mutatedBy;
 

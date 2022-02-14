@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Provides the configuration for logging a type of permissions. Example: { "audit_log_configs": [ { "log_type": "DATA_READ", "exempted_members": [ "user:jose@example.com" ] }, { "log_type": "DATA_WRITE" } ] } This enables 'DATA_READ' and 'DATA_WRITE' logging, while exempting jose@example.com from DATA_READ logging.
+ */
 public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AuditLogConfigArgs Empty = new AuditLogConfigArgs();
 
+    /**
+     * Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
+     */
     @InputImport(name="exemptedMembers")
     private final @Nullable Input<List<String>> exemptedMembers;
 
@@ -24,6 +30,9 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.exemptedMembers == null ? Input.empty() : this.exemptedMembers;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="ignoreChildExemptions")
     private final @Nullable Input<Boolean> ignoreChildExemptions;
 
@@ -31,6 +40,9 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.ignoreChildExemptions == null ? Input.empty() : this.ignoreChildExemptions;
     }
 
+    /**
+     * The log type that this config enables.
+     */
     @InputImport(name="logType")
     private final @Nullable Input<AuditLogConfigLogType> logType;
 

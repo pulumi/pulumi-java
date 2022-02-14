@@ -18,10 +18,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * ServiceNow server linked service.
+ */
 public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceNowLinkedServiceResponse Empty = new ServiceNowLinkedServiceResponse();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -29,6 +35,9 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * The authentication type to use.
+     */
     @InputImport(name="authenticationType", required=true)
     private final String authenticationType;
 
@@ -36,6 +45,9 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
         return this.authenticationType;
     }
 
+    /**
+     * The client id for OAuth2 authentication.
+     */
     @InputImport(name="clientId")
     private final @Nullable Object clientId;
 
@@ -43,6 +55,9 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
     }
 
+    /**
+     * The client secret for OAuth2 authentication.
+     */
     @InputImport(name="clientSecret")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
 
@@ -50,6 +65,9 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
         return this.clientSecret == null ? null : this.clientSecret;
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -57,6 +75,9 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -64,6 +85,9 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -71,6 +95,9 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
+    /**
+     * The endpoint of the ServiceNow server. (i.e. <instance>.service-now.com)
+     */
     @InputImport(name="endpoint", required=true)
     private final Object endpoint;
 
@@ -78,6 +105,9 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
         return this.endpoint;
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -85,6 +115,9 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * The password corresponding to the user name for Basic and OAuth2 authentication.
+     */
     @InputImport(name="password")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
@@ -92,6 +125,10 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
         return this.password == null ? null : this.password;
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'ServiceNow'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -99,6 +136,9 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
         return this.type;
     }
 
+    /**
+     * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+     */
     @InputImport(name="useEncryptedEndpoints")
     private final @Nullable Object useEncryptedEndpoints;
 
@@ -106,6 +146,9 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
         return this.useEncryptedEndpoints == null ? Optional.empty() : Optional.ofNullable(this.useEncryptedEndpoints);
     }
 
+    /**
+     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+     */
     @InputImport(name="useHostVerification")
     private final @Nullable Object useHostVerification;
 
@@ -113,6 +156,9 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
         return this.useHostVerification == null ? Optional.empty() : Optional.ofNullable(this.useHostVerification);
     }
 
+    /**
+     * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+     */
     @InputImport(name="usePeerVerification")
     private final @Nullable Object usePeerVerification;
 
@@ -120,6 +166,9 @@ public final class ServiceNowLinkedServiceResponse extends io.pulumi.resources.I
         return this.usePeerVerification == null ? Optional.empty() : Optional.ofNullable(this.usePeerVerification);
     }
 
+    /**
+     * The user name used to connect to the ServiceNow server for Basic and OAuth2 authentication.
+     */
     @InputImport(name="username")
     private final @Nullable Object username;
 

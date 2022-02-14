@@ -13,10 +13,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OutcomeResponse {
+/**
+ * More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE. Optional
+ */
     private final FailureDetailResponse failureDetail;
+/**
+ * More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not INCONCLUSIVE. Optional
+ */
     private final InconclusiveDetailResponse inconclusiveDetail;
+/**
+ * More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SKIPPED. Optional
+ */
     private final SkippedDetailResponse skippedDetail;
+/**
+ * More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SUCCESS. Optional
+ */
     private final SuccessDetailResponse successDetail;
+/**
+ * The simplest way to interpret a result. Required
+ */
     private final String summary;
 
     @OutputCustomType.Constructor({"failureDetail","inconclusiveDetail","skippedDetail","successDetail","summary"})
@@ -33,18 +48,33 @@ public final class OutcomeResponse {
         this.summary = Objects.requireNonNull(summary);
     }
 
+/**
+ * More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE. Optional
+ */
     public FailureDetailResponse getFailureDetail() {
         return this.failureDetail;
     }
+/**
+ * More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not INCONCLUSIVE. Optional
+ */
     public InconclusiveDetailResponse getInconclusiveDetail() {
         return this.inconclusiveDetail;
     }
+/**
+ * More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SKIPPED. Optional
+ */
     public SkippedDetailResponse getSkippedDetail() {
         return this.skippedDetail;
     }
+/**
+ * More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SUCCESS. Optional
+ */
     public SuccessDetailResponse getSuccessDetail() {
         return this.successDetail;
     }
+/**
+ * The simplest way to interpret a result. Required
+ */
     public String getSummary() {
         return this.summary;
     }

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppFunctionSecretsSlot {
+/**
+ * Function secrets.
+API Version: 2020-12-01.
+ *
+ * Function secrets.
+ */
     public static CompletableFuture<ListWebAppFunctionSecretsSlotResult> invokeAsync(ListWebAppFunctionSecretsSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppFunctionSecretsSlot", TypeShape.of(ListWebAppFunctionSecretsSlotResult.class), args == null ? ListWebAppFunctionSecretsSlotArgs.Empty : args, Utilities.withVersion(options));
     }

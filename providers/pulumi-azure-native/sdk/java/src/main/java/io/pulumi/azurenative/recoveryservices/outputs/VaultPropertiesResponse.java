@@ -5,7 +5,6 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.PrivateEndpointConnectionVaultPropertiesResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.UpgradeDetailsResponse;
-import io.pulumi.azurenative.recoveryservices.outputs.VaultPropertiesResponseEncryption;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
@@ -15,11 +14,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VaultPropertiesResponse {
+/**
+ * Customer Managed Key details of the resource.
+ */
     private final @Nullable VaultPropertiesResponseEncryption encryption;
+/**
+ * List of private endpoint connection.
+ */
     private final List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections;
+/**
+ * Private endpoint state for backup.
+ */
     private final String privateEndpointStateForBackup;
+/**
+ * Private endpoint state for site recovery.
+ */
     private final String privateEndpointStateForSiteRecovery;
+/**
+ * Provisioning State.
+ */
     private final String provisioningState;
+/**
+ * Details for upgrading vault.
+ */
     private final @Nullable UpgradeDetailsResponse upgradeDetails;
 
     @OutputCustomType.Constructor({"encryption","privateEndpointConnections","privateEndpointStateForBackup","privateEndpointStateForSiteRecovery","provisioningState","upgradeDetails"})
@@ -38,21 +55,39 @@ public final class VaultPropertiesResponse {
         this.upgradeDetails = upgradeDetails;
     }
 
+/**
+ * Customer Managed Key details of the resource.
+ */
     public Optional<VaultPropertiesResponseEncryption> getEncryption() {
         return Optional.ofNullable(this.encryption);
     }
+/**
+ * List of private endpoint connection.
+ */
     public List<PrivateEndpointConnectionVaultPropertiesResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
+/**
+ * Private endpoint state for backup.
+ */
     public String getPrivateEndpointStateForBackup() {
         return this.privateEndpointStateForBackup;
     }
+/**
+ * Private endpoint state for site recovery.
+ */
     public String getPrivateEndpointStateForSiteRecovery() {
         return this.privateEndpointStateForSiteRecovery;
     }
+/**
+ * Provisioning State.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Details for upgrading vault.
+ */
     public Optional<UpgradeDetailsResponse> getUpgradeDetails() {
         return Optional.ofNullable(this.upgradeDetails);
     }

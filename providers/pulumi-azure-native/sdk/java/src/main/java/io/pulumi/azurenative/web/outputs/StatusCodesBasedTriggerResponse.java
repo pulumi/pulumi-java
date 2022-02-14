@@ -12,11 +12,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StatusCodesBasedTriggerResponse {
+/**
+ * Request Count.
+ */
     private final @Nullable Integer count;
+/**
+ * Request Path
+ */
     private final @Nullable String path;
+/**
+ * HTTP status code.
+ */
     private final @Nullable Integer status;
+/**
+ * Request Sub Status.
+ */
     private final @Nullable Integer subStatus;
+/**
+ * Time interval.
+ */
     private final @Nullable String timeInterval;
+/**
+ * Win32 error code.
+ */
     private final @Nullable Integer win32Status;
 
     @OutputCustomType.Constructor({"count","path","status","subStatus","timeInterval","win32Status"})
@@ -35,21 +53,39 @@ public final class StatusCodesBasedTriggerResponse {
         this.win32Status = win32Status;
     }
 
+/**
+ * Request Count.
+ */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
+/**
+ * Request Path
+ */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
+/**
+ * HTTP status code.
+ */
     public Optional<Integer> getStatus() {
         return Optional.ofNullable(this.status);
     }
+/**
+ * Request Sub Status.
+ */
     public Optional<Integer> getSubStatus() {
         return Optional.ofNullable(this.subStatus);
     }
+/**
+ * Time interval.
+ */
     public Optional<String> getTimeInterval() {
         return Optional.ofNullable(this.timeInterval);
     }
+/**
+ * Win32 error code.
+ */
     public Optional<Integer> getWin32Status() {
         return Optional.ofNullable(this.win32Status);
     }

@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of auto scaling metric
+ */
     @EnumType
     public enum AutoScalingMetricKind {
+/**
+ * Indicates that the metric is one of resources, like cpu or memory.
+ */
         Resource("Resource");
 
         private final String value;

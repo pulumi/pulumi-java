@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetPrivateEndpointConnectionsForMIPPolicySyncArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPrivateEndpointConnectionsForMIPPolicySyncArgs Empty = new GetPrivateEndpointConnectionsForMIPPolicySyncArgs();
 
+    /**
+     * The name of the private endpoint connection associated with the Azure resource
+     */
     @InputImport(name="privateEndpointConnectionName", required=true)
     private final String privateEndpointConnectionName;
 
@@ -19,6 +25,9 @@ public final class GetPrivateEndpointConnectionsForMIPPolicySyncArgs extends io.
         return this.privateEndpointConnectionName;
     }
 
+    /**
+     * The name of the resource group that contains the service instance.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetPrivateEndpointConnectionsForMIPPolicySyncArgs extends io.
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the service instance.
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

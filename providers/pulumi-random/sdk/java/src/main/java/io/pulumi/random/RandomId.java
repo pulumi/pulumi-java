@@ -7,7 +7,6 @@ import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
-import io.pulumi.random.RandomIdArgs;
 import io.pulumi.random.Utilities;
 import io.pulumi.random.inputs.RandomIdState;
 import java.lang.Integer;
@@ -16,51 +15,222 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The resource `random.RandomId` generates random numbers that are intended to be
+used as unique identifiers for other resources.
+
+This resource *does* use a cryptographic random number generator in order
+to minimize the chance of collisions, making the results of this resource
+when a 16-byte identifier is requested of equivalent uniqueness to a
+type-4 UUID.
+
+This resource can be used in conjunction with resources that have
+the `create_before_destroy` lifecycle flag set to avoid conflicts with
+unique names during the brief period where both the old and new resources
+exist concurrently.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as random from "@pulumi/random";
+
+// The following example shows how to generate a unique name for an AWS EC2
+// instance that changes each time a new AMI id is selected.
+const serverRandomId = new random.RandomId("serverRandomId", {
+    keepers: {
+        ami_id: _var.ami_id,
+    },
+    byteLength: 8,
+});
+const serverInstance = new aws.ec2.Instance("serverInstance", {
+    tags: {
+        Name: pulumi.interpolate`web-server ${serverRandomId.hex}`,
+    },
+    ami: serverRandomId.keepers.apply(keepers => keepers?.amiId),
+});
+// ... (other aws_instance arguments) ...
+```
+```python
+import pulumi
+import pulumi_aws as aws
+import pulumi_random as random
+
+# The following example shows how to generate a unique name for an AWS EC2
+# instance that changes each time a new AMI id is selected.
+server_random_id = random.RandomId("serverRandomId",
+    keepers={
+        "ami_id": var["ami_id"],
+    },
+    byte_length=8)
+server_instance = aws.ec2.Instance("serverInstance",
+    tags={
+        "Name": server_random_id.hex.apply(lambda hex: f"web-server {hex}"),
+    },
+    ami=server_random_id.keepers["amiId"])
+# ... (other aws_instance arguments) ...
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // The following example shows how to generate a unique name for an AWS EC2
+        // instance that changes each time a new AMI id is selected.
+        var serverRandomId = new Random.RandomId("serverRandomId", new Random.RandomIdArgs
+        {
+            Keepers = 
+            {
+                { "ami_id", @var.Ami_id },
+            },
+            ByteLength = 8,
+        });
+        var serverInstance = new Aws.Ec2.Instance("serverInstance", new Aws.Ec2.InstanceArgs
+        {
+            Tags = 
+            {
+                { "Name", serverRandomId.Hex.Apply(hex => $"web-server {hex}") },
+            },
+            Ami = serverRandomId.Keepers.Apply(keepers => keepers?.AmiId),
+        });
+        // ... (other aws_instance arguments) ...
+    }
+
+}
+```
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+# Random IDs can be imported using the b64_url with an optional prefix. This # can be used to replace a config value with a value interpolated from the # random provider without experiencing diffs. # Example with no prefix
+
+```sh
+ $ pulumi import random:index/randomId:RandomId server p-9hUg
+```
+
+ # Example with prefix (prefix is separated by a ,)
+
+```sh
+ $ pulumi import random:index/randomId:RandomId server my-prefix-,p-9hUg
+```
+
+ 
+ */
 @ResourceType(type="random:index/randomId:RandomId")
 public class RandomId extends io.pulumi.resources.CustomResource {
+    /**
+     * The generated id presented in base64 without additional transformations.
+
+     */
     @OutputExport(name="b64Std", type=String.class, parameters={})
     private Output<String> b64Std;
 
+    /**
+     * @return The generated id presented in base64 without additional transformations.
+
+     */
     public Output<String> getB64Std() {
         return this.b64Std;
     }
+    /**
+     * The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the characters `_` and `-`.
+
+     */
     @OutputExport(name="b64Url", type=String.class, parameters={})
     private Output<String> b64Url;
 
+    /**
+     * @return The generated id presented in base64, using the URL-friendly character set: case-sensitive letters, digits and the characters `_` and `-`.
+
+     */
     public Output<String> getB64Url() {
         return this.b64Url;
     }
+    /**
+     * The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
+
+     */
     @OutputExport(name="byteLength", type=Integer.class, parameters={})
     private Output<Integer> byteLength;
 
+    /**
+     * @return The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
+
+     */
     public Output<Integer> getByteLength() {
         return this.byteLength;
     }
+    /**
+     * The generated id presented in non-padded decimal digits.
+
+     */
     @OutputExport(name="dec", type=String.class, parameters={})
     private Output<String> dec;
 
+    /**
+     * @return The generated id presented in non-padded decimal digits.
+
+     */
     public Output<String> getDec() {
         return this.dec;
     }
+    /**
+     * The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
+
+     */
     @OutputExport(name="hex", type=String.class, parameters={})
     private Output<String> hex;
 
+    /**
+     * @return The generated id presented in padded hexadecimal digits. This result will always be twice as long as the requested byte length.
+
+     */
     public Output<String> getHex() {
         return this.hex;
     }
+    /**
+     * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+
+     */
     @OutputExport(name="keepers", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> keepers;
 
+    /**
+     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+
+     */
     public Output</* @Nullable */ Map<String,Object>> getKeepers() {
         return this.keepers;
     }
+    /**
+     * Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
+
+     */
     @OutputExport(name="prefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> prefix;
 
+    /**
+     * @return Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
+
+     */
     public Output</* @Nullable */ String> getPrefix() {
         return this.prefix;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public RandomId(String name, RandomIdArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("random:index/randomId:RandomId", name, args == null ? RandomIdArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -76,6 +246,15 @@ public class RandomId extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static RandomId get(String name, Input<String> id, @Nullable RandomIdState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RandomId(name, id, state, options);
     }

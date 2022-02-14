@@ -15,12 +15,34 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AppendVariableActivityResponse {
+/**
+ * Activity depends on condition.
+ */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
+/**
+ * Activity description.
+ */
     private final @Nullable String description;
+/**
+ * Activity name.
+ */
     private final String name;
+/**
+ * Type of activity.
+Expected value is 'AppendVariable'.
+ */
     private final String type;
+/**
+ * Activity user properties.
+ */
     private final @Nullable List<UserPropertyResponse> userProperties;
+/**
+ * Value to be appended. Could be a static value or Expression
+ */
     private final @Nullable Object value;
+/**
+ * Name of the variable whose value needs to be appended to.
+ */
     private final @Nullable String variableName;
 
     @OutputCustomType.Constructor({"dependsOn","description","name","type","userProperties","value","variableName"})
@@ -41,24 +63,46 @@ public final class AppendVariableActivityResponse {
         this.variableName = variableName;
     }
 
+/**
+ * Activity depends on condition.
+ */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
+/**
+ * Activity description.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * Activity name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Type of activity.
+Expected value is 'AppendVariable'.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Activity user properties.
+ */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
+/**
+ * Value to be appended. Could be a static value or Expression
+ */
     public Optional<Object> getValue() {
         return Optional.ofNullable(this.value);
     }
+/**
+ * Name of the variable whose value needs to be appended to.
+ */
     public Optional<String> getVariableName() {
         return Optional.ofNullable(this.variableName);
     }

@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Policy creation properties.
+ */
 public final class CreatePolicyInputPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CreatePolicyInputPropertiesArgs Empty = new CreatePolicyInputPropertiesArgs();
 
+    /**
+     * The ReplicationProviderSettings.
+     */
     @InputImport(name="providerSpecificInput")
     private final @Nullable Input<Object> providerSpecificInput;
 

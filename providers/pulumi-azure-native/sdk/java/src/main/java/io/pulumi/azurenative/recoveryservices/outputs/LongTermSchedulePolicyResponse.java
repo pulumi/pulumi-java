@@ -9,6 +9,10 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LongTermSchedulePolicyResponse {
+/**
+ * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+Expected value is 'LongTermSchedulePolicy'.
+ */
     private final String schedulePolicyType;
 
     @OutputCustomType.Constructor({"schedulePolicyType"})
@@ -16,6 +20,10 @@ public final class LongTermSchedulePolicyResponse {
         this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
     }
 
+/**
+ * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+Expected value is 'LongTermSchedulePolicy'.
+ */
     public String getSchedulePolicyType() {
         return this.schedulePolicyType;
     }

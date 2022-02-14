@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A compensation entry that represents one component of compensation, such as base pay, bonus, or other compensation type. Annualization: One compensation entry can be annualized if - it contains valid amount or range. - and its expected_units_per_year is set or can be derived. Its annualized range is determined as (amount or range) times expected_units_per_year.
+ */
 public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CompensationEntryArgs Empty = new CompensationEntryArgs();
 
+    /**
+     * Optional. Compensation amount.
+     */
     @InputImport(name="amount")
     private final @Nullable Input<MoneyArgs> amount;
 
@@ -26,6 +32,9 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
         return this.amount == null ? Input.empty() : this.amount;
     }
 
+    /**
+     * Optional. Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -33,6 +42,9 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Optional. Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1
+     */
     @InputImport(name="expectedUnitsPerYear")
     private final @Nullable Input<Double> expectedUnitsPerYear;
 
@@ -40,6 +52,9 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
         return this.expectedUnitsPerYear == null ? Input.empty() : this.expectedUnitsPerYear;
     }
 
+    /**
+     * Optional. Compensation range.
+     */
     @InputImport(name="range")
     private final @Nullable Input<CompensationRangeArgs> range;
 
@@ -47,6 +62,9 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
         return this.range == null ? Input.empty() : this.range;
     }
 
+    /**
+     * Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.
+     */
     @InputImport(name="type")
     private final @Nullable Input<CompensationEntryType> type;
 
@@ -54,6 +72,9 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * Optional. Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
+     */
     @InputImport(name="unit")
     private final @Nullable Input<CompensationEntryUnit> unit;
 

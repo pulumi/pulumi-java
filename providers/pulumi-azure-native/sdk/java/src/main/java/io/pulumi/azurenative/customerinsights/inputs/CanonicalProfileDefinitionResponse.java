@@ -3,7 +3,6 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.azurenative.customerinsights.inputs.CanonicalProfileDefinitionResponseProperties;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
@@ -12,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Definition of canonical profile.
+ */
 public final class CanonicalProfileDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CanonicalProfileDefinitionResponse Empty = new CanonicalProfileDefinitionResponse();
 
+    /**
+     * Canonical profile ID.
+     */
     @InputImport(name="canonicalProfileId")
     private final @Nullable Integer canonicalProfileId;
 
@@ -23,6 +28,9 @@ public final class CanonicalProfileDefinitionResponse extends io.pulumi.resource
         return this.canonicalProfileId == null ? Optional.empty() : Optional.ofNullable(this.canonicalProfileId);
     }
 
+    /**
+     * Properties of the canonical profile.
+     */
     @InputImport(name="properties")
     private final @Nullable List<CanonicalProfileDefinitionResponseProperties> properties;
 

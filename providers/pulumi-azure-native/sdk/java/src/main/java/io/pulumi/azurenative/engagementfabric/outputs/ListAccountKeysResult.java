@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListAccountKeysResult {
+/**
+ * Account keys
+ */
     private final List<KeyDescriptionResponse> value;
 
     @OutputCustomType.Constructor({"value"})
@@ -17,6 +20,9 @@ public final class ListAccountKeysResult {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * Account keys
+ */
     public List<KeyDescriptionResponse> getValue() {
         return this.value;
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBackupPolicyArgs Empty = new GetBackupPolicyArgs();
 
+    /**
+     * The name of backup policy to be fetched.
+     */
     @InputImport(name="backupPolicyName", required=true)
     private final String backupPolicyName;
 
@@ -19,6 +25,9 @@ public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.backupPolicyName;
     }
 
+    /**
+     * The device name
+     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -26,6 +35,9 @@ public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.deviceName;
     }
 
+    /**
+     * The manager name
+     */
     @InputImport(name="managerName", required=true)
     private final String managerName;
 
@@ -33,6 +45,9 @@ public final class GetBackupPolicyArgs extends io.pulumi.resources.InvokeArgs {
         return this.managerName;
     }
 
+    /**
+     * The resource group name
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

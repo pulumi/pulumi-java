@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ConnectivityGroupItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectivityGroupItemArgs Empty = new ConnectivityGroupItemArgs();
 
+    /**
+     * Group connectivity type.
+     */
     @InputImport(name="groupConnectivity")
     private final @Nullable Input<Either<String,GroupConnectivity>> groupConnectivity;
 
@@ -25,6 +31,9 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
         return this.groupConnectivity == null ? Input.empty() : this.groupConnectivity;
     }
 
+    /**
+     * Flag if global is supported.
+     */
     @InputImport(name="isGlobal")
     private final @Nullable Input<Either<String,IsGlobal>> isGlobal;
 
@@ -32,6 +41,9 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
         return this.isGlobal == null ? Input.empty() : this.isGlobal;
     }
 
+    /**
+     * Network group Id.
+     */
     @InputImport(name="networkGroupId")
     private final @Nullable Input<String> networkGroupId;
 
@@ -39,6 +51,9 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
         return this.networkGroupId == null ? Input.empty() : this.networkGroupId;
     }
 
+    /**
+     * Flag if need to use hub gateway.
+     */
     @InputImport(name="useHubGateway")
     private final @Nullable Input<Either<String,UseHubGateway>> useHubGateway;
 

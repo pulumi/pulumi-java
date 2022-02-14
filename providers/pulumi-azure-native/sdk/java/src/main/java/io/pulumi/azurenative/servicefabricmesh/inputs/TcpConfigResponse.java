@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes the tcp configuration for external connectivity for this network.
+ */
 public final class TcpConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TcpConfigResponse Empty = new TcpConfigResponse();
 
+    /**
+     * Describes destination endpoint for routing traffic.
+     */
     @InputImport(name="destination", required=true)
     private final GatewayDestinationResponse destination;
 
@@ -21,6 +27,9 @@ public final class TcpConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.destination;
     }
 
+    /**
+     * tcp gateway config name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,6 +37,9 @@ public final class TcpConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * Specifies the port at which the service endpoint below needs to be exposed.
+     */
     @InputImport(name="port", required=true)
     private final Integer port;
 

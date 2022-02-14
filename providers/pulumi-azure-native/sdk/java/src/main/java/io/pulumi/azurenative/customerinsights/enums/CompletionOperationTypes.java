@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of completion operation.
+ */
     @EnumType
     public enum CompletionOperationTypes {
+/**
+ * 
+ */
         DoNothing("DoNothing"),
+/**
+ * 
+ */
         DeleteFile("DeleteFile"),
+/**
+ * 
+ */
         MoveFile("MoveFile");
 
         private final String value;

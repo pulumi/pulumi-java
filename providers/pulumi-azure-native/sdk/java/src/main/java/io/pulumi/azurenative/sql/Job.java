@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.sql.JobArgs;
 import io.pulumi.azurenative.sql.outputs.JobScheduleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,39 +15,273 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A job.
+API Version: 2020-11-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create a job with all properties specified
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var job = new AzureNative.Sql.Job("job", new AzureNative.Sql.JobArgs
+        {
+            Description = "my favourite job",
+            JobAgentName = "agent1",
+            JobName = "job1",
+            ResourceGroupName = "group1",
+            Schedule = new AzureNative.Sql.Inputs.JobScheduleArgs
+            {
+                Enabled = true,
+                EndTime = "2015-09-24T23:59:59Z",
+                Interval = "PT5M",
+                StartTime = "2015-09-24T18:30:01Z",
+                Type = "Recurring",
+            },
+            ServerName = "server1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewJob(ctx, "job", &sql.JobArgs{
+			Description:       pulumi.String("my favourite job"),
+			JobAgentName:      pulumi.String("agent1"),
+			JobName:           pulumi.String("job1"),
+			ResourceGroupName: pulumi.String("group1"),
+			Schedule: &sql.JobScheduleArgs{
+				Enabled:   pulumi.Bool(true),
+				EndTime:   pulumi.String("2015-09-24T23:59:59Z"),
+				Interval:  pulumi.String("PT5M"),
+				StartTime: pulumi.String("2015-09-24T18:30:01Z"),
+				Type:      "Recurring",
+			},
+			ServerName: pulumi.String("server1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const job = new azure_native.sql.Job("job", {
+    description: "my favourite job",
+    jobAgentName: "agent1",
+    jobName: "job1",
+    resourceGroupName: "group1",
+    schedule: {
+        enabled: true,
+        endTime: "2015-09-24T23:59:59Z",
+        interval: "PT5M",
+        startTime: "2015-09-24T18:30:01Z",
+        type: "Recurring",
+    },
+    serverName: "server1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+job = azure_native.sql.Job("job",
+    description="my favourite job",
+    job_agent_name="agent1",
+    job_name="job1",
+    resource_group_name="group1",
+    schedule=azure_native.sql.JobScheduleArgs(
+        enabled=True,
+        end_time="2015-09-24T23:59:59Z",
+        interval="PT5M",
+        start_time="2015-09-24T18:30:01Z",
+        type="Recurring",
+    ),
+    server_name="server1")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create a job with default properties
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var job = new AzureNative.Sql.Job("job", new AzureNative.Sql.JobArgs
+        {
+            JobAgentName = "agent1",
+            JobName = "job1",
+            ResourceGroupName = "group1",
+            ServerName = "server1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewJob(ctx, "job", &sql.JobArgs{
+			JobAgentName:      pulumi.String("agent1"),
+			JobName:           pulumi.String("job1"),
+			ResourceGroupName: pulumi.String("group1"),
+			ServerName:        pulumi.String("server1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const job = new azure_native.sql.Job("job", {
+    jobAgentName: "agent1",
+    jobName: "job1",
+    resourceGroupName: "group1",
+    serverName: "server1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+job = azure_native.sql.Job("job",
+    job_agent_name="agent1",
+    job_name="job1",
+    resource_group_name="group1",
+    server_name="server1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:sql:Job job1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/jobs/job1 
+```
+
+ */
 @ResourceType(type="azure-native:sql:Job")
 public class Job extends io.pulumi.resources.CustomResource {
+    /**
+     * User-defined description of the job.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return User-defined description of the job.
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Schedule properties of the job.
+     */
     @OutputExport(name="schedule", type=JobScheduleResponse.class, parameters={})
     private Output</* @Nullable */ JobScheduleResponse> schedule;
 
+    /**
+     * @return Schedule properties of the job.
+     */
     public Output</* @Nullable */ JobScheduleResponse> getSchedule() {
         return this.schedule;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The job version number.
+     */
     @OutputExport(name="version", type=Integer.class, parameters={})
     private Output<Integer> version;
 
+    /**
+     * @return The job version number.
+     */
     public Output<Integer> getVersion() {
         return this.version;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Job(String name, JobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -73,6 +306,14 @@ public class Job extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Job get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Job(name, id, options);
     }

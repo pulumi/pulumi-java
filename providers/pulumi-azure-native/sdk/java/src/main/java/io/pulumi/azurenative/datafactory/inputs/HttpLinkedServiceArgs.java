@@ -19,10 +19,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Linked service for an HTTP source.
+ */
 public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpLinkedServiceArgs Empty = new HttpLinkedServiceArgs();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -30,6 +36,9 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
+     */
     @InputImport(name="authHeaders")
     private final @Nullable Input<Object> authHeaders;
 
@@ -37,6 +46,9 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
         return this.authHeaders == null ? Input.empty() : this.authHeaders;
     }
 
+    /**
+     * The authentication type to be used to connect to the HTTP server.
+     */
     @InputImport(name="authenticationType")
     private final @Nullable Input<Either<String,HttpAuthenticationType>> authenticationType;
 
@@ -44,6 +56,9 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
     }
 
+    /**
+     * Thumbprint of certificate for ClientCertificate authentication. Only valid for on-premises copy. For on-premises copy with ClientCertificate authentication, either CertThumbprint or EmbeddedCertData/Password should be specified. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="certThumbprint")
     private final @Nullable Input<Object> certThumbprint;
 
@@ -51,6 +66,9 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
         return this.certThumbprint == null ? Input.empty() : this.certThumbprint;
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -58,6 +76,9 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -65,6 +86,9 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Base64 encoded certificate data for ClientCertificate authentication. For on-premises copy with ClientCertificate authentication, either CertThumbprint or EmbeddedCertData/Password should be specified. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="embeddedCertData")
     private final @Nullable Input<Object> embeddedCertData;
 
@@ -72,6 +96,9 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
         return this.embeddedCertData == null ? Input.empty() : this.embeddedCertData;
     }
 
+    /**
+     * If true, validate the HTTPS server SSL certificate. Default value is true. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="enableServerCertificateValidation")
     private final @Nullable Input<Object> enableServerCertificateValidation;
 
@@ -79,6 +106,9 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
         return this.enableServerCertificateValidation == null ? Input.empty() : this.enableServerCertificateValidation;
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -86,6 +116,9 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -93,6 +126,9 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Password for Basic, Digest, Windows, or ClientCertificate with EmbeddedCertData authentication.
+     */
     @InputImport(name="password")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
@@ -100,6 +136,10 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'HttpServer'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -107,6 +147,9 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
         return this.type;
     }
 
+    /**
+     * The base URL of the HTTP endpoint, e.g. http://www.microsoft.com. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="url", required=true)
     private final Input<Object> url;
 
@@ -114,6 +157,9 @@ public final class HttpLinkedServiceArgs extends io.pulumi.resources.ResourceArg
         return this.url;
     }
 
+    /**
+     * User name for Basic, Digest, or Windows authentication. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="userName")
     private final @Nullable Input<Object> userName;
 

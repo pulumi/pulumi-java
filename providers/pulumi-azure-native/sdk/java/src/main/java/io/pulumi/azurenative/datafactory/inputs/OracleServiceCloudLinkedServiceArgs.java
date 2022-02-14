@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Oracle Service Cloud linked service.
+ */
 public final class OracleServiceCloudLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OracleServiceCloudLinkedServiceArgs Empty = new OracleServiceCloudLinkedServiceArgs();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -29,6 +35,9 @@ public final class OracleServiceCloudLinkedServiceArgs extends io.pulumi.resourc
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -36,6 +45,9 @@ public final class OracleServiceCloudLinkedServiceArgs extends io.pulumi.resourc
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -43,6 +55,9 @@ public final class OracleServiceCloudLinkedServiceArgs extends io.pulumi.resourc
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -50,6 +65,9 @@ public final class OracleServiceCloudLinkedServiceArgs extends io.pulumi.resourc
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
+    /**
+     * The URL of the Oracle Service Cloud instance.
+     */
     @InputImport(name="host", required=true)
     private final Input<Object> host;
 
@@ -57,6 +75,9 @@ public final class OracleServiceCloudLinkedServiceArgs extends io.pulumi.resourc
         return this.host;
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -64,6 +85,9 @@ public final class OracleServiceCloudLinkedServiceArgs extends io.pulumi.resourc
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * The password corresponding to the user name that you provided in the username key.
+     */
     @InputImport(name="password", required=true)
     private final Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
@@ -71,6 +95,10 @@ public final class OracleServiceCloudLinkedServiceArgs extends io.pulumi.resourc
         return this.password;
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'OracleServiceCloud'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -78,6 +106,9 @@ public final class OracleServiceCloudLinkedServiceArgs extends io.pulumi.resourc
         return this.type;
     }
 
+    /**
+     * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="useEncryptedEndpoints")
     private final @Nullable Input<Object> useEncryptedEndpoints;
 
@@ -85,6 +116,9 @@ public final class OracleServiceCloudLinkedServiceArgs extends io.pulumi.resourc
         return this.useEncryptedEndpoints == null ? Input.empty() : this.useEncryptedEndpoints;
     }
 
+    /**
+     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="useHostVerification")
     private final @Nullable Input<Object> useHostVerification;
 
@@ -92,6 +126,9 @@ public final class OracleServiceCloudLinkedServiceArgs extends io.pulumi.resourc
         return this.useHostVerification == null ? Input.empty() : this.useHostVerification;
     }
 
+    /**
+     * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="usePeerVerification")
     private final @Nullable Input<Object> usePeerVerification;
 
@@ -99,6 +136,9 @@ public final class OracleServiceCloudLinkedServiceArgs extends io.pulumi.resourc
         return this.usePeerVerification == null ? Input.empty() : this.usePeerVerification;
     }
 
+    /**
+     * The user name that you use to access Oracle Service Cloud server.
+     */
     @InputImport(name="username", required=true)
     private final Input<Object> username;
 

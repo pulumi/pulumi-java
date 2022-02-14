@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class TableGetPropertiesResponseResource extends io.pulumi.resources.InvokeArgs {
 
     public static final TableGetPropertiesResponseResource Empty = new TableGetPropertiesResponseResource();
 
+    /**
+     * A system generated property representing the resource etag required for optimistic concurrency control.
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -20,6 +26,9 @@ public final class TableGetPropertiesResponseResource extends io.pulumi.resource
         return this.etag;
     }
 
+    /**
+     * Name of the Cosmos DB table
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -27,6 +36,9 @@ public final class TableGetPropertiesResponseResource extends io.pulumi.resource
         return this.id;
     }
 
+    /**
+     * A system generated property. A unique identifier.
+     */
     @InputImport(name="rid", required=true)
     private final String rid;
 
@@ -34,6 +46,9 @@ public final class TableGetPropertiesResponseResource extends io.pulumi.resource
         return this.rid;
     }
 
+    /**
+     * A system generated property that denotes the last updated timestamp of the resource.
+     */
     @InputImport(name="ts", required=true)
     private final Double ts;
 

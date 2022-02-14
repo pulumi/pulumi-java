@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetDedicatedHsmArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDedicatedHsmArgs Empty = new GetDedicatedHsmArgs();
 
+    /**
+     * The name of the dedicated HSM.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class GetDedicatedHsmArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The name of the Resource Group to which the dedicated hsm belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

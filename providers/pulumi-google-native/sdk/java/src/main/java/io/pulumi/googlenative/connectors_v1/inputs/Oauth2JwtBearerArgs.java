@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Parameters to support JSON Web Token (JWT) Profile for Oauth 2.0 Authorization Grant based authentication. See https://tools.ietf.org/html/rfc7523 for more details.
+ */
 public final class Oauth2JwtBearerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final Oauth2JwtBearerArgs Empty = new Oauth2JwtBearerArgs();
 
+    /**
+     * Secret version reference containing a PKCS#8 PEM-encoded private key associated with the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer authorization grant. Specified in the form as: `projects//{@literal /}secrets//{@literal /}versions/*`.
+     */
     @InputImport(name="clientKey")
     private final @Nullable Input<SecretArgs> clientKey;
 
@@ -22,6 +28,9 @@ public final class Oauth2JwtBearerArgs extends io.pulumi.resources.ResourceArgs 
         return this.clientKey == null ? Input.empty() : this.clientKey;
     }
 
+    /**
+     * JwtClaims providers fields to generate the token.
+     */
     @InputImport(name="jwtClaims")
     private final @Nullable Input<JwtClaimsArgs> jwtClaims;
 

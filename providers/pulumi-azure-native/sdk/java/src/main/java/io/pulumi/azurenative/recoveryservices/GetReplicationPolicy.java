@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReplicationPolicy {
+/**
+ * Protection profile details.
+API Version: 2018-07-10.
+ *
+ * Protection profile details.
+ */
     public static CompletableFuture<GetReplicationPolicyResult> invokeAsync(GetReplicationPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getReplicationPolicy", TypeShape.of(GetReplicationPolicyResult.class), args == null ? GetReplicationPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

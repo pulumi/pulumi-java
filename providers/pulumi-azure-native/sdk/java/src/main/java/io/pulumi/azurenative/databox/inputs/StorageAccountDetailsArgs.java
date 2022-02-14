@@ -10,10 +10,17 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details for the storage account.
+ */
 public final class StorageAccountDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageAccountDetailsArgs Empty = new StorageAccountDetailsArgs();
 
+    /**
+     * Account Type of the data to be transferred.
+Expected value is 'StorageAccount'.
+     */
     @InputImport(name="dataAccountType", required=true)
     private final Input<String> dataAccountType;
 
@@ -21,6 +28,9 @@ public final class StorageAccountDetailsArgs extends io.pulumi.resources.Resourc
         return this.dataAccountType;
     }
 
+    /**
+     * Password for all the shares to be created on the device. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+     */
     @InputImport(name="sharePassword")
     private final @Nullable Input<String> sharePassword;
 
@@ -28,6 +38,9 @@ public final class StorageAccountDetailsArgs extends io.pulumi.resources.Resourc
         return this.sharePassword == null ? Input.empty() : this.sharePassword;
     }
 
+    /**
+     * Storage Account Resource Id.
+     */
     @InputImport(name="storageAccountId", required=true)
     private final Input<String> storageAccountId;
 

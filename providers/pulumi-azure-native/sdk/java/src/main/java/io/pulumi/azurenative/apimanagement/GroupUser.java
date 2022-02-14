@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.apimanagement.GroupUserArgs;
 import io.pulumi.azurenative.apimanagement.outputs.GroupContractPropertiesResponse;
 import io.pulumi.azurenative.apimanagement.outputs.UserIdentityContractResponse;
 import io.pulumi.core.Alias;
@@ -16,69 +15,228 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * User details.
+API Version: 2020-12-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### ApiManagementCreateGroupUser
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var groupUser = new AzureNative.ApiManagement.GroupUser("groupUser", new AzureNative.ApiManagement.GroupUserArgs
+        {
+            GroupId = "tempgroup",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            UserId = "59307d350af58404d8a26300",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := apimanagement.NewGroupUser(ctx, "groupUser", &apimanagement.GroupUserArgs{
+			GroupId:           pulumi.String("tempgroup"),
+			ResourceGroupName: pulumi.String("rg1"),
+			ServiceName:       pulumi.String("apimService1"),
+			UserId:            pulumi.String("59307d350af58404d8a26300"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const groupUser = new azure_native.apimanagement.GroupUser("groupUser", {
+    groupId: "tempgroup",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    userId: "59307d350af58404d8a26300",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+group_user = azure_native.apimanagement.GroupUser("groupUser",
+    group_id="tempgroup",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    user_id="59307d350af58404d8a26300")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:apimanagement:GroupUser 59307d350af58404d8a26300 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/59307d350af58404d8a26300 
+```
+
+ */
 @ResourceType(type="azure-native:apimanagement:GroupUser")
 public class GroupUser extends io.pulumi.resources.CustomResource {
+    /**
+     * Email address.
+     */
     @OutputExport(name="email", type=String.class, parameters={})
     private Output</* @Nullable */ String> email;
 
+    /**
+     * @return Email address.
+     */
     public Output</* @Nullable */ String> getEmail() {
         return this.email;
     }
+    /**
+     * First name.
+     */
     @OutputExport(name="firstName", type=String.class, parameters={})
     private Output</* @Nullable */ String> firstName;
 
+    /**
+     * @return First name.
+     */
     public Output</* @Nullable */ String> getFirstName() {
         return this.firstName;
     }
+    /**
+     * Collection of groups user is part of.
+     */
     @OutputExport(name="groups", type=List.class, parameters={GroupContractPropertiesResponse.class})
     private Output<List<GroupContractPropertiesResponse>> groups;
 
+    /**
+     * @return Collection of groups user is part of.
+     */
     public Output<List<GroupContractPropertiesResponse>> getGroups() {
         return this.groups;
     }
+    /**
+     * Collection of user identities.
+     */
     @OutputExport(name="identities", type=List.class, parameters={UserIdentityContractResponse.class})
     private Output</* @Nullable */ List<UserIdentityContractResponse>> identities;
 
+    /**
+     * @return Collection of user identities.
+     */
     public Output</* @Nullable */ List<UserIdentityContractResponse>> getIdentities() {
         return this.identities;
     }
+    /**
+     * Last name.
+     */
     @OutputExport(name="lastName", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastName;
 
+    /**
+     * @return Last name.
+     */
     public Output</* @Nullable */ String> getLastName() {
         return this.lastName;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Optional note about a user set by the administrator.
+     */
     @OutputExport(name="note", type=String.class, parameters={})
     private Output</* @Nullable */ String> note;
 
+    /**
+     * @return Optional note about a user set by the administrator.
+     */
     public Output</* @Nullable */ String> getNote() {
         return this.note;
     }
+    /**
+     * Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+
+     */
     @OutputExport(name="registrationDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> registrationDate;
 
+    /**
+     * @return Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+
+     */
     public Output</* @Nullable */ String> getRegistrationDate() {
         return this.registrationDate;
     }
+    /**
+     * Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
+    /**
+     * @return Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
+     */
     public Output</* @Nullable */ String> getState() {
         return this.state;
     }
+    /**
+     * Resource type for API Management resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type for API Management resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public GroupUser(String name, GroupUserArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:GroupUser", name, args == null ? GroupUserArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -107,6 +265,14 @@ public class GroupUser extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static GroupUser get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GroupUser(name, id, options);
     }

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes one input parameter of a function.
+ */
 public final class FunctionInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FunctionInputArgs Empty = new FunctionInputArgs();
 
+    /**
+     * The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx
+     */
     @InputImport(name="dataType")
     private final @Nullable Input<String> dataType;
 
@@ -22,6 +28,9 @@ public final class FunctionInputArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataType == null ? Input.empty() : this.dataType;
     }
 
+    /**
+     * A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.
+     */
     @InputImport(name="isConfigurationParameter")
     private final @Nullable Input<Boolean> isConfigurationParameter;
 

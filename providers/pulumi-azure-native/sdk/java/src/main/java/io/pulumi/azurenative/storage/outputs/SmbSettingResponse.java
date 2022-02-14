@@ -12,10 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SmbSettingResponse {
+/**
+ * SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter ';'.
+ */
     private final @Nullable String authenticationMethods;
+/**
+ * SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter ';'.
+ */
     private final @Nullable String channelEncryption;
+/**
+ * Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter ';'
+ */
     private final @Nullable String kerberosTicketEncryption;
+/**
+ * Multichannel setting. Applies to Premium FileStorage only.
+ */
     private final @Nullable MultichannelResponse multichannel;
+/**
+ * SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter ';'.
+ */
     private final @Nullable String versions;
 
     @OutputCustomType.Constructor({"authenticationMethods","channelEncryption","kerberosTicketEncryption","multichannel","versions"})
@@ -32,18 +47,33 @@ public final class SmbSettingResponse {
         this.versions = versions;
     }
 
+/**
+ * SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter ';'.
+ */
     public Optional<String> getAuthenticationMethods() {
         return Optional.ofNullable(this.authenticationMethods);
     }
+/**
+ * SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter ';'.
+ */
     public Optional<String> getChannelEncryption() {
         return Optional.ofNullable(this.channelEncryption);
     }
+/**
+ * Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter ';'
+ */
     public Optional<String> getKerberosTicketEncryption() {
         return Optional.ofNullable(this.kerberosTicketEncryption);
     }
+/**
+ * Multichannel setting. Applies to Premium FileStorage only.
+ */
     public Optional<MultichannelResponse> getMultichannel() {
         return Optional.ofNullable(this.multichannel);
     }
+/**
+ * SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter ';'.
+ */
     public Optional<String> getVersions() {
         return Optional.ofNullable(this.versions);
     }

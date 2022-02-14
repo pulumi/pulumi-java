@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ClusteringResponse {
+/**
+ * [Repeated] One or more fields on which data should be clustered. Only top-level, non-repeated, simple-type fields are supported. When you cluster a table using multiple columns, the order of columns you specify is important. The order of the specified columns determines the sort order of the data.
+ */
     private final List<String> fields;
 
     @OutputCustomType.Constructor({"fields"})
@@ -17,6 +20,9 @@ public final class ClusteringResponse {
         this.fields = Objects.requireNonNull(fields);
     }
 
+/**
+ * [Repeated] One or more fields on which data should be clustered. Only top-level, non-repeated, simple-type fields are supported. When you cluster a table using multiple columns, the order of columns you specify is important. The order of the specified columns determines the sort order of the data.
+ */
     public List<String> getFields() {
         return this.fields;
     }

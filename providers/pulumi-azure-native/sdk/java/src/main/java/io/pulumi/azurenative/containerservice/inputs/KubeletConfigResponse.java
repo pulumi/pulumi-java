@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Kubelet configurations of agent nodes.
+ */
 public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KubeletConfigResponse Empty = new KubeletConfigResponse();
 
+    /**
+     * Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).
+     */
     @InputImport(name="allowedUnsafeSysctls")
     private final @Nullable List<String> allowedUnsafeSysctls;
 
@@ -24,6 +30,9 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.allowedUnsafeSysctls == null ? List.of() : this.allowedUnsafeSysctls;
     }
 
+    /**
+     * The maximum number of container log files that can be present for a container. The number must be ≥ 2.
+     */
     @InputImport(name="containerLogMaxFiles")
     private final @Nullable Integer containerLogMaxFiles;
 
@@ -31,6 +40,9 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.containerLogMaxFiles == null ? Optional.empty() : Optional.ofNullable(this.containerLogMaxFiles);
     }
 
+    /**
+     * The maximum size (e.g. 10Mi) of container log file before it is rotated.
+     */
     @InputImport(name="containerLogMaxSizeMB")
     private final @Nullable Integer containerLogMaxSizeMB;
 
@@ -38,6 +50,9 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.containerLogMaxSizeMB == null ? Optional.empty() : Optional.ofNullable(this.containerLogMaxSizeMB);
     }
 
+    /**
+     * Enable CPU CFS quota enforcement for containers that specify CPU limits.
+     */
     @InputImport(name="cpuCfsQuota")
     private final @Nullable Boolean cpuCfsQuota;
 
@@ -45,6 +60,9 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.cpuCfsQuota == null ? Optional.empty() : Optional.ofNullable(this.cpuCfsQuota);
     }
 
+    /**
+     * Sets CPU CFS quota period value.
+     */
     @InputImport(name="cpuCfsQuotaPeriod")
     private final @Nullable String cpuCfsQuotaPeriod;
 
@@ -52,6 +70,9 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.cpuCfsQuotaPeriod == null ? Optional.empty() : Optional.ofNullable(this.cpuCfsQuotaPeriod);
     }
 
+    /**
+     * CPU Manager policy to use.
+     */
     @InputImport(name="cpuManagerPolicy")
     private final @Nullable String cpuManagerPolicy;
 
@@ -59,6 +80,9 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.cpuManagerPolicy == null ? Optional.empty() : Optional.ofNullable(this.cpuManagerPolicy);
     }
 
+    /**
+     * If set to true it will make the Kubelet fail to start if swap is enabled on the node.
+     */
     @InputImport(name="failSwapOn")
     private final @Nullable Boolean failSwapOn;
 
@@ -66,6 +90,9 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.failSwapOn == null ? Optional.empty() : Optional.ofNullable(this.failSwapOn);
     }
 
+    /**
+     * The percent of disk usage after which image garbage collection is always run.
+     */
     @InputImport(name="imageGcHighThreshold")
     private final @Nullable Integer imageGcHighThreshold;
 
@@ -73,6 +100,9 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.imageGcHighThreshold == null ? Optional.empty() : Optional.ofNullable(this.imageGcHighThreshold);
     }
 
+    /**
+     * The percent of disk usage before which image garbage collection is never run.
+     */
     @InputImport(name="imageGcLowThreshold")
     private final @Nullable Integer imageGcLowThreshold;
 
@@ -80,6 +110,9 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.imageGcLowThreshold == null ? Optional.empty() : Optional.ofNullable(this.imageGcLowThreshold);
     }
 
+    /**
+     * The maximum number of processes per pod.
+     */
     @InputImport(name="podMaxPids")
     private final @Nullable Integer podMaxPids;
 
@@ -87,6 +120,9 @@ public final class KubeletConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.podMaxPids == null ? Optional.empty() : Optional.ofNullable(this.podMaxPids);
     }
 
+    /**
+     * Topology Manager policy to use.
+     */
     @InputImport(name="topologyManagerPolicy")
     private final @Nullable String topologyManagerPolicy;
 

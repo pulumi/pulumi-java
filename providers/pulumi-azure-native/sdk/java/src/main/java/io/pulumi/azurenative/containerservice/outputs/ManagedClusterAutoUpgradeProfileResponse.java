@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagedClusterAutoUpgradeProfileResponse {
+/**
+ * upgrade channel for auto upgrade.
+ */
     private final @Nullable String upgradeChannel;
 
     @OutputCustomType.Constructor({"upgradeChannel"})
@@ -18,6 +21,9 @@ public final class ManagedClusterAutoUpgradeProfileResponse {
         this.upgradeChannel = upgradeChannel;
     }
 
+/**
+ * upgrade channel for auto upgrade.
+ */
     public Optional<String> getUpgradeChannel() {
         return Optional.ofNullable(this.upgradeChannel);
     }

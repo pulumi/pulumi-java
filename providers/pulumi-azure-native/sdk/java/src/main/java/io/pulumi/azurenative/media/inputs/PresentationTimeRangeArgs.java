@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The presentation time range, this is asset related and not recommended for Account Filter.
+ */
 public final class PresentationTimeRangeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PresentationTimeRangeArgs Empty = new PresentationTimeRangeArgs();
 
+    /**
+     * The absolute end time boundary.
+     */
     @InputImport(name="endTimestamp")
     private final @Nullable Input<Double> endTimestamp;
 
@@ -22,6 +28,9 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
         return this.endTimestamp == null ? Input.empty() : this.endTimestamp;
     }
 
+    /**
+     * The indicator of forcing existing of end time stamp.
+     */
     @InputImport(name="forceEndTimestamp")
     private final @Nullable Input<Boolean> forceEndTimestamp;
 
@@ -29,6 +38,9 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
         return this.forceEndTimestamp == null ? Input.empty() : this.forceEndTimestamp;
     }
 
+    /**
+     * The relative to end right edge.
+     */
     @InputImport(name="liveBackoffDuration")
     private final @Nullable Input<Double> liveBackoffDuration;
 
@@ -36,6 +48,9 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
         return this.liveBackoffDuration == null ? Input.empty() : this.liveBackoffDuration;
     }
 
+    /**
+     * The relative to end sliding window.
+     */
     @InputImport(name="presentationWindowDuration")
     private final @Nullable Input<Double> presentationWindowDuration;
 
@@ -43,6 +58,9 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
         return this.presentationWindowDuration == null ? Input.empty() : this.presentationWindowDuration;
     }
 
+    /**
+     * The absolute start time boundary.
+     */
     @InputImport(name="startTimestamp")
     private final @Nullable Input<Double> startTimestamp;
 
@@ -50,6 +68,9 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
         return this.startTimestamp == null ? Input.empty() : this.startTimestamp;
     }
 
+    /**
+     * The time scale of time stamps.
+     */
     @InputImport(name="timescale")
     private final @Nullable Input<Double> timescale;
 

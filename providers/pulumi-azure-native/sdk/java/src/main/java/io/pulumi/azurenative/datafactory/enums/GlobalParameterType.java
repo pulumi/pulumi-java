@@ -8,13 +8,34 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Global Parameter type.
+ */
     @EnumType
     public enum GlobalParameterType {
+/**
+ * 
+ */
         Object("Object"),
+/**
+ * 
+ */
         String("String"),
+/**
+ * 
+ */
         Int("Int"),
+/**
+ * 
+ */
         Float("Float"),
+/**
+ * 
+ */
         Bool("Bool"),
+/**
+ * 
+ */
         Array("Array");
 
         private final String value;

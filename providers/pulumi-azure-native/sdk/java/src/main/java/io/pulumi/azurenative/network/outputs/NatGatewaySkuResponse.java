@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NatGatewaySkuResponse {
+/**
+ * Name of Nat Gateway SKU.
+ */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -18,6 +21,9 @@ public final class NatGatewaySkuResponse {
         this.name = name;
     }
 
+/**
+ * Name of Nat Gateway SKU.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

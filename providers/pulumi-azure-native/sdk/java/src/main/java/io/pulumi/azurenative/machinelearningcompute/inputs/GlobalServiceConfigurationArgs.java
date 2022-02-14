@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Global configuration for services in the cluster.
+ */
 public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GlobalServiceConfigurationArgs Empty = new GlobalServiceConfigurationArgs();
 
+    /**
+     * The auto-scale configuration
+     */
     @InputImport(name="autoScale")
     private final @Nullable Input<AutoScaleConfigurationArgs> autoScale;
 
@@ -24,6 +30,9 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
         return this.autoScale == null ? Input.empty() : this.autoScale;
     }
 
+    /**
+     * The configuration ETag for updates.
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -31,6 +40,9 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * Optional global authorization keys for all user services deployed in cluster. These are used if the service does not have auth keys.
+     */
     @InputImport(name="serviceAuth")
     private final @Nullable Input<ServiceAuthConfigurationArgs> serviceAuth;
 
@@ -38,6 +50,9 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
         return this.serviceAuth == null ? Input.empty() : this.serviceAuth;
     }
 
+    /**
+     * The SSL configuration properties
+     */
     @InputImport(name="ssl")
     private final @Nullable Input<SslConfigurationArgs> ssl;
 

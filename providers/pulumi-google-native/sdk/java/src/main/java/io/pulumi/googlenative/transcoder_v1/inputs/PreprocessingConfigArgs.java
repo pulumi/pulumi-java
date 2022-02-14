@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Preprocessing configurations.
+ */
 public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PreprocessingConfigArgs Empty = new PreprocessingConfigArgs();
 
+    /**
+     * Audio preprocessing configuration.
+     */
     @InputImport(name="audio")
     private final @Nullable Input<AudioArgs> audio;
 
@@ -26,6 +32,9 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
         return this.audio == null ? Input.empty() : this.audio;
     }
 
+    /**
+     * Color preprocessing configuration.
+     */
     @InputImport(name="color")
     private final @Nullable Input<ColorArgs> color;
 
@@ -33,6 +42,9 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
         return this.color == null ? Input.empty() : this.color;
     }
 
+    /**
+     * Specify the video cropping configuration.
+     */
     @InputImport(name="crop")
     private final @Nullable Input<CropArgs> crop;
 
@@ -40,6 +52,9 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
         return this.crop == null ? Input.empty() : this.crop;
     }
 
+    /**
+     * Deblock preprocessing configuration.
+     */
     @InputImport(name="deblock")
     private final @Nullable Input<DeblockArgs> deblock;
 
@@ -47,6 +62,9 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
         return this.deblock == null ? Input.empty() : this.deblock;
     }
 
+    /**
+     * Denoise preprocessing configuration.
+     */
     @InputImport(name="denoise")
     private final @Nullable Input<DenoiseArgs> denoise;
 
@@ -54,6 +72,9 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
         return this.denoise == null ? Input.empty() : this.denoise;
     }
 
+    /**
+     * Specify the video pad filter configuration.
+     */
     @InputImport(name="pad")
     private final @Nullable Input<PadArgs> pad;
 

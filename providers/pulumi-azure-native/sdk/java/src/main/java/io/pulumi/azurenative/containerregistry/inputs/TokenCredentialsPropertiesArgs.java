@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of the credentials that can be used for authenticating the token.
+ */
 public final class TokenCredentialsPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TokenCredentialsPropertiesArgs Empty = new TokenCredentialsPropertiesArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="certificates")
     private final @Nullable Input<List<TokenCertificateArgs>> certificates;
 
@@ -23,6 +29,9 @@ public final class TokenCredentialsPropertiesArgs extends io.pulumi.resources.Re
         return this.certificates == null ? Input.empty() : this.certificates;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="passwords")
     private final @Nullable Input<List<TokenPasswordArgs>> passwords;
 

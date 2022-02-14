@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LightHouseAuthorizationResponse {
+/**
+ * 
+ */
     private final String principalId;
+/**
+ * 
+ */
     private final String roleDefinitionId;
 
     @OutputCustomType.Constructor({"principalId","roleDefinitionId"})
@@ -20,9 +26,15 @@ public final class LightHouseAuthorizationResponse {
         this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
     }
 
+/**
+ * 
+ */
     public String getPrincipalId() {
         return this.principalId;
     }
+/**
+ * 
+ */
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
     }

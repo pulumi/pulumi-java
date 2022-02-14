@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Whether the test case passed in the agent environment.
+ */
     @EnumType
     public enum GoogleCloudDialogflowCxV3beta1TestCaseResultTestResult {
+/**
+ * Not specified. Should never be used.
+ */
         TestResultUnspecified("TEST_RESULT_UNSPECIFIED"),
+/**
+ * The test passed.
+ */
         Passed("PASSED"),
+/**
+ * The test did not pass.
+ */
         Failed("FAILED");
 
         private final String value;

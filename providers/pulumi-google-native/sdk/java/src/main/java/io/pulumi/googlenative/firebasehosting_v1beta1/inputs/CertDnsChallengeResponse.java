@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Represents a DNS certificate challenge.
+ */
 public final class CertDnsChallengeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CertDnsChallengeResponse Empty = new CertDnsChallengeResponse();
 
+    /**
+     * The domain name upon which the DNS challenge must be satisfied.
+     */
     @InputImport(name="domainName", required=true)
     private final String domainName;
 
@@ -19,6 +25,9 @@ public final class CertDnsChallengeResponse extends io.pulumi.resources.InvokeAr
         return this.domainName;
     }
 
+    /**
+     * The value that must be present as a TXT record on the domain name to satisfy the challenge.
+     */
     @InputImport(name="token", required=true)
     private final String token;
 

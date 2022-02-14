@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualNetworkRuleArgs Empty = new VirtualNetworkRuleArgs();
 
+    /**
+     * The name of the Data Lake Store account.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -21,6 +27,9 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
         return this.accountName;
     }
 
+    /**
+     * The name of the Azure resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -28,6 +37,9 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
+    /**
+     * The resource identifier for the subnet.
+     */
     @InputImport(name="subnetId", required=true)
     private final Input<String> subnetId;
 
@@ -35,6 +47,9 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
         return this.subnetId;
     }
 
+    /**
+     * The name of the virtual network rule to create or update.
+     */
     @InputImport(name="virtualNetworkRuleName")
     private final @Nullable Input<String> virtualNetworkRuleName;
 

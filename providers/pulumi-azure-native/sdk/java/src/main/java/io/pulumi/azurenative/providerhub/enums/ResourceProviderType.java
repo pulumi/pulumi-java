@@ -8,15 +8,42 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum ResourceProviderType {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         Internal("Internal"),
+/**
+ * 
+ */
         External("External"),
+/**
+ * 
+ */
         Hidden("Hidden"),
+/**
+ * 
+ */
         RegistrationFree("RegistrationFree"),
+/**
+ * 
+ */
         LegacyRegistrationRequired("LegacyRegistrationRequired"),
+/**
+ * 
+ */
         TenantOnly("TenantOnly"),
+/**
+ * 
+ */
         AuthorizationFree("AuthorizationFree");
 
         private final String value;

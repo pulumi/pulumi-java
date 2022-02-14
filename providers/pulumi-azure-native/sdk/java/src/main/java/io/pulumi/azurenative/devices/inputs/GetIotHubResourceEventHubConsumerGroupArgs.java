@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetIotHubResourceEventHubConsumerGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIotHubResourceEventHubConsumerGroupArgs Empty = new GetIotHubResourceEventHubConsumerGroupArgs();
 
+    /**
+     * The name of the Event Hub-compatible endpoint in the IoT hub.
+     */
     @InputImport(name="eventHubEndpointName", required=true)
     private final String eventHubEndpointName;
 
@@ -19,6 +25,9 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends io.pulumi.
         return this.eventHubEndpointName;
     }
 
+    /**
+     * The name of the consumer group to retrieve.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +35,9 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends io.pulumi.
         return this.name;
     }
 
+    /**
+     * The name of the resource group that contains the IoT hub.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,9 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends io.pulumi.
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the IoT hub.
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

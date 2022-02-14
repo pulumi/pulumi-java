@@ -8,17 +8,50 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.
+ */
     @EnumType
     public enum PolicyFactName {
+/**
+ * 
+ */
         UserOwnedLabVmCount("UserOwnedLabVmCount"),
+/**
+ * 
+ */
         UserOwnedLabPremiumVmCount("UserOwnedLabPremiumVmCount"),
+/**
+ * 
+ */
         LabVmCount("LabVmCount"),
+/**
+ * 
+ */
         LabPremiumVmCount("LabPremiumVmCount"),
+/**
+ * 
+ */
         LabVmSize("LabVmSize"),
+/**
+ * 
+ */
         GalleryImage("GalleryImage"),
+/**
+ * 
+ */
         UserOwnedLabVmCountInSubnet("UserOwnedLabVmCountInSubnet"),
+/**
+ * 
+ */
         LabTargetCost("LabTargetCost"),
+/**
+ * 
+ */
         EnvironmentTemplate("EnvironmentTemplate"),
+/**
+ * 
+ */
         ScheduleEditPermission("ScheduleEditPermission");
 
         private final String value;

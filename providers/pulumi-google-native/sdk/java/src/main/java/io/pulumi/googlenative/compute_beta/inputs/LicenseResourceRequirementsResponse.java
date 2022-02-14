@@ -8,10 +8,16 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class LicenseResourceRequirementsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LicenseResourceRequirementsResponse Empty = new LicenseResourceRequirementsResponse();
 
+    /**
+     * Minimum number of guest cpus required to use the Instance. Enforced at Instance creation and Instance start.
+     */
     @InputImport(name="minGuestCpuCount", required=true)
     private final Integer minGuestCpuCount;
 
@@ -19,6 +25,9 @@ public final class LicenseResourceRequirementsResponse extends io.pulumi.resourc
         return this.minGuestCpuCount;
     }
 
+    /**
+     * Minimum memory required to use the Instance. Enforced at Instance creation and Instance start.
+     */
     @InputImport(name="minMemoryMb", required=true)
     private final Integer minMemoryMb;
 

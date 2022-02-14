@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Catalog information for managed dedicated integration runtime.
+ */
 public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IntegrationRuntimeSsisCatalogInfoResponse Empty = new IntegrationRuntimeSsisCatalogInfoResponse();
 
+    /**
+     * The password of the administrator user account of the catalog database.
+     */
     @InputImport(name="catalogAdminPassword")
     private final @Nullable SecureStringResponse catalogAdminPassword;
 
@@ -22,6 +28,9 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
         return this.catalogAdminPassword == null ? Optional.empty() : Optional.ofNullable(this.catalogAdminPassword);
     }
 
+    /**
+     * The administrator user name of catalog database.
+     */
     @InputImport(name="catalogAdminUserName")
     private final @Nullable String catalogAdminUserName;
 
@@ -29,6 +38,9 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
         return this.catalogAdminUserName == null ? Optional.empty() : Optional.ofNullable(this.catalogAdminUserName);
     }
 
+    /**
+     * The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
+     */
     @InputImport(name="catalogPricingTier")
     private final @Nullable String catalogPricingTier;
 
@@ -36,6 +48,9 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
         return this.catalogPricingTier == null ? Optional.empty() : Optional.ofNullable(this.catalogPricingTier);
     }
 
+    /**
+     * The catalog database server URL.
+     */
     @InputImport(name="catalogServerEndpoint")
     private final @Nullable String catalogServerEndpoint;
 

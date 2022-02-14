@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * State of the Membership resource.
+ */
 public final class MembershipStateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MembershipStateResponse Empty = new MembershipStateResponse();
 
+    /**
+     * The current state of the Membership resource.
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -19,6 +25,9 @@ public final class MembershipStateResponse extends io.pulumi.resources.InvokeArg
         return this.code;
     }
 
+    /**
+     * This field is never set by the Hub Service.
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -26,6 +35,9 @@ public final class MembershipStateResponse extends io.pulumi.resources.InvokeArg
         return this.description;
     }
 
+    /**
+     * This field is never set by the Hub Service.
+     */
     @InputImport(name="updateTime", required=true)
     private final String updateTime;
 

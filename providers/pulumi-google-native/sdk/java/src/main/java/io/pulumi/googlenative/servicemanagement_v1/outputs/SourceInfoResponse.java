@@ -11,6 +11,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SourceInfoResponse {
+/**
+ * All files used during config generation.
+ */
     private final List<Map<String,String>> sourceFiles;
 
     @OutputCustomType.Constructor({"sourceFiles"})
@@ -18,6 +21,9 @@ public final class SourceInfoResponse {
         this.sourceFiles = Objects.requireNonNull(sourceFiles);
     }
 
+/**
+ * All files used during config generation.
+ */
     public List<Map<String,String>> getSourceFiles() {
         return this.sourceFiles;
     }

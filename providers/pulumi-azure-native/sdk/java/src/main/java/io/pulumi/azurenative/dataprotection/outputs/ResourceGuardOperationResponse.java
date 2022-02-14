@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourceGuardOperationResponse {
+/**
+ * Type of resource request.
+ */
     private final String requestResourceType;
+/**
+ * Name of the critical operation.
+ */
     private final String vaultCriticalOperation;
 
     @OutputCustomType.Constructor({"requestResourceType","vaultCriticalOperation"})
@@ -20,9 +26,15 @@ public final class ResourceGuardOperationResponse {
         this.vaultCriticalOperation = Objects.requireNonNull(vaultCriticalOperation);
     }
 
+/**
+ * Type of resource request.
+ */
     public String getRequestResourceType() {
         return this.requestResourceType;
     }
+/**
+ * Name of the critical operation.
+ */
     public String getVaultCriticalOperation() {
         return this.vaultCriticalOperation;
     }

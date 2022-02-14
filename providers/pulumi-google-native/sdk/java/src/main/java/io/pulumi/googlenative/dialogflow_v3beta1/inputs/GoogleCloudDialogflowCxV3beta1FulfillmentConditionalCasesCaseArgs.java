@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Each case has a Boolean condition. When it is evaluated to be True, the corresponding messages will be selected and evaluated recursively.
+ */
 public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs Empty = new GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs();
 
+    /**
+     * A list of case content.
+     */
     @InputImport(name="caseContent")
     private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs>> caseContent;
 
@@ -23,6 +29,9 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
         return this.caseContent == null ? Input.empty() : this.caseContent;
     }
 
+    /**
+     * The condition to activate and select this case. Empty means the condition is always true. The condition is evaluated against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
+     */
     @InputImport(name="condition")
     private final @Nullable Input<String> condition;
 

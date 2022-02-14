@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAlertPolicy {
+/**
+ * Gets a single alerting policy.
+ */
     public static CompletableFuture<GetAlertPolicyResult> invokeAsync(GetAlertPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:monitoring/v3:getAlertPolicy", TypeShape.of(GetAlertPolicyResult.class), args == null ? GetAlertPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Conditions in alert instance to be matched for a given action rule. Default value is all. Multiple values could be provided with comma separation.
+ */
 public final class ConditionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConditionsResponse Empty = new ConditionsResponse();
 
+    /**
+     * filter alerts by alert context (payload)
+     */
     @InputImport(name="alertContext")
     private final @Nullable ConditionResponse alertContext;
 
@@ -21,6 +27,9 @@ public final class ConditionsResponse extends io.pulumi.resources.InvokeArgs {
         return this.alertContext == null ? Optional.empty() : Optional.ofNullable(this.alertContext);
     }
 
+    /**
+     * filter alerts by alert rule id
+     */
     @InputImport(name="alertRuleId")
     private final @Nullable ConditionResponse alertRuleId;
 
@@ -28,6 +37,9 @@ public final class ConditionsResponse extends io.pulumi.resources.InvokeArgs {
         return this.alertRuleId == null ? Optional.empty() : Optional.ofNullable(this.alertRuleId);
     }
 
+    /**
+     * filter alerts by alert rule description
+     */
     @InputImport(name="description")
     private final @Nullable ConditionResponse description;
 
@@ -35,6 +47,9 @@ public final class ConditionsResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * filter alerts by monitor condition
+     */
     @InputImport(name="monitorCondition")
     private final @Nullable ConditionResponse monitorCondition;
 
@@ -42,6 +57,9 @@ public final class ConditionsResponse extends io.pulumi.resources.InvokeArgs {
         return this.monitorCondition == null ? Optional.empty() : Optional.ofNullable(this.monitorCondition);
     }
 
+    /**
+     * filter alerts by monitor service
+     */
     @InputImport(name="monitorService")
     private final @Nullable ConditionResponse monitorService;
 
@@ -49,6 +67,9 @@ public final class ConditionsResponse extends io.pulumi.resources.InvokeArgs {
         return this.monitorService == null ? Optional.empty() : Optional.ofNullable(this.monitorService);
     }
 
+    /**
+     * filter alerts by severity
+     */
     @InputImport(name="severity")
     private final @Nullable ConditionResponse severity;
 
@@ -56,6 +77,9 @@ public final class ConditionsResponse extends io.pulumi.resources.InvokeArgs {
         return this.severity == null ? Optional.empty() : Optional.ofNullable(this.severity);
     }
 
+    /**
+     * filter alerts by target resource type
+     */
     @InputImport(name="targetResourceType")
     private final @Nullable ConditionResponse targetResourceType;
 

@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Extension Properties.
+ */
 public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CloudServiceExtensionPropertiesArgs Empty = new CloudServiceExtensionPropertiesArgs();
 
+    /**
+     * Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.
+     */
     @InputImport(name="autoUpgradeMinorVersion")
     private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
 
@@ -24,6 +30,13 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
         return this.autoUpgradeMinorVersion == null ? Input.empty() : this.autoUpgradeMinorVersion;
     }
 
+    /**
+     * Tag to force apply the provided public and protected settings.
+Changing the tag value allows for re-running the extension without changing any of the public or protected settings.
+If forceUpdateTag is not changed, updates to public or protected settings would still be applied by the handler.
+If neither forceUpdateTag nor any of public or protected settings change, extension would flow to the role instance with the same sequence-number, and
+it is up to handler implementation whether to re-run it or not
+     */
     @InputImport(name="forceUpdateTag")
     private final @Nullable Input<String> forceUpdateTag;
 
@@ -31,6 +44,9 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
         return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
     }
 
+    /**
+     * Protected settings for the extension which are encrypted before sent to the role instance.
+     */
     @InputImport(name="protectedSettings")
     private final @Nullable Input<String> protectedSettings;
 
@@ -38,6 +54,9 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
         return this.protectedSettings == null ? Input.empty() : this.protectedSettings;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="protectedSettingsFromKeyVault")
     private final @Nullable Input<CloudServiceVaultAndSecretReferenceArgs> protectedSettingsFromKeyVault;
 
@@ -45,6 +64,9 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
         return this.protectedSettingsFromKeyVault == null ? Input.empty() : this.protectedSettingsFromKeyVault;
     }
 
+    /**
+     * The name of the extension handler publisher.
+     */
     @InputImport(name="publisher")
     private final @Nullable Input<String> publisher;
 
@@ -52,6 +74,9 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
         return this.publisher == null ? Input.empty() : this.publisher;
     }
 
+    /**
+     * Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.
+     */
     @InputImport(name="rolesAppliedTo")
     private final @Nullable Input<List<String>> rolesAppliedTo;
 
@@ -59,6 +84,9 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
         return this.rolesAppliedTo == null ? Input.empty() : this.rolesAppliedTo;
     }
 
+    /**
+     * Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.
+     */
     @InputImport(name="settings")
     private final @Nullable Input<String> settings;
 
@@ -66,6 +94,9 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
         return this.settings == null ? Input.empty() : this.settings;
     }
 
+    /**
+     * Specifies the type of the extension.
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 
@@ -73,6 +104,9 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.
+     */
     @InputImport(name="typeHandlerVersion")
     private final @Nullable Input<String> typeHandlerVersion;
 

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies configuration of a redis module
+ */
 public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModuleArgs Empty = new ModuleArgs();
 
+    /**
+     * Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.
+     */
     @InputImport(name="args")
     private final @Nullable Input<String> args;
 
@@ -21,6 +27,9 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.args == null ? Input.empty() : this.args;
     }
 
+    /**
+     * The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Redirect configuration of an application gateway.
+ */
 public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationGatewayRedirectConfigurationArgs Empty = new ApplicationGatewayRedirectConfigurationArgs();
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -26,6 +32,9 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Include path in the redirected url.
+     */
     @InputImport(name="includePath")
     private final @Nullable Input<Boolean> includePath;
 
@@ -33,6 +42,9 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
         return this.includePath == null ? Input.empty() : this.includePath;
     }
 
+    /**
+     * Include query string in the redirected url.
+     */
     @InputImport(name="includeQueryString")
     private final @Nullable Input<Boolean> includeQueryString;
 
@@ -40,6 +52,9 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
         return this.includeQueryString == null ? Input.empty() : this.includeQueryString;
     }
 
+    /**
+     * Name of the redirect configuration that is unique within an Application Gateway.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -47,6 +62,9 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Path rules specifying redirect configuration.
+     */
     @InputImport(name="pathRules")
     private final @Nullable Input<List<SubResourceArgs>> pathRules;
 
@@ -54,6 +72,9 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
         return this.pathRules == null ? Input.empty() : this.pathRules;
     }
 
+    /**
+     * HTTP redirection type.
+     */
     @InputImport(name="redirectType")
     private final @Nullable Input<Either<String,ApplicationGatewayRedirectType>> redirectType;
 
@@ -61,6 +82,9 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
         return this.redirectType == null ? Input.empty() : this.redirectType;
     }
 
+    /**
+     * Request routing specifying redirect configuration.
+     */
     @InputImport(name="requestRoutingRules")
     private final @Nullable Input<List<SubResourceArgs>> requestRoutingRules;
 
@@ -68,6 +92,9 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
         return this.requestRoutingRules == null ? Input.empty() : this.requestRoutingRules;
     }
 
+    /**
+     * Reference to a listener to redirect the request to.
+     */
     @InputImport(name="targetListener")
     private final @Nullable Input<SubResourceArgs> targetListener;
 
@@ -75,6 +102,9 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
         return this.targetListener == null ? Input.empty() : this.targetListener;
     }
 
+    /**
+     * Url to redirect the request to.
+     */
     @InputImport(name="targetUrl")
     private final @Nullable Input<String> targetUrl;
 
@@ -82,6 +112,9 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
         return this.targetUrl == null ? Input.empty() : this.targetUrl;
     }
 
+    /**
+     * Url path maps specifying default redirect configuration.
+     */
     @InputImport(name="urlPathMaps")
     private final @Nullable Input<List<SubResourceArgs>> urlPathMaps;
 

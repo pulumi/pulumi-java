@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The event request message sent to the service URI.
+ */
 public final class EventRequestMessageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EventRequestMessageResponse Empty = new EventRequestMessageResponse();
 
+    /**
+     * The content of the event request message.
+     */
     @InputImport(name="content")
     private final @Nullable EventContentResponse content;
 
@@ -23,6 +29,9 @@ public final class EventRequestMessageResponse extends io.pulumi.resources.Invok
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
     }
 
+    /**
+     * The headers of the event request message.
+     */
     @InputImport(name="headers")
     private final @Nullable Map<String,String> headers;
 
@@ -30,6 +39,9 @@ public final class EventRequestMessageResponse extends io.pulumi.resources.Invok
         return this.headers == null ? Map.of() : this.headers;
     }
 
+    /**
+     * The HTTP method used to send the event request message.
+     */
     @InputImport(name="method")
     private final @Nullable String method;
 
@@ -37,6 +49,9 @@ public final class EventRequestMessageResponse extends io.pulumi.resources.Invok
         return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
     }
 
+    /**
+     * The URI used to send the event request message.
+     */
     @InputImport(name="requestUri")
     private final @Nullable String requestUri;
 
@@ -44,6 +59,9 @@ public final class EventRequestMessageResponse extends io.pulumi.resources.Invok
         return this.requestUri == null ? Optional.empty() : Optional.ofNullable(this.requestUri);
     }
 
+    /**
+     * The HTTP message version.
+     */
     @InputImport(name="version")
     private final @Nullable String version;
 

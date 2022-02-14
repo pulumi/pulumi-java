@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PublicIPAddressSkuResponse {
+/**
+ * Specify public IP sku name
+ */
     private final @Nullable String name;
+/**
+ * Specify public IP sku tier
+ */
     private final @Nullable String tier;
 
     @OutputCustomType.Constructor({"name","tier"})
@@ -22,9 +28,15 @@ public final class PublicIPAddressSkuResponse {
         this.tier = tier;
     }
 
+/**
+ * Specify public IP sku name
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * Specify public IP sku tier
+ */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }

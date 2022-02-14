@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Avro write settings.
+ */
 public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AvroWriteSettingsResponse Empty = new AvroWriteSettingsResponse();
 
+    /**
+     * Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="fileNamePrefix")
     private final @Nullable Object fileNamePrefix;
 
@@ -22,6 +28,9 @@ public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeA
         return this.fileNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.fileNamePrefix);
     }
 
+    /**
+     * Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="maxRowsPerFile")
     private final @Nullable Object maxRowsPerFile;
 
@@ -29,6 +38,9 @@ public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeA
         return this.maxRowsPerFile == null ? Optional.empty() : Optional.ofNullable(this.maxRowsPerFile);
     }
 
+    /**
+     * Top level record name in write result, which is required in AVRO spec.
+     */
     @InputImport(name="recordName")
     private final @Nullable String recordName;
 
@@ -36,6 +48,9 @@ public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeA
         return this.recordName == null ? Optional.empty() : Optional.ofNullable(this.recordName);
     }
 
+    /**
+     * Record namespace in the write result.
+     */
     @InputImport(name="recordNamespace")
     private final @Nullable String recordNamespace;
 
@@ -43,6 +58,10 @@ public final class AvroWriteSettingsResponse extends io.pulumi.resources.InvokeA
         return this.recordNamespace == null ? Optional.empty() : Optional.ofNullable(this.recordNamespace);
     }
 
+    /**
+     * The write setting type.
+Expected value is 'AvroWriteSettings'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

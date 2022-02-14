@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.batch;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.batch.CertificateArgs;
 import io.pulumi.azurenative.batch.outputs.DeleteCertificateErrorResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,81 +14,413 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Contains information about a certificate.
+API Version: 2021-01-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### CreateCertificate - Full
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var certificate = new AzureNative.Batch.Certificate("certificate", new AzureNative.Batch.CertificateArgs
+        {
+            AccountName = "sampleacct",
+            CertificateName = "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+            Data = "MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
+            Format = "Pfx",
+            Password = "<ExamplePassword>",
+            ResourceGroupName = "default-azurebatch-japaneast",
+            Thumbprint = "0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+            ThumbprintAlgorithm = "sha1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewCertificate(ctx, "certificate", &batch.CertificateArgs{
+			AccountName:         pulumi.String("sampleacct"),
+			CertificateName:     pulumi.String("sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e"),
+			Data:                pulumi.String("MIIJsgIBAzCCCW4GCSqGSIb3DQE..."),
+			Format:              "Pfx",
+			Password:            pulumi.String("<ExamplePassword>"),
+			ResourceGroupName:   pulumi.String("default-azurebatch-japaneast"),
+			Thumbprint:          pulumi.String("0a0e4f50d51beadeac1d35afc5116098e7902e6e"),
+			ThumbprintAlgorithm: pulumi.String("sha1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const certificate = new azure_native.batch.Certificate("certificate", {
+    accountName: "sampleacct",
+    certificateName: "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+    data: "MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
+    format: "Pfx",
+    password: "<ExamplePassword>",
+    resourceGroupName: "default-azurebatch-japaneast",
+    thumbprint: "0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+    thumbprintAlgorithm: "sha1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+certificate = azure_native.batch.Certificate("certificate",
+    account_name="sampleacct",
+    certificate_name="sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+    data="MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
+    format="Pfx",
+    password="<ExamplePassword>",
+    resource_group_name="default-azurebatch-japaneast",
+    thumbprint="0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+    thumbprint_algorithm="sha1")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### CreateCertificate - Minimal Cer
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var certificate = new AzureNative.Batch.Certificate("certificate", new AzureNative.Batch.CertificateArgs
+        {
+            AccountName = "sampleacct",
+            CertificateName = "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+            Data = "MIICrjCCAZagAwI...",
+            Format = "Cer",
+            ResourceGroupName = "default-azurebatch-japaneast",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewCertificate(ctx, "certificate", &batch.CertificateArgs{
+			AccountName:       pulumi.String("sampleacct"),
+			CertificateName:   pulumi.String("sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e"),
+			Data:              pulumi.String("MIICrjCCAZagAwI..."),
+			Format:            "Cer",
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const certificate = new azure_native.batch.Certificate("certificate", {
+    accountName: "sampleacct",
+    certificateName: "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+    data: "MIICrjCCAZagAwI...",
+    format: "Cer",
+    resourceGroupName: "default-azurebatch-japaneast",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+certificate = azure_native.batch.Certificate("certificate",
+    account_name="sampleacct",
+    certificate_name="sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+    data="MIICrjCCAZagAwI...",
+    format="Cer",
+    resource_group_name="default-azurebatch-japaneast")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### CreateCertificate - Minimal Pfx
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var certificate = new AzureNative.Batch.Certificate("certificate", new AzureNative.Batch.CertificateArgs
+        {
+            AccountName = "sampleacct",
+            CertificateName = "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+            Data = "MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
+            Password = "<ExamplePassword>",
+            ResourceGroupName = "default-azurebatch-japaneast",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	batch "github.com/pulumi/pulumi-azure-native/sdk/go/azure/batch"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewCertificate(ctx, "certificate", &batch.CertificateArgs{
+			AccountName:       pulumi.String("sampleacct"),
+			CertificateName:   pulumi.String("sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e"),
+			Data:              pulumi.String("MIIJsgIBAzCCCW4GCSqGSIb3DQE..."),
+			Password:          pulumi.String("<ExamplePassword>"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const certificate = new azure_native.batch.Certificate("certificate", {
+    accountName: "sampleacct",
+    certificateName: "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+    data: "MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
+    password: "<ExamplePassword>",
+    resourceGroupName: "default-azurebatch-japaneast",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+certificate = azure_native.batch.Certificate("certificate",
+    account_name="sampleacct",
+    certificate_name="sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
+    data="MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
+    password="<ExamplePassword>",
+    resource_group_name="default-azurebatch-japaneast")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:batch:Certificate sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e /subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/samplecct/certificates/sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e 
+```
+
+ */
 @ResourceType(type="azure-native:batch:Certificate")
 public class Certificate extends io.pulumi.resources.CustomResource {
+    /**
+     * This is only returned when the certificate provisioningState is 'Failed'.
+     */
     @OutputExport(name="deleteCertificateError", type=DeleteCertificateErrorResponse.class, parameters={})
     private Output<DeleteCertificateErrorResponse> deleteCertificateError;
 
+    /**
+     * @return This is only returned when the certificate provisioningState is 'Failed'.
+     */
     public Output<DeleteCertificateErrorResponse> getDeleteCertificateError() {
         return this.deleteCertificateError;
     }
+    /**
+     * The ETag of the resource, used for concurrency statements.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return The ETag of the resource, used for concurrency statements.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.
+     */
     @OutputExport(name="format", type=String.class, parameters={})
     private Output</* @Nullable */ String> format;
 
+    /**
+     * @return The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.
+     */
     public Output</* @Nullable */ String> getFormat() {
         return this.format;
     }
+    /**
+     * The name of the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The previous provisioned state of the resource
+     */
     @OutputExport(name="previousProvisioningState", type=String.class, parameters={})
     private Output<String> previousProvisioningState;
 
+    /**
+     * @return The previous provisioned state of the resource
+     */
     public Output<String> getPreviousProvisioningState() {
         return this.previousProvisioningState;
     }
+    /**
+     * 
+     */
     @OutputExport(name="previousProvisioningStateTransitionTime", type=String.class, parameters={})
     private Output<String> previousProvisioningStateTransitionTime;
 
     public Output<String> getPreviousProvisioningStateTransitionTime() {
         return this.previousProvisioningStateTransitionTime;
     }
+    /**
+     * 
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * 
+     */
     @OutputExport(name="provisioningStateTransitionTime", type=String.class, parameters={})
     private Output<String> provisioningStateTransitionTime;
 
     public Output<String> getProvisioningStateTransitionTime() {
         return this.provisioningStateTransitionTime;
     }
+    /**
+     * The public key of the certificate.
+     */
     @OutputExport(name="publicData", type=String.class, parameters={})
     private Output<String> publicData;
 
+    /**
+     * @return The public key of the certificate.
+     */
     public Output<String> getPublicData() {
         return this.publicData;
     }
+    /**
+     * This must match the thumbprint from the name.
+     */
     @OutputExport(name="thumbprint", type=String.class, parameters={})
     private Output</* @Nullable */ String> thumbprint;
 
+    /**
+     * @return This must match the thumbprint from the name.
+     */
     public Output</* @Nullable */ String> getThumbprint() {
         return this.thumbprint;
     }
+    /**
+     * This must match the first portion of the certificate name. Currently required to be 'SHA1'.
+     */
     @OutputExport(name="thumbprintAlgorithm", type=String.class, parameters={})
     private Output</* @Nullable */ String> thumbprintAlgorithm;
 
+    /**
+     * @return This must match the first portion of the certificate name. Currently required to be 'SHA1'.
+     */
     public Output</* @Nullable */ String> getThumbprintAlgorithm() {
         return this.thumbprintAlgorithm;
     }
+    /**
+     * The type of the resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Certificate(String name, CertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:batch:Certificate", name, args == null ? CertificateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -116,6 +447,14 @@ public class Certificate extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Certificate get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Certificate(name, id, options);
     }

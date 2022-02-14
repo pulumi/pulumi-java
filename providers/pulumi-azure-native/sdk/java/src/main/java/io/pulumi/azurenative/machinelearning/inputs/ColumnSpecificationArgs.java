@@ -16,10 +16,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Swagger 2.0 schema for a column within the data table representing a web service input or output. See Swagger specification: http://swagger.io/specification/
+ */
 public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ColumnSpecificationArgs Empty = new ColumnSpecificationArgs();
 
+    /**
+     * If the data type is categorical, this provides the list of accepted categories.
+     */
     @InputImport(name="enum")
     private final @Nullable Input<List<Object>> $enum;
 
@@ -27,6 +33,9 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
         return this.$enum == null ? Input.empty() : this.$enum;
     }
 
+    /**
+     * Additional format information for the data type.
+     */
     @InputImport(name="format")
     private final @Nullable Input<Either<String,ColumnFormat>> format;
 
@@ -34,6 +43,9 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
         return this.format == null ? Input.empty() : this.format;
     }
 
+    /**
+     * Data type of the column.
+     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,ColumnType>> type;
 
@@ -41,6 +53,9 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
         return this.type;
     }
 
+    /**
+     * Flag indicating if the type supports null values or not.
+     */
     @InputImport(name="xMsIsnullable")
     private final @Nullable Input<Boolean> xMsIsnullable;
 
@@ -48,6 +63,9 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
         return this.xMsIsnullable == null ? Input.empty() : this.xMsIsnullable;
     }
 
+    /**
+     * Flag indicating whether the categories are treated as an ordered set or not, if this is a categorical column.
+     */
     @InputImport(name="xMsIsordered")
     private final @Nullable Input<Boolean> xMsIsordered;
 

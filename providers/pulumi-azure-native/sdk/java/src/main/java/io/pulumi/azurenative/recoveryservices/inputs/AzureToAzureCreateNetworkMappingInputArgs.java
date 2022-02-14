@@ -10,10 +10,17 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Create network mappings input properties/behavior specific to Azure to Azure Network mapping.
+ */
 public final class AzureToAzureCreateNetworkMappingInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureToAzureCreateNetworkMappingInputArgs Empty = new AzureToAzureCreateNetworkMappingInputArgs();
 
+    /**
+     * The instance type.
+Expected value is 'AzureToAzure'.
+     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -21,6 +28,9 @@ public final class AzureToAzureCreateNetworkMappingInputArgs extends io.pulumi.r
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
+    /**
+     * The primary azure vnet Id.
+     */
     @InputImport(name="primaryNetworkId")
     private final @Nullable Input<String> primaryNetworkId;
 

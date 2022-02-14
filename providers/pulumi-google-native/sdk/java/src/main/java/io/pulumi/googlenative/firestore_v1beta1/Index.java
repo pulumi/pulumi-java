@@ -8,39 +8,71 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.firestore_v1beta1.IndexArgs;
 import io.pulumi.googlenative.firestore_v1beta1.outputs.GoogleFirestoreAdminV1beta1IndexFieldResponse;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Creates the specified index. A newly created index's initial state is `CREATING`. On completion of the returned google.longrunning.Operation, the state will be `READY`. If the index already exists, the call will return an `ALREADY_EXISTS` status. During creation, the process could result in an error, in which case the index will move to the `ERROR` state. The process can be recovered by fixing the data that caused the error, removing the index with delete, then re-creating the index with create. Indexes with a single field cannot be created.
+ */
 @ResourceType(type="google-native:firestore/v1beta1:Index")
 public class Index extends io.pulumi.resources.CustomResource {
+    /**
+     * The collection ID to which this index applies. Required.
+     */
     @OutputExport(name="collectionId", type=String.class, parameters={})
     private Output<String> collectionId;
 
+    /**
+     * @return The collection ID to which this index applies. Required.
+     */
     public Output<String> getCollectionId() {
         return this.collectionId;
     }
+    /**
+     * The fields to index.
+     */
     @OutputExport(name="fields", type=List.class, parameters={GoogleFirestoreAdminV1beta1IndexFieldResponse.class})
     private Output<List<GoogleFirestoreAdminV1beta1IndexFieldResponse>> fields;
 
+    /**
+     * @return The fields to index.
+     */
     public Output<List<GoogleFirestoreAdminV1beta1IndexFieldResponse>> getFields() {
         return this.fields;
     }
+    /**
+     * The resource name of the index. Output only.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name of the index. Output only.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The state of the index. Output only.
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return The state of the index. Output only.
+     */
     public Output<String> getState() {
         return this.state;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Index(String name, IndexArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:firestore/v1beta1:Index", name, args == null ? IndexArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -56,6 +88,14 @@ public class Index extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Index get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Index(name, id, options);
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetResourcefileArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetResourcefileArgs Empty = new GetResourcefileArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="environmentId", required=true)
     private final String environmentId;
 
@@ -19,6 +25,9 @@ public final class GetResourcefileArgs extends io.pulumi.resources.InvokeArgs {
         return this.environmentId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +35,9 @@ public final class GetResourcefileArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 
@@ -33,6 +45,9 @@ public final class GetResourcefileArgs extends io.pulumi.resources.InvokeArgs {
         return this.organizationId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

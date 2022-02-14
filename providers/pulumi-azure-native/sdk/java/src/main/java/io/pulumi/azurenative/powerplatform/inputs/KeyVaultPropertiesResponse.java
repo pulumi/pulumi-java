@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings concerning key vault encryption for a configuration store.
+ */
 public final class KeyVaultPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyVaultPropertiesResponse Empty = new KeyVaultPropertiesResponse();
 
+    /**
+     * Uri of KeyVault
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -22,6 +28,9 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Identity of the secret that includes name and version.
+     */
     @InputImport(name="key")
     private final @Nullable KeyPropertiesResponse key;
 

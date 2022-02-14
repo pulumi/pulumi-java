@@ -12,16 +12,49 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EdifactFramingSettingsResponse {
+/**
+ * The character encoding.
+ */
     private final @Nullable String characterEncoding;
+/**
+ * The EDIFACT frame setting characterSet.
+ */
     private final String characterSet;
+/**
+ * The component separator.
+ */
     private final Integer componentSeparator;
+/**
+ * The data element separator.
+ */
     private final Integer dataElementSeparator;
+/**
+ * The EDIFACT frame setting decimal indicator.
+ */
     private final String decimalPointIndicator;
+/**
+ * The protocol version.
+ */
     private final Integer protocolVersion;
+/**
+ * The release indicator.
+ */
     private final Integer releaseIndicator;
+/**
+ * The repetition separator.
+ */
     private final Integer repetitionSeparator;
+/**
+ * The segment terminator.
+ */
     private final Integer segmentTerminator;
+/**
+ * The EDIFACT frame setting segment terminator suffix.
+ */
     private final String segmentTerminatorSuffix;
+/**
+ * The service code list directory version.
+ */
     private final @Nullable String serviceCodeListDirectoryVersion;
 
     @OutputCustomType.Constructor({"characterEncoding","characterSet","componentSeparator","dataElementSeparator","decimalPointIndicator","protocolVersion","releaseIndicator","repetitionSeparator","segmentTerminator","segmentTerminatorSuffix","serviceCodeListDirectoryVersion"})
@@ -50,36 +83,69 @@ public final class EdifactFramingSettingsResponse {
         this.serviceCodeListDirectoryVersion = serviceCodeListDirectoryVersion;
     }
 
+/**
+ * The character encoding.
+ */
     public Optional<String> getCharacterEncoding() {
         return Optional.ofNullable(this.characterEncoding);
     }
+/**
+ * The EDIFACT frame setting characterSet.
+ */
     public String getCharacterSet() {
         return this.characterSet;
     }
+/**
+ * The component separator.
+ */
     public Integer getComponentSeparator() {
         return this.componentSeparator;
     }
+/**
+ * The data element separator.
+ */
     public Integer getDataElementSeparator() {
         return this.dataElementSeparator;
     }
+/**
+ * The EDIFACT frame setting decimal indicator.
+ */
     public String getDecimalPointIndicator() {
         return this.decimalPointIndicator;
     }
+/**
+ * The protocol version.
+ */
     public Integer getProtocolVersion() {
         return this.protocolVersion;
     }
+/**
+ * The release indicator.
+ */
     public Integer getReleaseIndicator() {
         return this.releaseIndicator;
     }
+/**
+ * The repetition separator.
+ */
     public Integer getRepetitionSeparator() {
         return this.repetitionSeparator;
     }
+/**
+ * The segment terminator.
+ */
     public Integer getSegmentTerminator() {
         return this.segmentTerminator;
     }
+/**
+ * The EDIFACT frame setting segment terminator suffix.
+ */
     public String getSegmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
+/**
+ * The service code list directory version.
+ */
     public Optional<String> getServiceCodeListDirectoryVersion() {
         return Optional.ofNullable(this.serviceCodeListDirectoryVersion);
     }

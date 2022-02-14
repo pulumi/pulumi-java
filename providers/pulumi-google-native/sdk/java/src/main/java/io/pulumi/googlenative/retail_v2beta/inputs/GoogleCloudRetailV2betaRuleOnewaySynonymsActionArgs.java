@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Maps a set of terms to a set of synonyms. Set of synonyms will be treated as synonyms of each query term only. `query_terms` will not be treated as synonyms of each other. Example: "sneakers" will use a synonym of "shoes". "shoes" will not use a synonym of "sneakers".
+ */
 public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs Empty = new GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs();
 
+    /**
+     * Will be [deprecated = true] post migration;
+     */
     @InputImport(name="onewayTerms")
     private final @Nullable Input<List<String>> onewayTerms;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs extends i
         return this.onewayTerms == null ? Input.empty() : this.onewayTerms;
     }
 
+    /**
+     * Terms from the search query. Will treat synonyms as their synonyms. Not themselves synonyms of the synonyms. Can specify up to 100 terms.
+     */
     @InputImport(name="queryTerms")
     private final @Nullable Input<List<String>> queryTerms;
 
@@ -29,6 +38,9 @@ public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs extends i
         return this.queryTerms == null ? Input.empty() : this.queryTerms;
     }
 
+    /**
+     * Defines a set of synonyms. Cannot contain duplicates. Can specify up to 100 synonyms.
+     */
     @InputImport(name="synonyms")
     private final @Nullable Input<List<String>> synonyms;
 

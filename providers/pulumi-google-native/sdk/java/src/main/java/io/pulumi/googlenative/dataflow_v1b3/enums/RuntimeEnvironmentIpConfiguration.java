@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Configuration for VM IPs.
+ */
     @EnumType
     public enum RuntimeEnvironmentIpConfiguration {
+/**
+ * The configuration is unknown, or unspecified.
+ */
         WorkerIpUnspecified("WORKER_IP_UNSPECIFIED"),
+/**
+ * Workers should have public IP addresses.
+ */
         WorkerIpPublic("WORKER_IP_PUBLIC"),
+/**
+ * Workers should have private IP addresses.
+ */
         WorkerIpPrivate("WORKER_IP_PRIVATE");
 
         private final String value;

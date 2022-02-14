@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetSensorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSensorArgs Empty = new GetSensorArgs();
 
+    /**
+     * Scope of the query (IoT Hub, /providers/Microsoft.Devices/iotHubs/myHub)
+     */
     @InputImport(name="scope", required=true)
     private final String scope;
 
@@ -19,6 +25,9 @@ public final class GetSensorArgs extends io.pulumi.resources.InvokeArgs {
         return this.scope;
     }
 
+    /**
+     * Name of the IoT sensor
+     */
     @InputImport(name="sensorName", required=true)
     private final String sensorName;
 

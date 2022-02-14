@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetNetworkEdgeSecurityServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNetworkEdgeSecurityServiceArgs Empty = new GetNetworkEdgeSecurityServiceArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="networkEdgeSecurityService", required=true)
     private final String networkEdgeSecurityService;
 
@@ -21,6 +27,9 @@ public final class GetNetworkEdgeSecurityServiceArgs extends io.pulumi.resources
         return this.networkEdgeSecurityService;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -28,6 +37,9 @@ public final class GetNetworkEdgeSecurityServiceArgs extends io.pulumi.resources
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="region", required=true)
     private final String region;
 

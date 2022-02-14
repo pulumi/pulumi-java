@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContentItemArgs Empty = new ContentItemArgs();
 
+    /**
+     * Content item identifier.
+     */
     @InputImport(name="contentItemId")
     private final @Nullable Input<String> contentItemId;
 
@@ -21,6 +27,9 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentItemId == null ? Input.empty() : this.contentItemId;
     }
 
+    /**
+     * Content type identifier.
+     */
     @InputImport(name="contentTypeId", required=true)
     private final Input<String> contentTypeId;
 
@@ -28,6 +37,9 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentTypeId;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -35,6 +47,9 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Apt patching is completed by executing `apt-get update && apt-get upgrade`. Additional options can be set to control how this is executed.
+ */
 public final class AptSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AptSettingsResponse Empty = new AptSettingsResponse();
 
+    /**
+     * List of packages to exclude from update. These packages will be excluded
+     */
     @InputImport(name="excludes", required=true)
     private final List<String> excludes;
 
@@ -20,6 +26,9 @@ public final class AptSettingsResponse extends io.pulumi.resources.InvokeArgs {
         return this.excludes;
     }
 
+    /**
+     * An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field cannot be specified with any other patch configuration fields.
+     */
     @InputImport(name="exclusivePackages", required=true)
     private final List<String> exclusivePackages;
 
@@ -27,6 +36,9 @@ public final class AptSettingsResponse extends io.pulumi.resources.InvokeArgs {
         return this.exclusivePackages;
     }
 
+    /**
+     * By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

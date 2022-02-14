@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Custom information type provided by the user. Used to find domain-specific sensitive information configurable to the data in question.
+ */
 public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2CustomInfoTypeArgs Empty = new GooglePrivacyDlpV2CustomInfoTypeArgs();
 
+    /**
+     * Set of detection rules to apply to all findings of this CustomInfoType. Rules are applied in order that they are specified. Not supported for the `surrogate_type` CustomInfoType.
+     */
     @InputImport(name="detectionRules")
     private final @Nullable Input<List<GooglePrivacyDlpV2DetectionRuleArgs>> detectionRules;
 
@@ -29,6 +35,9 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
         return this.detectionRules == null ? Input.empty() : this.detectionRules;
     }
 
+    /**
+     * A list of phrases to detect as a CustomInfoType.
+     */
     @InputImport(name="dictionary")
     private final @Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary;
 
@@ -36,6 +45,9 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
         return this.dictionary == null ? Input.empty() : this.dictionary;
     }
 
+    /**
+     * If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
+     */
     @InputImport(name="exclusionType")
     private final @Nullable Input<GooglePrivacyDlpV2CustomInfoTypeExclusionType> exclusionType;
 
@@ -43,6 +55,9 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
         return this.exclusionType == null ? Input.empty() : this.exclusionType;
     }
 
+    /**
+     * CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in `InspectContent.info_types` list then the name is treated as a custom info type.
+     */
     @InputImport(name="infoType")
     private final @Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> infoType;
 
@@ -50,6 +65,9 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
         return this.infoType == null ? Input.empty() : this.infoType;
     }
 
+    /**
+     * Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria specified by the rule. Defaults to `VERY_LIKELY` if not specified.
+     */
     @InputImport(name="likelihood")
     private final @Nullable Input<GooglePrivacyDlpV2CustomInfoTypeLikelihood> likelihood;
 
@@ -57,6 +75,9 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
         return this.likelihood == null ? Input.empty() : this.likelihood;
     }
 
+    /**
+     * Regular expression based CustomInfoType.
+     */
     @InputImport(name="regex")
     private final @Nullable Input<GooglePrivacyDlpV2RegexArgs> regex;
 
@@ -64,6 +85,9 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
         return this.regex == null ? Input.empty() : this.regex;
     }
 
+    /**
+     * Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently supported in `InspectContent`.
+     */
     @InputImport(name="storedType")
     private final @Nullable Input<GooglePrivacyDlpV2StoredTypeArgs> storedType;
 
@@ -71,6 +95,9 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
         return this.storedType == null ? Input.empty() : this.storedType;
     }
 
+    /**
+     * Message for detecting output from deidentification transformations that support reversing.
+     */
     @InputImport(name="surrogateType")
     private final @Nullable Input<GooglePrivacyDlpV2SurrogateTypeArgs> surrogateType;
 

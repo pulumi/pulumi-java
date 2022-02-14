@@ -15,14 +15,41 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetStorageInsightConfigResult {
+/**
+ * The names of the blob containers that the workspace should read
+ */
     private final @Nullable List<String> containers;
+/**
+ * The ETag of the storage insight.
+ */
     private final @Nullable String eTag;
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     private final String id;
+/**
+ * The name of the resource
+ */
     private final String name;
+/**
+ * The status of the storage insight
+ */
     private final StorageInsightStatusResponse status;
+/**
+ * The storage account connection details
+ */
     private final StorageAccountResponse storageAccount;
+/**
+ * The names of the Azure tables that the workspace should read
+ */
     private final @Nullable List<String> tables;
+/**
+ * Resource tags.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"containers","eTag","id","name","status","storageAccount","tables","tags","type"})
@@ -47,30 +74,57 @@ public final class GetStorageInsightConfigResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The names of the blob containers that the workspace should read
+ */
     public List<String> getContainers() {
         return this.containers == null ? List.of() : this.containers;
     }
+/**
+ * The ETag of the storage insight.
+ */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The name of the resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The status of the storage insight
+ */
     public StorageInsightStatusResponse getStatus() {
         return this.status;
     }
+/**
+ * The storage account connection details
+ */
     public StorageAccountResponse getStorageAccount() {
         return this.storageAccount;
     }
+/**
+ * The names of the Azure tables that the workspace should read
+ */
     public List<String> getTables() {
         return this.tables == null ? List.of() : this.tables;
     }
+/**
+ * Resource tags.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     public String getType() {
         return this.type;
     }

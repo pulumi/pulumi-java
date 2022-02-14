@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An event handler specifies an event that can be handled during a session. When the specified event happens, the following actions are taken in order: * If there is a `trigger_fulfillment` associated with the event, it will be called. * If there is a `target_page` associated with the event, the session will transition into the specified page. * If there is a `target_flow` associated with the event, the session will transition into the specified flow.
+ */
 public final class GoogleCloudDialogflowCxV3beta1EventHandlerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1EventHandlerResponse Empty = new GoogleCloudDialogflowCxV3beta1EventHandlerResponse();
 
+    /**
+     * The name of the event to handle.
+     */
     @InputImport(name="event", required=true)
     private final String event;
 
@@ -20,6 +26,9 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerResponse extends io
         return this.event;
     }
 
+    /**
+     * The unique identifier of this event handler.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -27,6 +36,9 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerResponse extends io
         return this.name;
     }
 
+    /**
+     * The target flow to transition to. Format: `projects//locations//agents//flows/`.
+     */
     @InputImport(name="targetFlow", required=true)
     private final String targetFlow;
 
@@ -34,6 +46,9 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerResponse extends io
         return this.targetFlow;
     }
 
+    /**
+     * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
+     */
     @InputImport(name="targetPage", required=true)
     private final String targetPage;
 
@@ -41,6 +56,9 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerResponse extends io
         return this.targetPage;
     }
 
+    /**
+     * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
+     */
     @InputImport(name="triggerFulfillment", required=true)
     private final GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment;
 

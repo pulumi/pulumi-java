@@ -13,10 +13,16 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2NumericalStatsConf
 import java.util.Objects;
 
 
+/**
+ * Privacy metric to compute for reidentification risk analysis.
+ */
 public final class GooglePrivacyDlpV2PrivacyMetricResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2PrivacyMetricResponse Empty = new GooglePrivacyDlpV2PrivacyMetricResponse();
 
+    /**
+     * Categorical stats
+     */
     @InputImport(name="categoricalStatsConfig", required=true)
     private final GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig;
 
@@ -24,6 +30,9 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends io.pulumi.res
         return this.categoricalStatsConfig;
     }
 
+    /**
+     * delta-presence
+     */
     @InputImport(name="deltaPresenceEstimationConfig", required=true)
     private final GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig;
 
@@ -31,6 +40,9 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends io.pulumi.res
         return this.deltaPresenceEstimationConfig;
     }
 
+    /**
+     * K-anonymity
+     */
     @InputImport(name="kAnonymityConfig", required=true)
     private final GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig;
 
@@ -38,6 +50,9 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends io.pulumi.res
         return this.kAnonymityConfig;
     }
 
+    /**
+     * k-map
+     */
     @InputImport(name="kMapEstimationConfig", required=true)
     private final GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig;
 
@@ -45,6 +60,9 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends io.pulumi.res
         return this.kMapEstimationConfig;
     }
 
+    /**
+     * l-diversity
+     */
     @InputImport(name="lDiversityConfig", required=true)
     private final GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig;
 
@@ -52,6 +70,9 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends io.pulumi.res
         return this.lDiversityConfig;
     }
 
+    /**
+     * Numerical stats
+     */
     @InputImport(name="numericalStatsConfig", required=true)
     private final GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig;
 

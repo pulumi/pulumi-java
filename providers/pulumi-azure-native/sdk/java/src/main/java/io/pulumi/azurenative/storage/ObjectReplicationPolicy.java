@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.storage.ObjectReplicationPolicyArgs;
 import io.pulumi.azurenative.storage.outputs.ObjectReplicationPolicyRuleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,51 +14,682 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The replication policy between two storage accounts. Multiple rules can be defined in one policy.
+API Version: 2021-02-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### StorageAccountCreateObjectReplicationPolicyOnDestination
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var objectReplicationPolicy = new AzureNative.Storage.ObjectReplicationPolicy("objectReplicationPolicy", new AzureNative.Storage.ObjectReplicationPolicyArgs
+        {
+            AccountName = "dst112",
+            DestinationAccount = "dst112",
+            ObjectReplicationPolicyId = "default",
+            ResourceGroupName = "res7687",
+            Rules = 
+            {
+                new AzureNative.Storage.Inputs.ObjectReplicationPolicyRuleArgs
+                {
+                    DestinationContainer = "dcont139",
+                    Filters = new AzureNative.Storage.Inputs.ObjectReplicationPolicyFilterArgs
+                    {
+                        PrefixMatch = 
+                        {
+                            "blobA",
+                            "blobB",
+                        },
+                    },
+                    SourceContainer = "scont139",
+                },
+            },
+            SourceAccount = "src1122",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storage.NewObjectReplicationPolicy(ctx, "objectReplicationPolicy", &storage.ObjectReplicationPolicyArgs{
+			AccountName:               pulumi.String("dst112"),
+			DestinationAccount:        pulumi.String("dst112"),
+			ObjectReplicationPolicyId: pulumi.String("default"),
+			ResourceGroupName:         pulumi.String("res7687"),
+			Rules: []storage.ObjectReplicationPolicyRuleArgs{
+				&storage.ObjectReplicationPolicyRuleArgs{
+					DestinationContainer: pulumi.String("dcont139"),
+					Filters: &storage.ObjectReplicationPolicyFilterArgs{
+						PrefixMatch: pulumi.StringArray{
+							pulumi.String("blobA"),
+							pulumi.String("blobB"),
+						},
+					},
+					SourceContainer: pulumi.String("scont139"),
+				},
+			},
+			SourceAccount: pulumi.String("src1122"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const objectReplicationPolicy = new azure_native.storage.ObjectReplicationPolicy("objectReplicationPolicy", {
+    accountName: "dst112",
+    destinationAccount: "dst112",
+    objectReplicationPolicyId: "default",
+    resourceGroupName: "res7687",
+    rules: [{
+        destinationContainer: "dcont139",
+        filters: {
+            prefixMatch: [
+                "blobA",
+                "blobB",
+            ],
+        },
+        sourceContainer: "scont139",
+    }],
+    sourceAccount: "src1122",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+object_replication_policy = azure_native.storage.ObjectReplicationPolicy("objectReplicationPolicy",
+    account_name="dst112",
+    destination_account="dst112",
+    object_replication_policy_id="default",
+    resource_group_name="res7687",
+    rules=[azure_native.storage.ObjectReplicationPolicyRuleArgs(
+        destination_container="dcont139",
+        filters=azure_native.storage.ObjectReplicationPolicyFilterArgs(
+            prefix_match=[
+                "blobA",
+                "blobB",
+            ],
+        ),
+        source_container="scont139",
+    )],
+    source_account="src1122")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### StorageAccountCreateObjectReplicationPolicyOnSource
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var objectReplicationPolicy = new AzureNative.Storage.ObjectReplicationPolicy("objectReplicationPolicy", new AzureNative.Storage.ObjectReplicationPolicyArgs
+        {
+            AccountName = "src1122",
+            DestinationAccount = "dst112",
+            ObjectReplicationPolicyId = "2a20bb73-5717-4635-985a-5d4cf777438f",
+            ResourceGroupName = "res7687",
+            Rules = 
+            {
+                new AzureNative.Storage.Inputs.ObjectReplicationPolicyRuleArgs
+                {
+                    DestinationContainer = "dcont139",
+                    Filters = new AzureNative.Storage.Inputs.ObjectReplicationPolicyFilterArgs
+                    {
+                        MinCreationTime = "2020-02-19T16:05:00Z",
+                        PrefixMatch = 
+                        {
+                            "blobA",
+                            "blobB",
+                        },
+                    },
+                    RuleId = "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
+                    SourceContainer = "scont139",
+                },
+            },
+            SourceAccount = "src1122",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storage.NewObjectReplicationPolicy(ctx, "objectReplicationPolicy", &storage.ObjectReplicationPolicyArgs{
+			AccountName:               pulumi.String("src1122"),
+			DestinationAccount:        pulumi.String("dst112"),
+			ObjectReplicationPolicyId: pulumi.String("2a20bb73-5717-4635-985a-5d4cf777438f"),
+			ResourceGroupName:         pulumi.String("res7687"),
+			Rules: []storage.ObjectReplicationPolicyRuleArgs{
+				&storage.ObjectReplicationPolicyRuleArgs{
+					DestinationContainer: pulumi.String("dcont139"),
+					Filters: &storage.ObjectReplicationPolicyFilterArgs{
+						MinCreationTime: pulumi.String("2020-02-19T16:05:00Z"),
+						PrefixMatch: pulumi.StringArray{
+							pulumi.String("blobA"),
+							pulumi.String("blobB"),
+						},
+					},
+					RuleId:          pulumi.String("d5d18a48-8801-4554-aeaa-74faf65f5ef9"),
+					SourceContainer: pulumi.String("scont139"),
+				},
+			},
+			SourceAccount: pulumi.String("src1122"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const objectReplicationPolicy = new azure_native.storage.ObjectReplicationPolicy("objectReplicationPolicy", {
+    accountName: "src1122",
+    destinationAccount: "dst112",
+    objectReplicationPolicyId: "2a20bb73-5717-4635-985a-5d4cf777438f",
+    resourceGroupName: "res7687",
+    rules: [{
+        destinationContainer: "dcont139",
+        filters: {
+            minCreationTime: "2020-02-19T16:05:00Z",
+            prefixMatch: [
+                "blobA",
+                "blobB",
+            ],
+        },
+        ruleId: "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
+        sourceContainer: "scont139",
+    }],
+    sourceAccount: "src1122",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+object_replication_policy = azure_native.storage.ObjectReplicationPolicy("objectReplicationPolicy",
+    account_name="src1122",
+    destination_account="dst112",
+    object_replication_policy_id="2a20bb73-5717-4635-985a-5d4cf777438f",
+    resource_group_name="res7687",
+    rules=[azure_native.storage.ObjectReplicationPolicyRuleArgs(
+        destination_container="dcont139",
+        filters=azure_native.storage.ObjectReplicationPolicyFilterArgs(
+            min_creation_time="2020-02-19T16:05:00Z",
+            prefix_match=[
+                "blobA",
+                "blobB",
+            ],
+        ),
+        rule_id="d5d18a48-8801-4554-aeaa-74faf65f5ef9",
+        source_container="scont139",
+    )],
+    source_account="src1122")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### StorageAccountUpdateObjectReplicationPolicyOnDestination
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var objectReplicationPolicy = new AzureNative.Storage.ObjectReplicationPolicy("objectReplicationPolicy", new AzureNative.Storage.ObjectReplicationPolicyArgs
+        {
+            AccountName = "dst112",
+            DestinationAccount = "dst112",
+            ObjectReplicationPolicyId = "2a20bb73-5717-4635-985a-5d4cf777438f",
+            ResourceGroupName = "res7687",
+            Rules = 
+            {
+                new AzureNative.Storage.Inputs.ObjectReplicationPolicyRuleArgs
+                {
+                    DestinationContainer = "dcont139",
+                    Filters = new AzureNative.Storage.Inputs.ObjectReplicationPolicyFilterArgs
+                    {
+                        PrefixMatch = 
+                        {
+                            "blobA",
+                            "blobB",
+                        },
+                    },
+                    RuleId = "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
+                    SourceContainer = "scont139",
+                },
+                new AzureNative.Storage.Inputs.ObjectReplicationPolicyRuleArgs
+                {
+                    DestinationContainer = "dcont179",
+                    SourceContainer = "scont179",
+                },
+            },
+            SourceAccount = "src1122",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storage.NewObjectReplicationPolicy(ctx, "objectReplicationPolicy", &storage.ObjectReplicationPolicyArgs{
+			AccountName:               pulumi.String("dst112"),
+			DestinationAccount:        pulumi.String("dst112"),
+			ObjectReplicationPolicyId: pulumi.String("2a20bb73-5717-4635-985a-5d4cf777438f"),
+			ResourceGroupName:         pulumi.String("res7687"),
+			Rules: []storage.ObjectReplicationPolicyRuleArgs{
+				&storage.ObjectReplicationPolicyRuleArgs{
+					DestinationContainer: pulumi.String("dcont139"),
+					Filters: &storage.ObjectReplicationPolicyFilterArgs{
+						PrefixMatch: pulumi.StringArray{
+							pulumi.String("blobA"),
+							pulumi.String("blobB"),
+						},
+					},
+					RuleId:          pulumi.String("d5d18a48-8801-4554-aeaa-74faf65f5ef9"),
+					SourceContainer: pulumi.String("scont139"),
+				},
+				&storage.ObjectReplicationPolicyRuleArgs{
+					DestinationContainer: pulumi.String("dcont179"),
+					SourceContainer:      pulumi.String("scont179"),
+				},
+			},
+			SourceAccount: pulumi.String("src1122"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const objectReplicationPolicy = new azure_native.storage.ObjectReplicationPolicy("objectReplicationPolicy", {
+    accountName: "dst112",
+    destinationAccount: "dst112",
+    objectReplicationPolicyId: "2a20bb73-5717-4635-985a-5d4cf777438f",
+    resourceGroupName: "res7687",
+    rules: [
+        {
+            destinationContainer: "dcont139",
+            filters: {
+                prefixMatch: [
+                    "blobA",
+                    "blobB",
+                ],
+            },
+            ruleId: "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
+            sourceContainer: "scont139",
+        },
+        {
+            destinationContainer: "dcont179",
+            sourceContainer: "scont179",
+        },
+    ],
+    sourceAccount: "src1122",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+object_replication_policy = azure_native.storage.ObjectReplicationPolicy("objectReplicationPolicy",
+    account_name="dst112",
+    destination_account="dst112",
+    object_replication_policy_id="2a20bb73-5717-4635-985a-5d4cf777438f",
+    resource_group_name="res7687",
+    rules=[
+        azure_native.storage.ObjectReplicationPolicyRuleArgs(
+            destination_container="dcont139",
+            filters=azure_native.storage.ObjectReplicationPolicyFilterArgs(
+                prefix_match=[
+                    "blobA",
+                    "blobB",
+                ],
+            ),
+            rule_id="d5d18a48-8801-4554-aeaa-74faf65f5ef9",
+            source_container="scont139",
+        ),
+        azure_native.storage.ObjectReplicationPolicyRuleArgs(
+            destination_container="dcont179",
+            source_container="scont179",
+        ),
+    ],
+    source_account="src1122")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### StorageAccountUpdateObjectReplicationPolicyOnSource
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var objectReplicationPolicy = new AzureNative.Storage.ObjectReplicationPolicy("objectReplicationPolicy", new AzureNative.Storage.ObjectReplicationPolicyArgs
+        {
+            AccountName = "src1122",
+            DestinationAccount = "dst112",
+            ObjectReplicationPolicyId = "2a20bb73-5717-4635-985a-5d4cf777438f",
+            ResourceGroupName = "res7687",
+            Rules = 
+            {
+                new AzureNative.Storage.Inputs.ObjectReplicationPolicyRuleArgs
+                {
+                    DestinationContainer = "dcont139",
+                    Filters = new AzureNative.Storage.Inputs.ObjectReplicationPolicyFilterArgs
+                    {
+                        PrefixMatch = 
+                        {
+                            "blobA",
+                            "blobB",
+                        },
+                    },
+                    RuleId = "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
+                    SourceContainer = "scont139",
+                },
+                new AzureNative.Storage.Inputs.ObjectReplicationPolicyRuleArgs
+                {
+                    DestinationContainer = "dcont179",
+                    RuleId = "cfbb4bc2-8b60-429f-b05a-d1e0942b33b2",
+                    SourceContainer = "scont179",
+                },
+            },
+            SourceAccount = "src1122",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	storage "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storage.NewObjectReplicationPolicy(ctx, "objectReplicationPolicy", &storage.ObjectReplicationPolicyArgs{
+			AccountName:               pulumi.String("src1122"),
+			DestinationAccount:        pulumi.String("dst112"),
+			ObjectReplicationPolicyId: pulumi.String("2a20bb73-5717-4635-985a-5d4cf777438f"),
+			ResourceGroupName:         pulumi.String("res7687"),
+			Rules: []storage.ObjectReplicationPolicyRuleArgs{
+				&storage.ObjectReplicationPolicyRuleArgs{
+					DestinationContainer: pulumi.String("dcont139"),
+					Filters: &storage.ObjectReplicationPolicyFilterArgs{
+						PrefixMatch: pulumi.StringArray{
+							pulumi.String("blobA"),
+							pulumi.String("blobB"),
+						},
+					},
+					RuleId:          pulumi.String("d5d18a48-8801-4554-aeaa-74faf65f5ef9"),
+					SourceContainer: pulumi.String("scont139"),
+				},
+				&storage.ObjectReplicationPolicyRuleArgs{
+					DestinationContainer: pulumi.String("dcont179"),
+					RuleId:               pulumi.String("cfbb4bc2-8b60-429f-b05a-d1e0942b33b2"),
+					SourceContainer:      pulumi.String("scont179"),
+				},
+			},
+			SourceAccount: pulumi.String("src1122"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const objectReplicationPolicy = new azure_native.storage.ObjectReplicationPolicy("objectReplicationPolicy", {
+    accountName: "src1122",
+    destinationAccount: "dst112",
+    objectReplicationPolicyId: "2a20bb73-5717-4635-985a-5d4cf777438f",
+    resourceGroupName: "res7687",
+    rules: [
+        {
+            destinationContainer: "dcont139",
+            filters: {
+                prefixMatch: [
+                    "blobA",
+                    "blobB",
+                ],
+            },
+            ruleId: "d5d18a48-8801-4554-aeaa-74faf65f5ef9",
+            sourceContainer: "scont139",
+        },
+        {
+            destinationContainer: "dcont179",
+            ruleId: "cfbb4bc2-8b60-429f-b05a-d1e0942b33b2",
+            sourceContainer: "scont179",
+        },
+    ],
+    sourceAccount: "src1122",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+object_replication_policy = azure_native.storage.ObjectReplicationPolicy("objectReplicationPolicy",
+    account_name="src1122",
+    destination_account="dst112",
+    object_replication_policy_id="2a20bb73-5717-4635-985a-5d4cf777438f",
+    resource_group_name="res7687",
+    rules=[
+        azure_native.storage.ObjectReplicationPolicyRuleArgs(
+            destination_container="dcont139",
+            filters=azure_native.storage.ObjectReplicationPolicyFilterArgs(
+                prefix_match=[
+                    "blobA",
+                    "blobB",
+                ],
+            ),
+            rule_id="d5d18a48-8801-4554-aeaa-74faf65f5ef9",
+            source_container="scont139",
+        ),
+        azure_native.storage.ObjectReplicationPolicyRuleArgs(
+            destination_container="dcont179",
+            rule_id="cfbb4bc2-8b60-429f-b05a-d1e0942b33b2",
+            source_container="scont179",
+        ),
+    ],
+    source_account="src1122")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:storage:ObjectReplicationPolicy 2a20bb73-5717-4635-985a-5d4cf777438f /subscriptions/{subscription-id}/resourceGroups/res7687/providers/Microsoft.Storage/storageAccounts/src1122/objectReplicationPolicies/2a20bb73-5717-4635-985a-5d4cf777438f 
+```
+
+ */
 @ResourceType(type="azure-native:storage:ObjectReplicationPolicy")
 public class ObjectReplicationPolicy extends io.pulumi.resources.CustomResource {
+    /**
+     * Required. Destination account name.
+     */
     @OutputExport(name="destinationAccount", type=String.class, parameters={})
     private Output<String> destinationAccount;
 
+    /**
+     * @return Required. Destination account name.
+     */
     public Output<String> getDestinationAccount() {
         return this.destinationAccount;
     }
+    /**
+     * Indicates when the policy is enabled on the source account.
+     */
     @OutputExport(name="enabledTime", type=String.class, parameters={})
     private Output<String> enabledTime;
 
+    /**
+     * @return Indicates when the policy is enabled on the source account.
+     */
     public Output<String> getEnabledTime() {
         return this.enabledTime;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * A unique id for object replication policy.
+     */
     @OutputExport(name="policyId", type=String.class, parameters={})
     private Output<String> policyId;
 
+    /**
+     * @return A unique id for object replication policy.
+     */
     public Output<String> getPolicyId() {
         return this.policyId;
     }
+    /**
+     * The storage account object replication rules.
+     */
     @OutputExport(name="rules", type=List.class, parameters={ObjectReplicationPolicyRuleResponse.class})
     private Output</* @Nullable */ List<ObjectReplicationPolicyRuleResponse>> rules;
 
+    /**
+     * @return The storage account object replication rules.
+     */
     public Output</* @Nullable */ List<ObjectReplicationPolicyRuleResponse>> getRules() {
         return this.rules;
     }
+    /**
+     * Required. Source account name.
+     */
     @OutputExport(name="sourceAccount", type=String.class, parameters={})
     private Output<String> sourceAccount;
 
+    /**
+     * @return Required. Source account name.
+     */
     public Output<String> getSourceAccount() {
         return this.sourceAccount;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ObjectReplicationPolicy(String name, ObjectReplicationPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storage:ObjectReplicationPolicy", name, args == null ? ObjectReplicationPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -84,6 +714,14 @@ public class ObjectReplicationPolicy extends io.pulumi.resources.CustomResource 
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ObjectReplicationPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ObjectReplicationPolicy(name, id, options);
     }

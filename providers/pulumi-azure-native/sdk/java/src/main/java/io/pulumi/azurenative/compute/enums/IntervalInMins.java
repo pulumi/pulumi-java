@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Interval value in minutes used to create LogAnalytics call rate logs.
+ */
     @EnumType
     public enum IntervalInMins {
+/**
+ * 
+ */
         ThreeMins("ThreeMins"),
+/**
+ * 
+ */
         FiveMins("FiveMins"),
+/**
+ * 
+ */
         ThirtyMins("ThirtyMins"),
+/**
+ * 
+ */
         SixtyMins("SixtyMins");
 
         private final String value;

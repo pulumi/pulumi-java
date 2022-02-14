@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListOrderDCAccessCodeArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListOrderDCAccessCodeArgs Empty = new ListOrderDCAccessCodeArgs();
 
+    /**
+     * The device name
+     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -19,6 +25,9 @@ public final class ListOrderDCAccessCodeArgs extends io.pulumi.resources.InvokeA
         return this.deviceName;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class InstanceFailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceFailoverGroupArgs Empty = new InstanceFailoverGroupArgs();
 
+    /**
+     * The name of the failover group.
+     */
     @InputImport(name="failoverGroupName")
     private final @Nullable Input<String> failoverGroupName;
 
@@ -26,6 +32,9 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
         return this.failoverGroupName == null ? Input.empty() : this.failoverGroupName;
     }
 
+    /**
+     * The name of the region where the resource is located.
+     */
     @InputImport(name="locationName", required=true)
     private final Input<String> locationName;
 
@@ -33,6 +42,9 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
         return this.locationName;
     }
 
+    /**
+     * List of managed instance pairs in the failover group.
+     */
     @InputImport(name="managedInstancePairs", required=true)
     private final Input<List<ManagedInstancePairInfoArgs>> managedInstancePairs;
 
@@ -40,6 +52,9 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
         return this.managedInstancePairs;
     }
 
+    /**
+     * Partner region information for the failover group.
+     */
     @InputImport(name="partnerRegions", required=true)
     private final Input<List<PartnerRegionInfoArgs>> partnerRegions;
 
@@ -47,6 +62,9 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
         return this.partnerRegions;
     }
 
+    /**
+     * Read-only endpoint of the failover group instance.
+     */
     @InputImport(name="readOnlyEndpoint")
     private final @Nullable Input<InstanceFailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint;
 
@@ -54,6 +72,9 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
         return this.readOnlyEndpoint == null ? Input.empty() : this.readOnlyEndpoint;
     }
 
+    /**
+     * Read-write endpoint of the failover group instance.
+     */
     @InputImport(name="readWriteEndpoint", required=true)
     private final Input<InstanceFailoverGroupReadWriteEndpointArgs> readWriteEndpoint;
 
@@ -61,6 +82,9 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
         return this.readWriteEndpoint;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

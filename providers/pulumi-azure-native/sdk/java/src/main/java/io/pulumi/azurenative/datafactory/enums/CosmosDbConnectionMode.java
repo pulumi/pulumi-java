@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The connection mode used to access CosmosDB account. Type: string (or Expression with resultType string).
+ */
     @EnumType
     public enum CosmosDbConnectionMode {
+/**
+ * 
+ */
         Gateway("Gateway"),
+/**
+ * 
+ */
         Direct("Direct");
 
         private final String value;

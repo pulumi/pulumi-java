@@ -8,28 +8,94 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Language in which the recipient will receive the notification
+ */
     @EnumType
     public enum CultureCode {
+/**
+ * 
+ */
         Enus("en-us"),
+/**
+ * 
+ */
         Jajp("ja-jp"),
+/**
+ * 
+ */
         Zhcn("zh-cn"),
+/**
+ * 
+ */
         Dede("de-de"),
+/**
+ * 
+ */
         Eses("es-es"),
+/**
+ * 
+ */
         Frfr("fr-fr"),
+/**
+ * 
+ */
         Itit("it-it"),
+/**
+ * 
+ */
         Kokr("ko-kr"),
+/**
+ * 
+ */
         Ptbr("pt-br"),
+/**
+ * 
+ */
         Ruru("ru-ru"),
+/**
+ * 
+ */
         Zhtw("zh-tw"),
+/**
+ * 
+ */
         Cscz("cs-cz"),
+/**
+ * 
+ */
         Plpl("pl-pl"),
+/**
+ * 
+ */
         Trtr("tr-tr"),
+/**
+ * 
+ */
         Dadk("da-dk"),
+/**
+ * 
+ */
         Engb("en-gb"),
+/**
+ * 
+ */
         Huhu("hu-hu"),
+/**
+ * 
+ */
         Nbno("nb-no"),
+/**
+ * 
+ */
         Nlnl("nl-nl"),
+/**
+ * 
+ */
         Ptpt("pt-pt"),
+/**
+ * 
+ */
         Svse("sv-se");
 
         private final String value;

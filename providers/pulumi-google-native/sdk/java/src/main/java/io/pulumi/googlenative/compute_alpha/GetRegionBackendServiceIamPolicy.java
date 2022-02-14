@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionBackendServiceIamPolicy {
+/**
+ * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+ */
     public static CompletableFuture<GetRegionBackendServiceIamPolicyResult> invokeAsync(GetRegionBackendServiceIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionBackendServiceIamPolicy", TypeShape.of(GetRegionBackendServiceIamPolicyResult.class), args == null ? GetRegionBackendServiceIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -16,15 +16,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAutoscaleSettingResult {
+/**
+ * the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.
+ */
     private final @Nullable Boolean enabled;
+/**
+ * Azure resource Id
+ */
     private final String id;
+/**
+ * Resource location
+ */
     private final String location;
+/**
+ * Azure resource name
+ */
     private final String name;
+/**
+ * the collection of notifications.
+ */
     private final @Nullable List<AutoscaleNotificationResponse> notifications;
+/**
+ * the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.
+ */
     private final List<AutoscaleProfileResponse> profiles;
+/**
+ * Resource tags
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * the location of the resource that the autoscale setting should be added to.
+ */
     private final @Nullable String targetResourceLocation;
+/**
+ * the resource identifier of the resource that the autoscale setting should be added to.
+ */
     private final @Nullable String targetResourceUri;
+/**
+ * Azure resource type
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"enabled","id","location","name","notifications","profiles","tags","targetResourceLocation","targetResourceUri","type"})
@@ -51,33 +81,63 @@ public final class GetAutoscaleSettingResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.
+ */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
+/**
+ * Azure resource Id
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource location
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * Azure resource name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * the collection of notifications.
+ */
     public List<AutoscaleNotificationResponse> getNotifications() {
         return this.notifications == null ? List.of() : this.notifications;
     }
+/**
+ * the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.
+ */
     public List<AutoscaleProfileResponse> getProfiles() {
         return this.profiles;
     }
+/**
+ * Resource tags
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * the location of the resource that the autoscale setting should be added to.
+ */
     public Optional<String> getTargetResourceLocation() {
         return Optional.ofNullable(this.targetResourceLocation);
     }
+/**
+ * the resource identifier of the resource that the autoscale setting should be added to.
+ */
     public Optional<String> getTargetResourceUri() {
         return Optional.ofNullable(this.targetResourceUri);
     }
+/**
+ * Azure resource type
+ */
     public String getType() {
         return this.type;
     }

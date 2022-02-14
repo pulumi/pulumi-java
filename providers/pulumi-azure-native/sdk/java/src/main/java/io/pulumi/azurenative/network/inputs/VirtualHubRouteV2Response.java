@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * VirtualHubRouteTableV2 route.
+ */
 public final class VirtualHubRouteV2Response extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualHubRouteV2Response Empty = new VirtualHubRouteV2Response();
 
+    /**
+     * The type of destinations.
+     */
     @InputImport(name="destinationType")
     private final @Nullable String destinationType;
 
@@ -22,6 +28,9 @@ public final class VirtualHubRouteV2Response extends io.pulumi.resources.InvokeA
         return this.destinationType == null ? Optional.empty() : Optional.ofNullable(this.destinationType);
     }
 
+    /**
+     * List of all destinations.
+     */
     @InputImport(name="destinations")
     private final @Nullable List<String> destinations;
 
@@ -29,6 +38,9 @@ public final class VirtualHubRouteV2Response extends io.pulumi.resources.InvokeA
         return this.destinations == null ? List.of() : this.destinations;
     }
 
+    /**
+     * The type of next hops.
+     */
     @InputImport(name="nextHopType")
     private final @Nullable String nextHopType;
 
@@ -36,6 +48,9 @@ public final class VirtualHubRouteV2Response extends io.pulumi.resources.InvokeA
         return this.nextHopType == null ? Optional.empty() : Optional.ofNullable(this.nextHopType);
     }
 
+    /**
+     * NextHops ip address.
+     */
     @InputImport(name="nextHops")
     private final @Nullable List<String> nextHops;
 

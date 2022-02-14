@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackupPolicy {
+/**
+ * Backup policy information
+API Version: 2020-12-01.
+ *
+ * Backup policy information
+ */
     public static CompletableFuture<GetBackupPolicyResult> invokeAsync(GetBackupPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:netapp:getBackupPolicy", TypeShape.of(GetBackupPolicyResult.class), args == null ? GetBackupPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

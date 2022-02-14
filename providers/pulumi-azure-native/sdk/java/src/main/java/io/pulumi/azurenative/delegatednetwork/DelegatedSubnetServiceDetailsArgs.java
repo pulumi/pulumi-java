@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DelegatedSubnetServiceDetailsArgs Empty = new DelegatedSubnetServiceDetailsArgs();
 
+    /**
+     * Properties of the controller.
+     */
     @InputImport(name="controllerDetails")
     private final @Nullable Input<ControllerDetailsArgs> controllerDetails;
 
@@ -24,6 +30,9 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
         return this.controllerDetails == null ? Input.empty() : this.controllerDetails;
     }
 
+    /**
+     * Location of the resource.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -31,6 +40,9 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -38,6 +50,9 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the resource. It must be a minimum of 3 characters, and a maximum of 63.
+     */
     @InputImport(name="resourceName")
     private final @Nullable Input<String> resourceName;
 
@@ -45,6 +60,9 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
         return this.resourceName == null ? Input.empty() : this.resourceName;
     }
 
+    /**
+     * subnet details
+     */
     @InputImport(name="subnetDetails")
     private final @Nullable Input<SubnetDetailsArgs> subnetDetails;
 
@@ -52,6 +70,9 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
         return this.subnetDetails == null ? Input.empty() : this.subnetDetails;
     }
 
+    /**
+     * The resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

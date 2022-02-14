@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOperationalizationCluster {
+/**
+ * Instance of an Azure ML Operationalization Cluster resource.
+API Version: 2017-08-01-preview.
+ *
+ * Instance of an Azure ML Operationalization Cluster resource.
+ */
     public static CompletableFuture<GetOperationalizationClusterResult> invokeAsync(GetOperationalizationClusterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningcompute:getOperationalizationCluster", TypeShape.of(GetOperationalizationClusterResult.class), args == null ? GetOperationalizationClusterArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApplicationPackage {
+/**
+ * An application package which represents a particular version of an application.
+API Version: 2021-01-01.
+ *
+ * An application package which represents a particular version of an application.
+ */
     public static CompletableFuture<GetApplicationPackageResult> invokeAsync(GetApplicationPackageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:batch:getApplicationPackage", TypeShape.of(GetApplicationPackageResult.class), args == null ? GetApplicationPackageArgs.Empty : args, Utilities.withVersion(options));
     }

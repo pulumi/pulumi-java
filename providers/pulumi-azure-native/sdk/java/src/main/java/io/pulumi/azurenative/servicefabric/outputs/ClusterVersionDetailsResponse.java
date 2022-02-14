@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ClusterVersionDetailsResponse {
+/**
+ * The Service Fabric runtime version of the cluster.
+ */
     private final @Nullable String codeVersion;
+/**
+ * Indicates if this version is for Windows or Linux operating system.
+ */
     private final @Nullable String environment;
+/**
+ * The date of expiry of support of the version.
+ */
     private final @Nullable String supportExpiryUtc;
 
     @OutputCustomType.Constructor({"codeVersion","environment","supportExpiryUtc"})
@@ -25,12 +34,21 @@ public final class ClusterVersionDetailsResponse {
         this.supportExpiryUtc = supportExpiryUtc;
     }
 
+/**
+ * The Service Fabric runtime version of the cluster.
+ */
     public Optional<String> getCodeVersion() {
         return Optional.ofNullable(this.codeVersion);
     }
+/**
+ * Indicates if this version is for Windows or Linux operating system.
+ */
     public Optional<String> getEnvironment() {
         return Optional.ofNullable(this.environment);
     }
+/**
+ * The date of expiry of support of the version.
+ */
     public Optional<String> getSupportExpiryUtc() {
         return Optional.ofNullable(this.supportExpiryUtc);
     }

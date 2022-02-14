@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Managed integration runtime, including managed elastic and managed dedicated integration runtimes.
+ */
 public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedIntegrationRuntimeResponse Empty = new ManagedIntegrationRuntimeResponse();
 
+    /**
+     * The compute resource for managed integration runtime.
+     */
     @InputImport(name="computeProperties")
     private final @Nullable IntegrationRuntimeComputePropertiesResponse computeProperties;
 
@@ -25,6 +31,9 @@ public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources
         return this.computeProperties == null ? Optional.empty() : Optional.ofNullable(this.computeProperties);
     }
 
+    /**
+     * The name of virtual network to which Azure-SSIS integration runtime will join
+     */
     @InputImport(name="customerVirtualNetwork")
     private final @Nullable IntegrationRuntimeCustomerVirtualNetworkResponse customerVirtualNetwork;
 
@@ -32,6 +41,9 @@ public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources
         return this.customerVirtualNetwork == null ? Optional.empty() : Optional.ofNullable(this.customerVirtualNetwork);
     }
 
+    /**
+     * Integration runtime description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -39,6 +51,9 @@ public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Managed Virtual Network reference.
+     */
     @InputImport(name="managedVirtualNetwork")
     private final @Nullable ManagedVirtualNetworkReferenceResponse managedVirtualNetwork;
 
@@ -46,6 +61,9 @@ public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources
         return this.managedVirtualNetwork == null ? Optional.empty() : Optional.ofNullable(this.managedVirtualNetwork);
     }
 
+    /**
+     * SSIS properties for managed integration runtime.
+     */
     @InputImport(name="ssisProperties")
     private final @Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties;
 
@@ -53,6 +71,9 @@ public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources
         return this.ssisProperties == null ? Optional.empty() : Optional.ofNullable(this.ssisProperties);
     }
 
+    /**
+     * Integration runtime state, only valid for managed dedicated integration runtime.
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -60,6 +81,10 @@ public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources
         return this.state;
     }
 
+    /**
+     * The type of integration runtime.
+Expected value is 'Managed'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

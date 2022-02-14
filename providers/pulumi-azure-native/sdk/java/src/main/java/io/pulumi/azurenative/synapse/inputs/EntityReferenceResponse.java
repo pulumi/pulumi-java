@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The entity reference.
+ */
 public final class EntityReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EntityReferenceResponse Empty = new EntityReferenceResponse();
 
+    /**
+     * The name of this referenced entity.
+     */
     @InputImport(name="referenceName")
     private final @Nullable String referenceName;
 
@@ -21,6 +27,9 @@ public final class EntityReferenceResponse extends io.pulumi.resources.InvokeArg
         return this.referenceName == null ? Optional.empty() : Optional.ofNullable(this.referenceName);
     }
 
+    /**
+     * The type of this referenced entity.
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

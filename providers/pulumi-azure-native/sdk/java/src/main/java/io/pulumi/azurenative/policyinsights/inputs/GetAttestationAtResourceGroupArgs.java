@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetAttestationAtResourceGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAttestationAtResourceGroupArgs Empty = new GetAttestationAtResourceGroupArgs();
 
+    /**
+     * The name of the attestation.
+     */
     @InputImport(name="attestationName", required=true)
     private final String attestationName;
 
@@ -19,6 +25,9 @@ public final class GetAttestationAtResourceGroupArgs extends io.pulumi.resources
         return this.attestationName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The IP filter rules for a provisioning Service.
+ */
 public final class TargetIpFilterRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TargetIpFilterRuleResponse Empty = new TargetIpFilterRuleResponse();
 
+    /**
+     * The desired action for requests captured by this rule.
+     */
     @InputImport(name="action", required=true)
     private final String action;
 
@@ -21,6 +27,9 @@ public final class TargetIpFilterRuleResponse extends io.pulumi.resources.Invoke
         return this.action;
     }
 
+    /**
+     * The name of the IP filter rule.
+     */
     @InputImport(name="filterName", required=true)
     private final String filterName;
 
@@ -28,6 +37,9 @@ public final class TargetIpFilterRuleResponse extends io.pulumi.resources.Invoke
         return this.filterName;
     }
 
+    /**
+     * A string that contains the IP address range in CIDR notation for the rule.
+     */
     @InputImport(name="ipMask", required=true)
     private final String ipMask;
 
@@ -35,6 +47,9 @@ public final class TargetIpFilterRuleResponse extends io.pulumi.resources.Invoke
         return this.ipMask;
     }
 
+    /**
+     * Target for requests captured by this rule.
+     */
     @InputImport(name="target")
     private final @Nullable String target;
 

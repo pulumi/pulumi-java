@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IngressClassSpec {
+/**
+ * Controller refers to the name of the controller that should handle this class. This allows for different "flavors" that are controlled by the same controller. For example, you may have different Parameters for the same implementing controller. This should be specified as a domain-prefixed path no more than 250 characters in length, e.g. "acme.io/ingress-controller". This field is immutable.
+ */
     private final @Nullable String controller;
+/**
+ * Parameters is a link to a custom resource containing additional configuration for the controller. This is optional if the controller does not require extra parameters.
+ */
     private final @Nullable IngressClassParametersReference parameters;
 
     @OutputCustomType.Constructor({"controller","parameters"})
@@ -23,9 +29,15 @@ public final class IngressClassSpec {
         this.parameters = parameters;
     }
 
+/**
+ * Controller refers to the name of the controller that should handle this class. This allows for different "flavors" that are controlled by the same controller. For example, you may have different Parameters for the same implementing controller. This should be specified as a domain-prefixed path no more than 250 characters in length, e.g. "acme.io/ingress-controller". This field is immutable.
+ */
     public Optional<String> getController() {
         return Optional.ofNullable(this.controller);
     }
+/**
+ * Parameters is a link to a custom resource containing additional configuration for the controller. This is optional if the controller does not require extra parameters.
+ */
     public Optional<IngressClassParametersReference> getParameters() {
         return Optional.ofNullable(this.parameters);
     }

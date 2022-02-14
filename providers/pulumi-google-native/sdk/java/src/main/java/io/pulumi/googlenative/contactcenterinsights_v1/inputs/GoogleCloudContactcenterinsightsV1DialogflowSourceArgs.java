@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A Dialogflow source of conversation data.
+ */
 public final class GoogleCloudContactcenterinsightsV1DialogflowSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudContactcenterinsightsV1DialogflowSourceArgs Empty = new GoogleCloudContactcenterinsightsV1DialogflowSourceArgs();
 
+    /**
+     * Cloud Storage URI that points to a file that contains the conversation audio.
+     */
     @InputImport(name="audioUri")
     private final @Nullable Input<String> audioUri;
 

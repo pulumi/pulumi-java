@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Level to record this diagnostic.
+ */
     @EnumType
     public enum DiagnosticLevel {
+/**
+ * 
+ */
         Unknown("UNKNOWN"),
+/**
+ * If level is informational, it only gets displayed as part of the resource.
+ */
         Information("INFORMATION"),
+/**
+ * If level is warning, will end up in the resource as a warning.
+ */
         Warning("WARNING"),
+/**
+ * If level is error, it will indicate an error occurred after finishCondition is set, and this field will populate resource errors and operation errors.
+ */
         Error("ERROR");
 
         private final String value;

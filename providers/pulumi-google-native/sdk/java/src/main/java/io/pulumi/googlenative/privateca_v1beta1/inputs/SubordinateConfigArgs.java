@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes a subordinate CA's issuers. This is either a resource path to a known issuing CertificateAuthority, or a PEM issuer certificate chain.
+ */
 public final class SubordinateConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubordinateConfigArgs Empty = new SubordinateConfigArgs();
 
+    /**
+     * This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects//{@literal /}locations//{@literal /}certificateAuthorities/*`.
+     */
     @InputImport(name="certificateAuthority", required=true)
     private final Input<String> certificateAuthority;
 
@@ -21,6 +27,9 @@ public final class SubordinateConfigArgs extends io.pulumi.resources.ResourceArg
         return this.certificateAuthority;
     }
 
+    /**
+     * Contains the PEM certificate chain for the issuers of this CertificateAuthority, but not pem certificate for this CA itself.
+     */
     @InputImport(name="pemIssuerChain", required=true)
     private final Input<SubordinateConfigChainArgs> pemIssuerChain;
 

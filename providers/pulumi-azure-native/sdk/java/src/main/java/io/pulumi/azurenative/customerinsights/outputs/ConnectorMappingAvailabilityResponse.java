@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConnectorMappingAvailabilityResponse {
+/**
+ * The frequency to update.
+ */
     private final @Nullable String frequency;
+/**
+ * The interval of the given frequency to use.
+ */
     private final Integer interval;
 
     @OutputCustomType.Constructor({"frequency","interval"})
@@ -23,9 +29,15 @@ public final class ConnectorMappingAvailabilityResponse {
         this.interval = Objects.requireNonNull(interval);
     }
 
+/**
+ * The frequency to update.
+ */
     public Optional<String> getFrequency() {
         return Optional.ofNullable(this.frequency);
     }
+/**
+ * The interval of the given frequency to use.
+ */
     public Integer getInterval() {
         return this.interval;
     }

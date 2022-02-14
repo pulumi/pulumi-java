@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DaemonSetUpdateStrategyArgs Empty = new DaemonSetUpdateStrategyArgs();
 
+    /**
+     * Rolling update config params. Present only if type = "RollingUpdate".
+     */
     @InputImport(name="rollingUpdate")
     private final @Nullable Input<RollingUpdateDaemonSetArgs> rollingUpdate;
 
@@ -22,6 +28,9 @@ public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.Resou
         return this.rollingUpdate == null ? Input.empty() : this.rollingUpdate;
     }
 
+    /**
+     * Type of daemon set update. Can be "RollingUpdate" or "OnDelete". Default is OnDelete.
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

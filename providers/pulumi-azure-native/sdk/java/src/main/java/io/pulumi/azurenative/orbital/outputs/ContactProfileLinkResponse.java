@@ -14,10 +14,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ContactProfileLinkResponse {
+/**
+ * Contact Profile Link Channel
+ */
     private final List<ContactProfileLinkChannelResponse> channels;
+/**
+ * Direction (uplink or downlink)
+ */
     private final String direction;
+/**
+ * Effective Isotropic Radiated Power (EIRP) in dBW.
+ */
     private final @Nullable Double eirpdBW;
+/**
+ * Gain To Noise Temperature in db/K.
+ */
     private final @Nullable Double gainOverTemperature;
+/**
+ * polarization. eg (RHCP, LHCP)
+ */
     private final String polarization;
 
     @OutputCustomType.Constructor({"channels","direction","eirpdBW","gainOverTemperature","polarization"})
@@ -34,18 +49,33 @@ public final class ContactProfileLinkResponse {
         this.polarization = Objects.requireNonNull(polarization);
     }
 
+/**
+ * Contact Profile Link Channel
+ */
     public List<ContactProfileLinkChannelResponse> getChannels() {
         return this.channels;
     }
+/**
+ * Direction (uplink or downlink)
+ */
     public String getDirection() {
         return this.direction;
     }
+/**
+ * Effective Isotropic Radiated Power (EIRP) in dBW.
+ */
     public Optional<Double> getEirpdBW() {
         return Optional.ofNullable(this.eirpdBW);
     }
+/**
+ * Gain To Noise Temperature in db/K.
+ */
     public Optional<Double> getGainOverTemperature() {
         return Optional.ofNullable(this.gainOverTemperature);
     }
+/**
+ * polarization. eg (RHCP, LHCP)
+ */
     public String getPolarization() {
         return this.polarization;
     }

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of server X509Names.
+ */
 public final class X509CertificateNameResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final X509CertificateNameResponse Empty = new X509CertificateNameResponse();
 
+    /**
+     * Thumbprint for the Issuer of the Certificate.
+     */
     @InputImport(name="issuerCertificateThumbprint")
     private final @Nullable String issuerCertificateThumbprint;
 
@@ -21,6 +27,9 @@ public final class X509CertificateNameResponse extends io.pulumi.resources.Invok
         return this.issuerCertificateThumbprint == null ? Optional.empty() : Optional.ofNullable(this.issuerCertificateThumbprint);
     }
 
+    /**
+     * Common Name of the Certificate.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

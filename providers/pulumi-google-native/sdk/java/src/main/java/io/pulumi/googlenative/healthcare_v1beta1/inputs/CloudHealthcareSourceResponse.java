@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Cloud Healthcare API resource.
+ */
 public final class CloudHealthcareSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CloudHealthcareSourceResponse Empty = new CloudHealthcareSourceResponse();
 
+    /**
+     * Full path of a Cloud Healthcare API resource.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

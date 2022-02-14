@@ -9,10 +9,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Input for the task that validates connection to SQL DB and target server requirements
+ */
 public final class ConnectToTargetSqlDbTaskInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectToTargetSqlDbTaskInputArgs Empty = new ConnectToTargetSqlDbTaskInputArgs();
 
+    /**
+     * Connection information for target SQL DB
+     */
     @InputImport(name="targetConnectionInfo", required=true)
     private final Input<SqlConnectionInfoArgs> targetConnectionInfo;
 

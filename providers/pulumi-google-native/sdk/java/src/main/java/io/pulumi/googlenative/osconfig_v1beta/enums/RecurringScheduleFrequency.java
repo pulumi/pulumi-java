@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Required. The frequency unit of this recurring schedule.
+ */
     @EnumType
     public enum RecurringScheduleFrequency {
+/**
+ * Invalid. A frequency must be specified.
+ */
         FrequencyUnspecified("FREQUENCY_UNSPECIFIED"),
+/**
+ * Indicates that the frequency of recurrence should be expressed in terms of weeks.
+ */
         Weekly("WEEKLY"),
+/**
+ * Indicates that the frequency of recurrence should be expressed in terms of months.
+ */
         Monthly("MONTHLY"),
+/**
+ * Indicates that the frequency of recurrence should be expressed in terms of days.
+ */
         Daily("DAILY");
 
         private final String value;

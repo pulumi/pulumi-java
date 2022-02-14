@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * IP Filter Action
+ */
     @EnumType
     public enum NetworkRuleIPAction {
+/**
+ * 
+ */
         Allow("Allow");
 
         private final String value;

@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies the Security profile settings for the virtual machine or virtual machine scale set.
+ */
 public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityProfileArgs Empty = new SecurityProfileArgs();
 
+    /**
+     * This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.
+     */
     @InputImport(name="encryptionAtHost")
     private final @Nullable Input<Boolean> encryptionAtHost;
 
@@ -25,6 +31,9 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
         return this.encryptionAtHost == null ? Input.empty() : this.encryptionAtHost;
     }
 
+    /**
+     * Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.
+     */
     @InputImport(name="securityType")
     private final @Nullable Input<Either<String,SecurityTypes>> securityType;
 
@@ -32,6 +41,9 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
         return this.securityType == null ? Input.empty() : this.securityType;
     }
 
+    /**
+     * Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01
+     */
     @InputImport(name="uefiSettings")
     private final @Nullable Input<UefiSettingsArgs> uefiSettings;
 

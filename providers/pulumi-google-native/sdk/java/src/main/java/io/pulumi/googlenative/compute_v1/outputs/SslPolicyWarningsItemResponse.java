@@ -11,8 +11,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SslPolicyWarningsItemResponse {
+/**
+ * A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.
+ */
     private final String code;
+/**
+ * Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } 
+ */
     private final List<SslPolicyWarningsItemDataItemResponse> data;
+/**
+ * A human-readable description of the warning code.
+ */
     private final String message;
 
     @OutputCustomType.Constructor({"code","data","message"})
@@ -25,12 +34,21 @@ public final class SslPolicyWarningsItemResponse {
         this.message = Objects.requireNonNull(message);
     }
 
+/**
+ * A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.
+ */
     public String getCode() {
         return this.code;
     }
+/**
+ * Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" } 
+ */
     public List<SslPolicyWarningsItemDataItemResponse> getData() {
         return this.data;
     }
+/**
+ * A human-readable description of the warning code.
+ */
     public String getMessage() {
         return this.message;
     }

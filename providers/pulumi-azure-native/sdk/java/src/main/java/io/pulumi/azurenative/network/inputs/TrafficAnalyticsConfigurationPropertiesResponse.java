@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Parameters that define the configuration of traffic analytics.
+ */
 public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TrafficAnalyticsConfigurationPropertiesResponse Empty = new TrafficAnalyticsConfigurationPropertiesResponse();
 
+    /**
+     * Flag to enable/disable traffic analytics.
+     */
     @InputImport(name="enabled")
     private final @Nullable Boolean enabled;
 
@@ -23,6 +29,9 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
+    /**
+     * The interval in minutes which would decide how frequently TA service should do flow analytics.
+     */
     @InputImport(name="trafficAnalyticsInterval")
     private final @Nullable Integer trafficAnalyticsInterval;
 
@@ -30,6 +39,9 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
         return this.trafficAnalyticsInterval == null ? Optional.empty() : Optional.ofNullable(this.trafficAnalyticsInterval);
     }
 
+    /**
+     * The resource guid of the attached workspace.
+     */
     @InputImport(name="workspaceId")
     private final @Nullable String workspaceId;
 
@@ -37,6 +49,9 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
         return this.workspaceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceId);
     }
 
+    /**
+     * The location of the attached workspace.
+     */
     @InputImport(name="workspaceRegion")
     private final @Nullable String workspaceRegion;
 
@@ -44,6 +59,9 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
         return this.workspaceRegion == null ? Optional.empty() : Optional.ofNullable(this.workspaceRegion);
     }
 
+    /**
+     * Resource Id of the attached workspace.
+     */
     @InputImport(name="workspaceResourceId")
     private final @Nullable String workspaceResourceId;
 

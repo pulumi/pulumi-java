@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IPRuleResponse {
+/**
+ * The action of IP ACL rule.
+ */
     private final @Nullable String action;
+/**
+ * Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
+ */
     private final String iPAddressOrRange;
 
     @OutputCustomType.Constructor({"action","iPAddressOrRange"})
@@ -22,9 +28,15 @@ public final class IPRuleResponse {
         this.iPAddressOrRange = Objects.requireNonNull(iPAddressOrRange);
     }
 
+/**
+ * The action of IP ACL rule.
+ */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
+/**
+ * Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
+ */
     public String getIPAddressOrRange() {
         return this.iPAddressOrRange;
     }

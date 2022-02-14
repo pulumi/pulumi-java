@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TargetOSInfoResponse {
+/**
+ * Specifies the OS update type to test against, e.g., 'Security updates' or 'Feature updates'.
+ */
     private final String osUpdateType;
+/**
+ * Specifies the target OSs to be tested.
+ */
     private final List<String> targetOSs;
 
     @OutputCustomType.Constructor({"osUpdateType","targetOSs"})
@@ -21,9 +27,15 @@ public final class TargetOSInfoResponse {
         this.targetOSs = Objects.requireNonNull(targetOSs);
     }
 
+/**
+ * Specifies the OS update type to test against, e.g., 'Security updates' or 'Feature updates'.
+ */
     public String getOsUpdateType() {
         return this.osUpdateType;
     }
+/**
+ * Specifies the target OSs to be tested.
+ */
     public List<String> getTargetOSs() {
         return this.targetOSs;
     }

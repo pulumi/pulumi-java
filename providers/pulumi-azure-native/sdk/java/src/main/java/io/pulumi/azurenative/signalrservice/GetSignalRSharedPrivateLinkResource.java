@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSignalRSharedPrivateLinkResource {
+/**
+ * Describes a Shared Private Link Resource
+API Version: 2021-04-01-preview.
+ *
+ * Describes a Shared Private Link Resource
+ */
     public static CompletableFuture<GetSignalRSharedPrivateLinkResourceResult> invokeAsync(GetSignalRSharedPrivateLinkResourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:signalrservice:getSignalRSharedPrivateLinkResource", TypeShape.of(GetSignalRSharedPrivateLinkResourceResult.class), args == null ? GetSignalRSharedPrivateLinkResourceArgs.Empty : args, Utilities.withVersion(options));
     }

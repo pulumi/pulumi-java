@@ -8,45 +8,83 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.sourcerepo_v1.RepoArgs;
 import io.pulumi.googlenative.sourcerepo_v1.outputs.MirrorConfigResponse;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a repo in the given project with the given name. If the named repository already exists, `CreateRepo` returns `ALREADY_EXISTS`.
+ */
 @ResourceType(type="google-native:sourcerepo/v1:Repo")
 public class Repo extends io.pulumi.resources.CustomResource {
+    /**
+     * How this repository mirrors a repository managed by another service. Read-only field.
+     */
     @OutputExport(name="mirrorConfig", type=MirrorConfigResponse.class, parameters={})
     private Output<MirrorConfigResponse> mirrorConfig;
 
+    /**
+     * @return How this repository mirrors a repository managed by another service. Read-only field.
+     */
     public Output<MirrorConfigResponse> getMirrorConfig() {
         return this.mirrorConfig;
     }
+    /**
+     * Resource name of the repository, of the form `projects//repos/`. The repo name may contain slashes. eg, `projects/myproject/repos/name/with/slash`
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name of the repository, of the form `projects//repos/`. The repo name may contain slashes. eg, `projects/myproject/repos/name/with/slash`
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.
+     */
     @OutputExport(name="pubsubConfigs", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> pubsubConfigs;
 
+    /**
+     * @return How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.
+     */
     public Output<Map<String,String>> getPubsubConfigs() {
         return this.pubsubConfigs;
     }
+    /**
+     * The disk usage of the repo, in bytes. Read-only field. Size is only returned by GetRepo.
+     */
     @OutputExport(name="size", type=String.class, parameters={})
     private Output<String> size;
 
+    /**
+     * @return The disk usage of the repo, in bytes. Read-only field. Size is only returned by GetRepo.
+     */
     public Output<String> getSize() {
         return this.size;
     }
+    /**
+     * URL to clone the repository from Google Cloud Source Repositories. Read-only field.
+     */
     @OutputExport(name="url", type=String.class, parameters={})
     private Output<String> url;
 
+    /**
+     * @return URL to clone the repository from Google Cloud Source Repositories. Read-only field.
+     */
     public Output<String> getUrl() {
         return this.url;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Repo(String name, @Nullable RepoArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:sourcerepo/v1:Repo", name, args == null ? RepoArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -62,6 +100,14 @@ public class Repo extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Repo get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Repo(name, id, options);
     }

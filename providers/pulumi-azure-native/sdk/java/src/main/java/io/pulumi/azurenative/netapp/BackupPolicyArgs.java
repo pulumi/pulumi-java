@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackupPolicyArgs Empty = new BackupPolicyArgs();
 
+    /**
+     * The name of the NetApp account
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -26,6 +32,9 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * Backup policy Name which uniquely identify backup policy.
+     */
     @InputImport(name="backupPolicyName")
     private final @Nullable Input<String> backupPolicyName;
 
@@ -33,6 +42,9 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.backupPolicyName == null ? Input.empty() : this.backupPolicyName;
     }
 
+    /**
+     * Daily backups count to keep
+     */
     @InputImport(name="dailyBackupsToKeep")
     private final @Nullable Input<Integer> dailyBackupsToKeep;
 
@@ -40,6 +52,9 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.dailyBackupsToKeep == null ? Input.empty() : this.dailyBackupsToKeep;
     }
 
+    /**
+     * The property to decide policy is enabled or not
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -47,6 +62,9 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * Resource location
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -54,6 +72,9 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Monthly backups count to keep
+     */
     @InputImport(name="monthlyBackupsToKeep")
     private final @Nullable Input<Integer> monthlyBackupsToKeep;
 
@@ -61,6 +82,9 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.monthlyBackupsToKeep == null ? Input.empty() : this.monthlyBackupsToKeep;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -68,6 +92,9 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -75,6 +102,9 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * A list of volumes assigned to this policy
+     */
     @InputImport(name="volumeBackups")
     private final @Nullable Input<List<VolumeBackupsArgs>> volumeBackups;
 
@@ -82,6 +112,9 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.volumeBackups == null ? Input.empty() : this.volumeBackups;
     }
 
+    /**
+     * Volumes using current backup policy
+     */
     @InputImport(name="volumesAssigned")
     private final @Nullable Input<Integer> volumesAssigned;
 
@@ -89,6 +122,9 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.volumesAssigned == null ? Input.empty() : this.volumesAssigned;
     }
 
+    /**
+     * Weekly backups count to keep
+     */
     @InputImport(name="weeklyBackupsToKeep")
     private final @Nullable Input<Integer> weeklyBackupsToKeep;
 
@@ -96,6 +132,9 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.weeklyBackupsToKeep == null ? Input.empty() : this.weeklyBackupsToKeep;
     }
 
+    /**
+     * Yearly backups count to keep
+     */
     @InputImport(name="yearlyBackupsToKeep")
     private final @Nullable Input<Integer> yearlyBackupsToKeep;
 

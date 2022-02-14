@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SettingsPropertiesResponseCache extends io.pulumi.resources.InvokeArgs {
 
     public static final SettingsPropertiesResponseCache Empty = new SettingsPropertiesResponseCache();
 
+    /**
+     * Indicates the account type. Allowed values include: EA, PAYG, Modern, Internal, Unknown.
+     */
     @InputImport(name="channel", required=true)
     private final String channel;
 
@@ -21,6 +27,9 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
         return this.channel;
     }
 
+    /**
+     * Resource ID used by Resource Manager to uniquely identify the scope.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -28,6 +37,9 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
         return this.id;
     }
 
+    /**
+     * Display name for the scope.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,6 +47,9 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
         return this.name;
     }
 
+    /**
+     * Resource ID of the parent scope. For instance, subscription's resource ID for a resource group or a management group resource ID for a subscription.
+     */
     @InputImport(name="parent")
     private final @Nullable String parent;
 
@@ -42,6 +57,9 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
         return this.parent == null ? Optional.empty() : Optional.ofNullable(this.parent);
     }
 
+    /**
+     * Indicates the status of the scope. Status only applies to subscriptions and billing accounts.
+     */
     @InputImport(name="status")
     private final @Nullable String status;
 
@@ -49,6 +67,9 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
+    /**
+     * Indicates the type of modern account. Allowed values include: Individual, Enterprise, Partner, Indirect, NotApplicable
+     */
     @InputImport(name="subchannel", required=true)
     private final String subchannel;
 

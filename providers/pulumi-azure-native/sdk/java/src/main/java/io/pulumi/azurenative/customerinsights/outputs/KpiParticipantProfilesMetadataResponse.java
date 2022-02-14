@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class KpiParticipantProfilesMetadataResponse {
+/**
+ * Name of the type.
+ */
     private final String typeName;
 
     @OutputCustomType.Constructor({"typeName"})
@@ -16,6 +19,9 @@ public final class KpiParticipantProfilesMetadataResponse {
         this.typeName = Objects.requireNonNull(typeName);
     }
 
+/**
+ * Name of the type.
+ */
     public String getTypeName() {
         return this.typeName;
     }

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetBitbucketServerConfigArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBitbucketServerConfigArgs Empty = new GetBitbucketServerConfigArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="bitbucketServerConfigId", required=true)
     private final String bitbucketServerConfigId;
 
@@ -21,6 +27,9 @@ public final class GetBitbucketServerConfigArgs extends io.pulumi.resources.Invo
         return this.bitbucketServerConfigId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -28,6 +37,9 @@ public final class GetBitbucketServerConfigArgs extends io.pulumi.resources.Invo
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

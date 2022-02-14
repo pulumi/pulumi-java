@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents the eligibility of a device as a failover target device.
+ */
 public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FailoverTargetResponse Empty = new FailoverTargetResponse();
 
+    /**
+     * The amount of free local storage available on the device in bytes.
+     */
     @InputImport(name="availableLocalStorageInBytes")
     private final @Nullable Double availableLocalStorageInBytes;
 
@@ -24,6 +30,9 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
         return this.availableLocalStorageInBytes == null ? Optional.empty() : Optional.ofNullable(this.availableLocalStorageInBytes);
     }
 
+    /**
+     * The amount of free tiered storage available for the device in bytes.
+     */
     @InputImport(name="availableTieredStorageInBytes")
     private final @Nullable Double availableTieredStorageInBytes;
 
@@ -31,6 +40,9 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
         return this.availableTieredStorageInBytes == null ? Optional.empty() : Optional.ofNullable(this.availableTieredStorageInBytes);
     }
 
+    /**
+     * The count of data containers on the device.
+     */
     @InputImport(name="dataContainersCount")
     private final @Nullable Integer dataContainersCount;
 
@@ -38,6 +50,9 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
         return this.dataContainersCount == null ? Optional.empty() : Optional.ofNullable(this.dataContainersCount);
     }
 
+    /**
+     * The path ID of the device.
+     */
     @InputImport(name="deviceId")
     private final @Nullable String deviceId;
 
@@ -45,6 +60,9 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
         return this.deviceId == null ? Optional.empty() : Optional.ofNullable(this.deviceId);
     }
 
+    /**
+     * The geo location (applicable only for cloud appliances) of the device.
+     */
     @InputImport(name="deviceLocation")
     private final @Nullable String deviceLocation;
 
@@ -52,6 +70,9 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
         return this.deviceLocation == null ? Optional.empty() : Optional.ofNullable(this.deviceLocation);
     }
 
+    /**
+     * The software version of the device.
+     */
     @InputImport(name="deviceSoftwareVersion")
     private final @Nullable String deviceSoftwareVersion;
 
@@ -59,6 +80,9 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
         return this.deviceSoftwareVersion == null ? Optional.empty() : Optional.ofNullable(this.deviceSoftwareVersion);
     }
 
+    /**
+     * The status of the device.
+     */
     @InputImport(name="deviceStatus")
     private final @Nullable String deviceStatus;
 
@@ -66,6 +90,9 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
         return this.deviceStatus == null ? Optional.empty() : Optional.ofNullable(this.deviceStatus);
     }
 
+    /**
+     * The eligibility result of the device, as a failover target device.
+     */
     @InputImport(name="eligibilityResult")
     private final @Nullable TargetEligibilityResultResponse eligibilityResult;
 
@@ -73,6 +100,9 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
         return this.eligibilityResult == null ? Optional.empty() : Optional.ofNullable(this.eligibilityResult);
     }
 
+    /**
+     * The friendly name for the current version of software on the device.
+     */
     @InputImport(name="friendlyDeviceSoftwareVersion")
     private final @Nullable String friendlyDeviceSoftwareVersion;
 
@@ -80,6 +110,9 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
         return this.friendlyDeviceSoftwareVersion == null ? Optional.empty() : Optional.ofNullable(this.friendlyDeviceSoftwareVersion);
     }
 
+    /**
+     * The model number of the device.
+     */
     @InputImport(name="modelDescription")
     private final @Nullable String modelDescription;
 
@@ -87,6 +120,9 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
         return this.modelDescription == null ? Optional.empty() : Optional.ofNullable(this.modelDescription);
     }
 
+    /**
+     * The count of volumes on the device.
+     */
     @InputImport(name="volumesCount")
     private final @Nullable Integer volumesCount;
 

@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebhookArgs Empty = new WebhookArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="agentId", required=true)
     private final Input<String> agentId;
 
@@ -24,6 +30,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentId;
     }
 
+    /**
+     * Indicates whether the webhook is disabled.
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -31,6 +40,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * The human-readable name of the webhook, unique within the agent.
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -38,6 +50,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Configuration for a generic web service.
+     */
     @InputImport(name="genericWebService")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs> genericWebService;
 
@@ -45,6 +60,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.genericWebService == null ? Input.empty() : this.genericWebService;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -52,6 +70,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method. Webhooks.CreateWebhook populates the name automatically. Format: `projects//locations//agents//webhooks/`.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -59,6 +80,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -66,6 +90,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
+     */
     @InputImport(name="serviceDirectory")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs> serviceDirectory;
 
@@ -73,6 +100,9 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceDirectory == null ? Input.empty() : this.serviceDirectory;
     }
 
+    /**
+     * Webhook execution timeout. Execution is considered failed if Dialogflow doesn't receive a response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
+     */
     @InputImport(name="timeout")
     private final @Nullable Input<String> timeout;
 

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network manager security group item.
+ */
 public final class NetworkManagerSecurityGroupItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkManagerSecurityGroupItemArgs Empty = new NetworkManagerSecurityGroupItemArgs();
 
+    /**
+     * Network manager group Id.
+     */
     @InputImport(name="networkGroupId")
     private final @Nullable Input<String> networkGroupId;
 

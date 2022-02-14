@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The schedule recurrence.
+ */
     @EnumType
     public enum RecurrenceType {
+/**
+ * 
+ */
         Daily("Daily"),
+/**
+ * 
+ */
         Weekly("Weekly"),
+/**
+ * 
+ */
         Monthly("Monthly"),
+/**
+ * 
+ */
         Annually("Annually");
 
         private final String value;

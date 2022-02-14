@@ -11,8 +11,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FirewallPolicyRuleMatcherResponse {
+/**
+ * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
+ */
     private final List<String> destIpRanges;
+/**
+ * Pairs of IP protocols and ports that the rule should match.
+ */
     private final List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs;
+/**
+ * CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
+ */
     private final List<String> srcIpRanges;
 
     @OutputCustomType.Constructor({"destIpRanges","layer4Configs","srcIpRanges"})
@@ -25,12 +34,21 @@ public final class FirewallPolicyRuleMatcherResponse {
         this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
     }
 
+/**
+ * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
+ */
     public List<String> getDestIpRanges() {
         return this.destIpRanges;
     }
+/**
+ * Pairs of IP protocols and ports that the rule should match.
+ */
     public List<FirewallPolicyRuleMatcherLayer4ConfigResponse> getLayer4Configs() {
         return this.layer4Configs;
     }
+/**
+ * CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
+ */
     public List<String> getSrcIpRanges() {
         return this.srcIpRanges;
     }

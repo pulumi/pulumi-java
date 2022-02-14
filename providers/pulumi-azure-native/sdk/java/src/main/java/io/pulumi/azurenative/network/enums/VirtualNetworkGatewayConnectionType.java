@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Gateway connection type.
+ */
     @EnumType
     public enum VirtualNetworkGatewayConnectionType {
+/**
+ * 
+ */
         IPsec("IPsec"),
+/**
+ * 
+ */
         Vnet2Vnet("Vnet2Vnet"),
+/**
+ * 
+ */
         ExpressRoute("ExpressRoute"),
+/**
+ * 
+ */
         VPNClient("VPNClient");
 
         private final String value;

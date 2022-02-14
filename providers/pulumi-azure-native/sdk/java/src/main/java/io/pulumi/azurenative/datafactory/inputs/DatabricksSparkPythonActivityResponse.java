@@ -17,10 +17,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * DatabricksSparkPython activity.
+ */
 public final class DatabricksSparkPythonActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatabricksSparkPythonActivityResponse Empty = new DatabricksSparkPythonActivityResponse();
 
+    /**
+     * Activity depends on condition.
+     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -28,6 +34,9 @@ public final class DatabricksSparkPythonActivityResponse extends io.pulumi.resou
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -35,6 +44,9 @@ public final class DatabricksSparkPythonActivityResponse extends io.pulumi.resou
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * A list of libraries to be installed on the cluster that will execute the job.
+     */
     @InputImport(name="libraries")
     private final @Nullable List<Map<String,Object>> libraries;
 
@@ -42,6 +54,9 @@ public final class DatabricksSparkPythonActivityResponse extends io.pulumi.resou
         return this.libraries == null ? List.of() : this.libraries;
     }
 
+    /**
+     * Linked service reference.
+     */
     @InputImport(name="linkedServiceName")
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
@@ -49,6 +64,9 @@ public final class DatabricksSparkPythonActivityResponse extends io.pulumi.resou
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
+    /**
+     * Activity name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -56,6 +74,9 @@ public final class DatabricksSparkPythonActivityResponse extends io.pulumi.resou
         return this.name;
     }
 
+    /**
+     * Command line parameters that will be passed to the Python file.
+     */
     @InputImport(name="parameters")
     private final @Nullable List<Object> parameters;
 
@@ -63,6 +84,9 @@ public final class DatabricksSparkPythonActivityResponse extends io.pulumi.resou
         return this.parameters == null ? List.of() : this.parameters;
     }
 
+    /**
+     * Activity policy.
+     */
     @InputImport(name="policy")
     private final @Nullable ActivityPolicyResponse policy;
 
@@ -70,6 +94,9 @@ public final class DatabricksSparkPythonActivityResponse extends io.pulumi.resou
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
+    /**
+     * The URI of the Python file to be executed. DBFS paths are supported. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="pythonFile", required=true)
     private final Object pythonFile;
 
@@ -77,6 +104,10 @@ public final class DatabricksSparkPythonActivityResponse extends io.pulumi.resou
         return this.pythonFile;
     }
 
+    /**
+     * Type of activity.
+Expected value is 'DatabricksSparkPython'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -84,6 +115,9 @@ public final class DatabricksSparkPythonActivityResponse extends io.pulumi.resou
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

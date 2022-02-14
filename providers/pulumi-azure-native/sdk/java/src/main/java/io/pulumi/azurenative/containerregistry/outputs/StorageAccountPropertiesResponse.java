@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StorageAccountPropertiesResponse {
+/**
+ * The resource ID of the storage account.
+ */
     private final String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -16,6 +19,9 @@ public final class StorageAccountPropertiesResponse {
         this.id = Objects.requireNonNull(id);
     }
 
+/**
+ * The resource ID of the storage account.
+ */
     public String getId() {
         return this.id;
     }

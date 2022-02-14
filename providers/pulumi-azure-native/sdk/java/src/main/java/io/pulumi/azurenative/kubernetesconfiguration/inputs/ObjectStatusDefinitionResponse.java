@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Statuses of objects deployed by the user-specified kustomizations from the git repository.
+ */
 public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ObjectStatusDefinitionResponse Empty = new ObjectStatusDefinitionResponse();
 
+    /**
+     * Object reference to the Kustomization that applied this object
+     */
     @InputImport(name="appliedBy")
     private final @Nullable ObjectReferenceDefinitionResponse appliedBy;
 
@@ -25,6 +31,9 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
         return this.appliedBy == null ? Optional.empty() : Optional.ofNullable(this.appliedBy);
     }
 
+    /**
+     * Compliance state of the applied object showing whether the applied object has come into a ready state on the cluster.
+     */
     @InputImport(name="complianceState")
     private final @Nullable String complianceState;
 
@@ -32,6 +41,9 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
         return this.complianceState == null ? Optional.empty() : Optional.ofNullable(this.complianceState);
     }
 
+    /**
+     * Additional properties that are provided from objects of the HelmRelease kind
+     */
     @InputImport(name="helmReleaseProperties")
     private final @Nullable HelmReleasePropertiesDefinitionResponse helmReleaseProperties;
 
@@ -39,6 +51,9 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
         return this.helmReleaseProperties == null ? Optional.empty() : Optional.ofNullable(this.helmReleaseProperties);
     }
 
+    /**
+     * Kind of the applied object
+     */
     @InputImport(name="kind")
     private final @Nullable String kind;
 
@@ -46,6 +61,9 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
+    /**
+     * Name of the applied object
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -53,6 +71,9 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Namespace of the applied object
+     */
     @InputImport(name="namespace")
     private final @Nullable String namespace;
 
@@ -60,6 +81,9 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
         return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
     }
 
+    /**
+     * List of Kubernetes object status conditions present on the cluster
+     */
     @InputImport(name="statusConditions")
     private final @Nullable List<ObjectStatusConditionDefinitionResponse> statusConditions;
 

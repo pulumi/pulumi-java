@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssessmentArgs Empty = new AssessmentArgs();
 
+    /**
+     * Unique name of an assessment within a project.
+     */
     @InputImport(name="assessmentName")
     private final @Nullable Input<String> assessmentName;
 
@@ -22,6 +28,9 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.assessmentName == null ? Input.empty() : this.assessmentName;
     }
 
+    /**
+     * For optimistic concurrency control.
+     */
     @InputImport(name="eTag")
     private final @Nullable Input<String> eTag;
 
@@ -29,6 +38,9 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.eTag == null ? Input.empty() : this.eTag;
     }
 
+    /**
+     * Unique name of a group within a project.
+     */
     @InputImport(name="groupName", required=true)
     private final Input<String> groupName;
 
@@ -36,6 +48,9 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.groupName;
     }
 
+    /**
+     * Name of the Azure Migrate project.
+     */
     @InputImport(name="projectName", required=true)
     private final Input<String> projectName;
 
@@ -43,6 +58,9 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.projectName;
     }
 
+    /**
+     * Properties of the assessment.
+     */
     @InputImport(name="properties", required=true)
     private final Input<AssessmentPropertiesArgs> properties;
 
@@ -50,6 +68,9 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
+    /**
+     * Name of the Azure Resource Group that project is part of.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

@@ -19,10 +19,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * AML Compute properties
+ */
 public final class AmlComputePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AmlComputePropertiesArgs Empty = new AmlComputePropertiesArgs();
 
+    /**
+     * Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.
+     */
     @InputImport(name="enableNodePublicIp")
     private final @Nullable Input<Boolean> enableNodePublicIp;
 
@@ -30,6 +36,9 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
         return this.enableNodePublicIp == null ? Input.empty() : this.enableNodePublicIp;
     }
 
+    /**
+     * Network is isolated or not
+     */
     @InputImport(name="isolatedNetwork")
     private final @Nullable Input<Boolean> isolatedNetwork;
 
@@ -37,6 +46,9 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
         return this.isolatedNetwork == null ? Input.empty() : this.isolatedNetwork;
     }
 
+    /**
+     * Compute OS Type
+     */
     @InputImport(name="osType")
     private final @Nullable Input<Either<String,OsType>> osType;
 
@@ -44,6 +56,9 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
         return this.osType == null ? Input.empty() : this.osType;
     }
 
+    /**
+     * State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
+     */
     @InputImport(name="remoteLoginPortPublicAccess")
     private final @Nullable Input<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess;
 
@@ -51,6 +66,9 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
         return this.remoteLoginPortPublicAccess == null ? Input.empty() : this.remoteLoginPortPublicAccess;
     }
 
+    /**
+     * Scale settings for AML Compute
+     */
     @InputImport(name="scaleSettings")
     private final @Nullable Input<ScaleSettingsArgs> scaleSettings;
 
@@ -58,6 +76,9 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
         return this.scaleSettings == null ? Input.empty() : this.scaleSettings;
     }
 
+    /**
+     * Virtual network subnet resource ID the compute nodes belong to.
+     */
     @InputImport(name="subnet")
     private final @Nullable Input<ResourceIdArgs> subnet;
 
@@ -65,6 +86,9 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
         return this.subnet == null ? Input.empty() : this.subnet;
     }
 
+    /**
+     * Credentials for an administrator user account that will be created on each compute node.
+     */
     @InputImport(name="userAccountCredentials")
     private final @Nullable Input<UserAccountCredentialsArgs> userAccountCredentials;
 
@@ -72,6 +96,9 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
         return this.userAccountCredentials == null ? Input.empty() : this.userAccountCredentials;
     }
 
+    /**
+     * Virtual Machine image for AML Compute - windows only
+     */
     @InputImport(name="virtualMachineImage")
     private final @Nullable Input<VirtualMachineImageArgs> virtualMachineImage;
 
@@ -79,6 +106,9 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
         return this.virtualMachineImage == null ? Input.empty() : this.virtualMachineImage;
     }
 
+    /**
+     * Virtual Machine priority
+     */
     @InputImport(name="vmPriority")
     private final @Nullable Input<Either<String,VmPriority>> vmPriority;
 
@@ -86,6 +116,9 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
         return this.vmPriority == null ? Input.empty() : this.vmPriority;
     }
 
+    /**
+     * Virtual Machine Size
+     */
     @InputImport(name="vmSize")
     private final @Nullable Input<String> vmSize;
 

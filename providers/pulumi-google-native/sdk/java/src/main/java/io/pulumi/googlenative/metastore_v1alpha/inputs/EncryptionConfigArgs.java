@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Encryption settings for the service.
+ */
 public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EncryptionConfigArgs Empty = new EncryptionConfigArgs();
 
+    /**
+     * The fully qualified customer provided Cloud KMS key name to use for customer data encryption, in the following form:projects/{project_number}/locations/{location_id}/keyRings/{key_ring_id}/cryptoKeys/{crypto_key_id}.
+     */
     @InputImport(name="kmsKey")
     private final @Nullable Input<String> kmsKey;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAccessControlRecord {
+/**
+ * The access control record.
+API Version: 2017-06-01.
+ *
+ * The access control record.
+ */
     public static CompletableFuture<GetAccessControlRecordResult> invokeAsync(GetAccessControlRecordArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storsimple:getAccessControlRecord", TypeShape.of(GetAccessControlRecordResult.class), args == null ? GetAccessControlRecordArgs.Empty : args, Utilities.withVersion(options));
     }

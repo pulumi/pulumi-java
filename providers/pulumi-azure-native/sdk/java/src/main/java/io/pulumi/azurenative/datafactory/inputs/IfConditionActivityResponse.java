@@ -52,10 +52,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * This activity evaluates a boolean expression and executes either the activities under the ifTrueActivities property or the ifFalseActivities property depending on the result of the expression.
+ */
 public final class IfConditionActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IfConditionActivityResponse Empty = new IfConditionActivityResponse();
 
+    /**
+     * Activity depends on condition.
+     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -63,6 +69,9 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -70,6 +79,9 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * An expression that would evaluate to Boolean. This is used to determine the block of activities (ifTrueActivities or ifFalseActivities) that will be executed.
+     */
     @InputImport(name="expression", required=true)
     private final ExpressionResponse expression;
 
@@ -77,6 +89,9 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
         return this.expression;
     }
 
+    /**
+     * List of activities to execute if expression is evaluated to false. This is an optional property and if not provided, the activity will exit without any action.
+     */
     @InputImport(name="ifFalseActivities")
     private final @Nullable List<Object> ifFalseActivities;
 
@@ -84,6 +99,9 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
         return this.ifFalseActivities == null ? List.of() : this.ifFalseActivities;
     }
 
+    /**
+     * List of activities to execute if expression is evaluated to true. This is an optional property and if not provided, the activity will exit without any action.
+     */
     @InputImport(name="ifTrueActivities")
     private final @Nullable List<Object> ifTrueActivities;
 
@@ -91,6 +109,9 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
         return this.ifTrueActivities == null ? List.of() : this.ifTrueActivities;
     }
 
+    /**
+     * Activity name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -98,6 +119,10 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
         return this.name;
     }
 
+    /**
+     * Type of activity.
+Expected value is 'IfCondition'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -105,6 +130,9 @@ public final class IfConditionActivityResponse extends io.pulumi.resources.Invok
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

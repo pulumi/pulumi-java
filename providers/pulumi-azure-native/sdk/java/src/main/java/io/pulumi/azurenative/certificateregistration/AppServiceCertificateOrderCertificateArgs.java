@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppServiceCertificateOrderCertificateArgs Empty = new AppServiceCertificateOrderCertificateArgs();
 
+    /**
+     * Name of the certificate order.
+     */
     @InputImport(name="certificateOrderName", required=true)
     private final Input<String> certificateOrderName;
 
@@ -22,6 +28,9 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
         return this.certificateOrderName;
     }
 
+    /**
+     * Key Vault resource Id.
+     */
     @InputImport(name="keyVaultId")
     private final @Nullable Input<String> keyVaultId;
 
@@ -29,6 +38,9 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
         return this.keyVaultId == null ? Input.empty() : this.keyVaultId;
     }
 
+    /**
+     * Key Vault secret name.
+     */
     @InputImport(name="keyVaultSecretName")
     private final @Nullable Input<String> keyVaultSecretName;
 
@@ -36,6 +48,9 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
         return this.keyVaultSecretName == null ? Input.empty() : this.keyVaultSecretName;
     }
 
+    /**
+     * Kind of resource.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -43,6 +58,9 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Resource Location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -50,6 +68,9 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of the certificate.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -57,6 +78,9 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -64,6 +88,9 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

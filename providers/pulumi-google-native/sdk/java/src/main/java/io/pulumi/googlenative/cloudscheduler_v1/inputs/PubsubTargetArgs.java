@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Pub/Sub target. The job will be delivered by publishing a message to the given Pub/Sub topic.
+ */
 public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PubsubTargetArgs Empty = new PubsubTargetArgs();
 
+    /**
+     * Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
+     */
     @InputImport(name="attributes")
     private final @Nullable Input<Map<String,String>> attributes;
 
@@ -22,6 +28,9 @@ public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.attributes == null ? Input.empty() : this.attributes;
     }
 
+    /**
+     * The message payload for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
+     */
     @InputImport(name="data")
     private final @Nullable Input<String> data;
 
@@ -29,6 +38,9 @@ public final class PubsubTargetArgs extends io.pulumi.resources.ResourceArgs {
         return this.data == null ? Input.empty() : this.data;
     }
 
+    /**
+     * The name of the Cloud Pub/Sub topic to which messages will be published when a job is delivered. The topic name must be in the same format as required by PubSub's [PublishRequest.name](https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#publishrequest), for example `projects/PROJECT_ID/topics/TOPIC_ID`. The topic must be in the same project as the Cloud Scheduler job.
+     */
     @InputImport(name="topicName", required=true)
     private final Input<String> topicName;
 

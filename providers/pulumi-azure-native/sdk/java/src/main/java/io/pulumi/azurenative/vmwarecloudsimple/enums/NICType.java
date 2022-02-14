@@ -8,13 +8,34 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * NIC type
+ */
     @EnumType
     public enum NICType {
+/**
+ * 
+ */
         E1000("E1000"),
+/**
+ * 
+ */
         E1000E("E1000E"),
+/**
+ * 
+ */
         PCNET32("PCNET32"),
+/**
+ * 
+ */
         VMXNET("VMXNET"),
+/**
+ * 
+ */
         VMXNET2("VMXNET2"),
+/**
+ * 
+ */
         VMXNET3("VMXNET3");
 
         private final String value;

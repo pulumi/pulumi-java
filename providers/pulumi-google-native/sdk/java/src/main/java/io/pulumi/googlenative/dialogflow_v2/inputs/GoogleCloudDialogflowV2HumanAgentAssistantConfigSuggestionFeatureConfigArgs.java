@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Config for suggestion features.
+ */
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs Empty = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs();
 
+    /**
+     * Configs of custom conversation model.
+     */
     @InputImport(name="conversationModelConfig")
     private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs> conversationModelConfig;
 
@@ -26,6 +32,9 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
         return this.conversationModelConfig == null ? Input.empty() : this.conversationModelConfig;
     }
 
+    /**
+     * Configs for processing conversation.
+     */
     @InputImport(name="conversationProcessConfig")
     private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs> conversationProcessConfig;
 
@@ -33,6 +42,9 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
         return this.conversationProcessConfig == null ? Input.empty() : this.conversationProcessConfig;
     }
 
+    /**
+     * Automatically iterates all participants and tries to compile suggestions. Supported features: ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.
+     */
     @InputImport(name="enableEventBasedSuggestion")
     private final @Nullable Input<Boolean> enableEventBasedSuggestion;
 
@@ -40,6 +52,9 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
         return this.enableEventBasedSuggestion == null ? Input.empty() : this.enableEventBasedSuggestion;
     }
 
+    /**
+     * Configs of query.
+     */
     @InputImport(name="queryConfig")
     private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigArgs> queryConfig;
 
@@ -47,6 +62,9 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
         return this.queryConfig == null ? Input.empty() : this.queryConfig;
     }
 
+    /**
+     * The suggestion feature.
+     */
     @InputImport(name="suggestionFeature")
     private final @Nullable Input<GoogleCloudDialogflowV2SuggestionFeatureArgs> suggestionFeature;
 
@@ -54,6 +72,9 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
         return this.suggestionFeature == null ? Input.empty() : this.suggestionFeature;
     }
 
+    /**
+     * Settings of suggestion trigger. Currently, only ARTICLE_SUGGESTION and FAQ will use this field.
+     */
     @InputImport(name="suggestionTriggerSettings")
     private final @Nullable Input<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsArgs> suggestionTriggerSettings;
 

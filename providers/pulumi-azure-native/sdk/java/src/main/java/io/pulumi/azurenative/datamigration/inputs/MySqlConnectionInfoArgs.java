@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information for connecting to MySQL server
+ */
 public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MySqlConnectionInfoArgs Empty = new MySqlConnectionInfoArgs();
 
+    /**
+     * Password credential.
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -22,6 +28,9 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * Port for Server
+     */
     @InputImport(name="port", required=true)
     private final Input<Integer> port;
 
@@ -29,6 +38,9 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
         return this.port;
     }
 
+    /**
+     * Name of the server
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -36,6 +48,10 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
         return this.serverName;
     }
 
+    /**
+     * Type of connection info
+Expected value is 'MySqlConnectionInfo'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -43,6 +59,9 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
         return this.type;
     }
 
+    /**
+     * User name
+     */
     @InputImport(name="userName")
     private final @Nullable Input<String> userName;
 

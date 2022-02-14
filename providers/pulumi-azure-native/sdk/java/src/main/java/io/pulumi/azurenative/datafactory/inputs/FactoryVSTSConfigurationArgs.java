@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Factory's VSTS repo information.
+ */
 public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FactoryVSTSConfigurationArgs Empty = new FactoryVSTSConfigurationArgs();
 
+    /**
+     * Account name.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -21,6 +27,9 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
         return this.accountName;
     }
 
+    /**
+     * Collaboration branch.
+     */
     @InputImport(name="collaborationBranch", required=true)
     private final Input<String> collaborationBranch;
 
@@ -28,6 +37,9 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
         return this.collaborationBranch;
     }
 
+    /**
+     * Last commit id.
+     */
     @InputImport(name="lastCommitId")
     private final @Nullable Input<String> lastCommitId;
 
@@ -35,6 +47,9 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
         return this.lastCommitId == null ? Input.empty() : this.lastCommitId;
     }
 
+    /**
+     * VSTS project name.
+     */
     @InputImport(name="projectName", required=true)
     private final Input<String> projectName;
 
@@ -42,6 +57,9 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
         return this.projectName;
     }
 
+    /**
+     * Repository name.
+     */
     @InputImport(name="repositoryName", required=true)
     private final Input<String> repositoryName;
 
@@ -49,6 +67,9 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
         return this.repositoryName;
     }
 
+    /**
+     * Root folder.
+     */
     @InputImport(name="rootFolder", required=true)
     private final Input<String> rootFolder;
 
@@ -56,6 +77,9 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
         return this.rootFolder;
     }
 
+    /**
+     * VSTS tenant id.
+     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 
@@ -63,6 +87,10 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
         return this.tenantId == null ? Input.empty() : this.tenantId;
     }
 
+    /**
+     * Type of repo configuration.
+Expected value is 'FactoryVSTSConfiguration'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

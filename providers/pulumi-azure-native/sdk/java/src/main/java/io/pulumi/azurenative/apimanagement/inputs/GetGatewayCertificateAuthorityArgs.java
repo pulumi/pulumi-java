@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetGatewayCertificateAuthorityArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGatewayCertificateAuthorityArgs Empty = new GetGatewayCertificateAuthorityArgs();
 
+    /**
+     * Identifier of the certificate entity. Must be unique in the current API Management service instance.
+     */
     @InputImport(name="certificateId", required=true)
     private final String certificateId;
 
@@ -19,6 +25,9 @@ public final class GetGatewayCertificateAuthorityArgs extends io.pulumi.resource
         return this.certificateId;
     }
 
+    /**
+     * Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'
+     */
     @InputImport(name="gatewayId", required=true)
     private final String gatewayId;
 
@@ -26,6 +35,9 @@ public final class GetGatewayCertificateAuthorityArgs extends io.pulumi.resource
         return this.gatewayId;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,9 @@ public final class GetGatewayCertificateAuthorityArgs extends io.pulumi.resource
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

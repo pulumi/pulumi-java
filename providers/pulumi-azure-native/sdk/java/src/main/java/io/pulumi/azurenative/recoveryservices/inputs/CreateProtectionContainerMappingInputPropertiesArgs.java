@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configure pairing input properties.
+ */
 public final class CreateProtectionContainerMappingInputPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CreateProtectionContainerMappingInputPropertiesArgs Empty = new CreateProtectionContainerMappingInputPropertiesArgs();
 
+    /**
+     * Applicable policy.
+     */
     @InputImport(name="policyId")
     private final @Nullable Input<String> policyId;
 
@@ -24,6 +30,9 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends i
         return this.policyId == null ? Input.empty() : this.policyId;
     }
 
+    /**
+     * Provider specific input for pairing.
+     */
     @InputImport(name="providerSpecificInput")
     private final @Nullable Input<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> providerSpecificInput;
 
@@ -31,6 +40,9 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends i
         return this.providerSpecificInput == null ? Input.empty() : this.providerSpecificInput;
     }
 
+    /**
+     * The target unique protection container name.
+     */
     @InputImport(name="targetProtectionContainerId")
     private final @Nullable Input<String> targetProtectionContainerId;
 

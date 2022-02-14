@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings of change notification configuration for a subscription.
+ */
 public final class NotificationSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NotificationSettingsResponse Empty = new NotificationSettingsResponse();
 
+    /**
+     * The state of notifications feature.
+     */
     @InputImport(name="activationState")
     private final @Nullable String activationState;
 
@@ -22,6 +28,9 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
         return this.activationState == null ? Optional.empty() : Optional.ofNullable(this.activationState);
     }
 
+    /**
+     * Configuration properties of an Azure Monitor workspace that receives change notifications.
+     */
     @InputImport(name="azureMonitorWorkspaceProperties")
     private final @Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties;
 

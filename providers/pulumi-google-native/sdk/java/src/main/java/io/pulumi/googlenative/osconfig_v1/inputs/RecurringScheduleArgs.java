@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Sets the time for recurring patch deployments.
+ */
 public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RecurringScheduleArgs Empty = new RecurringScheduleArgs();
 
+    /**
+     * Optional. The end time at which a recurring patch deployment schedule is no longer active.
+     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -26,6 +32,9 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
+    /**
+     * The frequency unit of this recurring schedule.
+     */
     @InputImport(name="frequency", required=true)
     private final Input<RecurringScheduleFrequency> frequency;
 
@@ -33,6 +42,9 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
         return this.frequency;
     }
 
+    /**
+     * Schedule with monthly executions.
+     */
     @InputImport(name="monthly", required=true)
     private final Input<MonthlyScheduleArgs> monthly;
 
@@ -40,6 +52,9 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
         return this.monthly;
     }
 
+    /**
+     * Optional. The time that the recurring schedule becomes effective. Defaults to `create_time` of the patch deployment.
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -47,6 +62,9 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
+    /**
+     * Time of the day to run a recurring deployment.
+     */
     @InputImport(name="timeOfDay", required=true)
     private final Input<TimeOfDayArgs> timeOfDay;
 
@@ -54,6 +72,9 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
         return this.timeOfDay;
     }
 
+    /**
+     * Defines the time zone that `time_of_day` is relative to. The rules for daylight saving time are determined by the chosen time zone.
+     */
     @InputImport(name="timeZone", required=true)
     private final Input<TimeZoneArgs> timeZone;
 
@@ -61,6 +82,9 @@ public final class RecurringScheduleArgs extends io.pulumi.resources.ResourceArg
         return this.timeZone;
     }
 
+    /**
+     * Schedule with weekly executions.
+     */
     @InputImport(name="weekly", required=true)
     private final Input<WeeklyScheduleArgs> weekly;
 

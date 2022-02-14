@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.addons;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.addons.SupportPlanTypeArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -14,27 +13,134 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The status of the Canonical support plan.
+API Version: 2018-03-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### SupportPlanTypes_CreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var supportPlanType = new AzureNative.Addons.SupportPlanType("supportPlanType", new AzureNative.Addons.SupportPlanTypeArgs
+        {
+            PlanTypeName = "Standard",
+            ProviderName = "Canonical",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	addons "github.com/pulumi/pulumi-azure-native/sdk/go/azure/addons"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := addons.NewSupportPlanType(ctx, "supportPlanType", &addons.SupportPlanTypeArgs{
+			PlanTypeName: pulumi.String("Standard"),
+			ProviderName: pulumi.String("Canonical"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const supportPlanType = new azure_native.addons.SupportPlanType("supportPlanType", {
+    planTypeName: "Standard",
+    providerName: "Canonical",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+support_plan_type = azure_native.addons.SupportPlanType("supportPlanType",
+    plan_type_name="Standard",
+    provider_name="Canonical")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:addons:SupportPlanType Standard subscriptions/d18d258f-bdba-4de1-8b51-e79d6c181d5e/providers/Microsoft.Addons/supportProviders/canonical/supportPlanTypes/Standard 
+```
+
+ */
 @ResourceType(type="azure-native:addons:SupportPlanType")
 public class SupportPlanType extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the Canonical support plan, i.e. "essential", "standard" or "advanced".
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the Canonical support plan, i.e. "essential", "standard" or "advanced".
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
+    /**
+     * @return The provisioning state of the resource.
+     */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Microsoft.Addons/supportProvider
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Microsoft.Addons/supportProvider
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SupportPlanType(String name, SupportPlanTypeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:addons:SupportPlanType", name, args == null ? SupportPlanTypeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -54,6 +160,14 @@ public class SupportPlanType extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SupportPlanType get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SupportPlanType(name, id, options);
     }

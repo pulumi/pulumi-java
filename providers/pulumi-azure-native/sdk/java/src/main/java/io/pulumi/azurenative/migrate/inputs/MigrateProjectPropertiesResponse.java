@@ -15,10 +15,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Class for migrate project properties.
+ */
 public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateProjectPropertiesResponse Empty = new MigrateProjectPropertiesResponse();
 
+    /**
+     * Gets the last time the project summary was refreshed.
+     */
     @InputImport(name="lastSummaryRefreshedTime", required=true)
     private final String lastSummaryRefreshedTime;
 
@@ -26,6 +32,9 @@ public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.
         return this.lastSummaryRefreshedTime;
     }
 
+    /**
+     * Provisioning state of the migrate project.
+     */
     @InputImport(name="provisioningState")
     private final @Nullable String provisioningState;
 
@@ -33,6 +42,9 @@ public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
     }
 
+    /**
+     * Gets the refresh summary state.
+     */
     @InputImport(name="refreshSummaryState", required=true)
     private final String refreshSummaryState;
 
@@ -40,6 +52,9 @@ public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.
         return this.refreshSummaryState;
     }
 
+    /**
+     * Gets or sets the list of tools registered with the migrate project.
+     */
     @InputImport(name="registeredTools")
     private final @Nullable List<String> registeredTools;
 
@@ -47,6 +62,9 @@ public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.
         return this.registeredTools == null ? List.of() : this.registeredTools;
     }
 
+    /**
+     * Gets the summary of the migrate project.
+     */
     @InputImport(name="summary", required=true)
     private final Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary;
 

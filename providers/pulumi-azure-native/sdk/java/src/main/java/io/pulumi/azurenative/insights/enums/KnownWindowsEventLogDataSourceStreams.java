@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum KnownWindowsEventLogDataSourceStreams {
+/**
+ * 
+ */
         MicrosoftWindowsEvent("Microsoft-WindowsEvent"),
+/**
+ * 
+ */
         MicrosoftEvent("Microsoft-Event");
 
         private final String value;

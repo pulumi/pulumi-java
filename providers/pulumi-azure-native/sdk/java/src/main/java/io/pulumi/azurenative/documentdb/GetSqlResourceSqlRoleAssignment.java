@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSqlResourceSqlRoleAssignment {
+/**
+ * An Azure Cosmos DB Role Assignment
+API Version: 2021-03-01-preview.
+ *
+ * An Azure Cosmos DB Role Assignment
+ */
     public static CompletableFuture<GetSqlResourceSqlRoleAssignmentResult> invokeAsync(GetSqlResourceSqlRoleAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getSqlResourceSqlRoleAssignment", TypeShape.of(GetSqlResourceSqlRoleAssignmentResult.class), args == null ? GetSqlResourceSqlRoleAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Command describes a step performed as part of the build pipeline.
+ */
 public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CommandArgs Empty = new CommandArgs();
 
+    /**
+     * Command-line arguments used when executing this command.
+     */
     @InputImport(name="args")
     private final @Nullable Input<List<String>> args;
 
@@ -22,6 +28,9 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
         return this.args == null ? Input.empty() : this.args;
     }
 
+    /**
+     * Working directory (relative to project source root) used when running this command.
+     */
     @InputImport(name="dir")
     private final @Nullable Input<String> dir;
 
@@ -29,6 +38,9 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
         return this.dir == null ? Input.empty() : this.dir;
     }
 
+    /**
+     * Environment variables set before running this command.
+     */
     @InputImport(name="env")
     private final @Nullable Input<List<String>> env;
 
@@ -36,6 +48,9 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
         return this.env == null ? Input.empty() : this.env;
     }
 
+    /**
+     * Optional unique identifier for this command, used in wait_for to reference this command as a dependency.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -43,6 +58,9 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Name of the command, as presented on the command line, or if the command is packaged as a Docker container, as presented to `docker pull`.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -50,6 +68,9 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * The ID(s) of the command(s) that this command depends on.
+     */
     @InputImport(name="waitFor")
     private final @Nullable Input<List<String>> waitFor;
 

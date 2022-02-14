@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AddressableResponse {
+/**
+ * 
+ */
     private final String url;
 
     @OutputCustomType.Constructor({"url"})
@@ -16,6 +19,9 @@ public final class AddressableResponse {
         this.url = Objects.requireNonNull(url);
     }
 
+/**
+ * 
+ */
     public String getUrl() {
         return this.url;
     }

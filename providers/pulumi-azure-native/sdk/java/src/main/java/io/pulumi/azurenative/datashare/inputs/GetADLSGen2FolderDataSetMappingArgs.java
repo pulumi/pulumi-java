@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetADLSGen2FolderDataSetMappingArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetADLSGen2FolderDataSetMappingArgs Empty = new GetADLSGen2FolderDataSetMappingArgs();
 
+    /**
+     * The name of the share account.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetADLSGen2FolderDataSetMappingArgs extends io.pulumi.resourc
         return this.accountName;
     }
 
+    /**
+     * The name of the dataSetMapping.
+     */
     @InputImport(name="dataSetMappingName", required=true)
     private final String dataSetMappingName;
 
@@ -26,6 +35,9 @@ public final class GetADLSGen2FolderDataSetMappingArgs extends io.pulumi.resourc
         return this.dataSetMappingName;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,9 @@ public final class GetADLSGen2FolderDataSetMappingArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the shareSubscription.
+     */
     @InputImport(name="shareSubscriptionName", required=true)
     private final String shareSubscriptionName;
 

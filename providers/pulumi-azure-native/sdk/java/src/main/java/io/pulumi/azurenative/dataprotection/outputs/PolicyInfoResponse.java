@@ -12,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PolicyInfoResponse {
+/**
+ * 
+ */
     private final String policyId;
+/**
+ * Policy parameters for the backup instance
+ */
     private final @Nullable PolicyParametersResponse policyParameters;
+/**
+ * 
+ */
     private final String policyVersion;
 
     @OutputCustomType.Constructor({"policyId","policyParameters","policyVersion"})
@@ -26,12 +35,21 @@ public final class PolicyInfoResponse {
         this.policyVersion = Objects.requireNonNull(policyVersion);
     }
 
+/**
+ * 
+ */
     public String getPolicyId() {
         return this.policyId;
     }
+/**
+ * Policy parameters for the backup instance
+ */
     public Optional<PolicyParametersResponse> getPolicyParameters() {
         return Optional.ofNullable(this.policyParameters);
     }
+/**
+ * 
+ */
     public String getPolicyVersion() {
         return this.policyVersion;
     }

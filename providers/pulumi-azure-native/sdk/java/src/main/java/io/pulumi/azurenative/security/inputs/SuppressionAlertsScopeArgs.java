@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class SuppressionAlertsScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SuppressionAlertsScopeArgs Empty = new SuppressionAlertsScopeArgs();
 
+    /**
+     * All the conditions inside need to be true in order to suppress the alert
+     */
     @InputImport(name="allOf", required=true)
     private final Input<List<ScopeElementArgs>> allOf;
 

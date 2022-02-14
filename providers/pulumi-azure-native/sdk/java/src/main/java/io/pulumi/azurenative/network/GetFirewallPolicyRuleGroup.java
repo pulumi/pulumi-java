@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFirewallPolicyRuleGroup {
+/**
+ * Rule Group resource.
+API Version: 2020-04-01.
+ *
+ * Rule Group resource.
+ */
     public static CompletableFuture<GetFirewallPolicyRuleGroupResult> invokeAsync(GetFirewallPolicyRuleGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getFirewallPolicyRuleGroup", TypeShape.of(GetFirewallPolicyRuleGroupResult.class), args == null ? GetFirewallPolicyRuleGroupArgs.Empty : args, Utilities.withVersion(options));
     }

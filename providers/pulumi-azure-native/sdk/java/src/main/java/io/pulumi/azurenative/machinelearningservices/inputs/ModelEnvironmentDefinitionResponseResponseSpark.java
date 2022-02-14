@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration for a Spark environment.
+ */
 public final class ModelEnvironmentDefinitionResponseResponseSpark extends io.pulumi.resources.InvokeArgs {
 
     public static final ModelEnvironmentDefinitionResponseResponseSpark Empty = new ModelEnvironmentDefinitionResponseResponseSpark();
 
+    /**
+     * The Spark packages to use.
+     */
     @InputImport(name="packages")
     private final @Nullable List<SparkMavenPackageResponse> packages;
 
@@ -24,6 +30,9 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark extends io.pu
         return this.packages == null ? List.of() : this.packages;
     }
 
+    /**
+     * Whether to precache the packages.
+     */
     @InputImport(name="precachePackages")
     private final @Nullable Boolean precachePackages;
 
@@ -31,6 +40,9 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark extends io.pu
         return this.precachePackages == null ? Optional.empty() : Optional.ofNullable(this.precachePackages);
     }
 
+    /**
+     * The list of spark repositories.
+     */
     @InputImport(name="repositories")
     private final @Nullable List<String> repositories;
 

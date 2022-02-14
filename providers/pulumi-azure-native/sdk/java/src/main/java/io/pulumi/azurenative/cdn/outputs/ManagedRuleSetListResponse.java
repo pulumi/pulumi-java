@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagedRuleSetListResponse {
+/**
+ * List of rule sets.
+ */
     private final @Nullable List<ManagedRuleSetResponse> managedRuleSets;
 
     @OutputCustomType.Constructor({"managedRuleSets"})
@@ -18,6 +21,9 @@ public final class ManagedRuleSetListResponse {
         this.managedRuleSets = managedRuleSets;
     }
 
+/**
+ * List of rule sets.
+ */
     public List<ManagedRuleSetResponse> getManagedRuleSets() {
         return this.managedRuleSets == null ? List.of() : this.managedRuleSets;
     }

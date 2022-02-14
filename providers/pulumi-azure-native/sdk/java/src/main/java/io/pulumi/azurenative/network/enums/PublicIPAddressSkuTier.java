@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Tier of a public IP address SKU.
+ */
     @EnumType
     public enum PublicIPAddressSkuTier {
+/**
+ * 
+ */
         Regional("Regional"),
+/**
+ * 
+ */
         Global("Global");
 
         private final String value;

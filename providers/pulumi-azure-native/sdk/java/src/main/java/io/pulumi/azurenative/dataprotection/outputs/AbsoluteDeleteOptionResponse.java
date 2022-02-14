@@ -9,7 +9,14 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AbsoluteDeleteOptionResponse {
+/**
+ * Duration of deletion after given timespan
+ */
     private final String duration;
+/**
+ * Type of the specific object - used for deserializing
+Expected value is 'AbsoluteDeleteOption'.
+ */
     private final String objectType;
 
     @OutputCustomType.Constructor({"duration","objectType"})
@@ -20,9 +27,16 @@ public final class AbsoluteDeleteOptionResponse {
         this.objectType = Objects.requireNonNull(objectType);
     }
 
+/**
+ * Duration of deletion after given timespan
+ */
     public String getDuration() {
         return this.duration;
     }
+/**
+ * Type of the specific object - used for deserializing
+Expected value is 'AbsoluteDeleteOption'.
+ */
     public String getObjectType() {
         return this.objectType;
     }

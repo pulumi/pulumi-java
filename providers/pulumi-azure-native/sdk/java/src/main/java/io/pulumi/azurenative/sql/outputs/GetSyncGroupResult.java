@@ -15,20 +15,65 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSyncGroupResult {
+/**
+ * Conflict logging retention period.
+ */
     private final @Nullable Integer conflictLoggingRetentionInDays;
+/**
+ * Conflict resolution policy of the sync group.
+ */
     private final @Nullable String conflictResolutionPolicy;
+/**
+ * If conflict logging is enabled.
+ */
     private final @Nullable Boolean enableConflictLogging;
+/**
+ * User name for the sync group hub database credential.
+ */
     private final @Nullable String hubDatabaseUserName;
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Sync interval of the sync group.
+ */
     private final @Nullable Integer interval;
+/**
+ * Last sync time of the sync group.
+ */
     private final String lastSyncTime;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * Private endpoint name of the sync group if use private link connection is enabled.
+ */
     private final String privateEndpointName;
+/**
+ * Sync schema of the sync group.
+ */
     private final @Nullable SyncGroupSchemaResponse schema;
+/**
+ * The name and capacity of the SKU.
+ */
     private final @Nullable SkuResponse sku;
+/**
+ * ARM resource id of the sync database in the sync group.
+ */
     private final @Nullable String syncDatabaseId;
+/**
+ * Sync state of the sync group.
+ */
     private final String syncState;
+/**
+ * Resource type.
+ */
     private final String type;
+/**
+ * If use private link connection is enabled.
+ */
     private final @Nullable Boolean usePrivateLinkConnection;
 
     @OutputCustomType.Constructor({"conflictLoggingRetentionInDays","conflictResolutionPolicy","enableConflictLogging","hubDatabaseUserName","id","interval","lastSyncTime","name","privateEndpointName","schema","sku","syncDatabaseId","syncState","type","usePrivateLinkConnection"})
@@ -65,48 +110,93 @@ public final class GetSyncGroupResult {
         this.usePrivateLinkConnection = usePrivateLinkConnection;
     }
 
+/**
+ * Conflict logging retention period.
+ */
     public Optional<Integer> getConflictLoggingRetentionInDays() {
         return Optional.ofNullable(this.conflictLoggingRetentionInDays);
     }
+/**
+ * Conflict resolution policy of the sync group.
+ */
     public Optional<String> getConflictResolutionPolicy() {
         return Optional.ofNullable(this.conflictResolutionPolicy);
     }
+/**
+ * If conflict logging is enabled.
+ */
     public Optional<Boolean> getEnableConflictLogging() {
         return Optional.ofNullable(this.enableConflictLogging);
     }
+/**
+ * User name for the sync group hub database credential.
+ */
     public Optional<String> getHubDatabaseUserName() {
         return Optional.ofNullable(this.hubDatabaseUserName);
     }
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Sync interval of the sync group.
+ */
     public Optional<Integer> getInterval() {
         return Optional.ofNullable(this.interval);
     }
+/**
+ * Last sync time of the sync group.
+ */
     public String getLastSyncTime() {
         return this.lastSyncTime;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Private endpoint name of the sync group if use private link connection is enabled.
+ */
     public String getPrivateEndpointName() {
         return this.privateEndpointName;
     }
+/**
+ * Sync schema of the sync group.
+ */
     public Optional<SyncGroupSchemaResponse> getSchema() {
         return Optional.ofNullable(this.schema);
     }
+/**
+ * The name and capacity of the SKU.
+ */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
+/**
+ * ARM resource id of the sync database in the sync group.
+ */
     public Optional<String> getSyncDatabaseId() {
         return Optional.ofNullable(this.syncDatabaseId);
     }
+/**
+ * Sync state of the sync group.
+ */
     public String getSyncState() {
         return this.syncState;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * If use private link connection is enabled.
+ */
     public Optional<Boolean> getUsePrivateLinkConnection() {
         return Optional.ofNullable(this.usePrivateLinkConnection);
     }

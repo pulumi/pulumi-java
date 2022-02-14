@@ -16,10 +16,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TestMatrixArgs Empty = new TestMatrixArgs();
 
+    /**
+     * Information about the client which invoked the test.
+     */
     @InputImport(name="clientInfo")
     private final @Nullable Input<ClientInfoArgs> clientInfo;
 
@@ -27,6 +33,9 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientInfo == null ? Input.empty() : this.clientInfo;
     }
 
+    /**
+     * The devices the tests are being executed on.
+     */
     @InputImport(name="environmentMatrix", required=true)
     private final Input<EnvironmentMatrixArgs> environmentMatrix;
 
@@ -34,6 +43,9 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentMatrix;
     }
 
+    /**
+     * If true, only a single attempt at most will be made to run each execution/shard in the matrix. Flaky test attempts are not affected. Normally, 2 or more attempts are made if a potential infrastructure issue is detected. This feature is for latency sensitive workloads. The incidence of execution failures may be significantly greater for fail-fast matrices and support is more limited because of that expectation.
+     */
     @InputImport(name="failFast")
     private final @Nullable Input<Boolean> failFast;
 
@@ -41,6 +53,9 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
         return this.failFast == null ? Input.empty() : this.failFast;
     }
 
+    /**
+     * The number of times a TestExecution should be re-attempted if one or more of its test cases fail for any reason. The maximum number of reruns allowed is 10. Default is 0, which implies no reruns.
+     */
     @InputImport(name="flakyTestAttempts")
     private final @Nullable Input<Integer> flakyTestAttempts;
 
@@ -48,6 +63,9 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
         return this.flakyTestAttempts == null ? Input.empty() : this.flakyTestAttempts;
     }
 
+    /**
+     * The cloud project that owns the test matrix.
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -55,6 +73,9 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -62,6 +83,9 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * Where the results for the matrix are written.
+     */
     @InputImport(name="resultStorage", required=true)
     private final Input<ResultStorageArgs> resultStorage;
 
@@ -69,6 +93,9 @@ public final class TestMatrixArgs extends io.pulumi.resources.ResourceArgs {
         return this.resultStorage;
     }
 
+    /**
+     * How to run the test.
+     */
     @InputImport(name="testSpecification", required=true)
     private final Input<TestSpecificationArgs> testSpecification;
 

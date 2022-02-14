@@ -13,10 +13,19 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The request properties provided for a pipeline run.
+ */
 public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PipelineRunRequestArgs Empty = new PipelineRunRequestArgs();
 
+    /**
+     * List of source artifacts to be transferred by the pipeline. 
+Specify an image by repository ('hello-world'). This will use the 'latest' tag.
+Specify an image by tag ('hello-world:latest').
+Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
+     */
     @InputImport(name="artifacts")
     private final @Nullable Input<List<String>> artifacts;
 
@@ -24,6 +33,9 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
         return this.artifacts == null ? Input.empty() : this.artifacts;
     }
 
+    /**
+     * The digest of the tar used to transfer the artifacts.
+     */
     @InputImport(name="catalogDigest")
     private final @Nullable Input<String> catalogDigest;
 
@@ -31,6 +43,9 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
         return this.catalogDigest == null ? Input.empty() : this.catalogDigest;
     }
 
+    /**
+     * The resource ID of the pipeline to run.
+     */
     @InputImport(name="pipelineResourceId")
     private final @Nullable Input<String> pipelineResourceId;
 
@@ -38,6 +53,9 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
         return this.pipelineResourceId == null ? Input.empty() : this.pipelineResourceId;
     }
 
+    /**
+     * The source properties of the pipeline run.
+     */
     @InputImport(name="source")
     private final @Nullable Input<PipelineRunSourcePropertiesArgs> source;
 
@@ -45,6 +63,9 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
         return this.source == null ? Input.empty() : this.source;
     }
 
+    /**
+     * The target properties of the pipeline run.
+     */
     @InputImport(name="target")
     private final @Nullable Input<PipelineRunTargetPropertiesArgs> target;
 

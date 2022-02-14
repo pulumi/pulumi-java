@@ -13,13 +13,37 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetConsentArtifactResult {
+/**
+ * Optional. Screenshots, PDFs, or other binary information documenting the user's consent.
+ */
     private final List<ImageResponse> consentContentScreenshots;
+/**
+ * Optional. An string indicating the version of the consent information shown to the user.
+ */
     private final String consentContentVersion;
+/**
+ * Optional. A signature from a guardian.
+ */
     private final SignatureResponse guardianSignature;
+/**
+ * Optional. Metadata associated with the Consent artifact. For example, the consent locale or user agent version.
+ */
     private final Map<String,String> metadata;
+/**
+ * Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. Cannot be changed after creation.
+ */
     private final String name;
+/**
+ * User's UUID provided by the client.
+ */
     private final String userId;
+/**
+ * Optional. User's signature.
+ */
     private final SignatureResponse userSignature;
+/**
+ * Optional. A signature from a witness.
+ */
     private final SignatureResponse witnessSignature;
 
     @OutputCustomType.Constructor({"consentContentScreenshots","consentContentVersion","guardianSignature","metadata","name","userId","userSignature","witnessSignature"})
@@ -42,27 +66,51 @@ public final class GetConsentArtifactResult {
         this.witnessSignature = Objects.requireNonNull(witnessSignature);
     }
 
+/**
+ * Optional. Screenshots, PDFs, or other binary information documenting the user's consent.
+ */
     public List<ImageResponse> getConsentContentScreenshots() {
         return this.consentContentScreenshots;
     }
+/**
+ * Optional. An string indicating the version of the consent information shown to the user.
+ */
     public String getConsentContentVersion() {
         return this.consentContentVersion;
     }
+/**
+ * Optional. A signature from a guardian.
+ */
     public SignatureResponse getGuardianSignature() {
         return this.guardianSignature;
     }
+/**
+ * Optional. Metadata associated with the Consent artifact. For example, the consent locale or user agent version.
+ */
     public Map<String,String> getMetadata() {
         return this.metadata;
     }
+/**
+ * Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. Cannot be changed after creation.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * User's UUID provided by the client.
+ */
     public String getUserId() {
         return this.userId;
     }
+/**
+ * Optional. User's signature.
+ */
     public SignatureResponse getUserSignature() {
         return this.userSignature;
     }
+/**
+ * Optional. A signature from a witness.
+ */
     public SignatureResponse getWitnessSignature() {
         return this.witnessSignature;
     }

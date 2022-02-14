@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TestDetailsResponse {
+/**
+ * If the TestState is ERROR, then this string will contain human-readable details about the error.
+ */
     private final String errorMessage;
+/**
+ * Human-readable, detailed descriptions of the test's progress. For example: "Provisioning a device", "Starting Test". During the course of execution new data may be appended to the end of progress_messages.
+ */
     private final List<String> progressMessages;
 
     @OutputCustomType.Constructor({"errorMessage","progressMessages"})
@@ -21,9 +27,15 @@ public final class TestDetailsResponse {
         this.progressMessages = Objects.requireNonNull(progressMessages);
     }
 
+/**
+ * If the TestState is ERROR, then this string will contain human-readable details about the error.
+ */
     public String getErrorMessage() {
         return this.errorMessage;
     }
+/**
+ * Human-readable, detailed descriptions of the test's progress. For example: "Provisioning a device", "Starting Test". During the course of execution new data may be appended to the end of progress_messages.
+ */
     public List<String> getProgressMessages() {
         return this.progressMessages;
     }

@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourceGuardProxy {
+/**
+ * 
+API Version: 2021-02-01-preview.
+ */
     public static CompletableFuture<GetResourceGuardProxyResult> invokeAsync(GetResourceGuardProxyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getResourceGuardProxy", TypeShape.of(GetResourceGuardProxyResult.class), args == null ? GetResourceGuardProxyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final QueryParameterTypeStructTypesItemArgs Empty = new QueryParameterTypeStructTypesItemArgs();
 
+    /**
+     * [Optional] Human-oriented description of the field.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +28,9 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * [Optional] The name of this field.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +38,9 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * [Required] The type of this field.
+     */
     @InputImport(name="type")
     private final @Nullable Input<QueryParameterTypeArgs> type;
 

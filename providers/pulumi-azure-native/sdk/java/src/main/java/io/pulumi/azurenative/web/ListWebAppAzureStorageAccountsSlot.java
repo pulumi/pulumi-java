@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppAzureStorageAccountsSlot {
+/**
+ * AzureStorageInfo dictionary resource.
+API Version: 2020-12-01.
+ *
+ * AzureStorageInfo dictionary resource.
+ */
     public static CompletableFuture<ListWebAppAzureStorageAccountsSlotResult> invokeAsync(ListWebAppAzureStorageAccountsSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppAzureStorageAccountsSlot", TypeShape.of(ListWebAppAzureStorageAccountsSlotResult.class), args == null ? ListWebAppAzureStorageAccountsSlotArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.kusto;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.kusto.ScriptArgs;
 import io.pulumi.azurenative.kusto.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,51 +15,208 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Class representing a database script.
+API Version: 2021-01-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### KustoScriptsCreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var script = new AzureNative.Kusto.Script("script", new AzureNative.Kusto.ScriptArgs
+        {
+            ClusterName = "kustoclusterrptest4",
+            ContinueOnErrors = true,
+            DatabaseName = "KustoDatabase8",
+            ForceUpdateTag = "2bcf3c21-ffd1-4444-b9dd-e52e00ee53fe",
+            ResourceGroupName = "kustorptest",
+            ScriptName = "kustoScript1",
+            ScriptUrl = "https://mysa.blob.core.windows.net/container/script.txt",
+            ScriptUrlSasToken = "?sv=2019-02-02&st=2019-04-29T22%3A18%3A26Z&se=2019-04-30T02%3A23%3A26Z&sr=b&sp=rw&sip=168.1.5.60-168.1.5.70&spr=https&sig=********************************",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	"fmt"
+
+	kusto "github.com/pulumi/pulumi-azure-native/sdk/go/azure/kusto"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := kusto.NewScript(ctx, "script", &kusto.ScriptArgs{
+			ClusterName:       pulumi.String("kustoclusterrptest4"),
+			ContinueOnErrors:  pulumi.Bool(true),
+			DatabaseName:      pulumi.String("KustoDatabase8"),
+			ForceUpdateTag:    pulumi.String("2bcf3c21-ffd1-4444-b9dd-e52e00ee53fe"),
+			ResourceGroupName: pulumi.String("kustorptest"),
+			ScriptName:        pulumi.String("kustoScript1"),
+			ScriptUrl:         pulumi.String("https://mysa.blob.core.windows.net/container/script.txt"),
+			ScriptUrlSasToken: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v", "?sv=2019-02-02&st=2019-04-29T22", "%", "3A18", "%", "3A26Z&se=2019-04-30T02", "%", "3A23", "%", "3A26Z&sr=b&sp=rw&sip=168.1.5.60-168.1.5.70&spr=https&sig=********************************")),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const script = new azure_native.kusto.Script("script", {
+    clusterName: "kustoclusterrptest4",
+    continueOnErrors: true,
+    databaseName: "KustoDatabase8",
+    forceUpdateTag: "2bcf3c21-ffd1-4444-b9dd-e52e00ee53fe",
+    resourceGroupName: "kustorptest",
+    scriptName: "kustoScript1",
+    scriptUrl: "https://mysa.blob.core.windows.net/container/script.txt",
+    scriptUrlSasToken: `?sv=2019-02-02&st=2019-04-29T22%3A18%3A26Z&se=2019-04-30T02%3A23%3A26Z&sr=b&sp=rw&sip=168.1.5.60-168.1.5.70&spr=https&sig=********************************`,
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+script = azure_native.kusto.Script("script",
+    cluster_name="kustoclusterrptest4",
+    continue_on_errors=True,
+    database_name="KustoDatabase8",
+    force_update_tag="2bcf3c21-ffd1-4444-b9dd-e52e00ee53fe",
+    resource_group_name="kustorptest",
+    script_name="kustoScript1",
+    script_url="https://mysa.blob.core.windows.net/container/script.txt",
+    script_url_sas_token="?sv=2019-02-02&st=2019-04-29T22%3A18%3A26Z&se=2019-04-30T02%3A23%3A26Z&sr=b&sp=rw&sip=168.1.5.60-168.1.5.70&spr=https&sig=********************************")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:kusto:Script KustoClusterRPTest4/KustoDatabase8/kustoScript1 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterRPTest4/Databases/KustoDatabase8/Scripts/kustoScript1 
+```
+
+ */
 @ResourceType(type="azure-native:kusto:Script")
 public class Script extends io.pulumi.resources.CustomResource {
+    /**
+     * Flag that indicates whether to continue if one of the command fails.
+     */
     @OutputExport(name="continueOnErrors", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> continueOnErrors;
 
+    /**
+     * @return Flag that indicates whether to continue if one of the command fails.
+     */
     public Output</* @Nullable */ Boolean> getContinueOnErrors() {
         return this.continueOnErrors;
     }
+    /**
+     * A unique string. If changed the script will be applied again.
+     */
     @OutputExport(name="forceUpdateTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> forceUpdateTag;
 
+    /**
+     * @return A unique string. If changed the script will be applied again.
+     */
     public Output</* @Nullable */ String> getForceUpdateTag() {
         return this.forceUpdateTag;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioned state of the resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioned state of the resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The url to the KQL script blob file.
+     */
     @OutputExport(name="scriptUrl", type=String.class, parameters={})
     private Output<String> scriptUrl;
 
+    /**
+     * @return The url to the KQL script blob file.
+     */
     public Output<String> getScriptUrl() {
         return this.scriptUrl;
     }
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Metadata pertaining to creation and last modification of the resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Script(String name, ScriptArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:kusto:Script", name, args == null ? ScriptArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -80,6 +236,14 @@ public class Script extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Script get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Script(name, id, options);
     }

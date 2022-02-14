@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ApplianceNetworkConfigurationResponse {
+/**
+ * Mac Address.
+ */
     private final String macAddress;
+/**
+ * Name of the network.
+ */
     private final String name;
 
     @OutputCustomType.Constructor({"macAddress","name"})
@@ -20,9 +26,15 @@ public final class ApplianceNetworkConfigurationResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+/**
+ * Mac Address.
+ */
     public String getMacAddress() {
         return this.macAddress;
     }
+/**
+ * Name of the network.
+ */
     public String getName() {
         return this.name;
     }

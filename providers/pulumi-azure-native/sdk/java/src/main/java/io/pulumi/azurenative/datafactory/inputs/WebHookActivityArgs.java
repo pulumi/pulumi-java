@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * WebHook activity.
+ */
 public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebHookActivityArgs Empty = new WebHookActivityArgs();
 
+    /**
+     * Authentication method used for calling the endpoint.
+     */
     @InputImport(name="authentication")
     private final @Nullable Input<WebActivityAuthenticationArgs> authentication;
 
@@ -28,6 +34,9 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.authentication == null ? Input.empty() : this.authentication;
     }
 
+    /**
+     * Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
+     */
     @InputImport(name="body")
     private final @Nullable Input<Object> body;
 
@@ -35,6 +44,9 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.body == null ? Input.empty() : this.body;
     }
 
+    /**
+     * Activity depends on condition.
+     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
@@ -42,6 +54,9 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -49,6 +64,9 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="headers")
     private final @Nullable Input<Object> headers;
 
@@ -56,6 +74,9 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.headers == null ? Input.empty() : this.headers;
     }
 
+    /**
+     * Rest API method for target endpoint.
+     */
     @InputImport(name="method", required=true)
     private final Input<Either<String,WebHookActivityMethod>> method;
 
@@ -63,6 +84,9 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.method;
     }
 
+    /**
+     * Activity name.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -70,6 +94,9 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.name;
     }
 
+    /**
+     * When set to true, statusCode, output and error in callback request body will be consumed by activity. The activity can be marked as failed by setting statusCode >= 400 in callback request. Default is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="reportStatusOnCallBack")
     private final @Nullable Input<Object> reportStatusOnCallBack;
 
@@ -77,6 +104,9 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.reportStatusOnCallBack == null ? Input.empty() : this.reportStatusOnCallBack;
     }
 
+    /**
+     * The timeout within which the webhook should be called back. If there is no value specified, it defaults to 10 minutes. Type: string. Pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="timeout")
     private final @Nullable Input<String> timeout;
 
@@ -84,6 +114,10 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.timeout == null ? Input.empty() : this.timeout;
     }
 
+    /**
+     * Type of activity.
+Expected value is 'WebHook'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -91,6 +125,9 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.type;
     }
 
+    /**
+     * WebHook activity target endpoint and path. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="url", required=true)
     private final Input<Object> url;
 
@@ -98,6 +135,9 @@ public final class WebHookActivityArgs extends io.pulumi.resources.ResourceArgs 
         return this.url;
     }
 
+    /**
+     * Activity user properties.
+     */
     @InputImport(name="userProperties")
     private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 

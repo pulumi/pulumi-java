@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.eventgrid;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.eventgrid.PartnerRegistrationArgs;
 import io.pulumi.azurenative.eventgrid.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,117 +15,388 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Information about a partner registration.
+API Version: 2021-06-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### PartnerRegistrations_CreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var partnerRegistration = new AzureNative.EventGrid.PartnerRegistration("partnerRegistration", new AzureNative.EventGrid.PartnerRegistrationArgs
+        {
+            AuthorizedAzureSubscriptionIds = 
+            {
+                "d48566a8-2428-4a6c-8347-9675d09fb851",
+            },
+            Location = "global",
+            LogoUri = "https://www.example.com/logo.png",
+            PartnerName = "ContosoCorp",
+            PartnerRegistrationName = "examplePartnerRegistrationName1",
+            PartnerResourceTypeDescription = "ContocoCorp Accounts Description Text",
+            PartnerResourceTypeDisplayName = "ContocoCorp Accounts DisplayName Text",
+            PartnerResourceTypeName = "ContosoCorp.Accounts",
+            ResourceGroupName = "examplerg",
+            SetupUri = "https://www.example.com/setup.html",
+            Tags = 
+            {
+                { "key1", "value1" },
+                { "key2", "Value2" },
+                { "key3", "Value3" },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	eventgrid "github.com/pulumi/pulumi-azure-native/sdk/go/azure/eventgrid"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := eventgrid.NewPartnerRegistration(ctx, "partnerRegistration", &eventgrid.PartnerRegistrationArgs{
+			AuthorizedAzureSubscriptionIds: pulumi.StringArray{
+				pulumi.String("d48566a8-2428-4a6c-8347-9675d09fb851"),
+			},
+			Location:                       pulumi.String("global"),
+			LogoUri:                        pulumi.String("https://www.example.com/logo.png"),
+			PartnerName:                    pulumi.String("ContosoCorp"),
+			PartnerRegistrationName:        pulumi.String("examplePartnerRegistrationName1"),
+			PartnerResourceTypeDescription: pulumi.String("ContocoCorp Accounts Description Text"),
+			PartnerResourceTypeDisplayName: pulumi.String("ContocoCorp Accounts DisplayName Text"),
+			PartnerResourceTypeName:        pulumi.String("ContosoCorp.Accounts"),
+			ResourceGroupName:              pulumi.String("examplerg"),
+			SetupUri:                       pulumi.String("https://www.example.com/setup.html"),
+			Tags: pulumi.StringMap{
+				"key1": pulumi.String("value1"),
+				"key2": pulumi.String("Value2"),
+				"key3": pulumi.String("Value3"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const partnerRegistration = new azure_native.eventgrid.PartnerRegistration("partnerRegistration", {
+    authorizedAzureSubscriptionIds: ["d48566a8-2428-4a6c-8347-9675d09fb851"],
+    location: "global",
+    logoUri: "https://www.example.com/logo.png",
+    partnerName: "ContosoCorp",
+    partnerRegistrationName: "examplePartnerRegistrationName1",
+    partnerResourceTypeDescription: "ContocoCorp Accounts Description Text",
+    partnerResourceTypeDisplayName: "ContocoCorp Accounts DisplayName Text",
+    partnerResourceTypeName: "ContosoCorp.Accounts",
+    resourceGroupName: "examplerg",
+    setupUri: "https://www.example.com/setup.html",
+    tags: {
+        key1: "value1",
+        key2: "Value2",
+        key3: "Value3",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+partner_registration = azure_native.eventgrid.PartnerRegistration("partnerRegistration",
+    authorized_azure_subscription_ids=["d48566a8-2428-4a6c-8347-9675d09fb851"],
+    location="global",
+    logo_uri="https://www.example.com/logo.png",
+    partner_name="ContosoCorp",
+    partner_registration_name="examplePartnerRegistrationName1",
+    partner_resource_type_description="ContocoCorp Accounts Description Text",
+    partner_resource_type_display_name="ContocoCorp Accounts DisplayName Text",
+    partner_resource_type_name="ContosoCorp.Accounts",
+    resource_group_name="examplerg",
+    setup_uri="https://www.example.com/setup.html",
+    tags={
+        "key1": "value1",
+        "key2": "Value2",
+        "key3": "Value3",
+    })
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:eventgrid:PartnerRegistration examplePartnerRegistrationName1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerRegistrations/examplePartnerRegistrationName1 
+```
+
+ */
 @ResourceType(type="azure-native:eventgrid:PartnerRegistration")
 public class PartnerRegistration extends io.pulumi.resources.CustomResource {
+    /**
+     * List of Azure subscription Ids that are authorized to create a partner namespace
+associated with this partner registration. This is an optional property. Creating
+partner namespaces is always permitted under the same Azure subscription as the one used
+for creating the partner registration.
+     */
     @OutputExport(name="authorizedAzureSubscriptionIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> authorizedAzureSubscriptionIds;
 
+    /**
+     * @return List of Azure subscription Ids that are authorized to create a partner namespace
+associated with this partner registration. This is an optional property. Creating
+partner namespaces is always permitted under the same Azure subscription as the one used
+for creating the partner registration.
+     */
     public Output</* @Nullable */ List<String>> getAuthorizedAzureSubscriptionIds() {
         return this.authorizedAzureSubscriptionIds;
     }
+    /**
+     * The extension of the customer service URI of the publisher.
+     */
     @OutputExport(name="customerServiceUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> customerServiceUri;
 
+    /**
+     * @return The extension of the customer service URI of the publisher.
+     */
     public Output</* @Nullable */ String> getCustomerServiceUri() {
         return this.customerServiceUri;
     }
+    /**
+     * Location of the resource.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Location of the resource.
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * URI of the logo.
+     */
     @OutputExport(name="logoUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> logoUri;
 
+    /**
+     * @return URI of the logo.
+     */
     public Output</* @Nullable */ String> getLogoUri() {
         return this.logoUri;
     }
+    /**
+     * Long description for the custom scenarios and integration to be displayed in the portal if needed.
+Length of this description should not exceed 2048 characters.
+     */
     @OutputExport(name="longDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> longDescription;
 
+    /**
+     * @return Long description for the custom scenarios and integration to be displayed in the portal if needed.
+Length of this description should not exceed 2048 characters.
+     */
     public Output</* @Nullable */ String> getLongDescription() {
         return this.longDescription;
     }
+    /**
+     * Name of the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.
+     */
     @OutputExport(name="partnerCustomerServiceExtension", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerCustomerServiceExtension;
 
+    /**
+     * @return The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.
+     */
     public Output</* @Nullable */ String> getPartnerCustomerServiceExtension() {
         return this.partnerCustomerServiceExtension;
     }
+    /**
+     * The customer service number of the publisher. The expected phone format should start with a '+' sign 
+followed by the country code. The remaining digits are then followed. Only digits and spaces are allowed and its
+length cannot exceed 16 digits including country code. Examples of valid phone numbers are: +1 515 123 4567 and
++966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43
+     */
     @OutputExport(name="partnerCustomerServiceNumber", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerCustomerServiceNumber;
 
+    /**
+     * @return The customer service number of the publisher. The expected phone format should start with a '+' sign 
+followed by the country code. The remaining digits are then followed. Only digits and spaces are allowed and its
+length cannot exceed 16 digits including country code. Examples of valid phone numbers are: +1 515 123 4567 and
++966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43
+     */
     public Output</* @Nullable */ String> getPartnerCustomerServiceNumber() {
         return this.partnerCustomerServiceNumber;
     }
+    /**
+     * Official name of the partner name. For example: "Contoso".
+     */
     @OutputExport(name="partnerName", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerName;
 
+    /**
+     * @return Official name of the partner name. For example: "Contoso".
+     */
     public Output</* @Nullable */ String> getPartnerName() {
         return this.partnerName;
     }
+    /**
+     * Short description of the partner resource type. The length of this description should not exceed 256 characters.
+     */
     @OutputExport(name="partnerResourceTypeDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerResourceTypeDescription;
 
+    /**
+     * @return Short description of the partner resource type. The length of this description should not exceed 256 characters.
+     */
     public Output</* @Nullable */ String> getPartnerResourceTypeDescription() {
         return this.partnerResourceTypeDescription;
     }
+    /**
+     * Display name of the partner resource type.
+     */
     @OutputExport(name="partnerResourceTypeDisplayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerResourceTypeDisplayName;
 
+    /**
+     * @return Display name of the partner resource type.
+     */
     public Output</* @Nullable */ String> getPartnerResourceTypeDisplayName() {
         return this.partnerResourceTypeDisplayName;
     }
+    /**
+     * Name of the partner resource type.
+     */
     @OutputExport(name="partnerResourceTypeName", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerResourceTypeName;
 
+    /**
+     * @return Name of the partner resource type.
+     */
     public Output</* @Nullable */ String> getPartnerResourceTypeName() {
         return this.partnerResourceTypeName;
     }
+    /**
+     * Provisioning state of the partner registration.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state of the partner registration.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * URI of the partner website that can be used by Azure customers to setup Event Grid
+integration on an event source.
+     */
     @OutputExport(name="setupUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> setupUri;
 
+    /**
+     * @return URI of the partner website that can be used by Azure customers to setup Event Grid
+integration on an event source.
+     */
     public Output</* @Nullable */ String> getSetupUri() {
         return this.setupUri;
     }
+    /**
+     * The system metadata relating to Partner Registration resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system metadata relating to Partner Registration resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Tags of the resource.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Tags of the resource.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Type of the resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of the resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Visibility state of the partner registration.
+     */
     @OutputExport(name="visibilityState", type=String.class, parameters={})
     private Output</* @Nullable */ String> visibilityState;
 
+    /**
+     * @return Visibility state of the partner registration.
+     */
     public Output</* @Nullable */ String> getVisibilityState() {
         return this.visibilityState;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public PartnerRegistration(String name, PartnerRegistrationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:eventgrid:PartnerRegistration", name, args == null ? PartnerRegistrationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -147,6 +417,14 @@ public class PartnerRegistration extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static PartnerRegistration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PartnerRegistration(name, id, options);
     }

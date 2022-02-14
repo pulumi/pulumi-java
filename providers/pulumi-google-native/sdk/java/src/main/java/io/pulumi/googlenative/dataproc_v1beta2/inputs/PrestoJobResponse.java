@@ -13,10 +13,16 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * A Dataproc job for running Presto (https://prestosql.io/) queries. IMPORTANT: The Dataproc Presto Optional Component (https://cloud.google.com/dataproc/docs/concepts/components/presto) must be enabled when the cluster is created to submit a Presto job to the cluster.
+ */
 public final class PrestoJobResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrestoJobResponse Empty = new PrestoJobResponse();
 
+    /**
+     * Optional. Presto client tags to attach to this query
+     */
     @InputImport(name="clientTags", required=true)
     private final List<String> clientTags;
 
@@ -24,6 +30,9 @@ public final class PrestoJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.clientTags;
     }
 
+    /**
+     * Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
+     */
     @InputImport(name="continueOnFailure", required=true)
     private final Boolean continueOnFailure;
 
@@ -31,6 +40,9 @@ public final class PrestoJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.continueOnFailure;
     }
 
+    /**
+     * Optional. The runtime log config for job execution.
+     */
     @InputImport(name="loggingConfig", required=true)
     private final LoggingConfigResponse loggingConfig;
 
@@ -38,6 +50,9 @@ public final class PrestoJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.loggingConfig;
     }
 
+    /**
+     * Optional. The format in which query output will be displayed. See the Presto documentation for supported output formats
+     */
     @InputImport(name="outputFormat", required=true)
     private final String outputFormat;
 
@@ -45,6 +60,9 @@ public final class PrestoJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.outputFormat;
     }
 
+    /**
+     * Optional. A mapping of property names to values. Used to set Presto session properties (https://prestodb.io/docs/current/sql/set-session.html) Equivalent to using the --session flag in the Presto CLI
+     */
     @InputImport(name="properties", required=true)
     private final Map<String,String> properties;
 
@@ -52,6 +70,9 @@ public final class PrestoJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.properties;
     }
 
+    /**
+     * The HCFS URI of the script that contains SQL queries.
+     */
     @InputImport(name="queryFileUri", required=true)
     private final String queryFileUri;
 
@@ -59,6 +80,9 @@ public final class PrestoJobResponse extends io.pulumi.resources.InvokeArgs {
         return this.queryFileUri;
     }
 
+    /**
+     * A list of queries.
+     */
     @InputImport(name="queryList", required=true)
     private final QueryListResponse queryList;
 

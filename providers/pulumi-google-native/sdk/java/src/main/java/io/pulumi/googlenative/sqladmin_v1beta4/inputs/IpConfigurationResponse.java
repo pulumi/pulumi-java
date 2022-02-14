@@ -11,10 +11,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * IP Management configuration.
+ */
 public final class IpConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IpConfigurationResponse Empty = new IpConfigurationResponse();
 
+    /**
+     * The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?.`
+     */
     @InputImport(name="allocatedIpRange", required=true)
     private final String allocatedIpRange;
 
@@ -22,6 +28,9 @@ public final class IpConfigurationResponse extends io.pulumi.resources.InvokeArg
         return this.allocatedIpRange;
     }
 
+    /**
+     * The list of external networks that are allowed to connect to the instance using the IP. In 'CIDR' notation, also known as 'slash' notation (for example: `157.197.200.0/24`).
+     */
     @InputImport(name="authorizedNetworks", required=true)
     private final List<AclEntryResponse> authorizedNetworks;
 
@@ -29,6 +38,9 @@ public final class IpConfigurationResponse extends io.pulumi.resources.InvokeArg
         return this.authorizedNetworks;
     }
 
+    /**
+     * Whether the instance is assigned a public IP address or not.
+     */
     @InputImport(name="ipv4Enabled", required=true)
     private final Boolean ipv4Enabled;
 
@@ -36,6 +48,9 @@ public final class IpConfigurationResponse extends io.pulumi.resources.InvokeArg
         return this.ipv4Enabled;
     }
 
+    /**
+     * The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, `/projects/myProject/global/networks/default`. This setting can be updated, but it cannot be removed after it is set.
+     */
     @InputImport(name="privateNetwork", required=true)
     private final String privateNetwork;
 
@@ -43,6 +58,9 @@ public final class IpConfigurationResponse extends io.pulumi.resources.InvokeArg
         return this.privateNetwork;
     }
 
+    /**
+     * Whether SSL connections over IP are enforced or not.
+     */
     @InputImport(name="requireSsl", required=true)
     private final Boolean requireSsl;
 

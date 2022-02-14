@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DiskEncryptionConfigurationResponse {
+/**
+ * On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.
+ */
     private final @Nullable List<String> targets;
 
     @OutputCustomType.Constructor({"targets"})
@@ -18,6 +21,9 @@ public final class DiskEncryptionConfigurationResponse {
         this.targets = targets;
     }
 
+/**
+ * On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.
+ */
     public List<String> getTargets() {
         return this.targets == null ? List.of() : this.targets;
     }

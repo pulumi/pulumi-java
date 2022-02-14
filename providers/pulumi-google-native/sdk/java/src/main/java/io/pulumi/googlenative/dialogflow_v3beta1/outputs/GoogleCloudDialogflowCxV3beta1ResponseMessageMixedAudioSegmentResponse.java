@@ -10,8 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse {
+/**
+ * Whether the playback of this segment can be interrupted by the end user's speech and the client should then start the next Dialogflow request.
+ */
     private final Boolean allowPlaybackInterruption;
+/**
+ * Raw audio synthesized from the Dialogflow agent's response using the output config specified in the request.
+ */
     private final String audio;
+/**
+ * Client-specific URI that points to an audio clip accessible to the client. Dialogflow does not impose any validation on it.
+ */
     private final String uri;
 
     @OutputCustomType.Constructor({"allowPlaybackInterruption","audio","uri"})
@@ -24,12 +33,21 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmen
         this.uri = Objects.requireNonNull(uri);
     }
 
+/**
+ * Whether the playback of this segment can be interrupted by the end user's speech and the client should then start the next Dialogflow request.
+ */
     public Boolean getAllowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
     }
+/**
+ * Raw audio synthesized from the Dialogflow agent's response using the output config specified in the request.
+ */
     public String getAudio() {
         return this.audio;
     }
+/**
+ * Client-specific URI that points to an audio clip accessible to the client. Dialogflow does not impose any validation on it.
+ */
     public String getUri() {
         return this.uri;
     }

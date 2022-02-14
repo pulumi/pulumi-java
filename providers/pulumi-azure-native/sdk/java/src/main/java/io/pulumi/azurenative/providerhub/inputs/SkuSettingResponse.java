@@ -6,7 +6,6 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.inputs.SkuCapabilityResponse;
 import io.pulumi.azurenative.providerhub.inputs.SkuCostResponse;
 import io.pulumi.azurenative.providerhub.inputs.SkuLocationInfoResponse;
-import io.pulumi.azurenative.providerhub.inputs.SkuSettingResponseCapacity;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -15,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SkuSettingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuSettingResponse Empty = new SkuSettingResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="capabilities")
     private final @Nullable List<SkuCapabilityResponse> capabilities;
 
@@ -26,6 +31,9 @@ public final class SkuSettingResponse extends io.pulumi.resources.InvokeArgs {
         return this.capabilities == null ? List.of() : this.capabilities;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="capacity")
     private final @Nullable SkuSettingResponseCapacity capacity;
 
@@ -33,6 +41,9 @@ public final class SkuSettingResponse extends io.pulumi.resources.InvokeArgs {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="costs")
     private final @Nullable List<SkuCostResponse> costs;
 
@@ -40,6 +51,9 @@ public final class SkuSettingResponse extends io.pulumi.resources.InvokeArgs {
         return this.costs == null ? List.of() : this.costs;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="family")
     private final @Nullable String family;
 
@@ -47,6 +61,9 @@ public final class SkuSettingResponse extends io.pulumi.resources.InvokeArgs {
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable String kind;
 
@@ -54,6 +71,9 @@ public final class SkuSettingResponse extends io.pulumi.resources.InvokeArgs {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="locationInfo")
     private final @Nullable List<SkuLocationInfoResponse> locationInfo;
 
@@ -61,6 +81,9 @@ public final class SkuSettingResponse extends io.pulumi.resources.InvokeArgs {
         return this.locationInfo == null ? List.of() : this.locationInfo;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="locations")
     private final @Nullable List<String> locations;
 
@@ -68,6 +91,9 @@ public final class SkuSettingResponse extends io.pulumi.resources.InvokeArgs {
         return this.locations == null ? List.of() : this.locations;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -75,6 +101,9 @@ public final class SkuSettingResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requiredFeatures")
     private final @Nullable List<String> requiredFeatures;
 
@@ -82,6 +111,9 @@ public final class SkuSettingResponse extends io.pulumi.resources.InvokeArgs {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requiredQuotaIds")
     private final @Nullable List<String> requiredQuotaIds;
 
@@ -89,6 +121,9 @@ public final class SkuSettingResponse extends io.pulumi.resources.InvokeArgs {
         return this.requiredQuotaIds == null ? List.of() : this.requiredQuotaIds;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="size")
     private final @Nullable String size;
 
@@ -96,6 +131,9 @@ public final class SkuSettingResponse extends io.pulumi.resources.InvokeArgs {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

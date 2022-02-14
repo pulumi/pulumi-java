@@ -8,14 +8,38 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The provisioning state of the workspace.
+ */
     @EnumType
     public enum WorkspaceEntityStatus {
+/**
+ * 
+ */
         Creating("Creating"),
+/**
+ * 
+ */
         Succeeded("Succeeded"),
+/**
+ * 
+ */
         Failed("Failed"),
+/**
+ * 
+ */
         Canceled("Canceled"),
+/**
+ * 
+ */
         Deleting("Deleting"),
+/**
+ * 
+ */
         ProvisioningAccount("ProvisioningAccount"),
+/**
+ * 
+ */
         Updating("Updating");
 
         private final String value;

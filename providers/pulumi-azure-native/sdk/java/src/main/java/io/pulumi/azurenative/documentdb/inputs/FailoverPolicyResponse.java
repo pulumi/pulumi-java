@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The failover policy for a given region of a database account.
+ */
 public final class FailoverPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FailoverPolicyResponse Empty = new FailoverPolicyResponse();
 
+    /**
+     * The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
+     */
     @InputImport(name="failoverPriority")
     private final @Nullable Integer failoverPriority;
 
@@ -22,6 +28,9 @@ public final class FailoverPolicyResponse extends io.pulumi.resources.InvokeArgs
         return this.failoverPriority == null ? Optional.empty() : Optional.ofNullable(this.failoverPriority);
     }
 
+    /**
+     * The unique identifier of the region in which the database account replicates to. Example: &lt;accountName&gt;-&lt;locationName&gt;.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -29,6 +38,9 @@ public final class FailoverPolicyResponse extends io.pulumi.resources.InvokeArgs
         return this.id;
     }
 
+    /**
+     * The name of the region in which the database account exists.
+     */
     @InputImport(name="locationName")
     private final @Nullable String locationName;
 

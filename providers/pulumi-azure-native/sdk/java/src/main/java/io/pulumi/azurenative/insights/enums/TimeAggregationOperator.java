@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.
+ */
     @EnumType
     public enum TimeAggregationOperator {
+/**
+ * 
+ */
         Average("Average"),
+/**
+ * 
+ */
         Minimum("Minimum"),
+/**
+ * 
+ */
         Maximum("Maximum"),
+/**
+ * 
+ */
         Total("Total"),
+/**
+ * 
+ */
         Last("Last");
 
         private final String value;

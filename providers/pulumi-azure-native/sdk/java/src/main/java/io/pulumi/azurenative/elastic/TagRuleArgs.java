@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TagRuleArgs Empty = new TagRuleArgs();
 
+    /**
+     * Monitor resource name
+     */
     @InputImport(name="monitorName", required=true)
     private final Input<String> monitorName;
 
@@ -22,6 +28,9 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.monitorName;
     }
 
+    /**
+     * Properties of the monitoring tag rules.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<MonitoringTagRulesPropertiesArgs> properties;
 
@@ -29,6 +38,9 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group to which the Elastic resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,9 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Tag Rule Set resource name
+     */
     @InputImport(name="ruleSetName")
     private final @Nullable Input<String> ruleSetName;
 

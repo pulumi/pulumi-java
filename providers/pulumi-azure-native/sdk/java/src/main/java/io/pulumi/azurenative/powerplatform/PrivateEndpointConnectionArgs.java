@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateEndpointConnectionArgs Empty = new PrivateEndpointConnectionArgs();
 
+    /**
+     * EnterprisePolicy for the Microsoft Azure subscription.
+     */
     @InputImport(name="enterprisePolicyName", required=true)
     private final Input<String> enterprisePolicyName;
 
@@ -22,6 +28,9 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.enterprisePolicyName;
     }
 
+    /**
+     * The name of the private endpoint connection.
+     */
     @InputImport(name="privateEndpointConnectionName")
     private final @Nullable Input<String> privateEndpointConnectionName;
 
@@ -29,6 +38,9 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
+    /**
+     * A collection of information about the state of the connection between service consumer and provider.
+     */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
     private final Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
@@ -36,6 +48,9 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateLinkServiceConnectionState;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

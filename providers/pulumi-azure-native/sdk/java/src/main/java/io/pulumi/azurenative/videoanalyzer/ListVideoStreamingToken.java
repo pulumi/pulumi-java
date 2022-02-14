@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListVideoStreamingToken {
+/**
+ * Video streaming token grants access to the video streaming URLs which can be used by an compatible HLS or DASH player.
+API Version: 2021-05-01-preview.
+ *
+ * Video streaming token grants access to the video streaming URLs which can be used by an compatible HLS or DASH player.
+ */
     public static CompletableFuture<ListVideoStreamingTokenResult> invokeAsync(ListVideoStreamingTokenArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:videoanalyzer:listVideoStreamingToken", TypeShape.of(ListVideoStreamingTokenResult.class), args == null ? ListVideoStreamingTokenArgs.Empty : args, Utilities.withVersion(options));
     }

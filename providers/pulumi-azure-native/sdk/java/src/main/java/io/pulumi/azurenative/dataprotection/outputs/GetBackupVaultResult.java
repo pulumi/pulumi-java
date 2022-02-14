@@ -15,14 +15,41 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetBackupVaultResult {
+/**
+ * Optional ETag.
+ */
     private final @Nullable String eTag;
+/**
+ * Resource Id represents the complete path to the resource.
+ */
     private final String id;
+/**
+ * Input Managed Identity Details
+ */
     private final @Nullable DppIdentityDetailsResponse identity;
+/**
+ * Resource location.
+ */
     private final String location;
+/**
+ * Resource name associated with the resource.
+ */
     private final String name;
+/**
+ * BackupVaultResource properties
+ */
     private final BackupVaultResponse properties;
+/**
+ * Metadata pertaining to creation and last modification of the resource.
+ */
     private final SystemDataResponse systemData;
+/**
+ * Resource tags.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"eTag","id","identity","location","name","properties","systemData","tags","type"})
@@ -47,30 +74,57 @@ public final class GetBackupVaultResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Optional ETag.
+ */
     public Optional<String> getETag() {
         return Optional.ofNullable(this.eTag);
     }
+/**
+ * Resource Id represents the complete path to the resource.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Input Managed Identity Details
+ */
     public Optional<DppIdentityDetailsResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
+/**
+ * Resource location.
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * Resource name associated with the resource.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * BackupVaultResource properties
+ */
     public BackupVaultResponse getProperties() {
         return this.properties;
     }
+/**
+ * Metadata pertaining to creation and last modification of the resource.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * Resource tags.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
+ */
     public String getType() {
         return this.type;
     }

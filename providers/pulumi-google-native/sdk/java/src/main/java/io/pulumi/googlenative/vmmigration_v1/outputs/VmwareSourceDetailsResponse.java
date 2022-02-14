@@ -9,9 +9,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VmwareSourceDetailsResponse {
+/**
+ * Input only. The credentials password. This is write only and can not be read in a GET operation.
+ */
     private final String password;
+/**
+ * The thumbprint representing the certificate for the vcenter.
+ */
     private final String thumbprint;
+/**
+ * The credentials username.
+ */
     private final String username;
+/**
+ * The ip address of the vcenter this Source represents.
+ */
     private final String vcenterIp;
 
     @OutputCustomType.Constructor({"password","thumbprint","username","vcenterIp"})
@@ -26,15 +38,27 @@ public final class VmwareSourceDetailsResponse {
         this.vcenterIp = Objects.requireNonNull(vcenterIp);
     }
 
+/**
+ * Input only. The credentials password. This is write only and can not be read in a GET operation.
+ */
     public String getPassword() {
         return this.password;
     }
+/**
+ * The thumbprint representing the certificate for the vcenter.
+ */
     public String getThumbprint() {
         return this.thumbprint;
     }
+/**
+ * The credentials username.
+ */
     public String getUsername() {
         return this.username;
     }
+/**
+ * The ip address of the vcenter this Source represents.
+ */
     public String getVcenterIp() {
         return this.vcenterIp;
     }

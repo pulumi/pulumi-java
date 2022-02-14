@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration of a specific logging destination (the producer project or the consumer project).
+ */
 public final class LoggingDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoggingDestinationArgs Empty = new LoggingDestinationArgs();
 
+    /**
+     * Names of the logs to be sent to this destination. Each name must be defined in the Service.logs section. If the log name is not a domain scoped name, it will be automatically prefixed with the service name followed by "/".
+     */
     @InputImport(name="logs")
     private final @Nullable Input<List<String>> logs;
 
@@ -22,6 +28,9 @@ public final class LoggingDestinationArgs extends io.pulumi.resources.ResourceAr
         return this.logs == null ? Input.empty() : this.logs;
     }
 
+    /**
+     * The monitored resource type. The type must be defined in the Service.monitored_resources section.
+     */
     @InputImport(name="monitoredResource")
     private final @Nullable Input<String> monitoredResource;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetSpacecraftArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSpacecraftArgs Empty = new GetSpacecraftArgs();
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class GetSpacecraftArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Spacecraft ID
+     */
     @InputImport(name="spacecraftName", required=true)
     private final String spacecraftName;
 

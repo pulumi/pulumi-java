@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Type of the sever administrator.
+ */
     @EnumType
     public enum AdministratorType {
+/**
+ * 
+ */
         ActiveDirectory("ActiveDirectory");
 
         private final String value;

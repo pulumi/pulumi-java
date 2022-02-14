@@ -11,14 +11,41 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetQueryPackResult {
+/**
+ * Azure resource Id
+ */
     private final String id;
+/**
+ * Resource location
+ */
     private final String location;
+/**
+ * Azure resource name
+ */
     private final String name;
+/**
+ * Current state of this QueryPack: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
+ */
     private final String provisioningState;
+/**
+ * The unique ID of your application. This field cannot be changed.
+ */
     private final String queryPackId;
+/**
+ * Resource tags
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Creation Date for the Log Analytics QueryPack, in ISO 8601 format.
+ */
     private final String timeCreated;
+/**
+ * Last modified date of the Log Analytics QueryPack, in ISO 8601 format.
+ */
     private final String timeModified;
+/**
+ * Azure resource type
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","location","name","provisioningState","queryPackId","tags","timeCreated","timeModified","type"})
@@ -43,30 +70,57 @@ public final class GetQueryPackResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Azure resource Id
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource location
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * Azure resource name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Current state of this QueryPack: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * The unique ID of your application. This field cannot be changed.
+ */
     public String getQueryPackId() {
         return this.queryPackId;
     }
+/**
+ * Resource tags
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Creation Date for the Log Analytics QueryPack, in ISO 8601 format.
+ */
     public String getTimeCreated() {
         return this.timeCreated;
     }
+/**
+ * Last modified date of the Log Analytics QueryPack, in ISO 8601 format.
+ */
     public String getTimeModified() {
         return this.timeModified;
     }
+/**
+ * Azure resource type
+ */
     public String getType() {
         return this.type;
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Project Database Details
+ */
 public final class DatabaseInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatabaseInfoResponse Empty = new DatabaseInfoResponse();
 
+    /**
+     * Name of the database
+     */
     @InputImport(name="sourceDatabaseName", required=true)
     private final String sourceDatabaseName;
 

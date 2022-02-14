@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetAuthorizationServerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAuthorizationServerArgs Empty = new GetAuthorizationServerArgs();
 
+    /**
+     * Identifier of the authorization server.
+     */
     @InputImport(name="authsid", required=true)
     private final String authsid;
 
@@ -19,6 +25,9 @@ public final class GetAuthorizationServerArgs extends io.pulumi.resources.Invoke
         return this.authsid;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetAuthorizationServerArgs extends io.pulumi.resources.Invoke
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

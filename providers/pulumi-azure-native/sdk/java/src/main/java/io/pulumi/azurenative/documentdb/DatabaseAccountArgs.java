@@ -29,10 +29,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabaseAccountArgs Empty = new DatabaseAccountArgs();
 
+    /**
+     * Cosmos DB database account name.
+     */
     @InputImport(name="accountName")
     private final @Nullable Input<String> accountName;
 
@@ -40,6 +46,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.accountName == null ? Input.empty() : this.accountName;
     }
 
+    /**
+     * API specific properties. Currently, supported only for MongoDB API.
+     */
     @InputImport(name="apiProperties")
     private final @Nullable Input<ApiPropertiesArgs> apiProperties;
 
@@ -47,6 +56,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.apiProperties == null ? Input.empty() : this.apiProperties;
     }
 
+    /**
+     * The object representing the policy for taking backups on an account.
+     */
     @InputImport(name="backupPolicy")
     private final @Nullable Input<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy;
 
@@ -54,6 +66,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.backupPolicy == null ? Input.empty() : this.backupPolicy;
     }
 
+    /**
+     * List of Cosmos DB capabilities for the account
+     */
     @InputImport(name="capabilities")
     private final @Nullable Input<List<CapabilityArgs>> capabilities;
 
@@ -61,6 +76,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.capabilities == null ? Input.empty() : this.capabilities;
     }
 
+    /**
+     * The cassandra connector offer type for the Cosmos DB database C* account.
+     */
     @InputImport(name="connectorOffer")
     private final @Nullable Input<Either<String,ConnectorOffer>> connectorOffer;
 
@@ -68,6 +86,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.connectorOffer == null ? Input.empty() : this.connectorOffer;
     }
 
+    /**
+     * The consistency policy for the Cosmos DB account.
+     */
     @InputImport(name="consistencyPolicy")
     private final @Nullable Input<ConsistencyPolicyArgs> consistencyPolicy;
 
@@ -75,6 +96,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.consistencyPolicy == null ? Input.empty() : this.consistencyPolicy;
     }
 
+    /**
+     * The CORS policy for the Cosmos DB database account.
+     */
     @InputImport(name="cors")
     private final @Nullable Input<List<CorsPolicyArgs>> cors;
 
@@ -82,6 +106,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.cors == null ? Input.empty() : this.cors;
     }
 
+    /**
+     * The offer type for the database
+     */
     @InputImport(name="databaseAccountOfferType", required=true)
     private final Input<DatabaseAccountOfferType> databaseAccountOfferType;
 
@@ -89,6 +116,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.databaseAccountOfferType;
     }
 
+    /**
+     * The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more.
+     */
     @InputImport(name="defaultIdentity")
     private final @Nullable Input<String> defaultIdentity;
 
@@ -96,6 +126,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.defaultIdentity == null ? Input.empty() : this.defaultIdentity;
     }
 
+    /**
+     * Disable write operations on metadata resources (databases, containers, throughput) via account keys
+     */
     @InputImport(name="disableKeyBasedMetadataWriteAccess")
     private final @Nullable Input<Boolean> disableKeyBasedMetadataWriteAccess;
 
@@ -103,6 +136,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.disableKeyBasedMetadataWriteAccess == null ? Input.empty() : this.disableKeyBasedMetadataWriteAccess;
     }
 
+    /**
+     * Flag to indicate whether to enable storage analytics.
+     */
     @InputImport(name="enableAnalyticalStorage")
     private final @Nullable Input<Boolean> enableAnalyticalStorage;
 
@@ -110,6 +146,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.enableAnalyticalStorage == null ? Input.empty() : this.enableAnalyticalStorage;
     }
 
+    /**
+     * Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account.
+     */
     @InputImport(name="enableAutomaticFailover")
     private final @Nullable Input<Boolean> enableAutomaticFailover;
 
@@ -117,6 +156,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.enableAutomaticFailover == null ? Input.empty() : this.enableAutomaticFailover;
     }
 
+    /**
+     * Enables the cassandra connector on the Cosmos DB C* account
+     */
     @InputImport(name="enableCassandraConnector")
     private final @Nullable Input<Boolean> enableCassandraConnector;
 
@@ -124,6 +166,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.enableCassandraConnector == null ? Input.empty() : this.enableCassandraConnector;
     }
 
+    /**
+     * Flag to indicate whether Free Tier is enabled.
+     */
     @InputImport(name="enableFreeTier")
     private final @Nullable Input<Boolean> enableFreeTier;
 
@@ -131,6 +176,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.enableFreeTier == null ? Input.empty() : this.enableFreeTier;
     }
 
+    /**
+     * Enables the account to write in multiple locations
+     */
     @InputImport(name="enableMultipleWriteLocations")
     private final @Nullable Input<Boolean> enableMultipleWriteLocations;
 
@@ -138,6 +186,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.enableMultipleWriteLocations == null ? Input.empty() : this.enableMultipleWriteLocations;
     }
 
+    /**
+     * Identity for the resource.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<ManagedServiceIdentityArgs> identity;
 
@@ -145,6 +196,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * List of IpRules.
+     */
     @InputImport(name="ipRules")
     private final @Nullable Input<List<IpAddressOrRangeArgs>> ipRules;
 
@@ -152,6 +206,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.ipRules == null ? Input.empty() : this.ipRules;
     }
 
+    /**
+     * Flag to indicate whether to enable/disable Virtual Network ACL rules.
+     */
     @InputImport(name="isVirtualNetworkFilterEnabled")
     private final @Nullable Input<Boolean> isVirtualNetworkFilterEnabled;
 
@@ -159,6 +216,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.isVirtualNetworkFilterEnabled == null ? Input.empty() : this.isVirtualNetworkFilterEnabled;
     }
 
+    /**
+     * The URI of the key vault
+     */
     @InputImport(name="keyVaultKeyUri")
     private final @Nullable Input<String> keyVaultKeyUri;
 
@@ -166,6 +226,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.keyVaultKeyUri == null ? Input.empty() : this.keyVaultKeyUri;
     }
 
+    /**
+     * Indicates the type of database account. This can only be set at database account creation.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<Either<String,DatabaseAccountKind>> kind;
 
@@ -173,6 +236,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The location of the resource group to which the resource belongs.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -180,6 +246,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * An array that contains the georeplication locations enabled for the Cosmos DB account.
+     */
     @InputImport(name="locations", required=true)
     private final Input<List<LocationArgs>> locations;
 
@@ -187,6 +256,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.locations;
     }
 
+    /**
+     * Indicates what services are allowed to bypass firewall checks.
+     */
     @InputImport(name="networkAclBypass")
     private final @Nullable Input<NetworkAclBypass> networkAclBypass;
 
@@ -194,6 +266,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.networkAclBypass == null ? Input.empty() : this.networkAclBypass;
     }
 
+    /**
+     * An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account.
+     */
     @InputImport(name="networkAclBypassResourceIds")
     private final @Nullable Input<List<String>> networkAclBypassResourceIds;
 
@@ -201,6 +276,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.networkAclBypassResourceIds == null ? Input.empty() : this.networkAclBypassResourceIds;
     }
 
+    /**
+     * Whether requests from Public Network are allowed
+     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
@@ -208,6 +286,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -215,6 +296,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -222,6 +306,9 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * List of Virtual Network ACL rules configured for the Cosmos DB account.
+     */
     @InputImport(name="virtualNetworkRules")
     private final @Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
 

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A widget that displays a stream of log.
+ */
 public final class LogsPanelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LogsPanelArgs Empty = new LogsPanelArgs();
 
+    /**
+     * A filter that chooses which log entries to return. See Advanced Logs Queries (https://cloud.google.com/logging/docs/view/advanced-queries). Only log entries that match the filter are returned. An empty filter matches all log entries.
+     */
     @InputImport(name="filter")
     private final @Nullable Input<String> filter;
 
@@ -22,6 +28,9 @@ public final class LogsPanelArgs extends io.pulumi.resources.ResourceArgs {
         return this.filter == null ? Input.empty() : this.filter;
     }
 
+    /**
+     * The names of logging resources to collect logs for. Currently only projects are supported. If empty, the widget will default to the host project.
+     */
     @InputImport(name="resourceNames")
     private final @Nullable Input<List<String>> resourceNames;
 

@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * IngressSpec describes the Ingress the user wishes to exist.
+ */
 public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IngressSpecArgs Empty = new IngressSpecArgs();
 
+    /**
+     * DefaultBackend is the backend that should handle requests that don't match any rule. If Rules are not specified, DefaultBackend must be specified. If DefaultBackend is not set, the handling of requests that do not match any of the rules will be up to the Ingress controller.
+     */
     @InputImport(name="defaultBackend")
     private final @Nullable Input<IngressBackendArgs> defaultBackend;
 
@@ -25,6 +31,9 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultBackend == null ? Input.empty() : this.defaultBackend;
     }
 
+    /**
+     * IngressClassName is the name of the IngressClass cluster resource. The associated IngressClass defines which controller will implement the resource. This replaces the deprecated `kubernetes.io/ingress.class` annotation. For backwards compatibility, when that annotation is set, it must be given precedence over this field. The controller may emit a warning if the field and annotation have different values. Implementations of this API should ignore Ingresses without a class specified. An IngressClass resource may be marked as default, which can be used to set a default value for this field. For more information, refer to the IngressClass documentation.
+     */
     @InputImport(name="ingressClassName")
     private final @Nullable Input<String> ingressClassName;
 
@@ -32,6 +41,9 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.ingressClassName == null ? Input.empty() : this.ingressClassName;
     }
 
+    /**
+     * A list of host rules used to configure the Ingress. If unspecified, or no rule matches, all traffic is sent to the default backend.
+     */
     @InputImport(name="rules")
     private final @Nullable Input<List<IngressRuleArgs>> rules;
 
@@ -39,6 +51,9 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
         return this.rules == null ? Input.empty() : this.rules;
     }
 
+    /**
+     * TLS configuration. Currently the Ingress only supports a single TLS port, 443. If multiple members of this list specify different hosts, they will be multiplexed on the same port according to the hostname specified through the SNI TLS extension, if the ingress controller fulfilling the ingress supports SNI.
+     */
     @InputImport(name="tls")
     private final @Nullable Input<List<IngressTLSArgs>> tls;
 

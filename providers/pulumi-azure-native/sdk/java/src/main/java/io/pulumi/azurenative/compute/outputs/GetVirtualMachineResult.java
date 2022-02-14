@@ -29,38 +29,137 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetVirtualMachineResult {
+/**
+ * Specifies additional capabilities enabled or disabled on the virtual machine.
+ */
     private final @Nullable AdditionalCapabilitiesResponse additionalCapabilities;
+/**
+ * Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Availability sets overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview). <br><br> For more information on Azure planned maintenance, see [Maintenance and updates for Virtual Machines in Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates) <br><br> Currently, a VM can only be added to availability set at creation time. The availability set to which the VM is being added should be under the same resource group as the availability set resource. An existing VM cannot be added to an availability set. <br><br>This property cannot exist along with a non-null properties.virtualMachineScaleSet reference.
+ */
     private final @Nullable SubResourceResponse availabilitySet;
+/**
+ * Specifies the billing related details of a Azure Spot virtual machine. <br><br>Minimum api-version: 2019-03-01.
+ */
     private final @Nullable BillingProfileResponse billingProfile;
+/**
+ * Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.
+ */
     private final @Nullable DiagnosticsProfileResponse diagnosticsProfile;
+/**
+ * Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. <br><br>For Azure Spot virtual machines, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2019-03-01. <br><br>For Azure Spot scale sets, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2017-10-30-preview.
+ */
     private final @Nullable String evictionPolicy;
+/**
+ * The extended location of the Virtual Machine.
+ */
     private final @Nullable ExtendedLocationResponse extendedLocation;
+/**
+ * Specifies the time alloted for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. The default value is 90 minutes (PT1H30M). <br><br> Minimum api-version: 2020-06-01
+ */
     private final @Nullable String extensionsTimeBudget;
+/**
+ * Specifies the hardware settings for the virtual machine.
+ */
     private final @Nullable HardwareProfileResponse hardwareProfile;
+/**
+ * Specifies information about the dedicated host that the virtual machine resides in. <br><br>Minimum api-version: 2018-10-01.
+ */
     private final @Nullable SubResourceResponse host;
+/**
+ * Specifies information about the dedicated host group that the virtual machine resides in. <br><br>Minimum api-version: 2020-06-01. <br><br>NOTE: User cannot specify both host and hostGroup properties.
+ */
     private final @Nullable SubResourceResponse hostGroup;
+/**
+ * Resource Id
+ */
     private final String id;
+/**
+ * The identity of the virtual machine, if configured.
+ */
     private final @Nullable VirtualMachineIdentityResponse identity;
+/**
+ * The virtual machine instance view.
+ */
     private final VirtualMachineInstanceViewResponse instanceView;
+/**
+ * Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15
+ */
     private final @Nullable String licenseType;
+/**
+ * Resource location
+ */
     private final String location;
+/**
+ * Resource name
+ */
     private final String name;
+/**
+ * Specifies the network interfaces of the virtual machine.
+ */
     private final @Nullable NetworkProfileResponse networkProfile;
+/**
+ * Specifies the operating system settings used while creating the virtual machine. Some of the settings cannot be changed once VM is provisioned.
+ */
     private final @Nullable OSProfileResponse osProfile;
+/**
+ * Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.
+ */
     private final @Nullable PlanResponse plan;
+/**
+ * Specifies the scale set logical fault domain into which the Virtual Machine will be created. By default, the Virtual Machine will by automatically assigned to a fault domain that best maintains balance across available fault domains.<br><li>This is applicable only if the 'virtualMachineScaleSet' property of this Virtual Machine is set.<li>The Virtual Machine Scale Set that is referenced, must have 'platformFaultDomainCount' &gt; 1.<li>This property cannot be updated once the Virtual Machine is created.<li>Fault domain assignment can be viewed in the Virtual Machine Instance View.<br><br>Minimum api‐version: 2020‐12‐01
+ */
     private final @Nullable Integer platformFaultDomain;
+/**
+ * Specifies the priority for the virtual machine. <br><br>Minimum api-version: 2019-03-01
+ */
     private final @Nullable String priority;
+/**
+ * The provisioning state, which only appears in the response.
+ */
     private final String provisioningState;
+/**
+ * Specifies information about the proximity placement group that the virtual machine should be assigned to. <br><br>Minimum api-version: 2018-04-01.
+ */
     private final @Nullable SubResourceResponse proximityPlacementGroup;
+/**
+ * The virtual machine child extension resources.
+ */
     private final List<VirtualMachineExtensionResponse> resources;
+/**
+ * Specifies Scheduled Event related configurations.
+ */
     private final @Nullable ScheduledEventsProfileResponse scheduledEventsProfile;
+/**
+ * Specifies the Security related profile settings for the virtual machine.
+ */
     private final @Nullable SecurityProfileResponse securityProfile;
+/**
+ * Specifies the storage settings for the virtual machine disks.
+ */
     private final @Nullable StorageProfileResponse storageProfile;
+/**
+ * Resource tags
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Resource type
+ */
     private final String type;
+/**
+ * UserData for the VM, which must be base-64 encoded. Customer should not pass any secrets in here. <br><br>Minimum api-version: 2021-03-01
+ */
     private final @Nullable String userData;
+/**
+ * Specifies information about the virtual machine scale set that the virtual machine should be assigned to. Virtual machines specified in the same virtual machine scale set are allocated to different nodes to maximize availability. Currently, a VM can only be added to virtual machine scale set at creation time. An existing VM cannot be added to a virtual machine scale set. <br><br>This property cannot exist along with a non-null properties.availabilitySet reference. <br><br>Minimum api‐version: 2019‐03‐01
+ */
     private final @Nullable SubResourceResponse virtualMachineScaleSet;
+/**
+ * Specifies the VM unique ID which is a 128-bits identifier that is encoded and stored in all Azure IaaS VMs SMBIOS and can be read using platform BIOS commands.
+ */
     private final String vmId;
+/**
+ * The virtual machine zones.
+ */
     private final @Nullable List<String> zones;
 
     @OutputCustomType.Constructor({"additionalCapabilities","availabilitySet","billingProfile","diagnosticsProfile","evictionPolicy","extendedLocation","extensionsTimeBudget","hardwareProfile","host","hostGroup","id","identity","instanceView","licenseType","location","name","networkProfile","osProfile","plan","platformFaultDomain","priority","provisioningState","proximityPlacementGroup","resources","scheduledEventsProfile","securityProfile","storageProfile","tags","type","userData","virtualMachineScaleSet","vmId","zones"})
@@ -133,102 +232,201 @@ public final class GetVirtualMachineResult {
         this.zones = zones;
     }
 
+/**
+ * Specifies additional capabilities enabled or disabled on the virtual machine.
+ */
     public Optional<AdditionalCapabilitiesResponse> getAdditionalCapabilities() {
         return Optional.ofNullable(this.additionalCapabilities);
     }
+/**
+ * Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Availability sets overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview). <br><br> For more information on Azure planned maintenance, see [Maintenance and updates for Virtual Machines in Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates) <br><br> Currently, a VM can only be added to availability set at creation time. The availability set to which the VM is being added should be under the same resource group as the availability set resource. An existing VM cannot be added to an availability set. <br><br>This property cannot exist along with a non-null properties.virtualMachineScaleSet reference.
+ */
     public Optional<SubResourceResponse> getAvailabilitySet() {
         return Optional.ofNullable(this.availabilitySet);
     }
+/**
+ * Specifies the billing related details of a Azure Spot virtual machine. <br><br>Minimum api-version: 2019-03-01.
+ */
     public Optional<BillingProfileResponse> getBillingProfile() {
         return Optional.ofNullable(this.billingProfile);
     }
+/**
+ * Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.
+ */
     public Optional<DiagnosticsProfileResponse> getDiagnosticsProfile() {
         return Optional.ofNullable(this.diagnosticsProfile);
     }
+/**
+ * Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. <br><br>For Azure Spot virtual machines, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2019-03-01. <br><br>For Azure Spot scale sets, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2017-10-30-preview.
+ */
     public Optional<String> getEvictionPolicy() {
         return Optional.ofNullable(this.evictionPolicy);
     }
+/**
+ * The extended location of the Virtual Machine.
+ */
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
+/**
+ * Specifies the time alloted for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. The default value is 90 minutes (PT1H30M). <br><br> Minimum api-version: 2020-06-01
+ */
     public Optional<String> getExtensionsTimeBudget() {
         return Optional.ofNullable(this.extensionsTimeBudget);
     }
+/**
+ * Specifies the hardware settings for the virtual machine.
+ */
     public Optional<HardwareProfileResponse> getHardwareProfile() {
         return Optional.ofNullable(this.hardwareProfile);
     }
+/**
+ * Specifies information about the dedicated host that the virtual machine resides in. <br><br>Minimum api-version: 2018-10-01.
+ */
     public Optional<SubResourceResponse> getHost() {
         return Optional.ofNullable(this.host);
     }
+/**
+ * Specifies information about the dedicated host group that the virtual machine resides in. <br><br>Minimum api-version: 2020-06-01. <br><br>NOTE: User cannot specify both host and hostGroup properties.
+ */
     public Optional<SubResourceResponse> getHostGroup() {
         return Optional.ofNullable(this.hostGroup);
     }
+/**
+ * Resource Id
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The identity of the virtual machine, if configured.
+ */
     public Optional<VirtualMachineIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
+/**
+ * The virtual machine instance view.
+ */
     public VirtualMachineInstanceViewResponse getInstanceView() {
         return this.instanceView;
     }
+/**
+ * Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15
+ */
     public Optional<String> getLicenseType() {
         return Optional.ofNullable(this.licenseType);
     }
+/**
+ * Resource location
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * Resource name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Specifies the network interfaces of the virtual machine.
+ */
     public Optional<NetworkProfileResponse> getNetworkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
+/**
+ * Specifies the operating system settings used while creating the virtual machine. Some of the settings cannot be changed once VM is provisioned.
+ */
     public Optional<OSProfileResponse> getOsProfile() {
         return Optional.ofNullable(this.osProfile);
     }
+/**
+ * Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.
+ */
     public Optional<PlanResponse> getPlan() {
         return Optional.ofNullable(this.plan);
     }
+/**
+ * Specifies the scale set logical fault domain into which the Virtual Machine will be created. By default, the Virtual Machine will by automatically assigned to a fault domain that best maintains balance across available fault domains.<br><li>This is applicable only if the 'virtualMachineScaleSet' property of this Virtual Machine is set.<li>The Virtual Machine Scale Set that is referenced, must have 'platformFaultDomainCount' &gt; 1.<li>This property cannot be updated once the Virtual Machine is created.<li>Fault domain assignment can be viewed in the Virtual Machine Instance View.<br><br>Minimum api‐version: 2020‐12‐01
+ */
     public Optional<Integer> getPlatformFaultDomain() {
         return Optional.ofNullable(this.platformFaultDomain);
     }
+/**
+ * Specifies the priority for the virtual machine. <br><br>Minimum api-version: 2019-03-01
+ */
     public Optional<String> getPriority() {
         return Optional.ofNullable(this.priority);
     }
+/**
+ * The provisioning state, which only appears in the response.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Specifies information about the proximity placement group that the virtual machine should be assigned to. <br><br>Minimum api-version: 2018-04-01.
+ */
     public Optional<SubResourceResponse> getProximityPlacementGroup() {
         return Optional.ofNullable(this.proximityPlacementGroup);
     }
+/**
+ * The virtual machine child extension resources.
+ */
     public List<VirtualMachineExtensionResponse> getResources() {
         return this.resources;
     }
+/**
+ * Specifies Scheduled Event related configurations.
+ */
     public Optional<ScheduledEventsProfileResponse> getScheduledEventsProfile() {
         return Optional.ofNullable(this.scheduledEventsProfile);
     }
+/**
+ * Specifies the Security related profile settings for the virtual machine.
+ */
     public Optional<SecurityProfileResponse> getSecurityProfile() {
         return Optional.ofNullable(this.securityProfile);
     }
+/**
+ * Specifies the storage settings for the virtual machine disks.
+ */
     public Optional<StorageProfileResponse> getStorageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
+/**
+ * Resource tags
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Resource type
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * UserData for the VM, which must be base-64 encoded. Customer should not pass any secrets in here. <br><br>Minimum api-version: 2021-03-01
+ */
     public Optional<String> getUserData() {
         return Optional.ofNullable(this.userData);
     }
+/**
+ * Specifies information about the virtual machine scale set that the virtual machine should be assigned to. Virtual machines specified in the same virtual machine scale set are allocated to different nodes to maximize availability. Currently, a VM can only be added to virtual machine scale set at creation time. An existing VM cannot be added to a virtual machine scale set. <br><br>This property cannot exist along with a non-null properties.availabilitySet reference. <br><br>Minimum api‐version: 2019‐03‐01
+ */
     public Optional<SubResourceResponse> getVirtualMachineScaleSet() {
         return Optional.ofNullable(this.virtualMachineScaleSet);
     }
+/**
+ * Specifies the VM unique ID which is a 128-bits identifier that is encoded and stored in all Azure IaaS VMs SMBIOS and can be read using platform BIOS commands.
+ */
     public String getVmId() {
         return this.vmId;
     }
+/**
+ * The virtual machine zones.
+ */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }

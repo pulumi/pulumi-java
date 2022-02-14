@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.web.ContainerAppArgs;
 import io.pulumi.azurenative.web.outputs.ConfigurationResponse;
 import io.pulumi.azurenative.web.outputs.TemplateResponse;
 import io.pulumi.core.Alias;
@@ -17,75 +16,377 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Container App.
+API Version: 2021-03-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create or Update Container App
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var containerApp = new AzureNative.Web.ContainerApp("containerApp", new AzureNative.Web.ContainerAppArgs
+        {
+            Configuration = new AzureNative.Web.Inputs.ConfigurationArgs
+            {
+                Ingress = new AzureNative.Web.Inputs.IngressArgs
+                {
+                    External = true,
+                    TargetPort = 3000,
+                },
+            },
+            Kind = "containerApp",
+            KubeEnvironmentId = "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rg/providers/Microsoft.Web/kubeEnvironments/demokube",
+            Location = "East US",
+            Name = "testcontainerApp0",
+            ResourceGroupName = "rg",
+            Template = new AzureNative.Web.Inputs.TemplateArgs
+            {
+                Containers = 
+                {
+                    new AzureNative.Web.Inputs.ContainerArgs
+                    {
+                        Image = "repo/testcontainerApp0:v1",
+                        Name = "testcontainerApp0",
+                    },
+                },
+                Dapr = new AzureNative.Web.Inputs.DaprArgs
+                {
+                    AppPort = 3000,
+                    Enabled = true,
+                },
+                Scale = new AzureNative.Web.Inputs.ScaleArgs
+                {
+                    MaxReplicas = 5,
+                    MinReplicas = 1,
+                    Rules = 
+                    {
+                        new AzureNative.Web.Inputs.ScaleRuleArgs
+                        {
+                            Custom = new AzureNative.Web.Inputs.CustomScaleRuleArgs
+                            {
+                                Metadata = 
+                                {
+                                    { "concurrentRequests", "50" },
+                                },
+                                Type = "http",
+                            },
+                            Name = "httpscalingrule",
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	web "github.com/pulumi/pulumi-azure-native/sdk/go/azure/web"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := web.NewContainerApp(ctx, "containerApp", &web.ContainerAppArgs{
+			Configuration: &web.ConfigurationArgs{
+				Ingress: &web.IngressArgs{
+					External:   pulumi.Bool(true),
+					TargetPort: pulumi.Int(3000),
+				},
+			},
+			Kind:              pulumi.String("containerApp"),
+			KubeEnvironmentId: pulumi.String("/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rg/providers/Microsoft.Web/kubeEnvironments/demokube"),
+			Location:          pulumi.String("East US"),
+			Name:              pulumi.String("testcontainerApp0"),
+			ResourceGroupName: pulumi.String("rg"),
+			Template: &web.TemplateArgs{
+				Containers: web.ContainerArray{
+					&web.ContainerArgs{
+						Image: pulumi.String("repo/testcontainerApp0:v1"),
+						Name:  pulumi.String("testcontainerApp0"),
+					},
+				},
+				Dapr: &web.DaprArgs{
+					AppPort: pulumi.Int(3000),
+					Enabled: pulumi.Bool(true),
+				},
+				Scale: &web.ScaleArgs{
+					MaxReplicas: pulumi.Int(5),
+					MinReplicas: pulumi.Int(1),
+					Rules: web.ScaleRuleArray{
+						&web.ScaleRuleArgs{
+							Custom: &web.CustomScaleRuleArgs{
+								Metadata: pulumi.StringMap{
+									"concurrentRequests": pulumi.String("50"),
+								},
+								Type: pulumi.String("http"),
+							},
+							Name: pulumi.String("httpscalingrule"),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const containerApp = new azure_native.web.ContainerApp("containerApp", {
+    configuration: {
+        ingress: {
+            external: true,
+            targetPort: 3000,
+        },
+    },
+    kind: "containerApp",
+    kubeEnvironmentId: "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rg/providers/Microsoft.Web/kubeEnvironments/demokube",
+    location: "East US",
+    name: "testcontainerApp0",
+    resourceGroupName: "rg",
+    template: {
+        containers: [{
+            image: "repo/testcontainerApp0:v1",
+            name: "testcontainerApp0",
+        }],
+        dapr: {
+            appPort: 3000,
+            enabled: true,
+        },
+        scale: {
+            maxReplicas: 5,
+            minReplicas: 1,
+            rules: [{
+                custom: {
+                    metadata: {
+                        concurrentRequests: "50",
+                    },
+                    type: "http",
+                },
+                name: "httpscalingrule",
+            }],
+        },
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+container_app = azure_native.web.ContainerApp("containerApp",
+    configuration=azure_native.web.ConfigurationArgs(
+        ingress=azure_native.web.IngressArgs(
+            external=True,
+            target_port=3000,
+        ),
+    ),
+    kind="containerApp",
+    kube_environment_id="/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rg/providers/Microsoft.Web/kubeEnvironments/demokube",
+    location="East US",
+    name="testcontainerApp0",
+    resource_group_name="rg",
+    template=azure_native.web.TemplateArgs(
+        containers=[azure_native.web.ContainerArgs(
+            image="repo/testcontainerApp0:v1",
+            name="testcontainerApp0",
+        )],
+        dapr=azure_native.web.DaprArgs(
+            app_port=3000,
+            enabled=True,
+        ),
+        scale=azure_native.web.ScaleArgs(
+            max_replicas=5,
+            min_replicas=1,
+            rules=[azure_native.web.ScaleRuleArgs(
+                custom=azure_native.web.CustomScaleRuleArgs(
+                    metadata={
+                        "concurrentRequests": "50",
+                    },
+                    type="http",
+                ),
+                name="httpscalingrule",
+            )],
+        ),
+    ))
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:web:ContainerApp testcontainerApp0 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/rg/providers/Microsoft.Web/containerApps/testcontainerApp0 
+```
+
+ */
 @ResourceType(type="azure-native:web:ContainerApp")
 public class ContainerApp extends io.pulumi.resources.CustomResource {
+    /**
+     * Non versioned Container App configuration properties.
+     */
     @OutputExport(name="configuration", type=ConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ ConfigurationResponse> configuration;
 
+    /**
+     * @return Non versioned Container App configuration properties.
+     */
     public Output</* @Nullable */ ConfigurationResponse> getConfiguration() {
         return this.configuration;
     }
+    /**
+     * Kind of resource.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return Kind of resource.
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * Resource ID of the Container App's KubeEnvironment.
+     */
     @OutputExport(name="kubeEnvironmentId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kubeEnvironmentId;
 
+    /**
+     * @return Resource ID of the Container App's KubeEnvironment.
+     */
     public Output</* @Nullable */ String> getKubeEnvironmentId() {
         return this.kubeEnvironmentId;
     }
+    /**
+     * Fully Qualified Domain Name of the latest revision of the Container App.
+     */
     @OutputExport(name="latestRevisionFqdn", type=String.class, parameters={})
     private Output<String> latestRevisionFqdn;
 
+    /**
+     * @return Fully Qualified Domain Name of the latest revision of the Container App.
+     */
     public Output<String> getLatestRevisionFqdn() {
         return this.latestRevisionFqdn;
     }
+    /**
+     * Name of the latest revision of the Container App.
+     */
     @OutputExport(name="latestRevisionName", type=String.class, parameters={})
     private Output<String> latestRevisionName;
 
+    /**
+     * @return Name of the latest revision of the Container App.
+     */
     public Output<String> getLatestRevisionName() {
         return this.latestRevisionName;
     }
+    /**
+     * Resource Location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource Location.
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource Name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource Name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Provisioning state of the Container App.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state of the Container App.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Container App versioned application definition.
+     */
     @OutputExport(name="template", type=TemplateResponse.class, parameters={})
     private Output</* @Nullable */ TemplateResponse> template;
 
+    /**
+     * @return Container App versioned application definition.
+     */
     public Output</* @Nullable */ TemplateResponse> getTemplate() {
         return this.template;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ContainerApp(String name, ContainerAppArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:ContainerApp", name, args == null ? ContainerAppArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -104,6 +405,14 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ContainerApp get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ContainerApp(name, id, options);
     }

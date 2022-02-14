@@ -11,10 +11,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SubjectAltNamesResponse {
+/**
+ * Contains additional subject alternative name values.
+ */
     private final List<X509ExtensionResponse> customSans;
+/**
+ * Contains only valid, fully-qualified host names.
+ */
     private final List<String> dnsNames;
+/**
+ * Contains only valid RFC 2822 E-mail addresses.
+ */
     private final List<String> emailAddresses;
+/**
+ * Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
+ */
     private final List<String> ipAddresses;
+/**
+ * Contains only valid RFC 3986 URIs.
+ */
     private final List<String> uris;
 
     @OutputCustomType.Constructor({"customSans","dnsNames","emailAddresses","ipAddresses","uris"})
@@ -31,18 +46,33 @@ public final class SubjectAltNamesResponse {
         this.uris = Objects.requireNonNull(uris);
     }
 
+/**
+ * Contains additional subject alternative name values.
+ */
     public List<X509ExtensionResponse> getCustomSans() {
         return this.customSans;
     }
+/**
+ * Contains only valid, fully-qualified host names.
+ */
     public List<String> getDnsNames() {
         return this.dnsNames;
     }
+/**
+ * Contains only valid RFC 2822 E-mail addresses.
+ */
     public List<String> getEmailAddresses() {
         return this.emailAddresses;
     }
+/**
+ * Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
+ */
     public List<String> getIpAddresses() {
         return this.ipAddresses;
     }
+/**
+ * Contains only valid RFC 3986 URIs.
+ */
     public List<String> getUris() {
         return this.uris;
     }

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKustoClusterDataSet {
+/**
+ * A kusto cluster data set.
+API Version: 2020-09-01.
+ *
+ * A kusto cluster data set.
+ */
     public static CompletableFuture<GetKustoClusterDataSetResult> invokeAsync(GetKustoClusterDataSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getKustoClusterDataSet", TypeShape.of(GetKustoClusterDataSetResult.class), args == null ? GetKustoClusterDataSetArgs.Empty : args, Utilities.withVersion(options));
     }

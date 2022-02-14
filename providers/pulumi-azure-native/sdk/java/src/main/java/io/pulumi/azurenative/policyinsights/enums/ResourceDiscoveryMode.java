@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
+ */
     @EnumType
     public enum ResourceDiscoveryMode {
+/**
+ * Remediate resources that are already known to be non-compliant.
+ */
         ExistingNonCompliant("ExistingNonCompliant"),
+/**
+ * Re-evaluate the compliance state of resources and then remediate the resources found to be non-compliant.
+ */
         ReEvaluateCompliance("ReEvaluateCompliance");
 
         private final String value;

@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFeedbackMessage {
+/**
+ * Get a FeedbackMessage object.
+ */
     public static CompletableFuture<GetFeedbackMessageResult> invokeAsync(GetFeedbackMessageArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datalabeling/v1beta1:getFeedbackMessage", TypeShape.of(GetFeedbackMessageResult.class), args == null ? GetFeedbackMessageArgs.Empty : args, Utilities.withVersion(options));
     }

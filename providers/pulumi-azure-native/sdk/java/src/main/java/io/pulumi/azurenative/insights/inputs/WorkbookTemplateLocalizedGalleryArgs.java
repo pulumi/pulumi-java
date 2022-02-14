@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Localized template data and gallery information.
+ */
 public final class WorkbookTemplateLocalizedGalleryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkbookTemplateLocalizedGalleryArgs Empty = new WorkbookTemplateLocalizedGalleryArgs();
 
+    /**
+     * Workbook galleries supported by the template.
+     */
     @InputImport(name="galleries")
     private final @Nullable Input<List<WorkbookTemplateGalleryArgs>> galleries;
 
@@ -23,6 +29,9 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends io.pulumi.resour
         return this.galleries == null ? Input.empty() : this.galleries;
     }
 
+    /**
+     * Valid JSON object containing workbook template payload.
+     */
     @InputImport(name="templateData")
     private final @Nullable Input<Object> templateData;
 

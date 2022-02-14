@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ProviderRegistrationPropertiesResponseProviderHubMetadata extends io.pulumi.resources.InvokeArgs {
 
     public static final ProviderRegistrationPropertiesResponseProviderHubMetadata Empty = new ProviderRegistrationPropertiesResponseProviderHubMetadata();
 
+    /**
+     * 
+     */
     @InputImport(name="providerAuthentication")
     private final @Nullable ProviderHubMetadataResponseProviderAuthentication providerAuthentication;
 
@@ -24,6 +30,9 @@ public final class ProviderRegistrationPropertiesResponseProviderHubMetadata ext
         return this.providerAuthentication == null ? Optional.empty() : Optional.ofNullable(this.providerAuthentication);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="providerAuthorizations")
     private final @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations;
 
@@ -31,6 +40,9 @@ public final class ProviderRegistrationPropertiesResponseProviderHubMetadata ext
         return this.providerAuthorizations == null ? List.of() : this.providerAuthorizations;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="thirdPartyProviderAuthorization")
     private final @Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization;
 

@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Encapsulates the metadata for basic sample series represented by a line chart
+ */
 public final class BasicPerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BasicPerfSampleSeriesArgs Empty = new BasicPerfSampleSeriesArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="perfMetricType")
     private final @Nullable Input<BasicPerfSampleSeriesPerfMetricType> perfMetricType;
 
@@ -23,6 +29,9 @@ public final class BasicPerfSampleSeriesArgs extends io.pulumi.resources.Resourc
         return this.perfMetricType == null ? Input.empty() : this.perfMetricType;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="perfUnit")
     private final @Nullable Input<BasicPerfSampleSeriesPerfUnit> perfUnit;
 
@@ -30,6 +39,9 @@ public final class BasicPerfSampleSeriesArgs extends io.pulumi.resources.Resourc
         return this.perfUnit == null ? Input.empty() : this.perfUnit;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="sampleSeriesLabel")
     private final @Nullable Input<BasicPerfSampleSeriesSampleSeriesLabel> sampleSeriesLabel;
 

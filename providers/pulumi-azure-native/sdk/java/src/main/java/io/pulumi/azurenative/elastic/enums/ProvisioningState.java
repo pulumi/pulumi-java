@@ -8,16 +8,46 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Provisioning state of the monitoring tag rules.
+ */
     @EnumType
     public enum ProvisioningState {
+/**
+ * 
+ */
         Accepted("Accepted"),
+/**
+ * 
+ */
         Creating("Creating"),
+/**
+ * 
+ */
         Updating("Updating"),
+/**
+ * 
+ */
         Deleting("Deleting"),
+/**
+ * 
+ */
         Succeeded("Succeeded"),
+/**
+ * 
+ */
         Failed("Failed"),
+/**
+ * 
+ */
         Canceled("Canceled"),
+/**
+ * 
+ */
         Deleted("Deleted"),
+/**
+ * 
+ */
         NotSpecified("NotSpecified");
 
         private final String value;

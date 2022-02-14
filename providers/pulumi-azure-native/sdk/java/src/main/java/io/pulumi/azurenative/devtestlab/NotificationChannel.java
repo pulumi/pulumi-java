@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.devtestlab;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.devtestlab.NotificationChannelArgs;
 import io.pulumi.azurenative.devtestlab.outputs.EventResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,81 +15,280 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A notification.
+API Version: 2018-09-15.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### NotificationChannels_CreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var notificationChannel = new AzureNative.DevTestLab.NotificationChannel("notificationChannel", new AzureNative.DevTestLab.NotificationChannelArgs
+        {
+            Description = "Integration configured for auto-shutdown",
+            EmailRecipient = "{email}",
+            Events = 
+            {
+                new AzureNative.DevTestLab.Inputs.EventArgs
+                {
+                    EventName = "AutoShutdown",
+                },
+            },
+            LabName = "{labName}",
+            Name = "{notificationChannelName}",
+            NotificationLocale = "en",
+            ResourceGroupName = "resourceGroupName",
+            WebHookUrl = "{webhookUrl}",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devtestlab.NewNotificationChannel(ctx, "notificationChannel", &devtestlab.NotificationChannelArgs{
+			Description:    pulumi.String("Integration configured for auto-shutdown"),
+			EmailRecipient: pulumi.String("{email}"),
+			Events: []devtestlab.EventArgs{
+				&devtestlab.EventArgs{
+					EventName: pulumi.String("AutoShutdown"),
+				},
+			},
+			LabName:            pulumi.String("{labName}"),
+			Name:               pulumi.String("{notificationChannelName}"),
+			NotificationLocale: pulumi.String("en"),
+			ResourceGroupName:  pulumi.String("resourceGroupName"),
+			WebHookUrl:         pulumi.String("{webhookUrl}"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const notificationChannel = new azure_native.devtestlab.NotificationChannel("notificationChannel", {
+    description: "Integration configured for auto-shutdown",
+    emailRecipient: "{email}",
+    events: [{
+        eventName: "AutoShutdown",
+    }],
+    labName: "{labName}",
+    name: "{notificationChannelName}",
+    notificationLocale: "en",
+    resourceGroupName: "resourceGroupName",
+    webHookUrl: "{webhookUrl}",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+notification_channel = azure_native.devtestlab.NotificationChannel("notificationChannel",
+    description="Integration configured for auto-shutdown",
+    email_recipient="{email}",
+    events=[azure_native.devtestlab.EventArgs(
+        event_name="AutoShutdown",
+    )],
+    lab_name="{labName}",
+    name="{notificationChannelName}",
+    notification_locale="en",
+    resource_group_name="resourceGroupName",
+    web_hook_url="{webhookUrl}")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devtestlab:NotificationChannel {notificationChannelName} /subscriptions/{subscriptionId}/resourceGroups/resourceGroupName/providers/Microsoft.DevTestLab/labs/{labName}/notificationChannels/{notificationChannelName} 
+```
+
+ */
 @ResourceType(type="azure-native:devtestlab:NotificationChannel")
 public class NotificationChannel extends io.pulumi.resources.CustomResource {
+    /**
+     * The creation date of the notification channel.
+     */
     @OutputExport(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
+    /**
+     * @return The creation date of the notification channel.
+     */
     public Output<String> getCreatedDate() {
         return this.createdDate;
     }
+    /**
+     * Description of notification.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Description of notification.
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
+     */
     @OutputExport(name="emailRecipient", type=String.class, parameters={})
     private Output</* @Nullable */ String> emailRecipient;
 
+    /**
+     * @return The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
+     */
     public Output</* @Nullable */ String> getEmailRecipient() {
         return this.emailRecipient;
     }
+    /**
+     * The list of event for which this notification is enabled.
+     */
     @OutputExport(name="events", type=List.class, parameters={EventResponse.class})
     private Output</* @Nullable */ List<EventResponse>> events;
 
+    /**
+     * @return The list of event for which this notification is enabled.
+     */
     public Output</* @Nullable */ List<EventResponse>> getEvents() {
         return this.events;
     }
+    /**
+     * The location of the resource.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The location of the resource.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The locale to use when sending a notification (fallback for unsupported languages is EN).
+     */
     @OutputExport(name="notificationLocale", type=String.class, parameters={})
     private Output</* @Nullable */ String> notificationLocale;
 
+    /**
+     * @return The locale to use when sending a notification (fallback for unsupported languages is EN).
+     */
     public Output</* @Nullable */ String> getNotificationLocale() {
         return this.notificationLocale;
     }
+    /**
+     * The provisioning status of the resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning status of the resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The tags of the resource.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The unique immutable identifier of a resource (Guid).
+     */
     @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
+    /**
+     * @return The unique immutable identifier of a resource (Guid).
+     */
     public Output<String> getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
+    /**
+     * The webhook URL to send notifications to.
+     */
     @OutputExport(name="webHookUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> webHookUrl;
 
+    /**
+     * @return The webhook URL to send notifications to.
+     */
     public Output</* @Nullable */ String> getWebHookUrl() {
         return this.webHookUrl;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public NotificationChannel(String name, NotificationChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:devtestlab:NotificationChannel", name, args == null ? NotificationChannelArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -110,6 +308,14 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static NotificationChannel get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NotificationChannel(name, id, options);
     }

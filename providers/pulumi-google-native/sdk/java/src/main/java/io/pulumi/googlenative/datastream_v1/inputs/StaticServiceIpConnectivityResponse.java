@@ -6,6 +6,9 @@ package io.pulumi.googlenative.datastream_v1.inputs;
 import java.util.Objects;
 
 
+/**
+ * Static IP address connectivity.
+ */
 public final class StaticServiceIpConnectivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StaticServiceIpConnectivityResponse Empty = new StaticServiceIpConnectivityResponse();

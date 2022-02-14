@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2RequestedOptionsResponse {
+/**
+ * Inspect config.
+ */
     private final GooglePrivacyDlpV2InspectJobConfigResponse jobConfig;
+/**
+ * If run with an InspectTemplate, a snapshot of its state at the time of this run.
+ */
     private final GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate;
 
     @OutputCustomType.Constructor({"jobConfig","snapshotInspectTemplate"})
@@ -21,9 +27,15 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse {
         this.snapshotInspectTemplate = Objects.requireNonNull(snapshotInspectTemplate);
     }
 
+/**
+ * Inspect config.
+ */
     public GooglePrivacyDlpV2InspectJobConfigResponse getJobConfig() {
         return this.jobConfig;
     }
+/**
+ * If run with an InspectTemplate, a snapshot of its state at the time of this run.
+ */
     public GooglePrivacyDlpV2InspectTemplateResponse getSnapshotInspectTemplate() {
         return this.snapshotInspectTemplate;
     }

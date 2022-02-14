@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HealthStateResponse {
+/**
+ * Health state name
+ */
     private final String healthStateName;
+/**
+ * Severity of alert fired
+ */
     private final Double severity;
 
     @OutputCustomType.Constructor({"healthStateName","severity"})
@@ -21,9 +27,15 @@ public final class HealthStateResponse {
         this.severity = Objects.requireNonNull(severity);
     }
 
+/**
+ * Health state name
+ */
     public String getHealthStateName() {
         return this.healthStateName;
     }
+/**
+ * Severity of alert fired
+ */
     public Double getSeverity() {
         return this.severity;
     }

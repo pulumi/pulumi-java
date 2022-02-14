@@ -15,21 +15,70 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SqlDWSinkResponse {
+/**
+ * Indicates to use Copy Command to copy data into SQL Data Warehouse. Type: boolean (or Expression with resultType boolean).
+ */
     private final @Nullable Object allowCopyCommand;
+/**
+ * Indicates to use PolyBase to copy data into SQL Data Warehouse when applicable. Type: boolean (or Expression with resultType boolean).
+ */
     private final @Nullable Object allowPolyBase;
+/**
+ * Specifies Copy Command related settings when allowCopyCommand is true.
+ */
     private final @Nullable DWCopyCommandSettingsResponse copyCommandSettings;
+/**
+ * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+ */
     private final @Nullable Object disableMetricsCollection;
+/**
+ * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+ */
     private final @Nullable Object maxConcurrentConnections;
+/**
+ * Specifies PolyBase-related settings when allowPolyBase is true.
+ */
     private final @Nullable PolybaseSettingsResponse polyBaseSettings;
+/**
+ * SQL pre-copy script. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object preCopyScript;
+/**
+ * Sink retry count. Type: integer (or Expression with resultType integer).
+ */
     private final @Nullable Object sinkRetryCount;
+/**
+ * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+ */
     private final @Nullable Object sinkRetryWait;
+/**
+ * Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
+ */
     private final @Nullable Object sqlWriterUseTableLock;
+/**
+ * The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object tableOption;
+/**
+ * Copy sink type.
+Expected value is 'SqlDWSink'.
+ */
     private final String type;
+/**
+ * SQL DW upsert settings.
+ */
     private final @Nullable SqlDWUpsertSettingsResponse upsertSettings;
+/**
+ * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+ */
     private final @Nullable Object writeBatchSize;
+/**
+ * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+ */
     private final @Nullable Object writeBatchTimeout;
+/**
+ * Write behavior when copying data into azure SQL DW. Type: SqlDWWriteBehaviorEnum (or Expression with resultType SqlDWWriteBehaviorEnum)
+ */
     private final @Nullable Object writeBehavior;
 
     @OutputCustomType.Constructor({"allowCopyCommand","allowPolyBase","copyCommandSettings","disableMetricsCollection","maxConcurrentConnections","polyBaseSettings","preCopyScript","sinkRetryCount","sinkRetryWait","sqlWriterUseTableLock","tableOption","type","upsertSettings","writeBatchSize","writeBatchTimeout","writeBehavior"})
@@ -68,51 +117,100 @@ public final class SqlDWSinkResponse {
         this.writeBehavior = writeBehavior;
     }
 
+/**
+ * Indicates to use Copy Command to copy data into SQL Data Warehouse. Type: boolean (or Expression with resultType boolean).
+ */
     public Optional<Object> getAllowCopyCommand() {
         return Optional.ofNullable(this.allowCopyCommand);
     }
+/**
+ * Indicates to use PolyBase to copy data into SQL Data Warehouse when applicable. Type: boolean (or Expression with resultType boolean).
+ */
     public Optional<Object> getAllowPolyBase() {
         return Optional.ofNullable(this.allowPolyBase);
     }
+/**
+ * Specifies Copy Command related settings when allowCopyCommand is true.
+ */
     public Optional<DWCopyCommandSettingsResponse> getCopyCommandSettings() {
         return Optional.ofNullable(this.copyCommandSettings);
     }
+/**
+ * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+ */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
+/**
+ * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+ */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
+/**
+ * Specifies PolyBase-related settings when allowPolyBase is true.
+ */
     public Optional<PolybaseSettingsResponse> getPolyBaseSettings() {
         return Optional.ofNullable(this.polyBaseSettings);
     }
+/**
+ * SQL pre-copy script. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getPreCopyScript() {
         return Optional.ofNullable(this.preCopyScript);
     }
+/**
+ * Sink retry count. Type: integer (or Expression with resultType integer).
+ */
     public Optional<Object> getSinkRetryCount() {
         return Optional.ofNullable(this.sinkRetryCount);
     }
+/**
+ * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+ */
     public Optional<Object> getSinkRetryWait() {
         return Optional.ofNullable(this.sinkRetryWait);
     }
+/**
+ * Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
+ */
     public Optional<Object> getSqlWriterUseTableLock() {
         return Optional.ofNullable(this.sqlWriterUseTableLock);
     }
+/**
+ * The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getTableOption() {
         return Optional.ofNullable(this.tableOption);
     }
+/**
+ * Copy sink type.
+Expected value is 'SqlDWSink'.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * SQL DW upsert settings.
+ */
     public Optional<SqlDWUpsertSettingsResponse> getUpsertSettings() {
         return Optional.ofNullable(this.upsertSettings);
     }
+/**
+ * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+ */
     public Optional<Object> getWriteBatchSize() {
         return Optional.ofNullable(this.writeBatchSize);
     }
+/**
+ * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+ */
     public Optional<Object> getWriteBatchTimeout() {
         return Optional.ofNullable(this.writeBatchTimeout);
     }
+/**
+ * Write behavior when copying data into azure SQL DW. Type: SqlDWWriteBehaviorEnum (or Expression with resultType SqlDWWriteBehaviorEnum)
+ */
     public Optional<Object> getWriteBehavior() {
         return Optional.ofNullable(this.writeBehavior);
     }

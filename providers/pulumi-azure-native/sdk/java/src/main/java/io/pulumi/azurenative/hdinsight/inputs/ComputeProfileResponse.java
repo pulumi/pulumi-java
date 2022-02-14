@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the compute profile.
+ */
 public final class ComputeProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ComputeProfileResponse Empty = new ComputeProfileResponse();
 
+    /**
+     * The list of roles in the cluster.
+     */
     @InputImport(name="roles")
     private final @Nullable List<RoleResponse> roles;
 

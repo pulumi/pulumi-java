@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Wrapper for error response to follow ARM guidelines.
+ */
 public final class ErrorResponseWrapperResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ErrorResponseWrapperResponse Empty = new ErrorResponseWrapperResponse();
 
+    /**
+     * The error response.
+     */
     @InputImport(name="error")
     private final @Nullable ErrorResponseResponse error;
 

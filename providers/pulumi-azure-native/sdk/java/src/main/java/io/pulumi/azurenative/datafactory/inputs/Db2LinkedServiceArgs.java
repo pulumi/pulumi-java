@@ -19,10 +19,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Linked service for DB2 data source.
+ */
 public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final Db2LinkedServiceArgs Empty = new Db2LinkedServiceArgs();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -30,6 +36,9 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * AuthenticationType to be used for connection. It is mutually exclusive with connectionString property.
+     */
     @InputImport(name="authenticationType")
     private final @Nullable Input<Either<String,Db2AuthenticationType>> authenticationType;
 
@@ -37,6 +46,9 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
     }
 
+    /**
+     * Certificate Common Name when TLS is enabled. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="certificateCommonName")
     private final @Nullable Input<Object> certificateCommonName;
 
@@ -44,6 +56,9 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.certificateCommonName == null ? Input.empty() : this.certificateCommonName;
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -51,6 +66,9 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
+    /**
+     * The connection string. It is mutually exclusive with server, database, authenticationType, userName, packageCollection and certificateCommonName property. Type: string, SecureString or AzureKeyVaultSecretReference.
+     */
     @InputImport(name="connectionString")
     private final @Nullable Input<Object> connectionString;
 
@@ -58,6 +76,9 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.connectionString == null ? Input.empty() : this.connectionString;
     }
 
+    /**
+     * Database name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="database")
     private final @Nullable Input<Object> database;
 
@@ -65,6 +86,9 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.database == null ? Input.empty() : this.database;
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -72,6 +96,9 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -79,6 +106,9 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
+    /**
+     * Under where packages are created when querying database. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="packageCollection")
     private final @Nullable Input<Object> packageCollection;
 
@@ -86,6 +116,9 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.packageCollection == null ? Input.empty() : this.packageCollection;
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -93,6 +126,9 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Password for authentication.
+     */
     @InputImport(name="password")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
@@ -100,6 +136,9 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * Server name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="server")
     private final @Nullable Input<Object> server;
 
@@ -107,6 +146,10 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.server == null ? Input.empty() : this.server;
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'Db2'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -114,6 +157,9 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
         return this.type;
     }
 
+    /**
+     * Username for authentication. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="username")
     private final @Nullable Input<Object> username;
 

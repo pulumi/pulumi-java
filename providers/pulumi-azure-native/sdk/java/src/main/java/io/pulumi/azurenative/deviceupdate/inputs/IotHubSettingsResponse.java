@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Device Update account integration with IoT Hub settings.
+ */
 public final class IotHubSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IotHubSettingsResponse Empty = new IotHubSettingsResponse();
 
+    /**
+     * EventHub connection string.
+     */
     @InputImport(name="eventHubConnectionString")
     private final @Nullable String eventHubConnectionString;
 
@@ -21,6 +27,9 @@ public final class IotHubSettingsResponse extends io.pulumi.resources.InvokeArgs
         return this.eventHubConnectionString == null ? Optional.empty() : Optional.ofNullable(this.eventHubConnectionString);
     }
 
+    /**
+     * IoTHub connection string.
+     */
     @InputImport(name="ioTHubConnectionString")
     private final @Nullable String ioTHubConnectionString;
 
@@ -28,6 +37,9 @@ public final class IotHubSettingsResponse extends io.pulumi.resources.InvokeArgs
         return this.ioTHubConnectionString == null ? Optional.empty() : Optional.ofNullable(this.ioTHubConnectionString);
     }
 
+    /**
+     * IoTHub resource ID
+     */
     @InputImport(name="resourceId", required=true)
     private final String resourceId;
 

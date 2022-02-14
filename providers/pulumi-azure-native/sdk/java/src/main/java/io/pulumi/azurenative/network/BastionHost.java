@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.BastionHostArgs;
 import io.pulumi.azurenative.network.outputs.BastionHostIPConfigurationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,57 +15,238 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Bastion Host resource.
+API Version: 2020-11-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create Bastion Host
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bastionHost = new AzureNative.Network.BastionHost("bastionHost", new AzureNative.Network.BastionHostArgs
+        {
+            BastionHostName = "bastionhosttenant'",
+            IpConfigurations = 
+            {
+                new AzureNative.Network.Inputs.BastionHostIPConfigurationArgs
+                {
+                    Name = "bastionHostIpConfiguration",
+                    PublicIPAddress = new AzureNative.Network.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+                    },
+                    Subnet = new AzureNative.Network.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/BastionHostSubnet",
+                    },
+                },
+            },
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewBastionHost(ctx, "bastionHost", &network.BastionHostArgs{
+			BastionHostName: pulumi.String("bastionhosttenant'"),
+			IpConfigurations: []network.BastionHostIPConfigurationArgs{
+				&network.BastionHostIPConfigurationArgs{
+					Name: pulumi.String("bastionHostIpConfiguration"),
+					PublicIPAddress: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName"),
+					},
+					Subnet: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/BastionHostSubnet"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const bastionHost = new azure_native.network.BastionHost("bastionHost", {
+    bastionHostName: "bastionhosttenant'",
+    ipConfigurations: [{
+        name: "bastionHostIpConfiguration",
+        publicIPAddress: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+        },
+        subnet: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/BastionHostSubnet",
+        },
+    }],
+    resourceGroupName: "rg1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+bastion_host = azure_native.network.BastionHost("bastionHost",
+    bastion_host_name="bastionhosttenant'",
+    ip_configurations=[azure_native.network.BastionHostIPConfigurationArgs(
+        name="bastionHostIpConfiguration",
+        public_ip_address=azure_native.network.SubResourceArgs(
+            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/pipName",
+        ),
+        subnet=azure_native.network.SubResourceArgs(
+            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/BastionHostSubnet",
+        ),
+    )],
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:BastionHost bastionhost' /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/bastionHosts/bastionhosttenant' 
+```
+
+ */
 @ResourceType(type="azure-native:network:BastionHost")
 public class BastionHost extends io.pulumi.resources.CustomResource {
+    /**
+     * FQDN for the endpoint on which bastion host is accessible.
+     */
     @OutputExport(name="dnsName", type=String.class, parameters={})
     private Output</* @Nullable */ String> dnsName;
 
+    /**
+     * @return FQDN for the endpoint on which bastion host is accessible.
+     */
     public Output</* @Nullable */ String> getDnsName() {
         return this.dnsName;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * IP configuration of the Bastion Host resource.
+     */
     @OutputExport(name="ipConfigurations", type=List.class, parameters={BastionHostIPConfigurationResponse.class})
     private Output</* @Nullable */ List<BastionHostIPConfigurationResponse>> ipConfigurations;
 
+    /**
+     * @return IP configuration of the Bastion Host resource.
+     */
     public Output</* @Nullable */ List<BastionHostIPConfigurationResponse>> getIpConfigurations() {
         return this.ipConfigurations;
     }
+    /**
+     * Resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the bastion host resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the bastion host resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public BastionHost(String name, BastionHostArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:BastionHost", name, args == null ? BastionHostArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -101,6 +281,14 @@ public class BastionHost extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static BastionHost get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BastionHost(name, id, options);
     }

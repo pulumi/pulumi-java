@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConsentStore {
+/**
+ * Gets the specified consent store.
+ */
     public static CompletableFuture<GetConsentStoreResult> invokeAsync(GetConsentStoreArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1:getConsentStore", TypeShape.of(GetConsentStoreResult.class), args == null ? GetConsentStoreArgs.Empty : args, Utilities.withVersion(options));
     }

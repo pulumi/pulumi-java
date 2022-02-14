@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
+ */
     @EnumType
     public enum AttributeFilter {
+/**
+ * All tracks will be included.
+ */
         All("All"),
+/**
+ * The first track will be included when the attribute is sorted in descending order.  Generally used to select the largest bitrate.
+ */
         Top("Top"),
+/**
+ * The first track will be included when the attribute is sorted in ascending order.  Generally used to select the smallest bitrate.
+ */
         Bottom("Bottom"),
+/**
+ * Any tracks that have an attribute equal to the value given will be included.
+ */
         ValueEquals("ValueEquals");
 
         private final String value;

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Identity-Aware Proxy
+ */
 public final class BackendServiceIAPArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackendServiceIAPArgs Empty = new BackendServiceIAPArgs();
 
+    /**
+     * Whether the serving infrastructure will authenticate and authorize all incoming requests. If true, the oauth2ClientId and oauth2ClientSecret fields must be non-empty.
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -22,6 +28,9 @@ public final class BackendServiceIAPArgs extends io.pulumi.resources.ResourceArg
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * OAuth2 client ID to use for the authentication flow.
+     */
     @InputImport(name="oauth2ClientId")
     private final @Nullable Input<String> oauth2ClientId;
 
@@ -29,6 +38,9 @@ public final class BackendServiceIAPArgs extends io.pulumi.resources.ResourceArg
         return this.oauth2ClientId == null ? Input.empty() : this.oauth2ClientId;
     }
 
+    /**
+     * OAuth2 client secret to use for the authentication flow. For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field. @InputOnly
+     */
     @InputImport(name="oauth2ClientSecret")
     private final @Nullable Input<String> oauth2ClientSecret;
 

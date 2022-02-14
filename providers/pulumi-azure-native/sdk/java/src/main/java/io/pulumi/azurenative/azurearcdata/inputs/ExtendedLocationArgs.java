@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The complex type of the extended location.
+ */
 public final class ExtendedLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExtendedLocationArgs Empty = new ExtendedLocationArgs();
 
+    /**
+     * The name of the extended location.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -23,6 +29,9 @@ public final class ExtendedLocationArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The type of the extended location.
+     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,ExtendedLocationTypes>> type;
 

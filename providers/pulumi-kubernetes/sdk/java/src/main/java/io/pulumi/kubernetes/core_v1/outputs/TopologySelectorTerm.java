@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TopologySelectorTerm {
+/**
+ * A list of topology selector requirements by labels.
+ */
     private final @Nullable List<TopologySelectorLabelRequirement> matchLabelExpressions;
 
     @OutputCustomType.Constructor({"matchLabelExpressions"})
@@ -18,6 +21,9 @@ public final class TopologySelectorTerm {
         this.matchLabelExpressions = matchLabelExpressions;
     }
 
+/**
+ * A list of topology selector requirements by labels.
+ */
     public List<TopologySelectorLabelRequirement> getMatchLabelExpressions() {
         return this.matchLabelExpressions == null ? List.of() : this.matchLabelExpressions;
     }

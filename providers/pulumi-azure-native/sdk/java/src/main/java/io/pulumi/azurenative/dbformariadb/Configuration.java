@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.dbformariadb;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.dbformariadb.ConfigurationArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -14,57 +13,206 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Represents a Configuration.
+API Version: 2018-06-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### ConfigurationCreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var configuration = new AzureNative.DBforMariaDB.Configuration("configuration", new AzureNative.DBforMariaDB.ConfigurationArgs
+        {
+            ConfigurationName = "event_scheduler",
+            ResourceGroupName = "TestGroup",
+            ServerName = "testserver",
+            Source = "user-override",
+            Value = "off",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	dbformariadb "github.com/pulumi/pulumi-azure-native/sdk/go/azure/dbformariadb"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dbformariadb.NewConfiguration(ctx, "configuration", &dbformariadb.ConfigurationArgs{
+			ConfigurationName: pulumi.String("event_scheduler"),
+			ResourceGroupName: pulumi.String("TestGroup"),
+			ServerName:        pulumi.String("testserver"),
+			Source:            pulumi.String("user-override"),
+			Value:             pulumi.String("off"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const configuration = new azure_native.dbformariadb.Configuration("configuration", {
+    configurationName: "event_scheduler",
+    resourceGroupName: "TestGroup",
+    serverName: "testserver",
+    source: "user-override",
+    value: "off",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+configuration = azure_native.dbformariadb.Configuration("configuration",
+    configuration_name="event_scheduler",
+    resource_group_name="TestGroup",
+    server_name="testserver",
+    source="user-override",
+    value="off")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:dbformariadb:Configuration event_scheduler /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/TestGroup/providers/Microsoft.DBforMariaDB/servers/testserver/configurations/event_scheduler 
+```
+
+ */
 @ResourceType(type="azure-native:dbformariadb:Configuration")
 public class Configuration extends io.pulumi.resources.CustomResource {
+    /**
+     * Allowed values of the configuration.
+     */
     @OutputExport(name="allowedValues", type=String.class, parameters={})
     private Output<String> allowedValues;
 
+    /**
+     * @return Allowed values of the configuration.
+     */
     public Output<String> getAllowedValues() {
         return this.allowedValues;
     }
+    /**
+     * Data type of the configuration.
+     */
     @OutputExport(name="dataType", type=String.class, parameters={})
     private Output<String> dataType;
 
+    /**
+     * @return Data type of the configuration.
+     */
     public Output<String> getDataType() {
         return this.dataType;
     }
+    /**
+     * Default value of the configuration.
+     */
     @OutputExport(name="defaultValue", type=String.class, parameters={})
     private Output<String> defaultValue;
 
+    /**
+     * @return Default value of the configuration.
+     */
     public Output<String> getDefaultValue() {
         return this.defaultValue;
     }
+    /**
+     * Description of the configuration.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output<String> description;
 
+    /**
+     * @return Description of the configuration.
+     */
     public Output<String> getDescription() {
         return this.description;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Source of the configuration.
+     */
     @OutputExport(name="source", type=String.class, parameters={})
     private Output</* @Nullable */ String> source;
 
+    /**
+     * @return Source of the configuration.
+     */
     public Output</* @Nullable */ String> getSource() {
         return this.source;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Value of the configuration.
+     */
     @OutputExport(name="value", type=String.class, parameters={})
     private Output</* @Nullable */ String> value;
 
+    /**
+     * @return Value of the configuration.
+     */
     public Output</* @Nullable */ String> getValue() {
         return this.value;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Configuration(String name, ConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:dbformariadb:Configuration", name, args == null ? ConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -84,6 +232,14 @@ public class Configuration extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Configuration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Configuration(name, id, options);
     }

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.web.WebAppSourceControlArgs;
 import io.pulumi.azurenative.web.outputs.GitHubActionConfigurationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,69 +15,147 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Source control configuration for an app.
+API Version: 2020-12-01.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:web:WebAppSourceControl myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/sourcecontrols/web 
+```
+
+ */
 @ResourceType(type="azure-native:web:WebAppSourceControl")
 public class WebAppSourceControl extends io.pulumi.resources.CustomResource {
+    /**
+     * Name of branch to use for deployment.
+     */
     @OutputExport(name="branch", type=String.class, parameters={})
     private Output</* @Nullable */ String> branch;
 
+    /**
+     * @return Name of branch to use for deployment.
+     */
     public Output</* @Nullable */ String> getBranch() {
         return this.branch;
     }
+    /**
+     * <code>true</code> to enable deployment rollback; otherwise, <code>false</code>.
+     */
     @OutputExport(name="deploymentRollbackEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deploymentRollbackEnabled;
 
+    /**
+     * @return <code>true</code> to enable deployment rollback; otherwise, <code>false</code>.
+     */
     public Output</* @Nullable */ Boolean> getDeploymentRollbackEnabled() {
         return this.deploymentRollbackEnabled;
     }
+    /**
+     * If GitHub Action is selected, than the associated configuration.
+     */
     @OutputExport(name="gitHubActionConfiguration", type=GitHubActionConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ GitHubActionConfigurationResponse> gitHubActionConfiguration;
 
+    /**
+     * @return If GitHub Action is selected, than the associated configuration.
+     */
     public Output</* @Nullable */ GitHubActionConfigurationResponse> getGitHubActionConfiguration() {
         return this.gitHubActionConfiguration;
     }
+    /**
+     * <code>true</code> if this is deployed via GitHub action.
+     */
     @OutputExport(name="isGitHubAction", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isGitHubAction;
 
+    /**
+     * @return <code>true</code> if this is deployed via GitHub action.
+     */
     public Output</* @Nullable */ Boolean> getIsGitHubAction() {
         return this.isGitHubAction;
     }
+    /**
+     * <code>true</code> to limit to manual integration; <code>false</code> to enable continuous integration (which configures webhooks into online repos like GitHub).
+     */
     @OutputExport(name="isManualIntegration", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isManualIntegration;
 
+    /**
+     * @return <code>true</code> to limit to manual integration; <code>false</code> to enable continuous integration (which configures webhooks into online repos like GitHub).
+     */
     public Output</* @Nullable */ Boolean> getIsManualIntegration() {
         return this.isManualIntegration;
     }
+    /**
+     * <code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.
+     */
     @OutputExport(name="isMercurial", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isMercurial;
 
+    /**
+     * @return <code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.
+     */
     public Output</* @Nullable */ Boolean> getIsMercurial() {
         return this.isMercurial;
     }
+    /**
+     * Kind of resource.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return Kind of resource.
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * Resource Name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource Name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Repository or source control URL.
+     */
     @OutputExport(name="repoUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> repoUrl;
 
+    /**
+     * @return Repository or source control URL.
+     */
     public Output</* @Nullable */ String> getRepoUrl() {
         return this.repoUrl;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public WebAppSourceControl(String name, WebAppSourceControlArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:WebAppSourceControl", name, args == null ? WebAppSourceControlArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -109,6 +186,14 @@ public class WebAppSourceControl extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static WebAppSourceControl get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebAppSourceControl(name, id, options);
     }

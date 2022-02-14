@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The JSON object that contains the properties to send health probes to origin.
+ */
 public final class HealthProbeParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HealthProbeParametersArgs Empty = new HealthProbeParametersArgs();
 
+    /**
+     * The number of seconds between health probes.Default is 240sec.
+     */
     @InputImport(name="probeIntervalInSeconds")
     private final @Nullable Input<Integer> probeIntervalInSeconds;
 
@@ -24,6 +30,9 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
         return this.probeIntervalInSeconds == null ? Input.empty() : this.probeIntervalInSeconds;
     }
 
+    /**
+     * The path relative to the origin that is used to determine the health of the origin.
+     */
     @InputImport(name="probePath")
     private final @Nullable Input<String> probePath;
 
@@ -31,6 +40,9 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
         return this.probePath == null ? Input.empty() : this.probePath;
     }
 
+    /**
+     * Protocol to use for health probe.
+     */
     @InputImport(name="probeProtocol")
     private final @Nullable Input<ProbeProtocol> probeProtocol;
 
@@ -38,6 +50,9 @@ public final class HealthProbeParametersArgs extends io.pulumi.resources.Resourc
         return this.probeProtocol == null ? Input.empty() : this.probeProtocol;
     }
 
+    /**
+     * The type of health probe request that is made.
+     */
     @InputImport(name="probeRequestType")
     private final @Nullable Input<HealthProbeRequestType> probeRequestType;
 

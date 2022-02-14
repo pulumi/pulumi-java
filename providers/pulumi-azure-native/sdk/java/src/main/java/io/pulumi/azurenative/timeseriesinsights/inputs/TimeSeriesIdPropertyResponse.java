@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The structure of the property that a time series id can have. An environment can have multiple such properties.
+ */
 public final class TimeSeriesIdPropertyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TimeSeriesIdPropertyResponse Empty = new TimeSeriesIdPropertyResponse();
 
+    /**
+     * The name of the property.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +27,9 @@ public final class TimeSeriesIdPropertyResponse extends io.pulumi.resources.Invo
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The type of the property.
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

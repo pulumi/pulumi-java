@@ -14,9 +14,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RequestContractResponse {
+/**
+ * Operation request description.
+ */
     private final @Nullable String description;
+/**
+ * Collection of operation request headers.
+ */
     private final @Nullable List<ParameterContractResponse> headers;
+/**
+ * Collection of operation request query parameters.
+ */
     private final @Nullable List<ParameterContractResponse> queryParameters;
+/**
+ * Collection of operation request representations.
+ */
     private final @Nullable List<RepresentationContractResponse> representations;
 
     @OutputCustomType.Constructor({"description","headers","queryParameters","representations"})
@@ -31,15 +43,27 @@ public final class RequestContractResponse {
         this.representations = representations;
     }
 
+/**
+ * Operation request description.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * Collection of operation request headers.
+ */
     public List<ParameterContractResponse> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
     }
+/**
+ * Collection of operation request query parameters.
+ */
     public List<ParameterContractResponse> getQueryParameters() {
         return this.queryParameters == null ? List.of() : this.queryParameters;
     }
+/**
+ * Collection of operation request representations.
+ */
     public List<RepresentationContractResponse> getRepresentations() {
         return this.representations == null ? List.of() : this.representations;
     }

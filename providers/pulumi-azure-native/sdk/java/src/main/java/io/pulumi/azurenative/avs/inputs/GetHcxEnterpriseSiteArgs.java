@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetHcxEnterpriseSiteArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetHcxEnterpriseSiteArgs Empty = new GetHcxEnterpriseSiteArgs();
 
+    /**
+     * Name of the HCX Enterprise Site in the private cloud
+     */
     @InputImport(name="hcxEnterpriseSiteName", required=true)
     private final String hcxEnterpriseSiteName;
 
@@ -19,6 +25,9 @@ public final class GetHcxEnterpriseSiteArgs extends io.pulumi.resources.InvokeAr
         return this.hcxEnterpriseSiteName;
     }
 
+    /**
+     * Name of the private cloud
+     */
     @InputImport(name="privateCloudName", required=true)
     private final String privateCloudName;
 
@@ -26,6 +35,9 @@ public final class GetHcxEnterpriseSiteArgs extends io.pulumi.resources.InvokeAr
         return this.privateCloudName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

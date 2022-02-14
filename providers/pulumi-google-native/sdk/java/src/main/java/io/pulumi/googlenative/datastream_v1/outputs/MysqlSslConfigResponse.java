@@ -10,11 +10,29 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MysqlSslConfigResponse {
+/**
+ * Input only. PEM-encoded certificate of the CA that signed the source database server's certificate.
+ */
     private final String caCertificate;
+/**
+ * Indicates whether the ca_certificate field is set.
+ */
     private final Boolean caCertificateSet;
+/**
+ * Input only. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the 'client_key' and the 'ca_certificate' fields are mandatory.
+ */
     private final String clientCertificate;
+/**
+ * Indicates whether the client_certificate field is set.
+ */
     private final Boolean clientCertificateSet;
+/**
+ * Input only. PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.
+ */
     private final String clientKey;
+/**
+ * Indicates whether the client_key field is set.
+ */
     private final Boolean clientKeySet;
 
     @OutputCustomType.Constructor({"caCertificate","caCertificateSet","clientCertificate","clientCertificateSet","clientKey","clientKeySet"})
@@ -33,21 +51,39 @@ public final class MysqlSslConfigResponse {
         this.clientKeySet = Objects.requireNonNull(clientKeySet);
     }
 
+/**
+ * Input only. PEM-encoded certificate of the CA that signed the source database server's certificate.
+ */
     public String getCaCertificate() {
         return this.caCertificate;
     }
+/**
+ * Indicates whether the ca_certificate field is set.
+ */
     public Boolean getCaCertificateSet() {
         return this.caCertificateSet;
     }
+/**
+ * Input only. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the 'client_key' and the 'ca_certificate' fields are mandatory.
+ */
     public String getClientCertificate() {
         return this.clientCertificate;
     }
+/**
+ * Indicates whether the client_certificate field is set.
+ */
     public Boolean getClientCertificateSet() {
         return this.clientCertificateSet;
     }
+/**
+ * Input only. PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.
+ */
     public String getClientKey() {
         return this.clientKey;
     }
+/**
+ * Indicates whether the client_key field is set.
+ */
     public Boolean getClientKeySet() {
         return this.clientKeySet;
     }

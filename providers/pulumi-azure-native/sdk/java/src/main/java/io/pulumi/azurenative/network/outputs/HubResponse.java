@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HubResponse {
+/**
+ * Resource Id.
+ */
     private final @Nullable String resourceId;
+/**
+ * Resource Type.
+ */
     private final @Nullable String resourceType;
 
     @OutputCustomType.Constructor({"resourceId","resourceType"})
@@ -22,9 +28,15 @@ public final class HubResponse {
         this.resourceType = resourceType;
     }
 
+/**
+ * Resource Id.
+ */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
+/**
+ * Resource Type.
+ */
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }

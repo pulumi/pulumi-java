@@ -15,14 +15,41 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetGalleryImageVersionResult {
+/**
+ * Resource Id
+ */
     private final String id;
+/**
+ * Resource location
+ */
     private final String location;
+/**
+ * Resource name
+ */
     private final String name;
+/**
+ * The provisioning state, which only appears in the response.
+ */
     private final String provisioningState;
+/**
+ * The publishing profile of a gallery image Version.
+ */
     private final @Nullable GalleryImageVersionPublishingProfileResponse publishingProfile;
+/**
+ * This is the replication status of the gallery image version.
+ */
     private final ReplicationStatusResponse replicationStatus;
+/**
+ * This is the storage profile of a Gallery Image Version.
+ */
     private final GalleryImageVersionStorageProfileResponse storageProfile;
+/**
+ * Resource tags
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Resource type
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","location","name","provisioningState","publishingProfile","replicationStatus","storageProfile","tags","type"})
@@ -47,30 +74,57 @@ public final class GetGalleryImageVersionResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Resource Id
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource location
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * Resource name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The provisioning state, which only appears in the response.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * The publishing profile of a gallery image Version.
+ */
     public Optional<GalleryImageVersionPublishingProfileResponse> getPublishingProfile() {
         return Optional.ofNullable(this.publishingProfile);
     }
+/**
+ * This is the replication status of the gallery image version.
+ */
     public ReplicationStatusResponse getReplicationStatus() {
         return this.replicationStatus;
     }
+/**
+ * This is the storage profile of a Gallery Image Version.
+ */
     public GalleryImageVersionStorageProfileResponse getStorageProfile() {
         return this.storageProfile;
     }
+/**
+ * Resource tags
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Resource type
+ */
     public String getType() {
         return this.type;
     }

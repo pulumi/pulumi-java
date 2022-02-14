@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Details information about an error encountered during job execution or the results of an unsuccessful activation of the JobTrigger.
+ */
 public final class GooglePrivacyDlpV2ErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2ErrorResponse Empty = new GooglePrivacyDlpV2ErrorResponse();
 
+    /**
+     * Detailed error codes and messages.
+     */
     @InputImport(name="details", required=true)
     private final GoogleRpcStatusResponse details;
 
@@ -21,6 +27,9 @@ public final class GooglePrivacyDlpV2ErrorResponse extends io.pulumi.resources.I
         return this.details;
     }
 
+    /**
+     * The times the error occurred.
+     */
     @InputImport(name="timestamps", required=true)
     private final List<String> timestamps;
 

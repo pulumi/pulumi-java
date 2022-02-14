@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Gallery information for a workbook template.
+ */
 public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkbookTemplateGalleryResponse Empty = new WorkbookTemplateGalleryResponse();
 
+    /**
+     * Category for the gallery.
+     */
     @InputImport(name="category")
     private final @Nullable String category;
 
@@ -22,6 +28,9 @@ public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.I
         return this.category == null ? Optional.empty() : Optional.ofNullable(this.category);
     }
 
+    /**
+     * Name of the workbook template in the gallery.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -29,6 +38,9 @@ public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.I
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Order of the template within the gallery.
+     */
     @InputImport(name="order")
     private final @Nullable Integer order;
 
@@ -36,6 +48,9 @@ public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.I
         return this.order == null ? Optional.empty() : Optional.ofNullable(this.order);
     }
 
+    /**
+     * Azure resource type supported by the gallery.
+     */
     @InputImport(name="resourceType")
     private final @Nullable String resourceType;
 
@@ -43,6 +58,9 @@ public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.I
         return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
     }
 
+    /**
+     * Type of workbook supported by the workbook template.
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

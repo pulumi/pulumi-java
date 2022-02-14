@@ -12,10 +12,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Results of active probing from the last run of the test.
+ */
 public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProbingDetailsResponse Empty = new ProbingDetailsResponse();
 
+    /**
+     * The reason probing was aborted.
+     */
     @InputImport(name="abortCause", required=true)
     private final String abortCause;
 
@@ -23,6 +29,9 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
         return this.abortCause;
     }
 
+    /**
+     * The source and destination endpoints derived from the test input and used for active probing.
+     */
     @InputImport(name="endpointInfo", required=true)
     private final EndpointInfoResponse endpointInfo;
 
@@ -30,6 +39,9 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
         return this.endpointInfo;
     }
 
+    /**
+     * Details about an internal failure or the cancellation of active probing.
+     */
     @InputImport(name="error", required=true)
     private final StatusResponse error;
 
@@ -37,6 +49,9 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
         return this.error;
     }
 
+    /**
+     * Latency as measured by active probing in one direction: from the source to the destination endpoint.
+     */
     @InputImport(name="probingLatency", required=true)
     private final LatencyDistributionResponse probingLatency;
 
@@ -44,6 +59,9 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
         return this.probingLatency;
     }
 
+    /**
+     * The overall result of active probing.
+     */
     @InputImport(name="result", required=true)
     private final String result;
 
@@ -51,6 +69,9 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
         return this.result;
     }
 
+    /**
+     * Number of probes sent.
+     */
     @InputImport(name="sentProbeCount", required=true)
     private final Integer sentProbeCount;
 
@@ -58,6 +79,9 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
         return this.sentProbeCount;
     }
 
+    /**
+     * Number of probes that reached the destination.
+     */
     @InputImport(name="successfulProbeCount", required=true)
     private final Integer successfulProbeCount;
 
@@ -65,6 +89,9 @@ public final class ProbingDetailsResponse extends io.pulumi.resources.InvokeArgs
         return this.successfulProbeCount;
     }
 
+    /**
+     * The time that reachability was assessed through active probing.
+     */
     @InputImport(name="verifyTime", required=true)
     private final String verifyTime;
 

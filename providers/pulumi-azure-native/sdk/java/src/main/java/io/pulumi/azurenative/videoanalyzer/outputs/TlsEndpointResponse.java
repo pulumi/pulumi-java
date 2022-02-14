@@ -15,11 +15,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TlsEndpointResponse {
+/**
+ * Credentials to be presented to the endpoint.
+ */
     private final UsernamePasswordCredentialsResponse credentials;
+/**
+ * List of trusted certificate authorities when authenticating a TLS connection. A null list designates that Azure Video Analyzer's list of trusted authorities should be used.
+ */
     private final @Nullable PemCertificateListResponse trustedCertificates;
+/**
+ * Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
+ */
     private final @Nullable SecureIotDeviceRemoteTunnelResponse tunnel;
+/**
+ * The discriminator for derived types.
+Expected value is '#Microsoft.VideoAnalyzer.TlsEndpoint'.
+ */
     private final String type;
+/**
+ * The endpoint URL for Video Analyzer to connect to.
+ */
     private final String url;
+/**
+ * Validation options to use when authenticating a TLS connection. By default, strict validation is used.
+ */
     private final @Nullable TlsValidationOptionsResponse validationOptions;
 
     @OutputCustomType.Constructor({"credentials","trustedCertificates","tunnel","type","url","validationOptions"})
@@ -38,21 +57,40 @@ public final class TlsEndpointResponse {
         this.validationOptions = validationOptions;
     }
 
+/**
+ * Credentials to be presented to the endpoint.
+ */
     public UsernamePasswordCredentialsResponse getCredentials() {
         return this.credentials;
     }
+/**
+ * List of trusted certificate authorities when authenticating a TLS connection. A null list designates that Azure Video Analyzer's list of trusted authorities should be used.
+ */
     public Optional<PemCertificateListResponse> getTrustedCertificates() {
         return Optional.ofNullable(this.trustedCertificates);
     }
+/**
+ * Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
+ */
     public Optional<SecureIotDeviceRemoteTunnelResponse> getTunnel() {
         return Optional.ofNullable(this.tunnel);
     }
+/**
+ * The discriminator for derived types.
+Expected value is '#Microsoft.VideoAnalyzer.TlsEndpoint'.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * The endpoint URL for Video Analyzer to connect to.
+ */
     public String getUrl() {
         return this.url;
     }
+/**
+ * Validation options to use when authenticating a TLS connection. By default, strict validation is used.
+ */
     public Optional<TlsValidationOptionsResponse> getValidationOptions() {
         return Optional.ofNullable(this.validationOptions);
     }

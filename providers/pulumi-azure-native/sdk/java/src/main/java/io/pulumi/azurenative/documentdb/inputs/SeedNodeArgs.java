@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SeedNodeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SeedNodeArgs Empty = new SeedNodeArgs();
 
+    /**
+     * IP address of this seed node.
+     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<String> ipAddress;
 

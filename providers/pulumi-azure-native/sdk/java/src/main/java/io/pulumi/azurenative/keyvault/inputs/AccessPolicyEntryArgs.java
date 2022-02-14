@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An identity that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID.
+ */
 public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccessPolicyEntryArgs Empty = new AccessPolicyEntryArgs();
 
+    /**
+     *  Application ID of the client making request on behalf of a principal
+     */
     @InputImport(name="applicationId")
     private final @Nullable Input<String> applicationId;
 
@@ -22,6 +28,9 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
         return this.applicationId == null ? Input.empty() : this.applicationId;
     }
 
+    /**
+     * The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.
+     */
     @InputImport(name="objectId", required=true)
     private final Input<String> objectId;
 
@@ -29,6 +38,9 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
         return this.objectId;
     }
 
+    /**
+     * Permissions the identity has for keys, secrets and certificates.
+     */
     @InputImport(name="permissions", required=true)
     private final Input<PermissionsArgs> permissions;
 
@@ -36,6 +48,9 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
         return this.permissions;
     }
 
+    /**
+     * The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
+     */
     @InputImport(name="tenantId", required=true)
     private final Input<String> tenantId;
 

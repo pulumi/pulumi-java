@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Collection of instances belong to the Application Configuration Service
+ */
 public final class ConfigurationServiceInstanceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfigurationServiceInstanceResponse Empty = new ConfigurationServiceInstanceResponse();
 
+    /**
+     * Name of the Application Configuration Service instance
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class ConfigurationServiceInstanceResponse extends io.pulumi.resour
         return this.name;
     }
 
+    /**
+     * Status of the Application Configuration Service instance
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

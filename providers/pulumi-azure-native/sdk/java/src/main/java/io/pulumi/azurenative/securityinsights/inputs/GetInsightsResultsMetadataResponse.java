@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Get Insights result metadata.
+ */
 public final class GetInsightsResultsMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GetInsightsResultsMetadataResponse Empty = new GetInsightsResultsMetadataResponse();
 
+    /**
+     * information about the failed queries
+     */
     @InputImport(name="errors")
     private final @Nullable List<GetInsightsErrorResponse> errors;
 
@@ -23,6 +29,9 @@ public final class GetInsightsResultsMetadataResponse extends io.pulumi.resource
         return this.errors == null ? List.of() : this.errors;
     }
 
+    /**
+     * the total items found for the insights request
+     */
     @InputImport(name="totalCount", required=true)
     private final Integer totalCount;
 

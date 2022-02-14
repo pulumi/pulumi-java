@@ -8,10 +8,17 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specifies the clip time as an absolute time position in the media file.  The absolute time can point to a different position depending on whether the media file starts from a timestamp of zero or not.
+ */
 public final class AbsoluteClipTimeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AbsoluteClipTimeResponse Empty = new AbsoluteClipTimeResponse();
 
+    /**
+     * The discriminator for derived types.
+Expected value is '#Microsoft.Media.AbsoluteClipTime'.
+     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -19,6 +26,9 @@ public final class AbsoluteClipTimeResponse extends io.pulumi.resources.InvokeAr
         return this.odataType;
     }
 
+    /**
+     * The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.
+     */
     @InputImport(name="time", required=true)
     private final String time;
 

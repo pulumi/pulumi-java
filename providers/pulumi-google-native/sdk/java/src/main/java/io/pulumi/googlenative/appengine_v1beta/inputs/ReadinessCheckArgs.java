@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Readiness checking configuration for VM instances. Unhealthy instances are removed from traffic rotation.
+ */
 public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReadinessCheckArgs Empty = new ReadinessCheckArgs();
 
+    /**
+     * A maximum time limit on application initialization, measured from moment the application successfully replies to a healthcheck until it is ready to serve traffic.
+     */
     @InputImport(name="appStartTimeout")
     private final @Nullable Input<String> appStartTimeout;
 
@@ -22,6 +28,9 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.appStartTimeout == null ? Input.empty() : this.appStartTimeout;
     }
 
+    /**
+     * Interval between health checks.
+     */
     @InputImport(name="checkInterval")
     private final @Nullable Input<String> checkInterval;
 
@@ -29,6 +38,9 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.checkInterval == null ? Input.empty() : this.checkInterval;
     }
 
+    /**
+     * Number of consecutive failed checks required before removing traffic.
+     */
     @InputImport(name="failureThreshold")
     private final @Nullable Input<Integer> failureThreshold;
 
@@ -36,6 +48,9 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.failureThreshold == null ? Input.empty() : this.failureThreshold;
     }
 
+    /**
+     * Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
+     */
     @InputImport(name="host")
     private final @Nullable Input<String> host;
 
@@ -43,6 +58,9 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.host == null ? Input.empty() : this.host;
     }
 
+    /**
+     * The request path.
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -50,6 +68,9 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.path == null ? Input.empty() : this.path;
     }
 
+    /**
+     * Number of consecutive successful checks required before receiving traffic.
+     */
     @InputImport(name="successThreshold")
     private final @Nullable Input<Integer> successThreshold;
 
@@ -57,6 +78,9 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
         return this.successThreshold == null ? Input.empty() : this.successThreshold;
     }
 
+    /**
+     * Time before the check is considered failed.
+     */
     @InputImport(name="timeout")
     private final @Nullable Input<String> timeout;
 

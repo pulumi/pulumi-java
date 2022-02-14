@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourceProviderDetailsResponse {
+/**
+ * Resource provider namespace
+ */
     private final String resourceProviderNamespace;
 
     @OutputCustomType.Constructor({"resourceProviderNamespace"})
@@ -16,6 +19,9 @@ public final class ResourceProviderDetailsResponse {
         this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace);
     }
 
+/**
+ * Resource provider namespace
+ */
     public String getResourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }

@@ -13,10 +13,17 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OverrideTaskStepPropertiesArgs Empty = new OverrideTaskStepPropertiesArgs();
 
+    /**
+     * Gets or sets the collection of override arguments to be used when
+executing a build step.
+     */
     @InputImport(name="arguments")
     private final @Nullable Input<List<ArgumentArgs>> arguments;
 
@@ -24,6 +31,9 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
         return this.arguments == null ? Input.empty() : this.arguments;
     }
 
+    /**
+     * The source context against which run has to be queued.
+     */
     @InputImport(name="contextPath")
     private final @Nullable Input<String> contextPath;
 
@@ -31,6 +41,9 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
         return this.contextPath == null ? Input.empty() : this.contextPath;
     }
 
+    /**
+     * The file against which run has to be queued.
+     */
     @InputImport(name="file")
     private final @Nullable Input<String> file;
 
@@ -38,6 +51,9 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
         return this.file == null ? Input.empty() : this.file;
     }
 
+    /**
+     * The name of the target build stage for the docker build.
+     */
     @InputImport(name="target")
     private final @Nullable Input<String> target;
 
@@ -45,6 +61,9 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
         return this.target == null ? Input.empty() : this.target;
     }
 
+    /**
+     * Base64 encoded update trigger token that will be attached with the base image trigger webhook.
+     */
     @InputImport(name="updateTriggerToken")
     private final @Nullable Input<String> updateTriggerToken;
 
@@ -52,6 +71,9 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
         return this.updateTriggerToken == null ? Input.empty() : this.updateTriggerToken;
     }
 
+    /**
+     * The collection of overridable values that can be passed when running a Task.
+     */
     @InputImport(name="values")
     private final @Nullable Input<List<SetValueArgs>> values;
 

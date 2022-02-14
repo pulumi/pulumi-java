@@ -11,9 +11,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EncryptionServicesResponse {
+/**
+ * The encryption function of the blob storage service.
+ */
     private final @Nullable EncryptionServiceResponse blob;
+/**
+ * The encryption function of the file storage service.
+ */
     private final @Nullable EncryptionServiceResponse file;
+/**
+ * The encryption function of the queue storage service.
+ */
     private final @Nullable EncryptionServiceResponse queue;
+/**
+ * The encryption function of the table storage service.
+ */
     private final @Nullable EncryptionServiceResponse table;
 
     @OutputCustomType.Constructor({"blob","file","queue","table"})
@@ -28,15 +40,27 @@ public final class EncryptionServicesResponse {
         this.table = table;
     }
 
+/**
+ * The encryption function of the blob storage service.
+ */
     public Optional<EncryptionServiceResponse> getBlob() {
         return Optional.ofNullable(this.blob);
     }
+/**
+ * The encryption function of the file storage service.
+ */
     public Optional<EncryptionServiceResponse> getFile() {
         return Optional.ofNullable(this.file);
     }
+/**
+ * The encryption function of the queue storage service.
+ */
     public Optional<EncryptionServiceResponse> getQueue() {
         return Optional.ofNullable(this.queue);
     }
+/**
+ * The encryption function of the table storage service.
+ */
     public Optional<EncryptionServiceResponse> getTable() {
         return Optional.ofNullable(this.table);
     }

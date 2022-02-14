@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DayDetailsResponse {
+/**
+ * The time of day the schedule will occur.
+ */
     private final @Nullable String time;
 
     @OutputCustomType.Constructor({"time"})
@@ -18,6 +21,9 @@ public final class DayDetailsResponse {
         this.time = time;
     }
 
+/**
+ * The time of day the schedule will occur.
+ */
     public Optional<String> getTime() {
         return Optional.ofNullable(this.time);
     }

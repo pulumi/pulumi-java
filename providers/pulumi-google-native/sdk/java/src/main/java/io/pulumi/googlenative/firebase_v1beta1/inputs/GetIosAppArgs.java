@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetIosAppArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIosAppArgs Empty = new GetIosAppArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="iosAppId", required=true)
     private final String iosAppId;
 
@@ -21,6 +27,9 @@ public final class GetIosAppArgs extends io.pulumi.resources.InvokeArgs {
         return this.iosAppId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

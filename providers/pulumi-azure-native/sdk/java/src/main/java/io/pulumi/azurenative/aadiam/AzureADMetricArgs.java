@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AzureADMetricArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureADMetricArgs Empty = new AzureADMetricArgs();
 
+    /**
+     * Name of the azureADMetrics instance.
+     */
     @InputImport(name="azureADMetricsName")
     private final @Nullable Input<String> azureADMetricsName;
 
@@ -22,6 +28,9 @@ public final class AzureADMetricArgs extends io.pulumi.resources.ResourceArgs {
         return this.azureADMetricsName == null ? Input.empty() : this.azureADMetricsName;
     }
 
+    /**
+     * The geo-location where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -29,6 +38,9 @@ public final class AzureADMetricArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of an Azure resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,9 @@ public final class AzureADMetricArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

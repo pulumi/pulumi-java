@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The detector information. By default this is not populated, unless it's specified in expandDetector
+ */
 public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DetectorResponse Empty = new DetectorResponse();
 
+    /**
+     * The Smart Detector description. By default this is not populated, unless it's specified in expandDetector
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -24,6 +30,9 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The detector id.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -31,6 +40,9 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
         return this.id;
     }
 
+    /**
+     * The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector
+     */
     @InputImport(name="imagePaths")
     private final @Nullable List<String> imagePaths;
 
@@ -38,6 +50,9 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
         return this.imagePaths == null ? List.of() : this.imagePaths;
     }
 
+    /**
+     * The Smart Detector name. By default this is not populated, unless it's specified in expandDetector
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -45,6 +60,9 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The detector's parameters.'
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,Object> parameters;
 
@@ -52,6 +70,9 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector
+     */
     @InputImport(name="supportedResourceTypes")
     private final @Nullable List<String> supportedResourceTypes;
 

@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * DNS Service log level.
+ */
     @EnumType
     public enum DnsServiceLogLevelEnum {
+/**
+ * 
+ */
         DEBUG("DEBUG"),
+/**
+ * 
+ */
         INFO("INFO"),
+/**
+ * 
+ */
         WARNING("WARNING"),
+/**
+ * 
+ */
         ERROR("ERROR"),
+/**
+ * 
+ */
         FATAL("FATAL");
 
         private final String value;

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Parameters to support Username and Password Authentication.
+ */
 public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserPasswordArgs Empty = new UserPasswordArgs();
 
+    /**
+     * Secret version reference containing the password.
+     */
     @InputImport(name="password")
     private final @Nullable Input<SecretArgs> password;
 
@@ -22,6 +28,9 @@ public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * Username.
+     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 

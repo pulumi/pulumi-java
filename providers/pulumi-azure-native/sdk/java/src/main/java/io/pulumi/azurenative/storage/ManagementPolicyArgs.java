@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagementPolicyArgs Empty = new ManagementPolicyArgs();
 
+    /**
+     * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -22,6 +28,9 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.accountName;
     }
 
+    /**
+     * The name of the Storage Account Management Policy. It should always be 'default'
+     */
     @InputImport(name="managementPolicyName")
     private final @Nullable Input<String> managementPolicyName;
 
@@ -29,6 +38,9 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.managementPolicyName == null ? Input.empty() : this.managementPolicyName;
     }
 
+    /**
+     * The Storage Account ManagementPolicy, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
+     */
     @InputImport(name="policy", required=true)
     private final Input<ManagementPolicySchemaArgs> policy;
 
@@ -36,6 +48,9 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
         return this.policy;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServerBindingResponse {
+/**
+ * 
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -16,6 +19,9 @@ public final class ServerBindingResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * 
+ */
     public String getType() {
         return this.type;
     }

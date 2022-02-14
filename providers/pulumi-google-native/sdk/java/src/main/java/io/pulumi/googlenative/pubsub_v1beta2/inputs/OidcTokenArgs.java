@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains information needed for generating an [OpenID Connect token](https://developers.google.com/identity/protocols/OpenIDConnect).
+ */
 public final class OidcTokenArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OidcTokenArgs Empty = new OidcTokenArgs();
 
+    /**
+     * Audience to be used when generating OIDC token. The audience claim identifies the recipients that the JWT is intended for. The audience value is a single case-sensitive string. Having multiple values (array) for the audience field is not supported. More info about the OIDC JWT token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3 Note: if not specified, the Push endpoint URL will be used.
+     */
     @InputImport(name="audience")
     private final @Nullable Input<String> audience;
 
@@ -21,6 +27,9 @@ public final class OidcTokenArgs extends io.pulumi.resources.ResourceArgs {
         return this.audience == null ? Input.empty() : this.audience;
     }
 
+    /**
+     * [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating the OIDC token. The caller (for CreateSubscription, UpdateSubscription, and ModifyPushConfig RPCs) must have the iam.serviceAccounts.actAs permission for the service account.
+     */
     @InputImport(name="serviceAccountEmail")
     private final @Nullable Input<String> serviceAccountEmail;
 

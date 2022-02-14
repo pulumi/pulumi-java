@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of source control service.
+ */
     @EnumType
     public enum SourceControlType {
+/**
+ * 
+ */
         Github("Github"),
+/**
+ * 
+ */
         VisualStudioTeamService("VisualStudioTeamService");
 
         private final String value;

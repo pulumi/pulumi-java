@@ -12,9 +12,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IntegrationRuntimeSsisCatalogInfoResponse {
+/**
+ * The password of the administrator user account of the catalog database.
+ */
     private final @Nullable SecureStringResponse catalogAdminPassword;
+/**
+ * The administrator user name of catalog database.
+ */
     private final @Nullable String catalogAdminUserName;
+/**
+ * The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
+ */
     private final @Nullable String catalogPricingTier;
+/**
+ * The catalog database server URL.
+ */
     private final @Nullable String catalogServerEndpoint;
 
     @OutputCustomType.Constructor({"catalogAdminPassword","catalogAdminUserName","catalogPricingTier","catalogServerEndpoint"})
@@ -29,15 +41,27 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse {
         this.catalogServerEndpoint = catalogServerEndpoint;
     }
 
+/**
+ * The password of the administrator user account of the catalog database.
+ */
     public Optional<SecureStringResponse> getCatalogAdminPassword() {
         return Optional.ofNullable(this.catalogAdminPassword);
     }
+/**
+ * The administrator user name of catalog database.
+ */
     public Optional<String> getCatalogAdminUserName() {
         return Optional.ofNullable(this.catalogAdminUserName);
     }
+/**
+ * The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
+ */
     public Optional<String> getCatalogPricingTier() {
         return Optional.ofNullable(this.catalogPricingTier);
     }
+/**
+ * The catalog database server URL.
+ */
     public Optional<String> getCatalogServerEndpoint() {
         return Optional.ofNullable(this.catalogServerEndpoint);
     }

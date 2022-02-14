@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PodDNSConfigOption {
+/**
+ * Required.
+ */
     private final @Nullable String name;
+/**
+ * 
+ */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"name","value"})
@@ -22,9 +28,15 @@ public final class PodDNSConfigOption {
         this.value = value;
     }
 
+/**
+ * Required.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * 
+ */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

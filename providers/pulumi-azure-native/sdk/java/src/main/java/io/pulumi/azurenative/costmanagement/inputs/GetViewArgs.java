@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetViewArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetViewArgs Empty = new GetViewArgs();
 
+    /**
+     * View name
+     */
     @InputImport(name="viewName", required=true)
     private final String viewName;
 

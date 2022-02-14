@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImportJobArgs Empty = new ImportJobArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="importJobId", required=true)
     private final Input<String> importJobId;
 
@@ -23,6 +29,9 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.importJobId;
     }
 
+    /**
+     * Immutable. The wrapping method to be used for incoming key material.
+     */
     @InputImport(name="importMethod", required=true)
     private final Input<ImportJobImportMethod> importMethod;
 
@@ -30,6 +39,9 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.importMethod;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="keyRingId", required=true)
     private final Input<String> keyRingId;
 
@@ -37,6 +49,9 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyRingId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -44,6 +59,9 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -51,6 +69,9 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Immutable. The protection level of the ImportJob. This must match the protection_level of the version_template on the CryptoKey you attempt to import into.
+     */
     @InputImport(name="protectionLevel", required=true)
     private final Input<ImportJobProtectionLevel> protectionLevel;
 

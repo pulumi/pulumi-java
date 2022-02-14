@@ -10,7 +10,14 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DeliveryRuleHttpVersionConditionResponse {
+/**
+ * The name of the condition for the delivery rule.
+Expected value is 'HttpVersion'.
+ */
     private final String name;
+/**
+ * Defines the parameters for the condition.
+ */
     private final HttpVersionMatchConditionParametersResponse parameters;
 
     @OutputCustomType.Constructor({"name","parameters"})
@@ -21,9 +28,16 @@ public final class DeliveryRuleHttpVersionConditionResponse {
         this.parameters = Objects.requireNonNull(parameters);
     }
 
+/**
+ * The name of the condition for the delivery rule.
+Expected value is 'HttpVersion'.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Defines the parameters for the condition.
+ */
     public HttpVersionMatchConditionParametersResponse getParameters() {
         return this.parameters;
     }

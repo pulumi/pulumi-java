@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Class for EnvelopeEncryption encryption scheme
+ */
 public final class EnvelopeEncryptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvelopeEncryptionResponse Empty = new EnvelopeEncryptionResponse();
 
+    /**
+     * Representing which tracks should not be encrypted
+     */
     @InputImport(name="clearTracks")
     private final @Nullable List<TrackSelectionResponse> clearTracks;
 
@@ -25,6 +31,9 @@ public final class EnvelopeEncryptionResponse extends io.pulumi.resources.Invoke
         return this.clearTracks == null ? List.of() : this.clearTracks;
     }
 
+    /**
+     * Representing default content key for each encryption scheme and separate content keys for specific tracks
+     */
     @InputImport(name="contentKeys")
     private final @Nullable StreamingPolicyContentKeysResponse contentKeys;
 
@@ -32,6 +41,9 @@ public final class EnvelopeEncryptionResponse extends io.pulumi.resources.Invoke
         return this.contentKeys == null ? Optional.empty() : Optional.ofNullable(this.contentKeys);
     }
 
+    /**
+     * Template for the URL of the custom service delivering keys to end user players.  Not required when using Azure Media Services for issuing keys.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
+     */
     @InputImport(name="customKeyAcquisitionUrlTemplate")
     private final @Nullable String customKeyAcquisitionUrlTemplate;
 
@@ -39,6 +51,9 @@ public final class EnvelopeEncryptionResponse extends io.pulumi.resources.Invoke
         return this.customKeyAcquisitionUrlTemplate == null ? Optional.empty() : Optional.ofNullable(this.customKeyAcquisitionUrlTemplate);
     }
 
+    /**
+     * Representing supported protocols
+     */
     @InputImport(name="enabledProtocols")
     private final @Nullable EnabledProtocolsResponse enabledProtocols;
 

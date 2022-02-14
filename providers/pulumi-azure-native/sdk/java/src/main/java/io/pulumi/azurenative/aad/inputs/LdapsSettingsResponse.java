@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Secure LDAP Settings
+ */
 public final class LdapsSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LdapsSettingsResponse Empty = new LdapsSettingsResponse();
 
+    /**
+     * NotAfter DateTime of configure ldaps certificate.
+     */
     @InputImport(name="certificateNotAfter", required=true)
     private final String certificateNotAfter;
 
@@ -21,6 +27,9 @@ public final class LdapsSettingsResponse extends io.pulumi.resources.InvokeArgs 
         return this.certificateNotAfter;
     }
 
+    /**
+     * Thumbprint of configure ldaps certificate.
+     */
     @InputImport(name="certificateThumbprint", required=true)
     private final String certificateThumbprint;
 
@@ -28,6 +37,9 @@ public final class LdapsSettingsResponse extends io.pulumi.resources.InvokeArgs 
         return this.certificateThumbprint;
     }
 
+    /**
+     * A flag to determine whether or not Secure LDAP access over the internet is enabled or disabled.
+     */
     @InputImport(name="externalAccess")
     private final @Nullable String externalAccess;
 
@@ -35,6 +47,9 @@ public final class LdapsSettingsResponse extends io.pulumi.resources.InvokeArgs 
         return this.externalAccess == null ? Optional.empty() : Optional.ofNullable(this.externalAccess);
     }
 
+    /**
+     * A flag to determine whether or not Secure LDAP is enabled or disabled.
+     */
     @InputImport(name="ldaps")
     private final @Nullable String ldaps;
 
@@ -42,6 +57,9 @@ public final class LdapsSettingsResponse extends io.pulumi.resources.InvokeArgs 
         return this.ldaps == null ? Optional.empty() : Optional.ofNullable(this.ldaps);
     }
 
+    /**
+     * The certificate required to configure Secure LDAP. The parameter passed here should be a base64encoded representation of the certificate pfx file.
+     */
     @InputImport(name="pfxCertificate")
     private final @Nullable String pfxCertificate;
 
@@ -49,6 +67,9 @@ public final class LdapsSettingsResponse extends io.pulumi.resources.InvokeArgs 
         return this.pfxCertificate == null ? Optional.empty() : Optional.ofNullable(this.pfxCertificate);
     }
 
+    /**
+     * The password to decrypt the provided Secure LDAP certificate pfx file.
+     */
     @InputImport(name="pfxCertificatePassword")
     private final @Nullable String pfxCertificatePassword;
 
@@ -56,6 +77,9 @@ public final class LdapsSettingsResponse extends io.pulumi.resources.InvokeArgs 
         return this.pfxCertificatePassword == null ? Optional.empty() : Optional.ofNullable(this.pfxCertificatePassword);
     }
 
+    /**
+     * Public certificate used to configure secure ldap.
+     */
     @InputImport(name="publicCertificate", required=true)
     private final String publicCertificate;
 

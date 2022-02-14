@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceBusQueueMessageArgs Empty = new ServiceBusQueueMessageArgs();
 
+    /**
+     * Gets or sets the Service Bus authentication.
+     */
     @InputImport(name="authentication")
     private final @Nullable Input<ServiceBusAuthenticationArgs> authentication;
 
@@ -25,6 +31,9 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
         return this.authentication == null ? Input.empty() : this.authentication;
     }
 
+    /**
+     * Gets or sets the brokered message properties.
+     */
     @InputImport(name="brokeredMessageProperties")
     private final @Nullable Input<ServiceBusBrokeredMessagePropertiesArgs> brokeredMessageProperties;
 
@@ -32,6 +41,9 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
         return this.brokeredMessageProperties == null ? Input.empty() : this.brokeredMessageProperties;
     }
 
+    /**
+     * Gets or sets the custom message properties.
+     */
     @InputImport(name="customMessageProperties")
     private final @Nullable Input<Map<String,String>> customMessageProperties;
 
@@ -39,6 +51,9 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
         return this.customMessageProperties == null ? Input.empty() : this.customMessageProperties;
     }
 
+    /**
+     * Gets or sets the message.
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -46,6 +61,9 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
         return this.message == null ? Input.empty() : this.message;
     }
 
+    /**
+     * Gets or sets the namespace.
+     */
     @InputImport(name="namespace")
     private final @Nullable Input<String> namespace;
 
@@ -53,6 +71,9 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
         return this.namespace == null ? Input.empty() : this.namespace;
     }
 
+    /**
+     * Gets or sets the queue name.
+     */
     @InputImport(name="queueName")
     private final @Nullable Input<String> queueName;
 
@@ -60,6 +81,9 @@ public final class ServiceBusQueueMessageArgs extends io.pulumi.resources.Resour
         return this.queueName == null ? Input.empty() : this.queueName;
     }
 
+    /**
+     * Gets or sets the transport type.
+     */
     @InputImport(name="transportType")
     private final @Nullable Input<ServiceBusTransportType> transportType;
 

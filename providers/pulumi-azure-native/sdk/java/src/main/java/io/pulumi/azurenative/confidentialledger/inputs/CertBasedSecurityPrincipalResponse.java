@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Cert based security principal with Ledger RoleName
+ */
 public final class CertBasedSecurityPrincipalResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CertBasedSecurityPrincipalResponse Empty = new CertBasedSecurityPrincipalResponse();
 
+    /**
+     * Base64 encoded public key of the user cert (.pem or .cer)
+     */
     @InputImport(name="cert")
     private final @Nullable String cert;
 
@@ -21,6 +27,9 @@ public final class CertBasedSecurityPrincipalResponse extends io.pulumi.resource
         return this.cert == null ? Optional.empty() : Optional.ofNullable(this.cert);
     }
 
+    /**
+     * LedgerRole associated with the Security Principal of Ledger
+     */
     @InputImport(name="ledgerRoleName")
     private final @Nullable String ledgerRoleName;
 

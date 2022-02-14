@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.sql.DatabaseArgs;
 import io.pulumi.azurenative.sql.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -19,207 +18,1393 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A database resource.
+API Version: 2020-11-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Creates a VCore database by specifying service objective name.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureNative.Sql.Database("database", new AzureNative.Sql.DatabaseArgs
+        {
+            DatabaseName = "testdb",
+            Location = "southeastasia",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            ServerName = "testsvr",
+            Sku = new AzureNative.Sql.Inputs.SkuArgs
+            {
+                Capacity = 2,
+                Family = "Gen4",
+                Name = "BC",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewDatabase(ctx, "database", &sql.DatabaseArgs{
+			DatabaseName:      pulumi.String("testdb"),
+			Location:          pulumi.String("southeastasia"),
+			ResourceGroupName: pulumi.String("Default-SQL-SouthEastAsia"),
+			ServerName:        pulumi.String("testsvr"),
+			Sku: &sql.SkuArgs{
+				Capacity: pulumi.Int(2),
+				Family:   pulumi.String("Gen4"),
+				Name:     pulumi.String("BC"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const database = new azure_native.sql.Database("database", {
+    databaseName: "testdb",
+    location: "southeastasia",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    serverName: "testsvr",
+    sku: {
+        capacity: 2,
+        family: "Gen4",
+        name: "BC",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+database = azure_native.sql.Database("database",
+    database_name="testdb",
+    location="southeastasia",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    server_name="testsvr",
+    sku=azure_native.sql.SkuArgs(
+        capacity=2,
+        family="Gen4",
+        name="BC",
+    ))
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Creates a VCore database by specifying sku name and capacity.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureNative.Sql.Database("database", new AzureNative.Sql.DatabaseArgs
+        {
+            DatabaseName = "testdb",
+            Location = "southeastasia",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            ServerName = "testsvr",
+            Sku = new AzureNative.Sql.Inputs.SkuArgs
+            {
+                Capacity = 2,
+                Name = "BC_Gen4",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewDatabase(ctx, "database", &sql.DatabaseArgs{
+			DatabaseName:      pulumi.String("testdb"),
+			Location:          pulumi.String("southeastasia"),
+			ResourceGroupName: pulumi.String("Default-SQL-SouthEastAsia"),
+			ServerName:        pulumi.String("testsvr"),
+			Sku: &sql.SkuArgs{
+				Capacity: pulumi.Int(2),
+				Name:     pulumi.String("BC_Gen4"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const database = new azure_native.sql.Database("database", {
+    databaseName: "testdb",
+    location: "southeastasia",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    serverName: "testsvr",
+    sku: {
+        capacity: 2,
+        name: "BC_Gen4",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+database = azure_native.sql.Database("database",
+    database_name="testdb",
+    location="southeastasia",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    server_name="testsvr",
+    sku=azure_native.sql.SkuArgs(
+        capacity=2,
+        name="BC_Gen4",
+    ))
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Creates a database as a copy.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureNative.Sql.Database("database", new AzureNative.Sql.DatabaseArgs
+        {
+            CreateMode = "Copy",
+            DatabaseName = "dbcopy",
+            Location = "southeastasia",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            ServerName = "testsvr",
+            Sku = new AzureNative.Sql.Inputs.SkuArgs
+            {
+                Name = "S0",
+                Tier = "Standard",
+            },
+            SourceDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewDatabase(ctx, "database", &sql.DatabaseArgs{
+			CreateMode:        pulumi.String("Copy"),
+			DatabaseName:      pulumi.String("dbcopy"),
+			Location:          pulumi.String("southeastasia"),
+			ResourceGroupName: pulumi.String("Default-SQL-SouthEastAsia"),
+			ServerName:        pulumi.String("testsvr"),
+			Sku: &sql.SkuArgs{
+				Name: pulumi.String("S0"),
+				Tier: pulumi.String("Standard"),
+			},
+			SourceDatabaseId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const database = new azure_native.sql.Database("database", {
+    createMode: "Copy",
+    databaseName: "dbcopy",
+    location: "southeastasia",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    serverName: "testsvr",
+    sku: {
+        name: "S0",
+        tier: "Standard",
+    },
+    sourceDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+database = azure_native.sql.Database("database",
+    create_mode="Copy",
+    database_name="dbcopy",
+    location="southeastasia",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    server_name="testsvr",
+    sku=azure_native.sql.SkuArgs(
+        name="S0",
+        tier="Standard",
+    ),
+    source_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Creates a database as an on-line secondary.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureNative.Sql.Database("database", new AzureNative.Sql.DatabaseArgs
+        {
+            CreateMode = "Secondary",
+            DatabaseName = "testdb",
+            Location = "southeastasia",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            SecondaryType = "Geo",
+            ServerName = "testsvr",
+            Sku = new AzureNative.Sql.Inputs.SkuArgs
+            {
+                Name = "S0",
+                Tier = "Standard",
+            },
+            SourceDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-NorthEurope/providers/Microsoft.Sql/servers/testsvr1/databases/testdb",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewDatabase(ctx, "database", &sql.DatabaseArgs{
+			CreateMode:        pulumi.String("Secondary"),
+			DatabaseName:      pulumi.String("testdb"),
+			Location:          pulumi.String("southeastasia"),
+			ResourceGroupName: pulumi.String("Default-SQL-SouthEastAsia"),
+			SecondaryType:     pulumi.String("Geo"),
+			ServerName:        pulumi.String("testsvr"),
+			Sku: &sql.SkuArgs{
+				Name: pulumi.String("S0"),
+				Tier: pulumi.String("Standard"),
+			},
+			SourceDatabaseId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-NorthEurope/providers/Microsoft.Sql/servers/testsvr1/databases/testdb"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const database = new azure_native.sql.Database("database", {
+    createMode: "Secondary",
+    databaseName: "testdb",
+    location: "southeastasia",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    secondaryType: "Geo",
+    serverName: "testsvr",
+    sku: {
+        name: "S0",
+        tier: "Standard",
+    },
+    sourceDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-NorthEurope/providers/Microsoft.Sql/servers/testsvr1/databases/testdb",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+database = azure_native.sql.Database("database",
+    create_mode="Secondary",
+    database_name="testdb",
+    location="southeastasia",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    secondary_type="Geo",
+    server_name="testsvr",
+    sku=azure_native.sql.SkuArgs(
+        name="S0",
+        tier="Standard",
+    ),
+    source_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-NorthEurope/providers/Microsoft.Sql/servers/testsvr1/databases/testdb")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Creates a database as named replica secondary.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureNative.Sql.Database("database", new AzureNative.Sql.DatabaseArgs
+        {
+            CreateMode = "Secondary",
+            DatabaseName = "testdb",
+            Location = "southeastasia",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            SecondaryType = "Named",
+            ServerName = "testsvr",
+            Sku = new AzureNative.Sql.Inputs.SkuArgs
+            {
+                Capacity = 2,
+                Name = "HS_Gen4",
+                Tier = "Hyperscale",
+            },
+            SourceDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-NorthEurope/providers/Microsoft.Sql/servers/testsvr1/databases/primarydb",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewDatabase(ctx, "database", &sql.DatabaseArgs{
+			CreateMode:        pulumi.String("Secondary"),
+			DatabaseName:      pulumi.String("testdb"),
+			Location:          pulumi.String("southeastasia"),
+			ResourceGroupName: pulumi.String("Default-SQL-SouthEastAsia"),
+			SecondaryType:     pulumi.String("Named"),
+			ServerName:        pulumi.String("testsvr"),
+			Sku: &sql.SkuArgs{
+				Capacity: pulumi.Int(2),
+				Name:     pulumi.String("HS_Gen4"),
+				Tier:     pulumi.String("Hyperscale"),
+			},
+			SourceDatabaseId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-NorthEurope/providers/Microsoft.Sql/servers/testsvr1/databases/primarydb"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const database = new azure_native.sql.Database("database", {
+    createMode: "Secondary",
+    databaseName: "testdb",
+    location: "southeastasia",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    secondaryType: "Named",
+    serverName: "testsvr",
+    sku: {
+        capacity: 2,
+        name: "HS_Gen4",
+        tier: "Hyperscale",
+    },
+    sourceDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-NorthEurope/providers/Microsoft.Sql/servers/testsvr1/databases/primarydb",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+database = azure_native.sql.Database("database",
+    create_mode="Secondary",
+    database_name="testdb",
+    location="southeastasia",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    secondary_type="Named",
+    server_name="testsvr",
+    sku=azure_native.sql.SkuArgs(
+        capacity=2,
+        name="HS_Gen4",
+        tier="Hyperscale",
+    ),
+    source_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-NorthEurope/providers/Microsoft.Sql/servers/testsvr1/databases/primarydb")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Creates a database from PointInTimeRestore.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureNative.Sql.Database("database", new AzureNative.Sql.DatabaseArgs
+        {
+            CreateMode = "PointInTimeRestore",
+            DatabaseName = "dbpitr",
+            Location = "southeastasia",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            RestorePointInTime = "2020-10-22T05:35:31.503Z",
+            ServerName = "testsvr",
+            SourceDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SoutheastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewDatabase(ctx, "database", &sql.DatabaseArgs{
+			CreateMode:         pulumi.String("PointInTimeRestore"),
+			DatabaseName:       pulumi.String("dbpitr"),
+			Location:           pulumi.String("southeastasia"),
+			ResourceGroupName:  pulumi.String("Default-SQL-SouthEastAsia"),
+			RestorePointInTime: pulumi.String("2020-10-22T05:35:31.503Z"),
+			ServerName:         pulumi.String("testsvr"),
+			SourceDatabaseId:   pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SoutheastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const database = new azure_native.sql.Database("database", {
+    createMode: "PointInTimeRestore",
+    databaseName: "dbpitr",
+    location: "southeastasia",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    restorePointInTime: "2020-10-22T05:35:31.503Z",
+    serverName: "testsvr",
+    sourceDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SoutheastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+database = azure_native.sql.Database("database",
+    create_mode="PointInTimeRestore",
+    database_name="dbpitr",
+    location="southeastasia",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    restore_point_in_time="2020-10-22T05:35:31.503Z",
+    server_name="testsvr",
+    source_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SoutheastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Creates a database with default mode.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureNative.Sql.Database("database", new AzureNative.Sql.DatabaseArgs
+        {
+            Collation = "SQL_Latin1_General_CP1_CI_AS",
+            CreateMode = "Default",
+            DatabaseName = "testdb",
+            Location = "southeastasia",
+            MaxSizeBytes = 1073741824,
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            ServerName = "testsvr",
+            Sku = new AzureNative.Sql.Inputs.SkuArgs
+            {
+                Name = "S0",
+                Tier = "Standard",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewDatabase(ctx, "database", &sql.DatabaseArgs{
+			Collation:         pulumi.String("SQL_Latin1_General_CP1_CI_AS"),
+			CreateMode:        pulumi.String("Default"),
+			DatabaseName:      pulumi.String("testdb"),
+			Location:          pulumi.String("southeastasia"),
+			MaxSizeBytes:      pulumi.Float64(1073741824),
+			ResourceGroupName: pulumi.String("Default-SQL-SouthEastAsia"),
+			ServerName:        pulumi.String("testsvr"),
+			Sku: &sql.SkuArgs{
+				Name: pulumi.String("S0"),
+				Tier: pulumi.String("Standard"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const database = new azure_native.sql.Database("database", {
+    collation: "SQL_Latin1_General_CP1_CI_AS",
+    createMode: "Default",
+    databaseName: "testdb",
+    location: "southeastasia",
+    maxSizeBytes: 1073741824,
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    serverName: "testsvr",
+    sku: {
+        name: "S0",
+        tier: "Standard",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+database = azure_native.sql.Database("database",
+    collation="SQL_Latin1_General_CP1_CI_AS",
+    create_mode="Default",
+    database_name="testdb",
+    location="southeastasia",
+    max_size_bytes=1073741824,
+    resource_group_name="Default-SQL-SouthEastAsia",
+    server_name="testsvr",
+    sku=azure_native.sql.SkuArgs(
+        name="S0",
+        tier="Standard",
+    ))
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Creates a database with minimum number of parameters.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureNative.Sql.Database("database", new AzureNative.Sql.DatabaseArgs
+        {
+            DatabaseName = "testdb",
+            Location = "southeastasia",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            ServerName = "testsvr",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewDatabase(ctx, "database", &sql.DatabaseArgs{
+			DatabaseName:      pulumi.String("testdb"),
+			Location:          pulumi.String("southeastasia"),
+			ResourceGroupName: pulumi.String("Default-SQL-SouthEastAsia"),
+			ServerName:        pulumi.String("testsvr"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const database = new azure_native.sql.Database("database", {
+    databaseName: "testdb",
+    location: "southeastasia",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    serverName: "testsvr",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+database = azure_native.sql.Database("database",
+    database_name="testdb",
+    location="southeastasia",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    server_name="testsvr")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Creates a database with preferred maintenance window.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureNative.Sql.Database("database", new AzureNative.Sql.DatabaseArgs
+        {
+            Collation = "SQL_Latin1_General_CP1_CI_AS",
+            CreateMode = "Default",
+            DatabaseName = "testdb",
+            Location = "southeastasia",
+            MaintenanceConfigurationId = "/subscriptions/00000000-1111-2222-3333-444444444444/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_SouthEastAsia_1",
+            MaxSizeBytes = 1073741824,
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            ServerName = "testsvr",
+            Sku = new AzureNative.Sql.Inputs.SkuArgs
+            {
+                Name = "S2",
+                Tier = "Standard",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewDatabase(ctx, "database", &sql.DatabaseArgs{
+			Collation:                  pulumi.String("SQL_Latin1_General_CP1_CI_AS"),
+			CreateMode:                 pulumi.String("Default"),
+			DatabaseName:               pulumi.String("testdb"),
+			Location:                   pulumi.String("southeastasia"),
+			MaintenanceConfigurationId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_SouthEastAsia_1"),
+			MaxSizeBytes:               pulumi.Float64(1073741824),
+			ResourceGroupName:          pulumi.String("Default-SQL-SouthEastAsia"),
+			ServerName:                 pulumi.String("testsvr"),
+			Sku: &sql.SkuArgs{
+				Name: pulumi.String("S2"),
+				Tier: pulumi.String("Standard"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const database = new azure_native.sql.Database("database", {
+    collation: "SQL_Latin1_General_CP1_CI_AS",
+    createMode: "Default",
+    databaseName: "testdb",
+    location: "southeastasia",
+    maintenanceConfigurationId: "/subscriptions/00000000-1111-2222-3333-444444444444/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_SouthEastAsia_1",
+    maxSizeBytes: 1073741824,
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    serverName: "testsvr",
+    sku: {
+        name: "S2",
+        tier: "Standard",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+database = azure_native.sql.Database("database",
+    collation="SQL_Latin1_General_CP1_CI_AS",
+    create_mode="Default",
+    database_name="testdb",
+    location="southeastasia",
+    maintenance_configuration_id="/subscriptions/00000000-1111-2222-3333-444444444444/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_SouthEastAsia_1",
+    max_size_bytes=1073741824,
+    resource_group_name="Default-SQL-SouthEastAsia",
+    server_name="testsvr",
+    sku=azure_native.sql.SkuArgs(
+        name="S2",
+        tier="Standard",
+    ))
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Creates a database with specified backup storage redundancy.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var database = new AzureNative.Sql.Database("database", new AzureNative.Sql.DatabaseArgs
+        {
+            DatabaseName = "testdb",
+            Location = "southeastasia",
+            RequestedBackupStorageRedundancy = "Zone",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            ServerName = "testsvr",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewDatabase(ctx, "database", &sql.DatabaseArgs{
+			DatabaseName:                     pulumi.String("testdb"),
+			Location:                         pulumi.String("southeastasia"),
+			RequestedBackupStorageRedundancy: pulumi.String("Zone"),
+			ResourceGroupName:                pulumi.String("Default-SQL-SouthEastAsia"),
+			ServerName:                       pulumi.String("testsvr"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const database = new azure_native.sql.Database("database", {
+    databaseName: "testdb",
+    location: "southeastasia",
+    requestedBackupStorageRedundancy: "Zone",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    serverName: "testsvr",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+database = azure_native.sql.Database("database",
+    database_name="testdb",
+    location="southeastasia",
+    requested_backup_storage_redundancy="Zone",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    server_name="testsvr")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:sql:Database testdb /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb 
+```
+
+ */
 @ResourceType(type="azure-native:sql:Database")
 public class Database extends io.pulumi.resources.CustomResource {
+    /**
+     * Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled
+     */
     @OutputExport(name="autoPauseDelay", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> autoPauseDelay;
 
+    /**
+     * @return Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled
+     */
     public Output</* @Nullable */ Integer> getAutoPauseDelay() {
         return this.autoPauseDelay;
     }
+    /**
+     * Collation of the metadata catalog.
+     */
     @OutputExport(name="catalogCollation", type=String.class, parameters={})
     private Output</* @Nullable */ String> catalogCollation;
 
+    /**
+     * @return Collation of the metadata catalog.
+     */
     public Output</* @Nullable */ String> getCatalogCollation() {
         return this.catalogCollation;
     }
+    /**
+     * The collation of the database.
+     */
     @OutputExport(name="collation", type=String.class, parameters={})
     private Output</* @Nullable */ String> collation;
 
+    /**
+     * @return The collation of the database.
+     */
     public Output</* @Nullable */ String> getCollation() {
         return this.collation;
     }
+    /**
+     * The creation date of the database (ISO8601 format).
+     */
     @OutputExport(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
+    /**
+     * @return The creation date of the database (ISO8601 format).
+     */
     public Output<String> getCreationDate() {
         return this.creationDate;
     }
+    /**
+     * The storage account type used to store backups for this database.
+     */
     @OutputExport(name="currentBackupStorageRedundancy", type=String.class, parameters={})
     private Output<String> currentBackupStorageRedundancy;
 
+    /**
+     * @return The storage account type used to store backups for this database.
+     */
     public Output<String> getCurrentBackupStorageRedundancy() {
         return this.currentBackupStorageRedundancy;
     }
+    /**
+     * The current service level objective name of the database.
+     */
     @OutputExport(name="currentServiceObjectiveName", type=String.class, parameters={})
     private Output<String> currentServiceObjectiveName;
 
+    /**
+     * @return The current service level objective name of the database.
+     */
     public Output<String> getCurrentServiceObjectiveName() {
         return this.currentServiceObjectiveName;
     }
+    /**
+     * The name and tier of the SKU.
+     */
     @OutputExport(name="currentSku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> currentSku;
 
+    /**
+     * @return The name and tier of the SKU.
+     */
     public Output<SkuResponse> getCurrentSku() {
         return this.currentSku;
     }
+    /**
+     * The ID of the database.
+     */
     @OutputExport(name="databaseId", type=String.class, parameters={})
     private Output<String> databaseId;
 
+    /**
+     * @return The ID of the database.
+     */
     public Output<String> getDatabaseId() {
         return this.databaseId;
     }
+    /**
+     * The default secondary region for this database.
+     */
     @OutputExport(name="defaultSecondaryLocation", type=String.class, parameters={})
     private Output<String> defaultSecondaryLocation;
 
+    /**
+     * @return The default secondary region for this database.
+     */
     public Output<String> getDefaultSecondaryLocation() {
         return this.defaultSecondaryLocation;
     }
+    /**
+     * This records the earliest start date and time that restore is available for this database (ISO8601 format).
+     */
     @OutputExport(name="earliestRestoreDate", type=String.class, parameters={})
     private Output<String> earliestRestoreDate;
 
+    /**
+     * @return This records the earliest start date and time that restore is available for this database (ISO8601 format).
+     */
     public Output<String> getEarliestRestoreDate() {
         return this.earliestRestoreDate;
     }
+    /**
+     * The resource identifier of the elastic pool containing this database.
+     */
     @OutputExport(name="elasticPoolId", type=String.class, parameters={})
     private Output</* @Nullable */ String> elasticPoolId;
 
+    /**
+     * @return The resource identifier of the elastic pool containing this database.
+     */
     public Output</* @Nullable */ String> getElasticPoolId() {
         return this.elasticPoolId;
     }
+    /**
+     * Failover Group resource identifier that this database belongs to.
+     */
     @OutputExport(name="failoverGroupId", type=String.class, parameters={})
     private Output<String> failoverGroupId;
 
+    /**
+     * @return Failover Group resource identifier that this database belongs to.
+     */
     public Output<String> getFailoverGroupId() {
         return this.failoverGroupId;
     }
+    /**
+     * The number of secondary replicas associated with the database that are used to provide high availability.
+     */
     @OutputExport(name="highAvailabilityReplicaCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> highAvailabilityReplicaCount;
 
+    /**
+     * @return The number of secondary replicas associated with the database that are used to provide high availability.
+     */
     public Output</* @Nullable */ Integer> getHighAvailabilityReplicaCount() {
         return this.highAvailabilityReplicaCount;
     }
+    /**
+     * Kind of database. This is metadata used for the Azure portal experience.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return Kind of database. This is metadata used for the Azure portal experience.
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.
+     */
     @OutputExport(name="licenseType", type=String.class, parameters={})
     private Output</* @Nullable */ String> licenseType;
 
+    /**
+     * @return The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.
+     */
     public Output</* @Nullable */ String> getLicenseType() {
         return this.licenseType;
     }
+    /**
+     * Resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location.
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.
+     */
     @OutputExport(name="maintenanceConfigurationId", type=String.class, parameters={})
     private Output</* @Nullable */ String> maintenanceConfigurationId;
 
+    /**
+     * @return Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.
+     */
     public Output</* @Nullable */ String> getMaintenanceConfigurationId() {
         return this.maintenanceConfigurationId;
     }
+    /**
+     * Resource that manages the database.
+     */
     @OutputExport(name="managedBy", type=String.class, parameters={})
     private Output<String> managedBy;
 
+    /**
+     * @return Resource that manages the database.
+     */
     public Output<String> getManagedBy() {
         return this.managedBy;
     }
+    /**
+     * The max log size for this database.
+     */
     @OutputExport(name="maxLogSizeBytes", type=Double.class, parameters={})
     private Output<Double> maxLogSizeBytes;
 
+    /**
+     * @return The max log size for this database.
+     */
     public Output<Double> getMaxLogSizeBytes() {
         return this.maxLogSizeBytes;
     }
+    /**
+     * The max size of the database expressed in bytes.
+     */
     @OutputExport(name="maxSizeBytes", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> maxSizeBytes;
 
+    /**
+     * @return The max size of the database expressed in bytes.
+     */
     public Output</* @Nullable */ Double> getMaxSizeBytes() {
         return this.maxSizeBytes;
     }
+    /**
+     * Minimal capacity that database will always have allocated, if not paused
+     */
     @OutputExport(name="minCapacity", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> minCapacity;
 
+    /**
+     * @return Minimal capacity that database will always have allocated, if not paused
+     */
     public Output</* @Nullable */ Double> getMinCapacity() {
         return this.minCapacity;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The date when database was paused by user configuration or action(ISO8601 format). Null if the database is ready.
+     */
     @OutputExport(name="pausedDate", type=String.class, parameters={})
     private Output<String> pausedDate;
 
+    /**
+     * @return The date when database was paused by user configuration or action(ISO8601 format). Null if the database is ready.
+     */
     public Output<String> getPausedDate() {
         return this.pausedDate;
     }
+    /**
+     * The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.
+     */
     @OutputExport(name="readScale", type=String.class, parameters={})
     private Output</* @Nullable */ String> readScale;
 
+    /**
+     * @return The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.
+     */
     public Output</* @Nullable */ String> getReadScale() {
         return this.readScale;
     }
+    /**
+     * The storage account type to be used to store backups for this database.
+     */
     @OutputExport(name="requestedBackupStorageRedundancy", type=String.class, parameters={})
     private Output</* @Nullable */ String> requestedBackupStorageRedundancy;
 
+    /**
+     * @return The storage account type to be used to store backups for this database.
+     */
     public Output</* @Nullable */ String> getRequestedBackupStorageRedundancy() {
         return this.requestedBackupStorageRedundancy;
     }
+    /**
+     * The requested service level objective name of the database.
+     */
     @OutputExport(name="requestedServiceObjectiveName", type=String.class, parameters={})
     private Output<String> requestedServiceObjectiveName;
 
+    /**
+     * @return The requested service level objective name of the database.
+     */
     public Output<String> getRequestedServiceObjectiveName() {
         return this.requestedServiceObjectiveName;
     }
+    /**
+     * The date when database was resumed by user action or database login (ISO8601 format). Null if the database is paused.
+     */
     @OutputExport(name="resumedDate", type=String.class, parameters={})
     private Output<String> resumedDate;
 
+    /**
+     * @return The date when database was resumed by user action or database login (ISO8601 format). Null if the database is paused.
+     */
     public Output<String> getResumedDate() {
         return this.resumedDate;
     }
+    /**
+     * The secondary type of the database if it is a secondary.  Valid values are Geo and Named.
+     */
     @OutputExport(name="secondaryType", type=String.class, parameters={})
     private Output</* @Nullable */ String> secondaryType;
 
+    /**
+     * @return The secondary type of the database if it is a secondary.  Valid values are Geo and Named.
+     */
     public Output</* @Nullable */ String> getSecondaryType() {
         return this.secondaryType;
     }
+    /**
+     * The database SKU.
+
+The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:
+
+```azurecli
+az sql db list-editions -l <location> -o table
+````
+
+```powershell
+Get-AzSqlServerServiceObjective -Location <location>
+````
+
+     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
+    /**
+     * @return The database SKU.
+
+The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:
+
+```azurecli
+az sql db list-editions -l <location> -o table
+````
+
+```powershell
+Get-AzSqlServerServiceObjective -Location <location>
+````
+
+     */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * The status of the database.
+     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
+    /**
+     * @return The status of the database.
+     */
     public Output<String> getStatus() {
         return this.status;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
+     */
     @OutputExport(name="zoneRedundant", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> zoneRedundant;
 
+    /**
+     * @return Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
+     */
     public Output</* @Nullable */ Boolean> getZoneRedundant() {
         return this.zoneRedundant;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Database(String name, DatabaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:Database", name, args == null ? DatabaseArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -247,6 +1432,14 @@ public class Database extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Database get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Database(name, id, options);
     }

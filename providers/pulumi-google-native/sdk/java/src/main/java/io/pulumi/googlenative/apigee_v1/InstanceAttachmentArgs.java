@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceAttachmentArgs Empty = new InstanceAttachmentArgs();
 
+    /**
+     * ID of the attached environment.
+     */
     @InputImport(name="environment")
     private final @Nullable Input<String> environment;
 
@@ -21,6 +27,9 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
         return this.environment == null ? Input.empty() : this.environment;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="instanceId", required=true)
     private final Input<String> instanceId;
 
@@ -28,6 +37,9 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
         return this.instanceId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 

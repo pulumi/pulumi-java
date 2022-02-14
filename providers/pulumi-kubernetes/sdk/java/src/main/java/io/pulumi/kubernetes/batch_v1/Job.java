@@ -8,46 +8,392 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
-import io.pulumi.kubernetes.batch_v1.JobArgs;
 import io.pulumi.kubernetes.batch_v1.outputs.JobSpec;
 import io.pulumi.kubernetes.batch_v1.outputs.JobStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Job represents the configuration of a single job.
+
+This resource waits until its status is ready before registering success
+for create/update, and populating output properties from the current state of the resource.
+The following conditions are used to determine whether the resource creation has
+succeeded or failed:
+
+1. The Job's '.status.startTime' is set, which indicates that the Job has started running.
+2. The Job's '.status.conditions' has a status of type 'Complete', and a 'status' set
+   to 'True'.
+3. The Job's '.status.conditions' do not have a status of type 'Failed', with a
+	'status' set to 'True'. If this condition is set, we should fail the Job immediately.
+
+If the Job has not reached a Ready state after 10 minutes, it will
+time out and mark the resource update as Failed. You can override the default timeout value
+by setting the 'customTimeouts' option on the resource.
+
+By default, if a resource failed to become ready in a previous update, 
+Pulumi will continue to wait for readiness on the next update. If you would prefer
+to schedule a replacement for an unready resource on the next update, you can add the
+"pulumi.com/replaceUnready": "true" annotation to the resource definition.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create a Job with auto-naming
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as kubernetes from "@pulumi/kubernetes";
+
+const job = new kubernetes.batch.v1.Job("pi", {
+    spec: {
+        template: {
+            spec: {
+                containers: [{
+                    name: "pi",
+                    image: "perl",
+                    command: [
+                        "perl",
+                        "-Mbignum=bpi",
+                        "-wle",
+                        "print bpi(2000)",
+                    ],
+                }],
+                restartPolicy: "Never",
+            },
+        },
+        backoffLimit: 4,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_kubernetes as kubernetes
+
+job = kubernetes.batch.v1.Job(
+    "pi",
+    spec=kubernetes.batch.v1.JobSpecArgs(
+        template=kubernetes.core.v1.PodTemplateSpecArgs(
+            spec=kubernetes.core.v1.PodSpecArgs(
+                containers=[kubernetes.core.v1.ContainerArgs(
+                    name="pi",
+                    image="perl",
+                    command=[
+                        "perl",
+                        "-Mbignum=bpi",
+                        "-wle",
+                        "print bpi(2000)",
+                    ],
+                )],
+                restart_policy="Never",
+            ),
+        ),
+        backoff_limit=4,
+    ))
+```
+```csharp
+using Pulumi;
+using Kubernetes = Pulumi.Kubernetes;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var piJob = new Kubernetes.Batch.V1.Job("pi", new Kubernetes.Types.Inputs.Batch.V1.JobArgs
+        {
+            Spec = new Kubernetes.Types.Inputs.Batch.V1.JobSpecArgs
+            {
+                Template = new Kubernetes.Types.Inputs.Core.V1.PodTemplateSpecArgs
+                {
+                    Spec = new Kubernetes.Types.Inputs.Core.V1.PodSpecArgs
+                    {
+                        Containers = 
+                        {
+                            new Kubernetes.Types.Inputs.Core.V1.ContainerArgs
+                            {
+                                Name = "pi",
+                                Image = "perl",
+                                Command = 
+                                {
+                                    "perl",
+                                    "-Mbignum=bpi",
+                                    "-wle",
+                                    "print bpi(2000)",
+                                },
+                            },
+                        },
+                        RestartPolicy = "Never",
+                    },
+                },
+                BackoffLimit = 4,
+            },
+        });
+    }
+}
+```
+```go
+package main
+
+import (
+	batchv1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/batch/v1"
+	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
+	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/meta/v1"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batchv1.NewJob(ctx, "pi", &batchv1.JobArgs{
+			Spec: &batchv1.JobSpecArgs{
+				Template: &corev1.PodTemplateSpecArgs{
+					Spec: &corev1.PodSpecArgs{
+						Containers: corev1.ContainerArray{
+							&corev1.ContainerArgs{
+								Name:  pulumi.String("pi"),
+								Image: pulumi.String("perl"),
+								Command: pulumi.StringArray{
+									pulumi.String("perl"),
+									pulumi.String("-Mbignum=bpi"),
+									pulumi.String("-wle"),
+									pulumi.String("print bpi(2000)"),
+								},
+							},
+						},
+						RestartPolicy: pulumi.String("Never"),
+					},
+				},
+				BackoffLimit: pulumi.Int(4),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+{{% example %}}
+### Create a Job with a user-specified name
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as kubernetes from "@pulumi/kubernetes";
+
+const job = new kubernetes.batch.v1.Job("pi", {
+    metadata: {
+        name: "pi",
+    },
+    spec: {
+        template: {
+            spec: {
+                containers: [{
+                    name: "pi",
+                    image: "perl",
+                    command: [
+                        "perl",
+                        "-Mbignum=bpi",
+                        "-wle",
+                        "print bpi(2000)",
+                    ],
+                }],
+                restartPolicy: "Never",
+            },
+        },
+        backoffLimit: 4,
+    },
+});
+```
+```python
+import pulumi
+import pulumi_kubernetes as kubernetes
+
+job = kubernetes.batch.v1.Job(
+    "pi",
+    metadata=kubernetes.meta.v1.ObjectMetaArgs(
+        name="pi",
+    ),
+    spec=kubernetes.batch.v1.JobSpecArgs(
+        template=kubernetes.core.v1.PodTemplateSpecArgs(
+            spec=kubernetes.core.v1.PodSpecArgs(
+                containers=[kubernetes.core.v1.ContainerArgs(
+                    name="pi",
+                    image="perl",
+                    command=[
+                        "perl",
+                        "-Mbignum=bpi",
+                        "-wle",
+                        "print bpi(2000)",
+                    ],
+                )],
+                restart_policy="Never",
+            ),
+        ),
+        backoff_limit=4,
+    ))
+```
+```csharp
+using Pulumi;
+using Kubernetes = Pulumi.Kubernetes;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var piJob = new Kubernetes.Batch.V1.Job("pi", new Kubernetes.Types.Inputs.Batch.V1.JobArgs
+        {
+            Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+            {
+                Name = "pi",
+            },
+            Spec = new Kubernetes.Types.Inputs.Batch.V1.JobSpecArgs
+            {
+                Template = new Kubernetes.Types.Inputs.Core.V1.PodTemplateSpecArgs
+                {
+                    Spec = new Kubernetes.Types.Inputs.Core.V1.PodSpecArgs
+                    {
+                        Containers = 
+                        {
+                            new Kubernetes.Types.Inputs.Core.V1.ContainerArgs
+                            {
+                                Name = "pi",
+                                Image = "perl",
+                                Command = 
+                                {
+                                    "perl",
+                                    "-Mbignum=bpi",
+                                    "-wle",
+                                    "print bpi(2000)",
+                                },
+                            },
+                        },
+                        RestartPolicy = "Never",
+                    },
+                },
+                BackoffLimit = 4,
+            },
+        });
+    }
+}
+```
+```go
+package main
+
+import (
+	batchv1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/batch/v1"
+	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
+	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/meta/v1"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batchv1.NewJob(ctx, "pi", &batchv1.JobArgs{
+			Metadata: &metav1.ObjectMetaArgs{
+				Name: pulumi.String("pi"),
+			},
+			Spec: &batchv1.JobSpecArgs{
+				Template: &corev1.PodTemplateSpecArgs{
+					Spec: &corev1.PodSpecArgs{
+						Containers: corev1.ContainerArray{
+							&corev1.ContainerArgs{
+								Name:  pulumi.String("pi"),
+								Image: pulumi.String("perl"),
+								Command: pulumi.StringArray{
+									pulumi.String("perl"),
+									pulumi.String("-Mbignum=bpi"),
+									pulumi.String("-wle"),
+									pulumi.String("print bpi(2000)"),
+								},
+							},
+						},
+						RestartPolicy: pulumi.String("Never"),
+					},
+				},
+				BackoffLimit: pulumi.Int(4),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+{% /examples %}}
+
+ */
 @ResourceType(type="kubernetes:batch/v1:Job")
 public class Job extends io.pulumi.resources.CustomResource {
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     */
     @OutputExport(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
+    /**
+     * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     */
     @OutputExport(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
+    /**
+     * @return Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     */
     public Output</* @Nullable */ ObjectMeta> getMetadata() {
         return this.metadata;
     }
+    /**
+     * Specification of the desired behavior of a job. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     */
     @OutputExport(name="spec", type=JobSpec.class, parameters={})
     private Output</* @Nullable */ JobSpec> spec;
 
+    /**
+     * @return Specification of the desired behavior of a job. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     */
     public Output</* @Nullable */ JobSpec> getSpec() {
         return this.spec;
     }
+    /**
+     * Current status of a job. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     */
     @OutputExport(name="status", type=JobStatus.class, parameters={})
     private Output</* @Nullable */ JobStatus> status;
 
+    /**
+     * @return Current status of a job. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     */
     public Output</* @Nullable */ JobStatus> getStatus() {
         return this.status;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Job(String name, @Nullable JobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("kubernetes:batch/v1:Job", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -71,6 +417,14 @@ public class Job extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Job get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Job(name, id, options);
     }

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSubnetArgs Empty = new GetSubnetArgs();
 
+    /**
+     * Expands referenced resources.
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +27,9 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -28,6 +37,9 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the subnet.
+     */
     @InputImport(name="subnetName", required=true)
     private final String subnetName;
 
@@ -35,6 +47,9 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
         return this.subnetName;
     }
 
+    /**
+     * The name of the virtual network.
+     */
     @InputImport(name="virtualNetworkName", required=true)
     private final String virtualNetworkName;
 

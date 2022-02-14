@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomerArgs Empty = new CustomerArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="accountId", required=true)
     private final Input<String> accountId;
 
@@ -23,6 +29,9 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountId;
     }
 
+    /**
+     * Secondary contact email. You need to provide an alternate email to create different domains if a primary contact email already exists. Users will receive a notification with credentials when you create an admin.google.com account. Secondary emails are also recovery email addresses. Alternate emails are optional when you create Team customers.
+     */
     @InputImport(name="alternateEmail")
     private final @Nullable Input<String> alternateEmail;
 
@@ -30,6 +39,9 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
         return this.alternateEmail == null ? Input.empty() : this.alternateEmail;
     }
 
+    /**
+     * Cloud Identity ID of the customer's channel partner. Populated only if a channel partner exists for this customer.
+     */
     @InputImport(name="channelPartnerId")
     private final @Nullable Input<String> channelPartnerId;
 
@@ -37,6 +49,9 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
         return this.channelPartnerId == null ? Input.empty() : this.channelPartnerId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="channelPartnerLinkId", required=true)
     private final Input<String> channelPartnerLinkId;
 
@@ -44,6 +59,9 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
         return this.channelPartnerLinkId;
     }
 
+    /**
+     * The customer's primary domain. Must match the primary contact email's domain.
+     */
     @InputImport(name="domain", required=true)
     private final Input<String> domain;
 
@@ -51,6 +69,9 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
         return this.domain;
     }
 
+    /**
+     * Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+     */
     @InputImport(name="languageCode")
     private final @Nullable Input<String> languageCode;
 
@@ -58,6 +79,9 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
         return this.languageCode == null ? Input.empty() : this.languageCode;
     }
 
+    /**
+     * Name of the organization that the customer entity represents.
+     */
     @InputImport(name="orgDisplayName", required=true)
     private final Input<String> orgDisplayName;
 
@@ -65,6 +89,9 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
         return this.orgDisplayName;
     }
 
+    /**
+     * The organization address for the customer. To enforce US laws and embargoes, we require a region and zip code. You must provide valid addresses for every customer. To set the customer's language, use the Customer-level language code.
+     */
     @InputImport(name="orgPostalAddress", required=true)
     private final Input<GoogleTypePostalAddressArgs> orgPostalAddress;
 
@@ -72,6 +99,9 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
         return this.orgPostalAddress;
     }
 
+    /**
+     * Primary contact info.
+     */
     @InputImport(name="primaryContactInfo")
     private final @Nullable Input<GoogleCloudChannelV1ContactInfoArgs> primaryContactInfo;
 

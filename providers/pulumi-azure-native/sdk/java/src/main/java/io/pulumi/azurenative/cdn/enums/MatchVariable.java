@@ -8,21 +8,66 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The name of the condition for the delivery rule.
+ */
     @EnumType
     public enum MatchVariable {
+/**
+ * 
+ */
         RemoteAddress("RemoteAddress"),
+/**
+ * 
+ */
         RequestMethod("RequestMethod"),
+/**
+ * 
+ */
         QueryString("QueryString"),
+/**
+ * 
+ */
         PostArgs("PostArgs"),
+/**
+ * 
+ */
         RequestUri("RequestUri"),
+/**
+ * 
+ */
         RequestHeader("RequestHeader"),
+/**
+ * 
+ */
         RequestBody("RequestBody"),
+/**
+ * 
+ */
         RequestScheme("RequestScheme"),
+/**
+ * 
+ */
         UrlPath("UrlPath"),
+/**
+ * 
+ */
         UrlFileExtension("UrlFileExtension"),
+/**
+ * 
+ */
         UrlFileName("UrlFileName"),
+/**
+ * 
+ */
         HttpVersion("HttpVersion"),
+/**
+ * 
+ */
         Cookies("Cookies"),
+/**
+ * 
+ */
         IsDevice("IsDevice");
 
         private final String value;

@@ -11,10 +11,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Detailed runtime information of the rollout.
+ */
 public final class RolloutOperationInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RolloutOperationInfoResponse Empty = new RolloutOperationInfoResponse();
 
+    /**
+     * The start time of the rollout in UTC. This property will not be set if the rollout has not completed yet.
+     */
     @InputImport(name="endTime", required=true)
     private final String endTime;
 
@@ -22,6 +28,9 @@ public final class RolloutOperationInfoResponse extends io.pulumi.resources.Invo
         return this.endTime;
     }
 
+    /**
+     * The detailed error information for any failure.
+     */
     @InputImport(name="error", required=true)
     private final CloudErrorBodyResponse error;
 
@@ -29,6 +38,9 @@ public final class RolloutOperationInfoResponse extends io.pulumi.resources.Invo
         return this.error;
     }
 
+    /**
+     * The ordinal count of the number of retry attempts on a rollout. 0 if no retries of the rollout have been performed. If the rollout is updated with a PUT, this count is reset to 0.
+     */
     @InputImport(name="retryAttempt", required=true)
     private final Integer retryAttempt;
 
@@ -36,6 +48,9 @@ public final class RolloutOperationInfoResponse extends io.pulumi.resources.Invo
         return this.retryAttempt;
     }
 
+    /**
+     * True, if all steps that succeeded on the previous run/attempt were chosen to be skipped in this retry attempt. False, otherwise.
+     */
     @InputImport(name="skipSucceededOnRetry", required=true)
     private final Boolean skipSucceededOnRetry;
 
@@ -43,6 +58,9 @@ public final class RolloutOperationInfoResponse extends io.pulumi.resources.Invo
         return this.skipSucceededOnRetry;
     }
 
+    /**
+     * The start time of the rollout in UTC.
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 

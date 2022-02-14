@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Recurrence pattern of a lab schedule.
+ */
 public final class RecurrencePatternResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RecurrencePatternResponse Empty = new RecurrencePatternResponse();
 
+    /**
+     * When the recurrence will expire. This date is inclusive.
+     */
     @InputImport(name="expirationDate", required=true)
     private final String expirationDate;
 
@@ -23,6 +29,9 @@ public final class RecurrencePatternResponse extends io.pulumi.resources.InvokeA
         return this.expirationDate;
     }
 
+    /**
+     * The frequency of the recurrence.
+     */
     @InputImport(name="frequency", required=true)
     private final String frequency;
 
@@ -30,6 +39,9 @@ public final class RecurrencePatternResponse extends io.pulumi.resources.InvokeA
         return this.frequency;
     }
 
+    /**
+     * The interval to invoke the schedule on. For example, interval = 2 and RecurrenceFrequency.Daily will run every 2 days. When no interval is supplied, an interval of 1 is used.
+     */
     @InputImport(name="interval")
     private final @Nullable Integer interval;
 
@@ -37,6 +49,9 @@ public final class RecurrencePatternResponse extends io.pulumi.resources.InvokeA
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
     }
 
+    /**
+     * The week days the schedule runs. Used for when the Frequency is set to Weekly.
+     */
     @InputImport(name="weekDays")
     private final @Nullable List<String> weekDays;
 

@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Migration Properties
+ */
 public final class MigrationPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrationPropertiesResponse Empty = new MigrationPropertiesResponse();
 
+    /**
+     * Migration Progress
+     */
     @InputImport(name="migrationProgress", required=true)
     private final MigrationProgressResponse migrationProgress;
 
@@ -20,6 +26,9 @@ public final class MigrationPropertiesResponse extends io.pulumi.resources.Invok
         return this.migrationProgress;
     }
 
+    /**
+     * Old Subnet Id
+     */
     @InputImport(name="oldSubnetId", required=true)
     private final String oldSubnetId;
 
@@ -27,6 +36,9 @@ public final class MigrationPropertiesResponse extends io.pulumi.resources.Invok
         return this.oldSubnetId;
     }
 
+    /**
+     * Old Vnet Site Id
+     */
     @InputImport(name="oldVnetSiteId", required=true)
     private final String oldVnetSiteId;
 

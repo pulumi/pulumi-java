@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.synapse;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.synapse.KustoPoolArgs;
 import io.pulumi.azurenative.synapse.outputs.AzureSkuResponse;
 import io.pulumi.azurenative.synapse.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
@@ -17,93 +16,299 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Class representing a Kusto kusto pool.
+API Version: 2021-04-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### kustoPoolsCreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var kustoPool = new AzureNative.Synapse.KustoPool("kustoPool", new AzureNative.Synapse.KustoPoolArgs
+        {
+            KustoPoolName = "kustoclusterrptest4",
+            Location = "westus",
+            ResourceGroupName = "kustorptest",
+            Sku = new AzureNative.Synapse.Inputs.AzureSkuArgs
+            {
+                Capacity = 2,
+                Name = "Standard_L8s",
+                Tier = "Standard",
+            },
+            WorkspaceName = "synapseWorkspaceName",
+            WorkspaceUid = "11111111-2222-3333-444444444444",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	synapse "github.com/pulumi/pulumi-azure-native/sdk/go/azure/synapse"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := synapse.NewkustoPool(ctx, "kustoPool", &synapse.kustoPoolArgs{
+			KustoPoolName:     pulumi.String("kustoclusterrptest4"),
+			Location:          pulumi.String("westus"),
+			ResourceGroupName: pulumi.String("kustorptest"),
+			Sku: &synapse.AzureSkuArgs{
+				Capacity: pulumi.Int(2),
+				Name:     pulumi.String("Standard_L8s"),
+				Tier:     pulumi.String("Standard"),
+			},
+			WorkspaceName: pulumi.String("synapseWorkspaceName"),
+			WorkspaceUid:  pulumi.String("11111111-2222-3333-444444444444"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const kustoPool = new azure_native.synapse.KustoPool("kustoPool", {
+    kustoPoolName: "kustoclusterrptest4",
+    location: "westus",
+    resourceGroupName: "kustorptest",
+    sku: {
+        capacity: 2,
+        name: "Standard_L8s",
+        tier: "Standard",
+    },
+    workspaceName: "synapseWorkspaceName",
+    workspaceUid: "11111111-2222-3333-444444444444",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+kusto_pool = azure_native.synapse.KustoPool("kustoPool",
+    kusto_pool_name="kustoclusterrptest4",
+    location="westus",
+    resource_group_name="kustorptest",
+    sku=azure_native.synapse.AzureSkuArgs(
+        capacity=2,
+        name="Standard_L8s",
+        tier="Standard",
+    ),
+    workspace_name="synapseWorkspaceName",
+    workspace_uid="11111111-2222-3333-444444444444")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:synapse:kustoPool KustoClusterRPTest4 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Synapse/workspaces/synapseWorkspaceName/kustopools/KustoClusterRPTest4 
+```
+
+ */
 @ResourceType(type="azure-native:synapse:kustoPool")
 public class KustoPool extends io.pulumi.resources.CustomResource {
+    /**
+     * The Kusto Pool data ingestion URI.
+     */
     @OutputExport(name="dataIngestionUri", type=String.class, parameters={})
     private Output<String> dataIngestionUri;
 
+    /**
+     * @return The Kusto Pool data ingestion URI.
+     */
     public Output<String> getDataIngestionUri() {
         return this.dataIngestionUri;
     }
+    /**
+     * The engine type
+     */
     @OutputExport(name="engineType", type=String.class, parameters={})
     private Output</* @Nullable */ String> engineType;
 
+    /**
+     * @return The engine type
+     */
     public Output</* @Nullable */ String> getEngineType() {
         return this.engineType;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The geo-location where the resource lives
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioned state of the resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioned state of the resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The SKU of the kusto pool.
+     */
     @OutputExport(name="sku", type=AzureSkuResponse.class, parameters={})
     private Output<AzureSkuResponse> sku;
 
+    /**
+     * @return The SKU of the kusto pool.
+     */
     public Output<AzureSkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * The state of the resource.
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return The state of the resource.
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * The reason for the Kusto Pool's current state.
+     */
     @OutputExport(name="stateReason", type=String.class, parameters={})
     private Output<String> stateReason;
 
+    /**
+     * @return The reason for the Kusto Pool's current state.
+     */
     public Output<String> getStateReason() {
         return this.stateReason;
     }
+    /**
+     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The Kusto Pool URI.
+     */
     @OutputExport(name="uri", type=String.class, parameters={})
     private Output<String> uri;
 
+    /**
+     * @return The Kusto Pool URI.
+     */
     public Output<String> getUri() {
         return this.uri;
     }
+    /**
+     * The workspace unique identifier.
+     */
     @OutputExport(name="workspaceUid", type=String.class, parameters={})
     private Output</* @Nullable */ String> workspaceUid;
 
+    /**
+     * @return The workspace unique identifier.
+     */
     public Output</* @Nullable */ String> getWorkspaceUid() {
         return this.workspaceUid;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public KustoPool(String name, KustoPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:synapse:kustoPool", name, args == null ? KustoPoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -123,6 +328,14 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static KustoPool get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new KustoPool(name, id, options);
     }

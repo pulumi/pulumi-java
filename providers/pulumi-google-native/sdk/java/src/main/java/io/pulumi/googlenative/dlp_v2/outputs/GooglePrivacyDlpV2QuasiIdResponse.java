@@ -12,9 +12,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2QuasiIdResponse {
+/**
+ * A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary table that contains statistical information on the possible values of this column (below).
+ */
     private final String customTag;
+/**
+ * Identifies the column.
+ */
     private final GooglePrivacyDlpV2FieldIdResponse field;
+/**
+ * If no semantic tag is indicated, we infer the statistical model from the distribution of values in the input data
+ */
     private final GoogleProtobufEmptyResponse inferred;
+/**
+ * A column can be tagged with a InfoType to use the relevant public dataset as a statistical model of population, if available. We currently support US ZIP codes, region codes, ages and genders. To programmatically obtain the list of supported InfoTypes, use ListInfoTypes with the supported_by=RISK_ANALYSIS filter.
+ */
     private final GooglePrivacyDlpV2InfoTypeResponse infoType;
 
     @OutputCustomType.Constructor({"customTag","field","inferred","infoType"})
@@ -29,15 +41,27 @@ public final class GooglePrivacyDlpV2QuasiIdResponse {
         this.infoType = Objects.requireNonNull(infoType);
     }
 
+/**
+ * A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary table that contains statistical information on the possible values of this column (below).
+ */
     public String getCustomTag() {
         return this.customTag;
     }
+/**
+ * Identifies the column.
+ */
     public GooglePrivacyDlpV2FieldIdResponse getField() {
         return this.field;
     }
+/**
+ * If no semantic tag is indicated, we infer the statistical model from the distribution of values in the input data
+ */
     public GoogleProtobufEmptyResponse getInferred() {
         return this.inferred;
     }
+/**
+ * A column can be tagged with a InfoType to use the relevant public dataset as a statistical model of population, if available. We currently support US ZIP codes, region codes, ages and genders. To programmatically obtain the list of supported InfoTypes, use ListInfoTypes with the supported_by=RISK_ANALYSIS filter.
+ */
     public GooglePrivacyDlpV2InfoTypeResponse getInfoType() {
         return this.infoType;
     }

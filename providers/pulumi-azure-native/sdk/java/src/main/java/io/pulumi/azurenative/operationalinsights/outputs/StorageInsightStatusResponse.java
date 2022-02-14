@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StorageInsightStatusResponse {
+/**
+ * Description of the state of the storage insight.
+ */
     private final @Nullable String description;
+/**
+ * The state of the storage insight connection to the workspace
+ */
     private final String state;
 
     @OutputCustomType.Constructor({"description","state"})
@@ -22,9 +28,15 @@ public final class StorageInsightStatusResponse {
         this.state = Objects.requireNonNull(state);
     }
 
+/**
+ * Description of the state of the storage insight.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * The state of the storage insight connection to the workspace
+ */
     public String getState() {
         return this.state;
     }

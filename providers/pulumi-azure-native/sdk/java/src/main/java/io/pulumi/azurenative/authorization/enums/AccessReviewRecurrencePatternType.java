@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The recurrence type : weekly, monthly, etc.
+ */
     @EnumType
     public enum AccessReviewRecurrencePatternType {
+/**
+ * 
+ */
         Weekly("weekly"),
+/**
+ * 
+ */
         AbsoluteMonthly("absoluteMonthly");
 
         private final String value;

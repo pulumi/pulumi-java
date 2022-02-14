@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Custom DNS record type.
+ */
     @EnumType
     public enum CustomHostNameDnsRecordType {
+/**
+ * 
+ */
         CName("CName"),
+/**
+ * 
+ */
         A("A");
 
         private final String value;

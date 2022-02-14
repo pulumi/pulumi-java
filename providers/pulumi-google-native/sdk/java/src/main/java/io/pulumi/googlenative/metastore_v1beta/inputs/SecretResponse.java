@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A securely stored value.
+ */
 public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecretResponse Empty = new SecretResponse();
 
+    /**
+     * The relative resource name of a Secret Manager secret version, in the following form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
+     */
     @InputImport(name="cloudSecret", required=true)
     private final String cloudSecret;
 

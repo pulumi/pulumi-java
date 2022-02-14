@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Additional information of the container.
+ */
 public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MabContainerExtendedInfoArgs Empty = new MabContainerExtendedInfoArgs();
 
+    /**
+     * Type of backup items associated with this container.
+     */
     @InputImport(name="backupItemType")
     private final @Nullable Input<Either<String,BackupItemType>> backupItemType;
 
@@ -24,6 +30,9 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
         return this.backupItemType == null ? Input.empty() : this.backupItemType;
     }
 
+    /**
+     * List of backup items associated with this container.
+     */
     @InputImport(name="backupItems")
     private final @Nullable Input<List<String>> backupItems;
 
@@ -31,6 +40,9 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
         return this.backupItems == null ? Input.empty() : this.backupItems;
     }
 
+    /**
+     * Latest backup status of this container.
+     */
     @InputImport(name="lastBackupStatus")
     private final @Nullable Input<String> lastBackupStatus;
 
@@ -38,6 +50,9 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
         return this.lastBackupStatus == null ? Input.empty() : this.lastBackupStatus;
     }
 
+    /**
+     * Time stamp when this container was refreshed.
+     */
     @InputImport(name="lastRefreshedAt")
     private final @Nullable Input<String> lastRefreshedAt;
 
@@ -45,6 +60,9 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
         return this.lastRefreshedAt == null ? Input.empty() : this.lastRefreshedAt;
     }
 
+    /**
+     * Backup policy associated with this container.
+     */
     @InputImport(name="policyName")
     private final @Nullable Input<String> policyName;
 

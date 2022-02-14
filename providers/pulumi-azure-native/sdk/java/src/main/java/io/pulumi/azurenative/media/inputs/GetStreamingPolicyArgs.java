@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetStreamingPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetStreamingPolicyArgs Empty = new GetStreamingPolicyArgs();
 
+    /**
+     * The Media Services account name.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetStreamingPolicyArgs extends io.pulumi.resources.InvokeArgs
         return this.accountName;
     }
 
+    /**
+     * The name of the resource group within the Azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetStreamingPolicyArgs extends io.pulumi.resources.InvokeArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * The Streaming Policy name.
+     */
     @InputImport(name="streamingPolicyName", required=true)
     private final String streamingPolicyName;
 

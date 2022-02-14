@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings concerning lockbox.
+ */
 public final class PropertiesLockboxArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PropertiesLockboxArgs Empty = new PropertiesLockboxArgs();
 
+    /**
+     * lockbox configuration
+     */
     @InputImport(name="state")
     private final @Nullable Input<Either<String,State>> state;
 

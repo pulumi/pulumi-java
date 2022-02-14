@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDedicatedHost {
+/**
+ * Specifies information about the Dedicated host.
+API Version: 2020-12-01.
+ *
+ * Specifies information about the Dedicated host.
+ */
     public static CompletableFuture<GetDedicatedHostResult> invokeAsync(GetDedicatedHostArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getDedicatedHost", TypeShape.of(GetDedicatedHostResult.class), args == null ? GetDedicatedHostArgs.Empty : args, Utilities.withVersion(options));
     }

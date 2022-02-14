@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A message describing the state of a particular execution stage.
+ */
 public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExecutionStageStateArgs Empty = new ExecutionStageStateArgs();
 
+    /**
+     * The time at which the stage transitioned to this state.
+     */
     @InputImport(name="currentStateTime")
     private final @Nullable Input<String> currentStateTime;
 
@@ -22,6 +28,9 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
         return this.currentStateTime == null ? Input.empty() : this.currentStateTime;
     }
 
+    /**
+     * The name of the execution stage.
+     */
     @InputImport(name="executionStageName")
     private final @Nullable Input<String> executionStageName;
 
@@ -29,6 +38,9 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
         return this.executionStageName == null ? Input.empty() : this.executionStageName;
     }
 
+    /**
+     * Executions stage states allow the same set of values as JobState.
+     */
     @InputImport(name="executionStageState")
     private final @Nullable Input<ExecutionStageStateExecutionStageState> executionStageState;
 

@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNatAddress {
+/**
+ * Gets the details of a NAT address. **Note:** Not supported for Apigee hybrid.
+ */
     public static CompletableFuture<GetNatAddressResult> invokeAsync(GetNatAddressArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getNatAddress", TypeShape.of(GetNatAddressResult.class), args == null ? GetNatAddressArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualMachineTemplate {
+/**
+ * Define the virtualMachineTemplate.
+API Version: 2020-10-01-preview.
+ *
+ * Define the virtualMachineTemplate.
+ */
     public static CompletableFuture<GetVirtualMachineTemplateResult> invokeAsync(GetVirtualMachineTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getVirtualMachineTemplate", TypeShape.of(GetVirtualMachineTemplateResult.class), args == null ? GetVirtualMachineTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

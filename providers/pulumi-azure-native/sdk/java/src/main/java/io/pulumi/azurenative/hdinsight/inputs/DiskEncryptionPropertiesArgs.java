@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The disk encryption properties
+ */
 public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskEncryptionPropertiesArgs Empty = new DiskEncryptionPropertiesArgs();
 
+    /**
+     * Algorithm identifier for encryption, default RSA-OAEP.
+     */
     @InputImport(name="encryptionAlgorithm")
     private final @Nullable Input<Either<String,JsonWebKeyEncryptionAlgorithm>> encryptionAlgorithm;
 
@@ -24,6 +30,9 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
         return this.encryptionAlgorithm == null ? Input.empty() : this.encryptionAlgorithm;
     }
 
+    /**
+     * Indicates whether or not resource disk encryption is enabled.
+     */
     @InputImport(name="encryptionAtHost")
     private final @Nullable Input<Boolean> encryptionAtHost;
 
@@ -31,6 +40,9 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
         return this.encryptionAtHost == null ? Input.empty() : this.encryptionAtHost;
     }
 
+    /**
+     * Key name that is used for enabling disk encryption.
+     */
     @InputImport(name="keyName")
     private final @Nullable Input<String> keyName;
 
@@ -38,6 +50,9 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
         return this.keyName == null ? Input.empty() : this.keyName;
     }
 
+    /**
+     * Specific key version that is used for enabling disk encryption.
+     */
     @InputImport(name="keyVersion")
     private final @Nullable Input<String> keyVersion;
 
@@ -45,6 +60,9 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
         return this.keyVersion == null ? Input.empty() : this.keyVersion;
     }
 
+    /**
+     * Resource ID of Managed Identity that is used to access the key vault.
+     */
     @InputImport(name="msiResourceId")
     private final @Nullable Input<String> msiResourceId;
 
@@ -52,6 +70,9 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
         return this.msiResourceId == null ? Input.empty() : this.msiResourceId;
     }
 
+    /**
+     * Base key vault URI where the customers key is located eg. https://myvault.vault.azure.net
+     */
     @InputImport(name="vaultUri")
     private final @Nullable Input<String> vaultUri;
 

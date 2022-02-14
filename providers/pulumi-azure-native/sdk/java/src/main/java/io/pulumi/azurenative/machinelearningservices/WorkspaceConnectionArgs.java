@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkspaceConnectionArgs Empty = new WorkspaceConnectionArgs();
 
+    /**
+     * Authorization type of the workspace connection.
+     */
     @InputImport(name="authType")
     private final @Nullable Input<String> authType;
 
@@ -23,6 +29,9 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
         return this.authType == null ? Input.empty() : this.authType;
     }
 
+    /**
+     * Category of the workspace connection.
+     */
     @InputImport(name="category")
     private final @Nullable Input<String> category;
 
@@ -30,6 +39,9 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
         return this.category == null ? Input.empty() : this.category;
     }
 
+    /**
+     * Friendly name of the workspace connection
+     */
     @InputImport(name="connectionName")
     private final @Nullable Input<String> connectionName;
 
@@ -37,6 +49,9 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
         return this.connectionName == null ? Input.empty() : this.connectionName;
     }
 
+    /**
+     * Friendly name of the workspace connection
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -44,6 +59,9 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Name of the resource group in which workspace is located.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -51,6 +69,9 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
+    /**
+     * Target of the workspace connection.
+     */
     @InputImport(name="target")
     private final @Nullable Input<String> target;
 
@@ -58,6 +79,9 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
         return this.target == null ? Input.empty() : this.target;
     }
 
+    /**
+     * Value details of the workspace connection.
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 
@@ -65,6 +89,9 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
         return this.value == null ? Input.empty() : this.value;
     }
 
+    /**
+     * format for the workspace connection value
+     */
     @InputImport(name="valueFormat")
     private final @Nullable Input<Either<String,ValueFormat>> valueFormat;
 
@@ -72,6 +99,9 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
         return this.valueFormat == null ? Input.empty() : this.valueFormat;
     }
 
+    /**
+     * Name of Azure Machine Learning workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

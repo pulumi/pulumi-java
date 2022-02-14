@@ -9,10 +9,16 @@ import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3Conv
 import java.util.Objects;
 
 
+/**
+ * One interaction between a human and virtual agent. The human provides some input and the virtual agent provides a response.
+ */
 public final class GoogleCloudDialogflowCxV3ConversationTurnResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3ConversationTurnResponse Empty = new GoogleCloudDialogflowCxV3ConversationTurnResponse();
 
+    /**
+     * The user input.
+     */
     @InputImport(name="userInput", required=true)
     private final GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse userInput;
 
@@ -20,6 +26,9 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnResponse extends io.
         return this.userInput;
     }
 
+    /**
+     * The virtual agent output.
+     */
     @InputImport(name="virtualAgentOutput", required=true)
     private final GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse virtualAgentOutput;
 

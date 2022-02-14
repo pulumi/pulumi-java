@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrganizationRole {
+/**
+ * Gets the definition of a Role.
+ */
     public static CompletableFuture<GetOrganizationRoleResult> invokeAsync(GetOrganizationRoleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:iam/v1:getOrganizationRole", TypeShape.of(GetOrganizationRoleResult.class), args == null ? GetOrganizationRoleArgs.Empty : args, Utilities.withVersion(options));
     }

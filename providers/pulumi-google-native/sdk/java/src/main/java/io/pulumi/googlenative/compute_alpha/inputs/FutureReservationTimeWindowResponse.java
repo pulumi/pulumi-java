@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class FutureReservationTimeWindowResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FutureReservationTimeWindowResponse Empty = new FutureReservationTimeWindowResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="duration", required=true)
     private final DurationResponse duration;
 
@@ -20,6 +26,9 @@ public final class FutureReservationTimeWindowResponse extends io.pulumi.resourc
         return this.duration;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="endTime", required=true)
     private final String endTime;
 
@@ -27,6 +36,9 @@ public final class FutureReservationTimeWindowResponse extends io.pulumi.resourc
         return this.endTime;
     }
 
+    /**
+     * Start time of the Future Reservation. The start_time is an RFC3339 string.
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 

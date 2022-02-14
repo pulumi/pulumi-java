@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ChartOptionsResponse {
+/**
+ * The chart mode.
+ */
     private final String mode;
 
     @OutputCustomType.Constructor({"mode"})
@@ -16,6 +19,9 @@ public final class ChartOptionsResponse {
         this.mode = Objects.requireNonNull(mode);
     }
 
+/**
+ * The chart mode.
+ */
     public String getMode() {
         return this.mode;
     }

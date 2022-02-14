@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.sql.EncryptionProtectorArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -15,69 +14,312 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The server encryption protector.
+API Version: 2020-11-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Update the encryption protector to key vault
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var encryptionProtector = new AzureNative.Sql.EncryptionProtector("encryptionProtector", new AzureNative.Sql.EncryptionProtectorArgs
+        {
+            AutoRotationEnabled = false,
+            EncryptionProtectorName = "current",
+            ResourceGroupName = "sqlcrudtest-7398",
+            ServerKeyName = "someVault_someKey_01234567890123456789012345678901",
+            ServerKeyType = "AzureKeyVault",
+            ServerName = "sqlcrudtest-4645",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewEncryptionProtector(ctx, "encryptionProtector", &sql.EncryptionProtectorArgs{
+			AutoRotationEnabled:     pulumi.Bool(false),
+			EncryptionProtectorName: pulumi.String("current"),
+			ResourceGroupName:       pulumi.String("sqlcrudtest-7398"),
+			ServerKeyName:           pulumi.String("someVault_someKey_01234567890123456789012345678901"),
+			ServerKeyType:           pulumi.String("AzureKeyVault"),
+			ServerName:              pulumi.String("sqlcrudtest-4645"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const encryptionProtector = new azure_native.sql.EncryptionProtector("encryptionProtector", {
+    autoRotationEnabled: false,
+    encryptionProtectorName: "current",
+    resourceGroupName: "sqlcrudtest-7398",
+    serverKeyName: "someVault_someKey_01234567890123456789012345678901",
+    serverKeyType: "AzureKeyVault",
+    serverName: "sqlcrudtest-4645",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+encryption_protector = azure_native.sql.EncryptionProtector("encryptionProtector",
+    auto_rotation_enabled=False,
+    encryption_protector_name="current",
+    resource_group_name="sqlcrudtest-7398",
+    server_key_name="someVault_someKey_01234567890123456789012345678901",
+    server_key_type="AzureKeyVault",
+    server_name="sqlcrudtest-4645")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Update the encryption protector to service managed
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var encryptionProtector = new AzureNative.Sql.EncryptionProtector("encryptionProtector", new AzureNative.Sql.EncryptionProtectorArgs
+        {
+            EncryptionProtectorName = "current",
+            ResourceGroupName = "sqlcrudtest-7398",
+            ServerKeyName = "ServiceManaged",
+            ServerKeyType = "ServiceManaged",
+            ServerName = "sqlcrudtest-4645",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewEncryptionProtector(ctx, "encryptionProtector", &sql.EncryptionProtectorArgs{
+			EncryptionProtectorName: pulumi.String("current"),
+			ResourceGroupName:       pulumi.String("sqlcrudtest-7398"),
+			ServerKeyName:           pulumi.String("ServiceManaged"),
+			ServerKeyType:           pulumi.String("ServiceManaged"),
+			ServerName:              pulumi.String("sqlcrudtest-4645"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const encryptionProtector = new azure_native.sql.EncryptionProtector("encryptionProtector", {
+    encryptionProtectorName: "current",
+    resourceGroupName: "sqlcrudtest-7398",
+    serverKeyName: "ServiceManaged",
+    serverKeyType: "ServiceManaged",
+    serverName: "sqlcrudtest-4645",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+encryption_protector = azure_native.sql.EncryptionProtector("encryptionProtector",
+    encryption_protector_name="current",
+    resource_group_name="sqlcrudtest-7398",
+    server_key_name="ServiceManaged",
+    server_key_type="ServiceManaged",
+    server_name="sqlcrudtest-4645")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:sql:EncryptionProtector current /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-7398/providers/Microsoft.Sql/servers/sqlcrudtest-4645/encryptionProtector/current 
+```
+
+ */
 @ResourceType(type="azure-native:sql:EncryptionProtector")
 public class EncryptionProtector extends io.pulumi.resources.CustomResource {
+    /**
+     * Key auto rotation opt-in flag. Either true or false.
+     */
     @OutputExport(name="autoRotationEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoRotationEnabled;
 
+    /**
+     * @return Key auto rotation opt-in flag. Either true or false.
+     */
     public Output</* @Nullable */ Boolean> getAutoRotationEnabled() {
         return this.autoRotationEnabled;
     }
+    /**
+     * Kind of encryption protector. This is metadata used for the Azure portal experience.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return Kind of encryption protector. This is metadata used for the Azure portal experience.
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * Resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location.
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The name of the server key.
+     */
     @OutputExport(name="serverKeyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverKeyName;
 
+    /**
+     * @return The name of the server key.
+     */
     public Output</* @Nullable */ String> getServerKeyName() {
         return this.serverKeyName;
     }
+    /**
+     * The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
+     */
     @OutputExport(name="serverKeyType", type=String.class, parameters={})
     private Output<String> serverKeyType;
 
+    /**
+     * @return The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
+     */
     public Output<String> getServerKeyType() {
         return this.serverKeyType;
     }
+    /**
+     * Subregion of the encryption protector.
+     */
     @OutputExport(name="subregion", type=String.class, parameters={})
     private Output<String> subregion;
 
+    /**
+     * @return Subregion of the encryption protector.
+     */
     public Output<String> getSubregion() {
         return this.subregion;
     }
+    /**
+     * Thumbprint of the server key.
+     */
     @OutputExport(name="thumbprint", type=String.class, parameters={})
     private Output<String> thumbprint;
 
+    /**
+     * @return Thumbprint of the server key.
+     */
     public Output<String> getThumbprint() {
         return this.thumbprint;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The URI of the server key.
+     */
     @OutputExport(name="uri", type=String.class, parameters={})
     private Output<String> uri;
 
+    /**
+     * @return The URI of the server key.
+     */
     public Output<String> getUri() {
         return this.uri;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public EncryptionProtector(String name, EncryptionProtectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:EncryptionProtector", name, args == null ? EncryptionProtectorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -102,6 +344,14 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static EncryptionProtector get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EncryptionProtector(name, id, options);
     }

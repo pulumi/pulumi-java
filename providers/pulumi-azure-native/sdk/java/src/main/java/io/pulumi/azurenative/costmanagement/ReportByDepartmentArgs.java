@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ReportByDepartmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReportByDepartmentArgs Empty = new ReportByDepartmentArgs();
 
+    /**
+     * Has definition for the report.
+     */
     @InputImport(name="definition", required=true)
     private final Input<ReportDefinitionArgs> definition;
 
@@ -26,6 +32,9 @@ public final class ReportByDepartmentArgs extends io.pulumi.resources.ResourceAr
         return this.definition;
     }
 
+    /**
+     * Has delivery information for the report.
+     */
     @InputImport(name="deliveryInfo", required=true)
     private final Input<ReportDeliveryInfoArgs> deliveryInfo;
 
@@ -33,6 +42,9 @@ public final class ReportByDepartmentArgs extends io.pulumi.resources.ResourceAr
         return this.deliveryInfo;
     }
 
+    /**
+     * Department ID
+     */
     @InputImport(name="departmentId", required=true)
     private final Input<String> departmentId;
 
@@ -40,6 +52,9 @@ public final class ReportByDepartmentArgs extends io.pulumi.resources.ResourceAr
         return this.departmentId;
     }
 
+    /**
+     * The format of the report being delivered.
+     */
     @InputImport(name="format")
     private final @Nullable Input<Either<String,FormatType>> format;
 
@@ -47,6 +62,9 @@ public final class ReportByDepartmentArgs extends io.pulumi.resources.ResourceAr
         return this.format == null ? Input.empty() : this.format;
     }
 
+    /**
+     * Report Name.
+     */
     @InputImport(name="reportName")
     private final @Nullable Input<String> reportName;
 
@@ -54,6 +72,9 @@ public final class ReportByDepartmentArgs extends io.pulumi.resources.ResourceAr
         return this.reportName == null ? Input.empty() : this.reportName;
     }
 
+    /**
+     * Has schedule information for the report.
+     */
     @InputImport(name="schedule")
     private final @Nullable Input<ReportScheduleArgs> schedule;
 

@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a single apt package repository. These will be added to a repo file that will be managed at `/etc/apt/sources.list.d/google_osconfig.list`.
+ */
 public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OSPolicyResourceRepositoryResourceAptRepositoryArgs Empty = new OSPolicyResourceRepositoryResourceAptRepositoryArgs();
 
+    /**
+     * Type of archive files in this repository.
+     */
     @InputImport(name="archiveType", required=true)
     private final Input<OSPolicyResourceRepositoryResourceAptRepositoryArchiveType> archiveType;
 
@@ -23,6 +29,9 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
         return this.archiveType;
     }
 
+    /**
+     * List of components for this repository. Must contain at least one item.
+     */
     @InputImport(name="components", required=true)
     private final Input<List<String>> components;
 
@@ -30,6 +39,9 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
         return this.components;
     }
 
+    /**
+     * Distribution of this repository.
+     */
     @InputImport(name="distribution", required=true)
     private final Input<String> distribution;
 
@@ -37,6 +49,9 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
         return this.distribution;
     }
 
+    /**
+     * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
+     */
     @InputImport(name="gpgKey")
     private final @Nullable Input<String> gpgKey;
 
@@ -44,6 +59,9 @@ public final class OSPolicyResourceRepositoryResourceAptRepositoryArgs extends i
         return this.gpgKey == null ? Input.empty() : this.gpgKey;
     }
 
+    /**
+     * URI for this repository.
+     */
     @InputImport(name="uri", required=true)
     private final Input<String> uri;
 

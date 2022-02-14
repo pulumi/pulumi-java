@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LogConfigCloudAuditOptionsResponse {
+/**
+ * This is deprecated and has no effect. Do not use.
+ */
     private final AuthorizationLoggingOptionsResponse authorizationLoggingOptions;
+/**
+ * This is deprecated and has no effect. Do not use.
+ */
     private final String logName;
 
     @OutputCustomType.Constructor({"authorizationLoggingOptions","logName"})
@@ -21,9 +27,15 @@ public final class LogConfigCloudAuditOptionsResponse {
         this.logName = Objects.requireNonNull(logName);
     }
 
+/**
+ * This is deprecated and has no effect. Do not use.
+ */
     public AuthorizationLoggingOptionsResponse getAuthorizationLoggingOptions() {
         return this.authorizationLoggingOptions;
     }
+/**
+ * This is deprecated and has no effect. Do not use.
+ */
     public String getLogName() {
         return this.logName;
     }

@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Type of the parameter.
+ */
     @EnumType
     public enum ParameterType {
+/**
+ * The parameter's value is a string.
+ */
         String("String"),
+/**
+ * The parameter's value is a string that holds sensitive information.
+ */
         SecretString("SecretString"),
+/**
+ * The parameter's value is a 32-bit signed integer.
+ */
         Int("Int"),
+/**
+ * The parameter's value is a 64-bit double-precision floating point.
+ */
         Double("Double"),
+/**
+ * The parameter's value is a boolean value that is either true or false.
+ */
         Bool("Bool");
 
         private final String value;

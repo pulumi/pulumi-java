@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class CapacityReservationGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CapacityReservationGroupArgs Empty = new CapacityReservationGroupArgs();
 
+    /**
+     * The name of the capacity reservation group.
+     */
     @InputImport(name="capacityReservationGroupName")
     private final @Nullable Input<String> capacityReservationGroupName;
 
@@ -23,6 +29,9 @@ public final class CapacityReservationGroupArgs extends io.pulumi.resources.Reso
         return this.capacityReservationGroupName == null ? Input.empty() : this.capacityReservationGroupName;
     }
 
+    /**
+     * Resource location
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -30,6 +39,9 @@ public final class CapacityReservationGroupArgs extends io.pulumi.resources.Reso
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +49,9 @@ public final class CapacityReservationGroupArgs extends io.pulumi.resources.Reso
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -44,6 +59,9 @@ public final class CapacityReservationGroupArgs extends io.pulumi.resources.Reso
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Availability Zones to use for this capacity reservation group. The zones can be assigned only during creation. If not provided, the group supports only regional resources in the region. If provided, enforces each capacity reservation in the group to be in one of the zones.
+     */
     @InputImport(name="zones")
     private final @Nullable Input<List<String>> zones;
 

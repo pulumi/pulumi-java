@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkloadNetworkVMGroupArgs Empty = new WorkloadNetworkVMGroupArgs();
 
+    /**
+     * Display name of the VM group.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -23,6 +29,9 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Virtual machine members of this group.
+     */
     @InputImport(name="members")
     private final @Nullable Input<List<String>> members;
 
@@ -30,6 +39,9 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
         return this.members == null ? Input.empty() : this.members;
     }
 
+    /**
+     * Name of the private cloud
+     */
     @InputImport(name="privateCloudName", required=true)
     private final Input<String> privateCloudName;
 
@@ -37,6 +49,9 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
         return this.privateCloudName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +59,9 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
         return this.resourceGroupName;
     }
 
+    /**
+     * NSX revision number.
+     */
     @InputImport(name="revision")
     private final @Nullable Input<Double> revision;
 
@@ -51,6 +69,9 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
         return this.revision == null ? Input.empty() : this.revision;
     }
 
+    /**
+     * NSX VM Group identifier. Generally the same as the VM Group's display name
+     */
     @InputImport(name="vmGroupId")
     private final @Nullable Input<String> vmGroupId;
 

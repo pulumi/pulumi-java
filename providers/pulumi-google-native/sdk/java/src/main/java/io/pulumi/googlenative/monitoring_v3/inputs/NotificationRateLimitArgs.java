@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Control over the rate of notifications sent to this alert policy's notification channels.
+ */
 public final class NotificationRateLimitArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NotificationRateLimitArgs Empty = new NotificationRateLimitArgs();
 
+    /**
+     * Not more than one notification per period.
+     */
     @InputImport(name="period")
     private final @Nullable Input<String> period;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAction {
+/**
+ * Action for alert rule.
+API Version: 2020-01-01.
+ *
+ * Action for alert rule.
+ */
     public static CompletableFuture<GetActionResult> invokeAsync(GetActionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getAction", TypeShape.of(GetActionResult.class), args == null ? GetActionArgs.Empty : args, Utilities.withVersion(options));
     }

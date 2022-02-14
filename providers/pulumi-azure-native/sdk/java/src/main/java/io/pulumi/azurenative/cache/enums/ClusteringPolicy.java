@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Clustering policy - default is OSSCluster. Specified at create time.
+ */
     @EnumType
     public enum ClusteringPolicy {
+/**
+ * 
+ */
         EnterpriseCluster("EnterpriseCluster"),
+/**
+ * 
+ */
         OSSCluster("OSSCluster");
 
         private final String value;

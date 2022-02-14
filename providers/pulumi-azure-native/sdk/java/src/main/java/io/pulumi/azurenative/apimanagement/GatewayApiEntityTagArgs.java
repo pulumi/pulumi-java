@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GatewayApiEntityTagArgs Empty = new GatewayApiEntityTagArgs();
 
+    /**
+     * API identifier. Must be unique in the current API Management service instance.
+     */
     @InputImport(name="apiId")
     private final @Nullable Input<String> apiId;
 
@@ -22,6 +28,9 @@ public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceA
         return this.apiId == null ? Input.empty() : this.apiId;
     }
 
+    /**
+     * Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'
+     */
     @InputImport(name="gatewayId", required=true)
     private final Input<String> gatewayId;
 
@@ -29,6 +38,9 @@ public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceA
         return this.gatewayId;
     }
 
+    /**
+     * Provisioning state.
+     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<ProvisioningState> provisioningState;
 
@@ -36,6 +48,9 @@ public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceA
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +58,9 @@ public final class GatewayApiEntityTagArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

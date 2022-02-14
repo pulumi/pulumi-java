@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * User identity used for CMK.
+ */
 public final class EncryptionPropertiesIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EncryptionPropertiesIdentityArgs Empty = new EncryptionPropertiesIdentityArgs();
 
+    /**
+     * The user identity used for CMK. It will be an ARM resource id in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     */
     @InputImport(name="userAssignedIdentity")
     private final @Nullable Input<Object> userAssignedIdentity;
 

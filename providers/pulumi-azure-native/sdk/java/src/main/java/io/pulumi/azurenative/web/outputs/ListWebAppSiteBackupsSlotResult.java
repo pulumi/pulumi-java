@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListWebAppSiteBackupsSlotResult {
+/**
+ * Link to next page of resources.
+ */
     private final String nextLink;
+/**
+ * Collection of resources.
+ */
     private final List<BackupItemResponse> value;
 
     @OutputCustomType.Constructor({"nextLink","value"})
@@ -22,9 +28,15 @@ public final class ListWebAppSiteBackupsSlotResult {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * Link to next page of resources.
+ */
     public String getNextLink() {
         return this.nextLink;
     }
+/**
+ * Collection of resources.
+ */
     public List<BackupItemResponse> getValue() {
         return this.value;
     }

@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3beta1VersionVariantsResponse {
+/**
+ * A list of flow version variants.
+ */
     private final List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse> variants;
 
     @OutputCustomType.Constructor({"variants"})
@@ -17,6 +20,9 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsResponse {
         this.variants = Objects.requireNonNull(variants);
     }
 
+/**
+ * A list of flow version variants.
+ */
     public List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse> getVariants() {
         return this.variants;
     }

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.securityinsights.ScheduledAlertRuleArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -16,117 +15,525 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Represents scheduled alert rule.
+API Version: 2020-01-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Creates or updates a Fusion alert rule.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var scheduledAlertRule = new AzureNative.SecurityInsights.ScheduledAlertRule("scheduledAlertRule", new AzureNative.SecurityInsights.ScheduledAlertRuleArgs
+        {
+            ResourceGroupName = "myRg",
+            RuleId = "myFirstFusionRule",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := securityinsights.NewScheduledAlertRule(ctx, "scheduledAlertRule", &securityinsights.ScheduledAlertRuleArgs{
+			ResourceGroupName: pulumi.String("myRg"),
+			RuleId:            pulumi.String("myFirstFusionRule"),
+			WorkspaceName:     pulumi.String("myWorkspace"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const scheduledAlertRule = new azure_native.securityinsights.ScheduledAlertRule("scheduledAlertRule", {
+    resourceGroupName: "myRg",
+    ruleId: "myFirstFusionRule",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+scheduled_alert_rule = azure_native.securityinsights.ScheduledAlertRule("scheduledAlertRule",
+    resource_group_name="myRg",
+    rule_id="myFirstFusionRule",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Creates or updates a MicrosoftSecurityIncidentCreation rule.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var scheduledAlertRule = new AzureNative.SecurityInsights.ScheduledAlertRule("scheduledAlertRule", new AzureNative.SecurityInsights.ScheduledAlertRuleArgs
+        {
+            ResourceGroupName = "myRg",
+            RuleId = "microsoftSecurityIncidentCreationRuleExample",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := securityinsights.NewScheduledAlertRule(ctx, "scheduledAlertRule", &securityinsights.ScheduledAlertRuleArgs{
+			ResourceGroupName: pulumi.String("myRg"),
+			RuleId:            pulumi.String("microsoftSecurityIncidentCreationRuleExample"),
+			WorkspaceName:     pulumi.String("myWorkspace"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const scheduledAlertRule = new azure_native.securityinsights.ScheduledAlertRule("scheduledAlertRule", {
+    resourceGroupName: "myRg",
+    ruleId: "microsoftSecurityIncidentCreationRuleExample",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+scheduled_alert_rule = azure_native.securityinsights.ScheduledAlertRule("scheduledAlertRule",
+    resource_group_name="myRg",
+    rule_id="microsoftSecurityIncidentCreationRuleExample",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Creates or updates a Scheduled alert rule.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var scheduledAlertRule = new AzureNative.SecurityInsights.ScheduledAlertRule("scheduledAlertRule", new AzureNative.SecurityInsights.ScheduledAlertRuleArgs
+        {
+            Description = "",
+            DisplayName = "Rule2",
+            Enabled = true,
+            Kind = "Scheduled",
+            Query = "ProtectionStatus | extend HostCustomEntity = Computer | extend IPCustomEntity = ComputerIP_Hidden",
+            QueryFrequency = "PT1H",
+            QueryPeriod = "P2DT1H30M",
+            ResourceGroupName = "myRg",
+            RuleId = "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+            Severity = "High",
+            SuppressionDuration = "PT1H",
+            SuppressionEnabled = false,
+            Tactics = 
+            {
+                "Persistence",
+                "LateralMovement",
+            },
+            TriggerOperator = "GreaterThan",
+            TriggerThreshold = 0,
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := securityinsights.NewScheduledAlertRule(ctx, "scheduledAlertRule", &securityinsights.ScheduledAlertRuleArgs{
+			Description:         pulumi.String(""),
+			DisplayName:         pulumi.String("Rule2"),
+			Enabled:             pulumi.Bool(true),
+			Kind:                pulumi.String("Scheduled"),
+			Query:               pulumi.String("ProtectionStatus | extend HostCustomEntity = Computer | extend IPCustomEntity = ComputerIP_Hidden"),
+			QueryFrequency:      pulumi.String("PT1H"),
+			QueryPeriod:         pulumi.String("P2DT1H30M"),
+			ResourceGroupName:   pulumi.String("myRg"),
+			RuleId:              pulumi.String("73e01a99-5cd7-4139-a149-9f2736ff2ab5"),
+			Severity:            pulumi.String("High"),
+			SuppressionDuration: pulumi.String("PT1H"),
+			SuppressionEnabled:  pulumi.Bool(false),
+			Tactics: pulumi.StringArray{
+				pulumi.String("Persistence"),
+				pulumi.String("LateralMovement"),
+			},
+			TriggerOperator:  "GreaterThan",
+			TriggerThreshold: pulumi.Int(0),
+			WorkspaceName:    pulumi.String("myWorkspace"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const scheduledAlertRule = new azure_native.securityinsights.ScheduledAlertRule("scheduledAlertRule", {
+    description: "",
+    displayName: "Rule2",
+    enabled: true,
+    kind: "Scheduled",
+    query: "ProtectionStatus | extend HostCustomEntity = Computer | extend IPCustomEntity = ComputerIP_Hidden",
+    queryFrequency: "PT1H",
+    queryPeriod: "P2DT1H30M",
+    resourceGroupName: "myRg",
+    ruleId: "73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+    severity: "High",
+    suppressionDuration: "PT1H",
+    suppressionEnabled: false,
+    tactics: [
+        "Persistence",
+        "LateralMovement",
+    ],
+    triggerOperator: "GreaterThan",
+    triggerThreshold: 0,
+    workspaceName: "myWorkspace",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+scheduled_alert_rule = azure_native.securityinsights.ScheduledAlertRule("scheduledAlertRule",
+    description="",
+    display_name="Rule2",
+    enabled=True,
+    kind="Scheduled",
+    query="ProtectionStatus | extend HostCustomEntity = Computer | extend IPCustomEntity = ComputerIP_Hidden",
+    query_frequency="PT1H",
+    query_period="P2DT1H30M",
+    resource_group_name="myRg",
+    rule_id="73e01a99-5cd7-4139-a149-9f2736ff2ab5",
+    severity="High",
+    suppression_duration="PT1H",
+    suppression_enabled=False,
+    tactics=[
+        "Persistence",
+        "LateralMovement",
+    ],
+    trigger_operator="GreaterThan",
+    trigger_threshold=0,
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:securityinsights:ScheduledAlertRule 73e01a99-5cd7-4139-a149-9f2736ff2ab5 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/alertRules/73e01a99-5cd7-4139-a149-9f2736ff2ab5 
+```
+
+ */
 @ResourceType(type="azure-native:securityinsights:ScheduledAlertRule")
 public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
+    /**
+     * The Name of the alert rule template used to create this rule.
+     */
     @OutputExport(name="alertRuleTemplateName", type=String.class, parameters={})
     private Output</* @Nullable */ String> alertRuleTemplateName;
 
+    /**
+     * @return The Name of the alert rule template used to create this rule.
+     */
     public Output</* @Nullable */ String> getAlertRuleTemplateName() {
         return this.alertRuleTemplateName;
     }
+    /**
+     * The description of the alert rule.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return The description of the alert rule.
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The display name for alerts created by this alert rule.
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return The display name for alerts created by this alert rule.
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Determines whether this alert rule is enabled or disabled.
+     */
     @OutputExport(name="enabled", type=Boolean.class, parameters={})
     private Output<Boolean> enabled;
 
+    /**
+     * @return Determines whether this alert rule is enabled or disabled.
+     */
     public Output<Boolean> getEnabled() {
         return this.enabled;
     }
+    /**
+     * Etag of the azure resource
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return Etag of the azure resource
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * The kind of the alert rule
+Expected value is 'Scheduled'.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return The kind of the alert rule
+Expected value is 'Scheduled'.
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * The last time that this alert rule has been modified.
+     */
     @OutputExport(name="lastModifiedUtc", type=String.class, parameters={})
     private Output<String> lastModifiedUtc;
 
+    /**
+     * @return The last time that this alert rule has been modified.
+     */
     public Output<String> getLastModifiedUtc() {
         return this.lastModifiedUtc;
     }
+    /**
+     * Azure resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Azure resource name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The query that creates alerts for this rule.
+     */
     @OutputExport(name="query", type=String.class, parameters={})
     private Output<String> query;
 
+    /**
+     * @return The query that creates alerts for this rule.
+     */
     public Output<String> getQuery() {
         return this.query;
     }
+    /**
+     * The frequency (in ISO 8601 duration format) for this alert rule to run.
+     */
     @OutputExport(name="queryFrequency", type=String.class, parameters={})
     private Output<String> queryFrequency;
 
+    /**
+     * @return The frequency (in ISO 8601 duration format) for this alert rule to run.
+     */
     public Output<String> getQueryFrequency() {
         return this.queryFrequency;
     }
+    /**
+     * The period (in ISO 8601 duration format) that this alert rule looks at.
+     */
     @OutputExport(name="queryPeriod", type=String.class, parameters={})
     private Output<String> queryPeriod;
 
+    /**
+     * @return The period (in ISO 8601 duration format) that this alert rule looks at.
+     */
     public Output<String> getQueryPeriod() {
         return this.queryPeriod;
     }
+    /**
+     * The severity for alerts created by this alert rule.
+     */
     @OutputExport(name="severity", type=String.class, parameters={})
     private Output<String> severity;
 
+    /**
+     * @return The severity for alerts created by this alert rule.
+     */
     public Output<String> getSeverity() {
         return this.severity;
     }
+    /**
+     * The suppression (in ISO 8601 duration format) to wait since last time this alert rule been triggered.
+     */
     @OutputExport(name="suppressionDuration", type=String.class, parameters={})
     private Output<String> suppressionDuration;
 
+    /**
+     * @return The suppression (in ISO 8601 duration format) to wait since last time this alert rule been triggered.
+     */
     public Output<String> getSuppressionDuration() {
         return this.suppressionDuration;
     }
+    /**
+     * Determines whether the suppression for this alert rule is enabled or disabled.
+     */
     @OutputExport(name="suppressionEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> suppressionEnabled;
 
+    /**
+     * @return Determines whether the suppression for this alert rule is enabled or disabled.
+     */
     public Output<Boolean> getSuppressionEnabled() {
         return this.suppressionEnabled;
     }
+    /**
+     * The tactics of the alert rule
+     */
     @OutputExport(name="tactics", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> tactics;
 
+    /**
+     * @return The tactics of the alert rule
+     */
     public Output</* @Nullable */ List<String>> getTactics() {
         return this.tactics;
     }
+    /**
+     * The operation against the threshold that triggers alert rule.
+     */
     @OutputExport(name="triggerOperator", type=String.class, parameters={})
     private Output<String> triggerOperator;
 
+    /**
+     * @return The operation against the threshold that triggers alert rule.
+     */
     public Output<String> getTriggerOperator() {
         return this.triggerOperator;
     }
+    /**
+     * The threshold triggers this alert rule.
+     */
     @OutputExport(name="triggerThreshold", type=Integer.class, parameters={})
     private Output<Integer> triggerThreshold;
 
+    /**
+     * @return The threshold triggers this alert rule.
+     */
     public Output<Integer> getTriggerThreshold() {
         return this.triggerThreshold;
     }
+    /**
+     * Azure resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Azure resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ScheduledAlertRule(String name, ScheduledAlertRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:securityinsights:ScheduledAlertRule", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -155,6 +562,14 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ScheduledAlertRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ScheduledAlertRule(name, id, options);
     }

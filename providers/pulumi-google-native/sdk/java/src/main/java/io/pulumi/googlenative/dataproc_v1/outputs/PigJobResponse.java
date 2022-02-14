@@ -14,12 +14,33 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PigJobResponse {
+/**
+ * Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
+ */
     private final Boolean continueOnFailure;
+/**
+ * Optional. HCFS URIs of jar files to add to the CLASSPATH of the Pig Client and Hadoop MapReduce (MR) tasks. Can contain Pig UDFs.
+ */
     private final List<String> jarFileUris;
+/**
+ * Optional. The runtime log config for job execution.
+ */
     private final LoggingConfigResponse loggingConfig;
+/**
+ * Optional. A mapping of property names to values, used to configure Pig. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/pig/conf/pig.properties, and classes in user code.
+ */
     private final Map<String,String> properties;
+/**
+ * The HCFS URI of the script that contains the Pig queries.
+ */
     private final String queryFileUri;
+/**
+ * A list of queries.
+ */
     private final QueryListResponse queryList;
+/**
+ * Optional. Mapping of query variable names to values (equivalent to the Pig command: name=[value]).
+ */
     private final Map<String,String> scriptVariables;
 
     @OutputCustomType.Constructor({"continueOnFailure","jarFileUris","loggingConfig","properties","queryFileUri","queryList","scriptVariables"})
@@ -40,24 +61,45 @@ public final class PigJobResponse {
         this.scriptVariables = Objects.requireNonNull(scriptVariables);
     }
 
+/**
+ * Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
+ */
     public Boolean getContinueOnFailure() {
         return this.continueOnFailure;
     }
+/**
+ * Optional. HCFS URIs of jar files to add to the CLASSPATH of the Pig Client and Hadoop MapReduce (MR) tasks. Can contain Pig UDFs.
+ */
     public List<String> getJarFileUris() {
         return this.jarFileUris;
     }
+/**
+ * Optional. The runtime log config for job execution.
+ */
     public LoggingConfigResponse getLoggingConfig() {
         return this.loggingConfig;
     }
+/**
+ * Optional. A mapping of property names to values, used to configure Pig. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/pig/conf/pig.properties, and classes in user code.
+ */
     public Map<String,String> getProperties() {
         return this.properties;
     }
+/**
+ * The HCFS URI of the script that contains the Pig queries.
+ */
     public String getQueryFileUri() {
         return this.queryFileUri;
     }
+/**
+ * A list of queries.
+ */
     public QueryListResponse getQueryList() {
         return this.queryList;
     }
+/**
+ * Optional. Mapping of query variable names to values (equivalent to the Pig command: name=[value]).
+ */
     public Map<String,String> getScriptVariables() {
         return this.scriptVariables;
     }

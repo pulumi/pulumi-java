@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Data provided with a pipeline or transform to provide descriptive info.
+ */
 public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DisplayDataArgs Empty = new DisplayDataArgs();
 
+    /**
+     * Contains value if the data is of a boolean type.
+     */
     @InputImport(name="boolValue")
     private final @Nullable Input<Boolean> boolValue;
 
@@ -23,6 +29,9 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.boolValue == null ? Input.empty() : this.boolValue;
     }
 
+    /**
+     * Contains value if the data is of duration type.
+     */
     @InputImport(name="durationValue")
     private final @Nullable Input<String> durationValue;
 
@@ -30,6 +39,9 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.durationValue == null ? Input.empty() : this.durationValue;
     }
 
+    /**
+     * Contains value if the data is of float type.
+     */
     @InputImport(name="floatValue")
     private final @Nullable Input<Double> floatValue;
 
@@ -37,6 +49,9 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.floatValue == null ? Input.empty() : this.floatValue;
     }
 
+    /**
+     * Contains value if the data is of int64 type.
+     */
     @InputImport(name="int64Value")
     private final @Nullable Input<String> int64Value;
 
@@ -44,6 +59,9 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.int64Value == null ? Input.empty() : this.int64Value;
     }
 
+    /**
+     * Contains value if the data is of java class type.
+     */
     @InputImport(name="javaClassValue")
     private final @Nullable Input<String> javaClassValue;
 
@@ -51,6 +69,9 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.javaClassValue == null ? Input.empty() : this.javaClassValue;
     }
 
+    /**
+     * The key identifying the display data. This is intended to be used as a label for the display data when viewed in a dax monitoring system.
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -58,6 +79,9 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * An optional label to display in a dax UI for the element.
+     */
     @InputImport(name="label")
     private final @Nullable Input<String> label;
 
@@ -65,6 +89,9 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.label == null ? Input.empty() : this.label;
     }
 
+    /**
+     * The namespace for the key. This is usually a class name or programming language namespace (i.e. python module) which defines the display data. This allows a dax monitoring system to specially handle the data and perform custom rendering.
+     */
     @InputImport(name="namespace")
     private final @Nullable Input<String> namespace;
 
@@ -72,6 +99,9 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.namespace == null ? Input.empty() : this.namespace;
     }
 
+    /**
+     * A possible additional shorter value to display. For example a java_class_name_value of com.mypackage.MyDoFn will be stored with MyDoFn as the short_str_value and com.mypackage.MyDoFn as the java_class_name value. short_str_value can be displayed and java_class_name_value will be displayed as a tooltip.
+     */
     @InputImport(name="shortStrValue")
     private final @Nullable Input<String> shortStrValue;
 
@@ -79,6 +109,9 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.shortStrValue == null ? Input.empty() : this.shortStrValue;
     }
 
+    /**
+     * Contains value if the data is of string type.
+     */
     @InputImport(name="strValue")
     private final @Nullable Input<String> strValue;
 
@@ -86,6 +119,9 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.strValue == null ? Input.empty() : this.strValue;
     }
 
+    /**
+     * Contains value if the data is of timestamp type.
+     */
     @InputImport(name="timestampValue")
     private final @Nullable Input<String> timestampValue;
 
@@ -93,6 +129,9 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.timestampValue == null ? Input.empty() : this.timestampValue;
     }
 
+    /**
+     * An optional full URL.
+     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

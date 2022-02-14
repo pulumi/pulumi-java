@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDisasterRecoveryConfig {
+/**
+ * Single item in List or Get Alias(Disaster Recovery configuration) operation
+API Version: 2017-04-01.
+ *
+ * Single item in List or Get Alias(Disaster Recovery configuration) operation
+ */
     public static CompletableFuture<GetDisasterRecoveryConfigResult> invokeAsync(GetDisasterRecoveryConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicebus:getDisasterRecoveryConfig", TypeShape.of(GetDisasterRecoveryConfigResult.class), args == null ? GetDisasterRecoveryConfigArgs.Empty : args, Utilities.withVersion(options));
     }

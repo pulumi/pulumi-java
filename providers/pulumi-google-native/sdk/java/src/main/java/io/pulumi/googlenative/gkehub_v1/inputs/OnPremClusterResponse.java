@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * OnPremCluster contains information specific to GKE On-Prem clusters.
+ */
 public final class OnPremClusterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OnPremClusterResponse Empty = new OnPremClusterResponse();
 
+    /**
+     * Immutable. Whether the cluster is an admin cluster.
+     */
     @InputImport(name="adminCluster", required=true)
     private final Boolean adminCluster;
 
@@ -20,6 +26,9 @@ public final class OnPremClusterResponse extends io.pulumi.resources.InvokeArgs 
         return this.adminCluster;
     }
 
+    /**
+     * If cluster_missing is set then it denotes that API(gkeonprem.googleapis.com) resource for this GKE On-Prem cluster no longer exists.
+     */
     @InputImport(name="clusterMissing", required=true)
     private final Boolean clusterMissing;
 
@@ -27,6 +36,9 @@ public final class OnPremClusterResponse extends io.pulumi.resources.InvokeArgs 
         return this.clusterMissing;
     }
 
+    /**
+     * Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster
+     */
     @InputImport(name="resourceLink", required=true)
     private final String resourceLink;
 

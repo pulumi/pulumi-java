@@ -8,10 +8,16 @@ import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyResourceStatusI
 import java.util.Objects;
 
 
+/**
+ * Contains output only fields. Use this sub-message for all output fields set on ResourcePolicy. The internal structure of this "status" field should mimic the structure of ResourcePolicy proto specification.
+ */
 public final class ResourcePolicyResourceStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourcePolicyResourceStatusResponse Empty = new ResourcePolicyResourceStatusResponse();
 
+    /**
+     * Specifies a set of output values reffering to the instance_schedule_policy system status. This field should have the same name as corresponding policy field.
+     */
     @InputImport(name="instanceSchedulePolicy", required=true)
     private final ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy;
 

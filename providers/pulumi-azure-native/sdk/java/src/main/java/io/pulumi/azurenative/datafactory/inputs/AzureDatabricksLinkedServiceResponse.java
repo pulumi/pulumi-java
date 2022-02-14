@@ -19,10 +19,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure Databricks linked service.
+ */
 public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureDatabricksLinkedServiceResponse Empty = new AzureDatabricksLinkedServiceResponse();
 
+    /**
+     * Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="accessToken")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken;
 
@@ -30,6 +36,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.accessToken == null ? null : this.accessToken;
     }
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -37,6 +46,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * Required to specify MSI, if using Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="authentication")
     private final @Nullable Object authentication;
 
@@ -44,6 +56,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.authentication == null ? Optional.empty() : Optional.ofNullable(this.authentication);
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -51,6 +66,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
+    /**
+     * The credential reference containing authentication information.
+     */
     @InputImport(name="credential")
     private final @Nullable CredentialReferenceResponse credential;
 
@@ -58,6 +76,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -65,6 +86,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * <REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="domain", required=true)
     private final Object domain;
 
@@ -72,6 +96,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.domain;
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -79,6 +106,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
+    /**
+     * The id of an existing interactive cluster that will be used for all runs of this activity. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="existingClusterId")
     private final @Nullable Object existingClusterId;
 
@@ -86,6 +116,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.existingClusterId == null ? Optional.empty() : Optional.ofNullable(this.existingClusterId);
     }
 
+    /**
+     * The id of an existing instance pool that will be used for all runs of this activity. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="instancePoolId")
     private final @Nullable Object instancePoolId;
 
@@ -93,6 +126,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.instancePoolId == null ? Optional.empty() : Optional.ofNullable(this.instancePoolId);
     }
 
+    /**
+     * Additional tags for cluster resources. This property is ignored in instance pool configurations.
+     */
     @InputImport(name="newClusterCustomTags")
     private final @Nullable Map<String,Object> newClusterCustomTags;
 
@@ -100,6 +136,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.newClusterCustomTags == null ? Map.of() : this.newClusterCustomTags;
     }
 
+    /**
+     * The driver node type for the new job cluster. This property is ignored in instance pool configurations. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="newClusterDriverNodeType")
     private final @Nullable Object newClusterDriverNodeType;
 
@@ -107,6 +146,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.newClusterDriverNodeType == null ? Optional.empty() : Optional.ofNullable(this.newClusterDriverNodeType);
     }
 
+    /**
+     * Enable the elastic disk on the new cluster. This property is now ignored, and takes the default elastic disk behavior in Databricks (elastic disks are always enabled). Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="newClusterEnableElasticDisk")
     private final @Nullable Object newClusterEnableElasticDisk;
 
@@ -114,6 +156,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.newClusterEnableElasticDisk == null ? Optional.empty() : Optional.ofNullable(this.newClusterEnableElasticDisk);
     }
 
+    /**
+     * User-defined initialization scripts for the new cluster. Type: array of strings (or Expression with resultType array of strings).
+     */
     @InputImport(name="newClusterInitScripts")
     private final @Nullable Object newClusterInitScripts;
 
@@ -121,6 +166,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.newClusterInitScripts == null ? Optional.empty() : Optional.ofNullable(this.newClusterInitScripts);
     }
 
+    /**
+     * Specify a location to deliver Spark driver, worker, and event logs. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="newClusterLogDestination")
     private final @Nullable Object newClusterLogDestination;
 
@@ -128,6 +176,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.newClusterLogDestination == null ? Optional.empty() : Optional.ofNullable(this.newClusterLogDestination);
     }
 
+    /**
+     * The node type of the new job cluster. This property is required if newClusterVersion is specified and instancePoolId is not specified. If instancePoolId is specified, this property is ignored. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="newClusterNodeType")
     private final @Nullable Object newClusterNodeType;
 
@@ -135,6 +186,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.newClusterNodeType == null ? Optional.empty() : Optional.ofNullable(this.newClusterNodeType);
     }
 
+    /**
+     * If not using an existing interactive cluster, this specifies the number of worker nodes to use for the new job cluster or instance pool. For new job clusters, this a string-formatted Int32, like '1' means numOfWorker is 1 or '1:10' means auto-scale from 1 (min) to 10 (max). For instance pools, this is a string-formatted Int32, and can only specify a fixed number of worker nodes, such as '2'. Required if newClusterVersion is specified. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="newClusterNumOfWorker")
     private final @Nullable Object newClusterNumOfWorker;
 
@@ -142,6 +196,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.newClusterNumOfWorker == null ? Optional.empty() : Optional.ofNullable(this.newClusterNumOfWorker);
     }
 
+    /**
+     * A set of optional, user-specified Spark configuration key-value pairs.
+     */
     @InputImport(name="newClusterSparkConf")
     private final @Nullable Map<String,Object> newClusterSparkConf;
 
@@ -149,6 +206,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.newClusterSparkConf == null ? Map.of() : this.newClusterSparkConf;
     }
 
+    /**
+     * A set of optional, user-specified Spark environment variables key-value pairs.
+     */
     @InputImport(name="newClusterSparkEnvVars")
     private final @Nullable Map<String,Object> newClusterSparkEnvVars;
 
@@ -156,6 +216,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.newClusterSparkEnvVars == null ? Map.of() : this.newClusterSparkEnvVars;
     }
 
+    /**
+     * If not using an existing interactive cluster, this specifies the Spark version of a new job cluster or instance pool nodes created for each run of this activity. Required if instancePoolId is specified. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="newClusterVersion")
     private final @Nullable Object newClusterVersion;
 
@@ -163,6 +226,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.newClusterVersion == null ? Optional.empty() : Optional.ofNullable(this.newClusterVersion);
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -170,6 +236,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * The policy id for limiting the ability to configure clusters based on a user defined set of rules. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="policyId")
     private final @Nullable Object policyId;
 
@@ -177,6 +246,10 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'AzureDatabricks'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -184,6 +257,9 @@ public final class AzureDatabricksLinkedServiceResponse extends io.pulumi.resour
         return this.type;
     }
 
+    /**
+     * Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="workspaceResourceId")
     private final @Nullable Object workspaceResourceId;
 

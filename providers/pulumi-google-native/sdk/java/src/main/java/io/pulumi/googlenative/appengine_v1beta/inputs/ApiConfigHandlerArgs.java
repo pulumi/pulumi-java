@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Google Cloud Endpoints (https://cloud.google.com/appengine/docs/python/endpoints/) configuration for API handlers.
+ */
 public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiConfigHandlerArgs Empty = new ApiConfigHandlerArgs();
 
+    /**
+     * Action to take when users access resources that require authentication. Defaults to redirect.
+     */
     @InputImport(name="authFailAction")
     private final @Nullable Input<ApiConfigHandlerAuthFailAction> authFailAction;
 
@@ -24,6 +30,9 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
         return this.authFailAction == null ? Input.empty() : this.authFailAction;
     }
 
+    /**
+     * Level of login required to access this resource. Defaults to optional.
+     */
     @InputImport(name="login")
     private final @Nullable Input<ApiConfigHandlerLogin> login;
 
@@ -31,6 +40,9 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
         return this.login == null ? Input.empty() : this.login;
     }
 
+    /**
+     * Path to the script from the application root directory.
+     */
     @InputImport(name="script")
     private final @Nullable Input<String> script;
 
@@ -38,6 +50,9 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
         return this.script == null ? Input.empty() : this.script;
     }
 
+    /**
+     * Security (HTTPS) enforcement for this URL.
+     */
     @InputImport(name="securityLevel")
     private final @Nullable Input<ApiConfigHandlerSecurityLevel> securityLevel;
 
@@ -45,6 +60,9 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
         return this.securityLevel == null ? Input.empty() : this.securityLevel;
     }
 
+    /**
+     * URL to serve the endpoint at.
+     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

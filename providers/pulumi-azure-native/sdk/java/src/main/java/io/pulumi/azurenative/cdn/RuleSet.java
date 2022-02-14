@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.cdn;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.cdn.RuleSetArgs;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,39 +14,159 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Friendly RuleSet name mapping to the any RuleSet or secret related information.
+API Version: 2020-09-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### RuleSets_Create
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ruleSet = new AzureNative.Cdn.RuleSet("ruleSet", new AzureNative.Cdn.RuleSetArgs
+        {
+            ProfileName = "profile1",
+            ResourceGroupName = "RG",
+            RuleSetName = "ruleSet1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	cdn "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cdn"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cdn.NewRuleSet(ctx, "ruleSet", &cdn.RuleSetArgs{
+			ProfileName:       pulumi.String("profile1"),
+			ResourceGroupName: pulumi.String("RG"),
+			RuleSetName:       pulumi.String("ruleSet1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const ruleSet = new azure_native.cdn.RuleSet("ruleSet", {
+    profileName: "profile1",
+    resourceGroupName: "RG",
+    ruleSetName: "ruleSet1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+rule_set = azure_native.cdn.RuleSet("ruleSet",
+    profile_name="profile1",
+    resource_group_name="RG",
+    rule_set_name="ruleSet1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:cdn:RuleSet ruleSet1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/rulesets/ruleSet1 
+```
+
+ */
 @ResourceType(type="azure-native:cdn:RuleSet")
 public class RuleSet extends io.pulumi.resources.CustomResource {
+    /**
+     * 
+     */
     @OutputExport(name="deploymentStatus", type=String.class, parameters={})
     private Output<String> deploymentStatus;
 
     public Output<String> getDeploymentStatus() {
         return this.deploymentStatus;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Provisioning status
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning status
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Read only system data
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Read only system data
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public RuleSet(String name, RuleSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:cdn:RuleSet", name, args == null ? RuleSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -67,6 +186,14 @@ public class RuleSet extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static RuleSet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RuleSet(name, id, options);
     }

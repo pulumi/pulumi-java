@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An entry for an Access Control list.
+ */
 public final class AclEntryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AclEntryArgs Empty = new AclEntryArgs();
 
+    /**
+     * The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
+     */
     @InputImport(name="expirationTime")
     private final @Nullable Input<String> expirationTime;
 
@@ -21,6 +27,9 @@ public final class AclEntryArgs extends io.pulumi.resources.ResourceArgs {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
     }
 
+    /**
+     * This is always `sql#aclEntry`.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -28,6 +37,9 @@ public final class AclEntryArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Optional. A label to identify this entry.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +47,9 @@ public final class AclEntryArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The allowlisted value for the access control list.
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

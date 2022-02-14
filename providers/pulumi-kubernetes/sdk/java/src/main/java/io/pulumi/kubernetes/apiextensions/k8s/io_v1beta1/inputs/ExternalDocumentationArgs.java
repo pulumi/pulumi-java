@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ExternalDocumentation allows referencing an external resource for extended documentation.
+ */
 public final class ExternalDocumentationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExternalDocumentationArgs Empty = new ExternalDocumentationArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +27,9 @@ public final class ExternalDocumentationArgs extends io.pulumi.resources.Resourc
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

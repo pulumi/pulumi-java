@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of step.
+ */
     @EnumType
     public enum StepType {
+/**
+ * 
+ */
         Wait("Wait"),
+/**
+ * 
+ */
         HealthCheck("HealthCheck");
 
         private final String value;

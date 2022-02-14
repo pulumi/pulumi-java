@@ -16,10 +16,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Http listener of an application gateway.
+ */
 public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationGatewayHttpListenerArgs Empty = new ApplicationGatewayHttpListenerArgs();
 
+    /**
+     * Custom error configurations of the HTTP listener.
+     */
     @InputImport(name="customErrorConfigurations")
     private final @Nullable Input<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations;
 
@@ -27,6 +33,9 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
         return this.customErrorConfigurations == null ? Input.empty() : this.customErrorConfigurations;
     }
 
+    /**
+     * Reference to the FirewallPolicy resource.
+     */
     @InputImport(name="firewallPolicy")
     private final @Nullable Input<SubResourceArgs> firewallPolicy;
 
@@ -34,6 +43,9 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
         return this.firewallPolicy == null ? Input.empty() : this.firewallPolicy;
     }
 
+    /**
+     * Frontend IP configuration resource of an application gateway.
+     */
     @InputImport(name="frontendIPConfiguration")
     private final @Nullable Input<SubResourceArgs> frontendIPConfiguration;
 
@@ -41,6 +53,9 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
         return this.frontendIPConfiguration == null ? Input.empty() : this.frontendIPConfiguration;
     }
 
+    /**
+     * Frontend port resource of an application gateway.
+     */
     @InputImport(name="frontendPort")
     private final @Nullable Input<SubResourceArgs> frontendPort;
 
@@ -48,6 +63,9 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
         return this.frontendPort == null ? Input.empty() : this.frontendPort;
     }
 
+    /**
+     * Host name of HTTP listener.
+     */
     @InputImport(name="hostName")
     private final @Nullable Input<String> hostName;
 
@@ -55,6 +73,9 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
         return this.hostName == null ? Input.empty() : this.hostName;
     }
 
+    /**
+     * List of Host names for HTTP Listener that allows special wildcard characters as well.
+     */
     @InputImport(name="hostNames")
     private final @Nullable Input<List<String>> hostNames;
 
@@ -62,6 +83,9 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
         return this.hostNames == null ? Input.empty() : this.hostNames;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -69,6 +93,9 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Name of the HTTP listener that is unique within an Application Gateway.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -76,6 +103,9 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Protocol of the HTTP listener.
+     */
     @InputImport(name="protocol")
     private final @Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol;
 
@@ -83,6 +113,9 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
         return this.protocol == null ? Input.empty() : this.protocol;
     }
 
+    /**
+     * Applicable only if protocol is https. Enables SNI for multi-hosting.
+     */
     @InputImport(name="requireServerNameIndication")
     private final @Nullable Input<Boolean> requireServerNameIndication;
 
@@ -90,6 +123,9 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
         return this.requireServerNameIndication == null ? Input.empty() : this.requireServerNameIndication;
     }
 
+    /**
+     * SSL certificate resource of an application gateway.
+     */
     @InputImport(name="sslCertificate")
     private final @Nullable Input<SubResourceArgs> sslCertificate;
 
@@ -97,6 +133,9 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
         return this.sslCertificate == null ? Input.empty() : this.sslCertificate;
     }
 
+    /**
+     * SSL profile resource of the application gateway.
+     */
     @InputImport(name="sslProfile")
     private final @Nullable Input<SubResourceArgs> sslProfile;
 

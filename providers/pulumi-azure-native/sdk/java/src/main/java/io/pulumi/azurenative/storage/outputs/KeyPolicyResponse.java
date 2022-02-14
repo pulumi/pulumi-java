@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class KeyPolicyResponse {
+/**
+ * The key expiration period in days.
+ */
     private final Integer keyExpirationPeriodInDays;
 
     @OutputCustomType.Constructor({"keyExpirationPeriodInDays"})
@@ -16,6 +19,9 @@ public final class KeyPolicyResponse {
         this.keyExpirationPeriodInDays = Objects.requireNonNull(keyExpirationPeriodInDays);
     }
 
+/**
+ * The key expiration period in days.
+ */
     public Integer getKeyExpirationPeriodInDays() {
         return this.keyExpirationPeriodInDays;
     }

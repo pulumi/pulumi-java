@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The storage location for a packet capture session.
+ */
 public final class PacketCaptureStorageLocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PacketCaptureStorageLocationArgs Empty = new PacketCaptureStorageLocationArgs();
 
+    /**
+     * A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For linux virtual machine it must start with /var/captures. Required if no storage ID is provided, otherwise optional.
+     */
     @InputImport(name="filePath")
     private final @Nullable Input<String> filePath;
 
@@ -21,6 +27,9 @@ public final class PacketCaptureStorageLocationArgs extends io.pulumi.resources.
         return this.filePath == null ? Input.empty() : this.filePath;
     }
 
+    /**
+     * The ID of the storage account to save the packet capture session. Required if no local file path is provided.
+     */
     @InputImport(name="storageId")
     private final @Nullable Input<String> storageId;
 
@@ -28,6 +37,9 @@ public final class PacketCaptureStorageLocationArgs extends io.pulumi.resources.
         return this.storageId == null ? Input.empty() : this.storageId;
     }
 
+    /**
+     * The URI of the storage path to save the packet capture. Must be a well-formed URI describing the location to save the packet capture.
+     */
     @InputImport(name="storagePath")
     private final @Nullable Input<String> storagePath;
 

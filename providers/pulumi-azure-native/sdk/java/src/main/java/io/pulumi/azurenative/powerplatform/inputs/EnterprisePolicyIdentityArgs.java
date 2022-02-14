@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The identity of the EnterprisePolicy.
+ */
 public final class EnterprisePolicyIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnterprisePolicyIdentityArgs Empty = new EnterprisePolicyIdentityArgs();
 
+    /**
+     * The type of identity used for the EnterprisePolicy. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
+     */
     @InputImport(name="type")
     private final @Nullable Input<ResourceIdentityType> type;
 

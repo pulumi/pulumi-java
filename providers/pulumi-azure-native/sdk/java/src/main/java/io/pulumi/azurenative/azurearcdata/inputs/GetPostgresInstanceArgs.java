@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetPostgresInstanceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPostgresInstanceArgs Empty = new GetPostgresInstanceArgs();
 
+    /**
+     * Name of Postgres Instance
+     */
     @InputImport(name="postgresInstanceName", required=true)
     private final String postgresInstanceName;
 
@@ -19,6 +25,9 @@ public final class GetPostgresInstanceArgs extends io.pulumi.resources.InvokeArg
         return this.postgresInstanceName;
     }
 
+    /**
+     * The name of the Azure resource group
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

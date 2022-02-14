@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDatacatalogV1ContactsPersonResponse {
+/**
+ * Designation of the person, for example, Data Steward.
+ */
     private final String designation;
+/**
+ * Email of the person in the format of `john.doe@xyz`, ``, or `John Doe`.
+ */
     private final String email;
 
     @OutputCustomType.Constructor({"designation","email"})
@@ -20,9 +26,15 @@ public final class GoogleCloudDatacatalogV1ContactsPersonResponse {
         this.email = Objects.requireNonNull(email);
     }
 
+/**
+ * Designation of the person, for example, Data Steward.
+ */
     public String getDesignation() {
         return this.designation;
     }
+/**
+ * Email of the person in the format of `john.doe@xyz`, ``, or `John Doe`.
+ */
     public String getEmail() {
         return this.email;
     }

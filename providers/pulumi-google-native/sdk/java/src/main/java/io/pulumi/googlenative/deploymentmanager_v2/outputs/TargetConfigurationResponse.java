@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TargetConfigurationResponse {
+/**
+ * The configuration to use for this deployment.
+ */
     private final ConfigFileResponse config;
+/**
+ * Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.
+ */
     private final List<ImportFileResponse> imports;
 
     @OutputCustomType.Constructor({"config","imports"})
@@ -22,9 +28,15 @@ public final class TargetConfigurationResponse {
         this.imports = Objects.requireNonNull(imports);
     }
 
+/**
+ * The configuration to use for this deployment.
+ */
     public ConfigFileResponse getConfig() {
         return this.config;
     }
+/**
+ * Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.
+ */
     public List<ImportFileResponse> getImports() {
         return this.imports;
     }

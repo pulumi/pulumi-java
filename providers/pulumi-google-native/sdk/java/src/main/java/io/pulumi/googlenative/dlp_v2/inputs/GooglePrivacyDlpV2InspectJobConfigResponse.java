@@ -12,10 +12,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Controls what and how to inspect for findings.
+ */
 public final class GooglePrivacyDlpV2InspectJobConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2InspectJobConfigResponse Empty = new GooglePrivacyDlpV2InspectJobConfigResponse();
 
+    /**
+     * Actions to execute at the completion of the job.
+     */
     @InputImport(name="actions", required=true)
     private final List<GooglePrivacyDlpV2ActionResponse> actions;
 
@@ -23,6 +29,9 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends io.pulumi.
         return this.actions;
     }
 
+    /**
+     * How and what to scan for.
+     */
     @InputImport(name="inspectConfig", required=true)
     private final GooglePrivacyDlpV2InspectConfigResponse inspectConfig;
 
@@ -30,6 +39,9 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends io.pulumi.
         return this.inspectConfig;
     }
 
+    /**
+     * If provided, will be used as the default for all values in InspectConfig. `inspect_config` will be merged into the values persisted as part of the template.
+     */
     @InputImport(name="inspectTemplateName", required=true)
     private final String inspectTemplateName;
 
@@ -37,6 +49,9 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends io.pulumi.
         return this.inspectTemplateName;
     }
 
+    /**
+     * The data to scan.
+     */
     @InputImport(name="storageConfig", required=true)
     private final GooglePrivacyDlpV2StorageConfigResponse storageConfig;
 

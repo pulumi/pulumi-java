@@ -16,10 +16,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure Data Explorer command activity.
+ */
 public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureDataExplorerCommandActivityArgs Empty = new AzureDataExplorerCommandActivityArgs();
 
+    /**
+     * A control command, according to the Azure Data Explorer command syntax. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="command", required=true)
     private final Input<Object> command;
 
@@ -27,6 +33,9 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
         return this.command;
     }
 
+    /**
+     * Control command timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9]))..)
+     */
     @InputImport(name="commandTimeout")
     private final @Nullable Input<Object> commandTimeout;
 
@@ -34,6 +43,9 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
         return this.commandTimeout == null ? Input.empty() : this.commandTimeout;
     }
 
+    /**
+     * Activity depends on condition.
+     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
@@ -41,6 +53,9 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -48,6 +63,9 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Linked service reference.
+     */
     @InputImport(name="linkedServiceName")
     private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
@@ -55,6 +73,9 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
     }
 
+    /**
+     * Activity name.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -62,6 +83,9 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
         return this.name;
     }
 
+    /**
+     * Activity policy.
+     */
     @InputImport(name="policy")
     private final @Nullable Input<ActivityPolicyArgs> policy;
 
@@ -69,6 +93,10 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
         return this.policy == null ? Input.empty() : this.policy;
     }
 
+    /**
+     * Type of activity.
+Expected value is 'AzureDataExplorerCommand'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -76,6 +104,9 @@ public final class AzureDataExplorerCommandActivityArgs extends io.pulumi.resour
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     */
     @InputImport(name="userProperties")
     private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 

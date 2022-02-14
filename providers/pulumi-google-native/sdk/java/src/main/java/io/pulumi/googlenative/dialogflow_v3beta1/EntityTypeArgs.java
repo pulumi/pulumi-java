@@ -16,10 +16,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EntityTypeArgs Empty = new EntityTypeArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="agentId", required=true)
     private final Input<String> agentId;
 
@@ -27,6 +33,9 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentId;
     }
 
+    /**
+     * Indicates whether the entity type can be automatically expanded.
+     */
     @InputImport(name="autoExpansionMode")
     private final @Nullable Input<EntityTypeAutoExpansionMode> autoExpansionMode;
 
@@ -34,6 +43,9 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoExpansionMode == null ? Input.empty() : this.autoExpansionMode;
     }
 
+    /**
+     * The human-readable name of the entity type, unique within the agent.
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -41,6 +53,9 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Enables fuzzy entity extraction during classification.
+     */
     @InputImport(name="enableFuzzyExtraction")
     private final @Nullable Input<Boolean> enableFuzzyExtraction;
 
@@ -48,6 +63,9 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableFuzzyExtraction == null ? Input.empty() : this.enableFuzzyExtraction;
     }
 
+    /**
+     * The collection of entity entries associated with the entity type.
+     */
     @InputImport(name="entities")
     private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs>> entities;
 
@@ -55,6 +73,9 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.entities == null ? Input.empty() : this.entities;
     }
 
+    /**
+     * Collection of exceptional words and phrases that shouldn't be matched. For example, if you have a size entity type with entry `giant`(an adjective), you might consider adding `giants`(a noun) as an exclusion. If the kind of entity type is `KIND_MAP`, then the phrases specified by entities and excluded phrases should be mutually exclusive.
+     */
     @InputImport(name="excludedPhrases")
     private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseArgs>> excludedPhrases;
 
@@ -62,6 +83,9 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.excludedPhrases == null ? Input.empty() : this.excludedPhrases;
     }
 
+    /**
+     * Indicates the kind of entity type.
+     */
     @InputImport(name="kind", required=true)
     private final Input<EntityTypeKind> kind;
 
@@ -69,6 +93,9 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="languageCode")
     private final @Nullable Input<String> languageCode;
 
@@ -76,6 +103,9 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.languageCode == null ? Input.empty() : this.languageCode;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -83,6 +113,9 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType. Format: `projects//locations//agents//entityTypes/`.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -90,6 +123,9 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -97,6 +133,9 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Indicates whether parameters of the entity type should be redacted in log. If redaction is enabled, page parameters and intent parameters referring to the entity type will be replaced by parameter name during logging.
+     */
     @InputImport(name="redact")
     private final @Nullable Input<Boolean> redact;
 

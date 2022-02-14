@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Filter VMs by Any or All specified tags.
+ */
     @EnumType
     public enum TagOperators {
+/**
+ * 
+ */
         All("All"),
+/**
+ * 
+ */
         Any("Any");
 
         private final String value;

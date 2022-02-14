@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.deploymentmanager;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.deploymentmanager.RolloutArgs;
 import io.pulumi.azurenative.deploymentmanager.outputs.IdentityResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.StepGroupResponse;
 import io.pulumi.core.Alias;
@@ -17,63 +16,406 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Defines the PUT rollout request body.
+API Version: 2019-11-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create or update rollout
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var rollout = new AzureNative.DeploymentManager.Rollout("rollout", new AzureNative.DeploymentManager.RolloutArgs
+        {
+            ArtifactSourceId = "/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/Microsoft.DeploymentManager/artifactSources/myArtifactSource",
+            BuildVersion = "1.0.0.1",
+            Identity = new AzureNative.DeploymentManager.Inputs.IdentityArgs
+            {
+                IdentityIds = 
+                {
+                    "/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userassignedidentities/myuseridentity",
+                },
+                Type = "userAssigned",
+            },
+            Location = "centralus",
+            ResourceGroupName = "myResourceGroup",
+            RolloutName = "myRollout",
+            StepGroups = 
+            {
+                new AzureNative.DeploymentManager.Inputs.StepGroupArgs
+                {
+                    DeploymentTargetId = "Microsoft.DeploymentManager/serviceTopologies/myTopology/services/myService/serviceUnits/myServiceUnit1'",
+                    Name = "FirstRegion",
+                    PostDeploymentSteps = 
+                    {
+                        new AzureNative.DeploymentManager.Inputs.PrePostStepArgs
+                        {
+                            StepId = "Microsoft.DeploymentManager/steps/postDeployStep1",
+                        },
+                    },
+                    PreDeploymentSteps = 
+                    {
+                        new AzureNative.DeploymentManager.Inputs.PrePostStepArgs
+                        {
+                            StepId = "Microsoft.DeploymentManager/steps/preDeployStep1",
+                        },
+                        new AzureNative.DeploymentManager.Inputs.PrePostStepArgs
+                        {
+                            StepId = "Microsoft.DeploymentManager/steps/preDeployStep2",
+                        },
+                    },
+                },
+                new AzureNative.DeploymentManager.Inputs.StepGroupArgs
+                {
+                    DependsOnStepGroups = 
+                    {
+                        "FirstRegion",
+                    },
+                    DeploymentTargetId = "Microsoft.DeploymentManager/serviceTopologies/myTopology/services/myService/serviceUnits/myServiceUnit2'",
+                    Name = "SecondRegion",
+                    PostDeploymentSteps = 
+                    {
+                        new AzureNative.DeploymentManager.Inputs.PrePostStepArgs
+                        {
+                            StepId = "Microsoft.DeploymentManager/steps/postDeployStep5",
+                        },
+                    },
+                    PreDeploymentSteps = 
+                    {
+                        new AzureNative.DeploymentManager.Inputs.PrePostStepArgs
+                        {
+                            StepId = "Microsoft.DeploymentManager/steps/preDeployStep3",
+                        },
+                        new AzureNative.DeploymentManager.Inputs.PrePostStepArgs
+                        {
+                            StepId = "Microsoft.DeploymentManager/steps/preDeployStep4",
+                        },
+                    },
+                },
+            },
+            Tags = ,
+            TargetServiceTopologyId = "/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/Microsoft.DeploymentManager/serviceTopologies/myTopology",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	deploymentmanager "github.com/pulumi/pulumi-azure-native/sdk/go/azure/deploymentmanager"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := deploymentmanager.NewRollout(ctx, "rollout", &deploymentmanager.RolloutArgs{
+			ArtifactSourceId: pulumi.String("/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/Microsoft.DeploymentManager/artifactSources/myArtifactSource"),
+			BuildVersion:     pulumi.String("1.0.0.1"),
+			Identity: &deploymentmanager.IdentityArgs{
+				IdentityIds: pulumi.StringArray{
+					pulumi.String("/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userassignedidentities/myuseridentity"),
+				},
+				Type: pulumi.String("userAssigned"),
+			},
+			Location:          pulumi.String("centralus"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			RolloutName:       pulumi.String("myRollout"),
+			StepGroups: deploymentmanager.StepGroupArray{
+				&deploymentmanager.StepGroupArgs{
+					DeploymentTargetId: pulumi.String("Microsoft.DeploymentManager/serviceTopologies/myTopology/services/myService/serviceUnits/myServiceUnit1'"),
+					Name:               pulumi.String("FirstRegion"),
+					PostDeploymentSteps: deploymentmanager.PrePostStepArray{
+						&deploymentmanager.PrePostStepArgs{
+							StepId: pulumi.String("Microsoft.DeploymentManager/steps/postDeployStep1"),
+						},
+					},
+					PreDeploymentSteps: deploymentmanager.PrePostStepArray{
+						&deploymentmanager.PrePostStepArgs{
+							StepId: pulumi.String("Microsoft.DeploymentManager/steps/preDeployStep1"),
+						},
+						&deploymentmanager.PrePostStepArgs{
+							StepId: pulumi.String("Microsoft.DeploymentManager/steps/preDeployStep2"),
+						},
+					},
+				},
+				&deploymentmanager.StepGroupArgs{
+					DependsOnStepGroups: pulumi.StringArray{
+						pulumi.String("FirstRegion"),
+					},
+					DeploymentTargetId: pulumi.String("Microsoft.DeploymentManager/serviceTopologies/myTopology/services/myService/serviceUnits/myServiceUnit2'"),
+					Name:               pulumi.String("SecondRegion"),
+					PostDeploymentSteps: deploymentmanager.PrePostStepArray{
+						&deploymentmanager.PrePostStepArgs{
+							StepId: pulumi.String("Microsoft.DeploymentManager/steps/postDeployStep5"),
+						},
+					},
+					PreDeploymentSteps: deploymentmanager.PrePostStepArray{
+						&deploymentmanager.PrePostStepArgs{
+							StepId: pulumi.String("Microsoft.DeploymentManager/steps/preDeployStep3"),
+						},
+						&deploymentmanager.PrePostStepArgs{
+							StepId: pulumi.String("Microsoft.DeploymentManager/steps/preDeployStep4"),
+						},
+					},
+				},
+			},
+			Tags:                    nil,
+			TargetServiceTopologyId: pulumi.String("/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/Microsoft.DeploymentManager/serviceTopologies/myTopology"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const rollout = new azure_native.deploymentmanager.Rollout("rollout", {
+    artifactSourceId: "/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/Microsoft.DeploymentManager/artifactSources/myArtifactSource",
+    buildVersion: "1.0.0.1",
+    identity: {
+        identityIds: ["/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userassignedidentities/myuseridentity"],
+        type: "userAssigned",
+    },
+    location: "centralus",
+    resourceGroupName: "myResourceGroup",
+    rolloutName: "myRollout",
+    stepGroups: [
+        {
+            deploymentTargetId: "Microsoft.DeploymentManager/serviceTopologies/myTopology/services/myService/serviceUnits/myServiceUnit1'",
+            name: "FirstRegion",
+            postDeploymentSteps: [{
+                stepId: "Microsoft.DeploymentManager/steps/postDeployStep1",
+            }],
+            preDeploymentSteps: [
+                {
+                    stepId: "Microsoft.DeploymentManager/steps/preDeployStep1",
+                },
+                {
+                    stepId: "Microsoft.DeploymentManager/steps/preDeployStep2",
+                },
+            ],
+        },
+        {
+            dependsOnStepGroups: ["FirstRegion"],
+            deploymentTargetId: "Microsoft.DeploymentManager/serviceTopologies/myTopology/services/myService/serviceUnits/myServiceUnit2'",
+            name: "SecondRegion",
+            postDeploymentSteps: [{
+                stepId: "Microsoft.DeploymentManager/steps/postDeployStep5",
+            }],
+            preDeploymentSteps: [
+                {
+                    stepId: "Microsoft.DeploymentManager/steps/preDeployStep3",
+                },
+                {
+                    stepId: "Microsoft.DeploymentManager/steps/preDeployStep4",
+                },
+            ],
+        },
+    ],
+    tags: {},
+    targetServiceTopologyId: "/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/Microsoft.DeploymentManager/serviceTopologies/myTopology",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+rollout = azure_native.deploymentmanager.Rollout("rollout",
+    artifact_source_id="/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/Microsoft.DeploymentManager/artifactSources/myArtifactSource",
+    build_version="1.0.0.1",
+    identity=azure_native.deploymentmanager.IdentityArgs(
+        identity_ids=["/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userassignedidentities/myuseridentity"],
+        type="userAssigned",
+    ),
+    location="centralus",
+    resource_group_name="myResourceGroup",
+    rollout_name="myRollout",
+    step_groups=[
+        azure_native.deploymentmanager.StepGroupArgs(
+            deployment_target_id="Microsoft.DeploymentManager/serviceTopologies/myTopology/services/myService/serviceUnits/myServiceUnit1'",
+            name="FirstRegion",
+            post_deployment_steps=[azure_native.deploymentmanager.PrePostStepArgs(
+                step_id="Microsoft.DeploymentManager/steps/postDeployStep1",
+            )],
+            pre_deployment_steps=[
+                azure_native.deploymentmanager.PrePostStepArgs(
+                    step_id="Microsoft.DeploymentManager/steps/preDeployStep1",
+                ),
+                azure_native.deploymentmanager.PrePostStepArgs(
+                    step_id="Microsoft.DeploymentManager/steps/preDeployStep2",
+                ),
+            ],
+        ),
+        azure_native.deploymentmanager.StepGroupArgs(
+            depends_on_step_groups=["FirstRegion"],
+            deployment_target_id="Microsoft.DeploymentManager/serviceTopologies/myTopology/services/myService/serviceUnits/myServiceUnit2'",
+            name="SecondRegion",
+            post_deployment_steps=[azure_native.deploymentmanager.PrePostStepArgs(
+                step_id="Microsoft.DeploymentManager/steps/postDeployStep5",
+            )],
+            pre_deployment_steps=[
+                azure_native.deploymentmanager.PrePostStepArgs(
+                    step_id="Microsoft.DeploymentManager/steps/preDeployStep3",
+                ),
+                azure_native.deploymentmanager.PrePostStepArgs(
+                    step_id="Microsoft.DeploymentManager/steps/preDeployStep4",
+                ),
+            ],
+        ),
+    ],
+    tags={},
+    target_service_topology_id="/subscriptions/caac1590-e859-444f-a9e0-62091c0f5929/resourceGroups/myResourceGroup/Microsoft.DeploymentManager/serviceTopologies/myTopology")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:deploymentmanager:Rollout myRollout /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeploymentManager/rollouts/{rolloutName} 
+```
+
+ */
 @ResourceType(type="azure-native:deploymentmanager:Rollout")
 public class Rollout extends io.pulumi.resources.CustomResource {
+    /**
+     * The reference to the artifact source resource Id where the payload is located.
+     */
     @OutputExport(name="artifactSourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> artifactSourceId;
 
+    /**
+     * @return The reference to the artifact source resource Id where the payload is located.
+     */
     public Output</* @Nullable */ String> getArtifactSourceId() {
         return this.artifactSourceId;
     }
+    /**
+     * The version of the build being deployed.
+     */
     @OutputExport(name="buildVersion", type=String.class, parameters={})
     private Output<String> buildVersion;
 
+    /**
+     * @return The version of the build being deployed.
+     */
     public Output<String> getBuildVersion() {
         return this.buildVersion;
     }
+    /**
+     * Identity for the resource.
+     */
     @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
     private Output<IdentityResponse> identity;
 
+    /**
+     * @return Identity for the resource.
+     */
     public Output<IdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * The geo-location where the resource lives
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The list of step groups that define the orchestration.
+     */
     @OutputExport(name="stepGroups", type=List.class, parameters={StepGroupResponse.class})
     private Output<List<StepGroupResponse>> stepGroups;
 
+    /**
+     * @return The list of step groups that define the orchestration.
+     */
     public Output<List<StepGroupResponse>> getStepGroups() {
         return this.stepGroups;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The resource Id of the service topology from which service units are being referenced in step groups to be deployed.
+     */
     @OutputExport(name="targetServiceTopologyId", type=String.class, parameters={})
     private Output<String> targetServiceTopologyId;
 
+    /**
+     * @return The resource Id of the service topology from which service units are being referenced in step groups to be deployed.
+     */
     public Output<String> getTargetServiceTopologyId() {
         return this.targetServiceTopologyId;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Rollout(String name, RolloutArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:deploymentmanager:Rollout", name, args == null ? RolloutArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -93,6 +435,14 @@ public class Rollout extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Rollout get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Rollout(name, id, options);
     }

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetGlobalScheduleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGlobalScheduleArgs Empty = new GetGlobalScheduleArgs();
 
+    /**
+     * Specify the $expand query. Example: 'properties($select=status)'
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +27,9 @@ public final class GetGlobalScheduleArgs extends io.pulumi.resources.InvokeArgs 
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the schedule.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,6 +37,9 @@ public final class GetGlobalScheduleArgs extends io.pulumi.resources.InvokeArgs 
         return this.name;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

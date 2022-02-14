@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccountArgs Empty = new AccountArgs();
 
+    /**
+     * The name of Cognitive Services account.
+     */
     @InputImport(name="accountName")
     private final @Nullable Input<String> accountName;
 
@@ -25,6 +31,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName == null ? Input.empty() : this.accountName;
     }
 
+    /**
+     * The identity of Cognitive Services account.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityArgs> identity;
 
@@ -32,6 +41,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * The Kind of the resource.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -39,6 +51,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The location of the resource
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -46,6 +61,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Properties of Cognitive Services account.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<CognitiveServicesAccountPropertiesArgs> properties;
 
@@ -53,6 +71,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -60,6 +81,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The SKU of Cognitive Services account.
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -67,6 +91,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

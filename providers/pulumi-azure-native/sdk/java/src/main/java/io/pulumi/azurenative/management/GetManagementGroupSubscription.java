@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetManagementGroupSubscription {
+/**
+ * The details of subscription under management group.
+API Version: 2020-05-01.
+ *
+ * The details of subscription under management group.
+ */
     public static CompletableFuture<GetManagementGroupSubscriptionResult> invokeAsync(GetManagementGroupSubscriptionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:management:getManagementGroupSubscription", TypeShape.of(GetManagementGroupSubscriptionResult.class), args == null ? GetManagementGroupSubscriptionArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * VirtualNetworkGatewaySku details.
+ */
 public final class VirtualNetworkGatewaySkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualNetworkGatewaySkuArgs Empty = new VirtualNetworkGatewaySkuArgs();
 
+    /**
+     * Gateway SKU name.
+     */
     @InputImport(name="name")
     private final @Nullable Input<Either<String,VirtualNetworkGatewaySkuName>> name;
 
@@ -24,6 +30,9 @@ public final class VirtualNetworkGatewaySkuArgs extends io.pulumi.resources.Reso
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Gateway SKU tier.
+     */
     @InputImport(name="tier")
     private final @Nullable Input<Either<String,VirtualNetworkGatewaySkuTier>> tier;
 

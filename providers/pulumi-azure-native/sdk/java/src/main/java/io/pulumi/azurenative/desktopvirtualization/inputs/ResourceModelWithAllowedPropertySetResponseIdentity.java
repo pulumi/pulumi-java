@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResourceModelWithAllowedPropertySetResponseIdentity extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceModelWithAllowedPropertySetResponseIdentity Empty = new ResourceModelWithAllowedPropertySetResponseIdentity();
 
+    /**
+     * The principal ID of resource identity.
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -21,6 +27,9 @@ public final class ResourceModelWithAllowedPropertySetResponseIdentity extends i
         return this.principalId;
     }
 
+    /**
+     * The tenant ID of resource.
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -28,6 +37,9 @@ public final class ResourceModelWithAllowedPropertySetResponseIdentity extends i
         return this.tenantId;
     }
 
+    /**
+     * The identity type.
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

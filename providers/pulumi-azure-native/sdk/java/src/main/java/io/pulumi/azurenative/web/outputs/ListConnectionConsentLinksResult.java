@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListConnectionConsentLinksResult {
+/**
+ * Collection of resources
+ */
     private final @Nullable List<ConsentLinkDefinitionResponse> value;
 
     @OutputCustomType.Constructor({"value"})
@@ -18,6 +21,9 @@ public final class ListConnectionConsentLinksResult {
         this.value = value;
     }
 
+/**
+ * Collection of resources
+ */
     public List<ConsentLinkDefinitionResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration settings of the paths HTTP requests.
+ */
 public final class HttpSettingsRoutesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpSettingsRoutesArgs Empty = new HttpSettingsRoutesArgs();
 
+    /**
+     * The prefix that should precede all the authentication/authorization paths.
+     */
     @InputImport(name="apiPrefix")
     private final @Nullable Input<String> apiPrefix;
 

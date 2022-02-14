@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies options for controlling advanced machine features.
+ */
 public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AdvancedMachineFeaturesArgs Empty = new AdvancedMachineFeaturesArgs();
 
+    /**
+     * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+     */
     @InputImport(name="threadsPerCore")
     private final @Nullable Input<String> threadsPerCore;
 

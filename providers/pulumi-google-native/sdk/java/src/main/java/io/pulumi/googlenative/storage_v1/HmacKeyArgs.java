@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HmacKeyArgs Empty = new HmacKeyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -21,6 +27,9 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="serviceAccountEmail", required=true)
     private final Input<String> serviceAccountEmail;
 
@@ -28,6 +37,9 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceAccountEmail;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="userProject")
     private final @Nullable Input<String> userProject;
 

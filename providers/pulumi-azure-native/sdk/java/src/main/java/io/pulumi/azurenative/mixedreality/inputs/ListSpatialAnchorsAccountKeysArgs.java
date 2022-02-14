@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListSpatialAnchorsAccountKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListSpatialAnchorsAccountKeysArgs Empty = new ListSpatialAnchorsAccountKeysArgs();
 
+    /**
+     * Name of an Mixed Reality Account.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class ListSpatialAnchorsAccountKeysArgs extends io.pulumi.resources
         return this.accountName;
     }
 
+    /**
+     * Name of an Azure resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

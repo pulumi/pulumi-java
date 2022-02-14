@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MigrateSyncCompleteCommandOutputResponse {
+/**
+ * List of errors that happened during the command execution
+ */
     private final List<ReportableExceptionResponse> errors;
+/**
+ * Result identifier
+ */
     private final String id;
 
     @OutputCustomType.Constructor({"errors","id"})
@@ -22,9 +28,15 @@ public final class MigrateSyncCompleteCommandOutputResponse {
         this.id = Objects.requireNonNull(id);
     }
 
+/**
+ * List of errors that happened during the command execution
+ */
     public List<ReportableExceptionResponse> getErrors() {
         return this.errors;
     }
+/**
+ * Result identifier
+ */
     public String getId() {
         return this.id;
     }

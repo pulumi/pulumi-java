@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A load balancer probe.
+ */
 public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProbeArgs Empty = new ProbeArgs();
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -24,6 +30,9 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The interval, in seconds, for how frequently to probe the endpoint for health status. Typically, the interval is slightly less than half the allocated timeout period (in seconds) which allows two full probes before taking the instance out of rotation. The default value is 15, the minimum value is 5.
+     */
     @InputImport(name="intervalInSeconds")
     private final @Nullable Input<Integer> intervalInSeconds;
 
@@ -31,6 +40,9 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
         return this.intervalInSeconds == null ? Input.empty() : this.intervalInSeconds;
     }
 
+    /**
+     * The name of the resource that is unique within the set of probes used by the load balancer. This name can be used to access the resource.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -38,6 +50,9 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The number of probes where if no response, will result in stopping further traffic from being delivered to the endpoint. This values allows endpoints to be taken out of rotation faster or slower than the typical times used in Azure.
+     */
     @InputImport(name="numberOfProbes")
     private final @Nullable Input<Integer> numberOfProbes;
 
@@ -45,6 +60,9 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
         return this.numberOfProbes == null ? Input.empty() : this.numberOfProbes;
     }
 
+    /**
+     * The port for communicating the probe. Possible values range from 1 to 65535, inclusive.
+     */
     @InputImport(name="port", required=true)
     private final Input<Integer> port;
 
@@ -52,6 +70,9 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
         return this.port;
     }
 
+    /**
+     * The protocol of the end point. If 'Tcp' is specified, a received ACK is required for the probe to be successful. If 'Http' or 'Https' is specified, a 200 OK response from the specifies URI is required for the probe to be successful.
+     */
     @InputImport(name="protocol", required=true)
     private final Input<Either<String,ProbeProtocol>> protocol;
 
@@ -59,6 +80,9 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
         return this.protocol;
     }
 
+    /**
+     * The URI used for requesting health status from the VM. Path is required if a protocol is set to http. Otherwise, it is not allowed. There is no default value.
+     */
     @InputImport(name="requestPath")
     private final @Nullable Input<String> requestPath;
 

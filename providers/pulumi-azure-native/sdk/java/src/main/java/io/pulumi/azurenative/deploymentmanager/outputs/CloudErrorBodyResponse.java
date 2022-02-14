@@ -12,9 +12,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CloudErrorBodyResponse {
+/**
+ * Error code string.
+ */
     private final String code;
+/**
+ * More detailed error information.
+ */
     private final @Nullable List<CloudErrorBodyResponse> details;
+/**
+ * Descriptive error information.
+ */
     private final String message;
+/**
+ * Error target
+ */
     private final @Nullable String target;
 
     @OutputCustomType.Constructor({"code","details","message","target"})
@@ -29,15 +41,27 @@ public final class CloudErrorBodyResponse {
         this.target = target;
     }
 
+/**
+ * Error code string.
+ */
     public String getCode() {
         return this.code;
     }
+/**
+ * More detailed error information.
+ */
     public List<CloudErrorBodyResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
     }
+/**
+ * Descriptive error information.
+ */
     public String getMessage() {
         return this.message;
     }
+/**
+ * Error target
+ */
     public Optional<String> getTarget() {
         return Optional.ofNullable(this.target);
     }

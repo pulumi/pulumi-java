@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The configuration settings of the GitHub provider.
+ */
 public final class GitHubArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GitHubArgs Empty = new GitHubArgs();
 
+    /**
+     * <code>false</code> if the GitHub provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -23,6 +29,9 @@ public final class GitHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * The configuration settings of the login flow.
+     */
     @InputImport(name="login")
     private final @Nullable Input<LoginScopesArgs> login;
 
@@ -30,6 +39,9 @@ public final class GitHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.login == null ? Input.empty() : this.login;
     }
 
+    /**
+     * The configuration settings of the app registration for the GitHub provider.
+     */
     @InputImport(name="registration")
     private final @Nullable Input<ClientRegistrationArgs> registration;
 

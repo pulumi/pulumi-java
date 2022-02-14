@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListManagedClusterUserCredentials {
+/**
+ * The list of credential result response.
+API Version: 2021-03-01.
+ *
+ * The list of credential result response.
+ */
     public static CompletableFuture<ListManagedClusterUserCredentialsResult> invokeAsync(ListManagedClusterUserCredentialsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerservice:listManagedClusterUserCredentials", TypeShape.of(ListManagedClusterUserCredentialsResult.class), args == null ? ListManagedClusterUserCredentialsArgs.Empty : args, Utilities.withVersion(options));
     }

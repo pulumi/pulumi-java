@@ -13,8 +13,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EmailNotificationResponse {
+/**
+ * the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.
+ */
     private final @Nullable List<String> customEmails;
+/**
+ * a value indicating whether to send email to subscription administrator.
+ */
     private final @Nullable Boolean sendToSubscriptionAdministrator;
+/**
+ * a value indicating whether to send email to subscription co-administrators.
+ */
     private final @Nullable Boolean sendToSubscriptionCoAdministrators;
 
     @OutputCustomType.Constructor({"customEmails","sendToSubscriptionAdministrator","sendToSubscriptionCoAdministrators"})
@@ -27,12 +36,21 @@ public final class EmailNotificationResponse {
         this.sendToSubscriptionCoAdministrators = sendToSubscriptionCoAdministrators;
     }
 
+/**
+ * the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.
+ */
     public List<String> getCustomEmails() {
         return this.customEmails == null ? List.of() : this.customEmails;
     }
+/**
+ * a value indicating whether to send email to subscription administrator.
+ */
     public Optional<Boolean> getSendToSubscriptionAdministrator() {
         return Optional.ofNullable(this.sendToSubscriptionAdministrator);
     }
+/**
+ * a value indicating whether to send email to subscription co-administrators.
+ */
     public Optional<Boolean> getSendToSubscriptionCoAdministrators() {
         return Optional.ofNullable(this.sendToSubscriptionCoAdministrators);
     }

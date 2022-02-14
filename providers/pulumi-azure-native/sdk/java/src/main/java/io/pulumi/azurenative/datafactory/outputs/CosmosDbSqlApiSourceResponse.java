@@ -12,15 +12,46 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CosmosDbSqlApiSourceResponse {
+/**
+ * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+ */
     private final @Nullable Object additionalColumns;
+/**
+ * Whether detect primitive values as datetime values. Type: boolean (or Expression with resultType boolean).
+ */
     private final @Nullable Object detectDatetime;
+/**
+ * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+ */
     private final @Nullable Object disableMetricsCollection;
+/**
+ * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+ */
     private final @Nullable Object maxConcurrentConnections;
+/**
+ * Page size of the result. Type: integer (or Expression with resultType integer).
+ */
     private final @Nullable Object pageSize;
+/**
+ * Preferred regions. Type: array of strings (or Expression with resultType array of strings).
+ */
     private final @Nullable Object preferredRegions;
+/**
+ * SQL API query. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object query;
+/**
+ * Source retry count. Type: integer (or Expression with resultType integer).
+ */
     private final @Nullable Object sourceRetryCount;
+/**
+ * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+ */
     private final @Nullable Object sourceRetryWait;
+/**
+ * Copy source type.
+Expected value is 'CosmosDbSqlApiSource'.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"additionalColumns","detectDatetime","disableMetricsCollection","maxConcurrentConnections","pageSize","preferredRegions","query","sourceRetryCount","sourceRetryWait","type"})
@@ -47,33 +78,64 @@ public final class CosmosDbSqlApiSourceResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+ */
     public Optional<Object> getAdditionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
+/**
+ * Whether detect primitive values as datetime values. Type: boolean (or Expression with resultType boolean).
+ */
     public Optional<Object> getDetectDatetime() {
         return Optional.ofNullable(this.detectDatetime);
     }
+/**
+ * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+ */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
+/**
+ * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+ */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
+/**
+ * Page size of the result. Type: integer (or Expression with resultType integer).
+ */
     public Optional<Object> getPageSize() {
         return Optional.ofNullable(this.pageSize);
     }
+/**
+ * Preferred regions. Type: array of strings (or Expression with resultType array of strings).
+ */
     public Optional<Object> getPreferredRegions() {
         return Optional.ofNullable(this.preferredRegions);
     }
+/**
+ * SQL API query. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getQuery() {
         return Optional.ofNullable(this.query);
     }
+/**
+ * Source retry count. Type: integer (or Expression with resultType integer).
+ */
     public Optional<Object> getSourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
+/**
+ * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+ */
     public Optional<Object> getSourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
+/**
+ * Copy source type.
+Expected value is 'CosmosDbSqlApiSource'.
+ */
     public String getType() {
         return this.type;
     }

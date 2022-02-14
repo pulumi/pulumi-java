@@ -10,20 +10,66 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse {
+/**
+ * Number of applied deletes
+ */
     private final Double cdcDeleteCounter;
+/**
+ * Number of applied inserts
+ */
     private final Double cdcInsertCounter;
+/**
+ * Number of applied updates
+ */
     private final Double cdcUpdateCounter;
+/**
+ * Number of data errors occurred
+ */
     private final Double dataErrorsCounter;
+/**
+ * Name of the database
+ */
     private final String databaseName;
+/**
+ * Full load end time
+ */
     private final String fullLoadEndedOn;
+/**
+ * Estimate to finish full load
+ */
     private final String fullLoadEstFinishTime;
+/**
+ * Full load start time
+ */
     private final String fullLoadStartedOn;
+/**
+ * Number of rows applied in full load
+ */
     private final Double fullLoadTotalRows;
+/**
+ * Result identifier
+ */
     private final String id;
+/**
+ * Last modified time on target
+ */
     private final String lastModifiedTime;
+/**
+ * Result type
+Expected value is 'TableLevelOutput'.
+ */
     private final String resultType;
+/**
+ * Current state of the table migration
+ */
     private final String state;
+/**
+ * Name of the table
+ */
     private final String tableName;
+/**
+ * Total number of applied changes
+ */
     private final Double totalChangesApplied;
 
     @OutputCustomType.Constructor({"cdcDeleteCounter","cdcInsertCounter","cdcUpdateCounter","dataErrorsCounter","databaseName","fullLoadEndedOn","fullLoadEstFinishTime","fullLoadStartedOn","fullLoadTotalRows","id","lastModifiedTime","resultType","state","tableName","totalChangesApplied"})
@@ -60,48 +106,94 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse {
         this.totalChangesApplied = Objects.requireNonNull(totalChangesApplied);
     }
 
+/**
+ * Number of applied deletes
+ */
     public Double getCdcDeleteCounter() {
         return this.cdcDeleteCounter;
     }
+/**
+ * Number of applied inserts
+ */
     public Double getCdcInsertCounter() {
         return this.cdcInsertCounter;
     }
+/**
+ * Number of applied updates
+ */
     public Double getCdcUpdateCounter() {
         return this.cdcUpdateCounter;
     }
+/**
+ * Number of data errors occurred
+ */
     public Double getDataErrorsCounter() {
         return this.dataErrorsCounter;
     }
+/**
+ * Name of the database
+ */
     public String getDatabaseName() {
         return this.databaseName;
     }
+/**
+ * Full load end time
+ */
     public String getFullLoadEndedOn() {
         return this.fullLoadEndedOn;
     }
+/**
+ * Estimate to finish full load
+ */
     public String getFullLoadEstFinishTime() {
         return this.fullLoadEstFinishTime;
     }
+/**
+ * Full load start time
+ */
     public String getFullLoadStartedOn() {
         return this.fullLoadStartedOn;
     }
+/**
+ * Number of rows applied in full load
+ */
     public Double getFullLoadTotalRows() {
         return this.fullLoadTotalRows;
     }
+/**
+ * Result identifier
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Last modified time on target
+ */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
     }
+/**
+ * Result type
+Expected value is 'TableLevelOutput'.
+ */
     public String getResultType() {
         return this.resultType;
     }
+/**
+ * Current state of the table migration
+ */
     public String getState() {
         return this.state;
     }
+/**
+ * Name of the table
+ */
     public String getTableName() {
         return this.tableName;
     }
+/**
+ * Total number of applied changes
+ */
     public Double getTotalChangesApplied() {
         return this.totalChangesApplied;
     }

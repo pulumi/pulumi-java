@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A backend pool is a collection of backends that can be routed to.
+ */
 public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BackendPoolResponse Empty = new BackendPoolResponse();
 
+    /**
+     * The set of backends for this pool
+     */
     @InputImport(name="backends")
     private final @Nullable List<BackendResponse> backends;
 
@@ -24,6 +30,9 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.backends == null ? List.of() : this.backends;
     }
 
+    /**
+     * L7 health probe settings for a backend pool
+     */
     @InputImport(name="healthProbeSettings")
     private final @Nullable SubResourceResponse healthProbeSettings;
 
@@ -31,6 +40,9 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.healthProbeSettings == null ? Optional.empty() : Optional.ofNullable(this.healthProbeSettings);
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -38,6 +50,9 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Load balancing settings for a backend pool
+     */
     @InputImport(name="loadBalancingSettings")
     private final @Nullable SubResourceResponse loadBalancingSettings;
 
@@ -45,6 +60,9 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.loadBalancingSettings == null ? Optional.empty() : Optional.ofNullable(this.loadBalancingSettings);
     }
 
+    /**
+     * Resource name.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -52,6 +70,9 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Resource status.
+     */
     @InputImport(name="resourceState", required=true)
     private final String resourceState;
 
@@ -59,6 +80,9 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
         return this.resourceState;
     }
 
+    /**
+     * Resource type.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

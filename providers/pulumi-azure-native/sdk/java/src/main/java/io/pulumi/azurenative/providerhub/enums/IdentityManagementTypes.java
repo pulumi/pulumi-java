@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum IdentityManagementTypes {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         SystemAssigned("SystemAssigned"),
+/**
+ * 
+ */
         UserAssigned("UserAssigned"),
+/**
+ * 
+ */
         Actor("Actor"),
+/**
+ * 
+ */
         DelegatedResourceIdentity("DelegatedResourceIdentity");
 
         private final String value;

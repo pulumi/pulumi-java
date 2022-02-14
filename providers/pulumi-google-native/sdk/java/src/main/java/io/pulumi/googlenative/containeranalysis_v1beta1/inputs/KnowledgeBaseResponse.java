@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class KnowledgeBaseResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KnowledgeBaseResponse Empty = new KnowledgeBaseResponse();
 
+    /**
+     * The KB name (generally of the form KB[0-9]+ i.e. KB123456).
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class KnowledgeBaseResponse extends io.pulumi.resources.InvokeArgs 
         return this.name;
     }
 
+    /**
+     * A link to the KB in the Windows update catalog - https://www.catalog.update.microsoft.com/
+     */
     @InputImport(name="url", required=true)
     private final String url;
 

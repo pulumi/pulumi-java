@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details of the customer managed key associated with the workspace
+ */
 public final class WorkspaceKeyDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkspaceKeyDetailsResponse Empty = new WorkspaceKeyDetailsResponse();
 
+    /**
+     * Workspace Key sub-resource key vault url
+     */
     @InputImport(name="keyVaultUrl")
     private final @Nullable String keyVaultUrl;
 
@@ -21,6 +27,9 @@ public final class WorkspaceKeyDetailsResponse extends io.pulumi.resources.Invok
         return this.keyVaultUrl == null ? Optional.empty() : Optional.ofNullable(this.keyVaultUrl);
     }
 
+    /**
+     * Workspace Key sub-resource name
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

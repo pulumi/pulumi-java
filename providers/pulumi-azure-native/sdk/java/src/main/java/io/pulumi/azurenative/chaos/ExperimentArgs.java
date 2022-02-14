@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExperimentArgs Empty = new ExperimentArgs();
 
+    /**
+     * String that represents a Experiment resource name.
+     */
     @InputImport(name="experimentName")
     private final @Nullable Input<String> experimentName;
 
@@ -24,6 +30,9 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.experimentName == null ? Input.empty() : this.experimentName;
     }
 
+    /**
+     * The identity of the experiment resource.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<ResourceIdentityArgs> identity;
 
@@ -31,6 +40,9 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * The geo-location where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -38,6 +50,9 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The properties of the experiment resource.
+     */
     @InputImport(name="properties", required=true)
     private final Input<ExperimentPropertiesArgs> properties;
 
@@ -45,6 +60,9 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
+    /**
+     * String that represents an Azure resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -52,6 +70,9 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

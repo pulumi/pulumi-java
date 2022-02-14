@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Provisioning state.
+ */
     @EnumType
     public enum ProvisioningState {
+/**
+ * 
+ */
         Created("created");
 
         private final String value;

@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Server role migration result
+ */
 public final class StartMigrationScenarioServerRoleResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StartMigrationScenarioServerRoleResultResponse Empty = new StartMigrationScenarioServerRoleResultResponse();
 
+    /**
+     * Migration exceptions and warnings.
+     */
     @InputImport(name="exceptionsAndWarnings", required=true)
     private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
@@ -21,6 +27,9 @@ public final class StartMigrationScenarioServerRoleResultResponse extends io.pul
         return this.exceptionsAndWarnings;
     }
 
+    /**
+     * Name of server role.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,6 +37,9 @@ public final class StartMigrationScenarioServerRoleResultResponse extends io.pul
         return this.name;
     }
 
+    /**
+     * Current state of migration
+     */
     @InputImport(name="state", required=true)
     private final String state;
 

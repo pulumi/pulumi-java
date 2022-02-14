@@ -13,10 +13,17 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure VM (Mercury) workload-specific backup policy.
+ */
 public final class GenericProtectionPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GenericProtectionPolicyArgs Empty = new GenericProtectionPolicyArgs();
 
+    /**
+     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+Expected value is 'GenericProtectionPolicy'.
+     */
     @InputImport(name="backupManagementType", required=true)
     private final Input<String> backupManagementType;
 
@@ -24,6 +31,9 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
         return this.backupManagementType;
     }
 
+    /**
+     * Name of this policy's fabric.
+     */
     @InputImport(name="fabricName")
     private final @Nullable Input<String> fabricName;
 
@@ -31,6 +41,9 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
         return this.fabricName == null ? Input.empty() : this.fabricName;
     }
 
+    /**
+     * Number of items associated with this policy.
+     */
     @InputImport(name="protectedItemsCount")
     private final @Nullable Input<Integer> protectedItemsCount;
 
@@ -38,6 +51,9 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
         return this.protectedItemsCount == null ? Input.empty() : this.protectedItemsCount;
     }
 
+    /**
+     * List of sub-protection policies which includes schedule and retention
+     */
     @InputImport(name="subProtectionPolicy")
     private final @Nullable Input<List<SubProtectionPolicyArgs>> subProtectionPolicy;
 
@@ -45,6 +61,9 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
         return this.subProtectionPolicy == null ? Input.empty() : this.subProtectionPolicy;
     }
 
+    /**
+     * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
+     */
     @InputImport(name="timeZone")
     private final @Nullable Input<String> timeZone;
 

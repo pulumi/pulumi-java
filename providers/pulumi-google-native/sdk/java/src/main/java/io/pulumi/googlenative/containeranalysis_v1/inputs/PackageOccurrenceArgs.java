@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Details on how a particular software package was installed on a system.
+ */
 public final class PackageOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PackageOccurrenceArgs Empty = new PackageOccurrenceArgs();
 
+    /**
+     * All of the places within the filesystem versions of this package have been found.
+     */
     @InputImport(name="location", required=true)
     private final Input<List<LocationArgs>> location;
 

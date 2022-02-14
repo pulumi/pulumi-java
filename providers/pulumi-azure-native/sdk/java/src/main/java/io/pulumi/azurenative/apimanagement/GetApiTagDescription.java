@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiTagDescription {
+/**
+ * Contract details.
+API Version: 2020-12-01.
+ *
+ * Contract details.
+ */
     public static CompletableFuture<GetApiTagDescriptionResult> invokeAsync(GetApiTagDescriptionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiTagDescription", TypeShape.of(GetApiTagDescriptionResult.class), args == null ? GetApiTagDescriptionArgs.Empty : args, Utilities.withVersion(options));
     }

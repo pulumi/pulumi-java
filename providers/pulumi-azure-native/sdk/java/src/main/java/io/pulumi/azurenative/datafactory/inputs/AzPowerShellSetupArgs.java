@@ -9,10 +9,17 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The express custom setup of installing Azure PowerShell.
+ */
 public final class AzPowerShellSetupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzPowerShellSetupArgs Empty = new AzPowerShellSetupArgs();
 
+    /**
+     * The type of custom setup.
+Expected value is 'AzPowerShellSetup'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -20,6 +27,9 @@ public final class AzPowerShellSetupArgs extends io.pulumi.resources.ResourceArg
         return this.type;
     }
 
+    /**
+     * The required version of Azure PowerShell to install.
+     */
     @InputImport(name="version", required=true)
     private final Input<String> version;
 

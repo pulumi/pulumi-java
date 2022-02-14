@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FluidRelayEndpointsResponse {
+/**
+ * The Fluid Relay Orderer endpoints.
+ */
     private final List<String> ordererEndpoints;
+/**
+ * The Fluid Relay storage endpoints.
+ */
     private final List<String> storageEndpoints;
 
     @OutputCustomType.Constructor({"ordererEndpoints","storageEndpoints"})
@@ -21,9 +27,15 @@ public final class FluidRelayEndpointsResponse {
         this.storageEndpoints = Objects.requireNonNull(storageEndpoints);
     }
 
+/**
+ * The Fluid Relay Orderer endpoints.
+ */
     public List<String> getOrdererEndpoints() {
         return this.ordererEndpoints;
     }
+/**
+ * The Fluid Relay storage endpoints.
+ */
     public List<String> getStorageEndpoints() {
         return this.storageEndpoints;
     }

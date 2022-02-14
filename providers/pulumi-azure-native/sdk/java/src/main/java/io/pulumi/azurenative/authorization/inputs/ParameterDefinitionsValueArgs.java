@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The definition of a parameter that can be provided to the policy.
+ */
 public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ParameterDefinitionsValueArgs Empty = new ParameterDefinitionsValueArgs();
 
+    /**
+     * The allowed values for the parameter.
+     */
     @InputImport(name="allowedValues")
     private final @Nullable Input<List<Object>> allowedValues;
 
@@ -26,6 +32,9 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
         return this.allowedValues == null ? Input.empty() : this.allowedValues;
     }
 
+    /**
+     * The default value for the parameter if no value is provided.
+     */
     @InputImport(name="defaultValue")
     private final @Nullable Input<Object> defaultValue;
 
@@ -33,6 +42,9 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
     }
 
+    /**
+     * General metadata for the parameter.
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<ParameterDefinitionsValueMetadataArgs> metadata;
 
@@ -40,6 +52,9 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The data type of the parameter.
+     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,ParameterType>> type;
 

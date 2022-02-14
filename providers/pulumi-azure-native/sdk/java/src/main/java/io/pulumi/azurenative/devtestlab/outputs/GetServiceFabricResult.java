@@ -13,15 +13,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetServiceFabricResult {
+/**
+ * The applicable schedule for the virtual machine.
+ */
     private final ApplicableScheduleResponse applicableSchedule;
+/**
+ * The resource id of the environment under which the service fabric resource is present
+ */
     private final @Nullable String environmentId;
+/**
+ * The backing service fabric resource's id
+ */
     private final @Nullable String externalServiceFabricId;
+/**
+ * The identifier of the resource.
+ */
     private final String id;
+/**
+ * The location of the resource.
+ */
     private final @Nullable String location;
+/**
+ * The name of the resource.
+ */
     private final String name;
+/**
+ * The provisioning status of the resource.
+ */
     private final String provisioningState;
+/**
+ * The tags of the resource.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * The type of the resource.
+ */
     private final String type;
+/**
+ * The unique immutable identifier of a resource (Guid).
+ */
     private final String uniqueIdentifier;
 
     @OutputCustomType.Constructor({"applicableSchedule","environmentId","externalServiceFabricId","id","location","name","provisioningState","tags","type","uniqueIdentifier"})
@@ -48,33 +78,63 @@ public final class GetServiceFabricResult {
         this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
     }
 
+/**
+ * The applicable schedule for the virtual machine.
+ */
     public ApplicableScheduleResponse getApplicableSchedule() {
         return this.applicableSchedule;
     }
+/**
+ * The resource id of the environment under which the service fabric resource is present
+ */
     public Optional<String> getEnvironmentId() {
         return Optional.ofNullable(this.environmentId);
     }
+/**
+ * The backing service fabric resource's id
+ */
     public Optional<String> getExternalServiceFabricId() {
         return Optional.ofNullable(this.externalServiceFabricId);
     }
+/**
+ * The identifier of the resource.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The location of the resource.
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * The name of the resource.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The provisioning status of the resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * The tags of the resource.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * The type of the resource.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * The unique immutable identifier of a resource (Guid).
+ */
     public String getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }

@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The data type of a variable such as a function argument. Examples include: * INT64: `{"typeKind": "INT64"}` * ARRAY: { "typeKind": "ARRAY", "arrayElementType": {"typeKind": "STRING"} } * STRUCT>: { "typeKind": "STRUCT", "structType": { "fields": [ { "name": "x", "type": {"typeKind: "STRING"} }, { "name": "y", "type": { "typeKind": "ARRAY", "arrayElementType": {"typekind": "DATE"} } } ] } }
+ */
 public final class StandardSqlDataTypeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StandardSqlDataTypeResponse Empty = new StandardSqlDataTypeResponse();
 
+    /**
+     * The type of the array's elements, if type_kind = "ARRAY".
+     */
     @InputImport(name="arrayElementType", required=true)
     private final StandardSqlDataTypeResponse arrayElementType;
 
@@ -20,6 +26,9 @@ public final class StandardSqlDataTypeResponse extends io.pulumi.resources.Invok
         return this.arrayElementType;
     }
 
+    /**
+     * The fields of this struct, in order, if type_kind = "STRUCT".
+     */
     @InputImport(name="structType", required=true)
     private final StandardSqlStructTypeResponse structType;
 
@@ -27,6 +36,9 @@ public final class StandardSqlDataTypeResponse extends io.pulumi.resources.Invok
         return this.structType;
     }
 
+    /**
+     * The top level type of this field. Can be any standard SQL data type (e.g., "INT64", "DATE", "ARRAY").
+     */
     @InputImport(name="typeKind", required=true)
     private final String typeKind;
 

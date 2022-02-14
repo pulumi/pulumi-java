@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAssignment {
+/**
+ * Security Assignment on a resource group over a given scope
+API Version: 2021-08-01-preview.
+ *
+ * Security Assignment on a resource group over a given scope
+ */
     public static CompletableFuture<GetAssignmentResult> invokeAsync(GetAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:security:getAssignment", TypeShape.of(GetAssignmentResult.class), args == null ? GetAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

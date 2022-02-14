@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VirtualMachineScaleSetVMNetworkProfileConfigurationResponse {
+/**
+ * The list of network configurations.
+ */
     private final @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
 
     @OutputCustomType.Constructor({"networkInterfaceConfigurations"})
@@ -18,6 +21,9 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationResponse {
         this.networkInterfaceConfigurations = networkInterfaceConfigurations;
     }
 
+/**
+ * The list of network configurations.
+ */
     public List<VirtualMachineScaleSetNetworkConfigurationResponse> getNetworkInterfaceConfigurations() {
         return this.networkInterfaceConfigurations == null ? List.of() : this.networkInterfaceConfigurations;
     }

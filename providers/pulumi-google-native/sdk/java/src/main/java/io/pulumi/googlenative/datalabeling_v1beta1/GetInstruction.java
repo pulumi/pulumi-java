@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstruction {
+/**
+ * Gets an instruction by resource name.
+ */
     public static CompletableFuture<GetInstructionResult> invokeAsync(GetInstructionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datalabeling/v1beta1:getInstruction", TypeShape.of(GetInstructionResult.class), args == null ? GetInstructionArgs.Empty : args, Utilities.withVersion(options));
     }

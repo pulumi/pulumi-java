@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The kind (type) of Enterprise Policy.
+ */
     @EnumType
     public enum EnterprisePolicyKind {
+/**
+ * 
+ */
         Lockbox("Lockbox"),
+/**
+ * 
+ */
         PrivateEndpoint("PrivateEndpoint"),
+/**
+ * 
+ */
         Encryption("Encryption"),
+/**
+ * 
+ */
         NetworkInjection("NetworkInjection");
 
         private final String value;

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetLabAccountRegionalAvailabilityArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLabAccountRegionalAvailabilityArgs Empty = new GetLabAccountRegionalAvailabilityArgs();
 
+    /**
+     * The name of the lab Account.
+     */
     @InputImport(name="labAccountName", required=true)
     private final String labAccountName;
 
@@ -19,6 +25,9 @@ public final class GetLabAccountRegionalAvailabilityArgs extends io.pulumi.resou
         return this.labAccountName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

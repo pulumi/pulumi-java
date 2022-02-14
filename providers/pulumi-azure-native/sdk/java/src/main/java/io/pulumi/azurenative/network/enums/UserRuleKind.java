@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Whether the rule is custom or default.
+ */
     @EnumType
     public enum UserRuleKind {
+/**
+ * 
+ */
         Custom("Custom"),
+/**
+ * 
+ */
         Default("Default");
 
         private final String value;

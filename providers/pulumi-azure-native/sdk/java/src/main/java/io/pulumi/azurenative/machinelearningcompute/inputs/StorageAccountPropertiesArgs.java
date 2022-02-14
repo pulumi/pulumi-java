@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of Storage Account.
+ */
 public final class StorageAccountPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageAccountPropertiesArgs Empty = new StorageAccountPropertiesArgs();
 
+    /**
+     * ARM resource ID of the Azure Storage Account to store CLI specific files. If not provided one will be created. This cannot be changed once the cluster is created.
+     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 

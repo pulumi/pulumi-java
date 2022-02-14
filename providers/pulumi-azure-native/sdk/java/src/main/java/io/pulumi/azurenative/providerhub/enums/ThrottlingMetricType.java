@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum ThrottlingMetricType {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         NumberOfRequests("NumberOfRequests"),
+/**
+ * 
+ */
         NumberOfResources("NumberOfResources");
 
         private final String value;

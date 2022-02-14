@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The action of the command.
+ */
     @EnumType
     public enum Action {
+/**
+ * 
+ */
         Install("Install"),
+/**
+ * 
+ */
         Launch("Launch"),
+/**
+ * 
+ */
         Close("Close"),
+/**
+ * 
+ */
         Uninstall("Uninstall"),
+/**
+ * 
+ */
         Custom("Custom");
 
         private final String value;

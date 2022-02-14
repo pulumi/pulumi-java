@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.storagecache;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.storagecache.CacheArgs;
 import io.pulumi.azurenative.storagecache.outputs.CacheDirectorySettingsResponse;
 import io.pulumi.azurenative.storagecache.outputs.CacheEncryptionSettingsResponse;
 import io.pulumi.azurenative.storagecache.outputs.CacheHealthResponse;
@@ -25,111 +24,784 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A Cache instance. Follows Azure Resource Manager standards: https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/resource-api-reference.md
+API Version: 2021-03-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Caches_CreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cache = new AzureNative.StorageCache.Cache("cache", new AzureNative.StorageCache.CacheArgs
+        {
+            CacheName = "sc1",
+            CacheSizeGB = 3072,
+            DirectoryServicesSettings = new AzureNative.StorageCache.Inputs.CacheDirectorySettingsArgs
+            {
+                ActiveDirectory = new AzureNative.StorageCache.Inputs.CacheActiveDirectorySettingsArgs
+                {
+                    CacheNetBiosName = "contosoSmb",
+                    Credentials = new AzureNative.StorageCache.Inputs.CacheActiveDirectorySettingsCredentialsArgs
+                    {
+                        Password = "<password>",
+                        Username = "consotoAdmin",
+                    },
+                    DomainName = "contosoAd.contoso.local",
+                    DomainNetBiosName = "contosoAd",
+                    PrimaryDnsIpAddress = "192.0.2.10",
+                    SecondaryDnsIpAddress = "192.0.2.11",
+                },
+                UsernameDownload = new AzureNative.StorageCache.Inputs.CacheUsernameDownloadSettingsArgs
+                {
+                    Credentials = new AzureNative.StorageCache.Inputs.CacheUsernameDownloadSettingsCredentialsArgs
+                    {
+                        BindDn = "cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
+                        BindPassword = "<bindPassword>",
+                    },
+                    ExtendedGroups = true,
+                    LdapBaseDN = "dc=contosoad,dc=contoso,dc=local",
+                    LdapServer = "192.0.2.12",
+                    UsernameSource = "LDAP",
+                },
+            },
+            EncryptionSettings = new AzureNative.StorageCache.Inputs.CacheEncryptionSettingsArgs
+            {
+                KeyEncryptionKey = new AzureNative.StorageCache.Inputs.KeyVaultKeyReferenceArgs
+                {
+                    KeyUrl = "https://keyvault-cmk.vault.azure.net/keys/key2047/test",
+                    SourceVault = new AzureNative.StorageCache.Inputs.KeyVaultKeyReferenceSourceVaultArgs
+                    {
+                        Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.KeyVault/vaults/keyvault-cmk",
+                    },
+                },
+            },
+            Location = "westus",
+            ResourceGroupName = "scgroup",
+            SecuritySettings = new AzureNative.StorageCache.Inputs.CacheSecuritySettingsArgs
+            {
+                AccessPolicies = 
+                {
+                    new AzureNative.StorageCache.Inputs.NfsAccessPolicyArgs
+                    {
+                        AccessRules = 
+                        {
+                            new AzureNative.StorageCache.Inputs.NfsAccessRuleArgs
+                            {
+                                Access = "rw",
+                                RootSquash = false,
+                                Scope = "default",
+                                SubmountAccess = true,
+                                Suid = false,
+                            },
+                        },
+                        Name = "default",
+                    },
+                },
+            },
+            Sku = new AzureNative.StorageCache.Inputs.CacheSkuArgs
+            {
+                Name = "Standard_2G",
+            },
+            Subnet = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1",
+            Tags = 
+            {
+                { "Dept", "Contoso" },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	storagecache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagecache"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storagecache.NewCache(ctx, "cache", &storagecache.CacheArgs{
+			CacheName:   pulumi.String("sc1"),
+			CacheSizeGB: pulumi.Int(3072),
+			DirectoryServicesSettings: &storagecache.CacheDirectorySettingsArgs{
+				ActiveDirectory: &storagecache.CacheActiveDirectorySettingsArgs{
+					CacheNetBiosName: pulumi.String("contosoSmb"),
+					Credentials: &storagecache.CacheActiveDirectorySettingsCredentialsArgs{
+						Password: pulumi.String("<password>"),
+						Username: pulumi.String("consotoAdmin"),
+					},
+					DomainName:            pulumi.String("contosoAd.contoso.local"),
+					DomainNetBiosName:     pulumi.String("contosoAd"),
+					PrimaryDnsIpAddress:   pulumi.String("192.0.2.10"),
+					SecondaryDnsIpAddress: pulumi.String("192.0.2.11"),
+				},
+				UsernameDownload: &storagecache.CacheUsernameDownloadSettingsArgs{
+					Credentials: &storagecache.CacheUsernameDownloadSettingsCredentialsArgs{
+						BindDn:       pulumi.String("cn=ldapadmin,dc=contosoad,dc=contoso,dc=local"),
+						BindPassword: pulumi.String("<bindPassword>"),
+					},
+					ExtendedGroups: pulumi.Bool(true),
+					LdapBaseDN:     pulumi.String("dc=contosoad,dc=contoso,dc=local"),
+					LdapServer:     pulumi.String("192.0.2.12"),
+					UsernameSource: pulumi.String("LDAP"),
+				},
+			},
+			EncryptionSettings: &storagecache.CacheEncryptionSettingsArgs{
+				KeyEncryptionKey: &storagecache.KeyVaultKeyReferenceArgs{
+					KeyUrl: pulumi.String("https://keyvault-cmk.vault.azure.net/keys/key2047/test"),
+					SourceVault: &storagecache.KeyVaultKeyReferenceSourceVaultArgs{
+						Id: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.KeyVault/vaults/keyvault-cmk"),
+					},
+				},
+			},
+			Location:          pulumi.String("westus"),
+			ResourceGroupName: pulumi.String("scgroup"),
+			SecuritySettings: &storagecache.CacheSecuritySettingsArgs{
+				AccessPolicies: storagecache.NfsAccessPolicyArray{
+					&storagecache.NfsAccessPolicyArgs{
+						AccessRules: storagecache.NfsAccessRuleArray{
+							&storagecache.NfsAccessRuleArgs{
+								Access:         pulumi.String("rw"),
+								RootSquash:     pulumi.Bool(false),
+								Scope:          pulumi.String("default"),
+								SubmountAccess: pulumi.Bool(true),
+								Suid:           pulumi.Bool(false),
+							},
+						},
+						Name: pulumi.String("default"),
+					},
+				},
+			},
+			Sku: &storagecache.CacheSkuArgs{
+				Name: pulumi.String("Standard_2G"),
+			},
+			Subnet: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1"),
+			Tags: pulumi.StringMap{
+				"Dept": pulumi.String("Contoso"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const cache = new azure_native.storagecache.Cache("cache", {
+    cacheName: "sc1",
+    cacheSizeGB: 3072,
+    directoryServicesSettings: {
+        activeDirectory: {
+            cacheNetBiosName: "contosoSmb",
+            credentials: {
+                password: "<password>",
+                username: "consotoAdmin",
+            },
+            domainName: "contosoAd.contoso.local",
+            domainNetBiosName: "contosoAd",
+            primaryDnsIpAddress: "192.0.2.10",
+            secondaryDnsIpAddress: "192.0.2.11",
+        },
+        usernameDownload: {
+            credentials: {
+                bindDn: "cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
+                bindPassword: "<bindPassword>",
+            },
+            extendedGroups: true,
+            ldapBaseDN: "dc=contosoad,dc=contoso,dc=local",
+            ldapServer: "192.0.2.12",
+            usernameSource: "LDAP",
+        },
+    },
+    encryptionSettings: {
+        keyEncryptionKey: {
+            keyUrl: "https://keyvault-cmk.vault.azure.net/keys/key2047/test",
+            sourceVault: {
+                id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.KeyVault/vaults/keyvault-cmk",
+            },
+        },
+    },
+    location: "westus",
+    resourceGroupName: "scgroup",
+    securitySettings: {
+        accessPolicies: [{
+            accessRules: [{
+                access: "rw",
+                rootSquash: false,
+                scope: "default",
+                submountAccess: true,
+                suid: false,
+            }],
+            name: "default",
+        }],
+    },
+    sku: {
+        name: "Standard_2G",
+    },
+    subnet: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1",
+    tags: {
+        Dept: "Contoso",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+cache = azure_native.storagecache.Cache("cache",
+    cache_name="sc1",
+    cache_size_gb=3072,
+    directory_services_settings=azure_native.storagecache.CacheDirectorySettingsArgs(
+        active_directory=azure_native.storagecache.CacheActiveDirectorySettingsArgs(
+            cache_net_bios_name="contosoSmb",
+            credentials=azure_native.storagecache.CacheActiveDirectorySettingsCredentialsArgs(
+                password="<password>",
+                username="consotoAdmin",
+            ),
+            domain_name="contosoAd.contoso.local",
+            domain_net_bios_name="contosoAd",
+            primary_dns_ip_address="192.0.2.10",
+            secondary_dns_ip_address="192.0.2.11",
+        ),
+        username_download=azure_native.storagecache.CacheUsernameDownloadSettingsArgs(
+            credentials=azure_native.storagecache.CacheUsernameDownloadSettingsCredentialsArgs(
+                bind_dn="cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
+                bind_password="<bindPassword>",
+            ),
+            extended_groups=True,
+            ldap_base_dn="dc=contosoad,dc=contoso,dc=local",
+            ldap_server="192.0.2.12",
+            username_source="LDAP",
+        ),
+    ),
+    encryption_settings=azure_native.storagecache.CacheEncryptionSettingsArgs(
+        key_encryption_key=azure_native.storagecache.KeyVaultKeyReferenceArgs(
+            key_url="https://keyvault-cmk.vault.azure.net/keys/key2047/test",
+            source_vault=azure_native.storagecache.KeyVaultKeyReferenceSourceVaultArgs(
+                id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.KeyVault/vaults/keyvault-cmk",
+            ),
+        ),
+    ),
+    location="westus",
+    resource_group_name="scgroup",
+    security_settings=azure_native.storagecache.CacheSecuritySettingsArgs(
+        access_policies=[azure_native.storagecache.NfsAccessPolicyArgs(
+            access_rules=[azure_native.storagecache.NfsAccessRuleArgs(
+                access="rw",
+                root_squash=False,
+                scope="default",
+                submount_access=True,
+                suid=False,
+            )],
+            name="default",
+        )],
+    ),
+    sku=azure_native.storagecache.CacheSkuArgs(
+        name="Standard_2G",
+    ),
+    subnet="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1",
+    tags={
+        "Dept": "Contoso",
+    })
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Caches_CreateOrUpdate_ldap_only
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var cache = new AzureNative.StorageCache.Cache("cache", new AzureNative.StorageCache.CacheArgs
+        {
+            CacheName = "sc1",
+            CacheSizeGB = 3072,
+            DirectoryServicesSettings = new AzureNative.StorageCache.Inputs.CacheDirectorySettingsArgs
+            {
+                UsernameDownload = new AzureNative.StorageCache.Inputs.CacheUsernameDownloadSettingsArgs
+                {
+                    Credentials = new AzureNative.StorageCache.Inputs.CacheUsernameDownloadSettingsCredentialsArgs
+                    {
+                        BindDn = "cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
+                        BindPassword = "<bindPassword>",
+                    },
+                    ExtendedGroups = true,
+                    LdapBaseDN = "dc=contosoad,dc=contoso,dc=local",
+                    LdapServer = "192.0.2.12",
+                    UsernameSource = "LDAP",
+                },
+            },
+            EncryptionSettings = new AzureNative.StorageCache.Inputs.CacheEncryptionSettingsArgs
+            {
+                KeyEncryptionKey = new AzureNative.StorageCache.Inputs.KeyVaultKeyReferenceArgs
+                {
+                    KeyUrl = "https://keyvault-cmk.vault.azure.net/keys/key2048/test",
+                    SourceVault = new AzureNative.StorageCache.Inputs.KeyVaultKeyReferenceSourceVaultArgs
+                    {
+                        Id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.KeyVault/vaults/keyvault-cmk",
+                    },
+                },
+            },
+            Location = "westus",
+            ResourceGroupName = "scgroup",
+            SecuritySettings = new AzureNative.StorageCache.Inputs.CacheSecuritySettingsArgs
+            {
+                AccessPolicies = 
+                {
+                    new AzureNative.StorageCache.Inputs.NfsAccessPolicyArgs
+                    {
+                        AccessRules = 
+                        {
+                            new AzureNative.StorageCache.Inputs.NfsAccessRuleArgs
+                            {
+                                Access = "rw",
+                                RootSquash = false,
+                                Scope = "default",
+                                SubmountAccess = true,
+                                Suid = false,
+                            },
+                        },
+                        Name = "default",
+                    },
+                },
+            },
+            Sku = new AzureNative.StorageCache.Inputs.CacheSkuArgs
+            {
+                Name = "Standard_2G",
+            },
+            Subnet = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1",
+            Tags = 
+            {
+                { "Dept", "Contoso" },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	storagecache "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storagecache"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storagecache.NewCache(ctx, "cache", &storagecache.CacheArgs{
+			CacheName:   pulumi.String("sc1"),
+			CacheSizeGB: pulumi.Int(3072),
+			DirectoryServicesSettings: &storagecache.CacheDirectorySettingsArgs{
+				UsernameDownload: &storagecache.CacheUsernameDownloadSettingsArgs{
+					Credentials: &storagecache.CacheUsernameDownloadSettingsCredentialsArgs{
+						BindDn:       pulumi.String("cn=ldapadmin,dc=contosoad,dc=contoso,dc=local"),
+						BindPassword: pulumi.String("<bindPassword>"),
+					},
+					ExtendedGroups: pulumi.Bool(true),
+					LdapBaseDN:     pulumi.String("dc=contosoad,dc=contoso,dc=local"),
+					LdapServer:     pulumi.String("192.0.2.12"),
+					UsernameSource: pulumi.String("LDAP"),
+				},
+			},
+			EncryptionSettings: &storagecache.CacheEncryptionSettingsArgs{
+				KeyEncryptionKey: &storagecache.KeyVaultKeyReferenceArgs{
+					KeyUrl: pulumi.String("https://keyvault-cmk.vault.azure.net/keys/key2048/test"),
+					SourceVault: &storagecache.KeyVaultKeyReferenceSourceVaultArgs{
+						Id: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.KeyVault/vaults/keyvault-cmk"),
+					},
+				},
+			},
+			Location:          pulumi.String("westus"),
+			ResourceGroupName: pulumi.String("scgroup"),
+			SecuritySettings: &storagecache.CacheSecuritySettingsArgs{
+				AccessPolicies: storagecache.NfsAccessPolicyArray{
+					&storagecache.NfsAccessPolicyArgs{
+						AccessRules: storagecache.NfsAccessRuleArray{
+							&storagecache.NfsAccessRuleArgs{
+								Access:         pulumi.String("rw"),
+								RootSquash:     pulumi.Bool(false),
+								Scope:          pulumi.String("default"),
+								SubmountAccess: pulumi.Bool(true),
+								Suid:           pulumi.Bool(false),
+							},
+						},
+						Name: pulumi.String("default"),
+					},
+				},
+			},
+			Sku: &storagecache.CacheSkuArgs{
+				Name: pulumi.String("Standard_2G"),
+			},
+			Subnet: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1"),
+			Tags: pulumi.StringMap{
+				"Dept": pulumi.String("Contoso"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const cache = new azure_native.storagecache.Cache("cache", {
+    cacheName: "sc1",
+    cacheSizeGB: 3072,
+    directoryServicesSettings: {
+        usernameDownload: {
+            credentials: {
+                bindDn: "cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
+                bindPassword: "<bindPassword>",
+            },
+            extendedGroups: true,
+            ldapBaseDN: "dc=contosoad,dc=contoso,dc=local",
+            ldapServer: "192.0.2.12",
+            usernameSource: "LDAP",
+        },
+    },
+    encryptionSettings: {
+        keyEncryptionKey: {
+            keyUrl: "https://keyvault-cmk.vault.azure.net/keys/key2048/test",
+            sourceVault: {
+                id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.KeyVault/vaults/keyvault-cmk",
+            },
+        },
+    },
+    location: "westus",
+    resourceGroupName: "scgroup",
+    securitySettings: {
+        accessPolicies: [{
+            accessRules: [{
+                access: "rw",
+                rootSquash: false,
+                scope: "default",
+                submountAccess: true,
+                suid: false,
+            }],
+            name: "default",
+        }],
+    },
+    sku: {
+        name: "Standard_2G",
+    },
+    subnet: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1",
+    tags: {
+        Dept: "Contoso",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+cache = azure_native.storagecache.Cache("cache",
+    cache_name="sc1",
+    cache_size_gb=3072,
+    directory_services_settings=azure_native.storagecache.CacheDirectorySettingsArgs(
+        username_download=azure_native.storagecache.CacheUsernameDownloadSettingsArgs(
+            credentials=azure_native.storagecache.CacheUsernameDownloadSettingsCredentialsArgs(
+                bind_dn="cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
+                bind_password="<bindPassword>",
+            ),
+            extended_groups=True,
+            ldap_base_dn="dc=contosoad,dc=contoso,dc=local",
+            ldap_server="192.0.2.12",
+            username_source="LDAP",
+        ),
+    ),
+    encryption_settings=azure_native.storagecache.CacheEncryptionSettingsArgs(
+        key_encryption_key=azure_native.storagecache.KeyVaultKeyReferenceArgs(
+            key_url="https://keyvault-cmk.vault.azure.net/keys/key2048/test",
+            source_vault=azure_native.storagecache.KeyVaultKeyReferenceSourceVaultArgs(
+                id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.KeyVault/vaults/keyvault-cmk",
+            ),
+        ),
+    ),
+    location="westus",
+    resource_group_name="scgroup",
+    security_settings=azure_native.storagecache.CacheSecuritySettingsArgs(
+        access_policies=[azure_native.storagecache.NfsAccessPolicyArgs(
+            access_rules=[azure_native.storagecache.NfsAccessRuleArgs(
+                access="rw",
+                root_squash=False,
+                scope="default",
+                submount_access=True,
+                suid=False,
+            )],
+            name="default",
+        )],
+    ),
+    sku=azure_native.storagecache.CacheSkuArgs(
+        name="Standard_2G",
+    ),
+    subnet="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.Network/virtualNetworks/scvnet/subnets/sub1",
+    tags={
+        "Dept": "Contoso",
+    })
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:storagecache:Cache sc1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/scgroup/providers/Microsoft.StorageCache/caches/sc1 
+```
+
+ */
 @ResourceType(type="azure-native:storagecache:Cache")
 public class Cache extends io.pulumi.resources.CustomResource {
+    /**
+     * The size of this Cache, in GB.
+     */
     @OutputExport(name="cacheSizeGB", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> cacheSizeGB;
 
+    /**
+     * @return The size of this Cache, in GB.
+     */
     public Output</* @Nullable */ Integer> getCacheSizeGB() {
         return this.cacheSizeGB;
     }
+    /**
+     * Specifies Directory Services settings of the cache.
+     */
     @OutputExport(name="directoryServicesSettings", type=CacheDirectorySettingsResponse.class, parameters={})
     private Output</* @Nullable */ CacheDirectorySettingsResponse> directoryServicesSettings;
 
+    /**
+     * @return Specifies Directory Services settings of the cache.
+     */
     public Output</* @Nullable */ CacheDirectorySettingsResponse> getDirectoryServicesSettings() {
         return this.directoryServicesSettings;
     }
+    /**
+     * Specifies encryption settings of the cache.
+     */
     @OutputExport(name="encryptionSettings", type=CacheEncryptionSettingsResponse.class, parameters={})
     private Output</* @Nullable */ CacheEncryptionSettingsResponse> encryptionSettings;
 
+    /**
+     * @return Specifies encryption settings of the cache.
+     */
     public Output</* @Nullable */ CacheEncryptionSettingsResponse> getEncryptionSettings() {
         return this.encryptionSettings;
     }
+    /**
+     * Health of the Cache.
+     */
     @OutputExport(name="health", type=CacheHealthResponse.class, parameters={})
     private Output<CacheHealthResponse> health;
 
+    /**
+     * @return Health of the Cache.
+     */
     public Output<CacheHealthResponse> getHealth() {
         return this.health;
     }
+    /**
+     * The identity of the cache, if configured.
+     */
     @OutputExport(name="identity", type=CacheIdentityResponse.class, parameters={})
     private Output</* @Nullable */ CacheIdentityResponse> identity;
 
+    /**
+     * @return The identity of the cache, if configured.
+     */
     public Output</* @Nullable */ CacheIdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * Region name string.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Region name string.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Array of IP addresses that can be used by clients mounting this Cache.
+     */
     @OutputExport(name="mountAddresses", type=List.class, parameters={String.class})
     private Output<List<String>> mountAddresses;
 
+    /**
+     * @return Array of IP addresses that can be used by clients mounting this Cache.
+     */
     public Output<List<String>> getMountAddresses() {
         return this.mountAddresses;
     }
+    /**
+     * Name of Cache.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of Cache.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Specifies network settings of the cache.
+     */
     @OutputExport(name="networkSettings", type=CacheNetworkSettingsResponse.class, parameters={})
     private Output</* @Nullable */ CacheNetworkSettingsResponse> networkSettings;
 
+    /**
+     * @return Specifies network settings of the cache.
+     */
     public Output</* @Nullable */ CacheNetworkSettingsResponse> getNetworkSettings() {
         return this.networkSettings;
     }
+    /**
+     * ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
+    /**
+     * @return ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
+     */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Specifies security settings of the cache.
+     */
     @OutputExport(name="securitySettings", type=CacheSecuritySettingsResponse.class, parameters={})
     private Output</* @Nullable */ CacheSecuritySettingsResponse> securitySettings;
 
+    /**
+     * @return Specifies security settings of the cache.
+     */
     public Output</* @Nullable */ CacheSecuritySettingsResponse> getSecuritySettings() {
         return this.securitySettings;
     }
+    /**
+     * SKU for the Cache.
+     */
     @OutputExport(name="sku", type=CacheResponseSku.class, parameters={})
     private Output</* @Nullable */ CacheResponseSku> sku;
 
+    /**
+     * @return SKU for the Cache.
+     */
     public Output</* @Nullable */ CacheResponseSku> getSku() {
         return this.sku;
     }
+    /**
+     * Subnet used for the Cache.
+     */
     @OutputExport(name="subnet", type=String.class, parameters={})
     private Output</* @Nullable */ String> subnet;
 
+    /**
+     * @return Subnet used for the Cache.
+     */
     public Output</* @Nullable */ String> getSubnet() {
         return this.subnet;
     }
+    /**
+     * The system meta data relating to this resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system meta data relating to this resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Type of the Cache; Microsoft.StorageCache/Cache
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of the Cache; Microsoft.StorageCache/Cache
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Upgrade status of the Cache.
+     */
     @OutputExport(name="upgradeStatus", type=CacheUpgradeStatusResponse.class, parameters={})
     private Output</* @Nullable */ CacheUpgradeStatusResponse> upgradeStatus;
 
+    /**
+     * @return Upgrade status of the Cache.
+     */
     public Output</* @Nullable */ CacheUpgradeStatusResponse> getUpgradeStatus() {
         return this.upgradeStatus;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Cache(String name, CacheArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storagecache:Cache", name, args == null ? CacheArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -154,6 +826,14 @@ public class Cache extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Cache get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Cache(name, id, options);
     }

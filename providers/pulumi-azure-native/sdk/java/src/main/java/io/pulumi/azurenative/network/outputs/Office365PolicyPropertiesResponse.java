@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class Office365PolicyPropertiesResponse {
+/**
+ * Office 365 breakout categories.
+ */
     private final @Nullable BreakOutCategoryPoliciesResponse breakOutCategories;
 
     @OutputCustomType.Constructor({"breakOutCategories"})
@@ -18,6 +21,9 @@ public final class Office365PolicyPropertiesResponse {
         this.breakOutCategories = breakOutCategories;
     }
 
+/**
+ * Office 365 breakout categories.
+ */
     public Optional<BreakOutCategoryPoliciesResponse> getBreakOutCategories() {
         return Optional.ofNullable(this.breakOutCategories);
     }

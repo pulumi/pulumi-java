@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Windows patching is performed using the Windows Update Agent.
+ */
 public final class WindowsUpdateSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WindowsUpdateSettingsResponse Empty = new WindowsUpdateSettingsResponse();
 
+    /**
+     * Only apply updates of these windows update classifications. If empty, all updates are applied.
+     */
     @InputImport(name="classifications", required=true)
     private final List<String> classifications;
 
@@ -20,6 +26,9 @@ public final class WindowsUpdateSettingsResponse extends io.pulumi.resources.Inv
         return this.classifications;
     }
 
+    /**
+     * List of KBs to exclude from update.
+     */
     @InputImport(name="excludes", required=true)
     private final List<String> excludes;
 
@@ -27,6 +36,9 @@ public final class WindowsUpdateSettingsResponse extends io.pulumi.resources.Inv
         return this.excludes;
     }
 
+    /**
+     * An exclusive list of kbs to be updated. These are the only patches that will be updated. This field must not be used with other patch configurations.
+     */
     @InputImport(name="exclusivePatches", required=true)
     private final List<String> exclusivePatches;
 

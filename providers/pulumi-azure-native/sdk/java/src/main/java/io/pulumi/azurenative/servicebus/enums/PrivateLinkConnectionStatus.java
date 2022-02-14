@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Status of the connection.
+ */
     @EnumType
     public enum PrivateLinkConnectionStatus {
+/**
+ * 
+ */
         Pending("Pending"),
+/**
+ * 
+ */
         Approved("Approved"),
+/**
+ * 
+ */
         Rejected("Rejected"),
+/**
+ * 
+ */
         Disconnected("Disconnected");
 
         private final String value;

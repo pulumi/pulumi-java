@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTrigger {
+/**
+ * Trigger resource type.
+API Version: 2018-06-01.
+ *
+ * Trigger resource type.
+ */
     public static CompletableFuture<GetTriggerResult> invokeAsync(GetTriggerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datafactory:getTrigger", TypeShape.of(GetTriggerResult.class), args == null ? GetTriggerArgs.Empty : args, Utilities.withVersion(options));
     }

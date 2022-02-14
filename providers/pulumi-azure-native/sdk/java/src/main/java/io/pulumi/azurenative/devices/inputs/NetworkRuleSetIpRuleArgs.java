@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * IP Rule to be applied as part of Network Rule Set
+ */
 public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkRuleSetIpRuleArgs Empty = new NetworkRuleSetIpRuleArgs();
 
+    /**
+     * IP Filter Action
+     */
     @InputImport(name="action")
     private final @Nullable Input<Either<String,NetworkRuleIPAction>> action;
 
@@ -23,6 +29,9 @@ public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.Resource
         return this.action == null ? Input.empty() : this.action;
     }
 
+    /**
+     * Name of the IP filter rule.
+     */
     @InputImport(name="filterName", required=true)
     private final Input<String> filterName;
 
@@ -30,6 +39,9 @@ public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.Resource
         return this.filterName;
     }
 
+    /**
+     * A string that contains the IP address range in CIDR notation for the rule.
+     */
     @InputImport(name="ipMask", required=true)
     private final Input<String> ipMask;
 

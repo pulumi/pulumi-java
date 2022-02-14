@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * AppliedLicense holds the license data returned by adaptation module report.
+ */
 public final class AppliedLicenseResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AppliedLicenseResponse Empty = new AppliedLicenseResponse();
 
+    /**
+     * The OS license returned from the adaptation module's report.
+     */
     @InputImport(name="osLicense", required=true)
     private final String osLicense;
 
@@ -19,6 +25,9 @@ public final class AppliedLicenseResponse extends io.pulumi.resources.InvokeArgs
         return this.osLicense;
     }
 
+    /**
+     * The license type that was used in OS adaptation.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

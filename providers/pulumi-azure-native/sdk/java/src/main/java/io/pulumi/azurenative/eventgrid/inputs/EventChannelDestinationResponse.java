@@ -10,10 +10,17 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of the destination of an event channel.
+ */
 public final class EventChannelDestinationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EventChannelDestinationResponse Empty = new EventChannelDestinationResponse();
 
+    /**
+     * Azure subscription ID of the customer creating the event channel. The partner topic
+associated with the event channel will be created under this Azure subscription.
+     */
     @InputImport(name="azureSubscriptionId")
     private final @Nullable String azureSubscriptionId;
 
@@ -21,6 +28,9 @@ public final class EventChannelDestinationResponse extends io.pulumi.resources.I
         return this.azureSubscriptionId == null ? Optional.empty() : Optional.ofNullable(this.azureSubscriptionId);
     }
 
+    /**
+     * Name of the partner topic associated with the event channel.
+     */
     @InputImport(name="partnerTopicName")
     private final @Nullable String partnerTopicName;
 
@@ -28,6 +38,10 @@ public final class EventChannelDestinationResponse extends io.pulumi.resources.I
         return this.partnerTopicName == null ? Optional.empty() : Optional.ofNullable(this.partnerTopicName);
     }
 
+    /**
+     * Azure Resource Group of the customer creating the event channel. The partner topic
+associated with the event channel will be created under this resource group.
+     */
     @InputImport(name="resourceGroup")
     private final @Nullable String resourceGroup;
 

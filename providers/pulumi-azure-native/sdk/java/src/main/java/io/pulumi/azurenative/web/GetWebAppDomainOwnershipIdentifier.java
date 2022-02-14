@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppDomainOwnershipIdentifier {
+/**
+ * A domain specific resource identifier.
+API Version: 2020-12-01.
+ *
+ * A domain specific resource identifier.
+ */
     public static CompletableFuture<GetWebAppDomainOwnershipIdentifierResult> invokeAsync(GetWebAppDomainOwnershipIdentifierArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppDomainOwnershipIdentifier", TypeShape.of(GetWebAppDomainOwnershipIdentifierResult.class), args == null ? GetWebAppDomainOwnershipIdentifierArgs.Empty : args, Utilities.withVersion(options));
     }

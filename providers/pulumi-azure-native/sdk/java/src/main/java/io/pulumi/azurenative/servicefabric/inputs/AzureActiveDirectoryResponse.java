@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The settings to enable AAD authentication on the cluster.
+ */
 public final class AzureActiveDirectoryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureActiveDirectoryResponse Empty = new AzureActiveDirectoryResponse();
 
+    /**
+     * Azure active directory client application id.
+     */
     @InputImport(name="clientApplication")
     private final @Nullable String clientApplication;
 
@@ -21,6 +27,9 @@ public final class AzureActiveDirectoryResponse extends io.pulumi.resources.Invo
         return this.clientApplication == null ? Optional.empty() : Optional.ofNullable(this.clientApplication);
     }
 
+    /**
+     * Azure active directory cluster application id.
+     */
     @InputImport(name="clusterApplication")
     private final @Nullable String clusterApplication;
 
@@ -28,6 +37,9 @@ public final class AzureActiveDirectoryResponse extends io.pulumi.resources.Invo
         return this.clusterApplication == null ? Optional.empty() : Optional.ofNullable(this.clusterApplication);
     }
 
+    /**
+     * Azure active directory tenant id.
+     */
     @InputImport(name="tenantId")
     private final @Nullable String tenantId;
 

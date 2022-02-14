@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIotConnectorFhirDestination {
+/**
+ * IoT Connector FHIR destination definition.
+API Version: 2021-06-01-preview.
+ *
+ * IoT Connector FHIR destination definition.
+ */
     public static CompletableFuture<GetIotConnectorFhirDestinationResult> invokeAsync(GetIotConnectorFhirDestinationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:healthcareapis:getIotConnectorFhirDestination", TypeShape.of(GetIotConnectorFhirDestinationResult.class), args == null ? GetIotConnectorFhirDestinationArgs.Empty : args, Utilities.withVersion(options));
     }

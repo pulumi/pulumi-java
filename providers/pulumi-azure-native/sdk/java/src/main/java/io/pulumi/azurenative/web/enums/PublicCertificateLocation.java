@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Public Certificate Location
+ */
     @EnumType
     public enum PublicCertificateLocation {
+/**
+ * 
+ */
         CurrentUserMy("CurrentUserMy"),
+/**
+ * 
+ */
         LocalMachineMy("LocalMachineMy"),
+/**
+ * 
+ */
         Unknown("Unknown");
 
         private final String value;

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * App Engine HTTP queue. The task will be delivered to the App Engine application hostname specified by its AppEngineHttpQueue and AppEngineHttpRequest. The documentation for AppEngineHttpRequest explains how the task's host URL is constructed. Using AppEngineHttpQueue requires [`appengine.applications.get`](https://cloud.google.com/appengine/docs/admin-api/access-control) Google IAM permission for the project and the following scope: `https://www.googleapis.com/auth/cloud-platform`
+ */
 public final class AppEngineHttpQueueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppEngineHttpQueueArgs Empty = new AppEngineHttpQueueArgs();
 
+    /**
+     * Overrides for the task-level app_engine_routing. If set, `app_engine_routing_override` is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.
+     */
     @InputImport(name="appEngineRoutingOverride")
     private final @Nullable Input<AppEngineRoutingArgs> appEngineRoutingOverride;
 

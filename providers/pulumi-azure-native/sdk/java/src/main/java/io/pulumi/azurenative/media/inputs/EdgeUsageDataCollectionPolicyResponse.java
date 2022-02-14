@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class EdgeUsageDataCollectionPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EdgeUsageDataCollectionPolicyResponse Empty = new EdgeUsageDataCollectionPolicyResponse();
 
+    /**
+     * Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.
+     */
     @InputImport(name="dataCollectionFrequency")
     private final @Nullable String dataCollectionFrequency;
 
@@ -22,6 +28,9 @@ public final class EdgeUsageDataCollectionPolicyResponse extends io.pulumi.resou
         return this.dataCollectionFrequency == null ? Optional.empty() : Optional.ofNullable(this.dataCollectionFrequency);
     }
 
+    /**
+     * Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.
+     */
     @InputImport(name="dataReportingFrequency")
     private final @Nullable String dataReportingFrequency;
 
@@ -29,6 +38,9 @@ public final class EdgeUsageDataCollectionPolicyResponse extends io.pulumi.resou
         return this.dataReportingFrequency == null ? Optional.empty() : Optional.ofNullable(this.dataReportingFrequency);
     }
 
+    /**
+     * Details of Event Hub where the usage will be reported.
+     */
     @InputImport(name="eventHubDetails")
     private final @Nullable EdgeUsageDataEventHubResponse eventHubDetails;
 
@@ -36,6 +48,9 @@ public final class EdgeUsageDataCollectionPolicyResponse extends io.pulumi.resou
         return this.eventHubDetails == null ? Optional.empty() : Optional.ofNullable(this.eventHubDetails);
     }
 
+    /**
+     * Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.
+     */
     @InputImport(name="maxAllowedUnreportedUsageDuration")
     private final @Nullable String maxAllowedUnreportedUsageDuration;
 

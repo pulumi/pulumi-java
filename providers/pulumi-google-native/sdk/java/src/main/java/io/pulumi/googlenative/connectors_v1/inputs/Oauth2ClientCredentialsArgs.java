@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Parameters to support Oauth 2.0 Client Credentials Grant Authentication. See https://tools.ietf.org/html/rfc6749#section-1.3.4 for more details.
+ */
 public final class Oauth2ClientCredentialsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final Oauth2ClientCredentialsArgs Empty = new Oauth2ClientCredentialsArgs();
 
+    /**
+     * The client identifier.
+     */
     @InputImport(name="clientId")
     private final @Nullable Input<String> clientId;
 
@@ -22,6 +28,9 @@ public final class Oauth2ClientCredentialsArgs extends io.pulumi.resources.Resou
         return this.clientId == null ? Input.empty() : this.clientId;
     }
 
+    /**
+     * Secret version reference containing the client secret.
+     */
     @InputImport(name="clientSecret")
     private final @Nullable Input<SecretArgs> clientSecret;
 

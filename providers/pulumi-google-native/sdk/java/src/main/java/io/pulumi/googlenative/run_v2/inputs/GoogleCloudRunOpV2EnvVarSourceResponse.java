@@ -8,10 +8,16 @@ import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2SecretKeySelectorR
 import java.util.Objects;
 
 
+/**
+ * EnvVarSource represents a source for the value of an EnvVar.
+ */
 public final class GoogleCloudRunOpV2EnvVarSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRunOpV2EnvVarSourceResponse Empty = new GoogleCloudRunOpV2EnvVarSourceResponse();
 
+    /**
+     * Selects a secret and a specific version from Cloud Secret Manager.
+     */
     @InputImport(name="secretKeyRef", required=true)
     private final GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef;
 

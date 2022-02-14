@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBuildLogLink {
+/**
+ * The result of get log link operation.
+API Version: 2018-02-01-preview.
+ *
+ * The result of get log link operation.
+ */
     public static CompletableFuture<GetBuildLogLinkResult> invokeAsync(GetBuildLogLinkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getBuildLogLink", TypeShape.of(GetBuildLogLinkResult.class), args == null ? GetBuildLogLinkArgs.Empty : args, Utilities.withVersion(options));
     }

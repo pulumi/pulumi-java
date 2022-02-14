@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPerfSampleSeries {
+/**
+ * Gets a PerfSampleSeries. May return any of the following error code(s): - NOT_FOUND - The specified PerfSampleSeries does not exist
+ */
     public static CompletableFuture<GetPerfSampleSeriesResult> invokeAsync(GetPerfSampleSeriesArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:toolresults/v1beta3:getPerfSampleSeries", TypeShape.of(GetPerfSampleSeriesResult.class), args == null ? GetPerfSampleSeriesArgs.Empty : args, Utilities.withVersion(options));
     }

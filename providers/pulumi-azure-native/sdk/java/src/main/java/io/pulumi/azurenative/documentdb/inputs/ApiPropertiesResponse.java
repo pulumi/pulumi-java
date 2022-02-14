@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ApiPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiPropertiesResponse Empty = new ApiPropertiesResponse();
 
+    /**
+     * Describes the ServerVersion of an a MongoDB account.
+     */
     @InputImport(name="serverVersion")
     private final @Nullable String serverVersion;
 

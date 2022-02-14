@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebAppVnetConnectionSlot {
+/**
+ * Virtual Network information contract.
+API Version: 2020-12-01.
+ *
+ * Virtual Network information contract.
+ */
     public static CompletableFuture<GetWebAppVnetConnectionSlotResult> invokeAsync(GetWebAppVnetConnectionSlotArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getWebAppVnetConnectionSlot", TypeShape.of(GetWebAppVnetConnectionSlotResult.class), args == null ? GetWebAppVnetConnectionSlotArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -19,10 +19,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Common Vulnerability Scoring System. For details, see https://www.first.org/cvss/specification-document This is a message we will try to use for storing multiple versions of CVSS. The intention is that as new versions of CVSS scores get added, we will be able to modify this message rather than adding new protos for each new version of the score.
+ */
 public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CVSSArgs Empty = new CVSSArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="attackComplexity")
     private final @Nullable Input<CVSSAttackComplexity> attackComplexity;
 
@@ -30,6 +36,9 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
         return this.attackComplexity == null ? Input.empty() : this.attackComplexity;
     }
 
+    /**
+     * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
+     */
     @InputImport(name="attackVector")
     private final @Nullable Input<CVSSAttackVector> attackVector;
 
@@ -37,6 +46,9 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
         return this.attackVector == null ? Input.empty() : this.attackVector;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="authentication")
     private final @Nullable Input<CVSSAuthentication> authentication;
 
@@ -44,6 +56,9 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
         return this.authentication == null ? Input.empty() : this.authentication;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="availabilityImpact")
     private final @Nullable Input<CVSSAvailabilityImpact> availabilityImpact;
 
@@ -51,6 +66,9 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
         return this.availabilityImpact == null ? Input.empty() : this.availabilityImpact;
     }
 
+    /**
+     * The base score is a function of the base metric scores.
+     */
     @InputImport(name="baseScore")
     private final @Nullable Input<Double> baseScore;
 
@@ -58,6 +76,9 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
         return this.baseScore == null ? Input.empty() : this.baseScore;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="confidentialityImpact")
     private final @Nullable Input<CVSSConfidentialityImpact> confidentialityImpact;
 
@@ -65,6 +86,9 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
         return this.confidentialityImpact == null ? Input.empty() : this.confidentialityImpact;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="exploitabilityScore")
     private final @Nullable Input<Double> exploitabilityScore;
 
@@ -72,6 +96,9 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
         return this.exploitabilityScore == null ? Input.empty() : this.exploitabilityScore;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="impactScore")
     private final @Nullable Input<Double> impactScore;
 
@@ -79,6 +106,9 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
         return this.impactScore == null ? Input.empty() : this.impactScore;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="integrityImpact")
     private final @Nullable Input<CVSSIntegrityImpact> integrityImpact;
 
@@ -86,6 +116,9 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
         return this.integrityImpact == null ? Input.empty() : this.integrityImpact;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="privilegesRequired")
     private final @Nullable Input<CVSSPrivilegesRequired> privilegesRequired;
 
@@ -93,6 +126,9 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
         return this.privilegesRequired == null ? Input.empty() : this.privilegesRequired;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="scope")
     private final @Nullable Input<CVSSScope> scope;
 
@@ -100,6 +136,9 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
         return this.scope == null ? Input.empty() : this.scope;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="userInteraction")
     private final @Nullable Input<CVSSUserInteraction> userInteraction;
 

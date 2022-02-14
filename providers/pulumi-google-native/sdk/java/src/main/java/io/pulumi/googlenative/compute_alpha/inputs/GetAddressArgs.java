@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetAddressArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAddressArgs Empty = new GetAddressArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="address", required=true)
     private final String address;
 
@@ -21,6 +27,9 @@ public final class GetAddressArgs extends io.pulumi.resources.InvokeArgs {
         return this.address;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -28,6 +37,9 @@ public final class GetAddressArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="region", required=true)
     private final String region;
 

@@ -11,10 +11,17 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Email channel definition
+ */
 public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EmailChannelArgs Empty = new EmailChannelArgs();
 
+    /**
+     * The channel name
+Expected value is 'EmailChannel'.
+     */
     @InputImport(name="channelName", required=true)
     private final Input<String> channelName;
 
@@ -22,6 +29,9 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.channelName;
     }
 
+    /**
+     * Entity Tag of the resource
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -29,6 +39,9 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * Specifies the location of the resource.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -36,6 +49,9 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The set of properties specific to email channel resource
+     */
     @InputImport(name="properties")
     private final @Nullable Input<EmailChannelPropertiesArgs> properties;
 

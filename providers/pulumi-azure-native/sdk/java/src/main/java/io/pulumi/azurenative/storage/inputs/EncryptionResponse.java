@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The encryption settings on the storage account.
+ */
 public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EncryptionResponse Empty = new EncryptionResponse();
 
+    /**
+     * The identity to be used with service-side encryption at rest.
+     */
     @InputImport(name="encryptionIdentity")
     private final @Nullable EncryptionIdentityResponse encryptionIdentity;
 
@@ -25,6 +31,9 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
         return this.encryptionIdentity == null ? Optional.empty() : Optional.ofNullable(this.encryptionIdentity);
     }
 
+    /**
+     * The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault
+     */
     @InputImport(name="keySource", required=true)
     private final String keySource;
 
@@ -32,6 +41,9 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
         return this.keySource;
     }
 
+    /**
+     * Properties provided by key vault.
+     */
     @InputImport(name="keyVaultProperties")
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
@@ -39,6 +51,9 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
         return this.keyVaultProperties == null ? Optional.empty() : Optional.ofNullable(this.keyVaultProperties);
     }
 
+    /**
+     * A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
+     */
     @InputImport(name="requireInfrastructureEncryption")
     private final @Nullable Boolean requireInfrastructureEncryption;
 
@@ -46,6 +61,9 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
         return this.requireInfrastructureEncryption == null ? Optional.empty() : Optional.ofNullable(this.requireInfrastructureEncryption);
     }
 
+    /**
+     * List of services which support encryption.
+     */
     @InputImport(name="services")
     private final @Nullable EncryptionServicesResponse services;
 

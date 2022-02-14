@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Contains metadata about the user who performed an action, such as creating a release or finalizing a version.
+ */
 public final class ActingUserResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ActingUserResponse Empty = new ActingUserResponse();
 
+    /**
+     * The email address of the user when the user performed the action.
+     */
     @InputImport(name="email", required=true)
     private final String email;
 
@@ -19,6 +25,9 @@ public final class ActingUserResponse extends io.pulumi.resources.InvokeArgs {
         return this.email;
     }
 
+    /**
+     * A profile image URL for the user. May not be present if the user has changed their email address or deleted their account.
+     */
     @InputImport(name="imageUrl", required=true)
     private final String imageUrl;
 

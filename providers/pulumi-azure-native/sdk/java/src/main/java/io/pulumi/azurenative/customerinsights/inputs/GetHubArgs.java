@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetHubArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetHubArgs Empty = new GetHubArgs();
 
+    /**
+     * The name of the hub.
+     */
     @InputImport(name="hubName", required=true)
     private final String hubName;
 
@@ -19,6 +25,9 @@ public final class GetHubArgs extends io.pulumi.resources.InvokeArgs {
         return this.hubName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

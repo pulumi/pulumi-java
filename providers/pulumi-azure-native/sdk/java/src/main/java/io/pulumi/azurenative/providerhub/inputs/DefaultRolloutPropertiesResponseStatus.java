@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DefaultRolloutPropertiesResponseStatus extends io.pulumi.resources.InvokeArgs {
 
     public static final DefaultRolloutPropertiesResponseStatus Empty = new DefaultRolloutPropertiesResponseStatus();
 
+    /**
+     * 
+     */
     @InputImport(name="completedRegions")
     private final @Nullable List<String> completedRegions;
 
@@ -24,6 +30,9 @@ public final class DefaultRolloutPropertiesResponseStatus extends io.pulumi.reso
         return this.completedRegions == null ? List.of() : this.completedRegions;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="failedOrSkippedRegions")
     private final @Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions;
 
@@ -31,6 +40,9 @@ public final class DefaultRolloutPropertiesResponseStatus extends io.pulumi.reso
         return this.failedOrSkippedRegions == null ? Map.of() : this.failedOrSkippedRegions;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="nextTrafficRegion")
     private final @Nullable String nextTrafficRegion;
 
@@ -38,6 +50,9 @@ public final class DefaultRolloutPropertiesResponseStatus extends io.pulumi.reso
         return this.nextTrafficRegion == null ? Optional.empty() : Optional.ofNullable(this.nextTrafficRegion);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="nextTrafficRegionScheduledTime")
     private final @Nullable String nextTrafficRegionScheduledTime;
 
@@ -45,6 +60,9 @@ public final class DefaultRolloutPropertiesResponseStatus extends io.pulumi.reso
         return this.nextTrafficRegionScheduledTime == null ? Optional.empty() : Optional.ofNullable(this.nextTrafficRegionScheduledTime);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="subscriptionReregistrationResult")
     private final @Nullable String subscriptionReregistrationResult;
 

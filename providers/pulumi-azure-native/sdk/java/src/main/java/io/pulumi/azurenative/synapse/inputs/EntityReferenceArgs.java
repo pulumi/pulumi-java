@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The entity reference.
+ */
 public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EntityReferenceArgs Empty = new EntityReferenceArgs();
 
+    /**
+     * The name of this referenced entity.
+     */
     @InputImport(name="referenceName")
     private final @Nullable Input<String> referenceName;
 
@@ -23,6 +29,9 @@ public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs 
         return this.referenceName == null ? Input.empty() : this.referenceName;
     }
 
+    /**
+     * The type of this referenced entity.
+     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,IntegrationRuntimeEntityReferenceType>> type;
 

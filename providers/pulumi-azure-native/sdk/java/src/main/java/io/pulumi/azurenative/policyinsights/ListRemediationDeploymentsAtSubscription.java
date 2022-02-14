@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListRemediationDeploymentsAtSubscription {
+/**
+ * List of deployments for a remediation.
+API Version: 2019-07-01.
+ *
+ * List of deployments for a remediation.
+ */
     public static CompletableFuture<ListRemediationDeploymentsAtSubscriptionResult> invokeAsync(ListRemediationDeploymentsAtSubscriptionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:policyinsights:listRemediationDeploymentsAtSubscription", TypeShape.of(ListRemediationDeploymentsAtSubscriptionResult.class), args == null ? ListRemediationDeploymentsAtSubscriptionArgs.Empty : args, Utilities.withVersion(options));
     }

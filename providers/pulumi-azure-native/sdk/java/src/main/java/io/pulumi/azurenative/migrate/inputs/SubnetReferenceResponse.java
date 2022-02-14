@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines reference to subnet.
+ */
 public final class SubnetReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubnetReferenceResponse Empty = new SubnetReferenceResponse();
 
+    /**
+     * Gets the name of the proxy resource on the target side.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +27,9 @@ public final class SubnetReferenceResponse extends io.pulumi.resources.InvokeArg
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Gets the ARM resource ID of the tracked resource being referenced.
+     */
     @InputImport(name="sourceArmResourceId", required=true)
     private final String sourceArmResourceId;
 

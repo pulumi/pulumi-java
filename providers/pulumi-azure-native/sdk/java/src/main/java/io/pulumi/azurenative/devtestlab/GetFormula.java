@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFormula {
+/**
+ * A formula for creating a VM, specifying an image base and other parameters
+API Version: 2018-09-15.
+ *
+ * A formula for creating a VM, specifying an image base and other parameters
+ */
     public static CompletableFuture<GetFormulaResult> invokeAsync(GetFormulaArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getFormula", TypeShape.of(GetFormulaResult.class), args == null ? GetFormulaArgs.Empty : args, Utilities.withVersion(options));
     }

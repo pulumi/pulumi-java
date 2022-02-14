@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The storage account details.
+ */
 public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StorageAccountResponse Empty = new StorageAccountResponse();
 
+    /**
+     * The ID of the storage account resource. Media Services relies on tables and queues as well as blobs, so the primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage). Blob only storage accounts can be added as secondary storage accounts.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -21,6 +27,9 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The type of the storage account.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

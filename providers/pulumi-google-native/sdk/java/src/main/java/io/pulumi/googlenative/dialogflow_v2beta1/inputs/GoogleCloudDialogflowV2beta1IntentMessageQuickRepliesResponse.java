@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The quick replies response message.
+ */
 public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse Empty = new GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse();
 
+    /**
+     * Optional. The collection of quick replies.
+     */
     @InputImport(name="quickReplies", required=true)
     private final List<String> quickReplies;
 
@@ -20,6 +26,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse
         return this.quickReplies;
     }
 
+    /**
+     * Optional. The title of the collection of quick replies.
+     */
     @InputImport(name="title", required=true)
     private final String title;
 

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A DataFactory compute.
+ */
 public final class DatabricksArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabricksArgs Empty = new DatabricksArgs();
 
+    /**
+     * Location for the underlying compute
+     */
     @InputImport(name="computeLocation")
     private final @Nullable Input<String> computeLocation;
 
@@ -22,6 +28,10 @@ public final class DatabricksArgs extends io.pulumi.resources.ResourceArgs {
         return this.computeLocation == null ? Input.empty() : this.computeLocation;
     }
 
+    /**
+     * The type of compute
+Expected value is 'Databricks'.
+     */
     @InputImport(name="computeType", required=true)
     private final Input<String> computeType;
 
@@ -29,6 +39,9 @@ public final class DatabricksArgs extends io.pulumi.resources.ResourceArgs {
         return this.computeType;
     }
 
+    /**
+     * The description of the Machine Learning compute.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -36,6 +49,9 @@ public final class DatabricksArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<DatabricksPropertiesArgs> properties;
 
@@ -43,6 +59,9 @@ public final class DatabricksArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * ARM resource id of the underlying compute
+     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 

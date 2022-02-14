@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the parameters for Cookies match conditions
+ */
 public final class CookiesMatchConditionParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CookiesMatchConditionParametersResponse Empty = new CookiesMatchConditionParametersResponse();
 
+    /**
+     * The match value for the condition of the delivery rule
+     */
     @InputImport(name="matchValues")
     private final @Nullable List<String> matchValues;
 
@@ -23,6 +29,9 @@ public final class CookiesMatchConditionParametersResponse extends io.pulumi.res
         return this.matchValues == null ? List.of() : this.matchValues;
     }
 
+    /**
+     * Describes if this is negate condition or not
+     */
     @InputImport(name="negateCondition")
     private final @Nullable Boolean negateCondition;
 
@@ -30,6 +39,9 @@ public final class CookiesMatchConditionParametersResponse extends io.pulumi.res
         return this.negateCondition == null ? Optional.empty() : Optional.ofNullable(this.negateCondition);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -37,6 +49,9 @@ public final class CookiesMatchConditionParametersResponse extends io.pulumi.res
         return this.odataType;
     }
 
+    /**
+     * Describes operator to be matched
+     */
     @InputImport(name="operator", required=true)
     private final String operator;
 
@@ -44,6 +59,9 @@ public final class CookiesMatchConditionParametersResponse extends io.pulumi.res
         return this.operator;
     }
 
+    /**
+     * Name of Cookies to be matched
+     */
     @InputImport(name="selector")
     private final @Nullable String selector;
 
@@ -51,6 +69,9 @@ public final class CookiesMatchConditionParametersResponse extends io.pulumi.res
         return this.selector == null ? Optional.empty() : Optional.ofNullable(this.selector);
     }
 
+    /**
+     * List of transforms
+     */
     @InputImport(name="transforms")
     private final @Nullable List<String> transforms;
 

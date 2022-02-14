@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWebhook {
+/**
+ * Retrieves the specified webhook.
+ */
     public static CompletableFuture<GetWebhookResult> invokeAsync(GetWebhookArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getWebhook", TypeShape.of(GetWebhookResult.class), args == null ? GetWebhookArgs.Empty : args, Utilities.withVersion(options));
     }

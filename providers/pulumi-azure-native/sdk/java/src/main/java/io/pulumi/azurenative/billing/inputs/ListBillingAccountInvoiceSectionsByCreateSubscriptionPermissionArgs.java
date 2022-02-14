@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs Empty = new ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionArgs();
 
+    /**
+     * The ID that uniquely identifies a billing account.
+     */
     @InputImport(name="billingAccountName", required=true)
     private final String billingAccountName;
 

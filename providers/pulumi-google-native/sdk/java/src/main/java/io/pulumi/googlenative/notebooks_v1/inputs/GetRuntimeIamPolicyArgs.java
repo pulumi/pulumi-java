@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetRuntimeIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRuntimeIamPolicyArgs Empty = new GetRuntimeIamPolicyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -21,6 +27,9 @@ public final class GetRuntimeIamPolicyArgs extends io.pulumi.resources.InvokeArg
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="optionsRequestedPolicyVersion")
     private final @Nullable String optionsRequestedPolicyVersion;
 
@@ -28,6 +37,9 @@ public final class GetRuntimeIamPolicyArgs extends io.pulumi.resources.InvokeArg
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -35,6 +47,9 @@ public final class GetRuntimeIamPolicyArgs extends io.pulumi.resources.InvokeArg
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="runtimeId", required=true)
     private final String runtimeId;
 

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.relay;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.relay.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.relay.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.relay.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.core.Alias;
@@ -17,51 +16,220 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Private endpoint connection resource.
+API Version: 2018-01-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### RelayPutPrivateEndpointConnection
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpointConnection = new AzureNative.Relay.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.Relay.PrivateEndpointConnectionArgs
+        {
+            Location = "South Central US",
+            NamespaceName = "example-RelayNamespace-5849",
+            PrivateEndpoint = new AzureNative.Relay.Inputs.PrivateEndpointArgs
+            {
+                Id = "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1",
+            },
+            PrivateEndpointConnectionName = "{privateEndpointConnection name}",
+            PrivateLinkServiceConnectionState = new AzureNative.Relay.Inputs.PrivateLinkServiceConnectionStateArgs
+            {
+                Description = "You may pass",
+                Status = "Approved",
+            },
+            ResourceGroupName = "resourcegroup",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	relay "github.com/pulumi/pulumi-azure-native/sdk/go/azure/relay"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := relay.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &relay.PrivateEndpointConnectionArgs{
+			Location:      pulumi.String("South Central US"),
+			NamespaceName: pulumi.String("example-RelayNamespace-5849"),
+			PrivateEndpoint: &relay.PrivateEndpointArgs{
+				Id: pulumi.String("/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1"),
+			},
+			PrivateEndpointConnectionName: pulumi.String("{privateEndpointConnection name}"),
+			PrivateLinkServiceConnectionState: &relay.PrivateLinkServiceConnectionStateArgs{
+				Description: pulumi.String("You may pass"),
+				Status:      pulumi.String("Approved"),
+			},
+			ResourceGroupName: pulumi.String("resourcegroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const privateEndpointConnection = new azure_native.relay.PrivateEndpointConnection("privateEndpointConnection", {
+    location: "South Central US",
+    namespaceName: "example-RelayNamespace-5849",
+    privateEndpoint: {
+        id: "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1",
+    },
+    privateEndpointConnectionName: "{privateEndpointConnection name}",
+    privateLinkServiceConnectionState: {
+        description: "You may pass",
+        status: "Approved",
+    },
+    resourceGroupName: "resourcegroup",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+private_endpoint_connection = azure_native.relay.PrivateEndpointConnection("privateEndpointConnection",
+    location="South Central US",
+    namespace_name="example-RelayNamespace-5849",
+    private_endpoint=azure_native.relay.PrivateEndpointArgs(
+        id="/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/resourcegroup/providers/Microsoft.Network/privateEndpoints/ali-relay-pve-1",
+    ),
+    private_endpoint_connection_name="{privateEndpointConnection name}",
+    private_link_service_connection_state=azure_native.relay.PrivateLinkServiceConnectionStateArgs(
+        description="You may pass",
+        status="Approved",
+    ),
+    resource_group_name="resourcegroup")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:relay:PrivateEndpointConnection {privateEndpointConnection name} /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/alitest/providers/Microsoft.Relay/namespaces/relay-private-endpoint-test/privateEndpointConnections/{privateEndpointConnection name} 
+```
+
+ */
 @ResourceType(type="azure-native:relay:PrivateEndpointConnection")
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
+    /**
+     * Resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location.
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Properties of the private endpoint object.
+     */
     @OutputExport(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint;
 
+    /**
+     * @return Properties of the private endpoint object.
+     */
     public Output</* @Nullable */ PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint;
     }
+    /**
+     * Approval state of the private link connection.
+     */
     @OutputExport(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
+    /**
+     * @return Approval state of the private link connection.
+     */
     public Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
+    /**
+     * Provisioning state of the private endpoint connection.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state of the private endpoint connection.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public PrivateEndpointConnection(String name, PrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:relay:PrivateEndpointConnection", name, args == null ? PrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -80,6 +248,14 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static PrivateEndpointConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateEndpointConnection(name, id, options);
     }

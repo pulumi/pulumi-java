@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourceIdentityResponse {
+/**
+ * The user assigned managed identity's resource identifier to use when accessing a resource.
+ */
     private final String userAssignedIdentity;
 
     @OutputCustomType.Constructor({"userAssignedIdentity"})
@@ -16,6 +19,9 @@ public final class ResourceIdentityResponse {
         this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
     }
 
+/**
+ * The user assigned managed identity's resource identifier to use when accessing a resource.
+ */
     public String getUserAssignedIdentity() {
         return this.userAssignedIdentity;
     }

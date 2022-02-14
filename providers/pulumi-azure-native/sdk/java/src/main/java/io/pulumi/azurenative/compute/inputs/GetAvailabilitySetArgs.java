@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetAvailabilitySetArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAvailabilitySetArgs Empty = new GetAvailabilitySetArgs();
 
+    /**
+     * The name of the availability set.
+     */
     @InputImport(name="availabilitySetName", required=true)
     private final String availabilitySetName;
 
@@ -19,6 +25,9 @@ public final class GetAvailabilitySetArgs extends io.pulumi.resources.InvokeArgs
         return this.availabilitySetName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

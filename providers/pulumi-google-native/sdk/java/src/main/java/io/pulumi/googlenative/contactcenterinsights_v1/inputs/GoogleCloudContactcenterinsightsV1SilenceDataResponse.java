@@ -6,6 +6,9 @@ package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 import java.util.Objects;
 
 
+/**
+ * The data for a silence annotation.
+ */
 public final class GoogleCloudContactcenterinsightsV1SilenceDataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudContactcenterinsightsV1SilenceDataResponse Empty = new GoogleCloudContactcenterinsightsV1SilenceDataResponse();

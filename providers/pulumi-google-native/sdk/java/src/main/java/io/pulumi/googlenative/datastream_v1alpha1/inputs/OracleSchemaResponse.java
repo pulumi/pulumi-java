@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Oracle schema.
+ */
 public final class OracleSchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OracleSchemaResponse Empty = new OracleSchemaResponse();
 
+    /**
+     * Tables in the schema.
+     */
     @InputImport(name="oracleTables", required=true)
     private final List<OracleTableResponse> oracleTables;
 
@@ -21,6 +27,9 @@ public final class OracleSchemaResponse extends io.pulumi.resources.InvokeArgs {
         return this.oracleTables;
     }
 
+    /**
+     * Schema name.
+     */
     @InputImport(name="schemaName", required=true)
     private final String schemaName;
 

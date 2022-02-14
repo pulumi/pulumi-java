@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuntimeArgs Empty = new RuntimeArgs();
 
+    /**
+     * The config settings for accessing runtime.
+     */
     @InputImport(name="accessConfig")
     private final @Nullable Input<RuntimeAccessConfigArgs> accessConfig;
 
@@ -24,6 +30,9 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessConfig == null ? Input.empty() : this.accessConfig;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -31,6 +40,9 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -38,6 +50,9 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="runtimeId", required=true)
     private final Input<String> runtimeId;
 
@@ -45,6 +60,9 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
         return this.runtimeId;
     }
 
+    /**
+     * The config settings for software inside the runtime.
+     */
     @InputImport(name="softwareConfig")
     private final @Nullable Input<RuntimeSoftwareConfigArgs> softwareConfig;
 
@@ -52,6 +70,9 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
         return this.softwareConfig == null ? Input.empty() : this.softwareConfig;
     }
 
+    /**
+     * Use a Compute Engine VM image to start the managed notebook instance.
+     */
     @InputImport(name="virtualMachine")
     private final @Nullable Input<VirtualMachineArgs> virtualMachine;
 

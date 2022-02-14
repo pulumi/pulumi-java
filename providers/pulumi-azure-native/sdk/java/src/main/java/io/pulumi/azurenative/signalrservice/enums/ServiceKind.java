@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"
+ */
     @EnumType
     public enum ServiceKind {
+/**
+ * 
+ */
         SignalR("SignalR"),
+/**
+ * 
+ */
         RawWebSockets("RawWebSockets");
 
         private final String value;

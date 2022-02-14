@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Information about the machine learning workspace containing the experiment that is source for the web service.
+ */
 public final class MachineLearningWorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MachineLearningWorkspaceArgs Empty = new MachineLearningWorkspaceArgs();
 
+    /**
+     * Specifies the workspace ID of the machine learning workspace associated with the web service
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 

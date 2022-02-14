@@ -12,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SkuCostResponse {
+/**
+ * 
+ */
     private final @Nullable String extendedUnit;
+/**
+ * 
+ */
     private final String meterId;
+/**
+ * 
+ */
     private final @Nullable Integer quantity;
 
     @OutputCustomType.Constructor({"extendedUnit","meterId","quantity"})
@@ -26,12 +35,21 @@ public final class SkuCostResponse {
         this.quantity = quantity;
     }
 
+/**
+ * 
+ */
     public Optional<String> getExtendedUnit() {
         return Optional.ofNullable(this.extendedUnit);
     }
+/**
+ * 
+ */
     public String getMeterId() {
         return this.meterId;
     }
+/**
+ * 
+ */
     public Optional<Integer> getQuantity() {
         return Optional.ofNullable(this.quantity);
     }

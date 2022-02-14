@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNoteIamPolicy {
+/**
+ * Gets the access control policy for a note or an occurrence resource. Requires `containeranalysis.notes.setIamPolicy` or `containeranalysis.occurrences.setIamPolicy` permission if the resource is a note or occurrence, respectively. The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for occurrences.
+ */
     public static CompletableFuture<GetNoteIamPolicyResult> invokeAsync(GetNoteIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:containeranalysis/v1beta1:getNoteIamPolicy", TypeShape.of(GetNoteIamPolicyResult.class), args == null ? GetNoteIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

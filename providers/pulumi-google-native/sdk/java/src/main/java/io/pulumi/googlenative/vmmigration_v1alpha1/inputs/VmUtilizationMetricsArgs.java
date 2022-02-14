@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Utilization metrics values for a single VM.
+ */
 public final class VmUtilizationMetricsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VmUtilizationMetricsArgs Empty = new VmUtilizationMetricsArgs();
 
+    /**
+     * Average CPU usage, percent.
+     */
     @InputImport(name="cpuAverage")
     private final @Nullable Input<Integer> cpuAverage;
 
@@ -22,6 +28,9 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.cpuAverage == null ? Input.empty() : this.cpuAverage;
     }
 
+    /**
+     * Average CPU usage, percent.
+     */
     @InputImport(name="cpuAveragePercent")
     private final @Nullable Input<Integer> cpuAveragePercent;
 
@@ -29,6 +38,9 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.cpuAveragePercent == null ? Input.empty() : this.cpuAveragePercent;
     }
 
+    /**
+     * Max CPU usage, percent.
+     */
     @InputImport(name="cpuMax")
     private final @Nullable Input<Integer> cpuMax;
 
@@ -36,6 +48,9 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.cpuMax == null ? Input.empty() : this.cpuMax;
     }
 
+    /**
+     * Max CPU usage, percent.
+     */
     @InputImport(name="cpuMaxPercent")
     private final @Nullable Input<Integer> cpuMaxPercent;
 
@@ -43,6 +58,9 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.cpuMaxPercent == null ? Input.empty() : this.cpuMaxPercent;
     }
 
+    /**
+     * Average disk IO rate, in kilobytes per second.
+     */
     @InputImport(name="diskIoRateAverage")
     private final @Nullable Input<String> diskIoRateAverage;
 
@@ -50,6 +68,9 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.diskIoRateAverage == null ? Input.empty() : this.diskIoRateAverage;
     }
 
+    /**
+     * Average disk IO rate, in kilobytes per second.
+     */
     @InputImport(name="diskIoRateAverageKbps")
     private final @Nullable Input<String> diskIoRateAverageKbps;
 
@@ -57,6 +78,9 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.diskIoRateAverageKbps == null ? Input.empty() : this.diskIoRateAverageKbps;
     }
 
+    /**
+     * Max disk IO rate, in kilobytes per second.
+     */
     @InputImport(name="diskIoRateMax")
     private final @Nullable Input<String> diskIoRateMax;
 
@@ -64,6 +88,9 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.diskIoRateMax == null ? Input.empty() : this.diskIoRateMax;
     }
 
+    /**
+     * Max disk IO rate, in kilobytes per second.
+     */
     @InputImport(name="diskIoRateMaxKbps")
     private final @Nullable Input<String> diskIoRateMaxKbps;
 
@@ -71,6 +98,9 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.diskIoRateMaxKbps == null ? Input.empty() : this.diskIoRateMaxKbps;
     }
 
+    /**
+     * Average memory usage, percent.
+     */
     @InputImport(name="memoryAverage")
     private final @Nullable Input<Integer> memoryAverage;
 
@@ -78,6 +108,9 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.memoryAverage == null ? Input.empty() : this.memoryAverage;
     }
 
+    /**
+     * Average memory usage, percent.
+     */
     @InputImport(name="memoryAveragePercent")
     private final @Nullable Input<Integer> memoryAveragePercent;
 
@@ -85,6 +118,9 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.memoryAveragePercent == null ? Input.empty() : this.memoryAveragePercent;
     }
 
+    /**
+     * Max memory usage, percent.
+     */
     @InputImport(name="memoryMax")
     private final @Nullable Input<Integer> memoryMax;
 
@@ -92,6 +128,9 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.memoryMax == null ? Input.empty() : this.memoryMax;
     }
 
+    /**
+     * Max memory usage, percent.
+     */
     @InputImport(name="memoryMaxPercent")
     private final @Nullable Input<Integer> memoryMaxPercent;
 
@@ -99,6 +138,9 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.memoryMaxPercent == null ? Input.empty() : this.memoryMaxPercent;
     }
 
+    /**
+     * Average network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
+     */
     @InputImport(name="networkThroughputAverage")
     private final @Nullable Input<String> networkThroughputAverage;
 
@@ -106,6 +148,9 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.networkThroughputAverage == null ? Input.empty() : this.networkThroughputAverage;
     }
 
+    /**
+     * Average network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
+     */
     @InputImport(name="networkThroughputAverageKbps")
     private final @Nullable Input<String> networkThroughputAverageKbps;
 
@@ -113,6 +158,9 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.networkThroughputAverageKbps == null ? Input.empty() : this.networkThroughputAverageKbps;
     }
 
+    /**
+     * Max network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
+     */
     @InputImport(name="networkThroughputMax")
     private final @Nullable Input<String> networkThroughputMax;
 
@@ -120,6 +168,9 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
         return this.networkThroughputMax == null ? Input.empty() : this.networkThroughputMax;
     }
 
+    /**
+     * Max network throughput (combined transmit-rates and receive-rates), in kilobytes per second.
+     */
     @InputImport(name="networkThroughputMaxKbps")
     private final @Nullable Input<String> networkThroughputMaxKbps;
 

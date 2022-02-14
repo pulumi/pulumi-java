@@ -3,16 +3,21 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.azurenative.migrate.inputs.MoveCollectionPropertiesResponseErrors;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines the move collection properties.
+ */
 public final class MoveCollectionPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MoveCollectionPropertiesResponse Empty = new MoveCollectionPropertiesResponse();
 
+    /**
+     * Defines the move collection errors.
+     */
     @InputImport(name="errors", required=true)
     private final MoveCollectionPropertiesResponseErrors errors;
 
@@ -20,6 +25,9 @@ public final class MoveCollectionPropertiesResponse extends io.pulumi.resources.
         return this.errors;
     }
 
+    /**
+     * Defines the provisioning states.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -27,6 +35,9 @@ public final class MoveCollectionPropertiesResponse extends io.pulumi.resources.
         return this.provisioningState;
     }
 
+    /**
+     * Gets or sets the source region.
+     */
     @InputImport(name="sourceRegion", required=true)
     private final String sourceRegion;
 
@@ -34,6 +45,9 @@ public final class MoveCollectionPropertiesResponse extends io.pulumi.resources.
         return this.sourceRegion;
     }
 
+    /**
+     * Gets or sets the target region.
+     */
     @InputImport(name="targetRegion", required=true)
     private final String targetRegion;
 

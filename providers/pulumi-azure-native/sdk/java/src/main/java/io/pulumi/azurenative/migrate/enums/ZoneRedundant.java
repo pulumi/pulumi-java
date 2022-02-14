@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Defines the zone redundant resource setting.
+ */
     @EnumType
     public enum ZoneRedundant {
+/**
+ * 
+ */
         Enable("Enable"),
+/**
+ * 
+ */
         Disable("Disable");
 
         private final String value;

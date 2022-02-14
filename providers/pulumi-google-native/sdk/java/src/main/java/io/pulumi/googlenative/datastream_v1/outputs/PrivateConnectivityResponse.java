@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class PrivateConnectivityResponse {
+/**
+ * A reference to a private connection resource. Format: `projects/{project}/locations/{location}/privateConnections/{name}`
+ */
     private final String privateConnection;
 
     @OutputCustomType.Constructor({"privateConnection"})
@@ -16,6 +19,9 @@ public final class PrivateConnectivityResponse {
         this.privateConnection = Objects.requireNonNull(privateConnection);
     }
 
+/**
+ * A reference to a private connection resource. Format: `projects/{project}/locations/{location}/privateConnections/{name}`
+ */
     public String getPrivateConnection() {
         return this.privateConnection;
     }

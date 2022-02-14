@@ -17,10 +17,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Custom API properties
+ */
 public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomApiPropertiesDefinitionResponse Empty = new CustomApiPropertiesDefinitionResponse();
 
+    /**
+     * API Definitions
+     */
     @InputImport(name="apiDefinitions")
     private final @Nullable ApiResourceDefinitionsResponse apiDefinitions;
 
@@ -28,6 +34,9 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
         return this.apiDefinitions == null ? Optional.empty() : Optional.ofNullable(this.apiDefinitions);
     }
 
+    /**
+     * The API type
+     */
     @InputImport(name="apiType")
     private final @Nullable String apiType;
 
@@ -35,6 +44,9 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
         return this.apiType == null ? Optional.empty() : Optional.ofNullable(this.apiType);
     }
 
+    /**
+     * The API backend service
+     */
     @InputImport(name="backendService")
     private final @Nullable ApiResourceBackendServiceResponse backendService;
 
@@ -42,6 +54,9 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
         return this.backendService == null ? Optional.empty() : Optional.ofNullable(this.backendService);
     }
 
+    /**
+     * Brand color
+     */
     @InputImport(name="brandColor")
     private final @Nullable String brandColor;
 
@@ -49,6 +64,9 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
         return this.brandColor == null ? Optional.empty() : Optional.ofNullable(this.brandColor);
     }
 
+    /**
+     * The custom API capabilities
+     */
     @InputImport(name="capabilities")
     private final @Nullable List<String> capabilities;
 
@@ -56,6 +74,9 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
         return this.capabilities == null ? List.of() : this.capabilities;
     }
 
+    /**
+     * Connection parameters
+     */
     @InputImport(name="connectionParameters")
     private final @Nullable Map<String,ConnectionParameterResponse> connectionParameters;
 
@@ -63,6 +84,9 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
         return this.connectionParameters == null ? Map.of() : this.connectionParameters;
     }
 
+    /**
+     * The custom API description
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -70,6 +94,9 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The display name
+     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -77,6 +104,9 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * The icon URI
+     */
     @InputImport(name="iconUri")
     private final @Nullable String iconUri;
 
@@ -84,6 +114,9 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
         return this.iconUri == null ? Optional.empty() : Optional.ofNullable(this.iconUri);
     }
 
+    /**
+     * Runtime URLs
+     */
     @InputImport(name="runtimeUrls")
     private final @Nullable List<String> runtimeUrls;
 
@@ -91,6 +124,9 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
         return this.runtimeUrls == null ? List.of() : this.runtimeUrls;
     }
 
+    /**
+     * The JSON representation of the swagger
+     */
     @InputImport(name="swagger")
     private final @Nullable Object swagger;
 
@@ -98,6 +134,9 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
         return this.swagger == null ? Optional.empty() : Optional.ofNullable(this.swagger);
     }
 
+    /**
+     * The WSDL definition
+     */
     @InputImport(name="wsdlDefinition")
     private final @Nullable WsdlDefinitionResponse wsdlDefinition;
 

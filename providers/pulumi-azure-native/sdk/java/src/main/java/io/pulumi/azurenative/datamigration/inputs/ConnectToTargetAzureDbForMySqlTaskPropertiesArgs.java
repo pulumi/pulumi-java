@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for the task that validates connection to Azure Database for MySQL and target server requirements
+ */
 public final class ConnectToTargetAzureDbForMySqlTaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectToTargetAzureDbForMySqlTaskPropertiesArgs Empty = new ConnectToTargetAzureDbForMySqlTaskPropertiesArgs();
 
+    /**
+     * Task input
+     */
     @InputImport(name="input")
     private final @Nullable Input<ConnectToTargetAzureDbForMySqlTaskInputArgs> input;
 
@@ -22,6 +28,10 @@ public final class ConnectToTargetAzureDbForMySqlTaskPropertiesArgs extends io.p
         return this.input == null ? Input.empty() : this.input;
     }
 
+    /**
+     * Task type.
+Expected value is 'ConnectToTarget.AzureDbForMySql'.
+     */
     @InputImport(name="taskType", required=true)
     private final Input<String> taskType;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListMachineLearningComputeNodesArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListMachineLearningComputeNodesArgs Empty = new ListMachineLearningComputeNodesArgs();
 
+    /**
+     * Name of the Azure Machine Learning compute.
+     */
     @InputImport(name="computeName", required=true)
     private final String computeName;
 
@@ -19,6 +25,9 @@ public final class ListMachineLearningComputeNodesArgs extends io.pulumi.resourc
         return this.computeName;
     }
 
+    /**
+     * Name of the resource group in which workspace is located.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class ListMachineLearningComputeNodesArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of Azure Machine Learning workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

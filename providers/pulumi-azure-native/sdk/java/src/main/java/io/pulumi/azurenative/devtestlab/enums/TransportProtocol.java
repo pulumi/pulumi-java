@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Protocol type of the port.
+ */
     @EnumType
     public enum TransportProtocol {
+/**
+ * 
+ */
         Tcp("Tcp"),
+/**
+ * 
+ */
         Udp("Udp");
 
         private final String value;

@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiConnectionDefinitionPropertiesArgs Empty = new ApiConnectionDefinitionPropertiesArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="api")
     private final @Nullable Input<ApiReferenceArgs> api;
 
@@ -26,6 +32,9 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
         return this.api == null ? Input.empty() : this.api;
     }
 
+    /**
+     * Timestamp of last connection change
+     */
     @InputImport(name="changedTime")
     private final @Nullable Input<String> changedTime;
 
@@ -33,6 +42,9 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
         return this.changedTime == null ? Input.empty() : this.changedTime;
     }
 
+    /**
+     * Timestamp of the connection creation
+     */
     @InputImport(name="createdTime")
     private final @Nullable Input<String> createdTime;
 
@@ -40,6 +52,9 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
         return this.createdTime == null ? Input.empty() : this.createdTime;
     }
 
+    /**
+     * Dictionary of custom parameter values
+     */
     @InputImport(name="customParameterValues")
     private final @Nullable Input<Map<String,String>> customParameterValues;
 
@@ -47,6 +62,9 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
         return this.customParameterValues == null ? Input.empty() : this.customParameterValues;
     }
 
+    /**
+     * Display name
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -54,6 +72,9 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Dictionary of nonsecret parameter values
+     */
     @InputImport(name="nonSecretParameterValues")
     private final @Nullable Input<Map<String,String>> nonSecretParameterValues;
 
@@ -61,6 +82,9 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
         return this.nonSecretParameterValues == null ? Input.empty() : this.nonSecretParameterValues;
     }
 
+    /**
+     * Dictionary of parameter values
+     */
     @InputImport(name="parameterValues")
     private final @Nullable Input<Map<String,String>> parameterValues;
 
@@ -68,6 +92,9 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
         return this.parameterValues == null ? Input.empty() : this.parameterValues;
     }
 
+    /**
+     * Status of the connection
+     */
     @InputImport(name="statuses")
     private final @Nullable Input<List<ConnectionStatusDefinitionArgs>> statuses;
 
@@ -75,6 +102,9 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
         return this.statuses == null ? Input.empty() : this.statuses;
     }
 
+    /**
+     * Links to test the API connection
+     */
     @InputImport(name="testLinks")
     private final @Nullable Input<List<ApiConnectionTestLinkArgs>> testLinks;
 

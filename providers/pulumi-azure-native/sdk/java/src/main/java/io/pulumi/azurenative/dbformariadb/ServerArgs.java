@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServerArgs Empty = new ServerArgs();
 
+    /**
+     * The location the resource resides in.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -28,6 +34,9 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Properties of the server.
+     */
     @InputImport(name="properties", required=true)
     private final Input<Object> properties;
 
@@ -35,6 +44,9 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -42,6 +54,9 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     */
     @InputImport(name="serverName")
     private final @Nullable Input<String> serverName;
 
@@ -49,6 +64,9 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.serverName == null ? Input.empty() : this.serverName;
     }
 
+    /**
+     * The SKU (pricing tier) of the server.
+     */
     @InputImport(name="sku")
     private final @Nullable Input<SkuArgs> sku;
 
@@ -56,6 +74,9 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Application-specific metadata in the form of key-value pairs.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

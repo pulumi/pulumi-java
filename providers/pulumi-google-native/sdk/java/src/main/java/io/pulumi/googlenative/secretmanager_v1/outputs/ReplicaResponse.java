@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ReplicaResponse {
+/**
+ * Optional. The customer-managed encryption configuration of the User-Managed Replica. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
+ */
     private final CustomerManagedEncryptionResponse customerManagedEncryption;
+/**
+ * The canonical IDs of the location to replicate data. For example: `"us-east1"`.
+ */
     private final String location;
 
     @OutputCustomType.Constructor({"customerManagedEncryption","location"})
@@ -21,9 +27,15 @@ public final class ReplicaResponse {
         this.location = Objects.requireNonNull(location);
     }
 
+/**
+ * Optional. The customer-managed encryption configuration of the User-Managed Replica. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
+ */
     public CustomerManagedEncryptionResponse getCustomerManagedEncryption() {
         return this.customerManagedEncryption;
     }
+/**
+ * The canonical IDs of the location to replicate data. For example: `"us-east1"`.
+ */
     public String getLocation() {
         return this.location;
     }

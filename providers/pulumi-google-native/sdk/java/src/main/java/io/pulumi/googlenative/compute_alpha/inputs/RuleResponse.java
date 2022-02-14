@@ -11,10 +11,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * This is deprecated and has no effect. Do not use.
+ */
 public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RuleResponse Empty = new RuleResponse();
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="action", required=true)
     private final String action;
 
@@ -22,6 +28,9 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.action;
     }
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="conditions", required=true)
     private final List<ConditionResponse> conditions;
 
@@ -29,6 +38,9 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.conditions;
     }
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -36,6 +48,9 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.description;
     }
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="ins", required=true)
     private final List<String> ins;
 
@@ -43,6 +58,9 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.ins;
     }
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="logConfigs", required=true)
     private final List<LogConfigResponse> logConfigs;
 
@@ -50,6 +68,9 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.logConfigs;
     }
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="notIns", required=true)
     private final List<String> notIns;
 
@@ -57,6 +78,9 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.notIns;
     }
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="permissions", required=true)
     private final List<String> permissions;
 

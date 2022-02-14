@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Group connectivity type.
+ */
     @EnumType
     public enum GroupConnectivity {
+/**
+ * 
+ */
         None("None"),
+/**
+ * 
+ */
         DirectlyConnected("DirectlyConnected");
 
         private final String value;

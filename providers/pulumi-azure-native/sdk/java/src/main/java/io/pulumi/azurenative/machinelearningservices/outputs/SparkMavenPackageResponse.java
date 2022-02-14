@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SparkMavenPackageResponse {
+/**
+ * 
+ */
     private final @Nullable String artifact;
+/**
+ * 
+ */
     private final @Nullable String group;
+/**
+ * 
+ */
     private final @Nullable String version;
 
     @OutputCustomType.Constructor({"artifact","group","version"})
@@ -25,12 +34,21 @@ public final class SparkMavenPackageResponse {
         this.version = version;
     }
 
+/**
+ * 
+ */
     public Optional<String> getArtifact() {
         return Optional.ofNullable(this.artifact);
     }
+/**
+ * 
+ */
     public Optional<String> getGroup() {
         return Optional.ofNullable(this.group);
     }
+/**
+ * 
+ */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

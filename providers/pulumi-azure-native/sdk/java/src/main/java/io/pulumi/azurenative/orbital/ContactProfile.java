@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.orbital;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.orbital.ContactProfileArgs;
 import io.pulumi.azurenative.orbital.outputs.ContactProfileLinkResponse;
 import io.pulumi.azurenative.orbital.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
@@ -18,75 +17,435 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Customer creates a Contact Profile Resource, which will contain all of the configurations required for scheduling a contact.
+API Version: 2021-04-04-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create a contact profile
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var contactProfile = new AzureNative.Orbital.ContactProfile("contactProfile", new AzureNative.Orbital.ContactProfileArgs
+        {
+            AutoTrackingConfiguration = "xBand",
+            ContactProfileName = "AQUA_DIRECTPLAYBACK_WITH_UPLINK",
+            EventHubUri = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.EventHub/namespaces/orbitalppewestus2-ns/eventhubs/telemetry-hub/",
+            Links = 
+            {
+                new AzureNative.Orbital.Inputs.ContactProfileLinkArgs
+                {
+                    Channels = 
+                    {
+                        new AzureNative.Orbital.Inputs.ContactProfileLinkChannelArgs
+                        {
+                            BandwidthMHz = 0.036,
+                            CenterFrequencyMHz = 2106.4063,
+                            DecodingConfiguration = "na",
+                            DemodulationConfiguration = "na",
+                            EncodingConfiguration = "AQUA_CMD_CCSDS",
+                            EndPoint = new AzureNative.Orbital.Inputs.EndPointArgs
+                            {
+                                EndPointName = "AQUA_command",
+                                IpAddress = "10.0.1.0",
+                                Port = "4000",
+                                Protocol = "TCP",
+                            },
+                            ModulationConfiguration = "AQUA_UPLINK_BPSK",
+                        },
+                    },
+                    Direction = "uplink",
+                    EirpdBW = 45,
+                    GainOverTemperature = 0,
+                    Polarization = "RHCP",
+                },
+                new AzureNative.Orbital.Inputs.ContactProfileLinkArgs
+                {
+                    Channels = 
+                    {
+                        new AzureNative.Orbital.Inputs.ContactProfileLinkChannelArgs
+                        {
+                            BandwidthMHz = 150,
+                            CenterFrequencyMHz = 8160,
+                            DecodingConfiguration = "AQUA_DIRECTPLAYBACK_CCSDS",
+                            DemodulationConfiguration = "AQUA_DOWNLINK_QPSK",
+                            EncodingConfiguration = "na",
+                            EndPoint = new AzureNative.Orbital.Inputs.EndPointArgs
+                            {
+                                EndPointName = "AQUA_directplayback",
+                                IpAddress = "10.0.2.0",
+                                Port = "4000",
+                                Protocol = "TCP",
+                            },
+                            ModulationConfiguration = "na",
+                        },
+                    },
+                    Direction = "downlink",
+                    EirpdBW = 0,
+                    GainOverTemperature = 25,
+                    Polarization = "RHCP",
+                },
+            },
+            Location = "westus",
+            MinimumElevationDegrees = 10,
+            MinimumViableContactDuration = "PT1M",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	orbital "github.com/pulumi/pulumi-azure-native/sdk/go/azure/orbital"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := orbital.NewContactProfile(ctx, "contactProfile", &orbital.ContactProfileArgs{
+			AutoTrackingConfiguration: "xBand",
+			ContactProfileName:        pulumi.String("AQUA_DIRECTPLAYBACK_WITH_UPLINK"),
+			EventHubUri:               pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.EventHub/namespaces/orbitalppewestus2-ns/eventhubs/telemetry-hub/"),
+			Links: orbital.ContactProfileLinkArray{
+				&orbital.ContactProfileLinkArgs{
+					Channels: orbital.ContactProfileLinkChannelArray{
+						&orbital.ContactProfileLinkChannelArgs{
+							BandwidthMHz:              pulumi.Float64(0.036),
+							CenterFrequencyMHz:        pulumi.Float64(2106.4063),
+							DecodingConfiguration:     pulumi.String("na"),
+							DemodulationConfiguration: pulumi.String("na"),
+							EncodingConfiguration:     pulumi.String("AQUA_CMD_CCSDS"),
+							EndPoint: &orbital.EndPointArgs{
+								EndPointName: pulumi.String("AQUA_command"),
+								IpAddress:    pulumi.String("10.0.1.0"),
+								Port:         pulumi.String("4000"),
+								Protocol:     pulumi.String("TCP"),
+							},
+							ModulationConfiguration: pulumi.String("AQUA_UPLINK_BPSK"),
+						},
+					},
+					Direction:           pulumi.String("uplink"),
+					EirpdBW:             pulumi.Float64(45),
+					GainOverTemperature: pulumi.Float64(0),
+					Polarization:        pulumi.String("RHCP"),
+				},
+				&orbital.ContactProfileLinkArgs{
+					Channels: orbital.ContactProfileLinkChannelArray{
+						&orbital.ContactProfileLinkChannelArgs{
+							BandwidthMHz:              pulumi.Float64(150),
+							CenterFrequencyMHz:        pulumi.Float64(8160),
+							DecodingConfiguration:     pulumi.String("AQUA_DIRECTPLAYBACK_CCSDS"),
+							DemodulationConfiguration: pulumi.String("AQUA_DOWNLINK_QPSK"),
+							EncodingConfiguration:     pulumi.String("na"),
+							EndPoint: &orbital.EndPointArgs{
+								EndPointName: pulumi.String("AQUA_directplayback"),
+								IpAddress:    pulumi.String("10.0.2.0"),
+								Port:         pulumi.String("4000"),
+								Protocol:     pulumi.String("TCP"),
+							},
+							ModulationConfiguration: pulumi.String("na"),
+						},
+					},
+					Direction:           pulumi.String("downlink"),
+					EirpdBW:             pulumi.Float64(0),
+					GainOverTemperature: pulumi.Float64(25),
+					Polarization:        pulumi.String("RHCP"),
+				},
+			},
+			Location:                     pulumi.String("westus"),
+			MinimumElevationDegrees:      pulumi.Float64(10),
+			MinimumViableContactDuration: pulumi.String("PT1M"),
+			ResourceGroupName:            pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const contactProfile = new azure_native.orbital.ContactProfile("contactProfile", {
+    autoTrackingConfiguration: "xBand",
+    contactProfileName: "AQUA_DIRECTPLAYBACK_WITH_UPLINK",
+    eventHubUri: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.EventHub/namespaces/orbitalppewestus2-ns/eventhubs/telemetry-hub/",
+    links: [
+        {
+            channels: [{
+                bandwidthMHz: 0.036,
+                centerFrequencyMHz: 2106.4063,
+                decodingConfiguration: "na",
+                demodulationConfiguration: "na",
+                encodingConfiguration: "AQUA_CMD_CCSDS",
+                endPoint: {
+                    endPointName: "AQUA_command",
+                    ipAddress: "10.0.1.0",
+                    port: "4000",
+                    protocol: "TCP",
+                },
+                modulationConfiguration: "AQUA_UPLINK_BPSK",
+            }],
+            direction: "uplink",
+            eirpdBW: 45,
+            gainOverTemperature: 0,
+            polarization: "RHCP",
+        },
+        {
+            channels: [{
+                bandwidthMHz: 150,
+                centerFrequencyMHz: 8160,
+                decodingConfiguration: "AQUA_DIRECTPLAYBACK_CCSDS",
+                demodulationConfiguration: "AQUA_DOWNLINK_QPSK",
+                encodingConfiguration: "na",
+                endPoint: {
+                    endPointName: "AQUA_directplayback",
+                    ipAddress: "10.0.2.0",
+                    port: "4000",
+                    protocol: "TCP",
+                },
+                modulationConfiguration: "na",
+            }],
+            direction: "downlink",
+            eirpdBW: 0,
+            gainOverTemperature: 25,
+            polarization: "RHCP",
+        },
+    ],
+    location: "westus",
+    minimumElevationDegrees: 10,
+    minimumViableContactDuration: "PT1M",
+    resourceGroupName: "rg1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+contact_profile = azure_native.orbital.ContactProfile("contactProfile",
+    auto_tracking_configuration="xBand",
+    contact_profile_name="AQUA_DIRECTPLAYBACK_WITH_UPLINK",
+    event_hub_uri="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.EventHub/namespaces/orbitalppewestus2-ns/eventhubs/telemetry-hub/",
+    links=[
+        azure_native.orbital.ContactProfileLinkArgs(
+            channels=[azure_native.orbital.ContactProfileLinkChannelArgs(
+                bandwidth_m_hz=0.036,
+                center_frequency_m_hz=2106.4063,
+                decoding_configuration="na",
+                demodulation_configuration="na",
+                encoding_configuration="AQUA_CMD_CCSDS",
+                end_point=azure_native.orbital.EndPointArgs(
+                    end_point_name="AQUA_command",
+                    ip_address="10.0.1.0",
+                    port="4000",
+                    protocol="TCP",
+                ),
+                modulation_configuration="AQUA_UPLINK_BPSK",
+            )],
+            direction="uplink",
+            eirpd_bw=45,
+            gain_over_temperature=0,
+            polarization="RHCP",
+        ),
+        azure_native.orbital.ContactProfileLinkArgs(
+            channels=[azure_native.orbital.ContactProfileLinkChannelArgs(
+                bandwidth_m_hz=150,
+                center_frequency_m_hz=8160,
+                decoding_configuration="AQUA_DIRECTPLAYBACK_CCSDS",
+                demodulation_configuration="AQUA_DOWNLINK_QPSK",
+                encoding_configuration="na",
+                end_point=azure_native.orbital.EndPointArgs(
+                    end_point_name="AQUA_directplayback",
+                    ip_address="10.0.2.0",
+                    port="4000",
+                    protocol="TCP",
+                ),
+                modulation_configuration="na",
+            )],
+            direction="downlink",
+            eirpd_bw=0,
+            gain_over_temperature=25,
+            polarization="RHCP",
+        ),
+    ],
+    location="westus",
+    minimum_elevation_degrees=10,
+    minimum_viable_contact_duration="PT1M",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:orbital:ContactProfile contactProfile1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Orbital/contactProfiles/contactProfile1 
+```
+
+ */
 @ResourceType(type="azure-native:orbital:ContactProfile")
 public class ContactProfile extends io.pulumi.resources.CustomResource {
+    /**
+     * Auto track configuration.
+     */
     @OutputExport(name="autoTrackingConfiguration", type=String.class, parameters={})
     private Output</* @Nullable */ String> autoTrackingConfiguration;
 
+    /**
+     * @return Auto track configuration.
+     */
     public Output</* @Nullable */ String> getAutoTrackingConfiguration() {
         return this.autoTrackingConfiguration;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The URI of the Event Hub used for telemetry
+     */
     @OutputExport(name="eventHubUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventHubUri;
 
+    /**
+     * @return The URI of the Event Hub used for telemetry
+     */
     public Output</* @Nullable */ String> getEventHubUri() {
         return this.eventHubUri;
     }
+    /**
+     * Links of the Contact Profile
+     */
     @OutputExport(name="links", type=List.class, parameters={ContactProfileLinkResponse.class})
     private Output<List<ContactProfileLinkResponse>> links;
 
+    /**
+     * @return Links of the Contact Profile
+     */
     public Output<List<ContactProfileLinkResponse>> getLinks() {
         return this.links;
     }
+    /**
+     * The geo-location where the resource lives
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Minimum viable elevation for the contact in decimal degrees.
+     */
     @OutputExport(name="minimumElevationDegrees", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> minimumElevationDegrees;
 
+    /**
+     * @return Minimum viable elevation for the contact in decimal degrees.
+     */
     public Output</* @Nullable */ Double> getMinimumElevationDegrees() {
         return this.minimumElevationDegrees;
     }
+    /**
+     * Minimum viable contact duration in ISO 8601 format.
+     */
     @OutputExport(name="minimumViableContactDuration", type=String.class, parameters={})
     private Output</* @Nullable */ String> minimumViableContactDuration;
 
+    /**
+     * @return Minimum viable contact duration in ISO 8601 format.
+     */
     public Output</* @Nullable */ String> getMinimumViableContactDuration() {
         return this.minimumViableContactDuration;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ContactProfile(String name, ContactProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:orbital:ContactProfile", name, args == null ? ContactProfileArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -105,6 +464,14 @@ public class ContactProfile extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ContactProfile get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ContactProfile(name, id, options);
     }

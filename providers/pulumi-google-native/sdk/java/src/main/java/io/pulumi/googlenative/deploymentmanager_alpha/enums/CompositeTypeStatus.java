@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum CompositeTypeStatus {
+/**
+ * 
+ */
         UnknownStatus("UNKNOWN_STATUS"),
+/**
+ * 
+ */
         Deprecated("DEPRECATED"),
+/**
+ * 
+ */
         Experimental("EXPERIMENTAL"),
+/**
+ * 
+ */
         Supported("SUPPORTED");
 
         private final String value;

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a setting for the container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".
+ */
 public final class SettingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SettingResponse Empty = new SettingResponse();
 
+    /**
+     * The name of the setting.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +27,9 @@ public final class SettingResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The value of the setting.
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

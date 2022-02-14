@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A chart that displays alert policy data.
+ */
 public final class AlertChartArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AlertChartArgs Empty = new AlertChartArgs();
 
+    /**
+     * The resource name of the alert policy. The format is: projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] 
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

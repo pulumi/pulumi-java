@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Tier of a managed cluster SKU.
+ */
     @EnumType
     public enum ManagedClusterSKUTier {
+/**
+ * 
+ */
         Paid("Paid"),
+/**
+ * 
+ */
         Free("Free");
 
         private final String value;

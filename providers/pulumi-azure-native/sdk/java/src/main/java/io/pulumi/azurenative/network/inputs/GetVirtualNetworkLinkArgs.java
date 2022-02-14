@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetVirtualNetworkLinkArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVirtualNetworkLinkArgs Empty = new GetVirtualNetworkLinkArgs();
 
+    /**
+     * The name of the Private DNS zone (without a terminating dot).
+     */
     @InputImport(name="privateZoneName", required=true)
     private final String privateZoneName;
 
@@ -19,6 +25,9 @@ public final class GetVirtualNetworkLinkArgs extends io.pulumi.resources.InvokeA
         return this.privateZoneName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetVirtualNetworkLinkArgs extends io.pulumi.resources.InvokeA
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the virtual network link.
+     */
     @InputImport(name="virtualNetworkLinkName", required=true)
     private final String virtualNetworkLinkName;
 

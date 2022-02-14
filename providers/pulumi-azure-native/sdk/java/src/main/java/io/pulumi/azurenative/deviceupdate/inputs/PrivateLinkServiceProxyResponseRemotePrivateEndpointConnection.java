@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Remote private endpoint connection details.
+ */
 public final class PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection Empty = new PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection();
 
+    /**
+     * Remote private endpoint connection ID.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

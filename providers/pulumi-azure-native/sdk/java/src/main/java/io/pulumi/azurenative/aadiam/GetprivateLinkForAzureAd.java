@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetprivateLinkForAzureAd {
+/**
+ * PrivateLink Policy configuration object.
+API Version: 2020-03-01.
+ *
+ * PrivateLink Policy configuration object.
+ */
     public static CompletableFuture<GetprivateLinkForAzureAdResult> invokeAsync(GetprivateLinkForAzureAdArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:aadiam:getprivateLinkForAzureAd", TypeShape.of(GetprivateLinkForAzureAdResult.class), args == null ? GetprivateLinkForAzureAdArgs.Empty : args, Utilities.withVersion(options));
     }

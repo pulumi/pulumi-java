@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NameIdentifierResponse {
+/**
+ * Name of the object.
+ */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -18,6 +21,9 @@ public final class NameIdentifierResponse {
         this.name = name;
     }
 
+/**
+ * Name of the object.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

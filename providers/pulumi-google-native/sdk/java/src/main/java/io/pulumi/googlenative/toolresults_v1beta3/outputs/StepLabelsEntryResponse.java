@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class StepLabelsEntryResponse {
+/**
+ * 
+ */
     private final String key;
+/**
+ * 
+ */
     private final String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -20,9 +26,15 @@ public final class StepLabelsEntryResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * 
+ */
     public String getKey() {
         return this.key;
     }
+/**
+ * 
+ */
     public String getValue() {
         return this.value;
     }

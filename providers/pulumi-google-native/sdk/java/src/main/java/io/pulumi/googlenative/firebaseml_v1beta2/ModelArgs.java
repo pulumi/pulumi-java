@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModelArgs Empty = new ModelArgs();
 
+    /**
+     * The name of the model to create. The name can be up to 32 characters long and can consist only of ASCII Latin letters A-Z and a-z, underscores(_) and ASCII digits 0-9. It must start with a letter.
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -24,6 +30,9 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * The resource name of the Model. Model names have the form `projects/{project_id}/models/{model_id}` The name is ignored when creating a model.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -31,6 +40,9 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -38,6 +50,9 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * State common to all model types. Includes publishing and validation information.
+     */
     @InputImport(name="state")
     private final @Nullable Input<ModelStateArgs> state;
 
@@ -45,6 +60,9 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * User defined tags which can be used to group/filter models during listing
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 
@@ -52,6 +70,9 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * A TFLite Model
+     */
     @InputImport(name="tfliteModel")
     private final @Nullable Input<TfLiteModelArgs> tfliteModel;
 

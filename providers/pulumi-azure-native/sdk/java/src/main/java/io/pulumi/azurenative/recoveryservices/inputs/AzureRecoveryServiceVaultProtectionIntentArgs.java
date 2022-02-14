@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure Recovery Services Vault specific protection intent item.
+ */
 public final class AzureRecoveryServiceVaultProtectionIntentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureRecoveryServiceVaultProtectionIntentArgs Empty = new AzureRecoveryServiceVaultProtectionIntentArgs();
 
+    /**
+     * Type of backup management for the backed up item.
+     */
     @InputImport(name="backupManagementType")
     private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
@@ -24,6 +30,9 @@ public final class AzureRecoveryServiceVaultProtectionIntentArgs extends io.pulu
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
     }
 
+    /**
+     * ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
+     */
     @InputImport(name="itemId")
     private final @Nullable Input<String> itemId;
 
@@ -31,6 +40,9 @@ public final class AzureRecoveryServiceVaultProtectionIntentArgs extends io.pulu
         return this.itemId == null ? Input.empty() : this.itemId;
     }
 
+    /**
+     * ID of the backup policy with which this item is backed up.
+     */
     @InputImport(name="policyId")
     private final @Nullable Input<String> policyId;
 
@@ -38,6 +50,10 @@ public final class AzureRecoveryServiceVaultProtectionIntentArgs extends io.pulu
         return this.policyId == null ? Input.empty() : this.policyId;
     }
 
+    /**
+     * backup protectionIntent type.
+Expected value is 'RecoveryServiceVaultItem'.
+     */
     @InputImport(name="protectionIntentItemType", required=true)
     private final Input<String> protectionIntentItemType;
 
@@ -45,6 +61,9 @@ public final class AzureRecoveryServiceVaultProtectionIntentArgs extends io.pulu
         return this.protectionIntentItemType;
     }
 
+    /**
+     * Backup state of this backup item.
+     */
     @InputImport(name="protectionState")
     private final @Nullable Input<Either<String,ProtectionStatus>> protectionState;
 
@@ -52,6 +71,9 @@ public final class AzureRecoveryServiceVaultProtectionIntentArgs extends io.pulu
         return this.protectionState == null ? Input.empty() : this.protectionState;
     }
 
+    /**
+     * ARM ID of the resource to be backed up.
+     */
     @InputImport(name="sourceResourceId")
     private final @Nullable Input<String> sourceResourceId;
 

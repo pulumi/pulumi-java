@@ -13,7 +13,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceForestSettingsResponse {
+/**
+ * Resource Forest
+ */
     private final @Nullable String resourceForest;
+/**
+ * List of settings for Resource Forest
+ */
     private final @Nullable List<ForestTrustResponse> settings;
 
     @OutputCustomType.Constructor({"resourceForest","settings"})
@@ -24,9 +30,15 @@ public final class ResourceForestSettingsResponse {
         this.settings = settings;
     }
 
+/**
+ * Resource Forest
+ */
     public Optional<String> getResourceForest() {
         return Optional.ofNullable(this.resourceForest);
     }
+/**
+ * List of settings for Resource Forest
+ */
     public List<ForestTrustResponse> getSettings() {
         return this.settings == null ? List.of() : this.settings;
     }

@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A2A protected disk details.
+ */
 public final class A2AProtectedDiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final A2AProtectedDiskDetailsResponse Empty = new A2AProtectedDiskDetailsResponse();
 
+    /**
+     * The disk level operations list.
+     */
     @InputImport(name="allowedDiskLevelOperation")
     private final @Nullable List<String> allowedDiskLevelOperation;
 
@@ -25,6 +31,9 @@ public final class A2AProtectedDiskDetailsResponse extends io.pulumi.resources.I
         return this.allowedDiskLevelOperation == null ? List.of() : this.allowedDiskLevelOperation;
     }
 
+    /**
+     * The data pending at source virtual machine in MB.
+     */
     @InputImport(name="dataPendingAtSourceAgentInMB")
     private final @Nullable Double dataPendingAtSourceAgentInMB;
 
@@ -32,6 +41,9 @@ public final class A2AProtectedDiskDetailsResponse extends io.pulumi.resources.I
         return this.dataPendingAtSourceAgentInMB == null ? Optional.empty() : Optional.ofNullable(this.dataPendingAtSourceAgentInMB);
     }
 
+    /**
+     * The data pending for replication in MB at staging account.
+     */
     @InputImport(name="dataPendingInStagingStorageAccountInMB")
     private final @Nullable Double dataPendingInStagingStorageAccountInMB;
 
@@ -39,6 +51,9 @@ public final class A2AProtectedDiskDetailsResponse extends io.pulumi.resources.I
         return this.dataPendingInStagingStorageAccountInMB == null ? Optional.empty() : Optional.ofNullable(this.dataPendingInStagingStorageAccountInMB);
     }
 
+    /**
+     * The KeyVault resource id for secret (BEK).
+     */
     @InputImport(name="dekKeyVaultArmId")
     private final @Nullable String dekKeyVaultArmId;
 
@@ -46,6 +61,9 @@ public final class A2AProtectedDiskDetailsResponse extends io.pulumi.resources.I
         return this.dekKeyVaultArmId == null ? Optional.empty() : Optional.ofNullable(this.dekKeyVaultArmId);
     }
 
+    /**
+     * The disk capacity in bytes.
+     */
     @InputImport(name="diskCapacityInBytes")
     private final @Nullable Double diskCapacityInBytes;
 
@@ -53,6 +71,9 @@ public final class A2AProtectedDiskDetailsResponse extends io.pulumi.resources.I
         return this.diskCapacityInBytes == null ? Optional.empty() : Optional.ofNullable(this.diskCapacityInBytes);
     }
 
+    /**
+     * The disk name.
+     */
     @InputImport(name="diskName")
     private final @Nullable String diskName;
 
@@ -60,6 +81,9 @@ public final class A2AProtectedDiskDetailsResponse extends io.pulumi.resources.I
         return this.diskName == null ? Optional.empty() : Optional.ofNullable(this.diskName);
     }
 
+    /**
+     * The disk state.
+     */
     @InputImport(name="diskState")
     private final @Nullable String diskState;
 
@@ -67,6 +91,9 @@ public final class A2AProtectedDiskDetailsResponse extends io.pulumi.resources.I
         return this.diskState == null ? Optional.empty() : Optional.ofNullable(this.diskState);
     }
 
+    /**
+     * The type of disk.
+     */
     @InputImport(name="diskType")
     private final @Nullable String diskType;
 
@@ -74,6 +101,9 @@ public final class A2AProtectedDiskDetailsResponse extends io.pulumi.resources.I
         return this.diskType == null ? Optional.empty() : Optional.ofNullable(this.diskType);
     }
 
+    /**
+     * The disk uri.
+     */
     @InputImport(name="diskUri")
     private final @Nullable String diskUri;
 
@@ -81,6 +111,9 @@ public final class A2AProtectedDiskDetailsResponse extends io.pulumi.resources.I
         return this.diskUri == null ? Optional.empty() : Optional.ofNullable(this.diskUri);
     }
 
+    /**
+     * A value indicating whether vm has encrypted os disk or not.
+     */
     @InputImport(name="isDiskEncrypted")
     private final @Nullable Boolean isDiskEncrypted;
 
@@ -88,6 +121,9 @@ public final class A2AProtectedDiskDetailsResponse extends io.pulumi.resources.I
         return this.isDiskEncrypted == null ? Optional.empty() : Optional.ofNullable(this.isDiskEncrypted);
     }
 
+    /**
+     * A value indicating whether disk key got encrypted or not.
+     */
     @InputImport(name="isDiskKeyEncrypted")
     private final @Nullable Boolean isDiskKeyEncrypted;
 
@@ -95,6 +131,9 @@ public final class A2AProtectedDiskDetailsResponse extends io.pulumi.resources.I
         return this.isDiskKeyEncrypted == null ? Optional.empty() : Optional.ofNullable(this.isDiskKeyEncrypted);
     }
 
+    /**
+     * The KeyVault resource id for key (KEK).
+     */
     @InputImport(name="kekKeyVaultArmId")
     private final @Nullable String kekKeyVaultArmId;
 
@@ -102,6 +141,9 @@ public final class A2AProtectedDiskDetailsResponse extends io.pulumi.resources.I
         return this.kekKeyVaultArmId == null ? Optional.empty() : Optional.ofNullable(this.kekKeyVaultArmId);
     }
 
+    /**
+     * The key URL / identifier (KEK).
+     */
     @InputImport(name="keyIdentifier")
     private final @Nullable String keyIdentifier;
 
@@ -109,6 +151,9 @@ public final class A2AProtectedDiskDetailsResponse extends io.pulumi.resources.I
         return this.keyIdentifier == null ? Optional.empty() : Optional.ofNullable(this.keyIdentifier);
     }
 
+    /**
+     * The type of the monitoring job. The progress is contained in MonitoringPercentageCompletion property.
+     */
     @InputImport(name="monitoringJobType")
     private final @Nullable String monitoringJobType;
 
@@ -116,6 +161,9 @@ public final class A2AProtectedDiskDetailsResponse extends io.pulumi.resources.I
         return this.monitoringJobType == null ? Optional.empty() : Optional.ofNullable(this.monitoringJobType);
     }
 
+    /**
+     * The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.
+     */
     @InputImport(name="monitoringPercentageCompletion")
     private final @Nullable Integer monitoringPercentageCompletion;
 
@@ -123,6 +171,9 @@ public final class A2AProtectedDiskDetailsResponse extends io.pulumi.resources.I
         return this.monitoringPercentageCompletion == null ? Optional.empty() : Optional.ofNullable(this.monitoringPercentageCompletion);
     }
 
+    /**
+     * The primary disk storage account.
+     */
     @InputImport(name="primaryDiskAzureStorageAccountId")
     private final @Nullable String primaryDiskAzureStorageAccountId;
 
@@ -130,6 +181,9 @@ public final class A2AProtectedDiskDetailsResponse extends io.pulumi.resources.I
         return this.primaryDiskAzureStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.primaryDiskAzureStorageAccountId);
     }
 
+    /**
+     * The primary staging storage account.
+     */
     @InputImport(name="primaryStagingAzureStorageAccountId")
     private final @Nullable String primaryStagingAzureStorageAccountId;
 
@@ -137,6 +191,9 @@ public final class A2AProtectedDiskDetailsResponse extends io.pulumi.resources.I
         return this.primaryStagingAzureStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.primaryStagingAzureStorageAccountId);
     }
 
+    /**
+     * The recovery disk storage account.
+     */
     @InputImport(name="recoveryAzureStorageAccountId")
     private final @Nullable String recoveryAzureStorageAccountId;
 
@@ -144,6 +201,9 @@ public final class A2AProtectedDiskDetailsResponse extends io.pulumi.resources.I
         return this.recoveryAzureStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.recoveryAzureStorageAccountId);
     }
 
+    /**
+     * Recovery disk uri.
+     */
     @InputImport(name="recoveryDiskUri")
     private final @Nullable String recoveryDiskUri;
 
@@ -151,6 +211,9 @@ public final class A2AProtectedDiskDetailsResponse extends io.pulumi.resources.I
         return this.recoveryDiskUri == null ? Optional.empty() : Optional.ofNullable(this.recoveryDiskUri);
     }
 
+    /**
+     * A value indicating whether resync is required for this disk.
+     */
     @InputImport(name="resyncRequired")
     private final @Nullable Boolean resyncRequired;
 
@@ -158,6 +221,9 @@ public final class A2AProtectedDiskDetailsResponse extends io.pulumi.resources.I
         return this.resyncRequired == null ? Optional.empty() : Optional.ofNullable(this.resyncRequired);
     }
 
+    /**
+     * The secret URL / identifier (BEK).
+     */
     @InputImport(name="secretIdentifier")
     private final @Nullable String secretIdentifier;
 

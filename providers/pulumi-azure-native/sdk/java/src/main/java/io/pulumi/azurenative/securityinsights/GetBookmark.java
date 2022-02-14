@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBookmark {
+/**
+ * Represents a bookmark in Azure Security Insights.
+API Version: 2020-01-01.
+ *
+ * Represents a bookmark in Azure Security Insights.
+ */
     public static CompletableFuture<GetBookmarkResult> invokeAsync(GetBookmarkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getBookmark", TypeShape.of(GetBookmarkResult.class), args == null ? GetBookmarkArgs.Empty : args, Utilities.withVersion(options));
     }

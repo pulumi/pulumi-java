@@ -11,13 +11,37 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RoutingServiceBusTopicEndpointPropertiesResponse {
+/**
+ * Method used to authenticate against the service bus topic endpoint
+ */
     private final @Nullable String authenticationType;
+/**
+ * The connection string of the service bus topic endpoint.
+ */
     private final @Nullable String connectionString;
+/**
+ * The url of the service bus topic endpoint. It must include the protocol sb://
+ */
     private final @Nullable String endpointUri;
+/**
+ * Queue name on the service bus topic
+ */
     private final @Nullable String entityPath;
+/**
+ * Id of the service bus topic endpoint
+ */
     private final @Nullable String id;
+/**
+ * The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.
+ */
     private final String name;
+/**
+ * The name of the resource group of the service bus topic endpoint.
+ */
     private final @Nullable String resourceGroup;
+/**
+ * The subscription identifier of the service bus topic endpoint.
+ */
     private final @Nullable String subscriptionId;
 
     @OutputCustomType.Constructor({"authenticationType","connectionString","endpointUri","entityPath","id","name","resourceGroup","subscriptionId"})
@@ -40,27 +64,51 @@ public final class RoutingServiceBusTopicEndpointPropertiesResponse {
         this.subscriptionId = subscriptionId;
     }
 
+/**
+ * Method used to authenticate against the service bus topic endpoint
+ */
     public Optional<String> getAuthenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
+/**
+ * The connection string of the service bus topic endpoint.
+ */
     public Optional<String> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
+/**
+ * The url of the service bus topic endpoint. It must include the protocol sb://
+ */
     public Optional<String> getEndpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }
+/**
+ * Queue name on the service bus topic
+ */
     public Optional<String> getEntityPath() {
         return Optional.ofNullable(this.entityPath);
     }
+/**
+ * Id of the service bus topic endpoint
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.  The name need not be the same as the actual topic name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The name of the resource group of the service bus topic endpoint.
+ */
     public Optional<String> getResourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
+/**
+ * The subscription identifier of the service bus topic endpoint.
+ */
     public Optional<String> getSubscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }

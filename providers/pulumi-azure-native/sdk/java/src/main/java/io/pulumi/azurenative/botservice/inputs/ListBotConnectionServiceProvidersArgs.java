@@ -6,6 +6,9 @@ package io.pulumi.azurenative.botservice.inputs;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListBotConnectionServiceProvidersArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListBotConnectionServiceProvidersArgs Empty = new ListBotConnectionServiceProvidersArgs();

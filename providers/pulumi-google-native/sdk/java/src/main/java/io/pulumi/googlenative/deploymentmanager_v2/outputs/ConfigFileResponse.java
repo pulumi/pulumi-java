@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConfigFileResponse {
+/**
+ * The contents of the file.
+ */
     private final String content;
 
     @OutputCustomType.Constructor({"content"})
@@ -16,6 +19,9 @@ public final class ConfigFileResponse {
         this.content = Objects.requireNonNull(content);
     }
 
+/**
+ * The contents of the file.
+ */
     public String getContent() {
         return this.content;
     }

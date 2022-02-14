@@ -13,9 +13,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ContainerHttpGetResponse {
+/**
+ * The HTTP headers.
+ */
     private final @Nullable HttpHeadersResponse httpHeaders;
+/**
+ * The path to probe.
+ */
     private final @Nullable String path;
+/**
+ * The port number to probe.
+ */
     private final Integer port;
+/**
+ * The scheme.
+ */
     private final @Nullable String scheme;
 
     @OutputCustomType.Constructor({"httpHeaders","path","port","scheme"})
@@ -30,15 +42,27 @@ public final class ContainerHttpGetResponse {
         this.scheme = scheme;
     }
 
+/**
+ * The HTTP headers.
+ */
     public Optional<HttpHeadersResponse> getHttpHeaders() {
         return Optional.ofNullable(this.httpHeaders);
     }
+/**
+ * The path to probe.
+ */
     public Optional<String> getPath() {
         return Optional.ofNullable(this.path);
     }
+/**
+ * The port number to probe.
+ */
     public Integer getPort() {
         return this.port;
     }
+/**
+ * The scheme.
+ */
     public Optional<String> getScheme() {
         return Optional.ofNullable(this.scheme);
     }

@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Immutable. The FHIR specification version that this FHIR store supports natively. This field is immutable after store creation. Requests are rejected if they contain FHIR resources of a different version. Version is required for every FHIR store.
+ */
     @EnumType
     public enum FhirStoreVersion {
+/**
+ * Users must specify a version on store creation or an error is returned.
+ */
         VersionUnspecified("VERSION_UNSPECIFIED"),
+/**
+ * Draft Standard for Trial Use, [Release 2](https://www.hl7.org/fhir/DSTU2)
+ */
         Dstu2("DSTU2"),
+/**
+ * Standard for Trial Use, [Release 3](https://www.hl7.org/fhir/STU3)
+ */
         Stu3("STU3"),
+/**
+ * [Release 4](https://www.hl7.org/fhir/R4)
+ */
         R4("R4");
 
         private final String value;

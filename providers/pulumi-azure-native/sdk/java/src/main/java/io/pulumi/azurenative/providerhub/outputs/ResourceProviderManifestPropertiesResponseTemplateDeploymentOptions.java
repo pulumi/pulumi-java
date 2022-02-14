@@ -13,7 +13,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions {
+/**
+ * 
+ */
     private final @Nullable List<String> preflightOptions;
+/**
+ * 
+ */
     private final @Nullable Boolean preflightSupported;
 
     @OutputCustomType.Constructor({"preflightOptions","preflightSupported"})
@@ -24,9 +30,15 @@ public final class ResourceProviderManifestPropertiesResponseTemplateDeploymentO
         this.preflightSupported = preflightSupported;
     }
 
+/**
+ * 
+ */
     public List<String> getPreflightOptions() {
         return this.preflightOptions == null ? List.of() : this.preflightOptions;
     }
+/**
+ * 
+ */
     public Optional<Boolean> getPreflightSupported() {
         return Optional.ofNullable(this.preflightSupported);
     }

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDatabaseSecurityAlertPolicy {
+/**
+ * A database security alert policy.
+API Version: 2020-11-01-preview.
+ *
+ * A database security alert policy.
+ */
     public static CompletableFuture<GetDatabaseSecurityAlertPolicyResult> invokeAsync(GetDatabaseSecurityAlertPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getDatabaseSecurityAlertPolicy", TypeShape.of(GetDatabaseSecurityAlertPolicyResult.class), args == null ? GetDatabaseSecurityAlertPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

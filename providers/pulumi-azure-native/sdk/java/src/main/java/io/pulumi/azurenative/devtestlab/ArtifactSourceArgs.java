@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ArtifactSourceArgs Empty = new ArtifactSourceArgs();
 
+    /**
+     * The folder containing Azure Resource Manager templates.
+     */
     @InputImport(name="armTemplateFolderPath")
     private final @Nullable Input<String> armTemplateFolderPath;
 
@@ -25,6 +31,9 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.armTemplateFolderPath == null ? Input.empty() : this.armTemplateFolderPath;
     }
 
+    /**
+     * The artifact source's branch reference.
+     */
     @InputImport(name="branchRef")
     private final @Nullable Input<String> branchRef;
 
@@ -32,6 +41,9 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.branchRef == null ? Input.empty() : this.branchRef;
     }
 
+    /**
+     * The artifact source's display name.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -39,6 +51,9 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The folder containing artifacts.
+     */
     @InputImport(name="folderPath")
     private final @Nullable Input<String> folderPath;
 
@@ -46,6 +61,9 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.folderPath == null ? Input.empty() : this.folderPath;
     }
 
+    /**
+     * The name of the lab.
+     */
     @InputImport(name="labName", required=true)
     private final Input<String> labName;
 
@@ -53,6 +71,9 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.labName;
     }
 
+    /**
+     * The location of the resource.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -60,6 +81,9 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the artifact source.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -67,6 +91,9 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -74,6 +101,9 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The security token to authenticate to the artifact source.
+     */
     @InputImport(name="securityToken")
     private final @Nullable Input<String> securityToken;
 
@@ -81,6 +111,9 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.securityToken == null ? Input.empty() : this.securityToken;
     }
 
+    /**
+     * The artifact source's type.
+     */
     @InputImport(name="sourceType")
     private final @Nullable Input<Either<String,SourceControlType>> sourceType;
 
@@ -88,6 +121,9 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceType == null ? Input.empty() : this.sourceType;
     }
 
+    /**
+     * Indicates if the artifact source is enabled (values: Enabled, Disabled).
+     */
     @InputImport(name="status")
     private final @Nullable Input<Either<String,EnableStatus>> status;
 
@@ -95,6 +131,9 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * The tags of the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -102,6 +141,9 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The artifact source's URI.
+     */
     @InputImport(name="uri")
     private final @Nullable Input<String> uri;
 

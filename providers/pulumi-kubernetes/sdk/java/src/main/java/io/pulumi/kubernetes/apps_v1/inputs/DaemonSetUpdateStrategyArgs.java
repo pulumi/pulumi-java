@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * DaemonSetUpdateStrategy is a struct used to control the update strategy for a DaemonSet.
+ */
 public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DaemonSetUpdateStrategyArgs Empty = new DaemonSetUpdateStrategyArgs();
 
+    /**
+     * Rolling update config params. Present only if type = "RollingUpdate".
+     */
     @InputImport(name="rollingUpdate")
     private final @Nullable Input<RollingUpdateDaemonSetArgs> rollingUpdate;
 
@@ -22,6 +28,13 @@ public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.Resou
         return this.rollingUpdate == null ? Input.empty() : this.rollingUpdate;
     }
 
+    /**
+     * Type of daemon set update. Can be "RollingUpdate" or "OnDelete". Default is RollingUpdate.
+
+Possible enum values:
+ - `"OnDelete"` Replace the old daemons only when it's killed
+ - `"RollingUpdate"` Replace the old daemons by new ones using rolling update i.e replace them on each node one after the other.
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

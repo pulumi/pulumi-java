@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConsent {
+/**
+ * Gets the specified revision of a Consent, or the latest revision if `revision_id` is not specified in the resource name.
+ */
     public static CompletableFuture<GetConsentResult> invokeAsync(GetConsentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:healthcare/v1:getConsent", TypeShape.of(GetConsentResult.class), args == null ? GetConsentArgs.Empty : args, Utilities.withVersion(options));
     }

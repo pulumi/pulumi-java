@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetBillingAccountExclusionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBillingAccountExclusionArgs Empty = new GetBillingAccountExclusionArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="billingAccountId", required=true)
     private final String billingAccountId;
 
@@ -19,6 +25,9 @@ public final class GetBillingAccountExclusionArgs extends io.pulumi.resources.In
         return this.billingAccountId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="exclusionId", required=true)
     private final String exclusionId;
 

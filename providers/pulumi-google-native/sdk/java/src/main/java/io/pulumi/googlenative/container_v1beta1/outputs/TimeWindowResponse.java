@@ -10,8 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TimeWindowResponse {
+/**
+ * The time that the window ends. The end time should take place after the start time.
+ */
     private final String endTime;
+/**
+ * MaintenanceExclusionOptions provides maintenance exclusion related options.
+ */
     private final MaintenanceExclusionOptionsResponse maintenanceExclusionOptions;
+/**
+ * The time that the window first starts.
+ */
     private final String startTime;
 
     @OutputCustomType.Constructor({"endTime","maintenanceExclusionOptions","startTime"})
@@ -24,12 +33,21 @@ public final class TimeWindowResponse {
         this.startTime = Objects.requireNonNull(startTime);
     }
 
+/**
+ * The time that the window ends. The end time should take place after the start time.
+ */
     public String getEndTime() {
         return this.endTime;
     }
+/**
+ * MaintenanceExclusionOptions provides maintenance exclusion related options.
+ */
     public MaintenanceExclusionOptionsResponse getMaintenanceExclusionOptions() {
         return this.maintenanceExclusionOptions;
     }
+/**
+ * The time that the window first starts.
+ */
     public String getStartTime() {
         return this.startTime;
     }

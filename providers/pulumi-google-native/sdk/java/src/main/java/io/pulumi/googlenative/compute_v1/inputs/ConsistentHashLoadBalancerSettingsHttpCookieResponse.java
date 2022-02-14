@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The information about the HTTP Cookie on which the hash function is based for load balancing policies that use a consistent hash.
+ */
 public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConsistentHashLoadBalancerSettingsHttpCookieResponse Empty = new ConsistentHashLoadBalancerSettingsHttpCookieResponse();
 
+    /**
+     * Name of the cookie.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -20,6 +26,9 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse extends 
         return this.name;
     }
 
+    /**
+     * Path to set for the cookie.
+     */
     @InputImport(name="path", required=true)
     private final String path;
 
@@ -27,6 +36,9 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse extends 
         return this.path;
     }
 
+    /**
+     * Lifetime of the cookie.
+     */
     @InputImport(name="ttl", required=true)
     private final DurationResponse ttl;
 

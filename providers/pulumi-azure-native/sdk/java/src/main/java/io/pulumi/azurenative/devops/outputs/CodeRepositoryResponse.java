@@ -13,10 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CodeRepositoryResponse {
+/**
+ * Authorization info to access the code repository.
+ */
     private final @Nullable AuthorizationResponse authorization;
+/**
+ * Default branch used to configure Continuous Integration (CI) in the pipeline.
+ */
     private final String defaultBranch;
+/**
+ * Unique immutable identifier of the code repository.
+ */
     private final String id;
+/**
+ * Repository-specific properties.
+ */
     private final @Nullable Map<String,String> properties;
+/**
+ * Type of code repository.
+ */
     private final String repositoryType;
 
     @OutputCustomType.Constructor({"authorization","defaultBranch","id","properties","repositoryType"})
@@ -33,18 +48,33 @@ public final class CodeRepositoryResponse {
         this.repositoryType = Objects.requireNonNull(repositoryType);
     }
 
+/**
+ * Authorization info to access the code repository.
+ */
     public Optional<AuthorizationResponse> getAuthorization() {
         return Optional.ofNullable(this.authorization);
     }
+/**
+ * Default branch used to configure Continuous Integration (CI) in the pipeline.
+ */
     public String getDefaultBranch() {
         return this.defaultBranch;
     }
+/**
+ * Unique immutable identifier of the code repository.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Repository-specific properties.
+ */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
+/**
+ * Type of code repository.
+ */
     public String getRepositoryType() {
         return this.repositoryType;
     }

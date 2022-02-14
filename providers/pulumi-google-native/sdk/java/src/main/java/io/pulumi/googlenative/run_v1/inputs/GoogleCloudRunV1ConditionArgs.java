@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Condition defines a generic condition for a Resource.
+ */
 public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudRunV1ConditionArgs Empty = new GoogleCloudRunV1ConditionArgs();
 
+    /**
+     * Optional. Last time the condition transitioned from one status to another.
+     */
     @InputImport(name="lastTransitionTime")
     private final @Nullable Input<String> lastTransitionTime;
 
@@ -21,6 +27,9 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
         return this.lastTransitionTime == null ? Input.empty() : this.lastTransitionTime;
     }
 
+    /**
+     * Optional. Human readable message indicating details about the current status.
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -28,6 +37,9 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
         return this.message == null ? Input.empty() : this.message;
     }
 
+    /**
+     * Optional. One-word CamelCase reason for the condition's last transition.
+     */
     @InputImport(name="reason")
     private final @Nullable Input<String> reason;
 
@@ -35,6 +47,9 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
         return this.reason == null ? Input.empty() : this.reason;
     }
 
+    /**
+     * Optional. How to interpret failures of this condition, one of Error, Warning, Info
+     */
     @InputImport(name="severity")
     private final @Nullable Input<String> severity;
 
@@ -42,6 +57,9 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
         return this.severity == null ? Input.empty() : this.severity;
     }
 
+    /**
+     * Status of the condition, one of True, False, Unknown.
+     */
     @InputImport(name="status")
     private final @Nullable Input<String> status;
 
@@ -49,6 +67,9 @@ public final class GoogleCloudRunV1ConditionArgs extends io.pulumi.resources.Res
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * "Ready": True when the Resource is ready.
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

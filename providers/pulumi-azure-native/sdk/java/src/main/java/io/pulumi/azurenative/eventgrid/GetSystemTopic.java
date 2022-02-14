@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSystemTopic {
+/**
+ * EventGrid System Topic.
+API Version: 2021-06-01-preview.
+ *
+ * EventGrid System Topic.
+ */
     public static CompletableFuture<GetSystemTopicResult> invokeAsync(GetSystemTopicArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getSystemTopic", TypeShape.of(GetSystemTopicResult.class), args == null ? GetSystemTopicArgs.Empty : args, Utilities.withVersion(options));
     }

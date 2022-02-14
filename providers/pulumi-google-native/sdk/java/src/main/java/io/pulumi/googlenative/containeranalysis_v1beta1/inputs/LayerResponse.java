@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Layer holds metadata specific to a layer of a Docker image.
+ */
 public final class LayerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LayerResponse Empty = new LayerResponse();
 
+    /**
+     * The recovered arguments to the Dockerfile directive.
+     */
     @InputImport(name="arguments", required=true)
     private final String arguments;
 
@@ -19,6 +25,9 @@ public final class LayerResponse extends io.pulumi.resources.InvokeArgs {
         return this.arguments;
     }
 
+    /**
+     * The recovered Dockerfile directive used to construct this layer.
+     */
     @InputImport(name="directive", required=true)
     private final String directive;
 

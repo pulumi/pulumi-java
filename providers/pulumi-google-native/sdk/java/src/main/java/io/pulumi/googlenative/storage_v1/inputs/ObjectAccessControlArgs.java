@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An access-control entry.
+ */
 public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ObjectAccessControlArgs Empty = new ObjectAccessControlArgs();
 
+    /**
+     * The name of the bucket.
+     */
     @InputImport(name="bucket")
     private final @Nullable Input<String> bucket;
 
@@ -22,6 +28,9 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
         return this.bucket == null ? Input.empty() : this.bucket;
     }
 
+    /**
+     * The domain associated with the entity, if any.
+     */
     @InputImport(name="domain")
     private final @Nullable Input<String> domain;
 
@@ -29,6 +38,9 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
         return this.domain == null ? Input.empty() : this.domain;
     }
 
+    /**
+     * The email address associated with the entity, if any.
+     */
     @InputImport(name="email")
     private final @Nullable Input<String> email;
 
@@ -36,6 +48,20 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
         return this.email == null ? Input.empty() : this.email;
     }
 
+    /**
+     * The entity holding the permission, in one of the following forms: 
+- user-userId 
+- user-email 
+- group-groupId 
+- group-email 
+- domain-domain 
+- project-team-projectId 
+- allUsers 
+- allAuthenticatedUsers Examples: 
+- The user liz@example.com would be user-liz@example.com. 
+- The group example@googlegroups.com would be group-example@googlegroups.com. 
+- To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
+     */
     @InputImport(name="entity")
     private final @Nullable Input<String> entity;
 
@@ -43,6 +69,9 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
         return this.entity == null ? Input.empty() : this.entity;
     }
 
+    /**
+     * The ID for the entity, if any.
+     */
     @InputImport(name="entityId")
     private final @Nullable Input<String> entityId;
 
@@ -50,6 +79,9 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
         return this.entityId == null ? Input.empty() : this.entityId;
     }
 
+    /**
+     * HTTP 1.1 Entity tag for the access-control entry.
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -57,6 +89,9 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * The content generation of the object, if applied to an object.
+     */
     @InputImport(name="generation")
     private final @Nullable Input<String> generation;
 
@@ -64,6 +99,9 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
         return this.generation == null ? Input.empty() : this.generation;
     }
 
+    /**
+     * The ID of the access-control entry.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -71,6 +109,9 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The kind of item this is. For object access control entries, this is always storage#objectAccessControl.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -78,6 +119,9 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The name of the object, if applied to an object.
+     */
     @InputImport(name="object")
     private final @Nullable Input<String> object;
 
@@ -85,6 +129,9 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
         return this.object == null ? Input.empty() : this.object;
     }
 
+    /**
+     * The project team associated with the entity, if any.
+     */
     @InputImport(name="projectTeam")
     private final @Nullable Input<ObjectAccessControlProjectTeamArgs> projectTeam;
 
@@ -92,6 +139,9 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
         return this.projectTeam == null ? Input.empty() : this.projectTeam;
     }
 
+    /**
+     * The access permission for the entity.
+     */
     @InputImport(name="role")
     private final @Nullable Input<String> role;
 
@@ -99,6 +149,9 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
         return this.role == null ? Input.empty() : this.role;
     }
 
+    /**
+     * The link to this access-control entry.
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 

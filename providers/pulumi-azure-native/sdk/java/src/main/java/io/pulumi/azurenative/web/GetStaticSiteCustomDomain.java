@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStaticSiteCustomDomain {
+/**
+ * Static Site Custom Domain Overview ARM resource.
+API Version: 2020-12-01.
+ *
+ * Static Site Custom Domain Overview ARM resource.
+ */
     public static CompletableFuture<GetStaticSiteCustomDomainResult> invokeAsync(GetStaticSiteCustomDomainArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getStaticSiteCustomDomain", TypeShape.of(GetStaticSiteCustomDomainResult.class), args == null ? GetStaticSiteCustomDomainArgs.Empty : args, Utilities.withVersion(options));
     }

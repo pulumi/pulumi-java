@@ -9,10 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ApiConfigHandlerResponse {
+/**
+ * Action to take when users access resources that require authentication. Defaults to redirect.
+ */
     private final String authFailAction;
+/**
+ * Level of login required to access this resource. Defaults to optional.
+ */
     private final String login;
+/**
+ * Path to the script from the application root directory.
+ */
     private final String script;
+/**
+ * Security (HTTPS) enforcement for this URL.
+ */
     private final String securityLevel;
+/**
+ * URL to serve the endpoint at.
+ */
     private final String url;
 
     @OutputCustomType.Constructor({"authFailAction","login","script","securityLevel","url"})
@@ -29,18 +44,33 @@ public final class ApiConfigHandlerResponse {
         this.url = Objects.requireNonNull(url);
     }
 
+/**
+ * Action to take when users access resources that require authentication. Defaults to redirect.
+ */
     public String getAuthFailAction() {
         return this.authFailAction;
     }
+/**
+ * Level of login required to access this resource. Defaults to optional.
+ */
     public String getLogin() {
         return this.login;
     }
+/**
+ * Path to the script from the application root directory.
+ */
     public String getScript() {
         return this.script;
     }
+/**
+ * Security (HTTPS) enforcement for this URL.
+ */
     public String getSecurityLevel() {
         return this.securityLevel;
     }
+/**
+ * URL to serve the endpoint at.
+ */
     public String getUrl() {
         return this.url;
     }

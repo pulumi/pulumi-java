@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ParsedDataResponse {
+/**
+ * 
+ */
     private final List<SegmentResponse> segments;
 
     @OutputCustomType.Constructor({"segments"})
@@ -17,6 +20,9 @@ public final class ParsedDataResponse {
         this.segments = Objects.requireNonNull(segments);
     }
 
+/**
+ * 
+ */
     public List<SegmentResponse> getSegments() {
         return this.segments;
     }

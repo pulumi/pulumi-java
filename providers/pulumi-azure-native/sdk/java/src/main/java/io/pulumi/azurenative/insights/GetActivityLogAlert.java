@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetActivityLogAlert {
+/**
+ * An Activity Log Alert rule resource.
+API Version: 2020-10-01.
+ *
+ * An Activity Log Alert rule resource.
+ */
     public static CompletableFuture<GetActivityLogAlertResult> invokeAsync(GetActivityLogAlertArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getActivityLogAlert", TypeShape.of(GetActivityLogAlertResult.class), args == null ? GetActivityLogAlertArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -14,10 +14,17 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for the command that completes sync migration for a database.
+ */
 public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateSyncCompleteCommandPropertiesResponse Empty = new MigrateSyncCompleteCommandPropertiesResponse();
 
+    /**
+     * Command type.
+Expected value is 'Migrate.Sync.Complete.Database'.
+     */
     @InputImport(name="commandType", required=true)
     private final String commandType;
 
@@ -25,6 +32,9 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulum
         return this.commandType;
     }
 
+    /**
+     * Array of errors. This is ignored if submitted.
+     */
     @InputImport(name="errors", required=true)
     private final List<ODataErrorResponse> errors;
 
@@ -32,6 +42,9 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulum
         return this.errors;
     }
 
+    /**
+     * Command input
+     */
     @InputImport(name="input")
     private final @Nullable MigrateSyncCompleteCommandInputResponse input;
 
@@ -39,6 +52,9 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulum
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
     }
 
+    /**
+     * Command output. This is ignored if submitted.
+     */
     @InputImport(name="output", required=true)
     private final MigrateSyncCompleteCommandOutputResponse output;
 
@@ -46,6 +62,9 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulum
         return this.output;
     }
 
+    /**
+     * The state of the command. This is ignored if submitted.
+     */
     @InputImport(name="state", required=true)
     private final String state;
 

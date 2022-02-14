@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Connection properties specific to the Cloud SQL.
+ */
 public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CloudSqlPropertiesArgs Empty = new CloudSqlPropertiesArgs();
 
+    /**
+     * Input only. Cloud SQL credential.
+     */
     @InputImport(name="credential")
     private final @Nullable Input<CloudSqlCredentialArgs> credential;
 
@@ -23,6 +29,9 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.credential == null ? Input.empty() : this.credential;
     }
 
+    /**
+     * Database name.
+     */
     @InputImport(name="database")
     private final @Nullable Input<String> database;
 
@@ -30,6 +39,9 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.database == null ? Input.empty() : this.database;
     }
 
+    /**
+     * Cloud SQL instance ID in the form `project:location:instance`.
+     */
     @InputImport(name="instanceId")
     private final @Nullable Input<String> instanceId;
 
@@ -37,6 +49,9 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.instanceId == null ? Input.empty() : this.instanceId;
     }
 
+    /**
+     * Type of the Cloud SQL database.
+     */
     @InputImport(name="type")
     private final @Nullable Input<CloudSqlPropertiesType> type;
 

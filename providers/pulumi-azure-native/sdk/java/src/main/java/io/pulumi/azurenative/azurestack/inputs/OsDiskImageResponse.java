@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * OS disk image.
+ */
 public final class OsDiskImageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OsDiskImageResponse Empty = new OsDiskImageResponse();
 
+    /**
+     * OS operating system type.
+     */
     @InputImport(name="operatingSystem", required=true)
     private final String operatingSystem;
 
@@ -19,6 +25,9 @@ public final class OsDiskImageResponse extends io.pulumi.resources.InvokeArgs {
         return this.operatingSystem;
     }
 
+    /**
+     * SAS key for source blob.
+     */
     @InputImport(name="sourceBlobSasUri", required=true)
     private final String sourceBlobSasUri;
 

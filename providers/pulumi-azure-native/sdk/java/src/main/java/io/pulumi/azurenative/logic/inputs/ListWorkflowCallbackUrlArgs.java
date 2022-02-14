@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ListWorkflowCallbackUrlArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListWorkflowCallbackUrlArgs Empty = new ListWorkflowCallbackUrlArgs();
 
+    /**
+     * The key type.
+     */
     @InputImport(name="keyType")
     private final @Nullable Either<String,KeyType> keyType;
 
@@ -23,6 +29,9 @@ public final class ListWorkflowCallbackUrlArgs extends io.pulumi.resources.Invok
         return this.keyType == null ? null : this.keyType;
     }
 
+    /**
+     * The expiry time.
+     */
     @InputImport(name="notAfter")
     private final @Nullable String notAfter;
 
@@ -30,6 +39,9 @@ public final class ListWorkflowCallbackUrlArgs extends io.pulumi.resources.Invok
         return this.notAfter == null ? Optional.empty() : Optional.ofNullable(this.notAfter);
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -37,6 +49,9 @@ public final class ListWorkflowCallbackUrlArgs extends io.pulumi.resources.Invok
         return this.resourceGroupName;
     }
 
+    /**
+     * The workflow name.
+     */
     @InputImport(name="workflowName", required=true)
     private final String workflowName;
 

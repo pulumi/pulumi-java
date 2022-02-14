@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetWebAppDeploymentSlotArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWebAppDeploymentSlotArgs Empty = new GetWebAppDeploymentSlotArgs();
 
+    /**
+     * Deployment ID.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -19,6 +25,9 @@ public final class GetWebAppDeploymentSlotArgs extends io.pulumi.resources.Invok
         return this.id;
     }
 
+    /**
+     * Name of the app.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +35,9 @@ public final class GetWebAppDeploymentSlotArgs extends io.pulumi.resources.Invok
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,9 @@ public final class GetWebAppDeploymentSlotArgs extends io.pulumi.resources.Invok
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the deployment slot. If a slot is not specified, the API gets a deployment for the production slot.
+     */
     @InputImport(name="slot", required=true)
     private final String slot;
 

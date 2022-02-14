@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.recoveryservices.ReplicationvCenterArgs;
 import io.pulumi.azurenative.recoveryservices.outputs.VCenterPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,33 +14,183 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * vCenter definition.
+API Version: 2018-07-10.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Add vCenter.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var replicationvCenter = new AzureNative.RecoveryServices.ReplicationvCenter("replicationvCenter", new AzureNative.RecoveryServices.ReplicationvCenterArgs
+        {
+            FabricName = "MadhaviFabric",
+            Properties = new AzureNative.RecoveryServices.Inputs.AddVCenterRequestPropertiesArgs
+            {
+                FriendlyName = "esx-78",
+                IpAddress = "inmtest78",
+                Port = "443",
+                ProcessServerId = "5A720CAB-39CB-F445-BD1662B0B33164B5",
+                RunAsAccountId = "2",
+            },
+            ResourceGroupName = "MadhaviVRG",
+            ResourceName = "MadhaviVault",
+            VCenterName = "esx-78",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/recoveryservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewReplicationvCenter(ctx, "replicationvCenter", &recoveryservices.ReplicationvCenterArgs{
+			FabricName: pulumi.String("MadhaviFabric"),
+			Properties: &recoveryservices.AddVCenterRequestPropertiesArgs{
+				FriendlyName:    pulumi.String("esx-78"),
+				IpAddress:       pulumi.String("inmtest78"),
+				Port:            pulumi.String("443"),
+				ProcessServerId: pulumi.String("5A720CAB-39CB-F445-BD1662B0B33164B5"),
+				RunAsAccountId:  pulumi.String("2"),
+			},
+			ResourceGroupName: pulumi.String("MadhaviVRG"),
+			ResourceName:      pulumi.String("MadhaviVault"),
+			VCenterName:       pulumi.String("esx-78"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const replicationvCenter = new azure_native.recoveryservices.ReplicationvCenter("replicationvCenter", {
+    fabricName: "MadhaviFabric",
+    properties: {
+        friendlyName: "esx-78",
+        ipAddress: "inmtest78",
+        port: "443",
+        processServerId: "5A720CAB-39CB-F445-BD1662B0B33164B5",
+        runAsAccountId: "2",
+    },
+    resourceGroupName: "MadhaviVRG",
+    resourceName: "MadhaviVault",
+    vCenterName: "esx-78",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+replicationv_center = azure_native.recoveryservices.ReplicationvCenter("replicationvCenter",
+    fabric_name="MadhaviFabric",
+    properties=azure_native.recoveryservices.AddVCenterRequestPropertiesArgs(
+        friendly_name="esx-78",
+        ip_address="inmtest78",
+        port="443",
+        process_server_id="5A720CAB-39CB-F445-BD1662B0B33164B5",
+        run_as_account_id="2",
+    ),
+    resource_group_name="MadhaviVRG",
+    resource_name="MadhaviVault",
+    v_center_name="esx-78")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:recoveryservices:ReplicationvCenter esx-78 /Subscriptions/7c943c1b-5122-4097-90c8-861411bdd574/resourceGroups/MadhaviVRG/providers/Microsoft.RecoveryServices/vaults/MadhaviVault/replicationFabrics/239f778f368e34f78216d81f030725cdf2033174b47879b9f2eeede06fdd9c4d/replicationvCenters/esx-78 
+```
+
+ */
 @ResourceType(type="azure-native:recoveryservices:ReplicationvCenter")
 public class ReplicationvCenter extends io.pulumi.resources.CustomResource {
+    /**
+     * Resource Location
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource Location
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource Name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource Name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * VCenter related data.
+     */
     @OutputExport(name="properties", type=VCenterPropertiesResponse.class, parameters={})
     private Output<VCenterPropertiesResponse> properties;
 
+    /**
+     * @return VCenter related data.
+     */
     public Output<VCenterPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Resource Type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource Type
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ReplicationvCenter(String name, ReplicationvCenterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:recoveryservices:ReplicationvCenter", name, args == null ? ReplicationvCenterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -71,6 +220,14 @@ public class ReplicationvCenter extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ReplicationvCenter get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ReplicationvCenter(name, id, options);
     }

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Resource Type of Application.
+ */
     @EnumType
     public enum RemoteApplicationType {
+/**
+ * 
+ */
         InBuilt("InBuilt"),
+/**
+ * 
+ */
         MsixApplication("MsixApplication");
 
         private final String value;

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListIotHubResourceKeysForKeyNameArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListIotHubResourceKeysForKeyNameArgs Empty = new ListIotHubResourceKeysForKeyNameArgs();
 
+    /**
+     * The name of the shared access policy.
+     */
     @InputImport(name="keyName", required=true)
     private final String keyName;
 
@@ -19,6 +25,9 @@ public final class ListIotHubResourceKeysForKeyNameArgs extends io.pulumi.resour
         return this.keyName;
     }
 
+    /**
+     * The name of the resource group that contains the IoT hub.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class ListIotHubResourceKeysForKeyNameArgs extends io.pulumi.resour
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the IoT hub.
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

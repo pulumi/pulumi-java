@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GSuitePrincipalArgs Empty = new GSuitePrincipalArgs();
 
+    /**
+     * This principal represents all users of the G Suite domain of the customer.
+     */
     @InputImport(name="gsuiteDomain")
     private final @Nullable Input<Boolean> gsuiteDomain;
 
@@ -22,6 +28,9 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
         return this.gsuiteDomain == null ? Input.empty() : this.gsuiteDomain;
     }
 
+    /**
+     * This principal references a G Suite group account
+     */
     @InputImport(name="gsuiteGroupEmail")
     private final @Nullable Input<String> gsuiteGroupEmail;
 
@@ -29,6 +38,9 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
         return this.gsuiteGroupEmail == null ? Input.empty() : this.gsuiteGroupEmail;
     }
 
+    /**
+     * This principal references a G Suite user account
+     */
     @InputImport(name="gsuiteUserEmail")
     private final @Nullable Input<String> gsuiteUserEmail;
 

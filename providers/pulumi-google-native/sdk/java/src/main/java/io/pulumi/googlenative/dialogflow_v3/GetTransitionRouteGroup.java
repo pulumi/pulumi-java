@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTransitionRouteGroup {
+/**
+ * Retrieves the specified TransitionRouteGroup.
+ */
     public static CompletableFuture<GetTransitionRouteGroupResult> invokeAsync(GetTransitionRouteGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getTransitionRouteGroup", TypeShape.of(GetTransitionRouteGroupResult.class), args == null ? GetTransitionRouteGroupArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Round-Robin load balancing settings for a backend pool
+ */
 public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoadBalancingSettingsParametersArgs Empty = new LoadBalancingSettingsParametersArgs();
 
+    /**
+     * The additional latency in milliseconds for probes to fall into the lowest latency bucket
+     */
     @InputImport(name="additionalLatencyInMilliseconds")
     private final @Nullable Input<Integer> additionalLatencyInMilliseconds;
 
@@ -21,6 +27,9 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
         return this.additionalLatencyInMilliseconds == null ? Input.empty() : this.additionalLatencyInMilliseconds;
     }
 
+    /**
+     * The number of samples to consider for load balancing decisions
+     */
     @InputImport(name="sampleSize")
     private final @Nullable Input<Integer> sampleSize;
 
@@ -28,6 +37,9 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
         return this.sampleSize == null ? Input.empty() : this.sampleSize;
     }
 
+    /**
+     * The number of samples within the sample period that must succeed
+     */
     @InputImport(name="successfulSamplesRequired")
     private final @Nullable Input<Integer> successfulSamplesRequired;
 

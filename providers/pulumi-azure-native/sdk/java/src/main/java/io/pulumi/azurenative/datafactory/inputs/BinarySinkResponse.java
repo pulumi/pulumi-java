@@ -17,10 +17,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity Binary sink.
+ */
 public final class BinarySinkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BinarySinkResponse Empty = new BinarySinkResponse();
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -28,6 +34,9 @@ public final class BinarySinkResponse extends io.pulumi.resources.InvokeArgs {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
+    /**
+     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -35,6 +44,9 @@ public final class BinarySinkResponse extends io.pulumi.resources.InvokeArgs {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
+    /**
+     * Sink retry count. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="sinkRetryCount")
     private final @Nullable Object sinkRetryCount;
 
@@ -42,6 +54,9 @@ public final class BinarySinkResponse extends io.pulumi.resources.InvokeArgs {
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
     }
 
+    /**
+     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="sinkRetryWait")
     private final @Nullable Object sinkRetryWait;
 
@@ -49,6 +64,9 @@ public final class BinarySinkResponse extends io.pulumi.resources.InvokeArgs {
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
     }
 
+    /**
+     * Binary store settings.
+     */
     @InputImport(name="storeSettings")
     private final @Nullable Object storeSettings;
 
@@ -56,6 +74,10 @@ public final class BinarySinkResponse extends io.pulumi.resources.InvokeArgs {
         return this.storeSettings == null ? null : this.storeSettings;
     }
 
+    /**
+     * Copy sink type.
+Expected value is 'BinarySink'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -63,6 +85,9 @@ public final class BinarySinkResponse extends io.pulumi.resources.InvokeArgs {
         return this.type;
     }
 
+    /**
+     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     */
     @InputImport(name="writeBatchSize")
     private final @Nullable Object writeBatchSize;
 
@@ -70,6 +95,9 @@ public final class BinarySinkResponse extends io.pulumi.resources.InvokeArgs {
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
     }
 
+    /**
+     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="writeBatchTimeout")
     private final @Nullable Object writeBatchTimeout;
 

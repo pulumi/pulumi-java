@@ -8,10 +8,16 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Configuration for the Kubernetes Dashboard.
+ */
 public final class KubernetesDashboardResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KubernetesDashboardResponse Empty = new KubernetesDashboardResponse();
 
+    /**
+     * Whether the Kubernetes Dashboard is enabled for this cluster.
+     */
     @InputImport(name="disabled", required=true)
     private final Boolean disabled;
 

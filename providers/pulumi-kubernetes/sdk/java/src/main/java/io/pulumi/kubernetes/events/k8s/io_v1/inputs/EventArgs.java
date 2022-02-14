@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Event is a report of an event somewhere in the cluster. It generally denotes some state change in the system. Events have a limited retention time and triggers and messages may evolve with time.  Event consumers should not rely on the timing of an event with a given Reason reflecting a consistent underlying trigger, or the continued existence of events with that Reason.  Events should be treated as informative, best-effort, supplemental data.
+ */
 public final class EventArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EventArgs Empty = new EventArgs();
 
+    /**
+     * action is what action was taken/failed regarding to the regarding object. It is machine-readable. This field cannot be empty for new Events and it can have at most 128 characters.
+     */
     @InputImport(name="action")
     private final @Nullable Input<String> action;
 
@@ -26,6 +32,9 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.action == null ? Input.empty() : this.action;
     }
 
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -33,6 +42,9 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
+    /**
+     * deprecatedCount is the deprecated field assuring backward compatibility with core.v1 Event type.
+     */
     @InputImport(name="deprecatedCount")
     private final @Nullable Input<Integer> deprecatedCount;
 
@@ -40,6 +52,9 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.deprecatedCount == null ? Input.empty() : this.deprecatedCount;
     }
 
+    /**
+     * deprecatedFirstTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
+     */
     @InputImport(name="deprecatedFirstTimestamp")
     private final @Nullable Input<String> deprecatedFirstTimestamp;
 
@@ -47,6 +62,9 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.deprecatedFirstTimestamp == null ? Input.empty() : this.deprecatedFirstTimestamp;
     }
 
+    /**
+     * deprecatedLastTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
+     */
     @InputImport(name="deprecatedLastTimestamp")
     private final @Nullable Input<String> deprecatedLastTimestamp;
 
@@ -54,6 +72,9 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.deprecatedLastTimestamp == null ? Input.empty() : this.deprecatedLastTimestamp;
     }
 
+    /**
+     * deprecatedSource is the deprecated field assuring backward compatibility with core.v1 Event type.
+     */
     @InputImport(name="deprecatedSource")
     private final @Nullable Input<EventSourceArgs> deprecatedSource;
 
@@ -61,6 +82,9 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.deprecatedSource == null ? Input.empty() : this.deprecatedSource;
     }
 
+    /**
+     * eventTime is the time when this Event was first observed. It is required.
+     */
     @InputImport(name="eventTime", required=true)
     private final Input<String> eventTime;
 
@@ -68,6 +92,9 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventTime;
     }
 
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -75,6 +102,9 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<ObjectMetaArgs> metadata;
 
@@ -82,6 +112,9 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * note is a human-readable description of the status of this operation. Maximal length of the note is 1kB, but libraries should be prepared to handle values up to 64kB.
+     */
     @InputImport(name="note")
     private final @Nullable Input<String> note;
 
@@ -89,6 +122,9 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.note == null ? Input.empty() : this.note;
     }
 
+    /**
+     * reason is why the action was taken. It is human-readable. This field cannot be empty for new Events and it can have at most 128 characters.
+     */
     @InputImport(name="reason")
     private final @Nullable Input<String> reason;
 
@@ -96,6 +132,9 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.reason == null ? Input.empty() : this.reason;
     }
 
+    /**
+     * regarding contains the object this Event is about. In most cases it's an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
+     */
     @InputImport(name="regarding")
     private final @Nullable Input<ObjectReferenceArgs> regarding;
 
@@ -103,6 +142,9 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.regarding == null ? Input.empty() : this.regarding;
     }
 
+    /**
+     * related is the optional secondary object for more complex actions. E.g. when regarding object triggers a creation or deletion of related object.
+     */
     @InputImport(name="related")
     private final @Nullable Input<ObjectReferenceArgs> related;
 
@@ -110,6 +152,9 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.related == null ? Input.empty() : this.related;
     }
 
+    /**
+     * reportingController is the name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`. This field cannot be empty for new Events.
+     */
     @InputImport(name="reportingController")
     private final @Nullable Input<String> reportingController;
 
@@ -117,6 +162,9 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.reportingController == null ? Input.empty() : this.reportingController;
     }
 
+    /**
+     * reportingInstance is the ID of the controller instance, e.g. `kubelet-xyzf`. This field cannot be empty for new Events and it can have at most 128 characters.
+     */
     @InputImport(name="reportingInstance")
     private final @Nullable Input<String> reportingInstance;
 
@@ -124,6 +172,9 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.reportingInstance == null ? Input.empty() : this.reportingInstance;
     }
 
+    /**
+     * series is data about the Event series this event represents or nil if it's a singleton Event.
+     */
     @InputImport(name="series")
     private final @Nullable Input<EventSeriesArgs> series;
 
@@ -131,6 +182,9 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
         return this.series == null ? Input.empty() : this.series;
     }
 
+    /**
+     * type is the type of this event (Normal, Warning), new types could be added in the future. It is machine-readable. This field cannot be empty for new Events.
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

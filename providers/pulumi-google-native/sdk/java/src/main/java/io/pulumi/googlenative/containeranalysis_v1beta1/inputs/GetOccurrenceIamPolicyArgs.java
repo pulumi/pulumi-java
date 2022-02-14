@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetOccurrenceIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetOccurrenceIamPolicyArgs Empty = new GetOccurrenceIamPolicyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="occurrenceId", required=true)
     private final String occurrenceId;
 
@@ -21,6 +27,9 @@ public final class GetOccurrenceIamPolicyArgs extends io.pulumi.resources.Invoke
         return this.occurrenceId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

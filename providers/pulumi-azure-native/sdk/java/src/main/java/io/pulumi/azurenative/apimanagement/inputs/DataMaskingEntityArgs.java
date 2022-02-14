@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DataMaskingEntityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataMaskingEntityArgs Empty = new DataMaskingEntityArgs();
 
+    /**
+     * Data masking mode.
+     */
     @InputImport(name="mode")
     private final @Nullable Input<Either<String,DataMaskingMode>> mode;
 
@@ -23,6 +29,9 @@ public final class DataMaskingEntityArgs extends io.pulumi.resources.ResourceArg
         return this.mode == null ? Input.empty() : this.mode;
     }
 
+    /**
+     * The name of an entity to mask (e.g. a name of a header or a query parameter).
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

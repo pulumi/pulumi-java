@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An issue detected occurring during a test execution.
+ */
 public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TestIssueResponse Empty = new TestIssueResponse();
 
+    /**
+     * Category of issue. Required.
+     */
     @InputImport(name="category", required=true)
     private final String category;
 
@@ -20,6 +26,9 @@ public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
         return this.category;
     }
 
+    /**
+     * A brief human-readable message describing the issue. Required.
+     */
     @InputImport(name="errorMessage", required=true)
     private final String errorMessage;
 
@@ -27,6 +36,9 @@ public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
         return this.errorMessage;
     }
 
+    /**
+     * Severity of issue. Required.
+     */
     @InputImport(name="severity", required=true)
     private final String severity;
 
@@ -34,6 +46,9 @@ public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
         return this.severity;
     }
 
+    /**
+     * Type of issue. Required.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -41,6 +56,9 @@ public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
         return this.type;
     }
 
+    /**
+     * Warning message with additional details of the issue. Should always be a message from com.google.devtools.toolresults.v1.warnings
+     */
     @InputImport(name="warning", required=true)
     private final AnyResponse warning;
 

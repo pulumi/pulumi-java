@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse {
+/**
+ * Additional cases to be evaluated.
+ */
     private final GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse additionalCases;
+/**
+ * Returned message.
+ */
     private final GoogleCloudDialogflowCxV3beta1ResponseMessageResponse message;
 
     @OutputCustomType.Constructor({"additionalCases","message"})
@@ -21,9 +27,15 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
         this.message = Objects.requireNonNull(message);
     }
 
+/**
+ * Additional cases to be evaluated.
+ */
     public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse getAdditionalCases() {
         return this.additionalCases;
     }
+/**
+ * Returned message.
+ */
     public GoogleCloudDialogflowCxV3beta1ResponseMessageResponse getMessage() {
         return this.message;
     }

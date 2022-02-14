@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration for a push delivery endpoint.
+ */
 public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PushConfigArgs Empty = new PushConfigArgs();
 
+    /**
+     * A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint might use "https://example.com/push".
+     */
     @InputImport(name="pushEndpoint")
     private final @Nullable Input<String> pushEndpoint;
 

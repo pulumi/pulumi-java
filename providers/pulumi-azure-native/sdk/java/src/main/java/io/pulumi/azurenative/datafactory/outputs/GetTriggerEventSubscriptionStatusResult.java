@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetTriggerEventSubscriptionStatusResult {
+/**
+ * Event Subscription Status.
+ */
     private final String status;
+/**
+ * Trigger name.
+ */
     private final String triggerName;
 
     @OutputCustomType.Constructor({"status","triggerName"})
@@ -20,9 +26,15 @@ public final class GetTriggerEventSubscriptionStatusResult {
         this.triggerName = Objects.requireNonNull(triggerName);
     }
 
+/**
+ * Event Subscription Status.
+ */
     public String getStatus() {
         return this.status;
     }
+/**
+ * Trigger name.
+ */
     public String getTriggerName() {
         return this.triggerName;
     }

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.chaos;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.chaos.ExperimentArgs;
 import io.pulumi.azurenative.chaos.outputs.ExperimentPropertiesResponse;
 import io.pulumi.azurenative.chaos.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.chaos.outputs.SystemDataResponse;
@@ -18,51 +17,269 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Model that represents a Experiment resource.
+API Version: 2021-09-15-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create/update a Experiment in a resource group.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var experiment = new AzureNative.Chaos.Experiment("experiment", new AzureNative.Chaos.ExperimentArgs
+        {
+            ExperimentName = "exampleExperiment",
+            Identity = new AzureNative.Chaos.Inputs.ResourceIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Location = "centraluseuap",
+            Properties = new AzureNative.Chaos.Inputs.ExperimentPropertiesArgs
+            {
+                Selectors = 
+                {
+                    new AzureNative.Chaos.Inputs.SelectorArgs
+                    {
+                        Id = "selector1",
+                        Targets = 
+                        {
+                            new AzureNative.Chaos.Inputs.TargetReferenceArgs
+                            {
+                                Id = "/subscriptions/6b052e15-03d3-4f17-b2e1-be7f07588291/resourceGroups/exampleRG/providers/Microsoft.Compute/virtualMachines/exampleVM/providers/Microsoft.Chaos/targets/Microsoft-VirtualMachine",
+                                Type = "ChaosTarget",
+                            },
+                        },
+                        Type = "List",
+                    },
+                },
+                Steps = 
+                {
+                    new AzureNative.Chaos.Inputs.StepArgs
+                    {
+                        Branches = 
+                        {
+                            new AzureNative.Chaos.Inputs.BranchArgs
+                            {
+                                Actions = 
+                                {
+                                    
+                                    {
+                                        { "duration", "PT10M" },
+                                        { "name", "urn:csci:provider:providername:Shutdown/1.0" },
+                                        { "parameters", 
+                                        {
+                                            { "restartWhenComplete", true },
+                                        } },
+                                        { "selectorId", "selector1" },
+                                        { "type", "Continuous" },
+                                    },
+                                },
+                                Name = "branch1",
+                            },
+                        },
+                        Name = "step1",
+                    },
+                },
+            },
+            ResourceGroupName = "exampleRG",
+        });
+    }
+
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const experiment = new azure_native.chaos.Experiment("experiment", {
+    experimentName: "exampleExperiment",
+    identity: {
+        type: "SystemAssigned",
+    },
+    location: "centraluseuap",
+    properties: {
+        selectors: [{
+            id: "selector1",
+            targets: [{
+                id: "/subscriptions/6b052e15-03d3-4f17-b2e1-be7f07588291/resourceGroups/exampleRG/providers/Microsoft.Compute/virtualMachines/exampleVM/providers/Microsoft.Chaos/targets/Microsoft-VirtualMachine",
+                type: "ChaosTarget",
+            }],
+            type: "List",
+        }],
+        steps: [{
+            branches: [{
+                actions: [{
+                    duration: "PT10M",
+                    name: "urn:csci:provider:providername:Shutdown/1.0",
+                    parameters: {
+                        restartWhenComplete: true,
+                    },
+                    selectorId: "selector1",
+                    type: "Continuous",
+                }],
+                name: "branch1",
+            }],
+            name: "step1",
+        }],
+    },
+    resourceGroupName: "exampleRG",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+experiment = azure_native.chaos.Experiment("experiment",
+    experiment_name="exampleExperiment",
+    identity=azure_native.chaos.ResourceIdentityArgs(
+        type="SystemAssigned",
+    ),
+    location="centraluseuap",
+    properties=azure_native.chaos.ExperimentPropertiesArgs(
+        selectors=[azure_native.chaos.SelectorArgs(
+            id="selector1",
+            targets=[azure_native.chaos.TargetReferenceArgs(
+                id="/subscriptions/6b052e15-03d3-4f17-b2e1-be7f07588291/resourceGroups/exampleRG/providers/Microsoft.Compute/virtualMachines/exampleVM/providers/Microsoft.Chaos/targets/Microsoft-VirtualMachine",
+                type="ChaosTarget",
+            )],
+            type="List",
+        )],
+        steps=[azure_native.chaos.StepArgs(
+            branches=[azure_native.chaos.BranchArgs(
+                actions=[{
+                    "duration": "PT10M",
+                    "name": "urn:csci:provider:providername:Shutdown/1.0",
+                    "parameters": {
+                        "restartWhenComplete": True,
+                    },
+                    "selectorId": "selector1",
+                    "type": "Continuous",
+                }],
+                name="branch1",
+            )],
+            name="step1",
+        )],
+    ),
+    resource_group_name="exampleRG")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:chaos:Experiment exampleExperiment /subscriptions/6b052e15-03d3-4f17-b2e1-be7f07588291/resourceGroups/exampleRG/providers/Microsoft.Chaos/experiments/exampleExperiment 
+```
+
+ */
 @ResourceType(type="azure-native:chaos:Experiment")
 public class Experiment extends io.pulumi.resources.CustomResource {
+    /**
+     * The identity of the experiment resource.
+     */
     @OutputExport(name="identity", type=ResourceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ResourceIdentityResponse> identity;
 
+    /**
+     * @return The identity of the experiment resource.
+     */
     public Output</* @Nullable */ ResourceIdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * The geo-location where the resource lives
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The properties of the experiment resource.
+     */
     @OutputExport(name="properties", type=ExperimentPropertiesResponse.class, parameters={})
     private Output<ExperimentPropertiesResponse> properties;
 
+    /**
+     * @return The properties of the experiment resource.
+     */
     public Output<ExperimentPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * The system metadata of the experiment resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system metadata of the experiment resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Experiment(String name, ExperimentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:chaos:Experiment", name, args == null ? ExperimentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -81,6 +298,14 @@ public class Experiment extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Experiment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Experiment(name, id, options);
     }

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * MonitoringConfig is cluster monitoring configuration.
+ */
 public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MonitoringConfigArgs Empty = new MonitoringConfigArgs();
 
+    /**
+     * Monitoring components configuration
+     */
     @InputImport(name="componentConfig")
     private final @Nullable Input<MonitoringComponentConfigArgs> componentConfig;
 
@@ -22,6 +28,9 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
         return this.componentConfig == null ? Input.empty() : this.componentConfig;
     }
 
+    /**
+     * Enable Google Cloud Managed Service for Prometheus in the cluster.
+     */
     @InputImport(name="managedPrometheusConfig")
     private final @Nullable Input<ManagedPrometheusConfigArgs> managedPrometheusConfig;
 

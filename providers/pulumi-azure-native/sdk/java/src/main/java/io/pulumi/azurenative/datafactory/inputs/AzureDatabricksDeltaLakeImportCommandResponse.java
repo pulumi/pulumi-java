@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure Databricks Delta Lake import command settings.
+ */
 public final class AzureDatabricksDeltaLakeImportCommandResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureDatabricksDeltaLakeImportCommandResponse Empty = new AzureDatabricksDeltaLakeImportCommandResponse();
 
+    /**
+     * Specify the date format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="dateFormat")
     private final @Nullable Object dateFormat;
 
@@ -22,6 +28,9 @@ public final class AzureDatabricksDeltaLakeImportCommandResponse extends io.pulu
         return this.dateFormat == null ? Optional.empty() : Optional.ofNullable(this.dateFormat);
     }
 
+    /**
+     * Specify the timestamp format for csv in Azure Databricks Delta Lake Copy. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="timestampFormat")
     private final @Nullable Object timestampFormat;
 
@@ -29,6 +38,10 @@ public final class AzureDatabricksDeltaLakeImportCommandResponse extends io.pulu
         return this.timestampFormat == null ? Optional.empty() : Optional.ofNullable(this.timestampFormat);
     }
 
+    /**
+     * The import setting type.
+Expected value is 'AzureDatabricksDeltaLakeImportCommand'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

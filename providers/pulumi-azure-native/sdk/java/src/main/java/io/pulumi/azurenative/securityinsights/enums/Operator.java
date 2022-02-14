@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Operator used for list of dependencies in criteria array.
+ */
     @EnumType
     public enum Operator {
+/**
+ * 
+ */
         AND("AND"),
+/**
+ * 
+ */
         OR("OR");
 
         private final String value;

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum ClientAuthenticationMethod {
+/**
+ * Basic Client Authentication method.
+ */
         Basic("Basic"),
+/**
+ * Body based Authentication method.
+ */
         Body("Body");
 
         private final String value;

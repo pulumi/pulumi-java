@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReservation {
+/**
+ * Retrieves information about the specified reservation.
+ */
     public static CompletableFuture<GetReservationResult> invokeAsync(GetReservationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getReservation", TypeShape.of(GetReservationResult.class), args == null ? GetReservationArgs.Empty : args, Utilities.withVersion(options));
     }

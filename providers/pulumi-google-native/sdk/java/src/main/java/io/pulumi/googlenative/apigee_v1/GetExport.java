@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetExport {
+/**
+ * Gets the details and status of an analytics export job. If the export job is still in progress, its `state` is set to "running". After the export job has completed successfully, its `state` is set to "completed". If the export job fails, its `state` is set to `failed`.
+ */
     public static CompletableFuture<GetExportResult> invokeAsync(GetExportArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getExport", TypeShape.of(GetExportResult.class), args == null ? GetExportArgs.Empty : args, Utilities.withVersion(options));
     }

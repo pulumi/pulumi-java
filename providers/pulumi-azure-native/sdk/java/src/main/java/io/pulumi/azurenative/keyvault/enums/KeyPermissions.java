@@ -8,24 +8,78 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum KeyPermissions {
+/**
+ * 
+ */
         All("all"),
+/**
+ * 
+ */
         Encrypt("encrypt"),
+/**
+ * 
+ */
         Decrypt("decrypt"),
+/**
+ * 
+ */
         WrapKey("wrapKey"),
+/**
+ * 
+ */
         UnwrapKey("unwrapKey"),
+/**
+ * 
+ */
         Sign("sign"),
+/**
+ * 
+ */
         Verify("verify"),
+/**
+ * 
+ */
         Get("get"),
+/**
+ * 
+ */
         List("list"),
+/**
+ * 
+ */
         Create("create"),
+/**
+ * 
+ */
         Update("update"),
+/**
+ * 
+ */
         $Import("import"),
+/**
+ * 
+ */
         Delete("delete"),
+/**
+ * 
+ */
         Backup("backup"),
+/**
+ * 
+ */
         Restore("restore"),
+/**
+ * 
+ */
         Recover("recover"),
+/**
+ * 
+ */
         Purge("purge");
 
         private final String value;

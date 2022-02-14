@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GkeClusterConfigResponse {
+/**
+ * Optional. A target for the deployment.
+ */
     private final NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget;
 
     @OutputCustomType.Constructor({"namespacedGkeDeploymentTarget"})
@@ -16,6 +19,9 @@ public final class GkeClusterConfigResponse {
         this.namespacedGkeDeploymentTarget = Objects.requireNonNull(namespacedGkeDeploymentTarget);
     }
 
+/**
+ * Optional. A target for the deployment.
+ */
     public NamespacedGkeDeploymentTargetResponse getNamespacedGkeDeploymentTarget() {
         return this.namespacedGkeDeploymentTarget;
     }

@@ -9,10 +9,16 @@ import io.pulumi.googlenative.monitoring_v3.inputs.TimeSeriesRatioResponse;
 import java.util.Objects;
 
 
+/**
+ * Service Level Indicators for which atomic units of service are counted directly.
+ */
 public final class RequestBasedSliResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RequestBasedSliResponse Empty = new RequestBasedSliResponse();
 
+    /**
+     * distribution_cut is used when good_service is a count of values aggregated in a Distribution that fall into a good range. The total_service is the total count of all values aggregated in the Distribution.
+     */
     @InputImport(name="distributionCut", required=true)
     private final DistributionCutResponse distributionCut;
 
@@ -20,6 +26,9 @@ public final class RequestBasedSliResponse extends io.pulumi.resources.InvokeArg
         return this.distributionCut;
     }
 
+    /**
+     * good_total_ratio is used when the ratio of good_service to total_service is computed from two TimeSeries.
+     */
     @InputImport(name="goodTotalRatio", required=true)
     private final TimeSeriesRatioResponse goodTotalRatio;
 

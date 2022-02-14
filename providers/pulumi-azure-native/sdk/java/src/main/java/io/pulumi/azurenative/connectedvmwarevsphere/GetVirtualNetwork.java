@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualNetwork {
+/**
+ * Define the virtualNetwork.
+API Version: 2020-10-01-preview.
+ *
+ * Define the virtualNetwork.
+ */
     public static CompletableFuture<GetVirtualNetworkResult> invokeAsync(GetVirtualNetworkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:connectedvmwarevsphere:getVirtualNetwork", TypeShape.of(GetVirtualNetworkResult.class), args == null ? GetVirtualNetworkArgs.Empty : args, Utilities.withVersion(options));
     }

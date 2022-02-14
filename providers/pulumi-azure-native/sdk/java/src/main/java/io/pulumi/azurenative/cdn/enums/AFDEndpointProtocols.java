@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Supported protocols for the customer's endpoint.
+ */
     @EnumType
     public enum AFDEndpointProtocols {
+/**
+ * 
+ */
         Http("Http"),
+/**
+ * 
+ */
         Https("Https");
 
         private final String value;

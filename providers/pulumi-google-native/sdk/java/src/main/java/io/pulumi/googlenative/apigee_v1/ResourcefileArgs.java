@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResourcefileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourcefileArgs Empty = new ResourcefileArgs();
 
+    /**
+     * The HTTP Content-Type header value specifying the content type of the body.
+     */
     @InputImport(name="contentType")
     private final @Nullable Input<String> contentType;
 
@@ -23,6 +29,9 @@ public final class ResourcefileArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentType == null ? Input.empty() : this.contentType;
     }
 
+    /**
+     * The HTTP request/response body as raw binary.
+     */
     @InputImport(name="data")
     private final @Nullable Input<String> data;
 
@@ -30,6 +39,9 @@ public final class ResourcefileArgs extends io.pulumi.resources.ResourceArgs {
         return this.data == null ? Input.empty() : this.data;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="environmentId", required=true)
     private final Input<String> environmentId;
 
@@ -37,6 +49,9 @@ public final class ResourcefileArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentId;
     }
 
+    /**
+     * Application specific response metadata. Must be set in the first response for streaming APIs.
+     */
     @InputImport(name="extensions")
     private final @Nullable Input<List<Map<String,String>>> extensions;
 
@@ -44,6 +59,9 @@ public final class ResourcefileArgs extends io.pulumi.resources.ResourceArgs {
         return this.extensions == null ? Input.empty() : this.extensions;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -51,6 +69,9 @@ public final class ResourcefileArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 
@@ -58,6 +79,9 @@ public final class ResourcefileArgs extends io.pulumi.resources.ResourceArgs {
         return this.organizationId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

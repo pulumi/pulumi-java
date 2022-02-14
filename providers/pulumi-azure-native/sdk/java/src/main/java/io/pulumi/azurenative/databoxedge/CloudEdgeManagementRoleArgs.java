@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CloudEdgeManagementRoleArgs Empty = new CloudEdgeManagementRoleArgs();
 
+    /**
+     * The device name.
+     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -23,6 +29,10 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
         return this.deviceName;
     }
 
+    /**
+     * Role type.
+Expected value is 'CloudEdgeManagement'.
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -30,6 +40,9 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
         return this.kind;
     }
 
+    /**
+     * The role name.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,6 +50,9 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +60,9 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
         return this.resourceGroupName;
     }
 
+    /**
+     * Role status.
+     */
     @InputImport(name="roleStatus", required=true)
     private final Input<Either<String,RoleStatus>> roleStatus;
 

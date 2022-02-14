@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * InMageRcm mobility agent details.
+ */
 public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InMageRcmMobilityAgentDetailsResponse Empty = new InMageRcmMobilityAgentDetailsResponse();
 
+    /**
+     * The agent version expiry date.
+     */
     @InputImport(name="agentVersionExpiryDate", required=true)
     private final String agentVersionExpiryDate;
 
@@ -20,6 +26,9 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
         return this.agentVersionExpiryDate;
     }
 
+    /**
+     * The driver version.
+     */
     @InputImport(name="driverVersion", required=true)
     private final String driverVersion;
 
@@ -27,6 +36,9 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
         return this.driverVersion;
     }
 
+    /**
+     * The driver version expiry date.
+     */
     @InputImport(name="driverVersionExpiryDate", required=true)
     private final String driverVersionExpiryDate;
 
@@ -34,6 +46,9 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
         return this.driverVersionExpiryDate;
     }
 
+    /**
+     * A value indicating whether agent is upgradeable or not.
+     */
     @InputImport(name="isUpgradeable", required=true)
     private final String isUpgradeable;
 
@@ -41,6 +56,9 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
         return this.isUpgradeable;
     }
 
+    /**
+     * The time of the last heartbeat received from the agent.
+     */
     @InputImport(name="lastHeartbeatUtc", required=true)
     private final String lastHeartbeatUtc;
 
@@ -48,6 +66,9 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
         return this.lastHeartbeatUtc;
     }
 
+    /**
+     * The latest upgradeable version available without reboot.
+     */
     @InputImport(name="latestUpgradableVersionWithoutReboot", required=true)
     private final String latestUpgradableVersionWithoutReboot;
 
@@ -55,6 +76,9 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
         return this.latestUpgradableVersionWithoutReboot;
     }
 
+    /**
+     * The latest agent version available.
+     */
     @InputImport(name="latestVersion", required=true)
     private final String latestVersion;
 
@@ -62,6 +86,9 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
         return this.latestVersion;
     }
 
+    /**
+     * The whether update is possible or not.
+     */
     @InputImport(name="reasonsBlockingUpgrade", required=true)
     private final List<String> reasonsBlockingUpgrade;
 
@@ -69,6 +96,9 @@ public final class InMageRcmMobilityAgentDetailsResponse extends io.pulumi.resou
         return this.reasonsBlockingUpgrade;
     }
 
+    /**
+     * The agent version.
+     */
     @InputImport(name="version", required=true)
     private final String version;
 

@@ -10,11 +10,30 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AwsCredsAuthenticationDetailsPropertiesResponse {
+/**
+ * The ID of the cloud account
+ */
     private final String accountId;
+/**
+ * State of the multi-cloud connector
+ */
     private final String authenticationProvisioningState;
+/**
+ * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
+Expected value is 'awsCreds'.
+ */
     private final String authenticationType;
+/**
+ * Public key element of the AWS credential object (write only)
+ */
     private final String awsAccessKeyId;
+/**
+ * Secret key element of the AWS credential object (write only)
+ */
     private final String awsSecretAccessKey;
+/**
+ * The permissions detected in the cloud account.
+ */
     private final List<String> grantedPermissions;
 
     @OutputCustomType.Constructor({"accountId","authenticationProvisioningState","authenticationType","awsAccessKeyId","awsSecretAccessKey","grantedPermissions"})
@@ -33,21 +52,40 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse {
         this.grantedPermissions = Objects.requireNonNull(grantedPermissions);
     }
 
+/**
+ * The ID of the cloud account
+ */
     public String getAccountId() {
         return this.accountId;
     }
+/**
+ * State of the multi-cloud connector
+ */
     public String getAuthenticationProvisioningState() {
         return this.authenticationProvisioningState;
     }
+/**
+ * Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
+Expected value is 'awsCreds'.
+ */
     public String getAuthenticationType() {
         return this.authenticationType;
     }
+/**
+ * Public key element of the AWS credential object (write only)
+ */
     public String getAwsAccessKeyId() {
         return this.awsAccessKeyId;
     }
+/**
+ * Secret key element of the AWS credential object (write only)
+ */
     public String getAwsSecretAccessKey() {
         return this.awsSecretAccessKey;
     }
+/**
+ * The permissions detected in the cloud account.
+ */
     public List<String> getGrantedPermissions() {
         return this.grantedPermissions;
     }

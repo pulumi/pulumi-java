@@ -18,10 +18,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Xero Service linked service.
+ */
 public final class XeroLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final XeroLinkedServiceResponse Empty = new XeroLinkedServiceResponse();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -29,6 +35,9 @@ public final class XeroLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -36,6 +45,9 @@ public final class XeroLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
+    /**
+     * Properties used to connect to Xero. It is mutually exclusive with any other properties in the linked service. Type: object.
+     */
     @InputImport(name="connectionProperties")
     private final @Nullable Object connectionProperties;
 
@@ -43,6 +55,9 @@ public final class XeroLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.connectionProperties == null ? Optional.empty() : Optional.ofNullable(this.connectionProperties);
     }
 
+    /**
+     * The consumer key associated with the Xero application.
+     */
     @InputImport(name="consumerKey")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> consumerKey;
 
@@ -50,6 +65,9 @@ public final class XeroLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.consumerKey == null ? null : this.consumerKey;
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -57,6 +75,9 @@ public final class XeroLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -64,6 +85,9 @@ public final class XeroLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
+    /**
+     * The endpoint of the Xero server. (i.e. api.xero.com)
+     */
     @InputImport(name="host")
     private final @Nullable Object host;
 
@@ -71,6 +95,9 @@ public final class XeroLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -78,6 +105,10 @@ public final class XeroLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * The private key from the .pem file that was generated for your Xero private application. You must include all the text from the .pem file, including the Unix line endings(
+).
+     */
     @InputImport(name="privateKey")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKey;
 
@@ -85,6 +116,10 @@ public final class XeroLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.privateKey == null ? null : this.privateKey;
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'Xero'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -92,6 +127,9 @@ public final class XeroLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.type;
     }
 
+    /**
+     * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
+     */
     @InputImport(name="useEncryptedEndpoints")
     private final @Nullable Object useEncryptedEndpoints;
 
@@ -99,6 +137,9 @@ public final class XeroLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.useEncryptedEndpoints == null ? Optional.empty() : Optional.ofNullable(this.useEncryptedEndpoints);
     }
 
+    /**
+     * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
+     */
     @InputImport(name="useHostVerification")
     private final @Nullable Object useHostVerification;
 
@@ -106,6 +147,9 @@ public final class XeroLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.useHostVerification == null ? Optional.empty() : Optional.ofNullable(this.useHostVerification);
     }
 
+    /**
+     * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
+     */
     @InputImport(name="usePeerVerification")
     private final @Nullable Object usePeerVerification;
 

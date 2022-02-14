@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Autopilot is the configuration for Autopilot settings on the cluster.
+ */
 public final class AutopilotArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutopilotArgs Empty = new AutopilotArgs();
 
+    /**
+     * Enable Autopilot
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

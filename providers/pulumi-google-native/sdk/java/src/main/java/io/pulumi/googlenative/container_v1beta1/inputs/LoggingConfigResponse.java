@@ -8,10 +8,16 @@ import io.pulumi.googlenative.container_v1beta1.inputs.LoggingComponentConfigRes
 import java.util.Objects;
 
 
+/**
+ * LoggingConfig is cluster logging configuration.
+ */
 public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LoggingConfigResponse Empty = new LoggingConfigResponse();
 
+    /**
+     * Logging components configuration
+     */
     @InputImport(name="componentConfig", required=true)
     private final LoggingComponentConfigResponse componentConfig;
 

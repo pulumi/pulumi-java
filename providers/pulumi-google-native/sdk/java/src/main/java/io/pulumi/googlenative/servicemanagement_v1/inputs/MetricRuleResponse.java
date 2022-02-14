@@ -9,10 +9,16 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Bind API methods to metrics. Binding a method to a metric causes that metric's configured quota behaviors to apply to the method call.
+ */
 public final class MetricRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MetricRuleResponse Empty = new MetricRuleResponse();
 
+    /**
+     * Metrics to update when the selected methods are called, and the associated cost applied to each metric. The key of the map is the metric name, and the values are the amount increased for the metric against which the quota limits are defined. The value must not be negative.
+     */
     @InputImport(name="metricCosts", required=true)
     private final Map<String,String> metricCosts;
 
@@ -20,6 +26,9 @@ public final class MetricRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.metricCosts;
     }
 
+    /**
+     * Selects the methods to which this rule applies. Refer to selector for syntax details.
+     */
     @InputImport(name="selector", required=true)
     private final String selector;
 

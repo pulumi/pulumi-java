@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UserAssignedResourceIdentityResponse {
+/**
+ * The principal id of user assigned identity.
+ */
     private final String principalId;
+/**
+ * The tenant id of user assigned identity.
+ */
     private final String tenantId;
 
     @OutputCustomType.Constructor({"principalId","tenantId"})
@@ -20,9 +26,15 @@ public final class UserAssignedResourceIdentityResponse {
         this.tenantId = Objects.requireNonNull(tenantId);
     }
 
+/**
+ * The principal id of user assigned identity.
+ */
     public String getPrincipalId() {
         return this.principalId;
     }
+/**
+ * The tenant id of user assigned identity.
+ */
     public String getTenantId() {
         return this.tenantId;
     }

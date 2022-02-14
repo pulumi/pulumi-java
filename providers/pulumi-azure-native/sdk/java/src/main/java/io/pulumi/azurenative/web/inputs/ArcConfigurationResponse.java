@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ArcConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ArcConfigurationResponse Empty = new ArcConfigurationResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="artifactStorageAccessMode")
     private final @Nullable String artifactStorageAccessMode;
 
@@ -22,6 +28,9 @@ public final class ArcConfigurationResponse extends io.pulumi.resources.InvokeAr
         return this.artifactStorageAccessMode == null ? Optional.empty() : Optional.ofNullable(this.artifactStorageAccessMode);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="artifactStorageClassName")
     private final @Nullable String artifactStorageClassName;
 
@@ -29,6 +38,9 @@ public final class ArcConfigurationResponse extends io.pulumi.resources.InvokeAr
         return this.artifactStorageClassName == null ? Optional.empty() : Optional.ofNullable(this.artifactStorageClassName);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="artifactStorageMountPath")
     private final @Nullable String artifactStorageMountPath;
 
@@ -36,6 +48,9 @@ public final class ArcConfigurationResponse extends io.pulumi.resources.InvokeAr
         return this.artifactStorageMountPath == null ? Optional.empty() : Optional.ofNullable(this.artifactStorageMountPath);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="artifactStorageNodeName")
     private final @Nullable String artifactStorageNodeName;
 
@@ -43,6 +58,9 @@ public final class ArcConfigurationResponse extends io.pulumi.resources.InvokeAr
         return this.artifactStorageNodeName == null ? Optional.empty() : Optional.ofNullable(this.artifactStorageNodeName);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="artifactsStorageType")
     private final @Nullable String artifactsStorageType;
 
@@ -50,6 +68,9 @@ public final class ArcConfigurationResponse extends io.pulumi.resources.InvokeAr
         return this.artifactsStorageType == null ? Optional.empty() : Optional.ofNullable(this.artifactsStorageType);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="frontEndServiceConfiguration")
     private final @Nullable FrontEndConfigurationResponse frontEndServiceConfiguration;
 

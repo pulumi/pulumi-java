@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WaiterArgs Empty = new WaiterArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="configId", required=true)
     private final Input<String> configId;
 
@@ -22,6 +28,9 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
         return this.configId;
     }
 
+    /**
+     * [Optional] The failure condition of this waiter. If this condition is met, `done` will be set to `true` and the `error` code will be set to `ABORTED`. The failure condition takes precedence over the success condition. If both conditions are met, a failure will be indicated. This value is optional; if no failure condition is set, the only failure scenario will be a timeout.
+     */
     @InputImport(name="failure")
     private final @Nullable Input<EndConditionArgs> failure;
 
@@ -29,6 +38,9 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
         return this.failure == null ? Input.empty() : this.failure;
     }
 
+    /**
+     * The name of the Waiter resource, in the format: projects/[PROJECT_ID]/configs/[CONFIG_NAME]/waiters/[WAITER_NAME] The `[PROJECT_ID]` must be a valid Google Cloud project ID, the `[CONFIG_NAME]` must be a valid RuntimeConfig resource, the `[WAITER_NAME]` must match RFC 1035 segment specification, and the length of `[WAITER_NAME]` must be less than 64 bytes. After you create a Waiter resource, you cannot change the resource name.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -36,6 +48,9 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -43,6 +58,9 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -50,6 +68,9 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * [Required] The success condition. If this condition is met, `done` will be set to `true` and the `error` value will remain unset. The failure condition takes precedence over the success condition. If both conditions are met, a failure will be indicated.
+     */
     @InputImport(name="success")
     private final @Nullable Input<EndConditionArgs> success;
 
@@ -57,6 +78,9 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
         return this.success == null ? Input.empty() : this.success;
     }
 
+    /**
+     * [Required] Specifies the timeout of the waiter in seconds, beginning from the instant that `waiters().create` method is called. If this time elapses before the success or failure conditions are met, the waiter fails and sets the `error` code to `DEADLINE_EXCEEDED`.
+     */
     @InputImport(name="timeout")
     private final @Nullable Input<String> timeout;
 

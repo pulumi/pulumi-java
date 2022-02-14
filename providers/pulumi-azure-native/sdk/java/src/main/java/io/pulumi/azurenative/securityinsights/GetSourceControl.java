@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSourceControl {
+/**
+ * Represents a SourceControl in Azure Security Insights.
+API Version: 2021-03-01-preview.
+ *
+ * Represents a SourceControl in Azure Security Insights.
+ */
     public static CompletableFuture<GetSourceControlResult> invokeAsync(GetSourceControlArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getSourceControl", TypeShape.of(GetSourceControlResult.class), args == null ? GetSourceControlArgs.Empty : args, Utilities.withVersion(options));
     }

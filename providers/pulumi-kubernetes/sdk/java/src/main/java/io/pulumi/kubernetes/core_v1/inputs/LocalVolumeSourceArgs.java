@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Local represents directly-attached storage with node affinity (Beta feature)
+ */
 public final class LocalVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LocalVolumeSourceArgs Empty = new LocalVolumeSourceArgs();
 
+    /**
+     * Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". The default value is to auto-select a filesystem if unspecified.
+     */
     @InputImport(name="fsType")
     private final @Nullable Input<String> fsType;
 
@@ -21,6 +27,9 @@ public final class LocalVolumeSourceArgs extends io.pulumi.resources.ResourceArg
         return this.fsType == null ? Input.empty() : this.fsType;
     }
 
+    /**
+     * The full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).
+     */
     @InputImport(name="path", required=true)
     private final Input<String> path;
 

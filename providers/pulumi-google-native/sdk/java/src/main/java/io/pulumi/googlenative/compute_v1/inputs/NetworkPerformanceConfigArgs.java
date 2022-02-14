@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class NetworkPerformanceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkPerformanceConfigArgs Empty = new NetworkPerformanceConfigArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="totalEgressBandwidthTier")
     private final @Nullable Input<NetworkPerformanceConfigTotalEgressBandwidthTier> totalEgressBandwidthTier;
 

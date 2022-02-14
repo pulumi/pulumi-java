@@ -8,7 +8,6 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.pubsub_v1.SubscriptionArgs;
 import io.pulumi.googlenative.pubsub_v1.outputs.DeadLetterPolicyResponse;
 import io.pulumi.googlenative.pubsub_v1.outputs.ExpirationPolicyResponse;
 import io.pulumi.googlenative.pubsub_v1.outputs.PushConfigResponse;
@@ -19,99 +18,198 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a subscription to a given topic. See the [resource name rules] (https://cloud.google.com/pubsub/docs/admin#resource_names). If the subscription already exists, returns `ALREADY_EXISTS`. If the corresponding topic doesn't exist, returns `NOT_FOUND`. If the name is not provided in the request, the server will assign a random name for this subscription on the same project as the topic, conforming to the [resource name format] (https://cloud.google.com/pubsub/docs/admin#resource_names). The generated name is populated in the returned Subscription object. Note that for REST API requests, you must specify a name in the request.
+ */
 @ResourceType(type="google-native:pubsub/v1:Subscription")
 public class Subscription extends io.pulumi.resources.CustomResource {
+    /**
+     * The approximate amount of time (on a best-effort basis) Pub/Sub waits for the subscriber to acknowledge receipt before resending the message. In the interval after the message is delivered and before it is acknowledged, it is considered to be *outstanding*. During that time period, the message will not be redelivered (on a best-effort basis). For pull subscriptions, this value is used as the initial value for the ack deadline. To override this value for a given message, call `ModifyAckDeadline` with the corresponding `ack_id` if using non-streaming pull or send the `ack_id` in a `StreamingModifyAckDeadlineRequest` if using streaming pull. The minimum custom deadline you can specify is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the message.
+     */
     @OutputExport(name="ackDeadlineSeconds", type=Integer.class, parameters={})
     private Output<Integer> ackDeadlineSeconds;
 
+    /**
+     * @return The approximate amount of time (on a best-effort basis) Pub/Sub waits for the subscriber to acknowledge receipt before resending the message. In the interval after the message is delivered and before it is acknowledged, it is considered to be *outstanding*. During that time period, the message will not be redelivered (on a best-effort basis). For pull subscriptions, this value is used as the initial value for the ack deadline. To override this value for a given message, call `ModifyAckDeadline` with the corresponding `ack_id` if using non-streaming pull or send the `ack_id` in a `StreamingModifyAckDeadlineRequest` if using streaming pull. The minimum custom deadline you can specify is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the message.
+     */
     public Output<Integer> getAckDeadlineSeconds() {
         return this.ackDeadlineSeconds;
     }
+    /**
+     * A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscriptions's parent project (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on this subscription.
+     */
     @OutputExport(name="deadLetterPolicy", type=DeadLetterPolicyResponse.class, parameters={})
     private Output<DeadLetterPolicyResponse> deadLetterPolicy;
 
+    /**
+     * @return A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscriptions's parent project (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Acknowledge() messages on this subscription.
+     */
     public Output<DeadLetterPolicyResponse> getDeadLetterPolicy() {
         return this.deadLetterPolicy;
     }
+    /**
+     * Indicates whether the subscription is detached from its topic. Detached subscriptions don't receive messages from their topic and don't retain any backlog. `Pull` and `StreamingPull` requests will return FAILED_PRECONDITION. If the subscription is a push subscription, pushes to the endpoint will not be made.
+     */
     @OutputExport(name="detached", type=Boolean.class, parameters={})
     private Output<Boolean> detached;
 
+    /**
+     * @return Indicates whether the subscription is detached from its topic. Detached subscriptions don't receive messages from their topic and don't retain any backlog. `Pull` and `StreamingPull` requests will return FAILED_PRECONDITION. If the subscription is a push subscription, pushes to the endpoint will not be made.
+     */
     public Output<Boolean> getDetached() {
         return this.detached;
     }
+    /**
+     * If true, messages published with the same `ordering_key` in `PubsubMessage` will be delivered to the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they may be delivered in any order.
+     */
     @OutputExport(name="enableMessageOrdering", type=Boolean.class, parameters={})
     private Output<Boolean> enableMessageOrdering;
 
+    /**
+     * @return If true, messages published with the same `ordering_key` in `PubsubMessage` will be delivered to the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they may be delivered in any order.
+     */
     public Output<Boolean> getEnableMessageOrdering() {
         return this.enableMessageOrdering;
     }
+    /**
+     * A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as long as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the subscription. If `expiration_policy` is not set, a *default policy* with `ttl` of 31 days will be used. The minimum allowed value for `expiration_policy.ttl` is 1 day. If `expiration_policy` is set, but `expiration_policy.ttl` is not set, the subscription never expires.
+     */
     @OutputExport(name="expirationPolicy", type=ExpirationPolicyResponse.class, parameters={})
     private Output<ExpirationPolicyResponse> expirationPolicy;
 
+    /**
+     * @return A policy that specifies the conditions for this subscription's expiration. A subscription is considered active as long as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the subscription. If `expiration_policy` is not set, a *default policy* with `ttl` of 31 days will be used. The minimum allowed value for `expiration_policy.ttl` is 1 day. If `expiration_policy` is set, but `expiration_policy.ttl` is not set, the subscription never expires.
+     */
     public Output<ExpirationPolicyResponse> getExpirationPolicy() {
         return this.expirationPolicy;
     }
+    /**
+     * An expression written in the Pub/Sub [filter language](https://cloud.google.com/pubsub/docs/filtering). If non-empty, then only `PubsubMessage`s whose `attributes` field matches the filter are delivered on this subscription. If empty, then no messages are filtered out.
+     */
     @OutputExport(name="filter", type=String.class, parameters={})
     private Output<String> filter;
 
+    /**
+     * @return An expression written in the Pub/Sub [filter language](https://cloud.google.com/pubsub/docs/filtering). If non-empty, then only `PubsubMessage`s whose `attributes` field matches the filter are delivered on this subscription. If empty, then no messages are filtered out.
+     */
     public Output<String> getFilter() {
         return this.filter;
     }
+    /**
+     * See Creating and managing labels.
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
+    /**
+     * @return See Creating and managing labels.
+     */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If `retain_acked_messages` is true, then this also configures the retention of acknowledged messages, and thus configures how far back in time a `Seek` can be done. Defaults to 7 days. Cannot be more than 7 days or less than 10 minutes.
+     */
     @OutputExport(name="messageRetentionDuration", type=String.class, parameters={})
     private Output<String> messageRetentionDuration;
 
+    /**
+     * @return How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If `retain_acked_messages` is true, then this also configures the retention of acknowledged messages, and thus configures how far back in time a `Seek` can be done. Defaults to 7 days. Cannot be more than 7 days or less than 10 minutes.
+     */
     public Output<String> getMessageRetentionDuration() {
         return this.messageRetentionDuration;
     }
+    /**
+     * The name of the subscription. It must have the format `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must start with a letter, and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters in length, and it must not start with `"goog"`.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the subscription. It must have the format `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must start with a letter, and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters in length, and it must not start with `"goog"`.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * If push delivery is used with this subscription, this field is used to configure it. At most one of `pushConfig` and `bigQueryConfig` can be set. If both are empty, then the subscriber will pull and ack messages using API methods.
+     */
     @OutputExport(name="pushConfig", type=PushConfigResponse.class, parameters={})
     private Output<PushConfigResponse> pushConfig;
 
+    /**
+     * @return If push delivery is used with this subscription, this field is used to configure it. At most one of `pushConfig` and `bigQueryConfig` can be set. If both are empty, then the subscriber will pull and ack messages using API methods.
+     */
     public Output<PushConfigResponse> getPushConfig() {
         return this.pushConfig;
     }
+    /**
+     * Indicates whether to retain acknowledged messages. If true, then messages are not expunged from the subscription's backlog, even if they are acknowledged, until they fall out of the `message_retention_duration` window. This must be true if you would like to [`Seek` to a timestamp] (https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) in the past to replay previously-acknowledged messages.
+     */
     @OutputExport(name="retainAckedMessages", type=Boolean.class, parameters={})
     private Output<Boolean> retainAckedMessages;
 
+    /**
+     * @return Indicates whether to retain acknowledged messages. If true, then messages are not expunged from the subscription's backlog, even if they are acknowledged, until they fall out of the `message_retention_duration` window. This must be true if you would like to [`Seek` to a timestamp] (https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) in the past to replay previously-acknowledged messages.
+     */
     public Output<Boolean> getRetainAckedMessages() {
         return this.retainAckedMessages;
     }
+    /**
+     * A policy that specifies how Pub/Sub retries message delivery for this subscription. If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message.
+     */
     @OutputExport(name="retryPolicy", type=RetryPolicyResponse.class, parameters={})
     private Output<RetryPolicyResponse> retryPolicy;
 
+    /**
+     * @return A policy that specifies how Pub/Sub retries message delivery for this subscription. If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message.
+     */
     public Output<RetryPolicyResponse> getRetryPolicy() {
         return this.retryPolicy;
     }
+    /**
+     * An output-only field indicating whether or not the subscription can receive messages.
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return An output-only field indicating whether or not the subscription can receive messages.
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-topic_` if the topic has been deleted.
+     */
     @OutputExport(name="topic", type=String.class, parameters={})
     private Output<String> topic;
 
+    /**
+     * @return The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-topic_` if the topic has been deleted.
+     */
     public Output<String> getTopic() {
         return this.topic;
     }
+    /**
+     * Indicates the minimum duration for which a message is retained after it is published to the subscription's topic. If this field is set, messages published to the subscription's topic in the last `topic_message_retention_duration` are always available to subscribers. See the `message_retention_duration` field in `Topic`. This field is set only in responses from the server; it is ignored if it is set in any requests.
+     */
     @OutputExport(name="topicMessageRetentionDuration", type=String.class, parameters={})
     private Output<String> topicMessageRetentionDuration;
 
+    /**
+     * @return Indicates the minimum duration for which a message is retained after it is published to the subscription's topic. If this field is set, messages published to the subscription's topic in the last `topic_message_retention_duration` are always available to subscribers. See the `message_retention_duration` field in `Topic`. This field is set only in responses from the server; it is ignored if it is set in any requests.
+     */
     public Output<String> getTopicMessageRetentionDuration() {
         return this.topicMessageRetentionDuration;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Subscription(String name, SubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:pubsub/v1:Subscription", name, args == null ? SubscriptionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -127,6 +225,14 @@ public class Subscription extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Subscription get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Subscription(name, id, options);
     }

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A Facebook page for Facebook channel registration
+ */
 public final class FacebookPageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FacebookPageArgs Empty = new FacebookPageArgs();
 
+    /**
+     * Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.
+     */
     @InputImport(name="accessToken")
     private final @Nullable Input<String> accessToken;
 
@@ -21,6 +27,9 @@ public final class FacebookPageArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessToken == null ? Input.empty() : this.accessToken;
     }
 
+    /**
+     * Page id
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 

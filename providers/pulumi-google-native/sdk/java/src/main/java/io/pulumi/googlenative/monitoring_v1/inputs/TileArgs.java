@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A single tile in the mosaic. The placement and size of the tile are configurable.
+ */
 public final class TileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TileArgs Empty = new TileArgs();
 
+    /**
+     * The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.
+     */
     @InputImport(name="height")
     private final @Nullable Input<Integer> height;
 
@@ -22,6 +28,9 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
         return this.height == null ? Input.empty() : this.height;
     }
 
+    /**
+     * The informational widget contained in the tile. For example an XyChart.
+     */
     @InputImport(name="widget")
     private final @Nullable Input<WidgetArgs> widget;
 
@@ -29,6 +38,9 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
         return this.widget == null ? Input.empty() : this.widget;
     }
 
+    /**
+     * The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.
+     */
     @InputImport(name="width")
     private final @Nullable Input<Integer> width;
 
@@ -36,6 +48,9 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
         return this.width == null ? Input.empty() : this.width;
     }
 
+    /**
+     * The zero-indexed position of the tile in grid blocks relative to the left edge of the grid. Tiles must be contained within the specified number of columns. x_pos cannot be negative.
+     */
     @InputImport(name="xPos")
     private final @Nullable Input<Integer> xPos;
 
@@ -43,6 +58,9 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
         return this.xPos == null ? Input.empty() : this.xPos;
     }
 
+    /**
+     * The zero-indexed position of the tile in grid blocks relative to the top edge of the grid. y_pos cannot be negative.
+     */
     @InputImport(name="yPos")
     private final @Nullable Input<Integer> yPos;
 

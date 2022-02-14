@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Labels that can be used to filter Apigee metrics.
+ */
 public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse Empty = new GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse();
 
+    /**
+     * The environment ID associated with the metrics.
+     */
     @InputImport(name="env", required=true)
     private final String env;
 
@@ -19,6 +25,9 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse exten
         return this.env;
     }
 
+    /**
+     * The instance ID associated with the metrics. In Apigee Hybrid, the value is configured during installation.
+     */
     @InputImport(name="instanceId", required=true)
     private final String instanceId;
 
@@ -26,6 +35,9 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse exten
         return this.instanceId;
     }
 
+    /**
+     * The location associated with the metrics.
+     */
     @InputImport(name="location", required=true)
     private final String location;
 

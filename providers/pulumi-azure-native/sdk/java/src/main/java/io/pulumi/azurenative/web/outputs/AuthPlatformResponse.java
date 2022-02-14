@@ -12,8 +12,19 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AuthPlatformResponse {
+/**
+ * The path of the config file containing auth settings if they come from a file.
+If the path is relative, base will the site's root directory.
+ */
     private final @Nullable String configFilePath;
+/**
+ * <code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.
+ */
     private final @Nullable Boolean enabled;
+/**
+ * The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
+The setting in this value can control the behavior of certain features in the Authentication / Authorization module.
+ */
     private final @Nullable String runtimeVersion;
 
     @OutputCustomType.Constructor({"configFilePath","enabled","runtimeVersion"})
@@ -26,12 +37,23 @@ public final class AuthPlatformResponse {
         this.runtimeVersion = runtimeVersion;
     }
 
+/**
+ * The path of the config file containing auth settings if they come from a file.
+If the path is relative, base will the site's root directory.
+ */
     public Optional<String> getConfigFilePath() {
         return Optional.ofNullable(this.configFilePath);
     }
+/**
+ * <code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.
+ */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
+/**
+ * The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
+The setting in this value can control the behavior of certain features in the Authentication / Authorization module.
+ */
     public Optional<String> getRuntimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }

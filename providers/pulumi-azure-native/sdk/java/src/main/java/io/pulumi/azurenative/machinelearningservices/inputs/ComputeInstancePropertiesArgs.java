@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Compute Instance properties
+ */
 public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ComputeInstancePropertiesArgs Empty = new ComputeInstancePropertiesArgs();
 
+    /**
+     * Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
+     */
     @InputImport(name="applicationSharingPolicy")
     private final @Nullable Input<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy;
 
@@ -28,6 +34,9 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
         return this.applicationSharingPolicy == null ? Input.empty() : this.applicationSharingPolicy;
     }
 
+    /**
+     * The Compute Instance Authorization type. Available values are personal (default).
+     */
     @InputImport(name="computeInstanceAuthorizationType")
     private final @Nullable Input<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType;
 
@@ -35,6 +44,9 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
         return this.computeInstanceAuthorizationType == null ? Input.empty() : this.computeInstanceAuthorizationType;
     }
 
+    /**
+     * Settings for a personal compute instance.
+     */
     @InputImport(name="personalComputeInstanceSettings")
     private final @Nullable Input<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings;
 
@@ -42,6 +54,9 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
         return this.personalComputeInstanceSettings == null ? Input.empty() : this.personalComputeInstanceSettings;
     }
 
+    /**
+     * Details of customized scripts to execute for setting up the cluster.
+     */
     @InputImport(name="setupScripts")
     private final @Nullable Input<SetupScriptsArgs> setupScripts;
 
@@ -49,6 +64,9 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
         return this.setupScripts == null ? Input.empty() : this.setupScripts;
     }
 
+    /**
+     * Specifies policy and settings for SSH access.
+     */
     @InputImport(name="sshSettings")
     private final @Nullable Input<ComputeInstanceSshSettingsArgs> sshSettings;
 
@@ -56,6 +74,9 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
         return this.sshSettings == null ? Input.empty() : this.sshSettings;
     }
 
+    /**
+     * Virtual network subnet resource ID the compute nodes belong to.
+     */
     @InputImport(name="subnet")
     private final @Nullable Input<ResourceIdArgs> subnet;
 
@@ -63,6 +84,9 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
         return this.subnet == null ? Input.empty() : this.subnet;
     }
 
+    /**
+     * Virtual Machine Size
+     */
     @InputImport(name="vmSize")
     private final @Nullable Input<String> vmSize;
 

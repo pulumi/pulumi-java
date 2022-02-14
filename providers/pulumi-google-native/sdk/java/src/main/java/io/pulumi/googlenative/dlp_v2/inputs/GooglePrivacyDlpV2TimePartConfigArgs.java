@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * For use with `Date`, `Timestamp`, and `TimeOfDay`, extract or preserve a portion of the value.
+ */
 public final class GooglePrivacyDlpV2TimePartConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2TimePartConfigArgs Empty = new GooglePrivacyDlpV2TimePartConfigArgs();
 
+    /**
+     * The part of the time to keep.
+     */
     @InputImport(name="partToExtract")
     private final @Nullable Input<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract;
 

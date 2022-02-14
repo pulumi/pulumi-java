@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * If provided, i18n rewrites are enabled.
+ */
 public final class I18nConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final I18nConfigResponse Empty = new I18nConfigResponse();
 
+    /**
+     * The user-supplied path where country and language specific content will be looked for within the public directory.
+     */
     @InputImport(name="root", required=true)
     private final String root;
 

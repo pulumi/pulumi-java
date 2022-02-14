@@ -8,10 +8,16 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Define behaviors on logging.
+ */
 public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse Empty = new GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse();
 
+    /**
+     * If true, DF Interaction logging is currently enabled.
+     */
     @InputImport(name="enableInteractionLogging", required=true)
     private final Boolean enableInteractionLogging;
 
@@ -19,6 +25,9 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
         return this.enableInteractionLogging;
     }
 
+    /**
+     * If true, StackDriver logging is currently enabled.
+     */
     @InputImport(name="enableStackdriverLogging", required=true)
     private final Boolean enableStackdriverLogging;
 

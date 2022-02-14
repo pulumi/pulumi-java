@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFluxConfiguration {
+/**
+ * The Flux Configuration object returned in Get & Put response.
+API Version: 2021-11-01-preview.
+ *
+ * The Flux Configuration object returned in Get & Put response.
+ */
     public static CompletableFuture<GetFluxConfigurationResult> invokeAsync(GetFluxConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:kubernetesconfiguration:getFluxConfiguration", TypeShape.of(GetFluxConfigurationResult.class), args == null ? GetFluxConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

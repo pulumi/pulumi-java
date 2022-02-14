@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAutoScaleVCore {
+/**
+ * Represents an instance of an auto scale v-core resource.
+API Version: 2021-01-01.
+ *
+ * Represents an instance of an auto scale v-core resource.
+ */
     public static CompletableFuture<GetAutoScaleVCoreResult> invokeAsync(GetAutoScaleVCoreArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:powerbidedicated:getAutoScaleVCore", TypeShape.of(GetAutoScaleVCoreResult.class), args == null ? GetAutoScaleVCoreArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
+ */
     @EnumType
     public enum SqlAlwaysEncryptedAkvAuthType {
+/**
+ * 
+ */
         ServicePrincipal("ServicePrincipal"),
+/**
+ * 
+ */
         ManagedIdentity("ManagedIdentity"),
+/**
+ * 
+ */
         UserAssignedManagedIdentity("UserAssignedManagedIdentity");
 
         private final String value;

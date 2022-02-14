@@ -27,10 +27,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageAccountArgs Empty = new StorageAccountArgs();
 
+    /**
+     * Required for storage accounts where kind = BlobStorage. The access tier used for billing.
+     */
     @InputImport(name="accessTier")
     private final @Nullable Input<AccessTier> accessTier;
 
@@ -38,6 +44,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.accessTier == null ? Input.empty() : this.accessTier;
     }
 
+    /**
+     * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     */
     @InputImport(name="accountName")
     private final @Nullable Input<String> accountName;
 
@@ -45,6 +54,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName == null ? Input.empty() : this.accountName;
     }
 
+    /**
+     * Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.
+     */
     @InputImport(name="allowBlobPublicAccess")
     private final @Nullable Input<Boolean> allowBlobPublicAccess;
 
@@ -52,6 +64,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowBlobPublicAccess == null ? Input.empty() : this.allowBlobPublicAccess;
     }
 
+    /**
+     * Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.
+     */
     @InputImport(name="allowSharedKeyAccess")
     private final @Nullable Input<Boolean> allowSharedKeyAccess;
 
@@ -59,6 +74,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowSharedKeyAccess == null ? Input.empty() : this.allowSharedKeyAccess;
     }
 
+    /**
+     * Provides the identity based authentication settings for Azure Files.
+     */
     @InputImport(name="azureFilesIdentityBasedAuthentication")
     private final @Nullable Input<AzureFilesIdentityBasedAuthenticationArgs> azureFilesIdentityBasedAuthentication;
 
@@ -66,6 +84,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.azureFilesIdentityBasedAuthentication == null ? Input.empty() : this.azureFilesIdentityBasedAuthentication;
     }
 
+    /**
+     * User domain assigned to the storage account. Name is the CNAME source. Only one custom domain is supported per storage account at this time. To clear the existing custom domain, use an empty string for the custom domain name property.
+     */
     @InputImport(name="customDomain")
     private final @Nullable Input<CustomDomainArgs> customDomain;
 
@@ -73,6 +94,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.customDomain == null ? Input.empty() : this.customDomain;
     }
 
+    /**
+     * Allows https traffic only to storage service if sets to true. The default value is true since API version 2019-04-01.
+     */
     @InputImport(name="enableHttpsTrafficOnly")
     private final @Nullable Input<Boolean> enableHttpsTrafficOnly;
 
@@ -80,6 +104,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableHttpsTrafficOnly == null ? Input.empty() : this.enableHttpsTrafficOnly;
     }
 
+    /**
+     * NFS 3.0 protocol support enabled if set to true.
+     */
     @InputImport(name="enableNfsV3")
     private final @Nullable Input<Boolean> enableNfsV3;
 
@@ -87,6 +114,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableNfsV3 == null ? Input.empty() : this.enableNfsV3;
     }
 
+    /**
+     * Not applicable. Azure Storage encryption is enabled for all storage accounts and cannot be disabled.
+     */
     @InputImport(name="encryption")
     private final @Nullable Input<EncryptionArgs> encryption;
 
@@ -94,6 +124,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.encryption == null ? Input.empty() : this.encryption;
     }
 
+    /**
+     * Optional. Set the extended location of the resource. If not set, the storage account will be created in Azure main region. Otherwise it will be created in the specified extended location
+     */
     @InputImport(name="extendedLocation")
     private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
@@ -101,6 +134,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
     }
 
+    /**
+     * The identity of the resource.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityArgs> identity;
 
@@ -108,6 +144,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * Account HierarchicalNamespace enabled if sets to true.
+     */
     @InputImport(name="isHnsEnabled")
     private final @Nullable Input<Boolean> isHnsEnabled;
 
@@ -115,6 +154,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.isHnsEnabled == null ? Input.empty() : this.isHnsEnabled;
     }
 
+    /**
+     * KeyPolicy assigned to the storage account.
+     */
     @InputImport(name="keyPolicy")
     private final @Nullable Input<KeyPolicyArgs> keyPolicy;
 
@@ -122,6 +164,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyPolicy == null ? Input.empty() : this.keyPolicy;
     }
 
+    /**
+     * Required. Indicates the type of storage account.
+     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,Kind>> kind;
 
@@ -129,6 +174,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
+    /**
+     * Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.
+     */
     @InputImport(name="largeFileSharesState")
     private final @Nullable Input<Either<String,LargeFileSharesState>> largeFileSharesState;
 
@@ -136,6 +184,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.largeFileSharesState == null ? Input.empty() : this.largeFileSharesState;
     }
 
+    /**
+     * Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -143,6 +194,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.
+     */
     @InputImport(name="minimumTlsVersion")
     private final @Nullable Input<Either<String,MinimumTlsVersion>> minimumTlsVersion;
 
@@ -150,6 +204,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.minimumTlsVersion == null ? Input.empty() : this.minimumTlsVersion;
     }
 
+    /**
+     * Network rule set
+     */
     @InputImport(name="networkRuleSet")
     private final @Nullable Input<NetworkRuleSetArgs> networkRuleSet;
 
@@ -157,6 +214,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkRuleSet == null ? Input.empty() : this.networkRuleSet;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -164,6 +224,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Maintains information about the network routing choice opted by the user for data transfer
+     */
     @InputImport(name="routingPreference")
     private final @Nullable Input<RoutingPreferenceArgs> routingPreference;
 
@@ -171,6 +234,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.routingPreference == null ? Input.empty() : this.routingPreference;
     }
 
+    /**
+     * SasPolicy assigned to the storage account.
+     */
     @InputImport(name="sasPolicy")
     private final @Nullable Input<SasPolicyArgs> sasPolicy;
 
@@ -178,6 +244,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.sasPolicy == null ? Input.empty() : this.sasPolicy;
     }
 
+    /**
+     * Required. Gets or sets the SKU name.
+     */
     @InputImport(name="sku", required=true)
     private final Input<SkuArgs> sku;
 
@@ -185,6 +254,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku;
     }
 
+    /**
+     * Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

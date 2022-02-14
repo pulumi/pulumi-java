@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetGatewayArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGatewayArgs Empty = new GetGatewayArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="gatewayId", required=true)
     private final String gatewayId;
 
@@ -21,6 +27,9 @@ public final class GetGatewayArgs extends io.pulumi.resources.InvokeArgs {
         return this.gatewayId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -28,6 +37,9 @@ public final class GetGatewayArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.aad;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.aad.OuContainerArgs;
 import io.pulumi.azurenative.aad.outputs.ContainerAccountResponse;
 import io.pulumi.azurenative.aad.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
@@ -17,93 +16,282 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Resource for OuContainer.
+API Version: 2021-03-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create Domain Service
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ouContainer = new AzureNative.Aad.OuContainer("ouContainer", new AzureNative.Aad.OuContainerArgs
+        {
+            AccountName = "AccountName1",
+            DomainServiceName = "OuContainer.com",
+            OuContainerName = "OuContainer1",
+            Password = "<password>",
+            ResourceGroupName = "OuContainerResourceGroup",
+            Spn = "Spn1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	aad "github.com/pulumi/pulumi-azure-native/sdk/go/azure/aad"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aad.NewOuContainer(ctx, "ouContainer", &aad.OuContainerArgs{
+			AccountName:       pulumi.String("AccountName1"),
+			DomainServiceName: pulumi.String("OuContainer.com"),
+			OuContainerName:   pulumi.String("OuContainer1"),
+			Password:          pulumi.String("<password>"),
+			ResourceGroupName: pulumi.String("OuContainerResourceGroup"),
+			Spn:               pulumi.String("Spn1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const ouContainer = new azure_native.aad.OuContainer("ouContainer", {
+    accountName: "AccountName1",
+    domainServiceName: "OuContainer.com",
+    ouContainerName: "OuContainer1",
+    password: "<password>",
+    resourceGroupName: "OuContainerResourceGroup",
+    spn: "Spn1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+ou_container = azure_native.aad.OuContainer("ouContainer",
+    account_name="AccountName1",
+    domain_service_name="OuContainer.com",
+    ou_container_name="OuContainer1",
+    password="<password>",
+    resource_group_name="OuContainerResourceGroup",
+    spn="Spn1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:aad:OuContainer OuContainer.com/OuContainer1 /subscriptions/1639790a-76a2-4ac4-98d9-8562f5dfcb4d/resourceGroups/ouContainerResourceGroup/providers/Microsoft.AAD/domainServices/ouContainer.com/ouContainer/ouContainer1 
+```
+
+ */
 @ResourceType(type="azure-native:aad:OuContainer")
 public class OuContainer extends io.pulumi.resources.CustomResource {
+    /**
+     * The list of container accounts
+     */
     @OutputExport(name="accounts", type=List.class, parameters={ContainerAccountResponse.class})
     private Output</* @Nullable */ List<ContainerAccountResponse>> accounts;
 
+    /**
+     * @return The list of container accounts
+     */
     public Output</* @Nullable */ List<ContainerAccountResponse>> getAccounts() {
         return this.accounts;
     }
+    /**
+     * The OuContainer name
+     */
     @OutputExport(name="containerId", type=String.class, parameters={})
     private Output<String> containerId;
 
+    /**
+     * @return The OuContainer name
+     */
     public Output<String> getContainerId() {
         return this.containerId;
     }
+    /**
+     * The Deployment id
+     */
     @OutputExport(name="deploymentId", type=String.class, parameters={})
     private Output<String> deploymentId;
 
+    /**
+     * @return The Deployment id
+     */
     public Output<String> getDeploymentId() {
         return this.deploymentId;
     }
+    /**
+     * Distinguished Name of OuContainer instance
+     */
     @OutputExport(name="distinguishedName", type=String.class, parameters={})
     private Output<String> distinguishedName;
 
+    /**
+     * @return Distinguished Name of OuContainer instance
+     */
     public Output<String> getDistinguishedName() {
         return this.distinguishedName;
     }
+    /**
+     * The domain name of Domain Services.
+     */
     @OutputExport(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
+    /**
+     * @return The domain name of Domain Services.
+     */
     public Output<String> getDomainName() {
         return this.domainName;
     }
+    /**
+     * Resource etag
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return Resource etag
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * Resource location
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The current deployment or provisioning state, which only appears in the response.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The current deployment or provisioning state, which only appears in the response.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Status of OuContainer instance
+     */
     @OutputExport(name="serviceStatus", type=String.class, parameters={})
     private Output<String> serviceStatus;
 
+    /**
+     * @return Status of OuContainer instance
+     */
     public Output<String> getServiceStatus() {
         return this.serviceStatus;
     }
+    /**
+     * The system meta data relating to this resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system meta data relating to this resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Azure Active Directory tenant id
+     */
     @OutputExport(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
+    /**
+     * @return Azure Active Directory tenant id
+     */
     public Output<String> getTenantId() {
         return this.tenantId;
     }
+    /**
+     * Resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public OuContainer(String name, OuContainerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:aad:OuContainer", name, args == null ? OuContainerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -125,6 +313,14 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static OuContainer get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OuContainer(name, id, options);
     }

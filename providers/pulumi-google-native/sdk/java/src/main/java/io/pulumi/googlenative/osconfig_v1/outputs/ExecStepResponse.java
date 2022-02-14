@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ExecStepResponse {
+/**
+ * The ExecStepConfig for all Linux VMs targeted by the PatchJob.
+ */
     private final ExecStepConfigResponse linuxExecStepConfig;
+/**
+ * The ExecStepConfig for all Windows VMs targeted by the PatchJob.
+ */
     private final ExecStepConfigResponse windowsExecStepConfig;
 
     @OutputCustomType.Constructor({"linuxExecStepConfig","windowsExecStepConfig"})
@@ -20,9 +26,15 @@ public final class ExecStepResponse {
         this.windowsExecStepConfig = Objects.requireNonNull(windowsExecStepConfig);
     }
 
+/**
+ * The ExecStepConfig for all Linux VMs targeted by the PatchJob.
+ */
     public ExecStepConfigResponse getLinuxExecStepConfig() {
         return this.linuxExecStepConfig;
     }
+/**
+ * The ExecStepConfig for all Windows VMs targeted by the PatchJob.
+ */
     public ExecStepConfigResponse getWindowsExecStepConfig() {
         return this.windowsExecStepConfig;
     }

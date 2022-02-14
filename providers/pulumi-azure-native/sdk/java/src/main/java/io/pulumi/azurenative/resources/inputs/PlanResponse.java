@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Plan for the resource.
+ */
 public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PlanResponse Empty = new PlanResponse();
 
+    /**
+     * The plan ID.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +27,9 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The offer ID.
+     */
     @InputImport(name="product")
     private final @Nullable String product;
 
@@ -28,6 +37,9 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
         return this.product == null ? Optional.empty() : Optional.ofNullable(this.product);
     }
 
+    /**
+     * The promotion code.
+     */
     @InputImport(name="promotionCode")
     private final @Nullable String promotionCode;
 
@@ -35,6 +47,9 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
         return this.promotionCode == null ? Optional.empty() : Optional.ofNullable(this.promotionCode);
     }
 
+    /**
+     * The publisher ID.
+     */
     @InputImport(name="publisher")
     private final @Nullable String publisher;
 
@@ -42,6 +57,9 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
         return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
     }
 
+    /**
+     * The plan's version.
+     */
     @InputImport(name="version")
     private final @Nullable String version;
 

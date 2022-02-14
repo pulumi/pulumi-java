@@ -13,15 +13,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetStorageAccountResult {
+/**
+ * BlobEndpoint of Storage Account
+ */
     private final String blobEndpoint;
+/**
+ * The Container Count. Present only for Storage Accounts with DataPolicy set to Cloud.
+ */
     private final Integer containerCount;
+/**
+ * Data policy of the storage Account.
+ */
     private final String dataPolicy;
+/**
+ * Description for the storage Account.
+ */
     private final @Nullable String description;
+/**
+ * The path ID that uniquely identifies the object.
+ */
     private final String id;
+/**
+ * The object name.
+ */
     private final String name;
+/**
+ * Storage Account Credential Id
+ */
     private final @Nullable String storageAccountCredentialId;
+/**
+ * Current status of the storage account
+ */
     private final @Nullable String storageAccountStatus;
+/**
+ * StorageAccount object on ASE device
+ */
     private final SystemDataResponse systemData;
+/**
+ * The hierarchical type of the object.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"blobEndpoint","containerCount","dataPolicy","description","id","name","storageAccountCredentialId","storageAccountStatus","systemData","type"})
@@ -48,33 +78,63 @@ public final class GetStorageAccountResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * BlobEndpoint of Storage Account
+ */
     public String getBlobEndpoint() {
         return this.blobEndpoint;
     }
+/**
+ * The Container Count. Present only for Storage Accounts with DataPolicy set to Cloud.
+ */
     public Integer getContainerCount() {
         return this.containerCount;
     }
+/**
+ * Data policy of the storage Account.
+ */
     public String getDataPolicy() {
         return this.dataPolicy;
     }
+/**
+ * Description for the storage Account.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * The path ID that uniquely identifies the object.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The object name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Storage Account Credential Id
+ */
     public Optional<String> getStorageAccountCredentialId() {
         return Optional.ofNullable(this.storageAccountCredentialId);
     }
+/**
+ * Current status of the storage account
+ */
     public Optional<String> getStorageAccountStatus() {
         return Optional.ofNullable(this.storageAccountStatus);
     }
+/**
+ * StorageAccount object on ASE device
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * The hierarchical type of the object.
+ */
     public String getType() {
         return this.type;
     }

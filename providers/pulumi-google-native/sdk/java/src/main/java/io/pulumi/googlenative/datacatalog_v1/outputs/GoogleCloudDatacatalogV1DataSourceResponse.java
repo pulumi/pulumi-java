@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDatacatalogV1DataSourceResponse {
+/**
+ * Full name of a resource as defined by the service. For example: `//bigquery.googleapis.com/projects/{PROJECT_ID}/locations/{LOCATION}/datasets/{DATASET_ID}/tables/{TABLE_ID}`
+ */
     private final String resource;
+/**
+ * Service that physically stores the data.
+ */
     private final String service;
 
     @OutputCustomType.Constructor({"resource","service"})
@@ -20,9 +26,15 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse {
         this.service = Objects.requireNonNull(service);
     }
 
+/**
+ * Full name of a resource as defined by the service. For example: `//bigquery.googleapis.com/projects/{PROJECT_ID}/locations/{LOCATION}/datasets/{DATASET_ID}/tables/{TABLE_ID}`
+ */
     public String getResource() {
         return this.resource;
     }
+/**
+ * Service that physically stores the data.
+ */
     public String getService() {
         return this.service;
     }

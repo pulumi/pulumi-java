@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DestinationResponse {
+/**
+ * Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
+ */
     private final CloudRunServiceResponse cloudRunService;
 
     @OutputCustomType.Constructor({"cloudRunService"})
@@ -16,6 +19,9 @@ public final class DestinationResponse {
         this.cloudRunService = Objects.requireNonNull(cloudRunService);
     }
 
+/**
+ * Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
+ */
     public CloudRunServiceResponse getCloudRunService() {
         return this.cloudRunService;
     }

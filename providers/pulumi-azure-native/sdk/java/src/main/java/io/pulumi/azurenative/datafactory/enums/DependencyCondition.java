@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum DependencyCondition {
+/**
+ * 
+ */
         Succeeded("Succeeded"),
+/**
+ * 
+ */
         Failed("Failed"),
+/**
+ * 
+ */
         Skipped("Skipped"),
+/**
+ * 
+ */
         Completed("Completed");
 
         private final String value;

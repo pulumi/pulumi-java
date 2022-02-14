@@ -13,10 +13,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BanditPolicyResponse {
+/**
+ * Number of intervals by which to delay the first evaluation.
+ */
     private final @Nullable Integer delayEvaluation;
+/**
+ * Interval (number of runs) between policy evaluations.
+ */
     private final @Nullable Integer evaluationInterval;
+/**
+ * 
+Expected value is 'Bandit'.
+ */
     private final String policyType;
+/**
+ * Absolute distance allowed from the best performing run.
+ */
     private final @Nullable Double slackAmount;
+/**
+ * Ratio of the allowed distance from the best performing run.
+ */
     private final @Nullable Double slackFactor;
 
     @OutputCustomType.Constructor({"delayEvaluation","evaluationInterval","policyType","slackAmount","slackFactor"})
@@ -33,18 +49,34 @@ public final class BanditPolicyResponse {
         this.slackFactor = slackFactor;
     }
 
+/**
+ * Number of intervals by which to delay the first evaluation.
+ */
     public Optional<Integer> getDelayEvaluation() {
         return Optional.ofNullable(this.delayEvaluation);
     }
+/**
+ * Interval (number of runs) between policy evaluations.
+ */
     public Optional<Integer> getEvaluationInterval() {
         return Optional.ofNullable(this.evaluationInterval);
     }
+/**
+ * 
+Expected value is 'Bandit'.
+ */
     public String getPolicyType() {
         return this.policyType;
     }
+/**
+ * Absolute distance allowed from the best performing run.
+ */
     public Optional<Double> getSlackAmount() {
         return Optional.ofNullable(this.slackAmount);
     }
+/**
+ * Ratio of the allowed distance from the best performing run.
+ */
     public Optional<Double> getSlackFactor() {
         return Optional.ofNullable(this.slackFactor);
     }

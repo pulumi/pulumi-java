@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EnterprisePolicyIdentityResponse {
+/**
+ * The principal id of EnterprisePolicy identity.
+ */
     private final String systemAssignedIdentityPrincipalId;
+/**
+ * The tenant id associated with the EnterprisePolicy.
+ */
     private final String tenantId;
+/**
+ * The type of identity used for the EnterprisePolicy. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
+ */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"systemAssignedIdentityPrincipalId","tenantId","type"})
@@ -25,12 +34,21 @@ public final class EnterprisePolicyIdentityResponse {
         this.type = type;
     }
 
+/**
+ * The principal id of EnterprisePolicy identity.
+ */
     public String getSystemAssignedIdentityPrincipalId() {
         return this.systemAssignedIdentityPrincipalId;
     }
+/**
+ * The tenant id associated with the EnterprisePolicy.
+ */
     public String getTenantId() {
         return this.tenantId;
     }
+/**
+ * The type of identity used for the EnterprisePolicy. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
+ */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

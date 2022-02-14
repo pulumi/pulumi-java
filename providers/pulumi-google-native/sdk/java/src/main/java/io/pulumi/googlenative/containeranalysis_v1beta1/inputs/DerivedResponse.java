@@ -12,10 +12,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Derived describes the derived image portion (Occurrence) of the DockerImage relationship. This image would be produced from a Dockerfile with FROM .
+ */
 public final class DerivedResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DerivedResponse Empty = new DerivedResponse();
 
+    /**
+     * This contains the base image URL for the derived image occurrence.
+     */
     @InputImport(name="baseResourceUrl", required=true)
     private final String baseResourceUrl;
 
@@ -23,6 +29,9 @@ public final class DerivedResponse extends io.pulumi.resources.InvokeArgs {
         return this.baseResourceUrl;
     }
 
+    /**
+     * The number of layers by which this image differs from the associated image basis.
+     */
     @InputImport(name="distance", required=true)
     private final Integer distance;
 
@@ -30,6 +39,9 @@ public final class DerivedResponse extends io.pulumi.resources.InvokeArgs {
         return this.distance;
     }
 
+    /**
+     * The fingerprint of the derived image.
+     */
     @InputImport(name="fingerprint", required=true)
     private final FingerprintResponse fingerprint;
 
@@ -37,6 +49,9 @@ public final class DerivedResponse extends io.pulumi.resources.InvokeArgs {
         return this.fingerprint;
     }
 
+    /**
+     * This contains layer-specific metadata, if populated it has length "distance" and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
+     */
     @InputImport(name="layerInfo", required=true)
     private final List<LayerResponse> layerInfo;
 

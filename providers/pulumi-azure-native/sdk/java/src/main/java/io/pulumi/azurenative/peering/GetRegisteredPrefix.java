@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegisteredPrefix {
+/**
+ * The customer's prefix that is registered by the peering service provider.
+API Version: 2021-01-01.
+ *
+ * The customer's prefix that is registered by the peering service provider.
+ */
     public static CompletableFuture<GetRegisteredPrefixResult> invokeAsync(GetRegisteredPrefixArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getRegisteredPrefix", TypeShape.of(GetRegisteredPrefixResult.class), args == null ? GetRegisteredPrefixArgs.Empty : args, Utilities.withVersion(options));
     }

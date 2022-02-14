@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * For display only. Metadata associated with a Compute Engine forwarding rule.
+ */
 public final class ForwardingRuleInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ForwardingRuleInfoResponse Empty = new ForwardingRuleInfoResponse();
 
+    /**
+     * Name of a Compute Engine forwarding rule.
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -19,6 +25,9 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
         return this.displayName;
     }
 
+    /**
+     * Port range defined in the forwarding rule that matches the test.
+     */
     @InputImport(name="matchedPortRange", required=true)
     private final String matchedPortRange;
 
@@ -26,6 +35,9 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
         return this.matchedPortRange;
     }
 
+    /**
+     * Protocol defined in the forwarding rule that matches the test.
+     */
     @InputImport(name="matchedProtocol", required=true)
     private final String matchedProtocol;
 
@@ -33,6 +45,9 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
         return this.matchedProtocol;
     }
 
+    /**
+     * Network URI. Only valid for Internal Load Balancer.
+     */
     @InputImport(name="networkUri", required=true)
     private final String networkUri;
 
@@ -40,6 +55,9 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
         return this.networkUri;
     }
 
+    /**
+     * Target type of the forwarding rule.
+     */
     @InputImport(name="target", required=true)
     private final String target;
 
@@ -47,6 +65,9 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
         return this.target;
     }
 
+    /**
+     * URI of a Compute Engine forwarding rule.
+     */
     @InputImport(name="uri", required=true)
     private final String uri;
 
@@ -54,6 +75,9 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
         return this.uri;
     }
 
+    /**
+     * VIP of the forwarding rule.
+     */
     @InputImport(name="vip", required=true)
     private final String vip;
 

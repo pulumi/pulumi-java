@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetInspectTemplateArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetInspectTemplateArgs Empty = new GetInspectTemplateArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="inspectTemplateId", required=true)
     private final String inspectTemplateId;
 
@@ -21,6 +27,9 @@ public final class GetInspectTemplateArgs extends io.pulumi.resources.InvokeArgs
         return this.inspectTemplateId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -28,6 +37,9 @@ public final class GetInspectTemplateArgs extends io.pulumi.resources.InvokeArgs
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

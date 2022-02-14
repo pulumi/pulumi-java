@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A CryptoKeyVersionTemplate specifies the properties to use when creating a new CryptoKeyVersion, either manually with CreateCryptoKeyVersion or automatically as a result of auto-rotation.
+ */
 public final class CryptoKeyVersionTemplateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CryptoKeyVersionTemplateResponse Empty = new CryptoKeyVersionTemplateResponse();
 
+    /**
+     * Algorithm to use when creating a CryptoKeyVersion based on this template. For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is omitted and CryptoKey.purpose is ENCRYPT_DECRYPT.
+     */
     @InputImport(name="algorithm", required=true)
     private final String algorithm;
 
@@ -19,6 +25,9 @@ public final class CryptoKeyVersionTemplateResponse extends io.pulumi.resources.
         return this.algorithm;
     }
 
+    /**
+     * ProtectionLevel to use when creating a CryptoKeyVersion based on this template. Immutable. Defaults to SOFTWARE.
+     */
     @InputImport(name="protectionLevel", required=true)
     private final String protectionLevel;
 

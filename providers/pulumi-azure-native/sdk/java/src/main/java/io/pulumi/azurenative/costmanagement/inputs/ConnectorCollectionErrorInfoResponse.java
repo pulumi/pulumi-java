@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Details of any error encountered on last collection attempt
+ */
 public final class ConnectorCollectionErrorInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectorCollectionErrorInfoResponse Empty = new ConnectorCollectionErrorInfoResponse();
 
+    /**
+     * Short error code
+     */
     @InputImport(name="errorCode", required=true)
     private final String errorCode;
 
@@ -19,6 +25,9 @@ public final class ConnectorCollectionErrorInfoResponse extends io.pulumi.resour
         return this.errorCode;
     }
 
+    /**
+     * External Provider error message
+     */
     @InputImport(name="errorInnerMessage", required=true)
     private final String errorInnerMessage;
 
@@ -26,6 +35,9 @@ public final class ConnectorCollectionErrorInfoResponse extends io.pulumi.resour
         return this.errorInnerMessage;
     }
 
+    /**
+     * Detailed error message
+     */
     @InputImport(name="errorMessage", required=true)
     private final String errorMessage;
 
@@ -33,6 +45,9 @@ public final class ConnectorCollectionErrorInfoResponse extends io.pulumi.resour
         return this.errorMessage;
     }
 
+    /**
+     * Time the error started occurring (Last time error occurred in lastChecked)
+     */
     @InputImport(name="errorStartTime", required=true)
     private final String errorStartTime;
 

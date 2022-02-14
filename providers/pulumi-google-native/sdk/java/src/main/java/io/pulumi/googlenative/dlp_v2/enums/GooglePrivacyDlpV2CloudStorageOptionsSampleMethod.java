@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum GooglePrivacyDlpV2CloudStorageOptionsSampleMethod {
+/**
+ * 
+ */
         SampleMethodUnspecified("SAMPLE_METHOD_UNSPECIFIED"),
+/**
+ * Scan from the top (default).
+ */
         Top("TOP"),
+/**
+ * For each file larger than bytes_limit_per_file, randomly pick the offset to start scanning. The scanned bytes are contiguous.
+ */
         RandomStart("RANDOM_START");
 
         private final String value;

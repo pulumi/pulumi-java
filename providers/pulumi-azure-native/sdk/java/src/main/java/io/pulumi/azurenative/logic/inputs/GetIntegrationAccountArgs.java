@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetIntegrationAccountArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIntegrationAccountArgs Empty = new GetIntegrationAccountArgs();
 
+    /**
+     * The integration account name.
+     */
     @InputImport(name="integrationAccountName", required=true)
     private final String integrationAccountName;
 
@@ -19,6 +25,9 @@ public final class GetIntegrationAccountArgs extends io.pulumi.resources.InvokeA
         return this.integrationAccountName;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

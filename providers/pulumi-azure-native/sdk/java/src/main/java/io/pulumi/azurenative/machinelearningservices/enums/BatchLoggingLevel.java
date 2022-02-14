@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Logging level for batch inference operation.
+ */
     @EnumType
     public enum BatchLoggingLevel {
+/**
+ * 
+ */
         Info("Info"),
+/**
+ * 
+ */
         Warning("Warning"),
+/**
+ * 
+ */
         Debug("Debug");
 
         private final String value;

@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGameServerDeployment {
+/**
+ * Gets details of a single game server deployment.
+ */
     public static CompletableFuture<GetGameServerDeploymentResult> invokeAsync(GetGameServerDeploymentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gameservices/v1beta:getGameServerDeployment", TypeShape.of(GetGameServerDeploymentResult.class), args == null ? GetGameServerDeploymentArgs.Empty : args, Utilities.withVersion(options));
     }

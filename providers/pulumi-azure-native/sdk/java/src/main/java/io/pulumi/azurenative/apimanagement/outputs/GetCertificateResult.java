@@ -12,12 +12,34 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetCertificateResult {
+/**
+ * Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+
+ */
     private final String expirationDate;
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * KeyVault location details of the certificate.
+ */
     private final @Nullable KeyVaultContractPropertiesResponse keyVault;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * Subject attribute of the certificate.
+ */
     private final String subject;
+/**
+ * Thumbprint of the certificate.
+ */
     private final String thumbprint;
+/**
+ * Resource type for API Management resource.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"expirationDate","id","keyVault","name","subject","thumbprint","type"})
@@ -38,24 +60,46 @@ public final class GetCertificateResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
+
+ */
     public String getExpirationDate() {
         return this.expirationDate;
     }
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * KeyVault location details of the certificate.
+ */
     public Optional<KeyVaultContractPropertiesResponse> getKeyVault() {
         return Optional.ofNullable(this.keyVault);
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Subject attribute of the certificate.
+ */
     public String getSubject() {
         return this.subject;
     }
+/**
+ * Thumbprint of the certificate.
+ */
     public String getThumbprint() {
         return this.thumbprint;
     }
+/**
+ * Resource type for API Management resource.
+ */
     public String getType() {
         return this.type;
     }

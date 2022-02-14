@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SubResourceWithColocationStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubResourceWithColocationStatusResponse Empty = new SubResourceWithColocationStatusResponse();
 
+    /**
+     * Describes colocation status of a resource in the Proximity Placement Group.
+     */
     @InputImport(name="colocationStatus")
     private final @Nullable InstanceViewStatusResponse colocationStatus;
 
@@ -22,6 +28,9 @@ public final class SubResourceWithColocationStatusResponse extends io.pulumi.res
         return this.colocationStatus == null ? Optional.empty() : Optional.ofNullable(this.colocationStatus);
     }
 
+    /**
+     * Resource Id
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 

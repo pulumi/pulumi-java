@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceSkuArgs Empty = new ResourceSkuArgs();
 
+    /**
+     * Name of the SKU.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

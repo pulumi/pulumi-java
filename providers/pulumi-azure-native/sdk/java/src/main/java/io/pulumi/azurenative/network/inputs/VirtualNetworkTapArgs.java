@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Virtual Network Tap resource.
+ */
 public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualNetworkTapArgs Empty = new VirtualNetworkTapArgs();
 
+    /**
+     * The reference to the private IP address on the internal Load Balancer that will receive the tap.
+     */
     @InputImport(name="destinationLoadBalancerFrontEndIPConfiguration")
     private final @Nullable Input<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration;
 
@@ -25,6 +31,9 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
         return this.destinationLoadBalancerFrontEndIPConfiguration == null ? Input.empty() : this.destinationLoadBalancerFrontEndIPConfiguration;
     }
 
+    /**
+     * The reference to the private IP Address of the collector nic that will receive the tap.
+     */
     @InputImport(name="destinationNetworkInterfaceIPConfiguration")
     private final @Nullable Input<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration;
 
@@ -32,6 +41,9 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
         return this.destinationNetworkInterfaceIPConfiguration == null ? Input.empty() : this.destinationNetworkInterfaceIPConfiguration;
     }
 
+    /**
+     * The VXLAN destination port that will receive the tapped traffic.
+     */
     @InputImport(name="destinationPort")
     private final @Nullable Input<Integer> destinationPort;
 
@@ -39,6 +51,9 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
         return this.destinationPort == null ? Input.empty() : this.destinationPort;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -46,6 +61,9 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -53,6 +71,9 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

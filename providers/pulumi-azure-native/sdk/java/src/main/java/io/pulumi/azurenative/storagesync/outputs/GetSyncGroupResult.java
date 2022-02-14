@@ -9,10 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetSyncGroupResult {
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     private final String id;
+/**
+ * The name of the resource
+ */
     private final String name;
+/**
+ * Sync group status
+ */
     private final String syncGroupStatus;
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     private final String type;
+/**
+ * Unique Id
+ */
     private final String uniqueId;
 
     @OutputCustomType.Constructor({"id","name","syncGroupStatus","type","uniqueId"})
@@ -29,18 +44,33 @@ public final class GetSyncGroupResult {
         this.uniqueId = Objects.requireNonNull(uniqueId);
     }
 
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The name of the resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Sync group status
+ */
     public String getSyncGroupStatus() {
         return this.syncGroupStatus;
     }
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Unique Id
+ */
     public String getUniqueId() {
         return this.uniqueId;
     }

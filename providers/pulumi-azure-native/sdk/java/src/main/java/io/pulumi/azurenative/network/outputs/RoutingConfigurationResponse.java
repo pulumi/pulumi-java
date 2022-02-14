@@ -13,8 +13,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RoutingConfigurationResponse {
+/**
+ * The resource id RouteTable associated with this RoutingConfiguration.
+ */
     private final @Nullable SubResourceResponse associatedRouteTable;
+/**
+ * The list of RouteTables to advertise the routes to.
+ */
     private final @Nullable PropagatedRouteTableResponse propagatedRouteTables;
+/**
+ * List of routes that control routing from VirtualHub into a virtual network connection.
+ */
     private final @Nullable VnetRouteResponse vnetRoutes;
 
     @OutputCustomType.Constructor({"associatedRouteTable","propagatedRouteTables","vnetRoutes"})
@@ -27,12 +36,21 @@ public final class RoutingConfigurationResponse {
         this.vnetRoutes = vnetRoutes;
     }
 
+/**
+ * The resource id RouteTable associated with this RoutingConfiguration.
+ */
     public Optional<SubResourceResponse> getAssociatedRouteTable() {
         return Optional.ofNullable(this.associatedRouteTable);
     }
+/**
+ * The list of RouteTables to advertise the routes to.
+ */
     public Optional<PropagatedRouteTableResponse> getPropagatedRouteTables() {
         return Optional.ofNullable(this.propagatedRouteTables);
     }
+/**
+ * List of routes that control routing from VirtualHub into a virtual network connection.
+ */
     public Optional<VnetRouteResponse> getVnetRoutes() {
         return Optional.ofNullable(this.vnetRoutes);
     }

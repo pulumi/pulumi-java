@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Rule of type nat.
+ */
 public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NatRuleResponse Empty = new NatRuleResponse();
 
+    /**
+     * Description of the rule.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -22,6 +28,9 @@ public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * List of destination IP addresses or Service Tags.
+     */
     @InputImport(name="destinationAddresses")
     private final @Nullable List<String> destinationAddresses;
 
@@ -29,6 +38,9 @@ public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
     }
 
+    /**
+     * List of destination ports.
+     */
     @InputImport(name="destinationPorts")
     private final @Nullable List<String> destinationPorts;
 
@@ -36,6 +48,9 @@ public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
 
+    /**
+     * Array of FirewallPolicyRuleNetworkProtocols.
+     */
     @InputImport(name="ipProtocols")
     private final @Nullable List<String> ipProtocols;
 
@@ -43,6 +58,9 @@ public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.ipProtocols == null ? List.of() : this.ipProtocols;
     }
 
+    /**
+     * Name of the rule.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -50,6 +68,10 @@ public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Rule Type.
+Expected value is 'NatRule'.
+     */
     @InputImport(name="ruleType", required=true)
     private final String ruleType;
 
@@ -57,6 +79,9 @@ public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.ruleType;
     }
 
+    /**
+     * List of source IP addresses for this rule.
+     */
     @InputImport(name="sourceAddresses")
     private final @Nullable List<String> sourceAddresses;
 
@@ -64,6 +89,9 @@ public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
     }
 
+    /**
+     * List of source IpGroups for this rule.
+     */
     @InputImport(name="sourceIpGroups")
     private final @Nullable List<String> sourceIpGroups;
 
@@ -71,6 +99,9 @@ public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourceIpGroups == null ? List.of() : this.sourceIpGroups;
     }
 
+    /**
+     * The translated address for this NAT rule.
+     */
     @InputImport(name="translatedAddress")
     private final @Nullable String translatedAddress;
 
@@ -78,6 +109,9 @@ public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.translatedAddress == null ? Optional.empty() : Optional.ofNullable(this.translatedAddress);
     }
 
+    /**
+     * The translated FQDN for this NAT rule.
+     */
     @InputImport(name="translatedFqdn")
     private final @Nullable String translatedFqdn;
 
@@ -85,6 +119,9 @@ public final class NatRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.translatedFqdn == null ? Optional.empty() : Optional.ofNullable(this.translatedFqdn);
     }
 
+    /**
+     * The translated port for this NAT rule.
+     */
     @InputImport(name="translatedPort")
     private final @Nullable String translatedPort;
 

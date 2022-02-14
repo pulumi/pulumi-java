@@ -8,10 +8,17 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Azure Data Factory secure string definition. The string value will be masked with asterisks '*' during Get or List API calls.
+ */
 public final class SecureStringResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecureStringResponse Empty = new SecureStringResponse();
 
+    /**
+     * Type of the secret.
+Expected value is 'SecureString'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -19,6 +26,9 @@ public final class SecureStringResponse extends io.pulumi.resources.InvokeArgs {
         return this.type;
     }
 
+    /**
+     * Value of secure string.
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

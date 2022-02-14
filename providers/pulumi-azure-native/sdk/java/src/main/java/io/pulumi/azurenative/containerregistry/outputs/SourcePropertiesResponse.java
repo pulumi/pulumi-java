@@ -12,9 +12,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SourcePropertiesResponse {
+/**
+ * The branch name of the source code.
+ */
     private final @Nullable String branch;
+/**
+ * The full URL to the source code repository
+ */
     private final String repositoryUrl;
+/**
+ * The authorization properties for accessing the source code repository and to set up
+webhooks for notifications.
+ */
     private final @Nullable AuthInfoResponse sourceControlAuthProperties;
+/**
+ * The type of source control service.
+ */
     private final String sourceControlType;
 
     @OutputCustomType.Constructor({"branch","repositoryUrl","sourceControlAuthProperties","sourceControlType"})
@@ -29,15 +42,28 @@ public final class SourcePropertiesResponse {
         this.sourceControlType = Objects.requireNonNull(sourceControlType);
     }
 
+/**
+ * The branch name of the source code.
+ */
     public Optional<String> getBranch() {
         return Optional.ofNullable(this.branch);
     }
+/**
+ * The full URL to the source code repository
+ */
     public String getRepositoryUrl() {
         return this.repositoryUrl;
     }
+/**
+ * The authorization properties for accessing the source code repository and to set up
+webhooks for notifications.
+ */
     public Optional<AuthInfoResponse> getSourceControlAuthProperties() {
         return Optional.ofNullable(this.sourceControlAuthProperties);
     }
+/**
+ * The type of source control service.
+ */
     public String getSourceControlType() {
         return this.sourceControlType;
     }

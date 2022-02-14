@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * This is deprecated and has no effect. Do not use.
+ */
 public final class LogConfigCloudAuditOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LogConfigCloudAuditOptionsArgs Empty = new LogConfigCloudAuditOptionsArgs();
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="authorizationLoggingOptions")
     private final @Nullable Input<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions;
 
@@ -22,6 +28,9 @@ public final class LogConfigCloudAuditOptionsArgs extends io.pulumi.resources.Re
         return this.authorizationLoggingOptions == null ? Input.empty() : this.authorizationLoggingOptions;
     }
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="logName")
     private final @Nullable Input<LogConfigCloudAuditOptionsLogName> logName;
 

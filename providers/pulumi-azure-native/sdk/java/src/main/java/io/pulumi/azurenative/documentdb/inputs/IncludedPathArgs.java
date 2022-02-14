@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The paths that are included in indexing
+ */
 public final class IncludedPathArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IncludedPathArgs Empty = new IncludedPathArgs();
 
+    /**
+     * List of indexes for this path
+     */
     @InputImport(name="indexes")
     private final @Nullable Input<List<IndexesArgs>> indexes;
 
@@ -23,6 +29,9 @@ public final class IncludedPathArgs extends io.pulumi.resources.ResourceArgs {
         return this.indexes == null ? Input.empty() : this.indexes;
     }
 
+    /**
+     * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 

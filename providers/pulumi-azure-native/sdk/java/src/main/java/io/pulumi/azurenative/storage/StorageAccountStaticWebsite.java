@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.storage.StorageAccountStaticWebsiteArgs;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
@@ -12,27 +11,62 @@ import io.pulumi.core.internal.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Enables the static website feature of a storage account.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:storage:StorageAccountStaticWebsite myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/staticWebsite 
+```
+
+ */
 @ResourceType(type="azure-native:storage:StorageAccountStaticWebsite")
 public class StorageAccountStaticWebsite extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the container to upload blobs to.
+     */
     @OutputExport(name="containerName", type=String.class, parameters={})
     private Output<String> containerName;
 
+    /**
+     * @return The name of the container to upload blobs to.
+     */
     public Output<String> getContainerName() {
         return this.containerName;
     }
+    /**
+     * The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.
+     */
     @OutputExport(name="error404Document", type=String.class, parameters={})
     private Output</* @Nullable */ String> error404Document;
 
+    /**
+     * @return The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.
+     */
     public Output</* @Nullable */ String> getError404Document() {
         return this.error404Document;
     }
+    /**
+     * The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, 'index.html'. The value is case-sensitive.
+     */
     @OutputExport(name="indexDocument", type=String.class, parameters={})
     private Output</* @Nullable */ String> indexDocument;
 
+    /**
+     * @return The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, 'index.html'. The value is case-sensitive.
+     */
     public Output</* @Nullable */ String> getIndexDocument() {
         return this.indexDocument;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public StorageAccountStaticWebsite(String name, StorageAccountStaticWebsiteArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storage:StorageAccountStaticWebsite", name, args == null ? StorageAccountStaticWebsiteArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -48,6 +82,14 @@ public class StorageAccountStaticWebsite extends io.pulumi.resources.CustomResou
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static StorageAccountStaticWebsite get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StorageAccountStaticWebsite(name, id, options);
     }

@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionArgs Empty = new ConnectionArgs();
 
+    /**
+     * The name of the automation account.
+     */
     @InputImport(name="automationAccountName", required=true)
     private final Input<String> automationAccountName;
 
@@ -23,6 +29,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.automationAccountName;
     }
 
+    /**
+     * The parameters supplied to the create or update connection operation.
+     */
     @InputImport(name="connectionName")
     private final @Nullable Input<String> connectionName;
 
@@ -30,6 +39,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectionName == null ? Input.empty() : this.connectionName;
     }
 
+    /**
+     * Gets or sets the connectionType of the connection.
+     */
     @InputImport(name="connectionType", required=true)
     private final Input<ConnectionTypeAssociationPropertyArgs> connectionType;
 
@@ -37,6 +49,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectionType;
     }
 
+    /**
+     * Gets or sets the description of the connection.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -44,6 +59,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Gets or sets the field definition properties of the connection.
+     */
     @InputImport(name="fieldDefinitionValues")
     private final @Nullable Input<Map<String,String>> fieldDefinitionValues;
 
@@ -51,6 +69,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.fieldDefinitionValues == null ? Input.empty() : this.fieldDefinitionValues;
     }
 
+    /**
+     * Gets or sets the name of the connection.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -58,6 +79,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

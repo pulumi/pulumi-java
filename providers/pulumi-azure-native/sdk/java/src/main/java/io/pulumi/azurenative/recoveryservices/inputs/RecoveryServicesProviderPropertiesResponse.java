@@ -15,10 +15,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Recovery services provider properties.
+ */
 public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RecoveryServicesProviderPropertiesResponse Empty = new RecoveryServicesProviderPropertiesResponse();
 
+    /**
+     * The scenarios allowed on this provider.
+     */
     @InputImport(name="allowedScenarios")
     private final @Nullable List<String> allowedScenarios;
 
@@ -26,6 +32,9 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
         return this.allowedScenarios == null ? List.of() : this.allowedScenarios;
     }
 
+    /**
+     * The authentication identity details.
+     */
     @InputImport(name="authenticationIdentityDetails")
     private final @Nullable IdentityProviderDetailsResponse authenticationIdentityDetails;
 
@@ -33,6 +42,9 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
         return this.authenticationIdentityDetails == null ? Optional.empty() : Optional.ofNullable(this.authenticationIdentityDetails);
     }
 
+    /**
+     * A value indicating whether DRA is responsive.
+     */
     @InputImport(name="connectionStatus")
     private final @Nullable String connectionStatus;
 
@@ -40,6 +52,9 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
         return this.connectionStatus == null ? Optional.empty() : Optional.ofNullable(this.connectionStatus);
     }
 
+    /**
+     * The DRA Id.
+     */
     @InputImport(name="draIdentifier")
     private final @Nullable String draIdentifier;
 
@@ -47,6 +62,9 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
         return this.draIdentifier == null ? Optional.empty() : Optional.ofNullable(this.draIdentifier);
     }
 
+    /**
+     * The fabric friendly name.
+     */
     @InputImport(name="fabricFriendlyName")
     private final @Nullable String fabricFriendlyName;
 
@@ -54,6 +72,9 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
         return this.fabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.fabricFriendlyName);
     }
 
+    /**
+     * Type of the site.
+     */
     @InputImport(name="fabricType")
     private final @Nullable String fabricType;
 
@@ -61,6 +82,9 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
         return this.fabricType == null ? Optional.empty() : Optional.ofNullable(this.fabricType);
     }
 
+    /**
+     * Friendly name of the DRA.
+     */
     @InputImport(name="friendlyName")
     private final @Nullable String friendlyName;
 
@@ -68,6 +92,9 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
+    /**
+     * The recovery services provider health error details.
+     */
     @InputImport(name="healthErrorDetails")
     private final @Nullable List<HealthErrorResponse> healthErrorDetails;
 
@@ -75,6 +102,9 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
         return this.healthErrorDetails == null ? List.of() : this.healthErrorDetails;
     }
 
+    /**
+     * Time when last heartbeat was sent by the DRA.
+     */
     @InputImport(name="lastHeartBeat")
     private final @Nullable String lastHeartBeat;
 
@@ -82,6 +112,9 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
         return this.lastHeartBeat == null ? Optional.empty() : Optional.ofNullable(this.lastHeartBeat);
     }
 
+    /**
+     * Number of protected VMs currently managed by the DRA.
+     */
     @InputImport(name="protectedItemCount")
     private final @Nullable Integer protectedItemCount;
 
@@ -89,6 +122,9 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
         return this.protectedItemCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemCount);
     }
 
+    /**
+     * The provider version.
+     */
     @InputImport(name="providerVersion")
     private final @Nullable String providerVersion;
 
@@ -96,6 +132,9 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
         return this.providerVersion == null ? Optional.empty() : Optional.ofNullable(this.providerVersion);
     }
 
+    /**
+     * The provider version details.
+     */
     @InputImport(name="providerVersionDetails")
     private final @Nullable VersionDetailsResponse providerVersionDetails;
 
@@ -103,6 +142,9 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
         return this.providerVersionDetails == null ? Optional.empty() : Optional.ofNullable(this.providerVersionDetails);
     }
 
+    /**
+     * Expiry date of the version.
+     */
     @InputImport(name="providerVersionExpiryDate")
     private final @Nullable String providerVersionExpiryDate;
 
@@ -110,6 +152,9 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
         return this.providerVersionExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.providerVersionExpiryDate);
     }
 
+    /**
+     * DRA version status.
+     */
     @InputImport(name="providerVersionState")
     private final @Nullable String providerVersionState;
 
@@ -117,6 +162,9 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
         return this.providerVersionState == null ? Optional.empty() : Optional.ofNullable(this.providerVersionState);
     }
 
+    /**
+     * The resource access identity details.
+     */
     @InputImport(name="resourceAccessIdentityDetails")
     private final @Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails;
 
@@ -124,6 +172,9 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
         return this.resourceAccessIdentityDetails == null ? Optional.empty() : Optional.ofNullable(this.resourceAccessIdentityDetails);
     }
 
+    /**
+     * The fabric provider.
+     */
     @InputImport(name="serverVersion")
     private final @Nullable String serverVersion;
 

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The source trigger that caused a run.
+ */
 public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SourceTriggerDescriptorResponse Empty = new SourceTriggerDescriptorResponse();
 
+    /**
+     * The branch name in the repository.
+     */
     @InputImport(name="branchName")
     private final @Nullable String branchName;
 
@@ -21,6 +27,9 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
         return this.branchName == null ? Optional.empty() : Optional.ofNullable(this.branchName);
     }
 
+    /**
+     * The unique ID that identifies a commit.
+     */
     @InputImport(name="commitId")
     private final @Nullable String commitId;
 
@@ -28,6 +37,9 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
         return this.commitId == null ? Optional.empty() : Optional.ofNullable(this.commitId);
     }
 
+    /**
+     * The event type of the trigger.
+     */
     @InputImport(name="eventType")
     private final @Nullable String eventType;
 
@@ -35,6 +47,9 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
         return this.eventType == null ? Optional.empty() : Optional.ofNullable(this.eventType);
     }
 
+    /**
+     * The unique ID of the trigger.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -42,6 +57,9 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The source control provider type.
+     */
     @InputImport(name="providerType")
     private final @Nullable String providerType;
 
@@ -49,6 +67,9 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
         return this.providerType == null ? Optional.empty() : Optional.ofNullable(this.providerType);
     }
 
+    /**
+     * The unique ID that identifies pull request.
+     */
     @InputImport(name="pullRequestId")
     private final @Nullable String pullRequestId;
 
@@ -56,6 +77,9 @@ public final class SourceTriggerDescriptorResponse extends io.pulumi.resources.I
         return this.pullRequestId == null ? Optional.empty() : Optional.ofNullable(this.pullRequestId);
     }
 
+    /**
+     * The repository URL.
+     */
     @InputImport(name="repositoryUrl")
     private final @Nullable String repositoryUrl;
 

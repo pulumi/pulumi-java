@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A package managed by GooGet. - install: `googet -noconfirm install package` - remove: `googet -noconfirm remove package`
+ */
 public final class OSPolicyResourcePackageResourceGooGetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OSPolicyResourcePackageResourceGooGetArgs Empty = new OSPolicyResourcePackageResourceGooGetArgs();
 
+    /**
+     * Package name.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetSchemaArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSchemaArgs Empty = new GetSchemaArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -21,6 +27,9 @@ public final class GetSchemaArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="schemaId", required=true)
     private final String schemaId;
 
@@ -28,6 +37,9 @@ public final class GetSchemaArgs extends io.pulumi.resources.InvokeArgs {
         return this.schemaId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="view")
     private final @Nullable String view;
 

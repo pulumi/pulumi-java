@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Fleet configs for Agones.
+ */
 public final class FleetConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FleetConfigResponse Empty = new FleetConfigResponse();
 
+    /**
+     * Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
+     */
     @InputImport(name="fleetSpec", required=true)
     private final String fleetSpec;
 
@@ -19,6 +25,9 @@ public final class FleetConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.fleetSpec;
     }
 
+    /**
+     * The name of the FleetConfig.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

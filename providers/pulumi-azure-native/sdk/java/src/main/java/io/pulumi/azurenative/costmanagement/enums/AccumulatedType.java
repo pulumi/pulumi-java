@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Show costs accumulated over time.
+ */
     @EnumType
     public enum AccumulatedType {
+/**
+ * 
+ */
         $True("true"),
+/**
+ * 
+ */
         $False("false");
 
         private final String value;

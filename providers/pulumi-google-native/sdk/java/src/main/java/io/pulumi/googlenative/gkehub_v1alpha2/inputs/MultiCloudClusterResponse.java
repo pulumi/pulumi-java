@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * MultiCloudCluster contains information specific to GKE Multi-Cloud clusters.
+ */
 public final class MultiCloudClusterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MultiCloudClusterResponse Empty = new MultiCloudClusterResponse();
 
+    /**
+     * If cluster_missing is set then it denotes that API(gkemulticloud.googleapis.com) resource for this GKE Multi-Cloud cluster no longer exists.
+     */
     @InputImport(name="clusterMissing", required=true)
     private final Boolean clusterMissing;
 
@@ -20,6 +26,9 @@ public final class MultiCloudClusterResponse extends io.pulumi.resources.InvokeA
         return this.clusterMissing;
     }
 
+    /**
+     * Immutable. Self-link of the GCP resource for the GKE Multi-Cloud cluster. For example: //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/awsClusters/my-cluster //gkemulticloud.googleapis.com/projects/my-project/locations/us-west1-a/azureClusters/my-cluster
+     */
     @InputImport(name="resourceLink", required=true)
     private final String resourceLink;
 

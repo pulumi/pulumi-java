@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Action to take when users access resources that require authentication. Defaults to redirect.
+ */
     @EnumType
     public enum UrlMapAuthFailAction {
+/**
+ * Not specified. AUTH_FAIL_ACTION_REDIRECT is assumed.
+ */
         AuthFailActionUnspecified("AUTH_FAIL_ACTION_UNSPECIFIED"),
+/**
+ * Redirects user to "accounts.google.com". The user is redirected back to the application URL after signing in or creating an account.
+ */
         AuthFailActionRedirect("AUTH_FAIL_ACTION_REDIRECT"),
+/**
+ * Rejects request with a 401 HTTP status code and an error message.
+ */
         AuthFailActionUnauthorized("AUTH_FAIL_ACTION_UNAUTHORIZED");
 
         private final String value;

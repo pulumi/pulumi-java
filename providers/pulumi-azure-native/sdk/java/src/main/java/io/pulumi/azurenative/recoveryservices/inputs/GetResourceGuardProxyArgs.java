@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetResourceGuardProxyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetResourceGuardProxyArgs Empty = new GetResourceGuardProxyArgs();
 
+    /**
+     * The name of the resource group where the recovery services vault is present.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class GetResourceGuardProxyArgs extends io.pulumi.resources.InvokeA
         return this.resourceGroupName;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="resourceGuardProxyName", required=true)
     private final String resourceGuardProxyName;
 
@@ -26,6 +35,9 @@ public final class GetResourceGuardProxyArgs extends io.pulumi.resources.InvokeA
         return this.resourceGuardProxyName;
     }
 
+    /**
+     * The name of the recovery services vault.
+     */
     @InputImport(name="vaultName", required=true)
     private final String vaultName;
 

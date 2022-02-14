@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FirewallPolicyTransportSecurityResponse {
+/**
+ * The CA used for intermediate CA generation.
+ */
     private final @Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority;
 
     @OutputCustomType.Constructor({"certificateAuthority"})
@@ -18,6 +21,9 @@ public final class FirewallPolicyTransportSecurityResponse {
         this.certificateAuthority = certificateAuthority;
     }
 
+/**
+ * The CA used for intermediate CA generation.
+ */
     public Optional<FirewallPolicyCertificateAuthorityResponse> getCertificateAuthority() {
         return Optional.ofNullable(this.certificateAuthority);
     }

@@ -11,10 +11,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ComplianceNoteResponse Empty = new ComplianceNoteResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="cisBenchmark", required=true)
     private final CisBenchmarkResponse cisBenchmark;
 
@@ -22,6 +28,9 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
         return this.cisBenchmark;
     }
 
+    /**
+     * A description about this compliance check.
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -29,6 +38,9 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
         return this.description;
     }
 
+    /**
+     * A rationale for the existence of this compliance check.
+     */
     @InputImport(name="rationale", required=true)
     private final String rationale;
 
@@ -36,6 +48,9 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
         return this.rationale;
     }
 
+    /**
+     * A description of remediation steps if the compliance check fails.
+     */
     @InputImport(name="remediation", required=true)
     private final String remediation;
 
@@ -43,6 +58,9 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
         return this.remediation;
     }
 
+    /**
+     * Serialized scan instructions with a predefined format.
+     */
     @InputImport(name="scanInstructions", required=true)
     private final String scanInstructions;
 
@@ -50,6 +68,9 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
         return this.scanInstructions;
     }
 
+    /**
+     * The title that identifies this compliance check.
+     */
     @InputImport(name="title", required=true)
     private final String title;
 
@@ -57,6 +78,9 @@ public final class ComplianceNoteResponse extends io.pulumi.resources.InvokeArgs
         return this.title;
     }
 
+    /**
+     * The OS and config versions the benchmark applies to.
+     */
     @InputImport(name="version", required=true)
     private final List<ComplianceVersionResponse> version;
 

@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * polarization. eg (RHCP, LHCP)
+ */
     @EnumType
     public enum Polarization {
+/**
+ * 
+ */
         RHCP("RHCP"),
+/**
+ * 
+ */
         LHCP("LHCP"),
+/**
+ * 
+ */
         DualRhcpLhcp("dualRhcpLhcp"),
+/**
+ * 
+ */
         LinearVertical("linearVertical"),
+/**
+ * 
+ */
         LinearHorizontal("linearHorizontal");
 
         private final String value;

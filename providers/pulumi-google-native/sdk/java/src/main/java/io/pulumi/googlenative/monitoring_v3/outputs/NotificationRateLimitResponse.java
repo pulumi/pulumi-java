@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NotificationRateLimitResponse {
+/**
+ * Not more than one notification per period.
+ */
     private final String period;
 
     @OutputCustomType.Constructor({"period"})
@@ -16,6 +19,9 @@ public final class NotificationRateLimitResponse {
         this.period = Objects.requireNonNull(period);
     }
 
+/**
+ * Not more than one notification per period.
+ */
     public String getPeriod() {
         return this.period;
     }

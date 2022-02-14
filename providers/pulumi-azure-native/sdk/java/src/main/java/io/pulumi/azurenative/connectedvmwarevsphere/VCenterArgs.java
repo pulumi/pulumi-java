@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VCenterArgs Empty = new VCenterArgs();
 
+    /**
+     * Username / Password Credentials to connect to vcenter.
+     */
     @InputImport(name="credentials")
     private final @Nullable Input<VICredentialArgs> credentials;
 
@@ -25,6 +31,9 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
         return this.credentials == null ? Input.empty() : this.credentials;
     }
 
+    /**
+     * Gets or sets the extended location.
+     */
     @InputImport(name="extendedLocation")
     private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
@@ -32,6 +41,9 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
     }
 
+    /**
+     * Gets or sets the FQDN/IPAddress of the vCenter.
+     */
     @InputImport(name="fqdn", required=true)
     private final Input<String> fqdn;
 
@@ -39,6 +51,9 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
         return this.fqdn;
     }
 
+    /**
+     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -46,6 +61,9 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Gets or sets the location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -53,6 +71,9 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Gets or sets the port of the vCenter.
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 
@@ -60,6 +81,9 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * The Resource Group Name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -67,6 +91,9 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Gets or sets the Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -74,6 +101,9 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Name of the vCenter.
+     */
     @InputImport(name="vcenterName")
     private final @Nullable Input<String> vcenterName;
 

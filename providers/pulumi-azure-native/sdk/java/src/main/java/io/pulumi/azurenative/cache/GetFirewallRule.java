@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFirewallRule {
+/**
+ * A firewall rule on a redis cache has a name, and describes a contiguous range of IP addresses permitted to connect
+API Version: 2020-06-01.
+ *
+ * A firewall rule on a redis cache has a name, and describes a contiguous range of IP addresses permitted to connect
+ */
     public static CompletableFuture<GetFirewallRuleResult> invokeAsync(GetFirewallRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cache:getFirewallRule", TypeShape.of(GetFirewallRuleResult.class), args == null ? GetFirewallRuleArgs.Empty : args, Utilities.withVersion(options));
     }

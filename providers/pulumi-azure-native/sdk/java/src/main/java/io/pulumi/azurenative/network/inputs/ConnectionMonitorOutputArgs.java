@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a connection monitor output destination.
+ */
 public final class ConnectionMonitorOutputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionMonitorOutputArgs Empty = new ConnectionMonitorOutputArgs();
 
+    /**
+     * Connection monitor output destination type. Currently, only "Workspace" is supported.
+     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,OutputType>> type;
 
@@ -24,6 +30,9 @@ public final class ConnectionMonitorOutputArgs extends io.pulumi.resources.Resou
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * Describes the settings for producing output into a log analytics workspace.
+     */
     @InputImport(name="workspaceSettings")
     private final @Nullable Input<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListNotificationHubKeys {
+/**
+ * Namespace/NotificationHub Connection String
+API Version: 2017-04-01.
+ *
+ * Namespace/NotificationHub Connection String
+ */
     public static CompletableFuture<ListNotificationHubKeysResult> invokeAsync(ListNotificationHubKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:listNotificationHubKeys", TypeShape.of(ListNotificationHubKeysResult.class), args == null ? ListNotificationHubKeysArgs.Empty : args, Utilities.withVersion(options));
     }

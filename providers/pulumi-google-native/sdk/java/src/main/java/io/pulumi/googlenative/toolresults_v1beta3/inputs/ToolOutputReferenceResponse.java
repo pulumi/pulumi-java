@@ -10,10 +10,16 @@ import io.pulumi.googlenative.toolresults_v1beta3.inputs.TimestampResponse;
 import java.util.Objects;
 
 
+/**
+ * A reference to a ToolExecution output file.
+ */
 public final class ToolOutputReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ToolOutputReferenceResponse Empty = new ToolOutputReferenceResponse();
 
+    /**
+     * The creation time of the file. - In response: present if set by create/update request - In create/update request: optional
+     */
     @InputImport(name="creationTime", required=true)
     private final TimestampResponse creationTime;
 
@@ -21,6 +27,9 @@ public final class ToolOutputReferenceResponse extends io.pulumi.resources.Invok
         return this.creationTime;
     }
 
+    /**
+     * A FileReference to an output file. - In response: always set - In create/update request: always set
+     */
     @InputImport(name="output", required=true)
     private final FileReferenceResponse output;
 
@@ -28,6 +37,9 @@ public final class ToolOutputReferenceResponse extends io.pulumi.resources.Invok
         return this.output;
     }
 
+    /**
+     * The test case to which this output file belongs. - In response: present if set by create/update request - In create/update request: optional
+     */
     @InputImport(name="testCase", required=true)
     private final TestCaseReferenceResponse testCase;
 

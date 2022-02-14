@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecretValueArgs Empty = new SecretValueArgs();
 
+    /**
+     * The geo-location where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -22,6 +28,9 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Azure resource group name
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -29,6 +38,9 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the secret resource.
+     */
     @InputImport(name="secretResourceName", required=true)
     private final Input<String> secretResourceName;
 
@@ -36,6 +48,9 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.secretResourceName;
     }
 
+    /**
+     * The name of the secret resource value which is typically the version identifier for the value.
+     */
     @InputImport(name="secretValueResourceName")
     private final @Nullable Input<String> secretValueResourceName;
 
@@ -43,6 +58,9 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.secretValueResourceName == null ? Input.empty() : this.secretValueResourceName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -50,6 +68,9 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The actual value of the secret.
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * [Deprecated] Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate. validate the client/server certificate.
+ */
 public final class TlsValidationContextArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TlsValidationContextArgs Empty = new TlsValidationContextArgs();
 
+    /**
+     * The path to the file holding the CA certificate to validate the client or server certificate.
+     */
     @InputImport(name="certificatePath")
     private final @Nullable Input<String> certificatePath;
 
@@ -23,6 +29,9 @@ public final class TlsValidationContextArgs extends io.pulumi.resources.Resource
         return this.certificatePath == null ? Input.empty() : this.certificatePath;
     }
 
+    /**
+     * Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
+     */
     @InputImport(name="sdsConfig")
     private final @Nullable Input<SdsConfigArgs> sdsConfig;
 
@@ -30,6 +39,9 @@ public final class TlsValidationContextArgs extends io.pulumi.resources.Resource
         return this.sdsConfig == null ? Input.empty() : this.sdsConfig;
     }
 
+    /**
+     * Defines how TLS certificates are obtained.
+     */
     @InputImport(name="validationSource")
     private final @Nullable Input<TlsValidationContextValidationSource> validationSource;
 

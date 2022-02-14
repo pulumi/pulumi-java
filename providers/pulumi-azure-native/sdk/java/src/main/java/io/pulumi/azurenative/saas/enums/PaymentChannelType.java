@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The Payment channel for the SaasSubscription.
+ */
     @EnumType
     public enum PaymentChannelType {
+/**
+ * 
+ */
         SubscriptionDelegated("SubscriptionDelegated"),
+/**
+ * 
+ */
         CustomerDelegated("CustomerDelegated");
 
         private final String value;

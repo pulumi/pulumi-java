@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse {
+/**
+ * Flag that specifies whether the Connectors Platform add-on is enabled.
+ */
     private final Boolean enabled;
+/**
+ * Time at which the Connectors Platform add-on expires in milliseconds since epoch. If unspecified, the add-on will never expire.
+ */
     private final String expiresAt;
 
     @OutputCustomType.Constructor({"enabled","expiresAt"})
@@ -21,9 +27,15 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse {
         this.expiresAt = Objects.requireNonNull(expiresAt);
     }
 
+/**
+ * Flag that specifies whether the Connectors Platform add-on is enabled.
+ */
     public Boolean getEnabled() {
         return this.enabled;
     }
+/**
+ * Time at which the Connectors Platform add-on expires in milliseconds since epoch. If unspecified, the add-on will never expire.
+ */
     public String getExpiresAt() {
         return this.expiresAt;
     }

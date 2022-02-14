@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a label or a category of labels in a labeling job.
+ */
 public final class LabelClassArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LabelClassArgs Empty = new LabelClassArgs();
 
+    /**
+     * Display name of the label class.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -22,6 +28,9 @@ public final class LabelClassArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Dictionary of subclasses of the label class.
+     */
     @InputImport(name="subclasses")
     private final @Nullable Input<Map<String,LabelClassArgs>> subclasses;
 

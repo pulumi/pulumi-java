@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReplicationStorageClassificationMapping {
+/**
+ * Storage mapping object.
+API Version: 2018-07-10.
+ *
+ * Storage mapping object.
+ */
     public static CompletableFuture<GetReplicationStorageClassificationMappingResult> invokeAsync(GetReplicationStorageClassificationMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getReplicationStorageClassificationMapping", TypeShape.of(GetReplicationStorageClassificationMappingResult.class), args == null ? GetReplicationStorageClassificationMappingArgs.Empty : args, Utilities.withVersion(options));
     }

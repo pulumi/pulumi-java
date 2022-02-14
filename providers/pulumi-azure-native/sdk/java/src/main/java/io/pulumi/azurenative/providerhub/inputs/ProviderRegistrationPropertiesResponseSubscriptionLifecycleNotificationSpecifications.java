@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications extends io.pulumi.resources.InvokeArgs {
 
     public static final ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications Empty = new ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications();
 
+    /**
+     * 
+     */
     @InputImport(name="softDeleteTTL")
     private final @Nullable String softDeleteTTL;
 
@@ -23,6 +29,9 @@ public final class ProviderRegistrationPropertiesResponseSubscriptionLifecycleNo
         return this.softDeleteTTL == null ? Optional.empty() : Optional.ofNullable(this.softDeleteTTL);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="subscriptionStateOverrideActions")
     private final @Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions;
 

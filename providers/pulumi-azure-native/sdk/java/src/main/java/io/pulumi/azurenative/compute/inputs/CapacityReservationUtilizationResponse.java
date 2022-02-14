@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Represents the capacity reservation utilization in terms of resources allocated.
+ */
 public final class CapacityReservationUtilizationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CapacityReservationUtilizationResponse Empty = new CapacityReservationUtilizationResponse();
 
+    /**
+     * A list of all virtual machines resource ids allocated against the capacity reservation.
+     */
     @InputImport(name="virtualMachinesAllocated", required=true)
     private final List<SubResourceReadOnlyResponse> virtualMachinesAllocated;
 

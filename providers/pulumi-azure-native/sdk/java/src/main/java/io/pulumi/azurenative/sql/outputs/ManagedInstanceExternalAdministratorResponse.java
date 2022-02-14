@@ -12,11 +12,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagedInstanceExternalAdministratorResponse {
+/**
+ * Type of the sever administrator.
+ */
     private final @Nullable String administratorType;
+/**
+ * Azure Active Directory only Authentication enabled.
+ */
     private final @Nullable Boolean azureADOnlyAuthentication;
+/**
+ * Login name of the server administrator.
+ */
     private final @Nullable String login;
+/**
+ * Principal Type of the sever administrator.
+ */
     private final @Nullable String principalType;
+/**
+ * SID (object ID) of the server administrator.
+ */
     private final @Nullable String sid;
+/**
+ * Tenant ID of the administrator.
+ */
     private final @Nullable String tenantId;
 
     @OutputCustomType.Constructor({"administratorType","azureADOnlyAuthentication","login","principalType","sid","tenantId"})
@@ -35,21 +53,39 @@ public final class ManagedInstanceExternalAdministratorResponse {
         this.tenantId = tenantId;
     }
 
+/**
+ * Type of the sever administrator.
+ */
     public Optional<String> getAdministratorType() {
         return Optional.ofNullable(this.administratorType);
     }
+/**
+ * Azure Active Directory only Authentication enabled.
+ */
     public Optional<Boolean> getAzureADOnlyAuthentication() {
         return Optional.ofNullable(this.azureADOnlyAuthentication);
     }
+/**
+ * Login name of the server administrator.
+ */
     public Optional<String> getLogin() {
         return Optional.ofNullable(this.login);
     }
+/**
+ * Principal Type of the sever administrator.
+ */
     public Optional<String> getPrincipalType() {
         return Optional.ofNullable(this.principalType);
     }
+/**
+ * SID (object ID) of the server administrator.
+ */
     public Optional<String> getSid() {
         return Optional.ofNullable(this.sid);
     }
+/**
+ * Tenant ID of the administrator.
+ */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }

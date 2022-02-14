@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListRemoteRenderingAccountKeys {
+/**
+ * Developer Keys of account
+API Version: 2021-01-01.
+ *
+ * Developer Keys of account
+ */
     public static CompletableFuture<ListRemoteRenderingAccountKeysResult> invokeAsync(ListRemoteRenderingAccountKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:mixedreality:listRemoteRenderingAccountKeys", TypeShape.of(ListRemoteRenderingAccountKeysResult.class), args == null ? ListRemoteRenderingAccountKeysArgs.Empty : args, Utilities.withVersion(options));
     }

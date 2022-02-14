@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Time range of performance data used to recommend a size.
+ */
     @EnumType
     public enum TimeRange {
+/**
+ * 
+ */
         Day("Day"),
+/**
+ * 
+ */
         Week("Week"),
+/**
+ * 
+ */
         Month("Month"),
+/**
+ * 
+ */
         Custom("Custom");
 
         private final String value;

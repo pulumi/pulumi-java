@@ -8,7 +8,6 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.bigquery_v2.RoutineArgs;
 import io.pulumi.googlenative.bigquery_v2.outputs.ArgumentResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.RoutineReferenceResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.StandardSqlDataTypeResponse;
@@ -18,93 +17,187 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a new routine in the dataset.
+Auto-naming is currently not supported for this resource.
+ */
 @ResourceType(type="google-native:bigquery/v2:Routine")
 public class Routine extends io.pulumi.resources.CustomResource {
+    /**
+     * Optional.
+     */
     @OutputExport(name="arguments", type=List.class, parameters={ArgumentResponse.class})
     private Output<List<ArgumentResponse>> arguments;
 
+    /**
+     * @return Optional.
+     */
     public Output<List<ArgumentResponse>> getArguments() {
         return this.arguments;
     }
+    /**
+     * The time when this routine was created, in milliseconds since the epoch.
+     */
     @OutputExport(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
+    /**
+     * @return The time when this routine was created, in milliseconds since the epoch.
+     */
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
+    /**
+     * The body of the routine. For functions, this is the expression in the AS clause. If language=SQL, it is the substring inside (but excluding) the parentheses. For example, for the function created with the following statement: `CREATE FUNCTION JoinLines(x string, y string) as (concat(x, "\n", y))` The definition_body is `concat(x, "\n", y)` (\n is not replaced with linebreak). If language=JAVASCRIPT, it is the evaluated string in the AS clause. For example, for the function created with the following statement: `CREATE FUNCTION f() RETURNS STRING LANGUAGE js AS 'return "\n";\n'` The definition_body is `return "\n";\n` Note that both \n are replaced with linebreaks.
+     */
     @OutputExport(name="definitionBody", type=String.class, parameters={})
     private Output<String> definitionBody;
 
+    /**
+     * @return The body of the routine. For functions, this is the expression in the AS clause. If language=SQL, it is the substring inside (but excluding) the parentheses. For example, for the function created with the following statement: `CREATE FUNCTION JoinLines(x string, y string) as (concat(x, "\n", y))` The definition_body is `concat(x, "\n", y)` (\n is not replaced with linebreak). If language=JAVASCRIPT, it is the evaluated string in the AS clause. For example, for the function created with the following statement: `CREATE FUNCTION f() RETURNS STRING LANGUAGE js AS 'return "\n";\n'` The definition_body is `return "\n";\n` Note that both \n are replaced with linebreaks.
+     */
     public Output<String> getDefinitionBody() {
         return this.definitionBody;
     }
+    /**
+     * Optional. The description of the routine, if defined.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output<String> description;
 
+    /**
+     * @return Optional. The description of the routine, if defined.
+     */
     public Output<String> getDescription() {
         return this.description;
     }
+    /**
+     * Optional. The determinism level of the JavaScript UDF, if defined.
+     */
     @OutputExport(name="determinismLevel", type=String.class, parameters={})
     private Output<String> determinismLevel;
 
+    /**
+     * @return Optional. The determinism level of the JavaScript UDF, if defined.
+     */
     public Output<String> getDeterminismLevel() {
         return this.determinismLevel;
     }
+    /**
+     * A hash of this resource.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A hash of this resource.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Optional. If language = "JAVASCRIPT", this field stores the path of the imported JAVASCRIPT libraries.
+     */
     @OutputExport(name="importedLibraries", type=List.class, parameters={String.class})
     private Output<List<String>> importedLibraries;
 
+    /**
+     * @return Optional. If language = "JAVASCRIPT", this field stores the path of the imported JAVASCRIPT libraries.
+     */
     public Output<List<String>> getImportedLibraries() {
         return this.importedLibraries;
     }
+    /**
+     * Optional. Defaults to "SQL".
+     */
     @OutputExport(name="language", type=String.class, parameters={})
     private Output<String> language;
 
+    /**
+     * @return Optional. Defaults to "SQL".
+     */
     public Output<String> getLanguage() {
         return this.language;
     }
+    /**
+     * The time when this routine was last modified, in milliseconds since the epoch.
+     */
     @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
+    /**
+     * @return The time when this routine was last modified, in milliseconds since the epoch.
+     */
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
+    /**
+     * Optional. Can be set only if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return table type is inferred from definition_body at query time in each query that references this routine. If present, then the columns in the evaluated table result will be cast to match the column types specificed in return table type, at query time.
+     */
     @OutputExport(name="returnTableType", type=StandardSqlTableTypeResponse.class, parameters={})
     private Output<StandardSqlTableTypeResponse> returnTableType;
 
+    /**
+     * @return Optional. Can be set only if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return table type is inferred from definition_body at query time in each query that references this routine. If present, then the columns in the evaluated table result will be cast to match the column types specificed in return table type, at query time.
+     */
     public Output<StandardSqlTableTypeResponse> getReturnTableType() {
         return this.returnTableType;
     }
+    /**
+     * Optional if language = "SQL"; required otherwise. Cannot be set if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return type is inferred from definition_body at query time in each query that references this routine. If present, then the evaluated result will be cast to the specified returned type at query time. For example, for the functions created with the following statements: * `CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);` * `CREATE FUNCTION Increment(x FLOAT64) AS (Add(x, 1));` * `CREATE FUNCTION Decrement(x FLOAT64) RETURNS FLOAT64 AS (Add(x, -1));` The return_type is `{type_kind: "FLOAT64"}` for `Add` and `Decrement`, and is absent for `Increment` (inferred as FLOAT64 at query time). Suppose the function `Add` is replaced by `CREATE OR REPLACE FUNCTION Add(x INT64, y INT64) AS (x + y);` Then the inferred return type of `Increment` is automatically changed to INT64 at query time, while the return type of `Decrement` remains FLOAT64.
+     */
     @OutputExport(name="returnType", type=StandardSqlDataTypeResponse.class, parameters={})
     private Output<StandardSqlDataTypeResponse> returnType;
 
+    /**
+     * @return Optional if language = "SQL"; required otherwise. Cannot be set if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return type is inferred from definition_body at query time in each query that references this routine. If present, then the evaluated result will be cast to the specified returned type at query time. For example, for the functions created with the following statements: * `CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);` * `CREATE FUNCTION Increment(x FLOAT64) AS (Add(x, 1));` * `CREATE FUNCTION Decrement(x FLOAT64) RETURNS FLOAT64 AS (Add(x, -1));` The return_type is `{type_kind: "FLOAT64"}` for `Add` and `Decrement`, and is absent for `Increment` (inferred as FLOAT64 at query time). Suppose the function `Add` is replaced by `CREATE OR REPLACE FUNCTION Add(x INT64, y INT64) AS (x + y);` Then the inferred return type of `Increment` is automatically changed to INT64 at query time, while the return type of `Decrement` remains FLOAT64.
+     */
     public Output<StandardSqlDataTypeResponse> getReturnType() {
         return this.returnType;
     }
+    /**
+     * Reference describing the ID of this routine.
+     */
     @OutputExport(name="routineReference", type=RoutineReferenceResponse.class, parameters={})
     private Output<RoutineReferenceResponse> routineReference;
 
+    /**
+     * @return Reference describing the ID of this routine.
+     */
     public Output<RoutineReferenceResponse> getRoutineReference() {
         return this.routineReference;
     }
+    /**
+     * The type of routine.
+     */
     @OutputExport(name="routineType", type=String.class, parameters={})
     private Output<String> routineType;
 
+    /**
+     * @return The type of routine.
+     */
     public Output<String> getRoutineType() {
         return this.routineType;
     }
+    /**
+     * Optional. Can be set for procedures only. If true (default), the definition body will be validated in the creation and the updates of the procedure. For procedures with an argument of ANY TYPE, the definition body validtion is not supported at creation/update time, and thus this field must be set to false explicitly.
+     */
     @OutputExport(name="strictMode", type=Boolean.class, parameters={})
     private Output<Boolean> strictMode;
 
+    /**
+     * @return Optional. Can be set for procedures only. If true (default), the definition body will be validated in the creation and the updates of the procedure. For procedures with an argument of ANY TYPE, the definition body validtion is not supported at creation/update time, and thus this field must be set to false explicitly.
+     */
     public Output<Boolean> getStrictMode() {
         return this.strictMode;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Routine(String name, RoutineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:bigquery/v2:Routine", name, args == null ? RoutineArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -120,6 +213,14 @@ public class Routine extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Routine get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Routine(name, id, options);
     }

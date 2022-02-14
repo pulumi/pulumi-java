@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTargetPool {
+/**
+ * Returns the specified target pool. Gets a list of available target pools by making a list() request.
+ */
     public static CompletableFuture<GetTargetPoolResult> invokeAsync(GetTargetPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/beta:getTargetPool", TypeShape.of(GetTargetPoolResult.class), args == null ? GetTargetPoolArgs.Empty : args, Utilities.withVersion(options));
     }

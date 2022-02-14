@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A Machine Learning compute based on AKS.
+ */
 public final class AKSArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AKSArgs Empty = new AKSArgs();
 
+    /**
+     * Location for the underlying compute
+     */
     @InputImport(name="computeLocation")
     private final @Nullable Input<String> computeLocation;
 
@@ -22,6 +28,10 @@ public final class AKSArgs extends io.pulumi.resources.ResourceArgs {
         return this.computeLocation == null ? Input.empty() : this.computeLocation;
     }
 
+    /**
+     * The type of compute
+Expected value is 'AKS'.
+     */
     @InputImport(name="computeType", required=true)
     private final Input<String> computeType;
 
@@ -29,6 +39,9 @@ public final class AKSArgs extends io.pulumi.resources.ResourceArgs {
         return this.computeType;
     }
 
+    /**
+     * The description of the Machine Learning compute.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -36,6 +49,9 @@ public final class AKSArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * AKS properties
+     */
     @InputImport(name="properties")
     private final @Nullable Input<AKSPropertiesArgs> properties;
 
@@ -43,6 +59,9 @@ public final class AKSArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * ARM resource id of the underlying compute
+     */
     @InputImport(name="resourceId")
     private final @Nullable Input<String> resourceId;
 

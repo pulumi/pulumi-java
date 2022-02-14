@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetAutomationRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAutomationRuleArgs Empty = new GetAutomationRuleArgs();
 
+    /**
+     * Automation rule ID
+     */
     @InputImport(name="automationRuleId", required=true)
     private final String automationRuleId;
 
@@ -19,6 +25,9 @@ public final class GetAutomationRuleArgs extends io.pulumi.resources.InvokeArgs 
         return this.automationRuleId;
     }
 
+    /**
+     * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
     private final String operationalInsightsResourceProvider;
 
@@ -26,6 +35,9 @@ public final class GetAutomationRuleArgs extends io.pulumi.resources.InvokeArgs 
         return this.operationalInsightsResourceProvider;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,9 @@ public final class GetAutomationRuleArgs extends io.pulumi.resources.InvokeArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final String workspaceName;
 

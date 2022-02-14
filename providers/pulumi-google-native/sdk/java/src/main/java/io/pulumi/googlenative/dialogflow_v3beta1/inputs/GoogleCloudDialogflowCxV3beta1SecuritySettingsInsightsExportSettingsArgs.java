@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings for exporting conversations to [Insights](https://cloud.google.com/contact-center/insights/docs).
+ */
 public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs Empty = new GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs();
 
+    /**
+     * If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.
+     */
     @InputImport(name="enableInsightsExport")
     private final @Nullable Input<Boolean> enableInsightsExport;
 

@@ -51,7 +51,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SwitchCaseResponse {
+/**
+ * List of activities to execute for satisfied case condition.
+ */
     private final @Nullable List<Object> activities;
+/**
+ * Expected value that satisfies the expression result of the 'on' property.
+ */
     private final @Nullable String value;
 
     @OutputCustomType.Constructor({"activities","value"})
@@ -62,9 +68,15 @@ public final class SwitchCaseResponse {
         this.value = value;
     }
 
+/**
+ * List of activities to execute for satisfied case condition.
+ */
     public List<Object> getActivities() {
         return this.activities == null ? List.of() : this.activities;
     }
+/**
+ * Expected value that satisfies the expression result of the 'on' property.
+ */
     public Optional<String> getValue() {
         return Optional.ofNullable(this.value);
     }

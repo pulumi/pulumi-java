@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Workspace features.
+ */
 public final class WorkspaceFeaturesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkspaceFeaturesArgs Empty = new WorkspaceFeaturesArgs();
 
+    /**
+     * Dedicated LA cluster resourceId that is linked to the workspaces.
+     */
     @InputImport(name="clusterResourceId")
     private final @Nullable Input<String> clusterResourceId;
 
@@ -22,6 +28,9 @@ public final class WorkspaceFeaturesArgs extends io.pulumi.resources.ResourceArg
         return this.clusterResourceId == null ? Input.empty() : this.clusterResourceId;
     }
 
+    /**
+     * Disable Non-AAD based Auth.
+     */
     @InputImport(name="disableLocalAuth")
     private final @Nullable Input<Boolean> disableLocalAuth;
 
@@ -29,6 +38,9 @@ public final class WorkspaceFeaturesArgs extends io.pulumi.resources.ResourceArg
         return this.disableLocalAuth == null ? Input.empty() : this.disableLocalAuth;
     }
 
+    /**
+     * Flag that indicate if data should be exported.
+     */
     @InputImport(name="enableDataExport")
     private final @Nullable Input<Boolean> enableDataExport;
 
@@ -36,6 +48,9 @@ public final class WorkspaceFeaturesArgs extends io.pulumi.resources.ResourceArg
         return this.enableDataExport == null ? Input.empty() : this.enableDataExport;
     }
 
+    /**
+     * Flag that indicate which permission to use - resource or workspace or both.
+     */
     @InputImport(name="enableLogAccessUsingOnlyResourcePermissions")
     private final @Nullable Input<Boolean> enableLogAccessUsingOnlyResourcePermissions;
 
@@ -43,6 +58,9 @@ public final class WorkspaceFeaturesArgs extends io.pulumi.resources.ResourceArg
         return this.enableLogAccessUsingOnlyResourcePermissions == null ? Input.empty() : this.enableLogAccessUsingOnlyResourcePermissions;
     }
 
+    /**
+     * Flag that describes if we want to remove the data after 30 days.
+     */
     @InputImport(name="immediatePurgeDataOn30Days")
     private final @Nullable Input<Boolean> immediatePurgeDataOn30Days;
 

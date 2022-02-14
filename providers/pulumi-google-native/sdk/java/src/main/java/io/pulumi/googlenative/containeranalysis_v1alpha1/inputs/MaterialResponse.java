@@ -9,10 +9,16 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Material is a material used in the generation of the provenance
+ */
 public final class MaterialResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MaterialResponse Empty = new MaterialResponse();
 
+    /**
+     * digest is a map from a hash algorithm (e.g. sha256) to the value in the material
+     */
     @InputImport(name="digest", required=true)
     private final Map<String,String> digest;
 
@@ -20,6 +26,9 @@ public final class MaterialResponse extends io.pulumi.resources.InvokeArgs {
         return this.digest;
     }
 
+    /**
+     * uri is the uri of the material
+     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

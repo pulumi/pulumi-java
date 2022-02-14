@@ -12,8 +12,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FtpServerLocationResponse {
+/**
+ * Specify the file name of dataset. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object fileName;
+/**
+ * Specify the folder path of dataset. Type: string (or Expression with resultType string)
+ */
     private final @Nullable Object folderPath;
+/**
+ * Type of dataset storage location.
+Expected value is 'FtpServerLocation'.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"fileName","folderPath","type"})
@@ -26,12 +36,22 @@ public final class FtpServerLocationResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Specify the file name of dataset. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getFileName() {
         return Optional.ofNullable(this.fileName);
     }
+/**
+ * Specify the folder path of dataset. Type: string (or Expression with resultType string)
+ */
     public Optional<Object> getFolderPath() {
         return Optional.ofNullable(this.folderPath);
     }
+/**
+ * Type of dataset storage location.
+Expected value is 'FtpServerLocation'.
+ */
     public String getType() {
         return this.type;
     }

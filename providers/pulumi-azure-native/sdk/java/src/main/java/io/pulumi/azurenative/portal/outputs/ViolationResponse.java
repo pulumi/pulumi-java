@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ViolationResponse {
+/**
+ * Error message.
+ */
     private final String errorMessage;
+/**
+ * Id of the item that violates tenant configuration.
+ */
     private final String id;
+/**
+ * Id of the user who owns violated item.
+ */
     private final String userId;
 
     @OutputCustomType.Constructor({"errorMessage","id","userId"})
@@ -23,12 +32,21 @@ public final class ViolationResponse {
         this.userId = Objects.requireNonNull(userId);
     }
 
+/**
+ * Error message.
+ */
     public String getErrorMessage() {
         return this.errorMessage;
     }
+/**
+ * Id of the item that violates tenant configuration.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Id of the user who owns violated item.
+ */
     public String getUserId() {
         return this.userId;
     }

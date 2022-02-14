@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Installs an MSI file.
+ */
 public final class SoftwareRecipeStepInstallMsiResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SoftwareRecipeStepInstallMsiResponse Empty = new SoftwareRecipeStepInstallMsiResponse();
 
+    /**
+     * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
+     */
     @InputImport(name="allowedExitCodes", required=true)
     private final List<Integer> allowedExitCodes;
 
@@ -21,6 +27,9 @@ public final class SoftwareRecipeStepInstallMsiResponse extends io.pulumi.resour
         return this.allowedExitCodes;
     }
 
+    /**
+     * The id of the relevant artifact in the recipe.
+     */
     @InputImport(name="artifactId", required=true)
     private final String artifactId;
 
@@ -28,6 +37,9 @@ public final class SoftwareRecipeStepInstallMsiResponse extends io.pulumi.resour
         return this.artifactId;
     }
 
+    /**
+     * The flags to use when installing the MSI defaults to ["/i"] (i.e. the install flag).
+     */
     @InputImport(name="flags", required=true)
     private final List<String> flags;
 

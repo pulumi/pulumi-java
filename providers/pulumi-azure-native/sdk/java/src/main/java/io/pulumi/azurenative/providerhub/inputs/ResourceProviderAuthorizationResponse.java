@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResourceProviderAuthorizationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceProviderAuthorizationResponse Empty = new ResourceProviderAuthorizationResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="applicationId")
     private final @Nullable String applicationId;
 
@@ -21,6 +27,9 @@ public final class ResourceProviderAuthorizationResponse extends io.pulumi.resou
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="managedByRoleDefinitionId")
     private final @Nullable String managedByRoleDefinitionId;
 
@@ -28,6 +37,9 @@ public final class ResourceProviderAuthorizationResponse extends io.pulumi.resou
         return this.managedByRoleDefinitionId == null ? Optional.empty() : Optional.ofNullable(this.managedByRoleDefinitionId);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="roleDefinitionId")
     private final @Nullable String roleDefinitionId;
 

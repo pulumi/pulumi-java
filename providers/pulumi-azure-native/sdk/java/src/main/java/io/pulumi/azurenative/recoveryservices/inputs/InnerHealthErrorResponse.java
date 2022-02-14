@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Implements InnerHealthError class. HealthError object has a list of InnerHealthErrors as child errors. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.
+ */
 public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InnerHealthErrorResponse Empty = new InnerHealthErrorResponse();
 
+    /**
+     * Error creation time (UTC)
+     */
     @InputImport(name="creationTimeUtc")
     private final @Nullable String creationTimeUtc;
 
@@ -21,6 +27,9 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
         return this.creationTimeUtc == null ? Optional.empty() : Optional.ofNullable(this.creationTimeUtc);
     }
 
+    /**
+     * ID of the entity.
+     */
     @InputImport(name="entityId")
     private final @Nullable String entityId;
 
@@ -28,6 +37,9 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
         return this.entityId == null ? Optional.empty() : Optional.ofNullable(this.entityId);
     }
 
+    /**
+     * Category of error.
+     */
     @InputImport(name="errorCategory")
     private final @Nullable String errorCategory;
 
@@ -35,6 +47,9 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
         return this.errorCategory == null ? Optional.empty() : Optional.ofNullable(this.errorCategory);
     }
 
+    /**
+     * Error code.
+     */
     @InputImport(name="errorCode")
     private final @Nullable String errorCode;
 
@@ -42,6 +57,9 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
         return this.errorCode == null ? Optional.empty() : Optional.ofNullable(this.errorCode);
     }
 
+    /**
+     * Level of error.
+     */
     @InputImport(name="errorLevel")
     private final @Nullable String errorLevel;
 
@@ -49,6 +67,9 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
         return this.errorLevel == null ? Optional.empty() : Optional.ofNullable(this.errorLevel);
     }
 
+    /**
+     * Error message.
+     */
     @InputImport(name="errorMessage")
     private final @Nullable String errorMessage;
 
@@ -56,6 +77,9 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
         return this.errorMessage == null ? Optional.empty() : Optional.ofNullable(this.errorMessage);
     }
 
+    /**
+     * Source of error.
+     */
     @InputImport(name="errorSource")
     private final @Nullable String errorSource;
 
@@ -63,6 +87,9 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
         return this.errorSource == null ? Optional.empty() : Optional.ofNullable(this.errorSource);
     }
 
+    /**
+     * Type of error.
+     */
     @InputImport(name="errorType")
     private final @Nullable String errorType;
 
@@ -70,6 +97,9 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
         return this.errorType == null ? Optional.empty() : Optional.ofNullable(this.errorType);
     }
 
+    /**
+     * Possible causes of error.
+     */
     @InputImport(name="possibleCauses")
     private final @Nullable String possibleCauses;
 
@@ -77,6 +107,9 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
         return this.possibleCauses == null ? Optional.empty() : Optional.ofNullable(this.possibleCauses);
     }
 
+    /**
+     * Recommended action to resolve error.
+     */
     @InputImport(name="recommendedAction")
     private final @Nullable String recommendedAction;
 
@@ -84,6 +117,9 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
         return this.recommendedAction == null ? Optional.empty() : Optional.ofNullable(this.recommendedAction);
     }
 
+    /**
+     * DRA error message.
+     */
     @InputImport(name="recoveryProviderErrorMessage")
     private final @Nullable String recoveryProviderErrorMessage;
 
@@ -91,6 +127,9 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
         return this.recoveryProviderErrorMessage == null ? Optional.empty() : Optional.ofNullable(this.recoveryProviderErrorMessage);
     }
 
+    /**
+     * Summary message of the entity.
+     */
     @InputImport(name="summaryMessage")
     private final @Nullable String summaryMessage;
 

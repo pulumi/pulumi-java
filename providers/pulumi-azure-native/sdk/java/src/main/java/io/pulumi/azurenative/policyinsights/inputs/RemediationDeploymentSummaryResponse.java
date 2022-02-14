@@ -8,10 +8,16 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * The deployment status summary for all deployments created by the remediation.
+ */
 public final class RemediationDeploymentSummaryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RemediationDeploymentSummaryResponse Empty = new RemediationDeploymentSummaryResponse();
 
+    /**
+     * The number of deployments required by the remediation that have failed.
+     */
     @InputImport(name="failedDeployments", required=true)
     private final Integer failedDeployments;
 
@@ -19,6 +25,9 @@ public final class RemediationDeploymentSummaryResponse extends io.pulumi.resour
         return this.failedDeployments;
     }
 
+    /**
+     * The number of deployments required by the remediation that have succeeded.
+     */
     @InputImport(name="successfulDeployments", required=true)
     private final Integer successfulDeployments;
 
@@ -26,6 +35,9 @@ public final class RemediationDeploymentSummaryResponse extends io.pulumi.resour
         return this.successfulDeployments;
     }
 
+    /**
+     * The number of deployments required by the remediation.
+     */
     @InputImport(name="totalDeployments", required=true)
     private final Integer totalDeployments;
 

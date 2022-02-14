@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * VpnClientConnectionHealth properties.
+ */
 public final class VpnClientConnectionHealthResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VpnClientConnectionHealthResponse Empty = new VpnClientConnectionHealthResponse();
 
+    /**
+     * List of allocated ip addresses to the connected p2s vpn clients.
+     */
     @InputImport(name="allocatedIpAddresses")
     private final @Nullable List<String> allocatedIpAddresses;
 
@@ -24,6 +30,9 @@ public final class VpnClientConnectionHealthResponse extends io.pulumi.resources
         return this.allocatedIpAddresses == null ? List.of() : this.allocatedIpAddresses;
     }
 
+    /**
+     * Total of the Egress Bytes Transferred in this connection.
+     */
     @InputImport(name="totalEgressBytesTransferred", required=true)
     private final Double totalEgressBytesTransferred;
 
@@ -31,6 +40,9 @@ public final class VpnClientConnectionHealthResponse extends io.pulumi.resources
         return this.totalEgressBytesTransferred;
     }
 
+    /**
+     * Total of the Ingress Bytes Transferred in this P2S Vpn connection.
+     */
     @InputImport(name="totalIngressBytesTransferred", required=true)
     private final Double totalIngressBytesTransferred;
 
@@ -38,6 +50,9 @@ public final class VpnClientConnectionHealthResponse extends io.pulumi.resources
         return this.totalIngressBytesTransferred;
     }
 
+    /**
+     * The total of p2s vpn clients connected at this time to this P2SVpnGateway.
+     */
     @InputImport(name="vpnClientConnectionsCount")
     private final @Nullable Integer vpnClientConnectionsCount;
 

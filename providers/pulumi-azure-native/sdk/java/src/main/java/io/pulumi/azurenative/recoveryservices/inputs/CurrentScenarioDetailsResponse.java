@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Current scenario details of the protected entity.
+ */
 public final class CurrentScenarioDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CurrentScenarioDetailsResponse Empty = new CurrentScenarioDetailsResponse();
 
+    /**
+     * ARM Id of the job being executed.
+     */
     @InputImport(name="jobId")
     private final @Nullable String jobId;
 
@@ -21,6 +27,9 @@ public final class CurrentScenarioDetailsResponse extends io.pulumi.resources.In
         return this.jobId == null ? Optional.empty() : Optional.ofNullable(this.jobId);
     }
 
+    /**
+     * Scenario name.
+     */
     @InputImport(name="scenarioName")
     private final @Nullable String scenarioName;
 
@@ -28,6 +37,9 @@ public final class CurrentScenarioDetailsResponse extends io.pulumi.resources.In
         return this.scenarioName == null ? Optional.empty() : Optional.ofNullable(this.scenarioName);
     }
 
+    /**
+     * Start time of the workflow.
+     */
     @InputImport(name="startTime")
     private final @Nullable String startTime;
 

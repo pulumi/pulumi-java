@@ -11,8 +11,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DestinationResponse {
+/**
+ * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+ */
     private final String cloudFunction;
+/**
+ * Cloud Run fully-managed resource that receives the events. The resource should be in the same project as the trigger.
+ */
     private final CloudRunResponse cloudRun;
+/**
+ * A GKE service capable of receiving events. The service should be running in the same project as the trigger.
+ */
     private final GKEResponse gke;
 
     @OutputCustomType.Constructor({"cloudFunction","cloudRun","gke"})
@@ -25,12 +34,21 @@ public final class DestinationResponse {
         this.gke = Objects.requireNonNull(gke);
     }
 
+/**
+ * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
+ */
     public String getCloudFunction() {
         return this.cloudFunction;
     }
+/**
+ * Cloud Run fully-managed resource that receives the events. The resource should be in the same project as the trigger.
+ */
     public CloudRunResponse getCloudRun() {
         return this.cloudRun;
     }
+/**
+ * A GKE service capable of receiving events. The service should be running in the same project as the trigger.
+ */
     public GKEResponse getGke() {
         return this.gke;
     }

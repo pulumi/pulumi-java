@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The action to take.
+ */
 public final class BucketLifecycleRuleItemActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketLifecycleRuleItemActionArgs Empty = new BucketLifecycleRuleItemActionArgs();
 
+    /**
+     * Target storage class. Required iff the type of the action is SetStorageClass.
+     */
     @InputImport(name="storageClass")
     private final @Nullable Input<String> storageClass;
 
@@ -21,6 +27,9 @@ public final class BucketLifecycleRuleItemActionArgs extends io.pulumi.resources
         return this.storageClass == null ? Input.empty() : this.storageClass;
     }
 
+    /**
+     * Type of the action. Currently, only Delete and SetStorageClass are supported.
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

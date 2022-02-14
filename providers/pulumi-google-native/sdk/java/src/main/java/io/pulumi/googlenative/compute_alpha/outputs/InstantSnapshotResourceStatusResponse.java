@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class InstantSnapshotResourceStatusResponse {
+/**
+ * The storage size of this instant snapshot.
+ */
     private final String storageSizeBytes;
 
     @OutputCustomType.Constructor({"storageSizeBytes"})
@@ -16,6 +19,9 @@ public final class InstantSnapshotResourceStatusResponse {
         this.storageSizeBytes = Objects.requireNonNull(storageSizeBytes);
     }
 
+/**
+ * The storage size of this instant snapshot.
+ */
     public String getStorageSizeBytes() {
         return this.storageSizeBytes;
     }

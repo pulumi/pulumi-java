@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * PlacementPolicy defines the placement policy used by the node pool.
+ */
 public final class PlacementPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PlacementPolicyResponse Empty = new PlacementPolicyResponse();
 
+    /**
+     * The type of placement.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

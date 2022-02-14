@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The complete operation.
+ */
 public final class ConnectorMappingCompleteOperationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectorMappingCompleteOperationResponse Empty = new ConnectorMappingCompleteOperationResponse();
 
+    /**
+     * The type of completion operation.
+     */
     @InputImport(name="completionOperationType")
     private final @Nullable String completionOperationType;
 
@@ -21,6 +27,9 @@ public final class ConnectorMappingCompleteOperationResponse extends io.pulumi.r
         return this.completionOperationType == null ? Optional.empty() : Optional.ofNullable(this.completionOperationType);
     }
 
+    /**
+     * The destination folder where files will be moved to once the import is done.
+     */
     @InputImport(name="destinationFolder")
     private final @Nullable String destinationFolder;
 

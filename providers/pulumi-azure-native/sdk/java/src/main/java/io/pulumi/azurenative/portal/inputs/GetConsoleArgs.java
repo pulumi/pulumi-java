@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetConsoleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConsoleArgs Empty = new GetConsoleArgs();
 
+    /**
+     * The name of the console
+     */
     @InputImport(name="consoleName", required=true)
     private final String consoleName;
 

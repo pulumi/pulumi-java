@@ -13,12 +13,34 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetMECRoleResult {
+/**
+ * Activation key of the MEC.
+ */
     private final @Nullable AsymmetricEncryptedSecretResponse connectionString;
+/**
+ * The path ID that uniquely identifies the object.
+ */
     private final String id;
+/**
+ * Role type.
+Expected value is 'MEC'.
+ */
     private final String kind;
+/**
+ * The object name.
+ */
     private final String name;
+/**
+ * Role status.
+ */
     private final String roleStatus;
+/**
+ * Role configured on ASE resource
+ */
     private final SystemDataResponse systemData;
+/**
+ * The hierarchical type of the object.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"connectionString","id","kind","name","roleStatus","systemData","type"})
@@ -39,24 +61,46 @@ public final class GetMECRoleResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Activation key of the MEC.
+ */
     public Optional<AsymmetricEncryptedSecretResponse> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
+/**
+ * The path ID that uniquely identifies the object.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Role type.
+Expected value is 'MEC'.
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * The object name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Role status.
+ */
     public String getRoleStatus() {
         return this.roleStatus;
     }
+/**
+ * Role configured on ASE resource
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * The hierarchical type of the object.
+ */
     public String getType() {
         return this.type;
     }

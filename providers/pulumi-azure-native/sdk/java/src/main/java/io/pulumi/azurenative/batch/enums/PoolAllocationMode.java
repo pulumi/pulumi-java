@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService.
+ */
     @EnumType
     public enum PoolAllocationMode {
+/**
+ * Pools will be allocated in subscriptions owned by the Batch service.
+ */
         BatchService("BatchService"),
+/**
+ * Pools will be allocated in a subscription owned by the user.
+ */
         UserSubscription("UserSubscription");
 
         private final String value;

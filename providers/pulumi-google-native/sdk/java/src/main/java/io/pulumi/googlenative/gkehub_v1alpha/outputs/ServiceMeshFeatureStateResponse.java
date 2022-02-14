@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServiceMeshFeatureStateResponse {
+/**
+ * Results of running Service Mesh analyzers.
+ */
     private final List<ServiceMeshAnalysisMessageResponse> analysisMessages;
 
     @OutputCustomType.Constructor({"analysisMessages"})
@@ -17,6 +20,9 @@ public final class ServiceMeshFeatureStateResponse {
         this.analysisMessages = Objects.requireNonNull(analysisMessages);
     }
 
+/**
+ * Results of running Service Mesh analyzers.
+ */
     public List<ServiceMeshAnalysisMessageResponse> getAnalysisMessages() {
         return this.analysisMessages;
     }

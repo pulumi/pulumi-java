@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetAssessmentMetadataInSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAssessmentMetadataInSubscriptionArgs Empty = new GetAssessmentMetadataInSubscriptionArgs();
 
+    /**
+     * The Assessment Key - Unique key for the assessment type
+     */
     @InputImport(name="assessmentMetadataName", required=true)
     private final String assessmentMetadataName;
 

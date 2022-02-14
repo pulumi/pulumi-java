@@ -13,8 +13,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RestHealthCheckResponse {
+/**
+ * A unique name for this check.
+ */
     private final String name;
+/**
+ * The request to the health provider.
+ */
     private final RestRequestResponse request;
+/**
+ * The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.
+ */
     private final @Nullable RestResponseResponse response;
 
     @OutputCustomType.Constructor({"name","request","response"})
@@ -27,12 +36,21 @@ public final class RestHealthCheckResponse {
         this.response = response;
     }
 
+/**
+ * A unique name for this check.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The request to the health provider.
+ */
     public RestRequestResponse getRequest() {
         return this.request;
     }
+/**
+ * The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.
+ */
     public Optional<RestResponseResponse> getResponse() {
         return Optional.ofNullable(this.response);
     }

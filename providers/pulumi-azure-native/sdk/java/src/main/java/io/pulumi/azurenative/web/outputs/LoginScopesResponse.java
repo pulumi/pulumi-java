@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LoginScopesResponse {
+/**
+ * A list of the scopes that should be requested while authenticating.
+ */
     private final @Nullable List<String> scopes;
 
     @OutputCustomType.Constructor({"scopes"})
@@ -18,6 +21,9 @@ public final class LoginScopesResponse {
         this.scopes = scopes;
     }
 
+/**
+ * A list of the scopes that should be requested while authenticating.
+ */
     public List<String> getScopes() {
         return this.scopes == null ? List.of() : this.scopes;
     }

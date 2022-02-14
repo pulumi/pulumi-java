@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Whether fulfillment is enabled for the specific feature.
+ */
 public final class GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse Empty = new GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse();
 
+    /**
+     * The type of the feature that enabled for fulfillment.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

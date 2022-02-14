@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetNetworkInterfaceTapConfigurationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNetworkInterfaceTapConfigurationArgs Empty = new GetNetworkInterfaceTapConfigurationArgs();
 
+    /**
+     * The name of the network interface.
+     */
     @InputImport(name="networkInterfaceName", required=true)
     private final String networkInterfaceName;
 
@@ -19,6 +25,9 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends io.pulumi.res
         return this.networkInterfaceName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends io.pulumi.res
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the tap configuration.
+     */
     @InputImport(name="tapConfigurationName", required=true)
     private final String tapConfigurationName;
 

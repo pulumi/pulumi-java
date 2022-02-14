@@ -10,10 +10,17 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A type of synchronization setting based on schedule
+ */
 public final class ScheduledSourceSynchronizationSettingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScheduledSourceSynchronizationSettingResponse Empty = new ScheduledSourceSynchronizationSettingResponse();
 
+    /**
+     * Kind of synchronization setting on share.
+Expected value is 'ScheduleBased'.
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -21,6 +28,9 @@ public final class ScheduledSourceSynchronizationSettingResponse extends io.pulu
         return this.kind;
     }
 
+    /**
+     * Recurrence Interval
+     */
     @InputImport(name="recurrenceInterval")
     private final @Nullable String recurrenceInterval;
 
@@ -28,6 +38,9 @@ public final class ScheduledSourceSynchronizationSettingResponse extends io.pulu
         return this.recurrenceInterval == null ? Optional.empty() : Optional.ofNullable(this.recurrenceInterval);
     }
 
+    /**
+     * Synchronization time
+     */
     @InputImport(name="synchronizationTime")
     private final @Nullable String synchronizationTime;
 

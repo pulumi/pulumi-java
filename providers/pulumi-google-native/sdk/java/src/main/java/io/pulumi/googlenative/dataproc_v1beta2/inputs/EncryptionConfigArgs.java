@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Encryption settings for the cluster.
+ */
 public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EncryptionConfigArgs Empty = new EncryptionConfigArgs();
 
+    /**
+     * Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
+     */
     @InputImport(name="gcePdKmsKeyName")
     private final @Nullable Input<String> gcePdKmsKeyName;
 

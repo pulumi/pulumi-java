@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IntegrationServiceEnvironmentArgs Empty = new IntegrationServiceEnvironmentArgs();
 
+    /**
+     * Managed service identity properties.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<ManagedServiceIdentityArgs> identity;
 
@@ -25,6 +31,9 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * The integration service environment name.
+     */
     @InputImport(name="integrationServiceEnvironmentName")
     private final @Nullable Input<String> integrationServiceEnvironmentName;
 
@@ -32,6 +41,9 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
         return this.integrationServiceEnvironmentName == null ? Input.empty() : this.integrationServiceEnvironmentName;
     }
 
+    /**
+     * The resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -39,6 +51,9 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The integration service environment properties.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<IntegrationServiceEnvironmentPropertiesArgs> properties;
 
@@ -46,6 +61,9 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The resource group.
+     */
     @InputImport(name="resourceGroup", required=true)
     private final Input<String> resourceGroup;
 
@@ -53,6 +71,9 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
         return this.resourceGroup;
     }
 
+    /**
+     * The sku.
+     */
     @InputImport(name="sku")
     private final @Nullable Input<IntegrationServiceEnvironmentSkuArgs> sku;
 
@@ -60,6 +81,9 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * The resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

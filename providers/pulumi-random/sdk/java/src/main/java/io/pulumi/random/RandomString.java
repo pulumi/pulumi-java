@@ -7,7 +7,6 @@ import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
-import io.pulumi.random.RandomStringArgs;
 import io.pulumi.random.Utilities;
 import io.pulumi.random.inputs.RandomStringState;
 import java.lang.Boolean;
@@ -17,81 +16,268 @@ import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The resource `random.RandomString` generates a random permutation of alphanumeric characters and optionally special characters.
+
+This resource *does* use a cryptographic random number generator.
+
+Historically this resource's intended usage has been ambiguous as the original example used it in a password. For backwards compatibility it will continue to exist. For unique ids please use random_id, for sensitive random values please use random_password.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as random from "@pulumi/random";
+
+const randomRandomString = new random.RandomString("random", {
+    length: 16,
+    overrideSpecial: "/@£$",
+    special: true,
+});
+```
+```python
+import pulumi
+import pulumi_random as random
+
+random = random.RandomString("random",
+    length=16,
+    override_special="/@£$",
+    special=True)
+```
+```csharp
+using Pulumi;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var random = new Random.RandomString("random", new Random.RandomStringArgs
+        {
+            Length = 16,
+            OverrideSpecial = "/@£$",
+            Special = true,
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := random.NewRandomString(ctx, "random", &random.RandomStringArgs{
+			Length:          pulumi.Int(16),
+			OverrideSpecial: pulumi.String(fmt.Sprintf("%v%v", "/@£", "$")),
+			Special:         pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+# Strings can be imported by just specifying the value of the string
+
+```sh
+ $ pulumi import random:index/randomString:RandomString test test
+```
+
+ 
+ */
 @ResourceType(type="random:index/randomString:RandomString")
 public class RandomString extends io.pulumi.resources.CustomResource {
+    /**
+     * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+
+     */
     @OutputExport(name="keepers", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> keepers;
 
+    /**
+     * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
+
+     */
     public Output</* @Nullable */ Map<String,Object>> getKeepers() {
         return this.keepers;
     }
+    /**
+     * The length of the string desired.
+
+     */
     @OutputExport(name="length", type=Integer.class, parameters={})
     private Output<Integer> length;
 
+    /**
+     * @return The length of the string desired.
+
+     */
     public Output<Integer> getLength() {
         return this.length;
     }
+    /**
+     * Include lowercase alphabet characters in the result.
+
+     */
     @OutputExport(name="lower", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> lower;
 
+    /**
+     * @return Include lowercase alphabet characters in the result.
+
+     */
     public Output</* @Nullable */ Boolean> getLower() {
         return this.lower;
     }
+    /**
+     * Minimum number of lowercase alphabet characters in the result.
+
+     */
     @OutputExport(name="minLower", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minLower;
 
+    /**
+     * @return Minimum number of lowercase alphabet characters in the result.
+
+     */
     public Output</* @Nullable */ Integer> getMinLower() {
         return this.minLower;
     }
+    /**
+     * Minimum number of numeric characters in the result.
+
+     */
     @OutputExport(name="minNumeric", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minNumeric;
 
+    /**
+     * @return Minimum number of numeric characters in the result.
+
+     */
     public Output</* @Nullable */ Integer> getMinNumeric() {
         return this.minNumeric;
     }
+    /**
+     * Minimum number of special characters in the result.
+
+     */
     @OutputExport(name="minSpecial", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minSpecial;
 
+    /**
+     * @return Minimum number of special characters in the result.
+
+     */
     public Output</* @Nullable */ Integer> getMinSpecial() {
         return this.minSpecial;
     }
+    /**
+     * Minimum number of uppercase alphabet characters in the result.
+
+     */
     @OutputExport(name="minUpper", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minUpper;
 
+    /**
+     * @return Minimum number of uppercase alphabet characters in the result.
+
+     */
     public Output</* @Nullable */ Integer> getMinUpper() {
         return this.minUpper;
     }
+    /**
+     * Include numeric characters in the result.
+
+     */
     @OutputExport(name="number", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> number;
 
+    /**
+     * @return Include numeric characters in the result.
+
+     */
     public Output</* @Nullable */ Boolean> getNumber() {
         return this.number;
     }
+    /**
+     * Supply your own list of special characters to use for string generation.  This overrides the default character list in the special argument.  The `special` argument must still be set to true for any overwritten characters to be used in generation.
+
+     */
     @OutputExport(name="overrideSpecial", type=String.class, parameters={})
     private Output</* @Nullable */ String> overrideSpecial;
 
+    /**
+     * @return Supply your own list of special characters to use for string generation.  This overrides the default character list in the special argument.  The `special` argument must still be set to true for any overwritten characters to be used in generation.
+
+     */
     public Output</* @Nullable */ String> getOverrideSpecial() {
         return this.overrideSpecial;
     }
+    /**
+     * The generated random string.
+
+     */
     @OutputExport(name="result", type=String.class, parameters={})
     private Output<String> result;
 
+    /**
+     * @return The generated random string.
+
+     */
     public Output<String> getResult() {
         return this.result;
     }
+    /**
+     * Include special characters in the result. These are `!@#$%&*()-_=+[]{}<>:?`
+
+     */
     @OutputExport(name="special", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> special;
 
+    /**
+     * @return Include special characters in the result. These are `!@#$%&*()-_=+[]{}<>:?`
+
+     */
     public Output</* @Nullable */ Boolean> getSpecial() {
         return this.special;
     }
+    /**
+     * Include uppercase alphabet characters in the result.
+
+     */
     @OutputExport(name="upper", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> upper;
 
+    /**
+     * @return Include uppercase alphabet characters in the result.
+
+     */
     public Output</* @Nullable */ Boolean> getUpper() {
         return this.upper;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public RandomString(String name, RandomStringArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("random:index/randomString:RandomString", name, args == null ? RandomStringArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -107,6 +293,15 @@ public class RandomString extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param state
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static RandomString get(String name, Input<String> id, @Nullable RandomStringState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RandomString(name, id, state, options);
     }

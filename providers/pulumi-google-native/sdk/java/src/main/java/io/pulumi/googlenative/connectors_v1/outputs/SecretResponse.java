@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SecretResponse {
+/**
+ * The resource name of the secret version in the format, format as: `projects//{@literal /}secrets//{@literal /}versions/*`.
+ */
     private final String secretVersion;
 
     @OutputCustomType.Constructor({"secretVersion"})
@@ -16,6 +19,9 @@ public final class SecretResponse {
         this.secretVersion = Objects.requireNonNull(secretVersion);
     }
 
+/**
+ * The resource name of the secret version in the format, format as: `projects//{@literal /}secrets//{@literal /}versions/*`.
+ */
     public String getSecretVersion() {
         return this.secretVersion;
     }

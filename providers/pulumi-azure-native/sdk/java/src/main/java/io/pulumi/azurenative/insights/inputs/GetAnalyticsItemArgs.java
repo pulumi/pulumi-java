@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAnalyticsItemArgs Empty = new GetAnalyticsItemArgs();
 
+    /**
+     * The Id of a specific item defined in the Application Insights component
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -21,6 +27,9 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The name of a specific item defined in the Application Insights component
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -28,6 +37,9 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -35,6 +47,9 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Application Insights component resource.
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 
@@ -42,6 +57,9 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceName;
     }
 
+    /**
+     * Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
+     */
     @InputImport(name="scopePath", required=true)
     private final String scopePath;
 

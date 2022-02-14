@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.VpnServerConfigurationArgs;
 import io.pulumi.azurenative.network.outputs.AadAuthenticationParametersResponse;
 import io.pulumi.azurenative.network.outputs.IpsecPolicyResponse;
 import io.pulumi.azurenative.network.outputs.P2SVpnGatewayResponse;
@@ -23,117 +22,500 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * VpnServerConfiguration Resource.
+API Version: 2020-11-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### VpnServerConfigurationCreate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpnServerConfiguration = new AzureNative.Network.VpnServerConfiguration("vpnServerConfiguration", new AzureNative.Network.VpnServerConfigurationArgs
+        {
+            Location = "West US",
+            RadiusClientRootCertificates = 
+            {
+                new AzureNative.Network.Inputs.VpnServerConfigRadiusClientRootCertificateArgs
+                {
+                    Name = "vpnServerConfigRadiusClientRootCert1",
+                    Thumbprint = "83FFBFC8848B5A5836C94D0112367E16148A286F",
+                },
+            },
+            RadiusServerRootCertificates = 
+            {
+                new AzureNative.Network.Inputs.VpnServerConfigRadiusServerRootCertificateArgs
+                {
+                    Name = "vpnServerConfigRadiusServerRootCer1",
+                    PublicCertData = "MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuM",
+                },
+            },
+            RadiusServers = 
+            {
+                new AzureNative.Network.Inputs.RadiusServerArgs
+                {
+                    RadiusServerAddress = "10.0.0.0",
+                    RadiusServerScore = 25,
+                    RadiusServerSecret = "radiusServerSecret",
+                },
+            },
+            ResourceGroupName = "rg1",
+            Tags = 
+            {
+                { "key1", "value1" },
+            },
+            VpnClientIpsecPolicies = 
+            {
+                new AzureNative.Network.Inputs.IpsecPolicyArgs
+                {
+                    DhGroup = "DHGroup14",
+                    IkeEncryption = "AES256",
+                    IkeIntegrity = "SHA384",
+                    IpsecEncryption = "AES256",
+                    IpsecIntegrity = "SHA256",
+                    PfsGroup = "PFS14",
+                    SaDataSizeKilobytes = 429497,
+                    SaLifeTimeSeconds = 86472,
+                },
+            },
+            VpnClientRevokedCertificates = 
+            {
+                new AzureNative.Network.Inputs.VpnServerConfigVpnClientRevokedCertificateArgs
+                {
+                    Name = "vpnServerConfigVpnClientRevokedCert1",
+                    Thumbprint = "83FFBFC8848B5A5836C94D0112367E16148A286F",
+                },
+            },
+            VpnClientRootCertificates = 
+            {
+                new AzureNative.Network.Inputs.VpnServerConfigVpnClientRootCertificateArgs
+                {
+                    Name = "vpnServerConfigVpnClientRootCert1",
+                    PublicCertData = "MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuN",
+                },
+            },
+            VpnProtocols = 
+            {
+                "IkeV2",
+            },
+            VpnServerConfigurationName = "vpnServerConfiguration1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewVpnServerConfiguration(ctx, "vpnServerConfiguration", &network.VpnServerConfigurationArgs{
+			Location: pulumi.String("West US"),
+			RadiusClientRootCertificates: []network.VpnServerConfigRadiusClientRootCertificateArgs{
+				&network.VpnServerConfigRadiusClientRootCertificateArgs{
+					Name:       pulumi.String("vpnServerConfigRadiusClientRootCert1"),
+					Thumbprint: pulumi.String("83FFBFC8848B5A5836C94D0112367E16148A286F"),
+				},
+			},
+			RadiusServerRootCertificates: []network.VpnServerConfigRadiusServerRootCertificateArgs{
+				&network.VpnServerConfigRadiusServerRootCertificateArgs{
+					Name:           pulumi.String("vpnServerConfigRadiusServerRootCer1"),
+					PublicCertData: pulumi.String("MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuM"),
+				},
+			},
+			RadiusServers: []network.RadiusServerArgs{
+				&network.RadiusServerArgs{
+					RadiusServerAddress: pulumi.String("10.0.0.0"),
+					RadiusServerScore:   pulumi.Float64(25),
+					RadiusServerSecret:  pulumi.String("radiusServerSecret"),
+				},
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			Tags: pulumi.StringMap{
+				"key1": pulumi.String("value1"),
+			},
+			VpnClientIpsecPolicies: []network.IpsecPolicyArgs{
+				&network.IpsecPolicyArgs{
+					DhGroup:             pulumi.String("DHGroup14"),
+					IkeEncryption:       pulumi.String("AES256"),
+					IkeIntegrity:        pulumi.String("SHA384"),
+					IpsecEncryption:     pulumi.String("AES256"),
+					IpsecIntegrity:      pulumi.String("SHA256"),
+					PfsGroup:            pulumi.String("PFS14"),
+					SaDataSizeKilobytes: pulumi.Int(429497),
+					SaLifeTimeSeconds:   pulumi.Int(86472),
+				},
+			},
+			VpnClientRevokedCertificates: []network.VpnServerConfigVpnClientRevokedCertificateArgs{
+				&network.VpnServerConfigVpnClientRevokedCertificateArgs{
+					Name:       pulumi.String("vpnServerConfigVpnClientRevokedCert1"),
+					Thumbprint: pulumi.String("83FFBFC8848B5A5836C94D0112367E16148A286F"),
+				},
+			},
+			VpnClientRootCertificates: []network.VpnServerConfigVpnClientRootCertificateArgs{
+				&network.VpnServerConfigVpnClientRootCertificateArgs{
+					Name:           pulumi.String("vpnServerConfigVpnClientRootCert1"),
+					PublicCertData: pulumi.String("MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuN"),
+				},
+			},
+			VpnProtocols: pulumi.StringArray{
+				pulumi.String("IkeV2"),
+			},
+			VpnServerConfigurationName: pulumi.String("vpnServerConfiguration1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const vpnServerConfiguration = new azure_native.network.VpnServerConfiguration("vpnServerConfiguration", {
+    location: "West US",
+    radiusClientRootCertificates: [{
+        name: "vpnServerConfigRadiusClientRootCert1",
+        thumbprint: "83FFBFC8848B5A5836C94D0112367E16148A286F",
+    }],
+    radiusServerRootCertificates: [{
+        name: "vpnServerConfigRadiusServerRootCer1",
+        publicCertData: "MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuM",
+    }],
+    radiusServers: [{
+        radiusServerAddress: "10.0.0.0",
+        radiusServerScore: 25,
+        radiusServerSecret: "radiusServerSecret",
+    }],
+    resourceGroupName: "rg1",
+    tags: {
+        key1: "value1",
+    },
+    vpnClientIpsecPolicies: [{
+        dhGroup: "DHGroup14",
+        ikeEncryption: "AES256",
+        ikeIntegrity: "SHA384",
+        ipsecEncryption: "AES256",
+        ipsecIntegrity: "SHA256",
+        pfsGroup: "PFS14",
+        saDataSizeKilobytes: 429497,
+        saLifeTimeSeconds: 86472,
+    }],
+    vpnClientRevokedCertificates: [{
+        name: "vpnServerConfigVpnClientRevokedCert1",
+        thumbprint: "83FFBFC8848B5A5836C94D0112367E16148A286F",
+    }],
+    vpnClientRootCertificates: [{
+        name: "vpnServerConfigVpnClientRootCert1",
+        publicCertData: "MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuN",
+    }],
+    vpnProtocols: ["IkeV2"],
+    vpnServerConfigurationName: "vpnServerConfiguration1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+vpn_server_configuration = azure_native.network.VpnServerConfiguration("vpnServerConfiguration",
+    location="West US",
+    radius_client_root_certificates=[azure_native.network.VpnServerConfigRadiusClientRootCertificateArgs(
+        name="vpnServerConfigRadiusClientRootCert1",
+        thumbprint="83FFBFC8848B5A5836C94D0112367E16148A286F",
+    )],
+    radius_server_root_certificates=[azure_native.network.VpnServerConfigRadiusServerRootCertificateArgs(
+        name="vpnServerConfigRadiusServerRootCer1",
+        public_cert_data="MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuM",
+    )],
+    radius_servers=[azure_native.network.RadiusServerArgs(
+        radius_server_address="10.0.0.0",
+        radius_server_score=25,
+        radius_server_secret="radiusServerSecret",
+    )],
+    resource_group_name="rg1",
+    tags={
+        "key1": "value1",
+    },
+    vpn_client_ipsec_policies=[azure_native.network.IpsecPolicyArgs(
+        dh_group="DHGroup14",
+        ike_encryption="AES256",
+        ike_integrity="SHA384",
+        ipsec_encryption="AES256",
+        ipsec_integrity="SHA256",
+        pfs_group="PFS14",
+        sa_data_size_kilobytes=429497,
+        sa_life_time_seconds=86472,
+    )],
+    vpn_client_revoked_certificates=[azure_native.network.VpnServerConfigVpnClientRevokedCertificateArgs(
+        name="vpnServerConfigVpnClientRevokedCert1",
+        thumbprint="83FFBFC8848B5A5836C94D0112367E16148A286F",
+    )],
+    vpn_client_root_certificates=[azure_native.network.VpnServerConfigVpnClientRootCertificateArgs(
+        name="vpnServerConfigVpnClientRootCert1",
+        public_cert_data="MIIC5zCCAc+gAwIBAgIQErQ0Hk4aDJxIA+Q5RagB+jANBgkqhkiG9w0BAQsFADAWMRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0xNzEyMTQyMTA3MzhaFw0xODEyMTQyMTI3MzhaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArP7/NQXmW7cQ/ZR1mv3Y3I29Lt7HTOqzo/1KUOoVH3NItbQIRAQbwKy3UWrOFz4eGNX2GWtNRMdCyWsKeqy9Ltsdfcm1IbKXkl84DFeU/ZacXu4Dl3xX3gV5du4TLZjEowJELyur11Ea2YcjPRQ/FzAF9/hGuboS1HZQEPLx4FdUs9OxCYOtc0MxBCwLfVTTRqarb0Ne+arNYd4kCzIhAke1nOyKAJBda5ZL+VHy3S5S8qGlD46jm8HXugmAkUygS4oIIXOmj/1O9sNAi3LN60zufSzCmP8Rm/iUGX+DHAGGiXxwZOKQLEDaZXKqoHjMPP0XudmSWwOIbyeQVrLhkwIDAQABozEwLzAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFEfeNU2trYxNLF9ONmuJUsT13pKDMA0GCSqGSIb3DQEBCwUAA4IBAQBmM6RJzsGGipxyMhimHKN2xlkejhVsgBoTAhOU0llW9aUSwINJ9zFUGgI8IzUFy1VG776fchHp0LMRmPSIUYk5btEPxbsrPtumPuMH8EQGrS+Rt4pD+78c8H1fEPkq5CmDl/PKu4JoFGv+aFcE+Od0hlILstIF10Qysf++QXDolKfzJa/56bgMeYKFiju73loiRM57ns8ddXpfLl792UVpRkFU62LNns6Y1LKTwapmUF4IvIuAIzd6LZNOQng64LAKXtKnViJ1JQiXwf4CEzhgvAti3/ejpb3U90hsrUcyZi6wBv9bZLcAJRWpz61JNYliM1d1grSwQDKGXNQE4xuN",
+    )],
+    vpn_protocols=["IkeV2"],
+    vpn_server_configuration_name="vpnServerConfiguration1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:VpnServerConfiguration vpnServerConfiguration1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnServerConfigurations/vpnServerConfiguration1 
+```
+
+ */
 @ResourceType(type="azure-native:network:VpnServerConfiguration")
 public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
+    /**
+     * The set of aad vpn authentication parameters.
+     */
     @OutputExport(name="aadAuthenticationParameters", type=AadAuthenticationParametersResponse.class, parameters={})
     private Output</* @Nullable */ AadAuthenticationParametersResponse> aadAuthenticationParameters;
 
+    /**
+     * @return The set of aad vpn authentication parameters.
+     */
     public Output</* @Nullable */ AadAuthenticationParametersResponse> getAadAuthenticationParameters() {
         return this.aadAuthenticationParameters;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * List of references to P2SVpnGateways.
+     */
     @OutputExport(name="p2SVpnGateways", type=List.class, parameters={P2SVpnGatewayResponse.class})
     private Output<List<P2SVpnGatewayResponse>> p2SVpnGateways;
 
+    /**
+     * @return List of references to P2SVpnGateways.
+     */
     public Output<List<P2SVpnGatewayResponse>> getP2SVpnGateways() {
         return this.p2SVpnGateways;
     }
+    /**
+     * The provisioning state of the VpnServerConfiguration resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the VpnServerConfiguration resource. Possible values are: 'Updating', 'Deleting', and 'Failed'.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Radius client root certificate of VpnServerConfiguration.
+     */
     @OutputExport(name="radiusClientRootCertificates", type=List.class, parameters={VpnServerConfigRadiusClientRootCertificateResponse.class})
     private Output</* @Nullable */ List<VpnServerConfigRadiusClientRootCertificateResponse>> radiusClientRootCertificates;
 
+    /**
+     * @return Radius client root certificate of VpnServerConfiguration.
+     */
     public Output</* @Nullable */ List<VpnServerConfigRadiusClientRootCertificateResponse>> getRadiusClientRootCertificates() {
         return this.radiusClientRootCertificates;
     }
+    /**
+     * The radius server address property of the VpnServerConfiguration resource for point to site client connection.
+     */
     @OutputExport(name="radiusServerAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> radiusServerAddress;
 
+    /**
+     * @return The radius server address property of the VpnServerConfiguration resource for point to site client connection.
+     */
     public Output</* @Nullable */ String> getRadiusServerAddress() {
         return this.radiusServerAddress;
     }
+    /**
+     * Radius Server root certificate of VpnServerConfiguration.
+     */
     @OutputExport(name="radiusServerRootCertificates", type=List.class, parameters={VpnServerConfigRadiusServerRootCertificateResponse.class})
     private Output</* @Nullable */ List<VpnServerConfigRadiusServerRootCertificateResponse>> radiusServerRootCertificates;
 
+    /**
+     * @return Radius Server root certificate of VpnServerConfiguration.
+     */
     public Output</* @Nullable */ List<VpnServerConfigRadiusServerRootCertificateResponse>> getRadiusServerRootCertificates() {
         return this.radiusServerRootCertificates;
     }
+    /**
+     * The radius secret property of the VpnServerConfiguration resource for point to site client connection.
+     */
     @OutputExport(name="radiusServerSecret", type=String.class, parameters={})
     private Output</* @Nullable */ String> radiusServerSecret;
 
+    /**
+     * @return The radius secret property of the VpnServerConfiguration resource for point to site client connection.
+     */
     public Output</* @Nullable */ String> getRadiusServerSecret() {
         return this.radiusServerSecret;
     }
+    /**
+     * Multiple Radius Server configuration for VpnServerConfiguration.
+     */
     @OutputExport(name="radiusServers", type=List.class, parameters={RadiusServerResponse.class})
     private Output</* @Nullable */ List<RadiusServerResponse>> radiusServers;
 
+    /**
+     * @return Multiple Radius Server configuration for VpnServerConfiguration.
+     */
     public Output</* @Nullable */ List<RadiusServerResponse>> getRadiusServers() {
         return this.radiusServers;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * VPN authentication types for the VpnServerConfiguration.
+     */
     @OutputExport(name="vpnAuthenticationTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> vpnAuthenticationTypes;
 
+    /**
+     * @return VPN authentication types for the VpnServerConfiguration.
+     */
     public Output</* @Nullable */ List<String>> getVpnAuthenticationTypes() {
         return this.vpnAuthenticationTypes;
     }
+    /**
+     * VpnClientIpsecPolicies for VpnServerConfiguration.
+     */
     @OutputExport(name="vpnClientIpsecPolicies", type=List.class, parameters={IpsecPolicyResponse.class})
     private Output</* @Nullable */ List<IpsecPolicyResponse>> vpnClientIpsecPolicies;
 
+    /**
+     * @return VpnClientIpsecPolicies for VpnServerConfiguration.
+     */
     public Output</* @Nullable */ List<IpsecPolicyResponse>> getVpnClientIpsecPolicies() {
         return this.vpnClientIpsecPolicies;
     }
+    /**
+     * VPN client revoked certificate of VpnServerConfiguration.
+     */
     @OutputExport(name="vpnClientRevokedCertificates", type=List.class, parameters={VpnServerConfigVpnClientRevokedCertificateResponse.class})
     private Output</* @Nullable */ List<VpnServerConfigVpnClientRevokedCertificateResponse>> vpnClientRevokedCertificates;
 
+    /**
+     * @return VPN client revoked certificate of VpnServerConfiguration.
+     */
     public Output</* @Nullable */ List<VpnServerConfigVpnClientRevokedCertificateResponse>> getVpnClientRevokedCertificates() {
         return this.vpnClientRevokedCertificates;
     }
+    /**
+     * VPN client root certificate of VpnServerConfiguration.
+     */
     @OutputExport(name="vpnClientRootCertificates", type=List.class, parameters={VpnServerConfigVpnClientRootCertificateResponse.class})
     private Output</* @Nullable */ List<VpnServerConfigVpnClientRootCertificateResponse>> vpnClientRootCertificates;
 
+    /**
+     * @return VPN client root certificate of VpnServerConfiguration.
+     */
     public Output</* @Nullable */ List<VpnServerConfigVpnClientRootCertificateResponse>> getVpnClientRootCertificates() {
         return this.vpnClientRootCertificates;
     }
+    /**
+     * VPN protocols for the VpnServerConfiguration.
+     */
     @OutputExport(name="vpnProtocols", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> vpnProtocols;
 
+    /**
+     * @return VPN protocols for the VpnServerConfiguration.
+     */
     public Output</* @Nullable */ List<String>> getVpnProtocols() {
         return this.vpnProtocols;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public VpnServerConfiguration(String name, VpnServerConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:VpnServerConfiguration", name, args == null ? VpnServerConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -165,6 +547,14 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static VpnServerConfiguration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VpnServerConfiguration(name, id, options);
     }

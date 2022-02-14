@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The custom setup of installing 3rd party components.
+ */
 public final class ComponentSetupResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ComponentSetupResponse Empty = new ComponentSetupResponse();
 
+    /**
+     * The name of the 3rd party component.
+     */
     @InputImport(name="componentName", required=true)
     private final String componentName;
 
@@ -22,6 +28,9 @@ public final class ComponentSetupResponse extends io.pulumi.resources.InvokeArgs
         return this.componentName;
     }
 
+    /**
+     * The license key to activate the component.
+     */
     @InputImport(name="licenseKey")
     private final @Nullable SecureStringResponse licenseKey;
 
@@ -29,6 +38,10 @@ public final class ComponentSetupResponse extends io.pulumi.resources.InvokeArgs
         return this.licenseKey == null ? Optional.empty() : Optional.ofNullable(this.licenseKey);
     }
 
+    /**
+     * The type of custom setup.
+Expected value is 'ComponentSetup'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

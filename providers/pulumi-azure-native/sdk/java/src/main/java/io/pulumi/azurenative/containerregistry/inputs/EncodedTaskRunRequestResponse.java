@@ -17,10 +17,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The parameters for a quick task run request.
+ */
 public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EncodedTaskRunRequestResponse Empty = new EncodedTaskRunRequestResponse();
 
+    /**
+     * The machine configuration of the run agent.
+     */
     @InputImport(name="agentConfiguration")
     private final @Nullable AgentPropertiesResponse agentConfiguration;
 
@@ -28,6 +34,9 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
         return this.agentConfiguration == null ? Optional.empty() : Optional.ofNullable(this.agentConfiguration);
     }
 
+    /**
+     * The dedicated agent pool for the run.
+     */
     @InputImport(name="agentPoolName")
     private final @Nullable String agentPoolName;
 
@@ -35,6 +44,9 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
         return this.agentPoolName == null ? Optional.empty() : Optional.ofNullable(this.agentPoolName);
     }
 
+    /**
+     * The properties that describes a set of credentials that will be used when this run is invoked.
+     */
     @InputImport(name="credentials")
     private final @Nullable CredentialsResponse credentials;
 
@@ -42,6 +54,9 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
     }
 
+    /**
+     * Base64 encoded value of the template/definition file content.
+     */
     @InputImport(name="encodedTaskContent", required=true)
     private final String encodedTaskContent;
 
@@ -49,6 +64,9 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
         return this.encodedTaskContent;
     }
 
+    /**
+     * Base64 encoded value of the parameters/values file content.
+     */
     @InputImport(name="encodedValuesContent")
     private final @Nullable String encodedValuesContent;
 
@@ -56,6 +74,9 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
         return this.encodedValuesContent == null ? Optional.empty() : Optional.ofNullable(this.encodedValuesContent);
     }
 
+    /**
+     * The value that indicates whether archiving is enabled for the run or not.
+     */
     @InputImport(name="isArchiveEnabled")
     private final @Nullable Boolean isArchiveEnabled;
 
@@ -63,6 +84,9 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
         return this.isArchiveEnabled == null ? Optional.empty() : Optional.ofNullable(this.isArchiveEnabled);
     }
 
+    /**
+     * The template that describes the repository and tag information for run log artifact.
+     */
     @InputImport(name="logTemplate")
     private final @Nullable String logTemplate;
 
@@ -70,6 +94,9 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
         return this.logTemplate == null ? Optional.empty() : Optional.ofNullable(this.logTemplate);
     }
 
+    /**
+     * The platform properties against which the run has to happen.
+     */
     @InputImport(name="platform", required=true)
     private final PlatformPropertiesResponse platform;
 
@@ -77,6 +104,10 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
         return this.platform;
     }
 
+    /**
+     * The URL(absolute or relative) of the source context. It can be an URL to a tar or git repository.
+If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
+     */
     @InputImport(name="sourceLocation")
     private final @Nullable String sourceLocation;
 
@@ -84,6 +115,9 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
         return this.sourceLocation == null ? Optional.empty() : Optional.ofNullable(this.sourceLocation);
     }
 
+    /**
+     * Run timeout in seconds.
+     */
     @InputImport(name="timeout")
     private final @Nullable Integer timeout;
 
@@ -91,6 +125,10 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
     }
 
+    /**
+     * The type of the run request.
+Expected value is 'EncodedTaskRunRequest'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -98,6 +136,9 @@ public final class EncodedTaskRunRequestResponse extends io.pulumi.resources.Inv
         return this.type;
     }
 
+    /**
+     * The collection of overridable values that can be passed when running a task.
+     */
     @InputImport(name="values")
     private final @Nullable List<SetValueResponse> values;
 

@@ -12,11 +12,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetServiceTopologyResult {
+/**
+ * The resource Id of the artifact source that contains the artifacts that can be referenced in the service units.
+ */
     private final @Nullable String artifactSourceId;
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     private final String id;
+/**
+ * The geo-location where the resource lives
+ */
     private final String location;
+/**
+ * The name of the resource
+ */
     private final String name;
+/**
+ * Resource tags.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"artifactSourceId","id","location","name","tags","type"})
@@ -35,21 +53,39 @@ public final class GetServiceTopologyResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The resource Id of the artifact source that contains the artifacts that can be referenced in the service units.
+ */
     public Optional<String> getArtifactSourceId() {
         return Optional.ofNullable(this.artifactSourceId);
     }
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The geo-location where the resource lives
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * The name of the resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Resource tags.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     public String getType() {
         return this.type;
     }

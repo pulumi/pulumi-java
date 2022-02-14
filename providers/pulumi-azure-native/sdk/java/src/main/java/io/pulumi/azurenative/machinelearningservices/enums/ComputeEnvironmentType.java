@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The compute environment type for the service.
+ */
     @EnumType
     public enum ComputeEnvironmentType {
+/**
+ * 
+ */
         ACI("ACI"),
+/**
+ * 
+ */
         AKS("AKS");
 
         private final String value;

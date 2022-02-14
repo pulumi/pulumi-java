@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Pad filter configuration for the input video. The padded input video is scaled after padding with black to match the output resolution.
+ */
 public final class PadArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PadArgs Empty = new PadArgs();
 
+    /**
+     * The number of pixels to add to the bottom. The default is 0.
+     */
     @InputImport(name="bottomPixels")
     private final @Nullable Input<Integer> bottomPixels;
 
@@ -21,6 +27,9 @@ public final class PadArgs extends io.pulumi.resources.ResourceArgs {
         return this.bottomPixels == null ? Input.empty() : this.bottomPixels;
     }
 
+    /**
+     * The number of pixels to add to the left. The default is 0.
+     */
     @InputImport(name="leftPixels")
     private final @Nullable Input<Integer> leftPixels;
 
@@ -28,6 +37,9 @@ public final class PadArgs extends io.pulumi.resources.ResourceArgs {
         return this.leftPixels == null ? Input.empty() : this.leftPixels;
     }
 
+    /**
+     * The number of pixels to add to the right. The default is 0.
+     */
     @InputImport(name="rightPixels")
     private final @Nullable Input<Integer> rightPixels;
 
@@ -35,6 +47,9 @@ public final class PadArgs extends io.pulumi.resources.ResourceArgs {
         return this.rightPixels == null ? Input.empty() : this.rightPixels;
     }
 
+    /**
+     * The number of pixels to add to the top. The default is 0.
+     */
     @InputImport(name="topPixels")
     private final @Nullable Input<Integer> topPixels;
 

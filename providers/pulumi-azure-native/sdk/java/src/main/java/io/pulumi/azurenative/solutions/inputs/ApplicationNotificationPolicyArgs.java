@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Managed application notification policy.
+ */
 public final class ApplicationNotificationPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationNotificationPolicyArgs Empty = new ApplicationNotificationPolicyArgs();
 
+    /**
+     * The managed application notification endpoint.
+     */
     @InputImport(name="notificationEndpoints", required=true)
     private final Input<List<ApplicationNotificationEndpointArgs>> notificationEndpoints;
 

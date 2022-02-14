@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ServiceReference holds a reference to Service.legacy.k8s.io
+ */
 public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceReferenceArgs Empty = new ServiceReferenceArgs();
 
+    /**
+     * Name is the name of the service
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -22,6 +28,9 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Namespace is the namespace of the service
+     */
     @InputImport(name="namespace")
     private final @Nullable Input<String> namespace;
 
@@ -29,6 +38,9 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
         return this.namespace == null ? Input.empty() : this.namespace;
     }
 
+    /**
+     * If specified, the port on the service that hosting webhook. Default to 443 for backward compatibility. `port` should be a valid port number (1-65535, inclusive).
+     */
     @InputImport(name="port")
     private final @Nullable Input<Integer> port;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPoolArgs Empty = new GetPoolArgs();
 
+    /**
+     * The name of the Batch account.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetPoolArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * The pool name. This must be unique within the account.
+     */
     @InputImport(name="poolName", required=true)
     private final String poolName;
 
@@ -26,6 +35,9 @@ public final class GetPoolArgs extends io.pulumi.resources.InvokeArgs {
         return this.poolName;
     }
 
+    /**
+     * The name of the resource group that contains the Batch account.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

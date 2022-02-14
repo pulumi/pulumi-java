@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.compute.ProximityPlacementGroupArgs;
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceWithColocationStatusResponse;
 import io.pulumi.core.Alias;
@@ -17,63 +16,214 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Specifies information about the proximity placement group.
+API Version: 2020-12-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create or Update a proximity placement group.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var proximityPlacementGroup = new AzureNative.Compute.ProximityPlacementGroup("proximityPlacementGroup", new AzureNative.Compute.ProximityPlacementGroupArgs
+        {
+            Location = "westus",
+            ProximityPlacementGroupName = "myProximityPlacementGroup",
+            ProximityPlacementGroupType = "Standard",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewProximityPlacementGroup(ctx, "proximityPlacementGroup", &compute.ProximityPlacementGroupArgs{
+			Location:                    pulumi.String("westus"),
+			ProximityPlacementGroupName: pulumi.String("myProximityPlacementGroup"),
+			ProximityPlacementGroupType: pulumi.String("Standard"),
+			ResourceGroupName:           pulumi.String("myResourceGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const proximityPlacementGroup = new azure_native.compute.ProximityPlacementGroup("proximityPlacementGroup", {
+    location: "westus",
+    proximityPlacementGroupName: "myProximityPlacementGroup",
+    proximityPlacementGroupType: "Standard",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+proximity_placement_group = azure_native.compute.ProximityPlacementGroup("proximityPlacementGroup",
+    location="westus",
+    proximity_placement_group_name="myProximityPlacementGroup",
+    proximity_placement_group_type="Standard",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:compute:ProximityPlacementGroup myProximityPlacementGroup /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/proximityPlacementGroups/myProximityPlacementGroup 
+```
+
+ */
 @ResourceType(type="azure-native:compute:ProximityPlacementGroup")
 public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource {
+    /**
+     * A list of references to all availability sets in the proximity placement group.
+     */
     @OutputExport(name="availabilitySets", type=List.class, parameters={SubResourceWithColocationStatusResponse.class})
     private Output<List<SubResourceWithColocationStatusResponse>> availabilitySets;
 
+    /**
+     * @return A list of references to all availability sets in the proximity placement group.
+     */
     public Output<List<SubResourceWithColocationStatusResponse>> getAvailabilitySets() {
         return this.availabilitySets;
     }
+    /**
+     * Describes colocation status of the Proximity Placement Group.
+     */
     @OutputExport(name="colocationStatus", type=InstanceViewStatusResponse.class, parameters={})
     private Output</* @Nullable */ InstanceViewStatusResponse> colocationStatus;
 
+    /**
+     * @return Describes colocation status of the Proximity Placement Group.
+     */
     public Output</* @Nullable */ InstanceViewStatusResponse> getColocationStatus() {
         return this.colocationStatus;
     }
+    /**
+     * Resource location
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.
+     */
     @OutputExport(name="proximityPlacementGroupType", type=String.class, parameters={})
     private Output</* @Nullable */ String> proximityPlacementGroupType;
 
+    /**
+     * @return Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.
+     */
     public Output</* @Nullable */ String> getProximityPlacementGroupType() {
         return this.proximityPlacementGroupType;
     }
+    /**
+     * Resource tags
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * A list of references to all virtual machine scale sets in the proximity placement group.
+     */
     @OutputExport(name="virtualMachineScaleSets", type=List.class, parameters={SubResourceWithColocationStatusResponse.class})
     private Output<List<SubResourceWithColocationStatusResponse>> virtualMachineScaleSets;
 
+    /**
+     * @return A list of references to all virtual machine scale sets in the proximity placement group.
+     */
     public Output<List<SubResourceWithColocationStatusResponse>> getVirtualMachineScaleSets() {
         return this.virtualMachineScaleSets;
     }
+    /**
+     * A list of references to all virtual machines in the proximity placement group.
+     */
     @OutputExport(name="virtualMachines", type=List.class, parameters={SubResourceWithColocationStatusResponse.class})
     private Output<List<SubResourceWithColocationStatusResponse>> virtualMachines;
 
+    /**
+     * @return A list of references to all virtual machines in the proximity placement group.
+     */
     public Output<List<SubResourceWithColocationStatusResponse>> getVirtualMachines() {
         return this.virtualMachines;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ProximityPlacementGroup(String name, ProximityPlacementGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:compute:ProximityPlacementGroup", name, args == null ? ProximityPlacementGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -103,6 +253,14 @@ public class ProximityPlacementGroup extends io.pulumi.resources.CustomResource 
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ProximityPlacementGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ProximityPlacementGroup(name, id, options);
     }

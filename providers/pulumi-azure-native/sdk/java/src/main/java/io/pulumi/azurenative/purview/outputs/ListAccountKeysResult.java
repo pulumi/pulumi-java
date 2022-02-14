@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListAccountKeysResult {
+/**
+ * Gets or sets the primary connection string.
+ */
     private final @Nullable String atlasKafkaPrimaryEndpoint;
+/**
+ * Gets or sets the secondary connection string.
+ */
     private final @Nullable String atlasKafkaSecondaryEndpoint;
 
     @OutputCustomType.Constructor({"atlasKafkaPrimaryEndpoint","atlasKafkaSecondaryEndpoint"})
@@ -22,9 +28,15 @@ public final class ListAccountKeysResult {
         this.atlasKafkaSecondaryEndpoint = atlasKafkaSecondaryEndpoint;
     }
 
+/**
+ * Gets or sets the primary connection string.
+ */
     public Optional<String> getAtlasKafkaPrimaryEndpoint() {
         return Optional.ofNullable(this.atlasKafkaPrimaryEndpoint);
     }
+/**
+ * Gets or sets the secondary connection string.
+ */
     public Optional<String> getAtlasKafkaSecondaryEndpoint() {
         return Optional.ofNullable(this.atlasKafkaSecondaryEndpoint);
     }

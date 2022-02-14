@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents the size information
+ */
 public final class SizeAvailabilityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SizeAvailabilityResponse Empty = new SizeAvailabilityResponse();
 
+    /**
+     * Whether or not this size category is available
+     */
     @InputImport(name="isAvailable")
     private final @Nullable Boolean isAvailable;
 
@@ -22,6 +28,9 @@ public final class SizeAvailabilityResponse extends io.pulumi.resources.InvokeAr
         return this.isAvailable == null ? Optional.empty() : Optional.ofNullable(this.isAvailable);
     }
 
+    /**
+     * The category of the size (Basic, Standard, Performance).
+     */
     @InputImport(name="sizeCategory")
     private final @Nullable String sizeCategory;
 

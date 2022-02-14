@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVolume {
+/**
+ * Volume resource
+API Version: 2020-12-01.
+ *
+ * Volume resource
+ */
     public static CompletableFuture<GetVolumeResult> invokeAsync(GetVolumeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:netapp:getVolume", TypeShape.of(GetVolumeResult.class), args == null ? GetVolumeArgs.Empty : args, Utilities.withVersion(options));
     }

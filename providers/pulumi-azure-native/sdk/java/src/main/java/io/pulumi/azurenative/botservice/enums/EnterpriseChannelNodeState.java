@@ -8,17 +8,50 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The current state of the Enterprise Channel Node.
+ */
     @EnumType
     public enum EnterpriseChannelNodeState {
+/**
+ * 
+ */
         Creating("Creating"),
+/**
+ * 
+ */
         CreateFailed("CreateFailed"),
+/**
+ * 
+ */
         Started("Started"),
+/**
+ * 
+ */
         Starting("Starting"),
+/**
+ * 
+ */
         StartFailed("StartFailed"),
+/**
+ * 
+ */
         Stopped("Stopped"),
+/**
+ * 
+ */
         Stopping("Stopping"),
+/**
+ * 
+ */
         StopFailed("StopFailed"),
+/**
+ * 
+ */
         Deleting("Deleting"),
+/**
+ * 
+ */
         DeleteFailed("DeleteFailed");
 
         private final String value;

@@ -10,10 +10,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The repeating times at which this profile begins. This element is not used if the FixedDate element is used.
+ */
 public final class RecurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RecurrenceArgs Empty = new RecurrenceArgs();
 
+    /**
+     * the recurrence frequency. How often the schedule profile should take effect. This value must be Week, meaning each week will have the same set of profiles. For example, to set a daily schedule, set **schedule** to every day of the week. The frequency property specifies that the schedule is repeated weekly.
+     */
     @InputImport(name="frequency", required=true)
     private final Input<RecurrenceFrequency> frequency;
 
@@ -21,6 +27,9 @@ public final class RecurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.frequency;
     }
 
+    /**
+     * the scheduling constraints for when the profile begins.
+     */
     @InputImport(name="schedule", required=true)
     private final Input<RecurrentScheduleArgs> schedule;
 

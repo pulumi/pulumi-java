@@ -16,10 +16,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a data disk.
+ */
 public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageDataDiskArgs Empty = new ImageDataDiskArgs();
 
+    /**
+     * The Virtual Hard Disk.
+     */
     @InputImport(name="blobUri")
     private final @Nullable Input<String> blobUri;
 
@@ -27,6 +33,9 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.blobUri == null ? Input.empty() : this.blobUri;
     }
 
+    /**
+     * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
+     */
     @InputImport(name="caching")
     private final @Nullable Input<CachingTypes> caching;
 
@@ -34,6 +43,9 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.caching == null ? Input.empty() : this.caching;
     }
 
+    /**
+     * Specifies the customer managed disk encryption set resource id for the managed image disk.
+     */
     @InputImport(name="diskEncryptionSet")
     private final @Nullable Input<DiskEncryptionSetParametersArgs> diskEncryptionSet;
 
@@ -41,6 +53,9 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskEncryptionSet == null ? Input.empty() : this.diskEncryptionSet;
     }
 
+    /**
+     * Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
+     */
     @InputImport(name="diskSizeGB")
     private final @Nullable Input<Integer> diskSizeGB;
 
@@ -48,6 +63,9 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskSizeGB == null ? Input.empty() : this.diskSizeGB;
     }
 
+    /**
+     * Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+     */
     @InputImport(name="lun", required=true)
     private final Input<Integer> lun;
 
@@ -55,6 +73,9 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.lun;
     }
 
+    /**
+     * The managedDisk.
+     */
     @InputImport(name="managedDisk")
     private final @Nullable Input<SubResourceArgs> managedDisk;
 
@@ -62,6 +83,9 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.managedDisk == null ? Input.empty() : this.managedDisk;
     }
 
+    /**
+     * The snapshot.
+     */
     @InputImport(name="snapshot")
     private final @Nullable Input<SubResourceArgs> snapshot;
 
@@ -69,6 +93,9 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
         return this.snapshot == null ? Input.empty() : this.snapshot;
     }
 
+    /**
+     * Specifies the storage account type for the managed disk. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
+     */
     @InputImport(name="storageAccountType")
     private final @Nullable Input<Either<String,StorageAccountTypes>> storageAccountType;
 

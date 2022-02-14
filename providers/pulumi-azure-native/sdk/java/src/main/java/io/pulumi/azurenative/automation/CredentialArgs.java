@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CredentialArgs Empty = new CredentialArgs();
 
+    /**
+     * The name of the automation account.
+     */
     @InputImport(name="automationAccountName", required=true)
     private final Input<String> automationAccountName;
 
@@ -21,6 +27,9 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
         return this.automationAccountName;
     }
 
+    /**
+     * The parameters supplied to the create or update credential operation.
+     */
     @InputImport(name="credentialName")
     private final @Nullable Input<String> credentialName;
 
@@ -28,6 +37,9 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
         return this.credentialName == null ? Input.empty() : this.credentialName;
     }
 
+    /**
+     * Gets or sets the description of the credential.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -35,6 +47,9 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Gets or sets the name of the credential.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -42,6 +57,9 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * Gets or sets the password of the credential.
+     */
     @InputImport(name="password", required=true)
     private final Input<String> password;
 
@@ -49,6 +67,9 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
         return this.password;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -56,6 +77,9 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Gets or sets the user name of the credential.
+     */
     @InputImport(name="userName", required=true)
     private final Input<String> userName;
 

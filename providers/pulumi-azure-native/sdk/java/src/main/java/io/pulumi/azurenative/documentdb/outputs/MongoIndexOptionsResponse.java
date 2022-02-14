@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MongoIndexOptionsResponse {
+/**
+ * Expire after seconds
+ */
     private final @Nullable Integer expireAfterSeconds;
+/**
+ * Is unique or not
+ */
     private final @Nullable Boolean unique;
 
     @OutputCustomType.Constructor({"expireAfterSeconds","unique"})
@@ -23,9 +29,15 @@ public final class MongoIndexOptionsResponse {
         this.unique = unique;
     }
 
+/**
+ * Expire after seconds
+ */
     public Optional<Integer> getExpireAfterSeconds() {
         return Optional.ofNullable(this.expireAfterSeconds);
     }
+/**
+ * Is unique or not
+ */
     public Optional<Boolean> getUnique() {
         return Optional.ofNullable(this.unique);
     }

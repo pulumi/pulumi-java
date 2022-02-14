@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IssuanceModesResponse {
+/**
+ * When true, allows callers to create Certificates by specifying a CertificateConfig.
+ */
     private final Boolean allowConfigBasedIssuance;
+/**
+ * When true, allows callers to create Certificates by specifying a CSR.
+ */
     private final Boolean allowCsrBasedIssuance;
 
     @OutputCustomType.Constructor({"allowConfigBasedIssuance","allowCsrBasedIssuance"})
@@ -20,9 +26,15 @@ public final class IssuanceModesResponse {
         this.allowCsrBasedIssuance = Objects.requireNonNull(allowCsrBasedIssuance);
     }
 
+/**
+ * When true, allows callers to create Certificates by specifying a CertificateConfig.
+ */
     public Boolean getAllowConfigBasedIssuance() {
         return this.allowConfigBasedIssuance;
     }
+/**
+ * When true, allows callers to create Certificates by specifying a CSR.
+ */
     public Boolean getAllowCsrBasedIssuance() {
         return this.allowCsrBasedIssuance;
     }

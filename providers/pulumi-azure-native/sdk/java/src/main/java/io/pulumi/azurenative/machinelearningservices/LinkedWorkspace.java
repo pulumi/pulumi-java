@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.machinelearningservices;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.machinelearningservices.LinkedWorkspaceArgs;
 import io.pulumi.azurenative.machinelearningservices.outputs.LinkedWorkspacePropsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,27 +14,159 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Linked workspace.
+API Version: 2020-03-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### CreateLinkedWorkspace
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var linkedWorkspace = new AzureNative.MachineLearningServices.LinkedWorkspace("linkedWorkspace", new AzureNative.MachineLearningServices.LinkedWorkspaceArgs
+        {
+            LinkName = "link-1",
+            Name = "link-1",
+            Properties = new AzureNative.MachineLearningServices.Inputs.LinkedWorkspacePropsArgs
+            {
+                LinkedWorkspaceResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/linkedWorkspace-1",
+                UserAssignedIdentityResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai1",
+            },
+            ResourceGroupName = "resourceGroup-1",
+            WorkspaceName = "workspace-1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewLinkedWorkspace(ctx, "linkedWorkspace", &machinelearningservices.LinkedWorkspaceArgs{
+			LinkName: pulumi.String("link-1"),
+			Name:     pulumi.String("link-1"),
+			Properties: &machinelearningservices.LinkedWorkspacePropsArgs{
+				LinkedWorkspaceResourceId:      pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/linkedWorkspace-1"),
+				UserAssignedIdentityResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai1"),
+			},
+			ResourceGroupName: pulumi.String("resourceGroup-1"),
+			WorkspaceName:     pulumi.String("workspace-1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const linkedWorkspace = new azure_native.machinelearningservices.LinkedWorkspace("linkedWorkspace", {
+    linkName: "link-1",
+    name: "link-1",
+    properties: {
+        linkedWorkspaceResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/linkedWorkspace-1",
+        userAssignedIdentityResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai1",
+    },
+    resourceGroupName: "resourceGroup-1",
+    workspaceName: "workspace-1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+linked_workspace = azure_native.machinelearningservices.LinkedWorkspace("linkedWorkspace",
+    link_name="link-1",
+    name="link-1",
+    properties=azure_native.machinelearningservices.LinkedWorkspacePropsArgs(
+        linked_workspace_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.Synapse/workspaces/linkedWorkspace-1",
+        user_assigned_identity_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai1",
+    ),
+    resource_group_name="resourceGroup-1",
+    workspace_name="workspace-1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:machinelearningservices:LinkedWorkspace link-1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.MachineLearningServices/workspaces/workspace-1/linkedWorkspaces/link-1 
+```
+
+ */
 @ResourceType(type="azure-native:machinelearningservices:LinkedWorkspace")
 public class LinkedWorkspace extends io.pulumi.resources.CustomResource {
+    /**
+     * Friendly name of the linked workspace.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Friendly name of the linked workspace.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * LinkedWorkspace specific properties.
+     */
     @OutputExport(name="properties", type=LinkedWorkspacePropsResponse.class, parameters={})
     private Output<LinkedWorkspacePropsResponse> properties;
 
+    /**
+     * @return LinkedWorkspace specific properties.
+     */
     public Output<LinkedWorkspacePropsResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Resource type of linked workspace.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type of linked workspace.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public LinkedWorkspace(String name, LinkedWorkspaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:machinelearningservices:LinkedWorkspace", name, args == null ? LinkedWorkspaceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -54,6 +185,14 @@ public class LinkedWorkspace extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static LinkedWorkspace get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LinkedWorkspace(name, id, options);
     }

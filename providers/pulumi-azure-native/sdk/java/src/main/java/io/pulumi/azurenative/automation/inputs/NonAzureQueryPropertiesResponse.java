@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Non Azure query for the update configuration.
+ */
 public final class NonAzureQueryPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NonAzureQueryPropertiesResponse Empty = new NonAzureQueryPropertiesResponse();
 
+    /**
+     * Log Analytics Saved Search name.
+     */
     @InputImport(name="functionAlias")
     private final @Nullable String functionAlias;
 
@@ -21,6 +27,9 @@ public final class NonAzureQueryPropertiesResponse extends io.pulumi.resources.I
         return this.functionAlias == null ? Optional.empty() : Optional.ofNullable(this.functionAlias);
     }
 
+    /**
+     * Workspace Id for Log Analytics in which the saved Search is resided.
+     */
     @InputImport(name="workspaceId")
     private final @Nullable String workspaceId;
 

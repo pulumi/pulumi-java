@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SearchConfigResponse {
+/**
+ * A list of search parameters in this FHIR store that are used to configure this FHIR store.
+ */
     private final List<SearchParameterResponse> searchParameters;
 
     @OutputCustomType.Constructor({"searchParameters"})
@@ -17,6 +20,9 @@ public final class SearchConfigResponse {
         this.searchParameters = Objects.requireNonNull(searchParameters);
     }
 
+/**
+ * A list of search parameters in this FHIR store that are used to configure this FHIR store.
+ */
     public List<SearchParameterResponse> getSearchParameters() {
         return this.searchParameters;
     }

@@ -12,9 +12,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IoTDeviceInfoResponse {
+/**
+ * Encrypted IoT device/IoT edge device connection string.
+ */
     private final @Nullable AuthenticationResponse authentication;
+/**
+ * ID of the IoT device/edge device.
+ */
     private final String deviceId;
+/**
+ * Host name for the IoT hub associated to the device.
+ */
     private final String ioTHostHub;
+/**
+ * Id for the IoT hub associated to the device.
+ */
     private final @Nullable String ioTHostHubId;
 
     @OutputCustomType.Constructor({"authentication","deviceId","ioTHostHub","ioTHostHubId"})
@@ -29,15 +41,27 @@ public final class IoTDeviceInfoResponse {
         this.ioTHostHubId = ioTHostHubId;
     }
 
+/**
+ * Encrypted IoT device/IoT edge device connection string.
+ */
     public Optional<AuthenticationResponse> getAuthentication() {
         return Optional.ofNullable(this.authentication);
     }
+/**
+ * ID of the IoT device/edge device.
+ */
     public String getDeviceId() {
         return this.deviceId;
     }
+/**
+ * Host name for the IoT hub associated to the device.
+ */
     public String getIoTHostHub() {
         return this.ioTHostHub;
     }
+/**
+ * Id for the IoT hub associated to the device.
+ */
     public Optional<String> getIoTHostHubId() {
         return Optional.ofNullable(this.ioTHostHubId);
     }

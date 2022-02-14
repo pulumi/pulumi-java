@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HttpDataResponse {
+/**
+ * The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
+ */
     private final String listUrl;
 
     @OutputCustomType.Constructor({"listUrl"})
@@ -16,6 +19,9 @@ public final class HttpDataResponse {
         this.listUrl = Objects.requireNonNull(listUrl);
     }
 
+/**
+ * The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
+ */
     public String getListUrl() {
         return this.listUrl;
     }

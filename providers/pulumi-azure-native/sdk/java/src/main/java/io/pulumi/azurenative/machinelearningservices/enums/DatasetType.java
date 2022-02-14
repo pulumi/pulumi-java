@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Specifies dataset type.
+ */
     @EnumType
     public enum DatasetType {
+/**
+ * 
+ */
         Tabular("tabular"),
+/**
+ * 
+ */
         File("file");
 
         private final String value;

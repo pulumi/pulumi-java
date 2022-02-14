@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines sources for the suggest/search APIs.
+ */
 public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SourceArgs Empty = new SourceArgs();
 
+    /**
+     * Source name for content indexed by the Indexing API.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -22,6 +28,9 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Predefined content source for Google Apps.
+     */
     @InputImport(name="predefinedSource")
     private final @Nullable Input<SourcePredefinedSource> predefinedSource;
 

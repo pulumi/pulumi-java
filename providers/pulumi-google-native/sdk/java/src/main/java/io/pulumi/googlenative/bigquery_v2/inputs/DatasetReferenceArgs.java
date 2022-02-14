@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetReferenceArgs Empty = new DatasetReferenceArgs();
 
+    /**
+     * [Required] A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+     */
     @InputImport(name="datasetId")
     private final @Nullable Input<String> datasetId;
 
@@ -21,6 +27,9 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
         return this.datasetId == null ? Input.empty() : this.datasetId;
     }
 
+    /**
+     * [Optional] The ID of the project containing this dataset.
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

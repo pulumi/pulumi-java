@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The severity of the incident
+ */
     @EnumType
     public enum IncidentSeverity {
+/**
+ * High severity
+ */
         High("High"),
+/**
+ * Medium severity
+ */
         Medium("Medium"),
+/**
+ * Low severity
+ */
         Low("Low"),
+/**
+ * Informational severity
+ */
         Informational("Informational");
 
         private final String value;

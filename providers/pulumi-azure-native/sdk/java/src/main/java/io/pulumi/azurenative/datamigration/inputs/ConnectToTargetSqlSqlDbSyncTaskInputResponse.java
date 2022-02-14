@@ -8,10 +8,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Input for the task that validates connection to Azure SQL DB and target server requirements
+ */
 public final class ConnectToTargetSqlSqlDbSyncTaskInputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectToTargetSqlSqlDbSyncTaskInputResponse Empty = new ConnectToTargetSqlSqlDbSyncTaskInputResponse();
 
+    /**
+     * Connection information for source SQL Server
+     */
     @InputImport(name="sourceConnectionInfo", required=true)
     private final SqlConnectionInfoResponse sourceConnectionInfo;
 
@@ -19,6 +25,9 @@ public final class ConnectToTargetSqlSqlDbSyncTaskInputResponse extends io.pulum
         return this.sourceConnectionInfo;
     }
 
+    /**
+     * Connection information for target SQL DB
+     */
     @InputImport(name="targetConnectionInfo", required=true)
     private final SqlConnectionInfoResponse targetConnectionInfo;
 

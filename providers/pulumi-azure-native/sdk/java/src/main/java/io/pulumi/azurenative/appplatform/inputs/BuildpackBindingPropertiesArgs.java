@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of a buildpack binding
+ */
 public final class BuildpackBindingPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BuildpackBindingPropertiesArgs Empty = new BuildpackBindingPropertiesArgs();
 
+    /**
+     * Buildpack Binding Type
+     */
     @InputImport(name="bindingType")
     private final @Nullable Input<Either<String,BindingType>> bindingType;
 
@@ -24,6 +30,9 @@ public final class BuildpackBindingPropertiesArgs extends io.pulumi.resources.Re
         return this.bindingType == null ? Input.empty() : this.bindingType;
     }
 
+    /**
+     * The object describes the buildpack binding launch properties
+     */
     @InputImport(name="launchProperties")
     private final @Nullable Input<BuildpackBindingLaunchPropertiesArgs> launchProperties;
 

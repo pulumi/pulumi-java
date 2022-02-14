@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RestResponseResponseRegex {
+/**
+ * Indicates whether any or all of the expressions should match with the response content.
+ */
     private final @Nullable String matchQuantifier;
+/**
+ * The list of regular expressions.
+ */
     private final @Nullable List<String> matches;
 
     @OutputCustomType.Constructor({"matchQuantifier","matches"})
@@ -23,9 +29,15 @@ public final class RestResponseResponseRegex {
         this.matches = matches;
     }
 
+/**
+ * Indicates whether any or all of the expressions should match with the response content.
+ */
     public Optional<String> getMatchQuantifier() {
         return Optional.ofNullable(this.matchQuantifier);
     }
+/**
+ * The list of regular expressions.
+ */
     public List<String> getMatches() {
         return this.matches == null ? List.of() : this.matches;
     }

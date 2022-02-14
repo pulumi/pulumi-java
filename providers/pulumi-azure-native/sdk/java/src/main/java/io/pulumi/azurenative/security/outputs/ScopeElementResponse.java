@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ScopeElementResponse {
+/**
+ * The alert entity type to suppress by.
+ */
     private final @Nullable String field;
 
     @OutputCustomType.Constructor({"field"})
@@ -18,6 +21,9 @@ public final class ScopeElementResponse {
         this.field = field;
     }
 
+/**
+ * The alert entity type to suppress by.
+ */
     public Optional<String> getField() {
         return Optional.ofNullable(this.field);
     }

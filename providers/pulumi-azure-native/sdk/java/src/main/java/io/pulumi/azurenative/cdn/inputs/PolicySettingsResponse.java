@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines contents of a web application firewall global configuration
+ */
 public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PolicySettingsResponse Empty = new PolicySettingsResponse();
 
+    /**
+     * If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
+     */
     @InputImport(name="defaultCustomBlockResponseBody")
     private final @Nullable String defaultCustomBlockResponseBody;
 
@@ -22,6 +28,9 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
         return this.defaultCustomBlockResponseBody == null ? Optional.empty() : Optional.ofNullable(this.defaultCustomBlockResponseBody);
     }
 
+    /**
+     * If the action type is block, this field defines the default customer overridable http response status code.
+     */
     @InputImport(name="defaultCustomBlockResponseStatusCode")
     private final @Nullable Integer defaultCustomBlockResponseStatusCode;
 
@@ -29,6 +38,9 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
         return this.defaultCustomBlockResponseStatusCode == null ? Optional.empty() : Optional.ofNullable(this.defaultCustomBlockResponseStatusCode);
     }
 
+    /**
+     * If action type is redirect, this field represents the default redirect URL for the client.
+     */
     @InputImport(name="defaultRedirectUrl")
     private final @Nullable String defaultRedirectUrl;
 
@@ -36,6 +48,9 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
         return this.defaultRedirectUrl == null ? Optional.empty() : Optional.ofNullable(this.defaultRedirectUrl);
     }
 
+    /**
+     * describes if the policy is in enabled state or disabled state
+     */
     @InputImport(name="enabledState")
     private final @Nullable String enabledState;
 
@@ -43,6 +58,9 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
         return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
     }
 
+    /**
+     * Describes if it is in detection mode or prevention mode at policy level.
+     */
     @InputImport(name="mode")
     private final @Nullable String mode;
 

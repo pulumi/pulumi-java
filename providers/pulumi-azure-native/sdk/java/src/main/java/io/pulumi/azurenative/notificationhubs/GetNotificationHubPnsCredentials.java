@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetNotificationHubPnsCredentials {
+/**
+ * Description of a NotificationHub PNS Credentials.
+API Version: 2017-04-01.
+ *
+ * Description of a NotificationHub PNS Credentials.
+ */
     public static CompletableFuture<GetNotificationHubPnsCredentialsResult> invokeAsync(GetNotificationHubPnsCredentialsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:notificationhubs:getNotificationHubPnsCredentials", TypeShape.of(GetNotificationHubPnsCredentialsResult.class), args == null ? GetNotificationHubPnsCredentialsArgs.Empty : args, Utilities.withVersion(options));
     }

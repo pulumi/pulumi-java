@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualWan {
+/**
+ * VirtualWAN Resource.
+API Version: 2020-11-01.
+ *
+ * VirtualWAN Resource.
+ */
     public static CompletableFuture<GetVirtualWanResult> invokeAsync(GetVirtualWanArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualWan", TypeShape.of(GetVirtualWanResult.class), args == null ? GetVirtualWanArgs.Empty : args, Utilities.withVersion(options));
     }

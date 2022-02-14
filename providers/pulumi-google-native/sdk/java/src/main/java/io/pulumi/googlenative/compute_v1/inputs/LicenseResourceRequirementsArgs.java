@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class LicenseResourceRequirementsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LicenseResourceRequirementsArgs Empty = new LicenseResourceRequirementsArgs();
 
+    /**
+     * Minimum number of guest cpus required to use the Instance. Enforced at Instance creation and Instance start.
+     */
     @InputImport(name="minGuestCpuCount")
     private final @Nullable Input<Integer> minGuestCpuCount;
 
@@ -21,6 +27,9 @@ public final class LicenseResourceRequirementsArgs extends io.pulumi.resources.R
         return this.minGuestCpuCount == null ? Input.empty() : this.minGuestCpuCount;
     }
 
+    /**
+     * Minimum memory required to use the Instance. Enforced at Instance creation and Instance start.
+     */
     @InputImport(name="minMemoryMb")
     private final @Nullable Input<Integer> minMemoryMb;
 

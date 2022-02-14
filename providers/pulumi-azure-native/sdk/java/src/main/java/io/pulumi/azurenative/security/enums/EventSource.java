@@ -8,18 +8,54 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * A valid event source type.
+ */
     @EnumType
     public enum EventSource {
+/**
+ * 
+ */
         Assessments("Assessments"),
+/**
+ * 
+ */
         AssessmentsSnapshot("AssessmentsSnapshot"),
+/**
+ * 
+ */
         SubAssessments("SubAssessments"),
+/**
+ * 
+ */
         SubAssessmentsSnapshot("SubAssessmentsSnapshot"),
+/**
+ * 
+ */
         Alerts("Alerts"),
+/**
+ * 
+ */
         SecureScores("SecureScores"),
+/**
+ * 
+ */
         SecureScoresSnapshot("SecureScoresSnapshot"),
+/**
+ * 
+ */
         SecureScoreControls("SecureScoreControls"),
+/**
+ * 
+ */
         SecureScoreControlsSnapshot("SecureScoreControlsSnapshot"),
+/**
+ * 
+ */
         RegulatoryComplianceAssessment("RegulatoryComplianceAssessment"),
+/**
+ * 
+ */
         RegulatoryComplianceAssessmentSnapshot("RegulatoryComplianceAssessmentSnapshot");
 
         private final String value;

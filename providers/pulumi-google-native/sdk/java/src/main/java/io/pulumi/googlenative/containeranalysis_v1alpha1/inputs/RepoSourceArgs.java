@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * RepoSource describes the location of the source in a Google Cloud Source Repository.
+ */
 public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RepoSourceArgs Empty = new RepoSourceArgs();
 
+    /**
+     * Name of the branch to build.
+     */
     @InputImport(name="branchName")
     private final @Nullable Input<String> branchName;
 
@@ -21,6 +27,9 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.branchName == null ? Input.empty() : this.branchName;
     }
 
+    /**
+     * Explicit commit SHA to build.
+     */
     @InputImport(name="commitSha")
     private final @Nullable Input<String> commitSha;
 
@@ -28,6 +37,9 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.commitSha == null ? Input.empty() : this.commitSha;
     }
 
+    /**
+     * ID of the project that owns the repo.
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -35,6 +47,9 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Name of the repo.
+     */
     @InputImport(name="repoName")
     private final @Nullable Input<String> repoName;
 
@@ -42,6 +57,9 @@ public final class RepoSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.repoName == null ? Input.empty() : this.repoName;
     }
 
+    /**
+     * Name of the tag to build.
+     */
     @InputImport(name="tagName")
     private final @Nullable Input<String> tagName;
 

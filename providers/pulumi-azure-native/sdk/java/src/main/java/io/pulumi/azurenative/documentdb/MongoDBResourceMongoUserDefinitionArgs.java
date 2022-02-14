@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MongoDBResourceMongoUserDefinitionArgs Empty = new MongoDBResourceMongoUserDefinitionArgs();
 
+    /**
+     * Cosmos DB database account name.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -23,6 +29,9 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
         return this.accountName;
     }
 
+    /**
+     * A custom definition for the USer Definition.
+     */
     @InputImport(name="customData")
     private final @Nullable Input<String> customData;
 
@@ -30,6 +39,9 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
         return this.customData == null ? Input.empty() : this.customData;
     }
 
+    /**
+     * The database name for which access is being granted for this User Definition.
+     */
     @InputImport(name="databaseName")
     private final @Nullable Input<String> databaseName;
 
@@ -37,6 +49,9 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
         return this.databaseName == null ? Input.empty() : this.databaseName;
     }
 
+    /**
+     * The Mongo Auth mechanism. For now, we only support auth mechanism SCRAM-SHA-256.
+     */
     @InputImport(name="mechanisms")
     private final @Nullable Input<String> mechanisms;
 
@@ -44,6 +59,9 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
         return this.mechanisms == null ? Input.empty() : this.mechanisms;
     }
 
+    /**
+     * The ID for the User Definition {dbName.userName}.
+     */
     @InputImport(name="mongoUserDefinitionId")
     private final @Nullable Input<String> mongoUserDefinitionId;
 
@@ -51,6 +69,9 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
         return this.mongoUserDefinitionId == null ? Input.empty() : this.mongoUserDefinitionId;
     }
 
+    /**
+     * The password for User Definition. Response does not contain user password.
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -58,6 +79,9 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -65,6 +89,9 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
         return this.resourceGroupName;
     }
 
+    /**
+     * The set of roles inherited by the User Definition.
+     */
     @InputImport(name="roles")
     private final @Nullable Input<List<RoleArgs>> roles;
 
@@ -72,6 +99,9 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
         return this.roles == null ? Input.empty() : this.roles;
     }
 
+    /**
+     * The user name for User Definition.
+     */
     @InputImport(name="userName")
     private final @Nullable Input<String> userName;
 

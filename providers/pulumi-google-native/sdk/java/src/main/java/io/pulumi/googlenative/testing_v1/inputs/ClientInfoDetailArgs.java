@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Key-value pair of detailed information about the client which invoked the test. Examples: {'Version', '1.0'}, {'Release Track', 'BETA'}.
+ */
 public final class ClientInfoDetailArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClientInfoDetailArgs Empty = new ClientInfoDetailArgs();
 
+    /**
+     * The key of detailed client information.
+     */
     @InputImport(name="key", required=true)
     private final Input<String> key;
 
@@ -20,6 +26,9 @@ public final class ClientInfoDetailArgs extends io.pulumi.resources.ResourceArgs
         return this.key;
     }
 
+    /**
+     * The value of detailed client information.
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

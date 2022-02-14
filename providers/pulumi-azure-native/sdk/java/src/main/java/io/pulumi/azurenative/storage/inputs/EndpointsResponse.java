@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The URIs that are used to perform a retrieval of a public blob, queue, table, web or dfs object.
+ */
 public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EndpointsResponse Empty = new EndpointsResponse();
 
+    /**
+     * Gets the blob endpoint.
+     */
     @InputImport(name="blob", required=true)
     private final String blob;
 
@@ -23,6 +29,9 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
         return this.blob;
     }
 
+    /**
+     * Gets the dfs endpoint.
+     */
     @InputImport(name="dfs", required=true)
     private final String dfs;
 
@@ -30,6 +39,9 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
         return this.dfs;
     }
 
+    /**
+     * Gets the file endpoint.
+     */
     @InputImport(name="file", required=true)
     private final String file;
 
@@ -37,6 +49,9 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
         return this.file;
     }
 
+    /**
+     * Gets the internet routing storage endpoints
+     */
     @InputImport(name="internetEndpoints")
     private final @Nullable StorageAccountInternetEndpointsResponse internetEndpoints;
 
@@ -44,6 +59,9 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
         return this.internetEndpoints == null ? Optional.empty() : Optional.ofNullable(this.internetEndpoints);
     }
 
+    /**
+     * Gets the microsoft routing storage endpoints.
+     */
     @InputImport(name="microsoftEndpoints")
     private final @Nullable StorageAccountMicrosoftEndpointsResponse microsoftEndpoints;
 
@@ -51,6 +69,9 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
         return this.microsoftEndpoints == null ? Optional.empty() : Optional.ofNullable(this.microsoftEndpoints);
     }
 
+    /**
+     * Gets the queue endpoint.
+     */
     @InputImport(name="queue", required=true)
     private final String queue;
 
@@ -58,6 +79,9 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
         return this.queue;
     }
 
+    /**
+     * Gets the table endpoint.
+     */
     @InputImport(name="table", required=true)
     private final String table;
 
@@ -65,6 +89,9 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
         return this.table;
     }
 
+    /**
+     * Gets the web endpoint.
+     */
     @InputImport(name="web", required=true)
     private final String web;
 

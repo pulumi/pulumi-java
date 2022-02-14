@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration options for the private GKE cluster in a Cloud Composer environment.
+ */
 public final class PrivateClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateClusterConfigArgs Empty = new PrivateClusterConfigArgs();
 
+    /**
+     * Optional. If `true`, access to the public endpoint of the GKE cluster is denied.
+     */
     @InputImport(name="enablePrivateEndpoint")
     private final @Nullable Input<Boolean> enablePrivateEndpoint;
 
@@ -22,6 +28,9 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
         return this.enablePrivateEndpoint == null ? Input.empty() : this.enablePrivateEndpoint;
     }
 
+    /**
+     * Optional. The CIDR block from which IPv4 range for GKE master will be reserved. If left blank, the default value of '172.16.0.0/23' is used.
+     */
     @InputImport(name="masterIpv4CidrBlock")
     private final @Nullable Input<String> masterIpv4CidrBlock;
 

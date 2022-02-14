@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Description of an interstitial value between transforms in an execution stage.
+ */
 public final class ComponentSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ComponentSourceArgs Empty = new ComponentSourceArgs();
 
+    /**
+     * Dataflow service generated name for this source.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +27,9 @@ public final class ComponentSourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * User name for the original user transform or collection with which this source is most closely associated.
+     */
     @InputImport(name="originalTransformOrCollection")
     private final @Nullable Input<String> originalTransformOrCollection;
 
@@ -28,6 +37,9 @@ public final class ComponentSourceArgs extends io.pulumi.resources.ResourceArgs 
         return this.originalTransformOrCollection == null ? Input.empty() : this.originalTransformOrCollection;
     }
 
+    /**
+     * Human-readable name for this transform; may be user or system generated.
+     */
     @InputImport(name="userName")
     private final @Nullable Input<String> userName;
 

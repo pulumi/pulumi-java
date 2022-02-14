@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The destination information for the delivery of the report.
+ */
 public final class ReportDeliveryDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReportDeliveryDestinationArgs Empty = new ReportDeliveryDestinationArgs();
 
+    /**
+     * The name of the container where reports will be uploaded.
+     */
     @InputImport(name="container", required=true)
     private final Input<String> container;
 
@@ -21,6 +27,9 @@ public final class ReportDeliveryDestinationArgs extends io.pulumi.resources.Res
         return this.container;
     }
 
+    /**
+     * The resource id of the storage account where reports will be delivered.
+     */
     @InputImport(name="resourceId", required=true)
     private final Input<String> resourceId;
 
@@ -28,6 +37,9 @@ public final class ReportDeliveryDestinationArgs extends io.pulumi.resources.Res
         return this.resourceId;
     }
 
+    /**
+     * The name of the directory where reports will be uploaded.
+     */
     @InputImport(name="rootFolderPath")
     private final @Nullable Input<String> rootFolderPath;
 

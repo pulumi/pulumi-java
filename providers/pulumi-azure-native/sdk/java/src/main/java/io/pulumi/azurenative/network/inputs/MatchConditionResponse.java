@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Define match conditions.
+ */
 public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MatchConditionResponse Empty = new MatchConditionResponse();
 
+    /**
+     * Match value.
+     */
     @InputImport(name="matchValues", required=true)
     private final List<String> matchValues;
 
@@ -24,6 +30,9 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
         return this.matchValues;
     }
 
+    /**
+     * List of match variables.
+     */
     @InputImport(name="matchVariables", required=true)
     private final List<MatchVariableResponse> matchVariables;
 
@@ -31,6 +40,9 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
         return this.matchVariables;
     }
 
+    /**
+     * Whether this is negate condition or not.
+     */
     @InputImport(name="negationConditon")
     private final @Nullable Boolean negationConditon;
 
@@ -38,6 +50,9 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
         return this.negationConditon == null ? Optional.empty() : Optional.ofNullable(this.negationConditon);
     }
 
+    /**
+     * The operator to be matched.
+     */
     @InputImport(name="operator", required=true)
     private final String operator;
 
@@ -45,6 +60,9 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
         return this.operator;
     }
 
+    /**
+     * List of transforms.
+     */
     @InputImport(name="transforms")
     private final @Nullable List<String> transforms;
 

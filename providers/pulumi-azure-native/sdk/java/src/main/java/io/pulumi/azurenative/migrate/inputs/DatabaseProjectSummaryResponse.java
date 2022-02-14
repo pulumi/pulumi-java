@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The database project summary class.
+ */
 public final class DatabaseProjectSummaryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatabaseProjectSummaryResponse Empty = new DatabaseProjectSummaryResponse();
 
+    /**
+     * Gets or sets the extended summary.
+     */
     @InputImport(name="extendedSummary")
     private final @Nullable Map<String,String> extendedSummary;
 
@@ -22,6 +28,10 @@ public final class DatabaseProjectSummaryResponse extends io.pulumi.resources.In
         return this.extendedSummary == null ? Map.of() : this.extendedSummary;
     }
 
+    /**
+     * Gets the Instance type.
+Expected value is 'Databases'.
+     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -29,6 +39,9 @@ public final class DatabaseProjectSummaryResponse extends io.pulumi.resources.In
         return this.instanceType;
     }
 
+    /**
+     * Gets or sets the time when summary was last refreshed.
+     */
     @InputImport(name="lastSummaryRefreshedTime")
     private final @Nullable String lastSummaryRefreshedTime;
 
@@ -36,6 +49,9 @@ public final class DatabaseProjectSummaryResponse extends io.pulumi.resources.In
         return this.lastSummaryRefreshedTime == null ? Optional.empty() : Optional.ofNullable(this.lastSummaryRefreshedTime);
     }
 
+    /**
+     * Gets or sets the state of refresh summary.
+     */
     @InputImport(name="refreshSummaryState")
     private final @Nullable String refreshSummaryState;
 

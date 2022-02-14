@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.providerhub;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.providerhub.SkusArgs;
 import io.pulumi.azurenative.providerhub.outputs.SkuResourceResponseProperties;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,27 +14,213 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * 
+API Version: 2020-11-20.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Skus_CreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var skus = new AzureNative.ProviderHub.Skus("skus", new AzureNative.ProviderHub.SkusArgs
+        {
+            Properties = new AzureNative.ProviderHub.Inputs.SkuResourcePropertiesArgs
+            {
+                SkuSettings = 
+                {
+                    new AzureNative.ProviderHub.Inputs.SkuSettingArgs
+                    {
+                        Kind = "Standard",
+                        Name = "freeSku",
+                        Tier = "Tier1",
+                    },
+                    new AzureNative.ProviderHub.Inputs.SkuSettingArgs
+                    {
+                        Costs = 
+                        {
+                            new AzureNative.ProviderHub.Inputs.SkuCostArgs
+                            {
+                                MeterId = "xxx",
+                            },
+                        },
+                        Kind = "Premium",
+                        Name = "premiumSku",
+                        Tier = "Tier2",
+                    },
+                },
+            },
+            ProviderNamespace = "Microsoft.Contoso",
+            ResourceType = "testResourceType",
+            Sku = "testSku",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	providerhub "github.com/pulumi/pulumi-azure-native/sdk/go/azure/providerhub"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := providerhub.NewSkus(ctx, "skus", &providerhub.SkusArgs{
+			Properties: &providerhub.SkuResourcePropertiesArgs{
+				SkuSettings: []providerhub.SkuSettingArgs{
+					&providerhub.SkuSettingArgs{
+						Kind: pulumi.String("Standard"),
+						Name: pulumi.String("freeSku"),
+						Tier: pulumi.String("Tier1"),
+					},
+					&providerhub.SkuSettingArgs{
+						Costs: providerhub.SkuCostArray{
+							&providerhub.SkuCostArgs{
+								MeterId: pulumi.String("xxx"),
+							},
+						},
+						Kind: pulumi.String("Premium"),
+						Name: pulumi.String("premiumSku"),
+						Tier: pulumi.String("Tier2"),
+					},
+				},
+			},
+			ProviderNamespace: pulumi.String("Microsoft.Contoso"),
+			ResourceType:      pulumi.String("testResourceType"),
+			Sku:               pulumi.String("testSku"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const skus = new azure_native.providerhub.Skus("skus", {
+    properties: {
+        skuSettings: [
+            {
+                kind: "Standard",
+                name: "freeSku",
+                tier: "Tier1",
+            },
+            {
+                costs: [{
+                    meterId: "xxx",
+                }],
+                kind: "Premium",
+                name: "premiumSku",
+                tier: "Tier2",
+            },
+        ],
+    },
+    providerNamespace: "Microsoft.Contoso",
+    resourceType: "testResourceType",
+    sku: "testSku",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+skus = azure_native.providerhub.Skus("skus",
+    properties=azure_native.providerhub.SkuResourcePropertiesArgs(
+        sku_settings=[
+            azure_native.providerhub.SkuSettingArgs(
+                kind="Standard",
+                name="freeSku",
+                tier="Tier1",
+            ),
+            azure_native.providerhub.SkuSettingArgs(
+                costs=[azure_native.providerhub.SkuCostArgs(
+                    meter_id="xxx",
+                )],
+                kind="Premium",
+                name="premiumSku",
+                tier="Tier2",
+            ),
+        ],
+    ),
+    provider_namespace="Microsoft.Contoso",
+    resource_type="testResourceType",
+    sku="testSku")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:providerhub:Skus Microsoft.Contoso/ /subscriptions/ab7a8701-f7ef-471a-a2f4-d0ebbf494f77providers/Microsoft.ProviderHub/providerRegistrations/Microsoft.Contoso/ 
+```
+
+ */
 @ResourceType(type="azure-native:providerhub:Skus")
 public class Skus extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * 
+     */
     @OutputExport(name="properties", type=SkuResourceResponseProperties.class, parameters={})
     private Output<SkuResourceResponseProperties> properties;
 
     public Output<SkuResourceResponseProperties> getProperties() {
         return this.properties;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Skus(String name, SkusArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:providerhub:Skus", name, args == null ? SkusArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -57,6 +242,14 @@ public class Skus extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Skus get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Skus(name, id, options);
     }

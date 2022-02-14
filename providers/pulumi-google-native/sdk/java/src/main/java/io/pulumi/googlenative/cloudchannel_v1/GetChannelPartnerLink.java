@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetChannelPartnerLink {
+/**
+ * Returns the requested ChannelPartnerLink resource. You must be a distributor to call this method. Possible error codes: * PERMISSION_DENIED: The reseller account making the request is different from the reseller account in the API request. * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: ChannelPartnerLink resource not found because of an invalid channel partner link name. Return value: The ChannelPartnerLink resource.
+ */
     public static CompletableFuture<GetChannelPartnerLinkResult> invokeAsync(GetChannelPartnerLinkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudchannel/v1:getChannelPartnerLink", TypeShape.of(GetChannelPartnerLinkResult.class), args == null ? GetChannelPartnerLinkArgs.Empty : args, Utilities.withVersion(options));
     }

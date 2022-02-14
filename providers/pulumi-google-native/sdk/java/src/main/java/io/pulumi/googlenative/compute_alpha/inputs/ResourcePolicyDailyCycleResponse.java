@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Time window specified for daily operations.
+ */
 public final class ResourcePolicyDailyCycleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourcePolicyDailyCycleResponse Empty = new ResourcePolicyDailyCycleResponse();
 
+    /**
+     * Defines a schedule with units measured in months. The value determines how many months pass between the start of each cycle.
+     */
     @InputImport(name="daysInCycle", required=true)
     private final Integer daysInCycle;
 
@@ -20,6 +26,9 @@ public final class ResourcePolicyDailyCycleResponse extends io.pulumi.resources.
         return this.daysInCycle;
     }
 
+    /**
+     * [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
+     */
     @InputImport(name="duration", required=true)
     private final String duration;
 
@@ -27,6 +36,9 @@ public final class ResourcePolicyDailyCycleResponse extends io.pulumi.resources.
         return this.duration;
     }
 
+    /**
+     * Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 

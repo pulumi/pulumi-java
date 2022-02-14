@@ -14,9 +14,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TestResponse {
+/**
+ * The commands used in the test.
+ */
     private final List<CommandResponse> commands;
+/**
+ * Indicates if this test is active.It doesn't schedule test for not active Test.
+ */
     private final @Nullable Boolean isActive;
+/**
+ * The type of the test.
+ */
     private final String testType;
+/**
+ * The status of the validation run of the package.
+ */
     private final String validationRunStatus;
 
     @OutputCustomType.Constructor({"commands","isActive","testType","validationRunStatus"})
@@ -31,15 +43,27 @@ public final class TestResponse {
         this.validationRunStatus = Objects.requireNonNull(validationRunStatus);
     }
 
+/**
+ * The commands used in the test.
+ */
     public List<CommandResponse> getCommands() {
         return this.commands;
     }
+/**
+ * Indicates if this test is active.It doesn't schedule test for not active Test.
+ */
     public Optional<Boolean> getIsActive() {
         return Optional.ofNullable(this.isActive);
     }
+/**
+ * The type of the test.
+ */
     public String getTestType() {
         return this.testType;
     }
+/**
+ * The status of the validation run of the package.
+ */
     public String getValidationRunStatus() {
         return this.validationRunStatus;
     }

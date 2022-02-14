@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Authentication configuration information
+ */
 public final class FhirServiceAuthenticationConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FhirServiceAuthenticationConfigurationArgs Empty = new FhirServiceAuthenticationConfigurationArgs();
 
+    /**
+     * The audience url for the service
+     */
     @InputImport(name="audience")
     private final @Nullable Input<String> audience;
 
@@ -22,6 +28,9 @@ public final class FhirServiceAuthenticationConfigurationArgs extends io.pulumi.
         return this.audience == null ? Input.empty() : this.audience;
     }
 
+    /**
+     * The authority url for the service
+     */
     @InputImport(name="authority")
     private final @Nullable Input<String> authority;
 
@@ -29,6 +38,9 @@ public final class FhirServiceAuthenticationConfigurationArgs extends io.pulumi.
         return this.authority == null ? Input.empty() : this.authority;
     }
 
+    /**
+     * If the SMART on FHIR proxy is enabled
+     */
     @InputImport(name="smartProxyEnabled")
     private final @Nullable Input<Boolean> smartProxyEnabled;
 

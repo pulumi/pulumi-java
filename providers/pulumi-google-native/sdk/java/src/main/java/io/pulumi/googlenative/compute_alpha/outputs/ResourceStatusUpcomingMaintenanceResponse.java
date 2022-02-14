@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourceStatusUpcomingMaintenanceResponse {
+/**
+ * Indicates if the maintenance can be customer triggered. See go/sf-ctm-design for more details
+ */
     private final Boolean canReschedule;
 
     @OutputCustomType.Constructor({"canReschedule"})
@@ -16,6 +19,9 @@ public final class ResourceStatusUpcomingMaintenanceResponse {
         this.canReschedule = Objects.requireNonNull(canReschedule);
     }
 
+/**
+ * Indicates if the maintenance can be customer triggered. See go/sf-ctm-design for more details
+ */
     public Boolean getCanReschedule() {
         return this.canReschedule;
     }

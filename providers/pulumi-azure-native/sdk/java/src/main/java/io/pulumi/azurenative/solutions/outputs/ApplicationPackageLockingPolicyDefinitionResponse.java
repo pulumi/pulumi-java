@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationPackageLockingPolicyDefinitionResponse {
+/**
+ * The deny assignment excluded actions.
+ */
     private final @Nullable List<String> allowedActions;
+/**
+ * The deny assignment excluded data actions.
+ */
     private final @Nullable List<String> allowedDataActions;
 
     @OutputCustomType.Constructor({"allowedActions","allowedDataActions"})
@@ -22,9 +28,15 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse {
         this.allowedDataActions = allowedDataActions;
     }
 
+/**
+ * The deny assignment excluded actions.
+ */
     public List<String> getAllowedActions() {
         return this.allowedActions == null ? List.of() : this.allowedActions;
     }
+/**
+ * The deny assignment excluded data actions.
+ */
     public List<String> getAllowedDataActions() {
         return this.allowedDataActions == null ? List.of() : this.allowedDataActions;
     }

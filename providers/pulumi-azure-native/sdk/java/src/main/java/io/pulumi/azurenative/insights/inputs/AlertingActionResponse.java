@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specify action need to be taken when rule type is Alert
+ */
 public final class AlertingActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AlertingActionResponse Empty = new AlertingActionResponse();
 
+    /**
+     * Azure action group reference.
+     */
     @InputImport(name="aznsAction")
     private final @Nullable AzNsActionGroupResponse aznsAction;
 
@@ -24,6 +30,10 @@ public final class AlertingActionResponse extends io.pulumi.resources.InvokeArgs
         return this.aznsAction == null ? Optional.empty() : Optional.ofNullable(this.aznsAction);
     }
 
+    /**
+     * Specifies the action. Supported values - AlertingAction, LogToMetricAction
+Expected value is 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction'.
+     */
     @InputImport(name="odataType", required=true)
     private final String odataType;
 
@@ -31,6 +41,9 @@ public final class AlertingActionResponse extends io.pulumi.resources.InvokeArgs
         return this.odataType;
     }
 
+    /**
+     * Severity of the alert
+     */
     @InputImport(name="severity", required=true)
     private final String severity;
 
@@ -38,6 +51,9 @@ public final class AlertingActionResponse extends io.pulumi.resources.InvokeArgs
         return this.severity;
     }
 
+    /**
+     * time (in minutes) for which Alerts should be throttled or suppressed.
+     */
     @InputImport(name="throttlingInMin")
     private final @Nullable Integer throttlingInMin;
 
@@ -45,6 +61,9 @@ public final class AlertingActionResponse extends io.pulumi.resources.InvokeArgs
         return this.throttlingInMin == null ? Optional.empty() : Optional.ofNullable(this.throttlingInMin);
     }
 
+    /**
+     * The trigger condition that results in the alert rule being.
+     */
     @InputImport(name="trigger", required=true)
     private final TriggerConditionResponse trigger;
 

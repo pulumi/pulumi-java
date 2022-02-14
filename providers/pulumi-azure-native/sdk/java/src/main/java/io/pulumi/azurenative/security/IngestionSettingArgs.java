@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class IngestionSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IngestionSettingArgs Empty = new IngestionSettingArgs();
 
+    /**
+     * Name of the ingestion setting
+     */
     @InputImport(name="ingestionSettingName")
     private final @Nullable Input<String> ingestionSettingName;
 

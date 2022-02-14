@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetVirtualMachineImageTemplateArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVirtualMachineImageTemplateArgs Empty = new GetVirtualMachineImageTemplateArgs();
 
+    /**
+     * The name of the image Template
+     */
     @InputImport(name="imageTemplateName", required=true)
     private final String imageTemplateName;
 
@@ -19,6 +25,9 @@ public final class GetVirtualMachineImageTemplateArgs extends io.pulumi.resource
         return this.imageTemplateName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -13,15 +13,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetTransactionNodeResult {
+/**
+ * Gets or sets the transaction node dns endpoint.
+ */
     private final String dns;
+/**
+ * Gets or sets the firewall rules.
+ */
     private final @Nullable List<FirewallRuleResponse> firewallRules;
+/**
+ * Fully qualified resource Id of the resource.
+ */
     private final String id;
+/**
+ * Gets or sets the transaction node location.
+ */
     private final @Nullable String location;
+/**
+ * The name of the resource.
+ */
     private final String name;
+/**
+ * Sets the transaction node dns endpoint basic auth password.
+ */
     private final @Nullable String password;
+/**
+ * Gets or sets the blockchain member provision state.
+ */
     private final String provisioningState;
+/**
+ * Gets or sets the transaction node public key.
+ */
     private final String publicKey;
+/**
+ * The type of the service - e.g. "Microsoft.Blockchain"
+ */
     private final String type;
+/**
+ * Gets or sets the transaction node dns endpoint basic auth user name.
+ */
     private final String userName;
 
     @OutputCustomType.Constructor({"dns","firewallRules","id","location","name","password","provisioningState","publicKey","type","userName"})
@@ -48,33 +78,63 @@ public final class GetTransactionNodeResult {
         this.userName = Objects.requireNonNull(userName);
     }
 
+/**
+ * Gets or sets the transaction node dns endpoint.
+ */
     public String getDns() {
         return this.dns;
     }
+/**
+ * Gets or sets the firewall rules.
+ */
     public List<FirewallRuleResponse> getFirewallRules() {
         return this.firewallRules == null ? List.of() : this.firewallRules;
     }
+/**
+ * Fully qualified resource Id of the resource.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Gets or sets the transaction node location.
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * The name of the resource.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Sets the transaction node dns endpoint basic auth password.
+ */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
+/**
+ * Gets or sets the blockchain member provision state.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Gets or sets the transaction node public key.
+ */
     public String getPublicKey() {
         return this.publicKey;
     }
+/**
+ * The type of the service - e.g. "Microsoft.Blockchain"
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Gets or sets the transaction node dns endpoint basic auth user name.
+ */
     public String getUserName() {
         return this.userName;
     }

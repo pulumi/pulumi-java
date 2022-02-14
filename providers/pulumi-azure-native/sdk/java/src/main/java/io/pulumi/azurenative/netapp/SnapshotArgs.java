@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SnapshotArgs Empty = new SnapshotArgs();
 
+    /**
+     * The name of the NetApp account
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -21,6 +27,9 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * Resource location
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -28,6 +37,9 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the capacity pool
+     */
     @InputImport(name="poolName", required=true)
     private final Input<String> poolName;
 
@@ -35,6 +47,9 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
         return this.poolName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -42,6 +57,9 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the snapshot
+     */
     @InputImport(name="snapshotName")
     private final @Nullable Input<String> snapshotName;
 
@@ -49,6 +67,9 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
         return this.snapshotName == null ? Input.empty() : this.snapshotName;
     }
 
+    /**
+     * The name of the volume
+     */
     @InputImport(name="volumeName", required=true)
     private final Input<String> volumeName;
 

@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetDeploymentLogFileUrlResult {
+/**
+ * URL of the log file
+ */
     private final String url;
 
     @OutputCustomType.Constructor({"url"})
@@ -16,6 +19,9 @@ public final class GetDeploymentLogFileUrlResult {
         this.url = Objects.requireNonNull(url);
     }
 
+/**
+ * URL of the log file
+ */
     public String getUrl() {
         return this.url;
     }

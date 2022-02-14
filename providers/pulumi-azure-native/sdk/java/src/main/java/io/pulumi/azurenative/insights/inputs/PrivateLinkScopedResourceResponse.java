@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The private link scope resource reference.
+ */
 public final class PrivateLinkScopedResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateLinkScopedResourceResponse Empty = new PrivateLinkScopedResourceResponse();
 
+    /**
+     * The full resource Id of the private link scope resource.
+     */
     @InputImport(name="resourceId")
     private final @Nullable String resourceId;
 
@@ -21,6 +27,9 @@ public final class PrivateLinkScopedResourceResponse extends io.pulumi.resources
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 
+    /**
+     * The private link scope unique Identifier.
+     */
     @InputImport(name="scopeId")
     private final @Nullable String scopeId;
 

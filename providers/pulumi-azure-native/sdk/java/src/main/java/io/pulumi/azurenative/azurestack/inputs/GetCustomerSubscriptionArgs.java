@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetCustomerSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCustomerSubscriptionArgs Empty = new GetCustomerSubscriptionArgs();
 
+    /**
+     * Name of the product.
+     */
     @InputImport(name="customerSubscriptionName", required=true)
     private final String customerSubscriptionName;
 
@@ -19,6 +25,9 @@ public final class GetCustomerSubscriptionArgs extends io.pulumi.resources.Invok
         return this.customerSubscriptionName;
     }
 
+    /**
+     * Name of the Azure Stack registration.
+     */
     @InputImport(name="registrationName", required=true)
     private final String registrationName;
 
@@ -26,6 +35,9 @@ public final class GetCustomerSubscriptionArgs extends io.pulumi.resources.Invok
         return this.registrationName;
     }
 
+    /**
+     * Name of the resource group.
+     */
     @InputImport(name="resourceGroup", required=true)
     private final String resourceGroup;
 

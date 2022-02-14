@@ -16,10 +16,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Teradata database dataset.
+ */
 public final class TeradataTableDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TeradataTableDatasetResponse Empty = new TeradataTableDatasetResponse();
 
+    /**
+     * List of tags that can be used for describing the Dataset.
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -27,6 +33,9 @@ public final class TeradataTableDatasetResponse extends io.pulumi.resources.Invo
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * The database name of Teradata. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="database")
     private final @Nullable Object database;
 
@@ -34,6 +43,9 @@ public final class TeradataTableDatasetResponse extends io.pulumi.resources.Invo
         return this.database == null ? Optional.empty() : Optional.ofNullable(this.database);
     }
 
+    /**
+     * Dataset description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -41,6 +53,9 @@ public final class TeradataTableDatasetResponse extends io.pulumi.resources.Invo
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+     */
     @InputImport(name="folder")
     private final @Nullable DatasetResponseFolder folder;
 
@@ -48,6 +63,9 @@ public final class TeradataTableDatasetResponse extends io.pulumi.resources.Invo
         return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
     }
 
+    /**
+     * Linked service reference.
+     */
     @InputImport(name="linkedServiceName", required=true)
     private final LinkedServiceReferenceResponse linkedServiceName;
 
@@ -55,6 +73,9 @@ public final class TeradataTableDatasetResponse extends io.pulumi.resources.Invo
         return this.linkedServiceName;
     }
 
+    /**
+     * Parameters for dataset.
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -62,6 +83,9 @@ public final class TeradataTableDatasetResponse extends io.pulumi.resources.Invo
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+     */
     @InputImport(name="schema")
     private final @Nullable Object schema;
 
@@ -69,6 +93,9 @@ public final class TeradataTableDatasetResponse extends io.pulumi.resources.Invo
         return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
     }
 
+    /**
+     * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+     */
     @InputImport(name="structure")
     private final @Nullable Object structure;
 
@@ -76,6 +103,9 @@ public final class TeradataTableDatasetResponse extends io.pulumi.resources.Invo
         return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
     }
 
+    /**
+     * The table name of Teradata. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="table")
     private final @Nullable Object table;
 
@@ -83,6 +113,10 @@ public final class TeradataTableDatasetResponse extends io.pulumi.resources.Invo
         return this.table == null ? Optional.empty() : Optional.ofNullable(this.table);
     }
 
+    /**
+     * Type of dataset.
+Expected value is 'TeradataTable'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

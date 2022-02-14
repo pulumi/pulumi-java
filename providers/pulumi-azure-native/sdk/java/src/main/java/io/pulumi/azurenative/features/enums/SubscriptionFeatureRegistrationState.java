@@ -8,14 +8,38 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The state.
+ */
     @EnumType
     public enum SubscriptionFeatureRegistrationState {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         NotRegistered("NotRegistered"),
+/**
+ * 
+ */
         Pending("Pending"),
+/**
+ * 
+ */
         Registering("Registering"),
+/**
+ * 
+ */
         Registered("Registered"),
+/**
+ * 
+ */
         Unregistering("Unregistering"),
+/**
+ * 
+ */
         Unregistered("Unregistered");
 
         private final String value;

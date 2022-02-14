@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Metric and corresponding confidence intervals.
+ */
 public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs Empty = new GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs();
 
+    /**
+     * The probability that the treatment is better than all other treatments in the experiment
+     */
     @InputImport(name="confidenceInterval")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalArgs> confidenceInterval;
 
@@ -24,6 +30,9 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
         return this.confidenceInterval == null ? Input.empty() : this.confidenceInterval;
     }
 
+    /**
+     * Count value of a metric.
+     */
     @InputImport(name="count")
     private final @Nullable Input<Double> count;
 
@@ -31,6 +40,9 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
         return this.count == null ? Input.empty() : this.count;
     }
 
+    /**
+     * Count-based metric type. Only one of type or count_type is specified in each Metric.
+     */
     @InputImport(name="countType")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountType> countType;
 
@@ -38,6 +50,9 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
         return this.countType == null ? Input.empty() : this.countType;
     }
 
+    /**
+     * Ratio value of a metric.
+     */
     @InputImport(name="ratio")
     private final @Nullable Input<Double> ratio;
 
@@ -45,6 +60,9 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs exte
         return this.ratio == null ? Input.empty() : this.ratio;
     }
 
+    /**
+     * Ratio-based metric type. Only one of type or count_type is specified in each Metric.
+     */
     @InputImport(name="type")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricType> type;
 

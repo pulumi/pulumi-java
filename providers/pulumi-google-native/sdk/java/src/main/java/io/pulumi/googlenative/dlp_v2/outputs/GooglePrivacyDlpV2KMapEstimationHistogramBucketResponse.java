@@ -11,10 +11,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse {
+/**
+ * Number of records within these anonymity bounds.
+ */
     private final String bucketSize;
+/**
+ * Total number of distinct quasi-identifier tuple values in this bucket.
+ */
     private final String bucketValueCount;
+/**
+ * Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
+ */
     private final List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues;
+/**
+ * Always greater than or equal to min_anonymity.
+ */
     private final String maxAnonymity;
+/**
+ * Always positive.
+ */
     private final String minAnonymity;
 
     @OutputCustomType.Constructor({"bucketSize","bucketValueCount","bucketValues","maxAnonymity","minAnonymity"})
@@ -31,18 +46,33 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse {
         this.minAnonymity = Objects.requireNonNull(minAnonymity);
     }
 
+/**
+ * Number of records within these anonymity bounds.
+ */
     public String getBucketSize() {
         return this.bucketSize;
     }
+/**
+ * Total number of distinct quasi-identifier tuple values in this bucket.
+ */
     public String getBucketValueCount() {
         return this.bucketValueCount;
     }
+/**
+ * Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
+ */
     public List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> getBucketValues() {
         return this.bucketValues;
     }
+/**
+ * Always greater than or equal to min_anonymity.
+ */
     public String getMaxAnonymity() {
         return this.maxAnonymity;
     }
+/**
+ * Always positive.
+ */
     public String getMinAnonymity() {
         return this.minAnonymity;
     }

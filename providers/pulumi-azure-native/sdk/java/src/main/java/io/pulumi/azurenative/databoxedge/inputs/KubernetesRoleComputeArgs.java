@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Kubernetes role compute resource
+ */
 public final class KubernetesRoleComputeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KubernetesRoleComputeArgs Empty = new KubernetesRoleComputeArgs();
 
+    /**
+     * VM profile
+     */
     @InputImport(name="vmProfile", required=true)
     private final Input<String> vmProfile;
 

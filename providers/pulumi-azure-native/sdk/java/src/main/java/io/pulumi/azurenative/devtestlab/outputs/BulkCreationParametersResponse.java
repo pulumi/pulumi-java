@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BulkCreationParametersResponse {
+/**
+ * The number of virtual machine instances to create.
+ */
     private final @Nullable Integer instanceCount;
 
     @OutputCustomType.Constructor({"instanceCount"})
@@ -18,6 +21,9 @@ public final class BulkCreationParametersResponse {
         this.instanceCount = instanceCount;
     }
 
+/**
+ * The number of virtual machine instances to create.
+ */
     public Optional<Integer> getInstanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }

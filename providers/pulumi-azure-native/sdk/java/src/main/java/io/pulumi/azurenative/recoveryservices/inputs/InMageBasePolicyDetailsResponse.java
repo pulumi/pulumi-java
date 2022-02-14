@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Base class for the policies of providers using InMage replication.
+ */
 public final class InMageBasePolicyDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InMageBasePolicyDetailsResponse Empty = new InMageBasePolicyDetailsResponse();
 
+    /**
+     * The app consistent snapshot frequency in minutes.
+     */
     @InputImport(name="appConsistentFrequencyInMinutes")
     private final @Nullable Integer appConsistentFrequencyInMinutes;
 
@@ -22,6 +28,10 @@ public final class InMageBasePolicyDetailsResponse extends io.pulumi.resources.I
         return this.appConsistentFrequencyInMinutes == null ? Optional.empty() : Optional.ofNullable(this.appConsistentFrequencyInMinutes);
     }
 
+    /**
+     * Gets the class type. Overridden in derived classes.
+Expected value is 'InMageBasePolicyDetails'.
+     */
     @InputImport(name="instanceType", required=true)
     private final String instanceType;
 
@@ -29,6 +39,9 @@ public final class InMageBasePolicyDetailsResponse extends io.pulumi.resources.I
         return this.instanceType;
     }
 
+    /**
+     * A value indicating whether multi-VM sync has to be enabled.
+     */
     @InputImport(name="multiVmSyncStatus")
     private final @Nullable String multiVmSyncStatus;
 
@@ -36,6 +49,9 @@ public final class InMageBasePolicyDetailsResponse extends io.pulumi.resources.I
         return this.multiVmSyncStatus == null ? Optional.empty() : Optional.ofNullable(this.multiVmSyncStatus);
     }
 
+    /**
+     * The duration in minutes until which the recovery points need to be stored.
+     */
     @InputImport(name="recoveryPointHistory")
     private final @Nullable Integer recoveryPointHistory;
 
@@ -43,6 +59,9 @@ public final class InMageBasePolicyDetailsResponse extends io.pulumi.resources.I
         return this.recoveryPointHistory == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointHistory);
     }
 
+    /**
+     * The recovery point threshold in minutes.
+     */
     @InputImport(name="recoveryPointThresholdInMinutes")
     private final @Nullable Integer recoveryPointThresholdInMinutes;
 

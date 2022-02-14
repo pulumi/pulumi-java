@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ManagementLockAtSubscriptionLevelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagementLockAtSubscriptionLevelArgs Empty = new ManagementLockAtSubscriptionLevelArgs();
 
+    /**
+     * The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.
+     */
     @InputImport(name="level", required=true)
     private final Input<Either<String,LockLevel>> level;
 
@@ -25,6 +31,9 @@ public final class ManagementLockAtSubscriptionLevelArgs extends io.pulumi.resou
         return this.level;
     }
 
+    /**
+     * The name of lock. The lock name can be a maximum of 260 characters. It cannot contain <, > %, &, :, \, ?, /, or any control characters.
+     */
     @InputImport(name="lockName")
     private final @Nullable Input<String> lockName;
 
@@ -32,6 +41,9 @@ public final class ManagementLockAtSubscriptionLevelArgs extends io.pulumi.resou
         return this.lockName == null ? Input.empty() : this.lockName;
     }
 
+    /**
+     * Notes about the lock. Maximum of 512 characters.
+     */
     @InputImport(name="notes")
     private final @Nullable Input<String> notes;
 
@@ -39,6 +51,9 @@ public final class ManagementLockAtSubscriptionLevelArgs extends io.pulumi.resou
         return this.notes == null ? Input.empty() : this.notes;
     }
 
+    /**
+     * The owners of the lock.
+     */
     @InputImport(name="owners")
     private final @Nullable Input<List<ManagementLockOwnerArgs>> owners;
 

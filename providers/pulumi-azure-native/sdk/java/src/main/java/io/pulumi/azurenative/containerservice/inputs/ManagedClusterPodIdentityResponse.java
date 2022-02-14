@@ -3,7 +3,6 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.azurenative.containerservice.inputs.ManagedClusterPodIdentityResponseProvisioningInfo;
 import io.pulumi.azurenative.containerservice.inputs.UserAssignedIdentityResponse;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
@@ -12,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ManagedClusterPodIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedClusterPodIdentityResponse Empty = new ManagedClusterPodIdentityResponse();
 
+    /**
+     * Binding selector to use for the AzureIdentityBinding resource.
+     */
     @InputImport(name="bindingSelector")
     private final @Nullable String bindingSelector;
 
@@ -23,6 +28,9 @@ public final class ManagedClusterPodIdentityResponse extends io.pulumi.resources
         return this.bindingSelector == null ? Optional.empty() : Optional.ofNullable(this.bindingSelector);
     }
 
+    /**
+     * Information of the user assigned identity.
+     */
     @InputImport(name="identity", required=true)
     private final UserAssignedIdentityResponse identity;
 
@@ -30,6 +38,9 @@ public final class ManagedClusterPodIdentityResponse extends io.pulumi.resources
         return this.identity;
     }
 
+    /**
+     * Name of the pod identity.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -37,6 +48,9 @@ public final class ManagedClusterPodIdentityResponse extends io.pulumi.resources
         return this.name;
     }
 
+    /**
+     * Namespace of the pod identity.
+     */
     @InputImport(name="namespace", required=true)
     private final String namespace;
 
@@ -44,6 +58,9 @@ public final class ManagedClusterPodIdentityResponse extends io.pulumi.resources
         return this.namespace;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="provisioningInfo", required=true)
     private final ManagedClusterPodIdentityResponseProvisioningInfo provisioningInfo;
 
@@ -51,6 +68,9 @@ public final class ManagedClusterPodIdentityResponse extends io.pulumi.resources
         return this.provisioningInfo;
     }
 
+    /**
+     * The current provisioning state of the pod identity.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

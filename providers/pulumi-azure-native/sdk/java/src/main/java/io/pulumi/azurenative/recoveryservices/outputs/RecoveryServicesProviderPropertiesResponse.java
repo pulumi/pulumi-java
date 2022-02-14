@@ -16,21 +16,69 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RecoveryServicesProviderPropertiesResponse {
+/**
+ * The scenarios allowed on this provider.
+ */
     private final @Nullable List<String> allowedScenarios;
+/**
+ * The authentication identity details.
+ */
     private final @Nullable IdentityProviderDetailsResponse authenticationIdentityDetails;
+/**
+ * A value indicating whether DRA is responsive.
+ */
     private final @Nullable String connectionStatus;
+/**
+ * The DRA Id.
+ */
     private final @Nullable String draIdentifier;
+/**
+ * The fabric friendly name.
+ */
     private final @Nullable String fabricFriendlyName;
+/**
+ * Type of the site.
+ */
     private final @Nullable String fabricType;
+/**
+ * Friendly name of the DRA.
+ */
     private final @Nullable String friendlyName;
+/**
+ * The recovery services provider health error details.
+ */
     private final @Nullable List<HealthErrorResponse> healthErrorDetails;
+/**
+ * Time when last heartbeat was sent by the DRA.
+ */
     private final @Nullable String lastHeartBeat;
+/**
+ * Number of protected VMs currently managed by the DRA.
+ */
     private final @Nullable Integer protectedItemCount;
+/**
+ * The provider version.
+ */
     private final @Nullable String providerVersion;
+/**
+ * The provider version details.
+ */
     private final @Nullable VersionDetailsResponse providerVersionDetails;
+/**
+ * Expiry date of the version.
+ */
     private final @Nullable String providerVersionExpiryDate;
+/**
+ * DRA version status.
+ */
     private final @Nullable String providerVersionState;
+/**
+ * The resource access identity details.
+ */
     private final @Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails;
+/**
+ * The fabric provider.
+ */
     private final @Nullable String serverVersion;
 
     @OutputCustomType.Constructor({"allowedScenarios","authenticationIdentityDetails","connectionStatus","draIdentifier","fabricFriendlyName","fabricType","friendlyName","healthErrorDetails","lastHeartBeat","protectedItemCount","providerVersion","providerVersionDetails","providerVersionExpiryDate","providerVersionState","resourceAccessIdentityDetails","serverVersion"})
@@ -69,51 +117,99 @@ public final class RecoveryServicesProviderPropertiesResponse {
         this.serverVersion = serverVersion;
     }
 
+/**
+ * The scenarios allowed on this provider.
+ */
     public List<String> getAllowedScenarios() {
         return this.allowedScenarios == null ? List.of() : this.allowedScenarios;
     }
+/**
+ * The authentication identity details.
+ */
     public Optional<IdentityProviderDetailsResponse> getAuthenticationIdentityDetails() {
         return Optional.ofNullable(this.authenticationIdentityDetails);
     }
+/**
+ * A value indicating whether DRA is responsive.
+ */
     public Optional<String> getConnectionStatus() {
         return Optional.ofNullable(this.connectionStatus);
     }
+/**
+ * The DRA Id.
+ */
     public Optional<String> getDraIdentifier() {
         return Optional.ofNullable(this.draIdentifier);
     }
+/**
+ * The fabric friendly name.
+ */
     public Optional<String> getFabricFriendlyName() {
         return Optional.ofNullable(this.fabricFriendlyName);
     }
+/**
+ * Type of the site.
+ */
     public Optional<String> getFabricType() {
         return Optional.ofNullable(this.fabricType);
     }
+/**
+ * Friendly name of the DRA.
+ */
     public Optional<String> getFriendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
+/**
+ * The recovery services provider health error details.
+ */
     public List<HealthErrorResponse> getHealthErrorDetails() {
         return this.healthErrorDetails == null ? List.of() : this.healthErrorDetails;
     }
+/**
+ * Time when last heartbeat was sent by the DRA.
+ */
     public Optional<String> getLastHeartBeat() {
         return Optional.ofNullable(this.lastHeartBeat);
     }
+/**
+ * Number of protected VMs currently managed by the DRA.
+ */
     public Optional<Integer> getProtectedItemCount() {
         return Optional.ofNullable(this.protectedItemCount);
     }
+/**
+ * The provider version.
+ */
     public Optional<String> getProviderVersion() {
         return Optional.ofNullable(this.providerVersion);
     }
+/**
+ * The provider version details.
+ */
     public Optional<VersionDetailsResponse> getProviderVersionDetails() {
         return Optional.ofNullable(this.providerVersionDetails);
     }
+/**
+ * Expiry date of the version.
+ */
     public Optional<String> getProviderVersionExpiryDate() {
         return Optional.ofNullable(this.providerVersionExpiryDate);
     }
+/**
+ * DRA version status.
+ */
     public Optional<String> getProviderVersionState() {
         return Optional.ofNullable(this.providerVersionState);
     }
+/**
+ * The resource access identity details.
+ */
     public Optional<IdentityProviderDetailsResponse> getResourceAccessIdentityDetails() {
         return Optional.ofNullable(this.resourceAccessIdentityDetails);
     }
+/**
+ * The fabric provider.
+ */
     public Optional<String> getServerVersion() {
         return Optional.ofNullable(this.serverVersion);
     }

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties that are associated with an Azure Storage account
+ */
 public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StorageAccountResponse Empty = new StorageAccountResponse();
 
+    /**
+     * The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+     */
     @InputImport(name="accountKey")
     private final @Nullable String accountKey;
 
@@ -21,6 +27,9 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
         return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
     }
 
+    /**
+     * The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
+     */
     @InputImport(name="accountName")
     private final @Nullable String accountName;
 

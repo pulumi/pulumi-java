@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PacketMirroringNetworkInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PacketMirroringNetworkInfoArgs Empty = new PacketMirroringNetworkInfoArgs();
 
+    /**
+     * URL of the network resource.
+     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SecurityUserConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityUserConfigurationArgs Empty = new SecurityUserConfigurationArgs();
 
+    /**
+     * The name of the network manager security Configuration.
+     */
     @InputImport(name="configurationName")
     private final @Nullable Input<String> configurationName;
 
@@ -24,6 +30,9 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
         return this.configurationName == null ? Input.empty() : this.configurationName;
     }
 
+    /**
+     * Flag if need to delete existing network security groups.
+     */
     @InputImport(name="deleteExistingNSGs")
     private final @Nullable Input<Either<String,DeleteExistingNSGs>> deleteExistingNSGs;
 
@@ -31,6 +40,9 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
         return this.deleteExistingNSGs == null ? Input.empty() : this.deleteExistingNSGs;
     }
 
+    /**
+     * A description of the security configuration.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -38,6 +50,9 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * A display name of the security configuration.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -45,6 +60,9 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The name of the network manager.
+     */
     @InputImport(name="networkManagerName", required=true)
     private final Input<String> networkManagerName;
 
@@ -52,6 +70,9 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
         return this.networkManagerName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,6 +80,9 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
+    /**
+     * Security Type.
+     */
     @InputImport(name="securityType")
     private final @Nullable Input<Either<String,SecurityType>> securityType;
 

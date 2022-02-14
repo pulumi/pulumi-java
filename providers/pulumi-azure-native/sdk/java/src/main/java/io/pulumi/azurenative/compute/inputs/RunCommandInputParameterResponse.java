@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes the properties of a run command parameter.
+ */
 public final class RunCommandInputParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RunCommandInputParameterResponse Empty = new RunCommandInputParameterResponse();
 
+    /**
+     * The run command parameter name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class RunCommandInputParameterResponse extends io.pulumi.resources.
         return this.name;
     }
 
+    /**
+     * The run command parameter value.
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetModel {
+/**
+ * Gets information about a model, including its name, the description (if set), and the default version (if at least one version of the model has been deployed).
+ */
     public static CompletableFuture<GetModelResult> invokeAsync(GetModelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:ml/v1:getModel", TypeShape.of(GetModelResult.class), args == null ? GetModelArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -15,13 +15,37 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VirtualMachineNetworkInterfaceIPConfigurationResponse {
+/**
+ * Specifies an array of references to backend address pools of application gateways. A virtual machine can reference backend address pools of multiple application gateways. Multiple virtual machines cannot use the same application gateway.
+ */
     private final @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools;
+/**
+ * Specifies an array of references to application security group.
+ */
     private final @Nullable List<SubResourceResponse> applicationSecurityGroups;
+/**
+ * Specifies an array of references to backend address pools of load balancers. A virtual machine can reference backend address pools of one public and one internal load balancer. [Multiple virtual machines cannot use the same basic sku load balancer].
+ */
     private final @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools;
+/**
+ * The IP configuration name.
+ */
     private final String name;
+/**
+ * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
+ */
     private final @Nullable Boolean primary;
+/**
+ * Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.
+ */
     private final @Nullable String privateIPAddressVersion;
+/**
+ * The publicIPAddressConfiguration.
+ */
     private final @Nullable VirtualMachinePublicIPAddressConfigurationResponse publicIPAddressConfiguration;
+/**
+ * Specifies the identifier of the subnet.
+ */
     private final @Nullable SubResourceResponse subnet;
 
     @OutputCustomType.Constructor({"applicationGatewayBackendAddressPools","applicationSecurityGroups","loadBalancerBackendAddressPools","name","primary","privateIPAddressVersion","publicIPAddressConfiguration","subnet"})
@@ -44,27 +68,51 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse {
         this.subnet = subnet;
     }
 
+/**
+ * Specifies an array of references to backend address pools of application gateways. A virtual machine can reference backend address pools of multiple application gateways. Multiple virtual machines cannot use the same application gateway.
+ */
     public List<SubResourceResponse> getApplicationGatewayBackendAddressPools() {
         return this.applicationGatewayBackendAddressPools == null ? List.of() : this.applicationGatewayBackendAddressPools;
     }
+/**
+ * Specifies an array of references to application security group.
+ */
     public List<SubResourceResponse> getApplicationSecurityGroups() {
         return this.applicationSecurityGroups == null ? List.of() : this.applicationSecurityGroups;
     }
+/**
+ * Specifies an array of references to backend address pools of load balancers. A virtual machine can reference backend address pools of one public and one internal load balancer. [Multiple virtual machines cannot use the same basic sku load balancer].
+ */
     public List<SubResourceResponse> getLoadBalancerBackendAddressPools() {
         return this.loadBalancerBackendAddressPools == null ? List.of() : this.loadBalancerBackendAddressPools;
     }
+/**
+ * The IP configuration name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
+ */
     public Optional<Boolean> getPrimary() {
         return Optional.ofNullable(this.primary);
     }
+/**
+ * Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.
+ */
     public Optional<String> getPrivateIPAddressVersion() {
         return Optional.ofNullable(this.privateIPAddressVersion);
     }
+/**
+ * The publicIPAddressConfiguration.
+ */
     public Optional<VirtualMachinePublicIPAddressConfigurationResponse> getPublicIPAddressConfiguration() {
         return Optional.ofNullable(this.publicIPAddressConfiguration);
     }
+/**
+ * Specifies the identifier of the subnet.
+ */
     public Optional<SubResourceResponse> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }

@@ -18,10 +18,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Hive Server linked service.
+ */
 public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HiveLinkedServiceResponse Empty = new HiveLinkedServiceResponse();
 
+    /**
+     * Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
+     */
     @InputImport(name="allowHostNameCNMismatch")
     private final @Nullable Object allowHostNameCNMismatch;
 
@@ -29,6 +35,9 @@ public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.allowHostNameCNMismatch == null ? Optional.empty() : Optional.ofNullable(this.allowHostNameCNMismatch);
     }
 
+    /**
+     * Specifies whether to allow self-signed certificates from the server. The default value is false.
+     */
     @InputImport(name="allowSelfSignedServerCert")
     private final @Nullable Object allowSelfSignedServerCert;
 
@@ -36,6 +45,9 @@ public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.allowSelfSignedServerCert == null ? Optional.empty() : Optional.ofNullable(this.allowSelfSignedServerCert);
     }
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -43,6 +55,9 @@ public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * The authentication method used to access the Hive server.
+     */
     @InputImport(name="authenticationType", required=true)
     private final String authenticationType;
 
@@ -50,6 +65,9 @@ public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.authenticationType;
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -57,6 +75,9 @@ public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -64,6 +85,9 @@ public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Specifies whether the connections to the server are encrypted using SSL. The default value is false.
+     */
     @InputImport(name="enableSsl")
     private final @Nullable Object enableSsl;
 
@@ -71,6 +95,9 @@ public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.enableSsl == null ? Optional.empty() : Optional.ofNullable(this.enableSsl);
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -78,6 +105,9 @@ public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
+    /**
+     * IP address or host name of the Hive server, separated by ';' for multiple hosts (only when serviceDiscoveryMode is enable).
+     */
     @InputImport(name="host", required=true)
     private final Object host;
 
@@ -85,6 +115,9 @@ public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.host;
     }
 
+    /**
+     * The partial URL corresponding to the Hive server.
+     */
     @InputImport(name="httpPath")
     private final @Nullable Object httpPath;
 
@@ -92,6 +125,9 @@ public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.httpPath == null ? Optional.empty() : Optional.ofNullable(this.httpPath);
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -99,6 +135,9 @@ public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * The password corresponding to the user name that you provided in the Username field
+     */
     @InputImport(name="password")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
@@ -106,6 +145,9 @@ public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.password == null ? null : this.password;
     }
 
+    /**
+     * The TCP port that the Hive server uses to listen for client connections.
+     */
     @InputImport(name="port")
     private final @Nullable Object port;
 
@@ -113,6 +155,9 @@ public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
+    /**
+     * The type of Hive server.
+     */
     @InputImport(name="serverType")
     private final @Nullable String serverType;
 
@@ -120,6 +165,9 @@ public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.serverType == null ? Optional.empty() : Optional.ofNullable(this.serverType);
     }
 
+    /**
+     * true to indicate using the ZooKeeper service, false not.
+     */
     @InputImport(name="serviceDiscoveryMode")
     private final @Nullable Object serviceDiscoveryMode;
 
@@ -127,6 +175,9 @@ public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.serviceDiscoveryMode == null ? Optional.empty() : Optional.ofNullable(this.serviceDiscoveryMode);
     }
 
+    /**
+     * The transport protocol to use in the Thrift layer.
+     */
     @InputImport(name="thriftTransportProtocol")
     private final @Nullable String thriftTransportProtocol;
 
@@ -134,6 +185,9 @@ public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.thriftTransportProtocol == null ? Optional.empty() : Optional.ofNullable(this.thriftTransportProtocol);
     }
 
+    /**
+     * The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+     */
     @InputImport(name="trustedCertPath")
     private final @Nullable Object trustedCertPath;
 
@@ -141,6 +195,10 @@ public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.trustedCertPath == null ? Optional.empty() : Optional.ofNullable(this.trustedCertPath);
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'Hive'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -148,6 +206,9 @@ public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.type;
     }
 
+    /**
+     * Specifies whether the driver uses native HiveQL queries,or converts them into an equivalent form in HiveQL.
+     */
     @InputImport(name="useNativeQuery")
     private final @Nullable Object useNativeQuery;
 
@@ -155,6 +216,9 @@ public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.useNativeQuery == null ? Optional.empty() : Optional.ofNullable(this.useNativeQuery);
     }
 
+    /**
+     * Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
+     */
     @InputImport(name="useSystemTrustStore")
     private final @Nullable Object useSystemTrustStore;
 
@@ -162,6 +226,9 @@ public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.useSystemTrustStore == null ? Optional.empty() : Optional.ofNullable(this.useSystemTrustStore);
     }
 
+    /**
+     * The user name that you use to access Hive Server.
+     */
     @InputImport(name="username")
     private final @Nullable Object username;
 
@@ -169,6 +236,9 @@ public final class HiveLinkedServiceResponse extends io.pulumi.resources.InvokeA
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
     }
 
+    /**
+     * The namespace on ZooKeeper under which Hive Server 2 nodes are added.
+     */
     @InputImport(name="zooKeeperNameSpace")
     private final @Nullable Object zooKeeperNameSpace;
 

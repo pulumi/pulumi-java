@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionNetworkFirewallPolicy {
+/**
+ * Returns the specified network firewall policy.
+ */
     public static CompletableFuture<GetRegionNetworkFirewallPolicyResult> invokeAsync(GetRegionNetworkFirewallPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionNetworkFirewallPolicy", TypeShape.of(GetRegionNetworkFirewallPolicyResult.class), args == null ? GetRegionNetworkFirewallPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

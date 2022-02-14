@@ -10,8 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EncryptionInfoResponse {
+/**
+ * If present, the status of a recent encrypt/decrypt call on underlying data for this database or backup. Regardless of status, data is always encrypted at rest.
+ */
     private final StatusResponse encryptionStatus;
+/**
+ * The type of encryption.
+ */
     private final String encryptionType;
+/**
+ * A Cloud KMS key version that is being used to protect the database or backup.
+ */
     private final String kmsKeyVersion;
 
     @OutputCustomType.Constructor({"encryptionStatus","encryptionType","kmsKeyVersion"})
@@ -24,12 +33,21 @@ public final class EncryptionInfoResponse {
         this.kmsKeyVersion = Objects.requireNonNull(kmsKeyVersion);
     }
 
+/**
+ * If present, the status of a recent encrypt/decrypt call on underlying data for this database or backup. Regardless of status, data is always encrypted at rest.
+ */
     public StatusResponse getEncryptionStatus() {
         return this.encryptionStatus;
     }
+/**
+ * The type of encryption.
+ */
     public String getEncryptionType() {
         return this.encryptionType;
     }
+/**
+ * A Cloud KMS key version that is being used to protect the database or backup.
+ */
     public String getKmsKeyVersion() {
         return this.kmsKeyVersion;
     }

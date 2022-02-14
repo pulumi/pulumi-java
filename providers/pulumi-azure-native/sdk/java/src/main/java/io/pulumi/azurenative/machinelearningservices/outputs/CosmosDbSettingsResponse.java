@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CosmosDbSettingsResponse {
+/**
+ * The throughput of the collections in cosmosdb database
+ */
     private final @Nullable Integer collectionsThroughput;
 
     @OutputCustomType.Constructor({"collectionsThroughput"})
@@ -18,6 +21,9 @@ public final class CosmosDbSettingsResponse {
         this.collectionsThroughput = collectionsThroughput;
     }
 
+/**
+ * The throughput of the collections in cosmosdb database
+ */
     public Optional<Integer> getCollectionsThroughput() {
         return Optional.ofNullable(this.collectionsThroughput);
     }

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Type of response errors for real user requests for which origin will be deemed unhealthy
+ */
     @EnumType
     public enum ResponseBasedDetectedErrorTypes {
+/**
+ * 
+ */
         None("None"),
+/**
+ * 
+ */
         TcpErrorsOnly("TcpErrorsOnly"),
+/**
+ * 
+ */
         TcpAndHttpErrors("TcpAndHttpErrors");
 
         private final String value;

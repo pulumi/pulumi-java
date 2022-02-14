@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * This is deprecated and has no effect. Do not use.
+ */
 public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuleArgs Empty = new RuleArgs();
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="action")
     private final @Nullable Input<RuleAction> action;
 
@@ -25,6 +31,9 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.action == null ? Input.empty() : this.action;
     }
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="conditions")
     private final @Nullable Input<List<ConditionArgs>> conditions;
 
@@ -32,6 +41,9 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.conditions == null ? Input.empty() : this.conditions;
     }
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,6 +51,9 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="ins")
     private final @Nullable Input<List<String>> ins;
 
@@ -46,6 +61,9 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.ins == null ? Input.empty() : this.ins;
     }
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="logConfigs")
     private final @Nullable Input<List<LogConfigArgs>> logConfigs;
 
@@ -53,6 +71,9 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.logConfigs == null ? Input.empty() : this.logConfigs;
     }
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="notIns")
     private final @Nullable Input<List<String>> notIns;
 
@@ -60,6 +81,9 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
         return this.notIns == null ? Input.empty() : this.notIns;
     }
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="permissions")
     private final @Nullable Input<List<String>> permissions;
 

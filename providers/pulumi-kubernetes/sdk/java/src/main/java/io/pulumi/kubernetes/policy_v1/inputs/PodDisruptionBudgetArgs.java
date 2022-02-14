@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * PodDisruptionBudget is an object to define the max disruption that can be caused to a collection of pods
+ */
 public final class PodDisruptionBudgetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PodDisruptionBudgetArgs Empty = new PodDisruptionBudgetArgs();
 
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -24,6 +30,9 @@ public final class PodDisruptionBudgetArgs extends io.pulumi.resources.ResourceA
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -31,6 +40,9 @@ public final class PodDisruptionBudgetArgs extends io.pulumi.resources.ResourceA
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<ObjectMetaArgs> metadata;
 
@@ -38,6 +50,9 @@ public final class PodDisruptionBudgetArgs extends io.pulumi.resources.ResourceA
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * Specification of the desired behavior of the PodDisruptionBudget.
+     */
     @InputImport(name="spec")
     private final @Nullable Input<PodDisruptionBudgetSpecArgs> spec;
 
@@ -45,6 +60,9 @@ public final class PodDisruptionBudgetArgs extends io.pulumi.resources.ResourceA
         return this.spec == null ? Input.empty() : this.spec;
     }
 
+    /**
+     * Most recently observed status of the PodDisruptionBudget.
+     */
     @InputImport(name="status")
     private final @Nullable Input<PodDisruptionBudgetStatusArgs> status;
 

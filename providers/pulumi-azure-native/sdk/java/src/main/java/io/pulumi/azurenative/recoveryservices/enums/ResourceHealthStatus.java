@@ -8,13 +8,34 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Resource Health Status
+ */
     @EnumType
     public enum ResourceHealthStatus {
+/**
+ * 
+ */
         Healthy("Healthy"),
+/**
+ * 
+ */
         TransientDegraded("TransientDegraded"),
+/**
+ * 
+ */
         PersistentDegraded("PersistentDegraded"),
+/**
+ * 
+ */
         TransientUnhealthy("TransientUnhealthy"),
+/**
+ * 
+ */
         PersistentUnhealthy("PersistentUnhealthy"),
+/**
+ * 
+ */
         Invalid("Invalid");
 
         private final String value;

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListSqlMigrationServiceMonitoringDataArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListSqlMigrationServiceMonitoringDataArgs Empty = new ListSqlMigrationServiceMonitoringDataArgs();
 
+    /**
+     * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class ListSqlMigrationServiceMonitoringDataArgs extends io.pulumi.r
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the SQL Migration Service.
+     */
     @InputImport(name="sqlMigrationServiceName", required=true)
     private final String sqlMigrationServiceName;
 

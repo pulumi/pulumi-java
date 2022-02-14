@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Specifies network collocation
+ */
     @EnumType
     public enum ResourcePolicyGroupPlacementPolicyCollocation {
+/**
+ * 
+ */
         Collocated("COLLOCATED"),
+/**
+ * 
+ */
         UnspecifiedCollocation("UNSPECIFIED_COLLOCATION");
 
         private final String value;

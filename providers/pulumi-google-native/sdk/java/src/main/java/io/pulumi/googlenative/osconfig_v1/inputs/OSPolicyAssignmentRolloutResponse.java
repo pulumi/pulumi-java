@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Message to configure the rollout at the zonal level for the OS policy assignment.
+ */
 public final class OSPolicyAssignmentRolloutResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OSPolicyAssignmentRolloutResponse Empty = new OSPolicyAssignmentRolloutResponse();
 
+    /**
+     * The maximum number (or percentage) of VMs per zone to disrupt at any given moment.
+     */
     @InputImport(name="disruptionBudget", required=true)
     private final FixedOrPercentResponse disruptionBudget;
 
@@ -20,6 +26,9 @@ public final class OSPolicyAssignmentRolloutResponse extends io.pulumi.resources
         return this.disruptionBudget;
     }
 
+    /**
+     * This determines the minimum duration of time to wait after the configuration changes are applied through the current rollout. A VM continues to count towards the `disruption_budget` at least until this duration of time has passed after configuration changes are applied.
+     */
     @InputImport(name="minWaitDuration", required=true)
     private final String minWaitDuration;
 

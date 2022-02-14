@@ -9,10 +9,16 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ResultResponse;
 import java.util.Objects;
 
 
+/**
+ * The results of an inspect DataSource job.
+ */
 public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2InspectDataSourceDetailsResponse Empty = new GooglePrivacyDlpV2InspectDataSourceDetailsResponse();
 
+    /**
+     * The configuration used for this job.
+     */
     @InputImport(name="requestedOptions", required=true)
     private final GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions;
 
@@ -20,6 +26,9 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse extends io
         return this.requestedOptions;
     }
 
+    /**
+     * A summary of the outcome of this inspection job.
+     */
     @InputImport(name="result", required=true)
     private final GooglePrivacyDlpV2ResultResponse result;
 

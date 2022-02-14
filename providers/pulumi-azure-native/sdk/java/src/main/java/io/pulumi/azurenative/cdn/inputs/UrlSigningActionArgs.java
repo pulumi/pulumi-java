@@ -10,10 +10,17 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines the url signing action for the delivery rule.
+ */
 public final class UrlSigningActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UrlSigningActionArgs Empty = new UrlSigningActionArgs();
 
+    /**
+     * The name of the action for the delivery rule.
+Expected value is 'UrlSigning'.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +28,9 @@ public final class UrlSigningActionArgs extends io.pulumi.resources.ResourceArgs
         return this.name;
     }
 
+    /**
+     * Defines the parameters for the action.
+     */
     @InputImport(name="parameters", required=true)
     private final Input<UrlSigningActionParametersArgs> parameters;
 

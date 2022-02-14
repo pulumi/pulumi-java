@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The Sku name.
+ */
     @EnumType
     public enum SkuName {
+/**
+ * 
+ */
         Standard("Standard"),
+/**
+ * 
+ */
         RS0("RS0");
 
         private final String value;

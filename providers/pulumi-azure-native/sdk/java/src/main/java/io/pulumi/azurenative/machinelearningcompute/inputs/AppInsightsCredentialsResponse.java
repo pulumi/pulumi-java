@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * AppInsights credentials.
+ */
 public final class AppInsightsCredentialsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AppInsightsCredentialsResponse Empty = new AppInsightsCredentialsResponse();
 
+    /**
+     * The AppInsights application ID.
+     */
     @InputImport(name="appId")
     private final @Nullable String appId;
 
@@ -21,6 +27,9 @@ public final class AppInsightsCredentialsResponse extends io.pulumi.resources.In
         return this.appId == null ? Optional.empty() : Optional.ofNullable(this.appId);
     }
 
+    /**
+     * The AppInsights instrumentation key. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
+     */
     @InputImport(name="instrumentationKey")
     private final @Nullable String instrumentationKey;
 

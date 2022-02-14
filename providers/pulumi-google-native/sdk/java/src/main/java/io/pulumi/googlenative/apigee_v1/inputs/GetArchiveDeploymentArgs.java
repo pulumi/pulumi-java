@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetArchiveDeploymentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetArchiveDeploymentArgs Empty = new GetArchiveDeploymentArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="archiveDeploymentId", required=true)
     private final String archiveDeploymentId;
 
@@ -19,6 +25,9 @@ public final class GetArchiveDeploymentArgs extends io.pulumi.resources.InvokeAr
         return this.archiveDeploymentId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="environmentId", required=true)
     private final String environmentId;
 
@@ -26,6 +35,9 @@ public final class GetArchiveDeploymentArgs extends io.pulumi.resources.InvokeAr
         return this.environmentId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 

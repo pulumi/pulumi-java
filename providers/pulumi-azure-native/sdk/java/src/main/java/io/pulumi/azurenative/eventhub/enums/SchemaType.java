@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum SchemaType {
+/**
+ * 
+ */
         Unknown("Unknown"),
+/**
+ * 
+ */
         Avro("Avro");
 
         private final String value;

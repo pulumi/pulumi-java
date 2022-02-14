@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackupShortTermRetentionPolicyArgs Empty = new BackupShortTermRetentionPolicyArgs();
 
+    /**
+     * The name of the database.
+     */
     @InputImport(name="databaseName", required=true)
     private final Input<String> databaseName;
 
@@ -22,6 +28,9 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
         return this.databaseName;
     }
 
+    /**
+     * The policy name. Should always be "default".
+     */
     @InputImport(name="policyName")
     private final @Nullable Input<String> policyName;
 
@@ -29,6 +38,9 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
         return this.policyName == null ? Input.empty() : this.policyName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,9 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
         return this.resourceGroupName;
     }
 
+    /**
+     * The backup retention period in days. This is how many days Point-in-Time Restore will be supported.
+     */
     @InputImport(name="retentionDays")
     private final @Nullable Input<Integer> retentionDays;
 
@@ -43,6 +58,9 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
         return this.retentionDays == null ? Input.empty() : this.retentionDays;
     }
 
+    /**
+     * The name of the server.
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 

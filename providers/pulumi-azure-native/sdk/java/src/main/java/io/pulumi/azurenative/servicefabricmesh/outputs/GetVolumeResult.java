@@ -13,16 +13,49 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetVolumeResult {
+/**
+ * This type describes a volume provided by an Azure Files file share.
+ */
     private final @Nullable VolumeProviderParametersAzureFileResponse azureFileParameters;
+/**
+ * User readable description of the volume.
+ */
     private final @Nullable String description;
+/**
+ * Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     private final String id;
+/**
+ * The geo-location where the resource lives
+ */
     private final String location;
+/**
+ * The name of the resource
+ */
     private final String name;
+/**
+ * Provider of the volume.
+ */
     private final String provider;
+/**
+ * State of the resource.
+ */
     private final String provisioningState;
+/**
+ * Status of the volume.
+ */
     private final String status;
+/**
+ * Gives additional information about the current status of the volume.
+ */
     private final String statusDetails;
+/**
+ * Resource tags.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"azureFileParameters","description","id","location","name","provider","provisioningState","status","statusDetails","tags","type"})
@@ -51,36 +84,69 @@ public final class GetVolumeResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * This type describes a volume provided by an Azure Files file share.
+ */
     public Optional<VolumeProviderParametersAzureFileResponse> getAzureFileParameters() {
         return Optional.ofNullable(this.azureFileParameters);
     }
+/**
+ * User readable description of the volume.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The geo-location where the resource lives
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * The name of the resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Provider of the volume.
+ */
     public String getProvider() {
         return this.provider;
     }
+/**
+ * State of the resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Status of the volume.
+ */
     public String getStatus() {
         return this.status;
     }
+/**
+ * Gives additional information about the current status of the volume.
+ */
     public String getStatusDetails() {
         return this.statusDetails;
     }
+/**
+ * Resource tags.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
+ */
     public String getType() {
         return this.type;
     }

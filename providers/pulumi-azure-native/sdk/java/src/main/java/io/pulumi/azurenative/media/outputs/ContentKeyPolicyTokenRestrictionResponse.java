@@ -17,13 +17,38 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ContentKeyPolicyTokenRestrictionResponse {
+/**
+ * A list of alternative verification keys.
+ */
     private final @Nullable List<Object> alternateVerificationKeys;
+/**
+ * The audience for the token.
+ */
     private final String audience;
+/**
+ * The token issuer.
+ */
     private final String issuer;
+/**
+ * The discriminator for derived types.
+Expected value is '#Microsoft.Media.ContentKeyPolicyTokenRestriction'.
+ */
     private final String odataType;
+/**
+ * The OpenID connect discovery document.
+ */
     private final @Nullable String openIdConnectDiscoveryDocument;
+/**
+ * The primary verification key.
+ */
     private final Object primaryVerificationKey;
+/**
+ * A list of required token claims.
+ */
     private final @Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims;
+/**
+ * The type of token.
+ */
     private final String restrictionTokenType;
 
     @OutputCustomType.Constructor({"alternateVerificationKeys","audience","issuer","odataType","openIdConnectDiscoveryDocument","primaryVerificationKey","requiredClaims","restrictionTokenType"})
@@ -46,27 +71,52 @@ public final class ContentKeyPolicyTokenRestrictionResponse {
         this.restrictionTokenType = Objects.requireNonNull(restrictionTokenType);
     }
 
+/**
+ * A list of alternative verification keys.
+ */
     public List<Object> getAlternateVerificationKeys() {
         return this.alternateVerificationKeys == null ? List.of() : this.alternateVerificationKeys;
     }
+/**
+ * The audience for the token.
+ */
     public String getAudience() {
         return this.audience;
     }
+/**
+ * The token issuer.
+ */
     public String getIssuer() {
         return this.issuer;
     }
+/**
+ * The discriminator for derived types.
+Expected value is '#Microsoft.Media.ContentKeyPolicyTokenRestriction'.
+ */
     public String getOdataType() {
         return this.odataType;
     }
+/**
+ * The OpenID connect discovery document.
+ */
     public Optional<String> getOpenIdConnectDiscoveryDocument() {
         return Optional.ofNullable(this.openIdConnectDiscoveryDocument);
     }
+/**
+ * The primary verification key.
+ */
     public Object getPrimaryVerificationKey() {
         return this.primaryVerificationKey;
     }
+/**
+ * A list of required token claims.
+ */
     public List<ContentKeyPolicyTokenClaimResponse> getRequiredClaims() {
         return this.requiredClaims == null ? List.of() : this.requiredClaims;
     }
+/**
+ * The type of token.
+ */
     public String getRestrictionTokenType() {
         return this.restrictionTokenType;
     }

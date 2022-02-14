@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * MySQL source configuration
+ */
 public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MysqlSourceConfigArgs Empty = new MysqlSourceConfigArgs();
 
+    /**
+     * MySQL objects to retrieve from the source.
+     */
     @InputImport(name="allowlist")
     private final @Nullable Input<MysqlRdbmsArgs> allowlist;
 
@@ -21,6 +27,9 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
         return this.allowlist == null ? Input.empty() : this.allowlist;
     }
 
+    /**
+     * MySQL objects to exclude from the stream.
+     */
     @InputImport(name="rejectlist")
     private final @Nullable Input<MysqlRdbmsArgs> rejectlist;
 

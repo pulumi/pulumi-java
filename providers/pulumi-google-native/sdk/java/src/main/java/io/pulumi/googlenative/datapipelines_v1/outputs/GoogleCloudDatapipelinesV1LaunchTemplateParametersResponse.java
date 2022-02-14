@@ -12,10 +12,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse {
+/**
+ * The runtime environment for the job.
+ */
     private final GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment;
+/**
+ * The job name to use for the created job.
+ */
     private final String jobName;
+/**
+ * The runtime parameters to pass to the job.
+ */
     private final Map<String,String> parameters;
+/**
+ * Map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job. Only applicable when updating a pipeline.
+ */
     private final Map<String,String> transformNameMapping;
+/**
+ * If set, replace the existing pipeline with the name specified by jobName with this pipeline, preserving state.
+ */
     private final Boolean update;
 
     @OutputCustomType.Constructor({"environment","jobName","parameters","transformNameMapping","update"})
@@ -32,18 +47,33 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse {
         this.update = Objects.requireNonNull(update);
     }
 
+/**
+ * The runtime environment for the job.
+ */
     public GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse getEnvironment() {
         return this.environment;
     }
+/**
+ * The job name to use for the created job.
+ */
     public String getJobName() {
         return this.jobName;
     }
+/**
+ * The runtime parameters to pass to the job.
+ */
     public Map<String,String> getParameters() {
         return this.parameters;
     }
+/**
+ * Map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job. Only applicable when updating a pipeline.
+ */
     public Map<String,String> getTransformNameMapping() {
         return this.transformNameMapping;
     }
+/**
+ * If set, replace the existing pipeline with the name specified by jobName with this pipeline, preserving state.
+ */
     public Boolean getUpdate() {
         return this.update;
     }

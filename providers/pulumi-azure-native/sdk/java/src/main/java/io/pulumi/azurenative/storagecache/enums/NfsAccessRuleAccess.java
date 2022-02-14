@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Access allowed by this rule.
+ */
     @EnumType
     public enum NfsAccessRuleAccess {
+/**
+ * 
+ */
         No("no"),
+/**
+ * 
+ */
         Ro("ro"),
+/**
+ * 
+ */
         Rw("rw");
 
         private final String value;

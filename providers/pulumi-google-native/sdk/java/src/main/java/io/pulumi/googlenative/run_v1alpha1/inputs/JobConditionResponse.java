@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * JobCondition defines a readiness condition for a Revision.
+ */
 public final class JobConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JobConditionResponse Empty = new JobConditionResponse();
 
+    /**
+     * Optional. Last time the condition transitioned from one status to another.
+     */
     @InputImport(name="lastTransitionTime", required=true)
     private final String lastTransitionTime;
 
@@ -19,6 +25,9 @@ public final class JobConditionResponse extends io.pulumi.resources.InvokeArgs {
         return this.lastTransitionTime;
     }
 
+    /**
+     * Optional. Human readable message indicating details about the current status.
+     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -26,6 +35,9 @@ public final class JobConditionResponse extends io.pulumi.resources.InvokeArgs {
         return this.message;
     }
 
+    /**
+     * Optional. One-word CamelCase reason for the condition's last transition.
+     */
     @InputImport(name="reason", required=true)
     private final String reason;
 
@@ -33,6 +45,9 @@ public final class JobConditionResponse extends io.pulumi.resources.InvokeArgs {
         return this.reason;
     }
 
+    /**
+     * Optional. How to interpret failures of this condition, one of Error, Warning, Info
+     */
     @InputImport(name="severity", required=true)
     private final String severity;
 
@@ -40,6 +55,9 @@ public final class JobConditionResponse extends io.pulumi.resources.InvokeArgs {
         return this.severity;
     }
 
+    /**
+     * Status of the condition, one of True, False, Unknown.
+     */
     @InputImport(name="status", required=true)
     private final String status;
 
@@ -47,6 +65,9 @@ public final class JobConditionResponse extends io.pulumi.resources.InvokeArgs {
         return this.status;
     }
 
+    /**
+     * Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

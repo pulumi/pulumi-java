@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetGameServerClusterArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGameServerClusterArgs Empty = new GetGameServerClusterArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="gameServerClusterId", required=true)
     private final String gameServerClusterId;
 
@@ -21,6 +27,9 @@ public final class GetGameServerClusterArgs extends io.pulumi.resources.InvokeAr
         return this.gameServerClusterId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -28,6 +37,9 @@ public final class GetGameServerClusterArgs extends io.pulumi.resources.InvokeAr
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -35,6 +47,9 @@ public final class GetGameServerClusterArgs extends io.pulumi.resources.InvokeAr
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="realmId", required=true)
     private final String realmId;
 
@@ -42,6 +57,9 @@ public final class GetGameServerClusterArgs extends io.pulumi.resources.InvokeAr
         return this.realmId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="view")
     private final @Nullable String view;
 

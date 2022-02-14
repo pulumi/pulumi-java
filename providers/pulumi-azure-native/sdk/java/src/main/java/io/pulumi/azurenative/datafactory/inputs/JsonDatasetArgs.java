@@ -30,10 +30,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Json dataset.
+ */
 public final class JsonDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JsonDatasetArgs Empty = new JsonDatasetArgs();
 
+    /**
+     * List of tags that can be used for describing the Dataset.
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -41,6 +47,9 @@ public final class JsonDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * The data compression method used for the json dataset.
+     */
     @InputImport(name="compression")
     private final @Nullable Input<DatasetCompressionArgs> compression;
 
@@ -48,6 +57,9 @@ public final class JsonDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.compression == null ? Input.empty() : this.compression;
     }
 
+    /**
+     * Dataset description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -55,6 +67,9 @@ public final class JsonDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The code page name of the preferred encoding. If not specified, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encodingName")
     private final @Nullable Input<Object> encodingName;
 
@@ -62,6 +77,9 @@ public final class JsonDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.encodingName == null ? Input.empty() : this.encodingName;
     }
 
+    /**
+     * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+     */
     @InputImport(name="folder")
     private final @Nullable Input<DatasetFolderArgs> folder;
 
@@ -69,6 +87,9 @@ public final class JsonDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.folder == null ? Input.empty() : this.folder;
     }
 
+    /**
+     * Linked service reference.
+     */
     @InputImport(name="linkedServiceName", required=true)
     private final Input<LinkedServiceReferenceArgs> linkedServiceName;
 
@@ -76,6 +97,9 @@ public final class JsonDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkedServiceName;
     }
 
+    /**
+     * The location of the json data storage.
+     */
     @InputImport(name="location", required=true)
     private final Input<Object> location;
 
@@ -83,6 +107,9 @@ public final class JsonDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.location;
     }
 
+    /**
+     * Parameters for dataset.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -90,6 +117,9 @@ public final class JsonDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+     */
     @InputImport(name="schema")
     private final @Nullable Input<Object> schema;
 
@@ -97,6 +127,9 @@ public final class JsonDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.schema == null ? Input.empty() : this.schema;
     }
 
+    /**
+     * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+     */
     @InputImport(name="structure")
     private final @Nullable Input<Object> structure;
 
@@ -104,6 +137,10 @@ public final class JsonDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.structure == null ? Input.empty() : this.structure;
     }
 
+    /**
+     * Type of dataset.
+Expected value is 'Json'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureBlobFileSystemConfigurationArgs Empty = new AzureBlobFileSystemConfigurationArgs();
 
+    /**
+     * This property is mutually exclusive with sasKey and one must be specified.
+     */
     @InputImport(name="accountKey")
     private final @Nullable Input<String> accountKey;
 
@@ -21,6 +27,9 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
         return this.accountKey == null ? Input.empty() : this.accountKey;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -28,6 +37,9 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
         return this.accountName;
     }
 
+    /**
+     * These are 'net use' options in Windows and 'mount' options in Linux.
+     */
     @InputImport(name="blobfuseOptions")
     private final @Nullable Input<String> blobfuseOptions;
 
@@ -35,6 +47,9 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
         return this.blobfuseOptions == null ? Input.empty() : this.blobfuseOptions;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="containerName", required=true)
     private final Input<String> containerName;
 
@@ -42,6 +57,9 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
         return this.containerName;
     }
 
+    /**
+     * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+     */
     @InputImport(name="relativeMountPath", required=true)
     private final Input<String> relativeMountPath;
 
@@ -49,6 +67,9 @@ public final class AzureBlobFileSystemConfigurationArgs extends io.pulumi.resour
         return this.relativeMountPath;
     }
 
+    /**
+     * This property is mutually exclusive with accountKey and one must be specified.
+     */
     @InputImport(name="sasKey")
     private final @Nullable Input<String> sasKey;
 

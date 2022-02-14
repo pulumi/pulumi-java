@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Determines whether or no a connection is locked. If locked, a reason must be specified.
+ */
 public final class LockConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LockConfigResponse Empty = new LockConfigResponse();
 
+    /**
+     * Indicates whether or not the connection is locked.
+     */
     @InputImport(name="locked", required=true)
     private final Boolean locked;
 
@@ -20,6 +26,9 @@ public final class LockConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.locked;
     }
 
+    /**
+     * Describes why a connection is locked.
+     */
     @InputImport(name="reason", required=true)
     private final String reason;
 

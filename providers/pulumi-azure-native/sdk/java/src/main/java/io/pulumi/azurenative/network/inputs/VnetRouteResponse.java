@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * List of routes that control routing from VirtualHub into a virtual network connection.
+ */
 public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VnetRouteResponse Empty = new VnetRouteResponse();
 
+    /**
+     * List of all Static Routes.
+     */
     @InputImport(name="staticRoutes")
     private final @Nullable List<StaticRouteResponse> staticRoutes;
 

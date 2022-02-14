@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListTransactionNodeApiKeys {
+/**
+ * Collection of the API key payload which is exposed in the response of the resource provider.
+API Version: 2018-06-01-preview.
+ *
+ * Collection of the API key payload which is exposed in the response of the resource provider.
+ */
     public static CompletableFuture<ListTransactionNodeApiKeysResult> invokeAsync(ListTransactionNodeApiKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:blockchain:listTransactionNodeApiKeys", TypeShape.of(ListTransactionNodeApiKeysResult.class), args == null ? ListTransactionNodeApiKeysArgs.Empty : args, Utilities.withVersion(options));
     }

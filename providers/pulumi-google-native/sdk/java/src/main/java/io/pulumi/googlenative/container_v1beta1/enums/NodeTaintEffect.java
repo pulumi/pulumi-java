@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Effect for taint.
+ */
     @EnumType
     public enum NodeTaintEffect {
+/**
+ * Not set
+ */
         EffectUnspecified("EFFECT_UNSPECIFIED"),
+/**
+ * NoSchedule
+ */
         NoSchedule("NO_SCHEDULE"),
+/**
+ * PreferNoSchedule
+ */
         PreferNoSchedule("PREFER_NO_SCHEDULE"),
+/**
+ * NoExecute
+ */
         NoExecute("NO_EXECUTE");
 
         private final String value;

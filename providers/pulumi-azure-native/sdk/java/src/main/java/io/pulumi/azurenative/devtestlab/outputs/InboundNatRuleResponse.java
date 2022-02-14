@@ -12,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class InboundNatRuleResponse {
+/**
+ * The port to which the external traffic will be redirected.
+ */
     private final @Nullable Integer backendPort;
+/**
+ * The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.
+ */
     private final @Nullable Integer frontendPort;
+/**
+ * The transport protocol for the endpoint.
+ */
     private final @Nullable String transportProtocol;
 
     @OutputCustomType.Constructor({"backendPort","frontendPort","transportProtocol"})
@@ -26,12 +35,21 @@ public final class InboundNatRuleResponse {
         this.transportProtocol = transportProtocol;
     }
 
+/**
+ * The port to which the external traffic will be redirected.
+ */
     public Optional<Integer> getBackendPort() {
         return Optional.ofNullable(this.backendPort);
     }
+/**
+ * The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.
+ */
     public Optional<Integer> getFrontendPort() {
         return Optional.ofNullable(this.frontendPort);
     }
+/**
+ * The transport protocol for the endpoint.
+ */
     public Optional<String> getTransportProtocol() {
         return Optional.ofNullable(this.transportProtocol);
     }

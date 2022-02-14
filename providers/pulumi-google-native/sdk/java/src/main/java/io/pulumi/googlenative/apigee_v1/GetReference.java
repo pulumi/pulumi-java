@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReference {
+/**
+ * Gets a Reference resource.
+ */
     public static CompletableFuture<GetReferenceResult> invokeAsync(GetReferenceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getReference", TypeShape.of(GetReferenceResult.class), args == null ? GetReferenceArgs.Empty : args, Utilities.withVersion(options));
     }

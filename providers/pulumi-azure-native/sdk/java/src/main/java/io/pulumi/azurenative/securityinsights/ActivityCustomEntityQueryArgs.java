@@ -16,10 +16,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ActivityCustomEntityQueryArgs Empty = new ActivityCustomEntityQueryArgs();
 
+    /**
+     * The entity query content to display in timeline
+     */
     @InputImport(name="content")
     private final @Nullable Input<String> content;
 
@@ -27,6 +33,9 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
         return this.content == null ? Input.empty() : this.content;
     }
 
+    /**
+     * The entity query description
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -34,6 +43,9 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Determines whether this activity is enabled or disabled.
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -41,6 +53,9 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * The query applied only to entities matching to all filters
+     */
     @InputImport(name="entitiesFilter")
     private final @Nullable Input<Map<String,List<String>>> entitiesFilter;
 
@@ -48,6 +63,9 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
         return this.entitiesFilter == null ? Input.empty() : this.entitiesFilter;
     }
 
+    /**
+     * entity query ID
+     */
     @InputImport(name="entityQueryId")
     private final @Nullable Input<String> entityQueryId;
 
@@ -55,6 +73,9 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
         return this.entityQueryId == null ? Input.empty() : this.entityQueryId;
     }
 
+    /**
+     * The type of the query's source entity
+     */
     @InputImport(name="inputEntityType")
     private final @Nullable Input<Either<String,EntityType>> inputEntityType;
 
@@ -62,6 +83,10 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
         return this.inputEntityType == null ? Input.empty() : this.inputEntityType;
     }
 
+    /**
+     * The kind of the entity query that supports put request.
+Expected value is 'Activity'.
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -69,6 +94,9 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
         return this.kind;
     }
 
+    /**
+     * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
+     */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
     private final Input<String> operationalInsightsResourceProvider;
 
@@ -76,6 +104,9 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
         return this.operationalInsightsResourceProvider;
     }
 
+    /**
+     * The Activity query definitions
+     */
     @InputImport(name="queryDefinitions")
     private final @Nullable Input<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions;
 
@@ -83,6 +114,9 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
         return this.queryDefinitions == null ? Input.empty() : this.queryDefinitions;
     }
 
+    /**
+     * List of the fields of the source entity that are required to run the query
+     */
     @InputImport(name="requiredInputFieldsSets")
     private final @Nullable Input<List<List<String>>> requiredInputFieldsSets;
 
@@ -90,6 +124,9 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
         return this.requiredInputFieldsSets == null ? Input.empty() : this.requiredInputFieldsSets;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -97,6 +134,9 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
+    /**
+     * The template id this activity was created from
+     */
     @InputImport(name="templateName")
     private final @Nullable Input<String> templateName;
 
@@ -104,6 +144,9 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
         return this.templateName == null ? Input.empty() : this.templateName;
     }
 
+    /**
+     * The entity query title
+     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 
@@ -111,6 +154,9 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
         return this.title == null ? Input.empty() : this.title;
     }
 
+    /**
+     * The name of the workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGroupArgs Empty = new GetGroupArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="groupId", required=true)
     private final String groupId;
 

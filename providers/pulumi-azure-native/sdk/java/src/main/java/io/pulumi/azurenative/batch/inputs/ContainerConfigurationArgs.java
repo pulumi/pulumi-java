@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ContainerConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerConfigurationArgs Empty = new ContainerConfigurationArgs();
 
+    /**
+     * This is the full image reference, as would be specified to "docker pull". An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
+     */
     @InputImport(name="containerImageNames")
     private final @Nullable Input<List<String>> containerImageNames;
 
@@ -24,6 +30,9 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
         return this.containerImageNames == null ? Input.empty() : this.containerImageNames;
     }
 
+    /**
+     * If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.
+     */
     @InputImport(name="containerRegistries")
     private final @Nullable Input<List<ContainerRegistryArgs>> containerRegistries;
 
@@ -31,6 +40,9 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
         return this.containerRegistries == null ? Input.empty() : this.containerRegistries;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="type", required=true)
     private final Input<ContainerType> type;
 

@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EnvironmentVariableResponse {
+/**
+ * Key for the environment variable.
+ */
     private final String key;
+/**
+ * Value for the environment variable.
+ */
     private final String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -20,9 +26,15 @@ public final class EnvironmentVariableResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * Key for the environment variable.
+ */
     public String getKey() {
         return this.key;
     }
+/**
+ * Value for the environment variable.
+ */
     public String getValue() {
         return this.value;
     }

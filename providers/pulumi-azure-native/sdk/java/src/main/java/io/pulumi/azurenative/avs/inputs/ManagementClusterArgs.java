@@ -9,10 +9,16 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * The properties of a default cluster
+ */
 public final class ManagementClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagementClusterArgs Empty = new ManagementClusterArgs();
 
+    /**
+     * The cluster size
+     */
     @InputImport(name="clusterSize", required=true)
     private final Input<Integer> clusterSize;
 

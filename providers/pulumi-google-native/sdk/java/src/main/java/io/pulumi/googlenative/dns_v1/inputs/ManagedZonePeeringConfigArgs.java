@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ManagedZonePeeringConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedZonePeeringConfigArgs Empty = new ManagedZonePeeringConfigArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -22,6 +28,9 @@ public final class ManagedZonePeeringConfigArgs extends io.pulumi.resources.Reso
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The network with which to peer.
+     */
     @InputImport(name="targetNetwork")
     private final @Nullable Input<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork;
 

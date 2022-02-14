@@ -8,14 +8,38 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The encryption algorithm.
+ */
     @EnumType
     public enum EncryptionAlgorithm {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         None("None"),
+/**
+ * 
+ */
         DES3("DES3"),
+/**
+ * 
+ */
         RC2("RC2"),
+/**
+ * 
+ */
         AES128("AES128"),
+/**
+ * 
+ */
         AES192("AES192"),
+/**
+ * 
+ */
         AES256("AES256");
 
         private final String value;

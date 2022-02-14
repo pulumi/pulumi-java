@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSolutionConfigResult {
+/**
+ * Gets or sets the publisher sas uri for the solution.
+ */
     private final @Nullable String publisherSasUri;
 
     @OutputCustomType.Constructor({"publisherSasUri"})
@@ -18,6 +21,9 @@ public final class GetSolutionConfigResult {
         this.publisherSasUri = publisherSasUri;
     }
 
+/**
+ * Gets or sets the publisher sas uri for the solution.
+ */
     public Optional<String> getPublisherSasUri() {
         return Optional.ofNullable(this.publisherSasUri);
     }

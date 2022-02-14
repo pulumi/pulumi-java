@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Managed application billing details definition.
+ */
 public final class ApplicationBillingDetailsDefinitionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationBillingDetailsDefinitionResponse Empty = new ApplicationBillingDetailsDefinitionResponse();
 
+    /**
+     * The managed application resource usage Id.
+     */
     @InputImport(name="resourceUsageId")
     private final @Nullable String resourceUsageId;
 

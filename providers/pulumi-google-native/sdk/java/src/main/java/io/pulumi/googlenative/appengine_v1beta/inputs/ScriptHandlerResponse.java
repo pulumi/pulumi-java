@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Executes a script to handle the request that matches the URL pattern.
+ */
 public final class ScriptHandlerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScriptHandlerResponse Empty = new ScriptHandlerResponse();
 
+    /**
+     * Path to the script from the application root directory.
+     */
     @InputImport(name="scriptPath", required=true)
     private final String scriptPath;
 

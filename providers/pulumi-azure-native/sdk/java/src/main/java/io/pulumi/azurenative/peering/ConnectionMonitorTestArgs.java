@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ConnectionMonitorTestArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionMonitorTestArgs Empty = new ConnectionMonitorTestArgs();
 
+    /**
+     * The name of the connection monitor test
+     */
     @InputImport(name="connectionMonitorTestName")
     private final @Nullable Input<String> connectionMonitorTestName;
 
@@ -22,6 +28,9 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
         return this.connectionMonitorTestName == null ? Input.empty() : this.connectionMonitorTestName;
     }
 
+    /**
+     * The Connection Monitor test destination
+     */
     @InputImport(name="destination")
     private final @Nullable Input<String> destination;
 
@@ -29,6 +38,9 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
         return this.destination == null ? Input.empty() : this.destination;
     }
 
+    /**
+     * The Connection Monitor test destination port
+     */
     @InputImport(name="destinationPort")
     private final @Nullable Input<Integer> destinationPort;
 
@@ -36,6 +48,9 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
         return this.destinationPort == null ? Input.empty() : this.destinationPort;
     }
 
+    /**
+     * The name of the peering service.
+     */
     @InputImport(name="peeringServiceName", required=true)
     private final Input<String> peeringServiceName;
 
@@ -43,6 +58,9 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
         return this.peeringServiceName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -50,6 +68,9 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * The Connection Monitor test source agent
+     */
     @InputImport(name="sourceAgent")
     private final @Nullable Input<String> sourceAgent;
 
@@ -57,6 +78,9 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
         return this.sourceAgent == null ? Input.empty() : this.sourceAgent;
     }
 
+    /**
+     * The Connection Monitor test frequency in seconds
+     */
     @InputImport(name="testFrequencyInSec")
     private final @Nullable Input<Integer> testFrequencyInSec;
 

@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MachineGroupArgs Empty = new MachineGroupArgs();
 
+    /**
+     * Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.
+     */
     @InputImport(name="count")
     private final @Nullable Input<Integer> count;
 
@@ -26,6 +32,9 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.count == null ? Input.empty() : this.count;
     }
 
+    /**
+     * User defined name for the group
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -33,6 +42,9 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Type of the machine group
+     */
     @InputImport(name="groupType")
     private final @Nullable Input<Either<String,MachineGroupType>> groupType;
 
@@ -40,6 +52,10 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.groupType == null ? Input.empty() : this.groupType;
     }
 
+    /**
+     * Additional resource type qualifier.
+Expected value is 'machineGroup'.
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -47,6 +63,9 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
+    /**
+     * Machine Group resource name.
+     */
     @InputImport(name="machineGroupName")
     private final @Nullable Input<String> machineGroupName;
 
@@ -54,6 +73,9 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.machineGroupName == null ? Input.empty() : this.machineGroupName;
     }
 
+    /**
+     * References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.
+     */
     @InputImport(name="machines")
     private final @Nullable Input<List<MachineReferenceWithHintsArgs>> machines;
 
@@ -61,6 +83,9 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.machines == null ? Input.empty() : this.machines;
     }
 
+    /**
+     * Resource group name within the specified subscriptionId.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -68,6 +93,9 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * OMS workspace containing the resources of interest.
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

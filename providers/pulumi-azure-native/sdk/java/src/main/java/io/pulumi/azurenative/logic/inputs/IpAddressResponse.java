@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The ip address.
+ */
 public final class IpAddressResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IpAddressResponse Empty = new IpAddressResponse();
 
+    /**
+     * The address.
+     */
     @InputImport(name="address")
     private final @Nullable String address;
 

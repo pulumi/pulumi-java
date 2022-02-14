@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ApplicationAuthorizationResponse {
+/**
+ * The provider's principal identifier. This is the identity that the provider will use to call ARM to manage the managed application resources.
+ */
     private final String principalId;
+/**
+ * The provider's role definition identifier. This role will define all the permissions that the provider must have on the managed application's container resource group. This role definition cannot have permission to delete the resource group.
+ */
     private final String roleDefinitionId;
 
     @OutputCustomType.Constructor({"principalId","roleDefinitionId"})
@@ -20,9 +26,15 @@ public final class ApplicationAuthorizationResponse {
         this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
     }
 
+/**
+ * The provider's principal identifier. This is the identity that the provider will use to call ARM to manage the managed application resources.
+ */
     public String getPrincipalId() {
         return this.principalId;
     }
+/**
+ * The provider's role definition identifier. This role will define all the permissions that the provider must have on the managed application's container resource group. This role definition cannot have permission to delete the resource group.
+ */
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
     }

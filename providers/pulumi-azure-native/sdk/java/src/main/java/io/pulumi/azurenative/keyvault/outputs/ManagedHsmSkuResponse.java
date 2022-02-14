@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ManagedHsmSkuResponse {
+/**
+ * SKU Family of the managed HSM Pool
+ */
     private final String family;
+/**
+ * SKU of the managed HSM Pool
+ */
     private final String name;
 
     @OutputCustomType.Constructor({"family","name"})
@@ -20,9 +26,15 @@ public final class ManagedHsmSkuResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+/**
+ * SKU Family of the managed HSM Pool
+ */
     public String getFamily() {
         return this.family;
     }
+/**
+ * SKU of the managed HSM Pool
+ */
     public String getName() {
         return this.name;
     }

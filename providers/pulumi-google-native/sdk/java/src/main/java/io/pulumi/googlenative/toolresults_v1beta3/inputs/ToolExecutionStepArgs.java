@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Generic tool step to be used for binaries we do not explicitly support. For example: running cp to copy artifacts from one location to another.
+ */
 public final class ToolExecutionStepArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ToolExecutionStepArgs Empty = new ToolExecutionStepArgs();
 
+    /**
+     * A Tool execution. - In response: present if set by create/update request - In create/update request: optional
+     */
     @InputImport(name="toolExecution")
     private final @Nullable Input<ToolExecutionArgs> toolExecution;
 

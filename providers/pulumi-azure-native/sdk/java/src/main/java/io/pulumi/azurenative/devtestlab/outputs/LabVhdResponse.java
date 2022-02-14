@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LabVhdResponse {
+/**
+ * The URI to the VHD.
+ */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -18,6 +21,9 @@ public final class LabVhdResponse {
         this.id = id;
     }
 
+/**
+ * The URI to the VHD.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

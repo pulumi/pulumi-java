@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetServiceDatabaseTableIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServiceDatabaseTableIamPolicyArgs Empty = new GetServiceDatabaseTableIamPolicyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="databaseId", required=true)
     private final String databaseId;
 
@@ -21,6 +27,9 @@ public final class GetServiceDatabaseTableIamPolicyArgs extends io.pulumi.resour
         return this.databaseId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -28,6 +37,9 @@ public final class GetServiceDatabaseTableIamPolicyArgs extends io.pulumi.resour
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="optionsRequestedPolicyVersion")
     private final @Nullable String optionsRequestedPolicyVersion;
 
@@ -35,6 +47,9 @@ public final class GetServiceDatabaseTableIamPolicyArgs extends io.pulumi.resour
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -42,6 +57,9 @@ public final class GetServiceDatabaseTableIamPolicyArgs extends io.pulumi.resour
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="serviceId", required=true)
     private final String serviceId;
 
@@ -49,6 +67,9 @@ public final class GetServiceDatabaseTableIamPolicyArgs extends io.pulumi.resour
         return this.serviceId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="tableId", required=true)
     private final String tableId;
 

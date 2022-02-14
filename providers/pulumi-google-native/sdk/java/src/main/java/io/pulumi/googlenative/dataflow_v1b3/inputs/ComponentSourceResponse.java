@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Description of an interstitial value between transforms in an execution stage.
+ */
 public final class ComponentSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ComponentSourceResponse Empty = new ComponentSourceResponse();
 
+    /**
+     * Dataflow service generated name for this source.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class ComponentSourceResponse extends io.pulumi.resources.InvokeArg
         return this.name;
     }
 
+    /**
+     * User name for the original user transform or collection with which this source is most closely associated.
+     */
     @InputImport(name="originalTransformOrCollection", required=true)
     private final String originalTransformOrCollection;
 
@@ -26,6 +35,9 @@ public final class ComponentSourceResponse extends io.pulumi.resources.InvokeArg
         return this.originalTransformOrCollection;
     }
 
+    /**
+     * Human-readable name for this transform; may be user or system generated.
+     */
     @InputImport(name="userName", required=true)
     private final String userName;
 

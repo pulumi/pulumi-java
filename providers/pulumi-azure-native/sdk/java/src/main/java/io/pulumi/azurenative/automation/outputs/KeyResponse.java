@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class KeyResponse {
+/**
+ * Automation key name.
+ */
     private final String keyName;
+/**
+ * Automation key permissions.
+ */
     private final String permissions;
+/**
+ * Value of the Automation Key used for registration.
+ */
     private final String value;
 
     @OutputCustomType.Constructor({"keyName","permissions","value"})
@@ -23,12 +32,21 @@ public final class KeyResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * Automation key name.
+ */
     public String getKeyName() {
         return this.keyName;
     }
+/**
+ * Automation key permissions.
+ */
     public String getPermissions() {
         return this.permissions;
     }
+/**
+ * Value of the Automation Key used for registration.
+ */
     public String getValue() {
         return this.value;
     }

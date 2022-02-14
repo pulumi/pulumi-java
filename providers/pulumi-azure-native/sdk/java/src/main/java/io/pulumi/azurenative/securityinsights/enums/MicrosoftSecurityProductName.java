@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The alerts' productName on which the cases will be generated
+ */
     @EnumType
     public enum MicrosoftSecurityProductName {
+/**
+ * 
+ */
         Microsoft_Cloud_App_Security("Microsoft Cloud App Security"),
+/**
+ * 
+ */
         Azure_Security_Center("Azure Security Center"),
+/**
+ * 
+ */
         Azure_Advanced_Threat_Protection("Azure Advanced Threat Protection"),
+/**
+ * 
+ */
         Azure_Active_Directory_Identity_Protection("Azure Active Directory Identity Protection"),
+/**
+ * 
+ */
         Azure_Security_Center_for_IoT("Azure Security Center for IoT");
 
         private final String value;

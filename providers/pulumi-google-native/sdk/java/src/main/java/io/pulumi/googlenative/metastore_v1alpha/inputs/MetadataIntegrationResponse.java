@@ -9,10 +9,16 @@ import io.pulumi.googlenative.metastore_v1alpha.inputs.DataplexConfigResponse;
 import java.util.Objects;
 
 
+/**
+ * Specifies how metastore metadata should be integrated with external services.
+ */
 public final class MetadataIntegrationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MetadataIntegrationResponse Empty = new MetadataIntegrationResponse();
 
+    /**
+     * The integration config for the Data Catalog service.
+     */
     @InputImport(name="dataCatalogConfig", required=true)
     private final DataCatalogConfigResponse dataCatalogConfig;
 
@@ -20,6 +26,9 @@ public final class MetadataIntegrationResponse extends io.pulumi.resources.Invok
         return this.dataCatalogConfig;
     }
 
+    /**
+     * The integration config for the Dataplex service.
+     */
     @InputImport(name="dataplexConfig", required=true)
     private final DataplexConfigResponse dataplexConfig;
 

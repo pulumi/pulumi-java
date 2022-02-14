@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A rules engine configuration containing a list of rules that will run to modify the runtime behavior of the request and response.
+ */
 public final class RulesEngineResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RulesEngineResponse Empty = new RulesEngineResponse();
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -23,6 +29,9 @@ public final class RulesEngineResponse extends io.pulumi.resources.InvokeArgs {
         return this.id;
     }
 
+    /**
+     * Resource name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -30,6 +39,9 @@ public final class RulesEngineResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * Resource status.
+     */
     @InputImport(name="resourceState", required=true)
     private final String resourceState;
 
@@ -37,6 +49,9 @@ public final class RulesEngineResponse extends io.pulumi.resources.InvokeArgs {
         return this.resourceState;
     }
 
+    /**
+     * A list of rules that define a particular Rules Engine Configuration.
+     */
     @InputImport(name="rules")
     private final @Nullable List<RulesEngineRuleResponse> rules;
 
@@ -44,6 +59,9 @@ public final class RulesEngineResponse extends io.pulumi.resources.InvokeArgs {
         return this.rules == null ? List.of() : this.rules;
     }
 
+    /**
+     * Resource type.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

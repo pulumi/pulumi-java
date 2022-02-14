@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Whether the resource is continuously analyzed.
+ */
     @EnumType
     public enum DiscoveredContinuousAnalysis {
+/**
+ * Unknown.
+ */
         ContinuousAnalysisUnspecified("CONTINUOUS_ANALYSIS_UNSPECIFIED"),
+/**
+ * The resource is continuously analyzed.
+ */
         Active("ACTIVE"),
+/**
+ * The resource is ignored for continuous analysis.
+ */
         Inactive("INACTIVE");
 
         private final String value;

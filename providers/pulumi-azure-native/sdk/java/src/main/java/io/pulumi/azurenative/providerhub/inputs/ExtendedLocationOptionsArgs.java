@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ExtendedLocationOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExtendedLocationOptionsArgs Empty = new ExtendedLocationOptionsArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="supportedPolicy")
     private final @Nullable Input<String> supportedPolicy;
 
@@ -21,6 +27,9 @@ public final class ExtendedLocationOptionsArgs extends io.pulumi.resources.Resou
         return this.supportedPolicy == null ? Input.empty() : this.supportedPolicy;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

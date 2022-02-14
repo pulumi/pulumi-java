@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualMachineImageTemplate {
+/**
+ * Image template is an ARM resource managed by Microsoft.VirtualMachineImages provider
+API Version: 2020-02-14.
+ *
+ * Image template is an ARM resource managed by Microsoft.VirtualMachineImages provider
+ */
     public static CompletableFuture<GetVirtualMachineImageTemplateResult> invokeAsync(GetVirtualMachineImageTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:virtualmachineimages:getVirtualMachineImageTemplate", TypeShape.of(GetVirtualMachineImageTemplateResult.class), args == null ? GetVirtualMachineImageTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

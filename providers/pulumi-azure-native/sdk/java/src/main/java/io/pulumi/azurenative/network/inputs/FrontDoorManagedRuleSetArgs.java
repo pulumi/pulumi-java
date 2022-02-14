@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines a managed rule set.
+ */
 public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FrontDoorManagedRuleSetArgs Empty = new FrontDoorManagedRuleSetArgs();
 
+    /**
+     * Describes the exclusions that are applied to all rules in the set.
+     */
     @InputImport(name="exclusions")
     private final @Nullable Input<List<ManagedRuleExclusionArgs>> exclusions;
 
@@ -26,6 +32,9 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
         return this.exclusions == null ? Input.empty() : this.exclusions;
     }
 
+    /**
+     * Defines the rule group overrides to apply to the rule set.
+     */
     @InputImport(name="ruleGroupOverrides")
     private final @Nullable Input<List<FrontDoorManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
 
@@ -33,6 +42,9 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
         return this.ruleGroupOverrides == null ? Input.empty() : this.ruleGroupOverrides;
     }
 
+    /**
+     * Defines the action to take when a managed rule set score threshold is met.
+     */
     @InputImport(name="ruleSetAction")
     private final @Nullable Input<Either<String,ManagedRuleSetActionType>> ruleSetAction;
 
@@ -40,6 +52,9 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
         return this.ruleSetAction == null ? Input.empty() : this.ruleSetAction;
     }
 
+    /**
+     * Defines the rule set type to use.
+     */
     @InputImport(name="ruleSetType", required=true)
     private final Input<String> ruleSetType;
 
@@ -47,6 +62,9 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
         return this.ruleSetType;
     }
 
+    /**
+     * Defines the version of the rule set to use.
+     */
     @InputImport(name="ruleSetVersion", required=true)
     private final Input<String> ruleSetVersion;
 

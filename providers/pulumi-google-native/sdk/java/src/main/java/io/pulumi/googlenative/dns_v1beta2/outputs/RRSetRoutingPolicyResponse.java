@@ -11,10 +11,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RRSetRoutingPolicyResponse {
+/**
+ * 
+ */
     private final RRSetRoutingPolicyGeoPolicyResponse geo;
+/**
+ * 
+ */
     private final RRSetRoutingPolicyGeoPolicyResponse geoPolicy;
+/**
+ * 
+ */
     private final String kind;
+/**
+ * 
+ */
     private final RRSetRoutingPolicyWrrPolicyResponse wrr;
+/**
+ * 
+ */
     private final RRSetRoutingPolicyWrrPolicyResponse wrrPolicy;
 
     @OutputCustomType.Constructor({"geo","geoPolicy","kind","wrr","wrrPolicy"})
@@ -31,18 +46,33 @@ public final class RRSetRoutingPolicyResponse {
         this.wrrPolicy = Objects.requireNonNull(wrrPolicy);
     }
 
+/**
+ * 
+ */
     public RRSetRoutingPolicyGeoPolicyResponse getGeo() {
         return this.geo;
     }
+/**
+ * 
+ */
     public RRSetRoutingPolicyGeoPolicyResponse getGeoPolicy() {
         return this.geoPolicy;
     }
+/**
+ * 
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * 
+ */
     public RRSetRoutingPolicyWrrPolicyResponse getWrr() {
         return this.wrr;
     }
+/**
+ * 
+ */
     public RRSetRoutingPolicyWrrPolicyResponse getWrrPolicy() {
         return this.wrrPolicy;
     }

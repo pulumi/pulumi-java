@@ -11,10 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UserIdentityResponse {
+/**
+ * Set to the app Id of the client JWT making the request.
+ */
     private final @Nullable String appId;
+/**
+ * Set to the object Id of the client JWT making the request. Not all users have object Id. For CSP (reseller) scenarios for example, object Id is not available.
+ */
     private final @Nullable String objectId;
+/**
+ * Set to the principal Id of the client JWT making the request. Service principal will not have the principal Id.
+ */
     private final @Nullable String principalId;
+/**
+ * Set to the principal name / UPN of the client JWT making the request.
+ */
     private final @Nullable String principalName;
+/**
+ * Set to the tenant ID of the client JWT making the request.
+ */
     private final @Nullable String tenantId;
 
     @OutputCustomType.Constructor({"appId","objectId","principalId","principalName","tenantId"})
@@ -31,18 +46,33 @@ public final class UserIdentityResponse {
         this.tenantId = tenantId;
     }
 
+/**
+ * Set to the app Id of the client JWT making the request.
+ */
     public Optional<String> getAppId() {
         return Optional.ofNullable(this.appId);
     }
+/**
+ * Set to the object Id of the client JWT making the request. Not all users have object Id. For CSP (reseller) scenarios for example, object Id is not available.
+ */
     public Optional<String> getObjectId() {
         return Optional.ofNullable(this.objectId);
     }
+/**
+ * Set to the principal Id of the client JWT making the request. Service principal will not have the principal Id.
+ */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }
+/**
+ * Set to the principal name / UPN of the client JWT making the request.
+ */
     public Optional<String> getPrincipalName() {
         return Optional.ofNullable(this.principalName);
     }
+/**
+ * Set to the tenant ID of the client JWT making the request.
+ */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }

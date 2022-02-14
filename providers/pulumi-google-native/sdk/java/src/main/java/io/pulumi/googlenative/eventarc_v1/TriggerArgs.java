@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TriggerArgs Empty = new TriggerArgs();
 
+    /**
+     * Destination specifies where the events should be sent to.
+     */
     @InputImport(name="destination", required=true)
     private final Input<DestinationArgs> destination;
 
@@ -26,6 +32,9 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.destination;
     }
 
+    /**
+     * null The list of filters that applies to event attributes. Only events that match all the provided filters are sent to the destination.
+     */
     @InputImport(name="eventFilters", required=true)
     private final Input<List<EventFilterArgs>> eventFilters;
 
@@ -33,6 +42,9 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventFilters;
     }
 
+    /**
+     * Optional. User labels attached to the triggers that can be used to group resources.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -40,6 +52,9 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -47,6 +62,9 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource name of the trigger. Must be unique within the location of the project and must be in `projects/{project}/locations/{location}/triggers/{trigger}` format.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -54,6 +72,9 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -61,6 +82,9 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have the `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. To create Audit Log triggers, the service account should also have the `roles/eventarc.eventReceiver` IAM role.
+     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<String> serviceAccount;
 
@@ -68,6 +92,9 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
+    /**
+     * Optional. To deliver messages, Eventarc might use other GCP products as a transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.
+     */
     @InputImport(name="transport")
     private final @Nullable Input<TransportArgs> transport;
 
@@ -75,6 +102,9 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.transport == null ? Input.empty() : this.transport;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="triggerId", required=true)
     private final Input<String> triggerId;
 
@@ -82,6 +112,9 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
         return this.triggerId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="validateOnly", required=true)
     private final Input<String> validateOnly;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTagAtScope {
+/**
+ * Wrapper resource for tags API requests and responses.
+API Version: 2019-10-01.
+ *
+ * Wrapper resource for tags API requests and responses.
+ */
     public static CompletableFuture<GetTagAtScopeResult> invokeAsync(GetTagAtScopeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getTagAtScope", TypeShape.of(GetTagAtScopeResult.class), args == null ? GetTagAtScopeArgs.Empty : args, Utilities.withVersion(options));
     }

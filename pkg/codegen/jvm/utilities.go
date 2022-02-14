@@ -3,6 +3,8 @@
 package jvm
 
 import (
+	"strings"
+
 	"github.com/pulumi/pulumi/pkg/v3/codegen"
 	"github.com/pulumi/pulumi/pkg/v3/codegen/schema"
 )
@@ -49,4 +51,8 @@ func VisitPlainTypeClosure(properties []*schema.Property, visitor func(t schema.
 	for _, p := range properties {
 		visitPlainTypeClosure(p.Type, visitor, seen)
 	}
+}
+
+func escapeBlockComment(comment string) string {
+	return strings.ReplaceAll(comment, "*/", "*{@literal /}")
 }

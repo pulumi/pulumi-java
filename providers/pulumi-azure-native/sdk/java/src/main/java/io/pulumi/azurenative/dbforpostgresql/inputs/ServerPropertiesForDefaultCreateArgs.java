@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties used to create a new server.
+ */
 public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServerPropertiesForDefaultCreateArgs Empty = new ServerPropertiesForDefaultCreateArgs();
 
+    /**
+     * The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
+     */
     @InputImport(name="administratorLogin", required=true)
     private final Input<String> administratorLogin;
 
@@ -28,6 +34,9 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
         return this.administratorLogin;
     }
 
+    /**
+     * The password of the administrator login.
+     */
     @InputImport(name="administratorLoginPassword", required=true)
     private final Input<String> administratorLoginPassword;
 
@@ -35,6 +44,10 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
         return this.administratorLoginPassword;
     }
 
+    /**
+     * The mode to create a new server.
+Expected value is 'Default'.
+     */
     @InputImport(name="createMode", required=true)
     private final Input<String> createMode;
 
@@ -42,6 +55,9 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
         return this.createMode;
     }
 
+    /**
+     * Status showing whether the server enabled infrastructure encryption.
+     */
     @InputImport(name="infrastructureEncryption")
     private final @Nullable Input<Either<String,InfrastructureEncryption>> infrastructureEncryption;
 
@@ -49,6 +65,9 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
         return this.infrastructureEncryption == null ? Input.empty() : this.infrastructureEncryption;
     }
 
+    /**
+     * Enforce a minimal Tls version for the server.
+     */
     @InputImport(name="minimalTlsVersion")
     private final @Nullable Input<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
 
@@ -56,6 +75,9 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
         return this.minimalTlsVersion == null ? Input.empty() : this.minimalTlsVersion;
     }
 
+    /**
+     * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
 
@@ -63,6 +85,9 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
     }
 
+    /**
+     * Enable ssl enforcement or not when connect to server.
+     */
     @InputImport(name="sslEnforcement")
     private final @Nullable Input<SslEnforcementEnum> sslEnforcement;
 
@@ -70,6 +95,9 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
         return this.sslEnforcement == null ? Input.empty() : this.sslEnforcement;
     }
 
+    /**
+     * Storage profile of a server.
+     */
     @InputImport(name="storageProfile")
     private final @Nullable Input<StorageProfileArgs> storageProfile;
 
@@ -77,6 +105,9 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
         return this.storageProfile == null ? Input.empty() : this.storageProfile;
     }
 
+    /**
+     * Server version.
+     */
     @InputImport(name="version")
     private final @Nullable Input<Either<String,ServerVersion>> version;
 

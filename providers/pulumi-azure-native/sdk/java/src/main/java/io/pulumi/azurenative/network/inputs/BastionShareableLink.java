@@ -8,10 +8,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * Bastion Shareable Link.
+ */
 public final class BastionShareableLink extends io.pulumi.resources.InvokeArgs {
 
     public static final BastionShareableLink Empty = new BastionShareableLink();
 
+    /**
+     * Reference of the virtual machine resource.
+     */
     @InputImport(name="vm", required=true)
     private final VM vm;
 

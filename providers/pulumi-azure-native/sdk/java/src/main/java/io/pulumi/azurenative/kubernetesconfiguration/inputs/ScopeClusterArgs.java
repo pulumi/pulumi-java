@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies that the scope of the extensionInstance is Cluster
+ */
 public final class ScopeClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScopeClusterArgs Empty = new ScopeClusterArgs();
 
+    /**
+     * Namespace where the extension Release must be placed, for a Cluster scoped extensionInstance.  If this namespace does not exist, it will be created
+     */
     @InputImport(name="releaseNamespace")
     private final @Nullable Input<String> releaseNamespace;
 

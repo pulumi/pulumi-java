@@ -10,10 +10,16 @@ import io.pulumi.googlenative.privateca_v1.inputs.X509ParametersResponse;
 import java.util.Objects;
 
 
+/**
+ * A CertificateConfig describes an X.509 certificate or CSR that is to be created, as an alternative to using ASN.1.
+ */
 public final class CertificateConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CertificateConfigResponse Empty = new CertificateConfigResponse();
 
+    /**
+     * Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.
+     */
     @InputImport(name="publicKey", required=true)
     private final PublicKeyResponse publicKey;
 
@@ -21,6 +27,9 @@ public final class CertificateConfigResponse extends io.pulumi.resources.InvokeA
         return this.publicKey;
     }
 
+    /**
+     * Specifies some of the values in a certificate that are related to the subject.
+     */
     @InputImport(name="subjectConfig", required=true)
     private final SubjectConfigResponse subjectConfig;
 
@@ -28,6 +37,9 @@ public final class CertificateConfigResponse extends io.pulumi.resources.InvokeA
         return this.subjectConfig;
     }
 
+    /**
+     * Describes how some of the technical X.509 fields in a certificate should be populated.
+     */
     @InputImport(name="x509Config", required=true)
     private final X509ParametersResponse x509Config;
 

@@ -8,15 +8,42 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The name of the action for the delivery rule.
+ */
     @EnumType
     public enum DeliveryRuleAction {
+/**
+ * 
+ */
         CacheExpiration("CacheExpiration"),
+/**
+ * 
+ */
         CacheKeyQueryString("CacheKeyQueryString"),
+/**
+ * 
+ */
         ModifyRequestHeader("ModifyRequestHeader"),
+/**
+ * 
+ */
         ModifyResponseHeader("ModifyResponseHeader"),
+/**
+ * 
+ */
         UrlRedirect("UrlRedirect"),
+/**
+ * 
+ */
         UrlRewrite("UrlRewrite"),
+/**
+ * 
+ */
         UrlSigning("UrlSigning"),
+/**
+ * 
+ */
         OriginGroupOverride("OriginGroupOverride");
 
         private final String value;

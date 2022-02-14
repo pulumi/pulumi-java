@@ -8,10 +8,16 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Configuration for client certificates on the cluster.
+ */
 public final class ClientCertificateConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClientCertificateConfigResponse Empty = new ClientCertificateConfigResponse();
 
+    /**
+     * Issue a client certificate.
+     */
     @InputImport(name="issueClientCertificate", required=true)
     private final Boolean issueClientCertificate;
 

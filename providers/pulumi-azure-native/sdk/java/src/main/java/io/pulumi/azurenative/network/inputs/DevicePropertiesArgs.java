@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * List of properties of the device.
+ */
 public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DevicePropertiesArgs Empty = new DevicePropertiesArgs();
 
+    /**
+     * Model of the device.
+     */
     @InputImport(name="deviceModel")
     private final @Nullable Input<String> deviceModel;
 
@@ -22,6 +28,9 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
         return this.deviceModel == null ? Input.empty() : this.deviceModel;
     }
 
+    /**
+     * Name of the device Vendor.
+     */
     @InputImport(name="deviceVendor")
     private final @Nullable Input<String> deviceVendor;
 
@@ -29,6 +38,9 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
         return this.deviceVendor == null ? Input.empty() : this.deviceVendor;
     }
 
+    /**
+     * Link speed.
+     */
     @InputImport(name="linkSpeedInMbps")
     private final @Nullable Input<Integer> linkSpeedInMbps;
 

@@ -13,12 +13,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MoveResourceDependencyResponse {
+/**
+ * Defines the properties for automatic resolution.
+ */
     private final @Nullable AutomaticResolutionPropertiesResponse automaticResolution;
+/**
+ * Defines the dependency type.
+ */
     private final @Nullable String dependencyType;
+/**
+ * Gets the source ARM ID of the dependent resource.
+ */
     private final @Nullable String id;
+/**
+ * Gets or sets a value indicating whether the dependency is optional.
+ */
     private final @Nullable String isOptional;
+/**
+ * Defines the properties for manual resolution.
+ */
     private final @Nullable ManualResolutionPropertiesResponse manualResolution;
+/**
+ * Gets the dependency resolution status.
+ */
     private final @Nullable String resolutionStatus;
+/**
+ * Defines the resolution type.
+ */
     private final @Nullable String resolutionType;
 
     @OutputCustomType.Constructor({"automaticResolution","dependencyType","id","isOptional","manualResolution","resolutionStatus","resolutionType"})
@@ -39,24 +60,45 @@ public final class MoveResourceDependencyResponse {
         this.resolutionType = resolutionType;
     }
 
+/**
+ * Defines the properties for automatic resolution.
+ */
     public Optional<AutomaticResolutionPropertiesResponse> getAutomaticResolution() {
         return Optional.ofNullable(this.automaticResolution);
     }
+/**
+ * Defines the dependency type.
+ */
     public Optional<String> getDependencyType() {
         return Optional.ofNullable(this.dependencyType);
     }
+/**
+ * Gets the source ARM ID of the dependent resource.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * Gets or sets a value indicating whether the dependency is optional.
+ */
     public Optional<String> getIsOptional() {
         return Optional.ofNullable(this.isOptional);
     }
+/**
+ * Defines the properties for manual resolution.
+ */
     public Optional<ManualResolutionPropertiesResponse> getManualResolution() {
         return Optional.ofNullable(this.manualResolution);
     }
+/**
+ * Gets the dependency resolution status.
+ */
     public Optional<String> getResolutionStatus() {
         return Optional.ofNullable(this.resolutionStatus);
     }
+/**
+ * Defines the resolution type.
+ */
     public Optional<String> getResolutionType() {
         return Optional.ofNullable(this.resolutionType);
     }

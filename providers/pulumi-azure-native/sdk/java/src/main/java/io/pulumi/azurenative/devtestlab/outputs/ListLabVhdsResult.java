@@ -13,7 +13,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListLabVhdsResult {
+/**
+ * Link for next set of results.
+ */
     private final @Nullable String nextLink;
+/**
+ * Results of the list operation.
+ */
     private final @Nullable List<LabVhdResponse> value;
 
     @OutputCustomType.Constructor({"nextLink","value"})
@@ -24,9 +30,15 @@ public final class ListLabVhdsResult {
         this.value = value;
     }
 
+/**
+ * Link for next set of results.
+ */
     public Optional<String> getNextLink() {
         return Optional.ofNullable(this.nextLink);
     }
+/**
+ * Results of the list operation.
+ */
     public List<LabVhdResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

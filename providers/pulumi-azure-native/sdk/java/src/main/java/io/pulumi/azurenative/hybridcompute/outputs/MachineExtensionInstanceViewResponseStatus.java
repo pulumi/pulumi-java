@@ -9,10 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MachineExtensionInstanceViewResponseStatus {
+/**
+ * The status code.
+ */
     private final String code;
+/**
+ * The short localizable label for the status.
+ */
     private final String displayStatus;
+/**
+ * The level code.
+ */
     private final String level;
+/**
+ * The detailed status message, including for alerts and error messages.
+ */
     private final String message;
+/**
+ * The time of the status.
+ */
     private final String time;
 
     @OutputCustomType.Constructor({"code","displayStatus","level","message","time"})
@@ -29,18 +44,33 @@ public final class MachineExtensionInstanceViewResponseStatus {
         this.time = Objects.requireNonNull(time);
     }
 
+/**
+ * The status code.
+ */
     public String getCode() {
         return this.code;
     }
+/**
+ * The short localizable label for the status.
+ */
     public String getDisplayStatus() {
         return this.displayStatus;
     }
+/**
+ * The level code.
+ */
     public String getLevel() {
         return this.level;
     }
+/**
+ * The detailed status message, including for alerts and error messages.
+ */
     public String getMessage() {
         return this.message;
     }
+/**
+ * The time of the status.
+ */
     public String getTime() {
         return this.time;
     }

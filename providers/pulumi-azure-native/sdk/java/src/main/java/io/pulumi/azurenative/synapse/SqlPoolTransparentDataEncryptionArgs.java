@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlPoolTransparentDataEncryptionArgs Empty = new SqlPoolTransparentDataEncryptionArgs();
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -23,6 +29,9 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
         return this.resourceGroupName;
     }
 
+    /**
+     * SQL pool name
+     */
     @InputImport(name="sqlPoolName", required=true)
     private final Input<String> sqlPoolName;
 
@@ -30,6 +39,9 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
         return this.sqlPoolName;
     }
 
+    /**
+     * The status of the database transparent data encryption.
+     */
     @InputImport(name="status")
     private final @Nullable Input<Either<String,TransparentDataEncryptionStatus>> status;
 
@@ -37,6 +49,9 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * The name of the transparent data encryption configuration.
+     */
     @InputImport(name="transparentDataEncryptionName")
     private final @Nullable Input<String> transparentDataEncryptionName;
 
@@ -44,6 +59,9 @@ public final class SqlPoolTransparentDataEncryptionArgs extends io.pulumi.resour
         return this.transparentDataEncryptionName == null ? Input.empty() : this.transparentDataEncryptionName;
     }
 
+    /**
+     * The name of the workspace
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

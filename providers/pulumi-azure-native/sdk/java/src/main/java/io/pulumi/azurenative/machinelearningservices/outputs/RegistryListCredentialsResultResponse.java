@@ -12,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RegistryListCredentialsResultResponse {
+/**
+ * 
+ */
     private final String location;
+/**
+ * 
+ */
     private final @Nullable List<PasswordResponse> passwords;
+/**
+ * 
+ */
     private final String username;
 
     @OutputCustomType.Constructor({"location","passwords","username"})
@@ -26,12 +35,21 @@ public final class RegistryListCredentialsResultResponse {
         this.username = Objects.requireNonNull(username);
     }
 
+/**
+ * 
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * 
+ */
     public List<PasswordResponse> getPasswords() {
         return this.passwords == null ? List.of() : this.passwords;
     }
+/**
+ * 
+ */
     public String getUsername() {
         return this.username;
     }

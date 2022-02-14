@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TypedErrorInfoResponse {
+/**
+ * 
+ */
     private final Object info;
+/**
+ * 
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"info","type"})
@@ -21,9 +27,15 @@ public final class TypedErrorInfoResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * 
+ */
     public Object getInfo() {
         return this.info;
     }
+/**
+ * 
+ */
     public String getType() {
         return this.type;
     }

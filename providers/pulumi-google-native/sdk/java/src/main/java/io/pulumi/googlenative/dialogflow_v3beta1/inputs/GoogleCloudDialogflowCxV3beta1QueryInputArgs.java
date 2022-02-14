@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents the query input. It can contain one of: 1. A conversational query in the form of text. 2. An intent query that specifies which intent to trigger. 3. Natural language speech audio to be processed. 4. An event to be triggered. 
+ */
 public final class GoogleCloudDialogflowCxV3beta1QueryInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1QueryInputArgs Empty = new GoogleCloudDialogflowCxV3beta1QueryInputArgs();
 
+    /**
+     * The natural language speech audio to be processed.
+     */
     @InputImport(name="audio")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1AudioInputArgs> audio;
 
@@ -26,6 +32,9 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputArgs extends io.pulum
         return this.audio == null ? Input.empty() : this.audio;
     }
 
+    /**
+     * The DTMF event to be handled.
+     */
     @InputImport(name="dtmf")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1DtmfInputArgs> dtmf;
 
@@ -33,6 +42,9 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputArgs extends io.pulum
         return this.dtmf == null ? Input.empty() : this.dtmf;
     }
 
+    /**
+     * The event to be triggered.
+     */
     @InputImport(name="event")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1EventInputArgs> event;
 
@@ -40,6 +52,9 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputArgs extends io.pulum
         return this.event == null ? Input.empty() : this.event;
     }
 
+    /**
+     * The intent to be triggered.
+     */
     @InputImport(name="intent")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1IntentInputArgs> intent;
 
@@ -47,6 +62,9 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputArgs extends io.pulum
         return this.intent == null ? Input.empty() : this.intent;
     }
 
+    /**
+     * The language of the input. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.
+     */
     @InputImport(name="languageCode", required=true)
     private final Input<String> languageCode;
 
@@ -54,6 +72,9 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputArgs extends io.pulum
         return this.languageCode;
     }
 
+    /**
+     * The natural language text to be processed.
+     */
     @InputImport(name="text")
     private final @Nullable Input<GoogleCloudDialogflowCxV3beta1TextInputArgs> text;
 

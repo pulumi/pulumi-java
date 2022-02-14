@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BoundingPolyResponse {
+/**
+ * The bounding polygon normalized vertices.
+ */
     private final List<NormalizedVertexResponse> normalizedVertices;
+/**
+ * The bounding polygon vertices.
+ */
     private final List<VertexResponse> vertices;
 
     @OutputCustomType.Constructor({"normalizedVertices","vertices"})
@@ -22,9 +28,15 @@ public final class BoundingPolyResponse {
         this.vertices = Objects.requireNonNull(vertices);
     }
 
+/**
+ * The bounding polygon normalized vertices.
+ */
     public List<NormalizedVertexResponse> getNormalizedVertices() {
         return this.normalizedVertices;
     }
+/**
+ * The bounding polygon vertices.
+ */
     public List<VertexResponse> getVertices() {
         return this.vertices;
     }

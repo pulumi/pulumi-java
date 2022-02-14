@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SslCertArgs Empty = new SslCertArgs();
 
+    /**
+     * User supplied name. Must be a distinct name from the other certificates for this instance.
+     */
     @InputImport(name="commonName")
     private final @Nullable Input<String> commonName;
 
@@ -21,6 +27,9 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
         return this.commonName == null ? Input.empty() : this.commonName;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="instance", required=true)
     private final Input<String> instance;
 
@@ -28,6 +37,9 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
         return this.instance;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

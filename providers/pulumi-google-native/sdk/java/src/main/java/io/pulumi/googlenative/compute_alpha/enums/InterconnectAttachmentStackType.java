@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The stack type for this interconnect attachment to identify whether the IPv6 feature is enabled or not. If not specified, IPV4_ONLY will be used. This field can be both set at interconnect attachments creation and update interconnect attachment operations.
+ */
     @EnumType
     public enum InterconnectAttachmentStackType {
+/**
+ * The interconnect attachment can have both IPv4 and IPv6 addresses.
+ */
         Ipv4Ipv6("IPV4_IPV6"),
+/**
+ * The interconnect attachment will only be assigned IPv4 addresses.
+ */
         Ipv4Only("IPV4_ONLY");
 
         private final String value;

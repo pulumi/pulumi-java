@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RollbackConfig {
+/**
+ * The revision to rollback to. If set to 0, rollback to the last revision.
+ */
     private final @Nullable Integer revision;
 
     @OutputCustomType.Constructor({"revision"})
@@ -18,6 +21,9 @@ public final class RollbackConfig {
         this.revision = revision;
     }
 
+/**
+ * The revision to rollback to. If set to 0, rollback to the last revision.
+ */
     public Optional<Integer> getRevision() {
         return Optional.ofNullable(this.revision);
     }

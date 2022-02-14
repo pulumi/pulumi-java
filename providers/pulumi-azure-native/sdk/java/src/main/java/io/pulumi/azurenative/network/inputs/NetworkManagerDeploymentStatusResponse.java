@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network Manager Deployment Status.
+ */
 public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkManagerDeploymentStatusResponse Empty = new NetworkManagerDeploymentStatusResponse();
 
+    /**
+     * Commit Time.
+     */
     @InputImport(name="commitTime")
     private final @Nullable String commitTime;
 
@@ -22,6 +28,9 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
         return this.commitTime == null ? Optional.empty() : Optional.ofNullable(this.commitTime);
     }
 
+    /**
+     * List of configuration ids.
+     */
     @InputImport(name="configurationIds")
     private final @Nullable List<String> configurationIds;
 
@@ -29,6 +38,9 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
         return this.configurationIds == null ? List.of() : this.configurationIds;
     }
 
+    /**
+     * Deployment Status.
+     */
     @InputImport(name="deploymentStatus")
     private final @Nullable String deploymentStatus;
 
@@ -36,6 +48,9 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
         return this.deploymentStatus == null ? Optional.empty() : Optional.ofNullable(this.deploymentStatus);
     }
 
+    /**
+     * Configuration Deployment Type.
+     */
     @InputImport(name="deploymentType")
     private final @Nullable String deploymentType;
 
@@ -43,6 +58,9 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
         return this.deploymentType == null ? Optional.empty() : Optional.ofNullable(this.deploymentType);
     }
 
+    /**
+     * Error Message.
+     */
     @InputImport(name="errorMessage")
     private final @Nullable String errorMessage;
 
@@ -50,6 +68,9 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
         return this.errorMessage == null ? Optional.empty() : Optional.ofNullable(this.errorMessage);
     }
 
+    /**
+     * Region Name.
+     */
     @InputImport(name="region")
     private final @Nullable String region;
 

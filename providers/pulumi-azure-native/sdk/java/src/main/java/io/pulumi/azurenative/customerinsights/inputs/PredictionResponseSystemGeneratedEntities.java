@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * System generated entities.
+ */
 public final class PredictionResponseSystemGeneratedEntities extends io.pulumi.resources.InvokeArgs {
 
     public static final PredictionResponseSystemGeneratedEntities Empty = new PredictionResponseSystemGeneratedEntities();
 
+    /**
+     * Generated interaction types.
+     */
     @InputImport(name="generatedInteractionTypes")
     private final @Nullable List<String> generatedInteractionTypes;
 
@@ -23,6 +29,9 @@ public final class PredictionResponseSystemGeneratedEntities extends io.pulumi.r
         return this.generatedInteractionTypes == null ? List.of() : this.generatedInteractionTypes;
     }
 
+    /**
+     * Generated KPIs.
+     */
     @InputImport(name="generatedKpis")
     private final @Nullable Map<String,String> generatedKpis;
 
@@ -30,6 +39,9 @@ public final class PredictionResponseSystemGeneratedEntities extends io.pulumi.r
         return this.generatedKpis == null ? Map.of() : this.generatedKpis;
     }
 
+    /**
+     * Generated links.
+     */
     @InputImport(name="generatedLinks")
     private final @Nullable List<String> generatedLinks;
 

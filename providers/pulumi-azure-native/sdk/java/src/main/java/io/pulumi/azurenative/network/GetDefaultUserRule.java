@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDefaultUserRule {
+/**
+ * Network security default user rule.
+API Version: 2021-02-01-preview.
+ *
+ * Network security default user rule.
+ */
     public static CompletableFuture<GetDefaultUserRuleResult> invokeAsync(GetDefaultUserRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getDefaultUserRule", TypeShape.of(GetDefaultUserRuleResult.class), args == null ? GetDefaultUserRuleArgs.Empty : args, Utilities.withVersion(options));
     }

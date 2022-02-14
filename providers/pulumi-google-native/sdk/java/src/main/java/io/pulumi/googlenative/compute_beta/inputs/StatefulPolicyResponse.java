@@ -8,10 +8,16 @@ import io.pulumi.googlenative.compute_beta.inputs.StatefulPolicyPreservedStateRe
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class StatefulPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StatefulPolicyResponse Empty = new StatefulPolicyResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="preservedState", required=true)
     private final StatefulPolicyPreservedStateResponse preservedState;
 

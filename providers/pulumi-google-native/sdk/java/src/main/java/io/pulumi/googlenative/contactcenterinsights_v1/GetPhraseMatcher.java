@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPhraseMatcher {
+/**
+ * Gets a phrase matcher.
+ */
     public static CompletableFuture<GetPhraseMatcherResult> invokeAsync(GetPhraseMatcherArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:contactcenterinsights/v1:getPhraseMatcher", TypeShape.of(GetPhraseMatcherResult.class), args == null ? GetPhraseMatcherArgs.Empty : args, Utilities.withVersion(options));
     }

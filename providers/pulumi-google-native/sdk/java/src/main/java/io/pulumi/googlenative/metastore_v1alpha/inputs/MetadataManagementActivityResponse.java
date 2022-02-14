@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The metadata management activities of the metastore service.
+ */
 public final class MetadataManagementActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MetadataManagementActivityResponse Empty = new MetadataManagementActivityResponse();
 
+    /**
+     * The latest metadata exports of the metastore service.
+     */
     @InputImport(name="metadataExports", required=true)
     private final List<MetadataExportResponse> metadataExports;
 
@@ -21,6 +27,9 @@ public final class MetadataManagementActivityResponse extends io.pulumi.resource
         return this.metadataExports;
     }
 
+    /**
+     * The latest restores of the metastore service.
+     */
     @InputImport(name="restores", required=true)
     private final List<RestoreResponse> restores;
 

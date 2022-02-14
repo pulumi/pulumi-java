@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configures the Play Right in the PlayReady license.
+ */
 public final class ContentKeyPolicyPlayReadyPlayRightResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContentKeyPolicyPlayReadyPlayRightResponse Empty = new ContentKeyPolicyPlayReadyPlayRightResponse();
 
+    /**
+     * Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.
+     */
     @InputImport(name="agcAndColorStripeRestriction")
     private final @Nullable Integer agcAndColorStripeRestriction;
 
@@ -24,6 +30,9 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends io.pulumi.
         return this.agcAndColorStripeRestriction == null ? Optional.empty() : Optional.ofNullable(this.agcAndColorStripeRestriction);
     }
 
+    /**
+     * Configures Unknown output handling settings of the license.
+     */
     @InputImport(name="allowPassingVideoContentToUnknownOutput", required=true)
     private final String allowPassingVideoContentToUnknownOutput;
 
@@ -31,6 +40,9 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends io.pulumi.
         return this.allowPassingVideoContentToUnknownOutput;
     }
 
+    /**
+     * Specifies the output protection level for compressed digital audio.
+     */
     @InputImport(name="analogVideoOpl")
     private final @Nullable Integer analogVideoOpl;
 
@@ -38,6 +50,9 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends io.pulumi.
         return this.analogVideoOpl == null ? Optional.empty() : Optional.ofNullable(this.analogVideoOpl);
     }
 
+    /**
+     * Specifies the output protection level for compressed digital audio.
+     */
     @InputImport(name="compressedDigitalAudioOpl")
     private final @Nullable Integer compressedDigitalAudioOpl;
 
@@ -45,6 +60,9 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends io.pulumi.
         return this.compressedDigitalAudioOpl == null ? Optional.empty() : Optional.ofNullable(this.compressedDigitalAudioOpl);
     }
 
+    /**
+     * Specifies the output protection level for compressed digital video.
+     */
     @InputImport(name="compressedDigitalVideoOpl")
     private final @Nullable Integer compressedDigitalVideoOpl;
 
@@ -52,6 +70,9 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends io.pulumi.
         return this.compressedDigitalVideoOpl == null ? Optional.empty() : Optional.ofNullable(this.compressedDigitalVideoOpl);
     }
 
+    /**
+     * Enables the Image Constraint For Analog Component Video Restriction in the license.
+     */
     @InputImport(name="digitalVideoOnlyContentRestriction", required=true)
     private final Boolean digitalVideoOnlyContentRestriction;
 
@@ -59,6 +80,9 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends io.pulumi.
         return this.digitalVideoOnlyContentRestriction;
     }
 
+    /**
+     * Configures the Explicit Analog Television Output Restriction in the license. Configuration data must be between 0 and 3 inclusive.
+     */
     @InputImport(name="explicitAnalogTelevisionOutputRestriction")
     private final @Nullable ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse explicitAnalogTelevisionOutputRestriction;
 
@@ -66,6 +90,9 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends io.pulumi.
         return this.explicitAnalogTelevisionOutputRestriction == null ? Optional.empty() : Optional.ofNullable(this.explicitAnalogTelevisionOutputRestriction);
     }
 
+    /**
+     * The amount of time that the license is valid after the license is first used to play content.
+     */
     @InputImport(name="firstPlayExpiration")
     private final @Nullable String firstPlayExpiration;
 
@@ -73,6 +100,9 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends io.pulumi.
         return this.firstPlayExpiration == null ? Optional.empty() : Optional.ofNullable(this.firstPlayExpiration);
     }
 
+    /**
+     * Enables the Image Constraint For Analog Component Video Restriction in the license.
+     */
     @InputImport(name="imageConstraintForAnalogComponentVideoRestriction", required=true)
     private final Boolean imageConstraintForAnalogComponentVideoRestriction;
 
@@ -80,6 +110,9 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends io.pulumi.
         return this.imageConstraintForAnalogComponentVideoRestriction;
     }
 
+    /**
+     * Enables the Image Constraint For Analog Component Video Restriction in the license.
+     */
     @InputImport(name="imageConstraintForAnalogComputerMonitorRestriction", required=true)
     private final Boolean imageConstraintForAnalogComputerMonitorRestriction;
 
@@ -87,6 +120,9 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends io.pulumi.
         return this.imageConstraintForAnalogComputerMonitorRestriction;
     }
 
+    /**
+     * Configures the Serial Copy Management System (SCMS) in the license. Must be between 0 and 3 inclusive.
+     */
     @InputImport(name="scmsRestriction")
     private final @Nullable Integer scmsRestriction;
 
@@ -94,6 +130,9 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends io.pulumi.
         return this.scmsRestriction == null ? Optional.empty() : Optional.ofNullable(this.scmsRestriction);
     }
 
+    /**
+     * Specifies the output protection level for uncompressed digital audio.
+     */
     @InputImport(name="uncompressedDigitalAudioOpl")
     private final @Nullable Integer uncompressedDigitalAudioOpl;
 
@@ -101,6 +140,9 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse extends io.pulumi.
         return this.uncompressedDigitalAudioOpl == null ? Optional.empty() : Optional.ofNullable(this.uncompressedDigitalAudioOpl);
     }
 
+    /**
+     * Specifies the output protection level for uncompressed digital video.
+     */
     @InputImport(name="uncompressedDigitalVideoOpl")
     private final @Nullable Integer uncompressedDigitalVideoOpl;
 

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Extended Properties for Azure IaasVM Backup.
+ */
 public final class ExtendedPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExtendedPropertiesResponse Empty = new ExtendedPropertiesResponse();
 
+    /**
+     * Extended Properties for Disk Exclusion.
+     */
     @InputImport(name="diskExclusionProperties")
     private final @Nullable DiskExclusionPropertiesResponse diskExclusionProperties;
 

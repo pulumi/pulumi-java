@@ -17,10 +17,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * DatabricksNotebook activity.
+ */
 public final class DatabricksNotebookActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatabricksNotebookActivityResponse Empty = new DatabricksNotebookActivityResponse();
 
+    /**
+     * Base parameters to be used for each run of this job.If the notebook takes a parameter that is not specified, the default value from the notebook will be used.
+     */
     @InputImport(name="baseParameters")
     private final @Nullable Map<String,Object> baseParameters;
 
@@ -28,6 +34,9 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
         return this.baseParameters == null ? Map.of() : this.baseParameters;
     }
 
+    /**
+     * Activity depends on condition.
+     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -35,6 +44,9 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -42,6 +54,9 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * A list of libraries to be installed on the cluster that will execute the job.
+     */
     @InputImport(name="libraries")
     private final @Nullable List<Map<String,Object>> libraries;
 
@@ -49,6 +64,9 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
         return this.libraries == null ? List.of() : this.libraries;
     }
 
+    /**
+     * Linked service reference.
+     */
     @InputImport(name="linkedServiceName")
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
@@ -56,6 +74,9 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
+    /**
+     * Activity name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -63,6 +84,9 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
         return this.name;
     }
 
+    /**
+     * The absolute path of the notebook to be run in the Databricks Workspace. This path must begin with a slash. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="notebookPath", required=true)
     private final Object notebookPath;
 
@@ -70,6 +94,9 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
         return this.notebookPath;
     }
 
+    /**
+     * Activity policy.
+     */
     @InputImport(name="policy")
     private final @Nullable ActivityPolicyResponse policy;
 
@@ -77,6 +104,10 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
+    /**
+     * Type of activity.
+Expected value is 'DatabricksNotebook'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -84,6 +115,9 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

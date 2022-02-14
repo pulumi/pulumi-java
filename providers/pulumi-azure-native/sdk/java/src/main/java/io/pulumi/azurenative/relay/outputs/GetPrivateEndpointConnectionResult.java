@@ -14,13 +14,37 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetPrivateEndpointConnectionResult {
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Resource location.
+ */
     private final String location;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * Properties of the private endpoint object.
+ */
     private final @Nullable PrivateEndpointResponse privateEndpoint;
+/**
+ * Approval state of the private link connection.
+ */
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+/**
+ * Provisioning state of the private endpoint connection.
+ */
     private final String provisioningState;
+/**
+ * Resource tags.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","location","name","privateEndpoint","privateLinkServiceConnectionState","provisioningState","tags","type"})
@@ -43,27 +67,51 @@ public final class GetPrivateEndpointConnectionResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource location.
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Properties of the private endpoint object.
+ */
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
+/**
+ * Approval state of the private link connection.
+ */
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
+/**
+ * Provisioning state of the private endpoint connection.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Resource tags.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

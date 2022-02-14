@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details of the schedule the pipeline runs on.
+ */
 public final class GoogleCloudDatapipelinesV1ScheduleSpecArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatapipelinesV1ScheduleSpecArgs Empty = new GoogleCloudDatapipelinesV1ScheduleSpecArgs();
 
+    /**
+     * Unix-cron format of the schedule. This information is retrieved from the linked Cloud Scheduler.
+     */
     @InputImport(name="schedule")
     private final @Nullable Input<String> schedule;
 
@@ -21,6 +27,9 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecArgs extends io.pulumi.
         return this.schedule == null ? Input.empty() : this.schedule;
     }
 
+    /**
+     * Timezone ID. This matches the timezone IDs used by the Cloud Scheduler API. If empty, UTC time is assumed.
+     */
     @InputImport(name="timeZone")
     private final @Nullable Input<String> timeZone;
 

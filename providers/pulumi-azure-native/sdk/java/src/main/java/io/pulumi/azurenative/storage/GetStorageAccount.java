@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetStorageAccount {
+/**
+ * The storage account.
+API Version: 2021-02-01.
+ *
+ * The storage account.
+ */
     public static CompletableFuture<GetStorageAccountResult> invokeAsync(GetStorageAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getStorageAccount", TypeShape.of(GetStorageAccountResult.class), args == null ? GetStorageAccountArgs.Empty : args, Utilities.withVersion(options));
     }

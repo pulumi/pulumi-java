@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The details of the user assigned managed identity used by the Video Analyzer resource.
+ */
 public final class UserAssignedManagedIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UserAssignedManagedIdentityResponse Empty = new UserAssignedManagedIdentityResponse();
 
+    /**
+     * The client ID.
+     */
     @InputImport(name="clientId", required=true)
     private final String clientId;
 
@@ -19,6 +25,9 @@ public final class UserAssignedManagedIdentityResponse extends io.pulumi.resourc
         return this.clientId;
     }
 
+    /**
+     * The principal ID.
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 

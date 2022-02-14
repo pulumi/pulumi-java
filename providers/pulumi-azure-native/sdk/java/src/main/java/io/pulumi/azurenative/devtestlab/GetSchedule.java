@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSchedule {
+/**
+ * A schedule.
+API Version: 2018-09-15.
+ *
+ * A schedule.
+ */
     public static CompletableFuture<GetScheduleResult> invokeAsync(GetScheduleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:devtestlab:getSchedule", TypeShape.of(GetScheduleResult.class), args == null ? GetScheduleArgs.Empty : args, Utilities.withVersion(options));
     }

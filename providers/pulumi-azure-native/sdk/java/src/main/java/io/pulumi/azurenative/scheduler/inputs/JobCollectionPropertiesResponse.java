@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class JobCollectionPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JobCollectionPropertiesResponse Empty = new JobCollectionPropertiesResponse();
 
+    /**
+     * Gets or sets the job collection quota.
+     */
     @InputImport(name="quota")
     private final @Nullable JobCollectionQuotaResponse quota;
 
@@ -23,6 +29,9 @@ public final class JobCollectionPropertiesResponse extends io.pulumi.resources.I
         return this.quota == null ? Optional.empty() : Optional.ofNullable(this.quota);
     }
 
+    /**
+     * Gets or sets the SKU.
+     */
     @InputImport(name="sku")
     private final @Nullable SkuResponse sku;
 
@@ -30,6 +39,9 @@ public final class JobCollectionPropertiesResponse extends io.pulumi.resources.I
         return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
     }
 
+    /**
+     * Gets or sets the state.
+     */
     @InputImport(name="state")
     private final @Nullable String state;
 

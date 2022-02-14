@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Recurrence Interval
+ */
     @EnumType
     public enum RecurrenceInterval {
+/**
+ * 
+ */
         Hour("Hour"),
+/**
+ * 
+ */
         Day("Day");
 
         private final String value;

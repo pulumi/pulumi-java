@@ -11,9 +11,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AdditionalUnattendContentResponse {
+/**
+ * The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.
+ */
     private final @Nullable String componentName;
+/**
+ * Specifies the XML formatted content that is added to the unattend.xml file for the specified path and component. The XML must be less than 4KB and must include the root element for the setting or feature that is being inserted.
+ */
     private final @Nullable String content;
+/**
+ * The pass name. Currently, the only allowable value is OobeSystem.
+ */
     private final @Nullable String passName;
+/**
+ * Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon.
+ */
     private final @Nullable String settingName;
 
     @OutputCustomType.Constructor({"componentName","content","passName","settingName"})
@@ -28,15 +40,27 @@ public final class AdditionalUnattendContentResponse {
         this.settingName = settingName;
     }
 
+/**
+ * The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.
+ */
     public Optional<String> getComponentName() {
         return Optional.ofNullable(this.componentName);
     }
+/**
+ * Specifies the XML formatted content that is added to the unattend.xml file for the specified path and component. The XML must be less than 4KB and must include the root element for the setting or feature that is being inserted.
+ */
     public Optional<String> getContent() {
         return Optional.ofNullable(this.content);
     }
+/**
+ * The pass name. Currently, the only allowable value is OobeSystem.
+ */
     public Optional<String> getPassName() {
         return Optional.ofNullable(this.passName);
     }
+/**
+ * Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon.
+ */
     public Optional<String> getSettingName() {
         return Optional.ofNullable(this.settingName);
     }

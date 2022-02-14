@@ -8,13 +8,34 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The datatype for which the indexing behavior is applied to.
+ */
     @EnumType
     public enum DataType {
+/**
+ * 
+ */
         String("String"),
+/**
+ * 
+ */
         Number("Number"),
+/**
+ * 
+ */
         Point("Point"),
+/**
+ * 
+ */
         Polygon("Polygon"),
+/**
+ * 
+ */
         LineString("LineString"),
+/**
+ * 
+ */
         MultiPolygon("MultiPolygon");
 
         private final String value;

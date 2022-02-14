@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A custom alert rule that checks if a value (depends on the custom alert type) is allowed.
+ */
 public final class AllowlistCustomAlertRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AllowlistCustomAlertRuleResponse Empty = new AllowlistCustomAlertRuleResponse();
 
+    /**
+     * The values to allow. The format of the values depends on the rule type.
+     */
     @InputImport(name="allowlistValues", required=true)
     private final List<String> allowlistValues;
 
@@ -21,6 +27,9 @@ public final class AllowlistCustomAlertRuleResponse extends io.pulumi.resources.
         return this.allowlistValues;
     }
 
+    /**
+     * The description of the custom alert.
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -28,6 +37,9 @@ public final class AllowlistCustomAlertRuleResponse extends io.pulumi.resources.
         return this.description;
     }
 
+    /**
+     * The display name of the custom alert.
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -35,6 +47,9 @@ public final class AllowlistCustomAlertRuleResponse extends io.pulumi.resources.
         return this.displayName;
     }
 
+    /**
+     * Status of the custom alert.
+     */
     @InputImport(name="isEnabled", required=true)
     private final Boolean isEnabled;
 
@@ -42,6 +57,10 @@ public final class AllowlistCustomAlertRuleResponse extends io.pulumi.resources.
         return this.isEnabled;
     }
 
+    /**
+     * The type of the custom alert rule.
+Expected value is 'AllowlistCustomAlertRule'.
+     */
     @InputImport(name="ruleType", required=true)
     private final String ruleType;
 
@@ -49,6 +68,9 @@ public final class AllowlistCustomAlertRuleResponse extends io.pulumi.resources.
         return this.ruleType;
     }
 
+    /**
+     * The value type of the items in the list.
+     */
     @InputImport(name="valueType", required=true)
     private final String valueType;
 

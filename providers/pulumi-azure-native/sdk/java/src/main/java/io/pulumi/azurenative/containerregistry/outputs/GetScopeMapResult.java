@@ -13,13 +13,39 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetScopeMapResult {
+/**
+ * The list of scoped permissions for registry artifacts.
+E.g. repositories/repository-name/content/read,
+repositories/repository-name/metadata/write
+ */
     private final List<String> actions;
+/**
+ * The creation date of scope map.
+ */
     private final String creationDate;
+/**
+ * The user friendly description of the scope map.
+ */
     private final @Nullable String description;
+/**
+ * The resource ID.
+ */
     private final String id;
+/**
+ * The name of the resource.
+ */
     private final String name;
+/**
+ * Provisioning state of the resource.
+ */
     private final String provisioningState;
+/**
+ * Metadata pertaining to creation and last modification of the resource.
+ */
     private final SystemDataResponse systemData;
+/**
+ * The type of the resource.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"actions","creationDate","description","id","name","provisioningState","systemData","type"})
@@ -42,27 +68,53 @@ public final class GetScopeMapResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The list of scoped permissions for registry artifacts.
+E.g. repositories/repository-name/content/read,
+repositories/repository-name/metadata/write
+ */
     public List<String> getActions() {
         return this.actions;
     }
+/**
+ * The creation date of scope map.
+ */
     public String getCreationDate() {
         return this.creationDate;
     }
+/**
+ * The user friendly description of the scope map.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * The resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The name of the resource.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Provisioning state of the resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Metadata pertaining to creation and last modification of the resource.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * The type of the resource.
+ */
     public String getType() {
         return this.type;
     }

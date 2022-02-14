@@ -14,18 +14,57 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetInstanceResult {
+/**
+ * The time when the instance was created.
+ */
     private final String createTime;
+/**
+ * The description of the instance (2048 characters or less).
+ */
     private final String description;
+/**
+ * Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
+ */
     private final String etag;
+/**
+ * File system shares on the instance. For this version, only a single file share is supported.
+ */
     private final List<FileShareConfigResponse> fileShares;
+/**
+ * KMS key name used for data encryption.
+ */
     private final String kmsKeyName;
+/**
+ * Resource labels to represent user provided metadata.
+ */
     private final Map<String,String> labels;
+/**
+ * The resource name of the instance, in the format `projects/{project}/locations/{location}/instances/{instance}`.
+ */
     private final String name;
+/**
+ * VPC networks to which the instance is connected. For this version, only a single network is supported.
+ */
     private final List<NetworkConfigResponse> networks;
+/**
+ * Reserved for future use.
+ */
     private final Boolean satisfiesPzs;
+/**
+ * The instance state.
+ */
     private final String state;
+/**
+ * Additional information about the instance state, if available.
+ */
     private final String statusMessage;
+/**
+ * field indicates all the reasons the instance is in "SUSPENDED" state.
+ */
     private final List<String> suspensionReasons;
+/**
+ * The service tier of the instance.
+ */
     private final String tier;
 
     @OutputCustomType.Constructor({"createTime","description","etag","fileShares","kmsKeyName","labels","name","networks","satisfiesPzs","state","statusMessage","suspensionReasons","tier"})
@@ -58,42 +97,81 @@ public final class GetInstanceResult {
         this.tier = Objects.requireNonNull(tier);
     }
 
+/**
+ * The time when the instance was created.
+ */
     public String getCreateTime() {
         return this.createTime;
     }
+/**
+ * The description of the instance (2048 characters or less).
+ */
     public String getDescription() {
         return this.description;
     }
+/**
+ * Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * File system shares on the instance. For this version, only a single file share is supported.
+ */
     public List<FileShareConfigResponse> getFileShares() {
         return this.fileShares;
     }
+/**
+ * KMS key name used for data encryption.
+ */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }
+/**
+ * Resource labels to represent user provided metadata.
+ */
     public Map<String,String> getLabels() {
         return this.labels;
     }
+/**
+ * The resource name of the instance, in the format `projects/{project}/locations/{location}/instances/{instance}`.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * VPC networks to which the instance is connected. For this version, only a single network is supported.
+ */
     public List<NetworkConfigResponse> getNetworks() {
         return this.networks;
     }
+/**
+ * Reserved for future use.
+ */
     public Boolean getSatisfiesPzs() {
         return this.satisfiesPzs;
     }
+/**
+ * The instance state.
+ */
     public String getState() {
         return this.state;
     }
+/**
+ * Additional information about the instance state, if available.
+ */
     public String getStatusMessage() {
         return this.statusMessage;
     }
+/**
+ * field indicates all the reasons the instance is in "SUSPENDED" state.
+ */
     public List<String> getSuspensionReasons() {
         return this.suspensionReasons;
     }
+/**
+ * The service tier of the instance.
+ */
     public String getTier() {
         return this.tier;
     }

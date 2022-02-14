@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a connection monitor test configuration.
+ */
 public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionMonitorTestConfigurationArgs Empty = new ConnectionMonitorTestConfigurationArgs();
 
+    /**
+     * The parameters used to perform test evaluation over HTTP.
+     */
     @InputImport(name="httpConfiguration")
     private final @Nullable Input<ConnectionMonitorHttpConfigurationArgs> httpConfiguration;
 
@@ -29,6 +35,9 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
         return this.httpConfiguration == null ? Input.empty() : this.httpConfiguration;
     }
 
+    /**
+     * The parameters used to perform test evaluation over ICMP.
+     */
     @InputImport(name="icmpConfiguration")
     private final @Nullable Input<ConnectionMonitorIcmpConfigurationArgs> icmpConfiguration;
 
@@ -36,6 +45,9 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
         return this.icmpConfiguration == null ? Input.empty() : this.icmpConfiguration;
     }
 
+    /**
+     * The name of the connection monitor test configuration.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -43,6 +55,9 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
         return this.name;
     }
 
+    /**
+     * The preferred IP version to use in test evaluation. The connection monitor may choose to use a different version depending on other parameters.
+     */
     @InputImport(name="preferredIPVersion")
     private final @Nullable Input<Either<String,PreferredIPVersion>> preferredIPVersion;
 
@@ -50,6 +65,9 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
         return this.preferredIPVersion == null ? Input.empty() : this.preferredIPVersion;
     }
 
+    /**
+     * The protocol to use in test evaluation.
+     */
     @InputImport(name="protocol", required=true)
     private final Input<Either<String,ConnectionMonitorTestConfigurationProtocol>> protocol;
 
@@ -57,6 +75,9 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
         return this.protocol;
     }
 
+    /**
+     * The threshold for declaring a test successful.
+     */
     @InputImport(name="successThreshold")
     private final @Nullable Input<ConnectionMonitorSuccessThresholdArgs> successThreshold;
 
@@ -64,6 +85,9 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
         return this.successThreshold == null ? Input.empty() : this.successThreshold;
     }
 
+    /**
+     * The parameters used to perform test evaluation over TCP.
+     */
     @InputImport(name="tcpConfiguration")
     private final @Nullable Input<ConnectionMonitorTcpConfigurationArgs> tcpConfiguration;
 
@@ -71,6 +95,9 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
         return this.tcpConfiguration == null ? Input.empty() : this.tcpConfiguration;
     }
 
+    /**
+     * The frequency of test evaluation, in seconds.
+     */
     @InputImport(name="testFrequencySec")
     private final @Nullable Input<Integer> testFrequencySec;
 

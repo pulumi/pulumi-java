@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings concerning network injection.
+ */
 public final class PropertiesResponseNetworkInjection extends io.pulumi.resources.InvokeArgs {
 
     public static final PropertiesResponseNetworkInjection Empty = new PropertiesResponseNetworkInjection();
 
+    /**
+     * Network injection configuration
+     */
     @InputImport(name="virtualNetworks")
     private final @Nullable VirtualNetworkPropertiesListResponse virtualNetworks;
 

@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PriorityClassArgs Empty = new PriorityClassArgs();
 
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -24,6 +30,9 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
+    /**
+     * description is an arbitrary string that usually provides guidelines on when this priority class should be used.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -31,6 +40,9 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * globalDefault specifies whether this PriorityClass should be considered as the default priority for pods that do not have any priority class. Only one PriorityClass can be marked as `globalDefault`. However, if more than one PriorityClasses exists with their `globalDefault` field set to true, the smallest value of such global default PriorityClasses will be used as the default priority.
+     */
     @InputImport(name="globalDefault")
     private final @Nullable Input<Boolean> globalDefault;
 
@@ -38,6 +50,9 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
         return this.globalDefault == null ? Input.empty() : this.globalDefault;
     }
 
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -45,6 +60,9 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<ObjectMetaArgs> metadata;
 
@@ -52,6 +70,9 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * PreemptionPolicy is the Policy for preempting pods with lower priority. One of Never, PreemptLowerPriority. Defaults to PreemptLowerPriority if unset. This field is alpha-level and is only honored by servers that enable the NonPreemptingPriority feature.
+     */
     @InputImport(name="preemptionPolicy")
     private final @Nullable Input<String> preemptionPolicy;
 
@@ -59,6 +80,9 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
         return this.preemptionPolicy == null ? Input.empty() : this.preemptionPolicy;
     }
 
+    /**
+     * The value of this priority class. This is the actual priority that pods receive when they have the name of this class in their pod spec.
+     */
     @InputImport(name="value", required=true)
     private final Input<Integer> value;
 

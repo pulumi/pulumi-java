@@ -6,6 +6,9 @@ package io.pulumi.googlenative.cloudidentity_v1.inputs;
 import java.util.Objects;
 
 
+/**
+ * The evaluated state of this restriction.
+ */
 public final class MembershipRoleRestrictionEvaluationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MembershipRoleRestrictionEvaluationArgs Empty = new MembershipRoleRestrictionEvaluationArgs();

@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTagValueIamPolicy {
+/**
+ * Gets the access control policy for a TagValue. The returned policy may be empty if no such policy or resource exists. The `resource` field should be the TagValue's resource name. For example: `tagValues/1234`. The caller must have the `cloudresourcemanager.googleapis.com/tagValues.getIamPolicy` permission on the identified TagValue to get the access control policy.
+ */
     public static CompletableFuture<GetTagValueIamPolicyResult> invokeAsync(GetTagValueIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudresourcemanager/v3:getTagValueIamPolicy", TypeShape.of(GetTagValueIamPolicyResult.class), args == null ? GetTagValueIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

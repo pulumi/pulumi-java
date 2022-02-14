@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateArgs Empty = new CertificateArgs();
 
+    /**
+     * CNAME of the certificate to be issued via free certificate
+     */
     @InputImport(name="canonicalName")
     private final @Nullable Input<String> canonicalName;
 
@@ -23,6 +29,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.canonicalName == null ? Input.empty() : this.canonicalName;
     }
 
+    /**
+     * Method of domain validation for free cert
+     */
     @InputImport(name="domainValidationMethod")
     private final @Nullable Input<String> domainValidationMethod;
 
@@ -30,6 +39,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.domainValidationMethod == null ? Input.empty() : this.domainValidationMethod;
     }
 
+    /**
+     * Host names the certificate applies to.
+     */
     @InputImport(name="hostNames")
     private final @Nullable Input<List<String>> hostNames;
 
@@ -37,6 +49,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostNames == null ? Input.empty() : this.hostNames;
     }
 
+    /**
+     * Key Vault Csm resource Id.
+     */
     @InputImport(name="keyVaultId")
     private final @Nullable Input<String> keyVaultId;
 
@@ -44,6 +59,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyVaultId == null ? Input.empty() : this.keyVaultId;
     }
 
+    /**
+     * Key Vault secret name.
+     */
     @InputImport(name="keyVaultSecretName")
     private final @Nullable Input<String> keyVaultSecretName;
 
@@ -51,6 +69,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyVaultSecretName == null ? Input.empty() : this.keyVaultSecretName;
     }
 
+    /**
+     * Kind of resource.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -58,6 +79,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Resource Location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -65,6 +89,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of the certificate.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -72,6 +99,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Certificate password.
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -79,6 +109,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * Pfx blob.
+     */
     @InputImport(name="pfxBlob")
     private final @Nullable Input<String> pfxBlob;
 
@@ -86,6 +119,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.pfxBlob == null ? Input.empty() : this.pfxBlob;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -93,6 +129,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
+     */
     @InputImport(name="serverFarmId")
     private final @Nullable Input<String> serverFarmId;
 
@@ -100,6 +139,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.serverFarmId == null ? Input.empty() : this.serverFarmId;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

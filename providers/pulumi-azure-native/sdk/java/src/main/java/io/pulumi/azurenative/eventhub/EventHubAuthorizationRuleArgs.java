@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EventHubAuthorizationRuleArgs Empty = new EventHubAuthorizationRuleArgs();
 
+    /**
+     * The authorization rule name.
+     */
     @InputImport(name="authorizationRuleName")
     private final @Nullable Input<String> authorizationRuleName;
 
@@ -24,6 +30,9 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
         return this.authorizationRuleName == null ? Input.empty() : this.authorizationRuleName;
     }
 
+    /**
+     * The Event Hub name
+     */
     @InputImport(name="eventHubName", required=true)
     private final Input<String> eventHubName;
 
@@ -31,6 +40,9 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
         return this.eventHubName;
     }
 
+    /**
+     * The Namespace name
+     */
     @InputImport(name="namespaceName", required=true)
     private final Input<String> namespaceName;
 
@@ -38,6 +50,9 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
         return this.namespaceName;
     }
 
+    /**
+     * Name of the resource group within the azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -45,6 +60,9 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
         return this.resourceGroupName;
     }
 
+    /**
+     * The rights associated with the rule.
+     */
     @InputImport(name="rights", required=true)
     private final Input<List<Either<String,AccessRights>>> rights;
 

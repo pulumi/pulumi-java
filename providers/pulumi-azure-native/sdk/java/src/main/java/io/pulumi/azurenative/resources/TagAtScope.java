@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.resources;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.resources.TagAtScopeArgs;
 import io.pulumi.azurenative.resources.outputs.TagsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,27 +14,244 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Wrapper resource for tags API requests and responses.
+API Version: 2019-10-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Update tags on a resource
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tagAtScope = new AzureNative.Resources.TagAtScope("tagAtScope", new AzureNative.Resources.TagAtScopeArgs
+        {
+            Properties = new AzureNative.Resources.Inputs.TagsArgs
+            {
+                Tags = 
+                {
+                    { "tagKey1", "tagValue1" },
+                    { "tagKey2", "tagValue2" },
+                },
+            },
+            Scope = "subscriptions/eaee6a92-e973-4922-9471-3a0a6abf81cd/resourcegroups/myResourceGroup/providers/myPRNameSpace/VM/myVm",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := resources.NewTagAtScope(ctx, "tagAtScope", &resources.TagAtScopeArgs{
+			Properties: &resources.TagsArgs{
+				Tags: pulumi.StringMap{
+					"tagKey1": pulumi.String("tagValue1"),
+					"tagKey2": pulumi.String("tagValue2"),
+				},
+			},
+			Scope: pulumi.String("subscriptions/eaee6a92-e973-4922-9471-3a0a6abf81cd/resourcegroups/myResourceGroup/providers/myPRNameSpace/VM/myVm"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const tagAtScope = new azure_native.resources.TagAtScope("tagAtScope", {
+    properties: {
+        tags: {
+            tagKey1: "tagValue1",
+            tagKey2: "tagValue2",
+        },
+    },
+    scope: "subscriptions/eaee6a92-e973-4922-9471-3a0a6abf81cd/resourcegroups/myResourceGroup/providers/myPRNameSpace/VM/myVm",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+tag_at_scope = azure_native.resources.TagAtScope("tagAtScope",
+    properties=azure_native.resources.TagsArgs(
+        tags={
+            "tagKey1": "tagValue1",
+            "tagKey2": "tagValue2",
+        },
+    ),
+    scope="subscriptions/eaee6a92-e973-4922-9471-3a0a6abf81cd/resourcegroups/myResourceGroup/providers/myPRNameSpace/VM/myVm")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Update tags on a subscription
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tagAtScope = new AzureNative.Resources.TagAtScope("tagAtScope", new AzureNative.Resources.TagAtScopeArgs
+        {
+            Properties = new AzureNative.Resources.Inputs.TagsArgs
+            {
+                Tags = 
+                {
+                    { "tagKey1", "tagValue1" },
+                    { "tagKey2", "tagValue2" },
+                },
+            },
+            Scope = "subscriptions/eaee6a92-e973-4922-9471-3a0a6abf81cd",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	resources "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := resources.NewTagAtScope(ctx, "tagAtScope", &resources.TagAtScopeArgs{
+			Properties: &resources.TagsArgs{
+				Tags: pulumi.StringMap{
+					"tagKey1": pulumi.String("tagValue1"),
+					"tagKey2": pulumi.String("tagValue2"),
+				},
+			},
+			Scope: pulumi.String("subscriptions/eaee6a92-e973-4922-9471-3a0a6abf81cd"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const tagAtScope = new azure_native.resources.TagAtScope("tagAtScope", {
+    properties: {
+        tags: {
+            tagKey1: "tagValue1",
+            tagKey2: "tagValue2",
+        },
+    },
+    scope: "subscriptions/eaee6a92-e973-4922-9471-3a0a6abf81cd",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+tag_at_scope = azure_native.resources.TagAtScope("tagAtScope",
+    properties=azure_native.resources.TagsArgs(
+        tags={
+            "tagKey1": "tagValue1",
+            "tagKey2": "tagValue2",
+        },
+    ),
+    scope="subscriptions/eaee6a92-e973-4922-9471-3a0a6abf81cd")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:resources:TagAtScope myresource1 /{scope}/providers/Microsoft.Resources/tags/default 
+```
+
+ */
 @ResourceType(type="azure-native:resources:TagAtScope")
 public class TagAtScope extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the tags wrapper resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the tags wrapper resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The set of tags.
+     */
     @OutputExport(name="properties", type=TagsResponse.class, parameters={})
     private Output<TagsResponse> properties;
 
+    /**
+     * @return The set of tags.
+     */
     public Output<TagsResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * The type of the tags wrapper resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the tags wrapper resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public TagAtScope(String name, TagAtScopeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:resources:TagAtScope", name, args == null ? TagAtScopeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -59,6 +275,14 @@ public class TagAtScope extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static TagAtScope get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TagAtScope(name, id, options);
     }

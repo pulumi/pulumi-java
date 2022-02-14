@@ -47,10 +47,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterArgs Empty = new ClusterArgs();
 
+    /**
+     * Configurations for the various addons available to run in the cluster.
+     */
     @InputImport(name="addonsConfig")
     private final @Nullable Input<AddonsConfigArgs> addonsConfig;
 
@@ -58,6 +64,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.addonsConfig == null ? Input.empty() : this.addonsConfig;
     }
 
+    /**
+     * Configuration controlling RBAC group membership information.
+     */
     @InputImport(name="authenticatorGroupsConfig")
     private final @Nullable Input<AuthenticatorGroupsConfigArgs> authenticatorGroupsConfig;
 
@@ -65,6 +74,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.authenticatorGroupsConfig == null ? Input.empty() : this.authenticatorGroupsConfig;
     }
 
+    /**
+     * Autopilot configuration for the cluster.
+     */
     @InputImport(name="autopilot")
     private final @Nullable Input<AutopilotArgs> autopilot;
 
@@ -72,6 +84,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.autopilot == null ? Input.empty() : this.autopilot;
     }
 
+    /**
+     * Cluster-level autoscaling configuration.
+     */
     @InputImport(name="autoscaling")
     private final @Nullable Input<ClusterAutoscalingArgs> autoscaling;
 
@@ -79,6 +94,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoscaling == null ? Input.empty() : this.autoscaling;
     }
 
+    /**
+     * Configuration for Binary Authorization.
+     */
     @InputImport(name="binaryAuthorization")
     private final @Nullable Input<BinaryAuthorizationArgs> binaryAuthorization;
 
@@ -86,6 +104,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.binaryAuthorization == null ? Input.empty() : this.binaryAuthorization;
     }
 
+    /**
+     * The IP address range of the container pods in this cluster, in [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`). Leave blank to have one automatically chosen or specify a `/14` block in `10.0.0.0/8`.
+     */
     @InputImport(name="clusterIpv4Cidr")
     private final @Nullable Input<String> clusterIpv4Cidr;
 
@@ -93,6 +114,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterIpv4Cidr == null ? Input.empty() : this.clusterIpv4Cidr;
     }
 
+    /**
+     * Telemetry integration for the cluster.
+     */
     @InputImport(name="clusterTelemetry")
     private final @Nullable Input<ClusterTelemetryArgs> clusterTelemetry;
 
@@ -100,6 +124,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterTelemetry == null ? Input.empty() : this.clusterTelemetry;
     }
 
+    /**
+     * Which conditions caused the current cluster state.
+     */
     @InputImport(name="conditions")
     private final @Nullable Input<List<StatusConditionArgs>> conditions;
 
@@ -107,6 +134,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.conditions == null ? Input.empty() : this.conditions;
     }
 
+    /**
+     * Configuration of Confidential Nodes. All the nodes in the cluster will be Confidential VM once enabled.
+     */
     @InputImport(name="confidentialNodes")
     private final @Nullable Input<ConfidentialNodesArgs> confidentialNodes;
 
@@ -114,6 +144,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.confidentialNodes == null ? Input.empty() : this.confidentialNodes;
     }
 
+    /**
+     * Configuration of etcd encryption.
+     */
     @InputImport(name="databaseEncryption")
     private final @Nullable Input<DatabaseEncryptionArgs> databaseEncryption;
 
@@ -121,6 +154,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseEncryption == null ? Input.empty() : this.databaseEncryption;
     }
 
+    /**
+     * The default constraint on the maximum number of pods that can be run simultaneously on a node in the node pool of this cluster. Only honored if cluster created with IP Alias support.
+     */
     @InputImport(name="defaultMaxPodsConstraint")
     private final @Nullable Input<MaxPodsConstraintArgs> defaultMaxPodsConstraint;
 
@@ -128,6 +164,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultMaxPodsConstraint == null ? Input.empty() : this.defaultMaxPodsConstraint;
     }
 
+    /**
+     * An optional description of this cluster.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -135,6 +174,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Kubernetes alpha features are enabled on this cluster. This includes alpha API groups (e.g. v1beta1) and features that may not be production ready in the kubernetes version of the master and nodes. The cluster has no SLA for uptime and master/node upgrades are disabled. Alpha enabled clusters are automatically deleted thirty days after creation.
+     */
     @InputImport(name="enableKubernetesAlpha")
     private final @Nullable Input<Boolean> enableKubernetesAlpha;
 
@@ -142,6 +184,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableKubernetesAlpha == null ? Input.empty() : this.enableKubernetesAlpha;
     }
 
+    /**
+     * Configuration for Identity Service component.
+     */
     @InputImport(name="identityServiceConfig")
     private final @Nullable Input<IdentityServiceConfigArgs> identityServiceConfig;
 
@@ -149,6 +194,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.identityServiceConfig == null ? Input.empty() : this.identityServiceConfig;
     }
 
+    /**
+     * The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "","-": picks the default Kubernetes version
+     */
     @InputImport(name="initialClusterVersion")
     private final @Nullable Input<String> initialClusterVersion;
 
@@ -156,6 +204,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.initialClusterVersion == null ? Input.empty() : this.initialClusterVersion;
     }
 
+    /**
+     * Configuration for cluster IP allocation.
+     */
     @InputImport(name="ipAllocationPolicy")
     private final @Nullable Input<IPAllocationPolicyArgs> ipAllocationPolicy;
 
@@ -163,6 +214,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipAllocationPolicy == null ? Input.empty() : this.ipAllocationPolicy;
     }
 
+    /**
+     * Configuration for the legacy ABAC authorization mode.
+     */
     @InputImport(name="legacyAbac")
     private final @Nullable Input<LegacyAbacArgs> legacyAbac;
 
@@ -170,6 +224,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.legacyAbac == null ? Input.empty() : this.legacyAbac;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -177,6 +234,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes should be located. This field provides a default value if [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) are not specified during node pool creation. Warning: changing cluster locations will update the [NodePool.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations) of all node pools and will result in nodes being added and/or removed.
+     */
     @InputImport(name="locations")
     private final @Nullable Input<List<String>> locations;
 
@@ -184,6 +244,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.locations == null ? Input.empty() : this.locations;
     }
 
+    /**
+     * Logging configuration for the cluster.
+     */
     @InputImport(name="loggingConfig")
     private final @Nullable Input<LoggingConfigArgs> loggingConfig;
 
@@ -191,6 +254,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
     }
 
+    /**
+     * The logging service the cluster should use to write logs. Currently available options: * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer available as of GKE 1.15). * `none` - no logs will be exported from the cluster. If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or `logging.googleapis.com` for earlier versions.
+     */
     @InputImport(name="loggingService")
     private final @Nullable Input<String> loggingService;
 
@@ -198,6 +264,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.loggingService == null ? Input.empty() : this.loggingService;
     }
 
+    /**
+     * Configure the maintenance policy for this cluster.
+     */
     @InputImport(name="maintenancePolicy")
     private final @Nullable Input<MaintenancePolicyArgs> maintenancePolicy;
 
@@ -205,6 +274,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.maintenancePolicy == null ? Input.empty() : this.maintenancePolicy;
     }
 
+    /**
+     * Configuration for master components.
+     */
     @InputImport(name="master")
     private final @Nullable Input<MasterArgs> master;
 
@@ -212,6 +284,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.master == null ? Input.empty() : this.master;
     }
 
+    /**
+     * The authentication information for accessing the master endpoint. If unspecified, the defaults are used: For clusters before v1.12, if master_auth is unspecified, `username` will be set to "admin", a random password will be generated, and a client certificate will be issued.
+     */
     @InputImport(name="masterAuth")
     private final @Nullable Input<MasterAuthArgs> masterAuth;
 
@@ -219,6 +294,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.masterAuth == null ? Input.empty() : this.masterAuth;
     }
 
+    /**
+     * The configuration options for master authorized networks feature.
+     */
     @InputImport(name="masterAuthorizedNetworksConfig")
     private final @Nullable Input<MasterAuthorizedNetworksConfigArgs> masterAuthorizedNetworksConfig;
 
@@ -226,6 +304,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.masterAuthorizedNetworksConfig == null ? Input.empty() : this.masterAuthorizedNetworksConfig;
     }
 
+    /**
+     * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+     */
     @InputImport(name="meshCertificates")
     private final @Nullable Input<MeshCertificatesArgs> meshCertificates;
 
@@ -233,6 +314,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.meshCertificates == null ? Input.empty() : this.meshCertificates;
     }
 
+    /**
+     * Monitoring configuration for the cluster.
+     */
     @InputImport(name="monitoringConfig")
     private final @Nullable Input<MonitoringConfigArgs> monitoringConfig;
 
@@ -240,6 +324,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.monitoringConfig == null ? Input.empty() : this.monitoringConfig;
     }
 
+    /**
+     * The monitoring service the cluster should use to write metrics. Currently available options: * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or `monitoring.googleapis.com` for earlier versions.
+     */
     @InputImport(name="monitoringService")
     private final @Nullable Input<String> monitoringService;
 
@@ -247,6 +334,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.monitoringService == null ? Input.empty() : this.monitoringService;
     }
 
+    /**
+     * The name of this cluster. The name must be unique within this project and location (e.g. zone or region), and can be up to 40 characters with the following restrictions: * Lowercase letters, numbers, and hyphens only. * Must start with a letter. * Must end with a number or a letter.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -254,6 +344,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The name of the Google Compute Engine [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the cluster is connected. If left unspecified, the `default` network will be used. On output this shows the network ID instead of the name.
+     */
     @InputImport(name="network")
     private final @Nullable Input<String> network;
 
@@ -261,6 +354,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.network == null ? Input.empty() : this.network;
     }
 
+    /**
+     * Configuration for cluster networking.
+     */
     @InputImport(name="networkConfig")
     private final @Nullable Input<NetworkConfigArgs> networkConfig;
 
@@ -268,6 +364,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
     }
 
+    /**
+     * Configuration options for the NetworkPolicy feature.
+     */
     @InputImport(name="networkPolicy")
     private final @Nullable Input<NetworkPolicyArgs> networkPolicy;
 
@@ -275,6 +374,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkPolicy == null ? Input.empty() : this.networkPolicy;
     }
 
+    /**
+     * Default NodePool settings for the entire cluster. These settings are overridden if specified on the specific NodePool object.
+     */
     @InputImport(name="nodePoolDefaults")
     private final @Nullable Input<NodePoolDefaultsArgs> nodePoolDefaults;
 
@@ -282,6 +384,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.nodePoolDefaults == null ? Input.empty() : this.nodePoolDefaults;
     }
 
+    /**
+     * The node pools associated with this cluster. This field should not be set if "node_config" or "initial_node_count" are specified.
+     */
     @InputImport(name="nodePools")
     private final @Nullable Input<List<NodePoolArgs>> nodePools;
 
@@ -289,6 +394,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.nodePools == null ? Input.empty() : this.nodePools;
     }
 
+    /**
+     * Notification configuration of the cluster.
+     */
     @InputImport(name="notificationConfig")
     private final @Nullable Input<NotificationConfigArgs> notificationConfig;
 
@@ -296,6 +404,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
     }
 
+    /**
+     * The parent (project and location) where the cluster will be created. Specified in the format `projects//{@literal /}locations/*`.
+     */
     @InputImport(name="parent")
     private final @Nullable Input<String> parent;
 
@@ -303,6 +414,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.parent == null ? Input.empty() : this.parent;
     }
 
+    /**
+     * Configuration for the PodSecurityPolicy feature.
+     */
     @InputImport(name="podSecurityPolicyConfig")
     private final @Nullable Input<PodSecurityPolicyConfigArgs> podSecurityPolicyConfig;
 
@@ -310,6 +424,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.podSecurityPolicyConfig == null ? Input.empty() : this.podSecurityPolicyConfig;
     }
 
+    /**
+     * Configuration for private cluster.
+     */
     @InputImport(name="privateClusterConfig")
     private final @Nullable Input<PrivateClusterConfigArgs> privateClusterConfig;
 
@@ -317,6 +434,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateClusterConfig == null ? Input.empty() : this.privateClusterConfig;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -324,6 +444,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Release channel configuration.
+     */
     @InputImport(name="releaseChannel")
     private final @Nullable Input<ReleaseChannelArgs> releaseChannel;
 
@@ -331,6 +454,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.releaseChannel == null ? Input.empty() : this.releaseChannel;
     }
 
+    /**
+     * The resource labels for the cluster to use to annotate any related Google Compute Engine resources.
+     */
     @InputImport(name="resourceLabels")
     private final @Nullable Input<Map<String,String>> resourceLabels;
 
@@ -338,6 +464,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceLabels == null ? Input.empty() : this.resourceLabels;
     }
 
+    /**
+     * Configuration for exporting resource usages. Resource usage export is disabled when this config unspecified.
+     */
     @InputImport(name="resourceUsageExportConfig")
     private final @Nullable Input<ResourceUsageExportConfigArgs> resourceUsageExportConfig;
 
@@ -345,6 +474,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceUsageExportConfig == null ? Input.empty() : this.resourceUsageExportConfig;
     }
 
+    /**
+     * Shielded Nodes configuration.
+     */
     @InputImport(name="shieldedNodes")
     private final @Nullable Input<ShieldedNodesArgs> shieldedNodes;
 
@@ -352,6 +484,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.shieldedNodes == null ? Input.empty() : this.shieldedNodes;
     }
 
+    /**
+     * The name of the Google Compute Engine [subnetwork](https://cloud.google.com/compute/docs/subnetworks) to which the cluster is connected. On output this shows the subnetwork ID instead of the name.
+     */
     @InputImport(name="subnetwork")
     private final @Nullable Input<String> subnetwork;
 
@@ -359,6 +494,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
     }
 
+    /**
+     * Configuration for Cloud TPU support;
+     */
     @InputImport(name="tpuConfig")
     private final @Nullable Input<TpuConfigArgs> tpuConfig;
 
@@ -366,6 +504,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.tpuConfig == null ? Input.empty() : this.tpuConfig;
     }
 
+    /**
+     * Cluster-level Vertical Pod Autoscaling configuration.
+     */
     @InputImport(name="verticalPodAutoscaling")
     private final @Nullable Input<VerticalPodAutoscalingArgs> verticalPodAutoscaling;
 
@@ -373,6 +514,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.verticalPodAutoscaling == null ? Input.empty() : this.verticalPodAutoscaling;
     }
 
+    /**
+     * Configuration for issuance of mTLS keys and certificates to Kubernetes pods.
+     */
     @InputImport(name="workloadCertificates")
     private final @Nullable Input<WorkloadCertificatesArgs> workloadCertificates;
 
@@ -380,6 +524,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.workloadCertificates == null ? Input.empty() : this.workloadCertificates;
     }
 
+    /**
+     * Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
+     */
     @InputImport(name="workloadIdentityConfig")
     private final @Nullable Input<WorkloadIdentityConfigArgs> workloadIdentityConfig;
 

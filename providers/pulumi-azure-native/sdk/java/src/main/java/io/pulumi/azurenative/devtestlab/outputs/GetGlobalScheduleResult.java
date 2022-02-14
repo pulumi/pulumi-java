@@ -16,21 +16,69 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetGlobalScheduleResult {
+/**
+ * The creation date of the schedule.
+ */
     private final String createdDate;
+/**
+ * If the schedule will occur once each day of the week, specify the daily recurrence.
+ */
     private final @Nullable DayDetailsResponse dailyRecurrence;
+/**
+ * If the schedule will occur multiple times a day, specify the hourly recurrence.
+ */
     private final @Nullable HourDetailsResponse hourlyRecurrence;
+/**
+ * The identifier of the resource.
+ */
     private final String id;
+/**
+ * The location of the resource.
+ */
     private final @Nullable String location;
+/**
+ * The name of the resource.
+ */
     private final String name;
+/**
+ * Notification settings.
+ */
     private final @Nullable NotificationSettingsResponse notificationSettings;
+/**
+ * The provisioning status of the resource.
+ */
     private final String provisioningState;
+/**
+ * The status of the schedule (i.e. Enabled, Disabled)
+ */
     private final @Nullable String status;
+/**
+ * The tags of the resource.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * The resource ID to which the schedule belongs
+ */
     private final @Nullable String targetResourceId;
+/**
+ * The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
+ */
     private final @Nullable String taskType;
+/**
+ * The time zone ID (e.g. Pacific Standard time).
+ */
     private final @Nullable String timeZoneId;
+/**
+ * The type of the resource.
+ */
     private final String type;
+/**
+ * The unique immutable identifier of a resource (Guid).
+ */
     private final String uniqueIdentifier;
+/**
+ * If the schedule will occur only some days of the week, specify the weekly recurrence.
+ */
     private final @Nullable WeekDetailsResponse weeklyRecurrence;
 
     @OutputCustomType.Constructor({"createdDate","dailyRecurrence","hourlyRecurrence","id","location","name","notificationSettings","provisioningState","status","tags","targetResourceId","taskType","timeZoneId","type","uniqueIdentifier","weeklyRecurrence"})
@@ -69,51 +117,99 @@ public final class GetGlobalScheduleResult {
         this.weeklyRecurrence = weeklyRecurrence;
     }
 
+/**
+ * The creation date of the schedule.
+ */
     public String getCreatedDate() {
         return this.createdDate;
     }
+/**
+ * If the schedule will occur once each day of the week, specify the daily recurrence.
+ */
     public Optional<DayDetailsResponse> getDailyRecurrence() {
         return Optional.ofNullable(this.dailyRecurrence);
     }
+/**
+ * If the schedule will occur multiple times a day, specify the hourly recurrence.
+ */
     public Optional<HourDetailsResponse> getHourlyRecurrence() {
         return Optional.ofNullable(this.hourlyRecurrence);
     }
+/**
+ * The identifier of the resource.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The location of the resource.
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * The name of the resource.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Notification settings.
+ */
     public Optional<NotificationSettingsResponse> getNotificationSettings() {
         return Optional.ofNullable(this.notificationSettings);
     }
+/**
+ * The provisioning status of the resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * The status of the schedule (i.e. Enabled, Disabled)
+ */
     public Optional<String> getStatus() {
         return Optional.ofNullable(this.status);
     }
+/**
+ * The tags of the resource.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * The resource ID to which the schedule belongs
+ */
     public Optional<String> getTargetResourceId() {
         return Optional.ofNullable(this.targetResourceId);
     }
+/**
+ * The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
+ */
     public Optional<String> getTaskType() {
         return Optional.ofNullable(this.taskType);
     }
+/**
+ * The time zone ID (e.g. Pacific Standard time).
+ */
     public Optional<String> getTimeZoneId() {
         return Optional.ofNullable(this.timeZoneId);
     }
+/**
+ * The type of the resource.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * The unique immutable identifier of a resource (Guid).
+ */
     public String getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
+/**
+ * If the schedule will occur only some days of the week, specify the weekly recurrence.
+ */
     public Optional<WeekDetailsResponse> getWeeklyRecurrence() {
         return Optional.ofNullable(this.weeklyRecurrence);
     }

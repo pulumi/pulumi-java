@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTestResultFile {
+/**
+ * Test result.
+API Version: 2020-02-10-preview.
+ *
+ * Test result.
+ */
     public static CompletableFuture<GetTestResultFileResult> invokeAsync(GetTestResultFileArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getTestResultFile", TypeShape.of(GetTestResultFileResult.class), args == null ? GetTestResultFileArgs.Empty : args, Utilities.withVersion(options));
     }

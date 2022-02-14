@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOutput {
+/**
+ * An output object, containing all information associated with the named output. All outputs are contained under a streaming job.
+API Version: 2016-03-01.
+ *
+ * An output object, containing all information associated with the named output. All outputs are contained under a streaming job.
+ */
     public static CompletableFuture<GetOutputResult> invokeAsync(GetOutputArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:streamanalytics:getOutput", TypeShape.of(GetOutputResult.class), args == null ? GetOutputArgs.Empty : args, Utilities.withVersion(options));
     }

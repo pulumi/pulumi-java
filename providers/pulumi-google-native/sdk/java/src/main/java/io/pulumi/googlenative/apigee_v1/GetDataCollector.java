@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataCollector {
+/**
+ * Gets a data collector.
+ */
     public static CompletableFuture<GetDataCollectorResult> invokeAsync(GetDataCollectorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getDataCollector", TypeShape.of(GetDataCollectorResult.class), args == null ? GetDataCollectorArgs.Empty : args, Utilities.withVersion(options));
     }

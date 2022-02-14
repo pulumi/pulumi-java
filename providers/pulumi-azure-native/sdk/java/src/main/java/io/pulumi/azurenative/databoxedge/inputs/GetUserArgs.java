@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetUserArgs Empty = new GetUserArgs();
 
+    /**
+     * The device name.
+     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -19,6 +25,9 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
         return this.deviceName;
     }
 
+    /**
+     * The user name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +35,9 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

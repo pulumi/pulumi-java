@@ -14,12 +14,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetWorkspaceCollectionResult {
+/**
+ * Resource id
+ */
     private final @Nullable String id;
+/**
+ * Azure location
+ */
     private final @Nullable String location;
+/**
+ * Workspace collection name
+ */
     private final @Nullable String name;
+/**
+ * Properties
+ */
     private final Object properties;
+/**
+ * 
+ */
     private final @Nullable AzureSkuResponse sku;
+/**
+ * 
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Resource type
+ */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"id","location","name","properties","sku","tags","type"})
@@ -40,24 +61,45 @@ public final class GetWorkspaceCollectionResult {
         this.type = type;
     }
 
+/**
+ * Resource id
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * Azure location
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * Workspace collection name
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * Properties
+ */
     public Object getProperties() {
         return this.properties;
     }
+/**
+ * 
+ */
     public Optional<AzureSkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
+/**
+ * 
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Resource type
+ */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

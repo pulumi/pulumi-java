@@ -11,11 +11,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceOperationResponse {
+/**
+ * Unique identifier of the operation. For ARM resources, this is the operationId obtained from ARM service.
+ */
     private final String operationId;
+/**
+ * State of the resource deployment. For ARM resources, this is the current provisioning state of the resource.
+ */
     private final String provisioningState;
+/**
+ * Name of the resource as specified in the artifacts. For ARM resources, this is the name of the resource specified in the template.
+ */
     private final @Nullable String resourceName;
+/**
+ * Type of the resource as specified in the artifacts. For ARM resources, this is the type of the resource specified in the template.
+ */
     private final @Nullable String resourceType;
+/**
+ * Http status code of the operation.
+ */
     private final String statusCode;
+/**
+ * Descriptive information of the resource operation.
+ */
     private final String statusMessage;
 
     @OutputCustomType.Constructor({"operationId","provisioningState","resourceName","resourceType","statusCode","statusMessage"})
@@ -34,21 +52,39 @@ public final class ResourceOperationResponse {
         this.statusMessage = Objects.requireNonNull(statusMessage);
     }
 
+/**
+ * Unique identifier of the operation. For ARM resources, this is the operationId obtained from ARM service.
+ */
     public String getOperationId() {
         return this.operationId;
     }
+/**
+ * State of the resource deployment. For ARM resources, this is the current provisioning state of the resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Name of the resource as specified in the artifacts. For ARM resources, this is the name of the resource specified in the template.
+ */
     public Optional<String> getPropResourceName() {
         return Optional.ofNullable(this.resourceName);
     }
+/**
+ * Type of the resource as specified in the artifacts. For ARM resources, this is the type of the resource specified in the template.
+ */
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }
+/**
+ * Http status code of the operation.
+ */
     public String getStatusCode() {
         return this.statusCode;
     }
+/**
+ * Descriptive information of the resource operation.
+ */
     public String getStatusMessage() {
         return this.statusMessage;
     }

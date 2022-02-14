@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ExtendedErrorInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ExtendedErrorInfoResponse Empty = new ExtendedErrorInfoResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="additionalInfo")
     private final @Nullable List<TypedErrorInfoResponse> additionalInfo;
 
@@ -23,6 +29,9 @@ public final class ExtendedErrorInfoResponse extends io.pulumi.resources.InvokeA
         return this.additionalInfo == null ? List.of() : this.additionalInfo;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="code")
     private final @Nullable String code;
 
@@ -30,6 +39,9 @@ public final class ExtendedErrorInfoResponse extends io.pulumi.resources.InvokeA
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="details")
     private final @Nullable List<ExtendedErrorInfoResponse> details;
 
@@ -37,6 +49,9 @@ public final class ExtendedErrorInfoResponse extends io.pulumi.resources.InvokeA
         return this.details == null ? List.of() : this.details;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable String message;
 
@@ -44,6 +59,9 @@ public final class ExtendedErrorInfoResponse extends io.pulumi.resources.InvokeA
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="target")
     private final @Nullable String target;
 

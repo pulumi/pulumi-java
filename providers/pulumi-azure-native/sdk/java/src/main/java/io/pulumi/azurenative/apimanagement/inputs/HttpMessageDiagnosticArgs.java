@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Http message diagnostic settings.
+ */
 public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpMessageDiagnosticArgs Empty = new HttpMessageDiagnosticArgs();
 
+    /**
+     * Body logging settings.
+     */
     @InputImport(name="body")
     private final @Nullable Input<BodyDiagnosticSettingsArgs> body;
 
@@ -24,6 +30,9 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
         return this.body == null ? Input.empty() : this.body;
     }
 
+    /**
+     * Data masking settings.
+     */
     @InputImport(name="dataMasking")
     private final @Nullable Input<DataMaskingArgs> dataMasking;
 
@@ -31,6 +40,9 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
         return this.dataMasking == null ? Input.empty() : this.dataMasking;
     }
 
+    /**
+     * Array of HTTP Headers to log.
+     */
     @InputImport(name="headers")
     private final @Nullable Input<List<String>> headers;
 

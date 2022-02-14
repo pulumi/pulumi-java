@@ -10,8 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourcePolicyDailyCycleResponse {
+/**
+ * Defines a schedule with units measured in months. The value determines how many months pass between the start of each cycle.
+ */
     private final Integer daysInCycle;
+/**
+ * [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
+ */
     private final String duration;
+/**
+ * Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
+ */
     private final String startTime;
 
     @OutputCustomType.Constructor({"daysInCycle","duration","startTime"})
@@ -24,12 +33,21 @@ public final class ResourcePolicyDailyCycleResponse {
         this.startTime = Objects.requireNonNull(startTime);
     }
 
+/**
+ * Defines a schedule with units measured in months. The value determines how many months pass between the start of each cycle.
+ */
     public Integer getDaysInCycle() {
         return this.daysInCycle;
     }
+/**
+ * [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
+ */
     public String getDuration() {
         return this.duration;
     }
+/**
+ * Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
+ */
     public String getStartTime() {
         return this.startTime;
     }

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A simplified layout that divides the available space into rows and arranges a set of widgets horizontally in each row.
+ */
 public final class RowLayoutArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RowLayoutArgs Empty = new RowLayoutArgs();
 
+    /**
+     * The rows of content to display.
+     */
     @InputImport(name="rows")
     private final @Nullable Input<List<RowArgs>> rows;
 

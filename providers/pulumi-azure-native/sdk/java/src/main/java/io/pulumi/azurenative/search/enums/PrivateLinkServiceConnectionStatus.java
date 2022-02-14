@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Status of the the private link service connection. Can be Pending, Approved, Rejected, or Disconnected.
+ */
     @EnumType
     public enum PrivateLinkServiceConnectionStatus {
+/**
+ * 
+ */
         Pending("Pending"),
+/**
+ * 
+ */
         Approved("Approved"),
+/**
+ * 
+ */
         Rejected("Rejected"),
+/**
+ * 
+ */
         Disconnected("Disconnected");
 
         private final String value;

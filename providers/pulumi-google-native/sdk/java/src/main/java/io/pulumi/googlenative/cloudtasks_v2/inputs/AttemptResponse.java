@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The status of a task attempt.
+ */
 public final class AttemptResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AttemptResponse Empty = new AttemptResponse();
 
+    /**
+     * The time that this attempt was dispatched. `dispatch_time` will be truncated to the nearest microsecond.
+     */
     @InputImport(name="dispatchTime", required=true)
     private final String dispatchTime;
 
@@ -20,6 +26,9 @@ public final class AttemptResponse extends io.pulumi.resources.InvokeArgs {
         return this.dispatchTime;
     }
 
+    /**
+     * The response from the worker for this attempt. If `response_time` is unset, then the task has not been attempted or is currently running and the `response_status` field is meaningless.
+     */
     @InputImport(name="responseStatus", required=true)
     private final StatusResponse responseStatus;
 
@@ -27,6 +36,9 @@ public final class AttemptResponse extends io.pulumi.resources.InvokeArgs {
         return this.responseStatus;
     }
 
+    /**
+     * The time that this attempt response was received. `response_time` will be truncated to the nearest microsecond.
+     */
     @InputImport(name="responseTime", required=true)
     private final String responseTime;
 
@@ -34,6 +46,9 @@ public final class AttemptResponse extends io.pulumi.resources.InvokeArgs {
         return this.responseTime;
     }
 
+    /**
+     * The time that this attempt was scheduled. `schedule_time` will be truncated to the nearest microsecond.
+     */
     @InputImport(name="scheduleTime", required=true)
     private final String scheduleTime;
 

@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations
+ */
     @EnumType
     public enum NetworkApiVersion {
+/**
+ * 
+ */
         NetworkApiVersion_20201101("2020-11-01");
 
         private final String value;

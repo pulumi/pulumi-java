@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SchedulePolicyResponse {
+/**
+ * The idle duration between replication stages.
+ */
     private final String idleDuration;
+/**
+ * A flag to indicate whether to skip OS adaptation during the replication sync. OS adaptation is a process where the VM's operating system undergoes changes and adaptations to fully function on Compute Engine.
+ */
     private final Boolean skipOsAdaptation;
 
     @OutputCustomType.Constructor({"idleDuration","skipOsAdaptation"})
@@ -21,9 +27,15 @@ public final class SchedulePolicyResponse {
         this.skipOsAdaptation = Objects.requireNonNull(skipOsAdaptation);
     }
 
+/**
+ * The idle duration between replication stages.
+ */
     public String getIdleDuration() {
         return this.idleDuration;
     }
+/**
+ * A flag to indicate whether to skip OS adaptation during the replication sync. OS adaptation is a process where the VM's operating system undergoes changes and adaptations to fully function on Compute Engine.
+ */
     public Boolean getSkipOsAdaptation() {
         return this.skipOsAdaptation;
     }

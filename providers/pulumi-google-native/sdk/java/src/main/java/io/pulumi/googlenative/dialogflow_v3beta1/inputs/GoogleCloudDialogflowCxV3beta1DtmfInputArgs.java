@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents the input for dtmf event.
+ */
 public final class GoogleCloudDialogflowCxV3beta1DtmfInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1DtmfInputArgs Empty = new GoogleCloudDialogflowCxV3beta1DtmfInputArgs();
 
+    /**
+     * The dtmf digits.
+     */
     @InputImport(name="digits")
     private final @Nullable Input<String> digits;
 
@@ -21,6 +27,9 @@ public final class GoogleCloudDialogflowCxV3beta1DtmfInputArgs extends io.pulumi
         return this.digits == null ? Input.empty() : this.digits;
     }
 
+    /**
+     * The finish digit (if any).
+     */
     @InputImport(name="finishDigit")
     private final @Nullable Input<String> finishDigit;
 

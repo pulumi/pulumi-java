@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A service account.
+ */
 public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceAccountArgs Empty = new ServiceAccountArgs();
 
+    /**
+     * Email address of the service account.
+     */
     @InputImport(name="email")
     private final @Nullable Input<String> email;
 
@@ -22,6 +28,9 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
         return this.email == null ? Input.empty() : this.email;
     }
 
+    /**
+     * The list of scopes to be made available for this service account.
+     */
     @InputImport(name="scopes")
     private final @Nullable Input<List<String>> scopes;
 

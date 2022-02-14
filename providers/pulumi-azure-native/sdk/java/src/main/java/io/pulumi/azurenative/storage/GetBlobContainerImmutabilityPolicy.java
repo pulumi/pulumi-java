@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBlobContainerImmutabilityPolicy {
+/**
+ * The ImmutabilityPolicy property of a blob container, including Id, resource name, resource type, Etag.
+API Version: 2021-02-01.
+ *
+ * The ImmutabilityPolicy property of a blob container, including Id, resource name, resource type, Etag.
+ */
     public static CompletableFuture<GetBlobContainerImmutabilityPolicyResult> invokeAsync(GetBlobContainerImmutabilityPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getBlobContainerImmutabilityPolicy", TypeShape.of(GetBlobContainerImmutabilityPolicyResult.class), args == null ? GetBlobContainerImmutabilityPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -17,10 +17,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The definition of data present in the report.
+ */
 public final class ReportConfigDatasetResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReportConfigDatasetResponse Empty = new ReportConfigDatasetResponse();
 
+    /**
+     * Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
+     */
     @InputImport(name="aggregation")
     private final @Nullable Map<String,ReportConfigAggregationResponse> aggregation;
 
@@ -28,6 +34,9 @@ public final class ReportConfigDatasetResponse extends io.pulumi.resources.Invok
         return this.aggregation == null ? Map.of() : this.aggregation;
     }
 
+    /**
+     * Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
+     */
     @InputImport(name="configuration")
     private final @Nullable ReportConfigDatasetConfigurationResponse configuration;
 
@@ -35,6 +44,9 @@ public final class ReportConfigDatasetResponse extends io.pulumi.resources.Invok
         return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
     }
 
+    /**
+     * Has filter expression to use in the report.
+     */
     @InputImport(name="filter")
     private final @Nullable ReportConfigFilterResponse filter;
 
@@ -42,6 +54,9 @@ public final class ReportConfigDatasetResponse extends io.pulumi.resources.Invok
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
+    /**
+     * The granularity of rows in the report.
+     */
     @InputImport(name="granularity")
     private final @Nullable String granularity;
 
@@ -49,6 +64,9 @@ public final class ReportConfigDatasetResponse extends io.pulumi.resources.Invok
         return this.granularity == null ? Optional.empty() : Optional.ofNullable(this.granularity);
     }
 
+    /**
+     * Array of group by expression to use in the report. Report can have up to 2 group by clauses.
+     */
     @InputImport(name="grouping")
     private final @Nullable List<ReportConfigGroupingResponse> grouping;
 
@@ -56,6 +74,9 @@ public final class ReportConfigDatasetResponse extends io.pulumi.resources.Invok
         return this.grouping == null ? List.of() : this.grouping;
     }
 
+    /**
+     * Array of order by expression to use in the report.
+     */
     @InputImport(name="sorting")
     private final @Nullable List<ReportConfigSortingResponse> sorting;
 

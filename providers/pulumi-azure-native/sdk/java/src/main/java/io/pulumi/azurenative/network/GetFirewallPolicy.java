@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetFirewallPolicy {
+/**
+ * FirewallPolicy Resource.
+API Version: 2020-11-01.
+ *
+ * FirewallPolicy Resource.
+ */
     public static CompletableFuture<GetFirewallPolicyResult> invokeAsync(GetFirewallPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getFirewallPolicy", TypeShape.of(GetFirewallPolicyResult.class), args == null ? GetFirewallPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

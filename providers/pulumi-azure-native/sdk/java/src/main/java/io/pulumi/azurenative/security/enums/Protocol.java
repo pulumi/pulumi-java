@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum Protocol {
+/**
+ * 
+ */
         TCP("TCP"),
+/**
+ * 
+ */
         UDP("UDP"),
+/**
+ * 
+ */
         All("*");
 
         private final String value;

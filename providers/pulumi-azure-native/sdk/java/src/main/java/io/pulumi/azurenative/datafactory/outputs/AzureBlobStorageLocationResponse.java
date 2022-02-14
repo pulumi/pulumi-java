@@ -12,9 +12,22 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureBlobStorageLocationResponse {
+/**
+ * Specify the container of azure blob. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object container;
+/**
+ * Specify the file name of dataset. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object fileName;
+/**
+ * Specify the folder path of dataset. Type: string (or Expression with resultType string)
+ */
     private final @Nullable Object folderPath;
+/**
+ * Type of dataset storage location.
+Expected value is 'AzureBlobStorageLocation'.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"container","fileName","folderPath","type"})
@@ -29,15 +42,28 @@ public final class AzureBlobStorageLocationResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Specify the container of azure blob. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getContainer() {
         return Optional.ofNullable(this.container);
     }
+/**
+ * Specify the file name of dataset. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getFileName() {
         return Optional.ofNullable(this.fileName);
     }
+/**
+ * Specify the folder path of dataset. Type: string (or Expression with resultType string)
+ */
     public Optional<Object> getFolderPath() {
         return Optional.ofNullable(this.folderPath);
     }
+/**
+ * Type of dataset storage location.
+Expected value is 'AzureBlobStorageLocation'.
+ */
     public String getType() {
         return this.type;
     }

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A representation of a Datastore kind.
+ */
 public final class GooglePrivacyDlpV2KindExpressionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2KindExpressionArgs Empty = new GooglePrivacyDlpV2KindExpressionArgs();
 
+    /**
+     * The name of the kind.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

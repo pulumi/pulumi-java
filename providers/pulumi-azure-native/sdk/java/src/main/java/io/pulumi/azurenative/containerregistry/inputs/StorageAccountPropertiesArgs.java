@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The properties of a storage account for a container registry. Only applicable to Classic SKU.
+ */
 public final class StorageAccountPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageAccountPropertiesArgs Empty = new StorageAccountPropertiesArgs();
 
+    /**
+     * The resource ID of the storage account.
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 

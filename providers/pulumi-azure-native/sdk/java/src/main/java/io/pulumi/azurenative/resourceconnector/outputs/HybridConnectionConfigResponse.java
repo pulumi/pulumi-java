@@ -10,9 +10,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HybridConnectionConfigResponse {
+/**
+ * Timestamp when this token will be expired.
+ */
     private final Double expirationTime;
+/**
+ * Name of the connection
+ */
     private final String hybridConnectionName;
+/**
+ * Name of the notification service.
+ */
     private final String relay;
+/**
+ * Listener access token
+ */
     private final String token;
 
     @OutputCustomType.Constructor({"expirationTime","hybridConnectionName","relay","token"})
@@ -27,15 +39,27 @@ public final class HybridConnectionConfigResponse {
         this.token = Objects.requireNonNull(token);
     }
 
+/**
+ * Timestamp when this token will be expired.
+ */
     public Double getExpirationTime() {
         return this.expirationTime;
     }
+/**
+ * Name of the connection
+ */
     public String getHybridConnectionName() {
         return this.hybridConnectionName;
     }
+/**
+ * Name of the notification service.
+ */
     public String getRelay() {
         return this.relay;
     }
+/**
+ * Listener access token
+ */
     public String getToken() {
         return this.token;
     }

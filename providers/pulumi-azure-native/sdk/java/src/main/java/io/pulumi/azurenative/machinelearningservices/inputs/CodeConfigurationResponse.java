@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration for a scoring code asset.
+ */
 public final class CodeConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CodeConfigurationResponse Empty = new CodeConfigurationResponse();
 
+    /**
+     * ARM resource ID of the code asset.
+     */
     @InputImport(name="codeId")
     private final @Nullable String codeId;
 
@@ -21,6 +27,9 @@ public final class CodeConfigurationResponse extends io.pulumi.resources.InvokeA
         return this.codeId == null ? Optional.empty() : Optional.ofNullable(this.codeId);
     }
 
+    /**
+     * The script to execute on startup. eg. "score.py"
+     */
     @InputImport(name="scoringScript", required=true)
     private final String scoringScript;
 

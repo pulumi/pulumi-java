@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Guest disk signature based disk exclusion option when doing enable protection of virtual machine in InMage provider.
+ */
 public final class InMageVolumeExclusionOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InMageVolumeExclusionOptionsArgs Empty = new InMageVolumeExclusionOptionsArgs();
 
+    /**
+     * The value indicating whether to exclude multi volume disk or not. If a disk has multiple volumes and one of the volume has label matching with VolumeLabel this disk will be excluded from replication if OnlyExcludeIfSingleVolume is false.
+     */
     @InputImport(name="onlyExcludeIfSingleVolume")
     private final @Nullable Input<String> onlyExcludeIfSingleVolume;
 
@@ -21,6 +27,9 @@ public final class InMageVolumeExclusionOptionsArgs extends io.pulumi.resources.
         return this.onlyExcludeIfSingleVolume == null ? Input.empty() : this.onlyExcludeIfSingleVolume;
     }
 
+    /**
+     * The volume label. The disk having any volume with this label will be excluded from replication.
+     */
     @InputImport(name="volumeLabel")
     private final @Nullable Input<String> volumeLabel;
 

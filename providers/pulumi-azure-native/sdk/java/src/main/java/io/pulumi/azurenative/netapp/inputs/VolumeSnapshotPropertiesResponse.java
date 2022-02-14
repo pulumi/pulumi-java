@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Volume Snapshot Properties
+ */
 public final class VolumeSnapshotPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VolumeSnapshotPropertiesResponse Empty = new VolumeSnapshotPropertiesResponse();
 
+    /**
+     * Snapshot Policy ResourceId
+     */
     @InputImport(name="snapshotPolicyId")
     private final @Nullable String snapshotPolicyId;
 

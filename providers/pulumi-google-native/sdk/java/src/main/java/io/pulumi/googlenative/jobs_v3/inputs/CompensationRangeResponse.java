@@ -8,10 +8,16 @@ import io.pulumi.googlenative.jobs_v3.inputs.MoneyResponse;
 import java.util.Objects;
 
 
+/**
+ * Compensation range.
+ */
 public final class CompensationRangeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CompensationRangeResponse Empty = new CompensationRangeResponse();
 
+    /**
+     * Optional. The maximum amount of compensation. If left empty, the value is set to a maximal compensation value and the currency code is set to match the currency code of min_compensation.
+     */
     @InputImport(name="maxCompensation", required=true)
     private final MoneyResponse maxCompensation;
 
@@ -19,6 +25,9 @@ public final class CompensationRangeResponse extends io.pulumi.resources.InvokeA
         return this.maxCompensation;
     }
 
+    /**
+     * Optional. The minimum amount of compensation. If left empty, the value is set to zero and the currency code is set to match the currency code of max_compensation.
+     */
     @InputImport(name="minCompensation", required=true)
     private final MoneyResponse minCompensation;
 

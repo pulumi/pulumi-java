@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Rich Business Messaging (RBM) Media displayed in Cards The following media-types are currently supported: Image Types * image/jpeg * image/jpg' * image/gif * image/png Video Types * video/h263 * video/m4v * video/mp4 * video/mpeg * video/mpeg4 * video/webm
+ */
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs();
 
+    /**
+     * Publicly reachable URI of the file. The RBM platform determines the MIME type of the file from the content-type field in the HTTP headers when the platform fetches the file. The content-type field must be present and accurate in the HTTP response from the URL.
+     */
     @InputImport(name="fileUri", required=true)
     private final Input<String> fileUri;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
         return this.fileUri;
     }
 
+    /**
+     * Required for cards with vertical orientation. The height of the media within a rich card with a vertical layout. For a standalone card with horizontal layout, height is not customizable, and this field is ignored.
+     */
     @InputImport(name="height")
     private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight> height;
 
@@ -29,6 +38,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
         return this.height == null ? Input.empty() : this.height;
     }
 
+    /**
+     * Optional. Publicly reachable URI of the thumbnail.If you don't provide a thumbnail URI, the RBM platform displays a blank placeholder thumbnail until the user's device downloads the file. Depending on the user's setting, the file may not download automatically and may require the user to tap a download button.
+     */
     @InputImport(name="thumbnailUri")
     private final @Nullable Input<String> thumbnailUri;
 

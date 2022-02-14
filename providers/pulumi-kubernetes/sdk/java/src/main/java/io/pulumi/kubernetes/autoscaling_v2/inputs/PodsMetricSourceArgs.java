@@ -10,10 +10,16 @@ import io.pulumi.kubernetes.autoscaling_v2.inputs.MetricTargetArgs;
 import java.util.Objects;
 
 
+/**
+ * PodsMetricSource indicates how to scale on a metric describing each pod in the current scale target (for example, transactions-processed-per-second). The values will be averaged together before being compared to the target value.
+ */
 public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PodsMetricSourceArgs Empty = new PodsMetricSourceArgs();
 
+    /**
+     * metric identifies the target metric by name and selector
+     */
     @InputImport(name="metric", required=true)
     private final Input<MetricIdentifierArgs> metric;
 
@@ -21,6 +27,9 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
         return this.metric;
     }
 
+    /**
+     * target specifies the target value for the given metric
+     */
     @InputImport(name="target", required=true)
     private final Input<MetricTargetArgs> target;
 

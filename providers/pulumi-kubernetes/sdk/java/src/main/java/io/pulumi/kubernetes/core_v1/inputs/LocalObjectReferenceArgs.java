@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
+ */
 public final class LocalObjectReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LocalObjectReferenceArgs Empty = new LocalObjectReferenceArgs();
 
+    /**
+     * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

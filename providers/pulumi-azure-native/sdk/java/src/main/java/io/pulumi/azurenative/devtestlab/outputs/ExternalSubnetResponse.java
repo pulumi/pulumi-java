@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExternalSubnetResponse {
+/**
+ * Gets or sets the identifier.
+ */
     private final @Nullable String id;
+/**
+ * Gets or sets the name.
+ */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"id","name"})
@@ -22,9 +28,15 @@ public final class ExternalSubnetResponse {
         this.name = name;
     }
 
+/**
+ * Gets or sets the identifier.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * Gets or sets the name.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

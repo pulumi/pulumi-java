@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Catalog information for managed dedicated integration runtime.
+ */
 public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IntegrationRuntimeSsisCatalogInfoArgs Empty = new IntegrationRuntimeSsisCatalogInfoArgs();
 
+    /**
+     * The password of the administrator user account of the catalog database.
+     */
     @InputImport(name="catalogAdminPassword")
     private final @Nullable Input<SecureStringArgs> catalogAdminPassword;
 
@@ -24,6 +30,9 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
         return this.catalogAdminPassword == null ? Input.empty() : this.catalogAdminPassword;
     }
 
+    /**
+     * The administrator user name of catalog database.
+     */
     @InputImport(name="catalogAdminUserName")
     private final @Nullable Input<String> catalogAdminUserName;
 
@@ -31,6 +40,9 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
         return this.catalogAdminUserName == null ? Input.empty() : this.catalogAdminUserName;
     }
 
+    /**
+     * The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
+     */
     @InputImport(name="catalogPricingTier")
     private final @Nullable Input<Either<String,IntegrationRuntimeSsisCatalogPricingTier>> catalogPricingTier;
 
@@ -38,6 +50,9 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
         return this.catalogPricingTier == null ? Input.empty() : this.catalogPricingTier;
     }
 
+    /**
+     * The catalog database server URL.
+     */
     @InputImport(name="catalogServerEndpoint")
     private final @Nullable Input<String> catalogServerEndpoint;
 
@@ -45,6 +60,9 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
         return this.catalogServerEndpoint == null ? Input.empty() : this.catalogServerEndpoint;
     }
 
+    /**
+     * The dual standby pair name of Azure-SSIS Integration Runtimes to support SSISDB failover.
+     */
     @InputImport(name="dualStandbyPairName")
     private final @Nullable Input<String> dualStandbyPairName;
 

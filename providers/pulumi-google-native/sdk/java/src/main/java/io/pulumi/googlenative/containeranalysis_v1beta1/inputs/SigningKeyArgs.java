@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * This defines the format used to record keys used in the software supply chain. An in-toto link is attested using one or more keys defined in the in-toto layout. An example of this is: { "key_id": "776a00e29f3559e0141b3b096f696abc6cfb0c657ab40f441132b345b0...", "key_type": "rsa", "public_key_value": "-----BEGIN PUBLIC KEY-----\nMIIBojANBgkqhkiG9w0B...", "key_scheme": "rsassa-pss-sha256" } The format for in-toto's key definition can be found in section 4.2 of the in-toto specification.
+ */
 public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SigningKeyArgs Empty = new SigningKeyArgs();
 
+    /**
+     * key_id is an identifier for the signing key.
+     */
     @InputImport(name="keyId")
     private final @Nullable Input<String> keyId;
 
@@ -21,6 +27,9 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyId == null ? Input.empty() : this.keyId;
     }
 
+    /**
+     * This field contains the corresponding signature scheme. Eg: "rsassa-pss-sha256".
+     */
     @InputImport(name="keyScheme")
     private final @Nullable Input<String> keyScheme;
 
@@ -28,6 +37,9 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyScheme == null ? Input.empty() : this.keyScheme;
     }
 
+    /**
+     * This field identifies the specific signing method. Eg: "rsa", "ed25519", and "ecdsa".
+     */
     @InputImport(name="keyType")
     private final @Nullable Input<String> keyType;
 
@@ -35,6 +47,9 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyType == null ? Input.empty() : this.keyType;
     }
 
+    /**
+     * This field contains the actual public key.
+     */
     @InputImport(name="publicKeyValue")
     private final @Nullable Input<String> publicKeyValue;
 

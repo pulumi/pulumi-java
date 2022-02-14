@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ServerDnsAliasArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServerDnsAliasArgs Empty = new ServerDnsAliasArgs();
 
+    /**
+     * The name of the server dns alias.
+     */
     @InputImport(name="dnsAliasName")
     private final @Nullable Input<String> dnsAliasName;
 
@@ -21,6 +27,9 @@ public final class ServerDnsAliasArgs extends io.pulumi.resources.ResourceArgs {
         return this.dnsAliasName == null ? Input.empty() : this.dnsAliasName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -28,6 +37,9 @@ public final class ServerDnsAliasArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server that the alias is pointing to.
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 

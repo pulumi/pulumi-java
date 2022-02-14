@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GatewayCustomDomainArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GatewayCustomDomainArgs Empty = new GatewayCustomDomainArgs();
 
+    /**
+     * The name of the Spring Cloud Gateway custom domain.
+     */
     @InputImport(name="domainName")
     private final @Nullable Input<String> domainName;
 
@@ -22,6 +28,9 @@ public final class GatewayCustomDomainArgs extends io.pulumi.resources.ResourceA
         return this.domainName == null ? Input.empty() : this.domainName;
     }
 
+    /**
+     * The name of Spring Cloud Gateway.
+     */
     @InputImport(name="gatewayName", required=true)
     private final Input<String> gatewayName;
 
@@ -29,6 +38,9 @@ public final class GatewayCustomDomainArgs extends io.pulumi.resources.ResourceA
         return this.gatewayName;
     }
 
+    /**
+     * The properties of custom domain for Spring Cloud Gateway
+     */
     @InputImport(name="properties")
     private final @Nullable Input<GatewayCustomDomainPropertiesArgs> properties;
 
@@ -36,6 +48,9 @@ public final class GatewayCustomDomainArgs extends io.pulumi.resources.ResourceA
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +58,9 @@ public final class GatewayCustomDomainArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Service resource.
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

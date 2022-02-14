@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FluxConfigurationArgs Empty = new FluxConfigurationArgs();
 
+    /**
+     * The name of the kubernetes cluster.
+     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -28,6 +34,9 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.clusterName;
     }
 
+    /**
+     * The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
+     */
     @InputImport(name="clusterResourceName", required=true)
     private final Input<String> clusterResourceName;
 
@@ -35,6 +44,9 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.clusterResourceName;
     }
 
+    /**
+     * The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
+     */
     @InputImport(name="clusterRp", required=true)
     private final Input<String> clusterRp;
 
@@ -42,6 +54,9 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.clusterRp;
     }
 
+    /**
+     * Key-value pairs of protected configuration settings for the configuration
+     */
     @InputImport(name="configurationProtectedSettings")
     private final @Nullable Input<Map<String,String>> configurationProtectedSettings;
 
@@ -49,6 +64,9 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.configurationProtectedSettings == null ? Input.empty() : this.configurationProtectedSettings;
     }
 
+    /**
+     * Name of the Flux Configuration.
+     */
     @InputImport(name="fluxConfigurationName")
     private final @Nullable Input<String> fluxConfigurationName;
 
@@ -56,6 +74,9 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.fluxConfigurationName == null ? Input.empty() : this.fluxConfigurationName;
     }
 
+    /**
+     * Parameters to reconcile to the GitRepository source kind type.
+     */
     @InputImport(name="gitRepository")
     private final @Nullable Input<GitRepositoryDefinitionArgs> gitRepository;
 
@@ -63,6 +84,9 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.gitRepository == null ? Input.empty() : this.gitRepository;
     }
 
+    /**
+     * Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.
+     */
     @InputImport(name="kustomizations")
     private final @Nullable Input<Map<String,KustomizationDefinitionArgs>> kustomizations;
 
@@ -70,6 +94,9 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.kustomizations == null ? Input.empty() : this.kustomizations;
     }
 
+    /**
+     * The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
+     */
     @InputImport(name="namespace")
     private final @Nullable Input<String> namespace;
 
@@ -77,6 +104,9 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.namespace == null ? Input.empty() : this.namespace;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -84,6 +114,9 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.resourceGroupName;
     }
 
+    /**
+     * Scope at which the operator will be installed.
+     */
     @InputImport(name="scope")
     private final @Nullable Input<Either<String,ScopeType>> scope;
 
@@ -91,6 +124,9 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.scope == null ? Input.empty() : this.scope;
     }
 
+    /**
+     * Source Kind to pull the configuration data from.
+     */
     @InputImport(name="sourceKind")
     private final @Nullable Input<Either<String,SourceKindType>> sourceKind;
 
@@ -98,6 +134,9 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.sourceKind == null ? Input.empty() : this.sourceKind;
     }
 
+    /**
+     * Whether this configuration should suspend its reconciliation of its kustomizations and sources.
+     */
     @InputImport(name="suspend")
     private final @Nullable Input<Boolean> suspend;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class PipelineSourceTriggerPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PipelineSourceTriggerPropertiesResponse Empty = new PipelineSourceTriggerPropertiesResponse();
 
+    /**
+     * The current status of the source trigger.
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

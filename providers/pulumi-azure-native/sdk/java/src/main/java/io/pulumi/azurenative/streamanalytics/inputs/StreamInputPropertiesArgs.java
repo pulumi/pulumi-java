@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties that are associated with an input containing stream data.
+ */
 public final class StreamInputPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StreamInputPropertiesArgs Empty = new StreamInputPropertiesArgs();
 
+    /**
+     * Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.
+     */
     @InputImport(name="datasource")
     private final @Nullable Input<Object> datasource;
 
@@ -28,6 +34,9 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
         return this.datasource == null ? Input.empty() : this.datasource;
     }
 
+    /**
+     * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
+     */
     @InputImport(name="serialization")
     private final @Nullable Input<Object> serialization;
 
@@ -35,6 +44,10 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
         return this.serialization == null ? Input.empty() : this.serialization;
     }
 
+    /**
+     * Indicates whether the input is a source of reference data or stream data. Required on PUT (CreateOrReplace) requests.
+Expected value is 'Stream'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

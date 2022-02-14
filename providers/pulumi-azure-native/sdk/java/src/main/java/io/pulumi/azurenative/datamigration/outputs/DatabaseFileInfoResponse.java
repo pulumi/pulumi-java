@@ -12,12 +12,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DatabaseFileInfoResponse {
+/**
+ * Name of the database
+ */
     private final @Nullable String databaseName;
+/**
+ * Database file type
+ */
     private final @Nullable String fileType;
+/**
+ * Unique identifier for database file
+ */
     private final @Nullable String id;
+/**
+ * Logical name of the file
+ */
     private final @Nullable String logicalName;
+/**
+ * Operating-system full path of the file
+ */
     private final @Nullable String physicalFullName;
+/**
+ * Suggested full path of the file for restoring
+ */
     private final @Nullable String restoreFullName;
+/**
+ * Size of the file in megabytes
+ */
     private final @Nullable Double sizeMB;
 
     @OutputCustomType.Constructor({"databaseName","fileType","id","logicalName","physicalFullName","restoreFullName","sizeMB"})
@@ -38,24 +59,45 @@ public final class DatabaseFileInfoResponse {
         this.sizeMB = sizeMB;
     }
 
+/**
+ * Name of the database
+ */
     public Optional<String> getDatabaseName() {
         return Optional.ofNullable(this.databaseName);
     }
+/**
+ * Database file type
+ */
     public Optional<String> getFileType() {
         return Optional.ofNullable(this.fileType);
     }
+/**
+ * Unique identifier for database file
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * Logical name of the file
+ */
     public Optional<String> getLogicalName() {
         return Optional.ofNullable(this.logicalName);
     }
+/**
+ * Operating-system full path of the file
+ */
     public Optional<String> getPhysicalFullName() {
         return Optional.ofNullable(this.physicalFullName);
     }
+/**
+ * Suggested full path of the file for restoring
+ */
     public Optional<String> getRestoreFullName() {
         return Optional.ofNullable(this.restoreFullName);
     }
+/**
+ * Size of the file in megabytes
+ */
     public Optional<Double> getSizeMB() {
         return Optional.ofNullable(this.sizeMB);
     }

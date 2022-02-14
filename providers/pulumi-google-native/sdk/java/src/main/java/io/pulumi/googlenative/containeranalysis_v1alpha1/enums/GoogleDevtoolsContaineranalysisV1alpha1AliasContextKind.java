@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The alias kind.
+ */
     @EnumType
     public enum GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind {
+/**
+ * Unknown.
+ */
         KindUnspecified("KIND_UNSPECIFIED"),
+/**
+ * Git tag.
+ */
         Fixed("FIXED"),
+/**
+ * Git branch.
+ */
         Movable("MOVABLE"),
+/**
+ * Used to specify non-standard aliases. For example, if a Git repo has a ref named "refs/foo/bar".
+ */
         Other("OTHER");
 
         private final String value;

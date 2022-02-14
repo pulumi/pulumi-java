@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Type of entity.
+ */
     @EnumType
     public enum EntityTypes {
+/**
+ * 
+ */
         None("None"),
+/**
+ * 
+ */
         Profile("Profile"),
+/**
+ * 
+ */
         Interaction("Interaction"),
+/**
+ * 
+ */
         Relationship("Relationship");
 
         private final String value;

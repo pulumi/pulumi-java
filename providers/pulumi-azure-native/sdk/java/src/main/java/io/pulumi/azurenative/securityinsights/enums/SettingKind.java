@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The kind of the setting
+ */
     @EnumType
     public enum SettingKind {
+/**
+ * 
+ */
         Anomalies("Anomalies"),
+/**
+ * 
+ */
         EyesOn("EyesOn"),
+/**
+ * 
+ */
         EntityAnalytics("EntityAnalytics"),
+/**
+ * 
+ */
         Ueba("Ueba");
 
         private final String value;

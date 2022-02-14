@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Indicates that the builder claims certain fields in this message to be complete.
+ */
 public final class SlsaCompletenessArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SlsaCompletenessArgs Empty = new SlsaCompletenessArgs();
 
+    /**
+     * If true, the builder claims that recipe.arguments is complete, meaning that all external inputs are properly captured in the recipe.
+     */
     @InputImport(name="arguments")
     private final @Nullable Input<Boolean> arguments;
 
@@ -21,6 +27,9 @@ public final class SlsaCompletenessArgs extends io.pulumi.resources.ResourceArgs
         return this.arguments == null ? Input.empty() : this.arguments;
     }
 
+    /**
+     * If true, the builder claims that recipe.environment is claimed to be complete.
+     */
     @InputImport(name="environment")
     private final @Nullable Input<Boolean> environment;
 
@@ -28,6 +37,9 @@ public final class SlsaCompletenessArgs extends io.pulumi.resources.ResourceArgs
         return this.environment == null ? Input.empty() : this.environment;
     }
 
+    /**
+     * If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called "hermetic".
+     */
     @InputImport(name="materials")
     private final @Nullable Input<Boolean> materials;
 

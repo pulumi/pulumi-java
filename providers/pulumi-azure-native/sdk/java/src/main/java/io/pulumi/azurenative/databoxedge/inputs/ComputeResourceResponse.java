@@ -9,10 +9,16 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Compute infrastructure Resource
+ */
 public final class ComputeResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ComputeResourceResponse Empty = new ComputeResourceResponse();
 
+    /**
+     * Memory in GB
+     */
     @InputImport(name="memoryInGB", required=true)
     private final Double memoryInGB;
 
@@ -20,6 +26,9 @@ public final class ComputeResourceResponse extends io.pulumi.resources.InvokeArg
         return this.memoryInGB;
     }
 
+    /**
+     * Processor count
+     */
     @InputImport(name="processorCount", required=true)
     private final Integer processorCount;
 

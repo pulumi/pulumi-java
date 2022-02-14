@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Patch schedule entry for a Premium Redis Cache.
+ */
 public final class ScheduleEntryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScheduleEntryResponse Empty = new ScheduleEntryResponse();
 
+    /**
+     * Day of the week when a cache can be patched.
+     */
     @InputImport(name="dayOfWeek", required=true)
     private final String dayOfWeek;
 
@@ -22,6 +28,9 @@ public final class ScheduleEntryResponse extends io.pulumi.resources.InvokeArgs 
         return this.dayOfWeek;
     }
 
+    /**
+     * ISO8601 timespan specifying how much time cache patching can take. 
+     */
     @InputImport(name="maintenanceWindow")
     private final @Nullable String maintenanceWindow;
 
@@ -29,6 +38,9 @@ public final class ScheduleEntryResponse extends io.pulumi.resources.InvokeArgs 
         return this.maintenanceWindow == null ? Optional.empty() : Optional.ofNullable(this.maintenanceWindow);
     }
 
+    /**
+     * Start hour after which cache patching can start.
+     */
     @InputImport(name="startHourUtc", required=true)
     private final Integer startHourUtc;
 

@@ -19,10 +19,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The azure blob storage linked service.
+ */
 public final class AzureBlobStorageLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureBlobStorageLinkedServiceResponse Empty = new AzureBlobStorageLinkedServiceResponse();
 
+    /**
+     * The Azure key vault secret reference of accountKey in connection string.
+     */
     @InputImport(name="accountKey")
     private final @Nullable AzureKeyVaultSecretReferenceResponse accountKey;
 
@@ -30,6 +36,9 @@ public final class AzureBlobStorageLinkedServiceResponse extends io.pulumi.resou
         return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
     }
 
+    /**
+     * Specify the kind of your storage account. Allowed values are: Storage (general purpose v1), StorageV2 (general purpose v2), BlobStorage, or BlockBlobStorage. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="accountKind")
     private final @Nullable String accountKind;
 
@@ -37,6 +46,9 @@ public final class AzureBlobStorageLinkedServiceResponse extends io.pulumi.resou
         return this.accountKind == null ? Optional.empty() : Optional.ofNullable(this.accountKind);
     }
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -44,6 +56,9 @@ public final class AzureBlobStorageLinkedServiceResponse extends io.pulumi.resou
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="azureCloudType")
     private final @Nullable Object azureCloudType;
 
@@ -51,6 +66,9 @@ public final class AzureBlobStorageLinkedServiceResponse extends io.pulumi.resou
         return this.azureCloudType == null ? Optional.empty() : Optional.ofNullable(this.azureCloudType);
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -58,6 +76,9 @@ public final class AzureBlobStorageLinkedServiceResponse extends io.pulumi.resou
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
+    /**
+     * The connection string. It is mutually exclusive with sasUri, serviceEndpoint property. Type: string, SecureString or AzureKeyVaultSecretReference.
+     */
     @InputImport(name="connectionString")
     private final @Nullable Object connectionString;
 
@@ -65,6 +86,9 @@ public final class AzureBlobStorageLinkedServiceResponse extends io.pulumi.resou
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
     }
 
+    /**
+     * The credential reference containing authentication information.
+     */
     @InputImport(name="credential")
     private final @Nullable CredentialReferenceResponse credential;
 
@@ -72,6 +96,9 @@ public final class AzureBlobStorageLinkedServiceResponse extends io.pulumi.resou
         return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -79,6 +106,9 @@ public final class AzureBlobStorageLinkedServiceResponse extends io.pulumi.resou
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable String encryptedCredential;
 
@@ -86,6 +116,9 @@ public final class AzureBlobStorageLinkedServiceResponse extends io.pulumi.resou
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -93,6 +126,9 @@ public final class AzureBlobStorageLinkedServiceResponse extends io.pulumi.resou
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * The Azure key vault secret reference of sasToken in sas uri.
+     */
     @InputImport(name="sasToken")
     private final @Nullable AzureKeyVaultSecretReferenceResponse sasToken;
 
@@ -100,6 +136,9 @@ public final class AzureBlobStorageLinkedServiceResponse extends io.pulumi.resou
         return this.sasToken == null ? Optional.empty() : Optional.ofNullable(this.sasToken);
     }
 
+    /**
+     * SAS URI of the Azure Blob Storage resource. It is mutually exclusive with connectionString, serviceEndpoint property. Type: string, SecureString or AzureKeyVaultSecretReference.
+     */
     @InputImport(name="sasUri")
     private final @Nullable Object sasUri;
 
@@ -107,6 +146,9 @@ public final class AzureBlobStorageLinkedServiceResponse extends io.pulumi.resou
         return this.sasUri == null ? Optional.empty() : Optional.ofNullable(this.sasUri);
     }
 
+    /**
+     * Blob service endpoint of the Azure Blob Storage resource. It is mutually exclusive with connectionString, sasUri property.
+     */
     @InputImport(name="serviceEndpoint")
     private final @Nullable String serviceEndpoint;
 
@@ -114,6 +156,9 @@ public final class AzureBlobStorageLinkedServiceResponse extends io.pulumi.resou
         return this.serviceEndpoint == null ? Optional.empty() : Optional.ofNullable(this.serviceEndpoint);
     }
 
+    /**
+     * The ID of the service principal used to authenticate against Azure SQL Data Warehouse. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="servicePrincipalId")
     private final @Nullable Object servicePrincipalId;
 
@@ -121,6 +166,9 @@ public final class AzureBlobStorageLinkedServiceResponse extends io.pulumi.resou
         return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
     }
 
+    /**
+     * The key of the service principal used to authenticate against Azure SQL Data Warehouse.
+     */
     @InputImport(name="servicePrincipalKey")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
@@ -128,6 +176,9 @@ public final class AzureBlobStorageLinkedServiceResponse extends io.pulumi.resou
         return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
     }
 
+    /**
+     * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="tenant")
     private final @Nullable Object tenant;
 
@@ -135,6 +186,10 @@ public final class AzureBlobStorageLinkedServiceResponse extends io.pulumi.resou
         return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'AzureBlobStorage'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ReplicationProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicationProtectedItemArgs Empty = new ReplicationProtectedItemArgs();
 
+    /**
+     * Name of the fabric.
+     */
     @InputImport(name="fabricName", required=true)
     private final Input<String> fabricName;
 
@@ -22,6 +28,9 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
         return this.fabricName;
     }
 
+    /**
+     * Enable protection input properties.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<EnableProtectionInputPropertiesArgs> properties;
 
@@ -29,6 +38,9 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Protection container name.
+     */
     @InputImport(name="protectionContainerName", required=true)
     private final Input<String> protectionContainerName;
 
@@ -36,6 +48,9 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
         return this.protectionContainerName;
     }
 
+    /**
+     * A name for the replication protected item.
+     */
     @InputImport(name="replicatedProtectedItemName")
     private final @Nullable Input<String> replicatedProtectedItemName;
 
@@ -43,6 +58,9 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
         return this.replicatedProtectedItemName == null ? Input.empty() : this.replicatedProtectedItemName;
     }
 
+    /**
+     * The name of the resource group where the recovery services vault is present.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -50,6 +68,9 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the recovery services vault.
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 

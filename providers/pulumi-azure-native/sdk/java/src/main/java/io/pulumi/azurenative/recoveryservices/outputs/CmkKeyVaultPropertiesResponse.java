@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CmkKeyVaultPropertiesResponse {
+/**
+ * The key uri of the Customer Managed Key
+ */
     private final @Nullable String keyUri;
 
     @OutputCustomType.Constructor({"keyUri"})
@@ -18,6 +21,9 @@ public final class CmkKeyVaultPropertiesResponse {
         this.keyUri = keyUri;
     }
 
+/**
+ * The key uri of the Customer Managed Key
+ */
     public Optional<String> getKeyUri() {
         return Optional.ofNullable(this.keyUri);
     }

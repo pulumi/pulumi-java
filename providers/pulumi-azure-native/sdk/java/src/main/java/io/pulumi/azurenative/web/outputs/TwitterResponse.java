@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TwitterResponse {
+/**
+ * <code>false</code> if the Twitter provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+ */
     private final @Nullable Boolean enabled;
+/**
+ * The configuration settings of the app registration for the Twitter provider.
+ */
     private final @Nullable TwitterRegistrationResponse registration;
 
     @OutputCustomType.Constructor({"enabled","registration"})
@@ -23,9 +29,15 @@ public final class TwitterResponse {
         this.registration = registration;
     }
 
+/**
+ * <code>false</code> if the Twitter provider should not be enabled despite the set registration; otherwise, <code>true</code>.
+ */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
+/**
+ * The configuration settings of the app registration for the Twitter provider.
+ */
     public Optional<TwitterRegistrationResponse> getRegistration() {
         return Optional.ofNullable(this.registration);
     }

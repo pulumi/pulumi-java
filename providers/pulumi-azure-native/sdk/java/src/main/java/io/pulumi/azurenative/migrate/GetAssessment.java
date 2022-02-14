@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAssessment {
+/**
+ * An assessment created for a group in the Migration project.
+API Version: 2019-10-01.
+ *
+ * An assessment created for a group in the Migration project.
+ */
     public static CompletableFuture<GetAssessmentResult> invokeAsync(GetAssessmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:migrate:getAssessment", TypeShape.of(GetAssessmentResult.class), args == null ? GetAssessmentArgs.Empty : args, Utilities.withVersion(options));
     }

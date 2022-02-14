@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The Edifact message filter for odata query.
+ */
 public final class EdifactMessageFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EdifactMessageFilterResponse Empty = new EdifactMessageFilterResponse();
 
+    /**
+     * The message filter type.
+     */
     @InputImport(name="messageFilterType", required=true)
     private final String messageFilterType;
 

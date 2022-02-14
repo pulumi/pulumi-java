@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.hybridnetwork;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.hybridnetwork.VendorArgs;
 import io.pulumi.azurenative.hybridnetwork.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,33 +14,139 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Vendor resource.
+API Version: 2020-01-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create or update Vendor resource
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vendor = new AzureNative.HybridNetwork.Vendor("vendor", new AzureNative.HybridNetwork.VendorArgs
+        {
+            VendorName = "TestVendor",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	hybridnetwork "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hybridnetwork"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := hybridnetwork.NewVendor(ctx, "vendor", &hybridnetwork.VendorArgs{
+			VendorName: pulumi.String("TestVendor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const vendor = new azure_native.hybridnetwork.Vendor("vendor", {vendorName: "TestVendor"});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+vendor = azure_native.hybridnetwork.Vendor("vendor", vendor_name="TestVendor")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:hybridnetwork:Vendor TestVendor /subscriptions/subid/providers/Microsoft.HybridNetwork/vendors/TestVendor 
+```
+
+ */
 @ResourceType(type="azure-native:hybridnetwork:Vendor")
 public class Vendor extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the vendor resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the vendor resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * A list of IDs of the vendor skus offered by the vendor.
+     */
     @OutputExport(name="skus", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> skus;
 
+    /**
+     * @return A list of IDs of the vendor skus offered by the vendor.
+     */
     public Output<List<SubResourceResponse>> getSkus() {
         return this.skus;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Vendor(String name, @Nullable VendorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:hybridnetwork:Vendor", name, args == null ? VendorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -61,6 +166,14 @@ public class Vendor extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Vendor get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Vendor(name, id, options);
     }

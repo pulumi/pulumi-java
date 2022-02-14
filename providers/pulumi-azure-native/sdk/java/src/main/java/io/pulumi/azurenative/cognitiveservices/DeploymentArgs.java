@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeploymentArgs Empty = new DeploymentArgs();
 
+    /**
+     * The name of Cognitive Services account.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -22,6 +28,9 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the deployment associated with the Cognitive Services Account
+     */
     @InputImport(name="deploymentName")
     private final @Nullable Input<String> deploymentName;
 
@@ -29,6 +38,9 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
         return this.deploymentName == null ? Input.empty() : this.deploymentName;
     }
 
+    /**
+     * Properties of Cognitive Services account deployment.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<DeploymentPropertiesArgs> properties;
 
@@ -36,6 +48,9 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class CustomClassArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomClassArgs Empty = new CustomClassArgs();
 
+    /**
+     * The ID to use for the custom class, which will become the final component of the custom class' resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+     */
     @InputImport(name="customClassId", required=true)
     private final Input<String> customClassId;
 
@@ -23,6 +29,9 @@ public final class CustomClassArgs extends io.pulumi.resources.ResourceArgs {
         return this.customClassId;
     }
 
+    /**
+     * A collection of class items.
+     */
     @InputImport(name="items")
     private final @Nullable Input<List<ClassItemArgs>> items;
 
@@ -30,6 +39,9 @@ public final class CustomClassArgs extends io.pulumi.resources.ResourceArgs {
         return this.items == null ? Input.empty() : this.items;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -37,6 +49,9 @@ public final class CustomClassArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource name of the custom class.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -44,6 +59,9 @@ public final class CustomClassArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

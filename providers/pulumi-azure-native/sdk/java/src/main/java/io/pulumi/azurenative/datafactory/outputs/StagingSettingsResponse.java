@@ -12,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StagingSettingsResponse {
+/**
+ * Specifies whether to use compression when copying data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
+ */
     private final @Nullable Object enableCompression;
+/**
+ * Staging linked service reference.
+ */
     private final LinkedServiceReferenceResponse linkedServiceName;
+/**
+ * The path to storage for storing the interim data. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object path;
 
     @OutputCustomType.Constructor({"enableCompression","linkedServiceName","path"})
@@ -26,12 +35,21 @@ public final class StagingSettingsResponse {
         this.path = path;
     }
 
+/**
+ * Specifies whether to use compression when copying data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
+ */
     public Optional<Object> getEnableCompression() {
         return Optional.ofNullable(this.enableCompression);
     }
+/**
+ * Staging linked service reference.
+ */
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
     }
+/**
+ * The path to storage for storing the interim data. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getPath() {
         return Optional.ofNullable(this.path);
     }

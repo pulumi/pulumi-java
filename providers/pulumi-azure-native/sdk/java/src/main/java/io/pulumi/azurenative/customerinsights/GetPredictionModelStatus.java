@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPredictionModelStatus {
+/**
+ * The prediction model status.
+API Version: 2017-04-26.
+ *
+ * The prediction model status.
+ */
     public static CompletableFuture<GetPredictionModelStatusResult> invokeAsync(GetPredictionModelStatusArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getPredictionModelStatus", TypeShape.of(GetPredictionModelStatusResult.class), args == null ? GetPredictionModelStatusArgs.Empty : args, Utilities.withVersion(options));
     }

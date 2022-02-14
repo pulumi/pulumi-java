@@ -20,10 +20,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for task that migrates SQL Server databases to Azure SQL Database Managed Instance sync scenario
+ */
 public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MigrateSqlServerSqlMISyncTaskPropertiesResponse Empty = new MigrateSqlServerSqlMISyncTaskPropertiesResponse();
 
+    /**
+     * Array of command properties.
+     */
     @InputImport(name="commands", required=true)
     private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
@@ -31,6 +37,9 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse extends io.pu
         return this.commands;
     }
 
+    /**
+     * Array of errors. This is ignored if submitted.
+     */
     @InputImport(name="errors", required=true)
     private final List<ODataErrorResponse> errors;
 
@@ -38,6 +47,9 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse extends io.pu
         return this.errors;
     }
 
+    /**
+     * Task input
+     */
     @InputImport(name="input")
     private final @Nullable MigrateSqlServerSqlMISyncTaskInputResponse input;
 
@@ -45,6 +57,9 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse extends io.pu
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
     }
 
+    /**
+     * Task output. This is ignored if submitted.
+     */
     @InputImport(name="output", required=true)
     private final List<Object> output;
 
@@ -52,6 +67,9 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse extends io.pu
         return this.output;
     }
 
+    /**
+     * The state of the task. This is ignored if submitted.
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -59,6 +77,10 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesResponse extends io.pu
         return this.state;
     }
 
+    /**
+     * Task type.
+Expected value is 'Migrate.SqlServer.AzureSqlDbMI.Sync.LRS'.
+     */
     @InputImport(name="taskType", required=true)
     private final String taskType;
 

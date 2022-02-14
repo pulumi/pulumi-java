@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetMessageArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMessageArgs Empty = new GetMessageArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="datasetId", required=true)
     private final String datasetId;
 
@@ -21,6 +27,9 @@ public final class GetMessageArgs extends io.pulumi.resources.InvokeArgs {
         return this.datasetId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="hl7V2StoreId", required=true)
     private final String hl7V2StoreId;
 
@@ -28,6 +37,9 @@ public final class GetMessageArgs extends io.pulumi.resources.InvokeArgs {
         return this.hl7V2StoreId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -35,6 +47,9 @@ public final class GetMessageArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="messageId", required=true)
     private final String messageId;
 
@@ -42,6 +57,9 @@ public final class GetMessageArgs extends io.pulumi.resources.InvokeArgs {
         return this.messageId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -49,6 +67,9 @@ public final class GetMessageArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="view")
     private final @Nullable String view;
 

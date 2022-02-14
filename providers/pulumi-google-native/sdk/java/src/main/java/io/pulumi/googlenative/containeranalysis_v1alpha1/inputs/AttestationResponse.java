@@ -8,10 +8,16 @@ import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.PgpSignedAttesta
 import java.util.Objects;
 
 
+/**
+ * Occurrence that represents a single "attestation". The authenticity of an Attestation can be verified using the attached signature. If the verifier trusts the public key of the signer, then verifying the signature is sufficient to establish trust. In this circumstance, the AttestationAuthority to which this Attestation is attached is primarily useful for look-up (how to find this Attestation if you already know the Authority and artifact to be verified) and intent (which authority was this attestation intended to sign for).
+ */
 public final class AttestationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AttestationResponse Empty = new AttestationResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="pgpSignedAttestation", required=true)
     private final PgpSignedAttestationResponse pgpSignedAttestation;
 

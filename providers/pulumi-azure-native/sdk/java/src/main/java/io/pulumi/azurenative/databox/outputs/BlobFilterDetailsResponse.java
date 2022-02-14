@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BlobFilterDetailsResponse {
+/**
+ * List of full path of the blobs to be transferred.
+ */
     private final @Nullable List<String> blobPathList;
+/**
+ * Prefix list of the Azure blobs to be transferred.
+ */
     private final @Nullable List<String> blobPrefixList;
+/**
+ * List of blob containers to be transferred.
+ */
     private final @Nullable List<String> containerList;
 
     @OutputCustomType.Constructor({"blobPathList","blobPrefixList","containerList"})
@@ -25,12 +34,21 @@ public final class BlobFilterDetailsResponse {
         this.containerList = containerList;
     }
 
+/**
+ * List of full path of the blobs to be transferred.
+ */
     public List<String> getBlobPathList() {
         return this.blobPathList == null ? List.of() : this.blobPathList;
     }
+/**
+ * Prefix list of the Azure blobs to be transferred.
+ */
     public List<String> getBlobPrefixList() {
         return this.blobPrefixList == null ? List.of() : this.blobPrefixList;
     }
+/**
+ * List of blob containers to be transferred.
+ */
     public List<String> getContainerList() {
         return this.containerList == null ? List.of() : this.containerList;
     }

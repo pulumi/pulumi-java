@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DeploymentConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeploymentConfigurationResponse Empty = new DeploymentConfigurationResponse();
 
+    /**
+     * This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'.
+     */
     @InputImport(name="cloudServiceConfiguration")
     private final @Nullable CloudServiceConfigurationResponse cloudServiceConfiguration;
 
@@ -22,6 +28,9 @@ public final class DeploymentConfigurationResponse extends io.pulumi.resources.I
         return this.cloudServiceConfiguration == null ? Optional.empty() : Optional.ofNullable(this.cloudServiceConfiguration);
     }
 
+    /**
+     * This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.
+     */
     @InputImport(name="virtualMachineConfiguration")
     private final @Nullable VirtualMachineConfigurationResponse virtualMachineConfiguration;
 

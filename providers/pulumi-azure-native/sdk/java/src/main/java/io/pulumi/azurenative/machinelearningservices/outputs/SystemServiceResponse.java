@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SystemServiceResponse {
+/**
+ * Public IP address
+ */
     private final String publicIpAddress;
+/**
+ * The type of this system service.
+ */
     private final String systemServiceType;
+/**
+ * The version for this type.
+ */
     private final String version;
 
     @OutputCustomType.Constructor({"publicIpAddress","systemServiceType","version"})
@@ -23,12 +32,21 @@ public final class SystemServiceResponse {
         this.version = Objects.requireNonNull(version);
     }
 
+/**
+ * Public IP address
+ */
     public String getPublicIpAddress() {
         return this.publicIpAddress;
     }
+/**
+ * The type of this system service.
+ */
     public String getSystemServiceType() {
         return this.systemServiceType;
     }
+/**
+ * The version for this type.
+ */
     public String getVersion() {
         return this.version;
     }

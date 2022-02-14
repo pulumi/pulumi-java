@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.security;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.security.AssignmentArgs;
 import io.pulumi.azurenative.security.outputs.AssignedComponentItemResponse;
 import io.pulumi.azurenative.security.outputs.AssignedStandardItemResponse;
 import io.pulumi.azurenative.security.outputs.AssignmentPropertiesResponseAdditionalData;
@@ -20,105 +19,457 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Security Assignment on a resource group over a given scope
+API Version: 2021-08-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Define a default standard assignment
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var assignment = new AzureNative.Security.Assignment("assignment", new AzureNative.Security.AssignmentArgs
+        {
+            AssignedStandard = new AzureNative.Security.Inputs.AssignedStandardItemArgs
+            {
+                Id = "/providers/Microsoft.Security/Standards/1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
+            },
+            AssignmentId = "1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
+            Description = "Set of policies monitored by Azure Security Center for cross cloud",
+            DisplayName = "ASC Default",
+            Effect = "audit",
+            ResourceGroupName = "myResourceGroup",
+            Scope = "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/ResourceGroup/rg",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := security.NewAssignment(ctx, "assignment", &security.AssignmentArgs{
+			AssignedStandard: &security.AssignedStandardItemArgs{
+				Id: pulumi.String("/providers/Microsoft.Security/Standards/1f3afdf9-d0c9-4c3d-847f-89da613e70a8"),
+			},
+			AssignmentId:      pulumi.String("1f3afdf9-d0c9-4c3d-847f-89da613e70a8"),
+			Description:       pulumi.String("Set of policies monitored by Azure Security Center for cross cloud"),
+			DisplayName:       pulumi.String("ASC Default"),
+			Effect:            pulumi.String("audit"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			Scope:             pulumi.String("/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/ResourceGroup/rg"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const assignment = new azure_native.security.Assignment("assignment", {
+    assignedStandard: {
+        id: "/providers/Microsoft.Security/Standards/1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
+    },
+    assignmentId: "1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
+    description: "Set of policies monitored by Azure Security Center for cross cloud",
+    displayName: "ASC Default",
+    effect: "audit",
+    resourceGroupName: "myResourceGroup",
+    scope: "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/ResourceGroup/rg",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+assignment = azure_native.security.Assignment("assignment",
+    assigned_standard=azure_native.security.AssignedStandardItemArgs(
+        id="/providers/Microsoft.Security/Standards/1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
+    ),
+    assignment_id="1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
+    description="Set of policies monitored by Azure Security Center for cross cloud",
+    display_name="ASC Default",
+    effect="audit",
+    resource_group_name="myResourceGroup",
+    scope="/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/ResourceGroup/rg")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Exempt Recommendation From standard and resource
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var assignment = new AzureNative.Security.Assignment("assignment", new AzureNative.Security.AssignmentArgs
+        {
+            AdditionalData = new AzureNative.Security.Inputs.AssignmentPropertiesAdditionalDataArgs
+            {
+                ExemptionCategory = "waiver",
+            },
+            AssignedComponent = new AzureNative.Security.Inputs.AssignedComponentItemArgs
+            {
+                Key = "1195afff-c881-495e-9bc5-1486211ae03f",
+            },
+            AssignedStandard = new AzureNative.Security.Inputs.AssignedStandardItemArgs
+            {
+                Id = "/providers/Microsoft.Security/Standards/1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
+            },
+            AssignmentId = "1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
+            Description = "Set of policies monitored by Azure Security Center for cross cloud",
+            DisplayName = "ASC Default",
+            Effect = "Exempt",
+            ExpiresOn = "2022-05-01T19:50:47.083633Z",
+            Metadata = 
+            {
+                { "ticketId", 12345 },
+            },
+            ResourceGroupName = "myResourceGroup",
+            Scope = "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/ResourceGroup/rg",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := security.NewAssignment(ctx, "assignment", &security.AssignmentArgs{
+			AdditionalData: &security.AssignmentPropertiesAdditionalDataArgs{
+				ExemptionCategory: pulumi.String("waiver"),
+			},
+			AssignedComponent: &security.AssignedComponentItemArgs{
+				Key: pulumi.String("1195afff-c881-495e-9bc5-1486211ae03f"),
+			},
+			AssignedStandard: &security.AssignedStandardItemArgs{
+				Id: pulumi.String("/providers/Microsoft.Security/Standards/1f3afdf9-d0c9-4c3d-847f-89da613e70a8"),
+			},
+			AssignmentId: pulumi.String("1f3afdf9-d0c9-4c3d-847f-89da613e70a8"),
+			Description:  pulumi.String("Set of policies monitored by Azure Security Center for cross cloud"),
+			DisplayName:  pulumi.String("ASC Default"),
+			Effect:       pulumi.String("Exempt"),
+			ExpiresOn:    pulumi.String("2022-05-01T19:50:47.083633Z"),
+			Metadata: pulumi.Any{
+				TicketId: 12345,
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			Scope:             pulumi.String("/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/ResourceGroup/rg"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const assignment = new azure_native.security.Assignment("assignment", {
+    additionalData: {
+        exemptionCategory: "waiver",
+    },
+    assignedComponent: {
+        key: "1195afff-c881-495e-9bc5-1486211ae03f",
+    },
+    assignedStandard: {
+        id: "/providers/Microsoft.Security/Standards/1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
+    },
+    assignmentId: "1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
+    description: "Set of policies monitored by Azure Security Center for cross cloud",
+    displayName: "ASC Default",
+    effect: "Exempt",
+    expiresOn: "2022-05-01T19:50:47.083633Z",
+    metadata: {
+        ticketId: 12345,
+    },
+    resourceGroupName: "myResourceGroup",
+    scope: "/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/ResourceGroup/rg",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+assignment = azure_native.security.Assignment("assignment",
+    additional_data=azure_native.security.AssignmentPropertiesAdditionalDataArgs(
+        exemption_category="waiver",
+    ),
+    assigned_component=azure_native.security.AssignedComponentItemArgs(
+        key="1195afff-c881-495e-9bc5-1486211ae03f",
+    ),
+    assigned_standard=azure_native.security.AssignedStandardItemArgs(
+        id="/providers/Microsoft.Security/Standards/1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
+    ),
+    assignment_id="1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
+    description="Set of policies monitored by Azure Security Center for cross cloud",
+    display_name="ASC Default",
+    effect="Exempt",
+    expires_on="2022-05-01T19:50:47.083633Z",
+    metadata={
+        "ticketId": 12345,
+    },
+    resource_group_name="myResourceGroup",
+    scope="/subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/ResourceGroup/rg")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:security:Assignment 1f3afdf9-d0c9-4c3d-847f-89da613e70a8 subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myResourceGroup/providers/Microsoft.Security/assignments/1f3afdf9-d0c9-4c3d-847f-89da613e70a8 
+```
+
+ */
 @ResourceType(type="azure-native:security:Assignment")
 public class Assignment extends io.pulumi.resources.CustomResource {
+    /**
+     * Additional data about the assignment
+     */
     @OutputExport(name="additionalData", type=AssignmentPropertiesResponseAdditionalData.class, parameters={})
     private Output</* @Nullable */ AssignmentPropertiesResponseAdditionalData> additionalData;
 
+    /**
+     * @return Additional data about the assignment
+     */
     public Output</* @Nullable */ AssignmentPropertiesResponseAdditionalData> getAdditionalData() {
         return this.additionalData;
     }
+    /**
+     * Component item with key as applied to this standard assignment over the given scope
+     */
     @OutputExport(name="assignedComponent", type=AssignedComponentItemResponse.class, parameters={})
     private Output</* @Nullable */ AssignedComponentItemResponse> assignedComponent;
 
+    /**
+     * @return Component item with key as applied to this standard assignment over the given scope
+     */
     public Output</* @Nullable */ AssignedComponentItemResponse> getAssignedComponent() {
         return this.assignedComponent;
     }
+    /**
+     * Standard item with key as applied to this standard assignment over the given scope
+     */
     @OutputExport(name="assignedStandard", type=AssignedStandardItemResponse.class, parameters={})
     private Output</* @Nullable */ AssignedStandardItemResponse> assignedStandard;
 
+    /**
+     * @return Standard item with key as applied to this standard assignment over the given scope
+     */
     public Output</* @Nullable */ AssignedStandardItemResponse> getAssignedStandard() {
         return this.assignedStandard;
     }
+    /**
+     * description of the standardAssignment
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return description of the standardAssignment
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * display name of the standardAssignment
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
+    /**
+     * @return display name of the standardAssignment
+     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * expected effect of this assignment (Disable/Exempt/etc)
+     */
     @OutputExport(name="effect", type=String.class, parameters={})
     private Output</* @Nullable */ String> effect;
 
+    /**
+     * @return expected effect of this assignment (Disable/Exempt/etc)
+     */
     public Output</* @Nullable */ String> getEffect() {
         return this.effect;
     }
+    /**
+     * Entity tag is used for comparing two or more entities from the same requested resource.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return Entity tag is used for comparing two or more entities from the same requested resource.
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * Expiration date of this assignment as a full ISO date
+     */
     @OutputExport(name="expiresOn", type=String.class, parameters={})
     private Output</* @Nullable */ String> expiresOn;
 
+    /**
+     * @return Expiration date of this assignment as a full ISO date
+     */
     public Output</* @Nullable */ String> getExpiresOn() {
         return this.expiresOn;
     }
+    /**
+     * Kind of the resource
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return Kind of the resource
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * Location where the resource is stored
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Location where the resource is stored
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
+     */
     @OutputExport(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
+    /**
+     * @return The assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
+     */
     public Output</* @Nullable */ Object> getMetadata() {
         return this.metadata;
     }
+    /**
+     * Resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Scope to which the standardAssignment applies - can be a subscription path or a resource group under that subscription
+     */
     @OutputExport(name="scope", type=String.class, parameters={})
     private Output</* @Nullable */ String> scope;
 
+    /**
+     * @return Scope to which the standardAssignment applies - can be a subscription path or a resource group under that subscription
+     */
     public Output</* @Nullable */ String> getScope() {
         return this.scope;
     }
+    /**
+     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * A list of key value pairs that describe the resource.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return A list of key value pairs that describe the resource.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Assignment(String name, AssignmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:security:Assignment", name, args == null ? AssignmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -137,6 +488,14 @@ public class Assignment extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Assignment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Assignment(name, id, options);
     }

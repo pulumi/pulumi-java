@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The KPI alias.
+ */
 public final class KpiAliasResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KpiAliasResponse Empty = new KpiAliasResponse();
 
+    /**
+     * KPI alias name.
+     */
     @InputImport(name="aliasName", required=true)
     private final String aliasName;
 
@@ -19,6 +25,9 @@ public final class KpiAliasResponse extends io.pulumi.resources.InvokeArgs {
         return this.aliasName;
     }
 
+    /**
+     * The expression.
+     */
     @InputImport(name="expression", required=true)
     private final String expression;
 

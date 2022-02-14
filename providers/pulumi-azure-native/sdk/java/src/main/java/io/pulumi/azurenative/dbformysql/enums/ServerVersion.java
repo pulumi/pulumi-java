@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Server version.
+ */
     @EnumType
     public enum ServerVersion {
+/**
+ * 
+ */
         ServerVersion_5_6("5.6"),
+/**
+ * 
+ */
         ServerVersion_5_7("5.7"),
+/**
+ * 
+ */
         ServerVersion_8_0("8.0");
 
         private final String value;

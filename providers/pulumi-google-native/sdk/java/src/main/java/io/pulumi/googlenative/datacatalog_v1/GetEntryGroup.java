@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEntryGroup {
+/**
+ * Gets an entry group.
+ */
     public static CompletableFuture<GetEntryGroupResult> invokeAsync(GetEntryGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datacatalog/v1:getEntryGroup", TypeShape.of(GetEntryGroupResult.class), args == null ? GetEntryGroupArgs.Empty : args, Utilities.withVersion(options));
     }

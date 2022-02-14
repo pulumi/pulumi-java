@@ -9,7 +9,14 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourceGroupResourceSettingsResponse {
+/**
+ * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+Expected value is 'resourceGroups'.
+ */
     private final String resourceType;
+/**
+ * Gets or sets the target Resource name.
+ */
     private final String targetResourceName;
 
     @OutputCustomType.Constructor({"resourceType","targetResourceName"})
@@ -20,9 +27,16 @@ public final class ResourceGroupResourceSettingsResponse {
         this.targetResourceName = Objects.requireNonNull(targetResourceName);
     }
 
+/**
+ * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+Expected value is 'resourceGroups'.
+ */
     public String getPropResourceType() {
         return this.resourceType;
     }
+/**
+ * Gets or sets the target Resource name.
+ */
     public String getTargetResourceName() {
         return this.targetResourceName;
     }

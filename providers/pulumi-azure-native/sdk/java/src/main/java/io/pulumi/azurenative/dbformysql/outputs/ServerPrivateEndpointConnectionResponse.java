@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServerPrivateEndpointConnectionResponse {
+/**
+ * Resource Id of the private endpoint connection.
+ */
     private final String id;
+/**
+ * Private endpoint connection properties
+ */
     private final ServerPrivateEndpointConnectionPropertiesResponse properties;
 
     @OutputCustomType.Constructor({"id","properties"})
@@ -21,9 +27,15 @@ public final class ServerPrivateEndpointConnectionResponse {
         this.properties = Objects.requireNonNull(properties);
     }
 
+/**
+ * Resource Id of the private endpoint connection.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Private endpoint connection properties
+ */
     public ServerPrivateEndpointConnectionPropertiesResponse getProperties() {
         return this.properties;
     }

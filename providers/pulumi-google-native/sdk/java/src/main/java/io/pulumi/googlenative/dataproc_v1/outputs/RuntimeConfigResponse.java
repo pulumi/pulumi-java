@@ -10,8 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RuntimeConfigResponse {
+/**
+ * Optional. Optional custom container image for the job runtime environment. If not specified, a default container image will be used.
+ */
     private final String containerImage;
+/**
+ * Optional. A mapping of property names to values, which are used to configure workload execution.
+ */
     private final Map<String,String> properties;
+/**
+ * Optional. Version of the batch runtime.
+ */
     private final String version;
 
     @OutputCustomType.Constructor({"containerImage","properties","version"})
@@ -24,12 +33,21 @@ public final class RuntimeConfigResponse {
         this.version = Objects.requireNonNull(version);
     }
 
+/**
+ * Optional. Optional custom container image for the job runtime environment. If not specified, a default container image will be used.
+ */
     public String getContainerImage() {
         return this.containerImage;
     }
+/**
+ * Optional. A mapping of property names to values, which are used to configure workload execution.
+ */
     public Map<String,String> getProperties() {
         return this.properties;
     }
+/**
+ * Optional. Version of the batch runtime.
+ */
     public String getVersion() {
         return this.version;
     }

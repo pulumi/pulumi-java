@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Inner Error
+ */
 public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InnerErrorResponse Empty = new InnerErrorResponse();
 
+    /**
+     * Any Key value pairs that can be provided to the client for additional  verbose information.
+     */
     @InputImport(name="additionalInfo")
     private final @Nullable Map<String,String> additionalInfo;
 
@@ -22,6 +28,9 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
         return this.additionalInfo == null ? Map.of() : this.additionalInfo;
     }
 
+    /**
+     * Unique code for this error
+     */
     @InputImport(name="code")
     private final @Nullable String code;
 
@@ -29,6 +38,9 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
+    /**
+     * Child Inner Error, to allow Nesting.
+     */
     @InputImport(name="embeddedInnerError")
     private final @Nullable InnerErrorResponse embeddedInnerError;
 

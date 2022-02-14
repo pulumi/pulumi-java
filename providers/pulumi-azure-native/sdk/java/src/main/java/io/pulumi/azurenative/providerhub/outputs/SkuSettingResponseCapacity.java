@@ -12,9 +12,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SkuSettingResponseCapacity {
+/**
+ * 
+ */
     private final @Nullable Integer $default;
+/**
+ * 
+ */
     private final @Nullable Integer maximum;
+/**
+ * 
+ */
     private final Integer minimum;
+/**
+ * 
+ */
     private final @Nullable String scaleType;
 
     @OutputCustomType.Constructor({"$default","maximum","minimum","scaleType"})
@@ -29,15 +41,27 @@ public final class SkuSettingResponseCapacity {
         this.scaleType = scaleType;
     }
 
+/**
+ * 
+ */
     public Optional<Integer> get$default() {
         return Optional.ofNullable(this.$default);
     }
+/**
+ * 
+ */
     public Optional<Integer> getMaximum() {
         return Optional.ofNullable(this.maximum);
     }
+/**
+ * 
+ */
     public Integer getMinimum() {
         return this.minimum;
     }
+/**
+ * 
+ */
     public Optional<String> getScaleType() {
         return Optional.ofNullable(this.scaleType);
     }

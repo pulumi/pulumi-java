@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The parameters to provide for the Enterprise Channel.
+ */
 public final class EnterpriseChannelPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnterpriseChannelPropertiesArgs Empty = new EnterpriseChannelPropertiesArgs();
 
+    /**
+     * The nodes associated with the Enterprise Channel.
+     */
     @InputImport(name="nodes", required=true)
     private final Input<List<EnterpriseChannelNodeArgs>> nodes;
 
@@ -25,6 +31,9 @@ public final class EnterpriseChannelPropertiesArgs extends io.pulumi.resources.R
         return this.nodes;
     }
 
+    /**
+     * The current state of the Enterprise Channel.
+     */
     @InputImport(name="state")
     private final @Nullable Input<Either<String,EnterpriseChannelState>> state;
 

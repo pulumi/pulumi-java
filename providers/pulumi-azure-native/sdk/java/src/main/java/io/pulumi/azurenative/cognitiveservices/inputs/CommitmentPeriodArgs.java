@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Cognitive Services account commitment period.
+ */
 public final class CommitmentPeriodArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CommitmentPeriodArgs Empty = new CommitmentPeriodArgs();
 
+    /**
+     * Commitment period commitment count.
+     */
     @InputImport(name="count")
     private final @Nullable Input<Integer> count;
 
@@ -22,6 +28,9 @@ public final class CommitmentPeriodArgs extends io.pulumi.resources.ResourceArgs
         return this.count == null ? Input.empty() : this.count;
     }
 
+    /**
+     * Commitment period commitment tier.
+     */
     @InputImport(name="tier")
     private final @Nullable Input<String> tier;
 

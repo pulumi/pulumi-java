@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBucketObjectArgs Empty = new GetBucketObjectArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="bucket", required=true)
     private final String bucket;
 
@@ -21,6 +27,9 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
         return this.bucket;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="generation")
     private final @Nullable String generation;
 
@@ -28,6 +37,9 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
         return this.generation == null ? Optional.empty() : Optional.ofNullable(this.generation);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="ifGenerationMatch")
     private final @Nullable String ifGenerationMatch;
 
@@ -35,6 +47,9 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
         return this.ifGenerationMatch == null ? Optional.empty() : Optional.ofNullable(this.ifGenerationMatch);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="ifGenerationNotMatch")
     private final @Nullable String ifGenerationNotMatch;
 
@@ -42,6 +57,9 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
         return this.ifGenerationNotMatch == null ? Optional.empty() : Optional.ofNullable(this.ifGenerationNotMatch);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="ifMetagenerationMatch")
     private final @Nullable String ifMetagenerationMatch;
 
@@ -49,6 +67,9 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
         return this.ifMetagenerationMatch == null ? Optional.empty() : Optional.ofNullable(this.ifMetagenerationMatch);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="ifMetagenerationNotMatch")
     private final @Nullable String ifMetagenerationNotMatch;
 
@@ -56,6 +77,9 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
         return this.ifMetagenerationNotMatch == null ? Optional.empty() : Optional.ofNullable(this.ifMetagenerationNotMatch);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="object", required=true)
     private final String object;
 
@@ -63,6 +87,9 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
         return this.object;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="projection")
     private final @Nullable String projection;
 
@@ -70,6 +97,9 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
         return this.projection == null ? Optional.empty() : Optional.ofNullable(this.projection);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="provisionalUserProject")
     private final @Nullable String provisionalUserProject;
 
@@ -77,6 +107,9 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
         return this.provisionalUserProject == null ? Optional.empty() : Optional.ofNullable(this.provisionalUserProject);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="userProject")
     private final @Nullable String userProject;
 

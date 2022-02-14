@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResourceTypeRegistrationPropertiesExtensionOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceTypeRegistrationPropertiesExtensionOptionsArgs Empty = new ResourceTypeRegistrationPropertiesExtensionOptionsArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="resourceCreationBegin")
     private final @Nullable Input<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin;
 

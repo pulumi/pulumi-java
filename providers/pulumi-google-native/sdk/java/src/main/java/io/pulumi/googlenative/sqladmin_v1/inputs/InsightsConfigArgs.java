@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Insights configuration. This specifies when Cloud SQL Insights feature is enabled and optional configuration.
+ */
 public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InsightsConfigArgs Empty = new InsightsConfigArgs();
 
+    /**
+     * Whether Query Insights feature is enabled.
+     */
     @InputImport(name="queryInsightsEnabled")
     private final @Nullable Input<Boolean> queryInsightsEnabled;
 
@@ -22,6 +28,9 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.queryInsightsEnabled == null ? Input.empty() : this.queryInsightsEnabled;
     }
 
+    /**
+     * Number of query execution plans captured by Insights per minute for all queries combined. Default is 5.
+     */
     @InputImport(name="queryPlansPerMinute")
     private final @Nullable Input<Integer> queryPlansPerMinute;
 
@@ -29,6 +38,9 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.queryPlansPerMinute == null ? Input.empty() : this.queryPlansPerMinute;
     }
 
+    /**
+     * Maximum query length stored in bytes. Default value: 1024 bytes. Range: 256-4500 bytes. Query length more than this field value will be truncated to this value. When unset, query length will be the default value. Changing query length will restart the database.
+     */
     @InputImport(name="queryStringLength")
     private final @Nullable Input<Integer> queryStringLength;
 
@@ -36,6 +48,9 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.queryStringLength == null ? Input.empty() : this.queryStringLength;
     }
 
+    /**
+     * Whether Query Insights will record application tags from query when enabled.
+     */
     @InputImport(name="recordApplicationTags")
     private final @Nullable Input<Boolean> recordApplicationTags;
 
@@ -43,6 +58,9 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.recordApplicationTags == null ? Input.empty() : this.recordApplicationTags;
     }
 
+    /**
+     * Whether Query Insights will record client address when enabled.
+     */
     @InputImport(name="recordClientAddress")
     private final @Nullable Input<Boolean> recordClientAddress;
 

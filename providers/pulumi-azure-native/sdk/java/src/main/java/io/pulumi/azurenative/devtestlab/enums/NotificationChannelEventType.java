@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
+ */
     @EnumType
     public enum NotificationChannelEventType {
+/**
+ * 
+ */
         AutoShutdown("AutoShutdown"),
+/**
+ * 
+ */
         Cost("Cost");
 
         private final String value;

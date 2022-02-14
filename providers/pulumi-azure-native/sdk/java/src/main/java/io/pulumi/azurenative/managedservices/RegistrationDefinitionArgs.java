@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class RegistrationDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RegistrationDefinitionArgs Empty = new RegistrationDefinitionArgs();
 
+    /**
+     * Plan details for the managed services.
+     */
     @InputImport(name="plan")
     private final @Nullable Input<PlanArgs> plan;
 
@@ -23,6 +29,9 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
         return this.plan == null ? Input.empty() : this.plan;
     }
 
+    /**
+     * Properties of a registration definition.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<RegistrationDefinitionPropertiesArgs> properties;
 
@@ -30,6 +39,9 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Guid of the registration definition.
+     */
     @InputImport(name="registrationDefinitionId")
     private final @Nullable Input<String> registrationDefinitionId;
 
@@ -37,6 +49,9 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
         return this.registrationDefinitionId == null ? Input.empty() : this.registrationDefinitionId;
     }
 
+    /**
+     * Scope of the resource.
+     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 

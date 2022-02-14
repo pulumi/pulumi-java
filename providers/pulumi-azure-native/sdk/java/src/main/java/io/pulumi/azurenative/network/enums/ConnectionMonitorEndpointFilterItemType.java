@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of item included in the filter. Currently only 'AgentAddress' is supported.
+ */
     @EnumType
     public enum ConnectionMonitorEndpointFilterItemType {
+/**
+ * 
+ */
         AgentAddress("AgentAddress");
 
         private final String value;

@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Specifies the logging behavior for transfer operations. For cloud-to-cloud transfers, logs are sent to Cloud Logging. See [Read transfer logs](https://cloud.google.com/storage-transfer/docs/read-transfer-logs) for details. For transfers to or from a POSIX file system, logs are stored in the Cloud Storage bucket that is the source or sink of the transfer. See [Managing Transfer for on-premises jobs] (https://cloud.google.com/storage-transfer/docs/managing-on-prem-jobs#viewing-logs) for details.
+ */
 public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LoggingConfigResponse Empty = new LoggingConfigResponse();
 
+    /**
+     * For transfers with a PosixFilesystem source, this option enables the Cloud Storage transfer logs for this transfer.
+     */
     @InputImport(name="enableOnpremGcsTransferLogs", required=true)
     private final Boolean enableOnpremGcsTransferLogs;
 
@@ -21,6 +27,9 @@ public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.enableOnpremGcsTransferLogs;
     }
 
+    /**
+     * States in which `log_actions` are logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
+     */
     @InputImport(name="logActionStates", required=true)
     private final List<String> logActionStates;
 
@@ -28,6 +37,9 @@ public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.logActionStates;
     }
 
+    /**
+     * Specifies the actions to be logged. If empty, no logs are generated. Not supported for transfers with PosixFilesystem data sources; use enable_onprem_gcs_transfer_logs instead.
+     */
     @InputImport(name="logActions", required=true)
     private final List<String> logActions;
 

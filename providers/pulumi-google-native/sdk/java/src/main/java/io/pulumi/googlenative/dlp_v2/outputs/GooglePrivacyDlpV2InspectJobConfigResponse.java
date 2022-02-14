@@ -13,9 +13,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2InspectJobConfigResponse {
+/**
+ * Actions to execute at the completion of the job.
+ */
     private final List<GooglePrivacyDlpV2ActionResponse> actions;
+/**
+ * How and what to scan for.
+ */
     private final GooglePrivacyDlpV2InspectConfigResponse inspectConfig;
+/**
+ * If provided, will be used as the default for all values in InspectConfig. `inspect_config` will be merged into the values persisted as part of the template.
+ */
     private final String inspectTemplateName;
+/**
+ * The data to scan.
+ */
     private final GooglePrivacyDlpV2StorageConfigResponse storageConfig;
 
     @OutputCustomType.Constructor({"actions","inspectConfig","inspectTemplateName","storageConfig"})
@@ -30,15 +42,27 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse {
         this.storageConfig = Objects.requireNonNull(storageConfig);
     }
 
+/**
+ * Actions to execute at the completion of the job.
+ */
     public List<GooglePrivacyDlpV2ActionResponse> getActions() {
         return this.actions;
     }
+/**
+ * How and what to scan for.
+ */
     public GooglePrivacyDlpV2InspectConfigResponse getInspectConfig() {
         return this.inspectConfig;
     }
+/**
+ * If provided, will be used as the default for all values in InspectConfig. `inspect_config` will be merged into the values persisted as part of the template.
+ */
     public String getInspectTemplateName() {
         return this.inspectTemplateName;
     }
+/**
+ * The data to scan.
+ */
     public GooglePrivacyDlpV2StorageConfigResponse getStorageConfig() {
         return this.storageConfig;
     }

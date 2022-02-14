@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SqlWorkloadTypeUpdateSettingsResponse {
+/**
+ * SQL Server workload type.
+ */
     private final @Nullable String sqlWorkloadType;
 
     @OutputCustomType.Constructor({"sqlWorkloadType"})
@@ -18,6 +21,9 @@ public final class SqlWorkloadTypeUpdateSettingsResponse {
         this.sqlWorkloadType = sqlWorkloadType;
     }
 
+/**
+ * SQL Server workload type.
+ */
     public Optional<String> getSqlWorkloadType() {
         return Optional.ofNullable(this.sqlWorkloadType);
     }

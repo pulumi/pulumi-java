@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The key vault properties for the encryption scope. This is a required field if encryption scope 'source' attribute is set to 'Microsoft.KeyVault'.
+ */
 public final class EncryptionScopeKeyVaultPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EncryptionScopeKeyVaultPropertiesResponse Empty = new EncryptionScopeKeyVaultPropertiesResponse();
 
+    /**
+     * The object identifier of the current versioned Key Vault Key in use.
+     */
     @InputImport(name="currentVersionedKeyIdentifier", required=true)
     private final String currentVersionedKeyIdentifier;
 
@@ -21,6 +27,9 @@ public final class EncryptionScopeKeyVaultPropertiesResponse extends io.pulumi.r
         return this.currentVersionedKeyIdentifier;
     }
 
+    /**
+     * The object identifier for a key vault key object. When applied, the encryption scope will use the key referenced by the identifier to enable customer-managed key support on this encryption scope.
+     */
     @InputImport(name="keyUri")
     private final @Nullable String keyUri;
 
@@ -28,6 +37,9 @@ public final class EncryptionScopeKeyVaultPropertiesResponse extends io.pulumi.r
         return this.keyUri == null ? Optional.empty() : Optional.ofNullable(this.keyUri);
     }
 
+    /**
+     * Timestamp of last rotation of the Key Vault Key.
+     */
     @InputImport(name="lastKeyRotationTimestamp", required=true)
     private final String lastKeyRotationTimestamp;
 

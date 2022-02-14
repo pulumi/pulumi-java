@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes a selector for extracting and matching an MSH field to a value.
+ */
 public final class VersionSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VersionSourceResponse Empty = new VersionSourceResponse();
 
+    /**
+     * The field to extract from the MSH segment. For example, "3.1" or "18[1].1".
+     */
     @InputImport(name="mshField", required=true)
     private final String mshField;
 
@@ -19,6 +25,9 @@ public final class VersionSourceResponse extends io.pulumi.resources.InvokeArgs 
         return this.mshField;
     }
 
+    /**
+     * The value to match with the field. For example, "My Application Name" or "2.3".
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

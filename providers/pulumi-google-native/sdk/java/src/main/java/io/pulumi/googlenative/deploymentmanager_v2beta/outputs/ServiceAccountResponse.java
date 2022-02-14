@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServiceAccountResponse {
+/**
+ * The IAM service account email address like test@myproject.iam.gserviceaccount.com
+ */
     private final String email;
 
     @OutputCustomType.Constructor({"email"})
@@ -16,6 +19,9 @@ public final class ServiceAccountResponse {
         this.email = Objects.requireNonNull(email);
     }
 
+/**
+ * The IAM service account email address like test@myproject.iam.gserviceaccount.com
+ */
     public String getEmail() {
         return this.email;
     }

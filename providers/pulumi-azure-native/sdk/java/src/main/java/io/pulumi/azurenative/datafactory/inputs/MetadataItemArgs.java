@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specify the name and value of custom metadata item.
+ */
 public final class MetadataItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MetadataItemArgs Empty = new MetadataItemArgs();
 
+    /**
+     * Metadata item key name. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="name")
     private final @Nullable Input<Object> name;
 
@@ -21,6 +27,9 @@ public final class MetadataItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Metadata item value. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="value")
     private final @Nullable Input<Object> value;
 

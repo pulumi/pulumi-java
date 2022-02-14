@@ -17,15 +17,46 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureTableStorageLinkedServiceResponse {
+/**
+ * The Azure key vault secret reference of accountKey in connection string.
+ */
     private final @Nullable AzureKeyVaultSecretReferenceResponse accountKey;
+/**
+ * List of tags that can be used for describing the linked service.
+ */
     private final @Nullable List<Object> annotations;
+/**
+ * The integration runtime reference.
+ */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+/**
+ * The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
+ */
     private final @Nullable Object connectionString;
+/**
+ * Linked service description.
+ */
     private final @Nullable String description;
+/**
+ * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+ */
     private final @Nullable String encryptedCredential;
+/**
+ * Parameters for linked service.
+ */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+/**
+ * The Azure key vault secret reference of sasToken in sas uri.
+ */
     private final @Nullable AzureKeyVaultSecretReferenceResponse sasToken;
+/**
+ * SAS URI of the Azure Storage resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
+ */
     private final @Nullable Object sasUri;
+/**
+ * Type of linked service.
+Expected value is 'AzureTableStorage'.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"accountKey","annotations","connectVia","connectionString","description","encryptedCredential","parameters","sasToken","sasUri","type"})
@@ -52,33 +83,64 @@ public final class AzureTableStorageLinkedServiceResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The Azure key vault secret reference of accountKey in connection string.
+ */
     public Optional<AzureKeyVaultSecretReferenceResponse> getAccountKey() {
         return Optional.ofNullable(this.accountKey);
     }
+/**
+ * List of tags that can be used for describing the linked service.
+ */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
+/**
+ * The integration runtime reference.
+ */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
+/**
+ * The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
+ */
     public Optional<Object> getConnectionString() {
         return Optional.ofNullable(this.connectionString);
     }
+/**
+ * Linked service description.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+ */
     public Optional<String> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
+/**
+ * Parameters for linked service.
+ */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+/**
+ * The Azure key vault secret reference of sasToken in sas uri.
+ */
     public Optional<AzureKeyVaultSecretReferenceResponse> getSasToken() {
         return Optional.ofNullable(this.sasToken);
     }
+/**
+ * SAS URI of the Azure Storage resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
+ */
     public Optional<Object> getSasUri() {
         return Optional.ofNullable(this.sasUri);
     }
+/**
+ * Type of linked service.
+Expected value is 'AzureTableStorage'.
+ */
     public String getType() {
         return this.type;
     }

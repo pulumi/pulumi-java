@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EnvelopeSignatureResponse {
+/**
+ * 
+ */
     private final String keyid;
+/**
+ * 
+ */
     private final String sig;
 
     @OutputCustomType.Constructor({"keyid","sig"})
@@ -20,9 +26,15 @@ public final class EnvelopeSignatureResponse {
         this.sig = Objects.requireNonNull(sig);
     }
 
+/**
+ * 
+ */
     public String getKeyid() {
         return this.keyid;
     }
+/**
+ * 
+ */
     public String getSig() {
         return this.sig;
     }

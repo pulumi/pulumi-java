@@ -8,14 +8,38 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The name of the SKU.
+ */
     @EnumType
     public enum IotHubSku {
+/**
+ * 
+ */
         F1("F1"),
+/**
+ * 
+ */
         S1("S1"),
+/**
+ * 
+ */
         S2("S2"),
+/**
+ * 
+ */
         S3("S3"),
+/**
+ * 
+ */
         B1("B1"),
+/**
+ * 
+ */
         B2("B2"),
+/**
+ * 
+ */
         B3("B3");
 
         private final String value;

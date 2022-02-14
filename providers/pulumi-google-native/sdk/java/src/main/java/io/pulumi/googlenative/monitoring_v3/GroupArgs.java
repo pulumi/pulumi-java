@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GroupArgs Empty = new GroupArgs();
 
+    /**
+     * A user-assigned name for this group, used only for display purposes.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -22,6 +28,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The filter used to determine which monitored resources belong to this group.
+     */
     @InputImport(name="filter")
     private final @Nullable Input<String> filter;
 
@@ -29,6 +38,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.filter == null ? Input.empty() : this.filter;
     }
 
+    /**
+     * If true, the members of this group are considered to be a cluster. The system can perform additional analysis on groups that are clusters.
+     */
     @InputImport(name="isCluster")
     private final @Nullable Input<Boolean> isCluster;
 
@@ -36,6 +48,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.isCluster == null ? Input.empty() : this.isCluster;
     }
 
+    /**
+     * The name of the group's parent, if it has one. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] For groups with no parent, parent_name is the empty string, "".
+     */
     @InputImport(name="parentName")
     private final @Nullable Input<String> parentName;
 
@@ -43,6 +58,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.parentName == null ? Input.empty() : this.parentName;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -50,6 +68,9 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="validateOnly")
     private final @Nullable Input<String> validateOnly;
 

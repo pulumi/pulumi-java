@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVolume {
+/**
+ * This type describes a volume resource.
+API Version: 2018-09-01-preview.
+ *
+ * This type describes a volume resource.
+ */
     public static CompletableFuture<GetVolumeResult> invokeAsync(GetVolumeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:servicefabricmesh:getVolume", TypeShape.of(GetVolumeResult.class), args == null ? GetVolumeArgs.Empty : args, Utilities.withVersion(options));
     }

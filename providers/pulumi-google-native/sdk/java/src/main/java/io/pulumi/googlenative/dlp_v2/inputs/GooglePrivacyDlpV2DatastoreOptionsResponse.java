@@ -9,10 +9,16 @@ import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PartitionIdRespons
 import java.util.Objects;
 
 
+/**
+ * Options defining a data set within Google Cloud Datastore.
+ */
 public final class GooglePrivacyDlpV2DatastoreOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2DatastoreOptionsResponse Empty = new GooglePrivacyDlpV2DatastoreOptionsResponse();
 
+    /**
+     * The kind to process.
+     */
     @InputImport(name="kind", required=true)
     private final GooglePrivacyDlpV2KindExpressionResponse kind;
 
@@ -20,6 +26,9 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse extends io.pulumi.
         return this.kind;
     }
 
+    /**
+     * A partition ID identifies a grouping of entities. The grouping is always by project and namespace, however the namespace ID may be empty.
+     */
     @InputImport(name="partitionId", required=true)
     private final GooglePrivacyDlpV2PartitionIdResponse partitionId;
 

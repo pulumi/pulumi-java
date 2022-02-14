@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse {
+/**
+ * The confidence of the match ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+ */
     private final Double confidence;
+/**
+ * The Dialogflow intent resource path. Format: projects/{project}/agent/{agent}/intents/{intent}
+ */
     private final String dialogflowIntentId;
 
     @OutputCustomType.Constructor({"confidence","dialogflowIntentId"})
@@ -21,9 +27,15 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
         this.dialogflowIntentId = Objects.requireNonNull(dialogflowIntentId);
     }
 
+/**
+ * The confidence of the match ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
+ */
     public Double getConfidence() {
         return this.confidence;
     }
+/**
+ * The Dialogflow intent resource path. Format: projects/{project}/agent/{agent}/intents/{intent}
+ */
     public String getDialogflowIntentId() {
         return this.dialogflowIntentId;
     }

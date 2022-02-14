@@ -9,10 +9,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The integration account AS2 agreement content.
+ */
 public final class AS2AgreementContentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AS2AgreementContentArgs Empty = new AS2AgreementContentArgs();
 
+    /**
+     * The AS2 one-way receive agreement.
+     */
     @InputImport(name="receiveAgreement", required=true)
     private final Input<AS2OneWayAgreementArgs> receiveAgreement;
 
@@ -20,6 +26,9 @@ public final class AS2AgreementContentArgs extends io.pulumi.resources.ResourceA
         return this.receiveAgreement;
     }
 
+    /**
+     * The AS2 one-way send agreement.
+     */
     @InputImport(name="sendAgreement", required=true)
     private final Input<AS2OneWayAgreementArgs> sendAgreement;
 

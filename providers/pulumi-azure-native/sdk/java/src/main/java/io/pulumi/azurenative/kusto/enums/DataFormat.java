@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The data format of the message. Optionally the data format can be added to each message.
+ */
     @EnumType
     public enum DataFormat {
+/**
+ * 
+ */
         MULTIJSON("MULTIJSON"),
+/**
+ * 
+ */
         JSON("JSON"),
+/**
+ * 
+ */
         CSV("CSV");
 
         private final String value;

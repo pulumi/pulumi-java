@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The state of the geo backup policy.
+ */
     @EnumType
     public enum GeoBackupPolicyState {
+/**
+ * 
+ */
         Disabled("Disabled"),
+/**
+ * 
+ */
         Enabled("Enabled");
 
         private final String value;

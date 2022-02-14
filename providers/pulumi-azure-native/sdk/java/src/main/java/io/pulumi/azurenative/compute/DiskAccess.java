@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.compute.DiskAccessArgs;
 import io.pulumi.azurenative.compute.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,51 +15,186 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * disk access resource.
+API Version: 2020-12-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create a disk access resource.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var diskAccess = new AzureNative.Compute.DiskAccess("diskAccess", new AzureNative.Compute.DiskAccessArgs
+        {
+            DiskAccessName = "myDiskAccess",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewDiskAccess(ctx, "diskAccess", &compute.DiskAccessArgs{
+			DiskAccessName:    pulumi.String("myDiskAccess"),
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const diskAccess = new azure_native.compute.DiskAccess("diskAccess", {
+    diskAccessName: "myDiskAccess",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+disk_access = azure_native.compute.DiskAccess("diskAccess",
+    disk_access_name="myDiskAccess",
+    location="West US",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:compute:DiskAccess myDiskAccess /subscriptions/{subscription-id}/resourceGroups/myResourcegroup/providers/Microsoft.Compute/diskAccesses/myDiskAccess 
+```
+
+ */
 @ResourceType(type="azure-native:compute:DiskAccess")
 public class DiskAccess extends io.pulumi.resources.CustomResource {
+    /**
+     * Resource location
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * A readonly collection of private endpoint connections created on the disk. Currently only one endpoint connection is supported.
+     */
     @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
+    /**
+     * @return A readonly collection of private endpoint connections created on the disk. Currently only one endpoint connection is supported.
+     */
     public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
+    /**
+     * The disk access resource provisioning state.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The disk access resource provisioning state.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource tags
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The time when the disk access was created.
+     */
     @OutputExport(name="timeCreated", type=String.class, parameters={})
     private Output<String> timeCreated;
 
+    /**
+     * @return The time when the disk access was created.
+     */
     public Output<String> getTimeCreated() {
         return this.timeCreated;
     }
+    /**
+     * Resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DiskAccess(String name, DiskAccessArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:compute:DiskAccess", name, args == null ? DiskAccessArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -84,6 +218,14 @@ public class DiskAccess extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DiskAccess get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DiskAccess(name, id, options);
     }

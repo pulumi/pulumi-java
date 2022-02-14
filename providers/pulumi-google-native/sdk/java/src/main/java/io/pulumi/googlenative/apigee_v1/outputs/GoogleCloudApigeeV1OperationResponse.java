@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudApigeeV1OperationResponse {
+/**
+ * methods refers to the REST verbs as in https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html. When none specified, all verb types are allowed.
+ */
     private final List<String> methods;
+/**
+ * REST resource path associated with the API proxy or remote service.
+ */
     private final String resource;
 
     @OutputCustomType.Constructor({"methods","resource"})
@@ -21,9 +27,15 @@ public final class GoogleCloudApigeeV1OperationResponse {
         this.resource = Objects.requireNonNull(resource);
     }
 
+/**
+ * methods refers to the REST verbs as in https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html. When none specified, all verb types are allowed.
+ */
     public List<String> getMethods() {
         return this.methods;
     }
+/**
+ * REST resource path associated with the API proxy or remote service.
+ */
     public String getResource() {
         return this.resource;
     }

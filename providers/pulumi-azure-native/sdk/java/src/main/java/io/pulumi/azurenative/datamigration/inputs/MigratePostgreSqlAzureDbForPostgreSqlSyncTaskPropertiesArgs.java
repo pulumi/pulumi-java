@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for the task that migrates PostgreSQL databases to Azure Database for PostgreSQL for online migrations
+ */
 public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs Empty = new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs();
 
+    /**
+     * Task input
+     */
     @InputImport(name="input")
     private final @Nullable Input<MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputArgs> input;
 
@@ -22,6 +28,10 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskPropertiesArgs e
         return this.input == null ? Input.empty() : this.input;
     }
 
+    /**
+     * Task type.
+Expected value is 'Migrate.PostgreSql.AzureDbForPostgreSql.Sync'.
+     */
     @InputImport(name="taskType", required=true)
     private final Input<String> taskType;
 

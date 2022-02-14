@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FileEventTriggerArgs Empty = new FileEventTriggerArgs();
 
+    /**
+     * A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
+     */
     @InputImport(name="customContextTag")
     private final @Nullable Input<String> customContextTag;
 
@@ -23,6 +29,9 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
         return this.customContextTag == null ? Input.empty() : this.customContextTag;
     }
 
+    /**
+     * Creates or updates a trigger
+     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -30,6 +39,10 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
         return this.deviceName;
     }
 
+    /**
+     * Trigger Kind.
+Expected value is 'FileEvent'.
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -37,6 +50,9 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
         return this.kind;
     }
 
+    /**
+     * The trigger name.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -44,6 +60,9 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -51,6 +70,9 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * Role sink info.
+     */
     @InputImport(name="sinkInfo", required=true)
     private final Input<RoleSinkInfoArgs> sinkInfo;
 
@@ -58,6 +80,9 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
         return this.sinkInfo;
     }
 
+    /**
+     * File event source details.
+     */
     @InputImport(name="sourceInfo", required=true)
     private final Input<FileSourceInfoArgs> sourceInfo;
 

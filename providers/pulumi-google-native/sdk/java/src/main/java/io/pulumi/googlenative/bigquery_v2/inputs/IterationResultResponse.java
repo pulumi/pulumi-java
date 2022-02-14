@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class IterationResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IterationResultResponse Empty = new IterationResultResponse();
 
+    /**
+     * Time taken to run the iteration in milliseconds.
+     */
     @InputImport(name="durationMs", required=true)
     private final String durationMs;
 
@@ -21,6 +27,9 @@ public final class IterationResultResponse extends io.pulumi.resources.InvokeArg
         return this.durationMs;
     }
 
+    /**
+     * Loss computed on the eval data at the end of iteration.
+     */
     @InputImport(name="evalLoss", required=true)
     private final Double evalLoss;
 
@@ -28,6 +37,9 @@ public final class IterationResultResponse extends io.pulumi.resources.InvokeArg
         return this.evalLoss;
     }
 
+    /**
+     * Index of the iteration, 0 based.
+     */
     @InputImport(name="index", required=true)
     private final Integer index;
 
@@ -35,6 +47,9 @@ public final class IterationResultResponse extends io.pulumi.resources.InvokeArg
         return this.index;
     }
 
+    /**
+     * Learn rate used for this iteration.
+     */
     @InputImport(name="learnRate", required=true)
     private final Double learnRate;
 
@@ -42,6 +57,9 @@ public final class IterationResultResponse extends io.pulumi.resources.InvokeArg
         return this.learnRate;
     }
 
+    /**
+     * Loss computed on the training data at the end of iteration.
+     */
     @InputImport(name="trainingLoss", required=true)
     private final Double trainingLoss;
 

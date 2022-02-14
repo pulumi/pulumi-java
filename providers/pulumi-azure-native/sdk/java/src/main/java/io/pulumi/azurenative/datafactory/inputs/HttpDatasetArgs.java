@@ -22,10 +22,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A file in an HTTP web server.
+ */
 public final class HttpDatasetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpDatasetArgs Empty = new HttpDatasetArgs();
 
+    /**
+     * The headers for the HTTP Request. e.g. request-header-name-1:request-header-value-1
+...
+request-header-name-n:request-header-value-n Type: string (or Expression with resultType string).
+     */
     @InputImport(name="additionalHeaders")
     private final @Nullable Input<Object> additionalHeaders;
 
@@ -33,6 +41,9 @@ public final class HttpDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.additionalHeaders == null ? Input.empty() : this.additionalHeaders;
     }
 
+    /**
+     * List of tags that can be used for describing the Dataset.
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -40,6 +51,9 @@ public final class HttpDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * The data compression method used on files.
+     */
     @InputImport(name="compression")
     private final @Nullable Input<DatasetCompressionArgs> compression;
 
@@ -47,6 +61,9 @@ public final class HttpDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.compression == null ? Input.empty() : this.compression;
     }
 
+    /**
+     * Dataset description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -54,6 +71,9 @@ public final class HttpDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+     */
     @InputImport(name="folder")
     private final @Nullable Input<DatasetFolderArgs> folder;
 
@@ -61,6 +81,9 @@ public final class HttpDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.folder == null ? Input.empty() : this.folder;
     }
 
+    /**
+     * The format of files.
+     */
     @InputImport(name="format")
     private final @Nullable Input<Object> format;
 
@@ -68,6 +91,9 @@ public final class HttpDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.format == null ? Input.empty() : this.format;
     }
 
+    /**
+     * Linked service reference.
+     */
     @InputImport(name="linkedServiceName", required=true)
     private final Input<LinkedServiceReferenceArgs> linkedServiceName;
 
@@ -75,6 +101,9 @@ public final class HttpDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkedServiceName;
     }
 
+    /**
+     * Parameters for dataset.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -82,6 +111,9 @@ public final class HttpDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * The relative URL based on the URL in the HttpLinkedService refers to an HTTP file Type: string (or Expression with resultType string).
+     */
     @InputImport(name="relativeUrl")
     private final @Nullable Input<Object> relativeUrl;
 
@@ -89,6 +121,9 @@ public final class HttpDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.relativeUrl == null ? Input.empty() : this.relativeUrl;
     }
 
+    /**
+     * The body for the HTTP request. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="requestBody")
     private final @Nullable Input<Object> requestBody;
 
@@ -96,6 +131,9 @@ public final class HttpDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestBody == null ? Input.empty() : this.requestBody;
     }
 
+    /**
+     * The HTTP method for the HTTP request. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="requestMethod")
     private final @Nullable Input<Object> requestMethod;
 
@@ -103,6 +141,9 @@ public final class HttpDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestMethod == null ? Input.empty() : this.requestMethod;
     }
 
+    /**
+     * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+     */
     @InputImport(name="schema")
     private final @Nullable Input<Object> schema;
 
@@ -110,6 +151,9 @@ public final class HttpDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.schema == null ? Input.empty() : this.schema;
     }
 
+    /**
+     * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+     */
     @InputImport(name="structure")
     private final @Nullable Input<Object> structure;
 
@@ -117,6 +161,10 @@ public final class HttpDatasetArgs extends io.pulumi.resources.ResourceArgs {
         return this.structure == null ? Input.empty() : this.structure;
     }
 
+    /**
+     * Type of dataset.
+Expected value is 'HttpFile'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

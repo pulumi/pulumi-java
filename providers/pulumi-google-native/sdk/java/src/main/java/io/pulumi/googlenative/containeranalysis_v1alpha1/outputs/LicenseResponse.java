@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LicenseResponse {
+/**
+ * Comments
+ */
     private final String comments;
+/**
+ * Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
+ */
     private final String expression;
 
     @OutputCustomType.Constructor({"comments","expression"})
@@ -20,9 +26,15 @@ public final class LicenseResponse {
         this.expression = Objects.requireNonNull(expression);
     }
 
+/**
+ * Comments
+ */
     public String getComments() {
         return this.comments;
     }
+/**
+ * Expression: https://spdx.github.io/spdx-spec/appendix-IV-SPDX-license-expressions/
+ */
     public String getExpression() {
         return this.expression;
     }

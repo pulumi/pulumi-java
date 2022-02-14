@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListOperationalizationClusterKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListOperationalizationClusterKeysArgs Empty = new ListOperationalizationClusterKeysArgs();
 
+    /**
+     * The name of the cluster.
+     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -19,6 +25,9 @@ public final class ListOperationalizationClusterKeysArgs extends io.pulumi.resou
         return this.clusterName;
     }
 
+    /**
+     * Name of the resource group in which the cluster is located.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

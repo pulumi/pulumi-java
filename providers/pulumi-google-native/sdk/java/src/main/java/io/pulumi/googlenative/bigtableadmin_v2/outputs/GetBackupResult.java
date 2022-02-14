@@ -10,13 +10,37 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetBackupResult {
+/**
+ * The encryption information for the backup.
+ */
     private final EncryptionInfoResponse encryptionInfo;
+/**
+ * `end_time` is the time that the backup was finished. The row data in the backup will be no newer than this timestamp.
+ */
     private final String endTime;
+/**
+ * The expiration time of the backup, with microseconds granularity that must be at least 6 hours and at most 30 days from the time the request is received. Once the `expire_time` has passed, Cloud Bigtable will delete the backup and free the resources used by the backup.
+ */
     private final String expireTime;
+/**
+ * A globally unique identifier for the backup which cannot be changed. Values are of the form `projects/{project}/instances/{instance}/clusters/{cluster}/ backups/_a-zA-Z0-9*` The final segment of the name must be between 1 and 50 characters in length. The backup is stored in the cluster identified by the prefix of the backup name of the form `projects/{project}/instances/{instance}/clusters/{cluster}`.
+ */
     private final String name;
+/**
+ * Size of the backup in bytes.
+ */
     private final String sizeBytes;
+/**
+ * Immutable. Name of the table from which this backup was created. This needs to be in the same instance as the backup. Values are of the form `projects/{project}/instances/{instance}/tables/{source_table}`.
+ */
     private final String sourceTable;
+/**
+ * `start_time` is the time that the backup was started (i.e. approximately the time the CreateBackup request is received). The row data in this backup will be no older than this timestamp.
+ */
     private final String startTime;
+/**
+ * The current state of the backup.
+ */
     private final String state;
 
     @OutputCustomType.Constructor({"encryptionInfo","endTime","expireTime","name","sizeBytes","sourceTable","startTime","state"})
@@ -39,27 +63,51 @@ public final class GetBackupResult {
         this.state = Objects.requireNonNull(state);
     }
 
+/**
+ * The encryption information for the backup.
+ */
     public EncryptionInfoResponse getEncryptionInfo() {
         return this.encryptionInfo;
     }
+/**
+ * `end_time` is the time that the backup was finished. The row data in the backup will be no newer than this timestamp.
+ */
     public String getEndTime() {
         return this.endTime;
     }
+/**
+ * The expiration time of the backup, with microseconds granularity that must be at least 6 hours and at most 30 days from the time the request is received. Once the `expire_time` has passed, Cloud Bigtable will delete the backup and free the resources used by the backup.
+ */
     public String getExpireTime() {
         return this.expireTime;
     }
+/**
+ * A globally unique identifier for the backup which cannot be changed. Values are of the form `projects/{project}/instances/{instance}/clusters/{cluster}/ backups/_a-zA-Z0-9*` The final segment of the name must be between 1 and 50 characters in length. The backup is stored in the cluster identified by the prefix of the backup name of the form `projects/{project}/instances/{instance}/clusters/{cluster}`.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Size of the backup in bytes.
+ */
     public String getSizeBytes() {
         return this.sizeBytes;
     }
+/**
+ * Immutable. Name of the table from which this backup was created. This needs to be in the same instance as the backup. Values are of the form `projects/{project}/instances/{instance}/tables/{source_table}`.
+ */
     public String getSourceTable() {
         return this.sourceTable;
     }
+/**
+ * `start_time` is the time that the backup was started (i.e. approximately the time the CreateBackup request is received). The row data in this backup will be no older than this timestamp.
+ */
     public String getStartTime() {
         return this.startTime;
     }
+/**
+ * The current state of the backup.
+ */
     public String getState() {
         return this.state;
     }

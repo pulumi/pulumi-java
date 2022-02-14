@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SubResourceReadOnlyResponse {
+/**
+ * Resource Id
+ */
     private final String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -16,6 +19,9 @@ public final class SubResourceReadOnlyResponse {
         this.id = Objects.requireNonNull(id);
     }
 
+/**
+ * Resource Id
+ */
     public String getId() {
         return this.id;
     }

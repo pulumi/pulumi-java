@@ -16,16 +16,49 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetBlueprintResult {
+/**
+ * Multi-line explain this resource.
+ */
     private final @Nullable String description;
+/**
+ * One-liner string explain this resource.
+ */
     private final @Nullable String displayName;
+/**
+ * String Id used to locate any resource on Azure.
+ */
     private final String id;
+/**
+ * Layout view of the blueprint definition for UI reference.
+ */
     private final Object layout;
+/**
+ * Name of this resource.
+ */
     private final String name;
+/**
+ * Parameters required by this blueprint definition.
+ */
     private final @Nullable Map<String,ParameterDefinitionResponse> parameters;
+/**
+ * Resource group placeholders defined by this blueprint definition.
+ */
     private final @Nullable Map<String,ResourceGroupDefinitionResponse> resourceGroups;
+/**
+ * Status of the blueprint. This field is readonly.
+ */
     private final BlueprintStatusResponse status;
+/**
+ * The scope where this blueprint definition can be assigned.
+ */
     private final String targetScope;
+/**
+ * Type of this resource.
+ */
     private final String type;
+/**
+ * Published versions of this blueprint definition.
+ */
     private final @Nullable Object versions;
 
     @OutputCustomType.Constructor({"description","displayName","id","layout","name","parameters","resourceGroups","status","targetScope","type","versions"})
@@ -54,36 +87,69 @@ public final class GetBlueprintResult {
         this.versions = versions;
     }
 
+/**
+ * Multi-line explain this resource.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * One-liner string explain this resource.
+ */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+/**
+ * String Id used to locate any resource on Azure.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Layout view of the blueprint definition for UI reference.
+ */
     public Object getLayout() {
         return this.layout;
     }
+/**
+ * Name of this resource.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Parameters required by this blueprint definition.
+ */
     public Map<String,ParameterDefinitionResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+/**
+ * Resource group placeholders defined by this blueprint definition.
+ */
     public Map<String,ResourceGroupDefinitionResponse> getResourceGroups() {
         return this.resourceGroups == null ? Map.of() : this.resourceGroups;
     }
+/**
+ * Status of the blueprint. This field is readonly.
+ */
     public BlueprintStatusResponse getStatus() {
         return this.status;
     }
+/**
+ * The scope where this blueprint definition can be assigned.
+ */
     public String getTargetScope() {
         return this.targetScope;
     }
+/**
+ * Type of this resource.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Published versions of this blueprint definition.
+ */
     public Optional<Object> getVersions() {
         return Optional.ofNullable(this.versions);
     }

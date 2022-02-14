@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Private endpoint connection properties.
+ */
 public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateEndpointConnectionPropertiesArgs Empty = new PrivateEndpointConnectionPropertiesArgs();
 
+    /**
+     * State of the private endpoint connection.
+     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 

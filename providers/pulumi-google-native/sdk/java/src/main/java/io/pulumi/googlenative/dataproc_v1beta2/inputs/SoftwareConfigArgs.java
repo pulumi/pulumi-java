@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies the selection and config of software inside the cluster.
+ */
 public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SoftwareConfigArgs Empty = new SoftwareConfigArgs();
 
+    /**
+     * Optional. The version of software inside the cluster. It must be one of the supported Dataproc Versions (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#supported_dataproc_versions), such as "1.2" (including a subminor version, such as "1.2.29"), or the "preview" version (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.
+     */
     @InputImport(name="imageVersion")
     private final @Nullable Input<String> imageVersion;
 
@@ -24,6 +30,9 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.imageVersion == null ? Input.empty() : this.imageVersion;
     }
 
+    /**
+     * The set of optional components to activate on the cluster.
+     */
     @InputImport(name="optionalComponents")
     private final @Nullable Input<List<SoftwareConfigOptionalComponentsItem>> optionalComponents;
 
@@ -31,6 +40,9 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.optionalComponents == null ? Input.empty() : this.optionalComponents;
     }
 
+    /**
+     * Optional. The properties to set on daemon config files.Property keys are specified in prefix:property format, for example core:hadoop.tmp.dir. The following are supported prefixes and their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp: distcp-default.xml hdfs: hdfs-site.xml hive: hive-site.xml mapred: mapred-site.xml pig: pig.properties spark: spark-defaults.conf yarn: yarn-site.xmlFor more information, see Cluster properties (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
+     */
     @InputImport(name="properties")
     private final @Nullable Input<Map<String,String>> properties;
 

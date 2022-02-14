@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Information about a backup.
+ */
 public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BackupInfoResponse Empty = new BackupInfoResponse();
 
+    /**
+     * Name of the backup.
+     */
     @InputImport(name="backup", required=true)
     private final String backup;
 
@@ -19,6 +25,9 @@ public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.backup;
     }
 
+    /**
+     * This time that the backup was finished. Row data in the backup will be no newer than this timestamp.
+     */
     @InputImport(name="endTime", required=true)
     private final String endTime;
 
@@ -26,6 +35,9 @@ public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.endTime;
     }
 
+    /**
+     * Name of the table the backup was created from.
+     */
     @InputImport(name="sourceTable", required=true)
     private final String sourceTable;
 
@@ -33,6 +45,9 @@ public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.sourceTable;
     }
 
+    /**
+     * The time that the backup was started. Row data in the backup will be no older than this timestamp.
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 

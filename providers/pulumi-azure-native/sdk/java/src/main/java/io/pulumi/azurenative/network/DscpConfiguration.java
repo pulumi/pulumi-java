@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.DscpConfigurationArgs;
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceResponse;
 import io.pulumi.azurenative.network.outputs.QosIpRangeResponse;
 import io.pulumi.azurenative.network.outputs.QosPortRangeResponse;
@@ -19,99 +18,475 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * DSCP Configuration in a resource group.
+API Version: 2020-11-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create DSCP Configuration
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dscpConfiguration = new AzureNative.Network.DscpConfiguration("dscpConfiguration", new AzureNative.Network.DscpConfigurationArgs
+        {
+            DestinationIpRanges = 
+            {
+                new AzureNative.Network.Inputs.QosIpRangeArgs
+                {
+                    EndIP = "127.0.10.2",
+                    StartIP = "127.0.10.1",
+                },
+                new AzureNative.Network.Inputs.QosIpRangeArgs
+                {
+                    EndIP = "127.0.11.2",
+                    StartIP = "127.0.11.1",
+                },
+            },
+            DestinationPortRanges = 
+            {
+                new AzureNative.Network.Inputs.QosPortRangeArgs
+                {
+                    End = 15,
+                    Start = 15,
+                },
+                new AzureNative.Network.Inputs.QosPortRangeArgs
+                {
+                    End = 27,
+                    Start = 26,
+                },
+            },
+            DscpConfigurationName = "mydscpconfig",
+            Location = "eastus",
+            Markings = 
+            {
+                46,
+                10,
+            },
+            Protocol = "Tcp",
+            ResourceGroupName = "rg1",
+            SourceIpRanges = 
+            {
+                new AzureNative.Network.Inputs.QosIpRangeArgs
+                {
+                    EndIP = "127.0.0.2",
+                    StartIP = "127.0.0.1",
+                },
+                new AzureNative.Network.Inputs.QosIpRangeArgs
+                {
+                    EndIP = "127.0.1.2",
+                    StartIP = "127.0.1.1",
+                },
+            },
+            SourcePortRanges = 
+            {
+                new AzureNative.Network.Inputs.QosPortRangeArgs
+                {
+                    End = 11,
+                    Start = 10,
+                },
+                new AzureNative.Network.Inputs.QosPortRangeArgs
+                {
+                    End = 21,
+                    Start = 20,
+                },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewDscpConfiguration(ctx, "dscpConfiguration", &network.DscpConfigurationArgs{
+			DestinationIpRanges: []network.QosIpRangeArgs{
+				&network.QosIpRangeArgs{
+					EndIP:   pulumi.String("127.0.10.2"),
+					StartIP: pulumi.String("127.0.10.1"),
+				},
+				&network.QosIpRangeArgs{
+					EndIP:   pulumi.String("127.0.11.2"),
+					StartIP: pulumi.String("127.0.11.1"),
+				},
+			},
+			DestinationPortRanges: []network.QosPortRangeArgs{
+				&network.QosPortRangeArgs{
+					End:   pulumi.Int(15),
+					Start: pulumi.Int(15),
+				},
+				&network.QosPortRangeArgs{
+					End:   pulumi.Int(27),
+					Start: pulumi.Int(26),
+				},
+			},
+			DscpConfigurationName: pulumi.String("mydscpconfig"),
+			Location:              pulumi.String("eastus"),
+			Markings: pulumi.IntArray{
+				pulumi.Int(46),
+				pulumi.Int(10),
+			},
+			Protocol:          pulumi.String("Tcp"),
+			ResourceGroupName: pulumi.String("rg1"),
+			SourceIpRanges: []network.QosIpRangeArgs{
+				&network.QosIpRangeArgs{
+					EndIP:   pulumi.String("127.0.0.2"),
+					StartIP: pulumi.String("127.0.0.1"),
+				},
+				&network.QosIpRangeArgs{
+					EndIP:   pulumi.String("127.0.1.2"),
+					StartIP: pulumi.String("127.0.1.1"),
+				},
+			},
+			SourcePortRanges: []network.QosPortRangeArgs{
+				&network.QosPortRangeArgs{
+					End:   pulumi.Int(11),
+					Start: pulumi.Int(10),
+				},
+				&network.QosPortRangeArgs{
+					End:   pulumi.Int(21),
+					Start: pulumi.Int(20),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const dscpConfiguration = new azure_native.network.DscpConfiguration("dscpConfiguration", {
+    destinationIpRanges: [
+        {
+            endIP: "127.0.10.2",
+            startIP: "127.0.10.1",
+        },
+        {
+            endIP: "127.0.11.2",
+            startIP: "127.0.11.1",
+        },
+    ],
+    destinationPortRanges: [
+        {
+            end: 15,
+            start: 15,
+        },
+        {
+            end: 27,
+            start: 26,
+        },
+    ],
+    dscpConfigurationName: "mydscpconfig",
+    location: "eastus",
+    markings: [
+        46,
+        10,
+    ],
+    protocol: "Tcp",
+    resourceGroupName: "rg1",
+    sourceIpRanges: [
+        {
+            endIP: "127.0.0.2",
+            startIP: "127.0.0.1",
+        },
+        {
+            endIP: "127.0.1.2",
+            startIP: "127.0.1.1",
+        },
+    ],
+    sourcePortRanges: [
+        {
+            end: 11,
+            start: 10,
+        },
+        {
+            end: 21,
+            start: 20,
+        },
+    ],
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+dscp_configuration = azure_native.network.DscpConfiguration("dscpConfiguration",
+    destination_ip_ranges=[
+        azure_native.network.QosIpRangeArgs(
+            end_ip="127.0.10.2",
+            start_ip="127.0.10.1",
+        ),
+        azure_native.network.QosIpRangeArgs(
+            end_ip="127.0.11.2",
+            start_ip="127.0.11.1",
+        ),
+    ],
+    destination_port_ranges=[
+        azure_native.network.QosPortRangeArgs(
+            end=15,
+            start=15,
+        ),
+        azure_native.network.QosPortRangeArgs(
+            end=27,
+            start=26,
+        ),
+    ],
+    dscp_configuration_name="mydscpconfig",
+    location="eastus",
+    markings=[
+        46,
+        10,
+    ],
+    protocol="Tcp",
+    resource_group_name="rg1",
+    source_ip_ranges=[
+        azure_native.network.QosIpRangeArgs(
+            end_ip="127.0.0.2",
+            start_ip="127.0.0.1",
+        ),
+        azure_native.network.QosIpRangeArgs(
+            end_ip="127.0.1.2",
+            start_ip="127.0.1.1",
+        ),
+    ],
+    source_port_ranges=[
+        azure_native.network.QosPortRangeArgs(
+            end=11,
+            start=10,
+        ),
+        azure_native.network.QosPortRangeArgs(
+            end=21,
+            start=20,
+        ),
+    ])
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:DscpConfiguration mydscpConfig /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/dscpConfiguration/mydscpConfig 
+```
+
+ */
 @ResourceType(type="azure-native:network:DscpConfiguration")
 public class DscpConfiguration extends io.pulumi.resources.CustomResource {
+    /**
+     * Associated Network Interfaces to the DSCP Configuration.
+     */
     @OutputExport(name="associatedNetworkInterfaces", type=List.class, parameters={NetworkInterfaceResponse.class})
     private Output<List<NetworkInterfaceResponse>> associatedNetworkInterfaces;
 
+    /**
+     * @return Associated Network Interfaces to the DSCP Configuration.
+     */
     public Output<List<NetworkInterfaceResponse>> getAssociatedNetworkInterfaces() {
         return this.associatedNetworkInterfaces;
     }
+    /**
+     * Destination IP ranges.
+     */
     @OutputExport(name="destinationIpRanges", type=List.class, parameters={QosIpRangeResponse.class})
     private Output</* @Nullable */ List<QosIpRangeResponse>> destinationIpRanges;
 
+    /**
+     * @return Destination IP ranges.
+     */
     public Output</* @Nullable */ List<QosIpRangeResponse>> getDestinationIpRanges() {
         return this.destinationIpRanges;
     }
+    /**
+     * Destination port ranges.
+     */
     @OutputExport(name="destinationPortRanges", type=List.class, parameters={QosPortRangeResponse.class})
     private Output</* @Nullable */ List<QosPortRangeResponse>> destinationPortRanges;
 
+    /**
+     * @return Destination port ranges.
+     */
     public Output</* @Nullable */ List<QosPortRangeResponse>> getDestinationPortRanges() {
         return this.destinationPortRanges;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * List of markings to be used in the configuration.
+     */
     @OutputExport(name="markings", type=List.class, parameters={Integer.class})
     private Output</* @Nullable */ List<Integer>> markings;
 
+    /**
+     * @return List of markings to be used in the configuration.
+     */
     public Output</* @Nullable */ List<Integer>> getMarkings() {
         return this.markings;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * RNM supported protocol types.
+     */
     @OutputExport(name="protocol", type=String.class, parameters={})
     private Output</* @Nullable */ String> protocol;
 
+    /**
+     * @return RNM supported protocol types.
+     */
     public Output</* @Nullable */ String> getProtocol() {
         return this.protocol;
     }
+    /**
+     * The provisioning state of the DSCP Configuration resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the DSCP Configuration resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Qos Collection ID generated by RNM.
+     */
     @OutputExport(name="qosCollectionId", type=String.class, parameters={})
     private Output<String> qosCollectionId;
 
+    /**
+     * @return Qos Collection ID generated by RNM.
+     */
     public Output<String> getQosCollectionId() {
         return this.qosCollectionId;
     }
+    /**
+     * The resource GUID property of the DSCP Configuration resource.
+     */
     @OutputExport(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
+    /**
+     * @return The resource GUID property of the DSCP Configuration resource.
+     */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
+    /**
+     * Source IP ranges.
+     */
     @OutputExport(name="sourceIpRanges", type=List.class, parameters={QosIpRangeResponse.class})
     private Output</* @Nullable */ List<QosIpRangeResponse>> sourceIpRanges;
 
+    /**
+     * @return Source IP ranges.
+     */
     public Output</* @Nullable */ List<QosIpRangeResponse>> getSourceIpRanges() {
         return this.sourceIpRanges;
     }
+    /**
+     * Sources port ranges.
+     */
     @OutputExport(name="sourcePortRanges", type=List.class, parameters={QosPortRangeResponse.class})
     private Output</* @Nullable */ List<QosPortRangeResponse>> sourcePortRanges;
 
+    /**
+     * @return Sources port ranges.
+     */
     public Output</* @Nullable */ List<QosPortRangeResponse>> getSourcePortRanges() {
         return this.sourcePortRanges;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DscpConfiguration(String name, DscpConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:DscpConfiguration", name, args == null ? DscpConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -136,6 +511,14 @@ public class DscpConfiguration extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DscpConfiguration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DscpConfiguration(name, id, options);
     }

@@ -8,33 +8,59 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.vision_v1.ReferenceImageArgs;
 import io.pulumi.googlenative.vision_v1.outputs.BoundingPolyResponse;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Creates and returns a new ReferenceImage resource. The `bounding_poly` field is optional. If `bounding_poly` is not specified, the system will try to detect regions of interest in the image that are compatible with the product_category on the parent product. If it is specified, detection is ALWAYS skipped. The system converts polygons into non-rotated rectangles. Note that the pipeline will resize the image if the image resolution is too large to process (above 50MP). Possible errors: * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096 characters. * Returns INVALID_ARGUMENT if the product does not exist. * Returns INVALID_ARGUMENT if bounding_poly is not provided, and nothing compatible with the parent product's product_category is detected. * Returns INVALID_ARGUMENT if bounding_poly contains more than 10 polygons.
+ */
 @ResourceType(type="google-native:vision/v1:ReferenceImage")
 public class ReferenceImage extends io.pulumi.resources.CustomResource {
+    /**
+     * Optional. Bounding polygons around the areas of interest in the reference image. If this field is empty, the system will try to detect regions of interest. At most 10 bounding polygons will be used. The provided shape is converted into a non-rotated rectangle. Once converted, the small edge of the rectangle must be greater than or equal to 300 pixels. The aspect ratio must be 1:4 or less (i.e. 1:3 is ok; 1:5 is not).
+     */
     @OutputExport(name="boundingPolys", type=List.class, parameters={BoundingPolyResponse.class})
     private Output<List<BoundingPolyResponse>> boundingPolys;
 
+    /**
+     * @return Optional. Bounding polygons around the areas of interest in the reference image. If this field is empty, the system will try to detect regions of interest. At most 10 bounding polygons will be used. The provided shape is converted into a non-rotated rectangle. Once converted, the small edge of the rectangle must be greater than or equal to 300 pixels. The aspect ratio must be 1:4 or less (i.e. 1:3 is ok; 1:5 is not).
+     */
     public Output<List<BoundingPolyResponse>> getBoundingPolys() {
         return this.boundingPolys;
     }
+    /**
+     * The resource name of the reference image. Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`. This field is ignored when creating a reference image.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name of the reference image. Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`. This field is ignored when creating a reference image.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The Google Cloud Storage URI of the reference image. The URI must start with `gs://`.
+     */
     @OutputExport(name="uri", type=String.class, parameters={})
     private Output<String> uri;
 
+    /**
+     * @return The Google Cloud Storage URI of the reference image. The URI must start with `gs://`.
+     */
     public Output<String> getUri() {
         return this.uri;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ReferenceImage(String name, ReferenceImageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:vision/v1:ReferenceImage", name, args == null ? ReferenceImageArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -50,6 +76,14 @@ public class ReferenceImage extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ReferenceImage get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ReferenceImage(name, id, options);
     }

@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EncryptionPropertiesResponse {
+/**
+ * Type of the key source.
+ */
     private final @Nullable String keySource;
+/**
+ * Additional details when using Microsoft.KeyVault
+ */
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
     @OutputCustomType.Constructor({"keySource","keyVaultProperties"})
@@ -23,9 +29,15 @@ public final class EncryptionPropertiesResponse {
         this.keyVaultProperties = keyVaultProperties;
     }
 
+/**
+ * Type of the key source.
+ */
     public Optional<String> getKeySource() {
         return Optional.ofNullable(this.keySource);
     }
+/**
+ * Additional details when using Microsoft.KeyVault
+ */
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }

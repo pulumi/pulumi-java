@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Optional. The infrastructure type this Membership is running on.
+ */
     @EnumType
     public enum MembershipInfrastructureType {
+/**
+ * No type was specified. Some Hub functionality may require a type be specified, and will not support Memberships with this value.
+ */
         InfrastructureTypeUnspecified("INFRASTRUCTURE_TYPE_UNSPECIFIED"),
+/**
+ * Private infrastructure that is owned or operated by customer. This includes GKE distributions such as GKE-OnPrem and GKE-OnBareMetal.
+ */
         OnPrem("ON_PREM"),
+/**
+ * Public cloud infrastructure.
+ */
         MultiCloud("MULTI_CLOUD");
 
         private final String value;

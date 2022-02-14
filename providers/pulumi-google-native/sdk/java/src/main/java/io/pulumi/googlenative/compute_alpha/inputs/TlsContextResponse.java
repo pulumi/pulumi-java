@@ -9,10 +9,16 @@ import io.pulumi.googlenative.compute_alpha.inputs.TlsValidationContextResponse;
 import java.util.Objects;
 
 
+/**
+ * [Deprecated] The TLS settings for the client or server. The TLS settings for the client or server.
+ */
 public final class TlsContextResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TlsContextResponse Empty = new TlsContextResponse();
 
+    /**
+     * Defines the mechanism to obtain the client or server certificate.
+     */
     @InputImport(name="certificateContext", required=true)
     private final TlsCertificateContextResponse certificateContext;
 
@@ -20,6 +26,9 @@ public final class TlsContextResponse extends io.pulumi.resources.InvokeArgs {
         return this.certificateContext;
     }
 
+    /**
+     * Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate. If omitted, the proxy will not validate the server or client certificate.
+     */
     @InputImport(name="validationContext", required=true)
     private final TlsValidationContextResponse validationContext;
 

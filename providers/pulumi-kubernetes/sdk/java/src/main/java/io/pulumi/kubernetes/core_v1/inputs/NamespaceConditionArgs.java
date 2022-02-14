@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * NamespaceCondition contains details about state of namespace.
+ */
 public final class NamespaceConditionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NamespaceConditionArgs Empty = new NamespaceConditionArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="lastTransitionTime")
     private final @Nullable Input<String> lastTransitionTime;
 
@@ -21,6 +27,9 @@ public final class NamespaceConditionArgs extends io.pulumi.resources.ResourceAr
         return this.lastTransitionTime == null ? Input.empty() : this.lastTransitionTime;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="message")
     private final @Nullable Input<String> message;
 
@@ -28,6 +37,9 @@ public final class NamespaceConditionArgs extends io.pulumi.resources.ResourceAr
         return this.message == null ? Input.empty() : this.message;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="reason")
     private final @Nullable Input<String> reason;
 
@@ -35,6 +47,9 @@ public final class NamespaceConditionArgs extends io.pulumi.resources.ResourceAr
         return this.reason == null ? Input.empty() : this.reason;
     }
 
+    /**
+     * Status of the condition, one of True, False, Unknown.
+     */
     @InputImport(name="status", required=true)
     private final Input<String> status;
 
@@ -42,6 +57,16 @@ public final class NamespaceConditionArgs extends io.pulumi.resources.ResourceAr
         return this.status;
     }
 
+    /**
+     * Type of namespace controller condition.
+
+Possible enum values:
+ - `"NamespaceContentRemaining"` contains information about resources remaining in a namespace.
+ - `"NamespaceDeletionContentFailure"` contains information about namespace deleter errors during deletion of resources.
+ - `"NamespaceDeletionDiscoveryFailure"` contains information about namespace deleter errors during resource discovery.
+ - `"NamespaceDeletionGroupVersionParsingFailure"` contains information about namespace deleter errors parsing GV for legacy types.
+ - `"NamespaceFinalizersRemaining"` contains information about which finalizers are on resources remaining in a namespace.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

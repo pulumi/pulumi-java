@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A pair of time series filters that define a ratio computation. The output time series is the pair-wise division of each aligned element from the numerator and denominator time series.
+ */
 public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TimeSeriesFilterRatioArgs Empty = new TimeSeriesFilterRatioArgs();
 
+    /**
+     * The denominator of the ratio.
+     */
     @InputImport(name="denominator")
     private final @Nullable Input<RatioPartArgs> denominator;
 
@@ -23,6 +29,9 @@ public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.Resourc
         return this.denominator == null ? Input.empty() : this.denominator;
     }
 
+    /**
+     * The numerator of the ratio.
+     */
     @InputImport(name="numerator")
     private final @Nullable Input<RatioPartArgs> numerator;
 
@@ -30,6 +39,9 @@ public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.Resourc
         return this.numerator == null ? Input.empty() : this.numerator;
     }
 
+    /**
+     * Ranking based time series filter.
+     */
     @InputImport(name="pickTimeSeriesFilter")
     private final @Nullable Input<PickTimeSeriesFilterArgs> pickTimeSeriesFilter;
 
@@ -37,6 +49,9 @@ public final class TimeSeriesFilterRatioArgs extends io.pulumi.resources.Resourc
         return this.pickTimeSeriesFilter == null ? Input.empty() : this.pickTimeSeriesFilter;
     }
 
+    /**
+     * Apply a second aggregation after the ratio is computed.
+     */
     @InputImport(name="secondaryAggregation")
     private final @Nullable Input<AggregationArgs> secondaryAggregation;
 

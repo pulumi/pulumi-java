@@ -8,10 +8,16 @@ import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.AttestationAutho
 import java.util.Objects;
 
 
+/**
+ * Note kind that represents a logical attestation "role" or "authority". For example, an organization might have one `AttestationAuthority` for "QA" and one for "build". This Note is intended to act strictly as a grouping mechanism for the attached Occurrences (Attestations). This grouping mechanism also provides a security boundary, since IAM ACLs gate the ability for a principle to attach an Occurrence to a given Note. It also provides a single point of lookup to find all attached Attestation Occurrences, even if they don't all live in the same project.
+ */
 public final class AttestationAuthorityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AttestationAuthorityResponse Empty = new AttestationAuthorityResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="hint", required=true)
     private final AttestationAuthorityHintResponse hint;
 

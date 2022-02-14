@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SharingProfileGroupResponse {
+/**
+ * A list of subscription/tenant ids the gallery is aimed to be shared to.
+ */
     private final @Nullable List<String> ids;
+/**
+ * This property allows you to specify the type of sharing group. <br><br> Possible values are: <br><br> **Subscriptions** <br><br> **AADTenants**
+ */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"ids","type"})
@@ -23,9 +29,15 @@ public final class SharingProfileGroupResponse {
         this.type = type;
     }
 
+/**
+ * A list of subscription/tenant ids the gallery is aimed to be shared to.
+ */
     public List<String> getIds() {
         return this.ids == null ? List.of() : this.ids;
     }
+/**
+ * This property allows you to specify the type of sharing group. <br><br> Possible values are: <br><br> **Subscriptions** <br><br> **AADTenants**
+ */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

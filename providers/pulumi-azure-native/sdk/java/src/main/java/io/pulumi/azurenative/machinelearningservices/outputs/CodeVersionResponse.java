@@ -13,11 +13,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CodeVersionResponse {
+/**
+ * ARM resource ID of the datastore where the asset is located.
+ */
     private final @Nullable String datastoreId;
+/**
+ * The asset description text.
+ */
     private final @Nullable String description;
+/**
+ * If the name version are system generated (anonymous registration).
+ */
     private final @Nullable Boolean isAnonymous;
+/**
+ * The path of the file/directory in the datastore.
+ */
     private final String path;
+/**
+ * The asset property dictionary.
+ */
     private final @Nullable Map<String,String> properties;
+/**
+ * Tag dictionary. Tags can be added, removed, and updated.
+ */
     private final @Nullable Map<String,String> tags;
 
     @OutputCustomType.Constructor({"datastoreId","description","isAnonymous","path","properties","tags"})
@@ -36,21 +54,39 @@ public final class CodeVersionResponse {
         this.tags = tags;
     }
 
+/**
+ * ARM resource ID of the datastore where the asset is located.
+ */
     public Optional<String> getDatastoreId() {
         return Optional.ofNullable(this.datastoreId);
     }
+/**
+ * The asset description text.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * If the name version are system generated (anonymous registration).
+ */
     public Optional<Boolean> getIsAnonymous() {
         return Optional.ofNullable(this.isAnonymous);
     }
+/**
+ * The path of the file/directory in the datastore.
+ */
     public String getPath() {
         return this.path;
     }
+/**
+ * The asset property dictionary.
+ */
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
     }
+/**
+ * Tag dictionary. Tags can be added, removed, and updated.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }

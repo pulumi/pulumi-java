@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Load balancing settings for a backend pool
+ */
 public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HealthProbeSettingsModelArgs Empty = new HealthProbeSettingsModelArgs();
 
+    /**
+     * Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
+     */
     @InputImport(name="enabledState")
     private final @Nullable Input<Either<String,HealthProbeEnabled>> enabledState;
 
@@ -26,6 +32,9 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
         return this.enabledState == null ? Input.empty() : this.enabledState;
     }
 
+    /**
+     * Configures which HTTP method to use to probe the backends defined under backendPools.
+     */
     @InputImport(name="healthProbeMethod")
     private final @Nullable Input<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod;
 
@@ -33,6 +42,9 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
         return this.healthProbeMethod == null ? Input.empty() : this.healthProbeMethod;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -40,6 +52,9 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The number of seconds between health probes.
+     */
     @InputImport(name="intervalInSeconds")
     private final @Nullable Input<Integer> intervalInSeconds;
 
@@ -47,6 +62,9 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
         return this.intervalInSeconds == null ? Input.empty() : this.intervalInSeconds;
     }
 
+    /**
+     * Resource name.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -54,6 +72,9 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The path to use for the health probe. Default is /
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -61,6 +82,9 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
         return this.path == null ? Input.empty() : this.path;
     }
 
+    /**
+     * Protocol scheme to use for this probe
+     */
     @InputImport(name="protocol")
     private final @Nullable Input<Either<String,FrontDoorProtocol>> protocol;
 

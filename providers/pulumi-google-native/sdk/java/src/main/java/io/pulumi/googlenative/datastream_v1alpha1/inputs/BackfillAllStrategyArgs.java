@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Backfill strategy to automatically backfill the Stream's objects. Specific objects can be excluded.
+ */
 public final class BackfillAllStrategyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackfillAllStrategyArgs Empty = new BackfillAllStrategyArgs();
 
+    /**
+     * MySQL data source objects to avoid backfilling.
+     */
     @InputImport(name="mysqlExcludedObjects")
     private final @Nullable Input<MysqlRdbmsArgs> mysqlExcludedObjects;
 
@@ -22,6 +28,9 @@ public final class BackfillAllStrategyArgs extends io.pulumi.resources.ResourceA
         return this.mysqlExcludedObjects == null ? Input.empty() : this.mysqlExcludedObjects;
     }
 
+    /**
+     * Oracle data source objects to avoid backfilling.
+     */
     @InputImport(name="oracleExcludedObjects")
     private final @Nullable Input<OracleRdbmsArgs> oracleExcludedObjects;
 

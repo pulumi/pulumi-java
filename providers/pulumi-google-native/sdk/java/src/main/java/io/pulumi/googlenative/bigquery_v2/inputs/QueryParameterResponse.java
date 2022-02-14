@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class QueryParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final QueryParameterResponse Empty = new QueryParameterResponse();
 
+    /**
+     * [Optional] If unset, this is a positional parameter. Otherwise, should be unique within a query.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -21,6 +27,9 @@ public final class QueryParameterResponse extends io.pulumi.resources.InvokeArgs
         return this.name;
     }
 
+    /**
+     * [Required] The type of this parameter.
+     */
     @InputImport(name="parameterType", required=true)
     private final QueryParameterTypeResponse parameterType;
 
@@ -28,6 +37,9 @@ public final class QueryParameterResponse extends io.pulumi.resources.InvokeArgs
         return this.parameterType;
     }
 
+    /**
+     * [Required] The value of this parameter.
+     */
     @InputImport(name="parameterValue", required=true)
     private final QueryParameterValueResponse parameterValue;
 

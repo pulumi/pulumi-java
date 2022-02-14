@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The SKU for a container group.
+ */
     @EnumType
     public enum ContainerGroupSku {
+/**
+ * 
+ */
         Standard("Standard"),
+/**
+ * 
+ */
         Dedicated("Dedicated");
 
         private final String value;

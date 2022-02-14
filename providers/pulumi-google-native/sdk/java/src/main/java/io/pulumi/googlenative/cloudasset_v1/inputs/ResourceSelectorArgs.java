@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specifies the resource to analyze for access policies, which may be set directly on the resource, or on ancestors such as organizations, folders or projects.
+ */
 public final class ResourceSelectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceSelectorArgs Empty = new ResourceSelectorArgs();
 
+    /**
+     * The [full resource name] (https://cloud.google.com/asset-inventory/docs/resource-name-format) of a resource of [supported resource types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#analyzable_asset_types).
+     */
     @InputImport(name="fullResourceName", required=true)
     private final Input<String> fullResourceName;
 

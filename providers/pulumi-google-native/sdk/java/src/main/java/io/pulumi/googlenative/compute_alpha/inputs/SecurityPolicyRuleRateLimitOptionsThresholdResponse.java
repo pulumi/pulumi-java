@@ -8,10 +8,16 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityPolicyRuleRateLimitOptionsThresholdResponse Empty = new SecurityPolicyRuleRateLimitOptionsThresholdResponse();
 
+    /**
+     * Number of HTTP(S) requests for calculating the threshold.
+     */
     @InputImport(name="count", required=true)
     private final Integer count;
 
@@ -19,6 +25,9 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse extends i
         return this.count;
     }
 
+    /**
+     * Interval over which the threshold is computed.
+     */
     @InputImport(name="intervalSec", required=true)
     private final Integer intervalSec;
 

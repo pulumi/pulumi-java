@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details for an outcome with a FAILURE outcome summary.
+ */
 public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FailureDetailArgs Empty = new FailureDetailArgs();
 
+    /**
+     * If the failure was severe because the system (app) under test crashed.
+     */
     @InputImport(name="crashed")
     private final @Nullable Input<Boolean> crashed;
 
@@ -21,6 +27,9 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.crashed == null ? Input.empty() : this.crashed;
     }
 
+    /**
+     * If the device ran out of memory during a test, causing the test to crash.
+     */
     @InputImport(name="deviceOutOfMemory")
     private final @Nullable Input<Boolean> deviceOutOfMemory;
 
@@ -28,6 +37,9 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceOutOfMemory == null ? Input.empty() : this.deviceOutOfMemory;
     }
 
+    /**
+     * If the Roboscript failed to complete successfully, e.g., because a Roboscript action or assertion failed or a Roboscript action could not be matched during the entire crawl.
+     */
     @InputImport(name="failedRoboscript")
     private final @Nullable Input<Boolean> failedRoboscript;
 
@@ -35,6 +47,9 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.failedRoboscript == null ? Input.empty() : this.failedRoboscript;
     }
 
+    /**
+     * If an app is not installed and thus no test can be run with the app. This might be caused by trying to run a test on an unsupported platform.
+     */
     @InputImport(name="notInstalled")
     private final @Nullable Input<Boolean> notInstalled;
 
@@ -42,6 +57,9 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.notInstalled == null ? Input.empty() : this.notInstalled;
     }
 
+    /**
+     * If a native process (including any other than the app) crashed.
+     */
     @InputImport(name="otherNativeCrash")
     private final @Nullable Input<Boolean> otherNativeCrash;
 
@@ -49,6 +67,9 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.otherNativeCrash == null ? Input.empty() : this.otherNativeCrash;
     }
 
+    /**
+     * If the test overran some time limit, and that is why it failed.
+     */
     @InputImport(name="timedOut")
     private final @Nullable Input<Boolean> timedOut;
 
@@ -56,6 +77,9 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
         return this.timedOut == null ? Input.empty() : this.timedOut;
     }
 
+    /**
+     * If the robo was unable to crawl the app; perhaps because the app did not start.
+     */
     @InputImport(name="unableToCrawl")
     private final @Nullable Input<Boolean> unableToCrawl;
 

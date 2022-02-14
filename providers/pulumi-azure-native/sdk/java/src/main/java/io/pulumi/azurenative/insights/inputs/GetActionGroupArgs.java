@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetActionGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetActionGroupArgs Empty = new GetActionGroupArgs();
 
+    /**
+     * The name of the action group.
+     */
     @InputImport(name="actionGroupName", required=true)
     private final String actionGroupName;
 
@@ -19,6 +25,9 @@ public final class GetActionGroupArgs extends io.pulumi.resources.InvokeArgs {
         return this.actionGroupName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

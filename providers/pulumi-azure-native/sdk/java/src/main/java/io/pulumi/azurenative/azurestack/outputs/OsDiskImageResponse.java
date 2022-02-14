@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OsDiskImageResponse {
+/**
+ * OS operating system type.
+ */
     private final String operatingSystem;
+/**
+ * SAS key for source blob.
+ */
     private final String sourceBlobSasUri;
 
     @OutputCustomType.Constructor({"operatingSystem","sourceBlobSasUri"})
@@ -20,9 +26,15 @@ public final class OsDiskImageResponse {
         this.sourceBlobSasUri = Objects.requireNonNull(sourceBlobSasUri);
     }
 
+/**
+ * OS operating system type.
+ */
     public String getOperatingSystem() {
         return this.operatingSystem;
     }
+/**
+ * SAS key for source blob.
+ */
     public String getSourceBlobSasUri() {
         return this.sourceBlobSasUri;
     }

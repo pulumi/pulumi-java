@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Class for content key in Streaming Locator
+ */
 public final class StreamingLocatorContentKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StreamingLocatorContentKeyResponse Empty = new StreamingLocatorContentKeyResponse();
 
+    /**
+     * ID of Content Key
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -23,6 +29,9 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
         return this.id;
     }
 
+    /**
+     * Label of Content Key as specified in the Streaming Policy
+     */
     @InputImport(name="labelReferenceInStreamingPolicy")
     private final @Nullable String labelReferenceInStreamingPolicy;
 
@@ -30,6 +39,9 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
         return this.labelReferenceInStreamingPolicy == null ? Optional.empty() : Optional.ofNullable(this.labelReferenceInStreamingPolicy);
     }
 
+    /**
+     * ContentKeyPolicy used by Content Key
+     */
     @InputImport(name="policyName", required=true)
     private final String policyName;
 
@@ -37,6 +49,9 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
         return this.policyName;
     }
 
+    /**
+     * Tracks which use this Content Key
+     */
     @InputImport(name="tracks", required=true)
     private final List<TrackSelectionResponse> tracks;
 
@@ -44,6 +59,9 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
         return this.tracks;
     }
 
+    /**
+     * Encryption type of Content Key
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -51,6 +69,9 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
         return this.type;
     }
 
+    /**
+     * Value of Content Key
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

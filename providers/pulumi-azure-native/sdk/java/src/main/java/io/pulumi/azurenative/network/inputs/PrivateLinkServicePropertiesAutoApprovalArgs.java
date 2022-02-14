@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The auto-approval list of the private link service.
+ */
 public final class PrivateLinkServicePropertiesAutoApprovalArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateLinkServicePropertiesAutoApprovalArgs Empty = new PrivateLinkServicePropertiesAutoApprovalArgs();
 
+    /**
+     * The list of subscriptions.
+     */
     @InputImport(name="subscriptions")
     private final @Nullable Input<List<String>> subscriptions;
 

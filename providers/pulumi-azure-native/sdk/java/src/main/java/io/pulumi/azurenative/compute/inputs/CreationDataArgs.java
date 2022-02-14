@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Data used when creating a disk.
+ */
 public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CreationDataArgs Empty = new CreationDataArgs();
 
+    /**
+     * This enumerates the possible sources of a disk's creation.
+     */
     @InputImport(name="createOption", required=true)
     private final Input<Either<String,DiskCreateOption>> createOption;
 
@@ -26,6 +32,9 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.createOption;
     }
 
+    /**
+     * Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.
+     */
     @InputImport(name="galleryImageReference")
     private final @Nullable Input<ImageDiskReferenceArgs> galleryImageReference;
 
@@ -33,6 +42,9 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.galleryImageReference == null ? Input.empty() : this.galleryImageReference;
     }
 
+    /**
+     * Disk source information.
+     */
     @InputImport(name="imageReference")
     private final @Nullable Input<ImageDiskReferenceArgs> imageReference;
 
@@ -40,6 +52,9 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.imageReference == null ? Input.empty() : this.imageReference;
     }
 
+    /**
+     * Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.
+     */
     @InputImport(name="logicalSectorSize")
     private final @Nullable Input<Integer> logicalSectorSize;
 
@@ -47,6 +62,9 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.logicalSectorSize == null ? Input.empty() : this.logicalSectorSize;
     }
 
+    /**
+     * If createOption is Copy, this is the ARM id of the source snapshot or disk.
+     */
     @InputImport(name="sourceResourceId")
     private final @Nullable Input<String> sourceResourceId;
 
@@ -54,6 +72,9 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
     }
 
+    /**
+     * If createOption is Import, this is the URI of a blob to be imported into a managed disk.
+     */
     @InputImport(name="sourceUri")
     private final @Nullable Input<String> sourceUri;
 
@@ -61,6 +82,9 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceUri == null ? Input.empty() : this.sourceUri;
     }
 
+    /**
+     * Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.
+     */
     @InputImport(name="storageAccountId")
     private final @Nullable Input<String> storageAccountId;
 
@@ -68,6 +92,9 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageAccountId == null ? Input.empty() : this.storageAccountId;
     }
 
+    /**
+     * If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).
+     */
     @InputImport(name="uploadSizeBytes")
     private final @Nullable Input<Double> uploadSizeBytes;
 

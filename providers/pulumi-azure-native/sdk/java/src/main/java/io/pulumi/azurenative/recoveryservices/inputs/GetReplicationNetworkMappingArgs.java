@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetReplicationNetworkMappingArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetReplicationNetworkMappingArgs Empty = new GetReplicationNetworkMappingArgs();
 
+    /**
+     * Primary fabric name.
+     */
     @InputImport(name="fabricName", required=true)
     private final String fabricName;
 
@@ -19,6 +25,9 @@ public final class GetReplicationNetworkMappingArgs extends io.pulumi.resources.
         return this.fabricName;
     }
 
+    /**
+     * Network mapping name.
+     */
     @InputImport(name="networkMappingName", required=true)
     private final String networkMappingName;
 
@@ -26,6 +35,9 @@ public final class GetReplicationNetworkMappingArgs extends io.pulumi.resources.
         return this.networkMappingName;
     }
 
+    /**
+     * Primary network name.
+     */
     @InputImport(name="networkName", required=true)
     private final String networkName;
 
@@ -33,6 +45,9 @@ public final class GetReplicationNetworkMappingArgs extends io.pulumi.resources.
         return this.networkName;
     }
 
+    /**
+     * The name of the resource group where the recovery services vault is present.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -40,6 +55,9 @@ public final class GetReplicationNetworkMappingArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the recovery services vault.
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

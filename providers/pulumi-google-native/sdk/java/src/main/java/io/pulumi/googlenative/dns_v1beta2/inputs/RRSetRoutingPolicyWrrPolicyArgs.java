@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configures a RRSetRoutingPolicy that routes in a weighted round robin fashion.
+ */
 public final class RRSetRoutingPolicyWrrPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RRSetRoutingPolicyWrrPolicyArgs Empty = new RRSetRoutingPolicyWrrPolicyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="items")
     private final @Nullable Input<List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs>> items;
 
@@ -23,6 +29,9 @@ public final class RRSetRoutingPolicyWrrPolicyArgs extends io.pulumi.resources.R
         return this.items == null ? Input.empty() : this.items;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 

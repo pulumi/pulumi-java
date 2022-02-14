@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ViewArgs Empty = new ViewArgs();
 
+    /**
+     * View definition.
+     */
     @InputImport(name="definition", required=true)
     private final Input<String> definition;
 
@@ -22,6 +28,9 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
         return this.definition;
     }
 
+    /**
+     * Localized display name for the view.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<Map<String,String>> displayName;
 
@@ -29,6 +38,9 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The name of the hub.
+     */
     @InputImport(name="hubName", required=true)
     private final Input<String> hubName;
 
@@ -36,6 +48,9 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
         return this.hubName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +58,9 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * the user ID.
+     */
     @InputImport(name="userId")
     private final @Nullable Input<String> userId;
 
@@ -50,6 +68,9 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
         return this.userId == null ? Input.empty() : this.userId;
     }
 
+    /**
+     * The name of the view.
+     */
     @InputImport(name="viewName")
     private final @Nullable Input<String> viewName;
 

@@ -10,8 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BootDiagnosticsInstanceViewResponse {
+/**
+ * The console screenshot blob URI. <br><br>NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
+ */
     private final String consoleScreenshotBlobUri;
+/**
+ * The serial console log blob Uri. <br><br>NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
+ */
     private final String serialConsoleLogBlobUri;
+/**
+ * The boot diagnostics status information for the VM. <br><br> NOTE: It will be set only if there are errors encountered in enabling boot diagnostics.
+ */
     private final InstanceViewStatusResponse status;
 
     @OutputCustomType.Constructor({"consoleScreenshotBlobUri","serialConsoleLogBlobUri","status"})
@@ -24,12 +33,21 @@ public final class BootDiagnosticsInstanceViewResponse {
         this.status = Objects.requireNonNull(status);
     }
 
+/**
+ * The console screenshot blob URI. <br><br>NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
+ */
     public String getConsoleScreenshotBlobUri() {
         return this.consoleScreenshotBlobUri;
     }
+/**
+ * The serial console log blob Uri. <br><br>NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
+ */
     public String getSerialConsoleLogBlobUri() {
         return this.serialConsoleLogBlobUri;
     }
+/**
+ * The boot diagnostics status information for the VM. <br><br> NOTE: It will be set only if there are errors encountered in enabling boot diagnostics.
+ */
     public InstanceViewStatusResponse getStatus() {
         return this.status;
     }

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The configuration to set whether network access from public internet to the endpoints are allowed.
+ */
     @EnumType
     public enum KnownPublicNetworkAccessOptions {
+/**
+ * 
+ */
         Enabled("Enabled"),
+/**
+ * 
+ */
         Disabled("Disabled");
 
         private final String value;

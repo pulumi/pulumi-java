@@ -10,10 +10,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TileResponse {
+/**
+ * The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.
+ */
     private final Integer height;
+/**
+ * The informational widget contained in the tile. For example an XyChart.
+ */
     private final WidgetResponse widget;
+/**
+ * The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.
+ */
     private final Integer width;
+/**
+ * The zero-indexed position of the tile in grid blocks relative to the left edge of the grid. Tiles must be contained within the specified number of columns. x_pos cannot be negative.
+ */
     private final Integer xPos;
+/**
+ * The zero-indexed position of the tile in grid blocks relative to the top edge of the grid. y_pos cannot be negative.
+ */
     private final Integer yPos;
 
     @OutputCustomType.Constructor({"height","widget","width","xPos","yPos"})
@@ -30,18 +45,33 @@ public final class TileResponse {
         this.yPos = Objects.requireNonNull(yPos);
     }
 
+/**
+ * The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.
+ */
     public Integer getHeight() {
         return this.height;
     }
+/**
+ * The informational widget contained in the tile. For example an XyChart.
+ */
     public WidgetResponse getWidget() {
         return this.widget;
     }
+/**
+ * The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.
+ */
     public Integer getWidth() {
         return this.width;
     }
+/**
+ * The zero-indexed position of the tile in grid blocks relative to the left edge of the grid. Tiles must be contained within the specified number of columns. x_pos cannot be negative.
+ */
     public Integer getXPos() {
         return this.xPos;
     }
+/**
+ * The zero-indexed position of the tile in grid blocks relative to the top edge of the grid. y_pos cannot be negative.
+ */
     public Integer getYPos() {
         return this.yPos;
     }

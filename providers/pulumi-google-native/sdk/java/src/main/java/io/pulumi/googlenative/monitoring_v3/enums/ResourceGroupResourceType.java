@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The resource type of the group members.
+ */
     @EnumType
     public enum ResourceGroupResourceType {
+/**
+ * Default value (not valid).
+ */
         ResourceTypeUnspecified("RESOURCE_TYPE_UNSPECIFIED"),
+/**
+ * A group of instances from Google Cloud Platform (GCP) or Amazon Web Services (AWS).
+ */
         Instance("INSTANCE"),
+/**
+ * A group of Amazon ELB load balancers.
+ */
         AwsElbLoadBalancer("AWS_ELB_LOAD_BALANCER");
 
         private final String value;

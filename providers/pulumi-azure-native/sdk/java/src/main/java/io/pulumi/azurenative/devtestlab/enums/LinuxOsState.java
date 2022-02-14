@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
+ */
     @EnumType
     public enum LinuxOsState {
+/**
+ * 
+ */
         NonDeprovisioned("NonDeprovisioned"),
+/**
+ * 
+ */
         DeprovisionRequested("DeprovisionRequested"),
+/**
+ * 
+ */
         DeprovisionApplied("DeprovisionApplied");
 
         private final String value;

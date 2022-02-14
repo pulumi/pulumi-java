@@ -19,13 +19,37 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DefaultRolloutPropertiesResponseSpecification {
+/**
+ * 
+ */
     private final @Nullable DefaultRolloutSpecificationResponseCanary canary;
+/**
+ * 
+ */
     private final @Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic;
+/**
+ * 
+ */
     private final @Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic;
+/**
+ * 
+ */
     private final @Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic;
+/**
+ * 
+ */
     private final @Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration;
+/**
+ * 
+ */
     private final @Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations;
+/**
+ * 
+ */
     private final @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne;
+/**
+ * 
+ */
     private final @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo;
 
     @OutputCustomType.Constructor({"canary","highTraffic","lowTraffic","mediumTraffic","providerRegistration","resourceTypeRegistrations","restOfTheWorldGroupOne","restOfTheWorldGroupTwo"})
@@ -48,27 +72,51 @@ public final class DefaultRolloutPropertiesResponseSpecification {
         this.restOfTheWorldGroupTwo = restOfTheWorldGroupTwo;
     }
 
+/**
+ * 
+ */
     public Optional<DefaultRolloutSpecificationResponseCanary> getCanary() {
         return Optional.ofNullable(this.canary);
     }
+/**
+ * 
+ */
     public Optional<DefaultRolloutSpecificationResponseHighTraffic> getHighTraffic() {
         return Optional.ofNullable(this.highTraffic);
     }
+/**
+ * 
+ */
     public Optional<DefaultRolloutSpecificationResponseLowTraffic> getLowTraffic() {
         return Optional.ofNullable(this.lowTraffic);
     }
+/**
+ * 
+ */
     public Optional<DefaultRolloutSpecificationResponseMediumTraffic> getMediumTraffic() {
         return Optional.ofNullable(this.mediumTraffic);
     }
+/**
+ * 
+ */
     public Optional<DefaultRolloutSpecificationResponseProviderRegistration> getProviderRegistration() {
         return Optional.ofNullable(this.providerRegistration);
     }
+/**
+ * 
+ */
     public List<ResourceTypeRegistrationResponse> getResourceTypeRegistrations() {
         return this.resourceTypeRegistrations == null ? List.of() : this.resourceTypeRegistrations;
     }
+/**
+ * 
+ */
     public Optional<DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne> getRestOfTheWorldGroupOne() {
         return Optional.ofNullable(this.restOfTheWorldGroupOne);
     }
+/**
+ * 
+ */
     public Optional<DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo> getRestOfTheWorldGroupTwo() {
         return Optional.ofNullable(this.restOfTheWorldGroupTwo);
     }

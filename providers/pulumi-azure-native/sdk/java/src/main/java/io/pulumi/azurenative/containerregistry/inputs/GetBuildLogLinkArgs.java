@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetBuildLogLinkArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBuildLogLinkArgs Empty = new GetBuildLogLinkArgs();
 
+    /**
+     * The build ID.
+     */
     @InputImport(name="buildId", required=true)
     private final String buildId;
 
@@ -19,6 +25,9 @@ public final class GetBuildLogLinkArgs extends io.pulumi.resources.InvokeArgs {
         return this.buildId;
     }
 
+    /**
+     * The name of the container registry.
+     */
     @InputImport(name="registryName", required=true)
     private final String registryName;
 
@@ -26,6 +35,9 @@ public final class GetBuildLogLinkArgs extends io.pulumi.resources.InvokeArgs {
         return this.registryName;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetJobTriggerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetJobTriggerArgs Empty = new GetJobTriggerArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="jobTriggerId", required=true)
     private final String jobTriggerId;
 
@@ -21,6 +27,9 @@ public final class GetJobTriggerArgs extends io.pulumi.resources.InvokeArgs {
         return this.jobTriggerId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -28,6 +37,9 @@ public final class GetJobTriggerArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

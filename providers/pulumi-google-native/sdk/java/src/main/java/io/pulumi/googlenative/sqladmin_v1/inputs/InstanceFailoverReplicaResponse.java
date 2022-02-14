@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The name and status of the failover replica.
+ */
 public final class InstanceFailoverReplicaResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InstanceFailoverReplicaResponse Empty = new InstanceFailoverReplicaResponse();
 
+    /**
+     * The availability status of the failover replica. A false status indicates that the failover replica is out of sync. The primary instance can only failover to the failover replica when the status is true.
+     */
     @InputImport(name="available", required=true)
     private final Boolean available;
 
@@ -20,6 +26,9 @@ public final class InstanceFailoverReplicaResponse extends io.pulumi.resources.I
         return this.available;
     }
 
+    /**
+     * The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

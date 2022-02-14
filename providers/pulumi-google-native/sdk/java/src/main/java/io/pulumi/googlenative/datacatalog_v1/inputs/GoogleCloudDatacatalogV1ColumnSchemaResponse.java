@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A column within a schema. Columns can be nested inside other columns.
+ */
 public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatacatalogV1ColumnSchemaResponse Empty = new GoogleCloudDatacatalogV1ColumnSchemaResponse();
 
+    /**
+     * Name of the column. Must be a UTF-8 string without dots (.). The maximum size is 64 bytes.
+     */
     @InputImport(name="column", required=true)
     private final String column;
 
@@ -20,6 +26,9 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends io.pulum
         return this.column;
     }
 
+    /**
+     * Optional. Description of the column. Default value is an empty string. The description must be a UTF-8 string with the maximum size of 2000 bytes.
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -27,6 +36,9 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends io.pulum
         return this.description;
     }
 
+    /**
+     * Optional. A column's mode indicates whether values in this column are required, nullable, or repeated. Only `NULLABLE`, `REQUIRED`, and `REPEATED` values are supported. Default mode is `NULLABLE`.
+     */
     @InputImport(name="mode", required=true)
     private final String mode;
 
@@ -34,6 +46,9 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends io.pulum
         return this.mode;
     }
 
+    /**
+     * Optional. Schema of sub-columns. A column can have zero or more sub-columns.
+     */
     @InputImport(name="subcolumns", required=true)
     private final List<GoogleCloudDatacatalogV1ColumnSchemaResponse> subcolumns;
 
@@ -41,6 +56,9 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends io.pulum
         return this.subcolumns;
     }
 
+    /**
+     * Type of the column. Must be a UTF-8 string with the maximum size of 128 bytes.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

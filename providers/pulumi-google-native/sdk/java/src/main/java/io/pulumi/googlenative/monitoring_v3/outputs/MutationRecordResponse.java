@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MutationRecordResponse {
+/**
+ * When the change occurred.
+ */
     private final String mutateTime;
+/**
+ * The email address of the user making the change.
+ */
     private final String mutatedBy;
 
     @OutputCustomType.Constructor({"mutateTime","mutatedBy"})
@@ -20,9 +26,15 @@ public final class MutationRecordResponse {
         this.mutatedBy = Objects.requireNonNull(mutatedBy);
     }
 
+/**
+ * When the change occurred.
+ */
     public String getMutateTime() {
         return this.mutateTime;
     }
+/**
+ * The email address of the user making the change.
+ */
     public String getMutatedBy() {
         return this.mutatedBy;
     }

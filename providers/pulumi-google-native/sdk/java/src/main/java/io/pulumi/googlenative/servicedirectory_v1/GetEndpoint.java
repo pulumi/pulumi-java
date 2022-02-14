@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEndpoint {
+/**
+ * Gets an endpoint.
+ */
     public static CompletableFuture<GetEndpointResult> invokeAsync(GetEndpointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:servicedirectory/v1:getEndpoint", TypeShape.of(GetEndpointResult.class), args == null ? GetEndpointArgs.Empty : args, Utilities.withVersion(options));
     }

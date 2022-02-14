@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Configuration for a Cloud Function network endpoint group (NEG). The function must be provided explicitly or in the URL mask. Note: Cloud Function must be in the same project and located in the same region as the Serverless NEG.
+ */
 public final class NetworkEndpointGroupCloudFunctionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkEndpointGroupCloudFunctionResponse Empty = new NetworkEndpointGroupCloudFunctionResponse();
 
+    /**
+     * A user-defined name of the Cloud Function. The function name is case-sensitive and must be 1-63 characters long. Example value: "func1".
+     */
     @InputImport(name="function", required=true)
     private final String function;
 
@@ -19,6 +25,9 @@ public final class NetworkEndpointGroupCloudFunctionResponse extends io.pulumi.r
         return this.function;
     }
 
+    /**
+     * A template to parse function field from a request URL. URL mask allows for routing to multiple Cloud Functions without having to create multiple Network Endpoint Groups and backend services. For example, request URLs " mydomain.com/function1" and "mydomain.com/function2" can be backed by the same Serverless NEG with URL mask "/". The URL mask will parse them to { function = "function1" } and { function = "function2" } respectively.
+     */
     @InputImport(name="urlMask", required=true)
     private final String urlMask;
 

@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Signed Access Approvals (SAA) enrollment response.
+ */
 public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse Empty = new GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse();
 
+    /**
+     * Indicates SAA enrollment setup error if any.
+     */
     @InputImport(name="setupErrors", required=true)
     private final List<String> setupErrors;
 
@@ -20,6 +26,9 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
         return this.setupErrors;
     }
 
+    /**
+     * Indicates SAA enrollment status of a given workload.
+     */
     @InputImport(name="setupStatus", required=true)
     private final String setupStatus;
 

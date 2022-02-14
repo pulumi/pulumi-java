@@ -8,10 +8,16 @@ import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.DSSEHintResponse
 import java.util.Objects;
 
 
+/**
+ * A note describing an attestation
+ */
 public final class DSSEAttestationNoteResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DSSEAttestationNoteResponse Empty = new DSSEAttestationNoteResponse();
 
+    /**
+     * DSSEHint hints at the purpose of the attestation authority.
+     */
     @InputImport(name="hint", required=true)
     private final DSSEHintResponse hint;
 

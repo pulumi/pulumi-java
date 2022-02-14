@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetClusterGatewaySettings {
+/**
+ * Gateway settings.
+API Version: 2018-06-01-preview.
+ *
+ * Gateway settings.
+ */
     public static CompletableFuture<GetClusterGatewaySettingsResult> invokeAsync(GetClusterGatewaySettingsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hdinsight:getClusterGatewaySettings", TypeShape.of(GetClusterGatewaySettingsResult.class), args == null ? GetClusterGatewaySettingsArgs.Empty : args, Utilities.withVersion(options));
     }

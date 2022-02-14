@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure container registry configuration information
+ */
 public final class ServiceAcrConfigurationInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceAcrConfigurationInfoResponse Empty = new ServiceAcrConfigurationInfoResponse();
 
+    /**
+     * The list of the ACR login servers.
+     */
     @InputImport(name="loginServers")
     private final @Nullable List<String> loginServers;
 

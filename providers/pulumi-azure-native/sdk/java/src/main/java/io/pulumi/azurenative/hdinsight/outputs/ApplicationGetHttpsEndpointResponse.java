@@ -14,12 +14,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ApplicationGetHttpsEndpointResponse {
+/**
+ * The list of access modes for the application.
+ */
     private final @Nullable List<String> accessModes;
+/**
+ * The destination port to connect to.
+ */
     private final @Nullable Integer destinationPort;
+/**
+ * The value indicates whether to disable GatewayAuth.
+ */
     private final @Nullable Boolean disableGatewayAuth;
+/**
+ * The location of the endpoint.
+ */
     private final String location;
+/**
+ * The private ip address of the endpoint.
+ */
     private final @Nullable String privateIPAddress;
+/**
+ * The public port to connect to.
+ */
     private final Integer publicPort;
+/**
+ * The subdomain suffix of the application.
+ */
     private final @Nullable String subDomainSuffix;
 
     @OutputCustomType.Constructor({"accessModes","destinationPort","disableGatewayAuth","location","privateIPAddress","publicPort","subDomainSuffix"})
@@ -40,24 +61,45 @@ public final class ApplicationGetHttpsEndpointResponse {
         this.subDomainSuffix = subDomainSuffix;
     }
 
+/**
+ * The list of access modes for the application.
+ */
     public List<String> getAccessModes() {
         return this.accessModes == null ? List.of() : this.accessModes;
     }
+/**
+ * The destination port to connect to.
+ */
     public Optional<Integer> getDestinationPort() {
         return Optional.ofNullable(this.destinationPort);
     }
+/**
+ * The value indicates whether to disable GatewayAuth.
+ */
     public Optional<Boolean> getDisableGatewayAuth() {
         return Optional.ofNullable(this.disableGatewayAuth);
     }
+/**
+ * The location of the endpoint.
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * The private ip address of the endpoint.
+ */
     public Optional<String> getPrivateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
+/**
+ * The public port to connect to.
+ */
     public Integer getPublicPort() {
         return this.publicPort;
     }
+/**
+ * The subdomain suffix of the application.
+ */
     public Optional<String> getSubDomainSuffix() {
         return Optional.ofNullable(this.subDomainSuffix);
     }

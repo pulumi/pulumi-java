@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.
+ */
     @EnumType
     public enum ResourceIdentityType {
+/**
+ * 
+ */
         SystemAssigned("SystemAssigned"),
+/**
+ * 
+ */
         UserAssigned("UserAssigned"),
+/**
+ * 
+ */
         SystemAssigned_UserAssigned("SystemAssigned,UserAssigned"),
+/**
+ * 
+ */
         None("None");
 
         private final String value;

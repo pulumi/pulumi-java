@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2InspectionRuleSetResponse {
+/**
+ * List of infoTypes this rule set is applied to.
+ */
     private final List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
+/**
+ * Set of rules to be applied to infoTypes. The rules are applied in order.
+ */
     private final List<GooglePrivacyDlpV2InspectionRuleResponse> rules;
 
     @OutputCustomType.Constructor({"infoTypes","rules"})
@@ -22,9 +28,15 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse {
         this.rules = Objects.requireNonNull(rules);
     }
 
+/**
+ * List of infoTypes this rule set is applied to.
+ */
     public List<GooglePrivacyDlpV2InfoTypeResponse> getInfoTypes() {
         return this.infoTypes;
     }
+/**
+ * Set of rules to be applied to infoTypes. The rules are applied in order.
+ */
     public List<GooglePrivacyDlpV2InspectionRuleResponse> getRules() {
         return this.rules;
     }

@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EventNotificationConfigResponse {
+/**
+ * A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
+ */
     private final String pubsubTopicName;
+/**
+ * If the subfolder name matches this string exactly, this configuration will be used. The string must not include the leading '/' character. If empty, all strings are matched. This field is used only for telemetry events; subfolders are not supported for state changes.
+ */
     private final String subfolderMatches;
 
     @OutputCustomType.Constructor({"pubsubTopicName","subfolderMatches"})
@@ -20,9 +26,15 @@ public final class EventNotificationConfigResponse {
         this.subfolderMatches = Objects.requireNonNull(subfolderMatches);
     }
 
+/**
+ * A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
+ */
     public String getPubsubTopicName() {
         return this.pubsubTopicName;
     }
+/**
+ * If the subfolder name matches this string exactly, this configuration will be used. The string must not include the leading '/' character. If empty, all strings are matched. This field is used only for telemetry events; subfolders are not supported for state changes.
+ */
     public String getSubfolderMatches() {
         return this.subfolderMatches;
     }

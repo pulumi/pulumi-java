@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Adds and removes POSIX capabilities from running containers.
+ */
 public final class CapabilitiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CapabilitiesArgs Empty = new CapabilitiesArgs();
 
+    /**
+     * Added capabilities
+     */
     @InputImport(name="add")
     private final @Nullable Input<List<String>> add;
 
@@ -22,6 +28,9 @@ public final class CapabilitiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.add == null ? Input.empty() : this.add;
     }
 
+    /**
+     * Removed capabilities
+     */
     @InputImport(name="drop")
     private final @Nullable Input<List<String>> drop;
 

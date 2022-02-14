@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Root config for HL7v2 datatype definitions for a specific HL7v2 version.
+ */
 public final class Hl7TypesConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final Hl7TypesConfigResponse Empty = new Hl7TypesConfigResponse();
 
+    /**
+     * The HL7v2 type definitions.
+     */
     @InputImport(name="type", required=true)
     private final List<TypeResponse> type;
 
@@ -21,6 +27,9 @@ public final class Hl7TypesConfigResponse extends io.pulumi.resources.InvokeArgs
         return this.type;
     }
 
+    /**
+     * The version selectors that this config applies to. A message must match ALL version sources to apply.
+     */
     @InputImport(name="version", required=true)
     private final List<VersionSourceResponse> version;
 

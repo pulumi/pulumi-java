@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetGalleryApplicationVersionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGalleryApplicationVersionArgs Empty = new GetGalleryApplicationVersionArgs();
 
+    /**
+     * The expand expression to apply on the operation.
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +27,9 @@ public final class GetGalleryApplicationVersionArgs extends io.pulumi.resources.
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the gallery Application Definition in which the Application Version resides.
+     */
     @InputImport(name="galleryApplicationName", required=true)
     private final String galleryApplicationName;
 
@@ -28,6 +37,9 @@ public final class GetGalleryApplicationVersionArgs extends io.pulumi.resources.
         return this.galleryApplicationName;
     }
 
+    /**
+     * The name of the gallery Application Version to be retrieved.
+     */
     @InputImport(name="galleryApplicationVersionName", required=true)
     private final String galleryApplicationVersionName;
 
@@ -35,6 +47,9 @@ public final class GetGalleryApplicationVersionArgs extends io.pulumi.resources.
         return this.galleryApplicationVersionName;
     }
 
+    /**
+     * The name of the Shared Application Gallery in which the Application Definition resides.
+     */
     @InputImport(name="galleryName", required=true)
     private final String galleryName;
 
@@ -42,6 +57,9 @@ public final class GetGalleryApplicationVersionArgs extends io.pulumi.resources.
         return this.galleryName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

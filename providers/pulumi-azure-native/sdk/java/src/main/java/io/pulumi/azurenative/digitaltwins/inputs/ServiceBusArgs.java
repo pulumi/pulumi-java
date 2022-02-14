@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties related to ServiceBus.
+ */
 public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceBusArgs Empty = new ServiceBusArgs();
 
+    /**
+     * Specifies the authentication type being used for connecting to the endpoint.
+     */
     @InputImport(name="authenticationType")
     private final @Nullable Input<Either<String,AuthenticationType>> authenticationType;
 
@@ -23,6 +29,9 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
     }
 
+    /**
+     * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
+     */
     @InputImport(name="deadLetterSecret")
     private final @Nullable Input<String> deadLetterSecret;
 
@@ -30,6 +39,9 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
         return this.deadLetterSecret == null ? Input.empty() : this.deadLetterSecret;
     }
 
+    /**
+     * Dead letter storage URL for identity-based authentication.
+     */
     @InputImport(name="deadLetterUri")
     private final @Nullable Input<String> deadLetterUri;
 
@@ -37,6 +49,10 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
         return this.deadLetterUri == null ? Input.empty() : this.deadLetterUri;
     }
 
+    /**
+     * The type of Digital Twins endpoint
+Expected value is 'ServiceBus'.
+     */
     @InputImport(name="endpointType", required=true)
     private final Input<String> endpointType;
 
@@ -44,6 +60,9 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpointType;
     }
 
+    /**
+     * The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol sb://
+     */
     @InputImport(name="endpointUri")
     private final @Nullable Input<String> endpointUri;
 
@@ -51,6 +70,9 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpointUri == null ? Input.empty() : this.endpointUri;
     }
 
+    /**
+     * The ServiceBus Topic name for identity-based authentication
+     */
     @InputImport(name="entityPath")
     private final @Nullable Input<String> entityPath;
 
@@ -58,6 +80,9 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
         return this.entityPath == null ? Input.empty() : this.entityPath;
     }
 
+    /**
+     * PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+     */
     @InputImport(name="primaryConnectionString")
     private final @Nullable Input<String> primaryConnectionString;
 
@@ -65,6 +90,9 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
         return this.primaryConnectionString == null ? Input.empty() : this.primaryConnectionString;
     }
 
+    /**
+     * SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+     */
     @InputImport(name="secondaryConnectionString")
     private final @Nullable Input<String> secondaryConnectionString;
 

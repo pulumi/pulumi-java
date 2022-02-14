@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A custom preset for encoding audio with the AAC codec.
+ */
 public final class AudioEncoderAacArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AudioEncoderAacArgs Empty = new AudioEncoderAacArgs();
 
+    /**
+     * Bitrate, in kilobits per second or Kbps, at which audio should be encoded (2-channel stereo audio at a sampling rate of 48 kHz). Allowed values are 96, 112, 128, 160, 192, 224, and 256. If omitted, the bitrate of the input audio is used.
+     */
     @InputImport(name="bitrateKbps")
     private final @Nullable Input<String> bitrateKbps;
 
@@ -21,6 +27,10 @@ public final class AudioEncoderAacArgs extends io.pulumi.resources.ResourceArgs 
         return this.bitrateKbps == null ? Input.empty() : this.bitrateKbps;
     }
 
+    /**
+     * The discriminator for derived types.
+Expected value is '#Microsoft.VideoAnalyzer.AudioEncoderAac'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

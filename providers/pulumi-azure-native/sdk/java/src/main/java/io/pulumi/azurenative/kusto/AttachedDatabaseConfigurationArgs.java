@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AttachedDatabaseConfigurationArgs Empty = new AttachedDatabaseConfigurationArgs();
 
+    /**
+     * The name of the attached database configuration.
+     */
     @InputImport(name="attachedDatabaseConfigurationName")
     private final @Nullable Input<String> attachedDatabaseConfigurationName;
 
@@ -24,6 +30,9 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
         return this.attachedDatabaseConfigurationName == null ? Input.empty() : this.attachedDatabaseConfigurationName;
     }
 
+    /**
+     * The name of the Kusto cluster.
+     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -31,6 +40,9 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
         return this.clusterName;
     }
 
+    /**
+     * The resource id of the cluster where the databases you would like to attach reside.
+     */
     @InputImport(name="clusterResourceId", required=true)
     private final Input<String> clusterResourceId;
 
@@ -38,6 +50,9 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
         return this.clusterResourceId;
     }
 
+    /**
+     * The name of the database which you would like to attach, use * if you want to follow all current and future databases.
+     */
     @InputImport(name="databaseName", required=true)
     private final Input<String> databaseName;
 
@@ -45,6 +60,9 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
         return this.databaseName;
     }
 
+    /**
+     * The default principals modification kind
+     */
     @InputImport(name="defaultPrincipalsModificationKind", required=true)
     private final Input<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
 
@@ -52,6 +70,9 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
         return this.defaultPrincipalsModificationKind;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -59,6 +80,9 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group containing the Kusto cluster.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -66,6 +90,9 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
         return this.resourceGroupName;
     }
 
+    /**
+     * Table level sharing specifications
+     */
     @InputImport(name="tableLevelSharingProperties")
     private final @Nullable Input<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
 

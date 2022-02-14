@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Required. Type of fade animation: `FADE_IN` or `FADE_OUT`.
+ */
     @EnumType
     public enum AnimationFadeFadeType {
+/**
+ * The fade type is not specified.
+ */
         FadeTypeUnspecified("FADE_TYPE_UNSPECIFIED"),
+/**
+ * Fade the overlay object into view.
+ */
         FadeIn("FADE_IN"),
+/**
+ * Fade the overlay object out of view.
+ */
         FadeOut("FADE_OUT");
 
         private final String value;

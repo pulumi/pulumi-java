@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class PacketMirroringForwardingRuleInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PacketMirroringForwardingRuleInfoResponse Empty = new PacketMirroringForwardingRuleInfoResponse();
 
+    /**
+     * Unique identifier for the forwarding rule; defined by the server.
+     */
     @InputImport(name="canonicalUrl", required=true)
     private final String canonicalUrl;
 
@@ -19,6 +25,9 @@ public final class PacketMirroringForwardingRuleInfoResponse extends io.pulumi.r
         return this.canonicalUrl;
     }
 
+    /**
+     * Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.
+     */
     @InputImport(name="url", required=true)
     private final String url;
 

@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class TransitionRouteGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TransitionRouteGroupArgs Empty = new TransitionRouteGroupArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="agentId", required=true)
     private final Input<String> agentId;
 
@@ -23,6 +29,9 @@ public final class TransitionRouteGroupArgs extends io.pulumi.resources.Resource
         return this.agentId;
     }
 
+    /**
+     * The human-readable name of the transition route group, unique within the Agent. The display name can be no longer than 30 characters.
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -30,6 +39,9 @@ public final class TransitionRouteGroupArgs extends io.pulumi.resources.Resource
         return this.displayName;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="flowId", required=true)
     private final Input<String> flowId;
 
@@ -37,6 +49,9 @@ public final class TransitionRouteGroupArgs extends io.pulumi.resources.Resource
         return this.flowId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="languageCode")
     private final @Nullable Input<String> languageCode;
 
@@ -44,6 +59,9 @@ public final class TransitionRouteGroupArgs extends io.pulumi.resources.Resource
         return this.languageCode == null ? Input.empty() : this.languageCode;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -51,6 +69,9 @@ public final class TransitionRouteGroupArgs extends io.pulumi.resources.Resource
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The unique identifier of the transition route group. TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format: `projects//locations//agents//flows//transitionRouteGroups/`.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -58,6 +79,9 @@ public final class TransitionRouteGroupArgs extends io.pulumi.resources.Resource
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -65,6 +89,9 @@ public final class TransitionRouteGroupArgs extends io.pulumi.resources.Resource
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Transition routes associated with the TransitionRouteGroup.
+     */
     @InputImport(name="transitionRoutes")
     private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1TransitionRouteArgs>> transitionRoutes;
 

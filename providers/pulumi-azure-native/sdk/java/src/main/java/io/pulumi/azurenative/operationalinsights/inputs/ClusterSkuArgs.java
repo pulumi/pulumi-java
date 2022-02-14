@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The cluster sku definition.
+ */
 public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterSkuArgs Empty = new ClusterSkuArgs();
 
+    /**
+     * The capacity value
+     */
     @InputImport(name="capacity")
     private final @Nullable Input<Double> capacity;
 
@@ -24,6 +30,9 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
+    /**
+     * The name of the SKU.
+     */
     @InputImport(name="name")
     private final @Nullable Input<Either<String,ClusterSkuNameEnum>> name;
 

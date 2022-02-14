@@ -11,10 +11,16 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * A filter for a budget, limiting the scope of the cost to calculate.
+ */
 public final class GoogleCloudBillingBudgetsV1FilterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudBillingBudgetsV1FilterResponse Empty = new GoogleCloudBillingBudgetsV1FilterResponse();
 
+    /**
+     * Optional. Specifies to track usage for recurring calendar period. For example, assume that CalendarPeriod.QUARTER is set. The budget tracks usage from April 1 to June 30, when the current calendar month is April, May, June. After that, it tracks usage from July 1 to September 30 when the current calendar month is July, August, September, so on.
+     */
     @InputImport(name="calendarPeriod", required=true)
     private final String calendarPeriod;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends io.pulumi.r
         return this.calendarPeriod;
     }
 
+    /**
+     * Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. See [a list of acceptable credit type values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type). If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty.
+     */
     @InputImport(name="creditTypes", required=true)
     private final List<String> creditTypes;
 
@@ -29,6 +38,9 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends io.pulumi.r
         return this.creditTypes;
     }
 
+    /**
+     * Optional. If not set, default behavior is `INCLUDE_ALL_CREDITS`.
+     */
     @InputImport(name="creditTypesTreatment", required=true)
     private final String creditTypesTreatment;
 
@@ -36,6 +48,9 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends io.pulumi.r
         return this.creditTypesTreatment;
     }
 
+    /**
+     * Optional. Specifies to track usage from any start date (required) to any end date (optional). This time period is static, it does not recur.
+     */
     @InputImport(name="customPeriod", required=true)
     private final GoogleCloudBillingBudgetsV1CustomPeriodResponse customPeriod;
 
@@ -43,6 +58,9 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends io.pulumi.r
         return this.customPeriod;
     }
 
+    /**
+     * Optional. A single label and value pair specifying that usage from only this set of labeled resources should be included in the budget. If omitted, the report includes all labeled and unlabeled usage. An object containing a single `"key": value` pair. Example: `{ "name": "wrench" }`. _Currently, multiple entries or multiple values per entry are not allowed._
+     */
     @InputImport(name="labels", required=true)
     private final Map<String,String> labels;
 
@@ -50,6 +68,9 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends io.pulumi.r
         return this.labels;
     }
 
+    /**
+     * Optional. A set of projects of the form `projects/{project}`, specifying that usage from only this set of projects should be included in the budget. If omitted, the report includes all usage for the billing account, regardless of which project the usage occurred on. Only zero or one project can be specified currently.
+     */
     @InputImport(name="projects", required=true)
     private final List<String> projects;
 
@@ -57,6 +78,9 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends io.pulumi.r
         return this.projects;
     }
 
+    /**
+     * Optional. A set of services of the form `services/{service_id}`, specifying that usage from only this set of services should be included in the budget. If omitted, the report includes usage for all the services. The service names are available through the Catalog API: https://cloud.google.com/billing/v1/how-tos/catalog-api.
+     */
     @InputImport(name="services", required=true)
     private final List<String> services;
 
@@ -64,6 +88,9 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends io.pulumi.r
         return this.services;
     }
 
+    /**
+     * Optional. A set of subaccounts of the form `billingAccounts/{account_id}`, specifying that usage from only this set of subaccounts should be included in the budget. If a subaccount is set to the name of the parent account, usage from the parent account is included. If the field is omitted, the report includes usage from the parent account and all subaccounts, if they exist.
+     */
     @InputImport(name="subaccounts", required=true)
     private final List<String> subaccounts;
 

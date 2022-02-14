@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetPropertyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPropertyArgs Empty = new GetPropertyArgs();
 
+    /**
+     * Identifier of the property.
+     */
     @InputImport(name="propId", required=true)
     private final String propId;
 
@@ -19,6 +25,9 @@ public final class GetPropertyArgs extends io.pulumi.resources.InvokeArgs {
         return this.propId;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetPropertyArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

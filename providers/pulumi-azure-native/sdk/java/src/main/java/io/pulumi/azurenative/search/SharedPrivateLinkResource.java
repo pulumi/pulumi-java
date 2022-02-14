@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.search;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.search.SharedPrivateLinkResourceArgs;
 import io.pulumi.azurenative.search.outputs.SharedPrivateLinkResourcePropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,27 +14,159 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
+API Version: 2020-08-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### SharedPrivateLinkResourceCreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sharedPrivateLinkResource = new AzureNative.Search.SharedPrivateLinkResource("sharedPrivateLinkResource", new AzureNative.Search.SharedPrivateLinkResourceArgs
+        {
+            Properties = new AzureNative.Search.Inputs.SharedPrivateLinkResourcePropertiesArgs
+            {
+                GroupId = "blob",
+                PrivateLinkResourceId = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/storageAccountName",
+                RequestMessage = "please approve",
+            },
+            ResourceGroupName = "rg1",
+            SearchServiceName = "mysearchservice",
+            SharedPrivateLinkResourceName = "testResource",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	search "github.com/pulumi/pulumi-azure-native/sdk/go/azure/search"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := search.NewSharedPrivateLinkResource(ctx, "sharedPrivateLinkResource", &search.SharedPrivateLinkResourceArgs{
+			Properties: &search.SharedPrivateLinkResourcePropertiesArgs{
+				GroupId:               pulumi.String("blob"),
+				PrivateLinkResourceId: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/storageAccountName"),
+				RequestMessage:        pulumi.String("please approve"),
+			},
+			ResourceGroupName:             pulumi.String("rg1"),
+			SearchServiceName:             pulumi.String("mysearchservice"),
+			SharedPrivateLinkResourceName: pulumi.String("testResource"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const sharedPrivateLinkResource = new azure_native.search.SharedPrivateLinkResource("sharedPrivateLinkResource", {
+    properties: {
+        groupId: "blob",
+        privateLinkResourceId: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/storageAccountName",
+        requestMessage: "please approve",
+    },
+    resourceGroupName: "rg1",
+    searchServiceName: "mysearchservice",
+    sharedPrivateLinkResourceName: "testResource",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+shared_private_link_resource = azure_native.search.SharedPrivateLinkResource("sharedPrivateLinkResource",
+    properties=azure_native.search.SharedPrivateLinkResourcePropertiesArgs(
+        group_id="blob",
+        private_link_resource_id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Storage/storageAccounts/storageAccountName",
+        request_message="please approve",
+    ),
+    resource_group_name="rg1",
+    search_service_name="mysearchservice",
+    shared_private_link_resource_name="testResource")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:search:SharedPrivateLinkResource testResource /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Search/searchServices/mysearchservice/sharedPrivateLinkResources/testResource 
+```
+
+ */
 @ResourceType(type="azure-native:search:SharedPrivateLinkResource")
 public class SharedPrivateLinkResource extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.
+     */
     @OutputExport(name="properties", type=SharedPrivateLinkResourcePropertiesResponse.class, parameters={})
     private Output<SharedPrivateLinkResourcePropertiesResponse> properties;
 
+    /**
+     * @return Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.
+     */
     public Output<SharedPrivateLinkResourcePropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SharedPrivateLinkResource(String name, SharedPrivateLinkResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:search:SharedPrivateLinkResource", name, args == null ? SharedPrivateLinkResourceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -56,6 +187,14 @@ public class SharedPrivateLinkResource extends io.pulumi.resources.CustomResourc
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SharedPrivateLinkResource get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SharedPrivateLinkResource(name, id, options);
     }

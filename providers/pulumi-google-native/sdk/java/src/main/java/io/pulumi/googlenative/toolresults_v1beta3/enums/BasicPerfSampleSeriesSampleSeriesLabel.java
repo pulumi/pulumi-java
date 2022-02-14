@@ -8,20 +8,62 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum BasicPerfSampleSeriesSampleSeriesLabel {
+/**
+ * 
+ */
         SampleSeriesTypeUnspecified("sampleSeriesTypeUnspecified"),
+/**
+ * Memory sample series
+ */
         MemoryRssPrivate("memoryRssPrivate"),
+/**
+ * 
+ */
         MemoryRssShared("memoryRssShared"),
+/**
+ * 
+ */
         MemoryRssTotal("memoryRssTotal"),
+/**
+ * 
+ */
         MemoryTotal("memoryTotal"),
+/**
+ * CPU sample series
+ */
         CpuUser("cpuUser"),
+/**
+ * 
+ */
         CpuKernel("cpuKernel"),
+/**
+ * 
+ */
         CpuTotal("cpuTotal"),
+/**
+ * Network sample series
+ */
         NtBytesTransferred("ntBytesTransferred"),
+/**
+ * 
+ */
         NtBytesReceived("ntBytesReceived"),
+/**
+ * 
+ */
         NetworkSent("networkSent"),
+/**
+ * 
+ */
         NetworkReceived("networkReceived"),
+/**
+ * Graphics sample series
+ */
         GraphicsFrameRate("graphicsFrameRate");
 
         private final String value;

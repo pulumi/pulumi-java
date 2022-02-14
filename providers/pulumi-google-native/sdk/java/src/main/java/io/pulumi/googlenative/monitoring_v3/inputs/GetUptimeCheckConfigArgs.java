@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetUptimeCheckConfigArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetUptimeCheckConfigArgs Empty = new GetUptimeCheckConfigArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -21,6 +27,9 @@ public final class GetUptimeCheckConfigArgs extends io.pulumi.resources.InvokeAr
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="uptimeCheckConfigId", required=true)
     private final String uptimeCheckConfigId;
 

@@ -12,9 +12,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConfigurationProfilePreferenceVmBackupResponse {
+/**
+ * Instant RP retention policy range in days
+ */
     private final @Nullable Integer instantRpRetentionRangeInDays;
+/**
+ * Retention policy with the details on backup copy retention ranges.
+ */
     private final @Nullable String retentionPolicy;
+/**
+ * Backup schedule specified as part of backup policy.
+ */
     private final @Nullable String schedulePolicy;
+/**
+ * TimeZone optional input as string. For example: Pacific Standard Time
+ */
     private final @Nullable String timeZone;
 
     @OutputCustomType.Constructor({"instantRpRetentionRangeInDays","retentionPolicy","schedulePolicy","timeZone"})
@@ -29,15 +41,27 @@ public final class ConfigurationProfilePreferenceVmBackupResponse {
         this.timeZone = timeZone;
     }
 
+/**
+ * Instant RP retention policy range in days
+ */
     public Optional<Integer> getInstantRpRetentionRangeInDays() {
         return Optional.ofNullable(this.instantRpRetentionRangeInDays);
     }
+/**
+ * Retention policy with the details on backup copy retention ranges.
+ */
     public Optional<String> getRetentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
+/**
+ * Backup schedule specified as part of backup policy.
+ */
     public Optional<String> getSchedulePolicy() {
         return Optional.ofNullable(this.schedulePolicy);
     }
+/**
+ * TimeZone optional input as string. For example: Pacific Standard Time
+ */
     public Optional<String> getTimeZone() {
         return Optional.ofNullable(this.timeZone);
     }

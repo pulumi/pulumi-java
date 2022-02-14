@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OnlineDeploymentArgs Empty = new OnlineDeploymentArgs();
 
+    /**
+     * Inference Endpoint Deployment name.
+     */
     @InputImport(name="deploymentName")
     private final @Nullable Input<String> deploymentName;
 
@@ -26,6 +32,9 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
         return this.deploymentName == null ? Input.empty() : this.deploymentName;
     }
 
+    /**
+     * Inference endpoint name.
+     */
     @InputImport(name="endpointName", required=true)
     private final Input<String> endpointName;
 
@@ -33,6 +42,9 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
         return this.endpointName;
     }
 
+    /**
+     * Service identity associated with a resource.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<ResourceIdentityArgs> identity;
 
@@ -40,6 +52,9 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -47,6 +62,9 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The geo-location where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -54,6 +72,9 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Additional attributes of the entity.
+     */
     @InputImport(name="properties", required=true)
     private final Input<Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs>> properties;
 
@@ -61,6 +82,9 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
         return this.properties;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -68,6 +92,9 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -75,6 +102,9 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Name of Azure Machine Learning workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

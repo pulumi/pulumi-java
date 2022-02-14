@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlServerArgs Empty = new SqlServerArgs();
 
+    /**
+     * Cores of the Sql Server.
+     */
     @InputImport(name="cores")
     private final @Nullable Input<Integer> cores;
 
@@ -22,6 +28,9 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.cores == null ? Input.empty() : this.cores;
     }
 
+    /**
+     * Sql Server Edition.
+     */
     @InputImport(name="edition")
     private final @Nullable Input<String> edition;
 
@@ -29,6 +38,9 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.edition == null ? Input.empty() : this.edition;
     }
 
+    /**
+     * Sql Server Json Property Bag.
+     */
     @InputImport(name="propertyBag")
     private final @Nullable Input<String> propertyBag;
 
@@ -36,6 +48,9 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.propertyBag == null ? Input.empty() : this.propertyBag;
     }
 
+    /**
+     * ID for Parent Sql Server Registration.
+     */
     @InputImport(name="registrationID")
     private final @Nullable Input<String> registrationID;
 
@@ -43,6 +58,9 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.registrationID == null ? Input.empty() : this.registrationID;
     }
 
+    /**
+     * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -50,6 +68,9 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the SQL Server.
+     */
     @InputImport(name="sqlServerName")
     private final @Nullable Input<String> sqlServerName;
 
@@ -57,6 +78,9 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.sqlServerName == null ? Input.empty() : this.sqlServerName;
     }
 
+    /**
+     * Name of the SQL Server registration.
+     */
     @InputImport(name="sqlServerRegistrationName", required=true)
     private final Input<String> sqlServerRegistrationName;
 
@@ -64,6 +88,9 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
         return this.sqlServerRegistrationName;
     }
 
+    /**
+     * Version of the Sql Server.
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of the feedback queue for cloud-to-device messages.
+ */
 public final class FeedbackPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FeedbackPropertiesResponse Empty = new FeedbackPropertiesResponse();
 
+    /**
+     * The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+     */
     @InputImport(name="lockDurationAsIso8601")
     private final @Nullable String lockDurationAsIso8601;
 
@@ -22,6 +28,9 @@ public final class FeedbackPropertiesResponse extends io.pulumi.resources.Invoke
         return this.lockDurationAsIso8601 == null ? Optional.empty() : Optional.ofNullable(this.lockDurationAsIso8601);
     }
 
+    /**
+     * The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+     */
     @InputImport(name="maxDeliveryCount")
     private final @Nullable Integer maxDeliveryCount;
 
@@ -29,6 +38,9 @@ public final class FeedbackPropertiesResponse extends io.pulumi.resources.Invoke
         return this.maxDeliveryCount == null ? Optional.empty() : Optional.ofNullable(this.maxDeliveryCount);
     }
 
+    /**
+     * The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+     */
     @InputImport(name="ttlAsIso8601")
     private final @Nullable String ttlAsIso8601;
 

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.HubVirtualNetworkConnectionArgs;
 import io.pulumi.azurenative.network.outputs.RoutingConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
@@ -17,57 +16,367 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * HubVirtualNetworkConnection Resource.
+API Version: 2020-11-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### HubVirtualNetworkConnectionPut
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hubVirtualNetworkConnection = new AzureNative.Network.HubVirtualNetworkConnection("hubVirtualNetworkConnection", new AzureNative.Network.HubVirtualNetworkConnectionArgs
+        {
+            ConnectionName = "connection1",
+            EnableInternetSecurity = false,
+            RemoteVirtualNetwork = new AzureNative.Network.Inputs.SubResourceArgs
+            {
+                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/SpokeVnet1",
+            },
+            ResourceGroupName = "rg1",
+            RoutingConfiguration = new AzureNative.Network.Inputs.RoutingConfigurationArgs
+            {
+                AssociatedRouteTable = new AzureNative.Network.Inputs.SubResourceArgs
+                {
+                    Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
+                },
+                PropagatedRouteTables = new AzureNative.Network.Inputs.PropagatedRouteTableArgs
+                {
+                    Ids = 
+                    {
+                        new AzureNative.Network.Inputs.SubResourceArgs
+                        {
+                            Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
+                        },
+                    },
+                    Labels = 
+                    {
+                        "label1",
+                        "label2",
+                    },
+                },
+                VnetRoutes = new AzureNative.Network.Inputs.VnetRouteArgs
+                {
+                    StaticRoutes = 
+                    {
+                        new AzureNative.Network.Inputs.StaticRouteArgs
+                        {
+                            AddressPrefixes = 
+                            {
+                                "10.1.0.0/16",
+                                "10.2.0.0/16",
+                            },
+                            Name = "route1",
+                            NextHopIpAddress = "10.0.0.68",
+                        },
+                        new AzureNative.Network.Inputs.StaticRouteArgs
+                        {
+                            AddressPrefixes = 
+                            {
+                                "10.3.0.0/16",
+                                "10.4.0.0/16",
+                            },
+                            Name = "route2",
+                            NextHopIpAddress = "10.0.0.65",
+                        },
+                    },
+                },
+            },
+            VirtualHubName = "virtualHub1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewHubVirtualNetworkConnection(ctx, "hubVirtualNetworkConnection", &network.HubVirtualNetworkConnectionArgs{
+			ConnectionName:         pulumi.String("connection1"),
+			EnableInternetSecurity: pulumi.Bool(false),
+			RemoteVirtualNetwork: &network.SubResourceArgs{
+				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/SpokeVnet1"),
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			RoutingConfiguration: &network.RoutingConfigurationArgs{
+				AssociatedRouteTable: &network.SubResourceArgs{
+					Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1"),
+				},
+				PropagatedRouteTables: &network.PropagatedRouteTableArgs{
+					Ids: network.SubResourceArray{
+						&network.SubResourceArgs{
+							Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1"),
+						},
+					},
+					Labels: pulumi.StringArray{
+						pulumi.String("label1"),
+						pulumi.String("label2"),
+					},
+				},
+				VnetRoutes: &network.VnetRouteArgs{
+					StaticRoutes: network.StaticRouteArray{
+						&network.StaticRouteArgs{
+							AddressPrefixes: pulumi.StringArray{
+								pulumi.String("10.1.0.0/16"),
+								pulumi.String("10.2.0.0/16"),
+							},
+							Name:             pulumi.String("route1"),
+							NextHopIpAddress: pulumi.String("10.0.0.68"),
+						},
+						&network.StaticRouteArgs{
+							AddressPrefixes: pulumi.StringArray{
+								pulumi.String("10.3.0.0/16"),
+								pulumi.String("10.4.0.0/16"),
+							},
+							Name:             pulumi.String("route2"),
+							NextHopIpAddress: pulumi.String("10.0.0.65"),
+						},
+					},
+				},
+			},
+			VirtualHubName: pulumi.String("virtualHub1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const hubVirtualNetworkConnection = new azure_native.network.HubVirtualNetworkConnection("hubVirtualNetworkConnection", {
+    connectionName: "connection1",
+    enableInternetSecurity: false,
+    remoteVirtualNetwork: {
+        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/SpokeVnet1",
+    },
+    resourceGroupName: "rg1",
+    routingConfiguration: {
+        associatedRouteTable: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
+        },
+        propagatedRouteTables: {
+            ids: [{
+                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
+            }],
+            labels: [
+                "label1",
+                "label2",
+            ],
+        },
+        vnetRoutes: {
+            staticRoutes: [
+                {
+                    addressPrefixes: [
+                        "10.1.0.0/16",
+                        "10.2.0.0/16",
+                    ],
+                    name: "route1",
+                    nextHopIpAddress: "10.0.0.68",
+                },
+                {
+                    addressPrefixes: [
+                        "10.3.0.0/16",
+                        "10.4.0.0/16",
+                    ],
+                    name: "route2",
+                    nextHopIpAddress: "10.0.0.65",
+                },
+            ],
+        },
+    },
+    virtualHubName: "virtualHub1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+hub_virtual_network_connection = azure_native.network.HubVirtualNetworkConnection("hubVirtualNetworkConnection",
+    connection_name="connection1",
+    enable_internet_security=False,
+    remote_virtual_network=azure_native.network.SubResourceArgs(
+        id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/SpokeVnet1",
+    ),
+    resource_group_name="rg1",
+    routing_configuration=azure_native.network.RoutingConfigurationArgs(
+        associated_route_table=azure_native.network.SubResourceArgs(
+            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
+        ),
+        propagated_route_tables=azure_native.network.PropagatedRouteTableArgs(
+            ids=[azure_native.network.SubResourceArgs(
+                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubRouteTables/hubRouteTable1",
+            )],
+            labels=[
+                "label1",
+                "label2",
+            ],
+        ),
+        vnet_routes=azure_native.network.VnetRouteArgs(
+            static_routes=[
+                azure_native.network.StaticRouteArgs(
+                    address_prefixes=[
+                        "10.1.0.0/16",
+                        "10.2.0.0/16",
+                    ],
+                    name="route1",
+                    next_hop_ip_address="10.0.0.68",
+                ),
+                azure_native.network.StaticRouteArgs(
+                    address_prefixes=[
+                        "10.3.0.0/16",
+                        "10.4.0.0/16",
+                    ],
+                    name="route2",
+                    next_hop_ip_address="10.0.0.65",
+                ),
+            ],
+        ),
+    ),
+    virtual_hub_name="virtualHub1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:HubVirtualNetworkConnection connection1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubVirtualNetworkConnections/connection1 
+```
+
+ */
 @ResourceType(type="azure-native:network:HubVirtualNetworkConnection")
 public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResource {
+    /**
+     * Deprecated: VirtualHub to RemoteVnet transit to enabled or not.
+     */
     @OutputExport(name="allowHubToRemoteVnetTransit", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowHubToRemoteVnetTransit;
 
+    /**
+     * @return Deprecated: VirtualHub to RemoteVnet transit to enabled or not.
+     */
     public Output</* @Nullable */ Boolean> getAllowHubToRemoteVnetTransit() {
         return this.allowHubToRemoteVnetTransit;
     }
+    /**
+     * Deprecated: Allow RemoteVnet to use Virtual Hub's gateways.
+     */
     @OutputExport(name="allowRemoteVnetToUseHubVnetGateways", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowRemoteVnetToUseHubVnetGateways;
 
+    /**
+     * @return Deprecated: Allow RemoteVnet to use Virtual Hub's gateways.
+     */
     public Output</* @Nullable */ Boolean> getAllowRemoteVnetToUseHubVnetGateways() {
         return this.allowRemoteVnetToUseHubVnetGateways;
     }
+    /**
+     * Enable internet security.
+     */
     @OutputExport(name="enableInternetSecurity", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableInternetSecurity;
 
+    /**
+     * @return Enable internet security.
+     */
     public Output</* @Nullable */ Boolean> getEnableInternetSecurity() {
         return this.enableInternetSecurity;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the hub virtual network connection resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the hub virtual network connection resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Reference to the remote virtual network.
+     */
     @OutputExport(name="remoteVirtualNetwork", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> remoteVirtualNetwork;
 
+    /**
+     * @return Reference to the remote virtual network.
+     */
     public Output</* @Nullable */ SubResourceResponse> getRemoteVirtualNetwork() {
         return this.remoteVirtualNetwork;
     }
+    /**
+     * The Routing Configuration indicating the associated and propagated route tables on this connection.
+     */
     @OutputExport(name="routingConfiguration", type=RoutingConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ RoutingConfigurationResponse> routingConfiguration;
 
+    /**
+     * @return The Routing Configuration indicating the associated and propagated route tables on this connection.
+     */
     public Output</* @Nullable */ RoutingConfigurationResponse> getRoutingConfiguration() {
         return this.routingConfiguration;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public HubVirtualNetworkConnection(String name, HubVirtualNetworkConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:HubVirtualNetworkConnection", name, args == null ? HubVirtualNetworkConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -93,6 +402,14 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static HubVirtualNetworkConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new HubVirtualNetworkConnection(name, id, options);
     }

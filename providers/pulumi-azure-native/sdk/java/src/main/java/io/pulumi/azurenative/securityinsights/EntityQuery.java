@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.securityinsights.EntityQueryArgs;
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,40 +14,173 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Specific entity query.
+API Version: 2021-03-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Creates or updates an Activity entity query.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var entityQuery = new AzureNative.SecurityInsights.EntityQuery("entityQuery", new AzureNative.SecurityInsights.EntityQueryArgs
+        {
+            EntityQueryId = "07da3cc8-c8ad-4710-a44e-334cdcb7882b",
+            Kind = "Activity",
+            OperationalInsightsResourceProvider = "Microsoft.OperationalIinsights",
+            ResourceGroupName = "myRg",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := securityinsights.NewEntityQuery(ctx, "entityQuery", &securityinsights.EntityQueryArgs{
+			EntityQueryId:                       pulumi.String("07da3cc8-c8ad-4710-a44e-334cdcb7882b"),
+			Kind:                                pulumi.String("Activity"),
+			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalIinsights"),
+			ResourceGroupName:                   pulumi.String("myRg"),
+			WorkspaceName:                       pulumi.String("myWorkspace"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const entityQuery = new azure_native.securityinsights.EntityQuery("entityQuery", {
+    entityQueryId: "07da3cc8-c8ad-4710-a44e-334cdcb7882b",
+    kind: "Activity",
+    operationalInsightsResourceProvider: "Microsoft.OperationalIinsights",
+    resourceGroupName: "myRg",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+entity_query = azure_native.securityinsights.EntityQuery("entityQuery",
+    entity_query_id="07da3cc8-c8ad-4710-a44e-334cdcb7882b",
+    kind="Activity",
+    operational_insights_resource_provider="Microsoft.OperationalIinsights",
+    resource_group_name="myRg",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:securityinsights:EntityQuery 07da3cc8-c8ad-4710-a44e-334cdcb7882b /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/entityQueries/07da3cc8-c8ad-4710-a44e-334cdcb7882b 
+```
+
+ * @deprecated
+ * Please use one of the variants: ActivityCustomEntityQuery.
+ */
 @Deprecated /* Please use one of the variants: ActivityCustomEntityQuery. */
 @ResourceType(type="azure-native:securityinsights:EntityQuery")
 public class EntityQuery extends io.pulumi.resources.CustomResource {
+    /**
+     * Etag of the azure resource
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return Etag of the azure resource
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * the entity query kind
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return the entity query kind
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * Azure resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Azure resource name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Azure resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Azure resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public EntityQuery(String name, EntityQueryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:securityinsights:EntityQuery", name, args == null ? EntityQueryArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -68,6 +200,14 @@ public class EntityQuery extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static EntityQuery get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EntityQuery(name, id, options);
     }

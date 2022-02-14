@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetExtensionArgs Empty = new GetExtensionArgs();
 
+    /**
+     * Id of extension resource.
+     */
     @InputImport(name="extensionId", required=true)
     private final String extensionId;
 
@@ -19,6 +25,9 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
         return this.extensionId;
     }
 
+    /**
+     * FarmBeats resource name.
+     */
     @InputImport(name="farmBeatsResourceName", required=true)
     private final String farmBeatsResourceName;
 
@@ -26,6 +35,9 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
         return this.farmBeatsResourceName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -19,10 +19,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Linked service for MongoDb data source.
+ */
 public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MongoDbLinkedServiceArgs Empty = new MongoDbLinkedServiceArgs();
 
+    /**
+     * Specifies whether to allow self-signed certificates from the server. The default value is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="allowSelfSignedServerCert")
     private final @Nullable Input<Object> allowSelfSignedServerCert;
 
@@ -30,6 +36,9 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.allowSelfSignedServerCert == null ? Input.empty() : this.allowSelfSignedServerCert;
     }
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -37,6 +46,9 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * Database to verify the username and password. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="authSource")
     private final @Nullable Input<Object> authSource;
 
@@ -44,6 +56,9 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.authSource == null ? Input.empty() : this.authSource;
     }
 
+    /**
+     * The authentication type to be used to connect to the MongoDB database.
+     */
     @InputImport(name="authenticationType")
     private final @Nullable Input<Either<String,MongoDbAuthenticationType>> authenticationType;
 
@@ -51,6 +66,9 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -58,6 +76,9 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
+    /**
+     * The name of the MongoDB database that you want to access. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="databaseName", required=true)
     private final Input<Object> databaseName;
 
@@ -65,6 +86,9 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.databaseName;
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -72,6 +96,9 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Specifies whether the connections to the server are encrypted using SSL. The default value is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="enableSsl")
     private final @Nullable Input<Object> enableSsl;
 
@@ -79,6 +106,9 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.enableSsl == null ? Input.empty() : this.enableSsl;
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -86,6 +116,9 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -93,6 +126,9 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Password for authentication.
+     */
     @InputImport(name="password")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
@@ -100,6 +136,9 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * The TCP port number that the MongoDB server uses to listen for client connections. The default value is 27017. Type: integer (or Expression with resultType integer), minimum: 0.
+     */
     @InputImport(name="port")
     private final @Nullable Input<Object> port;
 
@@ -107,6 +146,9 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.port == null ? Input.empty() : this.port;
     }
 
+    /**
+     * The IP address or server name of the MongoDB server. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="server", required=true)
     private final Input<Object> server;
 
@@ -114,6 +156,10 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.server;
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'MongoDb'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -121,6 +167,9 @@ public final class MongoDbLinkedServiceArgs extends io.pulumi.resources.Resource
         return this.type;
     }
 
+    /**
+     * Username for authentication. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="username")
     private final @Nullable Input<Object> username;
 

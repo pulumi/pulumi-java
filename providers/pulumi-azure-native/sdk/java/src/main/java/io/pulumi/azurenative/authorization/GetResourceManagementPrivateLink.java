@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourceManagementPrivateLink {
+/**
+ * 
+API Version: 2020-05-01.
+ */
     public static CompletableFuture<GetResourceManagementPrivateLinkResult> invokeAsync(GetResourceManagementPrivateLinkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getResourceManagementPrivateLink", TypeShape.of(GetResourceManagementPrivateLinkResult.class), args == null ? GetResourceManagementPrivateLinkArgs.Empty : args, Utilities.withVersion(options));
     }

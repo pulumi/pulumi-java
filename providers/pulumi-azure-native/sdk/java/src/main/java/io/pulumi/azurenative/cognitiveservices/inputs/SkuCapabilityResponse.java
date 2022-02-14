@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * SkuCapability indicates the capability of a certain feature.
+ */
 public final class SkuCapabilityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuCapabilityResponse Empty = new SkuCapabilityResponse();
 
+    /**
+     * The name of the SkuCapability.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +27,9 @@ public final class SkuCapabilityResponse extends io.pulumi.resources.InvokeArgs 
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The value of the SkuCapability.
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

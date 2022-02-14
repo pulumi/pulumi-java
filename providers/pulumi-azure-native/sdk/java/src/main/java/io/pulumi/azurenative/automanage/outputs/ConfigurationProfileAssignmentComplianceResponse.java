@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConfigurationProfileAssignmentComplianceResponse {
+/**
+ * The state of compliance, which only appears in the response.
+ */
     private final String updateStatus;
 
     @OutputCustomType.Constructor({"updateStatus"})
@@ -16,6 +19,9 @@ public final class ConfigurationProfileAssignmentComplianceResponse {
         this.updateStatus = Objects.requireNonNull(updateStatus);
     }
 
+/**
+ * The state of compliance, which only appears in the response.
+ */
     public String getUpdateStatus() {
         return this.updateStatus;
     }

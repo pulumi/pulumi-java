@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IntegrationAccountArgs Empty = new IntegrationAccountArgs();
 
+    /**
+     * The integration account name.
+     */
     @InputImport(name="integrationAccountName")
     private final @Nullable Input<String> integrationAccountName;
 
@@ -26,6 +32,9 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
         return this.integrationAccountName == null ? Input.empty() : this.integrationAccountName;
     }
 
+    /**
+     * The integration service environment.
+     */
     @InputImport(name="integrationServiceEnvironment")
     private final @Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment;
 
@@ -33,6 +42,9 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
         return this.integrationServiceEnvironment == null ? Input.empty() : this.integrationServiceEnvironment;
     }
 
+    /**
+     * The resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -40,6 +52,9 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -47,6 +62,9 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
+    /**
+     * The sku.
+     */
     @InputImport(name="sku")
     private final @Nullable Input<IntegrationAccountSkuArgs> sku;
 
@@ -54,6 +72,9 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * The workflow state.
+     */
     @InputImport(name="state")
     private final @Nullable Input<Either<String,WorkflowState>> state;
 
@@ -61,6 +82,9 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * The resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT)
+ */
     @EnumType
     public enum GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType {
+/**
+ * Unknown resource type.
+ */
         ResourceTypeUnspecified("RESOURCE_TYPE_UNSPECIFIED"),
+/**
+ * Consumer project. AssuredWorkloads Projects are no longer supported. This field will be ignored only in CreateWorkload requests. ListWorkloads and GetWorkload will continue to provide projects information. Use CONSUMER_FOLDER instead.
+ */
         ConsumerProject("CONSUMER_PROJECT"),
+/**
+ * Consumer Folder.
+ */
         ConsumerFolder("CONSUMER_FOLDER"),
+/**
+ * Consumer project containing encryption keys.
+ */
         EncryptionKeysProject("ENCRYPTION_KEYS_PROJECT"),
+/**
+ * Keyring resource that hosts encryption keys.
+ */
         Keyring("KEYRING");
 
         private final String value;

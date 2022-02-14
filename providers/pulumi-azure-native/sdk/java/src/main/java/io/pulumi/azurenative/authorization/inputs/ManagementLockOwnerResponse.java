@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Lock owner properties.
+ */
 public final class ManagementLockOwnerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagementLockOwnerResponse Empty = new ManagementLockOwnerResponse();
 
+    /**
+     * The application ID of the lock owner.
+     */
     @InputImport(name="applicationId")
     private final @Nullable String applicationId;
 

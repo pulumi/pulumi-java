@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Log level.
+ */
     @EnumType
     public enum LogLevel {
+/**
+ * 
+ */
         Off("Off"),
+/**
+ * 
+ */
         Verbose("Verbose"),
+/**
+ * 
+ */
         Information("Information"),
+/**
+ * 
+ */
         Warning("Warning"),
+/**
+ * 
+ */
         Error("Error");
 
         private final String value;

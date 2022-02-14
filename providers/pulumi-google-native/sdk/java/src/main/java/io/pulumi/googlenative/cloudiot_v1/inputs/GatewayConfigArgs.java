@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Gateway-related configuration and state.
+ */
 public final class GatewayConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GatewayConfigArgs Empty = new GatewayConfigArgs();
 
+    /**
+     * Indicates how to authorize and/or authenticate devices to access the gateway.
+     */
     @InputImport(name="gatewayAuthMethod")
     private final @Nullable Input<GatewayConfigGatewayAuthMethod> gatewayAuthMethod;
 
@@ -22,6 +28,9 @@ public final class GatewayConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.gatewayAuthMethod == null ? Input.empty() : this.gatewayAuthMethod;
     }
 
+    /**
+     * Indicates whether the device is a gateway.
+     */
     @InputImport(name="gatewayType")
     private final @Nullable Input<GatewayConfigGatewayType> gatewayType;
 

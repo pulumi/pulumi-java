@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the ARM Resource ID for the linked endpoints
+ */
 public final class CdnEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CdnEndpointResponse Empty = new CdnEndpointResponse();
 
+    /**
+     * ARM Resource ID string.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 

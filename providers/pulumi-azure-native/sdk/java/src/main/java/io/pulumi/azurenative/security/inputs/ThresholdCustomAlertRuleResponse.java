@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A custom alert rule that checks if a value (depends on the custom alert type) is within the given range.
+ */
 public final class ThresholdCustomAlertRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ThresholdCustomAlertRuleResponse Empty = new ThresholdCustomAlertRuleResponse();
 
+    /**
+     * The description of the custom alert.
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -21,6 +27,9 @@ public final class ThresholdCustomAlertRuleResponse extends io.pulumi.resources.
         return this.description;
     }
 
+    /**
+     * The display name of the custom alert.
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -28,6 +37,9 @@ public final class ThresholdCustomAlertRuleResponse extends io.pulumi.resources.
         return this.displayName;
     }
 
+    /**
+     * Status of the custom alert.
+     */
     @InputImport(name="isEnabled", required=true)
     private final Boolean isEnabled;
 
@@ -35,6 +47,9 @@ public final class ThresholdCustomAlertRuleResponse extends io.pulumi.resources.
         return this.isEnabled;
     }
 
+    /**
+     * The maximum threshold.
+     */
     @InputImport(name="maxThreshold", required=true)
     private final Integer maxThreshold;
 
@@ -42,6 +57,9 @@ public final class ThresholdCustomAlertRuleResponse extends io.pulumi.resources.
         return this.maxThreshold;
     }
 
+    /**
+     * The minimum threshold.
+     */
     @InputImport(name="minThreshold", required=true)
     private final Integer minThreshold;
 
@@ -49,6 +67,10 @@ public final class ThresholdCustomAlertRuleResponse extends io.pulumi.resources.
         return this.minThreshold;
     }
 
+    /**
+     * The type of the custom alert rule.
+Expected value is 'ThresholdCustomAlertRule'.
+     */
     @InputImport(name="ruleType", required=true)
     private final String ruleType;
 

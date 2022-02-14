@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class TagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TagArgs Empty = new TagArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -21,6 +27,9 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the tag, for example: "projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/tags/tag1". If the package part contains slashes, the slashes are escaped. The tag part can only have characters in [a-zA-Z0-9\-._~:@], anything else must be URL encoded.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -28,6 +37,9 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="packageId", required=true)
     private final Input<String> packageId;
 
@@ -35,6 +47,9 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
         return this.packageId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -42,6 +57,9 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="repositoryId", required=true)
     private final Input<String> repositoryId;
 
@@ -49,6 +67,9 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
         return this.repositoryId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="tagId")
     private final @Nullable Input<String> tagId;
 
@@ -56,6 +77,9 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
         return this.tagId == null ? Input.empty() : this.tagId;
     }
 
+    /**
+     * The name of the version the tag refers to, for example: "projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/versions/sha256:5243811" If the package or version ID parts contain slashes, the slashes are escaped.
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

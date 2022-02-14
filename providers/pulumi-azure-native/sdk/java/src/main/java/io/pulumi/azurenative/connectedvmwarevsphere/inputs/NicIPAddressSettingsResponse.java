@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * IP address information for a virtual network adapter reported by the fabric.
+ */
 public final class NicIPAddressSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NicIPAddressSettingsResponse Empty = new NicIPAddressSettingsResponse();
 
+    /**
+     * Gets the ip address allocation method.
+     */
     @InputImport(name="allocationMethod", required=true)
     private final String allocationMethod;
 
@@ -19,6 +25,9 @@ public final class NicIPAddressSettingsResponse extends io.pulumi.resources.Invo
         return this.allocationMethod;
     }
 
+    /**
+     * Gets the ip address for the nic.
+     */
     @InputImport(name="ipAddress", required=true)
     private final String ipAddress;
 
@@ -26,6 +35,9 @@ public final class NicIPAddressSettingsResponse extends io.pulumi.resources.Invo
         return this.ipAddress;
     }
 
+    /**
+     * Gets the mask.
+     */
     @InputImport(name="subnetMask", required=true)
     private final String subnetMask;
 

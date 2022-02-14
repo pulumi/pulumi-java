@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.VirtualNetworkGatewayArgs;
 import io.pulumi.azurenative.network.outputs.AddressSpaceResponse;
 import io.pulumi.azurenative.network.outputs.BgpSettingsResponse;
 import io.pulumi.azurenative.network.outputs.ExtendedLocationResponse;
@@ -23,147 +22,554 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A common class for general resource information.
+API Version: 2020-11-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### UpdateVirtualNetworkGateway
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualNetworkGateway = new AzureNative.Network.VirtualNetworkGateway("virtualNetworkGateway", new AzureNative.Network.VirtualNetworkGatewayArgs
+        {
+            ActiveActive = false,
+            BgpSettings = new AzureNative.Network.Inputs.BgpSettingsArgs
+            {
+                Asn = 65515,
+                BgpPeeringAddress = "10.0.1.30",
+                PeerWeight = 0,
+            },
+            CustomRoutes = new AzureNative.Network.Inputs.AddressSpaceArgs
+            {
+                AddressPrefixes = 
+                {
+                    "101.168.0.6/32",
+                },
+            },
+            EnableBgp = false,
+            EnableDnsForwarding = true,
+            GatewayType = "Vpn",
+            IpConfigurations = 
+            {
+                new AzureNative.Network.Inputs.VirtualNetworkGatewayIPConfigurationArgs
+                {
+                    Name = "gwipconfig1",
+                    PrivateIPAllocationMethod = "Dynamic",
+                    PublicIPAddress = new AzureNative.Network.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip",
+                    },
+                    Subnet = new AzureNative.Network.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet",
+                    },
+                },
+            },
+            Location = "centralus",
+            ResourceGroupName = "rg1",
+            Sku = new AzureNative.Network.Inputs.VirtualNetworkGatewaySkuArgs
+            {
+                Name = "VpnGw1",
+                Tier = "VpnGw1",
+            },
+            VirtualNetworkGatewayName = "vpngw",
+            VpnClientConfiguration = new AzureNative.Network.Inputs.VpnClientConfigurationArgs
+            {
+                RadiusServers = 
+                {
+                    new AzureNative.Network.Inputs.RadiusServerArgs
+                    {
+                        RadiusServerAddress = "10.2.0.0",
+                        RadiusServerScore = 20,
+                        RadiusServerSecret = "radiusServerSecret",
+                    },
+                },
+                VpnClientProtocols = 
+                {
+                    "OpenVPN",
+                },
+                VpnClientRevokedCertificates = {},
+                VpnClientRootCertificates = {},
+            },
+            VpnType = "RouteBased",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewVirtualNetworkGateway(ctx, "virtualNetworkGateway", &network.VirtualNetworkGatewayArgs{
+			ActiveActive: pulumi.Bool(false),
+			BgpSettings: &network.BgpSettingsArgs{
+				Asn:               pulumi.Float64(65515),
+				BgpPeeringAddress: pulumi.String("10.0.1.30"),
+				PeerWeight:        pulumi.Int(0),
+			},
+			CustomRoutes: &network.AddressSpaceArgs{
+				AddressPrefixes: pulumi.StringArray{
+					pulumi.String("101.168.0.6/32"),
+				},
+			},
+			EnableBgp:           pulumi.Bool(false),
+			EnableDnsForwarding: pulumi.Bool(true),
+			GatewayType:         pulumi.String("Vpn"),
+			IpConfigurations: []network.VirtualNetworkGatewayIPConfigurationArgs{
+				&network.VirtualNetworkGatewayIPConfigurationArgs{
+					Name:                      pulumi.String("gwipconfig1"),
+					PrivateIPAllocationMethod: pulumi.String("Dynamic"),
+					PublicIPAddress: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip"),
+					},
+					Subnet: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet"),
+					},
+				},
+			},
+			Location:          pulumi.String("centralus"),
+			ResourceGroupName: pulumi.String("rg1"),
+			Sku: &network.VirtualNetworkGatewaySkuArgs{
+				Name: pulumi.String("VpnGw1"),
+				Tier: pulumi.String("VpnGw1"),
+			},
+			VirtualNetworkGatewayName: pulumi.String("vpngw"),
+			VpnClientConfiguration: &network.VpnClientConfigurationArgs{
+				RadiusServers: network.RadiusServerArray{
+					&network.RadiusServerArgs{
+						RadiusServerAddress: pulumi.String("10.2.0.0"),
+						RadiusServerScore:   pulumi.Float64(20),
+						RadiusServerSecret:  pulumi.String("radiusServerSecret"),
+					},
+				},
+				VpnClientProtocols: pulumi.StringArray{
+					pulumi.String("OpenVPN"),
+				},
+				VpnClientRevokedCertificates: network.VpnClientRevokedCertificateArray{},
+				VpnClientRootCertificates:    network.VpnClientRootCertificateArray{},
+			},
+			VpnType: pulumi.String("RouteBased"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const virtualNetworkGateway = new azure_native.network.VirtualNetworkGateway("virtualNetworkGateway", {
+    activeActive: false,
+    bgpSettings: {
+        asn: 65515,
+        bgpPeeringAddress: "10.0.1.30",
+        peerWeight: 0,
+    },
+    customRoutes: {
+        addressPrefixes: ["101.168.0.6/32"],
+    },
+    enableBgp: false,
+    enableDnsForwarding: true,
+    gatewayType: "Vpn",
+    ipConfigurations: [{
+        name: "gwipconfig1",
+        privateIPAllocationMethod: "Dynamic",
+        publicIPAddress: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip",
+        },
+        subnet: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet",
+        },
+    }],
+    location: "centralus",
+    resourceGroupName: "rg1",
+    sku: {
+        name: "VpnGw1",
+        tier: "VpnGw1",
+    },
+    virtualNetworkGatewayName: "vpngw",
+    vpnClientConfiguration: {
+        radiusServers: [{
+            radiusServerAddress: "10.2.0.0",
+            radiusServerScore: 20,
+            radiusServerSecret: "radiusServerSecret",
+        }],
+        vpnClientProtocols: ["OpenVPN"],
+        vpnClientRevokedCertificates: [],
+        vpnClientRootCertificates: [],
+    },
+    vpnType: "RouteBased",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+virtual_network_gateway = azure_native.network.VirtualNetworkGateway("virtualNetworkGateway",
+    active_active=False,
+    bgp_settings=azure_native.network.BgpSettingsArgs(
+        asn=65515,
+        bgp_peering_address="10.0.1.30",
+        peer_weight=0,
+    ),
+    custom_routes=azure_native.network.AddressSpaceArgs(
+        address_prefixes=["101.168.0.6/32"],
+    ),
+    enable_bgp=False,
+    enable_dns_forwarding=True,
+    gateway_type="Vpn",
+    ip_configurations=[azure_native.network.VirtualNetworkGatewayIPConfigurationArgs(
+        name="gwipconfig1",
+        private_ip_allocation_method="Dynamic",
+        public_ip_address=azure_native.network.SubResourceArgs(
+            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/gwpip",
+        ),
+        subnet=azure_native.network.SubResourceArgs(
+            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/GatewaySubnet",
+        ),
+    )],
+    location="centralus",
+    resource_group_name="rg1",
+    sku=azure_native.network.VirtualNetworkGatewaySkuArgs(
+        name="VpnGw1",
+        tier="VpnGw1",
+    ),
+    virtual_network_gateway_name="vpngw",
+    vpn_client_configuration=azure_native.network.VpnClientConfigurationArgs(
+        radius_servers=[azure_native.network.RadiusServerArgs(
+            radius_server_address="10.2.0.0",
+            radius_server_score=20,
+            radius_server_secret="radiusServerSecret",
+        )],
+        vpn_client_protocols=["OpenVPN"],
+        vpn_client_revoked_certificates=[],
+        vpn_client_root_certificates=[],
+    ),
+    vpn_type="RouteBased")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:VirtualNetworkGateway vpngw /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw 
+```
+
+ */
 @ResourceType(type="azure-native:network:VirtualNetworkGateway")
 public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
+    /**
+     * ActiveActive flag.
+     */
     @OutputExport(name="activeActive", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> activeActive;
 
+    /**
+     * @return ActiveActive flag.
+     */
     public Output</* @Nullable */ Boolean> getActiveActive() {
         return this.activeActive;
     }
+    /**
+     * Virtual network gateway's BGP speaker settings.
+     */
     @OutputExport(name="bgpSettings", type=BgpSettingsResponse.class, parameters={})
     private Output</* @Nullable */ BgpSettingsResponse> bgpSettings;
 
+    /**
+     * @return Virtual network gateway's BGP speaker settings.
+     */
     public Output</* @Nullable */ BgpSettingsResponse> getBgpSettings() {
         return this.bgpSettings;
     }
+    /**
+     * The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.
+     */
     @OutputExport(name="customRoutes", type=AddressSpaceResponse.class, parameters={})
     private Output</* @Nullable */ AddressSpaceResponse> customRoutes;
 
+    /**
+     * @return The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.
+     */
     public Output</* @Nullable */ AddressSpaceResponse> getCustomRoutes() {
         return this.customRoutes;
     }
+    /**
+     * Whether BGP is enabled for this virtual network gateway or not.
+     */
     @OutputExport(name="enableBgp", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableBgp;
 
+    /**
+     * @return Whether BGP is enabled for this virtual network gateway or not.
+     */
     public Output</* @Nullable */ Boolean> getEnableBgp() {
         return this.enableBgp;
     }
+    /**
+     * Whether dns forwarding is enabled or not.
+     */
     @OutputExport(name="enableDnsForwarding", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDnsForwarding;
 
+    /**
+     * @return Whether dns forwarding is enabled or not.
+     */
     public Output</* @Nullable */ Boolean> getEnableDnsForwarding() {
         return this.enableDnsForwarding;
     }
+    /**
+     * Whether private IP needs to be enabled on this gateway for connections or not.
+     */
     @OutputExport(name="enablePrivateIpAddress", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enablePrivateIpAddress;
 
+    /**
+     * @return Whether private IP needs to be enabled on this gateway for connections or not.
+     */
     public Output</* @Nullable */ Boolean> getEnablePrivateIpAddress() {
         return this.enablePrivateIpAddress;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The extended location of type local virtual network gateway.
+     */
     @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
+    /**
+     * @return The extended location of type local virtual network gateway.
+     */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
+    /**
+     * The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.
+     */
     @OutputExport(name="gatewayDefaultSite", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> gatewayDefaultSite;
 
+    /**
+     * @return The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.
+     */
     public Output</* @Nullable */ SubResourceResponse> getGatewayDefaultSite() {
         return this.gatewayDefaultSite;
     }
+    /**
+     * The type of this virtual network gateway.
+     */
     @OutputExport(name="gatewayType", type=String.class, parameters={})
     private Output</* @Nullable */ String> gatewayType;
 
+    /**
+     * @return The type of this virtual network gateway.
+     */
     public Output</* @Nullable */ String> getGatewayType() {
         return this.gatewayType;
     }
+    /**
+     * The IP address allocated by the gateway to which dns requests can be sent.
+     */
     @OutputExport(name="inboundDnsForwardingEndpoint", type=String.class, parameters={})
     private Output<String> inboundDnsForwardingEndpoint;
 
+    /**
+     * @return The IP address allocated by the gateway to which dns requests can be sent.
+     */
     public Output<String> getInboundDnsForwardingEndpoint() {
         return this.inboundDnsForwardingEndpoint;
     }
+    /**
+     * IP configurations for virtual network gateway.
+     */
     @OutputExport(name="ipConfigurations", type=List.class, parameters={VirtualNetworkGatewayIPConfigurationResponse.class})
     private Output</* @Nullable */ List<VirtualNetworkGatewayIPConfigurationResponse>> ipConfigurations;
 
+    /**
+     * @return IP configurations for virtual network gateway.
+     */
     public Output</* @Nullable */ List<VirtualNetworkGatewayIPConfigurationResponse>> getIpConfigurations() {
         return this.ipConfigurations;
     }
+    /**
+     * Resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning state of the virtual network gateway resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the virtual network gateway resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The resource GUID property of the virtual network gateway resource.
+     */
     @OutputExport(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
+    /**
+     * @return The resource GUID property of the virtual network gateway resource.
+     */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
+    /**
+     * The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.
+     */
     @OutputExport(name="sku", type=VirtualNetworkGatewaySkuResponse.class, parameters={})
     private Output</* @Nullable */ VirtualNetworkGatewaySkuResponse> sku;
 
+    /**
+     * @return The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.
+     */
     public Output</* @Nullable */ VirtualNetworkGatewaySkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
+     */
     @OutputExport(name="vNetExtendedLocationResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vNetExtendedLocationResourceId;
 
+    /**
+     * @return Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
+     */
     public Output</* @Nullable */ String> getVNetExtendedLocationResourceId() {
         return this.vNetExtendedLocationResourceId;
     }
+    /**
+     * The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.
+     */
     @OutputExport(name="vpnClientConfiguration", type=VpnClientConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ VpnClientConfigurationResponse> vpnClientConfiguration;
 
+    /**
+     * @return The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.
+     */
     public Output</* @Nullable */ VpnClientConfigurationResponse> getVpnClientConfiguration() {
         return this.vpnClientConfiguration;
     }
+    /**
+     * The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
+     */
     @OutputExport(name="vpnGatewayGeneration", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpnGatewayGeneration;
 
+    /**
+     * @return The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
+     */
     public Output</* @Nullable */ String> getVpnGatewayGeneration() {
         return this.vpnGatewayGeneration;
     }
+    /**
+     * The type of this virtual network gateway.
+     */
     @OutputExport(name="vpnType", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpnType;
 
+    /**
+     * @return The type of this virtual network gateway.
+     */
     public Output</* @Nullable */ String> getVpnType() {
         return this.vpnType;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public VirtualNetworkGateway(String name, VirtualNetworkGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:VirtualNetworkGateway", name, args == null ? VirtualNetworkGatewayArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -219,6 +625,14 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static VirtualNetworkGateway get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualNetworkGateway(name, id, options);
     }

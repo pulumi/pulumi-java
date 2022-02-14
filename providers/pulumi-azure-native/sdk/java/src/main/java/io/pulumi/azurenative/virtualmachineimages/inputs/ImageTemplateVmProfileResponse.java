@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the virtual machine used to build, customize and capture images
+ */
 public final class ImageTemplateVmProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ImageTemplateVmProfileResponse Empty = new ImageTemplateVmProfileResponse();
 
+    /**
+     * Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.
+     */
     @InputImport(name="osDiskSizeGB")
     private final @Nullable Integer osDiskSizeGB;
 
@@ -23,6 +29,9 @@ public final class ImageTemplateVmProfileResponse extends io.pulumi.resources.In
         return this.osDiskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.osDiskSizeGB);
     }
 
+    /**
+     * Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2 for Gen1 images and Standard_D2ds_v4 for Gen2 images).
+     */
     @InputImport(name="vmSize")
     private final @Nullable String vmSize;
 
@@ -30,6 +39,9 @@ public final class ImageTemplateVmProfileResponse extends io.pulumi.resources.In
         return this.vmSize == null ? Optional.empty() : Optional.ofNullable(this.vmSize);
     }
 
+    /**
+     * Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.
+     */
     @InputImport(name="vnetConfig")
     private final @Nullable VirtualNetworkConfigResponse vnetConfig;
 

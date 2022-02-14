@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetImportPipeline {
+/**
+ * An object that represents an import pipeline for a container registry.
+API Version: 2020-11-01-preview.
+ *
+ * An object that represents an import pipeline for a container registry.
+ */
     public static CompletableFuture<GetImportPipelineResult> invokeAsync(GetImportPipelineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:getImportPipeline", TypeShape.of(GetImportPipelineResult.class), args == null ? GetImportPipelineArgs.Empty : args, Utilities.withVersion(options));
     }

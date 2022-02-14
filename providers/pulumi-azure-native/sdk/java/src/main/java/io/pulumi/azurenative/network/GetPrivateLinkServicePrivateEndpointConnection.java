@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateLinkServicePrivateEndpointConnection {
+/**
+ * PrivateEndpointConnection resource.
+API Version: 2020-11-01.
+ *
+ * PrivateEndpointConnection resource.
+ */
     public static CompletableFuture<GetPrivateLinkServicePrivateEndpointConnectionResult> invokeAsync(GetPrivateLinkServicePrivateEndpointConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPrivateLinkServicePrivateEndpointConnection", TypeShape.of(GetPrivateLinkServicePrivateEndpointConnectionResult.class), args == null ? GetPrivateLinkServicePrivateEndpointConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

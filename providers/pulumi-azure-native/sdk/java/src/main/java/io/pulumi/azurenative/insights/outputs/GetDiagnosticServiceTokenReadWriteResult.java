@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDiagnosticServiceTokenReadWriteResult {
+/**
+ * JWT token for accessing application insights diagnostic service data.
+ */
     private final @Nullable String token;
 
     @OutputCustomType.Constructor({"token"})
@@ -18,6 +21,9 @@ public final class GetDiagnosticServiceTokenReadWriteResult {
         this.token = token;
     }
 
+/**
+ * JWT token for accessing application insights diagnostic service data.
+ */
     public Optional<String> getToken() {
         return Optional.ofNullable(this.token);
     }

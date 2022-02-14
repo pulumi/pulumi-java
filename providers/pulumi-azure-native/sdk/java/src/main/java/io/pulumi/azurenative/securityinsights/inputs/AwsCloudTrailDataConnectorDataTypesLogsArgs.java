@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Logs data type.
+ */
 public final class AwsCloudTrailDataConnectorDataTypesLogsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AwsCloudTrailDataConnectorDataTypesLogsArgs Empty = new AwsCloudTrailDataConnectorDataTypesLogsArgs();
 
+    /**
+     * Describe whether this data type connection is enabled or not.
+     */
     @InputImport(name="state")
     private final @Nullable Input<Either<String,DataTypeState>> state;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetContentKeyPolicyPropertiesWithSecrets {
+/**
+ * The properties of the Content Key Policy.
+API Version: 2020-05-01.
+ *
+ * The properties of the Content Key Policy.
+ */
     public static CompletableFuture<GetContentKeyPolicyPropertiesWithSecretsResult> invokeAsync(GetContentKeyPolicyPropertiesWithSecretsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getContentKeyPolicyPropertiesWithSecrets", TypeShape.of(GetContentKeyPolicyPropertiesWithSecretsResult.class), args == null ? GetContentKeyPolicyPropertiesWithSecretsArgs.Empty : args, Utilities.withVersion(options));
     }

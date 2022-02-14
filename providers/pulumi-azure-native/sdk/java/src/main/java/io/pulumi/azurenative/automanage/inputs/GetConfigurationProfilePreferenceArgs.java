@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetConfigurationProfilePreferenceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConfigurationProfilePreferenceArgs Empty = new GetConfigurationProfilePreferenceArgs();
 
+    /**
+     * The configuration profile preference name.
+     */
     @InputImport(name="configurationProfilePreferenceName", required=true)
     private final String configurationProfilePreferenceName;
 
@@ -19,6 +25,9 @@ public final class GetConfigurationProfilePreferenceArgs extends io.pulumi.resou
         return this.configurationProfilePreferenceName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

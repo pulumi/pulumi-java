@@ -12,9 +12,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ReferenceVmResponse {
+/**
+ * The password of the virtual machine. This will be set to null in GET resource API
+ */
     private final @Nullable String password;
+/**
+ * The username of the virtual machine
+ */
     private final String userName;
+/**
+ * VM resource Id for the environment
+ */
     private final String vmResourceId;
+/**
+ * The state details for the reference virtual machine.
+ */
     private final VmStateDetailsResponse vmStateDetails;
 
     @OutputCustomType.Constructor({"password","userName","vmResourceId","vmStateDetails"})
@@ -29,15 +41,27 @@ public final class ReferenceVmResponse {
         this.vmStateDetails = Objects.requireNonNull(vmStateDetails);
     }
 
+/**
+ * The password of the virtual machine. This will be set to null in GET resource API
+ */
     public Optional<String> getPassword() {
         return Optional.ofNullable(this.password);
     }
+/**
+ * The username of the virtual machine
+ */
     public String getUserName() {
         return this.userName;
     }
+/**
+ * VM resource Id for the environment
+ */
     public String getVmResourceId() {
         return this.vmResourceId;
     }
+/**
+ * The state details for the reference virtual machine.
+ */
     public VmStateDetailsResponse getVmStateDetails() {
         return this.vmStateDetails;
     }

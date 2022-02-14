@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Edifact delimiter override settings.
+ */
 public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EdifactDelimiterOverrideArgs Empty = new EdifactDelimiterOverrideArgs();
 
+    /**
+     * The component separator.
+     */
     @InputImport(name="componentSeparator", required=true)
     private final Input<Integer> componentSeparator;
 
@@ -24,6 +30,9 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
         return this.componentSeparator;
     }
 
+    /**
+     * The data element separator.
+     */
     @InputImport(name="dataElementSeparator", required=true)
     private final Input<Integer> dataElementSeparator;
 
@@ -31,6 +40,9 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
         return this.dataElementSeparator;
     }
 
+    /**
+     * The decimal point indicator.
+     */
     @InputImport(name="decimalPointIndicator", required=true)
     private final Input<EdifactDecimalIndicator> decimalPointIndicator;
 
@@ -38,6 +50,9 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
         return this.decimalPointIndicator;
     }
 
+    /**
+     * The message association assigned code.
+     */
     @InputImport(name="messageAssociationAssignedCode")
     private final @Nullable Input<String> messageAssociationAssignedCode;
 
@@ -45,6 +60,9 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
         return this.messageAssociationAssignedCode == null ? Input.empty() : this.messageAssociationAssignedCode;
     }
 
+    /**
+     * The message id.
+     */
     @InputImport(name="messageId")
     private final @Nullable Input<String> messageId;
 
@@ -52,6 +70,9 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
         return this.messageId == null ? Input.empty() : this.messageId;
     }
 
+    /**
+     * The message release.
+     */
     @InputImport(name="messageRelease")
     private final @Nullable Input<String> messageRelease;
 
@@ -59,6 +80,9 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
         return this.messageRelease == null ? Input.empty() : this.messageRelease;
     }
 
+    /**
+     * The message version.
+     */
     @InputImport(name="messageVersion")
     private final @Nullable Input<String> messageVersion;
 
@@ -66,6 +90,9 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
         return this.messageVersion == null ? Input.empty() : this.messageVersion;
     }
 
+    /**
+     * The release indicator.
+     */
     @InputImport(name="releaseIndicator", required=true)
     private final Input<Integer> releaseIndicator;
 
@@ -73,6 +100,9 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
         return this.releaseIndicator;
     }
 
+    /**
+     * The repetition separator.
+     */
     @InputImport(name="repetitionSeparator", required=true)
     private final Input<Integer> repetitionSeparator;
 
@@ -80,6 +110,9 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
         return this.repetitionSeparator;
     }
 
+    /**
+     * The segment terminator.
+     */
     @InputImport(name="segmentTerminator", required=true)
     private final Input<Integer> segmentTerminator;
 
@@ -87,6 +120,9 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
         return this.segmentTerminator;
     }
 
+    /**
+     * The segment terminator suffix.
+     */
     @InputImport(name="segmentTerminatorSuffix", required=true)
     private final Input<SegmentTerminatorSuffix> segmentTerminatorSuffix;
 
@@ -94,6 +130,9 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
         return this.segmentTerminatorSuffix;
     }
 
+    /**
+     * The target namespace on which this delimiter settings has to be applied.
+     */
     @InputImport(name="targetNamespace")
     private final @Nullable Input<String> targetNamespace;
 

@@ -13,18 +13,58 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SftpReadSettingsResponse {
+/**
+ * Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
+ */
     private final @Nullable Object deleteFilesAfterCompletion;
+/**
+ * If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).
+ */
     private final @Nullable Object disableChunking;
+/**
+ * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+ */
     private final @Nullable Object disableMetricsCollection;
+/**
+ * Indicates whether to enable partition discovery.
+ */
     private final @Nullable Boolean enablePartitionDiscovery;
+/**
+ * Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object fileListPath;
+/**
+ * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+ */
     private final @Nullable Object maxConcurrentConnections;
+/**
+ * The end of file's modified datetime. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object modifiedDatetimeEnd;
+/**
+ * The start of file's modified datetime. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object modifiedDatetimeStart;
+/**
+ * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object partitionRootPath;
+/**
+ * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
+ */
     private final @Nullable Object recursive;
+/**
+ * The read setting type.
+Expected value is 'SftpReadSettings'.
+ */
     private final String type;
+/**
+ * Sftp wildcardFileName. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object wildcardFileName;
+/**
+ * Sftp wildcardFolderPath. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object wildcardFolderPath;
 
     @OutputCustomType.Constructor({"deleteFilesAfterCompletion","disableChunking","disableMetricsCollection","enablePartitionDiscovery","fileListPath","maxConcurrentConnections","modifiedDatetimeEnd","modifiedDatetimeStart","partitionRootPath","recursive","type","wildcardFileName","wildcardFolderPath"})
@@ -57,42 +97,82 @@ public final class SftpReadSettingsResponse {
         this.wildcardFolderPath = wildcardFolderPath;
     }
 
+/**
+ * Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
+ */
     public Optional<Object> getDeleteFilesAfterCompletion() {
         return Optional.ofNullable(this.deleteFilesAfterCompletion);
     }
+/**
+ * If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).
+ */
     public Optional<Object> getDisableChunking() {
         return Optional.ofNullable(this.disableChunking);
     }
+/**
+ * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+ */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
+/**
+ * Indicates whether to enable partition discovery.
+ */
     public Optional<Boolean> getEnablePartitionDiscovery() {
         return Optional.ofNullable(this.enablePartitionDiscovery);
     }
+/**
+ * Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getFileListPath() {
         return Optional.ofNullable(this.fileListPath);
     }
+/**
+ * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+ */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
+/**
+ * The end of file's modified datetime. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getModifiedDatetimeEnd() {
         return Optional.ofNullable(this.modifiedDatetimeEnd);
     }
+/**
+ * The start of file's modified datetime. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getModifiedDatetimeStart() {
         return Optional.ofNullable(this.modifiedDatetimeStart);
     }
+/**
+ * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getPartitionRootPath() {
         return Optional.ofNullable(this.partitionRootPath);
     }
+/**
+ * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
+ */
     public Optional<Object> getRecursive() {
         return Optional.ofNullable(this.recursive);
     }
+/**
+ * The read setting type.
+Expected value is 'SftpReadSettings'.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Sftp wildcardFileName. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getWildcardFileName() {
         return Optional.ofNullable(this.wildcardFileName);
     }
+/**
+ * Sftp wildcardFolderPath. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getWildcardFolderPath() {
         return Optional.ofNullable(this.wildcardFolderPath);
     }

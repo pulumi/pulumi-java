@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebTestArgs Empty = new WebTestArgs();
 
+    /**
+     * An XML configuration specification for a WebTest.
+     */
     @InputImport(name="configuration")
     private final @Nullable Input<WebTestPropertiesConfigurationArgs> configuration;
 
@@ -28,6 +34,9 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.configuration == null ? Input.empty() : this.configuration;
     }
 
+    /**
+     * Purpose/user defined descriptive test for this WebTest.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -35,6 +44,9 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Is the test actively being monitored.
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -42,6 +54,9 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * Interval in seconds between test runs for this WebTest. Default value is 300.
+     */
     @InputImport(name="frequency")
     private final @Nullable Input<Integer> frequency;
 
@@ -49,6 +64,9 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.frequency == null ? Input.empty() : this.frequency;
     }
 
+    /**
+     * The kind of web test that this web test watches. Choices are ping and multistep.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<WebTestKind> kind;
 
@@ -56,6 +74,9 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Resource location
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -63,6 +84,9 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * A list of where to physically run the tests from to give global coverage for accessibility of your application.
+     */
     @InputImport(name="locations", required=true)
     private final Input<List<WebTestGeolocationArgs>> locations;
 
@@ -70,6 +94,9 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.locations;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -77,6 +104,9 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Allow for retries should this WebTest fail.
+     */
     @InputImport(name="retryEnabled")
     private final @Nullable Input<Boolean> retryEnabled;
 
@@ -84,6 +114,9 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.retryEnabled == null ? Input.empty() : this.retryEnabled;
     }
 
+    /**
+     * Unique ID of this WebTest. This is typically the same value as the Name field.
+     */
     @InputImport(name="syntheticMonitorId", required=true)
     private final Input<String> syntheticMonitorId;
 
@@ -91,6 +124,9 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.syntheticMonitorId;
     }
 
+    /**
+     * Resource tags
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -98,6 +134,9 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Seconds until this WebTest will timeout and fail. Default value is 30.
+     */
     @InputImport(name="timeout")
     private final @Nullable Input<Integer> timeout;
 
@@ -105,6 +144,9 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.timeout == null ? Input.empty() : this.timeout;
     }
 
+    /**
+     * The kind of web test this is, valid choices are ping and multistep.
+     */
     @InputImport(name="webTestKind", required=true)
     private final Input<WebTestKind> webTestKind;
 
@@ -112,6 +154,9 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.webTestKind;
     }
 
+    /**
+     * User defined name if this WebTest.
+     */
     @InputImport(name="webTestName")
     private final @Nullable Input<String> webTestName;
 

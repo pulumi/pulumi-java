@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Execution policy for an activity.
+ */
 public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RetryPolicyArgs Empty = new RetryPolicyArgs();
 
+    /**
+     * Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
+     */
     @InputImport(name="count")
     private final @Nullable Input<Object> count;
 
@@ -22,6 +28,9 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.count == null ? Input.empty() : this.count;
     }
 
+    /**
+     * Interval between retries in seconds. Default is 30.
+     */
     @InputImport(name="intervalInSeconds")
     private final @Nullable Input<Integer> intervalInSeconds;
 

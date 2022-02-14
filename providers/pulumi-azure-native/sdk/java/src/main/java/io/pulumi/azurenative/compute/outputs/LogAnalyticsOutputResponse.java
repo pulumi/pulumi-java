@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LogAnalyticsOutputResponse {
+/**
+ * Output file Uri path to blob container.
+ */
     private final String output;
 
     @OutputCustomType.Constructor({"output"})
@@ -16,6 +19,9 @@ public final class LogAnalyticsOutputResponse {
         this.output = Objects.requireNonNull(output);
     }
 
+/**
+ * Output file Uri path to blob container.
+ */
     public String getOutput() {
         return this.output;
     }

@@ -13,10 +13,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Response properties for iSCSI target portal group.
+ */
 public final class TargetPortalGroupResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TargetPortalGroupResponse Empty = new TargetPortalGroupResponse();
 
+    /**
+     * Access Control List (ACL) for an iSCSI target portal group.
+     */
     @InputImport(name="acls", required=true)
     private final List<AclResponse> acls;
 
@@ -24,6 +30,9 @@ public final class TargetPortalGroupResponse extends io.pulumi.resources.InvokeA
         return this.acls;
     }
 
+    /**
+     * Attributes of an iSCSI target portal group.
+     */
     @InputImport(name="attributes", required=true)
     private final AttributesResponse attributes;
 
@@ -31,6 +40,9 @@ public final class TargetPortalGroupResponse extends io.pulumi.resources.InvokeA
         return this.attributes;
     }
 
+    /**
+     * List of private IPv4 addresses to connect to the iSCSI target.
+     */
     @InputImport(name="endpoints", required=true)
     private final List<String> endpoints;
 
@@ -38,6 +50,9 @@ public final class TargetPortalGroupResponse extends io.pulumi.resources.InvokeA
         return this.endpoints;
     }
 
+    /**
+     * List of LUNs to be exposed through iSCSI target portal group.
+     */
     @InputImport(name="luns", required=true)
     private final List<IscsiLunResponse> luns;
 
@@ -45,6 +60,9 @@ public final class TargetPortalGroupResponse extends io.pulumi.resources.InvokeA
         return this.luns;
     }
 
+    /**
+     * The port used by iSCSI target portal group.
+     */
     @InputImport(name="port", required=true)
     private final Integer port;
 
@@ -52,6 +70,9 @@ public final class TargetPortalGroupResponse extends io.pulumi.resources.InvokeA
         return this.port;
     }
 
+    /**
+     * The tag associated with the iSCSI target portal group.
+     */
     @InputImport(name="tag", required=true)
     private final Integer tag;
 

@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Sku.
+ */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 
+    /**
+     * The display name of the sku.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -23,6 +29,9 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The sku family.
+     */
     @InputImport(name="family")
     private final @Nullable Input<String> family;
 
@@ -30,6 +39,9 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
         return this.family == null ? Input.empty() : this.family;
     }
 
+    /**
+     * The sku name.
+     */
     @InputImport(name="name", required=true)
     private final Input<Either<String,SkuName>> name;
 

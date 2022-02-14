@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class TableReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TableReferenceResponse Empty = new TableReferenceResponse();
 
+    /**
+     * [Required] The ID of the dataset containing this table.
+     */
     @InputImport(name="datasetId", required=true)
     private final String datasetId;
 
@@ -19,6 +25,9 @@ public final class TableReferenceResponse extends io.pulumi.resources.InvokeArgs
         return this.datasetId;
     }
 
+    /**
+     * [Required] The ID of the project containing this table.
+     */
     @InputImport(name="project", required=true)
     private final String project;
 
@@ -26,6 +35,9 @@ public final class TableReferenceResponse extends io.pulumi.resources.InvokeArgs
         return this.project;
     }
 
+    /**
+     * [Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+     */
     @InputImport(name="tableId", required=true)
     private final String tableId;
 

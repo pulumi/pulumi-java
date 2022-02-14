@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contact people for the entry.
+ */
 public final class GoogleCloudDatacatalogV1ContactsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1ContactsArgs Empty = new GoogleCloudDatacatalogV1ContactsArgs();
 
+    /**
+     * The list of contact people for the entry.
+     */
     @InputImport(name="people")
     private final @Nullable Input<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people;
 

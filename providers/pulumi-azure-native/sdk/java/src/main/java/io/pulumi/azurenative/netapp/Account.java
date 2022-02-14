@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.netapp;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.netapp.AccountArgs;
 import io.pulumi.azurenative.netapp.outputs.AccountEncryptionResponse;
 import io.pulumi.azurenative.netapp.outputs.ActiveDirectoryResponse;
 import io.pulumi.azurenative.netapp.outputs.SystemDataResponse;
@@ -18,57 +17,248 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * NetApp account resource
+API Version: 2020-12-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Accounts_CreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var account = new AzureNative.NetApp.Account("account", new AzureNative.NetApp.AccountArgs
+        {
+            AccountName = "account1",
+            ActiveDirectories = 
+            {
+                new AzureNative.NetApp.Inputs.ActiveDirectoryArgs
+                {
+                    AesEncryption = true,
+                    Dns = "10.10.10.3, 10.10.10.4",
+                    Domain = "10.10.10.3",
+                    LdapSigning = false,
+                    OrganizationalUnit = "Engineering",
+                    Password = "ad_password",
+                    Site = "SiteName",
+                    SmbServerName = "SMBServer",
+                    Username = "ad_user_name",
+                },
+            },
+            Location = "eastus",
+            ResourceGroupName = "myRG",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	netapp "github.com/pulumi/pulumi-azure-native/sdk/go/azure/netapp"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := netapp.NewAccount(ctx, "account", &netapp.AccountArgs{
+			AccountName: pulumi.String("account1"),
+			ActiveDirectories: []netapp.ActiveDirectoryArgs{
+				&netapp.ActiveDirectoryArgs{
+					AesEncryption:      pulumi.Bool(true),
+					Dns:                pulumi.String("10.10.10.3, 10.10.10.4"),
+					Domain:             pulumi.String("10.10.10.3"),
+					LdapSigning:        pulumi.Bool(false),
+					OrganizationalUnit: pulumi.String("Engineering"),
+					Password:           pulumi.String("ad_password"),
+					Site:               pulumi.String("SiteName"),
+					SmbServerName:      pulumi.String("SMBServer"),
+					Username:           pulumi.String("ad_user_name"),
+				},
+			},
+			Location:          pulumi.String("eastus"),
+			ResourceGroupName: pulumi.String("myRG"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const account = new azure_native.netapp.Account("account", {
+    accountName: "account1",
+    activeDirectories: [{
+        aesEncryption: true,
+        dns: "10.10.10.3, 10.10.10.4",
+        domain: "10.10.10.3",
+        ldapSigning: false,
+        organizationalUnit: "Engineering",
+        password: "ad_password",
+        site: "SiteName",
+        smbServerName: "SMBServer",
+        username: "ad_user_name",
+    }],
+    location: "eastus",
+    resourceGroupName: "myRG",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+account = azure_native.netapp.Account("account",
+    account_name="account1",
+    active_directories=[azure_native.netapp.ActiveDirectoryArgs(
+        aes_encryption=True,
+        dns="10.10.10.3, 10.10.10.4",
+        domain="10.10.10.3",
+        ldap_signing=False,
+        organizational_unit="Engineering",
+        password="ad_password",
+        site="SiteName",
+        smb_server_name="SMBServer",
+        username="ad_user_name",
+    )],
+    location="eastus",
+    resource_group_name="myRG")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:netapp:Account account1 /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1 
+```
+
+ */
 @ResourceType(type="azure-native:netapp:Account")
 public class Account extends io.pulumi.resources.CustomResource {
+    /**
+     * Active Directories
+     */
     @OutputExport(name="activeDirectories", type=List.class, parameters={ActiveDirectoryResponse.class})
     private Output</* @Nullable */ List<ActiveDirectoryResponse>> activeDirectories;
 
+    /**
+     * @return Active Directories
+     */
     public Output</* @Nullable */ List<ActiveDirectoryResponse>> getActiveDirectories() {
         return this.activeDirectories;
     }
+    /**
+     * Encryption settings
+     */
     @OutputExport(name="encryption", type=AccountEncryptionResponse.class, parameters={})
     private Output</* @Nullable */ AccountEncryptionResponse> encryption;
 
+    /**
+     * @return Encryption settings
+     */
     public Output</* @Nullable */ AccountEncryptionResponse> getEncryption() {
         return this.encryption;
     }
+    /**
+     * Resource location
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Azure lifecycle management
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Azure lifecycle management
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The system meta data relating to this resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system meta data relating to this resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Account(String name, AccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:netapp:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -107,6 +297,14 @@ public class Account extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Account get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Account(name, id, options);
     }

@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AttributeResponse {
+/**
+ * Indicates the name of an attribute defined in the consent store.
+ */
     private final String attributeDefinitionId;
+/**
+ * The value of the attribute. Must be an acceptable value as defined in the consent store. For example, if the consent store defines "data type" with acceptable values "questionnaire" and "step-count", when the attribute name is data type, this field must contain one of those values.
+ */
     private final List<String> values;
 
     @OutputCustomType.Constructor({"attributeDefinitionId","values"})
@@ -21,9 +27,15 @@ public final class AttributeResponse {
         this.values = Objects.requireNonNull(values);
     }
 
+/**
+ * Indicates the name of an attribute defined in the consent store.
+ */
     public String getAttributeDefinitionId() {
         return this.attributeDefinitionId;
     }
+/**
+ * The value of the attribute. Must be an acceptable value as defined in the consent store. For example, if the consent store defines "data type" with acceptable values "questionnaire" and "step-count", when the attribute name is data type, this field must contain one of those values.
+ */
     public List<String> getValues() {
         return this.values;
     }

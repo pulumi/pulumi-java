@@ -9,10 +9,16 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Specifies how many time series must fail a predicate to trigger a condition. If not specified, then a {count: 1} trigger is used.
+ */
 public final class TriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TriggerResponse Empty = new TriggerResponse();
 
+    /**
+     * The absolute number of time series that must fail the predicate for the condition to be triggered.
+     */
     @InputImport(name="count", required=true)
     private final Integer count;
 
@@ -20,6 +26,9 @@ public final class TriggerResponse extends io.pulumi.resources.InvokeArgs {
         return this.count;
     }
 
+    /**
+     * The percentage of time series that must fail the predicate for the condition to be triggered.
+     */
     @InputImport(name="percent", required=true)
     private final Double percent;
 

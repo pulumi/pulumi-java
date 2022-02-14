@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetVirtualMachineArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVirtualMachineArgs Empty = new GetVirtualMachineArgs();
 
+    /**
+     * The name of the resource group
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class GetVirtualMachineArgs extends io.pulumi.resources.InvokeArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * virtual machine name
+     */
     @InputImport(name="virtualMachineName", required=true)
     private final String virtualMachineName;
 

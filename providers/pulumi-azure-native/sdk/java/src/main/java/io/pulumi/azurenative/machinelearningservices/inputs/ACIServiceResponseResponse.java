@@ -3,10 +3,6 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.azurenative.machinelearningservices.inputs.ACIServiceResponseResponseDataCollection;
-import io.pulumi.azurenative.machinelearningservices.inputs.ACIServiceResponseResponseEncryptionProperties;
-import io.pulumi.azurenative.machinelearningservices.inputs.ACIServiceResponseResponseEnvironmentImageRequest;
-import io.pulumi.azurenative.machinelearningservices.inputs.ACIServiceResponseResponseVnetConfiguration;
 import io.pulumi.azurenative.machinelearningservices.inputs.ContainerResourceRequirementsResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.ModelResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.ServiceResponseBaseResponseError;
@@ -21,10 +17,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The response for an ACI service.
+ */
 public final class ACIServiceResponseResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ACIServiceResponseResponse Empty = new ACIServiceResponseResponse();
 
+    /**
+     * Whether or not Application Insights is enabled.
+     */
     @InputImport(name="appInsightsEnabled")
     private final @Nullable Boolean appInsightsEnabled;
 
@@ -32,6 +34,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.appInsightsEnabled == null ? Optional.empty() : Optional.ofNullable(this.appInsightsEnabled);
     }
 
+    /**
+     * Whether or not authentication is enabled on the service.
+     */
     @InputImport(name="authEnabled")
     private final @Nullable Boolean authEnabled;
 
@@ -39,6 +44,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.authEnabled == null ? Optional.empty() : Optional.ofNullable(this.authEnabled);
     }
 
+    /**
+     * The CName for the service.
+     */
     @InputImport(name="cname")
     private final @Nullable String cname;
 
@@ -46,6 +54,10 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.cname == null ? Optional.empty() : Optional.ofNullable(this.cname);
     }
 
+    /**
+     * The compute environment type for the service.
+Expected value is 'ACI'.
+     */
     @InputImport(name="computeType", required=true)
     private final String computeType;
 
@@ -53,6 +65,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.computeType;
     }
 
+    /**
+     * The container resource requirements.
+     */
     @InputImport(name="containerResourceRequirements")
     private final @Nullable ContainerResourceRequirementsResponse containerResourceRequirements;
 
@@ -60,6 +75,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.containerResourceRequirements == null ? Optional.empty() : Optional.ofNullable(this.containerResourceRequirements);
     }
 
+    /**
+     * Details of the data collection options specified.
+     */
     @InputImport(name="dataCollection")
     private final @Nullable ACIServiceResponseResponseDataCollection dataCollection;
 
@@ -67,6 +85,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.dataCollection == null ? Optional.empty() : Optional.ofNullable(this.dataCollection);
     }
 
+    /**
+     * The deployment type for the service.
+     */
     @InputImport(name="deploymentType")
     private final @Nullable String deploymentType;
 
@@ -74,6 +95,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.deploymentType == null ? Optional.empty() : Optional.ofNullable(this.deploymentType);
     }
 
+    /**
+     * The service description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -81,6 +105,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The encryption properties.
+     */
     @InputImport(name="encryptionProperties")
     private final @Nullable ACIServiceResponseResponseEncryptionProperties encryptionProperties;
 
@@ -88,6 +115,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.encryptionProperties == null ? Optional.empty() : Optional.ofNullable(this.encryptionProperties);
     }
 
+    /**
+     * The Environment, models and assets used for inferencing.
+     */
     @InputImport(name="environmentImageRequest")
     private final @Nullable ACIServiceResponseResponseEnvironmentImageRequest environmentImageRequest;
 
@@ -95,6 +125,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.environmentImageRequest == null ? Optional.empty() : Optional.ofNullable(this.environmentImageRequest);
     }
 
+    /**
+     * The error details.
+     */
     @InputImport(name="error", required=true)
     private final ServiceResponseBaseResponseError error;
 
@@ -102,6 +135,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.error;
     }
 
+    /**
+     * The service tag dictionary. Tags are mutable.
+     */
     @InputImport(name="kvTags")
     private final @Nullable Map<String,String> kvTags;
 
@@ -109,6 +145,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.kvTags == null ? Map.of() : this.kvTags;
     }
 
+    /**
+     * The name of the Azure location/region.
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -116,6 +155,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * Details on the models and configurations.
+     */
     @InputImport(name="modelConfigMap", required=true)
     private final Map<String,Object> modelConfigMap;
 
@@ -123,6 +165,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.modelConfigMap;
     }
 
+    /**
+     * The list of models.
+     */
     @InputImport(name="models")
     private final @Nullable List<ModelResponse> models;
 
@@ -130,6 +175,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.models == null ? List.of() : this.models;
     }
 
+    /**
+     * The service property dictionary. Properties are immutable.
+     */
     @InputImport(name="properties")
     private final @Nullable Map<String,String> properties;
 
@@ -137,6 +185,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.properties == null ? Map.of() : this.properties;
     }
 
+    /**
+     * The public Fqdn for the service.
+     */
     @InputImport(name="publicFqdn")
     private final @Nullable String publicFqdn;
 
@@ -144,6 +195,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.publicFqdn == null ? Optional.empty() : Optional.ofNullable(this.publicFqdn);
     }
 
+    /**
+     * The public IP address for the service.
+     */
     @InputImport(name="publicIp")
     private final @Nullable String publicIp;
 
@@ -151,6 +205,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.publicIp == null ? Optional.empty() : Optional.ofNullable(this.publicIp);
     }
 
+    /**
+     * The Uri for sending scoring requests.
+     */
     @InputImport(name="scoringUri", required=true)
     private final String scoringUri;
 
@@ -158,6 +215,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.scoringUri;
     }
 
+    /**
+     * The public SSL certificate in PEM format to use if SSL is enabled.
+     */
     @InputImport(name="sslCertificate")
     private final @Nullable String sslCertificate;
 
@@ -165,6 +225,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.sslCertificate == null ? Optional.empty() : Optional.ofNullable(this.sslCertificate);
     }
 
+    /**
+     * Whether or not SSL is enabled.
+     */
     @InputImport(name="sslEnabled")
     private final @Nullable Boolean sslEnabled;
 
@@ -172,6 +235,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.sslEnabled == null ? Optional.empty() : Optional.ofNullable(this.sslEnabled);
     }
 
+    /**
+     * The public SSL key in PEM format for the certificate.
+     */
     @InputImport(name="sslKey")
     private final @Nullable String sslKey;
 
@@ -179,6 +245,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.sslKey == null ? Optional.empty() : Optional.ofNullable(this.sslKey);
     }
 
+    /**
+     * The current state of the service.
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -186,6 +255,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.state;
     }
 
+    /**
+     * The Uri for sending swagger requests.
+     */
     @InputImport(name="swaggerUri", required=true)
     private final String swaggerUri;
 
@@ -193,6 +265,9 @@ public final class ACIServiceResponseResponse extends io.pulumi.resources.Invoke
         return this.swaggerUri;
     }
 
+    /**
+     * The virtual network configuration.
+     */
     @InputImport(name="vnetConfiguration")
     private final @Nullable ACIServiceResponseResponseVnetConfiguration vnetConfiguration;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetIntegrationRuntimeStatusArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIntegrationRuntimeStatusArgs Empty = new GetIntegrationRuntimeStatusArgs();
 
+    /**
+     * The factory name.
+     */
     @InputImport(name="factoryName", required=true)
     private final String factoryName;
 
@@ -19,6 +25,9 @@ public final class GetIntegrationRuntimeStatusArgs extends io.pulumi.resources.I
         return this.factoryName;
     }
 
+    /**
+     * The integration runtime name.
+     */
     @InputImport(name="integrationRuntimeName", required=true)
     private final String integrationRuntimeName;
 
@@ -26,6 +35,9 @@ public final class GetIntegrationRuntimeStatusArgs extends io.pulumi.resources.I
         return this.integrationRuntimeName;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

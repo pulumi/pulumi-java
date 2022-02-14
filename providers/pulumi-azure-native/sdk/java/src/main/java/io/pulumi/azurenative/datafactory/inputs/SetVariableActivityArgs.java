@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Set value for a Variable.
+ */
 public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SetVariableActivityArgs Empty = new SetVariableActivityArgs();
 
+    /**
+     * Activity depends on condition.
+     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
@@ -25,6 +31,9 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -32,6 +41,9 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Activity name.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -39,6 +51,10 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
         return this.name;
     }
 
+    /**
+     * Type of activity.
+Expected value is 'SetVariable'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -46,6 +62,9 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     */
     @InputImport(name="userProperties")
     private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
@@ -53,6 +72,9 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
         return this.userProperties == null ? Input.empty() : this.userProperties;
     }
 
+    /**
+     * Value to be set. Could be a static value or Expression
+     */
     @InputImport(name="value")
     private final @Nullable Input<Object> value;
 
@@ -60,6 +82,9 @@ public final class SetVariableActivityArgs extends io.pulumi.resources.ResourceA
         return this.value == null ? Input.empty() : this.value;
     }
 
+    /**
+     * Name of the variable whose value needs to be set.
+     */
     @InputImport(name="variableName")
     private final @Nullable Input<String> variableName;
 

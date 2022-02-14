@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The database's lifecycle state. Read-only.
+ */
     @EnumType
     public enum InstanceState {
+/**
+ * Unspecified state, likely the result of an error on the backend. This is only used for distinguishing unset values.
+ */
         LifecycleStateUnspecified("LIFECYCLE_STATE_UNSPECIFIED"),
+/**
+ * The normal and active state.
+ */
         Active("ACTIVE"),
+/**
+ * The database is in a disabled state. It can be re-enabled later.
+ */
         Disabled("DISABLED"),
+/**
+ * The database is in a deleted state.
+ */
         Deleted("DELETED");
 
         private final String value;

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWebAppPublishingCredentials {
+/**
+ * User credentials used for publishing activity.
+API Version: 2020-12-01.
+ *
+ * User credentials used for publishing activity.
+ */
     public static CompletableFuture<ListWebAppPublishingCredentialsResult> invokeAsync(ListWebAppPublishingCredentialsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:listWebAppPublishingCredentials", TypeShape.of(ListWebAppPublishingCredentialsResult.class), args == null ? ListWebAppPublishingCredentialsArgs.Empty : args, Utilities.withVersion(options));
     }

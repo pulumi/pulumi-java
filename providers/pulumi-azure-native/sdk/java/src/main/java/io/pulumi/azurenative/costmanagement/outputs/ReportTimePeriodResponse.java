@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ReportTimePeriodResponse {
+/**
+ * The start date to pull data from.
+ */
     private final String from;
+/**
+ * The end date to pull data to.
+ */
     private final String to;
 
     @OutputCustomType.Constructor({"from","to"})
@@ -20,9 +26,15 @@ public final class ReportTimePeriodResponse {
         this.to = Objects.requireNonNull(to);
     }
 
+/**
+ * The start date to pull data from.
+ */
     public String getFrom() {
         return this.from;
     }
+/**
+ * The end date to pull data to.
+ */
     public String getTo() {
         return this.to;
     }

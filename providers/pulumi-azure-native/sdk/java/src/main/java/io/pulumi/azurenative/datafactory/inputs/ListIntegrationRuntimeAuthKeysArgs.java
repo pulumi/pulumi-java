@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListIntegrationRuntimeAuthKeysArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListIntegrationRuntimeAuthKeysArgs Empty = new ListIntegrationRuntimeAuthKeysArgs();
 
+    /**
+     * The factory name.
+     */
     @InputImport(name="factoryName", required=true)
     private final String factoryName;
 
@@ -19,6 +25,9 @@ public final class ListIntegrationRuntimeAuthKeysArgs extends io.pulumi.resource
         return this.factoryName;
     }
 
+    /**
+     * The integration runtime name.
+     */
     @InputImport(name="integrationRuntimeName", required=true)
     private final String integrationRuntimeName;
 
@@ -26,6 +35,9 @@ public final class ListIntegrationRuntimeAuthKeysArgs extends io.pulumi.resource
         return this.integrationRuntimeName;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DebugSessionArgs Empty = new DebugSessionArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="apiId", required=true)
     private final Input<String> apiId;
 
@@ -22,6 +28,9 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiId;
     }
 
+    /**
+     * Optional. The number of request to be traced. Min = 1, Max = 15, Default = 10.
+     */
     @InputImport(name="count")
     private final @Nullable Input<Integer> count;
 
@@ -29,6 +38,9 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
         return this.count == null ? Input.empty() : this.count;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="environmentId", required=true)
     private final Input<String> environmentId;
 
@@ -36,6 +48,9 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentId;
     }
 
+    /**
+     * Optional. A conditional statement which is evaluated against the request message to determine if it should be traced. Syntax matches that of on API Proxy bundle flow Condition.
+     */
     @InputImport(name="filter")
     private final @Nullable Input<String> filter;
 
@@ -43,6 +58,9 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
         return this.filter == null ? Input.empty() : this.filter;
     }
 
+    /**
+     * A unique ID for this DebugSession.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -50,6 +68,9 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 
@@ -57,6 +78,9 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
         return this.organizationId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="revisionId", required=true)
     private final Input<String> revisionId;
 
@@ -64,6 +88,9 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
         return this.revisionId;
     }
 
+    /**
+     * Optional. The time in seconds after which this DebugSession should end. This value will override the value in query param, if both are provided.
+     */
     @InputImport(name="timeout")
     private final @Nullable Input<String> timeout;
 
@@ -71,6 +98,9 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
         return this.timeout == null ? Input.empty() : this.timeout;
     }
 
+    /**
+     * Optional. The maximum number of bytes captured from the response payload. Min = 0, Max = 5120, Default = 5120.
+     */
     @InputImport(name="tracesize")
     private final @Nullable Input<Integer> tracesize;
 
@@ -78,6 +108,9 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
         return this.tracesize == null ? Input.empty() : this.tracesize;
     }
 
+    /**
+     * Optional. The length of time, in seconds, that this debug session is valid, starting from when it's received in the control plane. Min = 1, Max = 15, Default = 10.
+     */
     @InputImport(name="validity")
     private final @Nullable Input<Integer> validity;
 

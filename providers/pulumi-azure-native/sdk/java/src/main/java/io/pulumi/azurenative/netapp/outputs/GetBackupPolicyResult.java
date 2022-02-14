@@ -16,18 +16,57 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetBackupPolicyResult {
+/**
+ * Daily backups count to keep
+ */
     private final @Nullable Integer dailyBackupsToKeep;
+/**
+ * The property to decide policy is enabled or not
+ */
     private final @Nullable Boolean enabled;
+/**
+ * Resource Id
+ */
     private final String id;
+/**
+ * Resource location
+ */
     private final String location;
+/**
+ * Monthly backups count to keep
+ */
     private final @Nullable Integer monthlyBackupsToKeep;
+/**
+ * Name of backup policy
+ */
     private final String name;
+/**
+ * Azure lifecycle management
+ */
     private final String provisioningState;
+/**
+ * Resource tags
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Resource type
+ */
     private final String type;
+/**
+ * A list of volumes assigned to this policy
+ */
     private final @Nullable List<VolumeBackupsResponse> volumeBackups;
+/**
+ * Volumes using current backup policy
+ */
     private final @Nullable Integer volumesAssigned;
+/**
+ * Weekly backups count to keep
+ */
     private final @Nullable Integer weeklyBackupsToKeep;
+/**
+ * Yearly backups count to keep
+ */
     private final @Nullable Integer yearlyBackupsToKeep;
 
     @OutputCustomType.Constructor({"dailyBackupsToKeep","enabled","id","location","monthlyBackupsToKeep","name","provisioningState","tags","type","volumeBackups","volumesAssigned","weeklyBackupsToKeep","yearlyBackupsToKeep"})
@@ -60,42 +99,81 @@ public final class GetBackupPolicyResult {
         this.yearlyBackupsToKeep = yearlyBackupsToKeep;
     }
 
+/**
+ * Daily backups count to keep
+ */
     public Optional<Integer> getDailyBackupsToKeep() {
         return Optional.ofNullable(this.dailyBackupsToKeep);
     }
+/**
+ * The property to decide policy is enabled or not
+ */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
+/**
+ * Resource Id
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource location
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * Monthly backups count to keep
+ */
     public Optional<Integer> getMonthlyBackupsToKeep() {
         return Optional.ofNullable(this.monthlyBackupsToKeep);
     }
+/**
+ * Name of backup policy
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Azure lifecycle management
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Resource tags
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Resource type
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * A list of volumes assigned to this policy
+ */
     public List<VolumeBackupsResponse> getVolumeBackups() {
         return this.volumeBackups == null ? List.of() : this.volumeBackups;
     }
+/**
+ * Volumes using current backup policy
+ */
     public Optional<Integer> getVolumesAssigned() {
         return Optional.ofNullable(this.volumesAssigned);
     }
+/**
+ * Weekly backups count to keep
+ */
     public Optional<Integer> getWeeklyBackupsToKeep() {
         return Optional.ofNullable(this.weeklyBackupsToKeep);
     }
+/**
+ * Yearly backups count to keep
+ */
     public Optional<Integer> getYearlyBackupsToKeep() {
         return Optional.ofNullable(this.yearlyBackupsToKeep);
     }

@@ -13,12 +13,34 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ContentKeyPolicyFairPlayConfigurationResponse {
+/**
+ * The key that must be used as FairPlay Application Secret key.
+ */
     private final String ask;
+/**
+ * The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
+ */
     private final String fairPlayPfx;
+/**
+ * The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
+ */
     private final String fairPlayPfxPassword;
+/**
+ * The discriminator for derived types.
+Expected value is '#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration'.
+ */
     private final String odataType;
+/**
+ * Offline rental policy
+ */
     private final @Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse offlineRentalConfiguration;
+/**
+ * The rental and lease key type.
+ */
     private final String rentalAndLeaseKeyType;
+/**
+ * The rental duration. Must be greater than or equal to 0.
+ */
     private final Double rentalDuration;
 
     @OutputCustomType.Constructor({"ask","fairPlayPfx","fairPlayPfxPassword","odataType","offlineRentalConfiguration","rentalAndLeaseKeyType","rentalDuration"})
@@ -39,24 +61,46 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse {
         this.rentalDuration = Objects.requireNonNull(rentalDuration);
     }
 
+/**
+ * The key that must be used as FairPlay Application Secret key.
+ */
     public String getAsk() {
         return this.ask;
     }
+/**
+ * The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
+ */
     public String getFairPlayPfx() {
         return this.fairPlayPfx;
     }
+/**
+ * The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
+ */
     public String getFairPlayPfxPassword() {
         return this.fairPlayPfxPassword;
     }
+/**
+ * The discriminator for derived types.
+Expected value is '#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration'.
+ */
     public String getOdataType() {
         return this.odataType;
     }
+/**
+ * Offline rental policy
+ */
     public Optional<ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse> getOfflineRentalConfiguration() {
         return Optional.ofNullable(this.offlineRentalConfiguration);
     }
+/**
+ * The rental and lease key type.
+ */
     public String getRentalAndLeaseKeyType() {
         return this.rentalAndLeaseKeyType;
     }
+/**
+ * The rental duration. Must be greater than or equal to 0.
+ */
     public Double getRentalDuration() {
         return this.rentalDuration;
     }

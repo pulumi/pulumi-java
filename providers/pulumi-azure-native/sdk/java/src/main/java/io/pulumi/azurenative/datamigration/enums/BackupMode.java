@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Backup Mode to specify whether to use existing backup or create new backup.
+ */
     @EnumType
     public enum BackupMode {
+/**
+ * 
+ */
         CreateBackup("CreateBackup"),
+/**
+ * 
+ */
         ExistingBackup("ExistingBackup");
 
         private final String value;

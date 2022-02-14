@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.delegatednetwork;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.delegatednetwork.OrchestratorInstanceServiceDetailsArgs;
 import io.pulumi.azurenative.delegatednetwork.outputs.ControllerDetailsResponse;
 import io.pulumi.azurenative.delegatednetwork.outputs.OrchestratorIdentityResponse;
 import io.pulumi.core.Alias;
@@ -17,93 +16,320 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Represents an instance of a orchestrator.
+API Version: 2021-03-15.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create orchestrator instance
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var orchestratorInstanceServiceDetails = new AzureNative.DelegatedNetwork.OrchestratorInstanceServiceDetails("orchestratorInstanceServiceDetails", new AzureNative.DelegatedNetwork.OrchestratorInstanceServiceDetailsArgs
+        {
+            ApiServerEndpoint = "https://testk8s.cloudapp.net",
+            ClusterRootCA = "ddsadsad344mfdsfdl",
+            ControllerDetails = new AzureNative.DelegatedNetwork.Inputs.ControllerDetailsArgs
+            {
+                Id = "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/testcontroller",
+            },
+            Identity = new AzureNative.DelegatedNetwork.Inputs.OrchestratorIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Kind = "Kubernetes",
+            Location = "West US",
+            OrchestratorAppId = "546192d7-503f-477a-9cfe-4efc3ee2b6e1",
+            OrchestratorTenantId = "da6192d7-503f-477a-9cfe-4efc3ee2b6c3",
+            PrivateLinkResourceId = "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.Network/privateLinkServices/plresource1",
+            ResourceGroupName = "TestRG",
+            ResourceName = "testk8s1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	delegatednetwork "github.com/pulumi/pulumi-azure-native/sdk/go/azure/delegatednetwork"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := delegatednetwork.NewOrchestratorInstanceServiceDetails(ctx, "orchestratorInstanceServiceDetails", &delegatednetwork.OrchestratorInstanceServiceDetailsArgs{
+			ApiServerEndpoint: pulumi.String("https://testk8s.cloudapp.net"),
+			ClusterRootCA:     pulumi.String("ddsadsad344mfdsfdl"),
+			ControllerDetails: &delegatednetwork.ControllerDetailsArgs{
+				Id: pulumi.String("/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/testcontroller"),
+			},
+			Identity: &delegatednetwork.OrchestratorIdentityArgs{
+				Type: "SystemAssigned",
+			},
+			Kind:                  pulumi.String("Kubernetes"),
+			Location:              pulumi.String("West US"),
+			OrchestratorAppId:     pulumi.String("546192d7-503f-477a-9cfe-4efc3ee2b6e1"),
+			OrchestratorTenantId:  pulumi.String("da6192d7-503f-477a-9cfe-4efc3ee2b6c3"),
+			PrivateLinkResourceId: pulumi.String("/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.Network/privateLinkServices/plresource1"),
+			ResourceGroupName:     pulumi.String("TestRG"),
+			ResourceName:          pulumi.String("testk8s1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const orchestratorInstanceServiceDetails = new azure_native.delegatednetwork.OrchestratorInstanceServiceDetails("orchestratorInstanceServiceDetails", {
+    apiServerEndpoint: "https://testk8s.cloudapp.net",
+    clusterRootCA: "ddsadsad344mfdsfdl",
+    controllerDetails: {
+        id: "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/testcontroller",
+    },
+    identity: {
+        type: "SystemAssigned",
+    },
+    kind: "Kubernetes",
+    location: "West US",
+    orchestratorAppId: "546192d7-503f-477a-9cfe-4efc3ee2b6e1",
+    orchestratorTenantId: "da6192d7-503f-477a-9cfe-4efc3ee2b6c3",
+    privateLinkResourceId: "/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.Network/privateLinkServices/plresource1",
+    resourceGroupName: "TestRG",
+    resourceName: "testk8s1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+orchestrator_instance_service_details = azure_native.delegatednetwork.OrchestratorInstanceServiceDetails("orchestratorInstanceServiceDetails",
+    api_server_endpoint="https://testk8s.cloudapp.net",
+    cluster_root_ca="ddsadsad344mfdsfdl",
+    controller_details=azure_native.delegatednetwork.ControllerDetailsArgs(
+        id="/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/testcontroller",
+    ),
+    identity=azure_native.delegatednetwork.OrchestratorIdentityArgs(
+        type="SystemAssigned",
+    ),
+    kind="Kubernetes",
+    location="West US",
+    orchestrator_app_id="546192d7-503f-477a-9cfe-4efc3ee2b6e1",
+    orchestrator_tenant_id="da6192d7-503f-477a-9cfe-4efc3ee2b6c3",
+    private_link_resource_id="/subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.Network/privateLinkServices/plresource1",
+    resource_group_name="TestRG",
+    resource_name="testk8s1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:delegatednetwork:OrchestratorInstanceServiceDetails testk8s1 /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/orchestrators/testk8s1 
+```
+
+ */
 @ResourceType(type="azure-native:delegatednetwork:OrchestratorInstanceServiceDetails")
 public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.CustomResource {
+    /**
+     * K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified
+     */
     @OutputExport(name="apiServerEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiServerEndpoint;
 
+    /**
+     * @return K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified
+     */
     public Output</* @Nullable */ String> getApiServerEndpoint() {
         return this.apiServerEndpoint;
     }
+    /**
+     * RootCA certificate of kubernetes cluster base64 encoded
+     */
     @OutputExport(name="clusterRootCA", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterRootCA;
 
+    /**
+     * @return RootCA certificate of kubernetes cluster base64 encoded
+     */
     public Output</* @Nullable */ String> getClusterRootCA() {
         return this.clusterRootCA;
     }
+    /**
+     * Properties of the controller.
+     */
     @OutputExport(name="controllerDetails", type=ControllerDetailsResponse.class, parameters={})
     private Output<ControllerDetailsResponse> controllerDetails;
 
+    /**
+     * @return Properties of the controller.
+     */
     public Output<ControllerDetailsResponse> getControllerDetails() {
         return this.controllerDetails;
     }
+    /**
+     * The identity of the orchestrator
+     */
     @OutputExport(name="identity", type=OrchestratorIdentityResponse.class, parameters={})
     private Output</* @Nullable */ OrchestratorIdentityResponse> identity;
 
+    /**
+     * @return The identity of the orchestrator
+     */
     public Output</* @Nullable */ OrchestratorIdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * The kind of workbook. Choices are user and shared.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return The kind of workbook. Choices are user and shared.
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * Location of the resource.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Location of the resource.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * AAD ID used with apiserver
+     */
     @OutputExport(name="orchestratorAppId", type=String.class, parameters={})
     private Output</* @Nullable */ String> orchestratorAppId;
 
+    /**
+     * @return AAD ID used with apiserver
+     */
     public Output</* @Nullable */ String> getOrchestratorAppId() {
         return this.orchestratorAppId;
     }
+    /**
+     * TenantID of server App ID
+     */
     @OutputExport(name="orchestratorTenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> orchestratorTenantId;
 
+    /**
+     * @return TenantID of server App ID
+     */
     public Output</* @Nullable */ String> getOrchestratorTenantId() {
         return this.orchestratorTenantId;
     }
+    /**
+     * private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified
+     */
     @OutputExport(name="privateLinkResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateLinkResourceId;
 
+    /**
+     * @return private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified
+     */
     public Output</* @Nullable */ String> getPrivateLinkResourceId() {
         return this.privateLinkResourceId;
     }
+    /**
+     * The current state of orchestratorInstance resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The current state of orchestratorInstance resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource guid.
+     */
     @OutputExport(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
+    /**
+     * @return Resource guid.
+     */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
+    /**
+     * The resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public OrchestratorInstanceServiceDetails(String name, OrchestratorInstanceServiceDetailsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:delegatednetwork:OrchestratorInstanceServiceDetails", name, args == null ? OrchestratorInstanceServiceDetailsArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -123,6 +349,14 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static OrchestratorInstanceServiceDetails get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OrchestratorInstanceServiceDetails(name, id, options);
     }

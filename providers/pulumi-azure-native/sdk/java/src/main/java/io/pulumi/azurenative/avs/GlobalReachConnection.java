@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.avs;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.avs.GlobalReachConnectionArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -14,51 +13,194 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A global reach connection resource
+API Version: 2020-07-17-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### GlobalReachConnections_CreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var globalReachConnection = new AzureNative.AVS.GlobalReachConnection("globalReachConnection", new AzureNative.AVS.GlobalReachConnectionArgs
+        {
+            AuthorizationKey = "01010101-0101-0101-0101-010101010101",
+            GlobalReachConnectionName = "connection1",
+            PeerExpressRouteCircuit = "/subscriptions/12341234-1234-1234-1234-123412341234/resourceGroups/mygroup/providers/Microsoft.Network/expressRouteCircuits/mypeer",
+            PrivateCloudName = "cloud1",
+            ResourceGroupName = "group1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	avs "github.com/pulumi/pulumi-azure-native/sdk/go/azure/avs"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := avs.NewGlobalReachConnection(ctx, "globalReachConnection", &avs.GlobalReachConnectionArgs{
+			AuthorizationKey:          pulumi.String("01010101-0101-0101-0101-010101010101"),
+			GlobalReachConnectionName: pulumi.String("connection1"),
+			PeerExpressRouteCircuit:   pulumi.String("/subscriptions/12341234-1234-1234-1234-123412341234/resourceGroups/mygroup/providers/Microsoft.Network/expressRouteCircuits/mypeer"),
+			PrivateCloudName:          pulumi.String("cloud1"),
+			ResourceGroupName:         pulumi.String("group1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const globalReachConnection = new azure_native.avs.GlobalReachConnection("globalReachConnection", {
+    authorizationKey: "01010101-0101-0101-0101-010101010101",
+    globalReachConnectionName: "connection1",
+    peerExpressRouteCircuit: "/subscriptions/12341234-1234-1234-1234-123412341234/resourceGroups/mygroup/providers/Microsoft.Network/expressRouteCircuits/mypeer",
+    privateCloudName: "cloud1",
+    resourceGroupName: "group1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+global_reach_connection = azure_native.avs.GlobalReachConnection("globalReachConnection",
+    authorization_key="01010101-0101-0101-0101-010101010101",
+    global_reach_connection_name="connection1",
+    peer_express_route_circuit="/subscriptions/12341234-1234-1234-1234-123412341234/resourceGroups/mygroup/providers/Microsoft.Network/expressRouteCircuits/mypeer",
+    private_cloud_name="cloud1",
+    resource_group_name="group1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:avs:GlobalReachConnection connection1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/globalReachConnections/connection1 
+```
+
+ */
 @ResourceType(type="azure-native:avs:GlobalReachConnection")
 public class GlobalReachConnection extends io.pulumi.resources.CustomResource {
+    /**
+     * The network used for global reach carved out from the original network block provided for the private cloud
+     */
     @OutputExport(name="addressPrefix", type=String.class, parameters={})
     private Output<String> addressPrefix;
 
+    /**
+     * @return The network used for global reach carved out from the original network block provided for the private cloud
+     */
     public Output<String> getAddressPrefix() {
         return this.addressPrefix;
     }
+    /**
+     * Authorization key from the peer express route used for the global reach connection
+     */
     @OutputExport(name="authorizationKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizationKey;
 
+    /**
+     * @return Authorization key from the peer express route used for the global reach connection
+     */
     public Output</* @Nullable */ String> getAuthorizationKey() {
         return this.authorizationKey;
     }
+    /**
+     * The connection status of the global reach connection
+     */
     @OutputExport(name="circuitConnectionStatus", type=String.class, parameters={})
     private Output<String> circuitConnectionStatus;
 
+    /**
+     * @return The connection status of the global reach connection
+     */
     public Output<String> getCircuitConnectionStatus() {
         return this.circuitConnectionStatus;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Identifier of the ExpressRoute Circuit to peer with in the global reach connection
+     */
     @OutputExport(name="peerExpressRouteCircuit", type=String.class, parameters={})
     private Output</* @Nullable */ String> peerExpressRouteCircuit;
 
+    /**
+     * @return Identifier of the ExpressRoute Circuit to peer with in the global reach connection
+     */
     public Output</* @Nullable */ String> getPeerExpressRouteCircuit() {
         return this.peerExpressRouteCircuit;
     }
+    /**
+     * The state of the  ExpressRoute Circuit Authorization provisioning
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The state of the  ExpressRoute Circuit Authorization provisioning
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public GlobalReachConnection(String name, GlobalReachConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:avs:GlobalReachConnection", name, args == null ? GlobalReachConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -80,6 +222,14 @@ public class GlobalReachConnection extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static GlobalReachConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GlobalReachConnection(name, id, options);
     }

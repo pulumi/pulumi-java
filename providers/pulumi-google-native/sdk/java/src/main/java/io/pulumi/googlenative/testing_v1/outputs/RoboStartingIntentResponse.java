@@ -11,8 +11,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RoboStartingIntentResponse {
+/**
+ * An intent that starts the main launcher activity.
+ */
     private final LauncherActivityIntentResponse launcherActivity;
+/**
+ * An intent that starts an activity with specific details.
+ */
     private final StartActivityIntentResponse startActivity;
+/**
+ * Timeout in seconds for each intent.
+ */
     private final String timeout;
 
     @OutputCustomType.Constructor({"launcherActivity","startActivity","timeout"})
@@ -25,12 +34,21 @@ public final class RoboStartingIntentResponse {
         this.timeout = Objects.requireNonNull(timeout);
     }
 
+/**
+ * An intent that starts the main launcher activity.
+ */
     public LauncherActivityIntentResponse getLauncherActivity() {
         return this.launcherActivity;
     }
+/**
+ * An intent that starts an activity with specific details.
+ */
     public StartActivityIntentResponse getStartActivity() {
         return this.startActivity;
     }
+/**
+ * Timeout in seconds for each intent.
+ */
     public String getTimeout() {
         return this.timeout;
     }

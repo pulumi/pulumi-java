@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The load distribution policy for this rule.
+ */
     @EnumType
     public enum LoadDistribution {
+/**
+ * 
+ */
         Default("Default"),
+/**
+ * 
+ */
         SourceIP("SourceIP"),
+/**
+ * 
+ */
         SourceIPProtocol("SourceIPProtocol");
 
         private final String value;

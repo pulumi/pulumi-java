@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the load balancer resource settings.
+ */
 public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoadBalancerResourceSettingsArgs Empty = new LoadBalancerResourceSettingsArgs();
 
+    /**
+     * Gets or sets the backend address pools of the load balancer.
+     */
     @InputImport(name="backendAddressPools")
     private final @Nullable Input<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools;
 
@@ -24,6 +30,9 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
         return this.backendAddressPools == null ? Input.empty() : this.backendAddressPools;
     }
 
+    /**
+     * Gets or sets the frontend IP configurations of the load balancer.
+     */
     @InputImport(name="frontendIPConfigurations")
     private final @Nullable Input<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations;
 
@@ -31,6 +40,10 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
         return this.frontendIPConfigurations == null ? Input.empty() : this.frontendIPConfigurations;
     }
 
+    /**
+     * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+Expected value is 'Microsoft.Network/loadBalancers'.
+     */
     @InputImport(name="resourceType", required=true)
     private final Input<String> resourceType;
 
@@ -38,6 +51,9 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
         return this.resourceType;
     }
 
+    /**
+     * Gets or sets load balancer sku (Basic/Standard).
+     */
     @InputImport(name="sku")
     private final @Nullable Input<String> sku;
 
@@ -45,6 +61,9 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Gets or sets the target Resource name.
+     */
     @InputImport(name="targetResourceName", required=true)
     private final Input<String> targetResourceName;
 
@@ -52,6 +71,10 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
         return this.targetResourceName;
     }
 
+    /**
+     * Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
+ precedence only if frontend IP configurations settings are not present.
+     */
     @InputImport(name="zones")
     private final @Nullable Input<String> zones;
 

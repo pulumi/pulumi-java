@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MonitoringResponse {
+/**
+ * Monitoring configurations for sending metrics to the consumer project. There can be multiple consumer destinations. A monitored resource type may appear in multiple monitoring destinations if different aggregations are needed for different sets of metrics associated with that monitored resource type. A monitored resource and metric pair may only be used once in the Monitoring configuration.
+ */
     private final List<MonitoringDestinationResponse> consumerDestinations;
+/**
+ * Monitoring configurations for sending metrics to the producer project. There can be multiple producer destinations. A monitored resource type may appear in multiple monitoring destinations if different aggregations are needed for different sets of metrics associated with that monitored resource type. A monitored resource and metric pair may only be used once in the Monitoring configuration.
+ */
     private final List<MonitoringDestinationResponse> producerDestinations;
 
     @OutputCustomType.Constructor({"consumerDestinations","producerDestinations"})
@@ -21,9 +27,15 @@ public final class MonitoringResponse {
         this.producerDestinations = Objects.requireNonNull(producerDestinations);
     }
 
+/**
+ * Monitoring configurations for sending metrics to the consumer project. There can be multiple consumer destinations. A monitored resource type may appear in multiple monitoring destinations if different aggregations are needed for different sets of metrics associated with that monitored resource type. A monitored resource and metric pair may only be used once in the Monitoring configuration.
+ */
     public List<MonitoringDestinationResponse> getConsumerDestinations() {
         return this.consumerDestinations;
     }
+/**
+ * Monitoring configurations for sending metrics to the producer project. There can be multiple producer destinations. A monitored resource type may appear in multiple monitoring destinations if different aggregations are needed for different sets of metrics associated with that monitored resource type. A monitored resource and metric pair may only be used once in the Monitoring configuration.
+ */
     public List<MonitoringDestinationResponse> getProducerDestinations() {
         return this.producerDestinations;
     }

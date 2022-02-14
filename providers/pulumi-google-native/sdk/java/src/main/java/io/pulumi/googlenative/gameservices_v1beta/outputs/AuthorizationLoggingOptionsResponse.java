@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AuthorizationLoggingOptionsResponse {
+/**
+ * The type of the permission that was checked.
+ */
     private final String permissionType;
 
     @OutputCustomType.Constructor({"permissionType"})
@@ -16,6 +19,9 @@ public final class AuthorizationLoggingOptionsResponse {
         this.permissionType = Objects.requireNonNull(permissionType);
     }
 
+/**
+ * The type of the permission that was checked.
+ */
     public String getPermissionType() {
         return this.permissionType;
     }

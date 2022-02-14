@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class AzureADMetricsPropertiesFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureADMetricsPropertiesFormatResponse Empty = new AzureADMetricsPropertiesFormatResponse();
 
+    /**
+     * The provisioning state of the resource.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 

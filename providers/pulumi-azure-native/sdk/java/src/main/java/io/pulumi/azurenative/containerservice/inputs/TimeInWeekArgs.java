@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Time in a week.
+ */
 public final class TimeInWeekArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TimeInWeekArgs Empty = new TimeInWeekArgs();
 
+    /**
+     * A day in a week.
+     */
     @InputImport(name="day")
     private final @Nullable Input<Either<String,WeekDay>> day;
 
@@ -25,6 +31,9 @@ public final class TimeInWeekArgs extends io.pulumi.resources.ResourceArgs {
         return this.day == null ? Input.empty() : this.day;
     }
 
+    /**
+     * hour slots in a day.
+     */
     @InputImport(name="hourSlots")
     private final @Nullable Input<List<Integer>> hourSlots;
 

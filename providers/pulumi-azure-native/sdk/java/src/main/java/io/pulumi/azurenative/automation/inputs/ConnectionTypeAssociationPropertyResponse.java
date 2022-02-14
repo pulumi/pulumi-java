@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The connection type property associated with the entity.
+ */
 public final class ConnectionTypeAssociationPropertyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectionTypeAssociationPropertyResponse Empty = new ConnectionTypeAssociationPropertyResponse();
 
+    /**
+     * Gets or sets the name of the connection type.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Automanage configuration profile assignment properties.
+ */
 public final class ConfigurationProfileAssignmentPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfigurationProfileAssignmentPropertiesResponse Empty = new ConfigurationProfileAssignmentPropertiesResponse();
 
+    /**
+     * The Automanage account ARM Resource URI
+     */
     @InputImport(name="accountId")
     private final @Nullable String accountId;
 
@@ -22,6 +28,9 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
         return this.accountId == null ? Optional.empty() : Optional.ofNullable(this.accountId);
     }
 
+    /**
+     * The configuration setting for the configuration profile.
+     */
     @InputImport(name="compliance")
     private final @Nullable ConfigurationProfileAssignmentComplianceResponse compliance;
 
@@ -29,6 +38,9 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
         return this.compliance == null ? Optional.empty() : Optional.ofNullable(this.compliance);
     }
 
+    /**
+     * A value indicating configuration profile.
+     */
     @InputImport(name="configurationProfile")
     private final @Nullable String configurationProfile;
 
@@ -36,6 +48,9 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
         return this.configurationProfile == null ? Optional.empty() : Optional.ofNullable(this.configurationProfile);
     }
 
+    /**
+     * The configuration profile custom preferences ARM resource URI
+     */
     @InputImport(name="configurationProfilePreferenceId")
     private final @Nullable String configurationProfilePreferenceId;
 
@@ -43,6 +58,9 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
         return this.configurationProfilePreferenceId == null ? Optional.empty() : Optional.ofNullable(this.configurationProfilePreferenceId);
     }
 
+    /**
+     * The state of onboarding, which only appears in the response.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -50,6 +68,9 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
         return this.provisioningState;
     }
 
+    /**
+     * The target VM resource URI
+     */
     @InputImport(name="targetId")
     private final @Nullable String targetId;
 

@@ -10,8 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class KeyOperationAttestationResponse {
+/**
+ * The certificate chains needed to validate the attestation
+ */
     private final CertificateChainsResponse certChains;
+/**
+ * The attestation data provided by the HSM when the key operation was performed.
+ */
     private final String content;
+/**
+ * The format of the attestation data.
+ */
     private final String format;
 
     @OutputCustomType.Constructor({"certChains","content","format"})
@@ -24,12 +33,21 @@ public final class KeyOperationAttestationResponse {
         this.format = Objects.requireNonNull(format);
     }
 
+/**
+ * The certificate chains needed to validate the attestation
+ */
     public CertificateChainsResponse getCertChains() {
         return this.certChains;
     }
+/**
+ * The attestation data provided by the HSM when the key operation was performed.
+ */
     public String getContent() {
         return this.content;
     }
+/**
+ * The format of the attestation data.
+ */
     public String getFormat() {
         return this.format;
     }

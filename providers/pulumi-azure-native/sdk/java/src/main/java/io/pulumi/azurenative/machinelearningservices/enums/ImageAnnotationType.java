@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Annotation type of image labeling tasks.
+ */
     @EnumType
     public enum ImageAnnotationType {
+/**
+ * 
+ */
         Classification("Classification"),
+/**
+ * 
+ */
         BoundingBox("BoundingBox"),
+/**
+ * 
+ */
         InstanceSegmentation("InstanceSegmentation");
 
         private final String value;

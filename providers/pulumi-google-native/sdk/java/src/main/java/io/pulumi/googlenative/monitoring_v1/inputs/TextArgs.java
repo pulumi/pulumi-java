@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A widget that displays textual content.
+ */
 public final class TextArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TextArgs Empty = new TextArgs();
 
+    /**
+     * The text content to be displayed.
+     */
     @InputImport(name="content")
     private final @Nullable Input<String> content;
 
@@ -22,6 +28,9 @@ public final class TextArgs extends io.pulumi.resources.ResourceArgs {
         return this.content == null ? Input.empty() : this.content;
     }
 
+    /**
+     * How the text content is formatted.
+     */
     @InputImport(name="format")
     private final @Nullable Input<TextFormat> format;
 

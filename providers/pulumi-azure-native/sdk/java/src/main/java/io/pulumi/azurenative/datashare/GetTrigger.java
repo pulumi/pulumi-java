@@ -14,6 +14,12 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: ScheduledTrigger. */
 public class GetTrigger {
+/**
+ * A Trigger data transfer object.
+API Version: 2020-09-01.
+ *
+ * A Trigger data transfer object.
+ */
     public static CompletableFuture<GetTriggerResult> invokeAsync(GetTriggerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getTrigger", TypeShape.of(GetTriggerResult.class), args == null ? GetTriggerArgs.Empty : args, Utilities.withVersion(options));
     }

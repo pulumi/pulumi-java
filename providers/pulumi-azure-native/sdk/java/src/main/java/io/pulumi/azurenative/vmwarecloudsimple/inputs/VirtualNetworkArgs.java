@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Virtual network model
+ */
 public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VirtualNetworkArgs Empty = new VirtualNetworkArgs();
 
+    /**
+     * virtual network id (privateCloudId:vsphereId)
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 

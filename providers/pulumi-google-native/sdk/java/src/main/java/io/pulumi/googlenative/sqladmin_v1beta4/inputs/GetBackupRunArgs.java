@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetBackupRunArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBackupRunArgs Empty = new GetBackupRunArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -21,6 +27,9 @@ public final class GetBackupRunArgs extends io.pulumi.resources.InvokeArgs {
         return this.id;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="instance", required=true)
     private final String instance;
 
@@ -28,6 +37,9 @@ public final class GetBackupRunArgs extends io.pulumi.resources.InvokeArgs {
         return this.instance;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

@@ -12,10 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureFunctionReceiverResponse {
+/**
+ * The azure resource id of the function app.
+ */
     private final String functionAppResourceId;
+/**
+ * The function name in the function app.
+ */
     private final String functionName;
+/**
+ * The http trigger url where http request sent to.
+ */
     private final String httpTriggerUrl;
+/**
+ * The name of the azure function receiver. Names must be unique across all receivers within an action group.
+ */
     private final String name;
+/**
+ * Indicates whether to use common alert schema.
+ */
     private final @Nullable Boolean useCommonAlertSchema;
 
     @OutputCustomType.Constructor({"functionAppResourceId","functionName","httpTriggerUrl","name","useCommonAlertSchema"})
@@ -32,18 +47,33 @@ public final class AzureFunctionReceiverResponse {
         this.useCommonAlertSchema = useCommonAlertSchema;
     }
 
+/**
+ * The azure resource id of the function app.
+ */
     public String getFunctionAppResourceId() {
         return this.functionAppResourceId;
     }
+/**
+ * The function name in the function app.
+ */
     public String getFunctionName() {
         return this.functionName;
     }
+/**
+ * The http trigger url where http request sent to.
+ */
     public String getHttpTriggerUrl() {
         return this.httpTriggerUrl;
     }
+/**
+ * The name of the azure function receiver. Names must be unique across all receivers within an action group.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Indicates whether to use common alert schema.
+ */
     public Optional<Boolean> getUseCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }

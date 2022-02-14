@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ContainerGroupIdentityResponseUserAssignedIdentities extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerGroupIdentityResponseUserAssignedIdentities Empty = new ContainerGroupIdentityResponseUserAssignedIdentities();
 
+    /**
+     * The client id of user assigned identity.
+     */
     @InputImport(name="clientId", required=true)
     private final String clientId;
 
@@ -19,6 +25,9 @@ public final class ContainerGroupIdentityResponseUserAssignedIdentities extends 
         return this.clientId;
     }
 
+    /**
+     * The principal id of user assigned identity.
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 

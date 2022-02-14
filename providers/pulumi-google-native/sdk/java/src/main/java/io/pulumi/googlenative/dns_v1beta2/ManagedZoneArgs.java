@@ -20,10 +20,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedZoneArgs Empty = new ManagedZoneArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="clientOperationId")
     private final @Nullable Input<String> clientOperationId;
 
@@ -31,6 +37,9 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientOperationId == null ? Input.empty() : this.clientOperationId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="cloudLoggingConfig")
     private final @Nullable Input<ManagedZoneCloudLoggingConfigArgs> cloudLoggingConfig;
 
@@ -38,6 +47,9 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.cloudLoggingConfig == null ? Input.empty() : this.cloudLoggingConfig;
     }
 
+    /**
+     * The time that this resource was created on the server. This is in RFC3339 text format. Output only.
+     */
     @InputImport(name="creationTime")
     private final @Nullable Input<String> creationTime;
 
@@ -45,6 +57,9 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.creationTime == null ? Input.empty() : this.creationTime;
     }
 
+    /**
+     * A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the managed zone's function.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -52,6 +67,9 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The DNS name of this managed zone, for instance "example.com.".
+     */
     @InputImport(name="dnsName")
     private final @Nullable Input<String> dnsName;
 
@@ -59,6 +77,9 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.dnsName == null ? Input.empty() : this.dnsName;
     }
 
+    /**
+     * DNSSEC configuration.
+     */
     @InputImport(name="dnssecConfig")
     private final @Nullable Input<ManagedZoneDnsSecConfigArgs> dnssecConfig;
 
@@ -66,6 +87,9 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.dnssecConfig == null ? Input.empty() : this.dnssecConfig;
     }
 
+    /**
+     * The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field contains the set of destinations to forward to.
+     */
     @InputImport(name="forwardingConfig")
     private final @Nullable Input<ManagedZoneForwardingConfigArgs> forwardingConfig;
 
@@ -73,6 +97,9 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.forwardingConfig == null ? Input.empty() : this.forwardingConfig;
     }
 
+    /**
+     * Unique identifier for the resource; defined by the server (output only)
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -80,6 +107,9 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -87,6 +117,9 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * User labels.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -94,6 +127,9 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * User assigned name for this resource. Must be unique within the project. The name must be 1-63 characters long, must begin with a letter, end with a letter or digit, and only contain lowercase letters, digits or dashes.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -101,6 +137,9 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Optionally specifies the NameServerSet for this ManagedZone. A NameServerSet is a set of DNS name servers that all host the same ManagedZones. Most users leave this field unset. If you need to use this field, contact your account team.
+     */
     @InputImport(name="nameServerSet")
     private final @Nullable Input<String> nameServerSet;
 
@@ -108,6 +147,9 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.nameServerSet == null ? Input.empty() : this.nameServerSet;
     }
 
+    /**
+     * Delegate your managed_zone to these virtual name servers; defined by the server (output only)
+     */
     @InputImport(name="nameServers")
     private final @Nullable Input<List<String>> nameServers;
 
@@ -115,6 +157,9 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.nameServers == null ? Input.empty() : this.nameServers;
     }
 
+    /**
+     * The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the network to peer with.
+     */
     @InputImport(name="peeringConfig")
     private final @Nullable Input<ManagedZonePeeringConfigArgs> peeringConfig;
 
@@ -122,6 +167,9 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.peeringConfig == null ? Input.empty() : this.peeringConfig;
     }
 
+    /**
+     * For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
+     */
     @InputImport(name="privateVisibilityConfig")
     private final @Nullable Input<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig;
 
@@ -129,6 +177,9 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.privateVisibilityConfig == null ? Input.empty() : this.privateVisibilityConfig;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -136,6 +187,9 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The presence of this field indicates that this is a managed reverse lookup zone and Cloud DNS resolves reverse lookup queries using automatically configured records for VPC resources. This only applies to networks listed under private_visibility_config.
+     */
     @InputImport(name="reverseLookupConfig")
     private final @Nullable Input<ManagedZoneReverseLookupConfigArgs> reverseLookupConfig;
 
@@ -143,6 +197,9 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.reverseLookupConfig == null ? Input.empty() : this.reverseLookupConfig;
     }
 
+    /**
+     * This field links to the associated service directory namespace. Do not set this field for public zones or forwarding zones.
+     */
     @InputImport(name="serviceDirectoryConfig")
     private final @Nullable Input<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig;
 
@@ -150,6 +207,9 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceDirectoryConfig == null ? Input.empty() : this.serviceDirectoryConfig;
     }
 
+    /**
+     * The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private Cloud resources.
+     */
     @InputImport(name="visibility")
     private final @Nullable Input<ManagedZoneVisibility> visibility;
 

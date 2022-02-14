@@ -14,19 +14,61 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SubscriptionFeatureRegistrationResponseProperties {
+/**
+ * The feature approval type.
+ */
     private final String approvalType;
+/**
+ * Authorization Profile
+ */
     private final @Nullable AuthorizationProfileResponse authorizationProfile;
+/**
+ * The feature description.
+ */
     private final @Nullable String description;
+/**
+ * The featureDisplayName.
+ */
     private final String displayName;
+/**
+ * The feature documentation link.
+ */
     private final String documentationLink;
+/**
+ * The featureName.
+ */
     private final String featureName;
+/**
+ * Key-value pairs for meta data.
+ */
     private final @Nullable Map<String,String> metadata;
+/**
+ * The providerNamespace.
+ */
     private final String providerNamespace;
+/**
+ * The feature registration date.
+ */
     private final String registrationDate;
+/**
+ * The feature release date.
+ */
     private final String releaseDate;
+/**
+ * Indicates whether feature should be displayed in Portal.
+ */
     private final @Nullable Boolean shouldFeatureDisplayInPortal;
+/**
+ * The state.
+ */
     private final @Nullable String state;
+/**
+ * The subscriptionId.
+ */
     private final String subscriptionId;
+/**
+ * The tenantId.
+ */
     private final String tenantId;
 
     @OutputCustomType.Constructor({"approvalType","authorizationProfile","description","displayName","documentationLink","featureName","metadata","providerNamespace","registrationDate","releaseDate","shouldFeatureDisplayInPortal","state","subscriptionId","tenantId"})
@@ -61,45 +103,87 @@ public final class SubscriptionFeatureRegistrationResponseProperties {
         this.tenantId = Objects.requireNonNull(tenantId);
     }
 
+/**
+ * The feature approval type.
+ */
     public String getApprovalType() {
         return this.approvalType;
     }
+/**
+ * Authorization Profile
+ */
     public Optional<AuthorizationProfileResponse> getAuthorizationProfile() {
         return Optional.ofNullable(this.authorizationProfile);
     }
+/**
+ * The feature description.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * The featureDisplayName.
+ */
     public String getDisplayName() {
         return this.displayName;
     }
+/**
+ * The feature documentation link.
+ */
     public String getDocumentationLink() {
         return this.documentationLink;
     }
+/**
+ * The featureName.
+ */
     public String getFeatureName() {
         return this.featureName;
     }
+/**
+ * Key-value pairs for meta data.
+ */
     public Map<String,String> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
+/**
+ * The providerNamespace.
+ */
     public String getProviderNamespace() {
         return this.providerNamespace;
     }
+/**
+ * The feature registration date.
+ */
     public String getRegistrationDate() {
         return this.registrationDate;
     }
+/**
+ * The feature release date.
+ */
     public String getReleaseDate() {
         return this.releaseDate;
     }
+/**
+ * Indicates whether feature should be displayed in Portal.
+ */
     public Optional<Boolean> getShouldFeatureDisplayInPortal() {
         return Optional.ofNullable(this.shouldFeatureDisplayInPortal);
     }
+/**
+ * The state.
+ */
     public Optional<String> getState() {
         return Optional.ofNullable(this.state);
     }
+/**
+ * The subscriptionId.
+ */
     public String getSubscriptionId() {
         return this.subscriptionId;
     }
+/**
+ * The tenantId.
+ */
     public String getTenantId() {
         return this.tenantId;
     }

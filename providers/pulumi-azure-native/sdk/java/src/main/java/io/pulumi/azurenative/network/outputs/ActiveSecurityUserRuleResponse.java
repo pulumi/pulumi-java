@@ -15,24 +15,82 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ActiveSecurityUserRuleResponse {
+/**
+ * Deployment time string.
+ */
     private final @Nullable String commitTime;
+/**
+ * A description of the security user configuration.
+ */
     private final @Nullable String configurationDescription;
+/**
+ * A display name of the security user configuration.
+ */
     private final @Nullable String configurationDisplayName;
+/**
+ * A description for this rule.
+ */
     private final @Nullable String description;
+/**
+ * The destination port ranges.
+ */
     private final @Nullable List<String> destinationPortRanges;
+/**
+ * The destination address prefixes. CIDR or destination IP ranges.
+ */
     private final @Nullable List<AddressPrefixItemResponse> destinations;
+/**
+ * Indicates if the traffic matched against the rule in inbound or outbound.
+ */
     private final String direction;
+/**
+ * A friendly name for the rule.
+ */
     private final @Nullable String displayName;
+/**
+ * Resource ID.
+ */
     private final @Nullable String id;
+/**
+ * Whether the rule is custom or default.
+Expected value is 'Custom'.
+ */
     private final String kind;
+/**
+ * Network protocol this rule applies to.
+ */
     private final String protocol;
+/**
+ * The provisioning state of the security configuration user rule resource.
+ */
     private final String provisioningState;
+/**
+ * Deployment region.
+ */
     private final @Nullable String region;
+/**
+ * Groups for rule collection
+ */
     private final @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups;
+/**
+ * A description of the rule collection.
+ */
     private final @Nullable String ruleCollectionDescription;
+/**
+ * A display name of the rule collection.
+ */
     private final @Nullable String ruleCollectionDisplayName;
+/**
+ * Effective configuration groups.
+ */
     private final @Nullable List<ConfigurationGroupResponse> ruleGroups;
+/**
+ * The source port ranges.
+ */
     private final @Nullable List<String> sourcePortRanges;
+/**
+ * The CIDR or source IP ranges.
+ */
     private final @Nullable List<AddressPrefixItemResponse> sources;
 
     @OutputCustomType.Constructor({"commitTime","configurationDescription","configurationDisplayName","description","destinationPortRanges","destinations","direction","displayName","id","kind","protocol","provisioningState","region","ruleCollectionAppliesToGroups","ruleCollectionDescription","ruleCollectionDisplayName","ruleGroups","sourcePortRanges","sources"})
@@ -77,60 +135,118 @@ public final class ActiveSecurityUserRuleResponse {
         this.sources = sources;
     }
 
+/**
+ * Deployment time string.
+ */
     public Optional<String> getCommitTime() {
         return Optional.ofNullable(this.commitTime);
     }
+/**
+ * A description of the security user configuration.
+ */
     public Optional<String> getConfigurationDescription() {
         return Optional.ofNullable(this.configurationDescription);
     }
+/**
+ * A display name of the security user configuration.
+ */
     public Optional<String> getConfigurationDisplayName() {
         return Optional.ofNullable(this.configurationDisplayName);
     }
+/**
+ * A description for this rule.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * The destination port ranges.
+ */
     public List<String> getDestinationPortRanges() {
         return this.destinationPortRanges == null ? List.of() : this.destinationPortRanges;
     }
+/**
+ * The destination address prefixes. CIDR or destination IP ranges.
+ */
     public List<AddressPrefixItemResponse> getDestinations() {
         return this.destinations == null ? List.of() : this.destinations;
     }
+/**
+ * Indicates if the traffic matched against the rule in inbound or outbound.
+ */
     public String getDirection() {
         return this.direction;
     }
+/**
+ * A friendly name for the rule.
+ */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+/**
+ * Resource ID.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * Whether the rule is custom or default.
+Expected value is 'Custom'.
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * Network protocol this rule applies to.
+ */
     public String getProtocol() {
         return this.protocol;
     }
+/**
+ * The provisioning state of the security configuration user rule resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Deployment region.
+ */
     public Optional<String> getRegion() {
         return Optional.ofNullable(this.region);
     }
+/**
+ * Groups for rule collection
+ */
     public List<NetworkManagerSecurityGroupItemResponse> getRuleCollectionAppliesToGroups() {
         return this.ruleCollectionAppliesToGroups == null ? List.of() : this.ruleCollectionAppliesToGroups;
     }
+/**
+ * A description of the rule collection.
+ */
     public Optional<String> getRuleCollectionDescription() {
         return Optional.ofNullable(this.ruleCollectionDescription);
     }
+/**
+ * A display name of the rule collection.
+ */
     public Optional<String> getRuleCollectionDisplayName() {
         return Optional.ofNullable(this.ruleCollectionDisplayName);
     }
+/**
+ * Effective configuration groups.
+ */
     public List<ConfigurationGroupResponse> getRuleGroups() {
         return this.ruleGroups == null ? List.of() : this.ruleGroups;
     }
+/**
+ * The source port ranges.
+ */
     public List<String> getSourcePortRanges() {
         return this.sourcePortRanges == null ? List.of() : this.sourcePortRanges;
     }
+/**
+ * The CIDR or source IP ranges.
+ */
     public List<AddressPrefixItemResponse> getSources() {
         return this.sources == null ? List.of() : this.sources;
     }

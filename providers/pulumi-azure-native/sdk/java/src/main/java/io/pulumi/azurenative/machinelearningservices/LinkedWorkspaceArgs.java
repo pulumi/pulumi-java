@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LinkedWorkspaceArgs Empty = new LinkedWorkspaceArgs();
 
+    /**
+     * Friendly name of the linked workspace
+     */
     @InputImport(name="linkName")
     private final @Nullable Input<String> linkName;
 
@@ -22,6 +28,9 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
         return this.linkName == null ? Input.empty() : this.linkName;
     }
 
+    /**
+     * Friendly name of the linked workspace
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +38,9 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * LinkedWorkspace specific properties.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<LinkedWorkspacePropsArgs> properties;
 
@@ -36,6 +48,9 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Name of the resource group in which workspace is located.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +58,9 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of Azure Machine Learning workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

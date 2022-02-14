@@ -28,10 +28,16 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Corresponds to the `Response` field in the Dialogflow console.
+ */
 public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageResponse Empty = new GoogleCloudDialogflowV2beta1IntentMessageResponse();
 
+    /**
+     * Displays a basic card for Actions on Google.
+     */
     @InputImport(name="basicCard", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse basicCard;
 
@@ -39,6 +45,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
         return this.basicCard;
     }
 
+    /**
+     * Browse carousel card for Actions on Google.
+     */
     @InputImport(name="browseCarouselCard", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse browseCarouselCard;
 
@@ -46,6 +55,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
         return this.browseCarouselCard;
     }
 
+    /**
+     * Displays a card.
+     */
     @InputImport(name="card", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageCardResponse card;
 
@@ -53,6 +65,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
         return this.card;
     }
 
+    /**
+     * Displays a carousel card for Actions on Google.
+     */
     @InputImport(name="carouselSelect", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse carouselSelect;
 
@@ -60,6 +75,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
         return this.carouselSelect;
     }
 
+    /**
+     * Displays an image.
+     */
     @InputImport(name="image", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
 
@@ -67,6 +85,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
         return this.image;
     }
 
+    /**
+     * Displays a link out suggestion chip for Actions on Google.
+     */
     @InputImport(name="linkOutSuggestion", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse linkOutSuggestion;
 
@@ -74,6 +95,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
         return this.linkOutSuggestion;
     }
 
+    /**
+     * Displays a list card for Actions on Google.
+     */
     @InputImport(name="listSelect", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse listSelect;
 
@@ -81,6 +105,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
         return this.listSelect;
     }
 
+    /**
+     * The media content card for Actions on Google.
+     */
     @InputImport(name="mediaContent", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse mediaContent;
 
@@ -88,6 +115,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
         return this.mediaContent;
     }
 
+    /**
+     * A custom platform-specific response.
+     */
     @InputImport(name="payload", required=true)
     private final Map<String,String> payload;
 
@@ -95,6 +125,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
         return this.payload;
     }
 
+    /**
+     * Optional. The platform that this message is intended for.
+     */
     @InputImport(name="platform", required=true)
     private final String platform;
 
@@ -102,6 +135,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
         return this.platform;
     }
 
+    /**
+     * Displays quick replies.
+     */
     @InputImport(name="quickReplies", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse quickReplies;
 
@@ -109,6 +145,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
         return this.quickReplies;
     }
 
+    /**
+     * Rich Business Messaging (RBM) carousel rich card response.
+     */
     @InputImport(name="rbmCarouselRichCard", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse rbmCarouselRichCard;
 
@@ -116,6 +155,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
         return this.rbmCarouselRichCard;
     }
 
+    /**
+     * Standalone Rich Business Messaging (RBM) rich card response.
+     */
     @InputImport(name="rbmStandaloneRichCard", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse rbmStandaloneRichCard;
 
@@ -123,6 +165,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
         return this.rbmStandaloneRichCard;
     }
 
+    /**
+     * Rich Business Messaging (RBM) text response. RBM allows businesses to send enriched and branded versions of SMS. See https://jibe.google.com/business-messaging.
+     */
     @InputImport(name="rbmText", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse rbmText;
 
@@ -130,6 +175,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
         return this.rbmText;
     }
 
+    /**
+     * Returns a voice or text-only response for Actions on Google.
+     */
     @InputImport(name="simpleResponses", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse simpleResponses;
 
@@ -137,6 +185,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
         return this.simpleResponses;
     }
 
+    /**
+     * Displays suggestion chips for Actions on Google.
+     */
     @InputImport(name="suggestions", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse suggestions;
 
@@ -144,6 +195,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
         return this.suggestions;
     }
 
+    /**
+     * Table card for Actions on Google.
+     */
     @InputImport(name="tableCard", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse tableCard;
 
@@ -151,6 +205,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
         return this.tableCard;
     }
 
+    /**
+     * Plays audio from a file in Telephony Gateway.
+     */
     @InputImport(name="telephonyPlayAudio", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse telephonyPlayAudio;
 
@@ -158,6 +215,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
         return this.telephonyPlayAudio;
     }
 
+    /**
+     * Synthesizes speech in Telephony Gateway.
+     */
     @InputImport(name="telephonySynthesizeSpeech", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse telephonySynthesizeSpeech;
 
@@ -165,6 +225,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
         return this.telephonySynthesizeSpeech;
     }
 
+    /**
+     * Transfers the call in Telephony Gateway.
+     */
     @InputImport(name="telephonyTransferCall", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse telephonyTransferCall;
 
@@ -172,6 +235,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
         return this.telephonyTransferCall;
     }
 
+    /**
+     * Returns a text response.
+     */
     @InputImport(name="text", required=true)
     private final GoogleCloudDialogflowV2beta1IntentMessageTextResponse text;
 

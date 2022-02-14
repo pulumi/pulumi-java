@@ -11,10 +11,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetLabelingJobResult {
+/**
+ * The resource URL of the entity (not URL encoded).
+ */
     private final String id;
+/**
+ * The name of the resource entity.
+ */
     private final String name;
+/**
+ * Definition of a labeling job.
+ */
     private final LabelingJobPropertiesResponse properties;
+/**
+ * Metadata pertaining to creation and last modification of the resource.
+ */
     private final SystemDataResponse systemData;
+/**
+ * The resource provider and type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","properties","systemData","type"})
@@ -31,18 +46,33 @@ public final class GetLabelingJobResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The resource URL of the entity (not URL encoded).
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The name of the resource entity.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Definition of a labeling job.
+ */
     public LabelingJobPropertiesResponse getProperties() {
         return this.properties;
     }
+/**
+ * Metadata pertaining to creation and last modification of the resource.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * The resource provider and type.
+ */
     public String getType() {
         return this.type;
     }

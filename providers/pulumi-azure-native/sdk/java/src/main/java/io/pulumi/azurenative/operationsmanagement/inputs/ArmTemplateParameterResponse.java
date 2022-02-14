@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Parameter to pass to ARM template
+ */
 public final class ArmTemplateParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ArmTemplateParameterResponse Empty = new ArmTemplateParameterResponse();
 
+    /**
+     * name of the parameter.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +27,9 @@ public final class ArmTemplateParameterResponse extends io.pulumi.resources.Invo
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * value for the parameter. In Jtoken 
+     */
     @InputImport(name="value")
     private final @Nullable String value;
 

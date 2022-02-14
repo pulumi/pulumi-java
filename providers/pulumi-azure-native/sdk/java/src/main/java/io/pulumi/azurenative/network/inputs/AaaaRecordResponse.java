@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An AAAA record.
+ */
 public final class AaaaRecordResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AaaaRecordResponse Empty = new AaaaRecordResponse();
 
+    /**
+     * The IPv6 address of this AAAA record.
+     */
     @InputImport(name="ipv6Address")
     private final @Nullable String ipv6Address;
 

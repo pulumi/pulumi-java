@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListAgentPoolQueueStatusResult {
+/**
+ * The number of pending runs in the queue
+ */
     private final @Nullable Integer count;
 
     @OutputCustomType.Constructor({"count"})
@@ -18,6 +21,9 @@ public final class ListAgentPoolQueueStatusResult {
         this.count = count;
     }
 
+/**
+ * The number of pending runs in the queue
+ */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetSaasSubscriptionLevelArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSaasSubscriptionLevelArgs Empty = new GetSaasSubscriptionLevelArgs();
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class GetSaasSubscriptionLevelArgs extends io.pulumi.resources.Invo
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the resource.
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

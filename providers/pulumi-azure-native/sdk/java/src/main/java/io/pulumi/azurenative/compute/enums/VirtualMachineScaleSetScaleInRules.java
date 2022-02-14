@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum VirtualMachineScaleSetScaleInRules {
+/**
+ * 
+ */
         Default("Default"),
+/**
+ * 
+ */
         OldestVM("OldestVM"),
+/**
+ * 
+ */
         NewestVM("NewestVM");
 
         private final String value;

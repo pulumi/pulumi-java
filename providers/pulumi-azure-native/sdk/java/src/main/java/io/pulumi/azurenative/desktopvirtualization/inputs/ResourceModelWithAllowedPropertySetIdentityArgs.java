@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResourceModelWithAllowedPropertySetIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceModelWithAllowedPropertySetIdentityArgs Empty = new ResourceModelWithAllowedPropertySetIdentityArgs();
 
+    /**
+     * The identity type.
+     */
     @InputImport(name="type")
     private final @Nullable Input<ResourceIdentityType> type;
 

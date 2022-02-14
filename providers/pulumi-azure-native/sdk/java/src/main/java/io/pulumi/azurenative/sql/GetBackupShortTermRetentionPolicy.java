@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackupShortTermRetentionPolicy {
+/**
+ * A short term retention policy.
+API Version: 2020-11-01-preview.
+ *
+ * A short term retention policy.
+ */
     public static CompletableFuture<GetBackupShortTermRetentionPolicyResult> invokeAsync(GetBackupShortTermRetentionPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getBackupShortTermRetentionPolicy", TypeShape.of(GetBackupShortTermRetentionPolicyResult.class), args == null ? GetBackupShortTermRetentionPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

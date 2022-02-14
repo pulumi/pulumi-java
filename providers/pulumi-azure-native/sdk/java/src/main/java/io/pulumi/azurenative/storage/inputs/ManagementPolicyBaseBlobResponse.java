@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Management policy action for base blob.
+ */
 public final class ManagementPolicyBaseBlobResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagementPolicyBaseBlobResponse Empty = new ManagementPolicyBaseBlobResponse();
 
+    /**
+     * The function to delete the blob
+     */
     @InputImport(name="delete")
     private final @Nullable DateAfterModificationResponse delete;
 
@@ -22,6 +28,9 @@ public final class ManagementPolicyBaseBlobResponse extends io.pulumi.resources.
         return this.delete == null ? Optional.empty() : Optional.ofNullable(this.delete);
     }
 
+    /**
+     * This property enables auto tiering of a blob from cool to hot on a blob access. This property requires tierToCool.daysAfterLastAccessTimeGreaterThan.
+     */
     @InputImport(name="enableAutoTierToHotFromCool")
     private final @Nullable Boolean enableAutoTierToHotFromCool;
 
@@ -29,6 +38,9 @@ public final class ManagementPolicyBaseBlobResponse extends io.pulumi.resources.
         return this.enableAutoTierToHotFromCool == null ? Optional.empty() : Optional.ofNullable(this.enableAutoTierToHotFromCool);
     }
 
+    /**
+     * The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier
+     */
     @InputImport(name="tierToArchive")
     private final @Nullable DateAfterModificationResponse tierToArchive;
 
@@ -36,6 +48,9 @@ public final class ManagementPolicyBaseBlobResponse extends io.pulumi.resources.
         return this.tierToArchive == null ? Optional.empty() : Optional.ofNullable(this.tierToArchive);
     }
 
+    /**
+     * The function to tier blobs to cool storage. Support blobs currently at Hot tier
+     */
     @InputImport(name="tierToCool")
     private final @Nullable DateAfterModificationResponse tierToCool;
 

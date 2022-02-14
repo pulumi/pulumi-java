@@ -14,6 +14,12 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: EventHubEventSource, IoTHubEventSource. */
 public class GetEventSource {
+/**
+ * An environment receives data from one or more event sources. Each event source has associated connection info that allows the Time Series Insights ingress pipeline to connect to and pull data from the event source
+API Version: 2020-05-15.
+ *
+ * An environment receives data from one or more event sources. Each event source has associated connection info that allows the Time Series Insights ingress pipeline to connect to and pull data from the event source
+ */
     public static CompletableFuture<GetEventSourceResult> invokeAsync(GetEventSourceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:timeseriesinsights:getEventSource", TypeShape.of(GetEventSourceResult.class), args == null ? GetEventSourceArgs.Empty : args, Utilities.withVersion(options));
     }

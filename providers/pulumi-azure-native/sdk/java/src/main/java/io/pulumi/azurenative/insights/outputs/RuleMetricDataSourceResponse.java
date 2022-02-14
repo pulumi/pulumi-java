@@ -11,11 +11,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RuleMetricDataSourceResponse {
+/**
+ * the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+ */
     private final @Nullable String legacyResourceId;
+/**
+ * the name of the metric that defines what the rule monitors.
+ */
     private final @Nullable String metricName;
+/**
+ * the namespace of the metric.
+ */
     private final @Nullable String metricNamespace;
+/**
+ * specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
+Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource'.
+ */
     private final String odataType;
+/**
+ * the location of the resource.
+ */
     private final @Nullable String resourceLocation;
+/**
+ * the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+ */
     private final @Nullable String resourceUri;
 
     @OutputCustomType.Constructor({"legacyResourceId","metricName","metricNamespace","odataType","resourceLocation","resourceUri"})
@@ -34,21 +53,40 @@ public final class RuleMetricDataSourceResponse {
         this.resourceUri = resourceUri;
     }
 
+/**
+ * the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+ */
     public Optional<String> getLegacyResourceId() {
         return Optional.ofNullable(this.legacyResourceId);
     }
+/**
+ * the name of the metric that defines what the rule monitors.
+ */
     public Optional<String> getMetricName() {
         return Optional.ofNullable(this.metricName);
     }
+/**
+ * the namespace of the metric.
+ */
     public Optional<String> getMetricNamespace() {
         return Optional.ofNullable(this.metricNamespace);
     }
+/**
+ * specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
+Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource'.
+ */
     public String getOdataType() {
         return this.odataType;
     }
+/**
+ * the location of the resource.
+ */
     public Optional<String> getResourceLocation() {
         return Optional.ofNullable(this.resourceLocation);
     }
+/**
+ * the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+ */
     public Optional<String> getResourceUri() {
         return Optional.ofNullable(this.resourceUri);
     }

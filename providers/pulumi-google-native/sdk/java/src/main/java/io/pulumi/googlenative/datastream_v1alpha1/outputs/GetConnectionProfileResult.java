@@ -17,17 +17,53 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetConnectionProfileResult {
+/**
+ * The create time of the resource.
+ */
     private final String createTime;
+/**
+ * Display name.
+ */
     private final String displayName;
+/**
+ * Forward SSH tunnel connectivity.
+ */
     private final ForwardSshTunnelConnectivityResponse forwardSshConnectivity;
+/**
+ * Cloud Storage ConnectionProfile configuration.
+ */
     private final GcsProfileResponse gcsProfile;
+/**
+ * Labels.
+ */
     private final Map<String,String> labels;
+/**
+ * MySQL ConnectionProfile configuration.
+ */
     private final MysqlProfileResponse mysqlProfile;
+/**
+ * The resource's name.
+ */
     private final String name;
+/**
+ * No connectivity option chosen.
+ */
     private final NoConnectivitySettingsResponse noConnectivity;
+/**
+ * Oracle ConnectionProfile configuration.
+ */
     private final OracleProfileResponse oracleProfile;
+/**
+ * Private connectivity.
+ */
     private final PrivateConnectivityResponse privateConnectivity;
+/**
+ * Static Service IP connectivity.
+ */
     private final StaticServiceIpConnectivityResponse staticServiceIpConnectivity;
+/**
+ * The update time of the resource.
+ */
     private final String updateTime;
 
     @OutputCustomType.Constructor({"createTime","displayName","forwardSshConnectivity","gcsProfile","labels","mysqlProfile","name","noConnectivity","oracleProfile","privateConnectivity","staticServiceIpConnectivity","updateTime"})
@@ -58,39 +94,75 @@ public final class GetConnectionProfileResult {
         this.updateTime = Objects.requireNonNull(updateTime);
     }
 
+/**
+ * The create time of the resource.
+ */
     public String getCreateTime() {
         return this.createTime;
     }
+/**
+ * Display name.
+ */
     public String getDisplayName() {
         return this.displayName;
     }
+/**
+ * Forward SSH tunnel connectivity.
+ */
     public ForwardSshTunnelConnectivityResponse getForwardSshConnectivity() {
         return this.forwardSshConnectivity;
     }
+/**
+ * Cloud Storage ConnectionProfile configuration.
+ */
     public GcsProfileResponse getGcsProfile() {
         return this.gcsProfile;
     }
+/**
+ * Labels.
+ */
     public Map<String,String> getLabels() {
         return this.labels;
     }
+/**
+ * MySQL ConnectionProfile configuration.
+ */
     public MysqlProfileResponse getMysqlProfile() {
         return this.mysqlProfile;
     }
+/**
+ * The resource's name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * No connectivity option chosen.
+ */
     public NoConnectivitySettingsResponse getNoConnectivity() {
         return this.noConnectivity;
     }
+/**
+ * Oracle ConnectionProfile configuration.
+ */
     public OracleProfileResponse getOracleProfile() {
         return this.oracleProfile;
     }
+/**
+ * Private connectivity.
+ */
     public PrivateConnectivityResponse getPrivateConnectivity() {
         return this.privateConnectivity;
     }
+/**
+ * Static Service IP connectivity.
+ */
     public StaticServiceIpConnectivityResponse getStaticServiceIpConnectivity() {
         return this.staticServiceIpConnectivity;
     }
+/**
+ * The update time of the resource.
+ */
     public String getUpdateTime() {
         return this.updateTime;
     }

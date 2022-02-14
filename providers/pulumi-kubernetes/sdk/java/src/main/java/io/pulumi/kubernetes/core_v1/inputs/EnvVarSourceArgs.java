@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * EnvVarSource represents a source for the value of an EnvVar.
+ */
 public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvVarSourceArgs Empty = new EnvVarSourceArgs();
 
+    /**
+     * Selects a key of a ConfigMap.
+     */
     @InputImport(name="configMapKeyRef")
     private final @Nullable Input<ConfigMapKeySelectorArgs> configMapKeyRef;
 
@@ -24,6 +30,9 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.configMapKeyRef == null ? Input.empty() : this.configMapKeyRef;
     }
 
+    /**
+     * Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.
+     */
     @InputImport(name="fieldRef")
     private final @Nullable Input<ObjectFieldSelectorArgs> fieldRef;
 
@@ -31,6 +40,9 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.fieldRef == null ? Input.empty() : this.fieldRef;
     }
 
+    /**
+     * Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.
+     */
     @InputImport(name="resourceFieldRef")
     private final @Nullable Input<ResourceFieldSelectorArgs> resourceFieldRef;
 
@@ -38,6 +50,9 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceFieldRef == null ? Input.empty() : this.resourceFieldRef;
     }
 
+    /**
+     * Selects a key of a secret in the pod's namespace
+     */
     @InputImport(name="secretKeyRef")
     private final @Nullable Input<SecretKeySelectorArgs> secretKeyRef;
 

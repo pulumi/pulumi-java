@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class FutureReservationTimeWindowArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FutureReservationTimeWindowArgs Empty = new FutureReservationTimeWindowArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="duration")
     private final @Nullable Input<DurationArgs> duration;
 
@@ -22,6 +28,9 @@ public final class FutureReservationTimeWindowArgs extends io.pulumi.resources.R
         return this.duration == null ? Input.empty() : this.duration;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -29,6 +38,9 @@ public final class FutureReservationTimeWindowArgs extends io.pulumi.resources.R
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
+    /**
+     * Start time of the Future Reservation. The start_time is an RFC3339 string.
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 

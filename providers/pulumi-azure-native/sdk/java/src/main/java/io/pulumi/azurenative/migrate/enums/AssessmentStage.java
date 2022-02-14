@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * User configurable setting that describes the status of the assessment.
+ */
     @EnumType
     public enum AssessmentStage {
+/**
+ * 
+ */
         InProgress("InProgress"),
+/**
+ * 
+ */
         UnderReview("UnderReview"),
+/**
+ * 
+ */
         Approved("Approved");
 
         private final String value;

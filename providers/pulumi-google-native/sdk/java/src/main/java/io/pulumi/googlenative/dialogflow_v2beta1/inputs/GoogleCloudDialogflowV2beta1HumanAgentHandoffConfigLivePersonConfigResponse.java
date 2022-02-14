@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Configuration specific to LivePerson (https://www.liveperson.com).
+ */
 public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse Empty = new GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse();
 
+    /**
+     * Account number of the LivePerson account to connect. This is the account number you input at the login page.
+     */
     @InputImport(name="accountNumber", required=true)
     private final String accountNumber;
 

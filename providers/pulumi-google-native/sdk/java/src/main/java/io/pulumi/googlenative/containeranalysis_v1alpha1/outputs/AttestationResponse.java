@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AttestationResponse {
+/**
+ * 
+ */
     private final PgpSignedAttestationResponse pgpSignedAttestation;
 
     @OutputCustomType.Constructor({"pgpSignedAttestation"})
@@ -16,6 +19,9 @@ public final class AttestationResponse {
         this.pgpSignedAttestation = Objects.requireNonNull(pgpSignedAttestation);
     }
 
+/**
+ * 
+ */
     public PgpSignedAttestationResponse getPgpSignedAttestation() {
         return this.pgpSignedAttestation;
     }

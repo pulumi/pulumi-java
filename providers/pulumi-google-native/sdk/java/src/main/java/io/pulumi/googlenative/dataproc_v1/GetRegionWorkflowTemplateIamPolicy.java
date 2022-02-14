@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionWorkflowTemplateIamPolicy {
+/**
+ * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+ */
     public static CompletableFuture<GetRegionWorkflowTemplateIamPolicyResult> invokeAsync(GetRegionWorkflowTemplateIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataproc/v1:getRegionWorkflowTemplateIamPolicy", TypeShape.of(GetRegionWorkflowTemplateIamPolicyResult.class), args == null ? GetRegionWorkflowTemplateIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

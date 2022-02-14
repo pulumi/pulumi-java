@@ -13,15 +13,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAppResult {
+/**
+ * The ID of the application.
+ */
     private final String applicationId;
+/**
+ * The display name of the application.
+ */
     private final @Nullable String displayName;
+/**
+ * The ARM resource identifier.
+ */
     private final String id;
+/**
+ * The resource location.
+ */
     private final String location;
+/**
+ * The ARM resource name.
+ */
     private final String name;
+/**
+ * A valid instance SKU.
+ */
     private final AppSkuInfoResponse sku;
+/**
+ * The subdomain of the application.
+ */
     private final @Nullable String subdomain;
+/**
+ * The resource tags.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
+ */
     private final @Nullable String template;
+/**
+ * The resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"applicationId","displayName","id","location","name","sku","subdomain","tags","template","type"})
@@ -48,33 +78,63 @@ public final class GetAppResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The ID of the application.
+ */
     public String getApplicationId() {
         return this.applicationId;
     }
+/**
+ * The display name of the application.
+ */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+/**
+ * The ARM resource identifier.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The resource location.
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * The ARM resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * A valid instance SKU.
+ */
     public AppSkuInfoResponse getSku() {
         return this.sku;
     }
+/**
+ * The subdomain of the application.
+ */
     public Optional<String> getSubdomain() {
         return Optional.ofNullable(this.subdomain);
     }
+/**
+ * The resource tags.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
+ */
     public Optional<String> getTemplate() {
         return Optional.ofNullable(this.template);
     }
+/**
+ * The resource type.
+ */
     public String getType() {
         return this.type;
     }

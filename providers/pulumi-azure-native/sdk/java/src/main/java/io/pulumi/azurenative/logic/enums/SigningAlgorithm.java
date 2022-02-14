@@ -8,13 +8,34 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The signing algorithm.
+ */
     @EnumType
     public enum SigningAlgorithm {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         Default("Default"),
+/**
+ * 
+ */
         SHA1("SHA1"),
+/**
+ * 
+ */
         SHA2256("SHA2256"),
+/**
+ * 
+ */
         SHA2384("SHA2384"),
+/**
+ * 
+ */
         SHA2512("SHA2512");
 
         private final String value;

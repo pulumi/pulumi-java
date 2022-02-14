@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines contents of custom rules
+ */
 public final class CustomRuleListResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomRuleListResponse Empty = new CustomRuleListResponse();
 
+    /**
+     * List of rules
+     */
     @InputImport(name="rules")
     private final @Nullable List<CustomRuleResponse> rules;
 

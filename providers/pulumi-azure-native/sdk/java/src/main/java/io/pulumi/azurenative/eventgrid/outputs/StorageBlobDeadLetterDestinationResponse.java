@@ -11,8 +11,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StorageBlobDeadLetterDestinationResponse {
+/**
+ * The name of the Storage blob container that is the destination of the deadletter events
+ */
     private final @Nullable String blobContainerName;
+/**
+ * Type of the endpoint for the dead letter destination
+Expected value is 'StorageBlob'.
+ */
     private final String endpointType;
+/**
+ * The Azure Resource ID of the storage account that is the destination of the deadletter events
+ */
     private final @Nullable String resourceId;
 
     @OutputCustomType.Constructor({"blobContainerName","endpointType","resourceId"})
@@ -25,12 +35,22 @@ public final class StorageBlobDeadLetterDestinationResponse {
         this.resourceId = resourceId;
     }
 
+/**
+ * The name of the Storage blob container that is the destination of the deadletter events
+ */
     public Optional<String> getBlobContainerName() {
         return Optional.ofNullable(this.blobContainerName);
     }
+/**
+ * Type of the endpoint for the dead letter destination
+Expected value is 'StorageBlob'.
+ */
     public String getEndpointType() {
         return this.endpointType;
     }
+/**
+ * The Azure Resource ID of the storage account that is the destination of the deadletter events
+ */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }

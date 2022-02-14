@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceProviderCapabilitiesResponse {
+/**
+ * 
+ */
     private final String effect;
+/**
+ * 
+ */
     private final String quotaId;
+/**
+ * 
+ */
     private final @Nullable List<String> requiredFeatures;
 
     @OutputCustomType.Constructor({"effect","quotaId","requiredFeatures"})
@@ -25,12 +34,21 @@ public final class ResourceProviderCapabilitiesResponse {
         this.requiredFeatures = requiredFeatures;
     }
 
+/**
+ * 
+ */
     public String getEffect() {
         return this.effect;
     }
+/**
+ * 
+ */
     public String getQuotaId() {
         return this.quotaId;
     }
+/**
+ * 
+ */
     public List<String> getRequiredFeatures() {
         return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
     }

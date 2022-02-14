@@ -11,10 +11,17 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Retention duration.
+ */
 public final class RetentionDurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RetentionDurationResponse Empty = new RetentionDurationResponse();
 
+    /**
+     * Count of duration types. Retention duration is obtained by the counting the duration type Count times.
+For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.
+     */
     @InputImport(name="count")
     private final @Nullable Integer count;
 
@@ -22,6 +29,9 @@ public final class RetentionDurationResponse extends io.pulumi.resources.InvokeA
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
     }
 
+    /**
+     * Retention duration type of retention policy.
+     */
     @InputImport(name="durationType")
     private final @Nullable String durationType;
 

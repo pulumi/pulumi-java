@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Indicates whether connections should be secured using TLS. The value of this field determines how TLS is enforced. This field can be set to one of the following: - SIMPLE Secure connections with standard TLS semantics. - MUTUAL Secure connections to the backends using mutual TLS by presenting client certificates for authentication. 
+ */
     @EnumType
     public enum ServerTlsSettingsTlsMode {
+/**
+ * 
+ */
         Invalid("INVALID"),
+/**
+ * Secure connections to the backends using mutual TLS by presenting client certificates for authentication.
+ */
         Mutual("MUTUAL"),
+/**
+ * Secure connections with standard TLS semantics.
+ */
         Simple("SIMPLE");
 
         private final String value;

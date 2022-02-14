@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BookmarkArgs Empty = new BookmarkArgs();
 
+    /**
+     * Bookmark ID
+     */
     @InputImport(name="bookmarkId")
     private final @Nullable Input<String> bookmarkId;
 
@@ -24,6 +30,9 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
         return this.bookmarkId == null ? Input.empty() : this.bookmarkId;
     }
 
+    /**
+     * The time the bookmark was created
+     */
     @InputImport(name="created")
     private final @Nullable Input<String> created;
 
@@ -31,6 +40,9 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
         return this.created == null ? Input.empty() : this.created;
     }
 
+    /**
+     * Describes a user that created the bookmark
+     */
     @InputImport(name="createdBy")
     private final @Nullable Input<UserInfoArgs> createdBy;
 
@@ -38,6 +50,9 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
         return this.createdBy == null ? Input.empty() : this.createdBy;
     }
 
+    /**
+     * The display name of the bookmark
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -45,6 +60,9 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * The bookmark event time
+     */
     @InputImport(name="eventTime")
     private final @Nullable Input<String> eventTime;
 
@@ -52,6 +70,9 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventTime == null ? Input.empty() : this.eventTime;
     }
 
+    /**
+     * Describes an incident that relates to bookmark
+     */
     @InputImport(name="incidentInfo")
     private final @Nullable Input<IncidentInfoArgs> incidentInfo;
 
@@ -59,6 +80,9 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
         return this.incidentInfo == null ? Input.empty() : this.incidentInfo;
     }
 
+    /**
+     * List of labels relevant to this bookmark
+     */
     @InputImport(name="labels")
     private final @Nullable Input<List<String>> labels;
 
@@ -66,6 +90,9 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The notes of the bookmark
+     */
     @InputImport(name="notes")
     private final @Nullable Input<String> notes;
 
@@ -73,6 +100,9 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
         return this.notes == null ? Input.empty() : this.notes;
     }
 
+    /**
+     * The query of the bookmark.
+     */
     @InputImport(name="query", required=true)
     private final Input<String> query;
 
@@ -80,6 +110,9 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
         return this.query;
     }
 
+    /**
+     * The end time for the query
+     */
     @InputImport(name="queryEndTime")
     private final @Nullable Input<String> queryEndTime;
 
@@ -87,6 +120,9 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
         return this.queryEndTime == null ? Input.empty() : this.queryEndTime;
     }
 
+    /**
+     * The query result of the bookmark.
+     */
     @InputImport(name="queryResult")
     private final @Nullable Input<String> queryResult;
 
@@ -94,6 +130,9 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
         return this.queryResult == null ? Input.empty() : this.queryResult;
     }
 
+    /**
+     * The start time for the query
+     */
     @InputImport(name="queryStartTime")
     private final @Nullable Input<String> queryStartTime;
 
@@ -101,6 +140,9 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
         return this.queryStartTime == null ? Input.empty() : this.queryStartTime;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -108,6 +150,9 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The last time the bookmark was updated
+     */
     @InputImport(name="updated")
     private final @Nullable Input<String> updated;
 
@@ -115,6 +160,9 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
         return this.updated == null ? Input.empty() : this.updated;
     }
 
+    /**
+     * Describes a user that updated the bookmark
+     */
     @InputImport(name="updatedBy")
     private final @Nullable Input<UserInfoArgs> updatedBy;
 
@@ -122,6 +170,9 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
         return this.updatedBy == null ? Input.empty() : this.updatedBy;
     }
 
+    /**
+     * The name of the workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

@@ -12,8 +12,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OrcFormatResponse {
+/**
+ * Deserializer. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object deserializer;
+/**
+ * Serializer. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object serializer;
+/**
+ * Type of dataset storage format.
+Expected value is 'OrcFormat'.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"deserializer","serializer","type"})
@@ -26,12 +36,22 @@ public final class OrcFormatResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Deserializer. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getDeserializer() {
         return Optional.ofNullable(this.deserializer);
     }
+/**
+ * Serializer. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getSerializer() {
         return Optional.ofNullable(this.serializer);
     }
+/**
+ * Type of dataset storage format.
+Expected value is 'OrcFormat'.
+ */
     public String getType() {
         return this.type;
     }

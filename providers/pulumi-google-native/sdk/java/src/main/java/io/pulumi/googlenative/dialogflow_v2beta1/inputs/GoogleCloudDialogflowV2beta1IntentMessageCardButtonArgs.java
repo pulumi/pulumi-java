@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Optional. Contains information about a button.
+ */
 public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs Empty = new GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs();
 
+    /**
+     * Optional. The text to send back to the Dialogflow API or a URI to open.
+     */
     @InputImport(name="postback")
     private final @Nullable Input<String> postback;
 
@@ -21,6 +27,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs exten
         return this.postback == null ? Input.empty() : this.postback;
     }
 
+    /**
+     * Optional. The text to show on the button.
+     */
     @InputImport(name="text")
     private final @Nullable Input<String> text;
 

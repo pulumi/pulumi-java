@@ -17,10 +17,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for the task that validates connection to Azure Database For PostgreSQL server and target server requirements for online migration
+ */
 public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesResponse Empty = new ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesResponse();
 
+    /**
+     * Array of command properties.
+     */
     @InputImport(name="commands", required=true)
     private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
@@ -28,6 +34,9 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesResponse
         return this.commands;
     }
 
+    /**
+     * Array of errors. This is ignored if submitted.
+     */
     @InputImport(name="errors", required=true)
     private final List<ODataErrorResponse> errors;
 
@@ -35,6 +44,9 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesResponse
         return this.errors;
     }
 
+    /**
+     * Task input
+     */
     @InputImport(name="input")
     private final @Nullable ConnectToTargetAzureDbForPostgreSqlSyncTaskInputResponse input;
 
@@ -42,6 +54,9 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesResponse
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
     }
 
+    /**
+     * Task output. This is ignored if submitted.
+     */
     @InputImport(name="output", required=true)
     private final List<ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse> output;
 
@@ -49,6 +64,9 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesResponse
         return this.output;
     }
 
+    /**
+     * The state of the task. This is ignored if submitted.
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -56,6 +74,10 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesResponse
         return this.state;
     }
 
+    /**
+     * Task type.
+Expected value is 'ConnectToTarget.AzureDbForPostgreSql.Sync'.
+     */
     @InputImport(name="taskType", required=true)
     private final String taskType;
 

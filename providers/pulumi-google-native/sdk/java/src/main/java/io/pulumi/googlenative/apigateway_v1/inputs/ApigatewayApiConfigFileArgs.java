@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A lightweight description of a file.
+ */
 public final class ApigatewayApiConfigFileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApigatewayApiConfigFileArgs Empty = new ApigatewayApiConfigFileArgs();
 
+    /**
+     * The bytes that constitute the file.
+     */
     @InputImport(name="contents")
     private final @Nullable Input<String> contents;
 
@@ -21,6 +27,9 @@ public final class ApigatewayApiConfigFileArgs extends io.pulumi.resources.Resou
         return this.contents == null ? Input.empty() : this.contents;
     }
 
+    /**
+     * The file path (full or relative path). This is typically the path of the file when it is uploaded.
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 

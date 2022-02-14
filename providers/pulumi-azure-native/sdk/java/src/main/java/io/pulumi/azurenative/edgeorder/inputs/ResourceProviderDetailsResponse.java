@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Management RP details
+ */
 public final class ResourceProviderDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceProviderDetailsResponse Empty = new ResourceProviderDetailsResponse();
 
+    /**
+     * Resource provider namespace
+     */
     @InputImport(name="resourceProviderNamespace", required=true)
     private final String resourceProviderNamespace;
 

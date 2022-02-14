@@ -21,10 +21,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Web activity.
+ */
 public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebActivityArgs Empty = new WebActivityArgs();
 
+    /**
+     * Authentication method used for calling the endpoint.
+     */
     @InputImport(name="authentication")
     private final @Nullable Input<WebActivityAuthenticationArgs> authentication;
 
@@ -32,6 +38,9 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.authentication == null ? Input.empty() : this.authentication;
     }
 
+    /**
+     * Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
+     */
     @InputImport(name="body")
     private final @Nullable Input<Object> body;
 
@@ -39,6 +48,9 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.body == null ? Input.empty() : this.body;
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -46,6 +58,9 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
+    /**
+     * List of datasets passed to web endpoint.
+     */
     @InputImport(name="datasets")
     private final @Nullable Input<List<DatasetReferenceArgs>> datasets;
 
@@ -53,6 +68,9 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.datasets == null ? Input.empty() : this.datasets;
     }
 
+    /**
+     * Activity depends on condition.
+     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
@@ -60,6 +78,9 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -67,6 +88,9 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="headers")
     private final @Nullable Input<Object> headers;
 
@@ -74,6 +98,9 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.headers == null ? Input.empty() : this.headers;
     }
 
+    /**
+     * Linked service reference.
+     */
     @InputImport(name="linkedServiceName")
     private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
@@ -81,6 +108,9 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
     }
 
+    /**
+     * List of linked services passed to web endpoint.
+     */
     @InputImport(name="linkedServices")
     private final @Nullable Input<List<LinkedServiceReferenceArgs>> linkedServices;
 
@@ -88,6 +118,9 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkedServices == null ? Input.empty() : this.linkedServices;
     }
 
+    /**
+     * Rest API method for target endpoint.
+     */
     @InputImport(name="method", required=true)
     private final Input<Either<String,WebActivityMethod>> method;
 
@@ -95,6 +128,9 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.method;
     }
 
+    /**
+     * Activity name.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -102,6 +138,9 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * Activity policy.
+     */
     @InputImport(name="policy")
     private final @Nullable Input<ActivityPolicyArgs> policy;
 
@@ -109,6 +148,10 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.policy == null ? Input.empty() : this.policy;
     }
 
+    /**
+     * Type of activity.
+Expected value is 'WebActivity'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -116,6 +159,9 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.type;
     }
 
+    /**
+     * Web activity target endpoint and path. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="url", required=true)
     private final Input<Object> url;
 
@@ -123,6 +169,9 @@ public final class WebActivityArgs extends io.pulumi.resources.ResourceArgs {
         return this.url;
     }
 
+    /**
+     * Activity user properties.
+     */
     @InputImport(name="userProperties")
     private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 

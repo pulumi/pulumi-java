@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The service with name and endpoint names
+ */
 public final class WsdlServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WsdlServiceArgs Empty = new WsdlServiceArgs();
 
+    /**
+     * List of the endpoints' qualified names
+     */
     @InputImport(name="endpointQualifiedNames")
     private final @Nullable Input<List<String>> endpointQualifiedNames;
 
@@ -22,6 +28,9 @@ public final class WsdlServiceArgs extends io.pulumi.resources.ResourceArgs {
         return this.endpointQualifiedNames == null ? Input.empty() : this.endpointQualifiedNames;
     }
 
+    /**
+     * The service's qualified name
+     */
     @InputImport(name="qualifiedName", required=true)
     private final Input<String> qualifiedName;
 

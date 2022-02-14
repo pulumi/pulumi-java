@@ -11,10 +11,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The instance view of the init container. Only valid in response.
+ */
 public final class InitContainerPropertiesDefinitionResponseInstanceView extends io.pulumi.resources.InvokeArgs {
 
     public static final InitContainerPropertiesDefinitionResponseInstanceView Empty = new InitContainerPropertiesDefinitionResponseInstanceView();
 
+    /**
+     * The current state of the init container.
+     */
     @InputImport(name="currentState", required=true)
     private final ContainerStateResponse currentState;
 
@@ -22,6 +28,9 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView extends
         return this.currentState;
     }
 
+    /**
+     * The events of the init container.
+     */
     @InputImport(name="events", required=true)
     private final List<EventResponse> events;
 
@@ -29,6 +38,9 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView extends
         return this.events;
     }
 
+    /**
+     * The previous state of the init container.
+     */
     @InputImport(name="previousState", required=true)
     private final ContainerStateResponse previousState;
 
@@ -36,6 +48,9 @@ public final class InitContainerPropertiesDefinitionResponseInstanceView extends
         return this.previousState;
     }
 
+    /**
+     * The number of times that the init container has been restarted.
+     */
     @InputImport(name="restartCount", required=true)
     private final Integer restartCount;
 

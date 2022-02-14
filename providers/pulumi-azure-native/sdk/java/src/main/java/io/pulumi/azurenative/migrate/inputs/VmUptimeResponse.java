@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class VmUptimeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VmUptimeResponse Empty = new VmUptimeResponse();
 
+    /**
+     * Number of days in a month for VM uptime.
+     */
     @InputImport(name="daysPerMonth")
     private final @Nullable Double daysPerMonth;
 
@@ -21,6 +27,9 @@ public final class VmUptimeResponse extends io.pulumi.resources.InvokeArgs {
         return this.daysPerMonth == null ? Optional.empty() : Optional.ofNullable(this.daysPerMonth);
     }
 
+    /**
+     * Number of hours per day for VM uptime.
+     */
     @InputImport(name="hoursPerDay")
     private final @Nullable Double hoursPerDay;
 

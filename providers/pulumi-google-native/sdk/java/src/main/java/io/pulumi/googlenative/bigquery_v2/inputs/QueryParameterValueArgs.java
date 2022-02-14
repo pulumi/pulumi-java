@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final QueryParameterValueArgs Empty = new QueryParameterValueArgs();
 
+    /**
+     * [Optional] The array values, if this is an array type.
+     */
     @InputImport(name="arrayValues")
     private final @Nullable Input<List<QueryParameterValueArgs>> arrayValues;
 
@@ -23,6 +29,9 @@ public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceA
         return this.arrayValues == null ? Input.empty() : this.arrayValues;
     }
 
+    /**
+     * [Optional] The struct field values, in order of the struct type's declaration.
+     */
     @InputImport(name="structValues")
     private final @Nullable Input<Map<String,String>> structValues;
 
@@ -30,6 +39,9 @@ public final class QueryParameterValueArgs extends io.pulumi.resources.ResourceA
         return this.structValues == null ? Input.empty() : this.structValues;
     }
 
+    /**
+     * [Optional] The value of this value, if a simple scalar type.
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

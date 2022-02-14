@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Gets or set the job state.
+ */
     @EnumType
     public enum JobState {
+/**
+ * 
+ */
         Enabled("Enabled"),
+/**
+ * 
+ */
         Disabled("Disabled"),
+/**
+ * 
+ */
         Faulted("Faulted"),
+/**
+ * 
+ */
         Completed("Completed");
 
         private final String value;

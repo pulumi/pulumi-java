@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LinkerArgs Empty = new LinkerArgs();
 
+    /**
+     * The authentication type.
+     */
     @InputImport(name="authInfo")
     private final @Nullable Input<Object> authInfo;
 
@@ -29,6 +35,9 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
         return this.authInfo == null ? Input.empty() : this.authInfo;
     }
 
+    /**
+     * The application client type
+     */
     @InputImport(name="clientType")
     private final @Nullable Input<Either<String,ClientType>> clientType;
 
@@ -36,6 +45,9 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientType == null ? Input.empty() : this.clientType;
     }
 
+    /**
+     * The name Linker resource.
+     */
     @InputImport(name="linkerName")
     private final @Nullable Input<String> linkerName;
 
@@ -43,6 +55,9 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
         return this.linkerName == null ? Input.empty() : this.linkerName;
     }
 
+    /**
+     * The fully qualified Azure Resource manager identifier of the resource to be connected.
+     */
     @InputImport(name="resourceUri", required=true)
     private final Input<String> resourceUri;
 
@@ -50,6 +65,9 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceUri;
     }
 
+    /**
+     * The resource Id of target service.
+     */
     @InputImport(name="targetId")
     private final @Nullable Input<String> targetId;
 

@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents the size configuration under the lab account
+ */
 public final class SizeConfigurationPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SizeConfigurationPropertiesResponse Empty = new SizeConfigurationPropertiesResponse();
 
+    /**
+     * Represents a list of size categories supported by this Lab Account (Small, Medium, Large)
+     */
     @InputImport(name="environmentSizes")
     private final @Nullable List<EnvironmentSizeResponse> environmentSizes;
 

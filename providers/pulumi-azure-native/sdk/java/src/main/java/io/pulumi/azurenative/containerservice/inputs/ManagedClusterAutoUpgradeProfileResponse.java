@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Auto upgrade profile for a managed cluster.
+ */
 public final class ManagedClusterAutoUpgradeProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedClusterAutoUpgradeProfileResponse Empty = new ManagedClusterAutoUpgradeProfileResponse();
 
+    /**
+     * upgrade channel for auto upgrade.
+     */
     @InputImport(name="upgradeChannel")
     private final @Nullable String upgradeChannel;
 

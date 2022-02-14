@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetGuestDiagnosticsSettingsAssociationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGuestDiagnosticsSettingsAssociationArgs Empty = new GetGuestDiagnosticsSettingsAssociationArgs();
 
+    /**
+     * The name of the diagnostic settings association.
+     */
     @InputImport(name="associationName", required=true)
     private final String associationName;
 
@@ -19,6 +25,9 @@ public final class GetGuestDiagnosticsSettingsAssociationArgs extends io.pulumi.
         return this.associationName;
     }
 
+    /**
+     * The fully qualified ID of the resource, including the resource name and resource type.
+     */
     @InputImport(name="resourceUri", required=true)
     private final String resourceUri;
 

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetCustomApiArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCustomApiArgs Empty = new GetCustomApiArgs();
 
+    /**
+     * API name
+     */
     @InputImport(name="apiName", required=true)
     private final String apiName;
 
@@ -21,6 +27,9 @@ public final class GetCustomApiArgs extends io.pulumi.resources.InvokeArgs {
         return this.apiName;
     }
 
+    /**
+     * The resource group
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -28,6 +37,9 @@ public final class GetCustomApiArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Subscription Id
+     */
     @InputImport(name="subscriptionId")
     private final @Nullable String subscriptionId;
 

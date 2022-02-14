@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A membership role within the Cloud Identity Groups API. A `MembershipRole` defines the privileges granted to a `Membership`.
+ */
 public final class MembershipRoleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MembershipRoleResponse Empty = new MembershipRoleResponse();
 
+    /**
+     * The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.
+     */
     @InputImport(name="expiryDetail", required=true)
     private final ExpiryDetailResponse expiryDetail;
 
@@ -21,6 +27,9 @@ public final class MembershipRoleResponse extends io.pulumi.resources.InvokeArgs
         return this.expiryDetail;
     }
 
+    /**
+     * The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,6 +37,9 @@ public final class MembershipRoleResponse extends io.pulumi.resources.InvokeArgs
         return this.name;
     }
 
+    /**
+     * Evaluations of restrictions applied to parent group on this membership.
+     */
     @InputImport(name="restrictionEvaluations", required=true)
     private final RestrictionEvaluationsResponse restrictionEvaluations;
 

@@ -9,10 +9,16 @@ import io.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayBackendConfigAr
 import java.util.Objects;
 
 
+/**
+ * Configuration settings for Gateways.
+ */
 public final class ApigatewayGatewayConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApigatewayGatewayConfigArgs Empty = new ApigatewayGatewayConfigArgs();
 
+    /**
+     * Backend settings that are applied to all backends of the Gateway.
+     */
     @InputImport(name="backendConfig", required=true)
     private final Input<ApigatewayBackendConfigArgs> backendConfig;
 

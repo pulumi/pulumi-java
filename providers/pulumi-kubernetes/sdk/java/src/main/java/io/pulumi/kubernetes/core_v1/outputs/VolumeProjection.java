@@ -14,9 +14,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VolumeProjection {
+/**
+ * information about the configMap data to project
+ */
     private final @Nullable ConfigMapProjection configMap;
+/**
+ * information about the downwardAPI data to project
+ */
     private final @Nullable DownwardAPIProjection downwardAPI;
+/**
+ * information about the secret data to project
+ */
     private final @Nullable SecretProjection secret;
+/**
+ * information about the serviceAccountToken data to project
+ */
     private final @Nullable ServiceAccountTokenProjection serviceAccountToken;
 
     @OutputCustomType.Constructor({"configMap","downwardAPI","secret","serviceAccountToken"})
@@ -31,15 +43,27 @@ public final class VolumeProjection {
         this.serviceAccountToken = serviceAccountToken;
     }
 
+/**
+ * information about the configMap data to project
+ */
     public Optional<ConfigMapProjection> getConfigMap() {
         return Optional.ofNullable(this.configMap);
     }
+/**
+ * information about the downwardAPI data to project
+ */
     public Optional<DownwardAPIProjection> getDownwardAPI() {
         return Optional.ofNullable(this.downwardAPI);
     }
+/**
+ * information about the secret data to project
+ */
     public Optional<SecretProjection> getSecret() {
         return Optional.ofNullable(this.secret);
     }
+/**
+ * information about the serviceAccountToken data to project
+ */
     public Optional<ServiceAccountTokenProjection> getServiceAccountToken() {
         return Optional.ofNullable(this.serviceAccountToken);
     }

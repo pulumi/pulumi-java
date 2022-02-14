@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse {
+/**
+ * The last time the schedule successfully ran. The timestamp is an RFC3339 string.
+ */
     private final String lastRunStartTime;
+/**
+ * The next time the schedule is planned to run. The actual time might be slightly different. The timestamp is an RFC3339 string.
+ */
     private final String nextRunStartTime;
 
     @OutputCustomType.Constructor({"lastRunStartTime","nextRunStartTime"})
@@ -20,9 +26,15 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
         this.nextRunStartTime = Objects.requireNonNull(nextRunStartTime);
     }
 
+/**
+ * The last time the schedule successfully ran. The timestamp is an RFC3339 string.
+ */
     public String getLastRunStartTime() {
         return this.lastRunStartTime;
     }
+/**
+ * The next time the schedule is planned to run. The actual time might be slightly different. The timestamp is an RFC3339 string.
+ */
     public String getNextRunStartTime() {
         return this.nextRunStartTime;
     }

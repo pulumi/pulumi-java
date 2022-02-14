@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The frequency of the time windows.
+ */
     @EnumType
     public enum TumblingWindowFrequency {
+/**
+ * 
+ */
         Minute("Minute"),
+/**
+ * 
+ */
         Hour("Hour"),
+/**
+ * 
+ */
         Month("Month");
 
         private final String value;

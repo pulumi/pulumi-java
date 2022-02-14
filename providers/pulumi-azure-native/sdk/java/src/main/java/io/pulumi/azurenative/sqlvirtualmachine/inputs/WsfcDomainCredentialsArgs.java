@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.
+ */
 public final class WsfcDomainCredentialsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WsfcDomainCredentialsArgs Empty = new WsfcDomainCredentialsArgs();
 
+    /**
+     * Cluster bootstrap account password.
+     */
     @InputImport(name="clusterBootstrapAccountPassword")
     private final @Nullable Input<String> clusterBootstrapAccountPassword;
 
@@ -21,6 +27,9 @@ public final class WsfcDomainCredentialsArgs extends io.pulumi.resources.Resourc
         return this.clusterBootstrapAccountPassword == null ? Input.empty() : this.clusterBootstrapAccountPassword;
     }
 
+    /**
+     * Cluster operator account password.
+     */
     @InputImport(name="clusterOperatorAccountPassword")
     private final @Nullable Input<String> clusterOperatorAccountPassword;
 
@@ -28,6 +37,9 @@ public final class WsfcDomainCredentialsArgs extends io.pulumi.resources.Resourc
         return this.clusterOperatorAccountPassword == null ? Input.empty() : this.clusterOperatorAccountPassword;
     }
 
+    /**
+     * SQL service account password.
+     */
     @InputImport(name="sqlServiceAccountPassword")
     private final @Nullable Input<String> sqlServiceAccountPassword;
 

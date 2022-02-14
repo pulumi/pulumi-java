@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Gets or sets the Sku.
+ */
 public final class AccountResponseSku extends io.pulumi.resources.InvokeArgs {
 
     public static final AccountResponseSku Empty = new AccountResponseSku();
 
+    /**
+     * Gets or sets the sku capacity.
+     */
     @InputImport(name="capacity")
     private final @Nullable Integer capacity;
 
@@ -22,6 +28,9 @@ public final class AccountResponseSku extends io.pulumi.resources.InvokeArgs {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
+    /**
+     * Gets or sets the sku name.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 

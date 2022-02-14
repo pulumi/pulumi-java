@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetProtectedItem {
+/**
+ * Base class for backup items.
+API Version: 2021-02-01.
+ *
+ * Base class for backup items.
+ */
     public static CompletableFuture<GetProtectedItemResult> invokeAsync(GetProtectedItemArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getProtectedItem", TypeShape.of(GetProtectedItemResult.class), args == null ? GetProtectedItemArgs.Empty : args, Utilities.withVersion(options));
     }

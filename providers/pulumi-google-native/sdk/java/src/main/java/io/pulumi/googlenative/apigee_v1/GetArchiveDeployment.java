@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetArchiveDeployment {
+/**
+ * Gets the specified ArchiveDeployment.
+ */
     public static CompletableFuture<GetArchiveDeploymentResult> invokeAsync(GetArchiveDeploymentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:apigee/v1:getArchiveDeployment", TypeShape.of(GetArchiveDeploymentResult.class), args == null ? GetArchiveDeploymentArgs.Empty : args, Utilities.withVersion(options));
     }

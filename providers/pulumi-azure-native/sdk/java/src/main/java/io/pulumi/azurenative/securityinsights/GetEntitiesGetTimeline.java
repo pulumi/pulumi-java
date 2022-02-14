@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEntitiesGetTimeline {
+/**
+ * The entity timeline result operation response.
+API Version: 2019-01-01-preview.
+ *
+ * The entity timeline result operation response.
+ */
     public static CompletableFuture<GetEntitiesGetTimelineResult> invokeAsync(GetEntitiesGetTimelineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getEntitiesGetTimeline", TypeShape.of(GetEntitiesGetTimelineResult.class), args == null ? GetEntitiesGetTimelineArgs.Empty : args, Utilities.withVersion(options));
     }

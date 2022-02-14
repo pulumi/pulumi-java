@@ -3,16 +3,27 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.azurenative.migrate.outputs.MoveCollectionPropertiesResponseErrors;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
 @OutputCustomType
 public final class MoveCollectionPropertiesResponse {
+/**
+ * Defines the move collection errors.
+ */
     private final MoveCollectionPropertiesResponseErrors errors;
+/**
+ * Defines the provisioning states.
+ */
     private final String provisioningState;
+/**
+ * Gets or sets the source region.
+ */
     private final String sourceRegion;
+/**
+ * Gets or sets the target region.
+ */
     private final String targetRegion;
 
     @OutputCustomType.Constructor({"errors","provisioningState","sourceRegion","targetRegion"})
@@ -27,15 +38,27 @@ public final class MoveCollectionPropertiesResponse {
         this.targetRegion = Objects.requireNonNull(targetRegion);
     }
 
+/**
+ * Defines the move collection errors.
+ */
     public MoveCollectionPropertiesResponseErrors getErrors() {
         return this.errors;
     }
+/**
+ * Defines the provisioning states.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Gets or sets the source region.
+ */
     public String getSourceRegion() {
         return this.sourceRegion;
     }
+/**
+ * Gets or sets the target region.
+ */
     public String getTargetRegion() {
         return this.targetRegion;
     }

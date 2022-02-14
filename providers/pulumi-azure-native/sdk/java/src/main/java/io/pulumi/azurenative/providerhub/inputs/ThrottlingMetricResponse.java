@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ThrottlingMetricResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ThrottlingMetricResponse Empty = new ThrottlingMetricResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="interval")
     private final @Nullable String interval;
 
@@ -22,6 +28,9 @@ public final class ThrottlingMetricResponse extends io.pulumi.resources.InvokeAr
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="limit", required=true)
     private final Double limit;
 
@@ -29,6 +38,9 @@ public final class ThrottlingMetricResponse extends io.pulumi.resources.InvokeAr
         return this.limit;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

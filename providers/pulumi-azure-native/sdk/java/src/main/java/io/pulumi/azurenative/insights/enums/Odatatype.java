@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * specifies the type of the alert criteria.
+ */
     @EnumType
     public enum Odatatype {
+/**
+ * 
+ */
         Microsoft_Azure_Monitor_SingleResourceMultipleMetricCriteria("Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria"),
+/**
+ * 
+ */
         Microsoft_Azure_Monitor_MultipleResourceMultipleMetricCriteria("Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"),
+/**
+ * 
+ */
         Microsoft_Azure_Monitor_WebtestLocationAvailabilityCriteria("Microsoft.Azure.Monitor.WebtestLocationAvailabilityCriteria");
 
         private final String value;

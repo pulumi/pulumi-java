@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An InstanceSchedulePolicy specifies when and how frequent certain operations are performed on the instance.
+ */
 public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourcePolicyInstanceSchedulePolicyArgs Empty = new ResourcePolicyInstanceSchedulePolicyArgs();
 
+    /**
+     * The expiration time of the schedule. The timestamp is an RFC3339 string.
+     */
     @InputImport(name="expirationTime")
     private final @Nullable Input<String> expirationTime;
 
@@ -22,6 +28,9 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
     }
 
+    /**
+     * The start time of the schedule. The timestamp is an RFC3339 string.
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 
@@ -29,6 +38,9 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
         return this.startTime == null ? Input.empty() : this.startTime;
     }
 
+    /**
+     * Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+     */
     @InputImport(name="timeZone")
     private final @Nullable Input<String> timeZone;
 
@@ -36,6 +48,9 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
         return this.timeZone == null ? Input.empty() : this.timeZone;
     }
 
+    /**
+     * Specifies the schedule for starting instances.
+     */
     @InputImport(name="vmStartSchedule")
     private final @Nullable Input<ResourcePolicyInstanceSchedulePolicyScheduleArgs> vmStartSchedule;
 
@@ -43,6 +58,9 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
         return this.vmStartSchedule == null ? Input.empty() : this.vmStartSchedule;
     }
 
+    /**
+     * Specifies the schedule for stopping instances.
+     */
     @InputImport(name="vmStopSchedule")
     private final @Nullable Input<ResourcePolicyInstanceSchedulePolicyScheduleArgs> vmStopSchedule;
 

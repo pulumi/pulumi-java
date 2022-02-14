@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * High-level information about a Template Spec version.
+ */
 public final class TemplateSpecVersionInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TemplateSpecVersionInfoResponse Empty = new TemplateSpecVersionInfoResponse();
 
+    /**
+     * Template Spec version description.
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -19,6 +25,9 @@ public final class TemplateSpecVersionInfoResponse extends io.pulumi.resources.I
         return this.description;
     }
 
+    /**
+     * The timestamp of when the version was created.
+     */
     @InputImport(name="timeCreated", required=true)
     private final String timeCreated;
 
@@ -26,6 +35,9 @@ public final class TemplateSpecVersionInfoResponse extends io.pulumi.resources.I
         return this.timeCreated;
     }
 
+    /**
+     * The timestamp of when the version was last modified.
+     */
     @InputImport(name="timeModified", required=true)
     private final String timeModified;
 

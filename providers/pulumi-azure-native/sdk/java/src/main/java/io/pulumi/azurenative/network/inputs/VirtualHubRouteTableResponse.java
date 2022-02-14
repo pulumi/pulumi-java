@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * VirtualHub route table.
+ */
 public final class VirtualHubRouteTableResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualHubRouteTableResponse Empty = new VirtualHubRouteTableResponse();
 
+    /**
+     * List of all routes.
+     */
     @InputImport(name="routes")
     private final @Nullable List<VirtualHubRouteResponse> routes;
 

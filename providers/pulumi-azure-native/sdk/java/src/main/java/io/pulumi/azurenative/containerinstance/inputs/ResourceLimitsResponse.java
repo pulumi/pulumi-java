@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The resource limits.
+ */
 public final class ResourceLimitsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceLimitsResponse Empty = new ResourceLimitsResponse();
 
+    /**
+     * The CPU limit of this container instance.
+     */
     @InputImport(name="cpu")
     private final @Nullable Double cpu;
 
@@ -22,6 +28,9 @@ public final class ResourceLimitsResponse extends io.pulumi.resources.InvokeArgs
         return this.cpu == null ? Optional.empty() : Optional.ofNullable(this.cpu);
     }
 
+    /**
+     * The GPU limit of this container instance.
+     */
     @InputImport(name="gpu")
     private final @Nullable GpuResourceResponse gpu;
 
@@ -29,6 +38,9 @@ public final class ResourceLimitsResponse extends io.pulumi.resources.InvokeArgs
         return this.gpu == null ? Optional.empty() : Optional.ofNullable(this.gpu);
     }
 
+    /**
+     * The memory limit in GB of this container instance.
+     */
     @InputImport(name="memoryInGB")
     private final @Nullable Double memoryInGB;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetLoggerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetLoggerArgs Empty = new GetLoggerArgs();
 
+    /**
+     * Logger identifier. Must be unique in the API Management service instance.
+     */
     @InputImport(name="loggerId", required=true)
     private final String loggerId;
 
@@ -19,6 +25,9 @@ public final class GetLoggerArgs extends io.pulumi.resources.InvokeArgs {
         return this.loggerId;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetLoggerArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

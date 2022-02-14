@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Cosmos DB MongoDB database resource object
+ */
 public final class MongoDBDatabaseResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MongoDBDatabaseResourceArgs Empty = new MongoDBDatabaseResourceArgs();
 
+    /**
+     * Name of the Cosmos DB MongoDB database
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 

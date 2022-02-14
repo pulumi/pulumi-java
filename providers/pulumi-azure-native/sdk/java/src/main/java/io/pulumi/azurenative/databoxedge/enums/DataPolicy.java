@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Data policy of the storage Account.
+ */
     @EnumType
     public enum DataPolicy {
+/**
+ * 
+ */
         Cloud("Cloud"),
+/**
+ * 
+ */
         Local("Local");
 
         private final String value;

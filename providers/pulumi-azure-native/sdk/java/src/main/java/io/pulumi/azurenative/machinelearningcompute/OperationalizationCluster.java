@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.machinelearningcompute;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.machinelearningcompute.OperationalizationClusterArgs;
 import io.pulumi.azurenative.machinelearningcompute.outputs.AcsClusterPropertiesResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.AppInsightsPropertiesResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.ContainerRegistryPropertiesResponse;
@@ -21,99 +20,380 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Instance of an Azure ML Operationalization Cluster resource.
+API Version: 2017-08-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### PUT Operationalization Cluster
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var operationalizationCluster = new AzureNative.MachineLearningCompute.OperationalizationCluster("operationalizationCluster", new AzureNative.MachineLearningCompute.OperationalizationClusterArgs
+        {
+            ClusterName = "myCluster",
+            ClusterType = "ACS",
+            ContainerService = new AzureNative.MachineLearningCompute.Inputs.AcsClusterPropertiesArgs
+            {
+                OrchestratorProperties = new AzureNative.MachineLearningCompute.Inputs.KubernetesClusterPropertiesArgs
+                {
+                    ServicePrincipal = new AzureNative.MachineLearningCompute.Inputs.ServicePrincipalPropertiesArgs
+                    {
+                        ClientId = "abcdefghijklmnopqrt",
+                        Secret = "<secret>",
+                    },
+                },
+                OrchestratorType = "Kubernetes",
+            },
+            Description = "My Operationalization Cluster",
+            GlobalServiceConfiguration = new AzureNative.MachineLearningCompute.Inputs.GlobalServiceConfigurationArgs
+            {
+                Ssl = new AzureNative.MachineLearningCompute.Inputs.SslConfigurationArgs
+                {
+                    Cert = "afjdklq2131casfakld=",
+                    Cname = "foo.bar.com",
+                    Key = "flksdafkldsajf=",
+                    Status = "Enabled",
+                },
+            },
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            Tags = 
+            {
+                { "key1", "alpha" },
+                { "key2", "beta" },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	machinelearningcompute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningcompute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningcompute.NewOperationalizationCluster(ctx, "operationalizationCluster", &machinelearningcompute.OperationalizationClusterArgs{
+			ClusterName: pulumi.String("myCluster"),
+			ClusterType: pulumi.String("ACS"),
+			ContainerService: &machinelearningcompute.AcsClusterPropertiesArgs{
+				OrchestratorProperties: &machinelearningcompute.KubernetesClusterPropertiesArgs{
+					ServicePrincipal: &machinelearningcompute.ServicePrincipalPropertiesArgs{
+						ClientId: pulumi.String("abcdefghijklmnopqrt"),
+						Secret:   pulumi.String("<secret>"),
+					},
+				},
+				OrchestratorType: pulumi.String("Kubernetes"),
+			},
+			Description: pulumi.String("My Operationalization Cluster"),
+			GlobalServiceConfiguration: &machinelearningcompute.GlobalServiceConfigurationArgs{
+				Ssl: &machinelearningcompute.SslConfigurationArgs{
+					Cert:   pulumi.String("afjdklq2131casfakld="),
+					Cname:  pulumi.String("foo.bar.com"),
+					Key:    pulumi.String("flksdafkldsajf="),
+					Status: pulumi.String("Enabled"),
+				},
+			},
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			Tags: pulumi.StringMap{
+				"key1": pulumi.String("alpha"),
+				"key2": pulumi.String("beta"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const operationalizationCluster = new azure_native.machinelearningcompute.OperationalizationCluster("operationalizationCluster", {
+    clusterName: "myCluster",
+    clusterType: "ACS",
+    containerService: {
+        orchestratorProperties: {
+            servicePrincipal: {
+                clientId: "abcdefghijklmnopqrt",
+                secret: "<secret>",
+            },
+        },
+        orchestratorType: "Kubernetes",
+    },
+    description: "My Operationalization Cluster",
+    globalServiceConfiguration: {
+        ssl: {
+            cert: "afjdklq2131casfakld=",
+            cname: "foo.bar.com",
+            key: "flksdafkldsajf=",
+            status: "Enabled",
+        },
+    },
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    tags: {
+        key1: "alpha",
+        key2: "beta",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+operationalization_cluster = azure_native.machinelearningcompute.OperationalizationCluster("operationalizationCluster",
+    cluster_name="myCluster",
+    cluster_type="ACS",
+    container_service=azure_native.machinelearningcompute.AcsClusterPropertiesArgs(
+        orchestrator_properties=azure_native.machinelearningcompute.KubernetesClusterPropertiesArgs(
+            service_principal=azure_native.machinelearningcompute.ServicePrincipalPropertiesArgs(
+                client_id="abcdefghijklmnopqrt",
+                secret="<secret>",
+            ),
+        ),
+        orchestrator_type="Kubernetes",
+    ),
+    description="My Operationalization Cluster",
+    global_service_configuration=azure_native.machinelearningcompute.GlobalServiceConfigurationArgs(
+        ssl=azure_native.machinelearningcompute.SslConfigurationArgs(
+            cert="afjdklq2131casfakld=",
+            cname="foo.bar.com",
+            key="flksdafkldsajf=",
+            status="Enabled",
+        ),
+    ),
+    location="West US",
+    resource_group_name="myResourceGroup",
+    tags={
+        "key1": "alpha",
+        "key2": "beta",
+    })
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:machinelearningcompute:OperationalizationCluster MyCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.MachineLearningCompute/operationalizationClusters/MyCluster 
+```
+
+ */
 @ResourceType(type="azure-native:machinelearningcompute:OperationalizationCluster")
 public class OperationalizationCluster extends io.pulumi.resources.CustomResource {
+    /**
+     * AppInsights configuration.
+     */
     @OutputExport(name="appInsights", type=AppInsightsPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ AppInsightsPropertiesResponse> appInsights;
 
+    /**
+     * @return AppInsights configuration.
+     */
     public Output</* @Nullable */ AppInsightsPropertiesResponse> getAppInsights() {
         return this.appInsights;
     }
+    /**
+     * The cluster type.
+     */
     @OutputExport(name="clusterType", type=String.class, parameters={})
     private Output<String> clusterType;
 
+    /**
+     * @return The cluster type.
+     */
     public Output<String> getClusterType() {
         return this.clusterType;
     }
+    /**
+     * Container Registry properties.
+     */
     @OutputExport(name="containerRegistry", type=ContainerRegistryPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ ContainerRegistryPropertiesResponse> containerRegistry;
 
+    /**
+     * @return Container Registry properties.
+     */
     public Output</* @Nullable */ ContainerRegistryPropertiesResponse> getContainerRegistry() {
         return this.containerRegistry;
     }
+    /**
+     * Parameters for the Azure Container Service cluster.
+     */
     @OutputExport(name="containerService", type=AcsClusterPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ AcsClusterPropertiesResponse> containerService;
 
+    /**
+     * @return Parameters for the Azure Container Service cluster.
+     */
     public Output</* @Nullable */ AcsClusterPropertiesResponse> getContainerService() {
         return this.containerService;
     }
+    /**
+     * The date and time when the cluster was created.
+     */
     @OutputExport(name="createdOn", type=String.class, parameters={})
     private Output<String> createdOn;
 
+    /**
+     * @return The date and time when the cluster was created.
+     */
     public Output<String> getCreatedOn() {
         return this.createdOn;
     }
+    /**
+     * The description of the cluster.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return The description of the cluster.
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Contains global configuration for the web services in the cluster.
+     */
     @OutputExport(name="globalServiceConfiguration", type=GlobalServiceConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ GlobalServiceConfigurationResponse> globalServiceConfiguration;
 
+    /**
+     * @return Contains global configuration for the web services in the cluster.
+     */
     public Output</* @Nullable */ GlobalServiceConfigurationResponse> getGlobalServiceConfiguration() {
         return this.globalServiceConfiguration;
     }
+    /**
+     * Specifies the location of the resource.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Specifies the location of the resource.
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The date and time when the cluster was last modified.
+     */
     @OutputExport(name="modifiedOn", type=String.class, parameters={})
     private Output<String> modifiedOn;
 
+    /**
+     * @return The date and time when the cluster was last modified.
+     */
     public Output<String> getModifiedOn() {
         return this.modifiedOn;
     }
+    /**
+     * Specifies the name of the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Specifies the name of the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * List of provisioning errors reported by the resource provider.
+     */
     @OutputExport(name="provisioningErrors", type=List.class, parameters={ErrorResponseWrapperResponse.class})
     private Output<List<ErrorResponseWrapperResponse>> provisioningErrors;
 
+    /**
+     * @return List of provisioning errors reported by the resource provider.
+     */
     public Output<List<ErrorResponseWrapperResponse>> getProvisioningErrors() {
         return this.provisioningErrors;
     }
+    /**
+     * The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Storage Account properties.
+     */
     @OutputExport(name="storageAccount", type=StorageAccountPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ StorageAccountPropertiesResponse> storageAccount;
 
+    /**
+     * @return Storage Account properties.
+     */
     public Output</* @Nullable */ StorageAccountPropertiesResponse> getStorageAccount() {
         return this.storageAccount;
     }
+    /**
+     * Contains resource tags defined as key/value pairs.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Contains resource tags defined as key/value pairs.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Specifies the type of the resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Specifies the type of the resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public OperationalizationCluster(String name, OperationalizationClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:machinelearningcompute:OperationalizationCluster", name, args == null ? OperationalizationClusterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -133,6 +413,14 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static OperationalizationCluster get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OperationalizationCluster(name, id, options);
     }

@@ -17,10 +17,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for the task that validates connection to Azure SQL Database Managed Instance
+ */
 public final class ConnectToTargetSqlMISyncTaskPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectToTargetSqlMISyncTaskPropertiesResponse Empty = new ConnectToTargetSqlMISyncTaskPropertiesResponse();
 
+    /**
+     * Array of command properties.
+     */
     @InputImport(name="commands", required=true)
     private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
@@ -28,6 +34,9 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesResponse extends io.pul
         return this.commands;
     }
 
+    /**
+     * Array of errors. This is ignored if submitted.
+     */
     @InputImport(name="errors", required=true)
     private final List<ODataErrorResponse> errors;
 
@@ -35,6 +44,9 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesResponse extends io.pul
         return this.errors;
     }
 
+    /**
+     * Task input
+     */
     @InputImport(name="input")
     private final @Nullable ConnectToTargetSqlMISyncTaskInputResponse input;
 
@@ -42,6 +54,9 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesResponse extends io.pul
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
     }
 
+    /**
+     * Task output. This is ignored if submitted.
+     */
     @InputImport(name="output", required=true)
     private final List<ConnectToTargetSqlMISyncTaskOutputResponse> output;
 
@@ -49,6 +64,9 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesResponse extends io.pul
         return this.output;
     }
 
+    /**
+     * The state of the task. This is ignored if submitted.
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -56,6 +74,10 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesResponse extends io.pul
         return this.state;
     }
 
+    /**
+     * Task type.
+Expected value is 'ConnectToTarget.AzureSqlDbMI.Sync.LRS'.
+     */
     @InputImport(name="taskType", required=true)
     private final String taskType;
 

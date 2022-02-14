@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.logic;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.logic.IntegrationAccountBatchConfigurationArgs;
 import io.pulumi.azurenative.logic.outputs.BatchConfigurationPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,39 +15,221 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The batch configuration resource definition.
+API Version: 2019-05-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create or update a batch configuration
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var integrationAccountBatchConfiguration = new AzureNative.Logic.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration", new AzureNative.Logic.IntegrationAccountBatchConfigurationArgs
+        {
+            BatchConfigurationName = "testBatchConfiguration",
+            IntegrationAccountName = "testIntegrationAccount",
+            Location = "westus",
+            Properties = new AzureNative.Logic.Inputs.BatchConfigurationPropertiesArgs
+            {
+                BatchGroupName = "DEFAULT",
+                ReleaseCriteria = new AzureNative.Logic.Inputs.BatchReleaseCriteriaArgs
+                {
+                    BatchSize = 234567,
+                    MessageCount = 10,
+                    Recurrence = new AzureNative.Logic.Inputs.WorkflowTriggerRecurrenceArgs
+                    {
+                        Frequency = "Minute",
+                        Interval = 1,
+                        StartTime = "2017-03-24T11:43:00",
+                        TimeZone = "India Standard Time",
+                    },
+                },
+            },
+            ResourceGroupName = "testResourceGroup",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	logic "github.com/pulumi/pulumi-azure-native/sdk/go/azure/logic"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := logic.NewIntegrationAccountBatchConfiguration(ctx, "integrationAccountBatchConfiguration", &logic.IntegrationAccountBatchConfigurationArgs{
+			BatchConfigurationName: pulumi.String("testBatchConfiguration"),
+			IntegrationAccountName: pulumi.String("testIntegrationAccount"),
+			Location:               pulumi.String("westus"),
+			Properties: &logic.BatchConfigurationPropertiesArgs{
+				BatchGroupName: pulumi.String("DEFAULT"),
+				ReleaseCriteria: &logic.BatchReleaseCriteriaArgs{
+					BatchSize:    pulumi.Int(234567),
+					MessageCount: pulumi.Int(10),
+					Recurrence: &logic.WorkflowTriggerRecurrenceArgs{
+						Frequency: pulumi.String("Minute"),
+						Interval:  pulumi.Int(1),
+						StartTime: pulumi.String("2017-03-24T11:43:00"),
+						TimeZone:  pulumi.String("India Standard Time"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("testResourceGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const integrationAccountBatchConfiguration = new azure_native.logic.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration", {
+    batchConfigurationName: "testBatchConfiguration",
+    integrationAccountName: "testIntegrationAccount",
+    location: "westus",
+    properties: {
+        batchGroupName: "DEFAULT",
+        releaseCriteria: {
+            batchSize: 234567,
+            messageCount: 10,
+            recurrence: {
+                frequency: "Minute",
+                interval: 1,
+                startTime: "2017-03-24T11:43:00",
+                timeZone: "India Standard Time",
+            },
+        },
+    },
+    resourceGroupName: "testResourceGroup",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+integration_account_batch_configuration = azure_native.logic.IntegrationAccountBatchConfiguration("integrationAccountBatchConfiguration",
+    batch_configuration_name="testBatchConfiguration",
+    integration_account_name="testIntegrationAccount",
+    location="westus",
+    properties=azure_native.logic.BatchConfigurationPropertiesArgs(
+        batch_group_name="DEFAULT",
+        release_criteria=azure_native.logic.BatchReleaseCriteriaArgs(
+            batch_size=234567,
+            message_count=10,
+            recurrence=azure_native.logic.WorkflowTriggerRecurrenceArgs(
+                frequency="Minute",
+                interval=1,
+                start_time="2017-03-24T11:43:00",
+                time_zone="India Standard Time",
+            ),
+        ),
+    ),
+    resource_group_name="testResourceGroup")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:logic:IntegrationAccountBatchConfiguration testBatchConfiguration /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/testIntegrationAccount/batchConfigurations/testBatchConfiguration 
+```
+
+ */
 @ResourceType(type="azure-native:logic:IntegrationAccountBatchConfiguration")
 public class IntegrationAccountBatchConfiguration extends io.pulumi.resources.CustomResource {
+    /**
+     * The resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The resource location.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Gets the resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Gets the resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The batch configuration properties.
+     */
     @OutputExport(name="properties", type=BatchConfigurationPropertiesResponse.class, parameters={})
     private Output<BatchConfigurationPropertiesResponse> properties;
 
+    /**
+     * @return The batch configuration properties.
+     */
     public Output<BatchConfigurationPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * The resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Gets the resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Gets the resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public IntegrationAccountBatchConfiguration(String name, IntegrationAccountBatchConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:logic:IntegrationAccountBatchConfiguration", name, args == null ? IntegrationAccountBatchConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -69,6 +250,14 @@ public class IntegrationAccountBatchConfiguration extends io.pulumi.resources.Cu
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static IntegrationAccountBatchConfiguration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IntegrationAccountBatchConfiguration(name, id, options);
     }

@@ -13,6 +13,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EventHandlerSettingsResponse {
+/**
+ * Get or set the EventHandler items. The key is the hub name and the value is the corresponding EventHandlerTemplate.
+ */
     private final @Nullable Map<String,List<EventHandlerTemplateResponse>> items;
 
     @OutputCustomType.Constructor({"items"})
@@ -20,6 +23,9 @@ public final class EventHandlerSettingsResponse {
         this.items = items;
     }
 
+/**
+ * Get or set the EventHandler items. The key is the hub name and the value is the corresponding EventHandlerTemplate.
+ */
     public Map<String,List<EventHandlerTemplateResponse>> getItems() {
         return this.items == null ? Map.of() : this.items;
     }

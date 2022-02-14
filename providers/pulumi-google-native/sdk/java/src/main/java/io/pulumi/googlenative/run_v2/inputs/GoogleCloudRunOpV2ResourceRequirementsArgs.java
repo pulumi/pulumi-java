@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ResourceRequirements describes the compute resource requirements.
+ */
 public final class GoogleCloudRunOpV2ResourceRequirementsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudRunOpV2ResourceRequirementsArgs Empty = new GoogleCloudRunOpV2ResourceRequirementsArgs();
 
+    /**
+     * Determines whether CPU should be throttled or not outside of requests.
+     */
     @InputImport(name="cpuIdle")
     private final @Nullable Input<Boolean> cpuIdle;
 
@@ -23,6 +29,9 @@ public final class GoogleCloudRunOpV2ResourceRequirementsArgs extends io.pulumi.
         return this.cpuIdle == null ? Input.empty() : this.cpuIdle;
     }
 
+    /**
+     * Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
+     */
     @InputImport(name="limits")
     private final @Nullable Input<Map<String,String>> limits;
 

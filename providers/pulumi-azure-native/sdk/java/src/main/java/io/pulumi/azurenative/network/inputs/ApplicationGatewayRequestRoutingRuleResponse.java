@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Request routing rule of an application gateway.
+ */
 public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayRequestRoutingRuleResponse Empty = new ApplicationGatewayRequestRoutingRuleResponse();
 
+    /**
+     * Backend address pool resource of the application gateway.
+     */
     @InputImport(name="backendAddressPool")
     private final @Nullable SubResourceResponse backendAddressPool;
 
@@ -23,6 +29,9 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
         return this.backendAddressPool == null ? Optional.empty() : Optional.ofNullable(this.backendAddressPool);
     }
 
+    /**
+     * Backend http settings resource of the application gateway.
+     */
     @InputImport(name="backendHttpSettings")
     private final @Nullable SubResourceResponse backendHttpSettings;
 
@@ -30,6 +39,9 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
         return this.backendHttpSettings == null ? Optional.empty() : Optional.ofNullable(this.backendHttpSettings);
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -37,6 +49,9 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
         return this.etag;
     }
 
+    /**
+     * Http listener resource of the application gateway.
+     */
     @InputImport(name="httpListener")
     private final @Nullable SubResourceResponse httpListener;
 
@@ -44,6 +59,9 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
         return this.httpListener == null ? Optional.empty() : Optional.ofNullable(this.httpListener);
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -51,6 +69,9 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Name of the request routing rule that is unique within an Application Gateway.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -58,6 +79,9 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Priority of the request routing rule.
+     */
     @InputImport(name="priority")
     private final @Nullable Integer priority;
 
@@ -65,6 +89,9 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
+    /**
+     * The provisioning state of the request routing rule resource.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -72,6 +99,9 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
         return this.provisioningState;
     }
 
+    /**
+     * Redirect configuration resource of the application gateway.
+     */
     @InputImport(name="redirectConfiguration")
     private final @Nullable SubResourceResponse redirectConfiguration;
 
@@ -79,6 +109,9 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
         return this.redirectConfiguration == null ? Optional.empty() : Optional.ofNullable(this.redirectConfiguration);
     }
 
+    /**
+     * Rewrite Rule Set resource in Basic rule of the application gateway.
+     */
     @InputImport(name="rewriteRuleSet")
     private final @Nullable SubResourceResponse rewriteRuleSet;
 
@@ -86,6 +119,9 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
         return this.rewriteRuleSet == null ? Optional.empty() : Optional.ofNullable(this.rewriteRuleSet);
     }
 
+    /**
+     * Rule type.
+     */
     @InputImport(name="ruleType")
     private final @Nullable String ruleType;
 
@@ -93,6 +129,9 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
         return this.ruleType == null ? Optional.empty() : Optional.ofNullable(this.ruleType);
     }
 
+    /**
+     * Type of the resource.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -100,6 +139,9 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
         return this.type;
     }
 
+    /**
+     * URL path map resource of the application gateway.
+     */
     @InputImport(name="urlPathMap")
     private final @Nullable SubResourceResponse urlPathMap;
 

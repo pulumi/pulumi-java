@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApplicationArgs Empty = new GetApplicationArgs();
 
+    /**
+     * The name of the Batch account.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the application. This must be unique within the account.
+     */
     @InputImport(name="applicationName", required=true)
     private final String applicationName;
 
@@ -26,6 +35,9 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
         return this.applicationName;
     }
 
+    /**
+     * The name of the resource group that contains the Batch account.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the OS profile for the cloud service.
+ */
 public final class CloudServiceOsProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CloudServiceOsProfileResponse Empty = new CloudServiceOsProfileResponse();
 
+    /**
+     * Specifies set of certificates that should be installed onto the role instances.
+     */
     @InputImport(name="secrets")
     private final @Nullable List<CloudServiceVaultSecretGroupResponse> secrets;
 

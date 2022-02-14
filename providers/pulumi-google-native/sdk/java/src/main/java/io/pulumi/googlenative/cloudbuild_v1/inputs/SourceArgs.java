@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Location of the source in a supported storage service.
+ */
 public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SourceArgs Empty = new SourceArgs();
 
+    /**
+     * If provided, get the source from this location in a Cloud Source Repository.
+     */
     @InputImport(name="repoSource")
     private final @Nullable Input<RepoSourceArgs> repoSource;
 
@@ -23,6 +29,9 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.repoSource == null ? Input.empty() : this.repoSource;
     }
 
+    /**
+     * If provided, get the source from this location in Google Cloud Storage.
+     */
     @InputImport(name="storageSource")
     private final @Nullable Input<StorageSourceArgs> storageSource;
 
@@ -30,6 +39,9 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageSource == null ? Input.empty() : this.storageSource;
     }
 
+    /**
+     * If provided, get the source from this manifest in Google Cloud Storage. This feature is in Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-fetcher).
+     */
     @InputImport(name="storageSourceManifest")
     private final @Nullable Input<StorageSourceManifestArgs> storageSourceManifest;
 

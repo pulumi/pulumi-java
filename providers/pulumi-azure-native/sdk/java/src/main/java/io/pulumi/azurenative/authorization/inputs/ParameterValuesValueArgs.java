@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The value of a parameter.
+ */
 public final class ParameterValuesValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ParameterValuesValueArgs Empty = new ParameterValuesValueArgs();
 
+    /**
+     * The value of the parameter.
+     */
     @InputImport(name="value")
     private final @Nullable Input<Object> value;
 

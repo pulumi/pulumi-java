@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties that define a direct peering.
+ */
 public final class PeeringPropertiesDirectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PeeringPropertiesDirectArgs Empty = new PeeringPropertiesDirectArgs();
 
+    /**
+     * The set of connections that constitute a direct peering.
+     */
     @InputImport(name="connections")
     private final @Nullable Input<List<DirectConnectionArgs>> connections;
 
@@ -26,6 +32,9 @@ public final class PeeringPropertiesDirectArgs extends io.pulumi.resources.Resou
         return this.connections == null ? Input.empty() : this.connections;
     }
 
+    /**
+     * The type of direct peering.
+     */
     @InputImport(name="directPeeringType")
     private final @Nullable Input<Either<String,DirectPeeringType>> directPeeringType;
 
@@ -33,6 +42,9 @@ public final class PeeringPropertiesDirectArgs extends io.pulumi.resources.Resou
         return this.directPeeringType == null ? Input.empty() : this.directPeeringType;
     }
 
+    /**
+     * The reference of the peer ASN.
+     */
     @InputImport(name="peerAsn")
     private final @Nullable Input<SubResourceArgs> peerAsn;
 

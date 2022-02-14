@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Database file specific information
+ */
 public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatabaseFileInfoResponse Empty = new DatabaseFileInfoResponse();
 
+    /**
+     * Name of the database
+     */
     @InputImport(name="databaseName")
     private final @Nullable String databaseName;
 
@@ -22,6 +28,9 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
         return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
     }
 
+    /**
+     * Database file type
+     */
     @InputImport(name="fileType")
     private final @Nullable String fileType;
 
@@ -29,6 +38,9 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
         return this.fileType == null ? Optional.empty() : Optional.ofNullable(this.fileType);
     }
 
+    /**
+     * Unique identifier for database file
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -36,6 +48,9 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Logical name of the file
+     */
     @InputImport(name="logicalName")
     private final @Nullable String logicalName;
 
@@ -43,6 +58,9 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
         return this.logicalName == null ? Optional.empty() : Optional.ofNullable(this.logicalName);
     }
 
+    /**
+     * Operating-system full path of the file
+     */
     @InputImport(name="physicalFullName")
     private final @Nullable String physicalFullName;
 
@@ -50,6 +68,9 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
         return this.physicalFullName == null ? Optional.empty() : Optional.ofNullable(this.physicalFullName);
     }
 
+    /**
+     * Suggested full path of the file for restoring
+     */
     @InputImport(name="restoreFullName")
     private final @Nullable String restoreFullName;
 
@@ -57,6 +78,9 @@ public final class DatabaseFileInfoResponse extends io.pulumi.resources.InvokeAr
         return this.restoreFullName == null ? Optional.empty() : Optional.ofNullable(this.restoreFullName);
     }
 
+    /**
+     * Size of the file in megabytes
+     */
     @InputImport(name="sizeMB")
     private final @Nullable Double sizeMB;
 

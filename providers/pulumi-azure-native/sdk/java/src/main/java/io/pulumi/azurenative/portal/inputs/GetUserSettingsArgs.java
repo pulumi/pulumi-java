@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetUserSettingsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetUserSettingsArgs Empty = new GetUserSettingsArgs();
 
+    /**
+     * The name of the user settings
+     */
     @InputImport(name="userSettingsName", required=true)
     private final String userSettingsName;
 

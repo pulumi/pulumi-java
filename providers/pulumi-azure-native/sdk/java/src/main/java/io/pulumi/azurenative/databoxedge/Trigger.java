@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.databoxedge.TriggerArgs;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,34 +14,157 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Trigger details.
+API Version: 2020-12-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### TriggerPut
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var trigger = new AzureNative.DataBoxEdge.Trigger("trigger", new AzureNative.DataBoxEdge.TriggerArgs
+        {
+            DeviceName = "testedgedevice",
+            Kind = "FileEvent",
+            Name = "trigger1",
+            ResourceGroupName = "GroupForEdgeAutomation",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	databoxedge "github.com/pulumi/pulumi-azure-native/sdk/go/azure/databoxedge"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := databoxedge.NewTrigger(ctx, "trigger", &databoxedge.TriggerArgs{
+			DeviceName:        pulumi.String("testedgedevice"),
+			Kind:              pulumi.String("FileEvent"),
+			Name:              pulumi.String("trigger1"),
+			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const trigger = new azure_native.databoxedge.Trigger("trigger", {
+    deviceName: "testedgedevice",
+    kind: "FileEvent",
+    name: "trigger1",
+    resourceGroupName: "GroupForEdgeAutomation",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+trigger = azure_native.databoxedge.Trigger("trigger",
+    device_name="testedgedevice",
+    kind="FileEvent",
+    name="trigger1",
+    resource_group_name="GroupForEdgeAutomation")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:databoxedge:Trigger trigger1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/triggers/trigger1 
+```
+
+ * @deprecated
+ * Please use one of the variants: FileEventTrigger, PeriodicTimerEventTrigger.
+ */
 @Deprecated /* Please use one of the variants: FileEventTrigger, PeriodicTimerEventTrigger. */
 @ResourceType(type="azure-native:databoxedge:Trigger")
 public class Trigger extends io.pulumi.resources.CustomResource {
+    /**
+     * Trigger Kind.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return Trigger Kind.
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * The object name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The object name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Trigger in DataBoxEdge Resource
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Trigger in DataBoxEdge Resource
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The hierarchical type of the object.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The hierarchical type of the object.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Trigger(String name, TriggerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:databoxedge:Trigger", name, args == null ? TriggerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -71,6 +193,14 @@ public class Trigger extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Trigger get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Trigger(name, id, options);
     }

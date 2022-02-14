@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DedicatedHostArgs Empty = new DedicatedHostArgs();
 
+    /**
+     * Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to 'true' when not provided.
+     */
     @InputImport(name="autoReplaceOnFailure")
     private final @Nullable Input<Boolean> autoReplaceOnFailure;
 
@@ -26,6 +32,9 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoReplaceOnFailure == null ? Input.empty() : this.autoReplaceOnFailure;
     }
 
+    /**
+     * The name of the dedicated host group.
+     */
     @InputImport(name="hostGroupName", required=true)
     private final Input<String> hostGroupName;
 
@@ -33,6 +42,9 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostGroupName;
     }
 
+    /**
+     * The name of the dedicated host .
+     */
     @InputImport(name="hostName")
     private final @Nullable Input<String> hostName;
 
@@ -40,6 +52,9 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
         return this.hostName == null ? Input.empty() : this.hostName;
     }
 
+    /**
+     * Specifies the software license type that will be applied to the VMs deployed on the dedicated host. <br><br> Possible values are: <br><br> **None** <br><br> **Windows_Server_Hybrid** <br><br> **Windows_Server_Perpetual** <br><br> Default: **None**
+     */
     @InputImport(name="licenseType")
     private final @Nullable Input<DedicatedHostLicenseTypes> licenseType;
 
@@ -47,6 +62,9 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
         return this.licenseType == null ? Input.empty() : this.licenseType;
     }
 
+    /**
+     * Resource location
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -54,6 +72,9 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Fault domain of the dedicated host within a dedicated host group.
+     */
     @InputImport(name="platformFaultDomain")
     private final @Nullable Input<Integer> platformFaultDomain;
 
@@ -61,6 +82,9 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
         return this.platformFaultDomain == null ? Input.empty() : this.platformFaultDomain;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -68,6 +92,9 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * SKU of the dedicated host for Hardware Generation and VM family. Only name is required to be set. List Microsoft.Compute SKUs for a list of possible values.
+     */
     @InputImport(name="sku", required=true)
     private final Input<SkuArgs> sku;
 
@@ -75,6 +102,9 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
         return this.sku;
     }
 
+    /**
+     * Resource tags
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

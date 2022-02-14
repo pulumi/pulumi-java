@@ -15,9 +15,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class PeeringPropertiesDirectResponse {
+/**
+ * The set of connections that constitute a direct peering.
+ */
     private final @Nullable List<DirectConnectionResponse> connections;
+/**
+ * The type of direct peering.
+ */
     private final @Nullable String directPeeringType;
+/**
+ * The reference of the peer ASN.
+ */
     private final @Nullable SubResourceResponse peerAsn;
+/**
+ * The flag that indicates whether or not the peering is used for peering service.
+ */
     private final Boolean useForPeeringService;
 
     @OutputCustomType.Constructor({"connections","directPeeringType","peerAsn","useForPeeringService"})
@@ -32,15 +44,27 @@ public final class PeeringPropertiesDirectResponse {
         this.useForPeeringService = Objects.requireNonNull(useForPeeringService);
     }
 
+/**
+ * The set of connections that constitute a direct peering.
+ */
     public List<DirectConnectionResponse> getConnections() {
         return this.connections == null ? List.of() : this.connections;
     }
+/**
+ * The type of direct peering.
+ */
     public Optional<String> getDirectPeeringType() {
         return Optional.ofNullable(this.directPeeringType);
     }
+/**
+ * The reference of the peer ASN.
+ */
     public Optional<SubResourceResponse> getPeerAsn() {
         return Optional.ofNullable(this.peerAsn);
     }
+/**
+ * The flag that indicates whether or not the peering is used for peering service.
+ */
     public Boolean getUseForPeeringService() {
         return this.useForPeeringService;
     }

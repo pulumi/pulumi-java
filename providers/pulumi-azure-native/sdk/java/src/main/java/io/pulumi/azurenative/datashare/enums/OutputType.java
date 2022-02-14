@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * File output type
+ */
     @EnumType
     public enum OutputType {
+/**
+ * 
+ */
         Csv("Csv"),
+/**
+ * 
+ */
         Parquet("Parquet");
 
         private final String value;

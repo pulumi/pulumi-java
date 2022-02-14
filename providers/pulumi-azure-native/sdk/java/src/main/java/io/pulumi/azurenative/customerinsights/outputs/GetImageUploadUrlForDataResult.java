@@ -12,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetImageUploadUrlForDataResult {
+/**
+ * Content URL for the image blob.
+ */
     private final @Nullable String contentUrl;
+/**
+ * Whether image exists already.
+ */
     private final @Nullable Boolean imageExists;
+/**
+ * Relative path of the image.
+ */
     private final @Nullable String relativePath;
 
     @OutputCustomType.Constructor({"contentUrl","imageExists","relativePath"})
@@ -26,12 +35,21 @@ public final class GetImageUploadUrlForDataResult {
         this.relativePath = relativePath;
     }
 
+/**
+ * Content URL for the image blob.
+ */
     public Optional<String> getContentUrl() {
         return Optional.ofNullable(this.contentUrl);
     }
+/**
+ * Whether image exists already.
+ */
     public Optional<Boolean> getImageExists() {
         return Optional.ofNullable(this.imageExists);
     }
+/**
+ * Relative path of the image.
+ */
     public Optional<String> getRelativePath() {
         return Optional.ofNullable(this.relativePath);
     }

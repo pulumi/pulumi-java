@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SkuResponse {
+/**
+ * The sku name
+ */
     private final String name;
+/**
+ * Gets the sku tier. This is based on the SKU name.
+ */
     private final String tier;
 
     @OutputCustomType.Constructor({"name","tier"})
@@ -20,9 +26,15 @@ public final class SkuResponse {
         this.tier = Objects.requireNonNull(tier);
     }
 
+/**
+ * The sku name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Gets the sku tier. This is based on the SKU name.
+ */
     public String getTier() {
         return this.tier;
     }

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll
+ */
 public final class TransferConfigurationResponseTransferAllDetails extends io.pulumi.resources.InvokeArgs {
 
     public static final TransferConfigurationResponseTransferAllDetails Empty = new TransferConfigurationResponseTransferAllDetails();
 
+    /**
+     * Details to transfer all data.
+     */
     @InputImport(name="include")
     private final @Nullable TransferAllDetailsResponse include;
 

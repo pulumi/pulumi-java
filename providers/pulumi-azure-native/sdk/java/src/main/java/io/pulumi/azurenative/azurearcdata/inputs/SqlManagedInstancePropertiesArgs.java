@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of sqlManagedInstance.
+ */
 public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SqlManagedInstancePropertiesArgs Empty = new SqlManagedInstancePropertiesArgs();
 
+    /**
+     * The instance admin user
+     */
     @InputImport(name="admin")
     private final @Nullable Input<String> admin;
 
@@ -23,6 +29,9 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
         return this.admin == null ? Input.empty() : this.admin;
     }
 
+    /**
+     * Username and password for basic authentication.
+     */
     @InputImport(name="basicLoginInformation")
     private final @Nullable Input<BasicLoginInformationArgs> basicLoginInformation;
 
@@ -30,6 +39,9 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
         return this.basicLoginInformation == null ? Input.empty() : this.basicLoginInformation;
     }
 
+    /**
+     * null
+     */
     @InputImport(name="dataControllerId")
     private final @Nullable Input<String> dataControllerId;
 
@@ -37,6 +49,9 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
         return this.dataControllerId == null ? Input.empty() : this.dataControllerId;
     }
 
+    /**
+     * The instance end time
+     */
     @InputImport(name="endTime")
     private final @Nullable Input<String> endTime;
 
@@ -44,6 +59,9 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
         return this.endTime == null ? Input.empty() : this.endTime;
     }
 
+    /**
+     * The raw kubernetes information
+     */
     @InputImport(name="k8sRaw")
     private final @Nullable Input<Object> k8sRaw;
 
@@ -51,6 +69,9 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
         return this.k8sRaw == null ? Input.empty() : this.k8sRaw;
     }
 
+    /**
+     * Last uploaded date from Kubernetes cluster. Defaults to current date time
+     */
     @InputImport(name="lastUploadedDate")
     private final @Nullable Input<String> lastUploadedDate;
 
@@ -58,6 +79,9 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
         return this.lastUploadedDate == null ? Input.empty() : this.lastUploadedDate;
     }
 
+    /**
+     * The instance start time
+     */
     @InputImport(name="startTime")
     private final @Nullable Input<String> startTime;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAppServicePlan {
+/**
+ * App Service plan.
+API Version: 2020-12-01.
+ *
+ * App Service plan.
+ */
     public static CompletableFuture<GetAppServicePlanResult> invokeAsync(GetAppServicePlanArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getAppServicePlan", TypeShape.of(GetAppServicePlanResult.class), args == null ? GetAppServicePlanArgs.Empty : args, Utilities.withVersion(options));
     }

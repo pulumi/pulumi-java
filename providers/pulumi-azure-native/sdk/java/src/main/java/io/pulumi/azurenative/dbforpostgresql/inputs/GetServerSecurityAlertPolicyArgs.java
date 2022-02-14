@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetServerSecurityAlertPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServerSecurityAlertPolicyArgs Empty = new GetServerSecurityAlertPolicyArgs();
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class GetServerSecurityAlertPolicyArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the security alert policy.
+     */
     @InputImport(name="securityAlertPolicyName", required=true)
     private final String securityAlertPolicyName;
 
@@ -26,6 +35,9 @@ public final class GetServerSecurityAlertPolicyArgs extends io.pulumi.resources.
         return this.securityAlertPolicyName;
     }
 
+    /**
+     * The name of the server.
+     */
     @InputImport(name="serverName", required=true)
     private final String serverName;
 

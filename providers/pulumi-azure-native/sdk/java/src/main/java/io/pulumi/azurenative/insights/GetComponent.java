@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetComponent {
+/**
+ * An Application Insights component definition.
+API Version: 2015-05-01.
+ *
+ * An Application Insights component definition.
+ */
     public static CompletableFuture<GetComponentResult> invokeAsync(GetComponentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getComponent", TypeShape.of(GetComponentResult.class), args == null ? GetComponentArgs.Empty : args, Utilities.withVersion(options));
     }

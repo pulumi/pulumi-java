@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.devtestlab;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.devtestlab.ServiceRunnerArgs;
 import io.pulumi.azurenative.devtestlab.outputs.IdentityPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,39 +15,204 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A container for a managed identity to execute DevTest lab services.
+API Version: 2018-09-15.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### ServiceRunners_CreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceRunner = new AzureNative.DevTestLab.ServiceRunner("serviceRunner", new AzureNative.DevTestLab.ServiceRunnerArgs
+        {
+            Identity = new AzureNative.DevTestLab.Inputs.IdentityPropertiesArgs
+            {
+                ClientSecretUrl = "{identityClientSecretUrl}",
+                PrincipalId = "{identityPrincipalId}",
+                TenantId = "{identityTenantId}",
+                Type = "{identityType}",
+            },
+            LabName = "{devtestlabName}",
+            Location = "{location}",
+            Name = "{servicerunnerName}",
+            ResourceGroupName = "resourceGroupName",
+            Tags = 
+            {
+                { "tagName1", "tagValue1" },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devtestlab.NewServiceRunner(ctx, "serviceRunner", &devtestlab.ServiceRunnerArgs{
+			Identity: &devtestlab.IdentityPropertiesArgs{
+				ClientSecretUrl: pulumi.String("{identityClientSecretUrl}"),
+				PrincipalId:     pulumi.String("{identityPrincipalId}"),
+				TenantId:        pulumi.String("{identityTenantId}"),
+				Type:            pulumi.String("{identityType}"),
+			},
+			LabName:           pulumi.String("{devtestlabName}"),
+			Location:          pulumi.String("{location}"),
+			Name:              pulumi.String("{servicerunnerName}"),
+			ResourceGroupName: pulumi.String("resourceGroupName"),
+			Tags: pulumi.StringMap{
+				"tagName1": pulumi.String("tagValue1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const serviceRunner = new azure_native.devtestlab.ServiceRunner("serviceRunner", {
+    identity: {
+        clientSecretUrl: "{identityClientSecretUrl}",
+        principalId: "{identityPrincipalId}",
+        tenantId: "{identityTenantId}",
+        type: "{identityType}",
+    },
+    labName: "{devtestlabName}",
+    location: "{location}",
+    name: "{servicerunnerName}",
+    resourceGroupName: "resourceGroupName",
+    tags: {
+        tagName1: "tagValue1",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+service_runner = azure_native.devtestlab.ServiceRunner("serviceRunner",
+    identity=azure_native.devtestlab.IdentityPropertiesArgs(
+        client_secret_url="{identityClientSecretUrl}",
+        principal_id="{identityPrincipalId}",
+        tenant_id="{identityTenantId}",
+        type="{identityType}",
+    ),
+    lab_name="{devtestlabName}",
+    location="{location}",
+    name="{servicerunnerName}",
+    resource_group_name="resourceGroupName",
+    tags={
+        "tagName1": "tagValue1",
+    })
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devtestlab:ServiceRunner myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/servicerunners/{name} 
+```
+
+ */
 @ResourceType(type="azure-native:devtestlab:ServiceRunner")
 public class ServiceRunner extends io.pulumi.resources.CustomResource {
+    /**
+     * The identity of the resource.
+     */
     @OutputExport(name="identity", type=IdentityPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ IdentityPropertiesResponse> identity;
 
+    /**
+     * @return The identity of the resource.
+     */
     public Output</* @Nullable */ IdentityPropertiesResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * The location of the resource.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The location of the resource.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The tags of the resource.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ServiceRunner(String name, ServiceRunnerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:devtestlab:ServiceRunner", name, args == null ? ServiceRunnerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -68,6 +232,14 @@ public class ServiceRunner extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ServiceRunner get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServiceRunner(name, id, options);
     }

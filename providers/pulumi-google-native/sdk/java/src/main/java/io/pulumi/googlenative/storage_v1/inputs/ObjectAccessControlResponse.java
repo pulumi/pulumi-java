@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An access-control entry.
+ */
 public final class ObjectAccessControlResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ObjectAccessControlResponse Empty = new ObjectAccessControlResponse();
 
+    /**
+     * The name of the bucket.
+     */
     @InputImport(name="bucket", required=true)
     private final String bucket;
 
@@ -20,6 +26,9 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
         return this.bucket;
     }
 
+    /**
+     * The domain associated with the entity, if any.
+     */
     @InputImport(name="domain", required=true)
     private final String domain;
 
@@ -27,6 +36,9 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
         return this.domain;
     }
 
+    /**
+     * The email address associated with the entity, if any.
+     */
     @InputImport(name="email", required=true)
     private final String email;
 
@@ -34,6 +46,20 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
         return this.email;
     }
 
+    /**
+     * The entity holding the permission, in one of the following forms: 
+- user-userId 
+- user-email 
+- group-groupId 
+- group-email 
+- domain-domain 
+- project-team-projectId 
+- allUsers 
+- allAuthenticatedUsers Examples: 
+- The user liz@example.com would be user-liz@example.com. 
+- The group example@googlegroups.com would be group-example@googlegroups.com. 
+- To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
+     */
     @InputImport(name="entity", required=true)
     private final String entity;
 
@@ -41,6 +67,9 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
         return this.entity;
     }
 
+    /**
+     * The ID for the entity, if any.
+     */
     @InputImport(name="entityId", required=true)
     private final String entityId;
 
@@ -48,6 +77,9 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
         return this.entityId;
     }
 
+    /**
+     * HTTP 1.1 Entity tag for the access-control entry.
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -55,6 +87,9 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
         return this.etag;
     }
 
+    /**
+     * The content generation of the object, if applied to an object.
+     */
     @InputImport(name="generation", required=true)
     private final String generation;
 
@@ -62,6 +97,9 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
         return this.generation;
     }
 
+    /**
+     * The kind of item this is. For object access control entries, this is always storage#objectAccessControl.
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -69,6 +107,9 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
         return this.kind;
     }
 
+    /**
+     * The name of the object, if applied to an object.
+     */
     @InputImport(name="object", required=true)
     private final String object;
 
@@ -76,6 +117,9 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
         return this.object;
     }
 
+    /**
+     * The project team associated with the entity, if any.
+     */
     @InputImport(name="projectTeam", required=true)
     private final ObjectAccessControlProjectTeamResponse projectTeam;
 
@@ -83,6 +127,9 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
         return this.projectTeam;
     }
 
+    /**
+     * The access permission for the entity.
+     */
     @InputImport(name="role", required=true)
     private final String role;
 
@@ -90,6 +137,9 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
         return this.role;
     }
 
+    /**
+     * The link to this access-control entry.
+     */
     @InputImport(name="selfLink", required=true)
     private final String selfLink;
 

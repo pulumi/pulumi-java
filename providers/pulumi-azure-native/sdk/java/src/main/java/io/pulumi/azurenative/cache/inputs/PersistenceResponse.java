@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Persistence-related configuration for the RedisEnterprise database
+ */
 public final class PersistenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PersistenceResponse Empty = new PersistenceResponse();
 
+    /**
+     * Sets whether AOF is enabled.
+     */
     @InputImport(name="aofEnabled")
     private final @Nullable Boolean aofEnabled;
 
@@ -22,6 +28,9 @@ public final class PersistenceResponse extends io.pulumi.resources.InvokeArgs {
         return this.aofEnabled == null ? Optional.empty() : Optional.ofNullable(this.aofEnabled);
     }
 
+    /**
+     * Sets the frequency at which data is written to disk.
+     */
     @InputImport(name="aofFrequency")
     private final @Nullable String aofFrequency;
 
@@ -29,6 +38,9 @@ public final class PersistenceResponse extends io.pulumi.resources.InvokeArgs {
         return this.aofFrequency == null ? Optional.empty() : Optional.ofNullable(this.aofFrequency);
     }
 
+    /**
+     * Sets whether RDB is enabled.
+     */
     @InputImport(name="rdbEnabled")
     private final @Nullable Boolean rdbEnabled;
 
@@ -36,6 +48,9 @@ public final class PersistenceResponse extends io.pulumi.resources.InvokeArgs {
         return this.rdbEnabled == null ? Optional.empty() : Optional.ofNullable(this.rdbEnabled);
     }
 
+    /**
+     * Sets the frequency at which a snapshot of the database is created.
+     */
     @InputImport(name="rdbFrequency")
     private final @Nullable String rdbFrequency;
 

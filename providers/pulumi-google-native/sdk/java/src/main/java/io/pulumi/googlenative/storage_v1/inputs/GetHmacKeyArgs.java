@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetHmacKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetHmacKeyArgs Empty = new GetHmacKeyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="accessId", required=true)
     private final String accessId;
 
@@ -21,6 +27,9 @@ public final class GetHmacKeyArgs extends io.pulumi.resources.InvokeArgs {
         return this.accessId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -28,6 +37,9 @@ public final class GetHmacKeyArgs extends io.pulumi.resources.InvokeArgs {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="userProject")
     private final @Nullable String userProject;
 

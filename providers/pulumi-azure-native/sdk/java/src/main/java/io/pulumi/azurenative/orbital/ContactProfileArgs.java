@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContactProfileArgs Empty = new ContactProfileArgs();
 
+    /**
+     * Auto track configuration.
+     */
     @InputImport(name="autoTrackingConfiguration")
     private final @Nullable Input<AutoTrackingConfiguration> autoTrackingConfiguration;
 
@@ -26,6 +32,9 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoTrackingConfiguration == null ? Input.empty() : this.autoTrackingConfiguration;
     }
 
+    /**
+     * Contact Profile Name
+     */
     @InputImport(name="contactProfileName")
     private final @Nullable Input<String> contactProfileName;
 
@@ -33,6 +42,9 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.contactProfileName == null ? Input.empty() : this.contactProfileName;
     }
 
+    /**
+     * The URI of the Event Hub used for telemetry
+     */
     @InputImport(name="eventHubUri")
     private final @Nullable Input<String> eventHubUri;
 
@@ -40,6 +52,9 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.eventHubUri == null ? Input.empty() : this.eventHubUri;
     }
 
+    /**
+     * Links of the Contact Profile
+     */
     @InputImport(name="links", required=true)
     private final Input<List<ContactProfileLinkArgs>> links;
 
@@ -47,6 +62,9 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.links;
     }
 
+    /**
+     * The geo-location where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -54,6 +72,9 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Minimum viable elevation for the contact in decimal degrees.
+     */
     @InputImport(name="minimumElevationDegrees")
     private final @Nullable Input<Double> minimumElevationDegrees;
 
@@ -61,6 +82,9 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.minimumElevationDegrees == null ? Input.empty() : this.minimumElevationDegrees;
     }
 
+    /**
+     * Minimum viable contact duration in ISO 8601 format.
+     */
     @InputImport(name="minimumViableContactDuration")
     private final @Nullable Input<String> minimumViableContactDuration;
 
@@ -68,6 +92,9 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.minimumViableContactDuration == null ? Input.empty() : this.minimumViableContactDuration;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -75,6 +102,9 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

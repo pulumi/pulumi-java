@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SKU of a public IP address.
+ */
 public final class PublicIPAddressSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PublicIPAddressSkuArgs Empty = new PublicIPAddressSkuArgs();
 
+    /**
+     * Name of a public IP address SKU.
+     */
     @InputImport(name="name")
     private final @Nullable Input<Either<String,PublicIPAddressSkuName>> name;
 
@@ -24,6 +30,9 @@ public final class PublicIPAddressSkuArgs extends io.pulumi.resources.ResourceAr
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Tier of a public IP address SKU.
+     */
     @InputImport(name="tier")
     private final @Nullable Input<Either<String,PublicIPAddressSkuTier>> tier;
 

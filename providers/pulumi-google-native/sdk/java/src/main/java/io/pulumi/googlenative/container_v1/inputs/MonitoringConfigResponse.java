@@ -8,10 +8,16 @@ import io.pulumi.googlenative.container_v1.inputs.MonitoringComponentConfigRespo
 import java.util.Objects;
 
 
+/**
+ * MonitoringConfig is cluster monitoring configuration.
+ */
 public final class MonitoringConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MonitoringConfigResponse Empty = new MonitoringConfigResponse();
 
+    /**
+     * Monitoring components configuration
+     */
     @InputImport(name="componentConfig", required=true)
     private final MonitoringComponentConfigResponse componentConfig;
 

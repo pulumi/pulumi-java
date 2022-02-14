@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * type of target scope
+ */
     @EnumType
     public enum ScopeType {
+/**
+ * 
+ */
         ResourceGroup("ResourceGroup"),
+/**
+ * 
+ */
         Resource("Resource"),
+/**
+ * 
+ */
         Subscription("Subscription");
 
         private final String value;

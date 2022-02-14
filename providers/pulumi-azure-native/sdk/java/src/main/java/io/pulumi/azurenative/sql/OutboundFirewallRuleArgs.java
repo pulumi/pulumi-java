@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class OutboundFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OutboundFirewallRuleArgs Empty = new OutboundFirewallRuleArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="outboundRuleFqdn")
     private final @Nullable Input<String> outboundRuleFqdn;
 
@@ -21,6 +27,9 @@ public final class OutboundFirewallRuleArgs extends io.pulumi.resources.Resource
         return this.outboundRuleFqdn == null ? Input.empty() : this.outboundRuleFqdn;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -28,6 +37,9 @@ public final class OutboundFirewallRuleArgs extends io.pulumi.resources.Resource
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 

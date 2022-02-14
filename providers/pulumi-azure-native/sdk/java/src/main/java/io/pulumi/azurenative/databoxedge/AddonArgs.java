@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AddonArgs Empty = new AddonArgs();
 
+    /**
+     * The addon name.
+     */
     @InputImport(name="addonName")
     private final @Nullable Input<String> addonName;
 
@@ -23,6 +29,9 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.addonName == null ? Input.empty() : this.addonName;
     }
 
+    /**
+     * The device name.
+     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -30,6 +39,9 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.deviceName;
     }
 
+    /**
+     * Addon type.
+     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,AddonType>> kind;
 
@@ -37,6 +49,9 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +59,9 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The role name.
+     */
     @InputImport(name="roleName", required=true)
     private final Input<String> roleName;
 

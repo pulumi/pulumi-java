@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Definition of RunAs credential to use for hybrid worker.
+ */
 public final class RunAsCredentialAssociationPropertyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RunAsCredentialAssociationPropertyArgs Empty = new RunAsCredentialAssociationPropertyArgs();
 
+    /**
+     * Gets or sets the name of the credential.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

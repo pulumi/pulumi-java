@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a blob input data source that contains reference data.
+ */
 public final class BlobReferenceInputDataSourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BlobReferenceInputDataSourceResponse Empty = new BlobReferenceInputDataSourceResponse();
 
+    /**
+     * The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.
+     */
     @InputImport(name="container")
     private final @Nullable String container;
 
@@ -23,6 +29,9 @@ public final class BlobReferenceInputDataSourceResponse extends io.pulumi.resour
         return this.container == null ? Optional.empty() : Optional.ofNullable(this.container);
     }
 
+    /**
+     * The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.
+     */
     @InputImport(name="dateFormat")
     private final @Nullable String dateFormat;
 
@@ -30,6 +39,9 @@ public final class BlobReferenceInputDataSourceResponse extends io.pulumi.resour
         return this.dateFormat == null ? Optional.empty() : Optional.ofNullable(this.dateFormat);
     }
 
+    /**
+     * The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.
+     */
     @InputImport(name="pathPattern")
     private final @Nullable String pathPattern;
 
@@ -37,6 +49,9 @@ public final class BlobReferenceInputDataSourceResponse extends io.pulumi.resour
         return this.pathPattern == null ? Optional.empty() : Optional.ofNullable(this.pathPattern);
     }
 
+    /**
+     * A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.
+     */
     @InputImport(name="storageAccounts")
     private final @Nullable List<StorageAccountResponse> storageAccounts;
 
@@ -44,6 +59,9 @@ public final class BlobReferenceInputDataSourceResponse extends io.pulumi.resour
         return this.storageAccounts == null ? List.of() : this.storageAccounts;
     }
 
+    /**
+     * The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.
+     */
     @InputImport(name="timeFormat")
     private final @Nullable String timeFormat;
 
@@ -51,6 +69,10 @@ public final class BlobReferenceInputDataSourceResponse extends io.pulumi.resour
         return this.timeFormat == null ? Optional.empty() : Optional.ofNullable(this.timeFormat);
     }
 
+    /**
+     * Indicates the type of input data source containing reference data. Required on PUT (CreateOrReplace) requests.
+Expected value is 'Microsoft.Storage/Blob'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

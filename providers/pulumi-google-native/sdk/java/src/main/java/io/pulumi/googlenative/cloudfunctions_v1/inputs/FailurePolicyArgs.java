@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the policy in case of function's execution failure. If empty, then defaults to ignoring failures (i.e. not retrying them).
+ */
 public final class FailurePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FailurePolicyArgs Empty = new FailurePolicyArgs();
 
+    /**
+     * If specified, then the function will be retried in case of a failure.
+     */
     @InputImport(name="retry")
     private final @Nullable Input<RetryArgs> retry;
 

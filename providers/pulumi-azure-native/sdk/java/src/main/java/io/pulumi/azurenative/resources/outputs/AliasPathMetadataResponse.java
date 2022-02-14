@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AliasPathMetadataResponse {
+/**
+ * The attributes of the token that the alias path is referring to.
+ */
     private final String attributes;
+/**
+ * The type of the token that the alias path is referring to.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"attributes","type"})
@@ -20,9 +26,15 @@ public final class AliasPathMetadataResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The attributes of the token that the alias path is referring to.
+ */
     public String getAttributes() {
         return this.attributes;
     }
+/**
+ * The type of the token that the alias path is referring to.
+ */
     public String getType() {
         return this.type;
     }

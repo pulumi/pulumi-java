@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class OrganizationResourcePropertiesResponseUserDetail {
+/**
+ * Email address
+ */
     private final @Nullable String emailAddress;
+/**
+ * First name
+ */
     private final @Nullable String firstName;
+/**
+ * Last name
+ */
     private final @Nullable String lastName;
 
     @OutputCustomType.Constructor({"emailAddress","firstName","lastName"})
@@ -25,12 +34,21 @@ public final class OrganizationResourcePropertiesResponseUserDetail {
         this.lastName = lastName;
     }
 
+/**
+ * Email address
+ */
     public Optional<String> getEmailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
+/**
+ * First name
+ */
     public Optional<String> getFirstName() {
         return Optional.ofNullable(this.firstName);
     }
+/**
+ * Last name
+ */
     public Optional<String> getLastName() {
         return Optional.ofNullable(this.lastName);
     }

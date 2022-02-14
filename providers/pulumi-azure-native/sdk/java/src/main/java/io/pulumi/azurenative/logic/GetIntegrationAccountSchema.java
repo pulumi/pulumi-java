@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIntegrationAccountSchema {
+/**
+ * The integration account schema.
+API Version: 2019-05-01.
+ *
+ * The integration account schema.
+ */
     public static CompletableFuture<GetIntegrationAccountSchemaResult> invokeAsync(GetIntegrationAccountSchemaArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logic:getIntegrationAccountSchema", TypeShape.of(GetIntegrationAccountSchemaResult.class), args == null ? GetIntegrationAccountSchemaArgs.Empty : args, Utilities.withVersion(options));
     }

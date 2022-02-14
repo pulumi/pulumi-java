@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).
+ */
 public final class LinuxConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LinuxConfigurationResponse Empty = new LinuxConfigurationResponse();
 
+    /**
+     * Specifies whether password authentication should be disabled.
+     */
     @InputImport(name="disablePasswordAuthentication")
     private final @Nullable Boolean disablePasswordAuthentication;
 
@@ -23,6 +29,9 @@ public final class LinuxConfigurationResponse extends io.pulumi.resources.Invoke
         return this.disablePasswordAuthentication == null ? Optional.empty() : Optional.ofNullable(this.disablePasswordAuthentication);
     }
 
+    /**
+     * [Preview Feature] Specifies settings related to VM Guest Patching on Linux.
+     */
     @InputImport(name="patchSettings")
     private final @Nullable LinuxPatchSettingsResponse patchSettings;
 
@@ -30,6 +39,9 @@ public final class LinuxConfigurationResponse extends io.pulumi.resources.Invoke
         return this.patchSettings == null ? Optional.empty() : Optional.ofNullable(this.patchSettings);
     }
 
+    /**
+     * Indicates whether virtual machine agent should be provisioned on the virtual machine. <br><br> When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
+     */
     @InputImport(name="provisionVMAgent")
     private final @Nullable Boolean provisionVMAgent;
 
@@ -37,6 +49,9 @@ public final class LinuxConfigurationResponse extends io.pulumi.resources.Invoke
         return this.provisionVMAgent == null ? Optional.empty() : Optional.ofNullable(this.provisionVMAgent);
     }
 
+    /**
+     * Specifies the ssh key configuration for a Linux OS.
+     */
     @InputImport(name="ssh")
     private final @Nullable SshConfigurationResponse ssh;
 

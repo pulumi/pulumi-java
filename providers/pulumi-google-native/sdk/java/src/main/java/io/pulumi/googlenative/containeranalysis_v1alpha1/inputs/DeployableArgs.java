@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An artifact that can be deployed in some runtime.
+ */
 public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeployableArgs Empty = new DeployableArgs();
 
+    /**
+     * Resource URI for the artifact being deployed.
+     */
     @InputImport(name="resourceUri")
     private final @Nullable Input<List<String>> resourceUri;
 

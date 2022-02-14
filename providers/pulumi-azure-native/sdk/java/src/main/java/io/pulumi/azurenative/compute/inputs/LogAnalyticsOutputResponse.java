@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * LogAnalytics output properties
+ */
 public final class LogAnalyticsOutputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LogAnalyticsOutputResponse Empty = new LogAnalyticsOutputResponse();
 
+    /**
+     * Output file Uri path to blob container.
+     */
     @InputImport(name="output", required=true)
     private final String output;
 

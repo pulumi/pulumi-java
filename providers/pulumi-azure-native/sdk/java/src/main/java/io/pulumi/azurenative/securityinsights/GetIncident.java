@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIncident {
+/**
+ * Represents an incident in Azure Security Insights.
+API Version: 2020-01-01.
+ *
+ * Represents an incident in Azure Security Insights.
+ */
     public static CompletableFuture<GetIncidentResult> invokeAsync(GetIncidentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getIncident", TypeShape.of(GetIncidentResult.class), args == null ? GetIncidentArgs.Empty : args, Utilities.withVersion(options));
     }

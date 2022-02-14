@@ -9,10 +9,17 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The key authorization type integration runtime.
+ */
 public final class LinkedIntegrationRuntimeKeyAuthorizationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LinkedIntegrationRuntimeKeyAuthorizationResponse Empty = new LinkedIntegrationRuntimeKeyAuthorizationResponse();
 
+    /**
+     * The authorization type for integration runtime sharing.
+Expected value is 'Key'.
+     */
     @InputImport(name="authorizationType", required=true)
     private final String authorizationType;
 
@@ -20,6 +27,9 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationResponse extends io.p
         return this.authorizationType;
     }
 
+    /**
+     * The key used for authorization.
+     */
     @InputImport(name="key", required=true)
     private final SecureStringResponse key;
 

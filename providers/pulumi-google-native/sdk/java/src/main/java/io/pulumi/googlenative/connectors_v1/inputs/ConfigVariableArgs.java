@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ConfigVariable represents a configuration variable present in a Connection. or AuthConfig.
+ */
 public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfigVariableArgs Empty = new ConfigVariableArgs();
 
+    /**
+     * Value is a bool.
+     */
     @InputImport(name="boolValue")
     private final @Nullable Input<Boolean> boolValue;
 
@@ -23,6 +29,9 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
         return this.boolValue == null ? Input.empty() : this.boolValue;
     }
 
+    /**
+     * Value is an integer
+     */
     @InputImport(name="intValue")
     private final @Nullable Input<String> intValue;
 
@@ -30,6 +39,9 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
         return this.intValue == null ? Input.empty() : this.intValue;
     }
 
+    /**
+     * Key of the config variable.
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 
@@ -37,6 +49,9 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
         return this.key == null ? Input.empty() : this.key;
     }
 
+    /**
+     * Value is a secret.
+     */
     @InputImport(name="secretValue")
     private final @Nullable Input<SecretArgs> secretValue;
 
@@ -44,6 +59,9 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
         return this.secretValue == null ? Input.empty() : this.secretValue;
     }
 
+    /**
+     * Value is a string.
+     */
     @InputImport(name="stringValue")
     private final @Nullable Input<String> stringValue;
 

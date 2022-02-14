@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Stage specifies a location to which to deploy.
+ */
 public final class StageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StageResponse Empty = new StageResponse();
 
+    /**
+     * Skaffold profiles to use when rendering the manifest for this stage's `Target`.
+     */
     @InputImport(name="profiles", required=true)
     private final List<String> profiles;
 
@@ -20,6 +26,9 @@ public final class StageResponse extends io.pulumi.resources.InvokeArgs {
         return this.profiles;
     }
 
+    /**
+     * The target_id to which this stage points. This field refers exclusively to the last segment of a target name. For example, this field would just be `my-target` (rather than `projects/project/locations/location/targets/my-target`). The location of the `Target` is inferred to be the same as the location of the `DeliveryPipeline` that contains this `Stage`.
+     */
     @InputImport(name="targetId", required=true)
     private final String targetId;
 

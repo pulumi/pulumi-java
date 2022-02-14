@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Routing rules in production experiments.
+ */
 public final class ExperimentsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExperimentsArgs Empty = new ExperimentsArgs();
 
+    /**
+     * List of ramp-up rules.
+     */
     @InputImport(name="rampUpRules")
     private final @Nullable Input<List<RampUpRuleArgs>> rampUpRules;
 

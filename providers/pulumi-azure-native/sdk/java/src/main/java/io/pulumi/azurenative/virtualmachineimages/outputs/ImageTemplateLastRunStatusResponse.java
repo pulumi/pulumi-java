@@ -11,10 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ImageTemplateLastRunStatusResponse {
+/**
+ * End time of the last run (UTC)
+ */
     private final @Nullable String endTime;
+/**
+ * Verbose information about the last run state
+ */
     private final @Nullable String message;
+/**
+ * State of the last run
+ */
     private final @Nullable String runState;
+/**
+ * Sub-state of the last run
+ */
     private final @Nullable String runSubState;
+/**
+ * Start time of the last run (UTC)
+ */
     private final @Nullable String startTime;
 
     @OutputCustomType.Constructor({"endTime","message","runState","runSubState","startTime"})
@@ -31,18 +46,33 @@ public final class ImageTemplateLastRunStatusResponse {
         this.startTime = startTime;
     }
 
+/**
+ * End time of the last run (UTC)
+ */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
+/**
+ * Verbose information about the last run state
+ */
     public Optional<String> getMessage() {
         return Optional.ofNullable(this.message);
     }
+/**
+ * State of the last run
+ */
     public Optional<String> getRunState() {
         return Optional.ofNullable(this.runState);
     }
+/**
+ * Sub-state of the last run
+ */
     public Optional<String> getRunSubState() {
         return Optional.ofNullable(this.runSubState);
     }
+/**
+ * Start time of the last run (UTC)
+ */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }

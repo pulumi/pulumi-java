@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A voice receiver.
+ */
 public final class VoiceReceiverResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VoiceReceiverResponse Empty = new VoiceReceiverResponse();
 
+    /**
+     * The country code of the voice receiver.
+     */
     @InputImport(name="countryCode", required=true)
     private final String countryCode;
 
@@ -19,6 +25,9 @@ public final class VoiceReceiverResponse extends io.pulumi.resources.InvokeArgs 
         return this.countryCode;
     }
 
+    /**
+     * The name of the voice receiver. Names must be unique across all receivers within an action group.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +35,9 @@ public final class VoiceReceiverResponse extends io.pulumi.resources.InvokeArgs 
         return this.name;
     }
 
+    /**
+     * The phone number of the voice receiver.
+     */
     @InputImport(name="phoneNumber", required=true)
     private final String phoneNumber;
 

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum SecurityPolicyDdosProtectionConfigDdosProtection {
+/**
+ * 
+ */
         Advanced("ADVANCED"),
+/**
+ * 
+ */
         Standard("STANDARD");
 
         private final String value;

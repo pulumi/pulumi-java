@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class IotHubDataConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IotHubDataConnectionArgs Empty = new IotHubDataConnectionArgs();
 
+    /**
+     * The name of the Kusto cluster.
+     */
     @InputImport(name="clusterName", required=true)
     private final Input<String> clusterName;
 
@@ -24,6 +30,9 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
         return this.clusterName;
     }
 
+    /**
+     * The iot hub consumer group.
+     */
     @InputImport(name="consumerGroup", required=true)
     private final Input<String> consumerGroup;
 
@@ -31,6 +40,9 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
         return this.consumerGroup;
     }
 
+    /**
+     * The name of the data connection.
+     */
     @InputImport(name="dataConnectionName")
     private final @Nullable Input<String> dataConnectionName;
 
@@ -38,6 +50,9 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
         return this.dataConnectionName == null ? Input.empty() : this.dataConnectionName;
     }
 
+    /**
+     * The data format of the message. Optionally the data format can be added to each message.
+     */
     @InputImport(name="dataFormat")
     private final @Nullable Input<Either<String,IotHubDataFormat>> dataFormat;
 
@@ -45,6 +60,9 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
         return this.dataFormat == null ? Input.empty() : this.dataFormat;
     }
 
+    /**
+     * The name of the database in the Kusto cluster.
+     */
     @InputImport(name="databaseName", required=true)
     private final Input<String> databaseName;
 
@@ -52,6 +70,9 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
         return this.databaseName;
     }
 
+    /**
+     * System properties of the iot hub
+     */
     @InputImport(name="eventSystemProperties")
     private final @Nullable Input<List<String>> eventSystemProperties;
 
@@ -59,6 +80,9 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
         return this.eventSystemProperties == null ? Input.empty() : this.eventSystemProperties;
     }
 
+    /**
+     * The resource ID of the Iot hub to be used to create a data connection.
+     */
     @InputImport(name="iotHubResourceId", required=true)
     private final Input<String> iotHubResourceId;
 
@@ -66,6 +90,10 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
         return this.iotHubResourceId;
     }
 
+    /**
+     * Kind of the endpoint for the data connection
+Expected value is 'IotHub'.
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -73,6 +101,9 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
         return this.kind;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -80,6 +111,9 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
+     */
     @InputImport(name="mappingRuleName")
     private final @Nullable Input<String> mappingRuleName;
 
@@ -87,6 +121,9 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
         return this.mappingRuleName == null ? Input.empty() : this.mappingRuleName;
     }
 
+    /**
+     * The name of the resource group containing the Kusto cluster.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -94,6 +131,9 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the share access policy
+     */
     @InputImport(name="sharedAccessPolicyName", required=true)
     private final Input<String> sharedAccessPolicyName;
 
@@ -101,6 +141,9 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
         return this.sharedAccessPolicyName;
     }
 
+    /**
+     * The table where the data should be ingested. Optionally the table information can be added to each message.
+     */
     @InputImport(name="tableName")
     private final @Nullable Input<String> tableName;
 

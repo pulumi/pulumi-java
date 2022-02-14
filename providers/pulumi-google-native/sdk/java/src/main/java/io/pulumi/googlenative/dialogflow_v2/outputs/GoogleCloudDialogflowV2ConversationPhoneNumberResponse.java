@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2ConversationPhoneNumberResponse {
+/**
+ * The phone number to connect to this conversation.
+ */
     private final String phoneNumber;
 
     @OutputCustomType.Constructor({"phoneNumber"})
@@ -16,6 +19,9 @@ public final class GoogleCloudDialogflowV2ConversationPhoneNumberResponse {
         this.phoneNumber = Objects.requireNonNull(phoneNumber);
     }
 
+/**
+ * The phone number to connect to this conversation.
+ */
     public String getPhoneNumber() {
         return this.phoneNumber;
     }

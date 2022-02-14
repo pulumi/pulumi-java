@@ -24,10 +24,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TaskArgs Empty = new TaskArgs();
 
+    /**
+     * The machine configuration of the run agent.
+     */
     @InputImport(name="agentConfiguration")
     private final @Nullable Input<AgentPropertiesArgs> agentConfiguration;
 
@@ -35,6 +41,9 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentConfiguration == null ? Input.empty() : this.agentConfiguration;
     }
 
+    /**
+     * The dedicated agent pool for the task.
+     */
     @InputImport(name="agentPoolName")
     private final @Nullable Input<String> agentPoolName;
 
@@ -42,6 +51,9 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.agentPoolName == null ? Input.empty() : this.agentPoolName;
     }
 
+    /**
+     * The properties that describes a set of credentials that will be used when this run is invoked.
+     */
     @InputImport(name="credentials")
     private final @Nullable Input<CredentialsArgs> credentials;
 
@@ -49,6 +61,9 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.credentials == null ? Input.empty() : this.credentials;
     }
 
+    /**
+     * Identity for the resource.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<IdentityPropertiesArgs> identity;
 
@@ -56,6 +71,9 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * The value of this property indicates whether the task resource is system task or not.
+     */
     @InputImport(name="isSystemTask")
     private final @Nullable Input<Boolean> isSystemTask;
 
@@ -63,6 +81,9 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.isSystemTask == null ? Input.empty() : this.isSystemTask;
     }
 
+    /**
+     * The location of the resource. This cannot be changed after the resource is created.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -70,6 +91,9 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The template that describes the repository and tag information for run log artifact.
+     */
     @InputImport(name="logTemplate")
     private final @Nullable Input<String> logTemplate;
 
@@ -77,6 +101,9 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.logTemplate == null ? Input.empty() : this.logTemplate;
     }
 
+    /**
+     * The platform properties against which the run has to happen.
+     */
     @InputImport(name="platform")
     private final @Nullable Input<PlatformPropertiesArgs> platform;
 
@@ -84,6 +111,9 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.platform == null ? Input.empty() : this.platform;
     }
 
+    /**
+     * The name of the container registry.
+     */
     @InputImport(name="registryName", required=true)
     private final Input<String> registryName;
 
@@ -91,6 +121,9 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.registryName;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -98,6 +131,9 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The current status of task.
+     */
     @InputImport(name="status")
     private final @Nullable Input<Either<String,TaskStatus>> status;
 
@@ -105,6 +141,9 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.status == null ? Input.empty() : this.status;
     }
 
+    /**
+     * The properties of a task step.
+     */
     @InputImport(name="step")
     private final @Nullable Input<Object> step;
 
@@ -112,6 +151,9 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.step == null ? Input.empty() : this.step;
     }
 
+    /**
+     * The tags of the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -119,6 +161,9 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The name of the container registry task.
+     */
     @InputImport(name="taskName")
     private final @Nullable Input<String> taskName;
 
@@ -126,6 +171,9 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.taskName == null ? Input.empty() : this.taskName;
     }
 
+    /**
+     * Run timeout in seconds.
+     */
     @InputImport(name="timeout")
     private final @Nullable Input<Integer> timeout;
 
@@ -133,6 +181,9 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         return this.timeout == null ? Input.empty() : this.timeout;
     }
 
+    /**
+     * The properties that describe all triggers for the task.
+     */
     @InputImport(name="trigger")
     private final @Nullable Input<TriggerPropertiesArgs> trigger;
 

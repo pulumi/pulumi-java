@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.
+ */
     @EnumType
     public enum KubeletDiskType {
+/**
+ * 
+ */
         OS("OS"),
+/**
+ * 
+ */
         Temporary("Temporary");
 
         private final String value;

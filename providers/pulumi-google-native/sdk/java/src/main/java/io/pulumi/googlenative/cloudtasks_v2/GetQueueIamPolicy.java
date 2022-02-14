@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetQueueIamPolicy {
+/**
+ * Gets the access control policy for a Queue. Returns an empty policy if the resource exists and does not have a policy set. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission on the specified resource parent: * `cloudtasks.queues.getIamPolicy`
+ */
     public static CompletableFuture<GetQueueIamPolicyResult> invokeAsync(GetQueueIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudtasks/v2:getQueueIamPolicy", TypeShape.of(GetQueueIamPolicyResult.class), args == null ? GetQueueIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -15,10 +15,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Custom linked service.
+ */
 public final class CustomDataSourceLinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CustomDataSourceLinkedServiceResponse Empty = new CustomDataSourceLinkedServiceResponse();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -26,6 +32,9 @@ public final class CustomDataSourceLinkedServiceResponse extends io.pulumi.resou
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -33,6 +42,9 @@ public final class CustomDataSourceLinkedServiceResponse extends io.pulumi.resou
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -40,6 +52,9 @@ public final class CustomDataSourceLinkedServiceResponse extends io.pulumi.resou
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -47,6 +62,10 @@ public final class CustomDataSourceLinkedServiceResponse extends io.pulumi.resou
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'CustomDataSource'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

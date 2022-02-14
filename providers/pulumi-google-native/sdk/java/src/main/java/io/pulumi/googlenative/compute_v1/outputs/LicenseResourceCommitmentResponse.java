@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LicenseResourceCommitmentResponse {
+/**
+ * The number of licenses purchased.
+ */
     private final String amount;
+/**
+ * Specifies the core range of the instance for which this license applies.
+ */
     private final String coresPerLicense;
+/**
+ * Any applicable license URI.
+ */
     private final String license;
 
     @OutputCustomType.Constructor({"amount","coresPerLicense","license"})
@@ -23,12 +32,21 @@ public final class LicenseResourceCommitmentResponse {
         this.license = Objects.requireNonNull(license);
     }
 
+/**
+ * The number of licenses purchased.
+ */
     public String getAmount() {
         return this.amount;
     }
+/**
+ * Specifies the core range of the instance for which this license applies.
+ */
     public String getCoresPerLicense() {
         return this.coresPerLicense;
     }
+/**
+ * Any applicable license URI.
+ */
     public String getLicense() {
         return this.license;
     }

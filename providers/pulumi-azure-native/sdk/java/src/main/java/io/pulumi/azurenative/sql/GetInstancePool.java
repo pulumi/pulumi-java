@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstancePool {
+/**
+ * An Azure SQL instance pool.
+API Version: 2020-11-01-preview.
+ *
+ * An Azure SQL instance pool.
+ */
     public static CompletableFuture<GetInstancePoolResult> invokeAsync(GetInstancePoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getInstancePool", TypeShape.of(GetInstancePoolResult.class), args == null ? GetInstancePoolArgs.Empty : args, Utilities.withVersion(options));
     }

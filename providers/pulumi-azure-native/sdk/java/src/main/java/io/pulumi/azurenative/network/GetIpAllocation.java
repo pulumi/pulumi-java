@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIpAllocation {
+/**
+ * IpAllocation resource.
+API Version: 2020-11-01.
+ *
+ * IpAllocation resource.
+ */
     public static CompletableFuture<GetIpAllocationResult> invokeAsync(GetIpAllocationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getIpAllocation", TypeShape.of(GetIpAllocationResult.class), args == null ? GetIpAllocationArgs.Empty : args, Utilities.withVersion(options));
     }

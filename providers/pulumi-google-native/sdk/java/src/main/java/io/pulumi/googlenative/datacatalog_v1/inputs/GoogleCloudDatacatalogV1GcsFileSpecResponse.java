@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specification of a single file in Cloud Storage.
+ */
 public final class GoogleCloudDatacatalogV1GcsFileSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatacatalogV1GcsFileSpecResponse Empty = new GoogleCloudDatacatalogV1GcsFileSpecResponse();
 
+    /**
+     * Full file path. Example: `gs://bucket_name/a/b.txt`.
+     */
     @InputImport(name="filePath", required=true)
     private final String filePath;
 
@@ -20,6 +26,9 @@ public final class GoogleCloudDatacatalogV1GcsFileSpecResponse extends io.pulumi
         return this.filePath;
     }
 
+    /**
+     * Creation, modification, and expiration timestamps of a Cloud Storage file.
+     */
     @InputImport(name="gcsTimestamps", required=true)
     private final GoogleCloudDatacatalogV1SystemTimestampsResponse gcsTimestamps;
 
@@ -27,6 +36,9 @@ public final class GoogleCloudDatacatalogV1GcsFileSpecResponse extends io.pulumi
         return this.gcsTimestamps;
     }
 
+    /**
+     * File size in bytes.
+     */
     @InputImport(name="sizeBytes", required=true)
     private final String sizeBytes;
 

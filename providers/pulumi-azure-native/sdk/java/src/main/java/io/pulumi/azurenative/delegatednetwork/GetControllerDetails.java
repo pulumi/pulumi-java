@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetControllerDetails {
+/**
+ * Represents an instance of a DNC controller.
+API Version: 2021-03-15.
+ *
+ * Represents an instance of a DNC controller.
+ */
     public static CompletableFuture<GetControllerDetailsResult> invokeAsync(GetControllerDetailsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:delegatednetwork:getControllerDetails", TypeShape.of(GetControllerDetailsResult.class), args == null ? GetControllerDetailsArgs.Empty : args, Utilities.withVersion(options));
     }

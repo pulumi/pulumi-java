@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBlobContainerDataSetMapping {
+/**
+ * A Blob container data set mapping.
+API Version: 2020-09-01.
+ *
+ * A Blob container data set mapping.
+ */
     public static CompletableFuture<GetBlobContainerDataSetMappingResult> invokeAsync(GetBlobContainerDataSetMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getBlobContainerDataSetMapping", TypeShape.of(GetBlobContainerDataSetMappingResult.class), args == null ? GetBlobContainerDataSetMappingArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The default is BOTH.
+ */
     @EnumType
     public enum PacketMirroringFilterDirection {
+/**
+ * Default, both directions are mirrored.
+ */
         Both("BOTH"),
+/**
+ * Only egress traffic is mirrored.
+ */
         Egress("EGRESS"),
+/**
+ * Only ingress traffic is mirrored.
+ */
         Ingress("INGRESS");
 
         private final String value;

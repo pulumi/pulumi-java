@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RestrictionEvaluationsResponse {
+/**
+ * Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.
+ */
     private final MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation;
 
     @OutputCustomType.Constructor({"memberRestrictionEvaluation"})
@@ -16,6 +19,9 @@ public final class RestrictionEvaluationsResponse {
         this.memberRestrictionEvaluation = Objects.requireNonNull(memberRestrictionEvaluation);
     }
 
+/**
+ * Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.
+ */
     public MembershipRoleRestrictionEvaluationResponse getMemberRestrictionEvaluation() {
         return this.memberRestrictionEvaluation;
     }

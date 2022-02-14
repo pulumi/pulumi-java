@@ -12,10 +12,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Options allows customized resource handling by Deployment Manager.
+ */
 public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OptionsResponse Empty = new OptionsResponse();
 
+    /**
+     * Options regarding how to thread async requests.
+     */
     @InputImport(name="asyncOptions", required=true)
     private final List<AsyncOptionsResponse> asyncOptions;
 
@@ -23,6 +29,9 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
         return this.asyncOptions;
     }
 
+    /**
+     * The mappings that apply for requests.
+     */
     @InputImport(name="inputMappings", required=true)
     private final List<InputMappingResponse> inputMappings;
 
@@ -30,6 +39,9 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
         return this.inputMappings;
     }
 
+    /**
+     * The json path to the field in the resource JSON body into which the resource name should be mapped. Leaving this empty indicates that there should be no mapping performed.
+     */
     @InputImport(name="nameProperty", required=true)
     private final String nameProperty;
 
@@ -37,6 +49,9 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
         return this.nameProperty;
     }
 
+    /**
+     * Options for how to validate and process properties on a resource.
+     */
     @InputImport(name="validationOptions", required=true)
     private final ValidationOptionsResponse validationOptions;
 

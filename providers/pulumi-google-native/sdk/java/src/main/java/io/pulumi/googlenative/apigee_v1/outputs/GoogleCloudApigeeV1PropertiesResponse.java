@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudApigeeV1PropertiesResponse {
+/**
+ * List of all properties in the object
+ */
     private final List<GoogleCloudApigeeV1PropertyResponse> property;
 
     @OutputCustomType.Constructor({"property"})
@@ -17,6 +20,9 @@ public final class GoogleCloudApigeeV1PropertiesResponse {
         this.property = Objects.requireNonNull(property);
     }
 
+/**
+ * List of all properties in the object
+ */
     public List<GoogleCloudApigeeV1PropertyResponse> getProperty() {
         return this.property;
     }

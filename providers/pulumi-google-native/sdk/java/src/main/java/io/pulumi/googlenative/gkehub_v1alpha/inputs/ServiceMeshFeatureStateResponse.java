@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * **Service Mesh**: State for the whole Hub, as analyzed by the Service Mesh Hub Controller.
+ */
 public final class ServiceMeshFeatureStateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceMeshFeatureStateResponse Empty = new ServiceMeshFeatureStateResponse();
 
+    /**
+     * Results of running Service Mesh analyzers.
+     */
     @InputImport(name="analysisMessages", required=true)
     private final List<ServiceMeshAnalysisMessageResponse> analysisMessages;
 

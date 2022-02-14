@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The gateway details.
+ */
 public final class GatewayDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GatewayDetailsArgs Empty = new GatewayDetailsArgs();
 
+    /**
+     * Gateway resource to be associated with the server.
+     */
     @InputImport(name="gatewayResourceId")
     private final @Nullable Input<String> gatewayResourceId;
 

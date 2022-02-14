@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ContainerGroupNetworkProfileResponse {
+/**
+ * The identifier for a network profile.
+ */
     private final String id;
 
     @OutputCustomType.Constructor({"id"})
@@ -16,6 +19,9 @@ public final class ContainerGroupNetworkProfileResponse {
         this.id = Objects.requireNonNull(id);
     }
 
+/**
+ * The identifier for a network profile.
+ */
     public String getId() {
         return this.id;
     }

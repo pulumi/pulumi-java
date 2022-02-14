@@ -14,10 +14,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LiveEventPreviewResponse {
+/**
+ * The access control for live event preview.
+ */
     private final @Nullable LiveEventPreviewAccessControlResponse accessControl;
+/**
+ * An alternative media identifier associated with the streaming locator created for the preview. This value is specified at creation time and cannot be updated. The identifier can be used in the CustomLicenseAcquisitionUrlTemplate or the CustomKeyAcquisitionUrlTemplate of the StreamingPolicy specified in the StreamingPolicyName field.
+ */
     private final @Nullable String alternativeMediaId;
+/**
+ * The endpoints for preview. Do not share the preview URL with the live event audience.
+ */
     private final @Nullable List<LiveEventEndpointResponse> endpoints;
+/**
+ * The identifier of the preview locator in Guid format. Specifying this at creation time allows the caller to know the preview locator url before the event is created. If omitted, the service will generate a random identifier. This value cannot be updated once the live event is created.
+ */
     private final @Nullable String previewLocator;
+/**
+ * The name of streaming policy used for the live event preview. This value is specified at creation time and cannot be updated.
+ */
     private final @Nullable String streamingPolicyName;
 
     @OutputCustomType.Constructor({"accessControl","alternativeMediaId","endpoints","previewLocator","streamingPolicyName"})
@@ -34,18 +49,33 @@ public final class LiveEventPreviewResponse {
         this.streamingPolicyName = streamingPolicyName;
     }
 
+/**
+ * The access control for live event preview.
+ */
     public Optional<LiveEventPreviewAccessControlResponse> getAccessControl() {
         return Optional.ofNullable(this.accessControl);
     }
+/**
+ * An alternative media identifier associated with the streaming locator created for the preview. This value is specified at creation time and cannot be updated. The identifier can be used in the CustomLicenseAcquisitionUrlTemplate or the CustomKeyAcquisitionUrlTemplate of the StreamingPolicy specified in the StreamingPolicyName field.
+ */
     public Optional<String> getAlternativeMediaId() {
         return Optional.ofNullable(this.alternativeMediaId);
     }
+/**
+ * The endpoints for preview. Do not share the preview URL with the live event audience.
+ */
     public List<LiveEventEndpointResponse> getEndpoints() {
         return this.endpoints == null ? List.of() : this.endpoints;
     }
+/**
+ * The identifier of the preview locator in Guid format. Specifying this at creation time allows the caller to know the preview locator url before the event is created. If omitted, the service will generate a random identifier. This value cannot be updated once the live event is created.
+ */
     public Optional<String> getPreviewLocator() {
         return Optional.ofNullable(this.previewLocator);
     }
+/**
+ * The name of streaming policy used for the live event preview. This value is specified at creation time and cannot be updated.
+ */
     public Optional<String> getStreamingPolicyName() {
         return Optional.ofNullable(this.streamingPolicyName);
     }

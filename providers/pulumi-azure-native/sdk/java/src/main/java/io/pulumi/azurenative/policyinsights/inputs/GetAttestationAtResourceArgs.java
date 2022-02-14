@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetAttestationAtResourceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAttestationAtResourceArgs Empty = new GetAttestationAtResourceArgs();
 
+    /**
+     * The name of the attestation.
+     */
     @InputImport(name="attestationName", required=true)
     private final String attestationName;
 
@@ -19,6 +25,9 @@ public final class GetAttestationAtResourceArgs extends io.pulumi.resources.Invo
         return this.attestationName;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="resourceId", required=true)
     private final String resourceId;
 

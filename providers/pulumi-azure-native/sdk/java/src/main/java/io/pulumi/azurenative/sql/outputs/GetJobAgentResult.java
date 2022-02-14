@@ -13,13 +13,37 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetJobAgentResult {
+/**
+ * Resource ID of the database to store job metadata in.
+ */
     private final String databaseId;
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Resource location.
+ */
     private final String location;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * The name and tier of the SKU.
+ */
     private final @Nullable SkuResponse sku;
+/**
+ * The state of the job agent.
+ */
     private final String state;
+/**
+ * Resource tags.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"databaseId","id","location","name","sku","state","tags","type"})
@@ -42,27 +66,51 @@ public final class GetJobAgentResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Resource ID of the database to store job metadata in.
+ */
     public String getDatabaseId() {
         return this.databaseId;
     }
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource location.
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The name and tier of the SKU.
+ */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
+/**
+ * The state of the job agent.
+ */
     public String getState() {
         return this.state;
     }
+/**
+ * Resource tags.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

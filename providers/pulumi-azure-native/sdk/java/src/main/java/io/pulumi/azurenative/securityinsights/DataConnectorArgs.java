@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataConnectorArgs Empty = new DataConnectorArgs();
 
+    /**
+     * Connector ID
+     */
     @InputImport(name="dataConnectorId")
     private final @Nullable Input<String> dataConnectorId;
 
@@ -23,6 +29,9 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataConnectorId == null ? Input.empty() : this.dataConnectorId;
     }
 
+    /**
+     * The data connector kind
+     */
     @InputImport(name="kind", required=true)
     private final Input<Either<String,DataConnectorKind>> kind;
 
@@ -30,6 +39,9 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +49,9 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

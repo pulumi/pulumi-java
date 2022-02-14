@@ -8,10 +8,16 @@ import io.pulumi.googlenative.testing_v1.inputs.GoogleAutoResponse;
 import java.util.Objects;
 
 
+/**
+ * Identifies an account and how to log into it.
+ */
 public final class AccountResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AccountResponse Empty = new AccountResponse();
 
+    /**
+     * An automatic google login account.
+     */
     @InputImport(name="googleAuto", required=true)
     private final GoogleAutoResponse googleAuto;
 

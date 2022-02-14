@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Contact information for a customer account.
+ */
 public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudChannelV1ContactInfoResponse Empty = new GoogleCloudChannelV1ContactInfoResponse();
 
+    /**
+     * The customer account contact's display name, formatted as a combination of the customer's first and last name.
+     */
     @InputImport(name="displayName", required=true)
     private final String displayName;
 
@@ -19,6 +25,9 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
         return this.displayName;
     }
 
+    /**
+     * The customer account's contact email. Required for entitlements that create admin.google.com accounts, and serves as the customer's username for those accounts. Use this email to invite Team customers.
+     */
     @InputImport(name="email", required=true)
     private final String email;
 
@@ -26,6 +35,9 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
         return this.email;
     }
 
+    /**
+     * The customer account contact's first name. Optional for Team customers.
+     */
     @InputImport(name="firstName", required=true)
     private final String firstName;
 
@@ -33,6 +45,9 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
         return this.firstName;
     }
 
+    /**
+     * The customer account contact's last name. Optional for Team customers.
+     */
     @InputImport(name="lastName", required=true)
     private final String lastName;
 
@@ -40,6 +55,9 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
         return this.lastName;
     }
 
+    /**
+     * The customer account's contact phone number.
+     */
     @InputImport(name="phone", required=true)
     private final String phone;
 
@@ -47,6 +65,9 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
         return this.phone;
     }
 
+    /**
+     * Optional. The customer account contact's job title.
+     */
     @InputImport(name="title", required=true)
     private final String title;
 

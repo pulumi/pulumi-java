@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details of the encryption associated with the workspace
+ */
 public final class EncryptionDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EncryptionDetailsArgs Empty = new EncryptionDetailsArgs();
 
+    /**
+     * Customer Managed Key Details
+     */
     @InputImport(name="cmk")
     private final @Nullable Input<CustomerManagedKeyDetailsArgs> cmk;
 

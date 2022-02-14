@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of a source based trigger.
+ */
 public final class SourceTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SourceTriggerResponse Empty = new SourceTriggerResponse();
 
+    /**
+     * The name of the trigger.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -23,6 +29,9 @@ public final class SourceTriggerResponse extends io.pulumi.resources.InvokeArgs 
         return this.name;
     }
 
+    /**
+     * The properties that describes the source(code) for the task.
+     */
     @InputImport(name="sourceRepository", required=true)
     private final SourcePropertiesResponse sourceRepository;
 
@@ -30,6 +39,9 @@ public final class SourceTriggerResponse extends io.pulumi.resources.InvokeArgs 
         return this.sourceRepository;
     }
 
+    /**
+     * The source event corresponding to the trigger.
+     */
     @InputImport(name="sourceTriggerEvents", required=true)
     private final List<String> sourceTriggerEvents;
 
@@ -37,6 +49,9 @@ public final class SourceTriggerResponse extends io.pulumi.resources.InvokeArgs 
         return this.sourceTriggerEvents;
     }
 
+    /**
+     * The current status of trigger.
+     */
     @InputImport(name="status")
     private final @Nullable String status;
 

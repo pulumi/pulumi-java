@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectToTargetSqlSqlDbSyncTaskInputResponse {
+/**
+ * Connection information for source SQL Server
+ */
     private final SqlConnectionInfoResponse sourceConnectionInfo;
+/**
+ * Connection information for target SQL DB
+ */
     private final SqlConnectionInfoResponse targetConnectionInfo;
 
     @OutputCustomType.Constructor({"sourceConnectionInfo","targetConnectionInfo"})
@@ -20,9 +26,15 @@ public final class ConnectToTargetSqlSqlDbSyncTaskInputResponse {
         this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
     }
 
+/**
+ * Connection information for source SQL Server
+ */
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
+/**
+ * Connection information for target SQL DB
+ */
     public SqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }

@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum OptInHeaderType {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         SignedUserToken("SignedUserToken"),
+/**
+ * 
+ */
         ClientGroupMembership("ClientGroupMembership"),
+/**
+ * 
+ */
         SignedAuxiliaryTokens("SignedAuxiliaryTokens"),
+/**
+ * 
+ */
         UnboundedClientGroupMembership("UnboundedClientGroupMembership");
 
         private final String value;

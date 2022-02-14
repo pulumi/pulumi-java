@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class OracleSourceConfigResponse {
+/**
+ * Oracle objects to include in the stream.
+ */
     private final OracleRdbmsResponse allowlist;
+/**
+ * Oracle objects to exclude from the stream.
+ */
     private final OracleRdbmsResponse rejectlist;
 
     @OutputCustomType.Constructor({"allowlist","rejectlist"})
@@ -20,9 +26,15 @@ public final class OracleSourceConfigResponse {
         this.rejectlist = Objects.requireNonNull(rejectlist);
     }
 
+/**
+ * Oracle objects to include in the stream.
+ */
     public OracleRdbmsResponse getAllowlist() {
         return this.allowlist;
     }
+/**
+ * Oracle objects to exclude from the stream.
+ */
     public OracleRdbmsResponse getRejectlist() {
         return this.rejectlist;
     }

@@ -21,10 +21,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProjectArgs Empty = new ProjectArgs();
 
+    /**
+     * List of DatabaseInfo
+     */
     @InputImport(name="databasesInfo")
     private final @Nullable Input<List<DatabaseInfoArgs>> databasesInfo;
 
@@ -32,6 +38,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.databasesInfo == null ? Input.empty() : this.databasesInfo;
     }
 
+    /**
+     * Name of the resource group
+     */
     @InputImport(name="groupName", required=true)
     private final Input<String> groupName;
 
@@ -39,6 +48,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.groupName;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -46,6 +58,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of the project
+     */
     @InputImport(name="projectName")
     private final @Nullable Input<String> projectName;
 
@@ -53,6 +68,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.projectName == null ? Input.empty() : this.projectName;
     }
 
+    /**
+     * Name of the service
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -60,6 +78,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
+    /**
+     * Information for connecting to source
+     */
     @InputImport(name="sourceConnectionInfo")
     private final @Nullable Input<Object> sourceConnectionInfo;
 
@@ -67,6 +88,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceConnectionInfo == null ? Input.empty() : this.sourceConnectionInfo;
     }
 
+    /**
+     * Source platform for the project
+     */
     @InputImport(name="sourcePlatform", required=true)
     private final Input<Either<String,ProjectSourcePlatform>> sourcePlatform;
 
@@ -74,6 +98,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourcePlatform;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -81,6 +108,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Information for connecting to target
+     */
     @InputImport(name="targetConnectionInfo")
     private final @Nullable Input<Object> targetConnectionInfo;
 
@@ -88,6 +118,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetConnectionInfo == null ? Input.empty() : this.targetConnectionInfo;
     }
 
+    /**
+     * Target platform for the project
+     */
     @InputImport(name="targetPlatform", required=true)
     private final Input<Either<String,ProjectTargetPlatform>> targetPlatform;
 

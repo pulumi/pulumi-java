@@ -8,14 +8,38 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Days of the week.
+ */
     @EnumType
     public enum WeekDay {
+/**
+ * Schedule will run on Sunday
+ */
         Sunday("Sunday"),
+/**
+ * Schedule will run on Monday
+ */
         Monday("Monday"),
+/**
+ * Schedule will run on Tuesday
+ */
         Tuesday("Tuesday"),
+/**
+ * Schedule will run on Wednesday
+ */
         Wednesday("Wednesday"),
+/**
+ * Schedule will run on Thursday
+ */
         Thursday("Thursday"),
+/**
+ * Schedule will run on Friday
+ */
         Friday("Friday"),
+/**
+ * Schedule will run on Saturday
+ */
         Saturday("Saturday");
 
         private final String value;

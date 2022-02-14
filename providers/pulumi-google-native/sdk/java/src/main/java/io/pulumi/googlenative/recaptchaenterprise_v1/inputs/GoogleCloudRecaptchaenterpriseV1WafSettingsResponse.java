@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Settings specific to keys that can be used for WAF (Web Application Firewall).
+ */
 public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudRecaptchaenterpriseV1WafSettingsResponse Empty = new GoogleCloudRecaptchaenterpriseV1WafSettingsResponse();
 
+    /**
+     * The WAF feature for which this key is enabled.
+     */
     @InputImport(name="wafFeature", required=true)
     private final String wafFeature;
 
@@ -19,6 +25,9 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse extends i
         return this.wafFeature;
     }
 
+    /**
+     * The WAF service that uses this key.
+     */
     @InputImport(name="wafService", required=true)
     private final String wafService;
 

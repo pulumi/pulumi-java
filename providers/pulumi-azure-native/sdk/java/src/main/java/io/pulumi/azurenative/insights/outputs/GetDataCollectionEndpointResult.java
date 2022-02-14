@@ -16,19 +16,61 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDataCollectionEndpointResult {
+/**
+ * The endpoint used by agents to access their configuration.
+ */
     private final @Nullable DataCollectionEndpointResponseConfigurationAccess configurationAccess;
+/**
+ * Description of the data collection endpoint.
+ */
     private final @Nullable String description;
+/**
+ * Resource entity tag (ETag).
+ */
     private final String etag;
+/**
+ * Fully qualified ID of the resource.
+ */
     private final String id;
+/**
+ * The immutable ID of this data collection endpoint resource. This property is READ-ONLY.
+ */
     private final @Nullable String immutableId;
+/**
+ * The kind of the resource.
+ */
     private final @Nullable String kind;
+/**
+ * The geo-location where the resource lives.
+ */
     private final String location;
+/**
+ * The endpoint used by clients to ingest logs.
+ */
     private final @Nullable DataCollectionEndpointResponseLogsIngestion logsIngestion;
+/**
+ * The name of the resource.
+ */
     private final String name;
+/**
+ * Network access control rules for the endpoints.
+ */
     private final @Nullable DataCollectionEndpointResponseNetworkAcls networkAcls;
+/**
+ * The resource provisioning state. This property is READ-ONLY.
+ */
     private final String provisioningState;
+/**
+ * Metadata pertaining to creation and last modification of the resource.
+ */
     private final DataCollectionEndpointResourceResponseSystemData systemData;
+/**
+ * Resource tags.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * The type of the resource.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"configurationAccess","description","etag","id","immutableId","kind","location","logsIngestion","name","networkAcls","provisioningState","systemData","tags","type"})
@@ -63,45 +105,87 @@ public final class GetDataCollectionEndpointResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The endpoint used by agents to access their configuration.
+ */
     public Optional<DataCollectionEndpointResponseConfigurationAccess> getConfigurationAccess() {
         return Optional.ofNullable(this.configurationAccess);
     }
+/**
+ * Description of the data collection endpoint.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * Resource entity tag (ETag).
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * Fully qualified ID of the resource.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The immutable ID of this data collection endpoint resource. This property is READ-ONLY.
+ */
     public Optional<String> getImmutableId() {
         return Optional.ofNullable(this.immutableId);
     }
+/**
+ * The kind of the resource.
+ */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
+/**
+ * The geo-location where the resource lives.
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * The endpoint used by clients to ingest logs.
+ */
     public Optional<DataCollectionEndpointResponseLogsIngestion> getLogsIngestion() {
         return Optional.ofNullable(this.logsIngestion);
     }
+/**
+ * The name of the resource.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Network access control rules for the endpoints.
+ */
     public Optional<DataCollectionEndpointResponseNetworkAcls> getNetworkAcls() {
         return Optional.ofNullable(this.networkAcls);
     }
+/**
+ * The resource provisioning state. This property is READ-ONLY.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Metadata pertaining to creation and last modification of the resource.
+ */
     public DataCollectionEndpointResourceResponseSystemData getSystemData() {
         return this.systemData;
     }
+/**
+ * Resource tags.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * The type of the resource.
+ */
     public String getType() {
         return this.type;
     }

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetApiSchema {
+/**
+ * Schema Contract details.
+API Version: 2020-12-01.
+ *
+ * Schema Contract details.
+ */
     public static CompletableFuture<GetApiSchemaResult> invokeAsync(GetApiSchemaArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getApiSchema", TypeShape.of(GetApiSchemaResult.class), args == null ? GetApiSchemaArgs.Empty : args, Utilities.withVersion(options));
     }

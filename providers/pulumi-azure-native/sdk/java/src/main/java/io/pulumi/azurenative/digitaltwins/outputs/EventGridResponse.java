@@ -11,14 +11,42 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EventGridResponse {
+/**
+ * EventGrid secondary accesskey. Will be obfuscated during read.
+ */
     private final String accessKey1;
+/**
+ * EventGrid secondary accesskey. Will be obfuscated during read.
+ */
     private final @Nullable String accessKey2;
+/**
+ * Specifies the authentication type being used for connecting to the endpoint.
+ */
     private final @Nullable String authenticationType;
+/**
+ * Time when the Endpoint was added to DigitalTwinsInstance.
+ */
     private final String createdTime;
+/**
+ * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
+ */
     private final @Nullable String deadLetterSecret;
+/**
+ * Dead letter storage URL for identity-based authentication.
+ */
     private final @Nullable String deadLetterUri;
+/**
+ * The type of Digital Twins endpoint
+Expected value is 'EventGrid'.
+ */
     private final String endpointType;
+/**
+ * The provisioning state.
+ */
     private final String provisioningState;
+/**
+ * EventGrid Topic Endpoint
+ */
     private final String topicEndpoint;
 
     @OutputCustomType.Constructor({"accessKey1","accessKey2","authenticationType","createdTime","deadLetterSecret","deadLetterUri","endpointType","provisioningState","topicEndpoint"})
@@ -43,30 +71,58 @@ public final class EventGridResponse {
         this.topicEndpoint = Objects.requireNonNull(topicEndpoint);
     }
 
+/**
+ * EventGrid secondary accesskey. Will be obfuscated during read.
+ */
     public String getAccessKey1() {
         return this.accessKey1;
     }
+/**
+ * EventGrid secondary accesskey. Will be obfuscated during read.
+ */
     public Optional<String> getAccessKey2() {
         return Optional.ofNullable(this.accessKey2);
     }
+/**
+ * Specifies the authentication type being used for connecting to the endpoint.
+ */
     public Optional<String> getAuthenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
+/**
+ * Time when the Endpoint was added to DigitalTwinsInstance.
+ */
     public String getCreatedTime() {
         return this.createdTime;
     }
+/**
+ * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
+ */
     public Optional<String> getDeadLetterSecret() {
         return Optional.ofNullable(this.deadLetterSecret);
     }
+/**
+ * Dead letter storage URL for identity-based authentication.
+ */
     public Optional<String> getDeadLetterUri() {
         return Optional.ofNullable(this.deadLetterUri);
     }
+/**
+ * The type of Digital Twins endpoint
+Expected value is 'EventGrid'.
+ */
     public String getEndpointType() {
         return this.endpointType;
     }
+/**
+ * The provisioning state.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * EventGrid Topic Endpoint
+ */
     public String getTopicEndpoint() {
         return this.topicEndpoint;
     }

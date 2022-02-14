@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet mirroring policy will not be enforced on the network. The default is TRUE.
+ */
     @EnumType
     public enum PacketMirroringEnable {
+/**
+ * 
+ */
         False("FALSE"),
+/**
+ * 
+ */
         True("TRUE");
 
         private final String value;

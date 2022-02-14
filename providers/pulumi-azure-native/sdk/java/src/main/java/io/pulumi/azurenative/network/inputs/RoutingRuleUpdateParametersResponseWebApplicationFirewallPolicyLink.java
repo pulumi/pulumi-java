@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the Web Application Firewall policy for each routing rule (if applicable)
+ */
 public final class RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink extends io.pulumi.resources.InvokeArgs {
 
     public static final RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink Empty = new RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink();
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 

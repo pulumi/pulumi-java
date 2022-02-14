@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Buildpack properties payload
+ */
 public final class BuildpackPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BuildpackPropertiesArgs Empty = new BuildpackPropertiesArgs();
 
+    /**
+     * Id of the buildpack
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 

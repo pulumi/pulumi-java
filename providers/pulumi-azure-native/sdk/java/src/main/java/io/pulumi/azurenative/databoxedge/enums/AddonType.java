@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Addon type.
+ */
     @EnumType
     public enum AddonType {
+/**
+ * 
+ */
         IotEdge("IotEdge"),
+/**
+ * 
+ */
         ArcForKubernetes("ArcForKubernetes");
 
         private final String value;

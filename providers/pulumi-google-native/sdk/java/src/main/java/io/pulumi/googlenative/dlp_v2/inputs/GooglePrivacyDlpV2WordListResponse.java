@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Message defining a list of words or phrases to search for in the data.
+ */
 public final class GooglePrivacyDlpV2WordListResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2WordListResponse Empty = new GooglePrivacyDlpV2WordListResponse();
 
+    /**
+     * Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits. [required]
+     */
     @InputImport(name="words", required=true)
     private final List<String> words;
 

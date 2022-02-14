@@ -12,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RetryPolicyResponse {
+/**
+ * Gets or sets the number of times a retry should be attempted.
+ */
     private final @Nullable Integer retryCount;
+/**
+ * Gets or sets the retry interval between retries, specify duration in ISO 8601 format.
+ */
     private final @Nullable String retryInterval;
+/**
+ * Gets or sets the retry strategy to be used.
+ */
     private final @Nullable String retryType;
 
     @OutputCustomType.Constructor({"retryCount","retryInterval","retryType"})
@@ -26,12 +35,21 @@ public final class RetryPolicyResponse {
         this.retryType = retryType;
     }
 
+/**
+ * Gets or sets the number of times a retry should be attempted.
+ */
     public Optional<Integer> getRetryCount() {
         return Optional.ofNullable(this.retryCount);
     }
+/**
+ * Gets or sets the retry interval between retries, specify duration in ISO 8601 format.
+ */
     public Optional<String> getRetryInterval() {
         return Optional.ofNullable(this.retryInterval);
     }
+/**
+ * Gets or sets the retry strategy to be used.
+ */
     public Optional<String> getRetryType() {
         return Optional.ofNullable(this.retryType);
     }

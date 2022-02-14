@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebAppSlotConfigurationNamesArgs Empty = new WebAppSlotConfigurationNamesArgs();
 
+    /**
+     * List of application settings names.
+     */
     @InputImport(name="appSettingNames")
     private final @Nullable Input<List<String>> appSettingNames;
 
@@ -22,6 +28,9 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
         return this.appSettingNames == null ? Input.empty() : this.appSettingNames;
     }
 
+    /**
+     * List of external Azure storage account identifiers.
+     */
     @InputImport(name="azureStorageConfigNames")
     private final @Nullable Input<List<String>> azureStorageConfigNames;
 
@@ -29,6 +38,9 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
         return this.azureStorageConfigNames == null ? Input.empty() : this.azureStorageConfigNames;
     }
 
+    /**
+     * List of connection string names.
+     */
     @InputImport(name="connectionStringNames")
     private final @Nullable Input<List<String>> connectionStringNames;
 
@@ -36,6 +48,9 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
         return this.connectionStringNames == null ? Input.empty() : this.connectionStringNames;
     }
 
+    /**
+     * Kind of resource.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -43,6 +58,9 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the app.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -50,6 +68,9 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

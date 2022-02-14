@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The object that contains details of encryption used on the workspace.
+ */
 public final class WorkspaceEncryptionParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkspaceEncryptionParameterArgs Empty = new WorkspaceEncryptionParameterArgs();
 
+    /**
+     * The value which should be used for this field.
+     */
     @InputImport(name="value")
     private final @Nullable Input<EncryptionArgs> value;
 

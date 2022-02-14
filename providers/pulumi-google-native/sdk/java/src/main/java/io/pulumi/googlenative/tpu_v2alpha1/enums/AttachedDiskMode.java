@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The mode in which to attach this disk. If not specified, the default is READ_WRITE mode. Only applicable to data_disks.
+ */
     @EnumType
     public enum AttachedDiskMode {
+/**
+ * The disk mode is not known/set.
+ */
         DiskModeUnspecified("DISK_MODE_UNSPECIFIED"),
+/**
+ * Attaches the disk in read-write mode. Only one TPU node can attach a disk in read-write mode at a time.
+ */
         ReadWrite("READ_WRITE"),
+/**
+ * Attaches the disk in read-only mode. Multiple TPU nodes can attach a disk in read-only mode at a time.
+ */
         ReadOnly("READ_ONLY");
 
         private final String value;

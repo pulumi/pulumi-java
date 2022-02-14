@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReleaseArgs Empty = new ReleaseArgs();
 
+    /**
+     * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<Map<String,String>> annotations;
 
@@ -24,6 +30,9 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * List of artifacts to pass through to Skaffold command.
+     */
     @InputImport(name="buildArtifacts")
     private final @Nullable Input<List<BuildArtifactArgs>> buildArtifacts;
 
@@ -31,6 +40,9 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.buildArtifacts == null ? Input.empty() : this.buildArtifacts;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="deliveryPipelineId", required=true)
     private final Input<String> deliveryPipelineId;
 
@@ -38,6 +50,9 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.deliveryPipelineId;
     }
 
+    /**
+     * Description of the `Release`. Max length is 255 characters.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -45,6 +60,9 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -52,6 +70,9 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -59,6 +80,9 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -66,6 +90,9 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Optional. Name of the `Release`. Format is projects/{project}/ locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/a-z{0,62}.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -73,6 +100,9 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -80,6 +110,9 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="releaseId", required=true)
     private final Input<String> releaseId;
 
@@ -87,6 +120,9 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.releaseId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -94,6 +130,9 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * Filepath of the Skaffold config inside of the config URI.
+     */
     @InputImport(name="skaffoldConfigPath")
     private final @Nullable Input<String> skaffoldConfigPath;
 
@@ -101,6 +140,9 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.skaffoldConfigPath == null ? Input.empty() : this.skaffoldConfigPath;
     }
 
+    /**
+     * Cloud Storage URI of tar.gz archive containing Skaffold configuration.
+     */
     @InputImport(name="skaffoldConfigUri")
     private final @Nullable Input<String> skaffoldConfigUri;
 
@@ -108,6 +150,9 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.skaffoldConfigUri == null ? Input.empty() : this.skaffoldConfigUri;
     }
 
+    /**
+     * The Skaffold version to use when operating on this release, such as "1.20.0". Not all versions are valid; Google Cloud Deploy supports a specific set of versions. If unset, the most recent supported Skaffold version will be used.
+     */
     @InputImport(name="skaffoldVersion")
     private final @Nullable Input<String> skaffoldVersion;
 
@@ -115,6 +160,9 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
         return this.skaffoldVersion == null ? Input.empty() : this.skaffoldVersion;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="validateOnly")
     private final @Nullable Input<String> validateOnly;
 

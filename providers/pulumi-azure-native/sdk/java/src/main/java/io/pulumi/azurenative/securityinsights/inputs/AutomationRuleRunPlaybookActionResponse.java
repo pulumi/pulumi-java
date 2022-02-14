@@ -3,17 +3,22 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.azurenative.securityinsights.inputs.AutomationRuleRunPlaybookActionResponseActionConfiguration;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes an automation rule action to run a playbook
+ */
 public final class AutomationRuleRunPlaybookActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutomationRuleRunPlaybookActionResponse Empty = new AutomationRuleRunPlaybookActionResponse();
 
+    /**
+     * The configuration of the run playbook automation rule action
+     */
     @InputImport(name="actionConfiguration", required=true)
     private final AutomationRuleRunPlaybookActionResponseActionConfiguration actionConfiguration;
 
@@ -21,6 +26,10 @@ public final class AutomationRuleRunPlaybookActionResponse extends io.pulumi.res
         return this.actionConfiguration;
     }
 
+    /**
+     * The type of the automation rule action
+Expected value is 'RunPlaybook'.
+     */
     @InputImport(name="actionType", required=true)
     private final String actionType;
 
@@ -28,6 +37,9 @@ public final class AutomationRuleRunPlaybookActionResponse extends io.pulumi.res
         return this.actionType;
     }
 
+    /**
+     * The order of execution of the automation rule action
+     */
     @InputImport(name="order", required=true)
     private final Integer order;
 

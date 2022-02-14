@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnectorMapping {
+/**
+ * The connector mapping resource format.
+API Version: 2017-04-26.
+ *
+ * The connector mapping resource format.
+ */
     public static CompletableFuture<GetConnectorMappingResult> invokeAsync(GetConnectorMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getConnectorMapping", TypeShape.of(GetConnectorMappingResult.class), args == null ? GetConnectorMappingArgs.Empty : args, Utilities.withVersion(options));
     }

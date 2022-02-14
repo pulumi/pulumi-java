@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class FrontEndConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FrontEndConfigurationResponse Empty = new FrontEndConfigurationResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable String kind;
 

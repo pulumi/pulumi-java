@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.digitaltwins;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.digitaltwins.DigitalTwinsEndpointArgs;
 import io.pulumi.azurenative.digitaltwins.outputs.EventGridResponse;
 import io.pulumi.azurenative.digitaltwins.outputs.EventHubResponse;
 import io.pulumi.azurenative.digitaltwins.outputs.ServiceBusResponse;
@@ -18,27 +17,258 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * DigitalTwinsInstance endpoint resource.
+API Version: 2020-12-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Put a DigitalTwinsInstance resource
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var digitalTwinsEndpoint = new AzureNative.DigitalTwins.DigitalTwinsEndpoint("digitalTwinsEndpoint", new AzureNative.DigitalTwins.DigitalTwinsEndpointArgs
+        {
+            EndpointName = "myServiceBus",
+            Properties = new AzureNative.DigitalTwins.Inputs.ServiceBusArgs
+            {
+                AuthenticationType = "KeyBased",
+                EndpointType = "ServiceBus",
+                PrimaryConnectionString = "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+                SecondaryConnectionString = "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+            },
+            ResourceGroupName = "resRg",
+            ResourceName = "myDigitalTwinsService",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	digitaltwins "github.com/pulumi/pulumi-azure-native/sdk/go/azure/digitaltwins"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := digitaltwins.NewDigitalTwinsEndpoint(ctx, "digitalTwinsEndpoint", &digitaltwins.DigitalTwinsEndpointArgs{
+			EndpointName: pulumi.String("myServiceBus"),
+			Properties: digitaltwins.ServiceBus{
+				AuthenticationType:        "KeyBased",
+				EndpointType:              "ServiceBus",
+				PrimaryConnectionString:   "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+				SecondaryConnectionString: "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+			},
+			ResourceGroupName: pulumi.String("resRg"),
+			ResourceName:      pulumi.String("myDigitalTwinsService"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const digitalTwinsEndpoint = new azure_native.digitaltwins.DigitalTwinsEndpoint("digitalTwinsEndpoint", {
+    endpointName: "myServiceBus",
+    properties: {
+        authenticationType: "KeyBased",
+        endpointType: "ServiceBus",
+        primaryConnectionString: "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+        secondaryConnectionString: "Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+    },
+    resourceGroupName: "resRg",
+    resourceName: "myDigitalTwinsService",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+digital_twins_endpoint = azure_native.digitaltwins.DigitalTwinsEndpoint("digitalTwinsEndpoint",
+    endpoint_name="myServiceBus",
+    properties=azure_native.digitaltwins.ServiceBusArgs(
+        authentication_type="KeyBased",
+        endpoint_type="ServiceBus",
+        primary_connection_string="Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+        secondary_connection_string="Endpoint=sb://mysb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xyzxyzoX4=;EntityPath=abcabc",
+    ),
+    resource_group_name="resRg",
+    resource_name="myDigitalTwinsService")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Put a DigitalTwinsInstance resource with identity
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var digitalTwinsEndpoint = new AzureNative.DigitalTwins.DigitalTwinsEndpoint("digitalTwinsEndpoint", new AzureNative.DigitalTwins.DigitalTwinsEndpointArgs
+        {
+            EndpointName = "myServiceBus",
+            Properties = new AzureNative.DigitalTwins.Inputs.ServiceBusArgs
+            {
+                AuthenticationType = "IdentityBased",
+                EndpointType = "ServiceBus",
+                EndpointUri = "sb://mysb.servicebus.windows.net/",
+                EntityPath = "mysbtopic",
+            },
+            ResourceGroupName = "resRg",
+            ResourceName = "myDigitalTwinsService",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	digitaltwins "github.com/pulumi/pulumi-azure-native/sdk/go/azure/digitaltwins"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := digitaltwins.NewDigitalTwinsEndpoint(ctx, "digitalTwinsEndpoint", &digitaltwins.DigitalTwinsEndpointArgs{
+			EndpointName: pulumi.String("myServiceBus"),
+			Properties: digitaltwins.ServiceBus{
+				AuthenticationType: "IdentityBased",
+				EndpointType:       "ServiceBus",
+				EndpointUri:        "sb://mysb.servicebus.windows.net/",
+				EntityPath:         "mysbtopic",
+			},
+			ResourceGroupName: pulumi.String("resRg"),
+			ResourceName:      pulumi.String("myDigitalTwinsService"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const digitalTwinsEndpoint = new azure_native.digitaltwins.DigitalTwinsEndpoint("digitalTwinsEndpoint", {
+    endpointName: "myServiceBus",
+    properties: {
+        authenticationType: "IdentityBased",
+        endpointType: "ServiceBus",
+        endpointUri: "sb://mysb.servicebus.windows.net/",
+        entityPath: "mysbtopic",
+    },
+    resourceGroupName: "resRg",
+    resourceName: "myDigitalTwinsService",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+digital_twins_endpoint = azure_native.digitaltwins.DigitalTwinsEndpoint("digitalTwinsEndpoint",
+    endpoint_name="myServiceBus",
+    properties=azure_native.digitaltwins.ServiceBusArgs(
+        authentication_type="IdentityBased",
+        endpoint_type="ServiceBus",
+        endpoint_uri="sb://mysb.servicebus.windows.net/",
+        entity_path="mysbtopic",
+    ),
+    resource_group_name="resRg",
+    resource_name="myDigitalTwinsService")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:digitaltwins:DigitalTwinsEndpoint myServiceBus /subscriptions/50016170-c839-41ba-a724-51e9df440b9e/resourcegroups/resRg/providers/Microsoft.DigitalTwins/digitalTwinsInstances/myDigitalTwinsService/endpoints/myServiceBus 
+```
+
+ */
 @ResourceType(type="azure-native:digitaltwins:DigitalTwinsEndpoint")
 public class DigitalTwinsEndpoint extends io.pulumi.resources.CustomResource {
+    /**
+     * Extension resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Extension resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * DigitalTwinsInstance endpoint resource properties.
+     */
     @OutputExport(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
+    /**
+     * @return DigitalTwinsInstance endpoint resource properties.
+     */
     public Output<Object> getProperties() {
         return this.properties;
     }
+    /**
+     * The resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DigitalTwinsEndpoint(String name, DigitalTwinsEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:digitaltwins:DigitalTwinsEndpoint", name, args == null ? DigitalTwinsEndpointArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -60,6 +290,14 @@ public class DigitalTwinsEndpoint extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DigitalTwinsEndpoint get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DigitalTwinsEndpoint(name, id, options);
     }

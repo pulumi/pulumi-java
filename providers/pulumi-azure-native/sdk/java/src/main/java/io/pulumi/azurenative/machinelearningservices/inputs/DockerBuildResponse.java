@@ -11,10 +11,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Class to represent configuration settings for Docker Build
+ */
 public final class DockerBuildResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DockerBuildResponse Empty = new DockerBuildResponse();
 
+    /**
+     * Path to a snapshot of the Docker Context. This property is only valid if Dockerfile is specified.
+The path is relative to the asset path which must contain a single Blob URI value.
+<seealso href="https://docs.docker.com/engine/context/working-with-contexts/" />
+     */
     @InputImport(name="context")
     private final @Nullable String context;
 
@@ -22,6 +30,10 @@ public final class DockerBuildResponse extends io.pulumi.resources.InvokeArgs {
         return this.context == null ? Optional.empty() : Optional.ofNullable(this.context);
     }
 
+    /**
+     * Enum to determine docker specification type. Must be either Build or Image.
+Expected value is 'Build'.
+     */
     @InputImport(name="dockerSpecificationType", required=true)
     private final String dockerSpecificationType;
 
@@ -29,6 +41,10 @@ public final class DockerBuildResponse extends io.pulumi.resources.InvokeArgs {
         return this.dockerSpecificationType;
     }
 
+    /**
+     * Docker command line instructions to assemble an image.
+<seealso href="https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments" />
+     */
     @InputImport(name="dockerfile", required=true)
     private final String dockerfile;
 
@@ -36,6 +52,9 @@ public final class DockerBuildResponse extends io.pulumi.resources.InvokeArgs {
         return this.dockerfile;
     }
 
+    /**
+     * The platform information of the docker image.
+     */
     @InputImport(name="platform")
     private final @Nullable DockerImagePlatformResponse platform;
 

@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMonitoringConfig {
+/**
+ * The metric setting details for the role
+API Version: 2020-12-01.
+ *
+ * The metric setting details for the role
+ */
     public static CompletableFuture<GetMonitoringConfigResult> invokeAsync(GetMonitoringConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getMonitoringConfig", TypeShape.of(GetMonitoringConfigResult.class), args == null ? GetMonitoringConfigArgs.Empty : args, Utilities.withVersion(options));
     }

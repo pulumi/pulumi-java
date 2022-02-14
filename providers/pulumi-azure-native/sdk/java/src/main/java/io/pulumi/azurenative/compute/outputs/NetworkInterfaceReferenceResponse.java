@@ -12,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NetworkInterfaceReferenceResponse {
+/**
+ * Specify what happens to the network interface when the VM is deleted
+ */
     private final @Nullable String deleteOption;
+/**
+ * Resource Id
+ */
     private final @Nullable String id;
+/**
+ * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
+ */
     private final @Nullable Boolean primary;
 
     @OutputCustomType.Constructor({"deleteOption","id","primary"})
@@ -26,12 +35,21 @@ public final class NetworkInterfaceReferenceResponse {
         this.primary = primary;
     }
 
+/**
+ * Specify what happens to the network interface when the VM is deleted
+ */
     public Optional<String> getDeleteOption() {
         return Optional.ofNullable(this.deleteOption);
     }
+/**
+ * Resource Id
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
+ */
     public Optional<Boolean> getPrimary() {
         return Optional.ofNullable(this.primary);
     }

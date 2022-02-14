@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CompositeFilterResponse {
+/**
+ * The logic operator of the sub filter.
+ */
     private final String logicOperator;
+/**
+ * Sub filters.
+ */
     private final List<FilterResponse> subFilters;
 
     @OutputCustomType.Constructor({"logicOperator","subFilters"})
@@ -22,9 +28,15 @@ public final class CompositeFilterResponse {
         this.subFilters = Objects.requireNonNull(subFilters);
     }
 
+/**
+ * The logic operator of the sub filter.
+ */
     public String getLogicOperator() {
         return this.logicOperator;
     }
+/**
+ * Sub filters.
+ */
     public List<FilterResponse> getSubFilters() {
         return this.subFilters;
     }

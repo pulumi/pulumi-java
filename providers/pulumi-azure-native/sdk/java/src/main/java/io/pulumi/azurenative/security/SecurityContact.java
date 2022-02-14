@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.security;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.security.SecurityContactArgs;
 import io.pulumi.azurenative.security.outputs.SecurityContactPropertiesResponseAlertNotifications;
 import io.pulumi.azurenative.security.outputs.SecurityContactPropertiesResponseNotificationsByRole;
 import io.pulumi.core.Alias;
@@ -16,45 +15,213 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Contact details and configurations for notifications coming from Azure Security Center.
+API Version: 2020-01-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create security contact data
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var securityContact = new AzureNative.Security.SecurityContact("securityContact", new AzureNative.Security.SecurityContactArgs
+        {
+            AlertNotifications = new AzureNative.Security.Inputs.SecurityContactPropertiesAlertNotificationsArgs
+            {
+                MinimalSeverity = "Low",
+                State = "On",
+            },
+            Emails = "john@contoso.com;jane@contoso.com",
+            NotificationsByRole = new AzureNative.Security.Inputs.SecurityContactPropertiesNotificationsByRoleArgs
+            {
+                Roles = 
+                {
+                    "Owner",
+                },
+                State = "On",
+            },
+            Phone = "(214)275-4038",
+            SecurityContactName = "default",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	security "github.com/pulumi/pulumi-azure-native/sdk/go/azure/security"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := security.NewSecurityContact(ctx, "securityContact", &security.SecurityContactArgs{
+			AlertNotifications: &security.SecurityContactPropertiesAlertNotificationsArgs{
+				MinimalSeverity: pulumi.String("Low"),
+				State:           pulumi.String("On"),
+			},
+			Emails: pulumi.String("john@contoso.com;jane@contoso.com"),
+			NotificationsByRole: &security.SecurityContactPropertiesNotificationsByRoleArgs{
+				Roles: pulumi.StringArray{
+					pulumi.String("Owner"),
+				},
+				State: pulumi.String("On"),
+			},
+			Phone:               pulumi.String("(214)275-4038"),
+			SecurityContactName: pulumi.String("default"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const securityContact = new azure_native.security.SecurityContact("securityContact", {
+    alertNotifications: {
+        minimalSeverity: "Low",
+        state: "On",
+    },
+    emails: "john@contoso.com;jane@contoso.com",
+    notificationsByRole: {
+        roles: ["Owner"],
+        state: "On",
+    },
+    phone: "(214)275-4038",
+    securityContactName: "default",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+security_contact = azure_native.security.SecurityContact("securityContact",
+    alert_notifications=azure_native.security.SecurityContactPropertiesAlertNotificationsArgs(
+        minimal_severity="Low",
+        state="On",
+    ),
+    emails="john@contoso.com;jane@contoso.com",
+    notifications_by_role=azure_native.security.SecurityContactPropertiesNotificationsByRoleArgs(
+        roles=["Owner"],
+        state="On",
+    ),
+    phone="(214)275-4038",
+    security_contact_name="default")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:security:SecurityContact default /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/securityContacts/default 
+```
+
+ */
 @ResourceType(type="azure-native:security:SecurityContact")
 public class SecurityContact extends io.pulumi.resources.CustomResource {
+    /**
+     * Defines whether to send email notifications about new security alerts
+     */
     @OutputExport(name="alertNotifications", type=SecurityContactPropertiesResponseAlertNotifications.class, parameters={})
     private Output</* @Nullable */ SecurityContactPropertiesResponseAlertNotifications> alertNotifications;
 
+    /**
+     * @return Defines whether to send email notifications about new security alerts
+     */
     public Output</* @Nullable */ SecurityContactPropertiesResponseAlertNotifications> getAlertNotifications() {
         return this.alertNotifications;
     }
+    /**
+     * List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
+     */
     @OutputExport(name="emails", type=String.class, parameters={})
     private Output</* @Nullable */ String> emails;
 
+    /**
+     * @return List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
+     */
     public Output</* @Nullable */ String> getEmails() {
         return this.emails;
     }
+    /**
+     * Resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+     */
     @OutputExport(name="notificationsByRole", type=SecurityContactPropertiesResponseNotificationsByRole.class, parameters={})
     private Output</* @Nullable */ SecurityContactPropertiesResponseNotificationsByRole> notificationsByRole;
 
+    /**
+     * @return Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
+     */
     public Output</* @Nullable */ SecurityContactPropertiesResponseNotificationsByRole> getNotificationsByRole() {
         return this.notificationsByRole;
     }
+    /**
+     * The security contact's phone number
+     */
     @OutputExport(name="phone", type=String.class, parameters={})
     private Output</* @Nullable */ String> phone;
 
+    /**
+     * @return The security contact's phone number
+     */
     public Output</* @Nullable */ String> getPhone() {
         return this.phone;
     }
+    /**
+     * Resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SecurityContact(String name, @Nullable SecurityContactArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:security:SecurityContact", name, args == null ? SecurityContactArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -74,6 +241,14 @@ public class SecurityContact extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SecurityContact get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SecurityContact(name, id, options);
     }

@@ -9,10 +9,17 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines the UrlPath condition for the delivery rule.
+ */
 public final class DeliveryRuleUrlPathConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeliveryRuleUrlPathConditionResponse Empty = new DeliveryRuleUrlPathConditionResponse();
 
+    /**
+     * The name of the condition for the delivery rule.
+Expected value is 'UrlPath'.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -20,6 +27,9 @@ public final class DeliveryRuleUrlPathConditionResponse extends io.pulumi.resour
         return this.name;
     }
 
+    /**
+     * Defines the parameters for the condition.
+     */
     @InputImport(name="parameters", required=true)
     private final UrlPathMatchConditionParametersResponse parameters;
 

@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Data Lake Analytics compute policy information.
+ */
 public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ComputePolicyResponse Empty = new ComputePolicyResponse();
 
+    /**
+     * The resource identifier.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -20,6 +26,9 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
         return this.id;
     }
 
+    /**
+     * The maximum degree of parallelism per job this user can use to submit jobs.
+     */
     @InputImport(name="maxDegreeOfParallelismPerJob", required=true)
     private final Integer maxDegreeOfParallelismPerJob;
 
@@ -27,6 +36,9 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
         return this.maxDegreeOfParallelismPerJob;
     }
 
+    /**
+     * The minimum priority per job this user can use to submit jobs.
+     */
     @InputImport(name="minPriorityPerJob", required=true)
     private final Integer minPriorityPerJob;
 
@@ -34,6 +46,9 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
         return this.minPriorityPerJob;
     }
 
+    /**
+     * The resource name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -41,6 +56,9 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
         return this.name;
     }
 
+    /**
+     * The AAD object identifier for the entity to create a policy for.
+     */
     @InputImport(name="objectId", required=true)
     private final String objectId;
 
@@ -48,6 +66,9 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
         return this.objectId;
     }
 
+    /**
+     * The type of AAD object the object identifier refers to.
+     */
     @InputImport(name="objectType", required=true)
     private final String objectType;
 
@@ -55,6 +76,9 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
         return this.objectType;
     }
 
+    /**
+     * The resource type.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

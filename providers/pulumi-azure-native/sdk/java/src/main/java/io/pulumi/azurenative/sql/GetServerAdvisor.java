@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerAdvisor {
+/**
+ * Database, Server or Elastic Pool Advisor.
+API Version: 2020-11-01-preview.
+ *
+ * Database, Server or Elastic Pool Advisor.
+ */
     public static CompletableFuture<GetServerAdvisorResult> invokeAsync(GetServerAdvisorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerAdvisor", TypeShape.of(GetServerAdvisorResult.class), args == null ? GetServerAdvisorArgs.Empty : args, Utilities.withVersion(options));
     }

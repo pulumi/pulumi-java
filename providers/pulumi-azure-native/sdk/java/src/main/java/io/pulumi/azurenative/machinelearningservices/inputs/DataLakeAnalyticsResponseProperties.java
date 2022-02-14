@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DataLakeAnalyticsResponseProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final DataLakeAnalyticsResponseProperties Empty = new DataLakeAnalyticsResponseProperties();
 
+    /**
+     * DataLake Store Account Name
+     */
     @InputImport(name="dataLakeStoreAccountName")
     private final @Nullable String dataLakeStoreAccountName;
 

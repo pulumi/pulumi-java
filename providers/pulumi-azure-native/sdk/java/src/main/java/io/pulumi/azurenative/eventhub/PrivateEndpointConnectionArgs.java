@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateEndpointConnectionArgs Empty = new PrivateEndpointConnectionArgs();
 
+    /**
+     * The Namespace name
+     */
     @InputImport(name="namespaceName", required=true)
     private final Input<String> namespaceName;
 
@@ -25,6 +31,9 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.namespaceName;
     }
 
+    /**
+     * The Private Endpoint resource for this Connection.
+     */
     @InputImport(name="privateEndpoint")
     private final @Nullable Input<PrivateEndpointArgs> privateEndpoint;
 
@@ -32,6 +41,9 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateEndpoint == null ? Input.empty() : this.privateEndpoint;
     }
 
+    /**
+     * The PrivateEndpointConnection name
+     */
     @InputImport(name="privateEndpointConnectionName")
     private final @Nullable Input<String> privateEndpointConnectionName;
 
@@ -39,6 +51,9 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateEndpointConnectionName == null ? Input.empty() : this.privateEndpointConnectionName;
     }
 
+    /**
+     * Details about the state of the connection.
+     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable Input<ConnectionStateArgs> privateLinkServiceConnectionState;
 
@@ -46,6 +61,9 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
     }
 
+    /**
+     * Provisioning state of the Private Endpoint Connection.
+     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<Either<String,EndPointProvisioningState>> provisioningState;
 
@@ -53,6 +71,9 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
+    /**
+     * Name of the resource group within the azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

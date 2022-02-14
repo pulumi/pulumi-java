@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the common properties for all audio codecs.
+ */
 public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AudioArgs Empty = new AudioArgs();
 
+    /**
+     * The bitrate, in bits per second, of the output encoded audio.
+     */
     @InputImport(name="bitrate")
     private final @Nullable Input<Integer> bitrate;
 
@@ -22,6 +28,9 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
         return this.bitrate == null ? Input.empty() : this.bitrate;
     }
 
+    /**
+     * The number of channels in the audio.
+     */
     @InputImport(name="channels")
     private final @Nullable Input<Integer> channels;
 
@@ -29,6 +38,9 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
         return this.channels == null ? Input.empty() : this.channels;
     }
 
+    /**
+     * An optional label for the codec. The label can be used to control muxing behavior.
+     */
     @InputImport(name="label")
     private final @Nullable Input<String> label;
 
@@ -36,6 +48,10 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
         return this.label == null ? Input.empty() : this.label;
     }
 
+    /**
+     * The discriminator for derived types.
+Expected value is '#Microsoft.Media.Audio'.
+     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 
@@ -43,6 +59,9 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
         return this.odataType;
     }
 
+    /**
+     * The sampling rate to use for encoding in hertz.
+     */
     @InputImport(name="samplingRate")
     private final @Nullable Input<Integer> samplingRate;
 

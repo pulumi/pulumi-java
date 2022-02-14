@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of an hourly schedule.
+ */
 public final class HourDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HourDetailsResponse Empty = new HourDetailsResponse();
 
+    /**
+     * Minutes of the hour the schedule will run.
+     */
     @InputImport(name="minute")
     private final @Nullable Integer minute;
 

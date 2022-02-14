@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetCustomEntityStoreAssignmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCustomEntityStoreAssignmentArgs Empty = new GetCustomEntityStoreAssignmentArgs();
 
+    /**
+     * Name of the custom entity store assignment. Generated name is GUID.
+     */
     @InputImport(name="customEntityStoreAssignmentName", required=true)
     private final String customEntityStoreAssignmentName;
 
@@ -19,6 +25,9 @@ public final class GetCustomEntityStoreAssignmentArgs extends io.pulumi.resource
         return this.customEntityStoreAssignmentName;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

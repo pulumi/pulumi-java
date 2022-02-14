@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Prevents `query_term` from being associated with specified terms during search. Example: Don't associate "gShoe" and "cheap".
+ */
 public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs Empty = new GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs();
 
+    /**
+     * Cannot contain duplicates or the query term. Can specify up to 100 terms.
+     */
     @InputImport(name="doNotAssociateTerms")
     private final @Nullable Input<List<String>> doNotAssociateTerms;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs extends i
         return this.doNotAssociateTerms == null ? Input.empty() : this.doNotAssociateTerms;
     }
 
+    /**
+     * Terms from the search query. Will not consider do_not_associate_terms for search if in search query. Can specify up to 100 terms.
+     */
     @InputImport(name="queryTerms")
     private final @Nullable Input<List<String>> queryTerms;
 
@@ -29,6 +38,9 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs extends i
         return this.queryTerms == null ? Input.empty() : this.queryTerms;
     }
 
+    /**
+     * Will be [deprecated = true] post migration;
+     */
     @InputImport(name="terms")
     private final @Nullable Input<List<String>> terms;
 

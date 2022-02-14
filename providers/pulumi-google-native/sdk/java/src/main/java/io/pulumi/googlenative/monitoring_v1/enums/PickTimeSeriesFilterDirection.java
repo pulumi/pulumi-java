@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * How to use the ranking to select time series that pass through the filter.
+ */
     @EnumType
     public enum PickTimeSeriesFilterDirection {
+/**
+ * Not allowed. You must specify a different Direction if you specify a PickTimeSeriesFilter.
+ */
         DirectionUnspecified("DIRECTION_UNSPECIFIED"),
+/**
+ * Pass the highest num_time_series ranking inputs.
+ */
         Top("TOP"),
+/**
+ * Pass the lowest num_time_series ranking inputs.
+ */
         Bottom("BOTTOM");
 
         private final String value;

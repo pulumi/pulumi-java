@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Display information of the operation.
+ */
 public final class OperationsDefinitionDisplayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OperationsDefinitionDisplayArgs Empty = new OperationsDefinitionDisplayArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="description", required=true)
     private final Input<String> description;
 
@@ -20,6 +26,9 @@ public final class OperationsDefinitionDisplayArgs extends io.pulumi.resources.R
         return this.description;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="operation", required=true)
     private final Input<String> operation;
 
@@ -27,6 +36,9 @@ public final class OperationsDefinitionDisplayArgs extends io.pulumi.resources.R
         return this.operation;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="provider", required=true)
     private final Input<String> provider;
 
@@ -34,6 +46,9 @@ public final class OperationsDefinitionDisplayArgs extends io.pulumi.resources.R
         return this.provider;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="resource", required=true)
     private final Input<String> resource;
 

@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DependsOnDefinitionResponse {
+/**
+ * Name of the kustomization to claim dependency on
+ */
     private final @Nullable String kustomizationName;
 
     @OutputCustomType.Constructor({"kustomizationName"})
@@ -18,6 +21,9 @@ public final class DependsOnDefinitionResponse {
         this.kustomizationName = kustomizationName;
     }
 
+/**
+ * Name of the kustomization to claim dependency on
+ */
     public Optional<String> getKustomizationName() {
         return Optional.ofNullable(this.kustomizationName);
     }

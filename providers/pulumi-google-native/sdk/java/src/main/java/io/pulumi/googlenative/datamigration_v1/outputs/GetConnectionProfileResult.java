@@ -14,16 +14,49 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetConnectionProfileResult {
+/**
+ * A CloudSQL database connection profile.
+ */
     private final CloudSqlConnectionProfileResponse cloudsql;
+/**
+ * The timestamp when the resource was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+ */
     private final String createTime;
+/**
+ * The connection profile display name.
+ */
     private final String displayName;
+/**
+ * The error details in case of state FAILED.
+ */
     private final StatusResponse error;
+/**
+ * The resource labels for connection profile to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
+ */
     private final Map<String,String> labels;
+/**
+ * A MySQL database connection profile.
+ */
     private final MySqlConnectionProfileResponse mysql;
+/**
+ * The name of this connection profile resource in the form of projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
+ */
     private final String name;
+/**
+ * A PostgreSQL database connection profile.
+ */
     private final PostgreSqlConnectionProfileResponse postgresql;
+/**
+ * The database provider.
+ */
     private final String provider;
+/**
+ * The current connection profile state (e.g. DRAFT, READY, or FAILED).
+ */
     private final String state;
+/**
+ * The timestamp when the resource was last updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+ */
     private final String updateTime;
 
     @OutputCustomType.Constructor({"cloudsql","createTime","displayName","error","labels","mysql","name","postgresql","provider","state","updateTime"})
@@ -52,36 +85,69 @@ public final class GetConnectionProfileResult {
         this.updateTime = Objects.requireNonNull(updateTime);
     }
 
+/**
+ * A CloudSQL database connection profile.
+ */
     public CloudSqlConnectionProfileResponse getCloudsql() {
         return this.cloudsql;
     }
+/**
+ * The timestamp when the resource was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+ */
     public String getCreateTime() {
         return this.createTime;
     }
+/**
+ * The connection profile display name.
+ */
     public String getDisplayName() {
         return this.displayName;
     }
+/**
+ * The error details in case of state FAILED.
+ */
     public StatusResponse getError() {
         return this.error;
     }
+/**
+ * The resource labels for connection profile to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
+ */
     public Map<String,String> getLabels() {
         return this.labels;
     }
+/**
+ * A MySQL database connection profile.
+ */
     public MySqlConnectionProfileResponse getMysql() {
         return this.mysql;
     }
+/**
+ * The name of this connection profile resource in the form of projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * A PostgreSQL database connection profile.
+ */
     public PostgreSqlConnectionProfileResponse getPostgresql() {
         return this.postgresql;
     }
+/**
+ * The database provider.
+ */
     public String getProvider() {
         return this.provider;
     }
+/**
+ * The current connection profile state (e.g. DRAFT, READY, or FAILED).
+ */
     public String getState() {
         return this.state;
     }
+/**
+ * The timestamp when the resource was last updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
+ */
     public String getUpdateTime() {
         return this.updateTime;
     }

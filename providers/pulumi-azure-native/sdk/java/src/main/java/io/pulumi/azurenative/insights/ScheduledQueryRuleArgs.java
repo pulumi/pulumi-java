@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScheduledQueryRuleArgs Empty = new ScheduledQueryRuleArgs();
 
+    /**
+     * Action needs to be taken on rule execution.
+     */
     @InputImport(name="action", required=true)
     private final Input<Either<AlertingActionArgs,LogToMetricActionArgs>> action;
 
@@ -29,6 +35,9 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
         return this.action;
     }
 
+    /**
+     * The flag that indicates whether the alert should be automatically resolved or not. The default is false.
+     */
     @InputImport(name="autoMitigate")
     private final @Nullable Input<Boolean> autoMitigate;
 
@@ -36,6 +45,9 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
         return this.autoMitigate == null ? Input.empty() : this.autoMitigate;
     }
 
+    /**
+     * The description of the Log Search rule.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -43,6 +55,9 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The display name of the alert rule
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -50,6 +65,9 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The flag which indicates whether the Log Search rule is enabled. Value should be true or false
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Either<String,Enabled>> enabled;
 
@@ -57,6 +75,9 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * Resource location
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -64,6 +85,9 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -71,6 +95,9 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the rule.
+     */
     @InputImport(name="ruleName")
     private final @Nullable Input<String> ruleName;
 
@@ -78,6 +105,9 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
         return this.ruleName == null ? Input.empty() : this.ruleName;
     }
 
+    /**
+     * Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction
+     */
     @InputImport(name="schedule")
     private final @Nullable Input<ScheduleArgs> schedule;
 
@@ -85,6 +115,9 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
         return this.schedule == null ? Input.empty() : this.schedule;
     }
 
+    /**
+     * Data Source against which rule will Query Data
+     */
     @InputImport(name="source", required=true)
     private final Input<SourceArgs> source;
 
@@ -92,6 +125,9 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
         return this.source;
     }
 
+    /**
+     * Resource tags
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

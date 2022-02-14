@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTableResourceTable {
+/**
+ * An Azure Cosmos DB Table.
+API Version: 2021-03-15.
+ *
+ * An Azure Cosmos DB Table.
+ */
     public static CompletableFuture<GetTableResourceTableResult> invokeAsync(GetTableResourceTableArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:documentdb:getTableResourceTable", TypeShape.of(GetTableResourceTableResult.class), args == null ? GetTableResourceTableArgs.Empty : args, Utilities.withVersion(options));
     }

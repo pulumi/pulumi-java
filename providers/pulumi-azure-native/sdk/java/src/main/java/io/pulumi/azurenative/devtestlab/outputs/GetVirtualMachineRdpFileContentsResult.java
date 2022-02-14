@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetVirtualMachineRdpFileContentsResult {
+/**
+ * The contents of the .rdp file
+ */
     private final @Nullable String contents;
 
     @OutputCustomType.Constructor({"contents"})
@@ -18,6 +21,9 @@ public final class GetVirtualMachineRdpFileContentsResult {
         this.contents = contents;
     }
 
+/**
+ * The contents of the .rdp file
+ */
     public Optional<String> getContents() {
         return Optional.ofNullable(this.contents);
     }

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum ServerBindingType {
+/**
+ * Node may associate with any physical server over its lifetime.
+ */
         RestartNodeOnAnyServer("RESTART_NODE_ON_ANY_SERVER"),
+/**
+ * Node may associate with minimal physical servers over its lifetime.
+ */
         RestartNodeOnMinimalServers("RESTART_NODE_ON_MINIMAL_SERVERS"),
+/**
+ * 
+ */
         ServerBindingTypeUnspecified("SERVER_BINDING_TYPE_UNSPECIFIED");
 
         private final String value;

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The family of the SKU.
+ */
     @EnumType
     public enum ExpressRouteCircuitSkuFamily {
+/**
+ * 
+ */
         UnlimitedData("UnlimitedData"),
+/**
+ * 
+ */
         MeteredData("MeteredData");
 
         private final String value;

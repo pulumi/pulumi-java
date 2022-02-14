@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerAppArgs Empty = new ContainerAppArgs();
 
+    /**
+     * Non versioned Container App configuration properties.
+     */
     @InputImport(name="configuration")
     private final @Nullable Input<ConfigurationArgs> configuration;
 
@@ -24,6 +30,9 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
         return this.configuration == null ? Input.empty() : this.configuration;
     }
 
+    /**
+     * Kind of resource.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -31,6 +40,9 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Resource ID of the Container App's KubeEnvironment.
+     */
     @InputImport(name="kubeEnvironmentId")
     private final @Nullable Input<String> kubeEnvironmentId;
 
@@ -38,6 +50,9 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
         return this.kubeEnvironmentId == null ? Input.empty() : this.kubeEnvironmentId;
     }
 
+    /**
+     * Resource Location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -45,6 +60,9 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of the Container App.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -52,6 +70,9 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -59,6 +80,9 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -66,6 +90,9 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Container App versioned application definition.
+     */
     @InputImport(name="template")
     private final @Nullable Input<TemplateArgs> template;
 

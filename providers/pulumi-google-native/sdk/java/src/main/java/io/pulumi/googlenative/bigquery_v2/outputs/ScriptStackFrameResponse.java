@@ -10,11 +10,29 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ScriptStackFrameResponse {
+/**
+ * One-based end column.
+ */
     private final Integer endColumn;
+/**
+ * One-based end line.
+ */
     private final Integer endLine;
+/**
+ * Name of the active procedure, empty if in a top-level script.
+ */
     private final String procedureId;
+/**
+ * One-based start column.
+ */
     private final Integer startColumn;
+/**
+ * One-based start line.
+ */
     private final Integer startLine;
+/**
+ * Text of the current statement/expression.
+ */
     private final String text;
 
     @OutputCustomType.Constructor({"endColumn","endLine","procedureId","startColumn","startLine","text"})
@@ -33,21 +51,39 @@ public final class ScriptStackFrameResponse {
         this.text = Objects.requireNonNull(text);
     }
 
+/**
+ * One-based end column.
+ */
     public Integer getEndColumn() {
         return this.endColumn;
     }
+/**
+ * One-based end line.
+ */
     public Integer getEndLine() {
         return this.endLine;
     }
+/**
+ * Name of the active procedure, empty if in a top-level script.
+ */
     public String getProcedureId() {
         return this.procedureId;
     }
+/**
+ * One-based start column.
+ */
     public Integer getStartColumn() {
         return this.startColumn;
     }
+/**
+ * One-based start line.
+ */
     public Integer getStartLine() {
         return this.startLine;
     }
+/**
+ * Text of the current statement/expression.
+ */
     public String getText() {
         return this.text;
     }

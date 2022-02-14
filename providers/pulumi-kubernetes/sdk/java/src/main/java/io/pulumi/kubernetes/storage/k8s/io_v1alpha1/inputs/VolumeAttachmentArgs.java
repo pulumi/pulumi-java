@@ -13,10 +13,18 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * VolumeAttachment captures the intent to attach or detach the specified volume to/from the specified node.
+
+VolumeAttachment objects are non-namespaced.
+ */
 public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VolumeAttachmentArgs Empty = new VolumeAttachmentArgs();
 
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     */
     @InputImport(name="apiVersion")
     private final @Nullable Input<String> apiVersion;
 
@@ -24,6 +32,9 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -31,6 +42,9 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<ObjectMetaArgs> metadata;
 
@@ -38,6 +52,9 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * Specification of the desired attach/detach volume behavior. Populated by the Kubernetes system.
+     */
     @InputImport(name="spec", required=true)
     private final Input<VolumeAttachmentSpecArgs> spec;
 
@@ -45,6 +62,9 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
         return this.spec;
     }
 
+    /**
+     * Status of the VolumeAttachment request. Populated by the entity completing the attach or detach operation, i.e. the external-attacher.
+     */
     @InputImport(name="status")
     private final @Nullable Input<VolumeAttachmentStatusArgs> status;
 

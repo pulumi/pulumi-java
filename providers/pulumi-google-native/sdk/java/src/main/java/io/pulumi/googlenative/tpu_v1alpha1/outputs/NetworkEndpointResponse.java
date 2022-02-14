@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NetworkEndpointResponse {
+/**
+ * The IP address of this network endpoint.
+ */
     private final String ipAddress;
+/**
+ * The port of this network endpoint.
+ */
     private final Integer port;
 
     @OutputCustomType.Constructor({"ipAddress","port"})
@@ -21,9 +27,15 @@ public final class NetworkEndpointResponse {
         this.port = Objects.requireNonNull(port);
     }
 
+/**
+ * The IP address of this network endpoint.
+ */
     public String getIpAddress() {
         return this.ipAddress;
     }
+/**
+ * The port of this network endpoint.
+ */
     public Integer getPort() {
         return this.port;
     }

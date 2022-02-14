@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetInterconnectArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetInterconnectArgs Empty = new GetInterconnectArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="interconnect", required=true)
     private final String interconnect;
 
@@ -21,6 +27,9 @@ public final class GetInterconnectArgs extends io.pulumi.resources.InvokeArgs {
         return this.interconnect;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

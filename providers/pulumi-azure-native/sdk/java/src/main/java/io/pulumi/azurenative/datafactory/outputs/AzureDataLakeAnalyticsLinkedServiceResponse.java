@@ -19,18 +19,58 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureDataLakeAnalyticsLinkedServiceResponse {
+/**
+ * The Azure Data Lake Analytics account name. Type: string (or Expression with resultType string).
+ */
     private final Object accountName;
+/**
+ * List of tags that can be used for describing the linked service.
+ */
     private final @Nullable List<Object> annotations;
+/**
+ * The integration runtime reference.
+ */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+/**
+ * Azure Data Lake Analytics URI Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object dataLakeAnalyticsUri;
+/**
+ * Linked service description.
+ */
     private final @Nullable String description;
+/**
+ * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object encryptedCredential;
+/**
+ * Parameters for linked service.
+ */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+/**
+ * Data Lake Analytics account resource group name (if different from Data Factory account). Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object resourceGroupName;
+/**
+ * The ID of the application used to authenticate against the Azure Data Lake Analytics account. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object servicePrincipalId;
+/**
+ * The Key of the application used to authenticate against the Azure Data Lake Analytics account.
+ */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
+/**
+ * Data Lake Analytics account subscription ID (if different from Data Factory account). Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object subscriptionId;
+/**
+ * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+ */
     private final Object tenant;
+/**
+ * Type of linked service.
+Expected value is 'AzureDataLakeAnalytics'.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"accountName","annotations","connectVia","dataLakeAnalyticsUri","description","encryptedCredential","parameters","resourceGroupName","servicePrincipalId","servicePrincipalKey","subscriptionId","tenant","type"})
@@ -63,42 +103,82 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The Azure Data Lake Analytics account name. Type: string (or Expression with resultType string).
+ */
     public Object getAccountName() {
         return this.accountName;
     }
+/**
+ * List of tags that can be used for describing the linked service.
+ */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
+/**
+ * The integration runtime reference.
+ */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
+/**
+ * Azure Data Lake Analytics URI Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getDataLakeAnalyticsUri() {
         return Optional.ofNullable(this.dataLakeAnalyticsUri);
     }
+/**
+ * Linked service description.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
+/**
+ * Parameters for linked service.
+ */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+/**
+ * Data Lake Analytics account resource group name (if different from Data Factory account). Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getResourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
+/**
+ * The ID of the application used to authenticate against the Azure Data Lake Analytics account. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getServicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
+/**
+ * The Key of the application used to authenticate against the Azure Data Lake Analytics account.
+ */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getServicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
+/**
+ * Data Lake Analytics account subscription ID (if different from Data Factory account). Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getSubscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
+/**
+ * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+ */
     public Object getTenant() {
         return this.tenant;
     }
+/**
+ * Type of linked service.
+Expected value is 'AzureDataLakeAnalytics'.
+ */
     public String getType() {
         return this.type;
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListWebAppPublishingCredentialsSlotArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListWebAppPublishingCredentialsSlotArgs Empty = new ListWebAppPublishingCredentialsSlotArgs();
 
+    /**
+     * Name of the app.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class ListWebAppPublishingCredentialsSlotArgs extends io.pulumi.res
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class ListWebAppPublishingCredentialsSlotArgs extends io.pulumi.res
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the deployment slot. If a slot is not specified, the API will get the publishing credentials for the production slot.
+     */
     @InputImport(name="slot", required=true)
     private final String slot;
 

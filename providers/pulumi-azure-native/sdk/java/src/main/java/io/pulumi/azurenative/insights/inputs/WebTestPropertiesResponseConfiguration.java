@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An XML configuration specification for a WebTest.
+ */
 public final class WebTestPropertiesResponseConfiguration extends io.pulumi.resources.InvokeArgs {
 
     public static final WebTestPropertiesResponseConfiguration Empty = new WebTestPropertiesResponseConfiguration();
 
+    /**
+     * The XML specification of a WebTest to run against an application.
+     */
     @InputImport(name="webTest")
     private final @Nullable String webTest;
 

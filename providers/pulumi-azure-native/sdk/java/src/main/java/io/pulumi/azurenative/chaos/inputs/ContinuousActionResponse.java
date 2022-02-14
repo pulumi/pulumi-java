@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Model that represents a continuous action.
+ */
 public final class ContinuousActionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContinuousActionResponse Empty = new ContinuousActionResponse();
 
+    /**
+     * ISO8601 formatted string that represents a duration.
+     */
     @InputImport(name="duration", required=true)
     private final String duration;
 
@@ -21,6 +27,9 @@ public final class ContinuousActionResponse extends io.pulumi.resources.InvokeAr
         return this.duration;
     }
 
+    /**
+     * String that represents a Capability URN.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,6 +37,9 @@ public final class ContinuousActionResponse extends io.pulumi.resources.InvokeAr
         return this.name;
     }
 
+    /**
+     * List of key value pairs.
+     */
     @InputImport(name="parameters", required=true)
     private final List<KeyValuePairResponse> parameters;
 
@@ -35,6 +47,9 @@ public final class ContinuousActionResponse extends io.pulumi.resources.InvokeAr
         return this.parameters;
     }
 
+    /**
+     * String that represents a selector.
+     */
     @InputImport(name="selectorId", required=true)
     private final String selectorId;
 
@@ -42,6 +57,10 @@ public final class ContinuousActionResponse extends io.pulumi.resources.InvokeAr
         return this.selectorId;
     }
 
+    /**
+     * Enum that discriminates between action models.
+Expected value is 'continuous'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

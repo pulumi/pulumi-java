@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TraceSinkArgs Empty = new TraceSinkArgs();
 
+    /**
+     * The canonical sink resource name, unique within the project. Must be of the form: project/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `"projects/12345/traceSinks/my-project-trace-sink"`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -22,6 +28,9 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The export destination.
+     */
     @InputImport(name="outputConfig", required=true)
     private final Input<OutputConfigArgs> outputConfig;
 
@@ -29,6 +38,9 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
         return this.outputConfig;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

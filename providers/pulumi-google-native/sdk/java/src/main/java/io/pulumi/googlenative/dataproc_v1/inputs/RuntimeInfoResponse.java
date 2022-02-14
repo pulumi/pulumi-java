@@ -9,10 +9,16 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Runtime information about workload execution.
+ */
 public final class RuntimeInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RuntimeInfoResponse Empty = new RuntimeInfoResponse();
 
+    /**
+     * A URI pointing to the location of the diagnostics tarball.
+     */
     @InputImport(name="diagnosticOutputUri", required=true)
     private final String diagnosticOutputUri;
 
@@ -20,6 +26,9 @@ public final class RuntimeInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.diagnosticOutputUri;
     }
 
+    /**
+     * Map of remote access endpoints (such as web interfaces and APIs) to their URIs.
+     */
     @InputImport(name="endpoints", required=true)
     private final Map<String,String> endpoints;
 
@@ -27,6 +36,9 @@ public final class RuntimeInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.endpoints;
     }
 
+    /**
+     * A URI pointing to the location of the stdout and stderr of the workload.
+     */
     @InputImport(name="outputUri", required=true)
     private final String outputUri;
 

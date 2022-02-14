@@ -12,8 +12,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HttpConfigResponse {
+/**
+ * description for routing.
+ */
     private final List<HttpHostConfigResponse> hosts;
+/**
+ * http gateway config name.
+ */
     private final String name;
+/**
+ * Specifies the port at which the service endpoint below needs to be exposed.
+ */
     private final Integer port;
 
     @OutputCustomType.Constructor({"hosts","name","port"})
@@ -26,12 +35,21 @@ public final class HttpConfigResponse {
         this.port = Objects.requireNonNull(port);
     }
 
+/**
+ * description for routing.
+ */
     public List<HttpHostConfigResponse> getHosts() {
         return this.hosts;
     }
+/**
+ * http gateway config name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Specifies the port at which the service endpoint below needs to be exposed.
+ */
     public Integer getPort() {
         return this.port;
     }

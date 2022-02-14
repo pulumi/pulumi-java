@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Managed service identity (system assigned and/or user assigned identities)
+ */
 public final class ManagedServiceIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedServiceIdentityArgs Empty = new ManagedServiceIdentityArgs();
 
+    /**
+     * Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
+     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,ManagedServiceIdentityType>> type;
 
@@ -25,6 +31,9 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
         return this.type;
     }
 
+    /**
+     * The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.
+     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
 

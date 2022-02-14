@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Details of an X.509 certificate. For informational purposes only.
+ */
 public final class X509CertificateDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final X509CertificateDetailsResponse Empty = new X509CertificateDetailsResponse();
 
+    /**
+     * The time the certificate becomes invalid.
+     */
     @InputImport(name="expiryTime", required=true)
     private final String expiryTime;
 
@@ -19,6 +25,9 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
         return this.expiryTime;
     }
 
+    /**
+     * The entity that signed the certificate.
+     */
     @InputImport(name="issuer", required=true)
     private final String issuer;
 
@@ -26,6 +35,9 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
         return this.issuer;
     }
 
+    /**
+     * The type of public key in the certificate.
+     */
     @InputImport(name="publicKeyType", required=true)
     private final String publicKeyType;
 
@@ -33,6 +45,9 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
         return this.publicKeyType;
     }
 
+    /**
+     * The algorithm used to sign the certificate.
+     */
     @InputImport(name="signatureAlgorithm", required=true)
     private final String signatureAlgorithm;
 
@@ -40,6 +55,9 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
         return this.signatureAlgorithm;
     }
 
+    /**
+     * The time the certificate becomes valid.
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 
@@ -47,6 +65,9 @@ public final class X509CertificateDetailsResponse extends io.pulumi.resources.In
         return this.startTime;
     }
 
+    /**
+     * The entity the certificate and public key belong to.
+     */
     @InputImport(name="subject", required=true)
     private final String subject;
 

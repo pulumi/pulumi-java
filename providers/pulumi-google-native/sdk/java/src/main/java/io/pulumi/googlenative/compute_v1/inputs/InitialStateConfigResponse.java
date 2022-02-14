@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Initial State for shielded instance, these are public keys which are safe to store in public
+ */
 public final class InitialStateConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InitialStateConfigResponse Empty = new InitialStateConfigResponse();
 
+    /**
+     * The Key Database (db).
+     */
     @InputImport(name="dbs", required=true)
     private final List<FileContentBufferResponse> dbs;
 
@@ -20,6 +26,9 @@ public final class InitialStateConfigResponse extends io.pulumi.resources.Invoke
         return this.dbs;
     }
 
+    /**
+     * The forbidden key database (dbx).
+     */
     @InputImport(name="dbxs", required=true)
     private final List<FileContentBufferResponse> dbxs;
 
@@ -27,6 +36,9 @@ public final class InitialStateConfigResponse extends io.pulumi.resources.Invoke
         return this.dbxs;
     }
 
+    /**
+     * The Key Exchange Key (KEK).
+     */
     @InputImport(name="keks", required=true)
     private final List<FileContentBufferResponse> keks;
 
@@ -34,6 +46,9 @@ public final class InitialStateConfigResponse extends io.pulumi.resources.Invoke
         return this.keks;
     }
 
+    /**
+     * The Platform Key (PK).
+     */
     @InputImport(name="pk", required=true)
     private final FileContentBufferResponse pk;
 

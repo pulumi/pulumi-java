@@ -13,10 +13,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExchangeConnectionResponse {
+/**
+ * The BGP session associated with the connection.
+ */
     private final @Nullable BgpSessionResponse bgpSession;
+/**
+ * The unique identifier (GUID) for the connection.
+ */
     private final @Nullable String connectionIdentifier;
+/**
+ * The state of the connection.
+ */
     private final String connectionState;
+/**
+ * The error message related to the connection state, if any.
+ */
     private final String errorMessage;
+/**
+ * The PeeringDB.com ID of the facility at which the connection has to be set up.
+ */
     private final @Nullable Integer peeringDBFacilityId;
 
     @OutputCustomType.Constructor({"bgpSession","connectionIdentifier","connectionState","errorMessage","peeringDBFacilityId"})
@@ -33,18 +48,33 @@ public final class ExchangeConnectionResponse {
         this.peeringDBFacilityId = peeringDBFacilityId;
     }
 
+/**
+ * The BGP session associated with the connection.
+ */
     public Optional<BgpSessionResponse> getBgpSession() {
         return Optional.ofNullable(this.bgpSession);
     }
+/**
+ * The unique identifier (GUID) for the connection.
+ */
     public Optional<String> getConnectionIdentifier() {
         return Optional.ofNullable(this.connectionIdentifier);
     }
+/**
+ * The state of the connection.
+ */
     public String getConnectionState() {
         return this.connectionState;
     }
+/**
+ * The error message related to the connection state, if any.
+ */
     public String getErrorMessage() {
         return this.errorMessage;
     }
+/**
+ * The PeeringDB.com ID of the facility at which the connection has to be set up.
+ */
     public Optional<Integer> getPeeringDBFacilityId() {
         return Optional.ofNullable(this.peeringDBFacilityId);
     }

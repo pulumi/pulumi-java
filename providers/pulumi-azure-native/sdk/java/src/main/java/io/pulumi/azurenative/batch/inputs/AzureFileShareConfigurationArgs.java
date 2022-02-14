@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureFileShareConfigurationArgs Empty = new AzureFileShareConfigurationArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="accountKey", required=true)
     private final Input<String> accountKey;
 
@@ -21,6 +27,9 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
         return this.accountKey;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -28,6 +37,9 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
         return this.accountName;
     }
 
+    /**
+     * This is of the form 'https://{account}.file.core.windows.net/'.
+     */
     @InputImport(name="azureFileUrl", required=true)
     private final Input<String> azureFileUrl;
 
@@ -35,6 +47,9 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
         return this.azureFileUrl;
     }
 
+    /**
+     * These are 'net use' options in Windows and 'mount' options in Linux.
+     */
     @InputImport(name="mountOptions")
     private final @Nullable Input<String> mountOptions;
 
@@ -42,6 +57,9 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
         return this.mountOptions == null ? Input.empty() : this.mountOptions;
     }
 
+    /**
+     * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
+     */
     @InputImport(name="relativeMountPath", required=true)
     private final Input<String> relativeMountPath;
 

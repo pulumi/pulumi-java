@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Required. The type of action that Robo should perform on the specified element.
+ */
     @EnumType
     public enum RoboDirectiveActionType {
+/**
+ * DO NOT USE. For proto versioning only.
+ */
         ActionTypeUnspecified("ACTION_TYPE_UNSPECIFIED"),
+/**
+ * Direct Robo to click on the specified element. No-op if specified element is not clickable.
+ */
         SingleClick("SINGLE_CLICK"),
+/**
+ * Direct Robo to enter text on the specified element. No-op if specified element is not enabled or does not allow text entry.
+ */
         EnterText("ENTER_TEXT"),
+/**
+ * Direct Robo to ignore interactions with a specific element.
+ */
         Ignore("IGNORE");
 
         private final String value;

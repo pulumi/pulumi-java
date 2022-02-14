@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRulesEngine {
+/**
+ * A rules engine configuration containing a list of rules that will run to modify the runtime behavior of the request and response.
+API Version: 2020-05-01.
+ *
+ * A rules engine configuration containing a list of rules that will run to modify the runtime behavior of the request and response.
+ */
     public static CompletableFuture<GetRulesEngineResult> invokeAsync(GetRulesEngineArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getRulesEngine", TypeShape.of(GetRulesEngineResult.class), args == null ? GetRulesEngineArgs.Empty : args, Utilities.withVersion(options));
     }

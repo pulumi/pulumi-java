@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Treatment of URL query terms when forming the cache key.
+ */
     @EnumType
     public enum FrontDoorQuery {
+/**
+ * 
+ */
         StripNone("StripNone"),
+/**
+ * 
+ */
         StripAll("StripAll"),
+/**
+ * 
+ */
         StripOnly("StripOnly"),
+/**
+ * 
+ */
         StripAllExcept("StripAllExcept");
 
         private final String value;

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum LoggingDirections {
+/**
+ * 
+ */
         None("None"),
+/**
+ * 
+ */
         Request("Request"),
+/**
+ * 
+ */
         Response("Response");
 
         private final String value;

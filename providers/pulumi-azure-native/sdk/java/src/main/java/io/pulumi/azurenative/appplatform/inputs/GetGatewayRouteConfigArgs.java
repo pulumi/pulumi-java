@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetGatewayRouteConfigArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGatewayRouteConfigArgs Empty = new GetGatewayRouteConfigArgs();
 
+    /**
+     * The name of Spring Cloud Gateway.
+     */
     @InputImport(name="gatewayName", required=true)
     private final String gatewayName;
 
@@ -19,6 +25,9 @@ public final class GetGatewayRouteConfigArgs extends io.pulumi.resources.InvokeA
         return this.gatewayName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetGatewayRouteConfigArgs extends io.pulumi.resources.InvokeA
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Spring Cloud Gateway route config.
+     */
     @InputImport(name="routeConfigName", required=true)
     private final String routeConfigName;
 
@@ -33,6 +45,9 @@ public final class GetGatewayRouteConfigArgs extends io.pulumi.resources.InvokeA
         return this.routeConfigName;
     }
 
+    /**
+     * The name of the Service resource.
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

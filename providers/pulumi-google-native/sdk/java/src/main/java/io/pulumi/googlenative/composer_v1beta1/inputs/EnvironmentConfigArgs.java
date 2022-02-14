@@ -21,10 +21,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration information for an environment.
+ */
 public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentConfigArgs Empty = new EnvironmentConfigArgs();
 
+    /**
+     * Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     */
     @InputImport(name="databaseConfig")
     private final @Nullable Input<DatabaseConfigArgs> databaseConfig;
 
@@ -32,6 +38,9 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
         return this.databaseConfig == null ? Input.empty() : this.databaseConfig;
     }
 
+    /**
+     * Optional. The encryption options for the Cloud Composer environment and its dependencies. Cannot be updated.
+     */
     @InputImport(name="encryptionConfig")
     private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
 
@@ -39,6 +48,9 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
     }
 
+    /**
+     * Optional. The size of the Cloud Composer environment. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+     */
     @InputImport(name="environmentSize")
     private final @Nullable Input<EnvironmentConfigEnvironmentSize> environmentSize;
 
@@ -46,6 +58,9 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
         return this.environmentSize == null ? Input.empty() : this.environmentSize;
     }
 
+    /**
+     * Optional. The maintenance window is the period when Cloud Composer components may undergo maintenance. It is defined so that maintenance is not executed during peak hours or critical time periods. The system will not be under maintenance for every occurrence of this window, but when maintenance is planned, it will be scheduled during the window. The maintenance window period must encompass at least 12 hours per week. This may be split into multiple chunks, each with a size of at least 4 hours. If this value is omitted, Cloud Composer components may be subject to maintenance at any time.
+     */
     @InputImport(name="maintenanceWindow")
     private final @Nullable Input<MaintenanceWindowArgs> maintenanceWindow;
 
@@ -53,6 +68,9 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
         return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
     }
 
+    /**
+     * Optional. The configuration options for GKE clusters master authorized networks. By default master authorized networks feature is: - in case of private environment: enabled with no external networks allowlisted. - in case of public environment: disabled.
+     */
     @InputImport(name="masterAuthorizedNetworksConfig")
     private final @Nullable Input<MasterAuthorizedNetworksConfigArgs> masterAuthorizedNetworksConfig;
 
@@ -60,6 +78,9 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
         return this.masterAuthorizedNetworksConfig == null ? Input.empty() : this.masterAuthorizedNetworksConfig;
     }
 
+    /**
+     * The configuration used for the Kubernetes Engine cluster.
+     */
     @InputImport(name="nodeConfig")
     private final @Nullable Input<NodeConfigArgs> nodeConfig;
 
@@ -67,6 +88,9 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
         return this.nodeConfig == null ? Input.empty() : this.nodeConfig;
     }
 
+    /**
+     * The number of nodes in the Kubernetes Engine cluster that will be used to run this environment. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     */
     @InputImport(name="nodeCount")
     private final @Nullable Input<Integer> nodeCount;
 
@@ -74,6 +98,9 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
         return this.nodeCount == null ? Input.empty() : this.nodeCount;
     }
 
+    /**
+     * The configuration used for the Private IP Cloud Composer environment.
+     */
     @InputImport(name="privateEnvironmentConfig")
     private final @Nullable Input<PrivateEnvironmentConfigArgs> privateEnvironmentConfig;
 
@@ -81,6 +108,9 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
         return this.privateEnvironmentConfig == null ? Input.empty() : this.privateEnvironmentConfig;
     }
 
+    /**
+     * The configuration settings for software inside the environment.
+     */
     @InputImport(name="softwareConfig")
     private final @Nullable Input<SoftwareConfigArgs> softwareConfig;
 
@@ -88,6 +118,9 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
         return this.softwareConfig == null ? Input.empty() : this.softwareConfig;
     }
 
+    /**
+     * Optional. The configuration settings for the Airflow web server App Engine instance. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
+     */
     @InputImport(name="webServerConfig")
     private final @Nullable Input<WebServerConfigArgs> webServerConfig;
 
@@ -95,6 +128,9 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
         return this.webServerConfig == null ? Input.empty() : this.webServerConfig;
     }
 
+    /**
+     * Optional. The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
+     */
     @InputImport(name="webServerNetworkAccessControl")
     private final @Nullable Input<WebServerNetworkAccessControlArgs> webServerNetworkAccessControl;
 
@@ -102,6 +138,9 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
         return this.webServerNetworkAccessControl == null ? Input.empty() : this.webServerNetworkAccessControl;
     }
 
+    /**
+     * Optional. The workloads configuration settings for the GKE cluster associated with the Cloud Composer environment. The GKE cluster runs Airflow scheduler, web server and workers workloads. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
+     */
     @InputImport(name="workloadsConfig")
     private final @Nullable Input<WorkloadsConfigArgs> workloadsConfig;
 

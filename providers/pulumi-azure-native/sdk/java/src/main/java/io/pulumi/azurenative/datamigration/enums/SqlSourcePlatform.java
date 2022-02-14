@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Server platform type for connection
+ */
     @EnumType
     public enum SqlSourcePlatform {
+/**
+ * 
+ */
         SqlOnPrem("SqlOnPrem");
 
         private final String value;

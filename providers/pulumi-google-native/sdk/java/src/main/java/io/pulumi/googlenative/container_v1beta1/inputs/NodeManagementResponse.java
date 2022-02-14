@@ -9,10 +9,16 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * NodeManagement defines the set of node management services turned on for the node pool.
+ */
 public final class NodeManagementResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NodeManagementResponse Empty = new NodeManagementResponse();
 
+    /**
+     * Whether the nodes will be automatically repaired.
+     */
     @InputImport(name="autoRepair", required=true)
     private final Boolean autoRepair;
 
@@ -20,6 +26,9 @@ public final class NodeManagementResponse extends io.pulumi.resources.InvokeArgs
         return this.autoRepair;
     }
 
+    /**
+     * Whether the nodes will be automatically upgraded.
+     */
     @InputImport(name="autoUpgrade", required=true)
     private final Boolean autoUpgrade;
 
@@ -27,6 +36,9 @@ public final class NodeManagementResponse extends io.pulumi.resources.InvokeArgs
         return this.autoUpgrade;
     }
 
+    /**
+     * Specifies the Auto Upgrade knobs for the node pool.
+     */
     @InputImport(name="upgradeOptions", required=true)
     private final AutoUpgradeOptionsResponse upgradeOptions;
 

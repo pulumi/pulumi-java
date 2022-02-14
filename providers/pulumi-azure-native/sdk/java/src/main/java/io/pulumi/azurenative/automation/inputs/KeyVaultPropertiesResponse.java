@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings concerning key vault encryption for a configuration store.
+ */
 public final class KeyVaultPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyVaultPropertiesResponse Empty = new KeyVaultPropertiesResponse();
 
+    /**
+     * The name of key used to encrypt data.
+     */
     @InputImport(name="keyName")
     private final @Nullable String keyName;
 
@@ -21,6 +27,9 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
         return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
     }
 
+    /**
+     * The key version of the key used to encrypt data.
+     */
     @InputImport(name="keyVersion")
     private final @Nullable String keyVersion;
 
@@ -28,6 +37,9 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
         return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
     }
 
+    /**
+     * The URI of the key vault key used to encrypt data.
+     */
     @InputImport(name="keyvaultUri")
     private final @Nullable String keyvaultUri;
 

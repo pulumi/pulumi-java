@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Visibility state of the partner registration.
+ */
     @EnumType
     public enum PartnerRegistrationVisibilityState {
+/**
+ * 
+ */
         Hidden("Hidden"),
+/**
+ * 
+ */
         PublicPreview("PublicPreview"),
+/**
+ * 
+ */
         GenerallyAvailable("GenerallyAvailable");
 
         private final String value;

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Source platform for the project
+ */
     @EnumType
     public enum ProjectSourcePlatform {
+/**
+ * 
+ */
         SQL("SQL"),
+/**
+ * 
+ */
         Unknown("Unknown");
 
         private final String value;

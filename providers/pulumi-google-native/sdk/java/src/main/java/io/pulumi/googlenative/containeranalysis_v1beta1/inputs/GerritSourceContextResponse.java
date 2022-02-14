@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A SourceContext referring to a Gerrit project.
+ */
 public final class GerritSourceContextResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GerritSourceContextResponse Empty = new GerritSourceContextResponse();
 
+    /**
+     * An alias, which may be a branch or tag.
+     */
     @InputImport(name="aliasContext", required=true)
     private final AliasContextResponse aliasContext;
 
@@ -20,6 +26,9 @@ public final class GerritSourceContextResponse extends io.pulumi.resources.Invok
         return this.aliasContext;
     }
 
+    /**
+     * The full project name within the host. Projects may be nested, so "project/subproject" is a valid project name. The "repo name" is the hostURI/project.
+     */
     @InputImport(name="gerritProject", required=true)
     private final String gerritProject;
 
@@ -27,6 +36,9 @@ public final class GerritSourceContextResponse extends io.pulumi.resources.Invok
         return this.gerritProject;
     }
 
+    /**
+     * The URI of a running Gerrit instance.
+     */
     @InputImport(name="hostUri", required=true)
     private final String hostUri;
 
@@ -34,6 +46,9 @@ public final class GerritSourceContextResponse extends io.pulumi.resources.Invok
         return this.hostUri;
     }
 
+    /**
+     * A revision (commit) ID.
+     */
     @InputImport(name="revisionId", required=true)
     private final String revisionId;
 

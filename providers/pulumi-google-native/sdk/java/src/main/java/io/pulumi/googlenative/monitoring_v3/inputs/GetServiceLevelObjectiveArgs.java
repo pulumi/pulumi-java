@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetServiceLevelObjectiveArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServiceLevelObjectiveArgs Empty = new GetServiceLevelObjectiveArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="serviceId", required=true)
     private final String serviceId;
 
@@ -21,6 +27,9 @@ public final class GetServiceLevelObjectiveArgs extends io.pulumi.resources.Invo
         return this.serviceId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="serviceLevelObjectiveId", required=true)
     private final String serviceLevelObjectiveId;
 
@@ -28,6 +37,9 @@ public final class GetServiceLevelObjectiveArgs extends io.pulumi.resources.Invo
         return this.serviceLevelObjectiveId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="v3Id", required=true)
     private final String v3Id;
 
@@ -35,6 +47,9 @@ public final class GetServiceLevelObjectiveArgs extends io.pulumi.resources.Invo
         return this.v3Id;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="v3Id1", required=true)
     private final String v3Id1;
 
@@ -42,6 +57,9 @@ public final class GetServiceLevelObjectiveArgs extends io.pulumi.resources.Invo
         return this.v3Id1;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="view")
     private final @Nullable String view;
 

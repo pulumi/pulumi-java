@@ -8,44 +8,83 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.iam_v1.WorkloadIdentityPoolArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a new WorkloadIdentityPool. You cannot reuse the name of a deleted pool until 30 days after deletion.
+Auto-naming is currently not supported for this resource.
+ */
 @ResourceType(type="google-native:iam/v1:WorkloadIdentityPool")
 public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
+    /**
+     * A description of the pool. Cannot exceed 256 characters.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output<String> description;
 
+    /**
+     * @return A description of the pool. Cannot exceed 256 characters.
+     */
     public Output<String> getDescription() {
         return this.description;
     }
+    /**
+     * Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use existing tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
+     */
     @OutputExport(name="disabled", type=Boolean.class, parameters={})
     private Output<Boolean> disabled;
 
+    /**
+     * @return Whether the pool is disabled. You cannot use a disabled pool to exchange tokens, or use existing tokens to access resources. If the pool is re-enabled, existing tokens grant access again.
+     */
     public Output<Boolean> getDisabled() {
         return this.disabled;
     }
+    /**
+     * A display name for the pool. Cannot exceed 32 characters.
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return A display name for the pool. Cannot exceed 32 characters.
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * The resource name of the pool.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name of the pool.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The state of the pool.
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return The state of the pool.
+     */
     public Output<String> getState() {
         return this.state;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public WorkloadIdentityPool(String name, WorkloadIdentityPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:iam/v1:WorkloadIdentityPool", name, args == null ? WorkloadIdentityPoolArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -61,6 +100,14 @@ public class WorkloadIdentityPool extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static WorkloadIdentityPool get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WorkloadIdentityPool(name, id, options);
     }

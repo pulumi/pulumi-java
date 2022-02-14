@@ -8,46 +8,327 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
-import io.pulumi.kubernetes.core_v1.ServiceArgs;
 import io.pulumi.kubernetes.core_v1.outputs.ServiceSpec;
 import io.pulumi.kubernetes.core_v1.outputs.ServiceStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Service is a named abstraction of software service (for example, mysql) consisting of local port (for example 3306) that the proxy listens on, and the selector that determines which pods will answer requests sent through the proxy.
+
+This resource waits until its status is ready before registering success
+for create/update, and populating output properties from the current state of the resource.
+The following conditions are used to determine whether the resource creation has
+succeeded or failed:
+
+1. Service object exists.
+2. Related Endpoint objects are created. Each time we get an update, wait 10 seconds
+   for any stragglers.
+3. The endpoints objects target some number of living objects (unless the Service is
+   an "empty headless" Service [1] or a Service with '.spec.type: ExternalName').
+4. External IP address is allocated (if Service has '.spec.type: LoadBalancer').
+
+Known limitations: 
+Services targeting ReplicaSets (and, by extension, Deployments,
+StatefulSets, etc.) with '.spec.replicas' set to 0 are not handled, and will time
+out. To work around this limitation, set 'pulumi.com/skipAwait: "true"' on
+'.metadata.annotations' for the Service. Work to handle this case is in progress [2].
+
+[1] https://kubernetes.io/docs/concepts/services-networking/service/#headless-services
+[2] https://github.com/pulumi/pulumi-kubernetes/pull/703
+
+If the Service has not reached a Ready state after 10 minutes, it will
+time out and mark the resource update as Failed. You can override the default timeout value
+by setting the 'customTimeouts' option on the resource.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create a Service with auto-naming
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as kubernetes from "@pulumi/kubernetes";
+
+const my_service = new kubernetes.core.v1.Service("my_service", {
+    spec: {
+        selector: {
+            app: "MyApp",
+        },
+        ports: [{
+            protocol: "TCP",
+            port: 80,
+            targetPort: 9376,
+        }],
+    },
+});
+```
+```python
+import pulumi
+import pulumi_kubernetes as kubernetes
+
+my_service = kubernetes.core.v1.Service(
+    "my_service",
+    spec=kubernetes.core.v1.ServiceSpecArgs(
+        selector={
+            "app": "MyApp",
+        },
+        ports=[kubernetes.core.v1.ServicePortArgs(
+            protocol="TCP",
+            port=80,
+            target_port=9376,
+        )],
+    ))
+```
+```csharp
+using Pulumi;
+using Kubernetes = Pulumi.Kubernetes;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var service = new Kubernetes.Core.V1.Service("my_service", new Kubernetes.Types.Inputs.Core.V1.ServiceArgs
+        {
+            Spec = new Kubernetes.Types.Inputs.Core.V1.ServiceSpecArgs
+            {
+                Selector = 
+                {
+                    { "app", "MyApp" },
+                },
+                Ports = 
+                {
+                    new Kubernetes.Types.Inputs.Core.V1.ServicePortArgs
+                    {
+                        Protocol = "TCP",
+                        Port = 80,
+                        TargetPort = 9376,
+                    },
+                },
+            },
+        });
+    }
+}
+```
+```go
+package main
+
+import (
+	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
+	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/meta/v1"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := corev1.NewService(ctx, "my_service", &corev1.ServiceArgs{
+			Spec: &corev1.ServiceSpecArgs{
+				Selector: pulumi.StringMap{
+					"app": pulumi.String("MyApp"),
+				},
+				Ports: corev1.ServicePortArray{
+					&corev1.ServicePortArgs{
+						Protocol:   pulumi.String("TCP"),
+						Port:       pulumi.Int(80),
+						TargetPort: pulumi.Int(9376),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+{{% example %}}
+### Create a Service with a user-specified name
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as kubernetes from "@pulumi/kubernetes";
+
+const my_service = new kubernetes.core.v1.Service("my_service", {
+    metadata: {
+        name: "my-service",
+    },
+    spec: {
+        selector: {
+            app: "MyApp",
+        },
+        ports: [{
+            protocol: "TCP",
+            port: 80,
+            targetPort: 9376,
+        }],
+    },
+});
+```
+```python
+import pulumi
+import pulumi_kubernetes as kubernetes
+
+my_service = kubernetes.core.v1.Service(
+    "my_service",
+    metadata=kubernetes.meta.v1.ObjectMetaArgs(
+        name="my-service",
+    ),
+    spec=kubernetes.core.v1.ServiceSpecArgs(
+        selector={
+            "app": "MyApp",
+        },
+        ports=[kubernetes.core.v1.ServicePortArgs(
+            protocol="TCP",
+            port=80,
+            target_port=9376,
+        )],
+    ))
+```
+```csharp
+using Pulumi;
+using Kubernetes = Pulumi.Kubernetes;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var service = new Kubernetes.Core.V1.Service("my_service", new Kubernetes.Types.Inputs.Core.V1.ServiceArgs
+        {
+            Metadata = new Kubernetes.Types.Inputs.Meta.V1.ObjectMetaArgs
+            {
+                Name = "my-service",
+            },
+            Spec = new Kubernetes.Types.Inputs.Core.V1.ServiceSpecArgs
+            {
+                Selector = 
+                {
+                    { "app", "MyApp" },
+                },
+                Ports = 
+                {
+                    new Kubernetes.Types.Inputs.Core.V1.ServicePortArgs
+                    {
+                        Protocol = "TCP",
+                        Port = 80,
+                        TargetPort = 9376,
+                    },
+                },
+            },
+        });
+    }
+}
+```
+```go
+package main
+
+import (
+	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
+	metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/meta/v1"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := corev1.NewService(ctx, "my_service", &corev1.ServiceArgs{
+			Metadata: &metav1.ObjectMetaArgs{
+				Name: pulumi.String("my-service"),
+			},
+			Spec: &corev1.ServiceSpecArgs{
+				Selector: pulumi.StringMap{
+					"app": pulumi.String("MyApp"),
+				},
+				Ports: corev1.ServicePortArray{
+					&corev1.ServicePortArgs{
+						Protocol:   pulumi.String("TCP"),
+						Port:       pulumi.Int(80),
+						TargetPort: pulumi.Int(9376),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+{{% /example %}}
+{% /examples %}}
+
+ */
 @ResourceType(type="kubernetes:core/v1:Service")
 public class Service extends io.pulumi.resources.CustomResource {
+    /**
+     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     */
     @OutputExport(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
+    /**
+     * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     */
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
+    /**
+     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     */
     @OutputExport(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
+    /**
+     * @return Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     */
     public Output</* @Nullable */ ObjectMeta> getMetadata() {
         return this.metadata;
     }
+    /**
+     * Spec defines the behavior of a service. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     */
     @OutputExport(name="spec", type=ServiceSpec.class, parameters={})
     private Output</* @Nullable */ ServiceSpec> spec;
 
+    /**
+     * @return Spec defines the behavior of a service. https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     */
     public Output</* @Nullable */ ServiceSpec> getSpec() {
         return this.spec;
     }
+    /**
+     * Most recently observed status of the service. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     */
     @OutputExport(name="status", type=ServiceStatus.class, parameters={})
     private Output</* @Nullable */ ServiceStatus> status;
 
+    /**
+     * @return Most recently observed status of the service. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
+     */
     public Output</* @Nullable */ ServiceStatus> getStatus() {
         return this.status;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Service(String name, @Nullable ServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("kubernetes:core/v1:Service", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -71,6 +352,14 @@ public class Service extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Service get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Service(name, id, options);
     }

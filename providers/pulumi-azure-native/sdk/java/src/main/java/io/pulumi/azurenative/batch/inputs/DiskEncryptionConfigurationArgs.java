@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The disk encryption configuration applied on compute nodes in the pool. Disk encryption configuration is not supported on Linux pool created with Virtual Machine Image or Shared Image Gallery Image.
+ */
 public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskEncryptionConfigurationArgs Empty = new DiskEncryptionConfigurationArgs();
 
+    /**
+     * On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.
+     */
     @InputImport(name="targets")
     private final @Nullable Input<List<DiskEncryptionTarget>> targets;
 

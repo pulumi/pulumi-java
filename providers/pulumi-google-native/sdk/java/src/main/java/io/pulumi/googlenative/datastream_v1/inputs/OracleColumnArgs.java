@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Oracle Column.
+ */
 public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OracleColumnArgs Empty = new OracleColumnArgs();
 
+    /**
+     * Column name.
+     */
     @InputImport(name="column")
     private final @Nullable Input<String> column;
 
@@ -23,6 +29,9 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
         return this.column == null ? Input.empty() : this.column;
     }
 
+    /**
+     * The Oracle data type.
+     */
     @InputImport(name="dataType")
     private final @Nullable Input<String> dataType;
 
@@ -30,6 +39,9 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataType == null ? Input.empty() : this.dataType;
     }
 
+    /**
+     * Column encoding.
+     */
     @InputImport(name="encoding")
     private final @Nullable Input<String> encoding;
 
@@ -37,6 +49,9 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
         return this.encoding == null ? Input.empty() : this.encoding;
     }
 
+    /**
+     * Column length.
+     */
     @InputImport(name="length")
     private final @Nullable Input<Integer> length;
 
@@ -44,6 +59,9 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
         return this.length == null ? Input.empty() : this.length;
     }
 
+    /**
+     * Whether or not the column can accept a null value.
+     */
     @InputImport(name="nullable")
     private final @Nullable Input<Boolean> nullable;
 
@@ -51,6 +69,9 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
         return this.nullable == null ? Input.empty() : this.nullable;
     }
 
+    /**
+     * The ordinal position of the column in the table.
+     */
     @InputImport(name="ordinalPosition")
     private final @Nullable Input<Integer> ordinalPosition;
 
@@ -58,6 +79,9 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
         return this.ordinalPosition == null ? Input.empty() : this.ordinalPosition;
     }
 
+    /**
+     * Column precision.
+     */
     @InputImport(name="precision")
     private final @Nullable Input<Integer> precision;
 
@@ -65,6 +89,9 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
         return this.precision == null ? Input.empty() : this.precision;
     }
 
+    /**
+     * Whether or not the column represents a primary key.
+     */
     @InputImport(name="primaryKey")
     private final @Nullable Input<Boolean> primaryKey;
 
@@ -72,6 +99,9 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
         return this.primaryKey == null ? Input.empty() : this.primaryKey;
     }
 
+    /**
+     * Column scale.
+     */
     @InputImport(name="scale")
     private final @Nullable Input<Integer> scale;
 

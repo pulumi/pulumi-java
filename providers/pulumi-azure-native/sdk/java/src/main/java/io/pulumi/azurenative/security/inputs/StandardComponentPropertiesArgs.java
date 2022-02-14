@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes properties of an component as related to the standard
+ */
 public final class StandardComponentPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StandardComponentPropertiesArgs Empty = new StandardComponentPropertiesArgs();
 
+    /**
+     * Component Key matching componentMetadata
+     */
     @InputImport(name="key")
     private final @Nullable Input<String> key;
 

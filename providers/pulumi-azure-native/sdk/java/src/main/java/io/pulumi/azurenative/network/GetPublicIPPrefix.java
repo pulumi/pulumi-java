@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPublicIPPrefix {
+/**
+ * Public IP prefix resource.
+API Version: 2020-11-01.
+ *
+ * Public IP prefix resource.
+ */
     public static CompletableFuture<GetPublicIPPrefixResult> invokeAsync(GetPublicIPPrefixArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getPublicIPPrefix", TypeShape.of(GetPublicIPPrefixResult.class), args == null ? GetPublicIPPrefixArgs.Empty : args, Utilities.withVersion(options));
     }

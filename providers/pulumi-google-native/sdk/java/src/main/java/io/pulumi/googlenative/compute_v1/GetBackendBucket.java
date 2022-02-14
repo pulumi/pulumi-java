@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBackendBucket {
+/**
+ * Returns the specified BackendBucket resource. Gets a list of available backend buckets by making a list() request.
+ */
     public static CompletableFuture<GetBackendBucketResult> invokeAsync(GetBackendBucketArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/v1:getBackendBucket", TypeShape.of(GetBackendBucketResult.class), args == null ? GetBackendBucketArgs.Empty : args, Utilities.withVersion(options));
     }

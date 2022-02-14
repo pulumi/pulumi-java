@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure Storage Account workload-specific container.
+ */
 public final class AzureStorageContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureStorageContainerArgs Empty = new AzureStorageContainerArgs();
 
+    /**
+     * Type of backup management for the container.
+     */
     @InputImport(name="backupManagementType")
     private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
@@ -24,6 +30,13 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
     }
 
+    /**
+     * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+Backup is VMAppContainer
+Expected value is 'StorageContainer'.
+     */
     @InputImport(name="containerType", required=true)
     private final Input<String> containerType;
 
@@ -31,6 +44,9 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
         return this.containerType;
     }
 
+    /**
+     * Friendly name of the container.
+     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -38,6 +54,9 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
+    /**
+     * Status of health of the container.
+     */
     @InputImport(name="healthStatus")
     private final @Nullable Input<String> healthStatus;
 
@@ -45,6 +64,9 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
         return this.healthStatus == null ? Input.empty() : this.healthStatus;
     }
 
+    /**
+     * Number of items backed up in this container.
+     */
     @InputImport(name="protectedItemCount")
     private final @Nullable Input<Double> protectedItemCount;
 
@@ -52,6 +74,9 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
         return this.protectedItemCount == null ? Input.empty() : this.protectedItemCount;
     }
 
+    /**
+     * Status of registration of the container with the Recovery Services Vault.
+     */
     @InputImport(name="registrationStatus")
     private final @Nullable Input<String> registrationStatus;
 
@@ -59,6 +84,9 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
         return this.registrationStatus == null ? Input.empty() : this.registrationStatus;
     }
 
+    /**
+     * Resource group name of Recovery Services Vault.
+     */
     @InputImport(name="resourceGroup")
     private final @Nullable Input<String> resourceGroup;
 
@@ -66,6 +94,9 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
         return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
     }
 
+    /**
+     * Fully qualified ARM url.
+     */
     @InputImport(name="sourceResourceId")
     private final @Nullable Input<String> sourceResourceId;
 
@@ -73,6 +104,9 @@ public final class AzureStorageContainerArgs extends io.pulumi.resources.Resourc
         return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
     }
 
+    /**
+     * Storage account version.
+     */
     @InputImport(name="storageAccountVersion")
     private final @Nullable Input<String> storageAccountVersion;
 

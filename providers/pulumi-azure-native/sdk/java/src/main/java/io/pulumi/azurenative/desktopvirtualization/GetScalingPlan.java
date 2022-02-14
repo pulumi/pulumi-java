@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetScalingPlan {
+/**
+ * Represents a scaling plan definition.
+API Version: 2021-02-01-preview.
+ *
+ * Represents a scaling plan definition.
+ */
     public static CompletableFuture<GetScalingPlanResult> invokeAsync(GetScalingPlanArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:desktopvirtualization:getScalingPlan", TypeShape.of(GetScalingPlanResult.class), args == null ? GetScalingPlanArgs.Empty : args, Utilities.withVersion(options));
     }

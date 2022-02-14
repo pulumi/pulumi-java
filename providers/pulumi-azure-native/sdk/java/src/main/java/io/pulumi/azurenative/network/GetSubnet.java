@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubnet {
+/**
+ * Subnet in a virtual network resource.
+API Version: 2020-11-01.
+ *
+ * Subnet in a virtual network resource.
+ */
     public static CompletableFuture<GetSubnetResult> invokeAsync(GetSubnetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getSubnet", TypeShape.of(GetSubnetResult.class), args == null ? GetSubnetArgs.Empty : args, Utilities.withVersion(options));
     }

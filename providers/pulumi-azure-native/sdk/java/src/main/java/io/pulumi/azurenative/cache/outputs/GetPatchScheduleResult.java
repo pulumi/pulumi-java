@@ -11,9 +11,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetPatchScheduleResult {
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * List of patch schedules for a Redis cache.
+ */
     private final List<ScheduleEntryResponse> scheduleEntries;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","scheduleEntries","type"})
@@ -28,15 +40,27 @@ public final class GetPatchScheduleResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * List of patch schedules for a Redis cache.
+ */
     public List<ScheduleEntryResponse> getScheduleEntries() {
         return this.scheduleEntries;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

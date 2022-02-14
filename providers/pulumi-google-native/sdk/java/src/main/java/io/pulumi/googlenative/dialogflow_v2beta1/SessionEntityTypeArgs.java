@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SessionEntityTypeArgs Empty = new SessionEntityTypeArgs();
 
+    /**
+     * The collection of entities associated with this session entity type.
+     */
     @InputImport(name="entities", required=true)
     private final Input<List<GoogleCloudDialogflowV2beta1EntityTypeEntityArgs>> entities;
 
@@ -24,6 +30,9 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
         return this.entities;
     }
 
+    /**
+     * Indicates whether the additional data should override or supplement the custom entity type definition.
+     */
     @InputImport(name="entityOverrideMode", required=true)
     private final Input<SessionEntityTypeEntityOverrideMode> entityOverrideMode;
 
@@ -31,6 +40,9 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
         return this.entityOverrideMode;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="environmentId", required=true)
     private final Input<String> environmentId;
 
@@ -38,6 +50,9 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
         return this.environmentId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -45,6 +60,9 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The unique identifier of this session entity type. Supported formats: - `projects//agent/sessions//entityTypes/` - `projects//locations//agent/sessions//entityTypes/` - `projects//agent/environments//users//sessions//entityTypes/` - `projects//locations//agent/environments/ /users//sessions//entityTypes/` If `Location ID` is not specified we assume default 'us' location. If `Environment ID` is not specified, we assume default 'draft' environment. If `User ID` is not specified, we assume default '-' user. `` must be the display name of an existing entity type in the same agent that will be overridden or supplemented.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -52,6 +70,9 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
         return this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -59,6 +80,9 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="sessionId", required=true)
     private final Input<String> sessionId;
 
@@ -66,6 +90,9 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
         return this.sessionId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="userId", required=true)
     private final Input<String> userId;
 

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the partner that created the assessment
+ */
 public final class SecurityAssessmentMetadataPartnerDataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityAssessmentMetadataPartnerDataResponse Empty = new SecurityAssessmentMetadataPartnerDataResponse();
 
+    /**
+     * Name of the company of the partner
+     */
     @InputImport(name="partnerName", required=true)
     private final String partnerName;
 
@@ -21,6 +27,9 @@ public final class SecurityAssessmentMetadataPartnerDataResponse extends io.pulu
         return this.partnerName;
     }
 
+    /**
+     * Name of the product of the partner that created the assessment
+     */
     @InputImport(name="productName")
     private final @Nullable String productName;
 
@@ -28,6 +37,9 @@ public final class SecurityAssessmentMetadataPartnerDataResponse extends io.pulu
         return this.productName == null ? Optional.empty() : Optional.ofNullable(this.productName);
     }
 
+    /**
+     * Secret to authenticate the partner and verify it created the assessment - write only
+     */
     @InputImport(name="secret", required=true)
     private final String secret;
 

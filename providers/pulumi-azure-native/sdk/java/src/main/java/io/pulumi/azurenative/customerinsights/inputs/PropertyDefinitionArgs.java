@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Property definition.
+ */
 public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PropertyDefinitionArgs Empty = new PropertyDefinitionArgs();
 
+    /**
+     * Array value separator for properties with isArray set.
+     */
     @InputImport(name="arrayValueSeparator")
     private final @Nullable Input<String> arrayValueSeparator;
 
@@ -25,6 +31,9 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
         return this.arrayValueSeparator == null ? Input.empty() : this.arrayValueSeparator;
     }
 
+    /**
+     * Describes valid values for an enum property.
+     */
     @InputImport(name="enumValidValues")
     private final @Nullable Input<List<ProfileEnumValidValuesFormatArgs>> enumValidValues;
 
@@ -32,6 +41,9 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
         return this.enumValidValues == null ? Input.empty() : this.enumValidValues;
     }
 
+    /**
+     * Name of the property.
+     */
     @InputImport(name="fieldName", required=true)
     private final Input<String> fieldName;
 
@@ -39,6 +51,9 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
         return this.fieldName;
     }
 
+    /**
+     * Type of the property.
+     */
     @InputImport(name="fieldType", required=true)
     private final Input<String> fieldType;
 
@@ -46,6 +61,9 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
         return this.fieldType;
     }
 
+    /**
+     * Indicates if the property is actually an array of the fieldType above on the data api.
+     */
     @InputImport(name="isArray")
     private final @Nullable Input<Boolean> isArray;
 
@@ -53,6 +71,9 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
         return this.isArray == null ? Input.empty() : this.isArray;
     }
 
+    /**
+     * Whether property is available in graph or not.
+     */
     @InputImport(name="isAvailableInGraph")
     private final @Nullable Input<Boolean> isAvailableInGraph;
 
@@ -60,6 +81,9 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
         return this.isAvailableInGraph == null ? Input.empty() : this.isAvailableInGraph;
     }
 
+    /**
+     * Indicates if the property is an enum.
+     */
     @InputImport(name="isEnum")
     private final @Nullable Input<Boolean> isEnum;
 
@@ -67,6 +91,9 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
         return this.isEnum == null ? Input.empty() : this.isEnum;
     }
 
+    /**
+     * Indicates if the property is an flag enum.
+     */
     @InputImport(name="isFlagEnum")
     private final @Nullable Input<Boolean> isFlagEnum;
 
@@ -74,6 +101,9 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
         return this.isFlagEnum == null ? Input.empty() : this.isFlagEnum;
     }
 
+    /**
+     * Whether the property is an Image.
+     */
     @InputImport(name="isImage")
     private final @Nullable Input<Boolean> isImage;
 
@@ -81,6 +111,9 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
         return this.isImage == null ? Input.empty() : this.isImage;
     }
 
+    /**
+     * Whether the property is a localized string.
+     */
     @InputImport(name="isLocalizedString")
     private final @Nullable Input<Boolean> isLocalizedString;
 
@@ -88,6 +121,9 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
         return this.isLocalizedString == null ? Input.empty() : this.isLocalizedString;
     }
 
+    /**
+     * Whether the property is a name or a part of name.
+     */
     @InputImport(name="isName")
     private final @Nullable Input<Boolean> isName;
 
@@ -95,6 +131,9 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
         return this.isName == null ? Input.empty() : this.isName;
     }
 
+    /**
+     * Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.
+     */
     @InputImport(name="isRequired")
     private final @Nullable Input<Boolean> isRequired;
 
@@ -102,6 +141,9 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
         return this.isRequired == null ? Input.empty() : this.isRequired;
     }
 
+    /**
+     * Max length of string. Used only if type is string.
+     */
     @InputImport(name="maxLength")
     private final @Nullable Input<Integer> maxLength;
 
@@ -109,6 +151,9 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
         return this.maxLength == null ? Input.empty() : this.maxLength;
     }
 
+    /**
+     * The ID associated with the property.
+     */
     @InputImport(name="propertyId")
     private final @Nullable Input<String> propertyId;
 
@@ -116,6 +161,9 @@ public final class PropertyDefinitionArgs extends io.pulumi.resources.ResourceAr
         return this.propertyId == null ? Input.empty() : this.propertyId;
     }
 
+    /**
+     * URL encoded schema.org item prop link for the property.
+     */
     @InputImport(name="schemaItemPropLink")
     private final @Nullable Input<String> schemaItemPropLink;
 

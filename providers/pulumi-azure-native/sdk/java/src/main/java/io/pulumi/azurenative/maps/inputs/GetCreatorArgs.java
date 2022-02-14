@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetCreatorArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCreatorArgs Empty = new GetCreatorArgs();
 
+    /**
+     * The name of the Maps Account.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetCreatorArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the Maps Creator instance.
+     */
     @InputImport(name="creatorName", required=true)
     private final String creatorName;
 
@@ -26,6 +35,9 @@ public final class GetCreatorArgs extends io.pulumi.resources.InvokeArgs {
         return this.creatorName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

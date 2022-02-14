@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGatewayCustomDomain {
+/**
+ * Custom domain of the Spring Cloud Gateway
+API Version: 2022-01-01-preview.
+ *
+ * Custom domain of the Spring Cloud Gateway
+ */
     public static CompletableFuture<GetGatewayCustomDomainResult> invokeAsync(GetGatewayCustomDomainArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appplatform:getGatewayCustomDomain", TypeShape.of(GetGatewayCustomDomainResult.class), args == null ? GetGatewayCustomDomainArgs.Empty : args, Utilities.withVersion(options));
     }

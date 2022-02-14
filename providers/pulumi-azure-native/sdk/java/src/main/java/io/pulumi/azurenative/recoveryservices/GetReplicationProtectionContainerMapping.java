@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetReplicationProtectionContainerMapping {
+/**
+ * Protection container mapping object.
+API Version: 2018-07-10.
+ *
+ * Protection container mapping object.
+ */
     public static CompletableFuture<GetReplicationProtectionContainerMappingResult> invokeAsync(GetReplicationProtectionContainerMappingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:recoveryservices:getReplicationProtectionContainerMapping", TypeShape.of(GetReplicationProtectionContainerMappingResult.class), args == null ? GetReplicationProtectionContainerMappingArgs.Empty : args, Utilities.withVersion(options));
     }

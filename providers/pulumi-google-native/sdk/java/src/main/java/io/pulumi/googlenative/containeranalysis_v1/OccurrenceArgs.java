@@ -21,10 +21,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OccurrenceArgs Empty = new OccurrenceArgs();
 
+    /**
+     * Describes an attestation of an artifact.
+     */
     @InputImport(name="attestation")
     private final @Nullable Input<AttestationOccurrenceArgs> attestation;
 
@@ -32,6 +38,9 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.attestation == null ? Input.empty() : this.attestation;
     }
 
+    /**
+     * Describes a verifiable build.
+     */
     @InputImport(name="build")
     private final @Nullable Input<BuildOccurrenceArgs> build;
 
@@ -39,6 +48,9 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.build == null ? Input.empty() : this.build;
     }
 
+    /**
+     * Describes a compliance violation on a linked resource.
+     */
     @InputImport(name="compliance")
     private final @Nullable Input<ComplianceOccurrenceArgs> compliance;
 
@@ -46,6 +58,9 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.compliance == null ? Input.empty() : this.compliance;
     }
 
+    /**
+     * Describes the deployment of an artifact on a runtime.
+     */
     @InputImport(name="deployment")
     private final @Nullable Input<DeploymentOccurrenceArgs> deployment;
 
@@ -53,6 +68,9 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.deployment == null ? Input.empty() : this.deployment;
     }
 
+    /**
+     * Describes when a resource was discovered.
+     */
     @InputImport(name="discovery")
     private final @Nullable Input<DiscoveryOccurrenceArgs> discovery;
 
@@ -60,6 +78,9 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.discovery == null ? Input.empty() : this.discovery;
     }
 
+    /**
+     * Describes an attestation of an artifact using dsse.
+     */
     @InputImport(name="dsseAttestation")
     private final @Nullable Input<DSSEAttestationOccurrenceArgs> dsseAttestation;
 
@@ -67,6 +88,9 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.dsseAttestation == null ? Input.empty() : this.dsseAttestation;
     }
 
+    /**
+     * https://github.com/secure-systems-lab/dsse
+     */
     @InputImport(name="envelope")
     private final @Nullable Input<EnvelopeArgs> envelope;
 
@@ -74,6 +98,9 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.envelope == null ? Input.empty() : this.envelope;
     }
 
+    /**
+     * Describes how this resource derives from the basis in the associated note.
+     */
     @InputImport(name="image")
     private final @Nullable Input<ImageOccurrenceArgs> image;
 
@@ -81,6 +108,9 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.image == null ? Input.empty() : this.image;
     }
 
+    /**
+     * Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
+     */
     @InputImport(name="noteName", required=true)
     private final Input<String> noteName;
 
@@ -88,6 +118,9 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.noteName;
     }
 
+    /**
+     * Describes the installation of a package on the linked resource.
+     */
     @InputImport(name="package")
     private final @Nullable Input<PackageOccurrenceArgs> $package;
 
@@ -95,6 +128,9 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.$package == null ? Input.empty() : this.$package;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -102,6 +138,9 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * A description of actions that can be taken to remedy the note.
+     */
     @InputImport(name="remediation")
     private final @Nullable Input<String> remediation;
 
@@ -109,6 +148,9 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.remediation == null ? Input.empty() : this.remediation;
     }
 
+    /**
+     * Immutable. A URI that represents the resource for which the occurrence applies. For example, `https://gcr.io/project/image@sha256:123abc` for a Docker image.
+     */
     @InputImport(name="resourceUri", required=true)
     private final Input<String> resourceUri;
 
@@ -116,6 +158,9 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceUri;
     }
 
+    /**
+     * Describes an available package upgrade on the linked resource.
+     */
     @InputImport(name="upgrade")
     private final @Nullable Input<UpgradeOccurrenceArgs> upgrade;
 
@@ -123,6 +168,9 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.upgrade == null ? Input.empty() : this.upgrade;
     }
 
+    /**
+     * Describes a security vulnerability.
+     */
     @InputImport(name="vulnerability")
     private final @Nullable Input<VulnerabilityOccurrenceArgs> vulnerability;
 

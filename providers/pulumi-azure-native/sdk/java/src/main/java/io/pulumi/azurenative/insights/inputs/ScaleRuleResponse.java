@@ -9,10 +9,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * A rule that provide the triggers and parameters for the scaling action.
+ */
 public final class ScaleRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScaleRuleResponse Empty = new ScaleRuleResponse();
 
+    /**
+     * the trigger that results in a scaling action.
+     */
     @InputImport(name="metricTrigger", required=true)
     private final MetricTriggerResponse metricTrigger;
 
@@ -20,6 +26,9 @@ public final class ScaleRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.metricTrigger;
     }
 
+    /**
+     * the parameters for the scaling action.
+     */
     @InputImport(name="scaleAction", required=true)
     private final ScaleActionResponse scaleAction;
 

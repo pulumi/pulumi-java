@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AttestationProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AttestationProviderArgs Empty = new AttestationProviderArgs();
 
+    /**
+     * The supported Azure location where the attestation provider should be created.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -23,6 +29,9 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Properties of the attestation provider
+     */
     @InputImport(name="properties", required=true)
     private final Input<AttestationServiceCreationSpecificParamsArgs> properties;
 
@@ -30,6 +39,9 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
         return this.properties;
     }
 
+    /**
+     * Name of the attestation provider.
+     */
     @InputImport(name="providerName")
     private final @Nullable Input<String> providerName;
 
@@ -37,6 +49,9 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
         return this.providerName == null ? Input.empty() : this.providerName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +59,9 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
+    /**
+     * The tags that will be assigned to the attestation provider.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

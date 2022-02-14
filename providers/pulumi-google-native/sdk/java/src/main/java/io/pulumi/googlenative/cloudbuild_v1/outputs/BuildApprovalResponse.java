@@ -11,8 +11,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BuildApprovalResponse {
+/**
+ * Configuration for manual approval of this build.
+ */
     private final ApprovalConfigResponse config;
+/**
+ * Result of manual approval for this Build.
+ */
     private final ApprovalResultResponse result;
+/**
+ * The state of this build's approval.
+ */
     private final String state;
 
     @OutputCustomType.Constructor({"config","result","state"})
@@ -25,12 +34,21 @@ public final class BuildApprovalResponse {
         this.state = Objects.requireNonNull(state);
     }
 
+/**
+ * Configuration for manual approval of this build.
+ */
     public ApprovalConfigResponse getConfig() {
         return this.config;
     }
+/**
+ * Result of manual approval for this Build.
+ */
     public ApprovalResultResponse getResult() {
         return this.result;
     }
+/**
+ * The state of this build's approval.
+ */
     public String getState() {
         return this.state;
     }

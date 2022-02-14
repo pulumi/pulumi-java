@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SKU of an Azure Firewall.
+ */
 public final class AzureFirewallSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureFirewallSkuArgs Empty = new AzureFirewallSkuArgs();
 
+    /**
+     * Name of an Azure Firewall SKU.
+     */
     @InputImport(name="name")
     private final @Nullable Input<Either<String,AzureFirewallSkuName>> name;
 
@@ -24,6 +30,9 @@ public final class AzureFirewallSkuArgs extends io.pulumi.resources.ResourceArgs
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Tier of an Azure Firewall.
+     */
     @InputImport(name="tier")
     private final @Nullable Input<Either<String,AzureFirewallSkuTier>> tier;
 

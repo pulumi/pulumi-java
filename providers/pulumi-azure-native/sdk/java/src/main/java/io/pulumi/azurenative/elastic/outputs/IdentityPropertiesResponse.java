@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IdentityPropertiesResponse {
+/**
+ * The identity ID.
+ */
     private final String principalId;
+/**
+ * The tenant ID of resource.
+ */
     private final String tenantId;
+/**
+ * Managed identity type.
+ */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type"})
@@ -25,12 +34,21 @@ public final class IdentityPropertiesResponse {
         this.type = type;
     }
 
+/**
+ * The identity ID.
+ */
     public String getPrincipalId() {
         return this.principalId;
     }
+/**
+ * The tenant ID of resource.
+ */
     public String getTenantId() {
         return this.tenantId;
     }
+/**
+ * Managed identity type.
+ */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

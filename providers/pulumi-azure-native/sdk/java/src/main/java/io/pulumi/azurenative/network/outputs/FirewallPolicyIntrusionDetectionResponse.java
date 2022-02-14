@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FirewallPolicyIntrusionDetectionResponse {
+/**
+ * Intrusion detection configuration properties.
+ */
     private final @Nullable FirewallPolicyIntrusionDetectionConfigurationResponse configuration;
+/**
+ * Intrusion detection general state.
+ */
     private final @Nullable String mode;
 
     @OutputCustomType.Constructor({"configuration","mode"})
@@ -23,9 +29,15 @@ public final class FirewallPolicyIntrusionDetectionResponse {
         this.mode = mode;
     }
 
+/**
+ * Intrusion detection configuration properties.
+ */
     public Optional<FirewallPolicyIntrusionDetectionConfigurationResponse> getConfiguration() {
         return Optional.ofNullable(this.configuration);
     }
+/**
+ * Intrusion detection general state.
+ */
     public Optional<String> getMode() {
         return Optional.ofNullable(this.mode);
     }

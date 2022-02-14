@@ -12,16 +12,49 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetPartnerResult {
+/**
+ * This is the DateTime when the partner was created.
+ */
     private final @Nullable String createdTime;
+/**
+ * Type of the partner
+ */
     private final @Nullable Integer etag;
+/**
+ * Identifier of the partner
+ */
     private final String id;
+/**
+ * Name of the partner
+ */
     private final String name;
+/**
+ * This is the object id.
+ */
     private final @Nullable String objectId;
+/**
+ * This is the partner id
+ */
     private final @Nullable String partnerId;
+/**
+ * This is the partner name
+ */
     private final @Nullable String partnerName;
+/**
+ * This is the tenant id.
+ */
     private final @Nullable String tenantId;
+/**
+ * Type of resource. "Microsoft.ManagementPartner/partners"
+ */
     private final String type;
+/**
+ * This is the DateTime when the partner was updated.
+ */
     private final @Nullable String updatedTime;
+/**
+ * This is the version.
+ */
     private final @Nullable Integer version;
 
     @OutputCustomType.Constructor({"createdTime","etag","id","name","objectId","partnerId","partnerName","tenantId","type","updatedTime","version"})
@@ -50,36 +83,69 @@ public final class GetPartnerResult {
         this.version = version;
     }
 
+/**
+ * This is the DateTime when the partner was created.
+ */
     public Optional<String> getCreatedTime() {
         return Optional.ofNullable(this.createdTime);
     }
+/**
+ * Type of the partner
+ */
     public Optional<Integer> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+/**
+ * Identifier of the partner
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Name of the partner
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * This is the object id.
+ */
     public Optional<String> getObjectId() {
         return Optional.ofNullable(this.objectId);
     }
+/**
+ * This is the partner id
+ */
     public Optional<String> getPartnerId() {
         return Optional.ofNullable(this.partnerId);
     }
+/**
+ * This is the partner name
+ */
     public Optional<String> getPartnerName() {
         return Optional.ofNullable(this.partnerName);
     }
+/**
+ * This is the tenant id.
+ */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
+/**
+ * Type of resource. "Microsoft.ManagementPartner/partners"
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * This is the DateTime when the partner was updated.
+ */
     public Optional<String> getUpdatedTime() {
         return Optional.ofNullable(this.updatedTime);
     }
+/**
+ * This is the version.
+ */
     public Optional<Integer> getVersion() {
         return Optional.ofNullable(this.version);
     }

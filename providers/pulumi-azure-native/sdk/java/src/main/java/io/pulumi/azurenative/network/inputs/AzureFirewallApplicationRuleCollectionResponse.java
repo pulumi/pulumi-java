@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Application rule collection resource.
+ */
 public final class AzureFirewallApplicationRuleCollectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureFirewallApplicationRuleCollectionResponse Empty = new AzureFirewallApplicationRuleCollectionResponse();
 
+    /**
+     * The action type of a rule collection.
+     */
     @InputImport(name="action")
     private final @Nullable AzureFirewallRCActionResponse action;
 
@@ -25,6 +31,9 @@ public final class AzureFirewallApplicationRuleCollectionResponse extends io.pul
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -32,6 +41,9 @@ public final class AzureFirewallApplicationRuleCollectionResponse extends io.pul
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -39,6 +51,9 @@ public final class AzureFirewallApplicationRuleCollectionResponse extends io.pul
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -46,6 +61,9 @@ public final class AzureFirewallApplicationRuleCollectionResponse extends io.pul
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Priority of the application rule collection resource.
+     */
     @InputImport(name="priority")
     private final @Nullable Integer priority;
 
@@ -53,6 +71,9 @@ public final class AzureFirewallApplicationRuleCollectionResponse extends io.pul
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
+    /**
+     * The provisioning state of the application rule collection resource.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -60,6 +81,9 @@ public final class AzureFirewallApplicationRuleCollectionResponse extends io.pul
         return this.provisioningState;
     }
 
+    /**
+     * Collection of rules used by a application rule collection.
+     */
     @InputImport(name="rules")
     private final @Nullable List<AzureFirewallApplicationRuleResponse> rules;
 

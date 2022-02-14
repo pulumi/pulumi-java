@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CategoryResponse {
+/**
+ * The identifier of the category.
+ */
     private final String categoryId;
+/**
+ * The localized name of the category.
+ */
     private final String name;
 
     @OutputCustomType.Constructor({"categoryId","name"})
@@ -20,9 +26,15 @@ public final class CategoryResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+/**
+ * The identifier of the category.
+ */
     public String getCategoryId() {
         return this.categoryId;
     }
+/**
+ * The localized name of the category.
+ */
     public String getName() {
         return this.name;
     }

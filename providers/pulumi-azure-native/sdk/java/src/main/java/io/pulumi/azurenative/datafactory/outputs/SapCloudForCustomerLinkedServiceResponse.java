@@ -19,14 +19,42 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SapCloudForCustomerLinkedServiceResponse {
+/**
+ * List of tags that can be used for describing the linked service.
+ */
     private final @Nullable List<Object> annotations;
+/**
+ * The integration runtime reference.
+ */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+/**
+ * Linked service description.
+ */
     private final @Nullable String description;
+/**
+ * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object encryptedCredential;
+/**
+ * Parameters for linked service.
+ */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+/**
+ * The password for Basic authentication.
+ */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+/**
+ * Type of linked service.
+Expected value is 'SapCloudForCustomer'.
+ */
     private final String type;
+/**
+ * The URL of SAP Cloud for Customer OData API. For example, '[https://[tenantname].crm.ondemand.com/sap/c4c/odata/v1]'. Type: string (or Expression with resultType string).
+ */
     private final Object url;
+/**
+ * The username for Basic authentication. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object username;
 
     @OutputCustomType.Constructor({"annotations","connectVia","description","encryptedCredential","parameters","password","type","url","username"})
@@ -51,30 +79,58 @@ public final class SapCloudForCustomerLinkedServiceResponse {
         this.username = username;
     }
 
+/**
+ * List of tags that can be used for describing the linked service.
+ */
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
+/**
+ * The integration runtime reference.
+ */
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return Optional.ofNullable(this.connectVia);
     }
+/**
+ * Linked service description.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getEncryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
+/**
+ * Parameters for linked service.
+ */
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
+/**
+ * The password for Basic authentication.
+ */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> getPassword() {
         return Optional.ofNullable(this.password);
     }
+/**
+ * Type of linked service.
+Expected value is 'SapCloudForCustomer'.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * The URL of SAP Cloud for Customer OData API. For example, '[https://[tenantname].crm.ondemand.com/sap/c4c/odata/v1]'. Type: string (or Expression with resultType string).
+ */
     public Object getUrl() {
         return this.url;
     }
+/**
+ * The username for Basic authentication. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getUsername() {
         return Optional.ofNullable(this.username);
     }

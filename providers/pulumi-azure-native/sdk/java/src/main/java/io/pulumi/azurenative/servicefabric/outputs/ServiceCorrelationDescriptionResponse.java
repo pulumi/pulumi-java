@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ServiceCorrelationDescriptionResponse {
+/**
+ * The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
+ */
     private final String scheme;
+/**
+ * The name of the service that the correlation relationship is established with.
+ */
     private final String serviceName;
 
     @OutputCustomType.Constructor({"scheme","serviceName"})
@@ -20,9 +26,15 @@ public final class ServiceCorrelationDescriptionResponse {
         this.serviceName = Objects.requireNonNull(serviceName);
     }
 
+/**
+ * The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
+ */
     public String getScheme() {
         return this.scheme;
     }
+/**
+ * The name of the service that the correlation relationship is established with.
+ */
     public String getServiceName() {
         return this.serviceName;
     }

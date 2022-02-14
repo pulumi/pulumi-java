@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The kind of workbook. Choices are user and shared.
+ */
     @EnumType
     public enum OrchestratorKind {
+/**
+ * 
+ */
         Kubernetes("Kubernetes");
 
         private final String value;

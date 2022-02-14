@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLogger {
+/**
+ * Logger details.
+API Version: 2020-12-01.
+ *
+ * Logger details.
+ */
     public static CompletableFuture<GetLoggerResult> invokeAsync(GetLoggerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getLogger", TypeShape.of(GetLoggerResult.class), args == null ? GetLoggerArgs.Empty : args, Utilities.withVersion(options));
     }

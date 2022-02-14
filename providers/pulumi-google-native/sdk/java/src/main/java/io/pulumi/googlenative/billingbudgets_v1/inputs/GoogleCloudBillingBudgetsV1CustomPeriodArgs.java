@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * All date times begin at 12 AM US and Canadian Pacific Time (UTC-8).
+ */
 public final class GoogleCloudBillingBudgetsV1CustomPeriodArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudBillingBudgetsV1CustomPeriodArgs Empty = new GoogleCloudBillingBudgetsV1CustomPeriodArgs();
 
+    /**
+     * Optional. The end date of the time period. Budgets with elapsed end date won't be processed. If unset, specifies to track all usage incurred since the start_date.
+     */
     @InputImport(name="endDate")
     private final @Nullable Input<GoogleTypeDateArgs> endDate;
 
@@ -21,6 +27,9 @@ public final class GoogleCloudBillingBudgetsV1CustomPeriodArgs extends io.pulumi
         return this.endDate == null ? Input.empty() : this.endDate;
     }
 
+    /**
+     * The start date must be after January 1, 2017.
+     */
     @InputImport(name="startDate", required=true)
     private final Input<GoogleTypeDateArgs> startDate;
 

@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RoleRef {
+/**
+ * APIGroup is the group for the resource being referenced
+ */
     private final String apiGroup;
+/**
+ * Kind is the type of resource being referenced
+ */
     private final String kind;
+/**
+ * Name is the name of resource being referenced
+ */
     private final String name;
 
     @OutputCustomType.Constructor({"apiGroup","kind","name"})
@@ -23,12 +32,21 @@ public final class RoleRef {
         this.name = Objects.requireNonNull(name);
     }
 
+/**
+ * APIGroup is the group for the resource being referenced
+ */
     public String getApiGroup() {
         return this.apiGroup;
     }
+/**
+ * Kind is the type of resource being referenced
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * Name is the name of resource being referenced
+ */
     public String getName() {
         return this.name;
     }

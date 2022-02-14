@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MysqlSourceConfigResponse {
+/**
+ * MySQL objects to retrieve from the source.
+ */
     private final MysqlRdbmsResponse allowlist;
+/**
+ * MySQL objects to exclude from the stream.
+ */
     private final MysqlRdbmsResponse rejectlist;
 
     @OutputCustomType.Constructor({"allowlist","rejectlist"})
@@ -20,9 +26,15 @@ public final class MysqlSourceConfigResponse {
         this.rejectlist = Objects.requireNonNull(rejectlist);
     }
 
+/**
+ * MySQL objects to retrieve from the source.
+ */
     public MysqlRdbmsResponse getAllowlist() {
         return this.allowlist;
     }
+/**
+ * MySQL objects to exclude from the stream.
+ */
     public MysqlRdbmsResponse getRejectlist() {
         return this.rejectlist;
     }

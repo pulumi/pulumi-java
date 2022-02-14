@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.datashare;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.datashare.SynapseWorkspaceSqlPoolTableDataSetMappingArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,57 +14,512 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A Synapse Workspace Sql Pool Table data set mapping
+API Version: 2020-09-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### DataSetMappings_Create
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var synapseWorkspaceSqlPoolTableDataSetMapping = new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSetMapping("synapseWorkspaceSqlPoolTableDataSetMapping", new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSetMappingArgs
+        {
+            AccountName = "Account1",
+            DataSetMappingName = "DatasetMapping1",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareSubscriptionName = "ShareSubscription1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datashare.NewSynapseWorkspaceSqlPoolTableDataSetMapping(ctx, "synapseWorkspaceSqlPoolTableDataSetMapping", &datashare.SynapseWorkspaceSqlPoolTableDataSetMappingArgs{
+			AccountName:           pulumi.String("Account1"),
+			DataSetMappingName:    pulumi.String("DatasetMapping1"),
+			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
+			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const synapseWorkspaceSqlPoolTableDataSetMapping = new azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSetMapping("synapseWorkspaceSqlPoolTableDataSetMapping", {
+    accountName: "Account1",
+    dataSetMappingName: "DatasetMapping1",
+    resourceGroupName: "SampleResourceGroup",
+    shareSubscriptionName: "ShareSubscription1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+synapse_workspace_sql_pool_table_data_set_mapping = azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSetMapping("synapseWorkspaceSqlPoolTableDataSetMapping",
+    account_name="Account1",
+    data_set_mapping_name="DatasetMapping1",
+    resource_group_name="SampleResourceGroup",
+    share_subscription_name="ShareSubscription1")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### DataSetMappings_SqlDB_Create
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var synapseWorkspaceSqlPoolTableDataSetMapping = new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSetMapping("synapseWorkspaceSqlPoolTableDataSetMapping", new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSetMappingArgs
+        {
+            AccountName = "Account1",
+            DataSetMappingName = "DatasetMapping1",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareSubscriptionName = "ShareSubscription1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datashare.NewSynapseWorkspaceSqlPoolTableDataSetMapping(ctx, "synapseWorkspaceSqlPoolTableDataSetMapping", &datashare.SynapseWorkspaceSqlPoolTableDataSetMappingArgs{
+			AccountName:           pulumi.String("Account1"),
+			DataSetMappingName:    pulumi.String("DatasetMapping1"),
+			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
+			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const synapseWorkspaceSqlPoolTableDataSetMapping = new azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSetMapping("synapseWorkspaceSqlPoolTableDataSetMapping", {
+    accountName: "Account1",
+    dataSetMappingName: "DatasetMapping1",
+    resourceGroupName: "SampleResourceGroup",
+    shareSubscriptionName: "ShareSubscription1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+synapse_workspace_sql_pool_table_data_set_mapping = azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSetMapping("synapseWorkspaceSqlPoolTableDataSetMapping",
+    account_name="Account1",
+    data_set_mapping_name="DatasetMapping1",
+    resource_group_name="SampleResourceGroup",
+    share_subscription_name="ShareSubscription1")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### DataSetMappings_SqlDWDataSetToAdlsGen2File_Create
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var synapseWorkspaceSqlPoolTableDataSetMapping = new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSetMapping("synapseWorkspaceSqlPoolTableDataSetMapping", new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSetMappingArgs
+        {
+            AccountName = "Account1",
+            DataSetMappingName = "DatasetMapping1",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareSubscriptionName = "ShareSubscription1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datashare.NewSynapseWorkspaceSqlPoolTableDataSetMapping(ctx, "synapseWorkspaceSqlPoolTableDataSetMapping", &datashare.SynapseWorkspaceSqlPoolTableDataSetMappingArgs{
+			AccountName:           pulumi.String("Account1"),
+			DataSetMappingName:    pulumi.String("DatasetMapping1"),
+			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
+			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const synapseWorkspaceSqlPoolTableDataSetMapping = new azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSetMapping("synapseWorkspaceSqlPoolTableDataSetMapping", {
+    accountName: "Account1",
+    dataSetMappingName: "DatasetMapping1",
+    resourceGroupName: "SampleResourceGroup",
+    shareSubscriptionName: "ShareSubscription1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+synapse_workspace_sql_pool_table_data_set_mapping = azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSetMapping("synapseWorkspaceSqlPoolTableDataSetMapping",
+    account_name="Account1",
+    data_set_mapping_name="DatasetMapping1",
+    resource_group_name="SampleResourceGroup",
+    share_subscription_name="ShareSubscription1")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### DataSetMappings_SqlDW_Create
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var synapseWorkspaceSqlPoolTableDataSetMapping = new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSetMapping("synapseWorkspaceSqlPoolTableDataSetMapping", new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSetMappingArgs
+        {
+            AccountName = "Account1",
+            DataSetMappingName = "DatasetMapping1",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareSubscriptionName = "ShareSubscription1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datashare.NewSynapseWorkspaceSqlPoolTableDataSetMapping(ctx, "synapseWorkspaceSqlPoolTableDataSetMapping", &datashare.SynapseWorkspaceSqlPoolTableDataSetMappingArgs{
+			AccountName:           pulumi.String("Account1"),
+			DataSetMappingName:    pulumi.String("DatasetMapping1"),
+			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
+			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const synapseWorkspaceSqlPoolTableDataSetMapping = new azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSetMapping("synapseWorkspaceSqlPoolTableDataSetMapping", {
+    accountName: "Account1",
+    dataSetMappingName: "DatasetMapping1",
+    resourceGroupName: "SampleResourceGroup",
+    shareSubscriptionName: "ShareSubscription1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+synapse_workspace_sql_pool_table_data_set_mapping = azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSetMapping("synapseWorkspaceSqlPoolTableDataSetMapping",
+    account_name="Account1",
+    data_set_mapping_name="DatasetMapping1",
+    resource_group_name="SampleResourceGroup",
+    share_subscription_name="ShareSubscription1")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### DataSetMappings_SynapseWorkspaceSqlPoolTable_Create
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var synapseWorkspaceSqlPoolTableDataSetMapping = new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSetMapping("synapseWorkspaceSqlPoolTableDataSetMapping", new AzureNative.DataShare.SynapseWorkspaceSqlPoolTableDataSetMappingArgs
+        {
+            AccountName = "consumerAccount",
+            DataSetId = "3dc64e49-1fc3-4186-b3dc-d388c4d3076a",
+            DataSetMappingName = "datasetMappingName1",
+            Kind = "SynapseWorkspaceSqlPoolTable",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareSubscriptionName = "ShareSubscription1",
+            SynapseWorkspaceSqlPoolTableResourceId = "/subscriptions/0f3dcfc3-18f8-4099-b381-8353e19d43a7/resourceGroups/SampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/sqlPools/ExampleSqlPool/schemas/dbo/tables/table1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datashare.NewSynapseWorkspaceSqlPoolTableDataSetMapping(ctx, "synapseWorkspaceSqlPoolTableDataSetMapping", &datashare.SynapseWorkspaceSqlPoolTableDataSetMappingArgs{
+			AccountName:                            pulumi.String("consumerAccount"),
+			DataSetId:                              pulumi.String("3dc64e49-1fc3-4186-b3dc-d388c4d3076a"),
+			DataSetMappingName:                     pulumi.String("datasetMappingName1"),
+			Kind:                                   pulumi.String("SynapseWorkspaceSqlPoolTable"),
+			ResourceGroupName:                      pulumi.String("SampleResourceGroup"),
+			ShareSubscriptionName:                  pulumi.String("ShareSubscription1"),
+			SynapseWorkspaceSqlPoolTableResourceId: pulumi.String("/subscriptions/0f3dcfc3-18f8-4099-b381-8353e19d43a7/resourceGroups/SampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/sqlPools/ExampleSqlPool/schemas/dbo/tables/table1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const synapseWorkspaceSqlPoolTableDataSetMapping = new azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSetMapping("synapseWorkspaceSqlPoolTableDataSetMapping", {
+    accountName: "consumerAccount",
+    dataSetId: "3dc64e49-1fc3-4186-b3dc-d388c4d3076a",
+    dataSetMappingName: "datasetMappingName1",
+    kind: "SynapseWorkspaceSqlPoolTable",
+    resourceGroupName: "SampleResourceGroup",
+    shareSubscriptionName: "ShareSubscription1",
+    synapseWorkspaceSqlPoolTableResourceId: "/subscriptions/0f3dcfc3-18f8-4099-b381-8353e19d43a7/resourceGroups/SampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/sqlPools/ExampleSqlPool/schemas/dbo/tables/table1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+synapse_workspace_sql_pool_table_data_set_mapping = azure_native.datashare.SynapseWorkspaceSqlPoolTableDataSetMapping("synapseWorkspaceSqlPoolTableDataSetMapping",
+    account_name="consumerAccount",
+    data_set_id="3dc64e49-1fc3-4186-b3dc-d388c4d3076a",
+    data_set_mapping_name="datasetMappingName1",
+    kind="SynapseWorkspaceSqlPoolTable",
+    resource_group_name="SampleResourceGroup",
+    share_subscription_name="ShareSubscription1",
+    synapse_workspace_sql_pool_table_resource_id="/subscriptions/0f3dcfc3-18f8-4099-b381-8353e19d43a7/resourceGroups/SampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/sqlPools/ExampleSqlPool/schemas/dbo/tables/table1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:datashare:SynapseWorkspaceSqlPoolTableDataSetMapping datasetMappingName1 /subscriptions/0f3dcfc3-18f8-4099-b381-8353e19d43a7/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/consumerAccount/shareSubscriptions/ShareSubscription1/dataSetMappings/datasetMappingName1 
+```
+
+ */
 @ResourceType(type="azure-native:datashare:SynapseWorkspaceSqlPoolTableDataSetMapping")
 public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resources.CustomResource {
+    /**
+     * The id of the source data set.
+     */
     @OutputExport(name="dataSetId", type=String.class, parameters={})
     private Output<String> dataSetId;
 
+    /**
+     * @return The id of the source data set.
+     */
     public Output<String> getDataSetId() {
         return this.dataSetId;
     }
+    /**
+     * Gets the status of the data set mapping.
+     */
     @OutputExport(name="dataSetMappingStatus", type=String.class, parameters={})
     private Output<String> dataSetMappingStatus;
 
+    /**
+     * @return Gets the status of the data set mapping.
+     */
     public Output<String> getDataSetMappingStatus() {
         return this.dataSetMappingStatus;
     }
+    /**
+     * Kind of data set mapping.
+Expected value is 'SynapseWorkspaceSqlPoolTable'.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return Kind of data set mapping.
+Expected value is 'SynapseWorkspaceSqlPoolTable'.
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * Name of the azure resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the azure resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Provisioning state of the data set mapping.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state of the data set mapping.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource id of the Synapse Workspace SQL Pool Table
+     */
     @OutputExport(name="synapseWorkspaceSqlPoolTableResourceId", type=String.class, parameters={})
     private Output<String> synapseWorkspaceSqlPoolTableResourceId;
 
+    /**
+     * @return Resource id of the Synapse Workspace SQL Pool Table
+     */
     public Output<String> getSynapseWorkspaceSqlPoolTableResourceId() {
         return this.synapseWorkspaceSqlPoolTableResourceId;
     }
+    /**
+     * System Data of the Azure resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return System Data of the Azure resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Type of the azure resource
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of the azure resource
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SynapseWorkspaceSqlPoolTableDataSetMapping(String name, SynapseWorkspaceSqlPoolTableDataSetMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datashare:SynapseWorkspaceSqlPoolTableDataSetMapping", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -95,6 +549,14 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SynapseWorkspaceSqlPoolTableDataSetMapping get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SynapseWorkspaceSqlPoolTableDataSetMapping(name, id, options);
     }

@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ManagedClusterPodIdentityProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedClusterPodIdentityProfileResponse Empty = new ManagedClusterPodIdentityProfileResponse();
 
+    /**
+     * Customer consent for enabling AAD pod identity addon in cluster using Kubenet network plugin.
+     */
     @InputImport(name="allowNetworkPluginKubenet")
     private final @Nullable Boolean allowNetworkPluginKubenet;
 
@@ -24,6 +30,9 @@ public final class ManagedClusterPodIdentityProfileResponse extends io.pulumi.re
         return this.allowNetworkPluginKubenet == null ? Optional.empty() : Optional.ofNullable(this.allowNetworkPluginKubenet);
     }
 
+    /**
+     * Whether the pod identity addon is enabled.
+     */
     @InputImport(name="enabled")
     private final @Nullable Boolean enabled;
 
@@ -31,6 +40,9 @@ public final class ManagedClusterPodIdentityProfileResponse extends io.pulumi.re
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
+    /**
+     * User assigned pod identity settings.
+     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities;
 
@@ -38,6 +50,9 @@ public final class ManagedClusterPodIdentityProfileResponse extends io.pulumi.re
         return this.userAssignedIdentities == null ? List.of() : this.userAssignedIdentities;
     }
 
+    /**
+     * User assigned pod identity exception settings.
+     */
     @InputImport(name="userAssignedIdentityExceptions")
     private final @Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions;
 

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The export dataset configuration. Allows columns to be selected for the export. If not provided then the export will include all available columns.
+ */
 public final class ExportDatasetConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExportDatasetConfigurationArgs Empty = new ExportDatasetConfigurationArgs();
 
+    /**
+     * Array of column names to be included in the export. If not provided then the export will include all available columns. The available columns can vary by customer channel (see examples).
+     */
     @InputImport(name="columns")
     private final @Nullable Input<List<String>> columns;
 

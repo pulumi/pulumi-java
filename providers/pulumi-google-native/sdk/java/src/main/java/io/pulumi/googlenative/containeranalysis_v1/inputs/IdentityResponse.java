@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The unique identifier of the update.
+ */
 public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IdentityResponse Empty = new IdentityResponse();
 
+    /**
+     * The revision number of the update.
+     */
     @InputImport(name="revision", required=true)
     private final Integer revision;
 
@@ -20,6 +26,9 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
         return this.revision;
     }
 
+    /**
+     * The revision independent identifier of the update.
+     */
     @InputImport(name="updateId", required=true)
     private final String updateId;
 

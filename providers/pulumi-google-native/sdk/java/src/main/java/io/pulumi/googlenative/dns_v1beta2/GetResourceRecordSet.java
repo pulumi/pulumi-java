@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetResourceRecordSet {
+/**
+ * Fetches the representation of an existing ResourceRecordSet.
+ */
     public static CompletableFuture<GetResourceRecordSetResult> invokeAsync(GetResourceRecordSetArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dns/v1beta2:getResourceRecordSet", TypeShape.of(GetResourceRecordSetResult.class), args == null ? GetResourceRecordSetArgs.Empty : args, Utilities.withVersion(options));
     }

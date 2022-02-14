@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Compute properties for data flow activity.
+ */
 public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExecuteDataFlowActivityTypePropertiesComputeArgs Empty = new ExecuteDataFlowActivityTypePropertiesComputeArgs();
 
+    /**
+     * Compute type of the cluster which will execute data flow job. Possible values include: 'General', 'MemoryOptimized', 'ComputeOptimized'. Type: string (or Expression with resultType string)
+     */
     @InputImport(name="computeType")
     private final @Nullable Input<Object> computeType;
 
@@ -21,6 +27,9 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends io.p
         return this.computeType == null ? Input.empty() : this.computeType;
     }
 
+    /**
+     * Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272. Type: integer (or Expression with resultType integer)
+     */
     @InputImport(name="coreCount")
     private final @Nullable Input<Object> coreCount;
 

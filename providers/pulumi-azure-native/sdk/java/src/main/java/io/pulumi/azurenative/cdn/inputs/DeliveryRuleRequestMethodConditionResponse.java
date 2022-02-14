@@ -9,10 +9,17 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines the RequestMethod condition for the delivery rule.
+ */
 public final class DeliveryRuleRequestMethodConditionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeliveryRuleRequestMethodConditionResponse Empty = new DeliveryRuleRequestMethodConditionResponse();
 
+    /**
+     * The name of the condition for the delivery rule.
+Expected value is 'RequestMethod'.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -20,6 +27,9 @@ public final class DeliveryRuleRequestMethodConditionResponse extends io.pulumi.
         return this.name;
     }
 
+    /**
+     * Defines the parameters for the condition.
+     */
     @InputImport(name="parameters", required=true)
     private final RequestMethodMatchConditionParametersResponse parameters;
 

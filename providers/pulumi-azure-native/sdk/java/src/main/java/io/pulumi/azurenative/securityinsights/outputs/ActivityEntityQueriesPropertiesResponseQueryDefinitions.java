@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ActivityEntityQueriesPropertiesResponseQueryDefinitions {
+/**
+ * The Activity query to run on a given entity
+ */
     private final @Nullable String query;
 
     @OutputCustomType.Constructor({"query"})
@@ -18,6 +21,9 @@ public final class ActivityEntityQueriesPropertiesResponseQueryDefinitions {
         this.query = query;
     }
 
+/**
+ * The Activity query to run on a given entity
+ */
     public Optional<String> getQuery() {
         return Optional.ofNullable(this.query);
     }

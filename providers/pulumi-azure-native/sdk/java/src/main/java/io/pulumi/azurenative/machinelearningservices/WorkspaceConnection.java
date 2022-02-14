@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.machinelearningservices;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.machinelearningservices.WorkspaceConnectionArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -14,51 +13,206 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Workspace connection.
+API Version: 2021-01-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### CreateWorkspaceConnection
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workspaceConnection = new AzureNative.MachineLearningServices.WorkspaceConnection("workspaceConnection", new AzureNative.MachineLearningServices.WorkspaceConnectionArgs
+        {
+            AuthType = "PAT",
+            Category = "ACR",
+            ConnectionName = "connection-1",
+            Name = "connection-1",
+            ResourceGroupName = "resourceGroup-1",
+            Target = "www.facebook.com",
+            Value = "secrets",
+            WorkspaceName = "workspace-1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	machinelearningservices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/machinelearningservices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := machinelearningservices.NewWorkspaceConnection(ctx, "workspaceConnection", &machinelearningservices.WorkspaceConnectionArgs{
+			AuthType:          pulumi.String("PAT"),
+			Category:          pulumi.String("ACR"),
+			ConnectionName:    pulumi.String("connection-1"),
+			Name:              pulumi.String("connection-1"),
+			ResourceGroupName: pulumi.String("resourceGroup-1"),
+			Target:            pulumi.String("www.facebook.com"),
+			Value:             pulumi.String("secrets"),
+			WorkspaceName:     pulumi.String("workspace-1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const workspaceConnection = new azure_native.machinelearningservices.WorkspaceConnection("workspaceConnection", {
+    authType: "PAT",
+    category: "ACR",
+    connectionName: "connection-1",
+    name: "connection-1",
+    resourceGroupName: "resourceGroup-1",
+    target: "www.facebook.com",
+    value: "secrets",
+    workspaceName: "workspace-1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+workspace_connection = azure_native.machinelearningservices.WorkspaceConnection("workspaceConnection",
+    auth_type="PAT",
+    category="ACR",
+    connection_name="connection-1",
+    name="connection-1",
+    resource_group_name="resourceGroup-1",
+    target="www.facebook.com",
+    value="secrets",
+    workspace_name="workspace-1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:machinelearningservices:WorkspaceConnection connection-1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup-1/providers/Microsoft.MachineLearningServices/workspaces/workspace-1/connections/connection-1 
+```
+
+ */
 @ResourceType(type="azure-native:machinelearningservices:WorkspaceConnection")
 public class WorkspaceConnection extends io.pulumi.resources.CustomResource {
+    /**
+     * Authorization type of the workspace connection.
+     */
     @OutputExport(name="authType", type=String.class, parameters={})
     private Output</* @Nullable */ String> authType;
 
+    /**
+     * @return Authorization type of the workspace connection.
+     */
     public Output</* @Nullable */ String> getAuthType() {
         return this.authType;
     }
+    /**
+     * Category of the workspace connection.
+     */
     @OutputExport(name="category", type=String.class, parameters={})
     private Output</* @Nullable */ String> category;
 
+    /**
+     * @return Category of the workspace connection.
+     */
     public Output</* @Nullable */ String> getCategory() {
         return this.category;
     }
+    /**
+     * Friendly name of the workspace connection.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Friendly name of the workspace connection.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Target of the workspace connection.
+     */
     @OutputExport(name="target", type=String.class, parameters={})
     private Output</* @Nullable */ String> target;
 
+    /**
+     * @return Target of the workspace connection.
+     */
     public Output</* @Nullable */ String> getTarget() {
         return this.target;
     }
+    /**
+     * Resource type of workspace connection.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type of workspace connection.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Value details of the workspace connection.
+     */
     @OutputExport(name="value", type=String.class, parameters={})
     private Output</* @Nullable */ String> value;
 
+    /**
+     * @return Value details of the workspace connection.
+     */
     public Output</* @Nullable */ String> getValue() {
         return this.value;
     }
+    /**
+     * format for the workspace connection value
+     */
     @OutputExport(name="valueFormat", type=String.class, parameters={})
     private Output</* @Nullable */ String> valueFormat;
 
+    /**
+     * @return format for the workspace connection value
+     */
     public Output</* @Nullable */ String> getValueFormat() {
         return this.valueFormat;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public WorkspaceConnection(String name, WorkspaceConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:machinelearningservices:WorkspaceConnection", name, args == null ? WorkspaceConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -84,6 +238,14 @@ public class WorkspaceConnection extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static WorkspaceConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WorkspaceConnection(name, id, options);
     }

@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Parameters for a schedule-based autoscale rule, consisting of an array of days + a time and capacity
+ */
 public final class AutoscaleScheduleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutoscaleScheduleResponse Empty = new AutoscaleScheduleResponse();
 
+    /**
+     * Days of the week for a schedule-based autoscale rule
+     */
     @InputImport(name="days")
     private final @Nullable List<String> days;
 
@@ -23,6 +29,9 @@ public final class AutoscaleScheduleResponse extends io.pulumi.resources.InvokeA
         return this.days == null ? List.of() : this.days;
     }
 
+    /**
+     * Time and capacity for a schedule-based autoscale rule
+     */
     @InputImport(name="timeAndCapacity")
     private final @Nullable AutoscaleTimeAndCapacityResponse timeAndCapacity;
 

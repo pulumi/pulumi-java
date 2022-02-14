@@ -11,10 +11,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The SKU of a container registry.
+ */
 public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuArgs Empty = new SkuArgs();
 
+    /**
+     * The SKU name of the container registry. Required for registry creation.
+     */
     @InputImport(name="name", required=true)
     private final Input<Either<String,SkuName>> name;
 

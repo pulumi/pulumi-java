@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The available data types for TI (Threat Intelligence) data connector.
+ */
 public final class TIDataConnectorDataTypesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TIDataConnectorDataTypesArgs Empty = new TIDataConnectorDataTypesArgs();
 
+    /**
+     * Data type for indicators connection.
+     */
     @InputImport(name="indicators")
     private final @Nullable Input<TIDataConnectorDataTypesIndicatorsArgs> indicators;
 

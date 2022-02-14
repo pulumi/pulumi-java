@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The HTTP method to use for the request.
+ */
     @EnumType
     public enum RestRequestMethod {
+/**
+ * 
+ */
         GET("GET"),
+/**
+ * 
+ */
         POST("POST");
 
         private final String value;

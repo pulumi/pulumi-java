@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Type of the managed instance administrator.
+ */
     @EnumType
     public enum ManagedInstanceAdministratorType {
+/**
+ * 
+ */
         ActiveDirectory("ActiveDirectory");
 
         private final String value;

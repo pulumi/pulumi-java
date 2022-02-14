@@ -13,7 +13,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VaultSecretGroupResponse {
+/**
+ * The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
+ */
     private final @Nullable SubResourceResponse sourceVault;
+/**
+ * The list of key vault references in SourceVault which contain certificates.
+ */
     private final @Nullable List<VaultCertificateResponse> vaultCertificates;
 
     @OutputCustomType.Constructor({"sourceVault","vaultCertificates"})
@@ -24,9 +30,15 @@ public final class VaultSecretGroupResponse {
         this.vaultCertificates = vaultCertificates;
     }
 
+/**
+ * The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
+ */
     public Optional<SubResourceResponse> getSourceVault() {
         return Optional.ofNullable(this.sourceVault);
     }
+/**
+ * The list of key vault references in SourceVault which contain certificates.
+ */
     public List<VaultCertificateResponse> getVaultCertificates() {
         return this.vaultCertificates == null ? List.of() : this.vaultCertificates;
     }

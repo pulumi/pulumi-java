@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListWorkflowRunActionRepetitionExpressionTracesResult {
+/**
+ * 
+ */
     private final @Nullable List<ExpressionRootResponse> inputs;
 
     @OutputCustomType.Constructor({"inputs"})
@@ -18,6 +21,9 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesResult {
         this.inputs = inputs;
     }
 
+/**
+ * 
+ */
     public List<ExpressionRootResponse> getInputs() {
         return this.inputs == null ? List.of() : this.inputs;
     }

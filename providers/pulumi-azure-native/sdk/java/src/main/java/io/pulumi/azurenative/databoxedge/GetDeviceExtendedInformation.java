@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeviceExtendedInformation {
+/**
+ * The extended Info of the Data Box Edge/Gateway device.
+API Version: 2020-12-01.
+ *
+ * The extended Info of the Data Box Edge/Gateway device.
+ */
     public static CompletableFuture<GetDeviceExtendedInformationResult> invokeAsync(GetDeviceExtendedInformationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getDeviceExtendedInformation", TypeShape.of(GetDeviceExtendedInformationResult.class), args == null ? GetDeviceExtendedInformationArgs.Empty : args, Utilities.withVersion(options));
     }

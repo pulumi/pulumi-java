@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Summary of database results in the migration
+ */
 public final class DatabaseSummaryResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatabaseSummaryResultResponse Empty = new DatabaseSummaryResultResponse();
 
+    /**
+     * Migration end time
+     */
     @InputImport(name="endedOn", required=true)
     private final String endedOn;
 
@@ -20,6 +26,9 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
         return this.endedOn;
     }
 
+    /**
+     * Wildcard string prefix to use for querying all errors of the item
+     */
     @InputImport(name="errorPrefix", required=true)
     private final String errorPrefix;
 
@@ -27,6 +36,9 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
         return this.errorPrefix;
     }
 
+    /**
+     * Number of successfully completed items
+     */
     @InputImport(name="itemsCompletedCount", required=true)
     private final Double itemsCompletedCount;
 
@@ -34,6 +46,9 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
         return this.itemsCompletedCount;
     }
 
+    /**
+     * Number of items
+     */
     @InputImport(name="itemsCount", required=true)
     private final Double itemsCount;
 
@@ -41,6 +56,9 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
         return this.itemsCount;
     }
 
+    /**
+     * Name of the item
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -48,6 +66,9 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
         return this.name;
     }
 
+    /**
+     * Wildcard string prefix to use for querying all sub-tem results of the item
+     */
     @InputImport(name="resultPrefix", required=true)
     private final String resultPrefix;
 
@@ -55,6 +76,9 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
         return this.resultPrefix;
     }
 
+    /**
+     * Size of the database in megabytes
+     */
     @InputImport(name="sizeMB", required=true)
     private final Double sizeMB;
 
@@ -62,6 +86,9 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
         return this.sizeMB;
     }
 
+    /**
+     * Migration start time
+     */
     @InputImport(name="startedOn", required=true)
     private final String startedOn;
 
@@ -69,6 +96,9 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
         return this.startedOn;
     }
 
+    /**
+     * Current state of migration
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -76,6 +106,9 @@ public final class DatabaseSummaryResultResponse extends io.pulumi.resources.Inv
         return this.state;
     }
 
+    /**
+     * Status message
+     */
     @InputImport(name="statusMessage", required=true)
     private final String statusMessage;
 

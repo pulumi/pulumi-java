@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An object that defines the blob inventory rule filter conditions.
+ */
 public final class BlobInventoryPolicyFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BlobInventoryPolicyFilterResponse Empty = new BlobInventoryPolicyFilterResponse();
 
+    /**
+     * An array of predefined enum values. Valid values include blockBlob, appendBlob, pageBlob. Hns accounts does not support pageBlobs.
+     */
     @InputImport(name="blobTypes", required=true)
     private final List<String> blobTypes;
 
@@ -23,6 +29,9 @@ public final class BlobInventoryPolicyFilterResponse extends io.pulumi.resources
         return this.blobTypes;
     }
 
+    /**
+     * Includes blob versions in blob inventory when value set to true.
+     */
     @InputImport(name="includeBlobVersions")
     private final @Nullable Boolean includeBlobVersions;
 
@@ -30,6 +39,9 @@ public final class BlobInventoryPolicyFilterResponse extends io.pulumi.resources
         return this.includeBlobVersions == null ? Optional.empty() : Optional.ofNullable(this.includeBlobVersions);
     }
 
+    /**
+     * Includes blob snapshots in blob inventory when value set to true.
+     */
     @InputImport(name="includeSnapshots")
     private final @Nullable Boolean includeSnapshots;
 
@@ -37,6 +49,9 @@ public final class BlobInventoryPolicyFilterResponse extends io.pulumi.resources
         return this.includeSnapshots == null ? Optional.empty() : Optional.ofNullable(this.includeSnapshots);
     }
 
+    /**
+     * An array of strings for blob prefixes to be matched.
+     */
     @InputImport(name="prefixMatch")
     private final @Nullable List<String> prefixMatch;
 

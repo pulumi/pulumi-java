@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of the rule collection.
+ */
     @EnumType
     public enum FirewallPolicyRuleCollectionType {
+/**
+ * 
+ */
         FirewallPolicyNatRuleCollection("FirewallPolicyNatRuleCollection"),
+/**
+ * 
+ */
         FirewallPolicyFilterRuleCollection("FirewallPolicyFilterRuleCollection");
 
         private final String value;

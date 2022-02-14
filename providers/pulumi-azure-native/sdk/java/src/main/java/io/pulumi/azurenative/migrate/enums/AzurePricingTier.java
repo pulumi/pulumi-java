@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Pricing tier for Size evaluation.
+ */
     @EnumType
     public enum AzurePricingTier {
+/**
+ * 
+ */
         Standard("Standard"),
+/**
+ * 
+ */
         Basic("Basic");
 
         private final String value;

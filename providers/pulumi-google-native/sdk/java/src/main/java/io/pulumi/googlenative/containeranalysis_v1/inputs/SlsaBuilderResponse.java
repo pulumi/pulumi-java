@@ -6,6 +6,9 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class SlsaBuilderResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SlsaBuilderResponse Empty = new SlsaBuilderResponse();

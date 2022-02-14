@@ -11,10 +11,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Optimization objective.
+ */
 public final class ObjectiveArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ObjectiveArgs Empty = new ObjectiveArgs();
 
+    /**
+     * Defines supported metric goals for hyperparameter tuning
+     */
     @InputImport(name="goal", required=true)
     private final Input<Either<String,Goal>> goal;
 
@@ -22,6 +28,9 @@ public final class ObjectiveArgs extends io.pulumi.resources.ResourceArgs {
         return this.goal;
     }
 
+    /**
+     * Name of the metric to optimize.
+     */
     @InputImport(name="primaryMetric", required=true)
     private final Input<String> primaryMetric;
 

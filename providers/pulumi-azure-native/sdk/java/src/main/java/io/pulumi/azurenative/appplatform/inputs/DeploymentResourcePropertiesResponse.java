@@ -15,10 +15,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Deployment resource properties payload
+ */
 public final class DeploymentResourcePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DeploymentResourcePropertiesResponse Empty = new DeploymentResourcePropertiesResponse();
 
+    /**
+     * Indicates whether the Deployment is active
+     */
     @InputImport(name="active", required=true)
     private final Boolean active;
 
@@ -26,6 +32,9 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
         return this.active;
     }
 
+    /**
+     * App name of the deployment
+     */
     @InputImport(name="appName", required=true)
     private final String appName;
 
@@ -33,6 +42,9 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
         return this.appName;
     }
 
+    /**
+     * Date time when the resource is created
+     */
     @InputImport(name="createdTime", required=true)
     private final String createdTime;
 
@@ -40,6 +52,9 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
         return this.createdTime;
     }
 
+    /**
+     * Deployment settings of the Deployment
+     */
     @InputImport(name="deploymentSettings")
     private final @Nullable DeploymentSettingsResponse deploymentSettings;
 
@@ -47,6 +62,9 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
         return this.deploymentSettings == null ? Optional.empty() : Optional.ofNullable(this.deploymentSettings);
     }
 
+    /**
+     * Collection of instances belong to the Deployment
+     */
     @InputImport(name="instances", required=true)
     private final List<DeploymentInstanceResponse> instances;
 
@@ -54,6 +72,9 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
         return this.instances;
     }
 
+    /**
+     * Provisioning state of the Deployment
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -61,6 +82,9 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
         return this.provisioningState;
     }
 
+    /**
+     * Uploaded source information of the deployment.
+     */
     @InputImport(name="source")
     private final @Nullable UserSourceInfoResponse source;
 
@@ -68,6 +92,9 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
     }
 
+    /**
+     * Status of the Deployment
+     */
     @InputImport(name="status", required=true)
     private final String status;
 

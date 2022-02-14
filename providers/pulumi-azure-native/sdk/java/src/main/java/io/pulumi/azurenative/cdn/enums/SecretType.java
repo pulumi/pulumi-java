@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of the Secret to create.
+ */
     @EnumType
     public enum SecretType {
+/**
+ * 
+ */
         UrlSigningKey("UrlSigningKey"),
+/**
+ * 
+ */
         CustomerCertificate("CustomerCertificate"),
+/**
+ * 
+ */
         ManagedCertificate("ManagedCertificate");
 
         private final String value;

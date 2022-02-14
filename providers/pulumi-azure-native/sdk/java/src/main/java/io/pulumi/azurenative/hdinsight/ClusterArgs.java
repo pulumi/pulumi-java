@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterArgs Empty = new ClusterArgs();
 
+    /**
+     * The name of the cluster.
+     */
     @InputImport(name="clusterName")
     private final @Nullable Input<String> clusterName;
 
@@ -24,6 +30,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.clusterName == null ? Input.empty() : this.clusterName;
     }
 
+    /**
+     * The identity of the cluster, if configured.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<ClusterIdentityArgs> identity;
 
@@ -31,6 +40,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * The location of the cluster.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -38,6 +50,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The cluster create parameters.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<ClusterCreatePropertiesArgs> properties;
 
@@ -45,6 +60,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -52,6 +70,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

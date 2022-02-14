@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualMachineScaleSetVMRunCommand {
+/**
+ * Describes a Virtual Machine run command.
+API Version: 2021-03-01.
+ *
+ * Describes a Virtual Machine run command.
+ */
     public static CompletableFuture<GetVirtualMachineScaleSetVMRunCommandResult> invokeAsync(GetVirtualMachineScaleSetVMRunCommandArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachineScaleSetVMRunCommand", TypeShape.of(GetVirtualMachineScaleSetVMRunCommandResult.class), args == null ? GetVirtualMachineScaleSetVMRunCommandArgs.Empty : args, Utilities.withVersion(options));
     }

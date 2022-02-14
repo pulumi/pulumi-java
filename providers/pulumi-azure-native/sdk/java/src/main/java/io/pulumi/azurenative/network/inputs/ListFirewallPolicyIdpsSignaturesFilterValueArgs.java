@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListFirewallPolicyIdpsSignaturesFilterValueArgs Empty = new ListFirewallPolicyIdpsSignaturesFilterValueArgs();
 
+    /**
+     * Describes the name of the column which values will be returned
+     */
     @InputImport(name="filterName")
     private final @Nullable String filterName;
 
@@ -21,6 +27,9 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends io.pu
         return this.filterName == null ? Optional.empty() : Optional.ofNullable(this.filterName);
     }
 
+    /**
+     * The name of the Firewall Policy.
+     */
     @InputImport(name="firewallPolicyName", required=true)
     private final String firewallPolicyName;
 
@@ -28,6 +37,9 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueArgs extends io.pu
         return this.firewallPolicyName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

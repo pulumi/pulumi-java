@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListIngestionSettingConnectionStringsResult {
+/**
+ * Connection strings
+ */
     private final List<IngestionConnectionStringResponse> value;
 
     @OutputCustomType.Constructor({"value"})
@@ -17,6 +20,9 @@ public final class ListIngestionSettingConnectionStringsResult {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * Connection strings
+ */
     public List<IngestionConnectionStringResponse> getValue() {
         return this.value;
     }

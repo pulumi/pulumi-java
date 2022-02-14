@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class KeyValueResponse {
+/**
+ * The key of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
+ */
     private final String key;
+/**
+ * The value of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
+ */
     private final String value;
 
     @OutputCustomType.Constructor({"key","value"})
@@ -20,9 +26,15 @@ public final class KeyValueResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * The key of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
+ */
     public String getKey() {
         return this.key;
     }
+/**
+ * The value of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
+ */
     public String getValue() {
         return this.value;
     }

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the resource range.
+ */
 public final class ResourceRangeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceRangeArgs Empty = new ResourceRangeArgs();
 
+    /**
+     * The maximum number of the resource.
+     */
     @InputImport(name="max")
     private final @Nullable Input<Integer> max;
 
@@ -21,6 +27,9 @@ public final class ResourceRangeArgs extends io.pulumi.resources.ResourceArgs {
         return this.max == null ? Input.empty() : this.max;
     }
 
+    /**
+     * The minimum number of the resource.
+     */
     @InputImport(name="min")
     private final @Nullable Input<Integer> min;
 

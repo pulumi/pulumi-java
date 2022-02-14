@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Determines the type of confirmation e-mail that will be sent to the newly created user.
+ */
     @EnumType
     public enum Confirmation {
+/**
+ * Send an e-mail to the user confirming they have successfully signed up.
+ */
         Signup("signup"),
+/**
+ * Send an e-mail inviting the user to sign-up and complete registration.
+ */
         Invite("invite");
 
         private final String value;

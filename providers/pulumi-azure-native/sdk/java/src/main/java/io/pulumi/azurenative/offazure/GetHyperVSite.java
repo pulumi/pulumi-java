@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetHyperVSite {
+/**
+ * Site REST Resource.
+API Version: 2020-01-01.
+ *
+ * Site REST Resource.
+ */
     public static CompletableFuture<GetHyperVSiteResult> invokeAsync(GetHyperVSiteArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:offazure:getHyperVSite", TypeShape.of(GetHyperVSiteResult.class), args == null ? GetHyperVSiteArgs.Empty : args, Utilities.withVersion(options));
     }

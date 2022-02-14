@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GatewayArgs Empty = new GatewayArgs();
 
+    /**
+     * User readable description of the gateway.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -26,6 +32,9 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Network that the Application is using.
+     */
     @InputImport(name="destinationNetwork", required=true)
     private final Input<NetworkRefArgs> destinationNetwork;
 
@@ -33,6 +42,9 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.destinationNetwork;
     }
 
+    /**
+     * The identity of the gateway.
+     */
     @InputImport(name="gatewayResourceName")
     private final @Nullable Input<String> gatewayResourceName;
 
@@ -40,6 +52,9 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.gatewayResourceName == null ? Input.empty() : this.gatewayResourceName;
     }
 
+    /**
+     * Configuration for http connectivity for this gateway.
+     */
     @InputImport(name="http")
     private final @Nullable Input<List<HttpConfigArgs>> http;
 
@@ -47,6 +62,9 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.http == null ? Input.empty() : this.http;
     }
 
+    /**
+     * The geo-location where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -54,6 +72,9 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Azure resource group name
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -61,6 +82,9 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Network the gateway should listen on for requests.
+     */
     @InputImport(name="sourceNetwork", required=true)
     private final Input<NetworkRefArgs> sourceNetwork;
 
@@ -68,6 +92,9 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.sourceNetwork;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -75,6 +102,9 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Configuration for tcp connectivity for this gateway.
+     */
     @InputImport(name="tcp")
     private final @Nullable Input<List<TcpConfigArgs>> tcp;
 

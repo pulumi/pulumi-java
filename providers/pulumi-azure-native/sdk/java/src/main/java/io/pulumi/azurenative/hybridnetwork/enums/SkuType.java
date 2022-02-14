@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The sku type.
+ */
     @EnumType
     public enum SkuType {
+/**
+ * 
+ */
         Unknown("Unknown"),
+/**
+ * 
+ */
         EvolvedPacketCore("EvolvedPacketCore"),
+/**
+ * 
+ */
         SDWAN("SDWAN"),
+/**
+ * 
+ */
         Firewall("Firewall");
 
         private final String value;

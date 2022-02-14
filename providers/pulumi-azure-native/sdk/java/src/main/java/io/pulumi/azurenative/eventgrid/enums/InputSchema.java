@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * This determines the format that Event Grid should expect for incoming events published to the topic.
+ */
     @EnumType
     public enum InputSchema {
+/**
+ * 
+ */
         EventGridSchema("EventGridSchema"),
+/**
+ * 
+ */
         CustomEventSchema("CustomEventSchema"),
+/**
+ * 
+ */
         CloudEventSchemaV1_0("CloudEventSchemaV1_0");
 
         private final String value;

@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Authorization info used to access a resource (like code repository).
+ */
 public final class AuthorizationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AuthorizationResponse Empty = new AuthorizationResponse();
 
+    /**
+     * Type of authorization.
+     */
     @InputImport(name="authorizationType", required=true)
     private final String authorizationType;
 
@@ -22,6 +28,9 @@ public final class AuthorizationResponse extends io.pulumi.resources.InvokeArgs 
         return this.authorizationType;
     }
 
+    /**
+     * Authorization parameters corresponding to the authorization type.
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,String> parameters;
 

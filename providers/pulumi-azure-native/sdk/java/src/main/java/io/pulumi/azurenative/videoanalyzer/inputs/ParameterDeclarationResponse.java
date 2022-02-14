@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Single topology parameter declaration. Declared parameters can and must be referenced throughout the topology and can optionally have default values to be used when they are not defined in the pipelines.
+ */
 public final class ParameterDeclarationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ParameterDeclarationResponse Empty = new ParameterDeclarationResponse();
 
+    /**
+     * The default value for the parameter to be used if the pipeline does not specify a value.
+     */
     @InputImport(name="default")
     private final @Nullable String $default;
 
@@ -21,6 +27,9 @@ public final class ParameterDeclarationResponse extends io.pulumi.resources.Invo
         return this.$default == null ? Optional.empty() : Optional.ofNullable(this.$default);
     }
 
+    /**
+     * Description of the parameter.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -28,6 +37,9 @@ public final class ParameterDeclarationResponse extends io.pulumi.resources.Invo
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Name of the parameter.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,6 +47,9 @@ public final class ParameterDeclarationResponse extends io.pulumi.resources.Invo
         return this.name;
     }
 
+    /**
+     * Type of the parameter.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

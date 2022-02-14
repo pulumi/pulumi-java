@@ -9,10 +9,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ApprovalResultResponse {
+/**
+ * The time when the approval decision was made.
+ */
     private final String approvalTime;
+/**
+ * Email of the user that called the ApproveBuild API to approve or reject a build at the time that the API was called.
+ */
     private final String approverAccount;
+/**
+ * Optional. An optional comment for this manual approval result.
+ */
     private final String comment;
+/**
+ * The decision of this manual approval.
+ */
     private final String decision;
+/**
+ * Optional. An optional URL tied to this manual approval result. This field is essentially the same as comment, except that it will be rendered by the UI differently. An example use case is a link to an external job that approved this Build.
+ */
     private final String url;
 
     @OutputCustomType.Constructor({"approvalTime","approverAccount","comment","decision","url"})
@@ -29,18 +44,33 @@ public final class ApprovalResultResponse {
         this.url = Objects.requireNonNull(url);
     }
 
+/**
+ * The time when the approval decision was made.
+ */
     public String getApprovalTime() {
         return this.approvalTime;
     }
+/**
+ * Email of the user that called the ApproveBuild API to approve or reject a build at the time that the API was called.
+ */
     public String getApproverAccount() {
         return this.approverAccount;
     }
+/**
+ * Optional. An optional comment for this manual approval result.
+ */
     public String getComment() {
         return this.comment;
     }
+/**
+ * The decision of this manual approval.
+ */
     public String getDecision() {
         return this.decision;
     }
+/**
+ * Optional. An optional URL tied to this manual approval result. This field is essentially the same as comment, except that it will be rendered by the UI differently. An example use case is a link to an external job that approved this Build.
+ */
     public String getUrl() {
         return this.url;
     }

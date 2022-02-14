@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * DDoS custom policy properties.
+ */
 public final class ProtocolCustomSettingsFormatResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProtocolCustomSettingsFormatResponse Empty = new ProtocolCustomSettingsFormatResponse();
 
+    /**
+     * The protocol for which the DDoS protection policy is being customized.
+     */
     @InputImport(name="protocol")
     private final @Nullable String protocol;
 
@@ -21,6 +27,9 @@ public final class ProtocolCustomSettingsFormatResponse extends io.pulumi.resour
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
+    /**
+     * The customized DDoS protection source rate.
+     */
     @InputImport(name="sourceRateOverride")
     private final @Nullable String sourceRateOverride;
 
@@ -28,6 +37,9 @@ public final class ProtocolCustomSettingsFormatResponse extends io.pulumi.resour
         return this.sourceRateOverride == null ? Optional.empty() : Optional.ofNullable(this.sourceRateOverride);
     }
 
+    /**
+     * The customized DDoS protection trigger rate.
+     */
     @InputImport(name="triggerRateOverride")
     private final @Nullable String triggerRateOverride;
 
@@ -35,6 +47,9 @@ public final class ProtocolCustomSettingsFormatResponse extends io.pulumi.resour
         return this.triggerRateOverride == null ? Optional.empty() : Optional.ofNullable(this.triggerRateOverride);
     }
 
+    /**
+     * The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.
+     */
     @InputImport(name="triggerSensitivityOverride")
     private final @Nullable String triggerSensitivityOverride;
 

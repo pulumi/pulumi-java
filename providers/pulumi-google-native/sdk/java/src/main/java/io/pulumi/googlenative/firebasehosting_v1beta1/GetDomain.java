@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDomain {
+/**
+ * Gets a domain mapping on the specified site.
+ */
     public static CompletableFuture<GetDomainResult> invokeAsync(GetDomainArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:firebasehosting/v1beta1:getDomain", TypeShape.of(GetDomainResult.class), args == null ? GetDomainArgs.Empty : args, Utilities.withVersion(options));
     }

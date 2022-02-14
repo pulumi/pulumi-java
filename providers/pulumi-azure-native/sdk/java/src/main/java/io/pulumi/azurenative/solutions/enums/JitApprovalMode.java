@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * JIT approval mode.
+ */
     @EnumType
     public enum JitApprovalMode {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         AutoApprove("AutoApprove"),
+/**
+ * 
+ */
         ManualApprove("ManualApprove");
 
         private final String value;

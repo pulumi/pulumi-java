@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * AggregationRule describes how to locate ClusterRoles to aggregate into the ClusterRole
+ */
 public final class AggregationRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AggregationRuleArgs Empty = new AggregationRuleArgs();
 
+    /**
+     * ClusterRoleSelectors holds a list of selectors which will be used to find ClusterRoles and create the rules. If any of the selectors match, then the ClusterRole's permissions will be added
+     */
     @InputImport(name="clusterRoleSelectors")
     private final @Nullable Input<List<LabelSelectorArgs>> clusterRoleSelectors;
 

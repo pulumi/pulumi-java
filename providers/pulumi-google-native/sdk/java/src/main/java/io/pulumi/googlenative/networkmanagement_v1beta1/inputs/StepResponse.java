@@ -24,10 +24,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A simulated forwarding path is composed of multiple steps. Each step has a well-defined state and an associated configuration.
+ */
 public final class StepResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StepResponse Empty = new StepResponse();
 
+    /**
+     * Display information of the final state "abort" and reason.
+     */
     @InputImport(name="abort", required=true)
     private final AbortInfoResponse abort;
 
@@ -35,6 +41,9 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
         return this.abort;
     }
 
+    /**
+     * This is a step that leads to the final state Drop.
+     */
     @InputImport(name="causesDrop", required=true)
     private final Boolean causesDrop;
 
@@ -42,6 +51,9 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
         return this.causesDrop;
     }
 
+    /**
+     * Display information of a Cloud SQL instance.
+     */
     @InputImport(name="cloudSqlInstance", required=true)
     private final CloudSQLInstanceInfoResponse cloudSqlInstance;
 
@@ -49,6 +61,9 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
         return this.cloudSqlInstance;
     }
 
+    /**
+     * Display information of the final state "deliver" and reason.
+     */
     @InputImport(name="deliver", required=true)
     private final DeliverInfoResponse deliver;
 
@@ -56,6 +71,9 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
         return this.deliver;
     }
 
+    /**
+     * A description of the step. Usually this is a summary of the state.
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -63,6 +81,9 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
         return this.description;
     }
 
+    /**
+     * Display information of the final state "drop" and reason.
+     */
     @InputImport(name="drop", required=true)
     private final DropInfoResponse drop;
 
@@ -70,6 +91,9 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
         return this.drop;
     }
 
+    /**
+     * Display information of the source and destination under analysis. The endpoint information in an intermediate state may differ with the initial input, as it might be modified by state like NAT, or Connection Proxy.
+     */
     @InputImport(name="endpoint", required=true)
     private final EndpointInfoResponse endpoint;
 
@@ -77,6 +101,9 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
         return this.endpoint;
     }
 
+    /**
+     * Display information of a Compute Engine firewall rule.
+     */
     @InputImport(name="firewall", required=true)
     private final FirewallInfoResponse firewall;
 
@@ -84,6 +111,9 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
         return this.firewall;
     }
 
+    /**
+     * Display information of the final state "forward" and reason.
+     */
     @InputImport(name="forward", required=true)
     private final ForwardInfoResponse forward;
 
@@ -91,6 +121,9 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
         return this.forward;
     }
 
+    /**
+     * Display information of a Compute Engine forwarding rule.
+     */
     @InputImport(name="forwardingRule", required=true)
     private final ForwardingRuleInfoResponse forwardingRule;
 
@@ -98,6 +131,9 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
         return this.forwardingRule;
     }
 
+    /**
+     * Display information of a Google Kubernetes Engine cluster master.
+     */
     @InputImport(name="gkeMaster", required=true)
     private final GKEMasterInfoResponse gkeMaster;
 
@@ -105,6 +141,9 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
         return this.gkeMaster;
     }
 
+    /**
+     * Display information of a Compute Engine instance.
+     */
     @InputImport(name="instance", required=true)
     private final InstanceInfoResponse instance;
 
@@ -112,6 +151,9 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
         return this.instance;
     }
 
+    /**
+     * Display information of the load balancers.
+     */
     @InputImport(name="loadBalancer", required=true)
     private final LoadBalancerInfoResponse loadBalancer;
 
@@ -119,6 +161,9 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
         return this.loadBalancer;
     }
 
+    /**
+     * Display information of a Google Cloud network.
+     */
     @InputImport(name="network", required=true)
     private final NetworkInfoResponse network;
 
@@ -126,6 +171,9 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
         return this.network;
     }
 
+    /**
+     * Project ID that contains the configuration this step is validating.
+     */
     @InputImport(name="project", required=true)
     private final String project;
 
@@ -133,6 +181,9 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
         return this.project;
     }
 
+    /**
+     * Display information of a Compute Engine route.
+     */
     @InputImport(name="route", required=true)
     private final RouteInfoResponse route;
 
@@ -140,6 +191,9 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
         return this.route;
     }
 
+    /**
+     * Each step is in one of the pre-defined states.
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -147,6 +201,9 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
         return this.state;
     }
 
+    /**
+     * Display information of a Compute Engine VPN gateway.
+     */
     @InputImport(name="vpnGateway", required=true)
     private final VpnGatewayInfoResponse vpnGateway;
 
@@ -154,6 +211,9 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
         return this.vpnGateway;
     }
 
+    /**
+     * Display information of a Compute Engine VPN tunnel.
+     */
     @InputImport(name="vpnTunnel", required=true)
     private final VpnTunnelInfoResponse vpnTunnel;
 

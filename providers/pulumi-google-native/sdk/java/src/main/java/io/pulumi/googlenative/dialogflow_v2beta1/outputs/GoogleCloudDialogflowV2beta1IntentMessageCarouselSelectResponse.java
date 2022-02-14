@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse {
+/**
+ * Carousel items.
+ */
     private final List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemResponse> items;
 
     @OutputCustomType.Constructor({"items"})
@@ -17,6 +20,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectRespon
         this.items = Objects.requireNonNull(items);
     }
 
+/**
+ * Carousel items.
+ */
     public List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemResponse> getItems() {
         return this.items;
     }

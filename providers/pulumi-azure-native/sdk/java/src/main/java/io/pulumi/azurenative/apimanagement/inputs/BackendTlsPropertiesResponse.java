@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties controlling TLS Certificate Validation.
+ */
 public final class BackendTlsPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BackendTlsPropertiesResponse Empty = new BackendTlsPropertiesResponse();
 
+    /**
+     * Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.
+     */
     @InputImport(name="validateCertificateChain")
     private final @Nullable Boolean validateCertificateChain;
 
@@ -21,6 +27,9 @@ public final class BackendTlsPropertiesResponse extends io.pulumi.resources.Invo
         return this.validateCertificateChain == null ? Optional.empty() : Optional.ofNullable(this.validateCertificateChain);
     }
 
+    /**
+     * Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.
+     */
     @InputImport(name="validateCertificateName")
     private final @Nullable Boolean validateCertificateName;
 

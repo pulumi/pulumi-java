@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BuildArgs Empty = new BuildArgs();
 
+    /**
+     * Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
+     */
     @InputImport(name="artifacts")
     private final @Nullable Input<ArtifactsArgs> artifacts;
 
@@ -29,6 +35,9 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.artifacts == null ? Input.empty() : this.artifacts;
     }
 
+    /**
+     * Secrets and secret environment variables.
+     */
     @InputImport(name="availableSecrets")
     private final @Nullable Input<SecretsArgs> availableSecrets;
 
@@ -36,6 +45,9 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.availableSecrets == null ? Input.empty() : this.availableSecrets;
     }
 
+    /**
+     * A list of images to be pushed upon the successful completion of all build steps. The images are pushed using the builder service account's credentials. The digests of the pushed images will be stored in the `Build` resource's results field. If any of the images fail to be pushed, the build status is marked `FAILURE`.
+     */
     @InputImport(name="images")
     private final @Nullable Input<List<String>> images;
 
@@ -43,6 +55,9 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.images == null ? Input.empty() : this.images;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -50,6 +65,9 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Google Cloud Storage bucket where logs should be written (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Logs file names will be of the format `${logs_bucket}/log-${build_id}.txt`.
+     */
     @InputImport(name="logsBucket")
     private final @Nullable Input<String> logsBucket;
 
@@ -57,6 +75,9 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.logsBucket == null ? Input.empty() : this.logsBucket;
     }
 
+    /**
+     * Special options for this build.
+     */
     @InputImport(name="options")
     private final @Nullable Input<BuildOptionsArgs> options;
 
@@ -64,6 +85,9 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.options == null ? Input.empty() : this.options;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -71,6 +95,9 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="projectId", required=true)
     private final Input<String> projectId;
 
@@ -78,6 +105,9 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.projectId;
     }
 
+    /**
+     * TTL in queue for this build. If provided and the build is enqueued longer than this value, the build will expire and the build status will be `EXPIRED`. The TTL starts ticking from create_time.
+     */
     @InputImport(name="queueTtl")
     private final @Nullable Input<String> queueTtl;
 
@@ -85,6 +115,9 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.queueTtl == null ? Input.empty() : this.queueTtl;
     }
 
+    /**
+     * Secrets to decrypt using Cloud Key Management Service. Note: Secret Manager is the recommended technique for managing sensitive data with Cloud Build. Use `available_secrets` to configure builds to access secrets from Secret Manager. For instructions, see: https://cloud.google.com/cloud-build/docs/securing-builds/use-secrets
+     */
     @InputImport(name="secrets")
     private final @Nullable Input<List<SecretArgs>> secrets;
 
@@ -92,6 +125,9 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.secrets == null ? Input.empty() : this.secrets;
     }
 
+    /**
+     * IAM service account whose credentials will be used at build runtime. Must be of the format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. ACCOUNT can be email address or uniqueId of the service account. 
+     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<String> serviceAccount;
 
@@ -99,6 +135,9 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
+    /**
+     * The location of the source files to build.
+     */
     @InputImport(name="source")
     private final @Nullable Input<SourceArgs> source;
 
@@ -106,6 +145,9 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.source == null ? Input.empty() : this.source;
     }
 
+    /**
+     * The operations to be performed on the workspace.
+     */
     @InputImport(name="steps", required=true)
     private final Input<List<BuildStepArgs>> steps;
 
@@ -113,6 +155,9 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.steps;
     }
 
+    /**
+     * Substitutions data for `Build` resource.
+     */
     @InputImport(name="substitutions")
     private final @Nullable Input<Map<String,String>> substitutions;
 
@@ -120,6 +165,9 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.substitutions == null ? Input.empty() : this.substitutions;
     }
 
+    /**
+     * Tags for annotation of a `Build`. These are not docker tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 
@@ -127,6 +175,9 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Amount of time that this build should be allowed to run, to second granularity. If this amount of time elapses, work on the build will cease and the build status will be `TIMEOUT`. `timeout` starts ticking from `startTime`. Default time is ten minutes.
+     */
     @InputImport(name="timeout")
     private final @Nullable Input<String> timeout;
 

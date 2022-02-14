@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * `Backend` defines the backend configuration for a service.
+ */
 public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackendArgs Empty = new BackendArgs();
 
+    /**
+     * A list of API backend rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
+     */
     @InputImport(name="rules")
     private final @Nullable Input<List<BackendRuleArgs>> rules;
 

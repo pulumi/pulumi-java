@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetQueryArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetQueryArgs Empty = new GetQueryArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="environmentId", required=true)
     private final String environmentId;
 
@@ -19,6 +25,9 @@ public final class GetQueryArgs extends io.pulumi.resources.InvokeArgs {
         return this.environmentId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="organizationId", required=true)
     private final String organizationId;
 
@@ -26,6 +35,9 @@ public final class GetQueryArgs extends io.pulumi.resources.InvokeArgs {
         return this.organizationId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="queryId", required=true)
     private final String queryId;
 

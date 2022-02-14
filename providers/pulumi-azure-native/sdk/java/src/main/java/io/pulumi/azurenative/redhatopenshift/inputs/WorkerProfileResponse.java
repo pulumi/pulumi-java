@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * WorkerProfile represents a worker profile.
+ */
 public final class WorkerProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkerProfileResponse Empty = new WorkerProfileResponse();
 
+    /**
+     * The number of worker VMs.  Must be between 3 and 20 (immutable).
+     */
     @InputImport(name="count")
     private final @Nullable Integer count;
 
@@ -22,6 +28,9 @@ public final class WorkerProfileResponse extends io.pulumi.resources.InvokeArgs 
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
     }
 
+    /**
+     * The disk size of the worker VMs.  Must be 128 or greater (immutable).
+     */
     @InputImport(name="diskSizeGB")
     private final @Nullable Integer diskSizeGB;
 
@@ -29,6 +38,9 @@ public final class WorkerProfileResponse extends io.pulumi.resources.InvokeArgs 
         return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
     }
 
+    /**
+     * The worker profile name.  Must be "worker" (immutable).
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -36,6 +48,9 @@ public final class WorkerProfileResponse extends io.pulumi.resources.InvokeArgs 
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The Azure resource ID of the worker subnet (immutable).
+     */
     @InputImport(name="subnetId")
     private final @Nullable String subnetId;
 
@@ -43,6 +58,9 @@ public final class WorkerProfileResponse extends io.pulumi.resources.InvokeArgs 
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
     }
 
+    /**
+     * The size of the worker VMs (immutable).
+     */
     @InputImport(name="vmSize")
     private final @Nullable String vmSize;
 

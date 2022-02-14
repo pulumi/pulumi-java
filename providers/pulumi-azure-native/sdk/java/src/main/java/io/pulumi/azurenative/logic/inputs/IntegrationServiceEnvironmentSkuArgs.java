@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The integration service environment sku.
+ */
 public final class IntegrationServiceEnvironmentSkuArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IntegrationServiceEnvironmentSkuArgs Empty = new IntegrationServiceEnvironmentSkuArgs();
 
+    /**
+     * The sku capacity.
+     */
     @InputImport(name="capacity")
     private final @Nullable Input<Integer> capacity;
 
@@ -24,6 +30,9 @@ public final class IntegrationServiceEnvironmentSkuArgs extends io.pulumi.resour
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
+    /**
+     * The sku name.
+     */
     @InputImport(name="name")
     private final @Nullable Input<Either<String,IntegrationServiceEnvironmentSkuName>> name;
 

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionArgs Empty = new ConnectionArgs();
 
+    /**
+     * Cloud SQL properties.
+     */
     @InputImport(name="cloudSql")
     private final @Nullable Input<CloudSqlPropertiesArgs> cloudSql;
 
@@ -22,6 +28,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.cloudSql == null ? Input.empty() : this.cloudSql;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="connectionId")
     private final @Nullable Input<String> connectionId;
 
@@ -29,6 +38,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectionId == null ? Input.empty() : this.connectionId;
     }
 
+    /**
+     * User provided description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -36,6 +48,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * User provided display name for the connection.
+     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -43,6 +58,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -50,6 +68,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource name of the connection in the form of: `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -57,6 +78,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

@@ -10,7 +10,14 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DeliveryRuleRequestUriConditionResponse {
+/**
+ * The name of the condition for the delivery rule.
+Expected value is 'RequestUri'.
+ */
     private final String name;
+/**
+ * Defines the parameters for the condition.
+ */
     private final RequestUriMatchConditionParametersResponse parameters;
 
     @OutputCustomType.Constructor({"name","parameters"})
@@ -21,9 +28,16 @@ public final class DeliveryRuleRequestUriConditionResponse {
         this.parameters = Objects.requireNonNull(parameters);
     }
 
+/**
+ * The name of the condition for the delivery rule.
+Expected value is 'RequestUri'.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Defines the parameters for the condition.
+ */
     public RequestUriMatchConditionParametersResponse getParameters() {
         return this.parameters;
     }

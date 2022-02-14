@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetNamespaceIpFilterRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNamespaceIpFilterRuleArgs Empty = new GetNamespaceIpFilterRuleArgs();
 
+    /**
+     * The IP Filter Rule name.
+     */
     @InputImport(name="ipFilterRuleName", required=true)
     private final String ipFilterRuleName;
 
@@ -19,6 +25,9 @@ public final class GetNamespaceIpFilterRuleArgs extends io.pulumi.resources.Invo
         return this.ipFilterRuleName;
     }
 
+    /**
+     * The Namespace name
+     */
     @InputImport(name="namespaceName", required=true)
     private final String namespaceName;
 
@@ -26,6 +35,9 @@ public final class GetNamespaceIpFilterRuleArgs extends io.pulumi.resources.Invo
         return this.namespaceName;
     }
 
+    /**
+     * Name of the resource group within the azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

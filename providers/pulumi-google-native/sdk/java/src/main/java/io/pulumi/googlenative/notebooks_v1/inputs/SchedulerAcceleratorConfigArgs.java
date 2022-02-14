@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Definition of a hardware accelerator. Note that not all combinations of `type` and `core_count` are valid. Check [GPUs on Compute Engine](https://cloud.google.com/compute/docs/gpus) to find a valid combination. TPUs are not supported.
+ */
 public final class SchedulerAcceleratorConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SchedulerAcceleratorConfigArgs Empty = new SchedulerAcceleratorConfigArgs();
 
+    /**
+     * Count of cores of this accelerator.
+     */
     @InputImport(name="coreCount")
     private final @Nullable Input<String> coreCount;
 
@@ -22,6 +28,9 @@ public final class SchedulerAcceleratorConfigArgs extends io.pulumi.resources.Re
         return this.coreCount == null ? Input.empty() : this.coreCount;
     }
 
+    /**
+     * Type of this accelerator.
+     */
     @InputImport(name="type")
     private final @Nullable Input<SchedulerAcceleratorConfigType> type;
 

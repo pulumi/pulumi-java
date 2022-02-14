@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AssignmentReportResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AssignmentReportResponse Empty = new AssignmentReportResponse();
 
+    /**
+     * Configuration details of the guest configuration assignment.
+     */
     @InputImport(name="assignment")
     private final @Nullable AssignmentInfoResponse assignment;
 
@@ -25,6 +31,9 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
         return this.assignment == null ? Optional.empty() : Optional.ofNullable(this.assignment);
     }
 
+    /**
+     * A value indicating compliance status of the machine for the assigned guest configuration.
+     */
     @InputImport(name="complianceStatus", required=true)
     private final String complianceStatus;
 
@@ -32,6 +41,9 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
         return this.complianceStatus;
     }
 
+    /**
+     * End date and time of the guest configuration assignment compliance status check.
+     */
     @InputImport(name="endTime", required=true)
     private final String endTime;
 
@@ -39,6 +51,9 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
         return this.endTime;
     }
 
+    /**
+     * ARM resource id of the report for the guest configuration assignment.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -46,6 +61,9 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
         return this.id;
     }
 
+    /**
+     * Type of report, Consistency or Initial
+     */
     @InputImport(name="operationType", required=true)
     private final String operationType;
 
@@ -53,6 +71,9 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
         return this.operationType;
     }
 
+    /**
+     * GUID that identifies the guest configuration assignment report under a subscription, resource group.
+     */
     @InputImport(name="reportId", required=true)
     private final String reportId;
 
@@ -60,6 +81,9 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
         return this.reportId;
     }
 
+    /**
+     * The list of resources for which guest configuration assignment compliance is checked.
+     */
     @InputImport(name="resources")
     private final @Nullable List<AssignmentReportResourceResponse> resources;
 
@@ -67,6 +91,9 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
         return this.resources == null ? List.of() : this.resources;
     }
 
+    /**
+     * Start date and time of the guest configuration assignment compliance status check.
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 
@@ -74,6 +101,9 @@ public final class AssignmentReportResponse extends io.pulumi.resources.InvokeAr
         return this.startTime;
     }
 
+    /**
+     * Information about the VM.
+     */
     @InputImport(name="vm")
     private final @Nullable VMInfoResponse vm;
 

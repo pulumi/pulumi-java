@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A private IP address bound to the availability group listener.
+ */
 public final class PrivateIPAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateIPAddressArgs Empty = new PrivateIPAddressArgs();
 
+    /**
+     * Private IP address bound to the availability group listener.
+     */
     @InputImport(name="ipAddress")
     private final @Nullable Input<String> ipAddress;
 
@@ -21,6 +27,9 @@ public final class PrivateIPAddressArgs extends io.pulumi.resources.ResourceArgs
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
+    /**
+     * Subnet used to include private IP.
+     */
     @InputImport(name="subnetResourceId")
     private final @Nullable Input<String> subnetResourceId;
 

@@ -14,10 +14,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CommonExportPropertiesResponse {
+/**
+ * Has the definition for the export.
+ */
     private final ExportDefinitionResponse definition;
+/**
+ * Has delivery information for the export.
+ */
     private final ExportDeliveryInfoResponse deliveryInfo;
+/**
+ * The format of the export being delivered. Currently only 'Csv' is supported.
+ */
     private final @Nullable String format;
+/**
+ * If the export has an active schedule, provides an estimate of the next execution time.
+ */
     private final String nextRunTimeEstimate;
+/**
+ * If requested, has the most recent execution history for the export.
+ */
     private final @Nullable ExportExecutionListResultResponse runHistory;
 
     @OutputCustomType.Constructor({"definition","deliveryInfo","format","nextRunTimeEstimate","runHistory"})
@@ -34,18 +49,33 @@ public final class CommonExportPropertiesResponse {
         this.runHistory = runHistory;
     }
 
+/**
+ * Has the definition for the export.
+ */
     public ExportDefinitionResponse getDefinition() {
         return this.definition;
     }
+/**
+ * Has delivery information for the export.
+ */
     public ExportDeliveryInfoResponse getDeliveryInfo() {
         return this.deliveryInfo;
     }
+/**
+ * The format of the export being delivered. Currently only 'Csv' is supported.
+ */
     public Optional<String> getFormat() {
         return Optional.ofNullable(this.format);
     }
+/**
+ * If the export has an active schedule, provides an estimate of the next execution time.
+ */
     public String getNextRunTimeEstimate() {
         return this.nextRunTimeEstimate;
     }
+/**
+ * If requested, has the most recent execution history for the export.
+ */
     public Optional<ExportExecutionListResultResponse> getRunHistory() {
         return Optional.ofNullable(this.runHistory);
     }

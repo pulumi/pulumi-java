@@ -6,6 +6,9 @@ package io.pulumi.azurenative.network.inputs;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetTrafficManagerUserMetricsKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTrafficManagerUserMetricsKeyArgs Empty = new GetTrafficManagerUserMetricsKeyArgs();

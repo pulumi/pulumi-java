@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeviceGroup {
+/**
+ * Device group
+API Version: 2021-02-01-preview.
+ *
+ * Device group
+ */
     public static CompletableFuture<GetDeviceGroupResult> invokeAsync(GetDeviceGroupArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:iotsecurity:getDeviceGroup", TypeShape.of(GetDeviceGroupResult.class), args == null ? GetDeviceGroupArgs.Empty : args, Utilities.withVersion(options));
     }

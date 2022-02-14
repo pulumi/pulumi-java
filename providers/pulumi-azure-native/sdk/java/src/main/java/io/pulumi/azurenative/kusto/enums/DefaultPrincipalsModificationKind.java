@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The default principals modification kind
+ */
     @EnumType
     public enum DefaultPrincipalsModificationKind {
+/**
+ * 
+ */
         Union("Union"),
+/**
+ * 
+ */
         Replace("Replace"),
+/**
+ * 
+ */
         None("None");
 
         private final String value;

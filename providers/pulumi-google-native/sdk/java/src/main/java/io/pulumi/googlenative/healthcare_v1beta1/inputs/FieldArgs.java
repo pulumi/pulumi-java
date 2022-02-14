@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A (sub) field of a type.
+ */
 public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FieldArgs Empty = new FieldArgs();
 
+    /**
+     * The maximum number of times this field can be repeated. 0 or -1 means unbounded.
+     */
     @InputImport(name="maxOccurs")
     private final @Nullable Input<Integer> maxOccurs;
 
@@ -22,6 +28,9 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxOccurs == null ? Input.empty() : this.maxOccurs;
     }
 
+    /**
+     * The minimum number of times this field must be present/repeated.
+     */
     @InputImport(name="minOccurs")
     private final @Nullable Input<Integer> minOccurs;
 
@@ -29,6 +38,9 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
         return this.minOccurs == null ? Input.empty() : this.minOccurs;
     }
 
+    /**
+     * The name of the field. For example, "PID-1" or just "1".
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -36,6 +48,9 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The HL7v2 table this field refers to. For example, PID-15 (Patient's Primary Language) usually refers to table "0296".
+     */
     @InputImport(name="table")
     private final @Nullable Input<String> table;
 
@@ -43,6 +58,9 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
         return this.table == null ? Input.empty() : this.table;
     }
 
+    /**
+     * The type of this field. A Type with this name must be defined in an Hl7TypesConfig.
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

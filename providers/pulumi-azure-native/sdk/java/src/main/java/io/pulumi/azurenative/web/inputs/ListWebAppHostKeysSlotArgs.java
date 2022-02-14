@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListWebAppHostKeysSlotArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListWebAppHostKeysSlotArgs Empty = new ListWebAppHostKeysSlotArgs();
 
+    /**
+     * Site name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class ListWebAppHostKeysSlotArgs extends io.pulumi.resources.Invoke
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class ListWebAppHostKeysSlotArgs extends io.pulumi.resources.Invoke
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the deployment slot.
+     */
     @InputImport(name="slot", required=true)
     private final String slot;
 

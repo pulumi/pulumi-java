@@ -11,10 +11,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Definition of a single value with generic type.
+ */
 public final class ValueResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ValueResponse Empty = new ValueResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="booleanValue", required=true)
     private final Boolean booleanValue;
 
@@ -22,6 +28,9 @@ public final class ValueResponse extends io.pulumi.resources.InvokeArgs {
         return this.booleanValue;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="dateValue", required=true)
     private final DateResponse dateValue;
 
@@ -29,6 +38,9 @@ public final class ValueResponse extends io.pulumi.resources.InvokeArgs {
         return this.dateValue;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="doubleValue", required=true)
     private final Double doubleValue;
 
@@ -36,6 +48,9 @@ public final class ValueResponse extends io.pulumi.resources.InvokeArgs {
         return this.doubleValue;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="integerValue", required=true)
     private final String integerValue;
 
@@ -43,6 +58,9 @@ public final class ValueResponse extends io.pulumi.resources.InvokeArgs {
         return this.integerValue;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="stringValue", required=true)
     private final String stringValue;
 
@@ -50,6 +68,9 @@ public final class ValueResponse extends io.pulumi.resources.InvokeArgs {
         return this.stringValue;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="timestampValue", required=true)
     private final String timestampValue;
 

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Identifies an account and how to log into it.
+ */
 public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccountArgs Empty = new AccountArgs();
 
+    /**
+     * An automatic google login account.
+     */
     @InputImport(name="googleAuto")
     private final @Nullable Input<GoogleAutoArgs> googleAuto;
 

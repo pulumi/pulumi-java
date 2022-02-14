@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourceTypeRegistrationPropertiesResponseFeaturesRule {
+/**
+ * 
+ */
     private final String requiredFeaturesPolicy;
 
     @OutputCustomType.Constructor({"requiredFeaturesPolicy"})
@@ -16,6 +19,9 @@ public final class ResourceTypeRegistrationPropertiesResponseFeaturesRule {
         this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy);
     }
 
+/**
+ * 
+ */
     public String getRequiredFeaturesPolicy() {
         return this.requiredFeaturesPolicy;
     }

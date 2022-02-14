@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.sql.ManagedDatabaseArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -15,75 +14,681 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A managed database resource.
+API Version: 2020-11-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Creates a new managed database by restoring from an external backup
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedDatabase = new AzureNative.Sql.ManagedDatabase("managedDatabase", new AzureNative.Sql.ManagedDatabaseArgs
+        {
+            AutoCompleteRestore = true,
+            Collation = "SQL_Latin1_General_CP1_CI_AS",
+            CreateMode = "RestoreExternalBackup",
+            DatabaseName = "managedDatabase",
+            LastBackupName = "last_backup_name",
+            Location = "southeastasia",
+            ManagedInstanceName = "managedInstance",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            StorageContainerSasToken = "sv=2015-12-11&sr=c&sp=rl&sig=1234",
+            StorageContainerUri = "https://myaccountname.blob.core.windows.net/backups",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewManagedDatabase(ctx, "managedDatabase", &sql.ManagedDatabaseArgs{
+			AutoCompleteRestore:      pulumi.Bool(true),
+			Collation:                pulumi.String("SQL_Latin1_General_CP1_CI_AS"),
+			CreateMode:               pulumi.String("RestoreExternalBackup"),
+			DatabaseName:             pulumi.String("managedDatabase"),
+			LastBackupName:           pulumi.String("last_backup_name"),
+			Location:                 pulumi.String("southeastasia"),
+			ManagedInstanceName:      pulumi.String("managedInstance"),
+			ResourceGroupName:        pulumi.String("Default-SQL-SouthEastAsia"),
+			StorageContainerSasToken: pulumi.String("sv=2015-12-11&sr=c&sp=rl&sig=1234"),
+			StorageContainerUri:      pulumi.String("https://myaccountname.blob.core.windows.net/backups"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const managedDatabase = new azure_native.sql.ManagedDatabase("managedDatabase", {
+    autoCompleteRestore: true,
+    collation: "SQL_Latin1_General_CP1_CI_AS",
+    createMode: "RestoreExternalBackup",
+    databaseName: "managedDatabase",
+    lastBackupName: "last_backup_name",
+    location: "southeastasia",
+    managedInstanceName: "managedInstance",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    storageContainerSasToken: "sv=2015-12-11&sr=c&sp=rl&sig=1234",
+    storageContainerUri: "https://myaccountname.blob.core.windows.net/backups",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+managed_database = azure_native.sql.ManagedDatabase("managedDatabase",
+    auto_complete_restore=True,
+    collation="SQL_Latin1_General_CP1_CI_AS",
+    create_mode="RestoreExternalBackup",
+    database_name="managedDatabase",
+    last_backup_name="last_backup_name",
+    location="southeastasia",
+    managed_instance_name="managedInstance",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    storage_container_sas_token="sv=2015-12-11&sr=c&sp=rl&sig=1234",
+    storage_container_uri="https://myaccountname.blob.core.windows.net/backups")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Creates a new managed database from restoring a geo-replicated backup
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedDatabase = new AzureNative.Sql.ManagedDatabase("managedDatabase", new AzureNative.Sql.ManagedDatabaseArgs
+        {
+            CreateMode = "Recovery",
+            DatabaseName = "testdb_recovered",
+            Location = "southeastasia",
+            ManagedInstanceName = "server1",
+            RecoverableDatabaseId = "/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/Default-SQL-WestEurope/providers/Microsoft.Sql/managedInstances/testsvr/recoverableDatabases/testdb",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewManagedDatabase(ctx, "managedDatabase", &sql.ManagedDatabaseArgs{
+			CreateMode:            pulumi.String("Recovery"),
+			DatabaseName:          pulumi.String("testdb_recovered"),
+			Location:              pulumi.String("southeastasia"),
+			ManagedInstanceName:   pulumi.String("server1"),
+			RecoverableDatabaseId: pulumi.String("/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/Default-SQL-WestEurope/providers/Microsoft.Sql/managedInstances/testsvr/recoverableDatabases/testdb"),
+			ResourceGroupName:     pulumi.String("Default-SQL-SouthEastAsia"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const managedDatabase = new azure_native.sql.ManagedDatabase("managedDatabase", {
+    createMode: "Recovery",
+    databaseName: "testdb_recovered",
+    location: "southeastasia",
+    managedInstanceName: "server1",
+    recoverableDatabaseId: "/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/Default-SQL-WestEurope/providers/Microsoft.Sql/managedInstances/testsvr/recoverableDatabases/testdb",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+managed_database = azure_native.sql.ManagedDatabase("managedDatabase",
+    create_mode="Recovery",
+    database_name="testdb_recovered",
+    location="southeastasia",
+    managed_instance_name="server1",
+    recoverable_database_id="/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/Default-SQL-WestEurope/providers/Microsoft.Sql/managedInstances/testsvr/recoverableDatabases/testdb",
+    resource_group_name="Default-SQL-SouthEastAsia")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Creates a new managed database from restoring a long term retention backup
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedDatabase = new AzureNative.Sql.ManagedDatabase("managedDatabase", new AzureNative.Sql.ManagedDatabaseArgs
+        {
+            Collation = "SQL_Latin1_General_CP1_CI_AS",
+            CreateMode = "RestoreExternalBackup",
+            DatabaseName = "managedDatabase",
+            Location = "southeastasia",
+            ManagedInstanceName = "managedInstance",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            StorageContainerSasToken = "sv=2015-12-11&sr=c&sp=rl&sig=1234",
+            StorageContainerUri = "https://myaccountname.blob.core.windows.net/backups",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewManagedDatabase(ctx, "managedDatabase", &sql.ManagedDatabaseArgs{
+			Collation:                pulumi.String("SQL_Latin1_General_CP1_CI_AS"),
+			CreateMode:               pulumi.String("RestoreExternalBackup"),
+			DatabaseName:             pulumi.String("managedDatabase"),
+			Location:                 pulumi.String("southeastasia"),
+			ManagedInstanceName:      pulumi.String("managedInstance"),
+			ResourceGroupName:        pulumi.String("Default-SQL-SouthEastAsia"),
+			StorageContainerSasToken: pulumi.String("sv=2015-12-11&sr=c&sp=rl&sig=1234"),
+			StorageContainerUri:      pulumi.String("https://myaccountname.blob.core.windows.net/backups"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const managedDatabase = new azure_native.sql.ManagedDatabase("managedDatabase", {
+    collation: "SQL_Latin1_General_CP1_CI_AS",
+    createMode: "RestoreExternalBackup",
+    databaseName: "managedDatabase",
+    location: "southeastasia",
+    managedInstanceName: "managedInstance",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    storageContainerSasToken: "sv=2015-12-11&sr=c&sp=rl&sig=1234",
+    storageContainerUri: "https://myaccountname.blob.core.windows.net/backups",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+managed_database = azure_native.sql.ManagedDatabase("managedDatabase",
+    collation="SQL_Latin1_General_CP1_CI_AS",
+    create_mode="RestoreExternalBackup",
+    database_name="managedDatabase",
+    location="southeastasia",
+    managed_instance_name="managedInstance",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    storage_container_sas_token="sv=2015-12-11&sr=c&sp=rl&sig=1234",
+    storage_container_uri="https://myaccountname.blob.core.windows.net/backups")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Creates a new managed database using point in time restore
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedDatabase = new AzureNative.Sql.ManagedDatabase("managedDatabase", new AzureNative.Sql.ManagedDatabaseArgs
+        {
+            CreateMode = "PointInTimeRestore",
+            DatabaseName = "managedDatabase",
+            Location = "southeastasia",
+            ManagedInstanceName = "managedInstance",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            RestorePointInTime = "2017-07-14T05:35:31.503Z",
+            SourceDatabaseId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/managedInstances/testsvr/databases/testdb",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewManagedDatabase(ctx, "managedDatabase", &sql.ManagedDatabaseArgs{
+			CreateMode:          pulumi.String("PointInTimeRestore"),
+			DatabaseName:        pulumi.String("managedDatabase"),
+			Location:            pulumi.String("southeastasia"),
+			ManagedInstanceName: pulumi.String("managedInstance"),
+			ResourceGroupName:   pulumi.String("Default-SQL-SouthEastAsia"),
+			RestorePointInTime:  pulumi.String("2017-07-14T05:35:31.503Z"),
+			SourceDatabaseId:    pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/managedInstances/testsvr/databases/testdb"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const managedDatabase = new azure_native.sql.ManagedDatabase("managedDatabase", {
+    createMode: "PointInTimeRestore",
+    databaseName: "managedDatabase",
+    location: "southeastasia",
+    managedInstanceName: "managedInstance",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    restorePointInTime: "2017-07-14T05:35:31.503Z",
+    sourceDatabaseId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/managedInstances/testsvr/databases/testdb",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+managed_database = azure_native.sql.ManagedDatabase("managedDatabase",
+    create_mode="PointInTimeRestore",
+    database_name="managedDatabase",
+    location="southeastasia",
+    managed_instance_name="managedInstance",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    restore_point_in_time="2017-07-14T05:35:31.503Z",
+    source_database_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/managedInstances/testsvr/databases/testdb")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Creates a new managed database with maximal properties
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedDatabase = new AzureNative.Sql.ManagedDatabase("managedDatabase", new AzureNative.Sql.ManagedDatabaseArgs
+        {
+            DatabaseName = "managedDatabase",
+            Location = "southeastasia",
+            ManagedInstanceName = "managedInstance",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+            Tags = 
+            {
+                { "tagKey1", "TagValue1" },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewManagedDatabase(ctx, "managedDatabase", &sql.ManagedDatabaseArgs{
+			DatabaseName:        pulumi.String("managedDatabase"),
+			Location:            pulumi.String("southeastasia"),
+			ManagedInstanceName: pulumi.String("managedInstance"),
+			ResourceGroupName:   pulumi.String("Default-SQL-SouthEastAsia"),
+			Tags: pulumi.StringMap{
+				"tagKey1": pulumi.String("TagValue1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const managedDatabase = new azure_native.sql.ManagedDatabase("managedDatabase", {
+    databaseName: "managedDatabase",
+    location: "southeastasia",
+    managedInstanceName: "managedInstance",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+    tags: {
+        tagKey1: "TagValue1",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+managed_database = azure_native.sql.ManagedDatabase("managedDatabase",
+    database_name="managedDatabase",
+    location="southeastasia",
+    managed_instance_name="managedInstance",
+    resource_group_name="Default-SQL-SouthEastAsia",
+    tags={
+        "tagKey1": "TagValue1",
+    })
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Creates a new managed database with minimal properties
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedDatabase = new AzureNative.Sql.ManagedDatabase("managedDatabase", new AzureNative.Sql.ManagedDatabaseArgs
+        {
+            DatabaseName = "managedDatabase",
+            Location = "southeastasia",
+            ManagedInstanceName = "managedInstance",
+            ResourceGroupName = "Default-SQL-SouthEastAsia",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewManagedDatabase(ctx, "managedDatabase", &sql.ManagedDatabaseArgs{
+			DatabaseName:        pulumi.String("managedDatabase"),
+			Location:            pulumi.String("southeastasia"),
+			ManagedInstanceName: pulumi.String("managedInstance"),
+			ResourceGroupName:   pulumi.String("Default-SQL-SouthEastAsia"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const managedDatabase = new azure_native.sql.ManagedDatabase("managedDatabase", {
+    databaseName: "managedDatabase",
+    location: "southeastasia",
+    managedInstanceName: "managedInstance",
+    resourceGroupName: "Default-SQL-SouthEastAsia",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+managed_database = azure_native.sql.ManagedDatabase("managedDatabase",
+    database_name="managedDatabase",
+    location="southeastasia",
+    managed_instance_name="managedInstance",
+    resource_group_name="Default-SQL-SouthEastAsia")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:sql:ManagedDatabase testdb1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/managedInstances/testsvr/databases/testdb1 
+```
+
+ */
 @ResourceType(type="azure-native:sql:ManagedDatabase")
 public class ManagedDatabase extends io.pulumi.resources.CustomResource {
+    /**
+     * Collation of the metadata catalog.
+     */
     @OutputExport(name="catalogCollation", type=String.class, parameters={})
     private Output</* @Nullable */ String> catalogCollation;
 
+    /**
+     * @return Collation of the metadata catalog.
+     */
     public Output</* @Nullable */ String> getCatalogCollation() {
         return this.catalogCollation;
     }
+    /**
+     * Collation of the managed database.
+     */
     @OutputExport(name="collation", type=String.class, parameters={})
     private Output</* @Nullable */ String> collation;
 
+    /**
+     * @return Collation of the managed database.
+     */
     public Output</* @Nullable */ String> getCollation() {
         return this.collation;
     }
+    /**
+     * Creation date of the database.
+     */
     @OutputExport(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
+    /**
+     * @return Creation date of the database.
+     */
     public Output<String> getCreationDate() {
         return this.creationDate;
     }
+    /**
+     * Geo paired region.
+     */
     @OutputExport(name="defaultSecondaryLocation", type=String.class, parameters={})
     private Output<String> defaultSecondaryLocation;
 
+    /**
+     * @return Geo paired region.
+     */
     public Output<String> getDefaultSecondaryLocation() {
         return this.defaultSecondaryLocation;
     }
+    /**
+     * Earliest restore point in time for point in time restore.
+     */
     @OutputExport(name="earliestRestorePoint", type=String.class, parameters={})
     private Output<String> earliestRestorePoint;
 
+    /**
+     * @return Earliest restore point in time for point in time restore.
+     */
     public Output<String> getEarliestRestorePoint() {
         return this.earliestRestorePoint;
     }
+    /**
+     * Instance Failover Group resource identifier that this managed database belongs to.
+     */
     @OutputExport(name="failoverGroupId", type=String.class, parameters={})
     private Output<String> failoverGroupId;
 
+    /**
+     * @return Instance Failover Group resource identifier that this managed database belongs to.
+     */
     public Output<String> getFailoverGroupId() {
         return this.failoverGroupId;
     }
+    /**
+     * Resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location.
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Status of the database.
+     */
     @OutputExport(name="status", type=String.class, parameters={})
     private Output<String> status;
 
+    /**
+     * @return Status of the database.
+     */
     public Output<String> getStatus() {
         return this.status;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ManagedDatabase(String name, ManagedDatabaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:ManagedDatabase", name, args == null ? ManagedDatabaseArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -110,6 +715,14 @@ public class ManagedDatabase extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ManagedDatabase get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ManagedDatabase(name, id, options);
     }

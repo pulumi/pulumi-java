@@ -13,13 +13,37 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetSqlMigrationServiceResult {
+/**
+ * 
+ */
     private final String id;
+/**
+ * Current state of the Integration runtime.
+ */
     private final String integrationRuntimeState;
+/**
+ * 
+ */
     private final @Nullable String location;
+/**
+ * 
+ */
     private final String name;
+/**
+ * Provisioning state to track the async operation status.
+ */
     private final String provisioningState;
+/**
+ * 
+ */
     private final SystemDataResponse systemData;
+/**
+ * 
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * 
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","integrationRuntimeState","location","name","provisioningState","systemData","tags","type"})
@@ -42,27 +66,51 @@ public final class GetSqlMigrationServiceResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * 
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Current state of the Integration runtime.
+ */
     public String getIntegrationRuntimeState() {
         return this.integrationRuntimeState;
     }
+/**
+ * 
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * 
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Provisioning state to track the async operation status.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * 
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * 
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * 
+ */
     public String getType() {
         return this.type;
     }

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.authorization;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.authorization.RoleDefinitionArgs;
 import io.pulumi.azurenative.authorization.outputs.PermissionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,51 +14,182 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Role definition.
+API Version: 2018-01-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create role definition
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var roleDefinition = new AzureNative.Authorization.RoleDefinition("roleDefinition", new AzureNative.Authorization.RoleDefinitionArgs
+        {
+            RoleDefinitionId = "roleDefinitionId",
+            Scope = "scope",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	authorization "github.com/pulumi/pulumi-azure-native/sdk/go/azure/authorization"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := authorization.NewRoleDefinition(ctx, "roleDefinition", &authorization.RoleDefinitionArgs{
+			RoleDefinitionId: pulumi.String("roleDefinitionId"),
+			Scope:            pulumi.String("scope"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const roleDefinition = new azure_native.authorization.RoleDefinition("roleDefinition", {
+    roleDefinitionId: "roleDefinitionId",
+    scope: "scope",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+role_definition = azure_native.authorization.RoleDefinition("roleDefinition",
+    role_definition_id="roleDefinitionId",
+    scope="scope")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:authorization:RoleDefinition roleDefinitionId /subscriptions/subID/providers/Microsoft.Authorization/roleDefinitions/roleDefinitionId 
+```
+
+ */
 @ResourceType(type="azure-native:authorization:RoleDefinition")
 public class RoleDefinition extends io.pulumi.resources.CustomResource {
+    /**
+     * Role definition assignable scopes.
+     */
     @OutputExport(name="assignableScopes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> assignableScopes;
 
+    /**
+     * @return Role definition assignable scopes.
+     */
     public Output</* @Nullable */ List<String>> getAssignableScopes() {
         return this.assignableScopes;
     }
+    /**
+     * The role definition description.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return The role definition description.
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * The role definition name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The role definition name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Role definition permissions.
+     */
     @OutputExport(name="permissions", type=List.class, parameters={PermissionResponse.class})
     private Output</* @Nullable */ List<PermissionResponse>> permissions;
 
+    /**
+     * @return Role definition permissions.
+     */
     public Output</* @Nullable */ List<PermissionResponse>> getPermissions() {
         return this.permissions;
     }
+    /**
+     * The role name.
+     */
     @OutputExport(name="roleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleName;
 
+    /**
+     * @return The role name.
+     */
     public Output</* @Nullable */ String> getRoleName() {
         return this.roleName;
     }
+    /**
+     * The role type.
+     */
     @OutputExport(name="roleType", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleType;
 
+    /**
+     * @return The role type.
+     */
     public Output</* @Nullable */ String> getRoleType() {
         return this.roleType;
     }
+    /**
+     * The role definition type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The role definition type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public RoleDefinition(String name, RoleDefinitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:authorization:RoleDefinition", name, args == null ? RoleDefinitionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -79,6 +209,14 @@ public class RoleDefinition extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static RoleDefinition get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RoleDefinition(name, id, options);
     }

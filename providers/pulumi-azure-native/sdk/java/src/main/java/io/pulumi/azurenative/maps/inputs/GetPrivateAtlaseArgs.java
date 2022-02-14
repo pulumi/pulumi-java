@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetPrivateAtlaseArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPrivateAtlaseArgs Empty = new GetPrivateAtlaseArgs();
 
+    /**
+     * The name of the Maps Account.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetPrivateAtlaseArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the Private Atlas instance.
+     */
     @InputImport(name="privateAtlasName", required=true)
     private final String privateAtlasName;
 
@@ -26,6 +35,9 @@ public final class GetPrivateAtlaseArgs extends io.pulumi.resources.InvokeArgs {
         return this.privateAtlasName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

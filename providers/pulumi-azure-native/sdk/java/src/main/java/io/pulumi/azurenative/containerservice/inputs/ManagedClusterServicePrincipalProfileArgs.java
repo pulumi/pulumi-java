@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information about a service principal identity for the cluster to use for manipulating Azure APIs.
+ */
 public final class ManagedClusterServicePrincipalProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedClusterServicePrincipalProfileArgs Empty = new ManagedClusterServicePrincipalProfileArgs();
 
+    /**
+     * The ID for the service principal.
+     */
     @InputImport(name="clientId", required=true)
     private final Input<String> clientId;
 
@@ -21,6 +27,9 @@ public final class ManagedClusterServicePrincipalProfileArgs extends io.pulumi.r
         return this.clientId;
     }
 
+    /**
+     * The secret password associated with the service principal in plain text.
+     */
     @InputImport(name="secret")
     private final @Nullable Input<String> secret;
 

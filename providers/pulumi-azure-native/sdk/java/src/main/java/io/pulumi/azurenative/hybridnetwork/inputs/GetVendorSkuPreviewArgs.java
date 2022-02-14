@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetVendorSkuPreviewArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetVendorSkuPreviewArgs Empty = new GetVendorSkuPreviewArgs();
 
+    /**
+     * Preview subscription ID.
+     */
     @InputImport(name="previewSubscription", required=true)
     private final String previewSubscription;
 
@@ -19,6 +25,9 @@ public final class GetVendorSkuPreviewArgs extends io.pulumi.resources.InvokeArg
         return this.previewSubscription;
     }
 
+    /**
+     * The name of the vendor sku.
+     */
     @InputImport(name="skuName", required=true)
     private final String skuName;
 
@@ -26,6 +35,9 @@ public final class GetVendorSkuPreviewArgs extends io.pulumi.resources.InvokeArg
         return this.skuName;
     }
 
+    /**
+     * The name of the vendor.
+     */
     @InputImport(name="vendorName", required=true)
     private final String vendorName;
 

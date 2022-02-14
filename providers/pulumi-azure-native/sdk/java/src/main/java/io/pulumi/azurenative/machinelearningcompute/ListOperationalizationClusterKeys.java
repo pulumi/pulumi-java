@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListOperationalizationClusterKeys {
+/**
+ * Credentials to resources in the cluster.
+API Version: 2017-08-01-preview.
+ *
+ * Credentials to resources in the cluster.
+ */
     public static CompletableFuture<ListOperationalizationClusterKeysResult> invokeAsync(ListOperationalizationClusterKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningcompute:listOperationalizationClusterKeys", TypeShape.of(ListOperationalizationClusterKeysResult.class), args == null ? ListOperationalizationClusterKeysArgs.Empty : args, Utilities.withVersion(options));
     }

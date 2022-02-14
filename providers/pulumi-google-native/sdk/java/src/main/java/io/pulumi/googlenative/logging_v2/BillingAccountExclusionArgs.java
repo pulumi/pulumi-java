@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class BillingAccountExclusionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BillingAccountExclusionArgs Empty = new BillingAccountExclusionArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="billingAccountId", required=true)
     private final Input<String> billingAccountId;
 
@@ -22,6 +28,9 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
         return this.billingAccountId;
     }
 
+    /**
+     * Optional. A description of this exclusion.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -29,6 +38,9 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Optional. If set to True, then this exclusion is disabled and it does not exclude any log entries. You can update an exclusion to change the value of this field.
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -36,6 +48,9 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-queries) that matches the log entries to be excluded. By using the sample function (https://cloud.google.com/logging/docs/view/advanced-queries#sample), you can exclude less than 100% of the matching log entries.For example, the following query matches 99% of low-severity log entries from Google Cloud Storage buckets:resource.type=gcs_bucket severity<ERROR sample(insertId, 0.99)
+     */
     @InputImport(name="filter", required=true)
     private final Input<String> filter;
 
@@ -43,6 +58,9 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
         return this.filter;
     }
 
+    /**
+     * A client-assigned identifier, such as "load-balancer-exclusion". Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

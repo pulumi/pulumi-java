@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the partner that created the assessment
+ */
 public final class SecurityAssessmentMetadataPartnerDataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SecurityAssessmentMetadataPartnerDataArgs Empty = new SecurityAssessmentMetadataPartnerDataArgs();
 
+    /**
+     * Name of the company of the partner
+     */
     @InputImport(name="partnerName", required=true)
     private final Input<String> partnerName;
 
@@ -21,6 +27,9 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends io.pulumi.r
         return this.partnerName;
     }
 
+    /**
+     * Name of the product of the partner that created the assessment
+     */
     @InputImport(name="productName")
     private final @Nullable Input<String> productName;
 
@@ -28,6 +37,9 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends io.pulumi.r
         return this.productName == null ? Input.empty() : this.productName;
     }
 
+    /**
+     * Secret to authenticate the partner and verify it created the assessment - write only
+     */
     @InputImport(name="secret", required=true)
     private final Input<String> secret;
 

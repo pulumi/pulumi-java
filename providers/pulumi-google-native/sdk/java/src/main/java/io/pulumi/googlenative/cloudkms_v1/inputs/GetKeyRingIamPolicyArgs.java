@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetKeyRingIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetKeyRingIamPolicyArgs Empty = new GetKeyRingIamPolicyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="keyRingId", required=true)
     private final String keyRingId;
 
@@ -21,6 +27,9 @@ public final class GetKeyRingIamPolicyArgs extends io.pulumi.resources.InvokeArg
         return this.keyRingId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -28,6 +37,9 @@ public final class GetKeyRingIamPolicyArgs extends io.pulumi.resources.InvokeArg
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="optionsRequestedPolicyVersion")
     private final @Nullable String optionsRequestedPolicyVersion;
 
@@ -35,6 +47,9 @@ public final class GetKeyRingIamPolicyArgs extends io.pulumi.resources.InvokeArg
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

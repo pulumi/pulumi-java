@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class MlStatisticsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MlStatisticsResponse Empty = new MlStatisticsResponse();
 
+    /**
+     * Results for all completed iterations.
+     */
     @InputImport(name="iterationResults", required=true)
     private final List<IterationResultResponse> iterationResults;
 
@@ -21,6 +27,9 @@ public final class MlStatisticsResponse extends io.pulumi.resources.InvokeArgs {
         return this.iterationResults;
     }
 
+    /**
+     * Maximum number of iterations specified as max_iterations in the 'CREATE MODEL' query. The actual number of iterations may be less than this number due to early stop.
+     */
     @InputImport(name="maxIterations", required=true)
     private final String maxIterations;
 

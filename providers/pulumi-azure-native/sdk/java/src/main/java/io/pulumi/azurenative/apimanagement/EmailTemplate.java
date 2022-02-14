@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.apimanagement.EmailTemplateArgs;
 import io.pulumi.azurenative.apimanagement.outputs.EmailTemplateParametersContractPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,57 +15,204 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Email Template details.
+API Version: 2020-12-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### ApiManagementCreateTemplate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var emailTemplate = new AzureNative.ApiManagement.EmailTemplate("emailTemplate", new AzureNative.ApiManagement.EmailTemplateArgs
+        {
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            Subject = "Your request for $IssueName was successfully received.",
+            TemplateName = "newIssueNotificationMessage",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	"fmt"
+
+	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := apimanagement.NewEmailTemplate(ctx, "emailTemplate", &apimanagement.EmailTemplateArgs{
+			ResourceGroupName: pulumi.String("rg1"),
+			ServiceName:       pulumi.String("apimService1"),
+			Subject:           pulumi.String(fmt.Sprintf("%v%v%v", "Your request for ", "$", "IssueName was successfully received.")),
+			TemplateName:      pulumi.String("newIssueNotificationMessage"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const emailTemplate = new azure_native.apimanagement.EmailTemplate("emailTemplate", {
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    subject: `Your request for $IssueName was successfully received.`,
+    templateName: "newIssueNotificationMessage",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+email_template = azure_native.apimanagement.EmailTemplate("emailTemplate",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    subject="Your request for $IssueName was successfully received.",
+    template_name="newIssueNotificationMessage")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:apimanagement:EmailTemplate NewIssueNotificationMessage /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/templates/NewIssueNotificationMessage 
+```
+
+ */
 @ResourceType(type="azure-native:apimanagement:EmailTemplate")
 public class EmailTemplate extends io.pulumi.resources.CustomResource {
+    /**
+     * Email Template Body. This should be a valid XDocument
+     */
     @OutputExport(name="body", type=String.class, parameters={})
     private Output<String> body;
 
+    /**
+     * @return Email Template Body. This should be a valid XDocument
+     */
     public Output<String> getBody() {
         return this.body;
     }
+    /**
+     * Description of the Email Template.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Description of the Email Template.
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Whether the template is the default template provided by Api Management or has been edited.
+     */
     @OutputExport(name="isDefault", type=Boolean.class, parameters={})
     private Output<Boolean> isDefault;
 
+    /**
+     * @return Whether the template is the default template provided by Api Management or has been edited.
+     */
     public Output<Boolean> getIsDefault() {
         return this.isDefault;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Email Template Parameter values.
+     */
     @OutputExport(name="parameters", type=List.class, parameters={EmailTemplateParametersContractPropertiesResponse.class})
     private Output</* @Nullable */ List<EmailTemplateParametersContractPropertiesResponse>> parameters;
 
+    /**
+     * @return Email Template Parameter values.
+     */
     public Output</* @Nullable */ List<EmailTemplateParametersContractPropertiesResponse>> getParameters() {
         return this.parameters;
     }
+    /**
+     * Subject of the Template.
+     */
     @OutputExport(name="subject", type=String.class, parameters={})
     private Output<String> subject;
 
+    /**
+     * @return Subject of the Template.
+     */
     public Output<String> getSubject() {
         return this.subject;
     }
+    /**
+     * Title of the Template.
+     */
     @OutputExport(name="title", type=String.class, parameters={})
     private Output</* @Nullable */ String> title;
 
+    /**
+     * @return Title of the Template.
+     */
     public Output</* @Nullable */ String> getTitle() {
         return this.title;
     }
+    /**
+     * Resource type for API Management resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type for API Management resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public EmailTemplate(String name, EmailTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:EmailTemplate", name, args == null ? EmailTemplateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -95,6 +241,14 @@ public class EmailTemplate extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static EmailTemplate get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EmailTemplate(name, id, options);
     }

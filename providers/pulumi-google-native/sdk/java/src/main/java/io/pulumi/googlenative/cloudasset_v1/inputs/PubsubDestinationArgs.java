@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A Pub/Sub destination.
+ */
 public final class PubsubDestinationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PubsubDestinationArgs Empty = new PubsubDestinationArgs();
 
+    /**
+     * The name of the Pub/Sub topic to publish to. Example: `projects/PROJECT_ID/topics/TOPIC_ID`.
+     */
     @InputImport(name="topic")
     private final @Nullable Input<String> topic;
 

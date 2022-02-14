@@ -12,12 +12,34 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetASCDataConnectorResult {
+/**
+ * The available data types for the connector.
+ */
     private final @Nullable AlertsDataTypeOfDataConnectorResponse dataTypes;
+/**
+ * Etag of the azure resource
+ */
     private final @Nullable String etag;
+/**
+ * Azure resource Id
+ */
     private final String id;
+/**
+ * The kind of the data connector
+Expected value is 'AzureSecurityCenter'.
+ */
     private final String kind;
+/**
+ * Azure resource name
+ */
     private final String name;
+/**
+ * The subscription id to connect to, and get the data from.
+ */
     private final @Nullable String subscriptionId;
+/**
+ * Azure resource type
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"dataTypes","etag","id","kind","name","subscriptionId","type"})
@@ -38,24 +60,46 @@ public final class GetASCDataConnectorResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The available data types for the connector.
+ */
     public Optional<AlertsDataTypeOfDataConnectorResponse> getDataTypes() {
         return Optional.ofNullable(this.dataTypes);
     }
+/**
+ * Etag of the azure resource
+ */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+/**
+ * Azure resource Id
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The kind of the data connector
+Expected value is 'AzureSecurityCenter'.
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * Azure resource name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The subscription id to connect to, and get the data from.
+ */
     public Optional<String> getSubscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
+/**
+ * Azure resource type
+ */
     public String getType() {
         return this.type;
     }

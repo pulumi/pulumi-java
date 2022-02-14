@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Data source type.
+ */
     @EnumType
     public enum SourceType {
+/**
+ * 
+ */
         Delimited_files("delimited_files"),
+/**
+ * 
+ */
         Json_lines_files("json_lines_files"),
+/**
+ * 
+ */
         Parquet_files("parquet_files");
 
         private final String value;

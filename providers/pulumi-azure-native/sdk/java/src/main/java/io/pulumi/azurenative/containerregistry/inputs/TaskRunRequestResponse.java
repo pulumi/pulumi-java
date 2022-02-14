@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The parameters for a task run request.
+ */
 public final class TaskRunRequestResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TaskRunRequestResponse Empty = new TaskRunRequestResponse();
 
+    /**
+     * The dedicated agent pool for the run.
+     */
     @InputImport(name="agentPoolName")
     private final @Nullable String agentPoolName;
 
@@ -23,6 +29,9 @@ public final class TaskRunRequestResponse extends io.pulumi.resources.InvokeArgs
         return this.agentPoolName == null ? Optional.empty() : Optional.ofNullable(this.agentPoolName);
     }
 
+    /**
+     * The value that indicates whether archiving is enabled for the run or not.
+     */
     @InputImport(name="isArchiveEnabled")
     private final @Nullable Boolean isArchiveEnabled;
 
@@ -30,6 +39,9 @@ public final class TaskRunRequestResponse extends io.pulumi.resources.InvokeArgs
         return this.isArchiveEnabled == null ? Optional.empty() : Optional.ofNullable(this.isArchiveEnabled);
     }
 
+    /**
+     * The template that describes the repository and tag information for run log artifact.
+     */
     @InputImport(name="logTemplate")
     private final @Nullable String logTemplate;
 
@@ -37,6 +49,9 @@ public final class TaskRunRequestResponse extends io.pulumi.resources.InvokeArgs
         return this.logTemplate == null ? Optional.empty() : Optional.ofNullable(this.logTemplate);
     }
 
+    /**
+     * Set of overridable parameters that can be passed when running a Task.
+     */
     @InputImport(name="overrideTaskStepProperties")
     private final @Nullable OverrideTaskStepPropertiesResponse overrideTaskStepProperties;
 
@@ -44,6 +59,9 @@ public final class TaskRunRequestResponse extends io.pulumi.resources.InvokeArgs
         return this.overrideTaskStepProperties == null ? Optional.empty() : Optional.ofNullable(this.overrideTaskStepProperties);
     }
 
+    /**
+     * The resource ID of task against which run has to be queued.
+     */
     @InputImport(name="taskId", required=true)
     private final String taskId;
 
@@ -51,6 +69,10 @@ public final class TaskRunRequestResponse extends io.pulumi.resources.InvokeArgs
         return this.taskId;
     }
 
+    /**
+     * The type of the run request.
+Expected value is 'TaskRunRequest'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

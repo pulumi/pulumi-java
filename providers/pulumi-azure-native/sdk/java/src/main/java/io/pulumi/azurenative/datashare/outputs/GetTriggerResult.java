@@ -10,10 +10,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetTriggerResult {
+/**
+ * The resource id of the azure resource
+ */
     private final String id;
+/**
+ * Kind of synchronization on trigger.
+ */
     private final String kind;
+/**
+ * Name of the azure resource
+ */
     private final String name;
+/**
+ * System Data of the Azure resource.
+ */
     private final SystemDataResponse systemData;
+/**
+ * Type of the azure resource
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","kind","name","systemData","type"})
@@ -30,18 +45,33 @@ public final class GetTriggerResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The resource id of the azure resource
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Kind of synchronization on trigger.
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * Name of the azure resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * System Data of the Azure resource.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * Type of the azure resource
+ */
     public String getType() {
         return this.type;
     }

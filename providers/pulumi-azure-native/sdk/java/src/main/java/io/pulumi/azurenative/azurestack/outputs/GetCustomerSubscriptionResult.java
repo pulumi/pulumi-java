@@ -11,10 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetCustomerSubscriptionResult {
+/**
+ * The entity tag used for optimistic concurrency when modifying the resource.
+ */
     private final @Nullable String etag;
+/**
+ * ID of the resource.
+ */
     private final String id;
+/**
+ * Name of the resource.
+ */
     private final String name;
+/**
+ * Tenant Id.
+ */
     private final @Nullable String tenantId;
+/**
+ * Type of Resource.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","name","tenantId","type"})
@@ -31,18 +46,33 @@ public final class GetCustomerSubscriptionResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The entity tag used for optimistic concurrency when modifying the resource.
+ */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+/**
+ * ID of the resource.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Name of the resource.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Tenant Id.
+ */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
+/**
+ * Type of Resource.
+ */
     public String getType() {
         return this.type;
     }

@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Push installer details.
+ */
 public final class PushInstallerDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PushInstallerDetailsResponse Empty = new PushInstallerDetailsResponse();
 
+    /**
+     * The health of the push installer.
+     */
     @InputImport(name="health", required=true)
     private final String health;
 
@@ -21,6 +27,9 @@ public final class PushInstallerDetailsResponse extends io.pulumi.resources.Invo
         return this.health;
     }
 
+    /**
+     * The health errors.
+     */
     @InputImport(name="healthErrors", required=true)
     private final List<HealthErrorResponse> healthErrors;
 
@@ -28,6 +37,9 @@ public final class PushInstallerDetailsResponse extends io.pulumi.resources.Invo
         return this.healthErrors;
     }
 
+    /**
+     * The push installer Id.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -35,6 +47,9 @@ public final class PushInstallerDetailsResponse extends io.pulumi.resources.Invo
         return this.id;
     }
 
+    /**
+     * The last heartbeat received from the push installer.
+     */
     @InputImport(name="lastHeartbeatUtc", required=true)
     private final String lastHeartbeatUtc;
 
@@ -42,6 +57,9 @@ public final class PushInstallerDetailsResponse extends io.pulumi.resources.Invo
         return this.lastHeartbeatUtc;
     }
 
+    /**
+     * The push installer name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -49,6 +67,9 @@ public final class PushInstallerDetailsResponse extends io.pulumi.resources.Invo
         return this.name;
     }
 
+    /**
+     * The push installer version.
+     */
     @InputImport(name="version", required=true)
     private final String version;
 

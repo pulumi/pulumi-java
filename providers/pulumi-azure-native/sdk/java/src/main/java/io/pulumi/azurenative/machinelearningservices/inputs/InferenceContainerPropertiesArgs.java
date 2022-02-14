@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InferenceContainerPropertiesArgs Empty = new InferenceContainerPropertiesArgs();
 
+    /**
+     * The route to check the liveness of the inference server container.
+     */
     @InputImport(name="livenessRoute")
     private final @Nullable Input<RouteArgs> livenessRoute;
 
@@ -21,6 +27,9 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
         return this.livenessRoute == null ? Input.empty() : this.livenessRoute;
     }
 
+    /**
+     * The route to check the readiness of the inference server container.
+     */
     @InputImport(name="readinessRoute")
     private final @Nullable Input<RouteArgs> readinessRoute;
 
@@ -28,6 +37,9 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
         return this.readinessRoute == null ? Input.empty() : this.readinessRoute;
     }
 
+    /**
+     * The port to send the scoring requests to, within the inference server container.
+     */
     @InputImport(name="scoringRoute")
     private final @Nullable Input<RouteArgs> scoringRoute;
 

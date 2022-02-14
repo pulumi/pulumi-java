@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A public key certificate format and data.
+ */
 public final class PublicKeyCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PublicKeyCertificateArgs Empty = new PublicKeyCertificateArgs();
 
+    /**
+     * The certificate data.
+     */
     @InputImport(name="certificate")
     private final @Nullable Input<String> certificate;
 
@@ -22,6 +28,9 @@ public final class PublicKeyCertificateArgs extends io.pulumi.resources.Resource
         return this.certificate == null ? Input.empty() : this.certificate;
     }
 
+    /**
+     * The certificate format.
+     */
     @InputImport(name="format")
     private final @Nullable Input<PublicKeyCertificateFormat> format;
 

@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ConnectToTargetAzureDbForMySqlTaskInputResponse {
+/**
+ * Connection information for source MySQL server
+ */
     private final MySqlConnectionInfoResponse sourceConnectionInfo;
+/**
+ * Connection information for target Azure Database for MySQL server
+ */
     private final MySqlConnectionInfoResponse targetConnectionInfo;
 
     @OutputCustomType.Constructor({"sourceConnectionInfo","targetConnectionInfo"})
@@ -20,9 +26,15 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputResponse {
         this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
     }
 
+/**
+ * Connection information for source MySQL server
+ */
     public MySqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
+/**
+ * Connection information for target Azure Database for MySQL server
+ */
     public MySqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }

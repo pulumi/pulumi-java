@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Input for the task that validates connection to SQL Server and also validates source server requirements
+ */
 public final class ConnectToSourceSqlServerTaskInputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectToSourceSqlServerTaskInputResponse Empty = new ConnectToSourceSqlServerTaskInputResponse();
 
+    /**
+     * Permission group for validations
+     */
     @InputImport(name="checkPermissionsGroup")
     private final @Nullable String checkPermissionsGroup;
 
@@ -23,6 +29,9 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends io.pulumi.r
         return this.checkPermissionsGroup == null ? Optional.empty() : Optional.ofNullable(this.checkPermissionsGroup);
     }
 
+    /**
+     * Flag for whether to collect agent jobs from source server.
+     */
     @InputImport(name="collectAgentJobs")
     private final @Nullable Boolean collectAgentJobs;
 
@@ -30,6 +39,9 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends io.pulumi.r
         return this.collectAgentJobs == null ? Optional.empty() : Optional.ofNullable(this.collectAgentJobs);
     }
 
+    /**
+     * Flag for whether to collect logins from source server.
+     */
     @InputImport(name="collectLogins")
     private final @Nullable Boolean collectLogins;
 
@@ -37,6 +49,9 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends io.pulumi.r
         return this.collectLogins == null ? Optional.empty() : Optional.ofNullable(this.collectLogins);
     }
 
+    /**
+     * Connection information for Source SQL Server
+     */
     @InputImport(name="sourceConnectionInfo", required=true)
     private final SqlConnectionInfoResponse sourceConnectionInfo;
 

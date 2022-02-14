@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.ExpressRouteCircuitPeeringArgs;
 import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitConnectionResponse;
 import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitPeeringConfigResponse;
 import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitStatsResponse;
@@ -23,147 +22,394 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Peering in an ExpressRouteCircuit resource.
+API Version: 2020-11-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create ExpressRouteCircuit Peerings
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var expressRouteCircuitPeering = new AzureNative.Network.ExpressRouteCircuitPeering("expressRouteCircuitPeering", new AzureNative.Network.ExpressRouteCircuitPeeringArgs
+        {
+            CircuitName = "circuitName",
+            PeerASN = 200,
+            PeeringName = "AzurePrivatePeering",
+            PrimaryPeerAddressPrefix = "192.168.16.252/30",
+            ResourceGroupName = "rg1",
+            SecondaryPeerAddressPrefix = "192.168.18.252/30",
+            VlanId = 200,
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewExpressRouteCircuitPeering(ctx, "expressRouteCircuitPeering", &network.ExpressRouteCircuitPeeringArgs{
+			CircuitName:                pulumi.String("circuitName"),
+			PeerASN:                    pulumi.Float64(200),
+			PeeringName:                pulumi.String("AzurePrivatePeering"),
+			PrimaryPeerAddressPrefix:   pulumi.String("192.168.16.252/30"),
+			ResourceGroupName:          pulumi.String("rg1"),
+			SecondaryPeerAddressPrefix: pulumi.String("192.168.18.252/30"),
+			VlanId:                     pulumi.Int(200),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const expressRouteCircuitPeering = new azure_native.network.ExpressRouteCircuitPeering("expressRouteCircuitPeering", {
+    circuitName: "circuitName",
+    peerASN: 200,
+    peeringName: "AzurePrivatePeering",
+    primaryPeerAddressPrefix: "192.168.16.252/30",
+    resourceGroupName: "rg1",
+    secondaryPeerAddressPrefix: "192.168.18.252/30",
+    vlanId: 200,
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+express_route_circuit_peering = azure_native.network.ExpressRouteCircuitPeering("expressRouteCircuitPeering",
+    circuit_name="circuitName",
+    peer_asn=200,
+    peering_name="AzurePrivatePeering",
+    primary_peer_address_prefix="192.168.16.252/30",
+    resource_group_name="rg1",
+    secondary_peer_address_prefix="192.168.18.252/30",
+    vlan_id=200)
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:ExpressRouteCircuitPeering AzurePrivatePeering /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRouteCircuits/circuitName/peerings/AzurePrivatePeering 
+```
+
+ */
 @ResourceType(type="azure-native:network:ExpressRouteCircuitPeering")
 public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResource {
+    /**
+     * The Azure ASN.
+     */
     @OutputExport(name="azureASN", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> azureASN;
 
+    /**
+     * @return The Azure ASN.
+     */
     public Output</* @Nullable */ Integer> getAzureASN() {
         return this.azureASN;
     }
+    /**
+     * The list of circuit connections associated with Azure Private Peering for this circuit.
+     */
     @OutputExport(name="connections", type=List.class, parameters={ExpressRouteCircuitConnectionResponse.class})
     private Output</* @Nullable */ List<ExpressRouteCircuitConnectionResponse>> connections;
 
+    /**
+     * @return The list of circuit connections associated with Azure Private Peering for this circuit.
+     */
     public Output</* @Nullable */ List<ExpressRouteCircuitConnectionResponse>> getConnections() {
         return this.connections;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The ExpressRoute connection.
+     */
     @OutputExport(name="expressRouteConnection", type=ExpressRouteConnectionIdResponse.class, parameters={})
     private Output</* @Nullable */ ExpressRouteConnectionIdResponse> expressRouteConnection;
 
+    /**
+     * @return The ExpressRoute connection.
+     */
     public Output</* @Nullable */ ExpressRouteConnectionIdResponse> getExpressRouteConnection() {
         return this.expressRouteConnection;
     }
+    /**
+     * The GatewayManager Etag.
+     */
     @OutputExport(name="gatewayManagerEtag", type=String.class, parameters={})
     private Output</* @Nullable */ String> gatewayManagerEtag;
 
+    /**
+     * @return The GatewayManager Etag.
+     */
     public Output</* @Nullable */ String> getGatewayManagerEtag() {
         return this.gatewayManagerEtag;
     }
+    /**
+     * The IPv6 peering configuration.
+     */
     @OutputExport(name="ipv6PeeringConfig", type=Ipv6ExpressRouteCircuitPeeringConfigResponse.class, parameters={})
     private Output</* @Nullable */ Ipv6ExpressRouteCircuitPeeringConfigResponse> ipv6PeeringConfig;
 
+    /**
+     * @return The IPv6 peering configuration.
+     */
     public Output</* @Nullable */ Ipv6ExpressRouteCircuitPeeringConfigResponse> getIpv6PeeringConfig() {
         return this.ipv6PeeringConfig;
     }
+    /**
+     * Who was the last to modify the peering.
+     */
     @OutputExport(name="lastModifiedBy", type=String.class, parameters={})
     private Output<String> lastModifiedBy;
 
+    /**
+     * @return Who was the last to modify the peering.
+     */
     public Output<String> getLastModifiedBy() {
         return this.lastModifiedBy;
     }
+    /**
+     * The Microsoft peering configuration.
+     */
     @OutputExport(name="microsoftPeeringConfig", type=ExpressRouteCircuitPeeringConfigResponse.class, parameters={})
     private Output</* @Nullable */ ExpressRouteCircuitPeeringConfigResponse> microsoftPeeringConfig;
 
+    /**
+     * @return The Microsoft peering configuration.
+     */
     public Output</* @Nullable */ ExpressRouteCircuitPeeringConfigResponse> getMicrosoftPeeringConfig() {
         return this.microsoftPeeringConfig;
     }
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * The peer ASN.
+     */
     @OutputExport(name="peerASN", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> peerASN;
 
+    /**
+     * @return The peer ASN.
+     */
     public Output</* @Nullable */ Double> getPeerASN() {
         return this.peerASN;
     }
+    /**
+     * The list of peered circuit connections associated with Azure Private Peering for this circuit.
+     */
     @OutputExport(name="peeredConnections", type=List.class, parameters={PeerExpressRouteCircuitConnectionResponse.class})
     private Output<List<PeerExpressRouteCircuitConnectionResponse>> peeredConnections;
 
+    /**
+     * @return The list of peered circuit connections associated with Azure Private Peering for this circuit.
+     */
     public Output<List<PeerExpressRouteCircuitConnectionResponse>> getPeeredConnections() {
         return this.peeredConnections;
     }
+    /**
+     * The peering type.
+     */
     @OutputExport(name="peeringType", type=String.class, parameters={})
     private Output</* @Nullable */ String> peeringType;
 
+    /**
+     * @return The peering type.
+     */
     public Output</* @Nullable */ String> getPeeringType() {
         return this.peeringType;
     }
+    /**
+     * The primary port.
+     */
     @OutputExport(name="primaryAzurePort", type=String.class, parameters={})
     private Output</* @Nullable */ String> primaryAzurePort;
 
+    /**
+     * @return The primary port.
+     */
     public Output</* @Nullable */ String> getPrimaryAzurePort() {
         return this.primaryAzurePort;
     }
+    /**
+     * The primary address prefix.
+     */
     @OutputExport(name="primaryPeerAddressPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> primaryPeerAddressPrefix;
 
+    /**
+     * @return The primary address prefix.
+     */
     public Output</* @Nullable */ String> getPrimaryPeerAddressPrefix() {
         return this.primaryPeerAddressPrefix;
     }
+    /**
+     * The provisioning state of the express route circuit peering resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the express route circuit peering resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The reference to the RouteFilter resource.
+     */
     @OutputExport(name="routeFilter", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> routeFilter;
 
+    /**
+     * @return The reference to the RouteFilter resource.
+     */
     public Output</* @Nullable */ SubResourceResponse> getRouteFilter() {
         return this.routeFilter;
     }
+    /**
+     * The secondary port.
+     */
     @OutputExport(name="secondaryAzurePort", type=String.class, parameters={})
     private Output</* @Nullable */ String> secondaryAzurePort;
 
+    /**
+     * @return The secondary port.
+     */
     public Output</* @Nullable */ String> getSecondaryAzurePort() {
         return this.secondaryAzurePort;
     }
+    /**
+     * The secondary address prefix.
+     */
     @OutputExport(name="secondaryPeerAddressPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> secondaryPeerAddressPrefix;
 
+    /**
+     * @return The secondary address prefix.
+     */
     public Output</* @Nullable */ String> getSecondaryPeerAddressPrefix() {
         return this.secondaryPeerAddressPrefix;
     }
+    /**
+     * The shared key.
+     */
     @OutputExport(name="sharedKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> sharedKey;
 
+    /**
+     * @return The shared key.
+     */
     public Output</* @Nullable */ String> getSharedKey() {
         return this.sharedKey;
     }
+    /**
+     * The peering state.
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
+    /**
+     * @return The peering state.
+     */
     public Output</* @Nullable */ String> getState() {
         return this.state;
     }
+    /**
+     * The peering stats of express route circuit.
+     */
     @OutputExport(name="stats", type=ExpressRouteCircuitStatsResponse.class, parameters={})
     private Output</* @Nullable */ ExpressRouteCircuitStatsResponse> stats;
 
+    /**
+     * @return The peering stats of express route circuit.
+     */
     public Output</* @Nullable */ ExpressRouteCircuitStatsResponse> getStats() {
         return this.stats;
     }
+    /**
+     * Type of the resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of the resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The VLAN ID.
+     */
     @OutputExport(name="vlanId", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> vlanId;
 
+    /**
+     * @return The VLAN ID.
+     */
     public Output</* @Nullable */ Integer> getVlanId() {
         return this.vlanId;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ExpressRouteCircuitPeering(String name, ExpressRouteCircuitPeeringArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:ExpressRouteCircuitPeering", name, args == null ? ExpressRouteCircuitPeeringArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -220,6 +466,14 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ExpressRouteCircuitPeering get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ExpressRouteCircuitPeering(name, id, options);
     }

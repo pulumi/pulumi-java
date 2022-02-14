@@ -8,10 +8,16 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * ApprovalConfig describes configuration for manual approval of a build.
+ */
 public final class ApprovalConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApprovalConfigResponse Empty = new ApprovalConfigResponse();
 
+    /**
+     * Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.
+     */
     @InputImport(name="approvalRequired", required=true)
     private final Boolean approvalRequired;
 

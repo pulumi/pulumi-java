@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ *  Resource is an entity that can have metadata. E.g., a Docker image.
+ */
 public final class ResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceResponse Empty = new ResourceResponse();
 
+    /**
+     * The hash of the resource content. E.g., the Docker digest.
+     */
     @InputImport(name="contentHash", required=true)
     private final HashResponse contentHash;
 
@@ -20,6 +26,9 @@ public final class ResourceResponse extends io.pulumi.resources.InvokeArgs {
         return this.contentHash;
     }
 
+    /**
+     * The name of the resource. E.g., the name of a Docker image - "Debian".
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -27,6 +36,9 @@ public final class ResourceResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The unique URI of the resource. E.g., "https://gcr.io/project/image@sha256:foo" for a Docker image.
+     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

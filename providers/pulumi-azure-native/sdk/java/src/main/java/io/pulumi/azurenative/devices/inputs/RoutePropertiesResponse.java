@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of a routing rule that your IoT hub uses to route messages to endpoints.
+ */
 public final class RoutePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RoutePropertiesResponse Empty = new RoutePropertiesResponse();
 
+    /**
+     * The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
+     */
     @InputImport(name="condition")
     private final @Nullable String condition;
 
@@ -23,6 +29,9 @@ public final class RoutePropertiesResponse extends io.pulumi.resources.InvokeArg
         return this.condition == null ? Optional.empty() : Optional.ofNullable(this.condition);
     }
 
+    /**
+     * The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.
+     */
     @InputImport(name="endpointNames", required=true)
     private final List<String> endpointNames;
 
@@ -30,6 +39,9 @@ public final class RoutePropertiesResponse extends io.pulumi.resources.InvokeArg
         return this.endpointNames;
     }
 
+    /**
+     * Used to specify whether a route is enabled.
+     */
     @InputImport(name="isEnabled", required=true)
     private final Boolean isEnabled;
 
@@ -37,6 +49,9 @@ public final class RoutePropertiesResponse extends io.pulumi.resources.InvokeArg
         return this.isEnabled;
     }
 
+    /**
+     * The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -44,6 +59,9 @@ public final class RoutePropertiesResponse extends io.pulumi.resources.InvokeArg
         return this.name;
     }
 
+    /**
+     * The source that the routing rule is to be applied to, such as DeviceMessages.
+     */
     @InputImport(name="source", required=true)
     private final String source;
 

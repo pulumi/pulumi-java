@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetImageUploadUrlForEntityType {
+/**
+ * The image definition.
+API Version: 2017-04-26.
+ *
+ * The image definition.
+ */
     public static CompletableFuture<GetImageUploadUrlForEntityTypeResult> invokeAsync(GetImageUploadUrlForEntityTypeArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getImageUploadUrlForEntityType", TypeShape.of(GetImageUploadUrlForEntityTypeResult.class), args == null ? GetImageUploadUrlForEntityTypeArgs.Empty : args, Utilities.withVersion(options));
     }

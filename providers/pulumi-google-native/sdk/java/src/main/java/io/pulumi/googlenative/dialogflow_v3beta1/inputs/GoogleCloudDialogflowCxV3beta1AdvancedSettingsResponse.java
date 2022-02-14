@@ -8,10 +8,16 @@ import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV
 import java.util.Objects;
 
 
+/**
+ * Hierarchical advanced settings for agent/flow/page/fulfillment/parameter. Settings exposed at lower level overrides the settings exposed at higher level. Hierarchy: Agent->Flow->Page->Fulfillment/Parameter.
+ */
 public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse Empty = new GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse();
 
+    /**
+     * Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels: - Agent level.
+     */
     @InputImport(name="loggingSettings", required=true)
     private final GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse loggingSettings;
 

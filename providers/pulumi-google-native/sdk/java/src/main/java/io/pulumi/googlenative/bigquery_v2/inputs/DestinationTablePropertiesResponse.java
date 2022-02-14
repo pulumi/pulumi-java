@@ -9,10 +9,16 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class DestinationTablePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DestinationTablePropertiesResponse Empty = new DestinationTablePropertiesResponse();
 
+    /**
+     * [Optional] The description for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current description is provided, the job will fail.
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -20,6 +26,9 @@ public final class DestinationTablePropertiesResponse extends io.pulumi.resource
         return this.description;
     }
 
+    /**
+     * [Internal] This field is for Google internal use only.
+     */
     @InputImport(name="expirationTime", required=true)
     private final String expirationTime;
 
@@ -27,6 +36,9 @@ public final class DestinationTablePropertiesResponse extends io.pulumi.resource
         return this.expirationTime;
     }
 
+    /**
+     * [Optional] The friendly name for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current friendly name is provided, the job will fail.
+     */
     @InputImport(name="friendlyName", required=true)
     private final String friendlyName;
 
@@ -34,6 +46,9 @@ public final class DestinationTablePropertiesResponse extends io.pulumi.resource
         return this.friendlyName;
     }
 
+    /**
+     * [Optional] The labels associated with this table. You can use these to organize and group your tables. This will only be used if the destination table is newly created. If the table already exists and labels are different than the current labels are provided, the job will fail.
+     */
     @InputImport(name="labels", required=true)
     private final Map<String,String> labels;
 

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class MDATPDataConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MDATPDataConnectorArgs Empty = new MDATPDataConnectorArgs();
 
+    /**
+     * Connector ID
+     */
     @InputImport(name="dataConnectorId")
     private final @Nullable Input<String> dataConnectorId;
 
@@ -22,6 +28,9 @@ public final class MDATPDataConnectorArgs extends io.pulumi.resources.ResourceAr
         return this.dataConnectorId == null ? Input.empty() : this.dataConnectorId;
     }
 
+    /**
+     * The available data types for the connector.
+     */
     @InputImport(name="dataTypes")
     private final @Nullable Input<AlertsDataTypeOfDataConnectorArgs> dataTypes;
 
@@ -29,6 +38,10 @@ public final class MDATPDataConnectorArgs extends io.pulumi.resources.ResourceAr
         return this.dataTypes == null ? Input.empty() : this.dataTypes;
     }
 
+    /**
+     * The kind of the data connector
+Expected value is 'MicrosoftDefenderAdvancedThreatProtection'.
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -36,6 +49,9 @@ public final class MDATPDataConnectorArgs extends io.pulumi.resources.ResourceAr
         return this.kind;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +59,9 @@ public final class MDATPDataConnectorArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
+    /**
+     * The tenant id to connect to, and get the data from.
+     */
     @InputImport(name="tenantId")
     private final @Nullable Input<String> tenantId;
 
@@ -50,6 +69,9 @@ public final class MDATPDataConnectorArgs extends io.pulumi.resources.ResourceAr
         return this.tenantId == null ? Input.empty() : this.tenantId;
     }
 
+    /**
+     * The name of the workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

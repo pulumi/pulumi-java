@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network-level access control policy for the Airflow web server.
+ */
 public final class WebServerNetworkAccessControlArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebServerNetworkAccessControlArgs Empty = new WebServerNetworkAccessControlArgs();
 
+    /**
+     * A collection of allowed IP ranges with descriptions.
+     */
     @InputImport(name="allowedIpRanges")
     private final @Nullable Input<List<AllowedIpRangeArgs>> allowedIpRanges;
 

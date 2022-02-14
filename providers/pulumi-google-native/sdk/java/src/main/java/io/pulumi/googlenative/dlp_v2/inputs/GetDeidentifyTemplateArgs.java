@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetDeidentifyTemplateArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDeidentifyTemplateArgs Empty = new GetDeidentifyTemplateArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="deidentifyTemplateId", required=true)
     private final String deidentifyTemplateId;
 
@@ -21,6 +27,9 @@ public final class GetDeidentifyTemplateArgs extends io.pulumi.resources.InvokeA
         return this.deidentifyTemplateId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -28,6 +37,9 @@ public final class GetDeidentifyTemplateArgs extends io.pulumi.resources.InvokeA
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

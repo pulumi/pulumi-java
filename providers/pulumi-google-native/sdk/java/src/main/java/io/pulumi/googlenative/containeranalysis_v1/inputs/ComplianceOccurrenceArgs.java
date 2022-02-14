@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An indication that the compliance checks in the associated ComplianceNote were not satisfied for particular resources or a specified reason.
+ */
 public final class ComplianceOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ComplianceOccurrenceArgs Empty = new ComplianceOccurrenceArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="nonComplianceReason")
     private final @Nullable Input<String> nonComplianceReason;
 
@@ -23,6 +29,9 @@ public final class ComplianceOccurrenceArgs extends io.pulumi.resources.Resource
         return this.nonComplianceReason == null ? Input.empty() : this.nonComplianceReason;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="nonCompliantFiles")
     private final @Nullable Input<List<NonCompliantFileArgs>> nonCompliantFiles;
 

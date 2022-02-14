@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIncidentComment {
+/**
+ * Represents an incident comment
+API Version: 2021-03-01-preview.
+ *
+ * Represents an incident comment
+ */
     public static CompletableFuture<GetIncidentCommentResult> invokeAsync(GetIncidentCommentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getIncidentComment", TypeShape.of(GetIncidentCommentResult.class), args == null ? GetIncidentCommentArgs.Empty : args, Utilities.withVersion(options));
     }

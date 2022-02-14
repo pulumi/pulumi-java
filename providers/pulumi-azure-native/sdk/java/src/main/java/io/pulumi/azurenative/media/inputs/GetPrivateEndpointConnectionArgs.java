@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPrivateEndpointConnectionArgs Empty = new GetPrivateEndpointConnectionArgs();
 
+    /**
+     * The Media Services account name.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
         return this.accountName;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +35,9 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
         return this.name;
     }
 
+    /**
+     * The name of the resource group within the Azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Metadata available primarily for filtering jobs. Will be included in the ListJob response and Job SUMMARY view.
+ */
 public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobMetadataArgs Empty = new JobMetadataArgs();
 
+    /**
+     * Identification of a Cloud Bigtable source used in the Dataflow job.
+     */
     @InputImport(name="bigTableDetails")
     private final @Nullable Input<List<BigTableIODetailsArgs>> bigTableDetails;
 
@@ -28,6 +34,9 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
         return this.bigTableDetails == null ? Input.empty() : this.bigTableDetails;
     }
 
+    /**
+     * Identification of a BigQuery source used in the Dataflow job.
+     */
     @InputImport(name="bigqueryDetails")
     private final @Nullable Input<List<BigQueryIODetailsArgs>> bigqueryDetails;
 
@@ -35,6 +44,9 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
         return this.bigqueryDetails == null ? Input.empty() : this.bigqueryDetails;
     }
 
+    /**
+     * Identification of a Datastore source used in the Dataflow job.
+     */
     @InputImport(name="datastoreDetails")
     private final @Nullable Input<List<DatastoreIODetailsArgs>> datastoreDetails;
 
@@ -42,6 +54,9 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
         return this.datastoreDetails == null ? Input.empty() : this.datastoreDetails;
     }
 
+    /**
+     * Identification of a File source used in the Dataflow job.
+     */
     @InputImport(name="fileDetails")
     private final @Nullable Input<List<FileIODetailsArgs>> fileDetails;
 
@@ -49,6 +64,9 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
         return this.fileDetails == null ? Input.empty() : this.fileDetails;
     }
 
+    /**
+     * Identification of a Pub/Sub source used in the Dataflow job.
+     */
     @InputImport(name="pubsubDetails")
     private final @Nullable Input<List<PubSubIODetailsArgs>> pubsubDetails;
 
@@ -56,6 +74,9 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
         return this.pubsubDetails == null ? Input.empty() : this.pubsubDetails;
     }
 
+    /**
+     * The SDK version used to run the job.
+     */
     @InputImport(name="sdkVersion")
     private final @Nullable Input<SdkVersionArgs> sdkVersion;
 
@@ -63,6 +84,9 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
         return this.sdkVersion == null ? Input.empty() : this.sdkVersion;
     }
 
+    /**
+     * Identification of a Spanner source used in the Dataflow job.
+     */
     @InputImport(name="spannerDetails")
     private final @Nullable Input<List<SpannerIODetailsArgs>> spannerDetails;
 

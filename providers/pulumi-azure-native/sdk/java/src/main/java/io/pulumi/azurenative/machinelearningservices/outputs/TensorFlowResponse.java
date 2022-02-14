@@ -12,8 +12,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class TensorFlowResponse {
+/**
+ * Enum to determine the job distribution type.
+Expected value is 'TensorFlow'.
+ */
     private final String distributionType;
+/**
+ * Number of parameter server tasks.
+ */
     private final @Nullable Integer parameterServerCount;
+/**
+ * Number of workers. Overwrites the node count in compute binding.
+ */
     private final @Nullable Integer workerCount;
 
     @OutputCustomType.Constructor({"distributionType","parameterServerCount","workerCount"})
@@ -26,12 +36,22 @@ public final class TensorFlowResponse {
         this.workerCount = workerCount;
     }
 
+/**
+ * Enum to determine the job distribution type.
+Expected value is 'TensorFlow'.
+ */
     public String getDistributionType() {
         return this.distributionType;
     }
+/**
+ * Number of parameter server tasks.
+ */
     public Optional<Integer> getParameterServerCount() {
         return Optional.ofNullable(this.parameterServerCount);
     }
+/**
+ * Number of workers. Overwrites the node count in compute binding.
+ */
     public Optional<Integer> getWorkerCount() {
         return Optional.ofNullable(this.workerCount);
     }

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SSL configuration information.
+ */
 public final class SslConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SslConfigArgs Empty = new SslConfigArgs();
 
+    /**
+     * Input only. The x509 PEM-encoded certificate of the CA that signed the source database server's certificate. The replica will use this certificate to verify it's connecting to the right host.
+     */
     @InputImport(name="caCertificate", required=true)
     private final Input<String> caCertificate;
 
@@ -21,6 +27,9 @@ public final class SslConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.caCertificate;
     }
 
+    /**
+     * Input only. The x509 PEM-encoded certificate that will be used by the replica to authenticate against the source database server.If this field is used then the 'client_key' field is mandatory.
+     */
     @InputImport(name="clientCertificate")
     private final @Nullable Input<String> clientCertificate;
 
@@ -28,6 +37,9 @@ public final class SslConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientCertificate == null ? Input.empty() : this.clientCertificate;
     }
 
+    /**
+     * Input only. The unencrypted PKCS#1 or PKCS#8 PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' field is mandatory.
+     */
     @InputImport(name="clientKey")
     private final @Nullable Input<String> clientKey;
 

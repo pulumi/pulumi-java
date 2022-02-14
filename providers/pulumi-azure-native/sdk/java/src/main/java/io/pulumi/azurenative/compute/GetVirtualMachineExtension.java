@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualMachineExtension {
+/**
+ * Describes a Virtual Machine Extension.
+API Version: 2021-03-01.
+ *
+ * Describes a Virtual Machine Extension.
+ */
     public static CompletableFuture<GetVirtualMachineExtensionResult> invokeAsync(GetVirtualMachineExtensionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:compute:getVirtualMachineExtension", TypeShape.of(GetVirtualMachineExtensionResult.class), args == null ? GetVirtualMachineExtensionArgs.Empty : args, Utilities.withVersion(options));
     }

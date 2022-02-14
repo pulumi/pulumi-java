@@ -8,33 +8,59 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.apigee_v1.ResourcefileArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Creates a resource file. Specify the `Content-Type` as `application/octet-stream` or `multipart/form-data`. For more information about resource files, see [Resource files](https://cloud.google.com/apigee/docs/api-platform/develop/resource-files).
+ */
 @ResourceType(type="google-native:apigee/v1:Resourcefile")
 public class Resourcefile extends io.pulumi.resources.CustomResource {
+    /**
+     * The HTTP Content-Type header value specifying the content type of the body.
+     */
     @OutputExport(name="contentType", type=String.class, parameters={})
     private Output<String> contentType;
 
+    /**
+     * @return The HTTP Content-Type header value specifying the content type of the body.
+     */
     public Output<String> getContentType() {
         return this.contentType;
     }
+    /**
+     * The HTTP request/response body as raw binary.
+     */
     @OutputExport(name="data", type=String.class, parameters={})
     private Output<String> data;
 
+    /**
+     * @return The HTTP request/response body as raw binary.
+     */
     public Output<String> getData() {
         return this.data;
     }
+    /**
+     * Application specific response metadata. Must be set in the first response for streaming APIs.
+     */
     @OutputExport(name="extensions", type=List.class, parameters={Map.class})
     private Output<List<Map<String,String>>> extensions;
 
+    /**
+     * @return Application specific response metadata. Must be set in the first response for streaming APIs.
+     */
     public Output<List<Map<String,String>>> getExtensions() {
         return this.extensions;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Resourcefile(String name, ResourcefileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:apigee/v1:Resourcefile", name, args == null ? ResourcefileArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -50,6 +76,14 @@ public class Resourcefile extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Resourcefile get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Resourcefile(name, id, options);
     }

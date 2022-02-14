@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Output only. Defines a warning trace message for ScanRun. Warning traces provide customers with useful information that helps make the scanning process more effective.
+ */
 public final class ScanRunWarningTraceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScanRunWarningTraceArgs Empty = new ScanRunWarningTraceArgs();
 
+    /**
+     * Indicates the warning code.
+     */
     @InputImport(name="code")
     private final @Nullable Input<ScanRunWarningTraceCode> code;
 

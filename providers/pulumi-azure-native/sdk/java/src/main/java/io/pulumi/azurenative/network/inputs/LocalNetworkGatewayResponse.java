@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A common class for general resource information.
+ */
 public final class LocalNetworkGatewayResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LocalNetworkGatewayResponse Empty = new LocalNetworkGatewayResponse();
 
+    /**
+     * Local network gateway's BGP speaker settings.
+     */
     @InputImport(name="bgpSettings")
     private final @Nullable BgpSettingsResponse bgpSettings;
 
@@ -24,6 +30,9 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
         return this.bgpSettings == null ? Optional.empty() : Optional.ofNullable(this.bgpSettings);
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -31,6 +40,9 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
         return this.etag;
     }
 
+    /**
+     * FQDN of local network gateway.
+     */
     @InputImport(name="fqdn")
     private final @Nullable String fqdn;
 
@@ -38,6 +50,9 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
         return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
     }
 
+    /**
+     * IP address of local network gateway.
+     */
     @InputImport(name="gatewayIpAddress")
     private final @Nullable String gatewayIpAddress;
 
@@ -45,6 +60,9 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
         return this.gatewayIpAddress == null ? Optional.empty() : Optional.ofNullable(this.gatewayIpAddress);
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -52,6 +70,9 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Local network site address space.
+     */
     @InputImport(name="localNetworkAddressSpace")
     private final @Nullable AddressSpaceResponse localNetworkAddressSpace;
 
@@ -59,6 +80,9 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
         return this.localNetworkAddressSpace == null ? Optional.empty() : Optional.ofNullable(this.localNetworkAddressSpace);
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -66,6 +90,9 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * Resource name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -73,6 +100,9 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
         return this.name;
     }
 
+    /**
+     * The provisioning state of the local network gateway resource.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -80,6 +110,9 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
         return this.provisioningState;
     }
 
+    /**
+     * The resource GUID property of the local network gateway resource.
+     */
     @InputImport(name="resourceGuid", required=true)
     private final String resourceGuid;
 
@@ -87,6 +120,9 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
         return this.resourceGuid;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 
@@ -94,6 +130,9 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
         return this.tags == null ? Map.of() : this.tags;
     }
 
+    /**
+     * Resource type.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

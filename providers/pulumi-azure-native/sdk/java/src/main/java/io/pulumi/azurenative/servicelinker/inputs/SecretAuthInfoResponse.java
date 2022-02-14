@@ -10,10 +10,17 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The authentication info when authType is secret
+ */
 public final class SecretAuthInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecretAuthInfoResponse Empty = new SecretAuthInfoResponse();
 
+    /**
+     * The authentication type.
+Expected value is 'secret'.
+     */
     @InputImport(name="authType", required=true)
     private final String authType;
 
@@ -21,6 +28,9 @@ public final class SecretAuthInfoResponse extends io.pulumi.resources.InvokeArgs
         return this.authType;
     }
 
+    /**
+     * Username or account name for secret auth.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -28,6 +38,9 @@ public final class SecretAuthInfoResponse extends io.pulumi.resources.InvokeArgs
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Password or account key for secret auth.
+     */
     @InputImport(name="secret")
     private final @Nullable String secret;
 

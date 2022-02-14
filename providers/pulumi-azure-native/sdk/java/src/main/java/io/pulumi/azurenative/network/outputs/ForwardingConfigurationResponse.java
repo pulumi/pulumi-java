@@ -13,10 +13,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ForwardingConfigurationResponse {
+/**
+ * A reference to the BackendPool which this rule routes to.
+ */
     private final @Nullable SubResourceResponse backendPool;
+/**
+ * The caching configuration associated with this rule.
+ */
     private final @Nullable CacheConfigurationResponse cacheConfiguration;
+/**
+ * A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
+ */
     private final @Nullable String customForwardingPath;
+/**
+ * Protocol this rule will use when forwarding traffic to backends.
+ */
     private final @Nullable String forwardingProtocol;
+/**
+ * 
+Expected value is '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration'.
+ */
     private final String odataType;
 
     @OutputCustomType.Constructor({"backendPool","cacheConfiguration","customForwardingPath","forwardingProtocol","odataType"})
@@ -33,18 +49,34 @@ public final class ForwardingConfigurationResponse {
         this.odataType = Objects.requireNonNull(odataType);
     }
 
+/**
+ * A reference to the BackendPool which this rule routes to.
+ */
     public Optional<SubResourceResponse> getBackendPool() {
         return Optional.ofNullable(this.backendPool);
     }
+/**
+ * The caching configuration associated with this rule.
+ */
     public Optional<CacheConfigurationResponse> getCacheConfiguration() {
         return Optional.ofNullable(this.cacheConfiguration);
     }
+/**
+ * A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.
+ */
     public Optional<String> getCustomForwardingPath() {
         return Optional.ofNullable(this.customForwardingPath);
     }
+/**
+ * Protocol this rule will use when forwarding traffic to backends.
+ */
     public Optional<String> getForwardingProtocol() {
         return Optional.ofNullable(this.forwardingProtocol);
     }
+/**
+ * 
+Expected value is '#Microsoft.Azure.FrontDoor.Models.FrontdoorForwardingConfiguration'.
+ */
     public String getOdataType() {
         return this.odataType;
     }

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Application related details of a job posting.
+ */
 public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationInfoArgs Empty = new ApplicationInfoArgs();
 
+    /**
+     * Optional but at least one of uris, emails or instruction must be specified. Use this field to specify email address(es) to which resumes or applications can be sent. The maximum number of allowed characters for each entry is 255.
+     */
     @InputImport(name="emails")
     private final @Nullable Input<List<String>> emails;
 
@@ -22,6 +28,9 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
         return this.emails == null ? Input.empty() : this.emails;
     }
 
+    /**
+     * Optional but at least one of uris, emails or instruction must be specified. Use this field to provide instructions, such as "Mail your application to ...", that a candidate can follow to apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 3,000.
+     */
     @InputImport(name="instruction")
     private final @Nullable Input<String> instruction;
 
@@ -29,6 +38,9 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
         return this.instruction == null ? Input.empty() : this.instruction;
     }
 
+    /**
+     * Optional but at least one of uris, emails or instruction must be specified. Use this URI field to direct an applicant to a website, for example to link to an online application form. The maximum number of allowed characters for each entry is 2,000.
+     */
     @InputImport(name="uris")
     private final @Nullable Input<List<String>> uris;
 

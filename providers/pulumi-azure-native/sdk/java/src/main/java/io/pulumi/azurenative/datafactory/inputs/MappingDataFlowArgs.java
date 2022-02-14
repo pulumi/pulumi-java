@@ -16,10 +16,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Mapping data flow.
+ */
 public final class MappingDataFlowArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MappingDataFlowArgs Empty = new MappingDataFlowArgs();
 
+    /**
+     * List of tags that can be used for describing the data flow.
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -27,6 +33,9 @@ public final class MappingDataFlowArgs extends io.pulumi.resources.ResourceArgs 
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * The description of the data flow.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -34,6 +43,9 @@ public final class MappingDataFlowArgs extends io.pulumi.resources.ResourceArgs 
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
+     */
     @InputImport(name="folder")
     private final @Nullable Input<DataFlowFolderArgs> folder;
 
@@ -41,6 +53,9 @@ public final class MappingDataFlowArgs extends io.pulumi.resources.ResourceArgs 
         return this.folder == null ? Input.empty() : this.folder;
     }
 
+    /**
+     * DataFlow script.
+     */
     @InputImport(name="script")
     private final @Nullable Input<String> script;
 
@@ -48,6 +63,9 @@ public final class MappingDataFlowArgs extends io.pulumi.resources.ResourceArgs 
         return this.script == null ? Input.empty() : this.script;
     }
 
+    /**
+     * Data flow script lines.
+     */
     @InputImport(name="scriptLines")
     private final @Nullable Input<List<String>> scriptLines;
 
@@ -55,6 +73,9 @@ public final class MappingDataFlowArgs extends io.pulumi.resources.ResourceArgs 
         return this.scriptLines == null ? Input.empty() : this.scriptLines;
     }
 
+    /**
+     * List of sinks in data flow.
+     */
     @InputImport(name="sinks")
     private final @Nullable Input<List<DataFlowSinkArgs>> sinks;
 
@@ -62,6 +83,9 @@ public final class MappingDataFlowArgs extends io.pulumi.resources.ResourceArgs 
         return this.sinks == null ? Input.empty() : this.sinks;
     }
 
+    /**
+     * List of sources in data flow.
+     */
     @InputImport(name="sources")
     private final @Nullable Input<List<DataFlowSourceArgs>> sources;
 
@@ -69,6 +93,9 @@ public final class MappingDataFlowArgs extends io.pulumi.resources.ResourceArgs 
         return this.sources == null ? Input.empty() : this.sources;
     }
 
+    /**
+     * List of transformations in data flow.
+     */
     @InputImport(name="transformations")
     private final @Nullable Input<List<TransformationArgs>> transformations;
 
@@ -76,6 +103,10 @@ public final class MappingDataFlowArgs extends io.pulumi.resources.ResourceArgs 
         return this.transformations == null ? Input.empty() : this.transformations;
     }
 
+    /**
+     * Type of data flow.
+Expected value is 'MappingDataFlow'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

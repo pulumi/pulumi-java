@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.azurestack;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.azurestack.LinkedSubscriptionArgs;
 import io.pulumi.azurenative.azurestack.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,93 +15,278 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Linked Subscription information.
+API Version: 2020-06-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create or update a Linked Subscription.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var linkedSubscription = new AzureNative.AzureStack.LinkedSubscription("linkedSubscription", new AzureNative.AzureStack.LinkedSubscriptionArgs
+        {
+            LinkedSubscriptionId = "104fbb77-2b0e-476a-83de-65ad8acd1f0b",
+            LinkedSubscriptionName = "testLinkedSubscription",
+            Location = "eastus",
+            RegistrationResourceId = "/subscriptions/dd8597b4-8739-4467-8b10-f8679f62bfbf/resourceGroups/azurestack/providers/Microsoft.AzureStack/registrations/testRegistration",
+            ResourceGroup = "azurestack",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	azurestack "github.com/pulumi/pulumi-azure-native/sdk/go/azure/azurestack"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := azurestack.NewLinkedSubscription(ctx, "linkedSubscription", &azurestack.LinkedSubscriptionArgs{
+			LinkedSubscriptionId:   pulumi.String("104fbb77-2b0e-476a-83de-65ad8acd1f0b"),
+			LinkedSubscriptionName: pulumi.String("testLinkedSubscription"),
+			Location:               pulumi.String("eastus"),
+			RegistrationResourceId: pulumi.String("/subscriptions/dd8597b4-8739-4467-8b10-f8679f62bfbf/resourceGroups/azurestack/providers/Microsoft.AzureStack/registrations/testRegistration"),
+			ResourceGroup:          pulumi.String("azurestack"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const linkedSubscription = new azure_native.azurestack.LinkedSubscription("linkedSubscription", {
+    linkedSubscriptionId: "104fbb77-2b0e-476a-83de-65ad8acd1f0b",
+    linkedSubscriptionName: "testLinkedSubscription",
+    location: "eastus",
+    registrationResourceId: "/subscriptions/dd8597b4-8739-4467-8b10-f8679f62bfbf/resourceGroups/azurestack/providers/Microsoft.AzureStack/registrations/testRegistration",
+    resourceGroup: "azurestack",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+linked_subscription = azure_native.azurestack.LinkedSubscription("linkedSubscription",
+    linked_subscription_id="104fbb77-2b0e-476a-83de-65ad8acd1f0b",
+    linked_subscription_name="testLinkedSubscription",
+    location="eastus",
+    registration_resource_id="/subscriptions/dd8597b4-8739-4467-8b10-f8679f62bfbf/resourceGroups/azurestack/providers/Microsoft.AzureStack/registrations/testRegistration",
+    resource_group="azurestack")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:azurestack:LinkedSubscription testLinkedSubscription /subscriptions/dd8597b4-8739-4467-8b10-f8679f62bfbf/resourceGroups/azurestack/providers/Microsoft.AzureStack/linkedSubscriptions/testLinkedSubscription 
+```
+
+ */
 @ResourceType(type="azure-native:azurestack:LinkedSubscription")
 public class LinkedSubscription extends io.pulumi.resources.CustomResource {
+    /**
+     * The status of the remote management connection of the Azure Stack device.
+     */
     @OutputExport(name="deviceConnectionStatus", type=String.class, parameters={})
     private Output<String> deviceConnectionStatus;
 
+    /**
+     * @return The status of the remote management connection of the Azure Stack device.
+     */
     public Output<String> getDeviceConnectionStatus() {
         return this.deviceConnectionStatus;
     }
+    /**
+     * The identifier of the Azure Stack device for remote management.
+     */
     @OutputExport(name="deviceId", type=String.class, parameters={})
     private Output<String> deviceId;
 
+    /**
+     * @return The identifier of the Azure Stack device for remote management.
+     */
     public Output<String> getDeviceId() {
         return this.deviceId;
     }
+    /**
+     * The connection state of the Azure Stack device.
+     */
     @OutputExport(name="deviceLinkState", type=String.class, parameters={})
     private Output<String> deviceLinkState;
 
+    /**
+     * @return The connection state of the Azure Stack device.
+     */
     public Output<String> getDeviceLinkState() {
         return this.deviceLinkState;
     }
+    /**
+     * The object identifier associated with the Azure Stack device connecting to Azure.
+     */
     @OutputExport(name="deviceObjectId", type=String.class, parameters={})
     private Output<String> deviceObjectId;
 
+    /**
+     * @return The object identifier associated with the Azure Stack device connecting to Azure.
+     */
     public Output<String> getDeviceObjectId() {
         return this.deviceObjectId;
     }
+    /**
+     * The entity tag used for optimistic concurrency when modifying the resource.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return The entity tag used for optimistic concurrency when modifying the resource.
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * The kind of the resource.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return The kind of the resource.
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * The last remote management connection time for the Azure Stack device connected to the linked subscription resource.
+     */
     @OutputExport(name="lastConnectedTime", type=String.class, parameters={})
     private Output<String> lastConnectedTime;
 
+    /**
+     * @return The last remote management connection time for the Azure Stack device connected to the linked subscription resource.
+     */
     public Output<String> getLastConnectedTime() {
         return this.lastConnectedTime;
     }
+    /**
+     * The identifier associated with the device subscription.
+     */
     @OutputExport(name="linkedSubscriptionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> linkedSubscriptionId;
 
+    /**
+     * @return The identifier associated with the device subscription.
+     */
     public Output</* @Nullable */ String> getLinkedSubscriptionId() {
         return this.linkedSubscriptionId;
     }
+    /**
+     * Location of the resource.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Location of the resource.
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Name of the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The identifier associated with the device registration.
+     */
     @OutputExport(name="registrationResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> registrationResourceId;
 
+    /**
+     * @return The identifier associated with the device registration.
+     */
     public Output</* @Nullable */ String> getRegistrationResourceId() {
         return this.registrationResourceId;
     }
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Metadata pertaining to creation and last modification of the resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Custom tags for the resource.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Custom tags for the resource.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Type of Resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of Resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public LinkedSubscription(String name, LinkedSubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:azurestack:LinkedSubscription", name, args == null ? LinkedSubscriptionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -121,6 +305,14 @@ public class LinkedSubscription extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static LinkedSubscription get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LinkedSubscription(name, id, options);
     }

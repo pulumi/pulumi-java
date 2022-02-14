@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetProjectIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetProjectIamPolicyArgs Empty = new GetProjectIamPolicyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="resource", required=true)
     private final String resource;
 

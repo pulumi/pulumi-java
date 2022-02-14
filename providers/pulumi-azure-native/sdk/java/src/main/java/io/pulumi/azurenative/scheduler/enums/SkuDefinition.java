@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Gets or set the SKU.
+ */
     @EnumType
     public enum SkuDefinition {
+/**
+ * 
+ */
         Standard("Standard"),
+/**
+ * 
+ */
         Free("Free"),
+/**
+ * 
+ */
         P10Premium("P10Premium"),
+/**
+ * 
+ */
         P20Premium("P20Premium");
 
         private final String value;

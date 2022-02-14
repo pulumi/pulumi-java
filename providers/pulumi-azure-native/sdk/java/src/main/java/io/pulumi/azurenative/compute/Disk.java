@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.compute.DiskArgs;
 import io.pulumi.azurenative.compute.outputs.CreationDataResponse;
 import io.pulumi.azurenative.compute.outputs.DiskSecurityProfileResponse;
 import io.pulumi.azurenative.compute.outputs.DiskSkuResponse;
@@ -27,213 +26,1682 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Disk resource.
+API Version: 2020-12-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create a managed disk and associate with disk access resource.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureNative.Compute.Disk("disk", new AzureNative.Compute.DiskArgs
+        {
+            CreationData = new AzureNative.Compute.Inputs.CreationDataArgs
+            {
+                CreateOption = "Empty",
+            },
+            DiskAccessId = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskAccesses/{existing-diskAccess-name}",
+            DiskName = "myDisk",
+            DiskSizeGB = 200,
+            Location = "West US",
+            NetworkAccessPolicy = "AllowPrivate",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewDisk(ctx, "disk", &compute.DiskArgs{
+			CreationData: &compute.CreationDataArgs{
+				CreateOption: pulumi.String("Empty"),
+			},
+			DiskAccessId:        pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskAccesses/{existing-diskAccess-name}"),
+			DiskName:            pulumi.String("myDisk"),
+			DiskSizeGB:          pulumi.Int(200),
+			Location:            pulumi.String("West US"),
+			NetworkAccessPolicy: pulumi.String("AllowPrivate"),
+			ResourceGroupName:   pulumi.String("myResourceGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const disk = new azure_native.compute.Disk("disk", {
+    creationData: {
+        createOption: "Empty",
+    },
+    diskAccessId: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskAccesses/{existing-diskAccess-name}",
+    diskName: "myDisk",
+    diskSizeGB: 200,
+    location: "West US",
+    networkAccessPolicy: "AllowPrivate",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+disk = azure_native.compute.Disk("disk",
+    creation_data=azure_native.compute.CreationDataArgs(
+        create_option="Empty",
+    ),
+    disk_access_id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskAccesses/{existing-diskAccess-name}",
+    disk_name="myDisk",
+    disk_size_gb=200,
+    location="West US",
+    network_access_policy="AllowPrivate",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create a managed disk and associate with disk encryption set.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureNative.Compute.Disk("disk", new AzureNative.Compute.DiskArgs
+        {
+            CreationData = new AzureNative.Compute.Inputs.CreationDataArgs
+            {
+                CreateOption = "Empty",
+            },
+            DiskName = "myDisk",
+            DiskSizeGB = 200,
+            Encryption = new AzureNative.Compute.Inputs.EncryptionArgs
+            {
+                DiskEncryptionSetId = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+            },
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewDisk(ctx, "disk", &compute.DiskArgs{
+			CreationData: &compute.CreationDataArgs{
+				CreateOption: pulumi.String("Empty"),
+			},
+			DiskName:   pulumi.String("myDisk"),
+			DiskSizeGB: pulumi.Int(200),
+			Encryption: &compute.EncryptionArgs{
+				DiskEncryptionSetId: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}"),
+			},
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const disk = new azure_native.compute.Disk("disk", {
+    creationData: {
+        createOption: "Empty",
+    },
+    diskName: "myDisk",
+    diskSizeGB: 200,
+    encryption: {
+        diskEncryptionSetId: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+    },
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+disk = azure_native.compute.Disk("disk",
+    creation_data=azure_native.compute.CreationDataArgs(
+        create_option="Empty",
+    ),
+    disk_name="myDisk",
+    disk_size_gb=200,
+    encryption=azure_native.compute.EncryptionArgs(
+        disk_encryption_set_id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/diskEncryptionSets/{existing-diskEncryptionSet-name}",
+    ),
+    location="West US",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create a managed disk by copying a snapshot.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureNative.Compute.Disk("disk", new AzureNative.Compute.DiskArgs
+        {
+            CreationData = new AzureNative.Compute.Inputs.CreationDataArgs
+            {
+                CreateOption = "Copy",
+                SourceResourceId = "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+            },
+            DiskName = "myDisk",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewDisk(ctx, "disk", &compute.DiskArgs{
+			CreationData: &compute.CreationDataArgs{
+				CreateOption:     pulumi.String("Copy"),
+				SourceResourceId: pulumi.String("subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot"),
+			},
+			DiskName:          pulumi.String("myDisk"),
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const disk = new azure_native.compute.Disk("disk", {
+    creationData: {
+        createOption: "Copy",
+        sourceResourceId: "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+    },
+    diskName: "myDisk",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+disk = azure_native.compute.Disk("disk",
+    creation_data=azure_native.compute.CreationDataArgs(
+        create_option="Copy",
+        source_resource_id="subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/snapshots/mySnapshot",
+    ),
+    disk_name="myDisk",
+    location="West US",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create a managed disk by importing an unmanaged blob from a different subscription.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureNative.Compute.Disk("disk", new AzureNative.Compute.DiskArgs
+        {
+            CreationData = new AzureNative.Compute.Inputs.CreationDataArgs
+            {
+                CreateOption = "Import",
+                SourceUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+                StorageAccountId = "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
+            },
+            DiskName = "myDisk",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewDisk(ctx, "disk", &compute.DiskArgs{
+			CreationData: &compute.CreationDataArgs{
+				CreateOption:     pulumi.String("Import"),
+				SourceUri:        pulumi.String("https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd"),
+				StorageAccountId: pulumi.String("subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount"),
+			},
+			DiskName:          pulumi.String("myDisk"),
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const disk = new azure_native.compute.Disk("disk", {
+    creationData: {
+        createOption: "Import",
+        sourceUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+        storageAccountId: "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
+    },
+    diskName: "myDisk",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+disk = azure_native.compute.Disk("disk",
+    creation_data=azure_native.compute.CreationDataArgs(
+        create_option="Import",
+        source_uri="https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+        storage_account_id="subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount",
+    ),
+    disk_name="myDisk",
+    location="West US",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create a managed disk by importing an unmanaged blob from the same subscription.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureNative.Compute.Disk("disk", new AzureNative.Compute.DiskArgs
+        {
+            CreationData = new AzureNative.Compute.Inputs.CreationDataArgs
+            {
+                CreateOption = "Import",
+                SourceUri = "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+            },
+            DiskName = "myDisk",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewDisk(ctx, "disk", &compute.DiskArgs{
+			CreationData: &compute.CreationDataArgs{
+				CreateOption: pulumi.String("Import"),
+				SourceUri:    pulumi.String("https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd"),
+			},
+			DiskName:          pulumi.String("myDisk"),
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const disk = new azure_native.compute.Disk("disk", {
+    creationData: {
+        createOption: "Import",
+        sourceUri: "https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+    },
+    diskName: "myDisk",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+disk = azure_native.compute.Disk("disk",
+    creation_data=azure_native.compute.CreationDataArgs(
+        create_option="Import",
+        source_uri="https://mystorageaccount.blob.core.windows.net/osimages/osimage.vhd",
+    ),
+    disk_name="myDisk",
+    location="West US",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create a managed disk from a platform image.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureNative.Compute.Disk("disk", new AzureNative.Compute.DiskArgs
+        {
+            CreationData = new AzureNative.Compute.Inputs.CreationDataArgs
+            {
+                CreateOption = "FromImage",
+                ImageReference = new AzureNative.Compute.Inputs.ImageDiskReferenceArgs
+                {
+                    Id = "/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/westus/Publishers/{publisher}/ArtifactTypes/VMImage/Offers/{offer}/Skus/{sku}/Versions/1.0.0",
+                },
+            },
+            DiskName = "myDisk",
+            Location = "West US",
+            OsType = "Windows",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewDisk(ctx, "disk", &compute.DiskArgs{
+			CreationData: &compute.CreationDataArgs{
+				CreateOption: pulumi.String("FromImage"),
+				ImageReference: &compute.ImageDiskReferenceArgs{
+					Id: pulumi.String("/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/westus/Publishers/{publisher}/ArtifactTypes/VMImage/Offers/{offer}/Skus/{sku}/Versions/1.0.0"),
+				},
+			},
+			DiskName:          pulumi.String("myDisk"),
+			Location:          pulumi.String("West US"),
+			OsType:            "Windows",
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const disk = new azure_native.compute.Disk("disk", {
+    creationData: {
+        createOption: "FromImage",
+        imageReference: {
+            id: "/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/westus/Publishers/{publisher}/ArtifactTypes/VMImage/Offers/{offer}/Skus/{sku}/Versions/1.0.0",
+        },
+    },
+    diskName: "myDisk",
+    location: "West US",
+    osType: "Windows",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+disk = azure_native.compute.Disk("disk",
+    creation_data=azure_native.compute.CreationDataArgs(
+        create_option="FromImage",
+        image_reference=azure_native.compute.ImageDiskReferenceArgs(
+            id="/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/westus/Publishers/{publisher}/ArtifactTypes/VMImage/Offers/{offer}/Skus/{sku}/Versions/1.0.0",
+        ),
+    ),
+    disk_name="myDisk",
+    location="West US",
+    os_type="Windows",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create a managed disk from an existing managed disk in the same or different subscription.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureNative.Compute.Disk("disk", new AzureNative.Compute.DiskArgs
+        {
+            CreationData = new AzureNative.Compute.Inputs.CreationDataArgs
+            {
+                CreateOption = "Copy",
+                SourceResourceId = "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1",
+            },
+            DiskName = "myDisk2",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewDisk(ctx, "disk", &compute.DiskArgs{
+			CreationData: &compute.CreationDataArgs{
+				CreateOption:     pulumi.String("Copy"),
+				SourceResourceId: pulumi.String("subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1"),
+			},
+			DiskName:          pulumi.String("myDisk2"),
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const disk = new azure_native.compute.Disk("disk", {
+    creationData: {
+        createOption: "Copy",
+        sourceResourceId: "subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1",
+    },
+    diskName: "myDisk2",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+disk = azure_native.compute.Disk("disk",
+    creation_data=azure_native.compute.CreationDataArgs(
+        create_option="Copy",
+        source_resource_id="subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/disks/myDisk1",
+    ),
+    disk_name="myDisk2",
+    location="West US",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create a managed disk with security profile
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureNative.Compute.Disk("disk", new AzureNative.Compute.DiskArgs
+        {
+            CreationData = new AzureNative.Compute.Inputs.CreationDataArgs
+            {
+                CreateOption = "FromImage",
+                ImageReference = new AzureNative.Compute.Inputs.ImageDiskReferenceArgs
+                {
+                    Id = "/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}",
+                },
+            },
+            DiskName = "myDisk",
+            Location = "North Central US",
+            OsType = "Windows",
+            ResourceGroupName = "myResourceGroup",
+            SecurityProfile = new AzureNative.Compute.Inputs.DiskSecurityProfileArgs
+            {
+                SecurityType = "TrustedLaunch",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewDisk(ctx, "disk", &compute.DiskArgs{
+			CreationData: &compute.CreationDataArgs{
+				CreateOption: pulumi.String("FromImage"),
+				ImageReference: &compute.ImageDiskReferenceArgs{
+					Id: pulumi.String("/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}"),
+				},
+			},
+			DiskName:          pulumi.String("myDisk"),
+			Location:          pulumi.String("North Central US"),
+			OsType:            "Windows",
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			SecurityProfile: &compute.DiskSecurityProfileArgs{
+				SecurityType: pulumi.String("TrustedLaunch"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const disk = new azure_native.compute.Disk("disk", {
+    creationData: {
+        createOption: "FromImage",
+        imageReference: {
+            id: "/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}",
+        },
+    },
+    diskName: "myDisk",
+    location: "North Central US",
+    osType: "Windows",
+    resourceGroupName: "myResourceGroup",
+    securityProfile: {
+        securityType: "TrustedLaunch",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+disk = azure_native.compute.Disk("disk",
+    creation_data=azure_native.compute.CreationDataArgs(
+        create_option="FromImage",
+        image_reference=azure_native.compute.ImageDiskReferenceArgs(
+            id="/Subscriptions/{subscriptionId}/Providers/Microsoft.Compute/Locations/uswest/Publishers/Microsoft/ArtifactTypes/VMImage/Offers/{offer}",
+        ),
+    ),
+    disk_name="myDisk",
+    location="North Central US",
+    os_type="Windows",
+    resource_group_name="myResourceGroup",
+    security_profile=azure_native.compute.DiskSecurityProfileArgs(
+        security_type="TrustedLaunch",
+    ))
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create a managed disk with ssd zrs account type.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureNative.Compute.Disk("disk", new AzureNative.Compute.DiskArgs
+        {
+            CreationData = new AzureNative.Compute.Inputs.CreationDataArgs
+            {
+                CreateOption = "Empty",
+            },
+            DiskName = "myDisk",
+            DiskSizeGB = 200,
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureNative.Compute.Inputs.DiskSkuArgs
+            {
+                Name = "Premium_ZRS",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewDisk(ctx, "disk", &compute.DiskArgs{
+			CreationData: &compute.CreationDataArgs{
+				CreateOption: pulumi.String("Empty"),
+			},
+			DiskName:          pulumi.String("myDisk"),
+			DiskSizeGB:        pulumi.Int(200),
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			Sku: &compute.DiskSkuArgs{
+				Name: pulumi.String("Premium_ZRS"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const disk = new azure_native.compute.Disk("disk", {
+    creationData: {
+        createOption: "Empty",
+    },
+    diskName: "myDisk",
+    diskSizeGB: 200,
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        name: "Premium_ZRS",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+disk = azure_native.compute.Disk("disk",
+    creation_data=azure_native.compute.CreationDataArgs(
+        create_option="Empty",
+    ),
+    disk_name="myDisk",
+    disk_size_gb=200,
+    location="West US",
+    resource_group_name="myResourceGroup",
+    sku=azure_native.compute.DiskSkuArgs(
+        name="Premium_ZRS",
+    ))
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create a managed upload disk.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureNative.Compute.Disk("disk", new AzureNative.Compute.DiskArgs
+        {
+            CreationData = new AzureNative.Compute.Inputs.CreationDataArgs
+            {
+                CreateOption = "Upload",
+                UploadSizeBytes = 10737418752,
+            },
+            DiskName = "myDisk",
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewDisk(ctx, "disk", &compute.DiskArgs{
+			CreationData: &compute.CreationDataArgs{
+				CreateOption:    pulumi.String("Upload"),
+				UploadSizeBytes: pulumi.Float64(10737418752),
+			},
+			DiskName:          pulumi.String("myDisk"),
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const disk = new azure_native.compute.Disk("disk", {
+    creationData: {
+        createOption: "Upload",
+        uploadSizeBytes: 10737418752,
+    },
+    diskName: "myDisk",
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+disk = azure_native.compute.Disk("disk",
+    creation_data=azure_native.compute.CreationDataArgs(
+        create_option="Upload",
+        upload_size_bytes=10737418752,
+    ),
+    disk_name="myDisk",
+    location="West US",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create an empty managed disk in extended location.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureNative.Compute.Disk("disk", new AzureNative.Compute.DiskArgs
+        {
+            CreationData = new AzureNative.Compute.Inputs.CreationDataArgs
+            {
+                CreateOption = "Empty",
+            },
+            DiskName = "myDisk",
+            DiskSizeGB = 200,
+            ExtendedLocation = new AzureNative.Compute.Inputs.ExtendedLocationArgs
+            {
+                Name = "{edge-zone-id}",
+                Type = "EdgeZone",
+            },
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewDisk(ctx, "disk", &compute.DiskArgs{
+			CreationData: &compute.CreationDataArgs{
+				CreateOption: pulumi.String("Empty"),
+			},
+			DiskName:   pulumi.String("myDisk"),
+			DiskSizeGB: pulumi.Int(200),
+			ExtendedLocation: &compute.ExtendedLocationArgs{
+				Name: pulumi.String("{edge-zone-id}"),
+				Type: pulumi.String("EdgeZone"),
+			},
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const disk = new azure_native.compute.Disk("disk", {
+    creationData: {
+        createOption: "Empty",
+    },
+    diskName: "myDisk",
+    diskSizeGB: 200,
+    extendedLocation: {
+        name: "{edge-zone-id}",
+        type: "EdgeZone",
+    },
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+disk = azure_native.compute.Disk("disk",
+    creation_data=azure_native.compute.CreationDataArgs(
+        create_option="Empty",
+    ),
+    disk_name="myDisk",
+    disk_size_gb=200,
+    extended_location=azure_native.compute.ExtendedLocationArgs(
+        name="{edge-zone-id}",
+        type="EdgeZone",
+    ),
+    location="West US",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create an empty managed disk.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureNative.Compute.Disk("disk", new AzureNative.Compute.DiskArgs
+        {
+            CreationData = new AzureNative.Compute.Inputs.CreationDataArgs
+            {
+                CreateOption = "Empty",
+            },
+            DiskName = "myDisk",
+            DiskSizeGB = 200,
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewDisk(ctx, "disk", &compute.DiskArgs{
+			CreationData: &compute.CreationDataArgs{
+				CreateOption: pulumi.String("Empty"),
+			},
+			DiskName:          pulumi.String("myDisk"),
+			DiskSizeGB:        pulumi.Int(200),
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const disk = new azure_native.compute.Disk("disk", {
+    creationData: {
+        createOption: "Empty",
+    },
+    diskName: "myDisk",
+    diskSizeGB: 200,
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+disk = azure_native.compute.Disk("disk",
+    creation_data=azure_native.compute.CreationDataArgs(
+        create_option="Empty",
+    ),
+    disk_name="myDisk",
+    disk_size_gb=200,
+    location="West US",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create an ultra managed disk with logicalSectorSize 512E
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureNative.Compute.Disk("disk", new AzureNative.Compute.DiskArgs
+        {
+            CreationData = new AzureNative.Compute.Inputs.CreationDataArgs
+            {
+                CreateOption = "Empty",
+                LogicalSectorSize = 512,
+            },
+            DiskName = "myDisk",
+            DiskSizeGB = 200,
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureNative.Compute.Inputs.DiskSkuArgs
+            {
+                Name = "UltraSSD_LRS",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewDisk(ctx, "disk", &compute.DiskArgs{
+			CreationData: &compute.CreationDataArgs{
+				CreateOption:      pulumi.String("Empty"),
+				LogicalSectorSize: pulumi.Int(512),
+			},
+			DiskName:          pulumi.String("myDisk"),
+			DiskSizeGB:        pulumi.Int(200),
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			Sku: &compute.DiskSkuArgs{
+				Name: pulumi.String("UltraSSD_LRS"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const disk = new azure_native.compute.Disk("disk", {
+    creationData: {
+        createOption: "Empty",
+        logicalSectorSize: 512,
+    },
+    diskName: "myDisk",
+    diskSizeGB: 200,
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        name: "UltraSSD_LRS",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+disk = azure_native.compute.Disk("disk",
+    creation_data=azure_native.compute.CreationDataArgs(
+        create_option="Empty",
+        logical_sector_size=512,
+    ),
+    disk_name="myDisk",
+    disk_size_gb=200,
+    location="West US",
+    resource_group_name="myResourceGroup",
+    sku=azure_native.compute.DiskSkuArgs(
+        name="UltraSSD_LRS",
+    ))
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:compute:Disk myDisk /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/disks/{diskName} 
+```
+
+ */
 @ResourceType(type="azure-native:compute:Disk")
 public class Disk extends io.pulumi.resources.CustomResource {
+    /**
+     * Set to true to enable bursting beyond the provisioned performance target of the disk. Bursting is disabled by default. Does not apply to Ultra disks.
+     */
     @OutputExport(name="burstingEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> burstingEnabled;
 
+    /**
+     * @return Set to true to enable bursting beyond the provisioned performance target of the disk. Bursting is disabled by default. Does not apply to Ultra disks.
+     */
     public Output</* @Nullable */ Boolean> getBurstingEnabled() {
         return this.burstingEnabled;
     }
+    /**
+     * Disk source information. CreationData information cannot be changed after the disk has been created.
+     */
     @OutputExport(name="creationData", type=CreationDataResponse.class, parameters={})
     private Output<CreationDataResponse> creationData;
 
+    /**
+     * @return Disk source information. CreationData information cannot be changed after the disk has been created.
+     */
     public Output<CreationDataResponse> getCreationData() {
         return this.creationData;
     }
+    /**
+     * ARM id of the DiskAccess resource for using private endpoints on disks.
+     */
     @OutputExport(name="diskAccessId", type=String.class, parameters={})
     private Output</* @Nullable */ String> diskAccessId;
 
+    /**
+     * @return ARM id of the DiskAccess resource for using private endpoints on disks.
+     */
     public Output</* @Nullable */ String> getDiskAccessId() {
         return this.diskAccessId;
     }
+    /**
+     * The total number of IOPS that will be allowed across all VMs mounting the shared disk as ReadOnly. One operation can transfer between 4k and 256k bytes.
+     */
     @OutputExport(name="diskIOPSReadOnly", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> diskIOPSReadOnly;
 
+    /**
+     * @return The total number of IOPS that will be allowed across all VMs mounting the shared disk as ReadOnly. One operation can transfer between 4k and 256k bytes.
+     */
     public Output</* @Nullable */ Double> getDiskIOPSReadOnly() {
         return this.diskIOPSReadOnly;
     }
+    /**
+     * The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.
+     */
     @OutputExport(name="diskIOPSReadWrite", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> diskIOPSReadWrite;
 
+    /**
+     * @return The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.
+     */
     public Output</* @Nullable */ Double> getDiskIOPSReadWrite() {
         return this.diskIOPSReadWrite;
     }
+    /**
+     * The total throughput (MBps) that will be allowed across all VMs mounting the shared disk as ReadOnly. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
+     */
     @OutputExport(name="diskMBpsReadOnly", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> diskMBpsReadOnly;
 
+    /**
+     * @return The total throughput (MBps) that will be allowed across all VMs mounting the shared disk as ReadOnly. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
+     */
     public Output</* @Nullable */ Double> getDiskMBpsReadOnly() {
         return this.diskMBpsReadOnly;
     }
+    /**
+     * The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
+     */
     @OutputExport(name="diskMBpsReadWrite", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> diskMBpsReadWrite;
 
+    /**
+     * @return The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.
+     */
     public Output</* @Nullable */ Double> getDiskMBpsReadWrite() {
         return this.diskMBpsReadWrite;
     }
+    /**
+     * The size of the disk in bytes. This field is read only.
+     */
     @OutputExport(name="diskSizeBytes", type=Double.class, parameters={})
     private Output<Double> diskSizeBytes;
 
+    /**
+     * @return The size of the disk in bytes. This field is read only.
+     */
     public Output<Double> getDiskSizeBytes() {
         return this.diskSizeBytes;
     }
+    /**
+     * If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
+     */
     @OutputExport(name="diskSizeGB", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> diskSizeGB;
 
+    /**
+     * @return If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
+     */
     public Output</* @Nullable */ Integer> getDiskSizeGB() {
         return this.diskSizeGB;
     }
+    /**
+     * The state of the disk.
+     */
     @OutputExport(name="diskState", type=String.class, parameters={})
     private Output<String> diskState;
 
+    /**
+     * @return The state of the disk.
+     */
     public Output<String> getDiskState() {
         return this.diskState;
     }
+    /**
+     * Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
+     */
     @OutputExport(name="encryption", type=EncryptionResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionResponse> encryption;
 
+    /**
+     * @return Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
+     */
     public Output</* @Nullable */ EncryptionResponse> getEncryption() {
         return this.encryption;
     }
+    /**
+     * Encryption settings collection used for Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
+     */
     @OutputExport(name="encryptionSettingsCollection", type=EncryptionSettingsCollectionResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionSettingsCollectionResponse> encryptionSettingsCollection;
 
+    /**
+     * @return Encryption settings collection used for Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
+     */
     public Output</* @Nullable */ EncryptionSettingsCollectionResponse> getEncryptionSettingsCollection() {
         return this.encryptionSettingsCollection;
     }
+    /**
+     * The extended location where the disk will be created. Extended location cannot be changed.
+     */
     @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
+    /**
+     * @return The extended location where the disk will be created. Extended location cannot be changed.
+     */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
+    /**
+     * The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+     */
     @OutputExport(name="hyperVGeneration", type=String.class, parameters={})
     private Output</* @Nullable */ String> hyperVGeneration;
 
+    /**
+     * @return The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
+     */
     public Output</* @Nullable */ String> getHyperVGeneration() {
         return this.hyperVGeneration;
     }
+    /**
+     * Resource location
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * A relative URI containing the ID of the VM that has the disk attached.
+     */
     @OutputExport(name="managedBy", type=String.class, parameters={})
     private Output<String> managedBy;
 
+    /**
+     * @return A relative URI containing the ID of the VM that has the disk attached.
+     */
     public Output<String> getManagedBy() {
         return this.managedBy;
     }
+    /**
+     * List of relative URIs containing the IDs of the VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
+     */
     @OutputExport(name="managedByExtended", type=List.class, parameters={String.class})
     private Output<List<String>> managedByExtended;
 
+    /**
+     * @return List of relative URIs containing the IDs of the VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
+     */
     public Output<List<String>> getManagedByExtended() {
         return this.managedByExtended;
     }
+    /**
+     * The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
+     */
     @OutputExport(name="maxShares", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxShares;
 
+    /**
+     * @return The maximum number of VMs that can attach to the disk at the same time. Value greater than one indicates a disk that can be mounted on multiple VMs at the same time.
+     */
     public Output</* @Nullable */ Integer> getMaxShares() {
         return this.maxShares;
     }
+    /**
+     * Resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Policy for accessing the disk via network.
+     */
     @OutputExport(name="networkAccessPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> networkAccessPolicy;
 
+    /**
+     * @return Policy for accessing the disk via network.
+     */
     public Output</* @Nullable */ String> getNetworkAccessPolicy() {
         return this.networkAccessPolicy;
     }
+    /**
+     * The Operating System type.
+     */
     @OutputExport(name="osType", type=String.class, parameters={})
     private Output</* @Nullable */ String> osType;
 
+    /**
+     * @return The Operating System type.
+     */
     public Output</* @Nullable */ String> getOsType() {
         return this.osType;
     }
+    /**
+     * Properties of the disk for which update is pending.
+     */
     @OutputExport(name="propertyUpdatesInProgress", type=PropertyUpdatesInProgressResponse.class, parameters={})
     private Output<PropertyUpdatesInProgressResponse> propertyUpdatesInProgress;
 
+    /**
+     * @return Properties of the disk for which update is pending.
+     */
     public Output<PropertyUpdatesInProgressResponse> getPropertyUpdatesInProgress() {
         return this.propertyUpdatesInProgress;
     }
+    /**
+     * The disk provisioning state.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The disk provisioning state.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}
+     */
     @OutputExport(name="purchasePlan", type=PurchasePlanResponse.class, parameters={})
     private Output</* @Nullable */ PurchasePlanResponse> purchasePlan;
 
+    /**
+     * @return Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}
+     */
     public Output</* @Nullable */ PurchasePlanResponse> getPurchasePlan() {
         return this.purchasePlan;
     }
+    /**
+     * Contains the security related information for the resource.
+     */
     @OutputExport(name="securityProfile", type=DiskSecurityProfileResponse.class, parameters={})
     private Output</* @Nullable */ DiskSecurityProfileResponse> securityProfile;
 
+    /**
+     * @return Contains the security related information for the resource.
+     */
     public Output</* @Nullable */ DiskSecurityProfileResponse> getSecurityProfile() {
         return this.securityProfile;
     }
+    /**
+     * Details of the list of all VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
+     */
     @OutputExport(name="shareInfo", type=List.class, parameters={ShareInfoElementResponse.class})
     private Output<List<ShareInfoElementResponse>> shareInfo;
 
+    /**
+     * @return Details of the list of all VMs that have the disk attached. maxShares should be set to a value greater than one for disks to allow attaching them to multiple VMs.
+     */
     public Output<List<ShareInfoElementResponse>> getShareInfo() {
         return this.shareInfo;
     }
+    /**
+     * The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.
+     */
     @OutputExport(name="sku", type=DiskSkuResponse.class, parameters={})
     private Output</* @Nullable */ DiskSkuResponse> sku;
 
+    /**
+     * @return The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, or StandardSSD_ZRS.
+     */
     public Output</* @Nullable */ DiskSkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * Indicates the OS on a disk supports hibernation.
+     */
     @OutputExport(name="supportsHibernation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> supportsHibernation;
 
+    /**
+     * @return Indicates the OS on a disk supports hibernation.
+     */
     public Output</* @Nullable */ Boolean> getSupportsHibernation() {
         return this.supportsHibernation;
     }
+    /**
+     * Resource tags
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Performance tier of the disk (e.g, P4, S10) as described here: https://azure.microsoft.com/en-us/pricing/details/managed-disks/. Does not apply to Ultra disks.
+     */
     @OutputExport(name="tier", type=String.class, parameters={})
     private Output</* @Nullable */ String> tier;
 
+    /**
+     * @return Performance tier of the disk (e.g, P4, S10) as described here: https://azure.microsoft.com/en-us/pricing/details/managed-disks/. Does not apply to Ultra disks.
+     */
     public Output</* @Nullable */ String> getTier() {
         return this.tier;
     }
+    /**
+     * The time when the disk was created.
+     */
     @OutputExport(name="timeCreated", type=String.class, parameters={})
     private Output<String> timeCreated;
 
+    /**
+     * @return The time when the disk was created.
+     */
     public Output<String> getTimeCreated() {
         return this.timeCreated;
     }
+    /**
+     * Resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Unique Guid identifying the resource.
+     */
     @OutputExport(name="uniqueId", type=String.class, parameters={})
     private Output<String> uniqueId;
 
+    /**
+     * @return Unique Guid identifying the resource.
+     */
     public Output<String> getUniqueId() {
         return this.uniqueId;
     }
+    /**
+     * The Logical zone list for Disk.
+     */
     @OutputExport(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
+    /**
+     * @return The Logical zone list for Disk.
+     */
     public Output</* @Nullable */ List<String>> getZones() {
         return this.zones;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Disk(String name, DiskArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:compute:Disk", name, args == null ? DiskArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -265,6 +1733,14 @@ public class Disk extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Disk get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Disk(name, id, options);
     }

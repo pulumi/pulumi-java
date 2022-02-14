@@ -12,11 +12,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SftpWriteSettingsResponse {
+/**
+ * The type of copy behavior for copy sink.
+ */
     private final @Nullable Object copyBehavior;
+/**
+ * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+ */
     private final @Nullable Object disableMetricsCollection;
+/**
+ * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+ */
     private final @Nullable Object maxConcurrentConnections;
+/**
+ * Specifies the timeout for writing each chunk to SFTP server. Default value: 01:00:00 (one hour). Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object operationTimeout;
+/**
+ * The write setting type.
+Expected value is 'SftpWriteSettings'.
+ */
     private final String type;
+/**
+ * Upload to temporary file(s) and rename. Disable this option if your SFTP server doesn't support rename operation. Type: boolean (or Expression with resultType boolean).
+ */
     private final @Nullable Object useTempFileRename;
 
     @OutputCustomType.Constructor({"copyBehavior","disableMetricsCollection","maxConcurrentConnections","operationTimeout","type","useTempFileRename"})
@@ -35,21 +54,40 @@ public final class SftpWriteSettingsResponse {
         this.useTempFileRename = useTempFileRename;
     }
 
+/**
+ * The type of copy behavior for copy sink.
+ */
     public Optional<Object> getCopyBehavior() {
         return Optional.ofNullable(this.copyBehavior);
     }
+/**
+ * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+ */
     public Optional<Object> getDisableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
+/**
+ * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+ */
     public Optional<Object> getMaxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
+/**
+ * Specifies the timeout for writing each chunk to SFTP server. Default value: 01:00:00 (one hour). Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getOperationTimeout() {
         return Optional.ofNullable(this.operationTimeout);
     }
+/**
+ * The write setting type.
+Expected value is 'SftpWriteSettings'.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Upload to temporary file(s) and rename. Disable this option if your SFTP server doesn't support rename operation. Type: boolean (or Expression with resultType boolean).
+ */
     public Optional<Object> getUseTempFileRename() {
         return Optional.ofNullable(this.useTempFileRename);
     }

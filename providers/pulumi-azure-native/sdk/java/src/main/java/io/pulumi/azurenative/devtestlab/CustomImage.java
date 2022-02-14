@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.devtestlab;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.devtestlab.CustomImageArgs;
 import io.pulumi.azurenative.devtestlab.outputs.CustomImagePropertiesCustomResponse;
 import io.pulumi.azurenative.devtestlab.outputs.CustomImagePropertiesFromPlanResponse;
 import io.pulumi.azurenative.devtestlab.outputs.CustomImagePropertiesFromVmResponse;
@@ -20,105 +19,337 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A custom image.
+API Version: 2018-09-15.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### CustomImages_CreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var customImage = new AzureNative.DevTestLab.CustomImage("customImage", new AzureNative.DevTestLab.CustomImageArgs
+        {
+            Description = "My Custom Image",
+            LabName = "{labName}",
+            Name = "{customImageName}",
+            ResourceGroupName = "resourceGroupName",
+            Tags = 
+            {
+                { "tagName1", "tagValue1" },
+            },
+            Vm = new AzureNative.DevTestLab.Inputs.CustomImagePropertiesFromVmArgs
+            {
+                LinuxOsInfo = new AzureNative.DevTestLab.Inputs.LinuxOsInfoArgs
+                {
+                    LinuxOsState = "NonDeprovisioned",
+                },
+                SourceVmId = "/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualmachines/{vmName}",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devtestlab.NewCustomImage(ctx, "customImage", &devtestlab.CustomImageArgs{
+			Description:       pulumi.String("My Custom Image"),
+			LabName:           pulumi.String("{labName}"),
+			Name:              pulumi.String("{customImageName}"),
+			ResourceGroupName: pulumi.String("resourceGroupName"),
+			Tags: pulumi.StringMap{
+				"tagName1": pulumi.String("tagValue1"),
+			},
+			Vm: &devtestlab.CustomImagePropertiesFromVmArgs{
+				LinuxOsInfo: &devtestlab.LinuxOsInfoArgs{
+					LinuxOsState: pulumi.String("NonDeprovisioned"),
+				},
+				SourceVmId: pulumi.String("/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualmachines/{vmName}"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const customImage = new azure_native.devtestlab.CustomImage("customImage", {
+    description: "My Custom Image",
+    labName: "{labName}",
+    name: "{customImageName}",
+    resourceGroupName: "resourceGroupName",
+    tags: {
+        tagName1: "tagValue1",
+    },
+    vm: {
+        linuxOsInfo: {
+            linuxOsState: "NonDeprovisioned",
+        },
+        sourceVmId: "/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualmachines/{vmName}",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+custom_image = azure_native.devtestlab.CustomImage("customImage",
+    description="My Custom Image",
+    lab_name="{labName}",
+    name="{customImageName}",
+    resource_group_name="resourceGroupName",
+    tags={
+        "tagName1": "tagValue1",
+    },
+    vm=azure_native.devtestlab.CustomImagePropertiesFromVmArgs(
+        linux_os_info=azure_native.devtestlab.LinuxOsInfoArgs(
+            linux_os_state="NonDeprovisioned",
+        ),
+        source_vm_id="/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualmachines/{vmName}",
+    ))
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devtestlab:CustomImage {customImageName} /subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/customimages/{customImageName} 
+```
+
+ */
 @ResourceType(type="azure-native:devtestlab:CustomImage")
 public class CustomImage extends io.pulumi.resources.CustomResource {
+    /**
+     * The author of the custom image.
+     */
     @OutputExport(name="author", type=String.class, parameters={})
     private Output</* @Nullable */ String> author;
 
+    /**
+     * @return The author of the custom image.
+     */
     public Output</* @Nullable */ String> getAuthor() {
         return this.author;
     }
+    /**
+     * The creation date of the custom image.
+     */
     @OutputExport(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
+    /**
+     * @return The creation date of the custom image.
+     */
     public Output<String> getCreationDate() {
         return this.creationDate;
     }
+    /**
+     * Storage information about the plan related to this custom image
+     */
     @OutputExport(name="customImagePlan", type=CustomImagePropertiesFromPlanResponse.class, parameters={})
     private Output</* @Nullable */ CustomImagePropertiesFromPlanResponse> customImagePlan;
 
+    /**
+     * @return Storage information about the plan related to this custom image
+     */
     public Output</* @Nullable */ CustomImagePropertiesFromPlanResponse> getCustomImagePlan() {
         return this.customImagePlan;
     }
+    /**
+     * Storage information about the data disks present in the custom image
+     */
     @OutputExport(name="dataDiskStorageInfo", type=List.class, parameters={DataDiskStorageTypeInfoResponse.class})
     private Output</* @Nullable */ List<DataDiskStorageTypeInfoResponse>> dataDiskStorageInfo;
 
+    /**
+     * @return Storage information about the data disks present in the custom image
+     */
     public Output</* @Nullable */ List<DataDiskStorageTypeInfoResponse>> getDataDiskStorageInfo() {
         return this.dataDiskStorageInfo;
     }
+    /**
+     * The description of the custom image.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return The description of the custom image.
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment
+     */
     @OutputExport(name="isPlanAuthorized", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isPlanAuthorized;
 
+    /**
+     * @return Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment
+     */
     public Output</* @Nullable */ Boolean> getIsPlanAuthorized() {
         return this.isPlanAuthorized;
     }
+    /**
+     * The location of the resource.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The location of the resource.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The Managed Image Id backing the custom image.
+     */
     @OutputExport(name="managedImageId", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedImageId;
 
+    /**
+     * @return The Managed Image Id backing the custom image.
+     */
     public Output</* @Nullable */ String> getManagedImageId() {
         return this.managedImageId;
     }
+    /**
+     * The Managed Snapshot Id backing the custom image.
+     */
     @OutputExport(name="managedSnapshotId", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedSnapshotId;
 
+    /**
+     * @return The Managed Snapshot Id backing the custom image.
+     */
     public Output</* @Nullable */ String> getManagedSnapshotId() {
         return this.managedSnapshotId;
     }
+    /**
+     * The name of the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning status of the resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning status of the resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The tags of the resource.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The unique immutable identifier of a resource (Guid).
+     */
     @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
+    /**
+     * @return The unique immutable identifier of a resource (Guid).
+     */
     public Output<String> getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
+    /**
+     * The VHD from which the image is to be created.
+     */
     @OutputExport(name="vhd", type=CustomImagePropertiesCustomResponse.class, parameters={})
     private Output</* @Nullable */ CustomImagePropertiesCustomResponse> vhd;
 
+    /**
+     * @return The VHD from which the image is to be created.
+     */
     public Output</* @Nullable */ CustomImagePropertiesCustomResponse> getVhd() {
         return this.vhd;
     }
+    /**
+     * The virtual machine from which the image is to be created.
+     */
     @OutputExport(name="vm", type=CustomImagePropertiesFromVmResponse.class, parameters={})
     private Output</* @Nullable */ CustomImagePropertiesFromVmResponse> vm;
 
+    /**
+     * @return The virtual machine from which the image is to be created.
+     */
     public Output</* @Nullable */ CustomImagePropertiesFromVmResponse> getVm() {
         return this.vm;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public CustomImage(String name, CustomImageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:devtestlab:CustomImage", name, args == null ? CustomImageArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -139,6 +370,14 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static CustomImage get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CustomImage(name, id, options);
     }

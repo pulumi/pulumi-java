@@ -18,10 +18,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Linked service for Amazon S3.
+ */
 public final class AmazonS3LinkedServiceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AmazonS3LinkedServiceResponse Empty = new AmazonS3LinkedServiceResponse();
 
+    /**
+     * The access key identifier of the Amazon S3 Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="accessKeyId")
     private final @Nullable Object accessKeyId;
 
@@ -29,6 +35,9 @@ public final class AmazonS3LinkedServiceResponse extends io.pulumi.resources.Inv
         return this.accessKeyId == null ? Optional.empty() : Optional.ofNullable(this.accessKeyId);
     }
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -36,6 +45,9 @@ public final class AmazonS3LinkedServiceResponse extends io.pulumi.resources.Inv
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * The authentication type of S3. Allowed value: AccessKey (default) or TemporarySecurityCredentials. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="authenticationType")
     private final @Nullable Object authenticationType;
 
@@ -43,6 +55,9 @@ public final class AmazonS3LinkedServiceResponse extends io.pulumi.resources.Inv
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
@@ -50,6 +65,9 @@ public final class AmazonS3LinkedServiceResponse extends io.pulumi.resources.Inv
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -57,6 +75,9 @@ public final class AmazonS3LinkedServiceResponse extends io.pulumi.resources.Inv
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Object encryptedCredential;
 
@@ -64,6 +85,9 @@ public final class AmazonS3LinkedServiceResponse extends io.pulumi.resources.Inv
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
@@ -71,6 +95,9 @@ public final class AmazonS3LinkedServiceResponse extends io.pulumi.resources.Inv
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
+    /**
+     * The secret access key of the Amazon S3 Identity and Access Management (IAM) user.
+     */
     @InputImport(name="secretAccessKey")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretAccessKey;
 
@@ -78,6 +105,9 @@ public final class AmazonS3LinkedServiceResponse extends io.pulumi.resources.Inv
         return this.secretAccessKey == null ? null : this.secretAccessKey;
     }
 
+    /**
+     * This value specifies the endpoint to access with the S3 Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="serviceUrl")
     private final @Nullable Object serviceUrl;
 
@@ -85,6 +115,9 @@ public final class AmazonS3LinkedServiceResponse extends io.pulumi.resources.Inv
         return this.serviceUrl == null ? Optional.empty() : Optional.ofNullable(this.serviceUrl);
     }
 
+    /**
+     * The session token for the S3 temporary security credential.
+     */
     @InputImport(name="sessionToken")
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> sessionToken;
 
@@ -92,6 +125,10 @@ public final class AmazonS3LinkedServiceResponse extends io.pulumi.resources.Inv
         return this.sessionToken == null ? null : this.sessionToken;
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'AmazonS3'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Artifact describes a build product.
+ */
 public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ArtifactArgs Empty = new ArtifactArgs();
 
+    /**
+     * Hash or checksum value of a binary, or Docker Registry 2.0 digest of a container.
+     */
     @InputImport(name="checksum")
     private final @Nullable Input<String> checksum;
 
@@ -22,6 +28,9 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
         return this.checksum == null ? Input.empty() : this.checksum;
     }
 
+    /**
+     * Artifact ID, if any; for container images, this will be a URL by digest like `gcr.io/projectID/imagename@sha256:123456`.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -29,6 +38,9 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Related artifact names. This may be the path to a binary or jar file, or in the case of a container build, the name used to push the container image to Google Container Registry, as presented to `docker push`. Note that a single Artifact ID can have multiple names, for example if two tags are applied to one image.
+     */
     @InputImport(name="names")
     private final @Nullable Input<List<String>> names;
 

@@ -15,10 +15,17 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Simple policy schedule.
+ */
 public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SimpleSchedulePolicyArgs Empty = new SimpleSchedulePolicyArgs();
 
+    /**
+     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+Expected value is 'SimpleSchedulePolicy'.
+     */
     @InputImport(name="schedulePolicyType", required=true)
     private final Input<String> schedulePolicyType;
 
@@ -26,6 +33,9 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
         return this.schedulePolicyType;
     }
 
+    /**
+     * List of days of week this schedule has to be run.
+     */
     @InputImport(name="scheduleRunDays")
     private final @Nullable Input<List<DayOfWeek>> scheduleRunDays;
 
@@ -33,6 +43,9 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
         return this.scheduleRunDays == null ? Input.empty() : this.scheduleRunDays;
     }
 
+    /**
+     * Frequency of the schedule operation of this policy.
+     */
     @InputImport(name="scheduleRunFrequency")
     private final @Nullable Input<Either<String,ScheduleRunType>> scheduleRunFrequency;
 
@@ -40,6 +53,9 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
         return this.scheduleRunFrequency == null ? Input.empty() : this.scheduleRunFrequency;
     }
 
+    /**
+     * List of times of day this schedule has to be run.
+     */
     @InputImport(name="scheduleRunTimes")
     private final @Nullable Input<List<String>> scheduleRunTimes;
 
@@ -47,6 +63,9 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
         return this.scheduleRunTimes == null ? Input.empty() : this.scheduleRunTimes;
     }
 
+    /**
+     * At every number weeks this schedule has to be run.
+     */
     @InputImport(name="scheduleWeeklyFrequency")
     private final @Nullable Input<Integer> scheduleWeeklyFrequency;
 

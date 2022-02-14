@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AutoscalingLimitsResponse {
+/**
+ * Maximum number of nodes to scale up to.
+ */
     private final Integer maxServeNodes;
+/**
+ * Minimum number of nodes to scale down to.
+ */
     private final Integer minServeNodes;
 
     @OutputCustomType.Constructor({"maxServeNodes","minServeNodes"})
@@ -20,9 +26,15 @@ public final class AutoscalingLimitsResponse {
         this.minServeNodes = Objects.requireNonNull(minServeNodes);
     }
 
+/**
+ * Maximum number of nodes to scale up to.
+ */
     public Integer getMaxServeNodes() {
         return this.maxServeNodes;
     }
+/**
+ * Minimum number of nodes to scale down to.
+ */
     public Integer getMinServeNodes() {
         return this.minServeNodes;
     }

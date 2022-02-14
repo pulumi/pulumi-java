@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * CS Accounts Details.
+ */
 public final class RunAsAccountResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RunAsAccountResponse Empty = new RunAsAccountResponse();
 
+    /**
+     * The CS RunAs account Id.
+     */
     @InputImport(name="accountId")
     private final @Nullable String accountId;
 
@@ -21,6 +27,9 @@ public final class RunAsAccountResponse extends io.pulumi.resources.InvokeArgs {
         return this.accountId == null ? Optional.empty() : Optional.ofNullable(this.accountId);
     }
 
+    /**
+     * The CS RunAs account name.
+     */
     @InputImport(name="accountName")
     private final @Nullable String accountName;
 

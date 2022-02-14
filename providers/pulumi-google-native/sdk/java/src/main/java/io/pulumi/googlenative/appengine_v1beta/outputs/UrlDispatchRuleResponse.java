@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class UrlDispatchRuleResponse {
+/**
+ * Domain name to match against. The wildcard "*" is supported if specified before a period: "*.".Defaults to matching all domains: "*".
+ */
     private final String domain;
+/**
+ * Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.The sum of the lengths of the domain and path may not exceed 100 characters.
+ */
     private final String path;
+/**
+ * Resource ID of a service in this application that should serve the matched request. The service must already exist. Example: default.
+ */
     private final String service;
 
     @OutputCustomType.Constructor({"domain","path","service"})
@@ -23,12 +32,21 @@ public final class UrlDispatchRuleResponse {
         this.service = Objects.requireNonNull(service);
     }
 
+/**
+ * Domain name to match against. The wildcard "*" is supported if specified before a period: "*.".Defaults to matching all domains: "*".
+ */
     public String getDomain() {
         return this.domain;
     }
+/**
+ * Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.The sum of the lengths of the domain and path may not exceed 100 characters.
+ */
     public String getPath() {
         return this.path;
     }
+/**
+ * Resource ID of a service in this application that should serve the matched request. The service must already exist. Example: default.
+ */
     public String getService() {
         return this.service;
     }

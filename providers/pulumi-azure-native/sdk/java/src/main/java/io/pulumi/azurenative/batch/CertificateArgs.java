@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateArgs Empty = new CertificateArgs();
 
+    /**
+     * The name of the Batch account.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -22,6 +28,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * The identifier for the certificate. This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request. For example SHA1-a3d1c5.
+     */
     @InputImport(name="certificateName")
     private final @Nullable Input<String> certificateName;
 
@@ -29,6 +38,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.certificateName == null ? Input.empty() : this.certificateName;
     }
 
+    /**
+     * The maximum size is 10KB.
+     */
     @InputImport(name="data", required=true)
     private final Input<String> data;
 
@@ -36,6 +48,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.data;
     }
 
+    /**
+     * The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.
+     */
     @InputImport(name="format")
     private final @Nullable Input<CertificateFormat> format;
 
@@ -43,6 +58,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.format == null ? Input.empty() : this.format;
     }
 
+    /**
+     * This must not be specified if the certificate format is Cer.
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -50,6 +68,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * The name of the resource group that contains the Batch account.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -57,6 +78,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * This must match the thumbprint from the name.
+     */
     @InputImport(name="thumbprint")
     private final @Nullable Input<String> thumbprint;
 
@@ -64,6 +88,9 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
         return this.thumbprint == null ? Input.empty() : this.thumbprint;
     }
 
+    /**
+     * This must match the first portion of the certificate name. Currently required to be 'SHA1'.
+     */
     @InputImport(name="thumbprintAlgorithm")
     private final @Nullable Input<String> thumbprintAlgorithm;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Parameters for using BigQuery as the destination of resource usage export.
+ */
 public final class BigQueryDestinationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BigQueryDestinationResponse Empty = new BigQueryDestinationResponse();
 
+    /**
+     * The ID of a BigQuery Dataset.
+     */
     @InputImport(name="datasetId", required=true)
     private final String datasetId;
 

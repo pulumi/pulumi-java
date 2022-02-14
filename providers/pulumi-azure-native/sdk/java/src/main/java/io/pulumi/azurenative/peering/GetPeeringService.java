@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPeeringService {
+/**
+ * Peering Service
+API Version: 2021-01-01.
+ *
+ * Peering Service
+ */
     public static CompletableFuture<GetPeeringServiceResult> invokeAsync(GetPeeringServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:peering:getPeeringService", TypeShape.of(GetPeeringServiceResult.class), args == null ? GetPeeringServiceArgs.Empty : args, Utilities.withVersion(options));
     }

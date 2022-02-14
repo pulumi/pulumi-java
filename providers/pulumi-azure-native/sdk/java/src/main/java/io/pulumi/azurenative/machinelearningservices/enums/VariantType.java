@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of the variant.
+ */
     @EnumType
     public enum VariantType {
+/**
+ * 
+ */
         Control("Control"),
+/**
+ * 
+ */
         Treatment("Treatment");
 
         private final String value;

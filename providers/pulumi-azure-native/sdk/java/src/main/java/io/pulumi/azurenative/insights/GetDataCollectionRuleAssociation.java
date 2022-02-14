@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDataCollectionRuleAssociation {
+/**
+ * Definition of generic ARM proxy resource.
+API Version: 2019-11-01-preview.
+ *
+ * Definition of generic ARM proxy resource.
+ */
     public static CompletableFuture<GetDataCollectionRuleAssociationResult> invokeAsync(GetDataCollectionRuleAssociationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getDataCollectionRuleAssociation", TypeShape.of(GetDataCollectionRuleAssociationResult.class), args == null ? GetDataCollectionRuleAssociationArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * IP address for the container group.
+ */
 public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IpAddressArgs Empty = new IpAddressArgs();
 
+    /**
+     * The Dns name label for the IP.
+     */
     @InputImport(name="dnsNameLabel")
     private final @Nullable Input<String> dnsNameLabel;
 
@@ -25,6 +31,9 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.dnsNameLabel == null ? Input.empty() : this.dnsNameLabel;
     }
 
+    /**
+     * The IP exposed to the public internet.
+     */
     @InputImport(name="ip")
     private final @Nullable Input<String> ip;
 
@@ -32,6 +41,9 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.ip == null ? Input.empty() : this.ip;
     }
 
+    /**
+     * The list of ports exposed on the container group.
+     */
     @InputImport(name="ports", required=true)
     private final Input<List<PortArgs>> ports;
 
@@ -39,6 +51,9 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.ports;
     }
 
+    /**
+     * Specifies if the IP is exposed to the public internet or private VNET.
+     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,ContainerGroupIpAddressType>> type;
 

@@ -10,8 +10,18 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class MigrateSqlServerSqlMITaskOutputErrorResponse {
+/**
+ * Migration error
+ */
     private final ReportableExceptionResponse error;
+/**
+ * Result identifier
+ */
     private final String id;
+/**
+ * Result type
+Expected value is 'ErrorOutput'.
+ */
     private final String resultType;
 
     @OutputCustomType.Constructor({"error","id","resultType"})
@@ -24,12 +34,22 @@ public final class MigrateSqlServerSqlMITaskOutputErrorResponse {
         this.resultType = Objects.requireNonNull(resultType);
     }
 
+/**
+ * Migration error
+ */
     public ReportableExceptionResponse getError() {
         return this.error;
     }
+/**
+ * Result identifier
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Result type
+Expected value is 'ErrorOutput'.
+ */
     public String getResultType() {
         return this.resultType;
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Options to control visual rendering of a chart.
+ */
 public final class ChartOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ChartOptionsResponse Empty = new ChartOptionsResponse();
 
+    /**
+     * The chart mode.
+     */
     @InputImport(name="mode", required=true)
     private final String mode;
 

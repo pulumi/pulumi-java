@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetPrivateRecordSetArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPrivateRecordSetArgs Empty = new GetPrivateRecordSetArgs();
 
+    /**
+     * The name of the Private DNS zone (without a terminating dot).
+     */
     @InputImport(name="privateZoneName", required=true)
     private final String privateZoneName;
 
@@ -19,6 +25,9 @@ public final class GetPrivateRecordSetArgs extends io.pulumi.resources.InvokeArg
         return this.privateZoneName;
     }
 
+    /**
+     * The type of DNS record in this record set.
+     */
     @InputImport(name="recordType", required=true)
     private final String recordType;
 
@@ -26,6 +35,9 @@ public final class GetPrivateRecordSetArgs extends io.pulumi.resources.InvokeArg
         return this.recordType;
     }
 
+    /**
+     * The name of the record set, relative to the name of the zone.
+     */
     @InputImport(name="relativeRecordSetName", required=true)
     private final String relativeRecordSetName;
 
@@ -33,6 +45,9 @@ public final class GetPrivateRecordSetArgs extends io.pulumi.resources.InvokeArg
         return this.relativeRecordSetName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

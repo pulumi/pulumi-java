@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration options for the Cloud Run feature.
+ */
 public final class CloudRunConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CloudRunConfigArgs Empty = new CloudRunConfigArgs();
 
+    /**
+     * Whether Cloud Run addon is enabled for this cluster.
+     */
     @InputImport(name="disabled")
     private final @Nullable Input<Boolean> disabled;
 
@@ -22,6 +28,9 @@ public final class CloudRunConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.disabled == null ? Input.empty() : this.disabled;
     }
 
+    /**
+     * Which load balancer type is installed for Cloud Run.
+     */
     @InputImport(name="loadBalancerType")
     private final @Nullable Input<CloudRunConfigLoadBalancerType> loadBalancerType;
 

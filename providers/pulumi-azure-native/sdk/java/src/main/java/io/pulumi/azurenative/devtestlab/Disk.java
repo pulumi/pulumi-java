@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.devtestlab;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.devtestlab.DiskArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -16,99 +15,298 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A Disk.
+API Version: 2018-09-15.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Disks_CreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var disk = new AzureNative.DevTestLab.Disk("disk", new AzureNative.DevTestLab.DiskArgs
+        {
+            DiskSizeGiB = 1023,
+            DiskType = "Standard",
+            LabName = "{labName}",
+            LeasedByLabVmId = "/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualmachines/vmName",
+            Name = "{diskName}",
+            ResourceGroupName = "resourceGroupName",
+            UserName = "{userId}",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	devtestlab "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devtestlab"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devtestlab.NewDisk(ctx, "disk", &devtestlab.DiskArgs{
+			DiskSizeGiB:       pulumi.Int(1023),
+			DiskType:          pulumi.String("Standard"),
+			LabName:           pulumi.String("{labName}"),
+			LeasedByLabVmId:   pulumi.String("/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualmachines/vmName"),
+			Name:              pulumi.String("{diskName}"),
+			ResourceGroupName: pulumi.String("resourceGroupName"),
+			UserName:          pulumi.String("{userId}"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const disk = new azure_native.devtestlab.Disk("disk", {
+    diskSizeGiB: 1023,
+    diskType: "Standard",
+    labName: "{labName}",
+    leasedByLabVmId: "/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualmachines/vmName",
+    name: "{diskName}",
+    resourceGroupName: "resourceGroupName",
+    userName: "{userId}",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+disk = azure_native.devtestlab.Disk("disk",
+    disk_size_gi_b=1023,
+    disk_type="Standard",
+    lab_name="{labName}",
+    leased_by_lab_vm_id="/subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/{labName}/virtualmachines/vmName",
+    name="{diskName}",
+    resource_group_name="resourceGroupName",
+    user_name="{userId}")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devtestlab:Disk {diskName} /subscriptions/{subscriptionId}/resourcegroups/resourceGroupName/providers/microsoft.devtestlab/labs/l{labName}/users/{userId}/disks/{diskName} 
+```
+
+ */
 @ResourceType(type="azure-native:devtestlab:Disk")
 public class Disk extends io.pulumi.resources.CustomResource {
+    /**
+     * The creation date of the disk.
+     */
     @OutputExport(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
+    /**
+     * @return The creation date of the disk.
+     */
     public Output<String> getCreatedDate() {
         return this.createdDate;
     }
+    /**
+     * When backed by a blob, the name of the VHD blob without extension.
+     */
     @OutputExport(name="diskBlobName", type=String.class, parameters={})
     private Output</* @Nullable */ String> diskBlobName;
 
+    /**
+     * @return When backed by a blob, the name of the VHD blob without extension.
+     */
     public Output</* @Nullable */ String> getDiskBlobName() {
         return this.diskBlobName;
     }
+    /**
+     * The size of the disk in Gibibytes.
+     */
     @OutputExport(name="diskSizeGiB", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> diskSizeGiB;
 
+    /**
+     * @return The size of the disk in Gibibytes.
+     */
     public Output</* @Nullable */ Integer> getDiskSizeGiB() {
         return this.diskSizeGiB;
     }
+    /**
+     * The storage type for the disk (i.e. Standard, Premium).
+     */
     @OutputExport(name="diskType", type=String.class, parameters={})
     private Output</* @Nullable */ String> diskType;
 
+    /**
+     * @return The storage type for the disk (i.e. Standard, Premium).
+     */
     public Output</* @Nullable */ String> getDiskType() {
         return this.diskType;
     }
+    /**
+     * When backed by a blob, the URI of underlying blob.
+     */
     @OutputExport(name="diskUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> diskUri;
 
+    /**
+     * @return When backed by a blob, the URI of underlying blob.
+     */
     public Output</* @Nullable */ String> getDiskUri() {
         return this.diskUri;
     }
+    /**
+     * The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).
+     */
     @OutputExport(name="hostCaching", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostCaching;
 
+    /**
+     * @return The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).
+     */
     public Output</* @Nullable */ String> getHostCaching() {
         return this.hostCaching;
     }
+    /**
+     * The resource ID of the VM to which this disk is leased.
+     */
     @OutputExport(name="leasedByLabVmId", type=String.class, parameters={})
     private Output</* @Nullable */ String> leasedByLabVmId;
 
+    /**
+     * @return The resource ID of the VM to which this disk is leased.
+     */
     public Output</* @Nullable */ String> getLeasedByLabVmId() {
         return this.leasedByLabVmId;
     }
+    /**
+     * The location of the resource.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The location of the resource.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * When backed by managed disk, this is the ID of the compute disk resource.
+     */
     @OutputExport(name="managedDiskId", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedDiskId;
 
+    /**
+     * @return When backed by managed disk, this is the ID of the compute disk resource.
+     */
     public Output</* @Nullable */ String> getManagedDiskId() {
         return this.managedDiskId;
     }
+    /**
+     * The name of the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The provisioning status of the resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning status of the resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * When backed by a blob, the storage account where the blob is.
+     */
     @OutputExport(name="storageAccountId", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountId;
 
+    /**
+     * @return When backed by a blob, the storage account where the blob is.
+     */
     public Output</* @Nullable */ String> getStorageAccountId() {
         return this.storageAccountId;
     }
+    /**
+     * The tags of the resource.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The unique immutable identifier of a resource (Guid).
+     */
     @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
+    /**
+     * @return The unique immutable identifier of a resource (Guid).
+     */
     public Output<String> getUniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Disk(String name, DiskArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:devtestlab:Disk", name, args == null ? DiskArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -128,6 +326,14 @@ public class Disk extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Disk get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Disk(name, id, options);
     }

@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListShareSynchronizationDetailsArgs Empty = new ListShareSynchronizationDetailsArgs();
 
+    /**
+     * The name of the share account.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -22,6 +28,9 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
         return this.accountName;
     }
 
+    /**
+     * Email of the user who created the synchronization
+     */
     @InputImport(name="consumerEmail")
     private final @Nullable String consumerEmail;
 
@@ -29,6 +38,9 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
         return this.consumerEmail == null ? Optional.empty() : Optional.ofNullable(this.consumerEmail);
     }
 
+    /**
+     * Name of the user who created the synchronization
+     */
     @InputImport(name="consumerName")
     private final @Nullable String consumerName;
 
@@ -36,6 +48,9 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
         return this.consumerName == null ? Optional.empty() : Optional.ofNullable(this.consumerName);
     }
 
+    /**
+     * Tenant name of the consumer who created the synchronization
+     */
     @InputImport(name="consumerTenantName")
     private final @Nullable String consumerTenantName;
 
@@ -43,6 +58,9 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
         return this.consumerTenantName == null ? Optional.empty() : Optional.ofNullable(this.consumerTenantName);
     }
 
+    /**
+     * synchronization duration
+     */
     @InputImport(name="durationMs")
     private final @Nullable Integer durationMs;
 
@@ -50,6 +68,9 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
         return this.durationMs == null ? Optional.empty() : Optional.ofNullable(this.durationMs);
     }
 
+    /**
+     * End time of synchronization
+     */
     @InputImport(name="endTime")
     private final @Nullable String endTime;
 
@@ -57,6 +78,9 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
     }
 
+    /**
+     * Filters the results using OData syntax.
+     */
     @InputImport(name="filter")
     private final @Nullable String filter;
 
@@ -64,6 +88,9 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
+    /**
+     * message of synchronization
+     */
     @InputImport(name="message")
     private final @Nullable String message;
 
@@ -71,6 +98,9 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
+    /**
+     * Sorts the results using OData syntax.
+     */
     @InputImport(name="orderby")
     private final @Nullable String orderby;
 
@@ -78,6 +108,9 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
         return this.orderby == null ? Optional.empty() : Optional.ofNullable(this.orderby);
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -85,6 +118,9 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the share.
+     */
     @InputImport(name="shareName", required=true)
     private final String shareName;
 
@@ -92,6 +128,9 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
         return this.shareName;
     }
 
+    /**
+     * Continuation token
+     */
     @InputImport(name="skipToken")
     private final @Nullable String skipToken;
 
@@ -99,6 +138,9 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
     }
 
+    /**
+     * start time of synchronization
+     */
     @InputImport(name="startTime")
     private final @Nullable String startTime;
 
@@ -106,6 +148,9 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
+    /**
+     * Raw Status
+     */
     @InputImport(name="status")
     private final @Nullable String status;
 
@@ -113,6 +158,9 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
+    /**
+     * Synchronization id
+     */
     @InputImport(name="synchronizationId")
     private final @Nullable String synchronizationId;
 

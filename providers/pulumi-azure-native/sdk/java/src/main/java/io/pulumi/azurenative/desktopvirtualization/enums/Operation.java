@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of operation for migration.
+ */
     @EnumType
     public enum Operation {
+/**
+ * Start the migration.
+ */
         Start("Start"),
+/**
+ * Revoke the migration.
+ */
         Revoke("Revoke"),
+/**
+ * Complete the migration.
+ */
         Complete("Complete"),
+/**
+ * Hide the hostpool.
+ */
         Hide("Hide"),
+/**
+ * Unhide the hostpool.
+ */
         Unhide("Unhide");
 
         private final String value;

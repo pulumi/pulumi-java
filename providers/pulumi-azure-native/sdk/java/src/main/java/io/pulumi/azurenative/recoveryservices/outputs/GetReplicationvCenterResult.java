@@ -12,10 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetReplicationvCenterResult {
+/**
+ * Resource Id
+ */
     private final String id;
+/**
+ * Resource Location
+ */
     private final @Nullable String location;
+/**
+ * Resource Name
+ */
     private final String name;
+/**
+ * VCenter related data.
+ */
     private final VCenterPropertiesResponse properties;
+/**
+ * Resource Type
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","location","name","properties","type"})
@@ -32,18 +47,33 @@ public final class GetReplicationvCenterResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Resource Id
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource Location
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * Resource Name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * VCenter related data.
+ */
     public VCenterPropertiesResponse getProperties() {
         return this.properties;
     }
+/**
+ * Resource Type
+ */
     public String getType() {
         return this.type;
     }

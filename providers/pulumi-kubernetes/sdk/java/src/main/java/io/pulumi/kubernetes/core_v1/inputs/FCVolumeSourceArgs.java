@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a Fibre Channel volume. Fibre Channel volumes can only be mounted as read/write once. Fibre Channel volumes support ownership management and SELinux relabeling.
+ */
 public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FCVolumeSourceArgs Empty = new FCVolumeSourceArgs();
 
+    /**
+     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
+     */
     @InputImport(name="fsType")
     private final @Nullable Input<String> fsType;
 
@@ -24,6 +30,9 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.fsType == null ? Input.empty() : this.fsType;
     }
 
+    /**
+     * Optional: FC target lun number
+     */
     @InputImport(name="lun")
     private final @Nullable Input<Integer> lun;
 
@@ -31,6 +40,9 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.lun == null ? Input.empty() : this.lun;
     }
 
+    /**
+     * Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     */
     @InputImport(name="readOnly")
     private final @Nullable Input<Boolean> readOnly;
 
@@ -38,6 +50,9 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.readOnly == null ? Input.empty() : this.readOnly;
     }
 
+    /**
+     * Optional: FC target worldwide names (WWNs)
+     */
     @InputImport(name="targetWWNs")
     private final @Nullable Input<List<String>> targetWWNs;
 
@@ -45,6 +60,9 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetWWNs == null ? Input.empty() : this.targetWWNs;
     }
 
+    /**
+     * Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.
+     */
     @InputImport(name="wwids")
     private final @Nullable Input<List<String>> wwids;
 

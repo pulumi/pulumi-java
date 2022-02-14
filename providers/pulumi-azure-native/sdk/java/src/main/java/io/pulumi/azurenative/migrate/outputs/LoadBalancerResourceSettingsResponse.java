@@ -14,11 +14,31 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LoadBalancerResourceSettingsResponse {
+/**
+ * Gets or sets the backend address pools of the load balancer.
+ */
     private final @Nullable List<LBBackendAddressPoolResourceSettingsResponse> backendAddressPools;
+/**
+ * Gets or sets the frontend IP configurations of the load balancer.
+ */
     private final @Nullable List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations;
+/**
+ * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+Expected value is 'Microsoft.Network/loadBalancers'.
+ */
     private final String resourceType;
+/**
+ * Gets or sets load balancer sku (Basic/Standard).
+ */
     private final @Nullable String sku;
+/**
+ * Gets or sets the target Resource name.
+ */
     private final String targetResourceName;
+/**
+ * Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
+ precedence only if frontend IP configurations settings are not present.
+ */
     private final @Nullable String zones;
 
     @OutputCustomType.Constructor({"backendAddressPools","frontendIPConfigurations","resourceType","sku","targetResourceName","zones"})
@@ -37,21 +57,41 @@ public final class LoadBalancerResourceSettingsResponse {
         this.zones = zones;
     }
 
+/**
+ * Gets or sets the backend address pools of the load balancer.
+ */
     public List<LBBackendAddressPoolResourceSettingsResponse> getBackendAddressPools() {
         return this.backendAddressPools == null ? List.of() : this.backendAddressPools;
     }
+/**
+ * Gets or sets the frontend IP configurations of the load balancer.
+ */
     public List<LBFrontendIPConfigurationResourceSettingsResponse> getFrontendIPConfigurations() {
         return this.frontendIPConfigurations == null ? List.of() : this.frontendIPConfigurations;
     }
+/**
+ * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+Expected value is 'Microsoft.Network/loadBalancers'.
+ */
     public String getPropResourceType() {
         return this.resourceType;
     }
+/**
+ * Gets or sets load balancer sku (Basic/Standard).
+ */
     public Optional<String> getSku() {
         return Optional.ofNullable(this.sku);
     }
+/**
+ * Gets or sets the target Resource name.
+ */
     public String getTargetResourceName() {
         return this.targetResourceName;
     }
+/**
+ * Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
+ precedence only if frontend IP configurations settings are not present.
+ */
     public Optional<String> getZones() {
         return Optional.ofNullable(this.zones);
     }

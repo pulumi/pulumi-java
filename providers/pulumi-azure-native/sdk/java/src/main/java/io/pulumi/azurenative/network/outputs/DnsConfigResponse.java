@@ -12,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DnsConfigResponse {
+/**
+ * The fully-qualified domain name (FQDN) of the Traffic Manager profile. This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.
+ */
     private final String fqdn;
+/**
+ * The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.
+ */
     private final @Nullable String relativeName;
+/**
+ * The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.
+ */
     private final @Nullable Double ttl;
 
     @OutputCustomType.Constructor({"fqdn","relativeName","ttl"})
@@ -26,12 +35,21 @@ public final class DnsConfigResponse {
         this.ttl = ttl;
     }
 
+/**
+ * The fully-qualified domain name (FQDN) of the Traffic Manager profile. This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.
+ */
     public String getFqdn() {
         return this.fqdn;
     }
+/**
+ * The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.
+ */
     public Optional<String> getRelativeName() {
         return Optional.ofNullable(this.relativeName);
     }
+/**
+ * The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.
+ */
     public Optional<Double> getTtl() {
         return Optional.ofNullable(this.ttl);
     }

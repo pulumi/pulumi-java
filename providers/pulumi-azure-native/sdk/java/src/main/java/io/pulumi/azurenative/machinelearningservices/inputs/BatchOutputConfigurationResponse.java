@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Batch inference output configuration.
+ */
 public final class BatchOutputConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final BatchOutputConfigurationResponse Empty = new BatchOutputConfigurationResponse();
 
+    /**
+     * Customized output file name for append_row output action.
+     */
     @InputImport(name="appendRowFileName")
     private final @Nullable String appendRowFileName;
 
@@ -21,6 +27,9 @@ public final class BatchOutputConfigurationResponse extends io.pulumi.resources.
         return this.appendRowFileName == null ? Optional.empty() : Optional.ofNullable(this.appendRowFileName);
     }
 
+    /**
+     * Indicates how the output will be organized.
+     */
     @InputImport(name="outputAction")
     private final @Nullable String outputAction;
 

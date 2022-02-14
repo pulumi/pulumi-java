@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AutomationRuleSetResponse {
+/**
+ * 
+ */
     private final @Nullable List<AutomationTriggeringRuleResponse> rules;
 
     @OutputCustomType.Constructor({"rules"})
@@ -18,6 +21,9 @@ public final class AutomationRuleSetResponse {
         this.rules = rules;
     }
 
+/**
+ * 
+ */
     public List<AutomationTriggeringRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
     }

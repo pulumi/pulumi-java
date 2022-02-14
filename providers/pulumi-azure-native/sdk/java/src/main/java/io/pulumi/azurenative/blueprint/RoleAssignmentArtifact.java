@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.blueprint;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.blueprint.RoleAssignmentArtifactArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -15,63 +14,594 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Blueprint artifact that applies a Role assignment.
+API Version: 2018-11-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### MG-ARMTemplateArtifact
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var roleAssignmentArtifact = new AzureNative.Blueprint.RoleAssignmentArtifact("roleAssignmentArtifact", new AzureNative.Blueprint.RoleAssignmentArtifactArgs
+        {
+            ArtifactName = "storageTemplate",
+            BlueprintName = "simpleBlueprint",
+            ResourceScope = "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	blueprint "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blueprint"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := blueprint.NewRoleAssignmentArtifact(ctx, "roleAssignmentArtifact", &blueprint.RoleAssignmentArtifactArgs{
+			ArtifactName:  pulumi.String("storageTemplate"),
+			BlueprintName: pulumi.String("simpleBlueprint"),
+			ResourceScope: pulumi.String("providers/Microsoft.Management/managementGroups/ContosoOnlineGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const roleAssignmentArtifact = new azure_native.blueprint.RoleAssignmentArtifact("roleAssignmentArtifact", {
+    artifactName: "storageTemplate",
+    blueprintName: "simpleBlueprint",
+    resourceScope: "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+role_assignment_artifact = azure_native.blueprint.RoleAssignmentArtifact("roleAssignmentArtifact",
+    artifact_name="storageTemplate",
+    blueprint_name="simpleBlueprint",
+    resource_scope="providers/Microsoft.Management/managementGroups/ContosoOnlineGroup")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### MG-PolicyAssignmentArtifact
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var roleAssignmentArtifact = new AzureNative.Blueprint.RoleAssignmentArtifact("roleAssignmentArtifact", new AzureNative.Blueprint.RoleAssignmentArtifactArgs
+        {
+            ArtifactName = "costCenterPolicy",
+            BlueprintName = "simpleBlueprint",
+            ResourceScope = "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	blueprint "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blueprint"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := blueprint.NewRoleAssignmentArtifact(ctx, "roleAssignmentArtifact", &blueprint.RoleAssignmentArtifactArgs{
+			ArtifactName:  pulumi.String("costCenterPolicy"),
+			BlueprintName: pulumi.String("simpleBlueprint"),
+			ResourceScope: pulumi.String("providers/Microsoft.Management/managementGroups/ContosoOnlineGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const roleAssignmentArtifact = new azure_native.blueprint.RoleAssignmentArtifact("roleAssignmentArtifact", {
+    artifactName: "costCenterPolicy",
+    blueprintName: "simpleBlueprint",
+    resourceScope: "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+role_assignment_artifact = azure_native.blueprint.RoleAssignmentArtifact("roleAssignmentArtifact",
+    artifact_name="costCenterPolicy",
+    blueprint_name="simpleBlueprint",
+    resource_scope="providers/Microsoft.Management/managementGroups/ContosoOnlineGroup")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### MG-RoleAssignmentArtifact
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var roleAssignmentArtifact = new AzureNative.Blueprint.RoleAssignmentArtifact("roleAssignmentArtifact", new AzureNative.Blueprint.RoleAssignmentArtifactArgs
+        {
+            ArtifactName = "ownerAssignment",
+            BlueprintName = "simpleBlueprint",
+            DisplayName = "enforce owners of given subscription",
+            Kind = "roleAssignment",
+            PrincipalIds = "[parameters('owners')]",
+            ResourceScope = "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
+            RoleDefinitionId = "/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	blueprint "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blueprint"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := blueprint.NewRoleAssignmentArtifact(ctx, "roleAssignmentArtifact", &blueprint.RoleAssignmentArtifactArgs{
+			ArtifactName:     pulumi.String("ownerAssignment"),
+			BlueprintName:    pulumi.String("simpleBlueprint"),
+			DisplayName:      pulumi.String("enforce owners of given subscription"),
+			Kind:             pulumi.String("roleAssignment"),
+			PrincipalIds:     pulumi.Any("[parameters('owners')]"),
+			ResourceScope:    pulumi.String("providers/Microsoft.Management/managementGroups/ContosoOnlineGroup"),
+			RoleDefinitionId: pulumi.String("/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const roleAssignmentArtifact = new azure_native.blueprint.RoleAssignmentArtifact("roleAssignmentArtifact", {
+    artifactName: "ownerAssignment",
+    blueprintName: "simpleBlueprint",
+    displayName: "enforce owners of given subscription",
+    kind: "roleAssignment",
+    principalIds: "[parameters('owners')]",
+    resourceScope: "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
+    roleDefinitionId: "/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+role_assignment_artifact = azure_native.blueprint.RoleAssignmentArtifact("roleAssignmentArtifact",
+    artifact_name="ownerAssignment",
+    blueprint_name="simpleBlueprint",
+    display_name="enforce owners of given subscription",
+    kind="roleAssignment",
+    principal_ids="[parameters('owners')]",
+    resource_scope="providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
+    role_definition_id="/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Sub-ARMTemplateArtifact
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var roleAssignmentArtifact = new AzureNative.Blueprint.RoleAssignmentArtifact("roleAssignmentArtifact", new AzureNative.Blueprint.RoleAssignmentArtifactArgs
+        {
+            ArtifactName = "storageTemplate",
+            BlueprintName = "simpleBlueprint",
+            ResourceScope = "subscriptions/00000000-0000-0000-0000-000000000000",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	blueprint "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blueprint"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := blueprint.NewRoleAssignmentArtifact(ctx, "roleAssignmentArtifact", &blueprint.RoleAssignmentArtifactArgs{
+			ArtifactName:  pulumi.String("storageTemplate"),
+			BlueprintName: pulumi.String("simpleBlueprint"),
+			ResourceScope: pulumi.String("subscriptions/00000000-0000-0000-0000-000000000000"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const roleAssignmentArtifact = new azure_native.blueprint.RoleAssignmentArtifact("roleAssignmentArtifact", {
+    artifactName: "storageTemplate",
+    blueprintName: "simpleBlueprint",
+    resourceScope: "subscriptions/00000000-0000-0000-0000-000000000000",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+role_assignment_artifact = azure_native.blueprint.RoleAssignmentArtifact("roleAssignmentArtifact",
+    artifact_name="storageTemplate",
+    blueprint_name="simpleBlueprint",
+    resource_scope="subscriptions/00000000-0000-0000-0000-000000000000")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Sub-PolicyAssignmentArtifact
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var roleAssignmentArtifact = new AzureNative.Blueprint.RoleAssignmentArtifact("roleAssignmentArtifact", new AzureNative.Blueprint.RoleAssignmentArtifactArgs
+        {
+            ArtifactName = "costCenterPolicy",
+            BlueprintName = "simpleBlueprint",
+            ResourceScope = "subscriptions/00000000-0000-0000-0000-000000000000",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	blueprint "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blueprint"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := blueprint.NewRoleAssignmentArtifact(ctx, "roleAssignmentArtifact", &blueprint.RoleAssignmentArtifactArgs{
+			ArtifactName:  pulumi.String("costCenterPolicy"),
+			BlueprintName: pulumi.String("simpleBlueprint"),
+			ResourceScope: pulumi.String("subscriptions/00000000-0000-0000-0000-000000000000"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const roleAssignmentArtifact = new azure_native.blueprint.RoleAssignmentArtifact("roleAssignmentArtifact", {
+    artifactName: "costCenterPolicy",
+    blueprintName: "simpleBlueprint",
+    resourceScope: "subscriptions/00000000-0000-0000-0000-000000000000",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+role_assignment_artifact = azure_native.blueprint.RoleAssignmentArtifact("roleAssignmentArtifact",
+    artifact_name="costCenterPolicy",
+    blueprint_name="simpleBlueprint",
+    resource_scope="subscriptions/00000000-0000-0000-0000-000000000000")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Sub-RoleAssignmentArtifact
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var roleAssignmentArtifact = new AzureNative.Blueprint.RoleAssignmentArtifact("roleAssignmentArtifact", new AzureNative.Blueprint.RoleAssignmentArtifactArgs
+        {
+            ArtifactName = "ownerAssignment",
+            BlueprintName = "simpleBlueprint",
+            DisplayName = "enforce owners of given subscription",
+            Kind = "roleAssignment",
+            PrincipalIds = "[parameters('owners')]",
+            ResourceScope = "subscriptions/00000000-0000-0000-0000-000000000000",
+            RoleDefinitionId = "/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	blueprint "github.com/pulumi/pulumi-azure-native/sdk/go/azure/blueprint"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := blueprint.NewRoleAssignmentArtifact(ctx, "roleAssignmentArtifact", &blueprint.RoleAssignmentArtifactArgs{
+			ArtifactName:     pulumi.String("ownerAssignment"),
+			BlueprintName:    pulumi.String("simpleBlueprint"),
+			DisplayName:      pulumi.String("enforce owners of given subscription"),
+			Kind:             pulumi.String("roleAssignment"),
+			PrincipalIds:     pulumi.Any("[parameters('owners')]"),
+			ResourceScope:    pulumi.String("subscriptions/00000000-0000-0000-0000-000000000000"),
+			RoleDefinitionId: pulumi.String("/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const roleAssignmentArtifact = new azure_native.blueprint.RoleAssignmentArtifact("roleAssignmentArtifact", {
+    artifactName: "ownerAssignment",
+    blueprintName: "simpleBlueprint",
+    displayName: "enforce owners of given subscription",
+    kind: "roleAssignment",
+    principalIds: "[parameters('owners')]",
+    resourceScope: "subscriptions/00000000-0000-0000-0000-000000000000",
+    roleDefinitionId: "/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+role_assignment_artifact = azure_native.blueprint.RoleAssignmentArtifact("roleAssignmentArtifact",
+    artifact_name="ownerAssignment",
+    blueprint_name="simpleBlueprint",
+    display_name="enforce owners of given subscription",
+    kind="roleAssignment",
+    principal_ids="[parameters('owners')]",
+    resource_scope="subscriptions/00000000-0000-0000-0000-000000000000",
+    role_definition_id="/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:blueprint:RoleAssignmentArtifact ownerAssignment /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Blueprint/blueprints/simpleBlueprint/artifacts/ownerAssignment 
+```
+
+ */
 @ResourceType(type="azure-native:blueprint:RoleAssignmentArtifact")
 public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
+    /**
+     * Artifacts which need to be deployed before the specified artifact.
+     */
     @OutputExport(name="dependsOn", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> dependsOn;
 
+    /**
+     * @return Artifacts which need to be deployed before the specified artifact.
+     */
     public Output</* @Nullable */ List<String>> getDependsOn() {
         return this.dependsOn;
     }
+    /**
+     * Multi-line explain this resource.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Multi-line explain this resource.
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * One-liner string explain this resource.
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
+    /**
+     * @return One-liner string explain this resource.
+     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Specifies the kind of blueprint artifact.
+Expected value is 'roleAssignment'.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return Specifies the kind of blueprint artifact.
+Expected value is 'roleAssignment'.
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * Name of this resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of this resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Array of user or group identities in Azure Active Directory. The roleDefinition will apply to each identity.
+     */
     @OutputExport(name="principalIds", type=Object.class, parameters={})
     private Output<Object> principalIds;
 
+    /**
+     * @return Array of user or group identities in Azure Active Directory. The roleDefinition will apply to each identity.
+     */
     public Output<Object> getPrincipalIds() {
         return this.principalIds;
     }
+    /**
+     * RoleAssignment will be scope to this resourceGroup. If empty, it scopes to the subscription.
+     */
     @OutputExport(name="resourceGroup", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceGroup;
 
+    /**
+     * @return RoleAssignment will be scope to this resourceGroup. If empty, it scopes to the subscription.
+     */
     public Output</* @Nullable */ String> getResourceGroup() {
         return this.resourceGroup;
     }
+    /**
+     * Azure resource ID of the RoleDefinition.
+     */
     @OutputExport(name="roleDefinitionId", type=String.class, parameters={})
     private Output<String> roleDefinitionId;
 
+    /**
+     * @return Azure resource ID of the RoleDefinition.
+     */
     public Output<String> getRoleDefinitionId() {
         return this.roleDefinitionId;
     }
+    /**
+     * Type of this resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of this resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public RoleAssignmentArtifact(String name, RoleAssignmentArtifactArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:blueprint:RoleAssignmentArtifact", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -97,6 +627,14 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static RoleAssignmentArtifact get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RoleAssignmentArtifact(name, id, options);
     }

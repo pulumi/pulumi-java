@@ -19,10 +19,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for creating a virtual machine.
+ */
 public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LabVirtualMachineCreationParameterResponse Empty = new LabVirtualMachineCreationParameterResponse();
 
+    /**
+     * Indicates whether another user can take ownership of the virtual machine
+     */
     @InputImport(name="allowClaim")
     private final @Nullable Boolean allowClaim;
 
@@ -30,6 +36,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.allowClaim == null ? Optional.empty() : Optional.ofNullable(this.allowClaim);
     }
 
+    /**
+     * The artifacts to be installed on the virtual machine.
+     */
     @InputImport(name="artifacts")
     private final @Nullable List<ArtifactInstallPropertiesResponse> artifacts;
 
@@ -37,6 +46,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.artifacts == null ? List.of() : this.artifacts;
     }
 
+    /**
+     * The number of virtual machine instances to create.
+     */
     @InputImport(name="bulkCreationParameters")
     private final @Nullable BulkCreationParametersResponse bulkCreationParameters;
 
@@ -44,6 +56,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.bulkCreationParameters == null ? Optional.empty() : Optional.ofNullable(this.bulkCreationParameters);
     }
 
+    /**
+     * The creation date of the virtual machine.
+     */
     @InputImport(name="createdDate")
     private final @Nullable String createdDate;
 
@@ -51,6 +66,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.createdDate == null ? Optional.empty() : Optional.ofNullable(this.createdDate);
     }
 
+    /**
+     * The custom image identifier of the virtual machine.
+     */
     @InputImport(name="customImageId")
     private final @Nullable String customImageId;
 
@@ -58,6 +76,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.customImageId == null ? Optional.empty() : Optional.ofNullable(this.customImageId);
     }
 
+    /**
+     * New or existing data disks to attach to the virtual machine after creation
+     */
     @InputImport(name="dataDiskParameters")
     private final @Nullable List<DataDiskPropertiesResponse> dataDiskParameters;
 
@@ -65,6 +86,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.dataDiskParameters == null ? List.of() : this.dataDiskParameters;
     }
 
+    /**
+     * Indicates whether the virtual machine is to be created without a public IP address.
+     */
     @InputImport(name="disallowPublicIpAddress")
     private final @Nullable Boolean disallowPublicIpAddress;
 
@@ -72,6 +96,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.disallowPublicIpAddress == null ? Optional.empty() : Optional.ofNullable(this.disallowPublicIpAddress);
     }
 
+    /**
+     * The resource ID of the environment that contains this virtual machine, if any.
+     */
     @InputImport(name="environmentId")
     private final @Nullable String environmentId;
 
@@ -79,6 +106,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.environmentId == null ? Optional.empty() : Optional.ofNullable(this.environmentId);
     }
 
+    /**
+     * The expiration date for VM.
+     */
     @InputImport(name="expirationDate")
     private final @Nullable String expirationDate;
 
@@ -86,6 +116,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.expirationDate == null ? Optional.empty() : Optional.ofNullable(this.expirationDate);
     }
 
+    /**
+     * The Microsoft Azure Marketplace image reference of the virtual machine.
+     */
     @InputImport(name="galleryImageReference")
     private final @Nullable GalleryImageReferenceResponse galleryImageReference;
 
@@ -93,6 +126,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.galleryImageReference == null ? Optional.empty() : Optional.ofNullable(this.galleryImageReference);
     }
 
+    /**
+     * Indicates whether this virtual machine uses an SSH key for authentication.
+     */
     @InputImport(name="isAuthenticationWithSshKey")
     private final @Nullable Boolean isAuthenticationWithSshKey;
 
@@ -100,6 +136,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.isAuthenticationWithSshKey == null ? Optional.empty() : Optional.ofNullable(this.isAuthenticationWithSshKey);
     }
 
+    /**
+     * The lab subnet name of the virtual machine.
+     */
     @InputImport(name="labSubnetName")
     private final @Nullable String labSubnetName;
 
@@ -107,6 +146,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.labSubnetName == null ? Optional.empty() : Optional.ofNullable(this.labSubnetName);
     }
 
+    /**
+     * The lab virtual network identifier of the virtual machine.
+     */
     @InputImport(name="labVirtualNetworkId")
     private final @Nullable String labVirtualNetworkId;
 
@@ -114,6 +156,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.labVirtualNetworkId == null ? Optional.empty() : Optional.ofNullable(this.labVirtualNetworkId);
     }
 
+    /**
+     * The location of the new virtual machine or environment
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -121,6 +166,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * The name of the virtual machine or environment
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -128,6 +176,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The network interface properties.
+     */
     @InputImport(name="networkInterface")
     private final @Nullable NetworkInterfacePropertiesResponse networkInterface;
 
@@ -135,6 +186,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.networkInterface == null ? Optional.empty() : Optional.ofNullable(this.networkInterface);
     }
 
+    /**
+     * The notes of the virtual machine.
+     */
     @InputImport(name="notes")
     private final @Nullable String notes;
 
@@ -142,6 +196,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.notes == null ? Optional.empty() : Optional.ofNullable(this.notes);
     }
 
+    /**
+     * The object identifier of the owner of the virtual machine.
+     */
     @InputImport(name="ownerObjectId")
     private final @Nullable String ownerObjectId;
 
@@ -149,6 +206,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.ownerObjectId == null ? Optional.empty() : Optional.ofNullable(this.ownerObjectId);
     }
 
+    /**
+     * The user principal name of the virtual machine owner.
+     */
     @InputImport(name="ownerUserPrincipalName")
     private final @Nullable String ownerUserPrincipalName;
 
@@ -156,6 +216,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.ownerUserPrincipalName == null ? Optional.empty() : Optional.ofNullable(this.ownerUserPrincipalName);
     }
 
+    /**
+     * The password of the virtual machine administrator.
+     */
     @InputImport(name="password")
     private final @Nullable String password;
 
@@ -163,6 +226,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
+    /**
+     * The id of the plan associated with the virtual machine image
+     */
     @InputImport(name="planId")
     private final @Nullable String planId;
 
@@ -170,6 +236,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.planId == null ? Optional.empty() : Optional.ofNullable(this.planId);
     }
 
+    /**
+     * Virtual Machine schedules to be created
+     */
     @InputImport(name="scheduleParameters")
     private final @Nullable List<ScheduleCreationParameterResponse> scheduleParameters;
 
@@ -177,6 +246,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.scheduleParameters == null ? List.of() : this.scheduleParameters;
     }
 
+    /**
+     * The size of the virtual machine.
+     */
     @InputImport(name="size")
     private final @Nullable String size;
 
@@ -184,6 +256,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
     }
 
+    /**
+     * The SSH key of the virtual machine administrator.
+     */
     @InputImport(name="sshKey")
     private final @Nullable String sshKey;
 
@@ -191,6 +266,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.sshKey == null ? Optional.empty() : Optional.ofNullable(this.sshKey);
     }
 
+    /**
+     * Storage type to use for virtual machine (i.e. Standard, Premium).
+     */
     @InputImport(name="storageType")
     private final @Nullable String storageType;
 
@@ -198,6 +276,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.storageType == null ? Optional.empty() : Optional.ofNullable(this.storageType);
     }
 
+    /**
+     * The tags of the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 
@@ -205,6 +286,9 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
         return this.tags == null ? Map.of() : this.tags;
     }
 
+    /**
+     * The user name of the virtual machine.
+     */
     @InputImport(name="userName")
     private final @Nullable String userName;
 

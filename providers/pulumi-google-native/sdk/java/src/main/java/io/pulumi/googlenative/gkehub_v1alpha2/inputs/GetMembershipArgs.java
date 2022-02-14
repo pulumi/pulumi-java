@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetMembershipArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMembershipArgs Empty = new GetMembershipArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -21,6 +27,9 @@ public final class GetMembershipArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="membershipId", required=true)
     private final String membershipId;
 
@@ -28,6 +37,9 @@ public final class GetMembershipArgs extends io.pulumi.resources.InvokeArgs {
         return this.membershipId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

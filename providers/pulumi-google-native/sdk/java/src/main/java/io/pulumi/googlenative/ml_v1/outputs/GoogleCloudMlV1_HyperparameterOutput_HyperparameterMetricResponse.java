@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse {
+/**
+ * The objective value at this training step.
+ */
     private final Double objectiveValue;
+/**
+ * The global training step for this metric.
+ */
     private final String trainingStep;
 
     @OutputCustomType.Constructor({"objectiveValue","trainingStep"})
@@ -21,9 +27,15 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
         this.trainingStep = Objects.requireNonNull(trainingStep);
     }
 
+/**
+ * The objective value at this training step.
+ */
     public Double getObjectiveValue() {
         return this.objectiveValue;
     }
+/**
+ * The global training step for this metric.
+ */
     public String getTrainingStep() {
         return this.trainingStep;
     }

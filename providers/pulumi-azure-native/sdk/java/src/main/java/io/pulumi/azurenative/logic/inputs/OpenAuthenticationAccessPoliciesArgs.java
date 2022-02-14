@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * AuthenticationPolicy of type Open.
+ */
 public final class OpenAuthenticationAccessPoliciesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OpenAuthenticationAccessPoliciesArgs Empty = new OpenAuthenticationAccessPoliciesArgs();
 
+    /**
+     * Open authentication policies.
+     */
     @InputImport(name="policies")
     private final @Nullable Input<Map<String,OpenAuthenticationAccessPolicyArgs>> policies;
 

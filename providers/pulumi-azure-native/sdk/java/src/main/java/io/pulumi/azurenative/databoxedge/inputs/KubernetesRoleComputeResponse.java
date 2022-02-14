@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Kubernetes role compute resource
+ */
 public final class KubernetesRoleComputeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KubernetesRoleComputeResponse Empty = new KubernetesRoleComputeResponse();
 
+    /**
+     * Memory in bytes
+     */
     @InputImport(name="memoryInBytes", required=true)
     private final Double memoryInBytes;
 
@@ -21,6 +27,9 @@ public final class KubernetesRoleComputeResponse extends io.pulumi.resources.Inv
         return this.memoryInBytes;
     }
 
+    /**
+     * Processor count
+     */
     @InputImport(name="processorCount", required=true)
     private final Integer processorCount;
 
@@ -28,6 +37,9 @@ public final class KubernetesRoleComputeResponse extends io.pulumi.resources.Inv
         return this.processorCount;
     }
 
+    /**
+     * VM profile
+     */
     @InputImport(name="vmProfile", required=true)
     private final String vmProfile;
 

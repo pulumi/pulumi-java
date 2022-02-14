@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetDiskArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDiskArgs Empty = new GetDiskArgs();
 
+    /**
+     * Specify the $expand query. Example: 'properties($select=diskType)'
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +27,9 @@ public final class GetDiskArgs extends io.pulumi.resources.InvokeArgs {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the lab.
+     */
     @InputImport(name="labName", required=true)
     private final String labName;
 
@@ -28,6 +37,9 @@ public final class GetDiskArgs extends io.pulumi.resources.InvokeArgs {
         return this.labName;
     }
 
+    /**
+     * The name of the disk.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -35,6 +47,9 @@ public final class GetDiskArgs extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -42,6 +57,9 @@ public final class GetDiskArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the user profile.
+     */
     @InputImport(name="userName", required=true)
     private final String userName;
 

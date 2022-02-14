@@ -11,10 +11,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Managed service identity.
+ */
 public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IdentityArgs Empty = new IdentityArgs();
 
+    /**
+     * The type of managed service identity.
+     */
     @InputImport(name="type", required=true)
     private final Input<Either<String,IdentityType>> type;
 

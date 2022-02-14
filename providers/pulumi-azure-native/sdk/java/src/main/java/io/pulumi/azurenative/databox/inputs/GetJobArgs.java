@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetJobArgs Empty = new GetJobArgs();
 
+    /**
+     * $expand is supported on details parameter for job, which provides details on the job stages.
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +27,9 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+     */
     @InputImport(name="jobName", required=true)
     private final String jobName;
 
@@ -28,6 +37,9 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
         return this.jobName;
     }
 
+    /**
+     * The Resource Group Name
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

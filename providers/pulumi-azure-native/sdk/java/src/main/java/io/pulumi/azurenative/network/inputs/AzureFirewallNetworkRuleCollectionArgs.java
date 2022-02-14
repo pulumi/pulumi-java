@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network rule collection resource.
+ */
 public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureFirewallNetworkRuleCollectionArgs Empty = new AzureFirewallNetworkRuleCollectionArgs();
 
+    /**
+     * The action type of a rule collection.
+     */
     @InputImport(name="action")
     private final @Nullable Input<AzureFirewallRCActionArgs> action;
 
@@ -25,6 +31,9 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
         return this.action == null ? Input.empty() : this.action;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -32,6 +41,9 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -39,6 +51,9 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Priority of the network rule collection resource.
+     */
     @InputImport(name="priority")
     private final @Nullable Input<Integer> priority;
 
@@ -46,6 +61,9 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
         return this.priority == null ? Input.empty() : this.priority;
     }
 
+    /**
+     * Collection of rules used by a network rule collection.
+     */
     @InputImport(name="rules")
     private final @Nullable Input<List<AzureFirewallNetworkRuleArgs>> rules;
 

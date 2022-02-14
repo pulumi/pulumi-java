@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Setting indicating whether the service has a managed identity associated with it.
+ */
 public final class ServicesResourceResponseIdentity extends io.pulumi.resources.InvokeArgs {
 
     public static final ServicesResourceResponseIdentity Empty = new ServicesResourceResponseIdentity();
 
+    /**
+     * The principal ID of the resource identity.
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -21,6 +27,9 @@ public final class ServicesResourceResponseIdentity extends io.pulumi.resources.
         return this.principalId;
     }
 
+    /**
+     * The tenant ID of the resource.
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -28,6 +37,9 @@ public final class ServicesResourceResponseIdentity extends io.pulumi.resources.
         return this.tenantId;
     }
 
+    /**
+     * Type of identity being specified, currently SystemAssigned and None are allowed.
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

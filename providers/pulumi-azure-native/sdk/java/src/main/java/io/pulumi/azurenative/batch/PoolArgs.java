@@ -24,10 +24,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PoolArgs Empty = new PoolArgs();
 
+    /**
+     * The name of the Batch account.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -35,6 +41,9 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * The list of application licenses must be a subset of available Batch service application licenses. If a license is requested which is not supported, pool creation will fail.
+     */
     @InputImport(name="applicationLicenses")
     private final @Nullable Input<List<String>> applicationLicenses;
 
@@ -42,6 +51,9 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationLicenses == null ? Input.empty() : this.applicationLicenses;
     }
 
+    /**
+     * Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. There is a maximum of 10 application package references on any given pool.
+     */
     @InputImport(name="applicationPackages")
     private final @Nullable Input<List<ApplicationPackageReferenceArgs>> applicationPackages;
 
@@ -49,6 +61,9 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.applicationPackages == null ? Input.empty() : this.applicationPackages;
     }
 
+    /**
+     * For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
+     */
     @InputImport(name="certificates")
     private final @Nullable Input<List<CertificateReferenceArgs>> certificates;
 
@@ -56,6 +71,9 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.certificates == null ? Input.empty() : this.certificates;
     }
 
+    /**
+     * Using CloudServiceConfiguration specifies that the nodes should be creating using Azure Cloud Services (PaaS), while VirtualMachineConfiguration uses Azure Virtual Machines (IaaS).
+     */
     @InputImport(name="deploymentConfiguration")
     private final @Nullable Input<DeploymentConfigurationArgs> deploymentConfiguration;
 
@@ -63,6 +81,9 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.deploymentConfiguration == null ? Input.empty() : this.deploymentConfiguration;
     }
 
+    /**
+     * The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -70,6 +91,9 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The type of identity used for the Batch Pool.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<BatchPoolIdentityArgs> identity;
 
@@ -77,6 +101,9 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to 'Disabled'.
+     */
     @InputImport(name="interNodeCommunication")
     private final @Nullable Input<InterNodeCommunicationState> interNodeCommunication;
 
@@ -84,6 +111,9 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.interNodeCommunication == null ? Input.empty() : this.interNodeCommunication;
     }
 
+    /**
+     * The Batch service does not assign any meaning to metadata; it is solely for the use of user code.
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<List<MetadataItemArgs>> metadata;
 
@@ -91,6 +121,9 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * This supports Azure Files, NFS, CIFS/SMB, and Blobfuse.
+     */
     @InputImport(name="mountConfiguration")
     private final @Nullable Input<List<MountConfigurationArgs>> mountConfiguration;
 
@@ -98,6 +131,9 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.mountConfiguration == null ? Input.empty() : this.mountConfiguration;
     }
 
+    /**
+     * The network configuration for a pool.
+     */
     @InputImport(name="networkConfiguration")
     private final @Nullable Input<NetworkConfigurationArgs> networkConfiguration;
 
@@ -105,6 +141,9 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.networkConfiguration == null ? Input.empty() : this.networkConfiguration;
     }
 
+    /**
+     * The pool name. This must be unique within the account.
+     */
     @InputImport(name="poolName")
     private final @Nullable Input<String> poolName;
 
@@ -112,6 +151,9 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.poolName == null ? Input.empty() : this.poolName;
     }
 
+    /**
+     * The name of the resource group that contains the Batch account.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -119,6 +161,9 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Defines the desired size of the pool. This can either be 'fixedScale' where the requested targetDedicatedNodes is specified, or 'autoScale' which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.
+     */
     @InputImport(name="scaleSettings")
     private final @Nullable Input<ScaleSettingsArgs> scaleSettings;
 
@@ -126,6 +171,9 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.scaleSettings == null ? Input.empty() : this.scaleSettings;
     }
 
+    /**
+     * In an PATCH (update) operation, this property can be set to an empty object to remove the start task from the pool.
+     */
     @InputImport(name="startTask")
     private final @Nullable Input<StartTaskArgs> startTask;
 
@@ -133,6 +181,9 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.startTask == null ? Input.empty() : this.startTask;
     }
 
+    /**
+     * If not specified, the default is spread.
+     */
     @InputImport(name="taskSchedulingPolicy")
     private final @Nullable Input<TaskSchedulingPolicyArgs> taskSchedulingPolicy;
 
@@ -140,6 +191,9 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.taskSchedulingPolicy == null ? Input.empty() : this.taskSchedulingPolicy;
     }
 
+    /**
+     * The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.
+     */
     @InputImport(name="taskSlotsPerNode")
     private final @Nullable Input<Integer> taskSlotsPerNode;
 
@@ -147,6 +201,9 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.taskSlotsPerNode == null ? Input.empty() : this.taskSlotsPerNode;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="userAccounts")
     private final @Nullable Input<List<UserAccountArgs>> userAccounts;
 
@@ -154,6 +211,9 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
         return this.userAccounts == null ? Input.empty() : this.userAccounts;
     }
 
+    /**
+     * For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/). Batch supports all Cloud Services VM sizes except ExtraSmall. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/) or Sizes for Virtual Machines (Windows) (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).
+     */
     @InputImport(name="vmSize")
     private final @Nullable Input<String> vmSize;
 

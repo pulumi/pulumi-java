@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Root config for HL7v2 datatype definitions for a specific HL7v2 version.
+ */
 public final class Hl7TypesConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final Hl7TypesConfigArgs Empty = new Hl7TypesConfigArgs();
 
+    /**
+     * The HL7v2 type definitions.
+     */
     @InputImport(name="type")
     private final @Nullable Input<List<TypeArgs>> type;
 
@@ -23,6 +29,9 @@ public final class Hl7TypesConfigArgs extends io.pulumi.resources.ResourceArgs {
         return this.type == null ? Input.empty() : this.type;
     }
 
+    /**
+     * The version selectors that this config applies to. A message must match ALL version sources to apply.
+     */
     @InputImport(name="version")
     private final @Nullable Input<List<VersionSourceArgs>> version;
 

@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TrafficPortSelectorResponse {
+/**
+ * Optional. A list of ports. Can be port numbers or port range (example, [80-90] specifies all ports from 80 to 90, including 80 and 90) or named ports or * to specify all ports. If the list is empty, all ports are selected.
+ */
     private final List<String> ports;
 
     @OutputCustomType.Constructor({"ports"})
@@ -17,6 +20,9 @@ public final class TrafficPortSelectorResponse {
         this.ports = Objects.requireNonNull(ports);
     }
 
+/**
+ * Optional. A list of ports. Can be port numbers or port range (example, [80-90] specifies all ports from 80 to 90, including 80 and 90) or named ports or * to specify all ports. If the list is empty, all ports are selected.
+ */
     public List<String> getPorts() {
         return this.ports;
     }

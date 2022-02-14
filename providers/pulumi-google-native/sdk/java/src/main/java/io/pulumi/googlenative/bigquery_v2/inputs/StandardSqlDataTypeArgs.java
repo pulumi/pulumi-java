@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The data type of a variable such as a function argument. Examples include: * INT64: `{"typeKind": "INT64"}` * ARRAY: { "typeKind": "ARRAY", "arrayElementType": {"typeKind": "STRING"} } * STRUCT>: { "typeKind": "STRUCT", "structType": { "fields": [ { "name": "x", "type": {"typeKind: "STRING"} }, { "name": "y", "type": { "typeKind": "ARRAY", "arrayElementType": {"typekind": "DATE"} } } ] } }
+ */
 public final class StandardSqlDataTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StandardSqlDataTypeArgs Empty = new StandardSqlDataTypeArgs();
 
+    /**
+     * The type of the array's elements, if type_kind = "ARRAY".
+     */
     @InputImport(name="arrayElementType")
     private final @Nullable Input<StandardSqlDataTypeArgs> arrayElementType;
 
@@ -22,6 +28,9 @@ public final class StandardSqlDataTypeArgs extends io.pulumi.resources.ResourceA
         return this.arrayElementType == null ? Input.empty() : this.arrayElementType;
     }
 
+    /**
+     * The fields of this struct, in order, if type_kind = "STRUCT".
+     */
     @InputImport(name="structType")
     private final @Nullable Input<StandardSqlStructTypeArgs> structType;
 
@@ -29,6 +38,9 @@ public final class StandardSqlDataTypeArgs extends io.pulumi.resources.ResourceA
         return this.structType == null ? Input.empty() : this.structType;
     }
 
+    /**
+     * The top level type of this field. Can be any standard SQL data type (e.g., "INT64", "DATE", "ARRAY").
+     */
     @InputImport(name="typeKind", required=true)
     private final Input<StandardSqlDataTypeTypeKind> typeKind;
 

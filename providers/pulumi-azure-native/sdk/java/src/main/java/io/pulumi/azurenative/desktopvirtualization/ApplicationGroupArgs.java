@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationGroupArgs Empty = new ApplicationGroupArgs();
 
+    /**
+     * The name of the application group
+     */
     @InputImport(name="applicationGroupName")
     private final @Nullable Input<String> applicationGroupName;
 
@@ -28,6 +34,9 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
         return this.applicationGroupName == null ? Input.empty() : this.applicationGroupName;
     }
 
+    /**
+     * Resource Type of ApplicationGroup.
+     */
     @InputImport(name="applicationGroupType", required=true)
     private final Input<Either<String,ApplicationGroupType>> applicationGroupType;
 
@@ -35,6 +44,9 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
         return this.applicationGroupType;
     }
 
+    /**
+     * Description of ApplicationGroup.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -42,6 +54,9 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Friendly name of ApplicationGroup.
+     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -49,6 +64,9 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
+    /**
+     * HostPool arm path of ApplicationGroup.
+     */
     @InputImport(name="hostPoolArmPath", required=true)
     private final Input<String> hostPoolArmPath;
 
@@ -56,6 +74,9 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
         return this.hostPoolArmPath;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="identity")
     private final @Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
 
@@ -63,6 +84,9 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -70,6 +94,9 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The geo-location where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -77,6 +104,9 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
+     */
     @InputImport(name="managedBy")
     private final @Nullable Input<String> managedBy;
 
@@ -84,6 +114,9 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
         return this.managedBy == null ? Input.empty() : this.managedBy;
     }
 
+    /**
+     * The registration info of HostPool.
+     */
     @InputImport(name="migrationRequest")
     private final @Nullable Input<MigrationRequestPropertiesArgs> migrationRequest;
 
@@ -91,6 +124,9 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
         return this.migrationRequest == null ? Input.empty() : this.migrationRequest;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="plan")
     private final @Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan;
 
@@ -98,6 +134,9 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
         return this.plan == null ? Input.empty() : this.plan;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -105,6 +144,9 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="sku")
     private final @Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku;
 
@@ -112,6 +154,9 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
         return this.sku == null ? Input.empty() : this.sku;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

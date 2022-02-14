@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Address information for domain registration.
+ */
 public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AddressArgs Empty = new AddressArgs();
 
+    /**
+     * First line of an Address.
+     */
     @InputImport(name="address1", required=true)
     private final Input<String> address1;
 
@@ -21,6 +27,9 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.address1;
     }
 
+    /**
+     * The second line of the Address. Optional.
+     */
     @InputImport(name="address2")
     private final @Nullable Input<String> address2;
 
@@ -28,6 +37,9 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.address2 == null ? Input.empty() : this.address2;
     }
 
+    /**
+     * The city for the address.
+     */
     @InputImport(name="city", required=true)
     private final Input<String> city;
 
@@ -35,6 +47,9 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.city;
     }
 
+    /**
+     * The country for the address.
+     */
     @InputImport(name="country", required=true)
     private final Input<String> country;
 
@@ -42,6 +57,9 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.country;
     }
 
+    /**
+     * The postal code for the address.
+     */
     @InputImport(name="postalCode", required=true)
     private final Input<String> postalCode;
 
@@ -49,6 +67,9 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
         return this.postalCode;
     }
 
+    /**
+     * The state or province for the address.
+     */
     @InputImport(name="state", required=true)
     private final Input<String> state;
 

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of App Insights.
+ */
 public final class AppInsightsPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AppInsightsPropertiesResponse Empty = new AppInsightsPropertiesResponse();
 
+    /**
+     * ARM resource ID of the App Insights.
+     */
     @InputImport(name="resourceId")
     private final @Nullable String resourceId;
 

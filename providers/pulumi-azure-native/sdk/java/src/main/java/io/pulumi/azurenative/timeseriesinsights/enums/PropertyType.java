@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of the property.
+ */
     @EnumType
     public enum PropertyType {
+/**
+ * 
+ */
         String("String");
 
         private final String value;

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A classification object with a product type and value.
+ */
 public final class CaseClassificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CaseClassificationArgs Empty = new CaseClassificationArgs();
 
+    /**
+     * The display name of the classification.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -21,6 +27,9 @@ public final class CaseClassificationArgs extends io.pulumi.resources.ResourceAr
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The unique ID for a classification. Must be specified for case creation.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetWorkspaceSettingArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWorkspaceSettingArgs Empty = new GetWorkspaceSettingArgs();
 
+    /**
+     * Name of the security setting
+     */
     @InputImport(name="workspaceSettingName", required=true)
     private final String workspaceSettingName;
 

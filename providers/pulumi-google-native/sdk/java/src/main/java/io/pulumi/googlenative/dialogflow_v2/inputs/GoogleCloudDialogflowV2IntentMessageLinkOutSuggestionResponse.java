@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The suggestion chip message that allows the user to jump out to the app or website associated with this agent.
+ */
 public final class GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse Empty = new GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse();
 
+    /**
+     * The name of the app or site this chip is linking to.
+     */
     @InputImport(name="destinationName", required=true)
     private final String destinationName;
 
@@ -19,6 +25,9 @@ public final class GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse
         return this.destinationName;
     }
 
+    /**
+     * The URI of the app or site to open when the user taps the suggestion chip.
+     */
     @InputImport(name="uri", required=true)
     private final String uri;
 

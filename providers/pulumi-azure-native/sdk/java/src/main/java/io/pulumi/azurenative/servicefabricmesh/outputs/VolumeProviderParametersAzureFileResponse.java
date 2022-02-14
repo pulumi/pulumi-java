@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VolumeProviderParametersAzureFileResponse {
+/**
+ * Access key of the Azure storage account for the File Share.
+ */
     private final @Nullable String accountKey;
+/**
+ * Name of the Azure storage account for the File Share.
+ */
     private final String accountName;
+/**
+ * Name of the Azure Files file share that provides storage for the volume.
+ */
     private final String shareName;
 
     @OutputCustomType.Constructor({"accountKey","accountName","shareName"})
@@ -25,12 +34,21 @@ public final class VolumeProviderParametersAzureFileResponse {
         this.shareName = Objects.requireNonNull(shareName);
     }
 
+/**
+ * Access key of the Azure storage account for the File Share.
+ */
     public Optional<String> getAccountKey() {
         return Optional.ofNullable(this.accountKey);
     }
+/**
+ * Name of the Azure storage account for the File Share.
+ */
     public String getAccountName() {
         return this.accountName;
     }
+/**
+ * Name of the Azure Files file share that provides storage for the volume.
+ */
     public String getShareName() {
         return this.shareName;
     }

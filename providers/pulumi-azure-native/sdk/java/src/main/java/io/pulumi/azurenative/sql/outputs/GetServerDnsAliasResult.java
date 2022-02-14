@@ -9,9 +9,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetServerDnsAliasResult {
+/**
+ * The fully qualified DNS record for alias
+ */
     private final String azureDnsRecord;
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"azureDnsRecord","id","name","type"})
@@ -26,15 +38,27 @@ public final class GetServerDnsAliasResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The fully qualified DNS record for alias
+ */
     public String getAzureDnsRecord() {
         return this.azureDnsRecord;
     }
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetEndpointPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEndpointPolicyArgs Empty = new GetEndpointPolicyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="endpointPolicyId", required=true)
     private final String endpointPolicyId;
 
@@ -21,6 +27,9 @@ public final class GetEndpointPolicyArgs extends io.pulumi.resources.InvokeArgs 
         return this.endpointPolicyId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -28,6 +37,9 @@ public final class GetEndpointPolicyArgs extends io.pulumi.resources.InvokeArgs 
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

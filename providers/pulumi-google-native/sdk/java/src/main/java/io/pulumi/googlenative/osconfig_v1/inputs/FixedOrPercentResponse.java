@@ -8,10 +8,16 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Message encapsulating a value that can be either absolute ("fixed") or relative ("percent") to a value.
+ */
 public final class FixedOrPercentResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FixedOrPercentResponse Empty = new FixedOrPercentResponse();
 
+    /**
+     * Specifies a fixed value.
+     */
     @InputImport(name="fixed", required=true)
     private final Integer fixed;
 
@@ -19,6 +25,9 @@ public final class FixedOrPercentResponse extends io.pulumi.resources.InvokeArgs
         return this.fixed;
     }
 
+    /**
+     * Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
+     */
     @InputImport(name="percent", required=true)
     private final Integer percent;
 

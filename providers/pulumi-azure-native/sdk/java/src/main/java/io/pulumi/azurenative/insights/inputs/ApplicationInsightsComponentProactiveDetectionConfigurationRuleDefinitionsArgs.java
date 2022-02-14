@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Static definitions of the ProactiveDetection configuration rule (same values for all components).
+ */
 public final class ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs Empty = new ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs();
 
+    /**
+     * The rule description
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -22,6 +28,9 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The rule name as it is displayed in UI
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -29,6 +38,9 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * URL which displays additional info about the proactive detection rule
+     */
     @InputImport(name="helpUrl")
     private final @Nullable Input<String> helpUrl;
 
@@ -36,6 +48,9 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
         return this.helpUrl == null ? Input.empty() : this.helpUrl;
     }
 
+    /**
+     * A flag indicating whether the rule is enabled by default
+     */
     @InputImport(name="isEnabledByDefault")
     private final @Nullable Input<Boolean> isEnabledByDefault;
 
@@ -43,6 +58,9 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
         return this.isEnabledByDefault == null ? Input.empty() : this.isEnabledByDefault;
     }
 
+    /**
+     * A flag indicating whether the rule is hidden (from the UI)
+     */
     @InputImport(name="isHidden")
     private final @Nullable Input<Boolean> isHidden;
 
@@ -50,6 +68,9 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
         return this.isHidden == null ? Input.empty() : this.isHidden;
     }
 
+    /**
+     * A flag indicating whether the rule is in preview
+     */
     @InputImport(name="isInPreview")
     private final @Nullable Input<Boolean> isInPreview;
 
@@ -57,6 +78,9 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
         return this.isInPreview == null ? Input.empty() : this.isInPreview;
     }
 
+    /**
+     * The rule name
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -64,6 +88,9 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A flag indicating whether email notifications are supported for detections for this rule
+     */
     @InputImport(name="supportsEmailNotifications")
     private final @Nullable Input<Boolean> supportsEmailNotifications;
 

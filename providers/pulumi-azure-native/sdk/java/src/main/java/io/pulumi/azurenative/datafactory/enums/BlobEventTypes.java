@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum BlobEventTypes {
+/**
+ * 
+ */
         Microsoft_Storage_BlobCreated("Microsoft.Storage.BlobCreated"),
+/**
+ * 
+ */
         Microsoft_Storage_BlobDeleted("Microsoft.Storage.BlobDeleted");
 
         private final String value;

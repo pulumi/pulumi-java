@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTargetProject {
+/**
+ * Gets details of a single TargetProject. NOTE: TargetProject is a global resource; hence the only supported value for location is `global`.
+ */
     public static CompletableFuture<GetTargetProjectResult> invokeAsync(GetTargetProjectArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:vmmigration/v1alpha1:getTargetProject", TypeShape.of(GetTargetProjectResult.class), args == null ? GetTargetProjectArgs.Empty : args, Utilities.withVersion(options));
     }

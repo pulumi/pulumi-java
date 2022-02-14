@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGlobalUserOperationStatus {
+/**
+ * Status Details of the long running operation for an environment
+API Version: 2018-10-15.
+ *
+ * Status Details of the long running operation for an environment
+ */
     public static CompletableFuture<GetGlobalUserOperationStatusResult> invokeAsync(GetGlobalUserOperationStatusArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:labservices:getGlobalUserOperationStatus", TypeShape.of(GetGlobalUserOperationStatusResult.class), args == null ? GetGlobalUserOperationStatusArgs.Empty : args, Utilities.withVersion(options));
     }

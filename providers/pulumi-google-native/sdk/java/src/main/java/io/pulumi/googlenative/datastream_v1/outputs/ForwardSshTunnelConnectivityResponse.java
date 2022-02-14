@@ -10,10 +10,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ForwardSshTunnelConnectivityResponse {
+/**
+ * Hostname for the SSH tunnel.
+ */
     private final String hostname;
+/**
+ * Input only. SSH password.
+ */
     private final String password;
+/**
+ * Port for the SSH tunnel, default value is 22.
+ */
     private final Integer port;
+/**
+ * Input only. SSH private key.
+ */
     private final String privateKey;
+/**
+ * Username for the SSH tunnel.
+ */
     private final String username;
 
     @OutputCustomType.Constructor({"hostname","password","port","privateKey","username"})
@@ -30,18 +45,33 @@ public final class ForwardSshTunnelConnectivityResponse {
         this.username = Objects.requireNonNull(username);
     }
 
+/**
+ * Hostname for the SSH tunnel.
+ */
     public String getHostname() {
         return this.hostname;
     }
+/**
+ * Input only. SSH password.
+ */
     public String getPassword() {
         return this.password;
     }
+/**
+ * Port for the SSH tunnel, default value is 22.
+ */
     public Integer getPort() {
         return this.port;
     }
+/**
+ * Input only. SSH private key.
+ */
     public String getPrivateKey() {
         return this.privateKey;
     }
+/**
+ * Username for the SSH tunnel.
+ */
     public String getUsername() {
         return this.username;
     }

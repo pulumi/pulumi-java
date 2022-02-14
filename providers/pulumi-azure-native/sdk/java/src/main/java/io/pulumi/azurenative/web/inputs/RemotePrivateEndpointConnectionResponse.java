@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A remote private endpoint connection
+ */
 public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RemotePrivateEndpointConnectionResponse Empty = new RemotePrivateEndpointConnectionResponse();
 
+    /**
+     * Resource Id.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -24,6 +30,9 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
         return this.id;
     }
 
+    /**
+     * Private IPAddresses mapped to the remote private endpoint
+     */
     @InputImport(name="ipAddresses")
     private final @Nullable List<String> ipAddresses;
 
@@ -31,6 +40,9 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
 
+    /**
+     * Kind of resource.
+     */
     @InputImport(name="kind")
     private final @Nullable String kind;
 
@@ -38,6 +50,9 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
     }
 
+    /**
+     * Resource Name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -45,6 +60,9 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
         return this.name;
     }
 
+    /**
+     * PrivateEndpoint of a remote private endpoint connection
+     */
     @InputImport(name="privateEndpoint")
     private final @Nullable ArmIdWrapperResponse privateEndpoint;
 
@@ -52,6 +70,9 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
     }
 
+    /**
+     * The state of a private link connection
+     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
 
@@ -59,6 +80,9 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -66,6 +90,9 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
         return this.provisioningState;
     }
 
+    /**
+     * Resource type.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

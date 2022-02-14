@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Catalog item thumbnail/detail image.
+ */
 public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudRecommendationengineV1beta1ImageArgs Empty = new GoogleCloudRecommendationengineV1beta1ImageArgs();
 
+    /**
+     * Optional. Height of the image in number of pixels.
+     */
     @InputImport(name="height")
     private final @Nullable Input<Integer> height;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends io.pu
         return this.height == null ? Input.empty() : this.height;
     }
 
+    /**
+     * URL of the image with a length limit of 5 KiB.
+     */
     @InputImport(name="uri", required=true)
     private final Input<String> uri;
 
@@ -29,6 +38,9 @@ public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends io.pu
         return this.uri;
     }
 
+    /**
+     * Optional. Width of the image in number of pixels.
+     */
     @InputImport(name="width")
     private final @Nullable Input<Integer> width;
 

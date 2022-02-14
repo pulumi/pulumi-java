@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DocumentArgs Empty = new DocumentArgs();
 
+    /**
+     * The raw content of the document. This field is only permitted for EXTRACTIVE_QA and FAQ knowledge types. Note: This field is in the process of being deprecated, please use raw_content instead.
+     */
     @InputImport(name="content")
     private final @Nullable Input<String> content;
 
@@ -25,6 +31,9 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.content == null ? Input.empty() : this.content;
     }
 
+    /**
+     * The URI where the file content is located. For documents stored in Google Cloud Storage, these URIs must have the form `gs:///`. NOTE: External URLs must correspond to public webpages, i.e., they must be indexed by Google Search. In particular, URLs for showing documents in Google Cloud Storage (i.e. the URL in your browser) are not supported. Instead use the `gs://` format URI described above.
+     */
     @InputImport(name="contentUri")
     private final @Nullable Input<String> contentUri;
 
@@ -32,6 +41,9 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentUri == null ? Input.empty() : this.contentUri;
     }
 
+    /**
+     * The display name of the document. The name must be 1024 bytes or less; otherwise, the creation request fails.
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -39,6 +51,9 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Optional. If true, we try to automatically reload the document every day (at a time picked by the system). If false or unspecified, we don't try to automatically reload the document. Currently you can only enable automatic reload for documents sourced from a public url, see `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If a reload fails, we will keep the document unchanged. If a reload fails with internal errors, the system will try to reload the document on the next day. If a reload fails with non-retriable errors (e.g. PERMISION_DENIED), the system will not try to reload the document anymore. You need to manually reload the document successfully by calling `ReloadDocument` and clear the errors.
+     */
     @InputImport(name="enableAutoReload")
     private final @Nullable Input<Boolean> enableAutoReload;
 
@@ -46,6 +61,9 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.enableAutoReload == null ? Input.empty() : this.enableAutoReload;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="importGcsCustomMetadata")
     private final @Nullable Input<String> importGcsCustomMetadata;
 
@@ -53,6 +71,9 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.importGcsCustomMetadata == null ? Input.empty() : this.importGcsCustomMetadata;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="knowledgeBaseId", required=true)
     private final Input<String> knowledgeBaseId;
 
@@ -60,6 +81,9 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.knowledgeBaseId;
     }
 
+    /**
+     * The knowledge type of document content.
+     */
     @InputImport(name="knowledgeTypes", required=true)
     private final Input<List<DocumentKnowledgeTypesItem>> knowledgeTypes;
 
@@ -67,6 +91,9 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.knowledgeTypes;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -74,6 +101,9 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Optional. Metadata for the document. The metadata supports arbitrary key-value pairs. Suggested use cases include storing a document's title, an external URL distinct from the document's content_uri, etc. The max size of a `key` or a `value` of the metadata is 1024 bytes.
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -81,6 +111,9 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * The MIME type of this document.
+     */
     @InputImport(name="mimeType", required=true)
     private final Input<String> mimeType;
 
@@ -88,6 +121,9 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.mimeType;
     }
 
+    /**
+     * Optional. The document resource name. The name must be empty when creating a document. Format: `projects//locations//knowledgeBases//documents/`.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -95,6 +131,9 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -102,6 +141,9 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The raw content of the document. This field is only permitted for EXTRACTIVE_QA and FAQ knowledge types.
+     */
     @InputImport(name="rawContent")
     private final @Nullable Input<String> rawContent;
 

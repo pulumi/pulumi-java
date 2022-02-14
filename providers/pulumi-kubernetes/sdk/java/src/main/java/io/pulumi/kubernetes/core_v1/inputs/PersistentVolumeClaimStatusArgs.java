@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * PersistentVolumeClaimStatus is the current status of a persistent volume claim.
+ */
 public final class PersistentVolumeClaimStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PersistentVolumeClaimStatusArgs Empty = new PersistentVolumeClaimStatusArgs();
 
+    /**
+     * AccessModes contains the actual access modes the volume backing the PVC has. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
+     */
     @InputImport(name="accessModes")
     private final @Nullable Input<List<String>> accessModes;
 
@@ -24,6 +30,9 @@ public final class PersistentVolumeClaimStatusArgs extends io.pulumi.resources.R
         return this.accessModes == null ? Input.empty() : this.accessModes;
     }
 
+    /**
+     * The storage resource within AllocatedResources tracks the capacity allocated to a PVC. It may be larger than the actual capacity when a volume expansion operation is requested. For storage quota, the larger value from allocatedResources and PVC.spec.resources is used. If allocatedResources is not set, PVC.spec.resources alone is used for quota calculation. If a volume expansion capacity request is lowered, allocatedResources is only lowered if there are no expansion operations in progress and if the actual volume capacity is equal or lower than the requested capacity. This is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.
+     */
     @InputImport(name="allocatedResources")
     private final @Nullable Input<Map<String,String>> allocatedResources;
 
@@ -31,6 +40,9 @@ public final class PersistentVolumeClaimStatusArgs extends io.pulumi.resources.R
         return this.allocatedResources == null ? Input.empty() : this.allocatedResources;
     }
 
+    /**
+     * Represents the actual resources of the underlying volume.
+     */
     @InputImport(name="capacity")
     private final @Nullable Input<Map<String,String>> capacity;
 
@@ -38,6 +50,9 @@ public final class PersistentVolumeClaimStatusArgs extends io.pulumi.resources.R
         return this.capacity == null ? Input.empty() : this.capacity;
     }
 
+    /**
+     * Current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to 'ResizeStarted'.
+     */
     @InputImport(name="conditions")
     private final @Nullable Input<List<PersistentVolumeClaimConditionArgs>> conditions;
 
@@ -45,6 +60,14 @@ public final class PersistentVolumeClaimStatusArgs extends io.pulumi.resources.R
         return this.conditions == null ? Input.empty() : this.conditions;
     }
 
+    /**
+     * Phase represents the current phase of PersistentVolumeClaim.
+
+Possible enum values:
+ - `"Bound"` used for PersistentVolumeClaims that are bound
+ - `"Lost"` used for PersistentVolumeClaims that lost their underlying PersistentVolume. The claim was bound to a PersistentVolume and this volume does not exist any longer and all data on it was lost.
+ - `"Pending"` used for PersistentVolumeClaims that are not yet bound
+     */
     @InputImport(name="phase")
     private final @Nullable Input<String> phase;
 
@@ -52,6 +75,9 @@ public final class PersistentVolumeClaimStatusArgs extends io.pulumi.resources.R
         return this.phase == null ? Input.empty() : this.phase;
     }
 
+    /**
+     * ResizeStatus stores status of resize operation. ResizeStatus is not set by default but when expansion is complete resizeStatus is set to empty string by resize controller or kubelet. This is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.
+     */
     @InputImport(name="resizeStatus")
     private final @Nullable Input<String> resizeStatus;
 

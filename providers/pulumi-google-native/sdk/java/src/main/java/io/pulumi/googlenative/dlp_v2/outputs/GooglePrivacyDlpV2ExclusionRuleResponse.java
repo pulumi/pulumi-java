@@ -12,9 +12,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2ExclusionRuleResponse {
+/**
+ * Dictionary which defines the rule.
+ */
     private final GooglePrivacyDlpV2DictionaryResponse dictionary;
+/**
+ * Set of infoTypes for which findings would affect this rule.
+ */
     private final GooglePrivacyDlpV2ExcludeInfoTypesResponse excludeInfoTypes;
+/**
+ * How the rule is applied, see MatchingType documentation for details.
+ */
     private final String matchingType;
+/**
+ * Regular expression which defines the rule.
+ */
     private final GooglePrivacyDlpV2RegexResponse regex;
 
     @OutputCustomType.Constructor({"dictionary","excludeInfoTypes","matchingType","regex"})
@@ -29,15 +41,27 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse {
         this.regex = Objects.requireNonNull(regex);
     }
 
+/**
+ * Dictionary which defines the rule.
+ */
     public GooglePrivacyDlpV2DictionaryResponse getDictionary() {
         return this.dictionary;
     }
+/**
+ * Set of infoTypes for which findings would affect this rule.
+ */
     public GooglePrivacyDlpV2ExcludeInfoTypesResponse getExcludeInfoTypes() {
         return this.excludeInfoTypes;
     }
+/**
+ * How the rule is applied, see MatchingType documentation for details.
+ */
     public String getMatchingType() {
         return this.matchingType;
     }
+/**
+ * Regular expression which defines the rule.
+ */
     public GooglePrivacyDlpV2RegexResponse getRegex() {
         return this.regex;
     }

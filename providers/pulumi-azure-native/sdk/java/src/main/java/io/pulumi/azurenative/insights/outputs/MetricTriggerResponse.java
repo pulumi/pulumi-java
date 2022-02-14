@@ -15,17 +15,53 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MetricTriggerResponse {
+/**
+ * List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].
+ */
     private final @Nullable List<ScaleRuleMetricDimensionResponse> dimensions;
+/**
+ * a value indicating whether metric should divide per instance.
+ */
     private final @Nullable Boolean dividePerInstance;
+/**
+ * the name of the metric that defines what the rule monitors.
+ */
     private final String metricName;
+/**
+ * the namespace of the metric that defines what the rule monitors.
+ */
     private final @Nullable String metricNamespace;
+/**
+ * the location of the resource the rule monitors.
+ */
     private final @Nullable String metricResourceLocation;
+/**
+ * the resource identifier of the resource the rule monitors.
+ */
     private final String metricResourceUri;
+/**
+ * the operator that is used to compare the metric data and the threshold.
+ */
     private final String operator;
+/**
+ * the metric statistic type. How the metrics from multiple instances are combined.
+ */
     private final String statistic;
+/**
+ * the threshold of the metric that triggers the scale action.
+ */
     private final Double threshold;
+/**
+ * time aggregation type. How the data that is collected should be combined over time. The default value is Average.
+ */
     private final String timeAggregation;
+/**
+ * the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.
+ */
     private final String timeGrain;
+/**
+ * the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.
+ */
     private final String timeWindow;
 
     @OutputCustomType.Constructor({"dimensions","dividePerInstance","metricName","metricNamespace","metricResourceLocation","metricResourceUri","operator","statistic","threshold","timeAggregation","timeGrain","timeWindow"})
@@ -56,39 +92,75 @@ public final class MetricTriggerResponse {
         this.timeWindow = Objects.requireNonNull(timeWindow);
     }
 
+/**
+ * List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].
+ */
     public List<ScaleRuleMetricDimensionResponse> getDimensions() {
         return this.dimensions == null ? List.of() : this.dimensions;
     }
+/**
+ * a value indicating whether metric should divide per instance.
+ */
     public Optional<Boolean> getDividePerInstance() {
         return Optional.ofNullable(this.dividePerInstance);
     }
+/**
+ * the name of the metric that defines what the rule monitors.
+ */
     public String getMetricName() {
         return this.metricName;
     }
+/**
+ * the namespace of the metric that defines what the rule monitors.
+ */
     public Optional<String> getMetricNamespace() {
         return Optional.ofNullable(this.metricNamespace);
     }
+/**
+ * the location of the resource the rule monitors.
+ */
     public Optional<String> getMetricResourceLocation() {
         return Optional.ofNullable(this.metricResourceLocation);
     }
+/**
+ * the resource identifier of the resource the rule monitors.
+ */
     public String getMetricResourceUri() {
         return this.metricResourceUri;
     }
+/**
+ * the operator that is used to compare the metric data and the threshold.
+ */
     public String getOperator() {
         return this.operator;
     }
+/**
+ * the metric statistic type. How the metrics from multiple instances are combined.
+ */
     public String getStatistic() {
         return this.statistic;
     }
+/**
+ * the threshold of the metric that triggers the scale action.
+ */
     public Double getThreshold() {
         return this.threshold;
     }
+/**
+ * time aggregation type. How the data that is collected should be combined over time. The default value is Average.
+ */
     public String getTimeAggregation() {
         return this.timeAggregation;
     }
+/**
+ * the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.
+ */
     public String getTimeGrain() {
         return this.timeGrain;
     }
+/**
+ * the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.
+ */
     public String getTimeWindow() {
         return this.timeWindow;
     }

@@ -15,21 +15,69 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FrontendIPConfigurationResponse {
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     private final String etag;
+/**
+ * Resource ID.
+ */
     private final @Nullable String id;
+/**
+ * An array of references to inbound pools that use this frontend IP.
+ */
     private final List<SubResourceResponse> inboundNatPools;
+/**
+ * An array of references to inbound rules that use this frontend IP.
+ */
     private final List<SubResourceResponse> inboundNatRules;
+/**
+ * An array of references to load balancing rules that use this frontend IP.
+ */
     private final List<SubResourceResponse> loadBalancingRules;
+/**
+ * The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
+ */
     private final @Nullable String name;
+/**
+ * An array of references to outbound rules that use this frontend IP.
+ */
     private final List<SubResourceResponse> outboundRules;
+/**
+ * The private IP address of the IP configuration.
+ */
     private final @Nullable String privateIPAddress;
+/**
+ * Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.
+ */
     private final @Nullable String privateIPAddressVersion;
+/**
+ * The Private IP allocation method.
+ */
     private final @Nullable String privateIPAllocationMethod;
+/**
+ * The provisioning state of the frontend IP configuration resource.
+ */
     private final String provisioningState;
+/**
+ * The reference to the Public IP resource.
+ */
     private final @Nullable PublicIPAddressResponse publicIPAddress;
+/**
+ * The reference to the Public IP Prefix resource.
+ */
     private final @Nullable SubResourceResponse publicIPPrefix;
+/**
+ * The reference to the subnet resource.
+ */
     private final @Nullable SubnetResponse subnet;
+/**
+ * Type of the resource.
+ */
     private final String type;
+/**
+ * A list of availability zones denoting the IP allocated for the resource needs to come from.
+ */
     private final @Nullable List<String> zones;
 
     @OutputCustomType.Constructor({"etag","id","inboundNatPools","inboundNatRules","loadBalancingRules","name","outboundRules","privateIPAddress","privateIPAddressVersion","privateIPAllocationMethod","provisioningState","publicIPAddress","publicIPPrefix","subnet","type","zones"})
@@ -68,51 +116,99 @@ public final class FrontendIPConfigurationResponse {
         this.zones = zones;
     }
 
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * Resource ID.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * An array of references to inbound pools that use this frontend IP.
+ */
     public List<SubResourceResponse> getInboundNatPools() {
         return this.inboundNatPools;
     }
+/**
+ * An array of references to inbound rules that use this frontend IP.
+ */
     public List<SubResourceResponse> getInboundNatRules() {
         return this.inboundNatRules;
     }
+/**
+ * An array of references to load balancing rules that use this frontend IP.
+ */
     public List<SubResourceResponse> getLoadBalancingRules() {
         return this.loadBalancingRules;
     }
+/**
+ * The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * An array of references to outbound rules that use this frontend IP.
+ */
     public List<SubResourceResponse> getOutboundRules() {
         return this.outboundRules;
     }
+/**
+ * The private IP address of the IP configuration.
+ */
     public Optional<String> getPrivateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
+/**
+ * Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.
+ */
     public Optional<String> getPrivateIPAddressVersion() {
         return Optional.ofNullable(this.privateIPAddressVersion);
     }
+/**
+ * The Private IP allocation method.
+ */
     public Optional<String> getPrivateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
+/**
+ * The provisioning state of the frontend IP configuration resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * The reference to the Public IP resource.
+ */
     public Optional<PublicIPAddressResponse> getPublicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
+/**
+ * The reference to the Public IP Prefix resource.
+ */
     public Optional<SubResourceResponse> getPublicIPPrefix() {
         return Optional.ofNullable(this.publicIPPrefix);
     }
+/**
+ * The reference to the subnet resource.
+ */
     public Optional<SubnetResponse> getSubnet() {
         return Optional.ofNullable(this.subnet);
     }
+/**
+ * Type of the resource.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * A list of availability zones denoting the IP allocated for the resource needs to come from.
+ */
     public List<String> getZones() {
         return this.zones == null ? List.of() : this.zones;
     }

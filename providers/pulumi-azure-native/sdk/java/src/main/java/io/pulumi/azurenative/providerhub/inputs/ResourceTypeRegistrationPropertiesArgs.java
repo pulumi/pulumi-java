@@ -34,10 +34,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceTypeRegistrationPropertiesArgs Empty = new ResourceTypeRegistrationPropertiesArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="allowedUnauthorizedActions")
     private final @Nullable Input<List<String>> allowedUnauthorizedActions;
 
@@ -45,6 +51,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.allowedUnauthorizedActions == null ? Input.empty() : this.allowedUnauthorizedActions;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="authorizationActionMappings")
     private final @Nullable Input<List<AuthorizationActionMappingArgs>> authorizationActionMappings;
 
@@ -52,6 +61,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.authorizationActionMappings == null ? Input.empty() : this.authorizationActionMappings;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="checkNameAvailabilitySpecifications")
     private final @Nullable Input<ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs> checkNameAvailabilitySpecifications;
 
@@ -59,6 +71,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.checkNameAvailabilitySpecifications == null ? Input.empty() : this.checkNameAvailabilitySpecifications;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="defaultApiVersion")
     private final @Nullable Input<String> defaultApiVersion;
 
@@ -66,6 +81,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.defaultApiVersion == null ? Input.empty() : this.defaultApiVersion;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="disallowedActionVerbs")
     private final @Nullable Input<List<String>> disallowedActionVerbs;
 
@@ -73,6 +91,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.disallowedActionVerbs == null ? Input.empty() : this.disallowedActionVerbs;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="enableAsyncOperation")
     private final @Nullable Input<Boolean> enableAsyncOperation;
 
@@ -80,6 +101,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.enableAsyncOperation == null ? Input.empty() : this.enableAsyncOperation;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="enableThirdPartyS2S")
     private final @Nullable Input<Boolean> enableThirdPartyS2S;
 
@@ -87,6 +111,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.enableThirdPartyS2S == null ? Input.empty() : this.enableThirdPartyS2S;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="endpoints")
     private final @Nullable Input<List<ResourceTypeEndpointArgs>> endpoints;
 
@@ -94,6 +121,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.endpoints == null ? Input.empty() : this.endpoints;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="extendedLocations")
     private final @Nullable Input<List<ExtendedLocationOptionsArgs>> extendedLocations;
 
@@ -101,6 +131,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.extendedLocations == null ? Input.empty() : this.extendedLocations;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="extensionOptions")
     private final @Nullable Input<ResourceTypeRegistrationPropertiesExtensionOptionsArgs> extensionOptions;
 
@@ -108,6 +141,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.extensionOptions == null ? Input.empty() : this.extensionOptions;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="featuresRule")
     private final @Nullable Input<ResourceTypeRegistrationPropertiesFeaturesRuleArgs> featuresRule;
 
@@ -115,6 +151,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.featuresRule == null ? Input.empty() : this.featuresRule;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="identityManagement")
     private final @Nullable Input<ResourceTypeRegistrationPropertiesIdentityManagementArgs> identityManagement;
 
@@ -122,6 +161,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.identityManagement == null ? Input.empty() : this.identityManagement;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="isPureProxy")
     private final @Nullable Input<Boolean> isPureProxy;
 
@@ -129,6 +171,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.isPureProxy == null ? Input.empty() : this.isPureProxy;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="linkedAccessChecks")
     private final @Nullable Input<List<LinkedAccessCheckArgs>> linkedAccessChecks;
 
@@ -136,6 +181,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.linkedAccessChecks == null ? Input.empty() : this.linkedAccessChecks;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="loggingRules")
     private final @Nullable Input<List<LoggingRuleArgs>> loggingRules;
 
@@ -143,6 +191,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.loggingRules == null ? Input.empty() : this.loggingRules;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="marketplaceType")
     private final @Nullable Input<String> marketplaceType;
 
@@ -150,6 +201,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.marketplaceType == null ? Input.empty() : this.marketplaceType;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
 
@@ -157,6 +211,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="regionality")
     private final @Nullable Input<Either<String,Regionality>> regionality;
 
@@ -164,6 +221,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.regionality == null ? Input.empty() : this.regionality;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requestHeaderOptions")
     private final @Nullable Input<ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs> requestHeaderOptions;
 
@@ -171,6 +231,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.requestHeaderOptions == null ? Input.empty() : this.requestHeaderOptions;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requiredFeatures")
     private final @Nullable Input<List<String>> requiredFeatures;
 
@@ -178,6 +241,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.requiredFeatures == null ? Input.empty() : this.requiredFeatures;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="resourceDeletionPolicy")
     private final @Nullable Input<Either<String,ResourceDeletionPolicy>> resourceDeletionPolicy;
 
@@ -185,6 +251,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.resourceDeletionPolicy == null ? Input.empty() : this.resourceDeletionPolicy;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="resourceMovePolicy")
     private final @Nullable Input<ResourceTypeRegistrationPropertiesResourceMovePolicyArgs> resourceMovePolicy;
 
@@ -192,6 +261,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.resourceMovePolicy == null ? Input.empty() : this.resourceMovePolicy;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="routingType")
     private final @Nullable Input<Either<String,RoutingType>> routingType;
 
@@ -199,6 +271,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.routingType == null ? Input.empty() : this.routingType;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="serviceTreeInfos")
     private final @Nullable Input<List<ServiceTreeInfoArgs>> serviceTreeInfos;
 
@@ -206,6 +281,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.serviceTreeInfos == null ? Input.empty() : this.serviceTreeInfos;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="subscriptionLifecycleNotificationSpecifications")
     private final @Nullable Input<ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs> subscriptionLifecycleNotificationSpecifications;
 
@@ -213,6 +291,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.subscriptionLifecycleNotificationSpecifications == null ? Input.empty() : this.subscriptionLifecycleNotificationSpecifications;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="subscriptionStateRules")
     private final @Nullable Input<List<SubscriptionStateRuleArgs>> subscriptionStateRules;
 
@@ -220,6 +301,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.subscriptionStateRules == null ? Input.empty() : this.subscriptionStateRules;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="swaggerSpecifications")
     private final @Nullable Input<List<SwaggerSpecificationArgs>> swaggerSpecifications;
 
@@ -227,6 +311,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.swaggerSpecifications == null ? Input.empty() : this.swaggerSpecifications;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="templateDeploymentOptions")
     private final @Nullable Input<ResourceTypeRegistrationPropertiesTemplateDeploymentOptionsArgs> templateDeploymentOptions;
 
@@ -234,6 +321,9 @@ public final class ResourceTypeRegistrationPropertiesArgs extends io.pulumi.reso
         return this.templateDeploymentOptions == null ? Input.empty() : this.templateDeploymentOptions;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="throttlingRules")
     private final @Nullable Input<List<ThrottlingRuleArgs>> throttlingRules;
 

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The artifact source's type.
+ */
     @EnumType
     public enum SourceControlType {
+/**
+ * 
+ */
         VsoGit("VsoGit"),
+/**
+ * 
+ */
         GitHub("GitHub"),
+/**
+ * 
+ */
         StorageAccount("StorageAccount");
 
         private final String value;

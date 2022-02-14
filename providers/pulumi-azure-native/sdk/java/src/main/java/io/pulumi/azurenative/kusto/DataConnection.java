@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.kusto;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.kusto.DataConnectionArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -14,34 +13,165 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Class representing an data connection.
+API Version: 2021-01-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### KustoDataConnectionsCreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataConnection = new AzureNative.Kusto.DataConnection("dataConnection", new AzureNative.Kusto.DataConnectionArgs
+        {
+            ClusterName = "kustoclusterrptest4",
+            DataConnectionName = "DataConnections8",
+            DatabaseName = "KustoDatabase8",
+            Kind = "EventHub",
+            Location = "westus",
+            ResourceGroupName = "kustorptest",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	kusto "github.com/pulumi/pulumi-azure-native/sdk/go/azure/kusto"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := kusto.NewDataConnection(ctx, "dataConnection", &kusto.DataConnectionArgs{
+			ClusterName:        pulumi.String("kustoclusterrptest4"),
+			DataConnectionName: pulumi.String("DataConnections8"),
+			DatabaseName:       pulumi.String("KustoDatabase8"),
+			Kind:               pulumi.String("EventHub"),
+			Location:           pulumi.String("westus"),
+			ResourceGroupName:  pulumi.String("kustorptest"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const dataConnection = new azure_native.kusto.DataConnection("dataConnection", {
+    clusterName: "kustoclusterrptest4",
+    dataConnectionName: "DataConnections8",
+    databaseName: "KustoDatabase8",
+    kind: "EventHub",
+    location: "westus",
+    resourceGroupName: "kustorptest",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+data_connection = azure_native.kusto.DataConnection("dataConnection",
+    cluster_name="kustoclusterrptest4",
+    data_connection_name="DataConnections8",
+    database_name="KustoDatabase8",
+    kind="EventHub",
+    location="westus",
+    resource_group_name="kustorptest")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:kusto:DataConnection KustoClusterRPTest4/KustoDatabase8/DataConnections8 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/KustoClusterRPTest4/Databases/KustoDatabase8/DataConnections/DataConnections8 
+```
+
+ * @deprecated
+ * Please use one of the variants: EventGridDataConnection, EventHubDataConnection, IotHubDataConnection.
+ */
 @Deprecated /* Please use one of the variants: EventGridDataConnection, EventHubDataConnection, IotHubDataConnection. */
 @ResourceType(type="azure-native:kusto:DataConnection")
 public class DataConnection extends io.pulumi.resources.CustomResource {
+    /**
+     * Kind of the endpoint for the data connection
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return Kind of the endpoint for the data connection
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * Resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public DataConnection(String name, DataConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:kusto:DataConnection", name, args == null ? DataConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -68,6 +198,14 @@ public class DataConnection extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static DataConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DataConnection(name, id, options);
     }

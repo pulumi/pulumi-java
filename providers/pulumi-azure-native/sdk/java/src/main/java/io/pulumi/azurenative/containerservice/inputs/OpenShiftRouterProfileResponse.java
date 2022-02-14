@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents an OpenShift router
+ */
 public final class OpenShiftRouterProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OpenShiftRouterProfileResponse Empty = new OpenShiftRouterProfileResponse();
 
+    /**
+     * Auto-allocated FQDN for the OpenShift router.
+     */
     @InputImport(name="fqdn", required=true)
     private final String fqdn;
 
@@ -21,6 +27,9 @@ public final class OpenShiftRouterProfileResponse extends io.pulumi.resources.In
         return this.fqdn;
     }
 
+    /**
+     * Name of the router profile.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -28,6 +37,9 @@ public final class OpenShiftRouterProfileResponse extends io.pulumi.resources.In
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * DNS subdomain for OpenShift router.
+     */
     @InputImport(name="publicSubdomain", required=true)
     private final String publicSubdomain;
 

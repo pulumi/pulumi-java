@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetPrivateEndpointConnectionsAdtAPI {
+/**
+ * The Private Endpoint Connection resource.
+API Version: 2021-03-08.
+ *
+ * The Private Endpoint Connection resource.
+ */
     public static CompletableFuture<GetPrivateEndpointConnectionsAdtAPIResult> invokeAsync(GetPrivateEndpointConnectionsAdtAPIArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityandcompliance:getPrivateEndpointConnectionsAdtAPI", TypeShape.of(GetPrivateEndpointConnectionsAdtAPIResult.class), args == null ? GetPrivateEndpointConnectionsAdtAPIArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MetadataCategoriesResponse {
+/**
+ * domain for the solution content item
+ */
     private final @Nullable List<String> domains;
+/**
+ * Industry verticals for the solution content item
+ */
     private final @Nullable List<String> verticals;
 
     @OutputCustomType.Constructor({"domains","verticals"})
@@ -22,9 +28,15 @@ public final class MetadataCategoriesResponse {
         this.verticals = verticals;
     }
 
+/**
+ * domain for the solution content item
+ */
     public List<String> getDomains() {
         return this.domains == null ? List.of() : this.domains;
     }
+/**
+ * Industry verticals for the solution content item
+ */
     public List<String> getVerticals() {
         return this.verticals == null ? List.of() : this.verticals;
     }

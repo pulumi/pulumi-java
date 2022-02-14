@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * SQL Server Management type.
+ */
     @EnumType
     public enum SqlManagementMode {
+/**
+ * 
+ */
         Full("Full"),
+/**
+ * 
+ */
         LightWeight("LightWeight"),
+/**
+ * 
+ */
         NoAgent("NoAgent");
 
         private final String value;

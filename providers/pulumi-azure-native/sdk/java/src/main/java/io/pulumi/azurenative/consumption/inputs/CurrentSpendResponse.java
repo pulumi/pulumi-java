@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The current amount of cost which is being tracked for a budget.
+ */
 public final class CurrentSpendResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CurrentSpendResponse Empty = new CurrentSpendResponse();
 
+    /**
+     * The total amount of cost which is being tracked by the budget.
+     */
     @InputImport(name="amount", required=true)
     private final Double amount;
 
@@ -20,6 +26,9 @@ public final class CurrentSpendResponse extends io.pulumi.resources.InvokeArgs {
         return this.amount;
     }
 
+    /**
+     * The unit of measure for the budget amount.
+     */
     @InputImport(name="unit", required=true)
     private final String unit;
 

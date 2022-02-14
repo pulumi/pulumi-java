@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class NodeGroupAutoscalingPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NodeGroupAutoscalingPolicyResponse Empty = new NodeGroupAutoscalingPolicyResponse();
 
+    /**
+     * The maximum number of nodes that the group should have. Must be set if autoscaling is enabled. Maximum value allowed is 100.
+     */
     @InputImport(name="maxNodes", required=true)
     private final Integer maxNodes;
 
@@ -20,6 +26,9 @@ public final class NodeGroupAutoscalingPolicyResponse extends io.pulumi.resource
         return this.maxNodes;
     }
 
+    /**
+     * The minimum number of nodes that the group should have.
+     */
     @InputImport(name="minNodes", required=true)
     private final Integer minNodes;
 
@@ -27,6 +36,9 @@ public final class NodeGroupAutoscalingPolicyResponse extends io.pulumi.resource
         return this.minNodes;
     }
 
+    /**
+     * The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see Autoscaler modes.
+     */
     @InputImport(name="mode", required=true)
     private final String mode;
 

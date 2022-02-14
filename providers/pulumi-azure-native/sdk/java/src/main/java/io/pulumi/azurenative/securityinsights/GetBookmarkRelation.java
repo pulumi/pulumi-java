@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetBookmarkRelation {
+/**
+ * Represents a relation between two resources
+API Version: 2019-01-01-preview.
+ *
+ * Represents a relation between two resources
+ */
     public static CompletableFuture<GetBookmarkRelationResult> invokeAsync(GetBookmarkRelationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:securityinsights:getBookmarkRelation", TypeShape.of(GetBookmarkRelationResult.class), args == null ? GetBookmarkRelationArgs.Empty : args, Utilities.withVersion(options));
     }

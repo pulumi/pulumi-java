@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudMlV1_Measurement_MetricResponse {
+/**
+ * Metric name.
+ */
     private final String metric;
+/**
+ * The value for this metric.
+ */
     private final Double value;
 
     @OutputCustomType.Constructor({"metric","value"})
@@ -21,9 +27,15 @@ public final class GoogleCloudMlV1_Measurement_MetricResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * Metric name.
+ */
     public String getMetric() {
         return this.metric;
     }
+/**
+ * The value for this metric.
+ */
     public Double getValue() {
         return this.value;
     }

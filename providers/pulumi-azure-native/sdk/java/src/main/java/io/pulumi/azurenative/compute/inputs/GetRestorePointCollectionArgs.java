@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetRestorePointCollectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRestorePointCollectionArgs Empty = new GetRestorePointCollectionArgs();
 
+    /**
+     * The expand expression to apply on the operation. If expand=restorePoints, server will return all contained restore points in the restorePointCollection.
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -21,6 +27,9 @@ public final class GetRestorePointCollectionArgs extends io.pulumi.resources.Inv
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -28,6 +37,9 @@ public final class GetRestorePointCollectionArgs extends io.pulumi.resources.Inv
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the restore point collection.
+     */
     @InputImport(name="restorePointCollectionName", required=true)
     private final String restorePointCollectionName;
 

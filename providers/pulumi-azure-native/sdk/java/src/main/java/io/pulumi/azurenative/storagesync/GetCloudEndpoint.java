@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCloudEndpoint {
+/**
+ * Cloud Endpoint object.
+API Version: 2020-03-01.
+ *
+ * Cloud Endpoint object.
+ */
     public static CompletableFuture<GetCloudEndpointResult> invokeAsync(GetCloudEndpointArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storagesync:getCloudEndpoint", TypeShape.of(GetCloudEndpointResult.class), args == null ? GetCloudEndpointArgs.Empty : args, Utilities.withVersion(options));
     }

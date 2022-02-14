@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DisplayInfoResponse {
+/**
+ * Configuration display name
+ */
     private final String configurationDisplayName;
+/**
+ * Product family display name
+ */
     private final String productFamilyDisplayName;
 
     @OutputCustomType.Constructor({"configurationDisplayName","productFamilyDisplayName"})
@@ -20,9 +26,15 @@ public final class DisplayInfoResponse {
         this.productFamilyDisplayName = Objects.requireNonNull(productFamilyDisplayName);
     }
 
+/**
+ * Configuration display name
+ */
     public String getConfigurationDisplayName() {
         return this.configurationDisplayName;
     }
+/**
+ * Product family display name
+ */
     public String getProductFamilyDisplayName() {
         return this.productFamilyDisplayName;
     }

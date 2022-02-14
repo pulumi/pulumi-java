@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApplicationArgs Empty = new GetApplicationArgs();
 
+    /**
+     * The name of the application group
+     */
     @InputImport(name="applicationGroupName", required=true)
     private final String applicationGroupName;
 
@@ -19,6 +25,9 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
         return this.applicationGroupName;
     }
 
+    /**
+     * The name of the application within the specified application group
+     */
     @InputImport(name="applicationName", required=true)
     private final String applicationName;
 
@@ -26,6 +35,9 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
         return this.applicationName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

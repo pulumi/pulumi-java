@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetBatchArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBatchArgs Empty = new GetBatchArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="batchId", required=true)
     private final String batchId;
 
@@ -21,6 +27,9 @@ public final class GetBatchArgs extends io.pulumi.resources.InvokeArgs {
         return this.batchId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -28,6 +37,9 @@ public final class GetBatchArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

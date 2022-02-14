@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class LabelSelectorResponse {
+/**
+ * Resource labels for this selector.
+ */
     private final Map<String,String> labels;
 
     @OutputCustomType.Constructor({"labels"})
@@ -17,6 +20,9 @@ public final class LabelSelectorResponse {
         this.labels = Objects.requireNonNull(labels);
     }
 
+/**
+ * Resource labels for this selector.
+ */
     public Map<String,String> getLabels() {
         return this.labels;
     }

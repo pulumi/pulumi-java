@@ -10,10 +10,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataSetResponse {
+/**
+ * A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value.
+ */
     private final String legendTemplate;
+/**
+ * Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.
+ */
     private final String minAlignmentPeriod;
+/**
+ * How this data should be plotted on the chart.
+ */
     private final String plotType;
+/**
+ * Optional. The target axis to use for plotting the metric.
+ */
     private final String targetAxis;
+/**
+ * Fields for querying time series data from the Stackdriver metrics API.
+ */
     private final TimeSeriesQueryResponse timeSeriesQuery;
 
     @OutputCustomType.Constructor({"legendTemplate","minAlignmentPeriod","plotType","targetAxis","timeSeriesQuery"})
@@ -30,18 +45,33 @@ public final class DataSetResponse {
         this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
     }
 
+/**
+ * A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value.
+ */
     public String getLegendTemplate() {
         return this.legendTemplate;
     }
+/**
+ * Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.
+ */
     public String getMinAlignmentPeriod() {
         return this.minAlignmentPeriod;
     }
+/**
+ * How this data should be plotted on the chart.
+ */
     public String getPlotType() {
         return this.plotType;
     }
+/**
+ * Optional. The target axis to use for plotting the metric.
+ */
     public String getTargetAxis() {
         return this.targetAxis;
     }
+/**
+ * Fields for querying time series data from the Stackdriver metrics API.
+ */
     public TimeSeriesQueryResponse getTimeSeriesQuery() {
         return this.timeSeriesQuery;
     }

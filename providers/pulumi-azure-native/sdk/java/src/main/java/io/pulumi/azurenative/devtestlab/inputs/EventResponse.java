@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An event to be notified for.
+ */
 public final class EventResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EventResponse Empty = new EventResponse();
 
+    /**
+     * The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
+     */
     @InputImport(name="eventName")
     private final @Nullable String eventName;
 

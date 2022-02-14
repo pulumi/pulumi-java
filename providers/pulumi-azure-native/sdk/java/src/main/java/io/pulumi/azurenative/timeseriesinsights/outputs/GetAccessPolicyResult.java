@@ -12,11 +12,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAccessPolicyResult {
+/**
+ * An description of the access policy.
+ */
     private final @Nullable String description;
+/**
+ * Resource Id
+ */
     private final String id;
+/**
+ * Resource name
+ */
     private final String name;
+/**
+ * The objectId of the principal in Azure Active Directory.
+ */
     private final @Nullable String principalObjectId;
+/**
+ * The list of roles the principal is assigned on the environment.
+ */
     private final @Nullable List<String> roles;
+/**
+ * Resource type
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"description","id","name","principalObjectId","roles","type"})
@@ -35,21 +53,39 @@ public final class GetAccessPolicyResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * An description of the access policy.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * Resource Id
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The objectId of the principal in Azure Active Directory.
+ */
     public Optional<String> getPrincipalObjectId() {
         return Optional.ofNullable(this.principalObjectId);
     }
+/**
+ * The list of roles the principal is assigned on the environment.
+ */
     public List<String> getRoles() {
         return this.roles == null ? List.of() : this.roles;
     }
+/**
+ * Resource type
+ */
     public String getType() {
         return this.type;
     }

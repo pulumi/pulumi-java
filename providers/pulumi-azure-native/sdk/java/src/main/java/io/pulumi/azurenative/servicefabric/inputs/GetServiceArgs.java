@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServiceArgs Empty = new GetServiceArgs();
 
+    /**
+     * The name of the application resource.
+     */
     @InputImport(name="applicationName", required=true)
     private final String applicationName;
 
@@ -19,6 +25,9 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.applicationName;
     }
 
+    /**
+     * The name of the cluster resource.
+     */
     @InputImport(name="clusterName", required=true)
     private final String clusterName;
 
@@ -26,6 +35,9 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.clusterName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,9 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the service resource in the format of {applicationName}~{serviceName}.
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

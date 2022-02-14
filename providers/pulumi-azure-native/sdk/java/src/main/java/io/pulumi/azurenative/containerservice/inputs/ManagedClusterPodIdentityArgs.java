@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedClusterPodIdentityArgs Empty = new ManagedClusterPodIdentityArgs();
 
+    /**
+     * Binding selector to use for the AzureIdentityBinding resource.
+     */
     @InputImport(name="bindingSelector")
     private final @Nullable Input<String> bindingSelector;
 
@@ -22,6 +28,9 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
         return this.bindingSelector == null ? Input.empty() : this.bindingSelector;
     }
 
+    /**
+     * Information of the user assigned identity.
+     */
     @InputImport(name="identity", required=true)
     private final Input<UserAssignedIdentityArgs> identity;
 
@@ -29,6 +38,9 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
         return this.identity;
     }
 
+    /**
+     * Name of the pod identity.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -36,6 +48,9 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
         return this.name;
     }
 
+    /**
+     * Namespace of the pod identity.
+     */
     @InputImport(name="namespace", required=true)
     private final Input<String> namespace;
 

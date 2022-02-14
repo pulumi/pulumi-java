@@ -9,10 +9,16 @@ import io.pulumi.googlenative.dataproc_v1beta2.inputs.ManagedClusterResponse;
 import java.util.Objects;
 
 
+/**
+ * Specifies workflow execution target.Either managed_cluster or cluster_selector is required.
+ */
 public final class WorkflowTemplatePlacementResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkflowTemplatePlacementResponse Empty = new WorkflowTemplatePlacementResponse();
 
+    /**
+     * Optional. A selector that chooses target cluster for jobs based on metadata.The selector is evaluated at the time each job is submitted.
+     */
     @InputImport(name="clusterSelector", required=true)
     private final ClusterSelectorResponse clusterSelector;
 
@@ -20,6 +26,9 @@ public final class WorkflowTemplatePlacementResponse extends io.pulumi.resources
         return this.clusterSelector;
     }
 
+    /**
+     * Optional. A cluster that is managed by the workflow.
+     */
     @InputImport(name="managedCluster", required=true)
     private final ManagedClusterResponse managedCluster;
 

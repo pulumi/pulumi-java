@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ExpressRouteGatewayPropertiesResponseBounds {
+/**
+ * Maximum number of scale units deployed for ExpressRoute gateway.
+ */
     private final @Nullable Integer max;
+/**
+ * Minimum number of scale units deployed for ExpressRoute gateway.
+ */
     private final @Nullable Integer min;
 
     @OutputCustomType.Constructor({"max","min"})
@@ -22,9 +28,15 @@ public final class ExpressRouteGatewayPropertiesResponseBounds {
         this.min = min;
     }
 
+/**
+ * Maximum number of scale units deployed for ExpressRoute gateway.
+ */
     public Optional<Integer> getMax() {
         return Optional.ofNullable(this.max);
     }
+/**
+ * Minimum number of scale units deployed for ExpressRoute gateway.
+ */
     public Optional<Integer> getMin() {
         return Optional.ofNullable(this.min);
     }

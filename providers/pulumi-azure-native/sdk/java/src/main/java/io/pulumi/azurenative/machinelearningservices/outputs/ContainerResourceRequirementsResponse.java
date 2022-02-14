@@ -12,11 +12,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ContainerResourceRequirementsResponse {
+/**
+ * The minimum amount of CPU cores to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+ */
     private final @Nullable Double cpu;
+/**
+ * The maximum amount of CPU cores allowed to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+ */
     private final @Nullable Double cpuLimit;
+/**
+ * The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.
+ */
     private final @Nullable Integer fpga;
+/**
+ * The number of GPU cores in the container.
+ */
     private final @Nullable Integer gpu;
+/**
+ * The minimum amount of memory (in GB) to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+ */
     private final @Nullable Double memoryInGB;
+/**
+ * The maximum amount of memory (in GB) allowed to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+ */
     private final @Nullable Double memoryInGBLimit;
 
     @OutputCustomType.Constructor({"cpu","cpuLimit","fpga","gpu","memoryInGB","memoryInGBLimit"})
@@ -35,21 +57,43 @@ public final class ContainerResourceRequirementsResponse {
         this.memoryInGBLimit = memoryInGBLimit;
     }
 
+/**
+ * The minimum amount of CPU cores to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+ */
     public Optional<Double> getCpu() {
         return Optional.ofNullable(this.cpu);
     }
+/**
+ * The maximum amount of CPU cores allowed to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+ */
     public Optional<Double> getCpuLimit() {
         return Optional.ofNullable(this.cpuLimit);
     }
+/**
+ * The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.
+ */
     public Optional<Integer> getFpga() {
         return Optional.ofNullable(this.fpga);
     }
+/**
+ * The number of GPU cores in the container.
+ */
     public Optional<Integer> getGpu() {
         return Optional.ofNullable(this.gpu);
     }
+/**
+ * The minimum amount of memory (in GB) to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+ */
     public Optional<Double> getMemoryInGB() {
         return Optional.ofNullable(this.memoryInGB);
     }
+/**
+ * The maximum amount of memory (in GB) allowed to be used by the container. More info:
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+ */
     public Optional<Double> getMemoryInGBLimit() {
         return Optional.ofNullable(this.memoryInGBLimit);
     }

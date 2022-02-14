@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Type of scheduled scan
+ */
     @EnumType
     public enum ScanType {
+/**
+ * 
+ */
         Quick("Quick"),
+/**
+ * 
+ */
         Full("Full");
 
         private final String value;

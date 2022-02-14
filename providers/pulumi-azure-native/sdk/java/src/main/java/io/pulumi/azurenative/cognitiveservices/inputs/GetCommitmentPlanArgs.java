@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetCommitmentPlanArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCommitmentPlanArgs Empty = new GetCommitmentPlanArgs();
 
+    /**
+     * The name of Cognitive Services account.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetCommitmentPlanArgs extends io.pulumi.resources.InvokeArgs 
         return this.accountName;
     }
 
+    /**
+     * The name of the commitmentPlan associated with the Cognitive Services Account
+     */
     @InputImport(name="commitmentPlanName", required=true)
     private final String commitmentPlanName;
 
@@ -26,6 +35,9 @@ public final class GetCommitmentPlanArgs extends io.pulumi.resources.InvokeArgs 
         return this.commitmentPlanName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

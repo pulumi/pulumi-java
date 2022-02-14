@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The flag which indicates whether the Log Search rule is enabled. Value should be true or false
+ */
     @EnumType
     public enum Enabled {
+/**
+ * 
+ */
         $True("true"),
+/**
+ * 
+ */
         $False("false");
 
         private final String value;

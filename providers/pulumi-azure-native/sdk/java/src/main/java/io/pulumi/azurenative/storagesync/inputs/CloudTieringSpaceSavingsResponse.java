@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Server endpoint cloud tiering status object.
+ */
 public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CloudTieringSpaceSavingsResponse Empty = new CloudTieringSpaceSavingsResponse();
 
+    /**
+     * Cached content size on the server
+     */
     @InputImport(name="cachedSizeBytes", required=true)
     private final Double cachedSizeBytes;
 
@@ -21,6 +27,9 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
         return this.cachedSizeBytes;
     }
 
+    /**
+     * Last updated timestamp
+     */
     @InputImport(name="lastUpdatedTimestamp", required=true)
     private final String lastUpdatedTimestamp;
 
@@ -28,6 +37,9 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
         return this.lastUpdatedTimestamp;
     }
 
+    /**
+     * Count of bytes saved on the server
+     */
     @InputImport(name="spaceSavingsBytes", required=true)
     private final Double spaceSavingsBytes;
 
@@ -35,6 +47,9 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
         return this.spaceSavingsBytes;
     }
 
+    /**
+     * Percentage of cached size over total size
+     */
     @InputImport(name="spaceSavingsPercent", required=true)
     private final Integer spaceSavingsPercent;
 
@@ -42,6 +57,9 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
         return this.spaceSavingsPercent;
     }
 
+    /**
+     * Total size of content in the azure file share
+     */
     @InputImport(name="totalSizeCloudBytes", required=true)
     private final Double totalSizeCloudBytes;
 
@@ -49,6 +67,9 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
         return this.totalSizeCloudBytes;
     }
 
+    /**
+     * Volume size
+     */
     @InputImport(name="volumeSizeBytes", required=true)
     private final Double volumeSizeBytes;
 

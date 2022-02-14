@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReferenceArgs Empty = new ReferenceArgs();
 
+    /**
+     * Optional. A human-readable description of this reference.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -21,6 +27,9 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="environmentId", required=true)
     private final Input<String> environmentId;
 
@@ -28,6 +37,9 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.environmentId;
     }
 
+    /**
+     * The resource id of this reference. Values must match the regular expression [\w\s\-.]+.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +47,9 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="organizationId", required=true)
     private final Input<String> organizationId;
 
@@ -42,6 +57,9 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.organizationId;
     }
 
+    /**
+     * The id of the resource to which this reference refers. Must be the id of a resource that exists in the parent environment and is of the given resource_type.
+     */
     @InputImport(name="refers", required=true)
     private final Input<String> refers;
 
@@ -49,6 +67,9 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.refers;
     }
 
+    /**
+     * The type of resource referred to by this reference. Valid values are 'KeyStore' or 'TrustStore'.
+     */
     @InputImport(name="resourceType")
     private final @Nullable Input<String> resourceType;
 

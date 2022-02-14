@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for the task that migrates on-prem SQL Server databases to Azure SQL Database
+ */
 public final class MigrateSqlServerSqlDbTaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MigrateSqlServerSqlDbTaskPropertiesArgs Empty = new MigrateSqlServerSqlDbTaskPropertiesArgs();
 
+    /**
+     * Task input
+     */
     @InputImport(name="input")
     private final @Nullable Input<MigrateSqlServerSqlDbTaskInputArgs> input;
 
@@ -22,6 +28,10 @@ public final class MigrateSqlServerSqlDbTaskPropertiesArgs extends io.pulumi.res
         return this.input == null ? Input.empty() : this.input;
     }
 
+    /**
+     * Task type.
+Expected value is 'Migrate.SqlServer.SqlDb'.
+     */
     @InputImport(name="taskType", required=true)
     private final Input<String> taskType;
 

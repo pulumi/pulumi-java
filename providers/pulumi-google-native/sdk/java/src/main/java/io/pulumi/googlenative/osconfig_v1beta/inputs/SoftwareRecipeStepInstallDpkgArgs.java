@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Installs a deb via dpkg.
+ */
 public final class SoftwareRecipeStepInstallDpkgArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SoftwareRecipeStepInstallDpkgArgs Empty = new SoftwareRecipeStepInstallDpkgArgs();
 
+    /**
+     * The id of the relevant artifact in the recipe.
+     */
     @InputImport(name="artifactId", required=true)
     private final Input<String> artifactId;
 

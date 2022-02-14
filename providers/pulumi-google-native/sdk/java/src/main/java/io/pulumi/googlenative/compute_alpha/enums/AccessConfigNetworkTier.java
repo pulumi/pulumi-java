@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * This signifies the networking tier used for configuring this access configuration and can only take the following values: PREMIUM, STANDARD. If an AccessConfig is specified without a valid external IP address, an ephemeral IP will be created with this networkTier. If an AccessConfig with a valid external IP address is specified, it must match that of the networkTier associated with the Address resource owning that IP.
+ */
     @EnumType
     public enum AccessConfigNetworkTier {
+/**
+ * Public internet quality with fixed bandwidth.
+ */
         FixedStandard("FIXED_STANDARD"),
+/**
+ * High quality, Google-grade network tier, support for all networking products.
+ */
         Premium("PREMIUM"),
+/**
+ * Price competitive network tier, support for all networking products.
+ */
         Select("SELECT"),
+/**
+ * Public internet quality, only limited support for other networking products.
+ */
         Standard("STANDARD"),
+/**
+ * (Output only) Temporary tier for FIXED_STANDARD when fixed standard tier is expired or not configured.
+ */
         StandardOverridesFixedStandard("STANDARD_OVERRIDES_FIXED_STANDARD");
 
         private final String value;

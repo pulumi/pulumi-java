@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoadTestArgs Empty = new LoadTestArgs();
 
+    /**
+     * Description of the resource.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +29,9 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The type of identity used for the resource.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<SystemAssignedServiceIdentityArgs> identity;
 
@@ -30,6 +39,9 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * Load Test name.
+     */
     @InputImport(name="loadTestName")
     private final @Nullable Input<String> loadTestName;
 
@@ -37,6 +49,9 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.loadTestName == null ? Input.empty() : this.loadTestName;
     }
 
+    /**
+     * The geo-location where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -44,6 +59,9 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -51,6 +69,9 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

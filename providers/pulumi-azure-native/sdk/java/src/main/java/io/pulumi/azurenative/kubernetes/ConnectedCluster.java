@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.kubernetes;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.kubernetes.ConnectedClusterArgs;
 import io.pulumi.azurenative.kubernetes.outputs.ConnectedClusterIdentityResponse;
 import io.pulumi.azurenative.kubernetes.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
@@ -18,117 +17,339 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Represents a connected cluster.
+API Version: 2021-03-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### CreateClusterExample
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var connectedCluster = new AzureNative.Kubernetes.ConnectedCluster("connectedCluster", new AzureNative.Kubernetes.ConnectedClusterArgs
+        {
+            AgentPublicKeyCertificate = "MIICYzCCAcygAwIBAgIBADANBgkqhkiG9w0BAQUFADAuMQswCQYDVQQGEwJVUzEMMAoGA1UEChMDSUJNMREwDwYDVQQLEwhMb2NhbCBDQTAeFw05OTEyMjIwNTAwMDBaFw0wMDEyMjMwNDU5NTlaMC4xCzAJBgNVBAYTAlVTMQwwCgYDVQQKEwNJQk0xETAPBgNVBAsTCExvY2FsIENBMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD2bZEo7xGaX2/0GHkrNFZvlxBou9v1Jmt/PDiTMPve8r9FeJAQ0QdvFST/0JPQYD20rH0bimdDLgNdNynmyRoS2S/IInfpmf69iyc2G0TPyRvmHIiOZbdCd+YBHQi1adkj17NDcWj6S14tVurFX73zx0sNoMS79q3tuXKrDsxeuwIDAQABo4GQMIGNMEsGCVUdDwGG+EIBDQQ+EzxHZW5lcmF0ZWQgYnkgdGhlIFNlY3VyZVdheSBTZWN1cml0eSBTZXJ2ZXIgZm9yIE9TLzM5MCAoUkFDRikwDgYDVR0PAQH/BAQDAgAGMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFJ3+ocRyCTJw067dLSwr/nalx6YMMA0GCSqGSIb3DQEBBQUAA4GBAMaQzt+zaj1GU77yzlr8iiMBXgdQrwsZZWJo5exnAucJAEYQZmOfyLiM D6oYq+ZnfvM0n8G/Y79q8nhwvuxpYOnRSAXFp6xSkrIOeZtJMY1h00LKp/JX3Ng1svZ2agE126JHsQ0bhzN5TKsYfbwfTwfjdWAGy6Vf1nYi/rO+ryMO",
+            ClusterName = "testCluster",
+            Identity = new AzureNative.Kubernetes.Inputs.ConnectedClusterIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Location = "East US",
+            ResourceGroupName = "k8sc-rg",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	kubernetes "github.com/pulumi/pulumi-azure-native/sdk/go/azure/kubernetes"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := kubernetes.NewConnectedCluster(ctx, "connectedCluster", &kubernetes.ConnectedClusterArgs{
+			AgentPublicKeyCertificate: pulumi.String("MIICYzCCAcygAwIBAgIBADANBgkqhkiG9w0BAQUFADAuMQswCQYDVQQGEwJVUzEMMAoGA1UEChMDSUJNMREwDwYDVQQLEwhMb2NhbCBDQTAeFw05OTEyMjIwNTAwMDBaFw0wMDEyMjMwNDU5NTlaMC4xCzAJBgNVBAYTAlVTMQwwCgYDVQQKEwNJQk0xETAPBgNVBAsTCExvY2FsIENBMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD2bZEo7xGaX2/0GHkrNFZvlxBou9v1Jmt/PDiTMPve8r9FeJAQ0QdvFST/0JPQYD20rH0bimdDLgNdNynmyRoS2S/IInfpmf69iyc2G0TPyRvmHIiOZbdCd+YBHQi1adkj17NDcWj6S14tVurFX73zx0sNoMS79q3tuXKrDsxeuwIDAQABo4GQMIGNMEsGCVUdDwGG+EIBDQQ+EzxHZW5lcmF0ZWQgYnkgdGhlIFNlY3VyZVdheSBTZWN1cml0eSBTZXJ2ZXIgZm9yIE9TLzM5MCAoUkFDRikwDgYDVR0PAQH/BAQDAgAGMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFJ3+ocRyCTJw067dLSwr/nalx6YMMA0GCSqGSIb3DQEBBQUAA4GBAMaQzt+zaj1GU77yzlr8iiMBXgdQrwsZZWJo5exnAucJAEYQZmOfyLiM D6oYq+ZnfvM0n8G/Y79q8nhwvuxpYOnRSAXFp6xSkrIOeZtJMY1h00LKp/JX3Ng1svZ2agE126JHsQ0bhzN5TKsYfbwfTwfjdWAGy6Vf1nYi/rO+ryMO"),
+			ClusterName:               pulumi.String("testCluster"),
+			Identity: &kubernetes.ConnectedClusterIdentityArgs{
+				Type: "SystemAssigned",
+			},
+			Location:          pulumi.String("East US"),
+			ResourceGroupName: pulumi.String("k8sc-rg"),
+			Tags:              nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const connectedCluster = new azure_native.kubernetes.ConnectedCluster("connectedCluster", {
+    agentPublicKeyCertificate: "MIICYzCCAcygAwIBAgIBADANBgkqhkiG9w0BAQUFADAuMQswCQYDVQQGEwJVUzEMMAoGA1UEChMDSUJNMREwDwYDVQQLEwhMb2NhbCBDQTAeFw05OTEyMjIwNTAwMDBaFw0wMDEyMjMwNDU5NTlaMC4xCzAJBgNVBAYTAlVTMQwwCgYDVQQKEwNJQk0xETAPBgNVBAsTCExvY2FsIENBMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD2bZEo7xGaX2/0GHkrNFZvlxBou9v1Jmt/PDiTMPve8r9FeJAQ0QdvFST/0JPQYD20rH0bimdDLgNdNynmyRoS2S/IInfpmf69iyc2G0TPyRvmHIiOZbdCd+YBHQi1adkj17NDcWj6S14tVurFX73zx0sNoMS79q3tuXKrDsxeuwIDAQABo4GQMIGNMEsGCVUdDwGG+EIBDQQ+EzxHZW5lcmF0ZWQgYnkgdGhlIFNlY3VyZVdheSBTZWN1cml0eSBTZXJ2ZXIgZm9yIE9TLzM5MCAoUkFDRikwDgYDVR0PAQH/BAQDAgAGMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFJ3+ocRyCTJw067dLSwr/nalx6YMMA0GCSqGSIb3DQEBBQUAA4GBAMaQzt+zaj1GU77yzlr8iiMBXgdQrwsZZWJo5exnAucJAEYQZmOfyLiM D6oYq+ZnfvM0n8G/Y79q8nhwvuxpYOnRSAXFp6xSkrIOeZtJMY1h00LKp/JX3Ng1svZ2agE126JHsQ0bhzN5TKsYfbwfTwfjdWAGy6Vf1nYi/rO+ryMO",
+    clusterName: "testCluster",
+    identity: {
+        type: "SystemAssigned",
+    },
+    location: "East US",
+    resourceGroupName: "k8sc-rg",
+    tags: {},
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+connected_cluster = azure_native.kubernetes.ConnectedCluster("connectedCluster",
+    agent_public_key_certificate="MIICYzCCAcygAwIBAgIBADANBgkqhkiG9w0BAQUFADAuMQswCQYDVQQGEwJVUzEMMAoGA1UEChMDSUJNMREwDwYDVQQLEwhMb2NhbCBDQTAeFw05OTEyMjIwNTAwMDBaFw0wMDEyMjMwNDU5NTlaMC4xCzAJBgNVBAYTAlVTMQwwCgYDVQQKEwNJQk0xETAPBgNVBAsTCExvY2FsIENBMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD2bZEo7xGaX2/0GHkrNFZvlxBou9v1Jmt/PDiTMPve8r9FeJAQ0QdvFST/0JPQYD20rH0bimdDLgNdNynmyRoS2S/IInfpmf69iyc2G0TPyRvmHIiOZbdCd+YBHQi1adkj17NDcWj6S14tVurFX73zx0sNoMS79q3tuXKrDsxeuwIDAQABo4GQMIGNMEsGCVUdDwGG+EIBDQQ+EzxHZW5lcmF0ZWQgYnkgdGhlIFNlY3VyZVdheSBTZWN1cml0eSBTZXJ2ZXIgZm9yIE9TLzM5MCAoUkFDRikwDgYDVR0PAQH/BAQDAgAGMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFJ3+ocRyCTJw067dLSwr/nalx6YMMA0GCSqGSIb3DQEBBQUAA4GBAMaQzt+zaj1GU77yzlr8iiMBXgdQrwsZZWJo5exnAucJAEYQZmOfyLiM D6oYq+ZnfvM0n8G/Y79q8nhwvuxpYOnRSAXFp6xSkrIOeZtJMY1h00LKp/JX3Ng1svZ2agE126JHsQ0bhzN5TKsYfbwfTwfjdWAGy6Vf1nYi/rO+ryMO",
+    cluster_name="testCluster",
+    identity=azure_native.kubernetes.ConnectedClusterIdentityArgs(
+        type="SystemAssigned",
+    ),
+    location="East US",
+    resource_group_name="k8sc-rg",
+    tags={})
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:kubernetes:ConnectedCluster connectedCluster1 /subscriptions/1bfbb5d0-917e-4346-9026-1d3b344417f5/resourceGroups/akkeshar/providers/Microsoft.Kubernetes/connectedClusters/connectedCluster1 
+```
+
+ */
 @ResourceType(type="azure-native:kubernetes:ConnectedCluster")
 public class ConnectedCluster extends io.pulumi.resources.CustomResource {
+    /**
+     * Base64 encoded public certificate used by the agent to do the initial handshake to the backend services in Azure.
+     */
     @OutputExport(name="agentPublicKeyCertificate", type=String.class, parameters={})
     private Output<String> agentPublicKeyCertificate;
 
+    /**
+     * @return Base64 encoded public certificate used by the agent to do the initial handshake to the backend services in Azure.
+     */
     public Output<String> getAgentPublicKeyCertificate() {
         return this.agentPublicKeyCertificate;
     }
+    /**
+     * Version of the agent running on the connected cluster resource
+     */
     @OutputExport(name="agentVersion", type=String.class, parameters={})
     private Output<String> agentVersion;
 
+    /**
+     * @return Version of the agent running on the connected cluster resource
+     */
     public Output<String> getAgentVersion() {
         return this.agentVersion;
     }
+    /**
+     * Represents the connectivity status of the connected cluster.
+     */
     @OutputExport(name="connectivityStatus", type=String.class, parameters={})
     private Output<String> connectivityStatus;
 
+    /**
+     * @return Represents the connectivity status of the connected cluster.
+     */
     public Output<String> getConnectivityStatus() {
         return this.connectivityStatus;
     }
+    /**
+     * The Kubernetes distribution running on this connected cluster.
+     */
     @OutputExport(name="distribution", type=String.class, parameters={})
     private Output</* @Nullable */ String> distribution;
 
+    /**
+     * @return The Kubernetes distribution running on this connected cluster.
+     */
     public Output</* @Nullable */ String> getDistribution() {
         return this.distribution;
     }
+    /**
+     * The identity of the connected cluster.
+     */
     @OutputExport(name="identity", type=ConnectedClusterIdentityResponse.class, parameters={})
     private Output<ConnectedClusterIdentityResponse> identity;
 
+    /**
+     * @return The identity of the connected cluster.
+     */
     public Output<ConnectedClusterIdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * The infrastructure on which the Kubernetes cluster represented by this connected cluster is running on.
+     */
     @OutputExport(name="infrastructure", type=String.class, parameters={})
     private Output</* @Nullable */ String> infrastructure;
 
+    /**
+     * @return The infrastructure on which the Kubernetes cluster represented by this connected cluster is running on.
+     */
     public Output</* @Nullable */ String> getInfrastructure() {
         return this.infrastructure;
     }
+    /**
+     * The Kubernetes version of the connected cluster resource
+     */
     @OutputExport(name="kubernetesVersion", type=String.class, parameters={})
     private Output<String> kubernetesVersion;
 
+    /**
+     * @return The Kubernetes version of the connected cluster resource
+     */
     public Output<String> getKubernetesVersion() {
         return this.kubernetesVersion;
     }
+    /**
+     * Time representing the last instance when heart beat was received from the cluster
+     */
     @OutputExport(name="lastConnectivityTime", type=String.class, parameters={})
     private Output<String> lastConnectivityTime;
 
+    /**
+     * @return Time representing the last instance when heart beat was received from the cluster
+     */
     public Output<String> getLastConnectivityTime() {
         return this.lastConnectivityTime;
     }
+    /**
+     * The geo-location where the resource lives
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Expiration time of the managed identity certificate
+     */
     @OutputExport(name="managedIdentityCertificateExpirationTime", type=String.class, parameters={})
     private Output<String> managedIdentityCertificateExpirationTime;
 
+    /**
+     * @return Expiration time of the managed identity certificate
+     */
     public Output<String> getManagedIdentityCertificateExpirationTime() {
         return this.managedIdentityCertificateExpirationTime;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Connected cluster offering
+     */
     @OutputExport(name="offering", type=String.class, parameters={})
     private Output<String> offering;
 
+    /**
+     * @return Connected cluster offering
+     */
     public Output<String> getOffering() {
         return this.offering;
     }
+    /**
+     * Provisioning state of the connected cluster resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
+    /**
+     * @return Provisioning state of the connected cluster resource.
+     */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Metadata pertaining to creation and last modification of the resource
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Metadata pertaining to creation and last modification of the resource
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Number of CPU cores present in the connected cluster resource
+     */
     @OutputExport(name="totalCoreCount", type=Integer.class, parameters={})
     private Output<Integer> totalCoreCount;
 
+    /**
+     * @return Number of CPU cores present in the connected cluster resource
+     */
     public Output<Integer> getTotalCoreCount() {
         return this.totalCoreCount;
     }
+    /**
+     * Number of nodes present in the connected cluster resource
+     */
     @OutputExport(name="totalNodeCount", type=Integer.class, parameters={})
     private Output<Integer> totalNodeCount;
 
+    /**
+     * @return Number of nodes present in the connected cluster resource
+     */
     public Output<Integer> getTotalNodeCount() {
         return this.totalNodeCount;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ConnectedCluster(String name, ConnectedClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:kubernetes:ConnectedCluster", name, args == null ? ConnectedClusterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -150,6 +371,14 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ConnectedCluster get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConnectedCluster(name, id, options);
     }

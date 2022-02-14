@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings for hybrid compute management
+ */
 public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HybridComputeSettingsPropertiesResponse Empty = new HybridComputeSettingsPropertiesResponse();
 
+    /**
+     * Whether or not to automatically install Azure Arc (hybrid compute) agents on machines
+     */
     @InputImport(name="autoProvision", required=true)
     private final String autoProvision;
 
@@ -23,6 +29,9 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
         return this.autoProvision;
     }
 
+    /**
+     * State of the service principal and its secret
+     */
     @InputImport(name="hybridComputeProvisioningState", required=true)
     private final String hybridComputeProvisioningState;
 
@@ -30,6 +39,9 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
         return this.hybridComputeProvisioningState;
     }
 
+    /**
+     * For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.
+     */
     @InputImport(name="proxyServer")
     private final @Nullable ProxyServerPropertiesResponse proxyServer;
 
@@ -37,6 +49,9 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
         return this.proxyServer == null ? Optional.empty() : Optional.ofNullable(this.proxyServer);
     }
 
+    /**
+     * The location where the metadata of machines will be stored
+     */
     @InputImport(name="region")
     private final @Nullable String region;
 
@@ -44,6 +59,9 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
     }
 
+    /**
+     * The name of the resource group where Arc (Hybrid Compute) connectors are connected.
+     */
     @InputImport(name="resourceGroupName")
     private final @Nullable String resourceGroupName;
 
@@ -51,6 +69,9 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
         return this.resourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupName);
     }
 
+    /**
+     * An object to access resources that are secured by an Azure AD tenant.
+     */
     @InputImport(name="servicePrincipal")
     private final @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
 

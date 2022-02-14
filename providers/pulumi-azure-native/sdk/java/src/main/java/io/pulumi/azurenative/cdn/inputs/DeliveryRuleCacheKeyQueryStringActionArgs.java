@@ -10,10 +10,17 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines the cache-key query string action for the delivery rule.
+ */
 public final class DeliveryRuleCacheKeyQueryStringActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeliveryRuleCacheKeyQueryStringActionArgs Empty = new DeliveryRuleCacheKeyQueryStringActionArgs();
 
+    /**
+     * The name of the action for the delivery rule.
+Expected value is 'CacheKeyQueryString'.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -21,6 +28,9 @@ public final class DeliveryRuleCacheKeyQueryStringActionArgs extends io.pulumi.r
         return this.name;
     }
 
+    /**
+     * Defines the parameters for the action.
+     */
     @InputImport(name="parameters", required=true)
     private final Input<CacheKeyQueryStringActionParametersArgs> parameters;
 

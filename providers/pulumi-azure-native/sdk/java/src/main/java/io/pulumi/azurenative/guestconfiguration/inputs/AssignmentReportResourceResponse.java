@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The guest configuration assignment resource.
+ */
 public final class AssignmentReportResourceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AssignmentReportResourceResponse Empty = new AssignmentReportResourceResponse();
 
+    /**
+     * A value indicating compliance status of the machine for the assigned guest configuration.
+     */
     @InputImport(name="complianceStatus", required=true)
     private final String complianceStatus;
 
@@ -24,6 +30,9 @@ public final class AssignmentReportResourceResponse extends io.pulumi.resources.
         return this.complianceStatus;
     }
 
+    /**
+     * Properties of a guest configuration assignment resource.
+     */
     @InputImport(name="properties", required=true)
     private final Object properties;
 
@@ -31,6 +40,9 @@ public final class AssignmentReportResourceResponse extends io.pulumi.resources.
         return this.properties;
     }
 
+    /**
+     * Compliance reason and reason code for a resource.
+     */
     @InputImport(name="reasons")
     private final @Nullable List<AssignmentReportResourceComplianceReasonResponse> reasons;
 
@@ -38,6 +50,9 @@ public final class AssignmentReportResourceResponse extends io.pulumi.resources.
         return this.reasons == null ? List.of() : this.reasons;
     }
 
+    /**
+     * Name of the guest configuration assignment resource setting.
+     */
     @InputImport(name="resourceId", required=true)
     private final String resourceId;
 

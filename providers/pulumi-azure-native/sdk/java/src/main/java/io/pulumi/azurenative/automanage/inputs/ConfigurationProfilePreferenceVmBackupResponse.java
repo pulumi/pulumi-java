@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Automanage configuration profile VM Backup preferences.
+ */
 public final class ConfigurationProfilePreferenceVmBackupResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfigurationProfilePreferenceVmBackupResponse Empty = new ConfigurationProfilePreferenceVmBackupResponse();
 
+    /**
+     * Instant RP retention policy range in days
+     */
     @InputImport(name="instantRpRetentionRangeInDays")
     private final @Nullable Integer instantRpRetentionRangeInDays;
 
@@ -22,6 +28,9 @@ public final class ConfigurationProfilePreferenceVmBackupResponse extends io.pul
         return this.instantRpRetentionRangeInDays == null ? Optional.empty() : Optional.ofNullable(this.instantRpRetentionRangeInDays);
     }
 
+    /**
+     * Retention policy with the details on backup copy retention ranges.
+     */
     @InputImport(name="retentionPolicy")
     private final @Nullable String retentionPolicy;
 
@@ -29,6 +38,9 @@ public final class ConfigurationProfilePreferenceVmBackupResponse extends io.pul
         return this.retentionPolicy == null ? Optional.empty() : Optional.ofNullable(this.retentionPolicy);
     }
 
+    /**
+     * Backup schedule specified as part of backup policy.
+     */
     @InputImport(name="schedulePolicy")
     private final @Nullable String schedulePolicy;
 
@@ -36,6 +48,9 @@ public final class ConfigurationProfilePreferenceVmBackupResponse extends io.pul
         return this.schedulePolicy == null ? Optional.empty() : Optional.ofNullable(this.schedulePolicy);
     }
 
+    /**
+     * TimeZone optional input as string. For example: Pacific Standard Time
+     */
     @InputImport(name="timeZone")
     private final @Nullable String timeZone;
 

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetSslCertificateArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSslCertificateArgs Empty = new GetSslCertificateArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -21,6 +27,9 @@ public final class GetSslCertificateArgs extends io.pulumi.resources.InvokeArgs 
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="sslCertificate", required=true)
     private final String sslCertificate;
 

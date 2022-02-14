@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header.
+ */
     @EnumType
     public enum RegionBackendServiceCompressionMode {
+/**
+ * Automatically uses the best compression based on the Accept-Encoding header sent by the client.
+ */
         Automatic("AUTOMATIC"),
+/**
+ * Disables compression. Existing compressed responses cached by Cloud CDN will not be served to clients.
+ */
         Disabled("DISABLED");
 
         private final String value;

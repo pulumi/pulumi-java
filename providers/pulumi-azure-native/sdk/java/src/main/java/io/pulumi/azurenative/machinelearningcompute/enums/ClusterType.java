@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The cluster type.
+ */
     @EnumType
     public enum ClusterType {
+/**
+ * 
+ */
         ACS("ACS"),
+/**
+ * 
+ */
         Local("Local");
 
         private final String value;

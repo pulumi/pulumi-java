@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Schedule for backup
+ */
 public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackupScheduleArgs Empty = new BackupScheduleArgs();
 
+    /**
+     * ISO 8601 repeating time interval format
+     */
     @InputImport(name="repeatingTimeIntervals", required=true)
     private final Input<List<String>> repeatingTimeIntervals;
 

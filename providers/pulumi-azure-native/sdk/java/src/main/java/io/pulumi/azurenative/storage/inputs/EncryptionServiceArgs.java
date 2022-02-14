@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A service that allows server-side encryption to be used.
+ */
 public final class EncryptionServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EncryptionServiceArgs Empty = new EncryptionServiceArgs();
 
+    /**
+     * A boolean indicating whether or not the service encrypts the data as it is stored.
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -24,6 +30,9 @@ public final class EncryptionServiceArgs extends io.pulumi.resources.ResourceArg
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * Encryption key type to be used for the encryption service. 'Account' key type implies that an account-scoped encryption key will be used. 'Service' key type implies that a default service key is used.
+     */
     @InputImport(name="keyType")
     private final @Nullable Input<Either<String,KeyType>> keyType;
 

@@ -9,9 +9,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CniConfigResponse {
+/**
+ * Pod Subnet
+ */
     private final String podSubnet;
+/**
+ * Service subnet
+ */
     private final String serviceSubnet;
+/**
+ * Cni type
+ */
     private final String type;
+/**
+ * Cni version
+ */
     private final String version;
 
     @OutputCustomType.Constructor({"podSubnet","serviceSubnet","type","version"})
@@ -26,15 +38,27 @@ public final class CniConfigResponse {
         this.version = Objects.requireNonNull(version);
     }
 
+/**
+ * Pod Subnet
+ */
     public String getPodSubnet() {
         return this.podSubnet;
     }
+/**
+ * Service subnet
+ */
     public String getServiceSubnet() {
         return this.serviceSubnet;
     }
+/**
+ * Cni type
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Cni version
+ */
     public String getVersion() {
         return this.version;
     }

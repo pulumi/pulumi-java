@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Encryption identity for the storage account.
+ */
 public final class EncryptionIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EncryptionIdentityResponse Empty = new EncryptionIdentityResponse();
 
+    /**
+     * Resource identifier of the UserAssigned identity to be associated with server-side encryption on the storage account.
+     */
     @InputImport(name="encryptionUserAssignedIdentity")
     private final @Nullable String encryptionUserAssignedIdentity;
 

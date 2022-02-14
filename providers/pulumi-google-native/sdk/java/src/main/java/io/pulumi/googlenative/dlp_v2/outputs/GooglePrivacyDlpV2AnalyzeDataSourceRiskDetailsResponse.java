@@ -17,14 +17,41 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse {
+/**
+ * Categorical stats result
+ */
     private final GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult;
+/**
+ * Delta-presence result
+ */
     private final GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult;
+/**
+ * K-anonymity result
+ */
     private final GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult;
+/**
+ * K-map result
+ */
     private final GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult;
+/**
+ * L-divesity result
+ */
     private final GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult;
+/**
+ * Numerical stats result
+ */
     private final GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult;
+/**
+ * The configuration used for this job.
+ */
     private final GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions;
+/**
+ * Privacy metric to compute.
+ */
     private final GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric;
+/**
+ * Input dataset to compute metrics over.
+ */
     private final GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable;
 
     @OutputCustomType.Constructor({"categoricalStatsResult","deltaPresenceEstimationResult","kAnonymityResult","kMapEstimationResult","lDiversityResult","numericalStatsResult","requestedOptions","requestedPrivacyMetric","requestedSourceTable"})
@@ -49,30 +76,57 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse {
         this.requestedSourceTable = Objects.requireNonNull(requestedSourceTable);
     }
 
+/**
+ * Categorical stats result
+ */
     public GooglePrivacyDlpV2CategoricalStatsResultResponse getCategoricalStatsResult() {
         return this.categoricalStatsResult;
     }
+/**
+ * Delta-presence result
+ */
     public GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse getDeltaPresenceEstimationResult() {
         return this.deltaPresenceEstimationResult;
     }
+/**
+ * K-anonymity result
+ */
     public GooglePrivacyDlpV2KAnonymityResultResponse getKAnonymityResult() {
         return this.kAnonymityResult;
     }
+/**
+ * K-map result
+ */
     public GooglePrivacyDlpV2KMapEstimationResultResponse getKMapEstimationResult() {
         return this.kMapEstimationResult;
     }
+/**
+ * L-divesity result
+ */
     public GooglePrivacyDlpV2LDiversityResultResponse getLDiversityResult() {
         return this.lDiversityResult;
     }
+/**
+ * Numerical stats result
+ */
     public GooglePrivacyDlpV2NumericalStatsResultResponse getNumericalStatsResult() {
         return this.numericalStatsResult;
     }
+/**
+ * The configuration used for this job.
+ */
     public GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse getRequestedOptions() {
         return this.requestedOptions;
     }
+/**
+ * Privacy metric to compute.
+ */
     public GooglePrivacyDlpV2PrivacyMetricResponse getRequestedPrivacyMetric() {
         return this.requestedPrivacyMetric;
     }
+/**
+ * Input dataset to compute metrics over.
+ */
     public GooglePrivacyDlpV2BigQueryTableResponse getRequestedSourceTable() {
         return this.requestedSourceTable;
     }

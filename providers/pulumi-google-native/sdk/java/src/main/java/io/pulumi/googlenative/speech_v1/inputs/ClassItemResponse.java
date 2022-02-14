@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * An item of the class.
+ */
 public final class ClassItemResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ClassItemResponse Empty = new ClassItemResponse();
 
+    /**
+     * The class item's value.
+     */
     @InputImport(name="value", required=true)
     private final String value;
 

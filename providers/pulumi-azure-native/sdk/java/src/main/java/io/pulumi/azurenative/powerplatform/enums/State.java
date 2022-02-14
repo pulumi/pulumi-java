@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * lockbox configuration
+ */
     @EnumType
     public enum State {
+/**
+ * 
+ */
         Enabled("Enabled"),
+/**
+ * 
+ */
         Disabled("Disabled"),
+/**
+ * 
+ */
         NotConfigured("NotConfigured");
 
         private final String value;

@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EndConditionResponse {
+/**
+ * The cardinality of the `EndCondition`.
+ */
     private final CardinalityResponse cardinality;
 
     @OutputCustomType.Constructor({"cardinality"})
@@ -16,6 +19,9 @@ public final class EndConditionResponse {
         this.cardinality = Objects.requireNonNull(cardinality);
     }
 
+/**
+ * The cardinality of the `EndCondition`.
+ */
     public CardinalityResponse getCardinality() {
         return this.cardinality;
     }

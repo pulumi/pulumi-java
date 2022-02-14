@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class SecurityPolicyDdosProtectionConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SecurityPolicyDdosProtectionConfigResponse Empty = new SecurityPolicyDdosProtectionConfigResponse();
 
+    /**
+     * 
+     */
     @InputImport(name="ddosProtection", required=true)
     private final String ddosProtection;
 

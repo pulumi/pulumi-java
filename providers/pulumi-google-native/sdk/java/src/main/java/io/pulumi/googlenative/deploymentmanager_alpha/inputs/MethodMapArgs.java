@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Deployment Manager will call these methods during the events of creation/deletion/update/get/setIamPolicy
+ */
 public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MethodMapArgs Empty = new MethodMapArgs();
 
+    /**
+     * The action identifier for the create method to be used for this collection
+     */
     @InputImport(name="create")
     private final @Nullable Input<String> create;
 
@@ -21,6 +27,9 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.create == null ? Input.empty() : this.create;
     }
 
+    /**
+     * The action identifier for the delete method to be used for this collection
+     */
     @InputImport(name="delete")
     private final @Nullable Input<String> delete;
 
@@ -28,6 +37,9 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.delete == null ? Input.empty() : this.delete;
     }
 
+    /**
+     * The action identifier for the get method to be used for this collection
+     */
     @InputImport(name="get")
     private final @Nullable Input<String> get;
 
@@ -35,6 +47,9 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.get == null ? Input.empty() : this.get;
     }
 
+    /**
+     * The action identifier for the setIamPolicy method to be used for this collection
+     */
     @InputImport(name="setIamPolicy")
     private final @Nullable Input<String> setIamPolicy;
 
@@ -42,6 +57,9 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
         return this.setIamPolicy == null ? Input.empty() : this.setIamPolicy;
     }
 
+    /**
+     * The action identifier for the update method to be used for this collection
+     */
     @InputImport(name="update")
     private final @Nullable Input<String> update;
 

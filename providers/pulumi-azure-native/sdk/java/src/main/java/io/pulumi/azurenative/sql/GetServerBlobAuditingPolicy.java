@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServerBlobAuditingPolicy {
+/**
+ * A server blob auditing policy.
+API Version: 2020-11-01-preview.
+ *
+ * A server blob auditing policy.
+ */
     public static CompletableFuture<GetServerBlobAuditingPolicyResult> invokeAsync(GetServerBlobAuditingPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:sql:getServerBlobAuditingPolicy", TypeShape.of(GetServerBlobAuditingPolicyResult.class), args == null ? GetServerBlobAuditingPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

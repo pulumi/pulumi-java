@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RolloutArgs Empty = new RolloutArgs();
 
+    /**
+     * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<Map<String,String>> annotations;
 
@@ -22,6 +28,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="deliveryPipelineId", required=true)
     private final Input<String> deliveryPipelineId;
 
@@ -29,6 +38,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.deliveryPipelineId;
     }
 
+    /**
+     * Description of the `Rollout` for user purposes. Max length is 255 characters.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -36,6 +48,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -43,6 +58,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -50,6 +68,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -57,6 +78,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Optional. Name of the `Rollout`. Format is projects/{project}/ locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/{release}/rollouts/a-z{0,62}.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -64,6 +88,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -71,6 +98,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="releaseId", required=true)
     private final Input<String> releaseId;
 
@@ -78,6 +108,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.releaseId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -85,6 +118,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="rolloutId", required=true)
     private final Input<String> rolloutId;
 
@@ -92,6 +128,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.rolloutId;
     }
 
+    /**
+     * The ID of Target to which this `Rollout` is deploying.
+     */
     @InputImport(name="targetId", required=true)
     private final Input<String> targetId;
 
@@ -99,6 +138,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.targetId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="validateOnly")
     private final @Nullable Input<String> validateOnly;
 

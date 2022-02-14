@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ConnectionGatewayDefinitionResponseProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectionGatewayDefinitionResponseProperties Empty = new ConnectionGatewayDefinitionResponseProperties();
 
+    /**
+     * The URI of the backend
+     */
     @InputImport(name="backendUri")
     private final @Nullable String backendUri;
 
@@ -24,6 +30,9 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
         return this.backendUri == null ? Optional.empty() : Optional.ofNullable(this.backendUri);
     }
 
+    /**
+     * The gateway installation reference
+     */
     @InputImport(name="connectionGatewayInstallation")
     private final @Nullable ConnectionGatewayReferenceResponse connectionGatewayInstallation;
 
@@ -31,6 +40,9 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
         return this.connectionGatewayInstallation == null ? Optional.empty() : Optional.ofNullable(this.connectionGatewayInstallation);
     }
 
+    /**
+     * The gateway admin
+     */
     @InputImport(name="contactInformation")
     private final @Nullable List<String> contactInformation;
 
@@ -38,6 +50,9 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
         return this.contactInformation == null ? List.of() : this.contactInformation;
     }
 
+    /**
+     * The gateway description
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -45,6 +60,9 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The gateway display name
+     */
     @InputImport(name="displayName")
     private final @Nullable String displayName;
 
@@ -52,6 +70,9 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
     }
 
+    /**
+     * The machine name of the gateway
+     */
     @InputImport(name="machineName")
     private final @Nullable String machineName;
 
@@ -59,6 +80,9 @@ public final class ConnectionGatewayDefinitionResponseProperties extends io.pulu
         return this.machineName == null ? Optional.empty() : Optional.ofNullable(this.machineName);
     }
 
+    /**
+     * The gateway status
+     */
     @InputImport(name="status")
     private final @Nullable Object status;
 

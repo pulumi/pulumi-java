@@ -14,12 +14,33 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetPageResult {
+/**
+ * The human-readable name of the page, unique within the agent.
+ */
     private final String displayName;
+/**
+ * The fulfillment to call when the session is entering the page.
+ */
     private final GoogleCloudDialogflowCxV3FulfillmentResponse entryFulfillment;
+/**
+ * Handlers associated with the page to handle events such as webhook errors, no match or no input.
+ */
     private final List<GoogleCloudDialogflowCxV3EventHandlerResponse> eventHandlers;
+/**
+ * The form associated with the page, used for collecting parameters relevant to the page.
+ */
     private final GoogleCloudDialogflowCxV3FormResponse form;
+/**
+ * The unique identifier of the page. Required for the Pages.UpdatePage method. Pages.CreatePage populates the name automatically. Format: `projects//locations//agents//flows//pages/`.
+ */
     private final String name;
+/**
+ * Ordered list of `TransitionRouteGroups` associated with the page. Transition route groups must be unique within a page. * If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route -> page's transition route group -> flow's transition routes. * If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence. Format:`projects//locations//agents//flows//transitionRouteGroups/`.
+ */
     private final List<String> transitionRouteGroups;
+/**
+ * A list of transitions for the transition rules of this page. They route the conversation to another page in the same flow, or another flow. When we are in a certain page, the TransitionRoutes are evalauted in the following order: * TransitionRoutes defined in the page with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in flow with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in the page with only condition specified. * TransitionRoutes defined in the transition route groups with only condition specified.
+ */
     private final List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes;
 
     @OutputCustomType.Constructor({"displayName","entryFulfillment","eventHandlers","form","name","transitionRouteGroups","transitionRoutes"})
@@ -40,24 +61,45 @@ public final class GetPageResult {
         this.transitionRoutes = Objects.requireNonNull(transitionRoutes);
     }
 
+/**
+ * The human-readable name of the page, unique within the agent.
+ */
     public String getDisplayName() {
         return this.displayName;
     }
+/**
+ * The fulfillment to call when the session is entering the page.
+ */
     public GoogleCloudDialogflowCxV3FulfillmentResponse getEntryFulfillment() {
         return this.entryFulfillment;
     }
+/**
+ * Handlers associated with the page to handle events such as webhook errors, no match or no input.
+ */
     public List<GoogleCloudDialogflowCxV3EventHandlerResponse> getEventHandlers() {
         return this.eventHandlers;
     }
+/**
+ * The form associated with the page, used for collecting parameters relevant to the page.
+ */
     public GoogleCloudDialogflowCxV3FormResponse getForm() {
         return this.form;
     }
+/**
+ * The unique identifier of the page. Required for the Pages.UpdatePage method. Pages.CreatePage populates the name automatically. Format: `projects//locations//agents//flows//pages/`.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Ordered list of `TransitionRouteGroups` associated with the page. Transition route groups must be unique within a page. * If multiple transition routes within a page scope refer to the same intent, then the precedence order is: page's transition route -> page's transition route group -> flow's transition routes. * If multiple transition route groups within a page contain the same intent, then the first group in the ordered list takes precedence. Format:`projects//locations//agents//flows//transitionRouteGroups/`.
+ */
     public List<String> getTransitionRouteGroups() {
         return this.transitionRouteGroups;
     }
+/**
+ * A list of transitions for the transition rules of this page. They route the conversation to another page in the same flow, or another flow. When we are in a certain page, the TransitionRoutes are evalauted in the following order: * TransitionRoutes defined in the page with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in flow with intent specified. * TransitionRoutes defined in the transition route groups with intent specified. * TransitionRoutes defined in the page with only condition specified. * TransitionRoutes defined in the transition route groups with only condition specified.
+ */
     public List<GoogleCloudDialogflowCxV3TransitionRouteResponse> getTransitionRoutes() {
         return this.transitionRoutes;
     }

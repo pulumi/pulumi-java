@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetServer {
+/**
+ * Represents a server.
+API Version: 2017-12-01.
+ *
+ * Represents a server.
+ */
     public static CompletableFuture<GetServerResult> invokeAsync(GetServerArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:dbformysql:getServer", TypeShape.of(GetServerResult.class), args == null ? GetServerArgs.Empty : args, Utilities.withVersion(options));
     }

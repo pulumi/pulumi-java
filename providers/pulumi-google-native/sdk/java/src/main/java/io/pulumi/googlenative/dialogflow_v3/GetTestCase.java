@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTestCase {
+/**
+ * Gets a test case.
+ */
     public static CompletableFuture<GetTestCaseResult> invokeAsync(GetTestCaseArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v3:getTestCase", TypeShape.of(GetTestCaseResult.class), args == null ? GetTestCaseArgs.Empty : args, Utilities.withVersion(options));
     }

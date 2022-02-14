@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VirtualMachineFamilyCoreQuotaResponse {
+/**
+ * The core quota for the VM family for the Batch account.
+ */
     private final Integer coreQuota;
+/**
+ * The Virtual Machine family name.
+ */
     private final String name;
 
     @OutputCustomType.Constructor({"coreQuota","name"})
@@ -21,9 +27,15 @@ public final class VirtualMachineFamilyCoreQuotaResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+/**
+ * The core quota for the VM family for the Batch account.
+ */
     public Integer getCoreQuota() {
         return this.coreQuota;
     }
+/**
+ * The Virtual Machine family name.
+ */
     public String getName() {
         return this.name;
     }

@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Rewrite rule of an application gateway.
+ */
 public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApplicationGatewayRewriteRuleResponse Empty = new ApplicationGatewayRewriteRuleResponse();
 
+    /**
+     * Set of actions to be done as part of the rewrite Rule.
+     */
     @InputImport(name="actionSet")
     private final @Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet;
 
@@ -25,6 +31,9 @@ public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resou
         return this.actionSet == null ? Optional.empty() : Optional.ofNullable(this.actionSet);
     }
 
+    /**
+     * Conditions based on which the action set execution will be evaluated.
+     */
     @InputImport(name="conditions")
     private final @Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions;
 
@@ -32,6 +41,9 @@ public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resou
         return this.conditions == null ? List.of() : this.conditions;
     }
 
+    /**
+     * Name of the rewrite rule that is unique within an Application Gateway.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -39,6 +51,9 @@ public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resou
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Rule Sequence of the rewrite rule that determines the order of execution of a particular rule in a RewriteRuleSet.
+     */
     @InputImport(name="ruleSequence")
     private final @Nullable Integer ruleSequence;
 

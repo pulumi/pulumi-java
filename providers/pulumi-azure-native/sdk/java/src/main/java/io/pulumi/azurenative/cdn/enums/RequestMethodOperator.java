@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Describes operator to be matched
+ */
     @EnumType
     public enum RequestMethodOperator {
+/**
+ * 
+ */
         Equal("Equal");
 
         private final String value;

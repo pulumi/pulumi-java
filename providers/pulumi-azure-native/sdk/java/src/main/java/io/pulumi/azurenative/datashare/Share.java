@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.datashare;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.datashare.ShareArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,69 +14,234 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A share data transfer object.
+API Version: 2020-09-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Shares_Create
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var share = new AzureNative.DataShare.Share("share", new AzureNative.DataShare.ShareArgs
+        {
+            AccountName = "Account1",
+            Description = "share description",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareKind = "CopyBased",
+            ShareName = "Share1",
+            Terms = "Confidential",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datashare.NewShare(ctx, "share", &datashare.ShareArgs{
+			AccountName:       pulumi.String("Account1"),
+			Description:       pulumi.String("share description"),
+			ResourceGroupName: pulumi.String("SampleResourceGroup"),
+			ShareKind:         pulumi.String("CopyBased"),
+			ShareName:         pulumi.String("Share1"),
+			Terms:             pulumi.String("Confidential"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const share = new azure_native.datashare.Share("share", {
+    accountName: "Account1",
+    description: "share description",
+    resourceGroupName: "SampleResourceGroup",
+    shareKind: "CopyBased",
+    shareName: "Share1",
+    terms: "Confidential",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+share = azure_native.datashare.Share("share",
+    account_name="Account1",
+    description="share description",
+    resource_group_name="SampleResourceGroup",
+    share_kind="CopyBased",
+    share_name="Share1",
+    terms="Confidential")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:datashare:Share Share1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shares/Share1 
+```
+
+ */
 @ResourceType(type="azure-native:datashare:Share")
 public class Share extends io.pulumi.resources.CustomResource {
+    /**
+     * Time at which the share was created.
+     */
     @OutputExport(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
+    /**
+     * @return Time at which the share was created.
+     */
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
+    /**
+     * Share description.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Share description.
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Name of the azure resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the azure resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Gets or sets the provisioning state
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Gets or sets the provisioning state
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Share kind.
+     */
     @OutputExport(name="shareKind", type=String.class, parameters={})
     private Output</* @Nullable */ String> shareKind;
 
+    /**
+     * @return Share kind.
+     */
     public Output</* @Nullable */ String> getShareKind() {
         return this.shareKind;
     }
+    /**
+     * System Data of the Azure resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return System Data of the Azure resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Share terms.
+     */
     @OutputExport(name="terms", type=String.class, parameters={})
     private Output</* @Nullable */ String> terms;
 
+    /**
+     * @return Share terms.
+     */
     public Output</* @Nullable */ String> getTerms() {
         return this.terms;
     }
+    /**
+     * Type of the azure resource
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of the azure resource
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Email of the user who created the resource
+     */
     @OutputExport(name="userEmail", type=String.class, parameters={})
     private Output<String> userEmail;
 
+    /**
+     * @return Email of the user who created the resource
+     */
     public Output<String> getUserEmail() {
         return this.userEmail;
     }
+    /**
+     * Name of the user who created the resource
+     */
     @OutputExport(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
+    /**
+     * @return Name of the user who created the resource
+     */
     public Output<String> getUserName() {
         return this.userName;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Share(String name, ShareArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datashare:Share", name, args == null ? ShareArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -100,6 +264,14 @@ public class Share extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Share get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Share(name, id, options);
     }

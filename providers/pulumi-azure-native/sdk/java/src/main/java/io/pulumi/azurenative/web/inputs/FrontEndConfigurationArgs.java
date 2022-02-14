@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class FrontEndConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FrontEndConfigurationArgs Empty = new FrontEndConfigurationArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="kind")
     private final @Nullable Input<FrontEndServiceType> kind;
 

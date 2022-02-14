@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetCloudEdgeManagementRoleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCloudEdgeManagementRoleArgs Empty = new GetCloudEdgeManagementRoleArgs();
 
+    /**
+     * The device name.
+     */
     @InputImport(name="deviceName", required=true)
     private final String deviceName;
 
@@ -19,6 +25,9 @@ public final class GetCloudEdgeManagementRoleArgs extends io.pulumi.resources.In
         return this.deviceName;
     }
 
+    /**
+     * The role name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +35,9 @@ public final class GetCloudEdgeManagementRoleArgs extends io.pulumi.resources.In
         return this.name;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

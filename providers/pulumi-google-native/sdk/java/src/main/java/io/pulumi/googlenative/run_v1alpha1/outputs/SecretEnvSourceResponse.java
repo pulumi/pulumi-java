@@ -11,8 +11,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SecretEnvSourceResponse {
+/**
+ * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
+ */
     private final LocalObjectReferenceResponse localObjectReference;
+/**
+ * The Secret to select from.
+ */
     private final String name;
+/**
+ * (Optional) Specify whether the Secret must be defined
+ */
     private final Boolean optional;
 
     @OutputCustomType.Constructor({"localObjectReference","name","optional"})
@@ -25,12 +34,21 @@ public final class SecretEnvSourceResponse {
         this.optional = Objects.requireNonNull(optional);
     }
 
+/**
+ * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
+ */
     public LocalObjectReferenceResponse getLocalObjectReference() {
         return this.localObjectReference;
     }
+/**
+ * The Secret to select from.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * (Optional) Specify whether the Secret must be defined
+ */
     public Boolean getOptional() {
         return this.optional;
     }

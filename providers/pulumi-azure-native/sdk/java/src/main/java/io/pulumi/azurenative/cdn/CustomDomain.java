@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.cdn;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.cdn.CustomDomainArgs;
 import io.pulumi.azurenative.cdn.outputs.CdnManagedHttpsParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.azurenative.cdn.outputs.UserManagedHttpsParametersResponse;
@@ -18,69 +17,230 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Friendly domain name mapping to the endpoint hostname that the customer provides for branding purposes, e.g. www.contoso.com.
+API Version: 2020-09-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### CustomDomains_Create
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var customDomain = new AzureNative.Cdn.CustomDomain("customDomain", new AzureNative.Cdn.CustomDomainArgs
+        {
+            CustomDomainName = "www-someDomain-net",
+            EndpointName = "endpoint1",
+            HostName = "www.someDomain.net",
+            ProfileName = "profile1",
+            ResourceGroupName = "RG",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	cdn "github.com/pulumi/pulumi-azure-native/sdk/go/azure/cdn"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cdn.NewCustomDomain(ctx, "customDomain", &cdn.CustomDomainArgs{
+			CustomDomainName:  pulumi.String("www-someDomain-net"),
+			EndpointName:      pulumi.String("endpoint1"),
+			HostName:          pulumi.String("www.someDomain.net"),
+			ProfileName:       pulumi.String("profile1"),
+			ResourceGroupName: pulumi.String("RG"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const customDomain = new azure_native.cdn.CustomDomain("customDomain", {
+    customDomainName: "www-someDomain-net",
+    endpointName: "endpoint1",
+    hostName: "www.someDomain.net",
+    profileName: "profile1",
+    resourceGroupName: "RG",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+custom_domain = azure_native.cdn.CustomDomain("customDomain",
+    custom_domain_name="www-someDomain-net",
+    endpoint_name="endpoint1",
+    host_name="www.someDomain.net",
+    profile_name="profile1",
+    resource_group_name="RG")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:cdn:CustomDomain www-someDomain-net /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/endpoints/endpoint1/customdomains/www-someDomain-net 
+```
+
+ */
 @ResourceType(type="azure-native:cdn:CustomDomain")
 public class CustomDomain extends io.pulumi.resources.CustomResource {
+    /**
+     * Certificate parameters for securing custom HTTPS
+     */
     @OutputExport(name="customHttpsParameters", type=Either.class, parameters={CdnManagedHttpsParametersResponse.class, UserManagedHttpsParametersResponse.class})
     private Output</* @Nullable */ Either<CdnManagedHttpsParametersResponse,UserManagedHttpsParametersResponse>> customHttpsParameters;
 
+    /**
+     * @return Certificate parameters for securing custom HTTPS
+     */
     public Output</* @Nullable */ Either<CdnManagedHttpsParametersResponse,UserManagedHttpsParametersResponse>> getCustomHttpsParameters() {
         return this.customHttpsParameters;
     }
+    /**
+     * Provisioning status of Custom Https of the custom domain.
+     */
     @OutputExport(name="customHttpsProvisioningState", type=String.class, parameters={})
     private Output<String> customHttpsProvisioningState;
 
+    /**
+     * @return Provisioning status of Custom Https of the custom domain.
+     */
     public Output<String> getCustomHttpsProvisioningState() {
         return this.customHttpsProvisioningState;
     }
+    /**
+     * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
+     */
     @OutputExport(name="customHttpsProvisioningSubstate", type=String.class, parameters={})
     private Output<String> customHttpsProvisioningSubstate;
 
+    /**
+     * @return Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step.
+     */
     public Output<String> getCustomHttpsProvisioningSubstate() {
         return this.customHttpsProvisioningSubstate;
     }
+    /**
+     * The host name of the custom domain. Must be a domain name.
+     */
     @OutputExport(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
+    /**
+     * @return The host name of the custom domain. Must be a domain name.
+     */
     public Output<String> getHostName() {
         return this.hostName;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Provisioning status of the custom domain.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning status of the custom domain.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource status of the custom domain.
+     */
     @OutputExport(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
+    /**
+     * @return Resource status of the custom domain.
+     */
     public Output<String> getResourceState() {
         return this.resourceState;
     }
+    /**
+     * Read only system data
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Read only system data
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
+     */
     @OutputExport(name="validationData", type=String.class, parameters={})
     private Output</* @Nullable */ String> validationData;
 
+    /**
+     * @return Special validation or data may be required when delivering CDN to some regions due to local compliance reasons. E.g. ICP license number of a custom domain is required to deliver content in China.
+     */
     public Output</* @Nullable */ String> getValidationData() {
         return this.validationData;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public CustomDomain(String name, CustomDomainArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:cdn:CustomDomain", name, args == null ? CustomDomainArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -111,6 +271,14 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static CustomDomain get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CustomDomain(name, id, options);
     }

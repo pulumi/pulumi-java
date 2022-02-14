@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a repository.
+ */
 public final class RepoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RepoResponse Empty = new RepoResponse();
 
+    /**
+     * Array of branches.
+     */
     @InputImport(name="branches")
     private final @Nullable List<String> branches;
 
@@ -22,6 +28,9 @@ public final class RepoResponse extends io.pulumi.resources.InvokeArgs {
         return this.branches == null ? List.of() : this.branches;
     }
 
+    /**
+     * The name of the repository.
+     */
     @InputImport(name="fullName")
     private final @Nullable String fullName;
 
@@ -29,6 +38,9 @@ public final class RepoResponse extends io.pulumi.resources.InvokeArgs {
         return this.fullName == null ? Optional.empty() : Optional.ofNullable(this.fullName);
     }
 
+    /**
+     * The url to access the repository.
+     */
     @InputImport(name="url")
     private final @Nullable String url;
 

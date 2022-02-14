@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.extendedlocation;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.extendedlocation.CustomLocationArgs;
 import io.pulumi.azurenative.extendedlocation.outputs.CustomLocationPropertiesResponseAuthentication;
 import io.pulumi.azurenative.extendedlocation.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
@@ -17,81 +16,284 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Custom Locations definition.
+API Version: 2021-03-15-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create/Update Custom Location
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var customLocation = new AzureNative.ExtendedLocation.CustomLocation("customLocation", new AzureNative.ExtendedLocation.CustomLocationArgs
+        {
+            Authentication = new AzureNative.ExtendedLocation.Inputs.CustomLocationPropertiesAuthenticationArgs
+            {
+                Type = "KubeConfig",
+                Value = "<base64 KubeConfig>",
+            },
+            ClusterExtensionIds = 
+            {
+                "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kubernetes/connectedCluster/someCluster/Microsoft.KubernetesConfiguration/clusterExtensions/fooExtension",
+            },
+            DisplayName = "customLocationLocation01",
+            HostResourceId = "/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/testresourcegroup/providers/Microsoft.ContainerService/managedClusters/cluster01",
+            Location = "West US",
+            Namespace = "namespace01",
+            ResourceGroupName = "testresourcegroup",
+            ResourceName = "customLocation01",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	extendedlocation "github.com/pulumi/pulumi-azure-native/sdk/go/azure/extendedlocation"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := extendedlocation.NewCustomLocation(ctx, "customLocation", &extendedlocation.CustomLocationArgs{
+			Authentication: &extendedlocation.CustomLocationPropertiesAuthenticationArgs{
+				Type:  pulumi.String("KubeConfig"),
+				Value: pulumi.String("<base64 KubeConfig>"),
+			},
+			ClusterExtensionIds: pulumi.StringArray{
+				pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kubernetes/connectedCluster/someCluster/Microsoft.KubernetesConfiguration/clusterExtensions/fooExtension"),
+			},
+			DisplayName:       pulumi.String("customLocationLocation01"),
+			HostResourceId:    pulumi.String("/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/testresourcegroup/providers/Microsoft.ContainerService/managedClusters/cluster01"),
+			Location:          pulumi.String("West US"),
+			Namespace:         pulumi.String("namespace01"),
+			ResourceGroupName: pulumi.String("testresourcegroup"),
+			ResourceName:      pulumi.String("customLocation01"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const customLocation = new azure_native.extendedlocation.CustomLocation("customLocation", {
+    authentication: {
+        type: "KubeConfig",
+        value: "<base64 KubeConfig>",
+    },
+    clusterExtensionIds: ["/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kubernetes/connectedCluster/someCluster/Microsoft.KubernetesConfiguration/clusterExtensions/fooExtension"],
+    displayName: "customLocationLocation01",
+    hostResourceId: "/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/testresourcegroup/providers/Microsoft.ContainerService/managedClusters/cluster01",
+    location: "West US",
+    namespace: "namespace01",
+    resourceGroupName: "testresourcegroup",
+    resourceName: "customLocation01",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+custom_location = azure_native.extendedlocation.CustomLocation("customLocation",
+    authentication=azure_native.extendedlocation.CustomLocationPropertiesAuthenticationArgs(
+        type="KubeConfig",
+        value="<base64 KubeConfig>",
+    ),
+    cluster_extension_ids=["/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kubernetes/connectedCluster/someCluster/Microsoft.KubernetesConfiguration/clusterExtensions/fooExtension"],
+    display_name="customLocationLocation01",
+    host_resource_id="/subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/testresourcegroup/providers/Microsoft.ContainerService/managedClusters/cluster01",
+    location="West US",
+    namespace="namespace01",
+    resource_group_name="testresourcegroup",
+    resource_name="customLocation01")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:extendedlocation:CustomLocation customLocation01 /subscriptions/11111111-2222-3333-4444-555555555555/resourceGroups/testrg/providers/Microsoft.ExtendedLocation/customLocations/customLocation01 
+```
+
+ */
 @ResourceType(type="azure-native:extendedlocation:CustomLocation")
 public class CustomLocation extends io.pulumi.resources.CustomResource {
+    /**
+     * This is optional input that contains the authentication that should be used to generate the namespace.
+     */
     @OutputExport(name="authentication", type=CustomLocationPropertiesResponseAuthentication.class, parameters={})
     private Output</* @Nullable */ CustomLocationPropertiesResponseAuthentication> authentication;
 
+    /**
+     * @return This is optional input that contains the authentication that should be used to generate the namespace.
+     */
     public Output</* @Nullable */ CustomLocationPropertiesResponseAuthentication> getAuthentication() {
         return this.authentication;
     }
+    /**
+     * Contains the reference to the add-on that contains charts to deploy CRDs and operators.
+     */
     @OutputExport(name="clusterExtensionIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> clusterExtensionIds;
 
+    /**
+     * @return Contains the reference to the add-on that contains charts to deploy CRDs and operators.
+     */
     public Output</* @Nullable */ List<String>> getClusterExtensionIds() {
         return this.clusterExtensionIds;
     }
+    /**
+     * Display name for the Custom Locations location.
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
+    /**
+     * @return Display name for the Custom Locations location.
+     */
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Connected Cluster or AKS Cluster. The Custom Locations RP will perform a checkAccess API for listAdminCredentials permissions.
+     */
     @OutputExport(name="hostResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostResourceId;
 
+    /**
+     * @return Connected Cluster or AKS Cluster. The Custom Locations RP will perform a checkAccess API for listAdminCredentials permissions.
+     */
     public Output</* @Nullable */ String> getHostResourceId() {
         return this.hostResourceId;
     }
+    /**
+     * Type of host the Custom Locations is referencing (Kubernetes, etc...).
+     */
     @OutputExport(name="hostType", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostType;
 
+    /**
+     * @return Type of host the Custom Locations is referencing (Kubernetes, etc...).
+     */
     public Output</* @Nullable */ String> getHostType() {
         return this.hostType;
     }
+    /**
+     * The geo-location where the resource lives
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Kubernetes namespace that will be created on the specified cluster.
+     */
     @OutputExport(name="namespace", type=String.class, parameters={})
     private Output</* @Nullable */ String> namespace;
 
+    /**
+     * @return Kubernetes namespace that will be created on the specified cluster.
+     */
     public Output</* @Nullable */ String> getNamespace() {
         return this.namespace;
     }
+    /**
+     * Provisioning State for the Custom Location.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
+    /**
+     * @return Provisioning State for the Custom Location.
+     */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Metadata pertaining to creation and last modification of the resource
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Metadata pertaining to creation and last modification of the resource
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public CustomLocation(String name, CustomLocationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:extendedlocation:CustomLocation", name, args == null ? CustomLocationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -111,6 +313,14 @@ public class CustomLocation extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static CustomLocation get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CustomLocation(name, id, options);
     }

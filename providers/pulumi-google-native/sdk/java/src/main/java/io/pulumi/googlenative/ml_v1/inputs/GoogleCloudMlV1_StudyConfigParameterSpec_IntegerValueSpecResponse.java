@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse Empty = new GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse();
 
+    /**
+     * Must be specified if type is `INTEGER`. Maximum value of the parameter.
+     */
     @InputImport(name="maxValue", required=true)
     private final String maxValue;
 
@@ -19,6 +25,9 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResp
         return this.maxValue;
     }
 
+    /**
+     * Must be specified if type is `INTEGER`. Minimum value of the parameter.
+     */
     @InputImport(name="minValue", required=true)
     private final String minValue;
 

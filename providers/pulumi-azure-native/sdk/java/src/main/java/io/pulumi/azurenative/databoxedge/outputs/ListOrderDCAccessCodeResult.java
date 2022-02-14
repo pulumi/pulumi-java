@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListOrderDCAccessCodeResult {
+/**
+ * DCAccess Code for the Self Managed shipment.
+ */
     private final @Nullable String authCode;
 
     @OutputCustomType.Constructor({"authCode"})
@@ -18,6 +21,9 @@ public final class ListOrderDCAccessCodeResult {
         this.authCode = authCode;
     }
 
+/**
+ * DCAccess Code for the Self Managed shipment.
+ */
     public Optional<String> getAuthCode() {
         return Optional.ofNullable(this.authCode);
     }

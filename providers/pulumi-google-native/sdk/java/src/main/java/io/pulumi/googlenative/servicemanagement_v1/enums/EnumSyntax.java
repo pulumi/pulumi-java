@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The source syntax.
+ */
     @EnumType
     public enum EnumSyntax {
+/**
+ * Syntax `proto2`.
+ */
         SyntaxProto2("SYNTAX_PROTO2"),
+/**
+ * Syntax `proto3`.
+ */
         SyntaxProto3("SYNTAX_PROTO3");
 
         private final String value;

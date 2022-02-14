@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetAccessReviewScheduleDefinitionByIdArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAccessReviewScheduleDefinitionByIdArgs Empty = new GetAccessReviewScheduleDefinitionByIdArgs();
 
+    /**
+     * The id of the access review schedule definition.
+     */
     @InputImport(name="scheduleDefinitionId", required=true)
     private final String scheduleDefinitionId;
 

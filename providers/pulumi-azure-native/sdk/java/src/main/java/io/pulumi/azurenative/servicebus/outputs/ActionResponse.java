@@ -13,8 +13,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ActionResponse {
+/**
+ * This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.
+ */
     private final @Nullable Integer compatibilityLevel;
+/**
+ * Value that indicates whether the rule action requires preprocessing.
+ */
     private final @Nullable Boolean requiresPreprocessing;
+/**
+ * SQL expression. e.g. MyProperty='ABC'
+ */
     private final @Nullable String sqlExpression;
 
     @OutputCustomType.Constructor({"compatibilityLevel","requiresPreprocessing","sqlExpression"})
@@ -27,12 +36,21 @@ public final class ActionResponse {
         this.sqlExpression = sqlExpression;
     }
 
+/**
+ * This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.
+ */
     public Optional<Integer> getCompatibilityLevel() {
         return Optional.ofNullable(this.compatibilityLevel);
     }
+/**
+ * Value that indicates whether the rule action requires preprocessing.
+ */
     public Optional<Boolean> getRequiresPreprocessing() {
         return Optional.ofNullable(this.requiresPreprocessing);
     }
+/**
+ * SQL expression. e.g. MyProperty='ABC'
+ */
     public Optional<String> getSqlExpression() {
         return Optional.ofNullable(this.sqlExpression);
     }

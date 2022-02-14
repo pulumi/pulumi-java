@@ -12,10 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JobScheduleResponse {
+/**
+ * Whether or not the schedule is enabled.
+ */
     private final @Nullable Boolean enabled;
+/**
+ * Schedule end time.
+ */
     private final @Nullable String endTime;
+/**
+ * Value of the schedule's recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
+ */
     private final @Nullable String interval;
+/**
+ * Schedule start time.
+ */
     private final @Nullable String startTime;
+/**
+ * Schedule interval type
+ */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"enabled","endTime","interval","startTime","type"})
@@ -32,18 +47,33 @@ public final class JobScheduleResponse {
         this.type = type;
     }
 
+/**
+ * Whether or not the schedule is enabled.
+ */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
+/**
+ * Schedule end time.
+ */
     public Optional<String> getEndTime() {
         return Optional.ofNullable(this.endTime);
     }
+/**
+ * Value of the schedule's recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
+ */
     public Optional<String> getInterval() {
         return Optional.ofNullable(this.interval);
     }
+/**
+ * Schedule start time.
+ */
     public Optional<String> getStartTime() {
         return Optional.ofNullable(this.startTime);
     }
+/**
+ * Schedule interval type
+ */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

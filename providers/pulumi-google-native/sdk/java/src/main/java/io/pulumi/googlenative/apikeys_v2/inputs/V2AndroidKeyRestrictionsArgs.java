@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The Android apps that are allowed to use the key.
+ */
 public final class V2AndroidKeyRestrictionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final V2AndroidKeyRestrictionsArgs Empty = new V2AndroidKeyRestrictionsArgs();
 
+    /**
+     * A list of Android applications that are allowed to make API calls with this key.
+     */
     @InputImport(name="allowedApplications")
     private final @Nullable Input<List<V2AndroidApplicationArgs>> allowedApplications;
 

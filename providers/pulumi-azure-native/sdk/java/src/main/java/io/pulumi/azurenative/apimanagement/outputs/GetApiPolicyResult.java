@@ -11,10 +11,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetApiPolicyResult {
+/**
+ * Format of the policyContent.
+ */
     private final @Nullable String format;
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * Resource type for API Management resource.
+ */
     private final String type;
+/**
+ * Contents of the Policy as defined by the format.
+ */
     private final String value;
 
     @OutputCustomType.Constructor({"format","id","name","type","value"})
@@ -31,18 +46,33 @@ public final class GetApiPolicyResult {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * Format of the policyContent.
+ */
     public Optional<String> getFormat() {
         return Optional.ofNullable(this.format);
     }
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Resource type for API Management resource.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Contents of the Policy as defined by the format.
+ */
     public String getValue() {
         return this.value;
     }

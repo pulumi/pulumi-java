@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Input or output argument of a function or stored procedure.
+ */
 public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatacatalogV1RoutineSpecArgumentArgs Empty = new GoogleCloudDatacatalogV1RoutineSpecArgumentArgs();
 
+    /**
+     * Specifies whether the argument is input or output.
+     */
     @InputImport(name="mode")
     private final @Nullable Input<GoogleCloudDatacatalogV1RoutineSpecArgumentMode> mode;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
         return this.mode == null ? Input.empty() : this.mode;
     }
 
+    /**
+     * The name of the argument. A return argument of a function might not have a name.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -29,6 +38,9 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Type of the argument. The exact value depends on the source system and the language.
+     */
     @InputImport(name="type")
     private final @Nullable Input<String> type;
 

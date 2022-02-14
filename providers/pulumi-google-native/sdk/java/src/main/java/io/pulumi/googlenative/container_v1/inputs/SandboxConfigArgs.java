@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SandboxConfig contains configurations of the sandbox to use for the node.
+ */
 public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SandboxConfigArgs Empty = new SandboxConfigArgs();
 
+    /**
+     * Type of the sandbox to use for the node.
+     */
     @InputImport(name="type")
     private final @Nullable Input<SandboxConfigType> type;
 

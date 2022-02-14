@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetComponentLinkedStorageAccount {
+/**
+ * An Application Insights component linked storage accounts
+API Version: 2020-03-01-preview.
+ *
+ * An Application Insights component linked storage accounts
+ */
     public static CompletableFuture<GetComponentLinkedStorageAccountResult> invokeAsync(GetComponentLinkedStorageAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:insights:getComponentLinkedStorageAccount", TypeShape.of(GetComponentLinkedStorageAccountResult.class), args == null ? GetComponentLinkedStorageAccountArgs.Empty : args, Utilities.withVersion(options));
     }

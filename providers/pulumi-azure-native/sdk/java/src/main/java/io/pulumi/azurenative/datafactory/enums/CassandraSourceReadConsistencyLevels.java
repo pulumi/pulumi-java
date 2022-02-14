@@ -8,17 +8,50 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The consistency level specifies how many Cassandra servers must respond to a read request before returning data to the client application. Cassandra checks the specified number of Cassandra servers for data to satisfy the read request. Must be one of cassandraSourceReadConsistencyLevels. The default value is 'ONE'. It is case-insensitive.
+ */
     @EnumType
     public enum CassandraSourceReadConsistencyLevels {
+/**
+ * 
+ */
         ALL("ALL"),
+/**
+ * 
+ */
         EACH_QUORUM("EACH_QUORUM"),
+/**
+ * 
+ */
         QUORUM("QUORUM"),
+/**
+ * 
+ */
         LOCAL_QUORUM("LOCAL_QUORUM"),
+/**
+ * 
+ */
         ONE("ONE"),
+/**
+ * 
+ */
         TWO("TWO"),
+/**
+ * 
+ */
         THREE("THREE"),
+/**
+ * 
+ */
         LOCAL_ONE("LOCAL_ONE"),
+/**
+ * 
+ */
         SERIAL("SERIAL"),
+/**
+ * 
+ */
         LOCAL_SERIAL("LOCAL_SERIAL");
 
         private final String value;

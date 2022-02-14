@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.securityinsights.ThreatIntelligenceIndicatorArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -14,33 +13,236 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Threat intelligence information object.
+API Version: 2019-01-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Update a threat Intelligence indicator
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var threatIntelligenceIndicator = new AzureNative.SecurityInsights.ThreatIntelligenceIndicator("threatIntelligenceIndicator", new AzureNative.SecurityInsights.ThreatIntelligenceIndicatorArgs
+        {
+            Confidence = 78,
+            CreatedByRef = "contoso@contoso.com",
+            Description = "debugging indicators",
+            DisplayName = "new schema",
+            ExternalReferences = {},
+            GranularMarkings = {},
+            KillChainPhases = {},
+            Kind = "indicator",
+            Labels = {},
+            Modified = "",
+            Name = "d9cd6f0b-96b9-3984-17cd-a779d1e15a93",
+            OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
+            Pattern = "[url:value = 'https://www.contoso.com']",
+            PatternType = "url",
+            ResourceGroupName = "myRg",
+            Revoked = false,
+            Source = "Azure Sentinel",
+            ThreatIntelligenceTags = 
+            {
+                "new schema",
+            },
+            ThreatTypes = 
+            {
+                "compromised",
+            },
+            ValidFrom = "2020-04-15T17:44:00.114052Z",
+            ValidUntil = "",
+            WorkspaceName = "myWorkspace",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	securityinsights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/securityinsights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := securityinsights.NewThreatIntelligenceIndicator(ctx, "threatIntelligenceIndicator", &securityinsights.ThreatIntelligenceIndicatorArgs{
+			Confidence:                          pulumi.Int(78),
+			CreatedByRef:                        pulumi.String("contoso@contoso.com"),
+			Description:                         pulumi.String("debugging indicators"),
+			DisplayName:                         pulumi.String("new schema"),
+			ExternalReferences:                  securityinsights.ThreatIntelligenceExternalReferenceArray{},
+			GranularMarkings:                    securityinsights.ThreatIntelligenceGranularMarkingModelArray{},
+			KillChainPhases:                     securityinsights.ThreatIntelligenceKillChainPhaseArray{},
+			Kind:                                pulumi.String("indicator"),
+			Labels:                              pulumi.StringArray{},
+			Modified:                            pulumi.String(""),
+			Name:                                pulumi.String("d9cd6f0b-96b9-3984-17cd-a779d1e15a93"),
+			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
+			Pattern:                             pulumi.String("[url:value = 'https://www.contoso.com']"),
+			PatternType:                         pulumi.String("url"),
+			ResourceGroupName:                   pulumi.String("myRg"),
+			Revoked:                             pulumi.Bool(false),
+			Source:                              pulumi.String("Azure Sentinel"),
+			ThreatIntelligenceTags: pulumi.StringArray{
+				pulumi.String("new schema"),
+			},
+			ThreatTypes: pulumi.StringArray{
+				pulumi.String("compromised"),
+			},
+			ValidFrom:     pulumi.String("2020-04-15T17:44:00.114052Z"),
+			ValidUntil:    pulumi.String(""),
+			WorkspaceName: pulumi.String("myWorkspace"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const threatIntelligenceIndicator = new azure_native.securityinsights.ThreatIntelligenceIndicator("threatIntelligenceIndicator", {
+    confidence: 78,
+    createdByRef: "contoso@contoso.com",
+    description: "debugging indicators",
+    displayName: "new schema",
+    externalReferences: [],
+    granularMarkings: [],
+    killChainPhases: [],
+    kind: "indicator",
+    labels: [],
+    modified: "",
+    name: "d9cd6f0b-96b9-3984-17cd-a779d1e15a93",
+    operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
+    pattern: "[url:value = 'https://www.contoso.com']",
+    patternType: "url",
+    resourceGroupName: "myRg",
+    revoked: false,
+    source: "Azure Sentinel",
+    threatIntelligenceTags: ["new schema"],
+    threatTypes: ["compromised"],
+    validFrom: "2020-04-15T17:44:00.114052Z",
+    validUntil: "",
+    workspaceName: "myWorkspace",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+threat_intelligence_indicator = azure_native.securityinsights.ThreatIntelligenceIndicator("threatIntelligenceIndicator",
+    confidence=78,
+    created_by_ref="contoso@contoso.com",
+    description="debugging indicators",
+    display_name="new schema",
+    external_references=[],
+    granular_markings=[],
+    kill_chain_phases=[],
+    kind="indicator",
+    labels=[],
+    modified="",
+    name="d9cd6f0b-96b9-3984-17cd-a779d1e15a93",
+    operational_insights_resource_provider="Microsoft.OperationalInsights",
+    pattern="[url:value = 'https://www.contoso.com']",
+    pattern_type="url",
+    resource_group_name="myRg",
+    revoked=False,
+    source="Azure Sentinel",
+    threat_intelligence_tags=["new schema"],
+    threat_types=["compromised"],
+    valid_from="2020-04-15T17:44:00.114052Z",
+    valid_until="",
+    workspace_name="myWorkspace")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:securityinsights:ThreatIntelligenceIndicator 180105c7-a28d-b1a2-4a78-234f6ec80fd6 /subscriptions/bd794837-4d29-4647-9105-6339bfdb4e6a/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/ThreatIntelligence/180105c7-a28d-b1a2-4a78-234f6ec80fd6 
+```
+
+ */
 @ResourceType(type="azure-native:securityinsights:ThreatIntelligenceIndicator")
 public class ThreatIntelligenceIndicator extends io.pulumi.resources.CustomResource {
+    /**
+     * Etag of the azure resource
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return Etag of the azure resource
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * The kind of the entity.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return The kind of the entity.
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * Azure resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Azure resource name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Azure resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Azure resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ThreatIntelligenceIndicator(String name, ThreatIntelligenceIndicatorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:securityinsights:ThreatIntelligenceIndicator", name, args == null ? ThreatIntelligenceIndicatorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -61,6 +263,14 @@ public class ThreatIntelligenceIndicator extends io.pulumi.resources.CustomResou
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ThreatIntelligenceIndicator get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ThreatIntelligenceIndicator(name, id, options);
     }

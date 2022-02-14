@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMediaService {
+/**
+ * A Media Services account.
+API Version: 2020-05-01.
+ *
+ * A Media Services account.
+ */
     public static CompletableFuture<GetMediaServiceResult> invokeAsync(GetMediaServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:media:getMediaService", TypeShape.of(GetMediaServiceResult.class), args == null ? GetMediaServiceArgs.Empty : args, Utilities.withVersion(options));
     }

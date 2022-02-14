@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIoTRole {
+/**
+ * Compute role.
+API Version: 2020-12-01.
+ *
+ * Compute role.
+ */
     public static CompletableFuture<GetIoTRoleResult> invokeAsync(GetIoTRoleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getIoTRole", TypeShape.of(GetIoTRoleResult.class), args == null ? GetIoTRoleArgs.Empty : args, Utilities.withVersion(options));
     }

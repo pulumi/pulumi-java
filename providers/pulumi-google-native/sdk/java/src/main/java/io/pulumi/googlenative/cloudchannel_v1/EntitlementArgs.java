@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EntitlementArgs Empty = new EntitlementArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="accountId", required=true)
     private final Input<String> accountId;
 
@@ -25,6 +31,9 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountId;
     }
 
+    /**
+     * Association information to other entitlements.
+     */
     @InputImport(name="associationInfo")
     private final @Nullable Input<GoogleCloudChannelV1AssociationInfoArgs> associationInfo;
 
@@ -32,6 +41,9 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
         return this.associationInfo == null ? Input.empty() : this.associationInfo;
     }
 
+    /**
+     * Commitment settings for a commitment-based Offer. Required for commitment based offers.
+     */
     @InputImport(name="commitmentSettings")
     private final @Nullable Input<GoogleCloudChannelV1CommitmentSettingsArgs> commitmentSettings;
 
@@ -39,6 +51,9 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
         return this.commitmentSettings == null ? Input.empty() : this.commitmentSettings;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="customerId", required=true)
     private final Input<String> customerId;
 
@@ -46,6 +61,9 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
         return this.customerId;
     }
 
+    /**
+     * The offer resource name for which the entitlement is to be created. Takes the form: accounts/{account_id}/offers/{offer_id}.
+     */
     @InputImport(name="offer", required=true)
     private final Input<String> offer;
 
@@ -53,6 +71,9 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
         return this.offer;
     }
 
+    /**
+     * Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. The response may include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. - max_units: The maximum assignable units for a flexible offer. - num_units: The total commitment for commitment-based offers.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<List<GoogleCloudChannelV1ParameterArgs>> parameters;
 
@@ -60,6 +81,9 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Optional. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters.
+     */
     @InputImport(name="purchaseOrderId")
     private final @Nullable Input<String> purchaseOrderId;
 
@@ -67,6 +91,9 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
         return this.purchaseOrderId == null ? Input.empty() : this.purchaseOrderId;
     }
 
+    /**
+     * Optional. You can specify an optional unique request ID, and if you need to retry your request, the server will know to ignore the request if it's complete. For example, you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if it received the original operation with the same request ID. If it did, it will ignore the second request. The request ID must be a valid [UUID](https://tools.ietf.org/html/rfc4122) with the exception that zero UUID is not supported (`00000000-0000-0000-0000-000000000000`).
+     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 

@@ -8,17 +8,50 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The application client type
+ */
     @EnumType
     public enum ClientType {
+/**
+ * 
+ */
         None("none"),
+/**
+ * 
+ */
         Dotnet("dotnet"),
+/**
+ * 
+ */
         Java("java"),
+/**
+ * 
+ */
         Python("python"),
+/**
+ * 
+ */
         Go("go"),
+/**
+ * 
+ */
         Php("php"),
+/**
+ * 
+ */
         Ruby("ruby"),
+/**
+ * 
+ */
         Django("django"),
+/**
+ * 
+ */
         Nodejs("nodejs"),
+/**
+ * 
+ */
         SpringBoot("springBoot");
 
         private final String value;

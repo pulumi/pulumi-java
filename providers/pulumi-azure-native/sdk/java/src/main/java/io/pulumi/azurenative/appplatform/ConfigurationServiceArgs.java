@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ConfigurationServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfigurationServiceArgs Empty = new ConfigurationServiceArgs();
 
+    /**
+     * The name of Application Configuration Service.
+     */
     @InputImport(name="configurationServiceName")
     private final @Nullable Input<String> configurationServiceName;
 
@@ -22,6 +28,9 @@ public final class ConfigurationServiceArgs extends io.pulumi.resources.Resource
         return this.configurationServiceName == null ? Input.empty() : this.configurationServiceName;
     }
 
+    /**
+     * Application Configuration Service properties payload
+     */
     @InputImport(name="properties")
     private final @Nullable Input<ConfigurationServicePropertiesArgs> properties;
 
@@ -29,6 +38,9 @@ public final class ConfigurationServiceArgs extends io.pulumi.resources.Resource
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,9 @@ public final class ConfigurationServiceArgs extends io.pulumi.resources.Resource
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Service resource.
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Bucket is represented as a range, along with replacement values.
+ */
 public final class GooglePrivacyDlpV2BucketArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2BucketArgs Empty = new GooglePrivacyDlpV2BucketArgs();
 
+    /**
+     * Upper bound of the range, exclusive; type must match min.
+     */
     @InputImport(name="max")
     private final @Nullable Input<GooglePrivacyDlpV2ValueArgs> max;
 
@@ -21,6 +27,9 @@ public final class GooglePrivacyDlpV2BucketArgs extends io.pulumi.resources.Reso
         return this.max == null ? Input.empty() : this.max;
     }
 
+    /**
+     * Lower bound of the range, inclusive. Type should be the same as max if used.
+     */
     @InputImport(name="min")
     private final @Nullable Input<GooglePrivacyDlpV2ValueArgs> min;
 
@@ -28,6 +37,9 @@ public final class GooglePrivacyDlpV2BucketArgs extends io.pulumi.resources.Reso
         return this.min == null ? Input.empty() : this.min;
     }
 
+    /**
+     * Replacement value for this bucket.
+     */
     @InputImport(name="replacementValue", required=true)
     private final Input<GooglePrivacyDlpV2ValueArgs> replacementValue;
 

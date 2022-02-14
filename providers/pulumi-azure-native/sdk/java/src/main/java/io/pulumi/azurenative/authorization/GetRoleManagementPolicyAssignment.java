@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRoleManagementPolicyAssignment {
+/**
+ * Role management policy
+API Version: 2020-10-01-preview.
+ *
+ * Role management policy
+ */
     public static CompletableFuture<GetRoleManagementPolicyAssignmentResult> invokeAsync(GetRoleManagementPolicyAssignmentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getRoleManagementPolicyAssignment", TypeShape.of(GetRoleManagementPolicyAssignmentResult.class), args == null ? GetRoleManagementPolicyAssignmentArgs.Empty : args, Utilities.withVersion(options));
     }

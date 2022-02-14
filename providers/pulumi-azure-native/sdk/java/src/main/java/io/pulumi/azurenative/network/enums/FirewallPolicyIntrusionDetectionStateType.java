@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Intrusion detection general state.
+ */
     @EnumType
     public enum FirewallPolicyIntrusionDetectionStateType {
+/**
+ * 
+ */
         Off("Off"),
+/**
+ * 
+ */
         Alert("Alert"),
+/**
+ * 
+ */
         Deny("Deny");
 
         private final String value;

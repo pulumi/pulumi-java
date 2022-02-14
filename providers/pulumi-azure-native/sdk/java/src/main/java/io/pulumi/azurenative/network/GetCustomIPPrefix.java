@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetCustomIPPrefix {
+/**
+ * Custom IP prefix resource.
+API Version: 2020-11-01.
+ *
+ * Custom IP prefix resource.
+ */
     public static CompletableFuture<GetCustomIPPrefixResult> invokeAsync(GetCustomIPPrefixArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getCustomIPPrefix", TypeShape.of(GetCustomIPPrefixResult.class), args == null ? GetCustomIPPrefixArgs.Empty : args, Utilities.withVersion(options));
     }

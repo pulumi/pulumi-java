@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetArcSetting {
+/**
+ * ArcSetting details.
+API Version: 2021-01-01-preview.
+ *
+ * ArcSetting details.
+ */
     public static CompletableFuture<GetArcSettingResult> invokeAsync(GetArcSettingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:azurestackhci:getArcSetting", TypeShape.of(GetArcSettingResult.class), args == null ? GetArcSettingArgs.Empty : args, Utilities.withVersion(options));
     }

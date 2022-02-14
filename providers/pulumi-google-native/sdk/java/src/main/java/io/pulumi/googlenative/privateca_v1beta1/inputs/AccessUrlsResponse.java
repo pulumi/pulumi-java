@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * URLs where a CertificateAuthority will publish content.
+ */
 public final class AccessUrlsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AccessUrlsResponse Empty = new AccessUrlsResponse();
 
+    /**
+     * The URL where this CertificateAuthority's CA certificate is published. This will only be set for CAs that have been activated.
+     */
     @InputImport(name="caCertificateAccessUrl", required=true)
     private final String caCertificateAccessUrl;
 
@@ -19,6 +25,9 @@ public final class AccessUrlsResponse extends io.pulumi.resources.InvokeArgs {
         return this.caCertificateAccessUrl;
     }
 
+    /**
+     * The URL where this CertificateAuthority's CRLs are published. This will only be set for CAs that have been activated.
+     */
     @InputImport(name="crlAccessUrl", required=true)
     private final String crlAccessUrl;
 

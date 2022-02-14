@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes a Encryption Settings for a Disk
+ */
 public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskEncryptionSettingsArgs Empty = new DiskEncryptionSettingsArgs();
 
+    /**
+     * Specifies the location of the disk encryption key, which is a Key Vault Secret.
+     */
     @InputImport(name="diskEncryptionKey")
     private final @Nullable Input<KeyVaultSecretReferenceArgs> diskEncryptionKey;
 
@@ -23,6 +29,9 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
         return this.diskEncryptionKey == null ? Input.empty() : this.diskEncryptionKey;
     }
 
+    /**
+     * Specifies whether disk encryption should be enabled on the virtual machine.
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -30,6 +39,9 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * Specifies the location of the key encryption key in Key Vault.
+     */
     @InputImport(name="keyEncryptionKey")
     private final @Nullable Input<KeyVaultKeyReferenceArgs> keyEncryptionKey;
 

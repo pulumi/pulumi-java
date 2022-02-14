@@ -6,6 +6,9 @@ package io.pulumi.googlenative.datastream_v1.inputs;
 import java.util.Objects;
 
 
+/**
+ * Backfill strategy to disable automatic backfill for the Stream's objects.
+ */
 public final class BackfillNoneStrategyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackfillNoneStrategyArgs Empty = new BackfillNoneStrategyArgs();

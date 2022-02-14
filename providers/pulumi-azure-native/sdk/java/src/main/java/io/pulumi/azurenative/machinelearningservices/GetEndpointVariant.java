@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEndpointVariant {
+/**
+ * Machine Learning service object wrapped into ARM resource envelope.
+API Version: 2021-01-01.
+ *
+ * Machine Learning service object wrapped into ARM resource envelope.
+ */
     public static CompletableFuture<GetEndpointVariantResult> invokeAsync(GetEndpointVariantArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:machinelearningservices:getEndpointVariant", TypeShape.of(GetEndpointVariantResult.class), args == null ? GetEndpointVariantArgs.Empty : args, Utilities.withVersion(options));
     }

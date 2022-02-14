@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of key used to encrypt the data of the disk.
+ */
     @EnumType
     public enum EncryptionType {
+/**
+ * Disk is encrypted at rest with Platform managed key. It is the default encryption type. This is not a valid encryption type for disk encryption sets.
+ */
         EncryptionAtRestWithPlatformKey("EncryptionAtRestWithPlatformKey"),
+/**
+ * Disk is encrypted at rest with Customer managed key that can be changed and revoked by a customer.
+ */
         EncryptionAtRestWithCustomerKey("EncryptionAtRestWithCustomerKey"),
+/**
+ * Disk is encrypted at rest with 2 layers of encryption. One of the keys is Customer managed and the other key is Platform managed.
+ */
         EncryptionAtRestWithPlatformAndCustomerKeys("EncryptionAtRestWithPlatformAndCustomerKeys");
 
         private final String value;

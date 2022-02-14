@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Definition of the configuration parameter type.
+ */
 public final class DscConfigurationParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DscConfigurationParameterResponse Empty = new DscConfigurationParameterResponse();
 
+    /**
+     * Gets or sets the default value of parameter.
+     */
     @InputImport(name="defaultValue")
     private final @Nullable String defaultValue;
 
@@ -23,6 +29,9 @@ public final class DscConfigurationParameterResponse extends io.pulumi.resources
         return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
     }
 
+    /**
+     * Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
+     */
     @InputImport(name="isMandatory")
     private final @Nullable Boolean isMandatory;
 
@@ -30,6 +39,9 @@ public final class DscConfigurationParameterResponse extends io.pulumi.resources
         return this.isMandatory == null ? Optional.empty() : Optional.ofNullable(this.isMandatory);
     }
 
+    /**
+     * Get or sets the position of the parameter.
+     */
     @InputImport(name="position")
     private final @Nullable Integer position;
 
@@ -37,6 +49,9 @@ public final class DscConfigurationParameterResponse extends io.pulumi.resources
         return this.position == null ? Optional.empty() : Optional.ofNullable(this.position);
     }
 
+    /**
+     * Gets or sets the type of the parameter.
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

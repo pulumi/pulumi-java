@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Reference to better Dataset or a Definition
+ */
 public final class DatasetStateResponseDeprecatedBy extends io.pulumi.resources.InvokeArgs {
 
     public static final DatasetStateResponseDeprecatedBy Empty = new DatasetStateResponseDeprecatedBy();
 
+    /**
+     * Unique Dataset identifier.
+     */
     @InputImport(name="datasetId", required=true)
     private final String datasetId;
 
@@ -21,6 +27,9 @@ public final class DatasetStateResponseDeprecatedBy extends io.pulumi.resources.
         return this.datasetId;
     }
 
+    /**
+     * Definition Version
+     */
     @InputImport(name="definitionVersion")
     private final @Nullable String definitionVersion;
 

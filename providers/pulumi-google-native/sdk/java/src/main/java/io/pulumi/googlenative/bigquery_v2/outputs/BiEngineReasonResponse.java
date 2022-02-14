@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BiEngineReasonResponse {
+/**
+ * High-level BI Engine reason for partial or disabled acceleration.
+ */
     private final String code;
+/**
+ * Free form human-readable reason for partial or disabled acceleration.
+ */
     private final String message;
 
     @OutputCustomType.Constructor({"code","message"})
@@ -20,9 +26,15 @@ public final class BiEngineReasonResponse {
         this.message = Objects.requireNonNull(message);
     }
 
+/**
+ * High-level BI Engine reason for partial or disabled acceleration.
+ */
     public String getCode() {
         return this.code;
     }
+/**
+ * Free form human-readable reason for partial or disabled acceleration.
+ */
     public String getMessage() {
         return this.message;
     }

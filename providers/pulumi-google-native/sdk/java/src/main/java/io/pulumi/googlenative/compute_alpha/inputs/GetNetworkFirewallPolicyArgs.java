@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetNetworkFirewallPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNetworkFirewallPolicyArgs Empty = new GetNetworkFirewallPolicyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="firewallPolicy", required=true)
     private final String firewallPolicy;
 
@@ -21,6 +27,9 @@ public final class GetNetworkFirewallPolicyArgs extends io.pulumi.resources.Invo
         return this.firewallPolicy;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

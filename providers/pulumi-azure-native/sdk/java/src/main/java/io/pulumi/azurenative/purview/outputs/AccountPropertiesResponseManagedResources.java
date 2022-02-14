@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AccountPropertiesResponseManagedResources {
+/**
+ * Gets the managed event hub namespace resource identifier.
+ */
     private final String eventHubNamespace;
+/**
+ * Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.
+ */
     private final String resourceGroup;
+/**
+ * Gets the managed storage account resource identifier.
+ */
     private final String storageAccount;
 
     @OutputCustomType.Constructor({"eventHubNamespace","resourceGroup","storageAccount"})
@@ -23,12 +32,21 @@ public final class AccountPropertiesResponseManagedResources {
         this.storageAccount = Objects.requireNonNull(storageAccount);
     }
 
+/**
+ * Gets the managed event hub namespace resource identifier.
+ */
     public String getEventHubNamespace() {
         return this.eventHubNamespace;
     }
+/**
+ * Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.
+ */
     public String getResourceGroup() {
         return this.resourceGroup;
     }
+/**
+ * Gets the managed storage account resource identifier.
+ */
     public String getStorageAccount() {
         return this.storageAccount;
     }

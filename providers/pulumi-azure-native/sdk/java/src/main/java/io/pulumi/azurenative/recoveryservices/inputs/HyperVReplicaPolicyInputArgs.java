@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Hyper-V Replica specific policy Input.
+ */
 public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HyperVReplicaPolicyInputArgs Empty = new HyperVReplicaPolicyInputArgs();
 
+    /**
+     * A value indicating the authentication type.
+     */
     @InputImport(name="allowedAuthenticationType")
     private final @Nullable Input<Integer> allowedAuthenticationType;
 
@@ -22,6 +28,9 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
         return this.allowedAuthenticationType == null ? Input.empty() : this.allowedAuthenticationType;
     }
 
+    /**
+     * A value indicating the application consistent frequency.
+     */
     @InputImport(name="applicationConsistentSnapshotFrequencyInHours")
     private final @Nullable Input<Integer> applicationConsistentSnapshotFrequencyInHours;
 
@@ -29,6 +38,9 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
         return this.applicationConsistentSnapshotFrequencyInHours == null ? Input.empty() : this.applicationConsistentSnapshotFrequencyInHours;
     }
 
+    /**
+     * A value indicating whether compression has to be enabled.
+     */
     @InputImport(name="compression")
     private final @Nullable Input<String> compression;
 
@@ -36,6 +48,9 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
         return this.compression == null ? Input.empty() : this.compression;
     }
 
+    /**
+     * A value indicating whether IR is online.
+     */
     @InputImport(name="initialReplicationMethod")
     private final @Nullable Input<String> initialReplicationMethod;
 
@@ -43,6 +58,10 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
         return this.initialReplicationMethod == null ? Input.empty() : this.initialReplicationMethod;
     }
 
+    /**
+     * The class type.
+Expected value is 'HyperVReplica2012'.
+     */
     @InputImport(name="instanceType")
     private final @Nullable Input<String> instanceType;
 
@@ -50,6 +69,9 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
+    /**
+     * A value indicating the offline IR export path.
+     */
     @InputImport(name="offlineReplicationExportPath")
     private final @Nullable Input<String> offlineReplicationExportPath;
 
@@ -57,6 +79,9 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
         return this.offlineReplicationExportPath == null ? Input.empty() : this.offlineReplicationExportPath;
     }
 
+    /**
+     * A value indicating the offline IR import path.
+     */
     @InputImport(name="offlineReplicationImportPath")
     private final @Nullable Input<String> offlineReplicationImportPath;
 
@@ -64,6 +89,9 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
         return this.offlineReplicationImportPath == null ? Input.empty() : this.offlineReplicationImportPath;
     }
 
+    /**
+     * A value indicating the online IR start time.
+     */
     @InputImport(name="onlineReplicationStartTime")
     private final @Nullable Input<String> onlineReplicationStartTime;
 
@@ -71,6 +99,9 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
         return this.onlineReplicationStartTime == null ? Input.empty() : this.onlineReplicationStartTime;
     }
 
+    /**
+     * A value indicating the number of recovery points.
+     */
     @InputImport(name="recoveryPoints")
     private final @Nullable Input<Integer> recoveryPoints;
 
@@ -78,6 +109,9 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
         return this.recoveryPoints == null ? Input.empty() : this.recoveryPoints;
     }
 
+    /**
+     * A value indicating whether the VM has to be auto deleted.
+     */
     @InputImport(name="replicaDeletion")
     private final @Nullable Input<String> replicaDeletion;
 
@@ -85,6 +119,9 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
         return this.replicaDeletion == null ? Input.empty() : this.replicaDeletion;
     }
 
+    /**
+     * A value indicating the recovery HTTPS port.
+     */
     @InputImport(name="replicationPort")
     private final @Nullable Input<Integer> replicationPort;
 

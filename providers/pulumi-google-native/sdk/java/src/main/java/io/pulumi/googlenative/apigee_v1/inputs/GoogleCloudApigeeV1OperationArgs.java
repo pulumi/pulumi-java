@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents the pairing of REST resource path and the actions (verbs) allowed on the resource path.
+ */
 public final class GoogleCloudApigeeV1OperationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudApigeeV1OperationArgs Empty = new GoogleCloudApigeeV1OperationArgs();
 
+    /**
+     * methods refers to the REST verbs as in https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html. When none specified, all verb types are allowed.
+     */
     @InputImport(name="methods")
     private final @Nullable Input<List<String>> methods;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudApigeeV1OperationArgs extends io.pulumi.resources.
         return this.methods == null ? Input.empty() : this.methods;
     }
 
+    /**
+     * REST resource path associated with the API proxy or remote service.
+     */
     @InputImport(name="resource", required=true)
     private final Input<String> resource;
 

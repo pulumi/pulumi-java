@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class VMExtensionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VMExtensionResponse Empty = new VMExtensionResponse();
 
+    /**
+     * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
+     */
     @InputImport(name="autoUpgradeMinorVersion")
     private final @Nullable Boolean autoUpgradeMinorVersion;
 
@@ -24,6 +30,9 @@ public final class VMExtensionResponse extends io.pulumi.resources.InvokeArgs {
         return this.autoUpgradeMinorVersion == null ? Optional.empty() : Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -31,6 +40,9 @@ public final class VMExtensionResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all. 
+     */
     @InputImport(name="protectedSettings")
     private final @Nullable Object protectedSettings;
 
@@ -38,6 +50,9 @@ public final class VMExtensionResponse extends io.pulumi.resources.InvokeArgs {
         return this.protectedSettings == null ? Optional.empty() : Optional.ofNullable(this.protectedSettings);
     }
 
+    /**
+     * Collection of extension names after which this extension needs to be provisioned.
+     */
     @InputImport(name="provisionAfterExtensions")
     private final @Nullable List<String> provisionAfterExtensions;
 
@@ -45,6 +60,9 @@ public final class VMExtensionResponse extends io.pulumi.resources.InvokeArgs {
         return this.provisionAfterExtensions == null ? List.of() : this.provisionAfterExtensions;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="publisher", required=true)
     private final String publisher;
 
@@ -52,6 +70,9 @@ public final class VMExtensionResponse extends io.pulumi.resources.InvokeArgs {
         return this.publisher;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="settings")
     private final @Nullable Object settings;
 
@@ -59,6 +80,9 @@ public final class VMExtensionResponse extends io.pulumi.resources.InvokeArgs {
         return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -66,6 +90,9 @@ public final class VMExtensionResponse extends io.pulumi.resources.InvokeArgs {
         return this.type;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="typeHandlerVersion")
     private final @Nullable String typeHandlerVersion;
 

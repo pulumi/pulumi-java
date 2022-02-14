@@ -8,10 +8,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The error details.
+ */
 public final class AKSReplicaStatusResponseError extends io.pulumi.resources.InvokeArgs {
 
     public static final AKSReplicaStatusResponseError Empty = new AKSReplicaStatusResponseError();
 
+    /**
+     * The error response.
+     */
     @InputImport(name="error", required=true)
     private final ErrorResponseResponse error;
 

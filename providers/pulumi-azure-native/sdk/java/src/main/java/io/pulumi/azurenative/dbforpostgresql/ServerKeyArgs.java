@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServerKeyArgs Empty = new ServerKeyArgs();
 
+    /**
+     * The name of the PostgreSQL Server key to be operated on (updated or created).
+     */
     @InputImport(name="keyName")
     private final @Nullable Input<String> keyName;
 
@@ -23,6 +29,9 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyName == null ? Input.empty() : this.keyName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -30,6 +39,9 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The key type like 'AzureKeyVault'.
+     */
     @InputImport(name="serverKeyType", required=true)
     private final Input<Either<String,ServerKeyType>> serverKeyType;
 
@@ -37,6 +49,9 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.serverKeyType;
     }
 
+    /**
+     * The name of the server.
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -44,6 +59,9 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
         return this.serverName;
     }
 
+    /**
+     * The URI of the key.
+     */
     @InputImport(name="uri")
     private final @Nullable Input<String> uri;
 

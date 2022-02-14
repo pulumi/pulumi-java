@@ -16,10 +16,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkVirtualApplianceArgs Empty = new NetworkVirtualApplianceArgs();
 
+    /**
+     * BootStrapConfigurationBlobs storage URLs.
+     */
     @InputImport(name="bootStrapConfigurationBlobs")
     private final @Nullable Input<List<String>> bootStrapConfigurationBlobs;
 
@@ -27,6 +33,9 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
         return this.bootStrapConfigurationBlobs == null ? Input.empty() : this.bootStrapConfigurationBlobs;
     }
 
+    /**
+     * CloudInitConfiguration string in plain text.
+     */
     @InputImport(name="cloudInitConfiguration")
     private final @Nullable Input<String> cloudInitConfiguration;
 
@@ -34,6 +43,9 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
         return this.cloudInitConfiguration == null ? Input.empty() : this.cloudInitConfiguration;
     }
 
+    /**
+     * CloudInitConfigurationBlob storage URLs.
+     */
     @InputImport(name="cloudInitConfigurationBlobs")
     private final @Nullable Input<List<String>> cloudInitConfigurationBlobs;
 
@@ -41,6 +53,9 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
         return this.cloudInitConfigurationBlobs == null ? Input.empty() : this.cloudInitConfigurationBlobs;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -48,6 +63,9 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The service principal that has read access to cloud-init and config blob.
+     */
     @InputImport(name="identity")
     private final @Nullable Input<ManagedServiceIdentityArgs> identity;
 
@@ -55,6 +73,9 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
         return this.identity == null ? Input.empty() : this.identity;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -62,6 +83,9 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of Network Virtual Appliance.
+     */
     @InputImport(name="networkVirtualApplianceName")
     private final @Nullable Input<String> networkVirtualApplianceName;
 
@@ -69,6 +93,9 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
         return this.networkVirtualApplianceName == null ? Input.empty() : this.networkVirtualApplianceName;
     }
 
+    /**
+     * Network Virtual Appliance SKU.
+     */
     @InputImport(name="nvaSku")
     private final @Nullable Input<VirtualApplianceSkuPropertiesArgs> nvaSku;
 
@@ -76,6 +103,9 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
         return this.nvaSku == null ? Input.empty() : this.nvaSku;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -83,6 +113,9 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
         return this.resourceGroupName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -90,6 +123,9 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * VirtualAppliance ASN.
+     */
     @InputImport(name="virtualApplianceAsn")
     private final @Nullable Input<Double> virtualApplianceAsn;
 
@@ -97,6 +133,9 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
         return this.virtualApplianceAsn == null ? Input.empty() : this.virtualApplianceAsn;
     }
 
+    /**
+     * The Virtual Hub where Network Virtual Appliance is being deployed.
+     */
     @InputImport(name="virtualHub")
     private final @Nullable Input<SubResourceArgs> virtualHub;
 

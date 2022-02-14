@@ -8,13 +8,34 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The role of the contact.
+ */
     @EnumType
     public enum Role {
+/**
+ * 
+ */
         Noc("Noc"),
+/**
+ * 
+ */
         Policy("Policy"),
+/**
+ * 
+ */
         Technical("Technical"),
+/**
+ * 
+ */
         Service("Service"),
+/**
+ * 
+ */
         Escalation("Escalation"),
+/**
+ * 
+ */
         Other("Other");
 
         private final String value;

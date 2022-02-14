@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Valid actions for a filtering tag.
+ */
     @EnumType
     public enum TagAction {
+/**
+ * 
+ */
         Include("Include"),
+/**
+ * 
+ */
         Exclude("Exclude");
 
         private final String value;

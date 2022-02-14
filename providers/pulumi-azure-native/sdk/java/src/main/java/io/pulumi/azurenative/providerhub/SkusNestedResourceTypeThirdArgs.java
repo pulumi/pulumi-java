@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkusNestedResourceTypeThirdArgs Empty = new SkusNestedResourceTypeThirdArgs();
 
+    /**
+     * The first child resource type.
+     */
     @InputImport(name="nestedResourceTypeFirst", required=true)
     private final Input<String> nestedResourceTypeFirst;
 
@@ -22,6 +28,9 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
         return this.nestedResourceTypeFirst;
     }
 
+    /**
+     * The second child resource type.
+     */
     @InputImport(name="nestedResourceTypeSecond", required=true)
     private final Input<String> nestedResourceTypeSecond;
 
@@ -29,6 +38,9 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
         return this.nestedResourceTypeSecond;
     }
 
+    /**
+     * The third child resource type.
+     */
     @InputImport(name="nestedResourceTypeThird", required=true)
     private final Input<String> nestedResourceTypeThird;
 
@@ -36,6 +48,9 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
         return this.nestedResourceTypeThird;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="properties")
     private final @Nullable Input<SkuResourcePropertiesArgs> properties;
 
@@ -43,6 +58,9 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource provider hosted within ProviderHub.
+     */
     @InputImport(name="providerNamespace", required=true)
     private final Input<String> providerNamespace;
 
@@ -50,6 +68,9 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
         return this.providerNamespace;
     }
 
+    /**
+     * The resource type.
+     */
     @InputImport(name="resourceType", required=true)
     private final Input<String> resourceType;
 
@@ -57,6 +78,9 @@ public final class SkusNestedResourceTypeThirdArgs extends io.pulumi.resources.R
         return this.resourceType;
     }
 
+    /**
+     * The SKU.
+     */
     @InputImport(name="sku")
     private final @Nullable Input<String> sku;
 

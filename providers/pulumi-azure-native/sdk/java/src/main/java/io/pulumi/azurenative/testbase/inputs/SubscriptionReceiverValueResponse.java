@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The subscription role receiver value.
+ */
 public final class SubscriptionReceiverValueResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubscriptionReceiverValueResponse Empty = new SubscriptionReceiverValueResponse();
 
+    /**
+     * The role of the notification receiver.
+     */
     @InputImport(name="role")
     private final @Nullable String role;
 
@@ -21,6 +27,9 @@ public final class SubscriptionReceiverValueResponse extends io.pulumi.resources
         return this.role == null ? Optional.empty() : Optional.ofNullable(this.role);
     }
 
+    /**
+     * The subscription id of the notification receiver.
+     */
     @InputImport(name="subscriptionId")
     private final @Nullable String subscriptionId;
 
@@ -28,6 +37,9 @@ public final class SubscriptionReceiverValueResponse extends io.pulumi.resources
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
     }
 
+    /**
+     * The subscription name of the notification receiver.
+     */
     @InputImport(name="subscriptionName")
     private final @Nullable String subscriptionName;
 

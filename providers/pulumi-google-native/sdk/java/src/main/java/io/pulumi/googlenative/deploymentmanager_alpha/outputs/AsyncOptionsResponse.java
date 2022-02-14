@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class AsyncOptionsResponse {
+/**
+ * Method regex where this policy will apply.
+ */
     private final String methodMatch;
+/**
+ * Deployment manager will poll instances for this API resource setting a RUNNING state, and blocking until polling conditions tell whether the resource is completed or failed.
+ */
     private final PollingOptionsResponse pollingOptions;
 
     @OutputCustomType.Constructor({"methodMatch","pollingOptions"})
@@ -21,9 +27,15 @@ public final class AsyncOptionsResponse {
         this.pollingOptions = Objects.requireNonNull(pollingOptions);
     }
 
+/**
+ * Method regex where this policy will apply.
+ */
     public String getMethodMatch() {
         return this.methodMatch;
     }
+/**
+ * Deployment manager will poll instances for this API resource setting a RUNNING state, and blocking until polling conditions tell whether the resource is completed or failed.
+ */
     public PollingOptionsResponse getPollingOptions() {
         return this.pollingOptions;
     }

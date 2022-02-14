@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of a hub.
+ */
 public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebPubSubHubPropertiesArgs Empty = new WebPubSubHubPropertiesArgs();
 
+    /**
+     * The settings for configuring if anonymous connections are allowed for this hub: "allow" or "deny". Default to "deny".
+     */
     @InputImport(name="anonymousConnectPolicy")
     private final @Nullable Input<String> anonymousConnectPolicy;
 
@@ -23,6 +29,9 @@ public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.Resour
         return this.anonymousConnectPolicy == null ? Input.empty() : this.anonymousConnectPolicy;
     }
 
+    /**
+     * Event handler of a hub.
+     */
     @InputImport(name="eventHandlers")
     private final @Nullable Input<List<EventHandlerArgs>> eventHandlers;
 

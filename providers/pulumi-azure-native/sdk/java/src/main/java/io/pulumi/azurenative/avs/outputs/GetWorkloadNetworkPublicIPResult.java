@@ -12,12 +12,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetWorkloadNetworkPublicIPResult {
+/**
+ * Display name of the Public IP Block.
+ */
     private final @Nullable String displayName;
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * Number of Public IPs requested.
+ */
     private final @Nullable Double numberOfPublicIPs;
+/**
+ * The provisioning state
+ */
     private final String provisioningState;
+/**
+ * CIDR Block of the Public IP Block.
+ */
     private final String publicIPBlock;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"displayName","id","name","numberOfPublicIPs","provisioningState","publicIPBlock","type"})
@@ -38,24 +59,45 @@ public final class GetWorkloadNetworkPublicIPResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Display name of the Public IP Block.
+ */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Number of Public IPs requested.
+ */
     public Optional<Double> getNumberOfPublicIPs() {
         return Optional.ofNullable(this.numberOfPublicIPs);
     }
+/**
+ * The provisioning state
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * CIDR Block of the Public IP Block.
+ */
     public String getPublicIPBlock() {
         return this.publicIPBlock;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetPacketCaptureArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPacketCaptureArgs Empty = new GetPacketCaptureArgs();
 
+    /**
+     * The name of the network watcher.
+     */
     @InputImport(name="networkWatcherName", required=true)
     private final String networkWatcherName;
 
@@ -19,6 +25,9 @@ public final class GetPacketCaptureArgs extends io.pulumi.resources.InvokeArgs {
         return this.networkWatcherName;
     }
 
+    /**
+     * The name of the packet capture session.
+     */
     @InputImport(name="packetCaptureName", required=true)
     private final String packetCaptureName;
 
@@ -26,6 +35,9 @@ public final class GetPacketCaptureArgs extends io.pulumi.resources.InvokeArgs {
         return this.packetCaptureName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

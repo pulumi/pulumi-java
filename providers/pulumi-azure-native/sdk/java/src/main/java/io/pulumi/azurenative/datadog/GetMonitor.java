@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetMonitor {
+/**
+ * 
+API Version: 2021-03-01.
+ */
     public static CompletableFuture<GetMonitorResult> invokeAsync(GetMonitorArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datadog:getMonitor", TypeShape.of(GetMonitorResult.class), args == null ? GetMonitorArgs.Empty : args, Utilities.withVersion(options));
     }

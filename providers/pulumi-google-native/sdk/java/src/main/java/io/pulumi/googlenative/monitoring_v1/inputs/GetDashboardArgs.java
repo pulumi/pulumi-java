@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetDashboardArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDashboardArgs Empty = new GetDashboardArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="dashboardId", required=true)
     private final String dashboardId;
 
@@ -21,6 +27,9 @@ public final class GetDashboardArgs extends io.pulumi.resources.InvokeArgs {
         return this.dashboardId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

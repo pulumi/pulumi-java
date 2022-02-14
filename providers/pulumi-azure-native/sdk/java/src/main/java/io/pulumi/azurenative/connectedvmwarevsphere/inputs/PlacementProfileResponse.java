@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the resource properties.
+ */
 public final class PlacementProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PlacementProfileResponse Empty = new PlacementProfileResponse();
 
+    /**
+     * Gets or sets the ARM Id of the cluster resource on which this virtual machine will deploy.
+     */
     @InputImport(name="clusterId")
     private final @Nullable String clusterId;
 
@@ -21,6 +27,9 @@ public final class PlacementProfileResponse extends io.pulumi.resources.InvokeAr
         return this.clusterId == null ? Optional.empty() : Optional.ofNullable(this.clusterId);
     }
 
+    /**
+     * Gets or sets the ARM Id of the datastore resource on which the data for the virtual machine will be kept.
+     */
     @InputImport(name="datastoreId")
     private final @Nullable String datastoreId;
 
@@ -28,6 +37,9 @@ public final class PlacementProfileResponse extends io.pulumi.resources.InvokeAr
         return this.datastoreId == null ? Optional.empty() : Optional.ofNullable(this.datastoreId);
     }
 
+    /**
+     * Gets or sets the ARM Id of the host resource on which this virtual machine will deploy.
+     */
     @InputImport(name="hostId")
     private final @Nullable String hostId;
 
@@ -35,6 +47,9 @@ public final class PlacementProfileResponse extends io.pulumi.resources.InvokeAr
         return this.hostId == null ? Optional.empty() : Optional.ofNullable(this.hostId);
     }
 
+    /**
+     * Gets or sets the ARM Id of the resourcePool resource on which this virtual machine will deploy.
+     */
     @InputImport(name="resourcePoolId")
     private final @Nullable String resourcePoolId;
 

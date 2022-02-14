@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Representing a list of FilterTrackPropertyConditions to select a track.  The filters are combined using a logical AND operation.
+ */
 public final class FilterTrackSelectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FilterTrackSelectionResponse Empty = new FilterTrackSelectionResponse();
 
+    /**
+     * The track selections.
+     */
     @InputImport(name="trackSelections", required=true)
     private final List<FilterTrackPropertyConditionResponse> trackSelections;
 

@@ -3,7 +3,6 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.azurenative.logic.inputs.KeyVaultKeyResponseAttributes;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -11,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The key vault key.
+ */
 public final class KeyVaultKeyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyVaultKeyResponse Empty = new KeyVaultKeyResponse();
 
+    /**
+     * The key attributes.
+     */
     @InputImport(name="attributes")
     private final @Nullable KeyVaultKeyResponseAttributes attributes;
 
@@ -22,6 +27,9 @@ public final class KeyVaultKeyResponse extends io.pulumi.resources.InvokeArgs {
         return this.attributes == null ? Optional.empty() : Optional.ofNullable(this.attributes);
     }
 
+    /**
+     * The key id.
+     */
     @InputImport(name="kid")
     private final @Nullable String kid;
 

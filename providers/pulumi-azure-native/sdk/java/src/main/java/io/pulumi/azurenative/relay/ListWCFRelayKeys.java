@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListWCFRelayKeys {
+/**
+ * Namespace/Relay Connection String
+API Version: 2017-04-01.
+ *
+ * Namespace/Relay Connection String
+ */
     public static CompletableFuture<ListWCFRelayKeysResult> invokeAsync(ListWCFRelayKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:relay:listWCFRelayKeys", TypeShape.of(ListWCFRelayKeysResult.class), args == null ? ListWCFRelayKeysArgs.Empty : args, Utilities.withVersion(options));
     }

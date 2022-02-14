@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A load balancer probe.
+ */
 public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ProbeResponse Empty = new ProbeResponse();
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -24,6 +30,9 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -31,6 +40,9 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The interval, in seconds, for how frequently to probe the endpoint for health status. Typically, the interval is slightly less than half the allocated timeout period (in seconds) which allows two full probes before taking the instance out of rotation. The default value is 15, the minimum value is 5.
+     */
     @InputImport(name="intervalInSeconds")
     private final @Nullable Integer intervalInSeconds;
 
@@ -38,6 +50,9 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
         return this.intervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalInSeconds);
     }
 
+    /**
+     * The load balancer rules that use this probe.
+     */
     @InputImport(name="loadBalancingRules", required=true)
     private final List<SubResourceResponse> loadBalancingRules;
 
@@ -45,6 +60,9 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
         return this.loadBalancingRules;
     }
 
+    /**
+     * The name of the resource that is unique within the set of probes used by the load balancer. This name can be used to access the resource.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -52,6 +70,9 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The number of probes where if no response, will result in stopping further traffic from being delivered to the endpoint. This values allows endpoints to be taken out of rotation faster or slower than the typical times used in Azure.
+     */
     @InputImport(name="numberOfProbes")
     private final @Nullable Integer numberOfProbes;
 
@@ -59,6 +80,9 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
         return this.numberOfProbes == null ? Optional.empty() : Optional.ofNullable(this.numberOfProbes);
     }
 
+    /**
+     * The port for communicating the probe. Possible values range from 1 to 65535, inclusive.
+     */
     @InputImport(name="port", required=true)
     private final Integer port;
 
@@ -66,6 +90,9 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
         return this.port;
     }
 
+    /**
+     * The protocol of the end point. If 'Tcp' is specified, a received ACK is required for the probe to be successful. If 'Http' or 'Https' is specified, a 200 OK response from the specifies URI is required for the probe to be successful.
+     */
     @InputImport(name="protocol", required=true)
     private final String protocol;
 
@@ -73,6 +100,9 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
         return this.protocol;
     }
 
+    /**
+     * The provisioning state of the probe resource.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -80,6 +110,9 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
         return this.provisioningState;
     }
 
+    /**
+     * The URI used for requesting health status from the VM. Path is required if a protocol is set to http. Otherwise, it is not allowed. There is no default value.
+     */
     @InputImport(name="requestPath")
     private final @Nullable String requestPath;
 
@@ -87,6 +120,9 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
         return this.requestPath == null ? Optional.empty() : Optional.ofNullable(this.requestPath);
     }
 
+    /**
+     * Type of the resource.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

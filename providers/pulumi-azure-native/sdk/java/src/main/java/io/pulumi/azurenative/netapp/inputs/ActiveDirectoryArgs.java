@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Active Directory
+ */
 public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ActiveDirectoryArgs Empty = new ActiveDirectoryArgs();
 
+    /**
+     * Id of the Active Directory
+     */
     @InputImport(name="activeDirectoryId")
     private final @Nullable Input<String> activeDirectoryId;
 
@@ -23,6 +29,9 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
         return this.activeDirectoryId == null ? Input.empty() : this.activeDirectoryId;
     }
 
+    /**
+     * Name of the active directory machine. This optional parameter is used only while creating kerberos volume
+     */
     @InputImport(name="adName")
     private final @Nullable Input<String> adName;
 
@@ -30,6 +39,9 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
         return this.adName == null ? Input.empty() : this.adName;
     }
 
+    /**
+     * If enabled, AES encryption will be enabled for SMB communication.
+     */
     @InputImport(name="aesEncryption")
     private final @Nullable Input<Boolean> aesEncryption;
 
@@ -37,6 +49,9 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
         return this.aesEncryption == null ? Input.empty() : this.aesEncryption;
     }
 
+    /**
+     *  If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.
+     */
     @InputImport(name="allowLocalNfsUsersWithLdap")
     private final @Nullable Input<Boolean> allowLocalNfsUsersWithLdap;
 
@@ -44,6 +59,9 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
         return this.allowLocalNfsUsersWithLdap == null ? Input.empty() : this.allowLocalNfsUsersWithLdap;
     }
 
+    /**
+     * Users to be added to the Built-in Backup Operator active directory group. A list of unique usernames without domain specifier
+     */
     @InputImport(name="backupOperators")
     private final @Nullable Input<List<String>> backupOperators;
 
@@ -51,6 +69,9 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
         return this.backupOperators == null ? Input.empty() : this.backupOperators;
     }
 
+    /**
+     * Comma separated list of DNS server IP addresses (IPv4 only) for the Active Directory domain
+     */
     @InputImport(name="dns")
     private final @Nullable Input<String> dns;
 
@@ -58,6 +79,9 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
         return this.dns == null ? Input.empty() : this.dns;
     }
 
+    /**
+     * Name of the Active Directory domain
+     */
     @InputImport(name="domain")
     private final @Nullable Input<String> domain;
 
@@ -65,6 +89,9 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
         return this.domain == null ? Input.empty() : this.domain;
     }
 
+    /**
+     * kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.
+     */
     @InputImport(name="kdcIP")
     private final @Nullable Input<String> kdcIP;
 
@@ -72,6 +99,9 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
         return this.kdcIP == null ? Input.empty() : this.kdcIP;
     }
 
+    /**
+     * Specifies whether or not the LDAP traffic needs to be secured via TLS.
+     */
     @InputImport(name="ldapOverTLS")
     private final @Nullable Input<Boolean> ldapOverTLS;
 
@@ -79,6 +109,9 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
         return this.ldapOverTLS == null ? Input.empty() : this.ldapOverTLS;
     }
 
+    /**
+     * Specifies whether or not the LDAP traffic needs to be signed.
+     */
     @InputImport(name="ldapSigning")
     private final @Nullable Input<Boolean> ldapSigning;
 
@@ -86,6 +119,9 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
         return this.ldapSigning == null ? Input.empty() : this.ldapSigning;
     }
 
+    /**
+     * The Organizational Unit (OU) within the Windows Active Directory
+     */
     @InputImport(name="organizationalUnit")
     private final @Nullable Input<String> organizationalUnit;
 
@@ -93,6 +129,9 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
         return this.organizationalUnit == null ? Input.empty() : this.organizationalUnit;
     }
 
+    /**
+     * Plain text password of Active Directory domain administrator, value is masked in the response
+     */
     @InputImport(name="password")
     private final @Nullable Input<String> password;
 
@@ -100,6 +139,9 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * Domain Users in the Active directory to be given SeSecurityPrivilege privilege (Needed for SMB Continuously available shares for SQL). A list of unique usernames without domain specifier
+     */
     @InputImport(name="securityOperators")
     private final @Nullable Input<List<String>> securityOperators;
 
@@ -107,6 +149,9 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
         return this.securityOperators == null ? Input.empty() : this.securityOperators;
     }
 
+    /**
+     * When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.
+     */
     @InputImport(name="serverRootCACertificate")
     private final @Nullable Input<String> serverRootCACertificate;
 
@@ -114,6 +159,9 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
         return this.serverRootCACertificate == null ? Input.empty() : this.serverRootCACertificate;
     }
 
+    /**
+     * The Active Directory site the service will limit Domain Controller discovery to
+     */
     @InputImport(name="site")
     private final @Nullable Input<String> site;
 
@@ -121,6 +169,9 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
         return this.site == null ? Input.empty() : this.site;
     }
 
+    /**
+     * NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes
+     */
     @InputImport(name="smbServerName")
     private final @Nullable Input<String> smbServerName;
 
@@ -128,6 +179,9 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
         return this.smbServerName == null ? Input.empty() : this.smbServerName;
     }
 
+    /**
+     * Username of Active Directory domain administrator
+     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 

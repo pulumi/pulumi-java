@@ -3,7 +3,6 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.azurenative.resources.inputs.IdentityResponseUserAssignedIdentities;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -12,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Identity for the resource.
+ */
 public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IdentityResponse Empty = new IdentityResponse();
 
+    /**
+     * The principal ID of resource identity.
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -23,6 +28,9 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
         return this.principalId;
     }
 
+    /**
+     * The tenant ID of resource.
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -30,6 +38,9 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
         return this.tenantId;
     }
 
+    /**
+     * The identity type.
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -37,6 +48,9 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
+    /**
+     * The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable Map<String,IdentityResponseUserAssignedIdentities> userAssignedIdentities;
 

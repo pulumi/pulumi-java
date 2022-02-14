@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class BlobShareResponse {
+/**
+ * SAS URI of Azure Storage Account Container.
+ */
     private final String sasUri;
 
     @OutputCustomType.Constructor({"sasUri"})
@@ -16,6 +19,9 @@ public final class BlobShareResponse {
         this.sasUri = Objects.requireNonNull(sasUri);
     }
 
+/**
+ * SAS URI of Azure Storage Account Container.
+ */
     public String getSasUri() {
         return this.sasUri;
     }

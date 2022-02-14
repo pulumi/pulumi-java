@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration for Automated Early Stopping of Trials. If no implementation_config is set, automated early stopping will not be run.
+ */
 public final class GoogleCloudMlV1__AutomatedStoppingConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudMlV1__AutomatedStoppingConfigArgs Empty = new GoogleCloudMlV1__AutomatedStoppingConfigArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="decayCurveStoppingConfig")
     private final @Nullable Input<GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs> decayCurveStoppingConfig;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudMlV1__AutomatedStoppingConfigArgs extends io.pulum
         return this.decayCurveStoppingConfig == null ? Input.empty() : this.decayCurveStoppingConfig;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="medianAutomatedStoppingConfig")
     private final @Nullable Input<GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs> medianAutomatedStoppingConfig;
 

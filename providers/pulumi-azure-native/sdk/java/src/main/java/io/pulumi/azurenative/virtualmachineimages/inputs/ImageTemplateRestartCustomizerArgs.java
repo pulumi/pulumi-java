@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Reboots a VM and waits for it to come back online (Windows). Corresponds to Packer windows-restart provisioner
+ */
 public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageTemplateRestartCustomizerArgs Empty = new ImageTemplateRestartCustomizerArgs();
 
+    /**
+     * Friendly Name to provide context on what this customization step does
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +27,9 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Command to check if restart succeeded [Default: '']
+     */
     @InputImport(name="restartCheckCommand")
     private final @Nullable Input<String> restartCheckCommand;
 
@@ -28,6 +37,9 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
         return this.restartCheckCommand == null ? Input.empty() : this.restartCheckCommand;
     }
 
+    /**
+     * Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']
+     */
     @InputImport(name="restartCommand")
     private final @Nullable Input<String> restartCommand;
 
@@ -35,6 +47,9 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
         return this.restartCommand == null ? Input.empty() : this.restartCommand;
     }
 
+    /**
+     * Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']
+     */
     @InputImport(name="restartTimeout")
     private final @Nullable Input<String> restartTimeout;
 
@@ -42,6 +57,10 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
         return this.restartTimeout == null ? Input.empty() : this.restartTimeout;
     }
 
+    /**
+     * The type of customization tool you want to use on the Image. For example, "Shell" can be shell customizer
+Expected value is 'WindowsRestart'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

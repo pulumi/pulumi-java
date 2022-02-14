@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListVideoContentTokenArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListVideoContentTokenArgs Empty = new ListVideoContentTokenArgs();
 
+    /**
+     * The Azure Video Analyzer account name.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class ListVideoContentTokenArgs extends io.pulumi.resources.InvokeA
         return this.accountName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class ListVideoContentTokenArgs extends io.pulumi.resources.InvokeA
         return this.resourceGroupName;
     }
 
+    /**
+     * The Video name.
+     */
     @InputImport(name="videoName", required=true)
     private final String videoName;
 

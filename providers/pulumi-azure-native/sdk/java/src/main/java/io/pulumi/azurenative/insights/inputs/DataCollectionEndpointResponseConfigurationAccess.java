@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The endpoint used by agents to access their configuration.
+ */
 public final class DataCollectionEndpointResponseConfigurationAccess extends io.pulumi.resources.InvokeArgs {
 
     public static final DataCollectionEndpointResponseConfigurationAccess Empty = new DataCollectionEndpointResponseConfigurationAccess();
 
+    /**
+     * The endpoint. This property is READ-ONLY.
+     */
     @InputImport(name="endpoint", required=true)
     private final String endpoint;
 

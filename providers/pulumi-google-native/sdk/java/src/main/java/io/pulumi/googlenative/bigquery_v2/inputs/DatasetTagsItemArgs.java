@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DatasetTagsItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetTagsItemArgs Empty = new DatasetTagsItemArgs();
 
+    /**
+     * [Required] The namespaced friendly name of the tag key, e.g. "12345/environment" where 12345 is org id.
+     */
     @InputImport(name="tagKey")
     private final @Nullable Input<String> tagKey;
 
@@ -21,6 +27,9 @@ public final class DatasetTagsItemArgs extends io.pulumi.resources.ResourceArgs 
         return this.tagKey == null ? Input.empty() : this.tagKey;
     }
 
+    /**
+     * [Required] Friendly short name of the tag value, e.g. "production".
+     */
     @InputImport(name="tagValue")
     private final @Nullable Input<String> tagValue;
 

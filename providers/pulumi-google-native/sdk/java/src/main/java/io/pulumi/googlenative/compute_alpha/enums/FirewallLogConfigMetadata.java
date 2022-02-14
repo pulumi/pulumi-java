@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.
+ */
     @EnumType
     public enum FirewallLogConfigMetadata {
+/**
+ * 
+ */
         ExcludeAllMetadata("EXCLUDE_ALL_METADATA"),
+/**
+ * 
+ */
         IncludeAllMetadata("INCLUDE_ALL_METADATA");
 
         private final String value;

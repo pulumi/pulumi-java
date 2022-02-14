@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListGlobalUserLabsArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListGlobalUserLabsArgs Empty = new ListGlobalUserLabsArgs();
 
+    /**
+     * The name of the user.
+     */
     @InputImport(name="userName", required=true)
     private final String userName;
 

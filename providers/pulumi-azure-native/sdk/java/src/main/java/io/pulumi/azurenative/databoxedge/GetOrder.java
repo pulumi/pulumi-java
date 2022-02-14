@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetOrder {
+/**
+ * The order details.
+API Version: 2020-12-01.
+ *
+ * The order details.
+ */
     public static CompletableFuture<GetOrderResult> invokeAsync(GetOrderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:databoxedge:getOrder", TypeShape.of(GetOrderResult.class), args == null ? GetOrderArgs.Empty : args, Utilities.withVersion(options));
     }

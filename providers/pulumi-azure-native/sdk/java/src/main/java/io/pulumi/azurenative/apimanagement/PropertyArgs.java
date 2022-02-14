@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PropertyArgs Empty = new PropertyArgs();
 
+    /**
+     * Unique name of Property. It may contain only letters, digits, period, dash, and underscore characters.
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -23,6 +29,9 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName;
     }
 
+    /**
+     * Identifier of the property.
+     */
     @InputImport(name="propId")
     private final @Nullable Input<String> propId;
 
@@ -30,6 +39,9 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
         return this.propId == null ? Input.empty() : this.propId;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -37,6 +49,9 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Determines whether the value is a secret and should be encrypted or not. Default value is false.
+     */
     @InputImport(name="secret")
     private final @Nullable Input<Boolean> secret;
 
@@ -44,6 +59,9 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
         return this.secret == null ? Input.empty() : this.secret;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -51,6 +69,9 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceName;
     }
 
+    /**
+     * Optional tags that when provided can be used to filter the property list.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 
@@ -58,6 +79,9 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SortOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SortOptionsArgs Empty = new SortOptionsArgs();
 
+    /**
+     * Name of the operator corresponding to the field to sort on. The corresponding property must be marked as sortable.
+     */
     @InputImport(name="operatorName")
     private final @Nullable Input<String> operatorName;
 
@@ -22,6 +28,9 @@ public final class SortOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.operatorName == null ? Input.empty() : this.operatorName;
     }
 
+    /**
+     * Ascending is the default sort order
+     */
     @InputImport(name="sortOrder")
     private final @Nullable Input<SortOptionsSortOrder> sortOrder;
 

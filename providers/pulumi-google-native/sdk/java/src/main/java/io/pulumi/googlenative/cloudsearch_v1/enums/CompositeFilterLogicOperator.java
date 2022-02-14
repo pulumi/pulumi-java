@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The logic operator of the sub filter.
+ */
     @EnumType
     public enum CompositeFilterLogicOperator {
+/**
+ * Logical operators, which can only be applied to sub filters.
+ */
         And("AND"),
+/**
+ * 
+ */
         Or("OR"),
+/**
+ * NOT can only be applied on a single sub filter.
+ */
         Not("NOT");
 
         private final String value;

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetManagedZoneArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetManagedZoneArgs Empty = new GetManagedZoneArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="clientOperationId")
     private final @Nullable String clientOperationId;
 
@@ -21,6 +27,9 @@ public final class GetManagedZoneArgs extends io.pulumi.resources.InvokeArgs {
         return this.clientOperationId == null ? Optional.empty() : Optional.ofNullable(this.clientOperationId);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="managedZone", required=true)
     private final String managedZone;
 
@@ -28,6 +37,9 @@ public final class GetManagedZoneArgs extends io.pulumi.resources.InvokeArgs {
         return this.managedZone;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

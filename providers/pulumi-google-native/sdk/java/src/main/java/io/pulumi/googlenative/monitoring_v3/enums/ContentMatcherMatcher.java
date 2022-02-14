@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
+ */
     @EnumType
     public enum ContentMatcherMatcher {
+/**
+ * No content matcher type specified (maintained for backward compatibility, but deprecated for future use). Treated as CONTAINS_STRING.
+ */
         ContentMatcherOptionUnspecified("CONTENT_MATCHER_OPTION_UNSPECIFIED"),
+/**
+ * Selects substring matching. The match succeeds if the output contains the content string. This is the default value for checks without a matcher option, or where the value of matcher is CONTENT_MATCHER_OPTION_UNSPECIFIED.
+ */
         ContainsString("CONTAINS_STRING"),
+/**
+ * Selects negation of substring matching. The match succeeds if the output does NOT contain the content string.
+ */
         NotContainsString("NOT_CONTAINS_STRING"),
+/**
+ * Selects regular-expression matching. The match succeeds of the output matches the regular expression specified in the content string. Regex matching is only supported for HTTP/HTTPS checks.
+ */
         MatchesRegex("MATCHES_REGEX"),
+/**
+ * Selects negation of regular-expression matching. The match succeeds if the output does NOT match the regular expression specified in the content string. Regex matching is only supported for HTTP/HTTPS checks.
+ */
         NotMatchesRegex("NOT_MATCHES_REGEX");
 
         private final String value;

@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * NumberLessThanOrEquals Advanced Filter.
+ */
 public final class NumberLessThanOrEqualsAdvancedFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NumberLessThanOrEqualsAdvancedFilterResponse Empty = new NumberLessThanOrEqualsAdvancedFilterResponse();
 
+    /**
+     * The field/property in the event based on which you want to filter.
+     */
     @InputImport(name="key")
     private final @Nullable String key;
 
@@ -22,6 +28,10 @@ public final class NumberLessThanOrEqualsAdvancedFilterResponse extends io.pulum
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
+    /**
+     * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+Expected value is 'NumberLessThanOrEquals'.
+     */
     @InputImport(name="operatorType", required=true)
     private final String operatorType;
 
@@ -29,6 +39,9 @@ public final class NumberLessThanOrEqualsAdvancedFilterResponse extends io.pulum
         return this.operatorType;
     }
 
+    /**
+     * The filter value.
+     */
     @InputImport(name="value")
     private final @Nullable Double value;
 

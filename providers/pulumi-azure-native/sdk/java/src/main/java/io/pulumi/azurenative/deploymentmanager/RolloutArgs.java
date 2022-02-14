@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RolloutArgs Empty = new RolloutArgs();
 
+    /**
+     * The reference to the artifact source resource Id where the payload is located.
+     */
     @InputImport(name="artifactSourceId")
     private final @Nullable Input<String> artifactSourceId;
 
@@ -25,6 +31,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.artifactSourceId == null ? Input.empty() : this.artifactSourceId;
     }
 
+    /**
+     * The version of the build being deployed.
+     */
     @InputImport(name="buildVersion", required=true)
     private final Input<String> buildVersion;
 
@@ -32,6 +41,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.buildVersion;
     }
 
+    /**
+     * Identity for the resource.
+     */
     @InputImport(name="identity", required=true)
     private final Input<IdentityArgs> identity;
 
@@ -39,6 +51,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.identity;
     }
 
+    /**
+     * The geo-location where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -46,6 +61,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -53,6 +71,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The rollout name.
+     */
     @InputImport(name="rolloutName")
     private final @Nullable Input<String> rolloutName;
 
@@ -60,6 +81,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.rolloutName == null ? Input.empty() : this.rolloutName;
     }
 
+    /**
+     * The list of step groups that define the orchestration.
+     */
     @InputImport(name="stepGroups", required=true)
     private final Input<List<StepGroupArgs>> stepGroups;
 
@@ -67,6 +91,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.stepGroups;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -74,6 +101,9 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The resource Id of the service topology from which service units are being referenced in step groups to be deployed.
+     */
     @InputImport(name="targetServiceTopologyId", required=true)
     private final Input<String> targetServiceTopologyId;
 

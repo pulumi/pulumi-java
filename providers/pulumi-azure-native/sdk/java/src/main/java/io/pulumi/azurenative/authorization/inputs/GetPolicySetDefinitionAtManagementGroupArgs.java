@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetPolicySetDefinitionAtManagementGroupArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPolicySetDefinitionAtManagementGroupArgs Empty = new GetPolicySetDefinitionAtManagementGroupArgs();
 
+    /**
+     * The ID of the management group.
+     */
     @InputImport(name="managementGroupId", required=true)
     private final String managementGroupId;
 
@@ -19,6 +25,9 @@ public final class GetPolicySetDefinitionAtManagementGroupArgs extends io.pulumi
         return this.managementGroupId;
     }
 
+    /**
+     * The name of the policy set definition to get.
+     */
     @InputImport(name="policySetDefinitionName", required=true)
     private final String policySetDefinitionName;
 

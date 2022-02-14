@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetBackupInstanceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBackupInstanceArgs Empty = new GetBackupInstanceArgs();
 
+    /**
+     * The name of the backup instance
+     */
     @InputImport(name="backupInstanceName", required=true)
     private final String backupInstanceName;
 
@@ -19,6 +25,9 @@ public final class GetBackupInstanceArgs extends io.pulumi.resources.InvokeArgs 
         return this.backupInstanceName;
     }
 
+    /**
+     * The name of the resource group where the backup vault is present.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetBackupInstanceArgs extends io.pulumi.resources.InvokeArgs 
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the backup vault.
+     */
     @InputImport(name="vaultName", required=true)
     private final String vaultName;
 

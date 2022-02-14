@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Definition of the module error info type.
+ */
 public final class ModuleErrorInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ModuleErrorInfoResponse Empty = new ModuleErrorInfoResponse();
 
+    /**
+     * Gets or sets the error code.
+     */
     @InputImport(name="code")
     private final @Nullable String code;
 
@@ -21,6 +27,9 @@ public final class ModuleErrorInfoResponse extends io.pulumi.resources.InvokeArg
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
+    /**
+     * Gets or sets the error message.
+     */
     @InputImport(name="message")
     private final @Nullable String message;
 

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Reference to another Cloud SQL instance.
+ */
 public final class InstanceReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceReferenceArgs Empty = new InstanceReferenceArgs();
 
+    /**
+     * The name of the Cloud SQL instance being referenced. This does not include the project ID.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +27,9 @@ public final class InstanceReferenceArgs extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The project ID of the Cloud SQL instance being referenced. The default is the same project ID as the instance references it.
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -28,6 +37,9 @@ public final class InstanceReferenceArgs extends io.pulumi.resources.ResourceArg
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The region of the Cloud SQL instance being referenced.
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 

@@ -4,14 +4,19 @@
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
 import io.pulumi.core.internal.annotations.OutputCustomType;
-import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponse {
+/**
+ * List of media objects.
+ */
     private final List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects;
+/**
+ * Optional. What type of media is the content (ie "audio").
+ */
     private final String mediaType;
 
     @OutputCustomType.Constructor({"mediaObjects","mediaType"})
@@ -22,9 +27,15 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponse {
         this.mediaType = Objects.requireNonNull(mediaType);
     }
 
+/**
+ * List of media objects.
+ */
     public List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse> getMediaObjects() {
         return this.mediaObjects;
     }
+/**
+ * Optional. What type of media is the content (ie "audio").
+ */
     public String getMediaType() {
         return this.mediaType;
     }

@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class VMInfoResponse {
+/**
+ * Azure resource Id of the VM.
+ */
     private final String id;
+/**
+ * UUID(Universally Unique Identifier) of the VM.
+ */
     private final String uuid;
 
     @OutputCustomType.Constructor({"id","uuid"})
@@ -20,9 +26,15 @@ public final class VMInfoResponse {
         this.uuid = Objects.requireNonNull(uuid);
     }
 
+/**
+ * Azure resource Id of the VM.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * UUID(Universally Unique Identifier) of the VM.
+ */
     public String getUuid() {
         return this.uuid;
     }

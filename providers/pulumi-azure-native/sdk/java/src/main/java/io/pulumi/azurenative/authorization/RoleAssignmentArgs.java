@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RoleAssignmentArgs Empty = new RoleAssignmentArgs();
 
+    /**
+     * The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
+     */
     @InputImport(name="condition")
     private final @Nullable Input<String> condition;
 
@@ -23,6 +29,9 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
+    /**
+     * Version of the condition. Currently accepted value is '2.0'
+     */
     @InputImport(name="conditionVersion")
     private final @Nullable Input<String> conditionVersion;
 
@@ -30,6 +39,9 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.conditionVersion == null ? Input.empty() : this.conditionVersion;
     }
 
+    /**
+     * Id of the delegated managed identity resource
+     */
     @InputImport(name="delegatedManagedIdentityResourceId")
     private final @Nullable Input<String> delegatedManagedIdentityResourceId;
 
@@ -37,6 +49,9 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.delegatedManagedIdentityResourceId == null ? Input.empty() : this.delegatedManagedIdentityResourceId;
     }
 
+    /**
+     * Description of role assignment
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -44,6 +59,9 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The principal ID.
+     */
     @InputImport(name="principalId", required=true)
     private final Input<String> principalId;
 
@@ -51,6 +69,9 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.principalId;
     }
 
+    /**
+     * The principal type of the assigned principal ID.
+     */
     @InputImport(name="principalType")
     private final @Nullable Input<Either<String,PrincipalType>> principalType;
 
@@ -58,6 +79,9 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.principalType == null ? Input.empty() : this.principalType;
     }
 
+    /**
+     * The name of the role assignment. It can be any valid GUID.
+     */
     @InputImport(name="roleAssignmentName")
     private final @Nullable Input<String> roleAssignmentName;
 
@@ -65,6 +89,9 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleAssignmentName == null ? Input.empty() : this.roleAssignmentName;
     }
 
+    /**
+     * The role definition ID.
+     */
     @InputImport(name="roleDefinitionId", required=true)
     private final Input<String> roleDefinitionId;
 
@@ -72,6 +99,9 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
         return this.roleDefinitionId;
     }
 
+    /**
+     * The scope of the operation or resource. Valid scopes are: subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
+     */
     @InputImport(name="scope", required=true)
     private final Input<String> scope;
 

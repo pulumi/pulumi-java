@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class EncryptionConfigResponse {
+/**
+ * Optional. Customer-managed Encryption Key available through Google's Key Management Service. Cannot be updated. If not specified, Google-managed key will be used.
+ */
     private final String kmsKeyName;
 
     @OutputCustomType.Constructor({"kmsKeyName"})
@@ -16,6 +19,9 @@ public final class EncryptionConfigResponse {
         this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
     }
 
+/**
+ * Optional. Customer-managed Encryption Key available through Google's Key Management Service. Cannot be updated. If not specified, Google-managed key will be used.
+ */
     public String getKmsKeyName() {
         return this.kmsKeyName;
     }

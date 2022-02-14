@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.botservice;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.botservice.BotConnectionArgs;
 import io.pulumi.azurenative.botservice.outputs.ConnectionSettingPropertiesResponse;
 import io.pulumi.azurenative.botservice.outputs.SkuResponse;
 import io.pulumi.core.Alias;
@@ -17,63 +16,282 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Bot channel resource definition
+API Version: 2021-03-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create Connection Setting
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var botConnection = new AzureNative.BotService.BotConnection("botConnection", new AzureNative.BotService.BotConnectionArgs
+        {
+            ConnectionName = "sampleConnection",
+            Location = "West US",
+            Properties = new AzureNative.BotService.Inputs.ConnectionSettingPropertiesArgs
+            {
+                ClientId = "sampleclientid",
+                ClientSecret = "samplesecret",
+                Parameters = 
+                {
+                    new AzureNative.BotService.Inputs.ConnectionSettingParameterArgs
+                    {
+                        Key = "key1",
+                        Value = "value1",
+                    },
+                    new AzureNative.BotService.Inputs.ConnectionSettingParameterArgs
+                    {
+                        Key = "key2",
+                        Value = "value2",
+                    },
+                },
+                Scopes = "samplescope",
+                ServiceProviderId = "serviceproviderid",
+            },
+            ResourceGroupName = "OneResourceGroupName",
+            ResourceName = "samplebotname",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	botservice "github.com/pulumi/pulumi-azure-native/sdk/go/azure/botservice"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := botservice.NewBotConnection(ctx, "botConnection", &botservice.BotConnectionArgs{
+			ConnectionName: pulumi.String("sampleConnection"),
+			Location:       pulumi.String("West US"),
+			Properties: &botservice.ConnectionSettingPropertiesArgs{
+				ClientId:     pulumi.String("sampleclientid"),
+				ClientSecret: pulumi.String("samplesecret"),
+				Parameters: botservice.ConnectionSettingParameterArray{
+					&botservice.ConnectionSettingParameterArgs{
+						Key:   pulumi.String("key1"),
+						Value: pulumi.String("value1"),
+					},
+					&botservice.ConnectionSettingParameterArgs{
+						Key:   pulumi.String("key2"),
+						Value: pulumi.String("value2"),
+					},
+				},
+				Scopes:            pulumi.String("samplescope"),
+				ServiceProviderId: pulumi.String("serviceproviderid"),
+			},
+			ResourceGroupName: pulumi.String("OneResourceGroupName"),
+			ResourceName:      pulumi.String("samplebotname"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const botConnection = new azure_native.botservice.BotConnection("botConnection", {
+    connectionName: "sampleConnection",
+    location: "West US",
+    properties: {
+        clientId: "sampleclientid",
+        clientSecret: "samplesecret",
+        parameters: [
+            {
+                key: "key1",
+                value: "value1",
+            },
+            {
+                key: "key2",
+                value: "value2",
+            },
+        ],
+        scopes: "samplescope",
+        serviceProviderId: "serviceproviderid",
+    },
+    resourceGroupName: "OneResourceGroupName",
+    resourceName: "samplebotname",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+bot_connection = azure_native.botservice.BotConnection("botConnection",
+    connection_name="sampleConnection",
+    location="West US",
+    properties=azure_native.botservice.ConnectionSettingPropertiesArgs(
+        client_id="sampleclientid",
+        client_secret="samplesecret",
+        parameters=[
+            azure_native.botservice.ConnectionSettingParameterArgs(
+                key="key1",
+                value="value1",
+            ),
+            azure_native.botservice.ConnectionSettingParameterArgs(
+                key="key2",
+                value="value2",
+            ),
+        ],
+        scopes="samplescope",
+        service_provider_id="serviceproviderid",
+    ),
+    resource_group_name="OneResourceGroupName",
+    resource_name="samplebotname")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:botservice:BotConnection sampleConnection /subscriptions/subscription-id/resourceGroups/OneResourceGroupName/providers/Microsoft.BotService/botServices/samplebotname/connections/sampleConnection 
+```
+
+ */
 @ResourceType(type="azure-native:botservice:BotConnection")
 public class BotConnection extends io.pulumi.resources.CustomResource {
+    /**
+     * Entity Tag
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
+    /**
+     * @return Entity Tag
+     */
     public Output</* @Nullable */ String> getEtag() {
         return this.etag;
     }
+    /**
+     * Required. Gets or sets the Kind of the resource.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
+    /**
+     * @return Required. Gets or sets the Kind of the resource.
+     */
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
+    /**
+     * Specifies the location of the resource.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Specifies the location of the resource.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Specifies the name of the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Specifies the name of the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The set of properties specific to bot channel resource
+     */
     @OutputExport(name="properties", type=ConnectionSettingPropertiesResponse.class, parameters={})
     private Output<ConnectionSettingPropertiesResponse> properties;
 
+    /**
+     * @return The set of properties specific to bot channel resource
+     */
     public Output<ConnectionSettingPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Gets or sets the SKU of the resource.
+     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
+    /**
+     * @return Gets or sets the SKU of the resource.
+     */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * Contains resource tags defined as key/value pairs.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Contains resource tags defined as key/value pairs.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Specifies the type of the resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Specifies the type of the resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Entity zones
+     */
     @OutputExport(name="zones", type=List.class, parameters={String.class})
     private Output<List<String>> zones;
 
+    /**
+     * @return Entity zones
+     */
     public Output<List<String>> getZones() {
         return this.zones;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public BotConnection(String name, BotConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:botservice:BotConnection", name, args == null ? BotConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -96,6 +314,14 @@ public class BotConnection extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static BotConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new BotConnection(name, id, options);
     }

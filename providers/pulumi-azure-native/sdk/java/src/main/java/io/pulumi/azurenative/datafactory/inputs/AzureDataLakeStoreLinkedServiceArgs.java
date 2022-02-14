@@ -19,10 +19,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure Data Lake Store linked service.
+ */
 public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureDataLakeStoreLinkedServiceArgs Empty = new AzureDataLakeStoreLinkedServiceArgs();
 
+    /**
+     * Data Lake Store account name. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="accountName")
     private final @Nullable Input<Object> accountName;
 
@@ -30,6 +36,9 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
         return this.accountName == null ? Input.empty() : this.accountName;
     }
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -37,6 +46,9 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="azureCloudType")
     private final @Nullable Input<Object> azureCloudType;
 
@@ -44,6 +56,9 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
         return this.azureCloudType == null ? Input.empty() : this.azureCloudType;
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -51,6 +66,9 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
+    /**
+     * The credential reference containing authentication information.
+     */
     @InputImport(name="credential")
     private final @Nullable Input<CredentialReferenceArgs> credential;
 
@@ -58,6 +76,9 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
         return this.credential == null ? Input.empty() : this.credential;
     }
 
+    /**
+     * Data Lake Store service URI. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="dataLakeStoreUri", required=true)
     private final Input<Object> dataLakeStoreUri;
 
@@ -65,6 +86,9 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
         return this.dataLakeStoreUri;
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -72,6 +96,9 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -79,6 +106,9 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -86,6 +116,9 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Data Lake Store account resource group name (if different from Data Factory account). Type: string (or Expression with resultType string).
+     */
     @InputImport(name="resourceGroupName")
     private final @Nullable Input<Object> resourceGroupName;
 
@@ -93,6 +126,9 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
         return this.resourceGroupName == null ? Input.empty() : this.resourceGroupName;
     }
 
+    /**
+     * The ID of the application used to authenticate against the Azure Data Lake Store account. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="servicePrincipalId")
     private final @Nullable Input<Object> servicePrincipalId;
 
@@ -100,6 +136,9 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
         return this.servicePrincipalId == null ? Input.empty() : this.servicePrincipalId;
     }
 
+    /**
+     * The Key of the application used to authenticate against the Azure Data Lake Store account.
+     */
     @InputImport(name="servicePrincipalKey")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
@@ -107,6 +146,9 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
         return this.servicePrincipalKey == null ? Input.empty() : this.servicePrincipalKey;
     }
 
+    /**
+     * Data Lake Store account subscription ID (if different from Data Factory account). Type: string (or Expression with resultType string).
+     */
     @InputImport(name="subscriptionId")
     private final @Nullable Input<Object> subscriptionId;
 
@@ -114,6 +156,9 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
     }
 
+    /**
+     * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="tenant")
     private final @Nullable Input<Object> tenant;
 
@@ -121,6 +166,10 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
         return this.tenant == null ? Input.empty() : this.tenant;
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'AzureDataLakeStore'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

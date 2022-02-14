@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DataMaskingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataMaskingArgs Empty = new DataMaskingArgs();
 
+    /**
+     * Masking settings for headers
+     */
     @InputImport(name="headers")
     private final @Nullable Input<List<DataMaskingEntityArgs>> headers;
 
@@ -22,6 +28,9 @@ public final class DataMaskingArgs extends io.pulumi.resources.ResourceArgs {
         return this.headers == null ? Input.empty() : this.headers;
     }
 
+    /**
+     * Masking settings for Url query parameters
+     */
     @InputImport(name="queryParams")
     private final @Nullable Input<List<DataMaskingEntityArgs>> queryParams;
 

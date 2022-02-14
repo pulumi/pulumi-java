@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetFileArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFileArgs Empty = new GetFileArgs();
 
+    /**
+     * Name of the File
+     */
     @InputImport(name="fileName", required=true)
     private final String fileName;
 
@@ -19,6 +25,9 @@ public final class GetFileArgs extends io.pulumi.resources.InvokeArgs {
         return this.fileName;
     }
 
+    /**
+     * Name of the resource group
+     */
     @InputImport(name="groupName", required=true)
     private final String groupName;
 
@@ -26,6 +35,9 @@ public final class GetFileArgs extends io.pulumi.resources.InvokeArgs {
         return this.groupName;
     }
 
+    /**
+     * Name of the project
+     */
     @InputImport(name="projectName", required=true)
     private final String projectName;
 
@@ -33,6 +45,9 @@ public final class GetFileArgs extends io.pulumi.resources.InvokeArgs {
         return this.projectName;
     }
 
+    /**
+     * Name of the service
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTemplate {
+/**
+ * Get the template associated with a template.
+ */
     public static CompletableFuture<GetTemplateResult> invokeAsync(GetTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataflow/v1b3:getTemplate", TypeShape.of(GetTemplateResult.class), args == null ? GetTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

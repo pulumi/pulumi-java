@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FilterFileDetailsResponse {
+/**
+ * Path of the file that contains the details of all items to transfer.
+ */
     private final String filterFilePath;
+/**
+ * Type of the filter file.
+ */
     private final String filterFileType;
 
     @OutputCustomType.Constructor({"filterFilePath","filterFileType"})
@@ -20,9 +26,15 @@ public final class FilterFileDetailsResponse {
         this.filterFileType = Objects.requireNonNull(filterFileType);
     }
 
+/**
+ * Path of the file that contains the details of all items to transfer.
+ */
     public String getFilterFilePath() {
         return this.filterFilePath;
     }
+/**
+ * Type of the filter file.
+ */
     public String getFilterFileType() {
         return this.filterFileType;
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * File source details.
+ */
 public final class FileSourceInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FileSourceInfoResponse Empty = new FileSourceInfoResponse();
 
+    /**
+     * File share ID.
+     */
     @InputImport(name="shareId", required=true)
     private final String shareId;
 

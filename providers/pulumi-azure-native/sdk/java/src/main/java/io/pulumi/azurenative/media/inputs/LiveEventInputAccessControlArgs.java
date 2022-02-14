@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The IP access control for live event input.
+ */
 public final class LiveEventInputAccessControlArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LiveEventInputAccessControlArgs Empty = new LiveEventInputAccessControlArgs();
 
+    /**
+     * The IP access control properties.
+     */
     @InputImport(name="ip")
     private final @Nullable Input<IPAccessControlArgs> ip;
 

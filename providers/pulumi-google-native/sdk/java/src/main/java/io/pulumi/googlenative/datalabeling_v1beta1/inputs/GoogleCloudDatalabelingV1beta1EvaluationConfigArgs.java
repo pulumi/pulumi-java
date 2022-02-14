@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration details used for calculating evaluation metrics and creating an Evaluation.
+ */
 public final class GoogleCloudDatalabelingV1beta1EvaluationConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatalabelingV1beta1EvaluationConfigArgs Empty = new GoogleCloudDatalabelingV1beta1EvaluationConfigArgs();
 
+    /**
+     * Only specify this field if the related model performs image object detection (`IMAGE_BOUNDING_BOX_ANNOTATION`). Describes how to evaluate bounding boxes.
+     */
     @InputImport(name="boundingBoxEvaluationOptions")
     private final @Nullable Input<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions;
 

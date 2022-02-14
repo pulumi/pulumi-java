@@ -14,14 +14,42 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetMachineGroupResult {
+/**
+ * Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.
+ */
     private final @Nullable Integer count;
+/**
+ * User defined name for the group
+ */
     private final String displayName;
+/**
+ * Resource ETAG.
+ */
     private final @Nullable String etag;
+/**
+ * Type of the machine group
+ */
     private final @Nullable String groupType;
+/**
+ * Resource identifier.
+ */
     private final String id;
+/**
+ * Additional resource type qualifier.
+Expected value is 'machineGroup'.
+ */
     private final String kind;
+/**
+ * References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.
+ */
     private final @Nullable List<MachineReferenceWithHintsResponse> machines;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"count","displayName","etag","groupType","id","kind","machines","name","type"})
@@ -46,30 +74,58 @@ public final class GetMachineGroupResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.
+ */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }
+/**
+ * User defined name for the group
+ */
     public String getDisplayName() {
         return this.displayName;
     }
+/**
+ * Resource ETAG.
+ */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+/**
+ * Type of the machine group
+ */
     public Optional<String> getGroupType() {
         return Optional.ofNullable(this.groupType);
     }
+/**
+ * Resource identifier.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Additional resource type qualifier.
+Expected value is 'machineGroup'.
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.
+ */
     public List<MachineReferenceWithHintsResponse> getMachines() {
         return this.machines == null ? List.of() : this.machines;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

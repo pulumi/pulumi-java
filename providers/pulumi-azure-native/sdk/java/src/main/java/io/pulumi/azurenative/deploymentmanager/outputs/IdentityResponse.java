@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class IdentityResponse {
+/**
+ * The list of identities.
+ */
     private final List<String> identityIds;
+/**
+ * The identity type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"identityIds","type"})
@@ -21,9 +27,15 @@ public final class IdentityResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The list of identities.
+ */
     public List<String> getIdentityIds() {
         return this.identityIds;
     }
+/**
+ * The identity type.
+ */
     public String getType() {
         return this.type;
     }

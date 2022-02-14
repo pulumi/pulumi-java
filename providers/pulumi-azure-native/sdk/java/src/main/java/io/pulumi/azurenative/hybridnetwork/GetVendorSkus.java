@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVendorSkus {
+/**
+ * Sku sub resource.
+API Version: 2020-01-01-preview.
+ *
+ * Sku sub resource.
+ */
     public static CompletableFuture<GetVendorSkusResult> invokeAsync(GetVendorSkusArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:hybridnetwork:getVendorSkus", TypeShape.of(GetVendorSkusResult.class), args == null ? GetVendorSkusArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Azure reserved instance.
+ */
     @EnumType
     public enum ReservedInstance {
+/**
+ * 
+ */
         None("None"),
+/**
+ * 
+ */
         RI1Year("RI1Year"),
+/**
+ * 
+ */
         RI3Year("RI3Year");
 
         private final String value;

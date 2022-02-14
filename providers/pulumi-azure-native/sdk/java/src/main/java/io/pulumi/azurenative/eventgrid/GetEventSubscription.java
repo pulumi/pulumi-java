@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventSubscription {
+/**
+ * Event Subscription
+API Version: 2020-06-01.
+ *
+ * Event Subscription
+ */
     public static CompletableFuture<GetEventSubscriptionResult> invokeAsync(GetEventSubscriptionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getEventSubscription", TypeShape.of(GetEventSubscriptionResult.class), args == null ? GetEventSubscriptionArgs.Empty : args, Utilities.withVersion(options));
     }

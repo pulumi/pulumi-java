@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Compute type of the cluster which will execute data flow job.
+ */
     @EnumType
     public enum DataFlowComputeType {
+/**
+ * 
+ */
         General("General"),
+/**
+ * 
+ */
         MemoryOptimized("MemoryOptimized"),
+/**
+ * 
+ */
         ComputeOptimized("ComputeOptimized");
 
         private final String value;

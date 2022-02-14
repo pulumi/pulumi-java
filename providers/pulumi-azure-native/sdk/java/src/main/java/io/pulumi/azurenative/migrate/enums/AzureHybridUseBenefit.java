@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * AHUB discount on windows virtual machines.
+ */
     @EnumType
     public enum AzureHybridUseBenefit {
+/**
+ * 
+ */
         Unknown("Unknown"),
+/**
+ * 
+ */
         Yes("Yes"),
+/**
+ * 
+ */
         No("No");
 
         private final String value;

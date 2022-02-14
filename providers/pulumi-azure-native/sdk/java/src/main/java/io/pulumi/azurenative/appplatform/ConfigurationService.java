@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.appplatform.ConfigurationServiceArgs;
 import io.pulumi.azurenative.appplatform.outputs.ConfigurationServicePropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
@@ -16,33 +15,212 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Application Configuration Service resource
+API Version: 2022-01-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### ConfigurationServices_CreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var configurationService = new AzureNative.AppPlatform.ConfigurationService("configurationService", new AzureNative.AppPlatform.ConfigurationServiceArgs
+        {
+            ConfigurationServiceName = "default",
+            Properties = new AzureNative.AppPlatform.Inputs.ConfigurationServicePropertiesArgs
+            {
+                Settings = new AzureNative.AppPlatform.Inputs.ConfigurationServiceSettingsArgs
+                {
+                    GitProperty = new AzureNative.AppPlatform.Inputs.ConfigurationServiceGitPropertyArgs
+                    {
+                        Repositories = 
+                        {
+                            new AzureNative.AppPlatform.Inputs.ConfigurationServiceGitRepositoryArgs
+                            {
+                                Label = "master",
+                                Name = "fake",
+                                Patterns = 
+                                {
+                                    "app/dev",
+                                },
+                                Uri = "https://github.com/fake-user/fake-repository",
+                            },
+                        },
+                    },
+                },
+            },
+            ResourceGroupName = "myResourceGroup",
+            ServiceName = "myservice",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	appplatform "github.com/pulumi/pulumi-azure-native/sdk/go/azure/appplatform"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := appplatform.NewConfigurationService(ctx, "configurationService", &appplatform.ConfigurationServiceArgs{
+			ConfigurationServiceName: pulumi.String("default"),
+			Properties: &appplatform.ConfigurationServicePropertiesArgs{
+				Settings: &appplatform.ConfigurationServiceSettingsArgs{
+					GitProperty: &appplatform.ConfigurationServiceGitPropertyArgs{
+						Repositories: appplatform.ConfigurationServiceGitRepositoryArray{
+							&appplatform.ConfigurationServiceGitRepositoryArgs{
+								Label: pulumi.String("master"),
+								Name:  pulumi.String("fake"),
+								Patterns: pulumi.StringArray{
+									pulumi.String("app/dev"),
+								},
+								Uri: pulumi.String("https://github.com/fake-user/fake-repository"),
+							},
+						},
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			ServiceName:       pulumi.String("myservice"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const configurationService = new azure_native.appplatform.ConfigurationService("configurationService", {
+    configurationServiceName: "default",
+    properties: {
+        settings: {
+            gitProperty: {
+                repositories: [{
+                    label: "master",
+                    name: "fake",
+                    patterns: ["app/dev"],
+                    uri: "https://github.com/fake-user/fake-repository",
+                }],
+            },
+        },
+    },
+    resourceGroupName: "myResourceGroup",
+    serviceName: "myservice",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+configuration_service = azure_native.appplatform.ConfigurationService("configurationService",
+    configuration_service_name="default",
+    properties=azure_native.appplatform.ConfigurationServicePropertiesArgs(
+        settings=azure_native.appplatform.ConfigurationServiceSettingsArgs(
+            git_property=azure_native.appplatform.ConfigurationServiceGitPropertyArgs(
+                repositories=[azure_native.appplatform.ConfigurationServiceGitRepositoryArgs(
+                    label="master",
+                    name="fake",
+                    patterns=["app/dev"],
+                    uri="https://github.com/fake-user/fake-repository",
+                )],
+            ),
+        ),
+    ),
+    resource_group_name="myResourceGroup",
+    service_name="myservice")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:appplatform:ConfigurationService default /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/configurationServices/default 
+```
+
+ */
 @ResourceType(type="azure-native:appplatform:ConfigurationService")
 public class ConfigurationService extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the resource.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Application Configuration Service properties payload
+     */
     @OutputExport(name="properties", type=ConfigurationServicePropertiesResponse.class, parameters={})
     private Output<ConfigurationServicePropertiesResponse> properties;
 
+    /**
+     * @return Application Configuration Service properties payload
+     */
     public Output<ConfigurationServicePropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Metadata pertaining to creation and last modification of the resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return Metadata pertaining to creation and last modification of the resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * The type of the resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ConfigurationService(String name, ConfigurationServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:appplatform:ConfigurationService", name, args == null ? ConfigurationServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -61,6 +239,14 @@ public class ConfigurationService extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ConfigurationService get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConfigurationService(name, id, options);
     }

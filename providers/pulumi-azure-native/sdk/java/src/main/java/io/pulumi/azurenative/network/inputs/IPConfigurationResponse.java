@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * IP configuration.
+ */
 public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IPConfigurationResponse Empty = new IPConfigurationResponse();
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -23,6 +29,9 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -30,6 +39,9 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -37,6 +49,9 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The private IP address of the IP configuration.
+     */
     @InputImport(name="privateIPAddress")
     private final @Nullable String privateIPAddress;
 
@@ -44,6 +59,9 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
         return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
     }
 
+    /**
+     * The private IP address allocation method.
+     */
     @InputImport(name="privateIPAllocationMethod")
     private final @Nullable String privateIPAllocationMethod;
 
@@ -51,6 +69,9 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
         return this.privateIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIPAllocationMethod);
     }
 
+    /**
+     * The provisioning state of the IP configuration resource.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -58,6 +79,9 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
         return this.provisioningState;
     }
 
+    /**
+     * The reference to the public IP resource.
+     */
     @InputImport(name="publicIPAddress")
     private final @Nullable PublicIPAddressResponse publicIPAddress;
 
@@ -65,6 +89,9 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
         return this.publicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddress);
     }
 
+    /**
+     * The reference to the subnet resource.
+     */
     @InputImport(name="subnet")
     private final @Nullable SubnetResponse subnet;
 

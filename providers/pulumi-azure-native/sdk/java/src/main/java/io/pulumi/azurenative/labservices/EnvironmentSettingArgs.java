@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnvironmentSettingArgs Empty = new EnvironmentSettingArgs();
 
+    /**
+     * Describes the user's progress in configuring their environment setting
+     */
     @InputImport(name="configurationState")
     private final @Nullable Input<Either<String,ConfigurationState>> configurationState;
 
@@ -25,6 +31,9 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
         return this.configurationState == null ? Input.empty() : this.configurationState;
     }
 
+    /**
+     * Describes the environment and its resource settings
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -32,6 +41,9 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The name of the environment Setting.
+     */
     @InputImport(name="environmentSettingName")
     private final @Nullable Input<String> environmentSettingName;
 
@@ -39,6 +51,9 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
         return this.environmentSettingName == null ? Input.empty() : this.environmentSettingName;
     }
 
+    /**
+     * The name of the lab Account.
+     */
     @InputImport(name="labAccountName", required=true)
     private final Input<String> labAccountName;
 
@@ -46,6 +61,9 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
         return this.labAccountName;
     }
 
+    /**
+     * The name of the lab.
+     */
     @InputImport(name="labName", required=true)
     private final Input<String> labName;
 
@@ -53,6 +71,9 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
         return this.labName;
     }
 
+    /**
+     * The location of the resource.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -60,6 +81,9 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The provisioning status of the resource.
+     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<String> provisioningState;
 
@@ -67,6 +91,9 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -74,6 +101,9 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
+    /**
+     * The resource specific settings
+     */
     @InputImport(name="resourceSettings", required=true)
     private final Input<ResourceSettingsArgs> resourceSettings;
 
@@ -81,6 +111,9 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
         return this.resourceSettings;
     }
 
+    /**
+     * The tags of the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -88,6 +121,9 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Brief title describing the environment and its resource settings
+     */
     @InputImport(name="title")
     private final @Nullable Input<String> title;
 
@@ -95,6 +131,9 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
         return this.title == null ? Input.empty() : this.title;
     }
 
+    /**
+     * The unique immutable identifier of a resource (Guid).
+     */
     @InputImport(name="uniqueIdentifier")
     private final @Nullable Input<String> uniqueIdentifier;
 

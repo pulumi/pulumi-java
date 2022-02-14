@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Current status of the storage account
+ */
     @EnumType
     public enum StorageAccountStatus {
+/**
+ * 
+ */
         OK("OK"),
+/**
+ * 
+ */
         Offline("Offline"),
+/**
+ * 
+ */
         Unknown("Unknown"),
+/**
+ * 
+ */
         Updating("Updating"),
+/**
+ * 
+ */
         NeedsAttention("NeedsAttention");
 
         private final String value;

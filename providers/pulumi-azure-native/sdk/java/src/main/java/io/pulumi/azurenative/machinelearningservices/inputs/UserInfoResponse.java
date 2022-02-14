@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * User who created.
+ */
 public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UserInfoResponse Empty = new UserInfoResponse();
 
+    /**
+     * A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid
+     */
     @InputImport(name="userAltSecId")
     private final @Nullable String userAltSecId;
 
@@ -21,6 +27,9 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.userAltSecId == null ? Optional.empty() : Optional.ofNullable(this.userAltSecId);
     }
 
+    /**
+     * A user identity provider. Eg live.com
+     */
     @InputImport(name="userIdp")
     private final @Nullable String userIdp;
 
@@ -28,6 +37,9 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.userIdp == null ? Optional.empty() : Optional.ofNullable(this.userIdp);
     }
 
+    /**
+     * The issuer which issued the token for this user.
+     */
     @InputImport(name="userIss")
     private final @Nullable String userIss;
 
@@ -35,6 +47,9 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.userIss == null ? Optional.empty() : Optional.ofNullable(this.userIss);
     }
 
+    /**
+     *  A user's full name or a service principal's app ID.
+     */
     @InputImport(name="userName")
     private final @Nullable String userName;
 
@@ -42,6 +57,9 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
     }
 
+    /**
+     * A user or service principal's object ID..
+     */
     @InputImport(name="userObjectId")
     private final @Nullable String userObjectId;
 
@@ -49,6 +67,9 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.userObjectId == null ? Optional.empty() : Optional.ofNullable(this.userObjectId);
     }
 
+    /**
+     * A user or service principal's PuID.
+     */
     @InputImport(name="userPuId")
     private final @Nullable String userPuId;
 
@@ -56,6 +77,9 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.userPuId == null ? Optional.empty() : Optional.ofNullable(this.userPuId);
     }
 
+    /**
+     * A user or service principal's tenant ID.
+     */
     @InputImport(name="userTenantId")
     private final @Nullable String userTenantId;
 

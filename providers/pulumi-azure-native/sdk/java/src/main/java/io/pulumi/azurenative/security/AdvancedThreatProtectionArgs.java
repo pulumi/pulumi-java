@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AdvancedThreatProtectionArgs Empty = new AdvancedThreatProtectionArgs();
 
+    /**
+     * Indicates whether Advanced Threat Protection is enabled.
+     */
     @InputImport(name="isEnabled")
     private final @Nullable Input<Boolean> isEnabled;
 
@@ -22,6 +28,9 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
         return this.isEnabled == null ? Input.empty() : this.isEnabled;
     }
 
+    /**
+     * The identifier of the resource.
+     */
     @InputImport(name="resourceId", required=true)
     private final Input<String> resourceId;
 
@@ -29,6 +38,9 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
         return this.resourceId;
     }
 
+    /**
+     * Advanced Threat Protection setting name.
+     */
     @InputImport(name="settingName")
     private final @Nullable Input<String> settingName;
 

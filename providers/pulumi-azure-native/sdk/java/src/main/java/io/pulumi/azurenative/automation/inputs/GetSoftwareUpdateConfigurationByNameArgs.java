@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetSoftwareUpdateConfigurationByNameArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSoftwareUpdateConfigurationByNameArgs Empty = new GetSoftwareUpdateConfigurationByNameArgs();
 
+    /**
+     * The name of the automation account.
+     */
     @InputImport(name="automationAccountName", required=true)
     private final String automationAccountName;
 
@@ -19,6 +25,9 @@ public final class GetSoftwareUpdateConfigurationByNameArgs extends io.pulumi.re
         return this.automationAccountName;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetSoftwareUpdateConfigurationByNameArgs extends io.pulumi.re
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the software update configuration to be created.
+     */
     @InputImport(name="softwareUpdateConfigurationName", required=true)
     private final String softwareUpdateConfigurationName;
 

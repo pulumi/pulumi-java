@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetVirtualNetworkGatewayBgpPeerStatusResult {
+/**
+ * List of BGP peers.
+ */
     private final @Nullable List<BgpPeerStatusResponse> value;
 
     @OutputCustomType.Constructor({"value"})
@@ -18,6 +21,9 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusResult {
         this.value = value;
     }
 
+/**
+ * List of BGP peers.
+ */
     public List<BgpPeerStatusResponse> getValue() {
         return this.value == null ? List.of() : this.value;
     }

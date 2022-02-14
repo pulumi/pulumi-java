@@ -10,10 +10,25 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetPrivateEndpointConnectionResult {
+/**
+ * Etag identifies change in the resource.
+ */
     private final String etag;
+/**
+ * The resource identifier.
+ */
     private final String id;
+/**
+ * The resource name.
+ */
     private final String name;
+/**
+ * Core resource properties
+ */
     private final RemotePrivateEndpointConnectionResponse properties;
+/**
+ * The resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","name","properties","type"})
@@ -30,18 +45,33 @@ public final class GetPrivateEndpointConnectionResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Etag identifies change in the resource.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * The resource identifier.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Core resource properties
+ */
     public RemotePrivateEndpointConnectionResponse getProperties() {
         return this.properties;
     }
+/**
+ * The resource type.
+ */
     public String getType() {
         return this.type;
     }

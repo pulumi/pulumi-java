@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Type of the integration.
+ */
     @EnumType
     public enum ClusterTelemetryType {
+/**
+ * Not set.
+ */
         Unspecified("UNSPECIFIED"),
+/**
+ * Monitoring integration is disabled.
+ */
         Disabled("DISABLED"),
+/**
+ * Monitoring integration is enabled.
+ */
         Enabled("ENABLED"),
+/**
+ * Only system components are monitored and logged.
+ */
         SystemOnly("SYSTEM_ONLY");
 
         private final String value;

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the Power State of the cluster
+ */
 public final class PowerStateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PowerStateResponse Empty = new PowerStateResponse();
 
+    /**
+     * Tells whether the cluster is Running or Stopped
+     */
     @InputImport(name="code")
     private final @Nullable String code;
 

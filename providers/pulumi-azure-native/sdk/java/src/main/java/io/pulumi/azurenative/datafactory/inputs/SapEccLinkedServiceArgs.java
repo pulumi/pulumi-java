@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Linked service for SAP ERP Central Component(SAP ECC).
+ */
 public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SapEccLinkedServiceArgs Empty = new SapEccLinkedServiceArgs();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -29,6 +35,9 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -36,6 +45,9 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -43,6 +55,9 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<String> encryptedCredential;
 
@@ -50,6 +65,9 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -57,6 +75,9 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * The password for Basic authentication.
+     */
     @InputImport(name="password")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
@@ -64,6 +85,10 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'SapEcc'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -71,6 +96,9 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.type;
     }
 
+    /**
+     * The URL of SAP ECC OData API. For example, '[https://hostname:port/sap/opu/odata/sap/servicename/]'. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="url", required=true)
     private final Input<String> url;
 
@@ -78,6 +106,9 @@ public final class SapEccLinkedServiceArgs extends io.pulumi.resources.ResourceA
         return this.url;
     }
 
+    /**
+     * The username for Basic authentication. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="username")
     private final @Nullable Input<String> username;
 

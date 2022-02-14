@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResponsePolicyRuleLocalDataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResponsePolicyRuleLocalDataArgs Empty = new ResponsePolicyRuleLocalDataArgs();
 
+    /**
+     * All resource record sets for this selector, one per resource record type. The name must match the dns_name.
+     */
     @InputImport(name="localDatas")
     private final @Nullable Input<List<ResourceRecordSetArgs>> localDatas;
 

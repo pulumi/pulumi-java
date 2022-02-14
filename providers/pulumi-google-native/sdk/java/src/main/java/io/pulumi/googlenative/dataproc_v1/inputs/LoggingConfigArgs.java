@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The runtime logging config of the job.
+ */
 public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LoggingConfigArgs Empty = new LoggingConfigArgs();
 
+    /**
+     * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+     */
     @InputImport(name="driverLogLevels")
     private final @Nullable Input<Map<String,String>> driverLogLevels;
 

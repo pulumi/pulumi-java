@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * CidrBlock contains an optional name and one CIDR block.
+ */
 public final class CidrBlockArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CidrBlockArgs Empty = new CidrBlockArgs();
 
+    /**
+     * cidr_block must be specified in CIDR notation.
+     */
     @InputImport(name="cidrBlock")
     private final @Nullable Input<String> cidrBlock;
 
@@ -21,6 +27,9 @@ public final class CidrBlockArgs extends io.pulumi.resources.ResourceArgs {
         return this.cidrBlock == null ? Input.empty() : this.cidrBlock;
     }
 
+    /**
+     * display_name is an optional field for users to identify CIDR blocks.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 

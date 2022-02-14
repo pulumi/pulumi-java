@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataAccessOptionsResponse {
+/**
+ * 
+ */
     private final String logMode;
 
     @OutputCustomType.Constructor({"logMode"})
@@ -16,6 +19,9 @@ public final class DataAccessOptionsResponse {
         this.logMode = Objects.requireNonNull(logMode);
     }
 
+/**
+ * 
+ */
     public String getLogMode() {
         return this.logMode;
     }

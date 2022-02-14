@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * This is deprecated and has no effect. Do not use.
+ */
 public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LogConfigCounterOptionsArgs Empty = new LogConfigCounterOptionsArgs();
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="customFields")
     private final @Nullable Input<List<LogConfigCounterOptionsCustomFieldArgs>> customFields;
 
@@ -23,6 +29,9 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
         return this.customFields == null ? Input.empty() : this.customFields;
     }
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="field")
     private final @Nullable Input<String> field;
 
@@ -30,6 +39,9 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
         return this.field == null ? Input.empty() : this.field;
     }
 
+    /**
+     * This is deprecated and has no effect. Do not use.
+     */
     @InputImport(name="metric")
     private final @Nullable Input<String> metric;
 

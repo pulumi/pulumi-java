@@ -14,9 +14,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class Subject {
+/**
+ * 
+ */
     private final @Nullable GroupSubject group;
+/**
+ * Required
+ */
     private final String kind;
+/**
+ * 
+ */
     private final @Nullable ServiceAccountSubject serviceAccount;
+/**
+ * 
+ */
     private final @Nullable UserSubject user;
 
     @OutputCustomType.Constructor({"group","kind","serviceAccount","user"})
@@ -31,15 +43,27 @@ public final class Subject {
         this.user = user;
     }
 
+/**
+ * 
+ */
     public Optional<GroupSubject> getGroup() {
         return Optional.ofNullable(this.group);
     }
+/**
+ * Required
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * 
+ */
     public Optional<ServiceAccountSubject> getServiceAccount() {
         return Optional.ofNullable(this.serviceAccount);
     }
+/**
+ * 
+ */
     public Optional<UserSubject> getUser() {
         return Optional.ofNullable(this.user);
     }

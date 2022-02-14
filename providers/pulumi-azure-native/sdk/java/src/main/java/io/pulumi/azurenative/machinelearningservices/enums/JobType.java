@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Specifies the type of job.
+ */
     @EnumType
     public enum JobType {
+/**
+ * 
+ */
         Command("Command"),
+/**
+ * 
+ */
         Sweep("Sweep"),
+/**
+ * 
+ */
         Labeling("Labeling");
 
         private final String value;

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AutoscaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutoscaleSettingsArgs Empty = new AutoscaleSettingsArgs();
 
+    /**
+     * Represents maximum throughput, the resource can scale up to.
+     */
     @InputImport(name="maxThroughput")
     private final @Nullable Input<Integer> maxThroughput;
 

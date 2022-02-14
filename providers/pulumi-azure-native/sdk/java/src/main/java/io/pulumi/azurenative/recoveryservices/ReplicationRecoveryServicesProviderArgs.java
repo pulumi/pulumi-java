@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicationRecoveryServicesProviderArgs Empty = new ReplicationRecoveryServicesProviderArgs();
 
+    /**
+     * Fabric name.
+     */
     @InputImport(name="fabricName", required=true)
     private final Input<String> fabricName;
 
@@ -22,6 +28,9 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
         return this.fabricName;
     }
 
+    /**
+     * The properties of an add provider request.
+     */
     @InputImport(name="properties", required=true)
     private final Input<AddRecoveryServicesProviderInputPropertiesArgs> properties;
 
@@ -29,6 +38,9 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
         return this.properties;
     }
 
+    /**
+     * Recovery services provider name.
+     */
     @InputImport(name="providerName")
     private final @Nullable Input<String> providerName;
 
@@ -36,6 +48,9 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
         return this.providerName == null ? Input.empty() : this.providerName;
     }
 
+    /**
+     * The name of the resource group where the recovery services vault is present.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +58,9 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the recovery services vault.
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 

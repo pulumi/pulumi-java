@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabaseSecurityAlertPolicyArgs Empty = new DatabaseSecurityAlertPolicyArgs();
 
+    /**
+     * The name of the  database for which the security alert policy is defined.
+     */
     @InputImport(name="databaseName", required=true)
     private final Input<String> databaseName;
 
@@ -25,6 +31,9 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
         return this.databaseName;
     }
 
+    /**
+     * Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly, Data_Exfiltration, Unsafe_Action, Brute_Force
+     */
     @InputImport(name="disabledAlerts")
     private final @Nullable Input<List<String>> disabledAlerts;
 
@@ -32,6 +41,9 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
         return this.disabledAlerts == null ? Input.empty() : this.disabledAlerts;
     }
 
+    /**
+     * Specifies that the alert is sent to the account administrators.
+     */
     @InputImport(name="emailAccountAdmins")
     private final @Nullable Input<Boolean> emailAccountAdmins;
 
@@ -39,6 +51,9 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
         return this.emailAccountAdmins == null ? Input.empty() : this.emailAccountAdmins;
     }
 
+    /**
+     * Specifies an array of e-mail addresses to which the alert is sent.
+     */
     @InputImport(name="emailAddresses")
     private final @Nullable Input<List<String>> emailAddresses;
 
@@ -46,6 +61,9 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
         return this.emailAddresses == null ? Input.empty() : this.emailAddresses;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -53,6 +71,9 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
         return this.resourceGroupName;
     }
 
+    /**
+     * Specifies the number of days to keep in the Threat Detection audit logs.
+     */
     @InputImport(name="retentionDays")
     private final @Nullable Input<Integer> retentionDays;
 
@@ -60,6 +81,9 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
         return this.retentionDays == null ? Input.empty() : this.retentionDays;
     }
 
+    /**
+     * The name of the security alert policy.
+     */
     @InputImport(name="securityAlertPolicyName")
     private final @Nullable Input<String> securityAlertPolicyName;
 
@@ -67,6 +91,9 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
         return this.securityAlertPolicyName == null ? Input.empty() : this.securityAlertPolicyName;
     }
 
+    /**
+     * The name of the  server.
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 
@@ -74,6 +101,9 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
         return this.serverName;
     }
 
+    /**
+     * Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database.
+     */
     @InputImport(name="state", required=true)
     private final Input<SecurityAlertsPolicyState> state;
 
@@ -81,6 +111,9 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
         return this.state;
     }
 
+    /**
+     * Specifies the identifier key of the Threat Detection audit storage account.
+     */
     @InputImport(name="storageAccountAccessKey")
     private final @Nullable Input<String> storageAccountAccessKey;
 
@@ -88,6 +121,9 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
         return this.storageAccountAccessKey == null ? Input.empty() : this.storageAccountAccessKey;
     }
 
+    /**
+     * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
+     */
     @InputImport(name="storageEndpoint")
     private final @Nullable Input<String> storageEndpoint;
 

@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Linked service for Oracle Cloud Storage.
+ */
 public final class OracleCloudStorageLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OracleCloudStorageLinkedServiceArgs Empty = new OracleCloudStorageLinkedServiceArgs();
 
+    /**
+     * The access key identifier of the Oracle Cloud Storage Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="accessKeyId")
     private final @Nullable Input<Object> accessKeyId;
 
@@ -29,6 +35,9 @@ public final class OracleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
         return this.accessKeyId == null ? Input.empty() : this.accessKeyId;
     }
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -36,6 +45,9 @@ public final class OracleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -43,6 +55,9 @@ public final class OracleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -50,6 +65,9 @@ public final class OracleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -57,6 +75,9 @@ public final class OracleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -64,6 +85,9 @@ public final class OracleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * The secret access key of the Oracle Cloud Storage Identity and Access Management (IAM) user.
+     */
     @InputImport(name="secretAccessKey")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey;
 
@@ -71,6 +95,9 @@ public final class OracleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
         return this.secretAccessKey == null ? Input.empty() : this.secretAccessKey;
     }
 
+    /**
+     * This value specifies the endpoint to access with the Oracle Cloud Storage Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="serviceUrl")
     private final @Nullable Input<Object> serviceUrl;
 
@@ -78,6 +105,10 @@ public final class OracleCloudStorageLinkedServiceArgs extends io.pulumi.resourc
         return this.serviceUrl == null ? Input.empty() : this.serviceUrl;
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'OracleCloudStorage'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

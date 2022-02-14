@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Settings for user account that gets created on each on the nodes of a compute.
+ */
 public final class UserAccountCredentialsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserAccountCredentialsArgs Empty = new UserAccountCredentialsArgs();
 
+    /**
+     * Name of the administrator user account which can be used to SSH to nodes.
+     */
     @InputImport(name="adminUserName", required=true)
     private final Input<String> adminUserName;
 
@@ -21,6 +27,9 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
         return this.adminUserName;
     }
 
+    /**
+     * Password of the administrator user account.
+     */
     @InputImport(name="adminUserPassword")
     private final @Nullable Input<String> adminUserPassword;
 
@@ -28,6 +37,9 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
         return this.adminUserPassword == null ? Input.empty() : this.adminUserPassword;
     }
 
+    /**
+     * SSH public key of the administrator user account.
+     */
     @InputImport(name="adminUserSshPublicKey")
     private final @Nullable Input<String> adminUserSshPublicKey;
 

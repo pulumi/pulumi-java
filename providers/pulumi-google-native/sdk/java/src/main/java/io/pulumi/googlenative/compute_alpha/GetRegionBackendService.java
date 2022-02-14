@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionBackendService {
+/**
+ * Returns the specified regional BackendService resource.
+ */
     public static CompletableFuture<GetRegionBackendServiceResult> invokeAsync(GetRegionBackendServiceArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionBackendService", TypeShape.of(GetRegionBackendServiceResult.class), args == null ? GetRegionBackendServiceArgs.Empty : args, Utilities.withVersion(options));
     }

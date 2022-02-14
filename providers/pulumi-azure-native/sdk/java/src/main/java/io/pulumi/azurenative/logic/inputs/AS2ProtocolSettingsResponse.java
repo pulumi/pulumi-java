@@ -14,10 +14,16 @@ import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
 
 
+/**
+ * The AS2 agreement protocol settings.
+ */
 public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AS2ProtocolSettingsResponse Empty = new AS2ProtocolSettingsResponse();
 
+    /**
+     * The acknowledgement connection settings.
+     */
     @InputImport(name="acknowledgementConnectionSettings", required=true)
     private final AS2AcknowledgementConnectionSettingsResponse acknowledgementConnectionSettings;
 
@@ -25,6 +31,9 @@ public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.Invok
         return this.acknowledgementConnectionSettings;
     }
 
+    /**
+     * The envelope settings.
+     */
     @InputImport(name="envelopeSettings", required=true)
     private final AS2EnvelopeSettingsResponse envelopeSettings;
 
@@ -32,6 +41,9 @@ public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.Invok
         return this.envelopeSettings;
     }
 
+    /**
+     * The error settings.
+     */
     @InputImport(name="errorSettings", required=true)
     private final AS2ErrorSettingsResponse errorSettings;
 
@@ -39,6 +51,9 @@ public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.Invok
         return this.errorSettings;
     }
 
+    /**
+     * The MDN settings.
+     */
     @InputImport(name="mdnSettings", required=true)
     private final AS2MdnSettingsResponse mdnSettings;
 
@@ -46,6 +61,9 @@ public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.Invok
         return this.mdnSettings;
     }
 
+    /**
+     * The message connection settings.
+     */
     @InputImport(name="messageConnectionSettings", required=true)
     private final AS2MessageConnectionSettingsResponse messageConnectionSettings;
 
@@ -53,6 +71,9 @@ public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.Invok
         return this.messageConnectionSettings;
     }
 
+    /**
+     * The security settings.
+     */
     @InputImport(name="securitySettings", required=true)
     private final AS2SecuritySettingsResponse securitySettings;
 
@@ -60,6 +81,9 @@ public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.Invok
         return this.securitySettings;
     }
 
+    /**
+     * The validation settings.
+     */
     @InputImport(name="validationSettings", required=true)
     private final AS2ValidationSettingsResponse validationSettings;
 

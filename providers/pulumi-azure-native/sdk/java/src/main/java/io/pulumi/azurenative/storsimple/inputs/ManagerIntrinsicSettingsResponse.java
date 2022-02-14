@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Intrinsic settings which refers to the type of the StorSimple Manager.
+ */
 public final class ManagerIntrinsicSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagerIntrinsicSettingsResponse Empty = new ManagerIntrinsicSettingsResponse();
 
+    /**
+     * The type of StorSimple Manager.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class SkuSettingResponseCapacity extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuSettingResponseCapacity Empty = new SkuSettingResponseCapacity();
 
+    /**
+     * 
+     */
     @InputImport(name="default")
     private final @Nullable Integer $default;
 
@@ -22,6 +28,9 @@ public final class SkuSettingResponseCapacity extends io.pulumi.resources.Invoke
         return this.$default == null ? Optional.empty() : Optional.ofNullable(this.$default);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="maximum")
     private final @Nullable Integer maximum;
 
@@ -29,6 +38,9 @@ public final class SkuSettingResponseCapacity extends io.pulumi.resources.Invoke
         return this.maximum == null ? Optional.empty() : Optional.ofNullable(this.maximum);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="minimum", required=true)
     private final Integer minimum;
 
@@ -36,6 +48,9 @@ public final class SkuSettingResponseCapacity extends io.pulumi.resources.Invoke
         return this.minimum;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="scaleType")
     private final @Nullable String scaleType;
 

@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Definition of a single parameter for an entity.
+ */
 public final class GlobalParameterSpecificationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GlobalParameterSpecificationResponse Empty = new GlobalParameterSpecificationResponse();
 
+    /**
+     * Global Parameter type.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -20,6 +26,9 @@ public final class GlobalParameterSpecificationResponse extends io.pulumi.resour
         return this.type;
     }
 
+    /**
+     * Value of parameter.
+     */
     @InputImport(name="value", required=true)
     private final Object value;
 

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicationPolicyArgs Empty = new ReplicationPolicyArgs();
 
+    /**
+     * Replication policy name
+     */
     @InputImport(name="policyName")
     private final @Nullable Input<String> policyName;
 
@@ -22,6 +28,9 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
         return this.policyName == null ? Input.empty() : this.policyName;
     }
 
+    /**
+     * Policy creation properties.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<CreatePolicyInputPropertiesArgs> properties;
 
@@ -29,6 +38,9 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group where the recovery services vault is present.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,9 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the recovery services vault.
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 

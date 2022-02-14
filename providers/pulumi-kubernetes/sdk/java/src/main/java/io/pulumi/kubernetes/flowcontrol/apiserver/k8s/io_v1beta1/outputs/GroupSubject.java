@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GroupSubject {
+/**
+ * name is the user group that matches, or "*" to match all user groups. See https://github.com/kubernetes/apiserver/blob/master/pkg/authentication/user/user.go for some well-known group names. Required.
+ */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +19,9 @@ public final class GroupSubject {
         this.name = Objects.requireNonNull(name);
     }
 
+/**
+ * name is the user group that matches, or "*" to match all user groups. See https://github.com/kubernetes/apiserver/blob/master/pkg/authentication/user/user.go for some well-known group names. Required.
+ */
     public String getName() {
         return this.name;
     }

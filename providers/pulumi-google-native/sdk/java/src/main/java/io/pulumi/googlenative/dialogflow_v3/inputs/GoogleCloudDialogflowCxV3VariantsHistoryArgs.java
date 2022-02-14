@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The history of variants update.
+ */
 public final class GoogleCloudDialogflowCxV3VariantsHistoryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3VariantsHistoryArgs Empty = new GoogleCloudDialogflowCxV3VariantsHistoryArgs();
 
+    /**
+     * Update time of the variants.
+     */
     @InputImport(name="updateTime")
     private final @Nullable Input<String> updateTime;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryArgs extends io.pulum
         return this.updateTime == null ? Input.empty() : this.updateTime;
     }
 
+    /**
+     * The flow versions as the variants.
+     */
     @InputImport(name="versionVariants")
     private final @Nullable Input<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants;
 

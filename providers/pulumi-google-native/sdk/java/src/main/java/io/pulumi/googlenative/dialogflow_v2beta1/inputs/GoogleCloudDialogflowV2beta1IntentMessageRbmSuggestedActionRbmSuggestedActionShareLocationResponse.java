@@ -6,6 +6,9 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 import java.util.Objects;
 
 
+/**
+ * Opens the device's location chooser so the user can pick a location to send back to the agent.
+ */
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse Empty = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse();

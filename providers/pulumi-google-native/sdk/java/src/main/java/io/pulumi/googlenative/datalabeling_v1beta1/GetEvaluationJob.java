@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEvaluationJob {
+/**
+ * Gets an evaluation job by resource name.
+ */
     public static CompletableFuture<GetEvaluationJobResult> invokeAsync(GetEvaluationJobArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:datalabeling/v1beta1:getEvaluationJob", TypeShape.of(GetEvaluationJobResult.class), args == null ? GetEvaluationJobArgs.Empty : args, Utilities.withVersion(options));
     }

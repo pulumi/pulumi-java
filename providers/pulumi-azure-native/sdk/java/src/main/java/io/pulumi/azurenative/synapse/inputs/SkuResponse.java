@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * SQL pool SKU
+ */
 public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SkuResponse Empty = new SkuResponse();
 
+    /**
+     * If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
+     */
     @InputImport(name="capacity")
     private final @Nullable Integer capacity;
 
@@ -22,6 +28,9 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
+    /**
+     * The SKU name
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -29,6 +38,9 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The service tier
+     */
     @InputImport(name="tier")
     private final @Nullable String tier;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Managed service identity.
+ */
 public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IdentityResponse Empty = new IdentityResponse();
 
+    /**
+     * The principal id of managed service identity.
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -19,6 +25,9 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
         return this.principalId;
     }
 
+    /**
+     * The tenant of managed service identity.
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -26,6 +35,9 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
         return this.tenantId;
     }
 
+    /**
+     * The type of managed service identity.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

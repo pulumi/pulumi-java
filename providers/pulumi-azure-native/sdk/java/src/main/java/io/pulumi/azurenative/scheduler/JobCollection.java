@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.scheduler;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.scheduler.JobCollectionArgs;
 import io.pulumi.azurenative.scheduler.outputs.JobCollectionPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,39 +15,87 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * 
+API Version: 2016-03-01.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:scheduler:JobCollection myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Scheduler/jobCollections/{jobCollectionName} 
+```
+
+ */
 @ResourceType(type="azure-native:scheduler:JobCollection")
 public class JobCollection extends io.pulumi.resources.CustomResource {
+    /**
+     * Gets or sets the storage account location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Gets or sets the storage account location.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Gets or sets the job collection resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return Gets or sets the job collection resource name.
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * Gets or sets the job collection properties.
+     */
     @OutputExport(name="properties", type=JobCollectionPropertiesResponse.class, parameters={})
     private Output<JobCollectionPropertiesResponse> properties;
 
+    /**
+     * @return Gets or sets the job collection properties.
+     */
     public Output<JobCollectionPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Gets or sets the tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Gets or sets the tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Gets the job collection resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Gets the job collection resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public JobCollection(String name, JobCollectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:scheduler:JobCollection", name, args == null ? JobCollectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -69,6 +116,14 @@ public class JobCollection extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static JobCollection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new JobCollection(name, id, options);
     }

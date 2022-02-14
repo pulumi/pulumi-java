@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The instance view of a capacity reservation that includes the name of the capacity reservation. It is used for the response to the instance view of a capacity reservation group.
+ */
 public final class CapacityReservationInstanceViewWithNameResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CapacityReservationInstanceViewWithNameResponse Empty = new CapacityReservationInstanceViewWithNameResponse();
 
+    /**
+     * The name of the capacity reservation.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -24,6 +30,9 @@ public final class CapacityReservationInstanceViewWithNameResponse extends io.pu
         return this.name;
     }
 
+    /**
+     * The resource status information.
+     */
     @InputImport(name="statuses")
     private final @Nullable List<InstanceViewStatusResponse> statuses;
 
@@ -31,6 +40,9 @@ public final class CapacityReservationInstanceViewWithNameResponse extends io.pu
         return this.statuses == null ? List.of() : this.statuses;
     }
 
+    /**
+     * Unutilized capacity of the capacity reservation.
+     */
     @InputImport(name="utilizationInfo")
     private final @Nullable CapacityReservationUtilizationResponse utilizationInfo;
 

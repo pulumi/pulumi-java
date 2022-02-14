@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ComputeInstanceConnectivityEndpointsResponse {
+/**
+ * Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).
+ */
     private final String privateIpAddress;
+/**
+ * Public IP Address of this ComputeInstance.
+ */
     private final String publicIpAddress;
 
     @OutputCustomType.Constructor({"privateIpAddress","publicIpAddress"})
@@ -20,9 +26,15 @@ public final class ComputeInstanceConnectivityEndpointsResponse {
         this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
     }
 
+/**
+ * Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).
+ */
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
     }
+/**
+ * Public IP Address of this ComputeInstance.
+ */
     public String getPublicIpAddress() {
         return this.publicIpAddress;
     }

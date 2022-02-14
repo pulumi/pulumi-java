@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetClientTokenArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetClientTokenArgs Empty = new GetClientTokenArgs();
 
+    /**
+     * Optional authentication endpoint. Defaults to the endpoint of Azure Resource Manager.
+     */
     @InputImport(name="endpoint")
     private final @Nullable String endpoint;
 

@@ -12,10 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class WorkbookTemplateGalleryResponse {
+/**
+ * Category for the gallery.
+ */
     private final @Nullable String category;
+/**
+ * Name of the workbook template in the gallery.
+ */
     private final @Nullable String name;
+/**
+ * Order of the template within the gallery.
+ */
     private final @Nullable Integer order;
+/**
+ * Azure resource type supported by the gallery.
+ */
     private final @Nullable String resourceType;
+/**
+ * Type of workbook supported by the workbook template.
+ */
     private final @Nullable String type;
 
     @OutputCustomType.Constructor({"category","name","order","resourceType","type"})
@@ -32,18 +47,33 @@ public final class WorkbookTemplateGalleryResponse {
         this.type = type;
     }
 
+/**
+ * Category for the gallery.
+ */
     public Optional<String> getCategory() {
         return Optional.ofNullable(this.category);
     }
+/**
+ * Name of the workbook template in the gallery.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * Order of the template within the gallery.
+ */
     public Optional<Integer> getOrder() {
         return Optional.ofNullable(this.order);
     }
+/**
+ * Azure resource type supported by the gallery.
+ */
     public Optional<String> getPropResourceType() {
         return Optional.ofNullable(this.resourceType);
     }
+/**
+ * Type of workbook supported by the workbook template.
+ */
     public Optional<String> getType() {
         return Optional.ofNullable(this.type);
     }

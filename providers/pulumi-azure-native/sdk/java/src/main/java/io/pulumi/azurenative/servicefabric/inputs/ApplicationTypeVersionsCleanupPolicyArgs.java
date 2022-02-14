@@ -9,10 +9,16 @@ import java.lang.Double;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ApplicationTypeVersionsCleanupPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationTypeVersionsCleanupPolicyArgs Empty = new ApplicationTypeVersionsCleanupPolicyArgs();
 
+    /**
+     * Number of unused versions per application type to keep.
+     */
     @InputImport(name="maxUnusedVersionsToKeep", required=true)
     private final Input<Double> maxUnusedVersionsToKeep;
 

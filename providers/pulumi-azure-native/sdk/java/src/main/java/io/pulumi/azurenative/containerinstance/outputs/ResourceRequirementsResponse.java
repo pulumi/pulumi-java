@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ResourceRequirementsResponse {
+/**
+ * The resource limits of this container instance.
+ */
     private final @Nullable ResourceLimitsResponse limits;
+/**
+ * The resource requests of this container instance.
+ */
     private final ResourceRequestsResponse requests;
 
     @OutputCustomType.Constructor({"limits","requests"})
@@ -23,9 +29,15 @@ public final class ResourceRequirementsResponse {
         this.requests = Objects.requireNonNull(requests);
     }
 
+/**
+ * The resource limits of this container instance.
+ */
     public Optional<ResourceLimitsResponse> getLimits() {
         return Optional.ofNullable(this.limits);
     }
+/**
+ * The resource requests of this container instance.
+ */
     public ResourceRequestsResponse getRequests() {
         return this.requests;
     }

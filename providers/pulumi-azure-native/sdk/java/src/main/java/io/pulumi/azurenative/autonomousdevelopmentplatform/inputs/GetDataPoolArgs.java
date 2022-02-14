@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetDataPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDataPoolArgs Empty = new GetDataPoolArgs();
 
+    /**
+     * The name of the ADP account
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetDataPoolArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the Data Pool
+     */
     @InputImport(name="dataPoolName", required=true)
     private final String dataPoolName;
 
@@ -26,6 +35,9 @@ public final class GetDataPoolArgs extends io.pulumi.resources.InvokeArgs {
         return this.dataPoolName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

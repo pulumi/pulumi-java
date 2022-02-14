@@ -8,13 +8,34 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum SubscriptionState {
+/**
+ * 
+ */
         NotDefined("NotDefined"),
+/**
+ * 
+ */
         Enabled("Enabled"),
+/**
+ * 
+ */
         Warned("Warned"),
+/**
+ * 
+ */
         PastDue("PastDue"),
+/**
+ * 
+ */
         Disabled("Disabled"),
+/**
+ * 
+ */
         Deleted("Deleted");
 
         private final String value;

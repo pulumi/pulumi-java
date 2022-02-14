@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PerfSampleSeriesArgs Empty = new PerfSampleSeriesArgs();
 
+    /**
+     * Basic series represented by a line chart
+     */
     @InputImport(name="basicPerfSampleSeries")
     private final @Nullable Input<BasicPerfSampleSeriesArgs> basicPerfSampleSeries;
 
@@ -22,6 +28,9 @@ public final class PerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs
         return this.basicPerfSampleSeries == null ? Input.empty() : this.basicPerfSampleSeries;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="executionId", required=true)
     private final Input<String> executionId;
 
@@ -29,6 +38,9 @@ public final class PerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs
         return this.executionId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="historyId", required=true)
     private final Input<String> historyId;
 
@@ -36,6 +48,9 @@ public final class PerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs
         return this.historyId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -43,6 +58,9 @@ public final class PerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="stepId", required=true)
     private final Input<String> stepId;
 

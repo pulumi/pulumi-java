@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The project team associated with the entity, if any.
+ */
 public final class DefaultObjectAccessControlProjectTeamResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DefaultObjectAccessControlProjectTeamResponse Empty = new DefaultObjectAccessControlProjectTeamResponse();
 
+    /**
+     * The project number.
+     */
     @InputImport(name="projectNumber", required=true)
     private final String projectNumber;
 
@@ -19,6 +25,9 @@ public final class DefaultObjectAccessControlProjectTeamResponse extends io.pulu
         return this.projectNumber;
     }
 
+    /**
+     * The team.
+     */
     @InputImport(name="team", required=true)
     private final String team;
 

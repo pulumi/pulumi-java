@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DicomServiceAuthenticationConfigurationResponse {
+/**
+ * The audiences for the service
+ */
     private final List<String> audiences;
+/**
+ * The authority url for the service
+ */
     private final String authority;
 
     @OutputCustomType.Constructor({"audiences","authority"})
@@ -21,9 +27,15 @@ public final class DicomServiceAuthenticationConfigurationResponse {
         this.authority = Objects.requireNonNull(authority);
     }
 
+/**
+ * The audiences for the service
+ */
     public List<String> getAudiences() {
         return this.audiences;
     }
+/**
+ * The authority url for the service
+ */
     public String getAuthority() {
         return this.authority;
     }

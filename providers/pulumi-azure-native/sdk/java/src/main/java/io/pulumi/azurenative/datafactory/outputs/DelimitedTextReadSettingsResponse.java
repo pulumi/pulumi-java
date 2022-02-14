@@ -15,8 +15,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class DelimitedTextReadSettingsResponse {
+/**
+ * Compression settings.
+ */
     private final @Nullable Object compressionProperties;
+/**
+ * Indicates the number of non-empty rows to skip when reading data from input files. Type: integer (or Expression with resultType integer).
+ */
     private final @Nullable Object skipLineCount;
+/**
+ * The read setting type.
+Expected value is 'DelimitedTextReadSettings'.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"compressionProperties","skipLineCount","type"})
@@ -29,12 +39,22 @@ public final class DelimitedTextReadSettingsResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Compression settings.
+ */
     public Optional<Object> getCompressionProperties() {
         return Optional.ofNullable(this.compressionProperties);
     }
+/**
+ * Indicates the number of non-empty rows to skip when reading data from input files. Type: integer (or Expression with resultType integer).
+ */
     public Optional<Object> getSkipLineCount() {
         return Optional.ofNullable(this.skipLineCount);
     }
+/**
+ * The read setting type.
+Expected value is 'DelimitedTextReadSettings'.
+ */
     public String getType() {
         return this.type;
     }

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * An object that contains the details about an environment's state.
+ */
 public final class EnvironmentStateDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvironmentStateDetailsResponse Empty = new EnvironmentStateDetailsResponse();
 
+    /**
+     * Contains the code that represents the reason of an environment being in a particular state. Can be used to programmatically handle specific cases.
+     */
     @InputImport(name="code")
     private final @Nullable String code;
 
@@ -21,6 +27,9 @@ public final class EnvironmentStateDetailsResponse extends io.pulumi.resources.I
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
     }
 
+    /**
+     * A message that describes the state in detail.
+     */
     @InputImport(name="message")
     private final @Nullable String message;
 

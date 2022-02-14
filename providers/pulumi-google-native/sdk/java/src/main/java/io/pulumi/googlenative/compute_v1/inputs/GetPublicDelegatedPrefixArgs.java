@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetPublicDelegatedPrefixArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPublicDelegatedPrefixArgs Empty = new GetPublicDelegatedPrefixArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -21,6 +27,9 @@ public final class GetPublicDelegatedPrefixArgs extends io.pulumi.resources.Invo
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="publicDelegatedPrefix", required=true)
     private final String publicDelegatedPrefix;
 
@@ -28,6 +37,9 @@ public final class GetPublicDelegatedPrefixArgs extends io.pulumi.resources.Invo
         return this.publicDelegatedPrefix;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="region", required=true)
     private final String region;
 

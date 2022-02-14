@@ -15,15 +15,45 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EffectiveConnectivityConfigurationResponse {
+/**
+ * Groups for configuration
+ */
     private final @Nullable List<ConnectivityGroupItemResponse> appliesToGroups;
+/**
+ * Effective configuration groups.
+ */
     private final @Nullable List<ConfigurationGroupResponse> configurationGroups;
+/**
+ * Connectivity topology type.
+ */
     private final String connectivityTopology;
+/**
+ * Flag if need to remove current existing peerings.
+ */
     private final @Nullable String deleteExistingPeering;
+/**
+ * A description of the connectivity configuration.
+ */
     private final @Nullable String description;
+/**
+ * A friendly name for the resource.
+ */
     private final @Nullable String displayName;
+/**
+ * List of hubItems
+ */
     private final @Nullable List<HubResponse> hubs;
+/**
+ * Resource ID.
+ */
     private final @Nullable String id;
+/**
+ * Flag if global mesh is supported.
+ */
     private final @Nullable String isGlobal;
+/**
+ * The provisioning state of the connectivity configuration resource.
+ */
     private final String provisioningState;
 
     @OutputCustomType.Constructor({"appliesToGroups","configurationGroups","connectivityTopology","deleteExistingPeering","description","displayName","hubs","id","isGlobal","provisioningState"})
@@ -50,33 +80,63 @@ public final class EffectiveConnectivityConfigurationResponse {
         this.provisioningState = Objects.requireNonNull(provisioningState);
     }
 
+/**
+ * Groups for configuration
+ */
     public List<ConnectivityGroupItemResponse> getAppliesToGroups() {
         return this.appliesToGroups == null ? List.of() : this.appliesToGroups;
     }
+/**
+ * Effective configuration groups.
+ */
     public List<ConfigurationGroupResponse> getConfigurationGroups() {
         return this.configurationGroups == null ? List.of() : this.configurationGroups;
     }
+/**
+ * Connectivity topology type.
+ */
     public String getConnectivityTopology() {
         return this.connectivityTopology;
     }
+/**
+ * Flag if need to remove current existing peerings.
+ */
     public Optional<String> getDeleteExistingPeering() {
         return Optional.ofNullable(this.deleteExistingPeering);
     }
+/**
+ * A description of the connectivity configuration.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * A friendly name for the resource.
+ */
     public Optional<String> getDisplayName() {
         return Optional.ofNullable(this.displayName);
     }
+/**
+ * List of hubItems
+ */
     public List<HubResponse> getHubs() {
         return this.hubs == null ? List.of() : this.hubs;
     }
+/**
+ * Resource ID.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * Flag if global mesh is supported.
+ */
     public Optional<String> getIsGlobal() {
         return Optional.ofNullable(this.isGlobal);
     }
+/**
+ * The provisioning state of the connectivity configuration resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }

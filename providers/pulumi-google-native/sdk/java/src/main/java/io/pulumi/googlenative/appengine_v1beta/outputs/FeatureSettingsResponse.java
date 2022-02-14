@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FeatureSettingsResponse {
+/**
+ * Boolean value indicating if split health checks should be used instead of the legacy health checks. At an app.yaml level, this means defaulting to 'readiness_check' and 'liveness_check' values instead of 'health_check' ones. Once the legacy 'health_check' behavior is deprecated, and this value is always true, this setting can be removed.
+ */
     private final Boolean splitHealthChecks;
+/**
+ * If true, use Container-Optimized OS (https://cloud.google.com/container-optimized-os/) base image for VMs, rather than a base Debian image.
+ */
     private final Boolean useContainerOptimizedOs;
 
     @OutputCustomType.Constructor({"splitHealthChecks","useContainerOptimizedOs"})
@@ -20,9 +26,15 @@ public final class FeatureSettingsResponse {
         this.useContainerOptimizedOs = Objects.requireNonNull(useContainerOptimizedOs);
     }
 
+/**
+ * Boolean value indicating if split health checks should be used instead of the legacy health checks. At an app.yaml level, this means defaulting to 'readiness_check' and 'liveness_check' values instead of 'health_check' ones. Once the legacy 'health_check' behavior is deprecated, and this value is always true, this setting can be removed.
+ */
     public Boolean getSplitHealthChecks() {
         return this.splitHealthChecks;
     }
+/**
+ * If true, use Container-Optimized OS (https://cloud.google.com/container-optimized-os/) base image for VMs, rather than a base Debian image.
+ */
     public Boolean getUseContainerOptimizedOs() {
         return this.useContainerOptimizedOs;
     }

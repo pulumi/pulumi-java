@@ -13,16 +13,49 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetTaskResult {
+/**
+ * HTTP request that is sent to the App Engine app handler. An App Engine task is a task that has AppEngineHttpRequest set.
+ */
     private final AppEngineHttpRequestResponse appEngineHttpRequest;
+/**
+ * The time that the task was created. `create_time` will be truncated to the nearest second.
+ */
     private final String createTime;
+/**
+ * The number of attempts dispatched. This count includes attempts which have been dispatched but haven't received a response.
+ */
     private final Integer dispatchCount;
+/**
+ * The deadline for requests sent to the worker. If the worker does not respond by this deadline then the request is cancelled and the attempt is marked as a `DEADLINE_EXCEEDED` failure. Cloud Tasks will retry the task according to the RetryConfig. Note that when the request is cancelled, Cloud Tasks will stop listening for the response, but whether the worker stops processing depends on the worker. For example, if the worker is stuck, it may not react to cancelled requests. The default and maximum values depend on the type of request: * For HTTP tasks, the default is 10 minutes. The deadline must be in the interval [15 seconds, 30 minutes]. * For App Engine tasks, 0 indicates that the request has the default deadline. The default deadline depends on the [scaling type](https://cloud.google.com/appengine/docs/standard/go/how-instances-are-managed#instance_scaling) of the service: 10 minutes for standard apps with automatic scaling, 24 hours for standard apps with manual and basic scaling, and 60 minutes for flex apps. If the request deadline is set, it must be in the interval [15 seconds, 24 hours 15 seconds]. Regardless of the task's `dispatch_deadline`, the app handler will not run for longer than than the service's timeout. We recommend setting the `dispatch_deadline` to at most a few seconds more than the app handler's timeout. For more information see [Timeouts](https://cloud.google.com/tasks/docs/creating-appengine-handlers#timeouts). `dispatch_deadline` will be truncated to the nearest millisecond. The deadline is an approximate deadline.
+ */
     private final String dispatchDeadline;
+/**
+ * The status of the task's first attempt. Only dispatch_time will be set. The other Attempt information is not retained by Cloud Tasks.
+ */
     private final AttemptResponse firstAttempt;
+/**
+ * HTTP request that is sent to the worker. An HTTP task is a task that has HttpRequest set.
+ */
     private final HttpRequestResponse httpRequest;
+/**
+ * The status of the task's last attempt.
+ */
     private final AttemptResponse lastAttempt;
+/**
+ * Optionally caller-specified in CreateTask. The task name. The task name must have the following format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID` * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the task's location. The list of available locations can be obtained by calling ListLocations. For more information, see https://cloud.google.com/about/locations/. * `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum length is 100 characters. * `TASK_ID` can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or underscores (_). The maximum length is 500 characters.
+ */
     private final String name;
+/**
+ * The number of attempts which have received a response.
+ */
     private final Integer responseCount;
+/**
+ * The time when the task is scheduled to be attempted or retried. `schedule_time` will be truncated to the nearest microsecond.
+ */
     private final String scheduleTime;
+/**
+ * The view specifies which subset of the Task has been returned.
+ */
     private final String view;
 
     @OutputCustomType.Constructor({"appEngineHttpRequest","createTime","dispatchCount","dispatchDeadline","firstAttempt","httpRequest","lastAttempt","name","responseCount","scheduleTime","view"})
@@ -51,36 +84,69 @@ public final class GetTaskResult {
         this.view = Objects.requireNonNull(view);
     }
 
+/**
+ * HTTP request that is sent to the App Engine app handler. An App Engine task is a task that has AppEngineHttpRequest set.
+ */
     public AppEngineHttpRequestResponse getAppEngineHttpRequest() {
         return this.appEngineHttpRequest;
     }
+/**
+ * The time that the task was created. `create_time` will be truncated to the nearest second.
+ */
     public String getCreateTime() {
         return this.createTime;
     }
+/**
+ * The number of attempts dispatched. This count includes attempts which have been dispatched but haven't received a response.
+ */
     public Integer getDispatchCount() {
         return this.dispatchCount;
     }
+/**
+ * The deadline for requests sent to the worker. If the worker does not respond by this deadline then the request is cancelled and the attempt is marked as a `DEADLINE_EXCEEDED` failure. Cloud Tasks will retry the task according to the RetryConfig. Note that when the request is cancelled, Cloud Tasks will stop listening for the response, but whether the worker stops processing depends on the worker. For example, if the worker is stuck, it may not react to cancelled requests. The default and maximum values depend on the type of request: * For HTTP tasks, the default is 10 minutes. The deadline must be in the interval [15 seconds, 30 minutes]. * For App Engine tasks, 0 indicates that the request has the default deadline. The default deadline depends on the [scaling type](https://cloud.google.com/appengine/docs/standard/go/how-instances-are-managed#instance_scaling) of the service: 10 minutes for standard apps with automatic scaling, 24 hours for standard apps with manual and basic scaling, and 60 minutes for flex apps. If the request deadline is set, it must be in the interval [15 seconds, 24 hours 15 seconds]. Regardless of the task's `dispatch_deadline`, the app handler will not run for longer than than the service's timeout. We recommend setting the `dispatch_deadline` to at most a few seconds more than the app handler's timeout. For more information see [Timeouts](https://cloud.google.com/tasks/docs/creating-appengine-handlers#timeouts). `dispatch_deadline` will be truncated to the nearest millisecond. The deadline is an approximate deadline.
+ */
     public String getDispatchDeadline() {
         return this.dispatchDeadline;
     }
+/**
+ * The status of the task's first attempt. Only dispatch_time will be set. The other Attempt information is not retained by Cloud Tasks.
+ */
     public AttemptResponse getFirstAttempt() {
         return this.firstAttempt;
     }
+/**
+ * HTTP request that is sent to the worker. An HTTP task is a task that has HttpRequest set.
+ */
     public HttpRequestResponse getHttpRequest() {
         return this.httpRequest;
     }
+/**
+ * The status of the task's last attempt.
+ */
     public AttemptResponse getLastAttempt() {
         return this.lastAttempt;
     }
+/**
+ * Optionally caller-specified in CreateTask. The task name. The task name must have the following format: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID` * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the task's location. The list of available locations can be obtained by calling ListLocations. For more information, see https://cloud.google.com/about/locations/. * `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum length is 100 characters. * `TASK_ID` can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or underscores (_). The maximum length is 500 characters.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The number of attempts which have received a response.
+ */
     public Integer getResponseCount() {
         return this.responseCount;
     }
+/**
+ * The time when the task is scheduled to be attempted or retried. `schedule_time` will be truncated to the nearest microsecond.
+ */
     public String getScheduleTime() {
         return this.scheduleTime;
     }
+/**
+ * The view specifies which subset of the Task has been returned.
+ */
     public String getView() {
         return this.view;
     }

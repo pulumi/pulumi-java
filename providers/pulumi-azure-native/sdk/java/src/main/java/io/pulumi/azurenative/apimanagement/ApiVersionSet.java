@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.apimanagement.ApiVersionSetArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -14,51 +13,198 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Api Version Set Contract details.
+API Version: 2020-12-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### ApiManagementCreateApiVersionSet
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var apiVersionSet = new AzureNative.ApiManagement.ApiVersionSet("apiVersionSet", new AzureNative.ApiManagement.ApiVersionSetArgs
+        {
+            Description = "Version configuration",
+            DisplayName = "api set 1",
+            ResourceGroupName = "rg1",
+            ServiceName = "apimService1",
+            VersionSetId = "api1",
+            VersioningScheme = "Segment",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	apimanagement "github.com/pulumi/pulumi-azure-native/sdk/go/azure/apimanagement"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := apimanagement.NewApiVersionSet(ctx, "apiVersionSet", &apimanagement.ApiVersionSetArgs{
+			Description:       pulumi.String("Version configuration"),
+			DisplayName:       pulumi.String("api set 1"),
+			ResourceGroupName: pulumi.String("rg1"),
+			ServiceName:       pulumi.String("apimService1"),
+			VersionSetId:      pulumi.String("api1"),
+			VersioningScheme:  pulumi.String("Segment"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const apiVersionSet = new azure_native.apimanagement.ApiVersionSet("apiVersionSet", {
+    description: "Version configuration",
+    displayName: "api set 1",
+    resourceGroupName: "rg1",
+    serviceName: "apimService1",
+    versionSetId: "api1",
+    versioningScheme: "Segment",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+api_version_set = azure_native.apimanagement.ApiVersionSet("apiVersionSet",
+    description="Version configuration",
+    display_name="api set 1",
+    resource_group_name="rg1",
+    service_name="apimService1",
+    version_set_id="api1",
+    versioning_scheme="Segment")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:apimanagement:ApiVersionSet api1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apiVersionSets/api1 
+```
+
+ */
 @ResourceType(type="azure-native:apimanagement:ApiVersionSet")
 public class ApiVersionSet extends io.pulumi.resources.CustomResource {
+    /**
+     * Description of API Version Set.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Description of API Version Set.
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Name of API Version Set
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return Name of API Version Set
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Resource type for API Management resource.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type for API Management resource.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
+     */
     @OutputExport(name="versionHeaderName", type=String.class, parameters={})
     private Output</* @Nullable */ String> versionHeaderName;
 
+    /**
+     * @return Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
+     */
     public Output</* @Nullable */ String> getVersionHeaderName() {
         return this.versionHeaderName;
     }
+    /**
+     * Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
+     */
     @OutputExport(name="versionQueryName", type=String.class, parameters={})
     private Output</* @Nullable */ String> versionQueryName;
 
+    /**
+     * @return Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
+     */
     public Output</* @Nullable */ String> getVersionQueryName() {
         return this.versionQueryName;
     }
+    /**
+     * An value that determines where the API Version identifier will be located in a HTTP request.
+     */
     @OutputExport(name="versioningScheme", type=String.class, parameters={})
     private Output<String> versioningScheme;
 
+    /**
+     * @return An value that determines where the API Version identifier will be located in a HTTP request.
+     */
     public Output<String> getVersioningScheme() {
         return this.versioningScheme;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ApiVersionSet(String name, ApiVersionSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:ApiVersionSet", name, args == null ? ApiVersionSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -87,6 +233,14 @@ public class ApiVersionSet extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ApiVersionSet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApiVersionSet(name, id, options);
     }

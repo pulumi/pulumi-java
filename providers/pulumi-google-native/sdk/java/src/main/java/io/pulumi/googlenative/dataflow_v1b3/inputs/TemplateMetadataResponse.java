@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Metadata describing a template.
+ */
 public final class TemplateMetadataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TemplateMetadataResponse Empty = new TemplateMetadataResponse();
 
+    /**
+     * Optional. A description of the template.
+     */
     @InputImport(name="description", required=true)
     private final String description;
 
@@ -21,6 +27,9 @@ public final class TemplateMetadataResponse extends io.pulumi.resources.InvokeAr
         return this.description;
     }
 
+    /**
+     * The name of the template.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,6 +37,9 @@ public final class TemplateMetadataResponse extends io.pulumi.resources.InvokeAr
         return this.name;
     }
 
+    /**
+     * The parameters for the template.
+     */
     @InputImport(name="parameters", required=true)
     private final List<ParameterMetadataResponse> parameters;
 

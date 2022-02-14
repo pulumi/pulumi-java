@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Power Query data flow.
+ */
 public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WranglingDataFlowArgs Empty = new WranglingDataFlowArgs();
 
+    /**
+     * List of tags that can be used for describing the data flow.
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -25,6 +31,9 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * The description of the data flow.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -32,6 +41,9 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Locale of the Power query mashup document.
+     */
     @InputImport(name="documentLocale")
     private final @Nullable Input<String> documentLocale;
 
@@ -39,6 +51,9 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
         return this.documentLocale == null ? Input.empty() : this.documentLocale;
     }
 
+    /**
+     * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
+     */
     @InputImport(name="folder")
     private final @Nullable Input<DataFlowFolderArgs> folder;
 
@@ -46,6 +61,9 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
         return this.folder == null ? Input.empty() : this.folder;
     }
 
+    /**
+     * Power query mashup script.
+     */
     @InputImport(name="script")
     private final @Nullable Input<String> script;
 
@@ -53,6 +71,9 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
         return this.script == null ? Input.empty() : this.script;
     }
 
+    /**
+     * List of sources in Power Query.
+     */
     @InputImport(name="sources")
     private final @Nullable Input<List<PowerQuerySourceArgs>> sources;
 
@@ -60,6 +81,10 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
         return this.sources == null ? Input.empty() : this.sources;
     }
 
+    /**
+     * Type of data flow.
+Expected value is 'WranglingDataFlow'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 

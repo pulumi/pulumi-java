@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.logic;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.logic.IntegrationAccountCertificateArgs;
 import io.pulumi.azurenative.logic.outputs.KeyVaultKeyReferenceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -17,63 +16,248 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The integration account certificate.
+API Version: 2019-05-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create or update a certificate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var integrationAccountCertificate = new AzureNative.Logic.IntegrationAccountCertificate("integrationAccountCertificate", new AzureNative.Logic.IntegrationAccountCertificateArgs
+        {
+            CertificateName = "testCertificate",
+            IntegrationAccountName = "testIntegrationAccount",
+            Key = new AzureNative.Logic.Inputs.KeyVaultKeyReferenceArgs
+            {
+                KeyName = "<keyName>",
+                KeyVault = new AzureNative.Logic.Inputs.KeyVaultKeyReferenceKeyVaultArgs
+                {
+                    Id = "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testResourceGroup/providers/microsoft.keyvault/vaults/<keyVaultName>",
+                },
+                KeyVersion = "87d9764197604449b9b8eb7bd8710868",
+            },
+            Location = "brazilsouth",
+            PublicCertificate = "<publicCertificateValue>",
+            ResourceGroupName = "testResourceGroup",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	logic "github.com/pulumi/pulumi-azure-native/sdk/go/azure/logic"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := logic.NewIntegrationAccountCertificate(ctx, "integrationAccountCertificate", &logic.IntegrationAccountCertificateArgs{
+			CertificateName:        pulumi.String("testCertificate"),
+			IntegrationAccountName: pulumi.String("testIntegrationAccount"),
+			Key: &logic.KeyVaultKeyReferenceArgs{
+				KeyName: pulumi.String("<keyName>"),
+				KeyVault: &logic.KeyVaultKeyReferenceKeyVaultArgs{
+					Id: pulumi.String("/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testResourceGroup/providers/microsoft.keyvault/vaults/<keyVaultName>"),
+				},
+				KeyVersion: pulumi.String("87d9764197604449b9b8eb7bd8710868"),
+			},
+			Location:          pulumi.String("brazilsouth"),
+			PublicCertificate: pulumi.String("<publicCertificateValue>"),
+			ResourceGroupName: pulumi.String("testResourceGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const integrationAccountCertificate = new azure_native.logic.IntegrationAccountCertificate("integrationAccountCertificate", {
+    certificateName: "testCertificate",
+    integrationAccountName: "testIntegrationAccount",
+    key: {
+        keyName: "<keyName>",
+        keyVault: {
+            id: "/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testResourceGroup/providers/microsoft.keyvault/vaults/<keyVaultName>",
+        },
+        keyVersion: "87d9764197604449b9b8eb7bd8710868",
+    },
+    location: "brazilsouth",
+    publicCertificate: "<publicCertificateValue>",
+    resourceGroupName: "testResourceGroup",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+integration_account_certificate = azure_native.logic.IntegrationAccountCertificate("integrationAccountCertificate",
+    certificate_name="testCertificate",
+    integration_account_name="testIntegrationAccount",
+    key=azure_native.logic.KeyVaultKeyReferenceArgs(
+        key_name="<keyName>",
+        key_vault=azure_native.logic.KeyVaultKeyReferenceKeyVaultArgs(
+            id="/subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourcegroups/testResourceGroup/providers/microsoft.keyvault/vaults/<keyVaultName>",
+        ),
+        key_version="87d9764197604449b9b8eb7bd8710868",
+    ),
+    location="brazilsouth",
+    public_certificate="<publicCertificateValue>",
+    resource_group_name="testResourceGroup")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:logic:IntegrationAccountCertificate testCertificate /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/testIntegrationAccount/certificates/testCertificate 
+```
+
+ */
 @ResourceType(type="azure-native:logic:IntegrationAccountCertificate")
 public class IntegrationAccountCertificate extends io.pulumi.resources.CustomResource {
+    /**
+     * The changed time.
+     */
     @OutputExport(name="changedTime", type=String.class, parameters={})
     private Output<String> changedTime;
 
+    /**
+     * @return The changed time.
+     */
     public Output<String> getChangedTime() {
         return this.changedTime;
     }
+    /**
+     * The created time.
+     */
     @OutputExport(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
+    /**
+     * @return The created time.
+     */
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
+    /**
+     * The key details in the key vault.
+     */
     @OutputExport(name="key", type=KeyVaultKeyReferenceResponse.class, parameters={})
     private Output</* @Nullable */ KeyVaultKeyReferenceResponse> key;
 
+    /**
+     * @return The key details in the key vault.
+     */
     public Output</* @Nullable */ KeyVaultKeyReferenceResponse> getKey() {
         return this.key;
     }
+    /**
+     * The resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return The resource location.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * The metadata.
+     */
     @OutputExport(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
+    /**
+     * @return The metadata.
+     */
     public Output</* @Nullable */ Object> getMetadata() {
         return this.metadata;
     }
+    /**
+     * Gets the resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Gets the resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The public certificate.
+     */
     @OutputExport(name="publicCertificate", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicCertificate;
 
+    /**
+     * @return The public certificate.
+     */
     public Output</* @Nullable */ String> getPublicCertificate() {
         return this.publicCertificate;
     }
+    /**
+     * The resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Gets the resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Gets the resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public IntegrationAccountCertificate(String name, IntegrationAccountCertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:logic:IntegrationAccountCertificate", name, args == null ? IntegrationAccountCertificateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -95,6 +279,14 @@ public class IntegrationAccountCertificate extends io.pulumi.resources.CustomRes
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static IntegrationAccountCertificate get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IntegrationAccountCertificate(name, id, options);
     }

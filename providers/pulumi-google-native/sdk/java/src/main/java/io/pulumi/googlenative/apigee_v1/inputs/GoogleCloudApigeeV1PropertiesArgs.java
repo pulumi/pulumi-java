@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Message for compatibility with legacy Edge specification for Java Properties object in JSON.
+ */
 public final class GoogleCloudApigeeV1PropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudApigeeV1PropertiesArgs Empty = new GoogleCloudApigeeV1PropertiesArgs();
 
+    /**
+     * List of all properties in the object
+     */
     @InputImport(name="property")
     private final @Nullable Input<List<GoogleCloudApigeeV1PropertyArgs>> property;
 

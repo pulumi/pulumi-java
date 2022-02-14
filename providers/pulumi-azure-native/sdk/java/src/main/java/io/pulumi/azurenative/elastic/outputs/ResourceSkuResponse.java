@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ResourceSkuResponse {
+/**
+ * Name of the SKU.
+ */
     private final String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -16,6 +19,9 @@ public final class ResourceSkuResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+/**
+ * Name of the SKU.
+ */
     public String getName() {
         return this.name;
     }

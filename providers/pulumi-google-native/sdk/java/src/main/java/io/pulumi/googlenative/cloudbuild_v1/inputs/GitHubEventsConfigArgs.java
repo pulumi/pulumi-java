@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * GitHubEventsConfig describes the configuration of a trigger that creates a build whenever a GitHub event is received.
+ */
 public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GitHubEventsConfigArgs Empty = new GitHubEventsConfigArgs();
 
+    /**
+     * Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
+     */
     @InputImport(name="enterpriseConfigResourceName")
     private final @Nullable Input<String> enterpriseConfigResourceName;
 
@@ -23,6 +29,9 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
         return this.enterpriseConfigResourceName == null ? Input.empty() : this.enterpriseConfigResourceName;
     }
 
+    /**
+     * The installationID that emits the GitHub event.
+     */
     @InputImport(name="installationId")
     private final @Nullable Input<String> installationId;
 
@@ -30,6 +39,9 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
         return this.installationId == null ? Input.empty() : this.installationId;
     }
 
+    /**
+     * Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is "cloud-builders".
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -37,6 +49,9 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
+     */
     @InputImport(name="owner")
     private final @Nullable Input<String> owner;
 
@@ -44,6 +59,9 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
         return this.owner == null ? Input.empty() : this.owner;
     }
 
+    /**
+     * filter to match changes in pull requests.
+     */
     @InputImport(name="pullRequest")
     private final @Nullable Input<PullRequestFilterArgs> pullRequest;
 
@@ -51,6 +69,9 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
         return this.pullRequest == null ? Input.empty() : this.pullRequest;
     }
 
+    /**
+     * filter to match changes in refs like branches, tags.
+     */
     @InputImport(name="push")
     private final @Nullable Input<PushFilterArgs> push;
 

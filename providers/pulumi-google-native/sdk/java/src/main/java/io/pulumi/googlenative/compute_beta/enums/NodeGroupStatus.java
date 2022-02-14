@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum NodeGroupStatus {
+/**
+ * 
+ */
         Creating("CREATING"),
+/**
+ * 
+ */
         Deleting("DELETING"),
+/**
+ * 
+ */
         Invalid("INVALID"),
+/**
+ * 
+ */
         Ready("READY");
 
         private final String value;

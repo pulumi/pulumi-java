@@ -12,10 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ListTenantAccessSecretsResult {
+/**
+ * Determines whether direct access is enabled.
+ */
     private final @Nullable Boolean enabled;
+/**
+ * Access Information type ('access' or 'gitAccess')
+ */
     private final @Nullable String id;
+/**
+ * Primary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+ */
     private final @Nullable String primaryKey;
+/**
+ * Principal (User) Identifier.
+ */
     private final @Nullable String principalId;
+/**
+ * Secondary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+ */
     private final @Nullable String secondaryKey;
 
     @OutputCustomType.Constructor({"enabled","id","primaryKey","principalId","secondaryKey"})
@@ -32,18 +47,33 @@ public final class ListTenantAccessSecretsResult {
         this.secondaryKey = secondaryKey;
     }
 
+/**
+ * Determines whether direct access is enabled.
+ */
     public Optional<Boolean> getEnabled() {
         return Optional.ofNullable(this.enabled);
     }
+/**
+ * Access Information type ('access' or 'gitAccess')
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * Primary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+ */
     public Optional<String> getPrimaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
+/**
+ * Principal (User) Identifier.
+ */
     public Optional<String> getPrincipalId() {
         return Optional.ofNullable(this.principalId);
     }
+/**
+ * Secondary access key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+ */
     public Optional<String> getSecondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }

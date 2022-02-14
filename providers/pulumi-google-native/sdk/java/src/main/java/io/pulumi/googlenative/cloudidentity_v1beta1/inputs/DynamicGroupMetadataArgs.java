@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Dynamic group metadata like queries and status.
+ */
 public final class DynamicGroupMetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DynamicGroupMetadataArgs Empty = new DynamicGroupMetadataArgs();
 
+    /**
+     * Memberships will be the union of all queries. Only one entry with USER resource is currently supported. Customers can create up to 100 dynamic groups.
+     */
     @InputImport(name="queries")
     private final @Nullable Input<List<DynamicGroupQueryArgs>> queries;
 

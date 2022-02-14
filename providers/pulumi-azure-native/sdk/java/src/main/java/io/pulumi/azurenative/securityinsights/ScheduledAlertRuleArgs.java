@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScheduledAlertRuleArgs Empty = new ScheduledAlertRuleArgs();
 
+    /**
+     * The Name of the alert rule template used to create this rule.
+     */
     @InputImport(name="alertRuleTemplateName")
     private final @Nullable Input<String> alertRuleTemplateName;
 
@@ -28,6 +34,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
         return this.alertRuleTemplateName == null ? Input.empty() : this.alertRuleTemplateName;
     }
 
+    /**
+     * The description of the alert rule.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -35,6 +44,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The display name for alerts created by this alert rule.
+     */
     @InputImport(name="displayName", required=true)
     private final Input<String> displayName;
 
@@ -42,6 +54,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
         return this.displayName;
     }
 
+    /**
+     * Determines whether this alert rule is enabled or disabled.
+     */
     @InputImport(name="enabled", required=true)
     private final Input<Boolean> enabled;
 
@@ -49,6 +64,10 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
         return this.enabled;
     }
 
+    /**
+     * The kind of the alert rule
+Expected value is 'Scheduled'.
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -56,6 +75,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
         return this.kind;
     }
 
+    /**
+     * The query that creates alerts for this rule.
+     */
     @InputImport(name="query", required=true)
     private final Input<String> query;
 
@@ -63,6 +85,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
         return this.query;
     }
 
+    /**
+     * The frequency (in ISO 8601 duration format) for this alert rule to run.
+     */
     @InputImport(name="queryFrequency", required=true)
     private final Input<String> queryFrequency;
 
@@ -70,6 +95,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
         return this.queryFrequency;
     }
 
+    /**
+     * The period (in ISO 8601 duration format) that this alert rule looks at.
+     */
     @InputImport(name="queryPeriod", required=true)
     private final Input<String> queryPeriod;
 
@@ -77,6 +105,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
         return this.queryPeriod;
     }
 
+    /**
+     * The name of the resource group within the user's subscription. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -84,6 +115,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
+    /**
+     * Alert rule ID
+     */
     @InputImport(name="ruleId")
     private final @Nullable Input<String> ruleId;
 
@@ -91,6 +125,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
         return this.ruleId == null ? Input.empty() : this.ruleId;
     }
 
+    /**
+     * The severity for alerts created by this alert rule.
+     */
     @InputImport(name="severity", required=true)
     private final Input<Either<String,AlertSeverity>> severity;
 
@@ -98,6 +135,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
         return this.severity;
     }
 
+    /**
+     * The suppression (in ISO 8601 duration format) to wait since last time this alert rule been triggered.
+     */
     @InputImport(name="suppressionDuration", required=true)
     private final Input<String> suppressionDuration;
 
@@ -105,6 +145,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
         return this.suppressionDuration;
     }
 
+    /**
+     * Determines whether the suppression for this alert rule is enabled or disabled.
+     */
     @InputImport(name="suppressionEnabled", required=true)
     private final Input<Boolean> suppressionEnabled;
 
@@ -112,6 +155,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
         return this.suppressionEnabled;
     }
 
+    /**
+     * The tactics of the alert rule
+     */
     @InputImport(name="tactics")
     private final @Nullable Input<List<Either<String,AttackTactic>>> tactics;
 
@@ -119,6 +165,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
         return this.tactics == null ? Input.empty() : this.tactics;
     }
 
+    /**
+     * The operation against the threshold that triggers alert rule.
+     */
     @InputImport(name="triggerOperator", required=true)
     private final Input<TriggerOperator> triggerOperator;
 
@@ -126,6 +175,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
         return this.triggerOperator;
     }
 
+    /**
+     * The threshold triggers this alert rule.
+     */
     @InputImport(name="triggerThreshold", required=true)
     private final Input<Integer> triggerThreshold;
 
@@ -133,6 +185,9 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
         return this.triggerThreshold;
     }
 
+    /**
+     * The name of the workspace.
+     */
     @InputImport(name="workspaceName", required=true)
     private final Input<String> workspaceName;
 

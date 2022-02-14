@@ -12,10 +12,26 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class JpgLayerResponse {
+/**
+ * The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
+ */
     private final @Nullable String height;
+/**
+ * The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
+ */
     private final @Nullable String label;
+/**
+ * The discriminator for derived types.
+Expected value is '#Microsoft.Media.JpgLayer'.
+ */
     private final String odataType;
+/**
+ * The compression quality of the JPEG output. Range is from 0-100 and the default is 70.
+ */
     private final @Nullable Integer quality;
+/**
+ * The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
+ */
     private final @Nullable String width;
 
     @OutputCustomType.Constructor({"height","label","odataType","quality","width"})
@@ -32,18 +48,34 @@ public final class JpgLayerResponse {
         this.width = width;
     }
 
+/**
+ * The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
+ */
     public Optional<String> getHeight() {
         return Optional.ofNullable(this.height);
     }
+/**
+ * The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
+ */
     public Optional<String> getLabel() {
         return Optional.ofNullable(this.label);
     }
+/**
+ * The discriminator for derived types.
+Expected value is '#Microsoft.Media.JpgLayer'.
+ */
     public String getOdataType() {
         return this.odataType;
     }
+/**
+ * The compression quality of the JPEG output. Range is from 0-100 and the default is 70.
+ */
     public Optional<Integer> getQuality() {
         return Optional.ofNullable(this.quality);
     }
+/**
+ * The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
+ */
     public Optional<String> getWidth() {
         return Optional.ofNullable(this.width);
     }

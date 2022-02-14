@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetRegistrationAssignmentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRegistrationAssignmentArgs Empty = new GetRegistrationAssignmentArgs();
 
+    /**
+     * Tells whether to return registration definition details also along with registration assignment details.
+     */
     @InputImport(name="expandRegistrationDefinition")
     private final @Nullable Boolean expandRegistrationDefinition;
 
@@ -22,6 +28,9 @@ public final class GetRegistrationAssignmentArgs extends io.pulumi.resources.Inv
         return this.expandRegistrationDefinition == null ? Optional.empty() : Optional.ofNullable(this.expandRegistrationDefinition);
     }
 
+    /**
+     * Guid of the registration assignment.
+     */
     @InputImport(name="registrationAssignmentId", required=true)
     private final String registrationAssignmentId;
 
@@ -29,6 +38,9 @@ public final class GetRegistrationAssignmentArgs extends io.pulumi.resources.Inv
         return this.registrationAssignmentId;
     }
 
+    /**
+     * Scope of the resource.
+     */
     @InputImport(name="scope", required=true)
     private final String scope;
 

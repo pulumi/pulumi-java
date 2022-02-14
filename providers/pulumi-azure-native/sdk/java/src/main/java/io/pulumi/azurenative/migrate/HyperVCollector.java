@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.migrate.HyperVCollectorArgs;
 import io.pulumi.azurenative.migrate.outputs.CollectorPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,26 +14,180 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * 
+API Version: 2019-10-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### HyperVCollectors_Create
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hyperVCollector = new AzureNative.Migrate.HyperVCollector("hyperVCollector", new AzureNative.Migrate.HyperVCollectorArgs
+        {
+            ETag = "\"00000981-0000-0300-0000-5d74cd5f0000\"",
+            HyperVCollectorName = "migrateprojectce73collector",
+            ProjectName = "migrateprojectce73project",
+            Properties = new AzureNative.Migrate.Inputs.CollectorPropertiesArgs
+            {
+                AgentProperties = new AzureNative.Migrate.Inputs.CollectorAgentPropertiesArgs
+                {
+                    SpnDetails = new AzureNative.Migrate.Inputs.CollectorBodyAgentSpnPropertiesArgs
+                    {
+                        ApplicationId = "827f1053-44dc-439f-b832-05416dcce12b",
+                        Audience = "https://72f988bf-86f1-41af-91ab-2d7cd011db47/migrateprojectce73agentauthaadapp",
+                        Authority = "https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
+                        ObjectId = "be75098e-c0fc-4ac4-98c7-282ebbcf8370",
+                        TenantId = "72f988bf-86f1-41af-91ab-2d7cd011db47",
+                    },
+                },
+                DiscoverySiteId = "/subscriptions/8c3c936a-c09b-4de3-830b-3f5f244d72e9/resourceGroups/ContosoITHyperV/providers/Microsoft.OffAzure/HyperVSites/migrateprojectce73site",
+            },
+            ResourceGroupName = "contosoithyperv",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	migrate "github.com/pulumi/pulumi-azure-native/sdk/go/azure/migrate"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := migrate.NewHyperVCollector(ctx, "hyperVCollector", &migrate.HyperVCollectorArgs{
+			ETag:                pulumi.String("\"00000981-0000-0300-0000-5d74cd5f0000\""),
+			HyperVCollectorName: pulumi.String("migrateprojectce73collector"),
+			ProjectName:         pulumi.String("migrateprojectce73project"),
+			Properties: &migrate.CollectorPropertiesArgs{
+				AgentProperties: &migrate.CollectorAgentPropertiesArgs{
+					SpnDetails: &migrate.CollectorBodyAgentSpnPropertiesArgs{
+						ApplicationId: pulumi.String("827f1053-44dc-439f-b832-05416dcce12b"),
+						Audience:      pulumi.String("https://72f988bf-86f1-41af-91ab-2d7cd011db47/migrateprojectce73agentauthaadapp"),
+						Authority:     pulumi.String("https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47"),
+						ObjectId:      pulumi.String("be75098e-c0fc-4ac4-98c7-282ebbcf8370"),
+						TenantId:      pulumi.String("72f988bf-86f1-41af-91ab-2d7cd011db47"),
+					},
+				},
+				DiscoverySiteId: pulumi.String("/subscriptions/8c3c936a-c09b-4de3-830b-3f5f244d72e9/resourceGroups/ContosoITHyperV/providers/Microsoft.OffAzure/HyperVSites/migrateprojectce73site"),
+			},
+			ResourceGroupName: pulumi.String("contosoithyperv"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const hyperVCollector = new azure_native.migrate.HyperVCollector("hyperVCollector", {
+    eTag: "\"00000981-0000-0300-0000-5d74cd5f0000\"",
+    hyperVCollectorName: "migrateprojectce73collector",
+    projectName: "migrateprojectce73project",
+    properties: {
+        agentProperties: {
+            spnDetails: {
+                applicationId: "827f1053-44dc-439f-b832-05416dcce12b",
+                audience: "https://72f988bf-86f1-41af-91ab-2d7cd011db47/migrateprojectce73agentauthaadapp",
+                authority: "https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
+                objectId: "be75098e-c0fc-4ac4-98c7-282ebbcf8370",
+                tenantId: "72f988bf-86f1-41af-91ab-2d7cd011db47",
+            },
+        },
+        discoverySiteId: "/subscriptions/8c3c936a-c09b-4de3-830b-3f5f244d72e9/resourceGroups/ContosoITHyperV/providers/Microsoft.OffAzure/HyperVSites/migrateprojectce73site",
+    },
+    resourceGroupName: "contosoithyperv",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+hyper_v_collector = azure_native.migrate.HyperVCollector("hyperVCollector",
+    e_tag="\"00000981-0000-0300-0000-5d74cd5f0000\"",
+    hyper_v_collector_name="migrateprojectce73collector",
+    project_name="migrateprojectce73project",
+    properties=azure_native.migrate.CollectorPropertiesArgs(
+        agent_properties=azure_native.migrate.CollectorAgentPropertiesArgs(
+            spn_details=azure_native.migrate.CollectorBodyAgentSpnPropertiesArgs(
+                application_id="827f1053-44dc-439f-b832-05416dcce12b",
+                audience="https://72f988bf-86f1-41af-91ab-2d7cd011db47/migrateprojectce73agentauthaadapp",
+                authority="https://login.windows.net/72f988bf-86f1-41af-91ab-2d7cd011db47",
+                object_id="be75098e-c0fc-4ac4-98c7-282ebbcf8370",
+                tenant_id="72f988bf-86f1-41af-91ab-2d7cd011db47",
+            ),
+        ),
+        discovery_site_id="/subscriptions/8c3c936a-c09b-4de3-830b-3f5f244d72e9/resourceGroups/ContosoITHyperV/providers/Microsoft.OffAzure/HyperVSites/migrateprojectce73site",
+    ),
+    resource_group_name="contosoithyperv")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:migrate:HyperVCollector migrateprojectce73collector /subscriptions/8c3c936a-c09b-4de3-830b-3f5f244d72e9/resourceGroups/contosoithyperv/providers/Microsoft.Migrate/assessmentprojects/migrateprojectce73project/hypervcollectors/migrateprojectce73collector 
+```
+
+ */
 @ResourceType(type="azure-native:migrate:HyperVCollector")
 public class HyperVCollector extends io.pulumi.resources.CustomResource {
+    /**
+     * 
+     */
     @OutputExport(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     public Output</* @Nullable */ String> getETag() {
         return this.eTag;
     }
+    /**
+     * 
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * 
+     */
     @OutputExport(name="properties", type=CollectorPropertiesResponse.class, parameters={})
     private Output<CollectorPropertiesResponse> properties;
 
     public Output<CollectorPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * 
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
@@ -42,6 +195,12 @@ public class HyperVCollector extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public HyperVCollector(String name, HyperVCollectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:migrate:HyperVCollector", name, args == null ? HyperVCollectorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -60,6 +219,14 @@ public class HyperVCollector extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static HyperVCollector get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new HyperVCollector(name, id, options);
     }

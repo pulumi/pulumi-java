@@ -11,10 +11,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes an automation rule action to run a playbook
+ */
 public final class AutomationRuleRunPlaybookActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutomationRuleRunPlaybookActionArgs Empty = new AutomationRuleRunPlaybookActionArgs();
 
+    /**
+     * The configuration of the run playbook automation rule action
+     */
     @InputImport(name="actionConfiguration", required=true)
     private final Input<AutomationRuleRunPlaybookActionActionConfigurationArgs> actionConfiguration;
 
@@ -22,6 +28,10 @@ public final class AutomationRuleRunPlaybookActionArgs extends io.pulumi.resourc
         return this.actionConfiguration;
     }
 
+    /**
+     * The type of the automation rule action
+Expected value is 'RunPlaybook'.
+     */
     @InputImport(name="actionType", required=true)
     private final Input<String> actionType;
 
@@ -29,6 +39,9 @@ public final class AutomationRuleRunPlaybookActionArgs extends io.pulumi.resourc
         return this.actionType;
     }
 
+    /**
+     * The order of execution of the automation rule action
+     */
     @InputImport(name="order", required=true)
     private final Input<Integer> order;
 

@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The resource set description.
+ */
 public final class ResourceSetDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceSetDescriptionResponse Empty = new ResourceSetDescriptionResponse();
 
+    /**
+     * The elements included in the set.
+     */
     @InputImport(name="elements")
     private final @Nullable List<String> elements;
 
@@ -22,6 +28,9 @@ public final class ResourceSetDescriptionResponse extends io.pulumi.resources.In
         return this.elements == null ? List.of() : this.elements;
     }
 
+    /**
+     * The elements that are not included in the set, in case elements contains '*' indicating 'all'.
+     */
     @InputImport(name="exceptions")
     private final @Nullable List<String> exceptions;
 

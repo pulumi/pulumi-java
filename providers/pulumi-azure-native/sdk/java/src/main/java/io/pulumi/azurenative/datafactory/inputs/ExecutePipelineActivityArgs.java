@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Execute pipeline activity.
+ */
 public final class ExecutePipelineActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExecutePipelineActivityArgs Empty = new ExecutePipelineActivityArgs();
 
+    /**
+     * Activity depends on condition.
+     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
@@ -28,6 +34,9 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -35,6 +44,9 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Activity name.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -42,6 +54,9 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
         return this.name;
     }
 
+    /**
+     * Pipeline parameters.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,Object>> parameters;
 
@@ -49,6 +64,9 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Pipeline reference.
+     */
     @InputImport(name="pipeline", required=true)
     private final Input<PipelineReferenceArgs> pipeline;
 
@@ -56,6 +74,10 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
         return this.pipeline;
     }
 
+    /**
+     * Type of activity.
+Expected value is 'ExecutePipeline'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -63,6 +85,9 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     */
     @InputImport(name="userProperties")
     private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
@@ -70,6 +95,9 @@ public final class ExecutePipelineActivityArgs extends io.pulumi.resources.Resou
         return this.userProperties == null ? Input.empty() : this.userProperties;
     }
 
+    /**
+     * Defines whether activity execution will wait for the dependent pipeline execution to finish. Default is false.
+     */
     @InputImport(name="waitOnCompletion")
     private final @Nullable Input<Boolean> waitOnCompletion;
 

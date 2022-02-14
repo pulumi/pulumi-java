@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for the task that migrates MySQL databases to Azure Database for MySQL for online migrations
+ */
 public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs Empty = new MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs();
 
+    /**
+     * Task input
+     */
     @InputImport(name="input")
     private final @Nullable Input<MigrateMySqlAzureDbForMySqlSyncTaskInputArgs> input;
 
@@ -22,6 +28,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs extends io.
         return this.input == null ? Input.empty() : this.input;
     }
 
+    /**
+     * Task type.
+Expected value is 'Migrate.MySql.AzureDbForMySql.Sync'.
+     */
     @InputImport(name="taskType", required=true)
     private final Input<String> taskType;
 

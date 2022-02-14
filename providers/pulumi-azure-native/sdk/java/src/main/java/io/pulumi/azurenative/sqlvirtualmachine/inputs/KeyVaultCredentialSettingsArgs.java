@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configure your SQL virtual machine to be able to connect to the Azure Key Vault service.
+ */
 public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyVaultCredentialSettingsArgs Empty = new KeyVaultCredentialSettingsArgs();
 
+    /**
+     * Azure Key Vault url.
+     */
     @InputImport(name="azureKeyVaultUrl")
     private final @Nullable Input<String> azureKeyVaultUrl;
 
@@ -22,6 +28,9 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
         return this.azureKeyVaultUrl == null ? Input.empty() : this.azureKeyVaultUrl;
     }
 
+    /**
+     * Credential name.
+     */
     @InputImport(name="credentialName")
     private final @Nullable Input<String> credentialName;
 
@@ -29,6 +38,9 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
         return this.credentialName == null ? Input.empty() : this.credentialName;
     }
 
+    /**
+     * Enable or disable key vault credential setting.
+     */
     @InputImport(name="enable")
     private final @Nullable Input<Boolean> enable;
 
@@ -36,6 +48,9 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
         return this.enable == null ? Input.empty() : this.enable;
     }
 
+    /**
+     * Service principal name to access key vault.
+     */
     @InputImport(name="servicePrincipalName")
     private final @Nullable Input<String> servicePrincipalName;
 
@@ -43,6 +58,9 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
         return this.servicePrincipalName == null ? Input.empty() : this.servicePrincipalName;
     }
 
+    /**
+     * Service principal name secret to access key vault.
+     */
     @InputImport(name="servicePrincipalSecret")
     private final @Nullable Input<String> servicePrincipalSecret;
 

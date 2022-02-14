@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Database flags for Cloud SQL instances.
+ */
 public final class DatabaseFlagsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatabaseFlagsArgs Empty = new DatabaseFlagsArgs();
 
+    /**
+     * The name of the flag. These flags are passed at instance startup, so include both server options and system variables. Flags are specified with underscores, not hyphens. For more information, see [Configuring Database Flags](https://cloud.google.com/sql/docs/mysql/flags) in the Cloud SQL documentation.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -21,6 +27,9 @@ public final class DatabaseFlagsArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The value of the flag. Boolean flags are set to `on` for true and `off` for false. This field must be omitted if the flag doesn't take a value.
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

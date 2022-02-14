@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details of an inquired protectable item.
+ */
 public final class WorkloadInquiryDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkloadInquiryDetailsResponse Empty = new WorkloadInquiryDetailsResponse();
 
+    /**
+     * Inquiry validation such as permissions and other backup validations.
+     */
     @InputImport(name="inquiryValidation")
     private final @Nullable InquiryValidationResponse inquiryValidation;
 
@@ -23,6 +29,9 @@ public final class WorkloadInquiryDetailsResponse extends io.pulumi.resources.In
         return this.inquiryValidation == null ? Optional.empty() : Optional.ofNullable(this.inquiryValidation);
     }
 
+    /**
+     * Contains the protectable item Count inside this Container.
+     */
     @InputImport(name="itemCount")
     private final @Nullable Double itemCount;
 
@@ -30,6 +39,9 @@ public final class WorkloadInquiryDetailsResponse extends io.pulumi.resources.In
         return this.itemCount == null ? Optional.empty() : Optional.ofNullable(this.itemCount);
     }
 
+    /**
+     * Type of the Workload such as SQL, Oracle etc.
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

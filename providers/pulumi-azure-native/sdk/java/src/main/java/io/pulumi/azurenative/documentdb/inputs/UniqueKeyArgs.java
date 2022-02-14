@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The unique key on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
+ */
 public final class UniqueKeyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UniqueKeyArgs Empty = new UniqueKeyArgs();
 
+    /**
+     * List of paths must be unique for each document in the Azure Cosmos DB service
+     */
     @InputImport(name="paths")
     private final @Nullable Input<List<String>> paths;
 

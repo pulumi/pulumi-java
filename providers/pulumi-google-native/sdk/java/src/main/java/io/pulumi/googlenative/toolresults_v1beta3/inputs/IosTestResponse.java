@@ -12,10 +12,16 @@ import io.pulumi.googlenative.toolresults_v1beta3.inputs.IosXcTestResponse;
 import java.util.Objects;
 
 
+/**
+ * A iOS mobile test specification
+ */
 public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IosTestResponse Empty = new IosTestResponse();
 
+    /**
+     * Information about the application under test.
+     */
     @InputImport(name="iosAppInfo", required=true)
     private final IosAppInfoResponse iosAppInfo;
 
@@ -23,6 +29,9 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
         return this.iosAppInfo;
     }
 
+    /**
+     * An iOS Robo test.
+     */
     @InputImport(name="iosRoboTest", required=true)
     private final IosRoboTestResponse iosRoboTest;
 
@@ -30,6 +39,9 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
         return this.iosRoboTest;
     }
 
+    /**
+     * An iOS test loop.
+     */
     @InputImport(name="iosTestLoop", required=true)
     private final IosTestLoopResponse iosTestLoop;
 
@@ -37,6 +49,9 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
         return this.iosTestLoop;
     }
 
+    /**
+     * An iOS XCTest.
+     */
     @InputImport(name="iosXcTest", required=true)
     private final IosXcTestResponse iosXcTest;
 
@@ -44,6 +59,9 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
         return this.iosXcTest;
     }
 
+    /**
+     * Max time a test is allowed to run before it is automatically cancelled.
+     */
     @InputImport(name="testTimeout", required=true)
     private final DurationResponse testTimeout;
 

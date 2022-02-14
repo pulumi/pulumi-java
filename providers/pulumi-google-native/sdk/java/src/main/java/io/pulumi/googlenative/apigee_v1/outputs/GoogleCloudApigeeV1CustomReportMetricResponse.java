@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudApigeeV1CustomReportMetricResponse {
+/**
+ * aggregate function
+ */
     private final String function;
+/**
+ * name of the metric
+ */
     private final String name;
 
     @OutputCustomType.Constructor({"function","name"})
@@ -20,9 +26,15 @@ public final class GoogleCloudApigeeV1CustomReportMetricResponse {
         this.name = Objects.requireNonNull(name);
     }
 
+/**
+ * aggregate function
+ */
     public String getFunction() {
         return this.function;
     }
+/**
+ * name of the metric
+ */
     public String getName() {
         return this.name;
     }

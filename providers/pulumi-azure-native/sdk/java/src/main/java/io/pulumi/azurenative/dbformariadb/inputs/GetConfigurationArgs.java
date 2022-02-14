@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetConfigurationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConfigurationArgs Empty = new GetConfigurationArgs();
 
+    /**
+     * The name of the server configuration.
+     */
     @InputImport(name="configurationName", required=true)
     private final String configurationName;
 
@@ -19,6 +25,9 @@ public final class GetConfigurationArgs extends io.pulumi.resources.InvokeArgs {
         return this.configurationName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetConfigurationArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     */
     @InputImport(name="serverName", required=true)
     private final String serverName;
 

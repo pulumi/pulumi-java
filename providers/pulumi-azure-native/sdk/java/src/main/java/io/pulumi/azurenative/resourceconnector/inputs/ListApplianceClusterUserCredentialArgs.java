@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListApplianceClusterUserCredentialArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListApplianceClusterUserCredentialArgs Empty = new ListApplianceClusterUserCredentialArgs();
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -19,6 +25,9 @@ public final class ListApplianceClusterUserCredentialArgs extends io.pulumi.reso
         return this.resourceGroupName;
     }
 
+    /**
+     * Appliances name.
+     */
     @InputImport(name="resourceName", required=true)
     private final String resourceName;
 

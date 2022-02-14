@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DataStoreInfoBaseResponse {
+/**
+ * type of datastore; Operational/Vault/Archive
+ */
     private final String dataStoreType;
+/**
+ * Type of Datasource object, used to initialize the right inherited type
+ */
     private final String objectType;
 
     @OutputCustomType.Constructor({"dataStoreType","objectType"})
@@ -20,9 +26,15 @@ public final class DataStoreInfoBaseResponse {
         this.objectType = Objects.requireNonNull(objectType);
     }
 
+/**
+ * type of datastore; Operational/Vault/Archive
+ */
     public String getDataStoreType() {
         return this.dataStoreType;
     }
+/**
+ * Type of Datasource object, used to initialize the right inherited type
+ */
     public String getObjectType() {
         return this.objectType;
     }

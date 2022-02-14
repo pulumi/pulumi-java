@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetWCFRelayAuthorizationRule {
+/**
+ * Description of a namespace authorization rule.
+API Version: 2017-04-01.
+ *
+ * Description of a namespace authorization rule.
+ */
     public static CompletableFuture<GetWCFRelayAuthorizationRuleResult> invokeAsync(GetWCFRelayAuthorizationRuleArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:relay:getWCFRelayAuthorizationRule", TypeShape.of(GetWCFRelayAuthorizationRuleResult.class), args == null ? GetWCFRelayAuthorizationRuleArgs.Empty : args, Utilities.withVersion(options));
     }

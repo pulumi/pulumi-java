@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DnsCacheConfigResponse {
+/**
+ * Whether NodeLocal DNSCache is enabled for this cluster.
+ */
     private final Boolean enabled;
 
     @OutputCustomType.Constructor({"enabled"})
@@ -16,6 +19,9 @@ public final class DnsCacheConfigResponse {
         this.enabled = Objects.requireNonNull(enabled);
     }
 
+/**
+ * Whether NodeLocal DNSCache is enabled for this cluster.
+ */
     public Boolean getEnabled() {
         return this.enabled;
     }

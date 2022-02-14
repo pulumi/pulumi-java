@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the resource range.
+ */
 public final class ResourceRangeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceRangeResponse Empty = new ResourceRangeResponse();
 
+    /**
+     * The maximum number of the resource.
+     */
     @InputImport(name="max")
     private final @Nullable Integer max;
 
@@ -21,6 +27,9 @@ public final class ResourceRangeResponse extends io.pulumi.resources.InvokeArgs 
         return this.max == null ? Optional.empty() : Optional.ofNullable(this.max);
     }
 
+    /**
+     * The minimum number of the resource.
+     */
     @InputImport(name="min")
     private final @Nullable Integer min;
 

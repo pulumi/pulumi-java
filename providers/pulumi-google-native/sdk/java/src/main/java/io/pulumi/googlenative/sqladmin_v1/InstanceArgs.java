@@ -27,10 +27,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceArgs Empty = new InstanceArgs();
 
+    /**
+     * The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by Google. This property is read-only; use the `tier` property in the `settings` object to determine the database type.
+     */
     @InputImport(name="backendType")
     private final @Nullable Input<InstanceBackendType> backendType;
 
@@ -38,6 +44,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.backendType == null ? Input.empty() : this.backendType;
     }
 
+    /**
+     * Connection name of the Cloud SQL instance used in connection strings.
+     */
     @InputImport(name="connectionName")
     private final @Nullable Input<String> connectionName;
 
@@ -45,6 +54,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.connectionName == null ? Input.empty() : this.connectionName;
     }
 
+    /**
+     * The current disk usage of the instance in bytes. This property has been deprecated. Use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead. Please see [this announcement](https://groups.google.com/d/msg/google-cloud-sql-announce/I_7-F9EBhT0/BtvFtdFeAgAJ) for details.
+     */
     @InputImport(name="currentDiskSize")
     private final @Nullable Input<String> currentDiskSize;
 
@@ -52,6 +64,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.currentDiskSize == null ? Input.empty() : this.currentDiskSize;
     }
 
+    /**
+     * The database engine type and version. The `databaseVersion` field cannot be changed after instance creation.
+     */
     @InputImport(name="databaseVersion")
     private final @Nullable Input<InstanceDatabaseVersion> databaseVersion;
 
@@ -59,6 +74,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.databaseVersion == null ? Input.empty() : this.databaseVersion;
     }
 
+    /**
+     * Disk encryption configuration specific to an instance.
+     */
     @InputImport(name="diskEncryptionConfiguration")
     private final @Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
 
@@ -66,6 +84,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskEncryptionConfiguration == null ? Input.empty() : this.diskEncryptionConfiguration;
     }
 
+    /**
+     * Disk encryption status specific to an instance.
+     */
     @InputImport(name="diskEncryptionStatus")
     private final @Nullable Input<DiskEncryptionStatusArgs> diskEncryptionStatus;
 
@@ -73,6 +94,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.diskEncryptionStatus == null ? Input.empty() : this.diskEncryptionStatus;
     }
 
+    /**
+     * The name and status of the failover replica.
+     */
     @InputImport(name="failoverReplica")
     private final @Nullable Input<InstanceFailoverReplicaArgs> failoverReplica;
 
@@ -80,6 +104,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.failoverReplica == null ? Input.empty() : this.failoverReplica;
     }
 
+    /**
+     * The Compute Engine zone that the instance is currently serving from. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary zone. WARNING: Changing this might restart the instance.
+     */
     @InputImport(name="gceZone")
     private final @Nullable Input<String> gceZone;
 
@@ -87,6 +114,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.gceZone == null ? Input.empty() : this.gceZone;
     }
 
+    /**
+     * The instance type.
+     */
     @InputImport(name="instanceType")
     private final @Nullable Input<InstanceInstanceType> instanceType;
 
@@ -94,6 +124,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
+    /**
+     * The assigned IP addresses for the instance.
+     */
     @InputImport(name="ipAddresses")
     private final @Nullable Input<List<IpMappingArgs>> ipAddresses;
 
@@ -101,6 +134,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
     }
 
+    /**
+     * This is always `sql#instance`.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -108,6 +144,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * The name of the instance which will act as primary in the replication setup.
+     */
     @InputImport(name="masterInstanceName")
     private final @Nullable Input<String> masterInstanceName;
 
@@ -115,6 +154,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.masterInstanceName == null ? Input.empty() : this.masterInstanceName;
     }
 
+    /**
+     * The maximum disk size of the instance in bytes.
+     */
     @InputImport(name="maxDiskSize")
     private final @Nullable Input<String> maxDiskSize;
 
@@ -122,6 +164,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.maxDiskSize == null ? Input.empty() : this.maxDiskSize;
     }
 
+    /**
+     * Name of the Cloud SQL instance. This does not include the project ID.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -129,6 +174,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Configuration specific to on-premises instances.
+     */
     @InputImport(name="onPremisesConfiguration")
     private final @Nullable Input<OnPremisesConfigurationArgs> onPremisesConfiguration;
 
@@ -136,6 +184,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.onPremisesConfiguration == null ? Input.empty() : this.onPremisesConfiguration;
     }
 
+    /**
+     * This field represents the report generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job
+     */
     @InputImport(name="outOfDiskReport")
     private final @Nullable Input<SqlOutOfDiskReportArgs> outOfDiskReport;
 
@@ -143,6 +194,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.outOfDiskReport == null ? Input.empty() : this.outOfDiskReport;
     }
 
+    /**
+     * The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed if applicable.
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -150,6 +204,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * The geographical region. Can be: * `us-central` (`FIRST_GEN` instances only) * `us-central1` (`SECOND_GEN` instances only) * `asia-east1` or `europe-west1`. Defaults to `us-central` or `us-central1` depending on the instance type. The region cannot be changed after instance creation.
+     */
     @InputImport(name="region")
     private final @Nullable Input<String> region;
 
@@ -157,6 +214,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.region == null ? Input.empty() : this.region;
     }
 
+    /**
+     * Configuration specific to failover replicas and read replicas.
+     */
     @InputImport(name="replicaConfiguration")
     private final @Nullable Input<ReplicaConfigurationArgs> replicaConfiguration;
 
@@ -164,6 +224,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.replicaConfiguration == null ? Input.empty() : this.replicaConfiguration;
     }
 
+    /**
+     * The replicas of the instance.
+     */
     @InputImport(name="replicaNames")
     private final @Nullable Input<List<String>> replicaNames;
 
@@ -171,6 +234,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.replicaNames == null ? Input.empty() : this.replicaNames;
     }
 
+    /**
+     * Initial root password. Use only on creation.
+     */
     @InputImport(name="rootPassword")
     private final @Nullable Input<String> rootPassword;
 
@@ -178,6 +244,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.rootPassword == null ? Input.empty() : this.rootPassword;
     }
 
+    /**
+     * The status indicating if instance satisfiesPzs. Reserved for future use.
+     */
     @InputImport(name="satisfiesPzs")
     private final @Nullable Input<Boolean> satisfiesPzs;
 
@@ -185,6 +254,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.satisfiesPzs == null ? Input.empty() : this.satisfiesPzs;
     }
 
+    /**
+     * The start time of any upcoming scheduled maintenance for this instance.
+     */
     @InputImport(name="scheduledMaintenance")
     private final @Nullable Input<SqlScheduledMaintenanceArgs> scheduledMaintenance;
 
@@ -192,6 +264,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.scheduledMaintenance == null ? Input.empty() : this.scheduledMaintenance;
     }
 
+    /**
+     * The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone. Reserved for future use.
+     */
     @InputImport(name="secondaryGceZone")
     private final @Nullable Input<String> secondaryGceZone;
 
@@ -199,6 +274,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.secondaryGceZone == null ? Input.empty() : this.secondaryGceZone;
     }
 
+    /**
+     * The URI of this resource.
+     */
     @InputImport(name="selfLink")
     private final @Nullable Input<String> selfLink;
 
@@ -206,6 +284,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
+    /**
+     * SSL configuration.
+     */
     @InputImport(name="serverCaCert")
     private final @Nullable Input<SslCertArgs> serverCaCert;
 
@@ -213,6 +294,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.serverCaCert == null ? Input.empty() : this.serverCaCert;
     }
 
+    /**
+     * The service account email address assigned to the instance.\This property is read-only.
+     */
     @InputImport(name="serviceAccountEmailAddress")
     private final @Nullable Input<String> serviceAccountEmailAddress;
 
@@ -220,6 +304,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.serviceAccountEmailAddress == null ? Input.empty() : this.serviceAccountEmailAddress;
     }
 
+    /**
+     * The user settings.
+     */
     @InputImport(name="settings")
     private final @Nullable Input<SettingsArgs> settings;
 
@@ -227,6 +314,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.settings == null ? Input.empty() : this.settings;
     }
 
+    /**
+     * The current serving state of the Cloud SQL instance.
+     */
     @InputImport(name="state")
     private final @Nullable Input<InstanceState> state;
 
@@ -234,6 +324,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
         return this.state == null ? Input.empty() : this.state;
     }
 
+    /**
+     * If the instance state is SUSPENDED, the reason for the suspension.
+     */
     @InputImport(name="suspensionReason")
     private final @Nullable Input<List<InstanceSuspensionReasonItem>> suspensionReason;
 

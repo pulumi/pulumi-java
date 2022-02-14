@@ -12,10 +12,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specifies the health state to alert on and the corresponding severity
+ */
 public final class HealthStateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HealthStateArgs Empty = new HealthStateArgs();
 
+    /**
+     * Health state name
+     */
     @InputImport(name="healthStateName", required=true)
     private final Input<Either<String,HealthStateName>> healthStateName;
 
@@ -23,6 +29,9 @@ public final class HealthStateArgs extends io.pulumi.resources.ResourceArgs {
         return this.healthStateName;
     }
 
+    /**
+     * Severity of alert fired
+     */
     @InputImport(name="severity", required=true)
     private final Input<Double> severity;
 

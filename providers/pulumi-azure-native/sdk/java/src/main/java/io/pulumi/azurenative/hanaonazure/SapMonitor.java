@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.hanaonazure;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.hanaonazure.SapMonitorArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -16,81 +15,279 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * SAP monitor info on Azure (ARM properties and SAP monitor properties)
+API Version: 2020-02-07-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create a SAP Monitor
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sapMonitor = new AzureNative.HanaOnAzure.SapMonitor("sapMonitor", new AzureNative.HanaOnAzure.SapMonitorArgs
+        {
+            EnableCustomerAnalytics = true,
+            Location = "westus",
+            LogAnalyticsWorkspaceArmId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/microsoft.operationalinsights/workspaces/myWorkspace",
+            LogAnalyticsWorkspaceId = "00000000-0000-0000-0000-000000000000",
+            LogAnalyticsWorkspaceSharedKey = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
+            MonitorSubnet = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+            ResourceGroupName = "myResourceGroup",
+            SapMonitorName = "mySapMonitor",
+            Tags = 
+            {
+                { "key", "value" },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	hanaonazure "github.com/pulumi/pulumi-azure-native/sdk/go/azure/hanaonazure"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := hanaonazure.NewSapMonitor(ctx, "sapMonitor", &hanaonazure.SapMonitorArgs{
+			EnableCustomerAnalytics:        pulumi.Bool(true),
+			Location:                       pulumi.String("westus"),
+			LogAnalyticsWorkspaceArmId:     pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/microsoft.operationalinsights/workspaces/myWorkspace"),
+			LogAnalyticsWorkspaceId:        pulumi.String("00000000-0000-0000-0000-000000000000"),
+			LogAnalyticsWorkspaceSharedKey: pulumi.String("00000000000000000000000000000000000000000000000000000000000000000000000000000000000000=="),
+			MonitorSubnet:                  pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet"),
+			ResourceGroupName:              pulumi.String("myResourceGroup"),
+			SapMonitorName:                 pulumi.String("mySapMonitor"),
+			Tags: pulumi.StringMap{
+				"key": pulumi.String("value"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const sapMonitor = new azure_native.hanaonazure.SapMonitor("sapMonitor", {
+    enableCustomerAnalytics: true,
+    location: "westus",
+    logAnalyticsWorkspaceArmId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/microsoft.operationalinsights/workspaces/myWorkspace",
+    logAnalyticsWorkspaceId: "00000000-0000-0000-0000-000000000000",
+    logAnalyticsWorkspaceSharedKey: "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
+    monitorSubnet: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+    resourceGroupName: "myResourceGroup",
+    sapMonitorName: "mySapMonitor",
+    tags: {
+        key: "value",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+sap_monitor = azure_native.hanaonazure.SapMonitor("sapMonitor",
+    enable_customer_analytics=True,
+    location="westus",
+    log_analytics_workspace_arm_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/microsoft.operationalinsights/workspaces/myWorkspace",
+    log_analytics_workspace_id="00000000-0000-0000-0000-000000000000",
+    log_analytics_workspace_shared_key="00000000000000000000000000000000000000000000000000000000000000000000000000000000000000==",
+    monitor_subnet="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+    resource_group_name="myResourceGroup",
+    sap_monitor_name="mySapMonitor",
+    tags={
+        "key": "value",
+    })
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:hanaonazure:SapMonitor myHanaInstance /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance 
+```
+
+ */
 @ResourceType(type="azure-native:hanaonazure:SapMonitor")
 public class SapMonitor extends io.pulumi.resources.CustomResource {
+    /**
+     * The value indicating whether to send analytics to Microsoft
+     */
     @OutputExport(name="enableCustomerAnalytics", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableCustomerAnalytics;
 
+    /**
+     * @return The value indicating whether to send analytics to Microsoft
+     */
     public Output</* @Nullable */ Boolean> getEnableCustomerAnalytics() {
         return this.enableCustomerAnalytics;
     }
+    /**
+     * The geo-location where the resource lives
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The ARM ID of the Log Analytics Workspace that is used for monitoring
+     */
     @OutputExport(name="logAnalyticsWorkspaceArmId", type=String.class, parameters={})
     private Output</* @Nullable */ String> logAnalyticsWorkspaceArmId;
 
+    /**
+     * @return The ARM ID of the Log Analytics Workspace that is used for monitoring
+     */
     public Output</* @Nullable */ String> getLogAnalyticsWorkspaceArmId() {
         return this.logAnalyticsWorkspaceArmId;
     }
+    /**
+     * The workspace ID of the log analytics workspace to be used for monitoring
+     */
     @OutputExport(name="logAnalyticsWorkspaceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> logAnalyticsWorkspaceId;
 
+    /**
+     * @return The workspace ID of the log analytics workspace to be used for monitoring
+     */
     public Output</* @Nullable */ String> getLogAnalyticsWorkspaceId() {
         return this.logAnalyticsWorkspaceId;
     }
+    /**
+     * The shared key of the log analytics workspace that is used for monitoring
+     */
     @OutputExport(name="logAnalyticsWorkspaceSharedKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> logAnalyticsWorkspaceSharedKey;
 
+    /**
+     * @return The shared key of the log analytics workspace that is used for monitoring
+     */
     public Output</* @Nullable */ String> getLogAnalyticsWorkspaceSharedKey() {
         return this.logAnalyticsWorkspaceSharedKey;
     }
+    /**
+     * The name of the resource group the SAP Monitor resources get deployed into.
+     */
     @OutputExport(name="managedResourceGroupName", type=String.class, parameters={})
     private Output<String> managedResourceGroupName;
 
+    /**
+     * @return The name of the resource group the SAP Monitor resources get deployed into.
+     */
     public Output<String> getManagedResourceGroupName() {
         return this.managedResourceGroupName;
     }
+    /**
+     * The subnet which the SAP monitor will be deployed in
+     */
     @OutputExport(name="monitorSubnet", type=String.class, parameters={})
     private Output</* @Nullable */ String> monitorSubnet;
 
+    /**
+     * @return The subnet which the SAP monitor will be deployed in
+     */
     public Output</* @Nullable */ String> getMonitorSubnet() {
         return this.monitorSubnet;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * State of provisioning of the HanaInstance
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return State of provisioning of the HanaInstance
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The version of the payload running in the Collector VM
+     */
     @OutputExport(name="sapMonitorCollectorVersion", type=String.class, parameters={})
     private Output<String> sapMonitorCollectorVersion;
 
+    /**
+     * @return The version of the payload running in the Collector VM
+     */
     public Output<String> getSapMonitorCollectorVersion() {
         return this.sapMonitorCollectorVersion;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SapMonitor(String name, SapMonitorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:hanaonazure:SapMonitor", name, args == null ? SapMonitorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -109,6 +306,14 @@ public class SapMonitor extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SapMonitor get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SapMonitor(name, id, options);
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetDataStoreArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDataStoreArgs Empty = new GetDataStoreArgs();
 
+    /**
+     * The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+     */
     @InputImport(name="dataManagerName", required=true)
     private final String dataManagerName;
 
@@ -19,6 +25,9 @@ public final class GetDataStoreArgs extends io.pulumi.resources.InvokeArgs {
         return this.dataManagerName;
     }
 
+    /**
+     * The data store/repository name queried.
+     */
     @InputImport(name="dataStoreName", required=true)
     private final String dataStoreName;
 
@@ -26,6 +35,9 @@ public final class GetDataStoreArgs extends io.pulumi.resources.InvokeArgs {
         return this.dataStoreName;
     }
 
+    /**
+     * The Resource Group Name
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

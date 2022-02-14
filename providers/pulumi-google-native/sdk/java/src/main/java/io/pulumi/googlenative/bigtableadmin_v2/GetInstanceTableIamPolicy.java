@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInstanceTableIamPolicy {
+/**
+ * Gets the access control policy for a Table resource. Returns an empty policy if the resource exists but does not have a policy set.
+ */
     public static CompletableFuture<GetInstanceTableIamPolicyResult> invokeAsync(GetInstanceTableIamPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:bigtableadmin/v2:getInstanceTableIamPolicy", TypeShape.of(GetInstanceTableIamPolicyResult.class), args == null ? GetInstanceTableIamPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

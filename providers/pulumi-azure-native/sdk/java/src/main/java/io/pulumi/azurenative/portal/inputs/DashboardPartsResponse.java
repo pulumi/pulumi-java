@@ -3,7 +3,6 @@
 
 package io.pulumi.azurenative.portal.inputs;
 
-import io.pulumi.azurenative.portal.inputs.DashboardPartsResponsePosition;
 import io.pulumi.azurenative.portal.inputs.MarkdownPartMetadataResponse;
 import io.pulumi.core.internal.annotations.InputImport;
 import java.util.Objects;
@@ -11,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A dashboard part.
+ */
 public final class DashboardPartsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DashboardPartsResponse Empty = new DashboardPartsResponse();
 
+    /**
+     * The dashboard part's metadata.
+     */
     @InputImport(name="metadata")
     private final @Nullable MarkdownPartMetadataResponse metadata;
 
@@ -22,6 +27,9 @@ public final class DashboardPartsResponse extends io.pulumi.resources.InvokeArgs
         return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The dashboard's part position.
+     */
     @InputImport(name="position", required=true)
     private final DashboardPartsResponsePosition position;
 

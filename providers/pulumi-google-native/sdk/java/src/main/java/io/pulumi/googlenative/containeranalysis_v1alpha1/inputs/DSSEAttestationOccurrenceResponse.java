@@ -9,10 +9,16 @@ import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.InTotoStatementR
 import java.util.Objects;
 
 
+/**
+ * An occurrence describing an attestation on a resource
+ */
 public final class DSSEAttestationOccurrenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DSSEAttestationOccurrenceResponse Empty = new DSSEAttestationOccurrenceResponse();
 
+    /**
+     * If doing something security critical, make sure to verify the signatures in this metadata.
+     */
     @InputImport(name="envelope", required=true)
     private final EnvelopeResponse envelope;
 
@@ -20,6 +26,9 @@ public final class DSSEAttestationOccurrenceResponse extends io.pulumi.resources
         return this.envelope;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="statement", required=true)
     private final InTotoStatementResponse statement;
 

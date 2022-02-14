@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDeployment {
+/**
+ * Cognitive Services account deployment.
+API Version: 2021-10-01.
+ *
+ * Cognitive Services account deployment.
+ */
     public static CompletableFuture<GetDeploymentResult> invokeAsync(GetDeploymentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:cognitiveservices:getDeployment", TypeShape.of(GetDeploymentResult.class), args == null ? GetDeploymentArgs.Empty : args, Utilities.withVersion(options));
     }

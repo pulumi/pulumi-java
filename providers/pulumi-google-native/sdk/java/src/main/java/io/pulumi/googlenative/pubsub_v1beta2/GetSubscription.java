@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubscription {
+/**
+ * Gets the configuration details of a subscription.
+ */
     public static CompletableFuture<GetSubscriptionResult> invokeAsync(GetSubscriptionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:pubsub/v1beta2:getSubscription", TypeShape.of(GetSubscriptionResult.class), args == null ? GetSubscriptionArgs.Empty : args, Utilities.withVersion(options));
     }

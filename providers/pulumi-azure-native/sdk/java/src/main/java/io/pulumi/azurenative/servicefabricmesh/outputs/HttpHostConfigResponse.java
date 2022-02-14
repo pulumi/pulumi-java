@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HttpHostConfigResponse {
+/**
+ * http hostname config name.
+ */
     private final String name;
+/**
+ * Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.
+ */
     private final List<HttpRouteConfigResponse> routes;
 
     @OutputCustomType.Constructor({"name","routes"})
@@ -22,9 +28,15 @@ public final class HttpHostConfigResponse {
         this.routes = Objects.requireNonNull(routes);
     }
 
+/**
+ * http hostname config name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.
+ */
     public List<HttpRouteConfigResponse> getRoutes() {
         return this.routes;
     }

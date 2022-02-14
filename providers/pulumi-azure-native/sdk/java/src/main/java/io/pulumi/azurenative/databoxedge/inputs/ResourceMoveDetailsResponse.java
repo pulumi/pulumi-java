@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Fields for tracking resource move
+ */
 public final class ResourceMoveDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceMoveDetailsResponse Empty = new ResourceMoveDetailsResponse();
 
+    /**
+     * Denotes whether move operation is in progress
+     */
     @InputImport(name="operationInProgress")
     private final @Nullable String operationInProgress;
 
@@ -21,6 +27,9 @@ public final class ResourceMoveDetailsResponse extends io.pulumi.resources.Invok
         return this.operationInProgress == null ? Optional.empty() : Optional.ofNullable(this.operationInProgress);
     }
 
+    /**
+     * Denotes the timeout of the operation to finish
+     */
     @InputImport(name="operationInProgressLockTimeoutInUTC")
     private final @Nullable String operationInProgressLockTimeoutInUTC;
 

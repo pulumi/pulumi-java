@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Managed Identity used for CMK.
+ */
 public final class CMKIdentityDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CMKIdentityDefinitionArgs Empty = new CMKIdentityDefinitionArgs();
 
+    /**
+     * The resource id of the user assigned identity to authenticate to customer's key vault.
+     */
     @InputImport(name="userAssignedIdentity")
     private final @Nullable Input<String> userAssignedIdentity;
 

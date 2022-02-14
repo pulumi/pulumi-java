@@ -15,11 +15,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RolloutStepResponse {
+/**
+ * Supplementary informative messages during rollout.
+ */
     private final List<MessageResponse> messages;
+/**
+ * Name of the step.
+ */
     private final String name;
+/**
+ * Detailed information of specific action execution.
+ */
     private final StepOperationInfoResponse operationInfo;
+/**
+ * Set of resource operations that were performed, if any, on an Azure resource.
+ */
     private final List<ResourceOperationResponse> resourceOperations;
+/**
+ * Current state of the step.
+ */
     private final String status;
+/**
+ * The step group the current step is part of.
+ */
     private final @Nullable String stepGroup;
 
     @OutputCustomType.Constructor({"messages","name","operationInfo","resourceOperations","status","stepGroup"})
@@ -38,21 +56,39 @@ public final class RolloutStepResponse {
         this.stepGroup = stepGroup;
     }
 
+/**
+ * Supplementary informative messages during rollout.
+ */
     public List<MessageResponse> getMessages() {
         return this.messages;
     }
+/**
+ * Name of the step.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Detailed information of specific action execution.
+ */
     public StepOperationInfoResponse getOperationInfo() {
         return this.operationInfo;
     }
+/**
+ * Set of resource operations that were performed, if any, on an Azure resource.
+ */
     public List<ResourceOperationResponse> getResourceOperations() {
         return this.resourceOperations;
     }
+/**
+ * Current state of the step.
+ */
     public String getStatus() {
         return this.status;
     }
+/**
+ * The step group the current step is part of.
+ */
     public Optional<String> getStepGroup() {
         return Optional.ofNullable(this.stepGroup);
     }

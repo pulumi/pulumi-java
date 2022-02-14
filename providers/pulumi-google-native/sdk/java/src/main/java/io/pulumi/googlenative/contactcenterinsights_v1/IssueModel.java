@@ -8,57 +8,107 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.contactcenterinsights_v1.IssueModelArgs;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse;
 import java.lang.String;
 import javax.annotation.Nullable;
 
+/**
+ * Creates an issue model.
+ */
 @ResourceType(type="google-native:contactcenterinsights/v1:IssueModel")
 public class IssueModel extends io.pulumi.resources.CustomResource {
+    /**
+     * The time at which this issue model was created.
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return The time at which this issue model was created.
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * The representative name for the issue model.
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return The representative name for the issue model.
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Configs for the input data that used to create the issue model.
+     */
     @OutputExport(name="inputDataConfig", type=GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse.class, parameters={})
     private Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse> inputDataConfig;
 
+    /**
+     * @return Configs for the input data that used to create the issue model.
+     */
     public Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse> getInputDataConfig() {
         return this.inputDataConfig;
     }
+    /**
+     * Immutable. The resource name of the issue model. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Immutable. The resource name of the issue model. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * State of the model.
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return State of the model.
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * Immutable. The issue model's label statistics on its training data.
+     */
     @OutputExport(name="trainingStats", type=GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse.class, parameters={})
     private Output<GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse> trainingStats;
 
+    /**
+     * @return Immutable. The issue model's label statistics on its training data.
+     */
     public Output<GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse> getTrainingStats() {
         return this.trainingStats;
     }
+    /**
+     * The most recent time at which the issue model was updated.
+     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
+    /**
+     * @return The most recent time at which the issue model was updated.
+     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public IssueModel(String name, @Nullable IssueModelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:contactcenterinsights/v1:IssueModel", name, args == null ? IssueModelArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -74,6 +124,14 @@ public class IssueModel extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static IssueModel get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IssueModel(name, id, options);
     }

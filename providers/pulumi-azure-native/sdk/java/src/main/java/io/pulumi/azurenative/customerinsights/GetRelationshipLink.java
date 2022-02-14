@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRelationshipLink {
+/**
+ * The relationship link resource format.
+API Version: 2017-04-26.
+ *
+ * The relationship link resource format.
+ */
     public static CompletableFuture<GetRelationshipLinkResult> invokeAsync(GetRelationshipLinkArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:customerinsights:getRelationshipLink", TypeShape.of(GetRelationshipLinkResult.class), args == null ? GetRelationshipLinkArgs.Empty : args, Utilities.withVersion(options));
     }

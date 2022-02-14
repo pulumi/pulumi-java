@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Customer Managed Identity
+ */
 public final class WorkbookManagedIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkbookManagedIdentityResponse Empty = new WorkbookManagedIdentityResponse();
 
+    /**
+     * The identity type.
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -22,6 +28,9 @@ public final class WorkbookManagedIdentityResponse extends io.pulumi.resources.I
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
+    /**
+     * Customer Managed Identity
+     */
     @InputImport(name="userAssignedIdentities")
     private final @Nullable WorkbookUserAssignedIdentitiesResponse userAssignedIdentities;
 

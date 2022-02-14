@@ -12,10 +12,16 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * Output of the task that collects user tables for the given list of databases
+ */
 public final class GetUserTablesSqlSyncTaskOutputResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GetUserTablesSqlSyncTaskOutputResponse Empty = new GetUserTablesSqlSyncTaskOutputResponse();
 
+    /**
+     * Mapping from database name to list of source tables
+     */
     @InputImport(name="databasesToSourceTables", required=true)
     private final Map<String,List<DatabaseTableResponse>> databasesToSourceTables;
 
@@ -23,6 +29,9 @@ public final class GetUserTablesSqlSyncTaskOutputResponse extends io.pulumi.reso
         return this.databasesToSourceTables;
     }
 
+    /**
+     * Mapping from database name to list of target tables
+     */
     @InputImport(name="databasesToTargetTables", required=true)
     private final Map<String,List<DatabaseTableResponse>> databasesToTargetTables;
 
@@ -30,6 +39,9 @@ public final class GetUserTablesSqlSyncTaskOutputResponse extends io.pulumi.reso
         return this.databasesToTargetTables;
     }
 
+    /**
+     * Mapping from database name to list of validation errors
+     */
     @InputImport(name="tableValidationErrors", required=true)
     private final Map<String,List<String>> tableValidationErrors;
 
@@ -37,6 +49,9 @@ public final class GetUserTablesSqlSyncTaskOutputResponse extends io.pulumi.reso
         return this.tableValidationErrors;
     }
 
+    /**
+     * Validation errors
+     */
     @InputImport(name="validationErrors", required=true)
     private final List<ReportableExceptionResponse> validationErrors;
 

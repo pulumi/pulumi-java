@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ManagementConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagementConfigurationArgs Empty = new ManagementConfigurationArgs();
 
+    /**
+     * Resource location
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -22,6 +28,9 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * User Management Configuration Name.
+     */
     @InputImport(name="managementConfigurationName")
     private final @Nullable Input<String> managementConfigurationName;
 
@@ -29,6 +38,9 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
         return this.managementConfigurationName == null ? Input.empty() : this.managementConfigurationName;
     }
 
+    /**
+     * Properties for ManagementConfiguration object supported by the OperationsManagement resource provider.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<ManagementConfigurationPropertiesArgs> properties;
 
@@ -36,6 +48,9 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The name of the resource group to get. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

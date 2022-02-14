@@ -14,11 +14,29 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SourceResponse {
+/**
+ * If provided, some of the source code used for the build may be found in these locations, in the case where the source repository had multiple remotes or submodules. This list will not include the context specified in the context field.
+ */
     private final List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts;
+/**
+ * If provided, the input binary artifacts for the build came from this location.
+ */
     private final StorageSourceResponse artifactStorageSource;
+/**
+ * If provided, the source code used for the build came from this location.
+ */
     private final GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context;
+/**
+ * Hash(es) of the build source, which can be used to verify that the original source integrity was maintained in the build. The keys to this map are file paths used as build source and the values contain the hash values for those files. If the build source came in a single package such as a gzipped tarfile (.tar.gz), the FileHash will be for the single path to that file.
+ */
     private final Map<String,String> fileHashes;
+/**
+ * If provided, get source from this location in a Cloud Repo.
+ */
     private final RepoSourceResponse repoSource;
+/**
+ * If provided, get the source from this location in in Google Cloud Storage.
+ */
     private final StorageSourceResponse storageSource;
 
     @OutputCustomType.Constructor({"additionalContexts","artifactStorageSource","context","fileHashes","repoSource","storageSource"})
@@ -37,21 +55,39 @@ public final class SourceResponse {
         this.storageSource = Objects.requireNonNull(storageSource);
     }
 
+/**
+ * If provided, some of the source code used for the build may be found in these locations, in the case where the source repository had multiple remotes or submodules. This list will not include the context specified in the context field.
+ */
     public List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> getAdditionalContexts() {
         return this.additionalContexts;
     }
+/**
+ * If provided, the input binary artifacts for the build came from this location.
+ */
     public StorageSourceResponse getArtifactStorageSource() {
         return this.artifactStorageSource;
     }
+/**
+ * If provided, the source code used for the build came from this location.
+ */
     public GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse getContext() {
         return this.context;
     }
+/**
+ * Hash(es) of the build source, which can be used to verify that the original source integrity was maintained in the build. The keys to this map are file paths used as build source and the values contain the hash values for those files. If the build source came in a single package such as a gzipped tarfile (.tar.gz), the FileHash will be for the single path to that file.
+ */
     public Map<String,String> getFileHashes() {
         return this.fileHashes;
     }
+/**
+ * If provided, get source from this location in a Cloud Repo.
+ */
     public RepoSourceResponse getRepoSource() {
         return this.repoSource;
     }
+/**
+ * If provided, get the source from this location in in Google Cloud Storage.
+ */
     public StorageSourceResponse getStorageSource() {
         return this.storageSource;
     }

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The key type.
+ */
     @EnumType
     public enum KeyType {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         Primary("Primary"),
+/**
+ * 
+ */
         Secondary("Secondary");
 
         private final String value;

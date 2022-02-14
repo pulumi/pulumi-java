@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetPrivateZoneArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPrivateZoneArgs Empty = new GetPrivateZoneArgs();
 
+    /**
+     * The name of the Private DNS zone (without a terminating dot).
+     */
     @InputImport(name="privateZoneName", required=true)
     private final String privateZoneName;
 
@@ -19,6 +25,9 @@ public final class GetPrivateZoneArgs extends io.pulumi.resources.InvokeArgs {
         return this.privateZoneName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

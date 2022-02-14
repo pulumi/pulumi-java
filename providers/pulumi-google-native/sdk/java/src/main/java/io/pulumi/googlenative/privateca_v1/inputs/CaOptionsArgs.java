@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes values that are relevant in a CA certificate.
+ */
 public final class CaOptionsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CaOptionsArgs Empty = new CaOptionsArgs();
 
+    /**
+     * Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
+     */
     @InputImport(name="isCa")
     private final @Nullable Input<Boolean> isCa;
 
@@ -22,6 +28,9 @@ public final class CaOptionsArgs extends io.pulumi.resources.ResourceArgs {
         return this.isCa == null ? Input.empty() : this.isCa;
     }
 
+    /**
+     * Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate.
+     */
     @InputImport(name="maxIssuerPathLength")
     private final @Nullable Input<Integer> maxIssuerPathLength;
 

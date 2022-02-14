@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of Cognitive Services account deployment model.
+ */
 public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeploymentModelArgs Empty = new DeploymentModelArgs();
 
+    /**
+     * Deployment model format.
+     */
     @InputImport(name="format")
     private final @Nullable Input<String> format;
 
@@ -21,6 +27,9 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
         return this.format == null ? Input.empty() : this.format;
     }
 
+    /**
+     * Deployment model name.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -28,6 +37,9 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Deployment model version.
+     */
     @InputImport(name="version")
     private final @Nullable Input<String> version;
 

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The security provider name.
+ */
     @EnumType
     public enum SecurityProviderName {
+/**
+ * 
+ */
         ZScaler("ZScaler"),
+/**
+ * 
+ */
         IBoss("IBoss"),
+/**
+ * 
+ */
         Checkpoint("Checkpoint");
 
         private final String value;

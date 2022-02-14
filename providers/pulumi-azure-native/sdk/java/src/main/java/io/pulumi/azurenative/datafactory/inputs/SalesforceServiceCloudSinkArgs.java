@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity Salesforce Service Cloud sink.
+ */
 public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SalesforceServiceCloudSinkArgs Empty = new SalesforceServiceCloudSinkArgs();
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Input<Object> disableMetricsCollection;
 
@@ -24,6 +30,9 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
     }
 
+    /**
+     * The name of the external ID field for upsert operation. Default value is 'Id' column. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="externalIdFieldName")
     private final @Nullable Input<Object> externalIdFieldName;
 
@@ -31,6 +40,9 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
         return this.externalIdFieldName == null ? Input.empty() : this.externalIdFieldName;
     }
 
+    /**
+     * The flag indicating whether or not to ignore null values from input dataset (except key fields) during write operation. Default value is false. If set it to true, it means ADF will leave the data in the destination object unchanged when doing upsert/update operation and insert defined default value when doing insert operation, versus ADF will update the data in the destination object to NULL when doing upsert/update operation and insert NULL value when doing insert operation. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="ignoreNullValues")
     private final @Nullable Input<Object> ignoreNullValues;
 
@@ -38,6 +50,9 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
         return this.ignoreNullValues == null ? Input.empty() : this.ignoreNullValues;
     }
 
+    /**
+     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Input<Object> maxConcurrentConnections;
 
@@ -45,6 +60,9 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
     }
 
+    /**
+     * Sink retry count. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="sinkRetryCount")
     private final @Nullable Input<Object> sinkRetryCount;
 
@@ -52,6 +70,9 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
         return this.sinkRetryCount == null ? Input.empty() : this.sinkRetryCount;
     }
 
+    /**
+     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="sinkRetryWait")
     private final @Nullable Input<Object> sinkRetryWait;
 
@@ -59,6 +80,10 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
         return this.sinkRetryWait == null ? Input.empty() : this.sinkRetryWait;
     }
 
+    /**
+     * Copy sink type.
+Expected value is 'SalesforceServiceCloudSink'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -66,6 +91,9 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
         return this.type;
     }
 
+    /**
+     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     */
     @InputImport(name="writeBatchSize")
     private final @Nullable Input<Object> writeBatchSize;
 
@@ -73,6 +101,9 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
         return this.writeBatchSize == null ? Input.empty() : this.writeBatchSize;
     }
 
+    /**
+     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="writeBatchTimeout")
     private final @Nullable Input<Object> writeBatchTimeout;
 
@@ -80,6 +111,9 @@ public final class SalesforceServiceCloudSinkArgs extends io.pulumi.resources.Re
         return this.writeBatchTimeout == null ? Input.empty() : this.writeBatchTimeout;
     }
 
+    /**
+     * The write behavior for the operation. Default is Insert.
+     */
     @InputImport(name="writeBehavior")
     private final @Nullable Input<Either<String,SalesforceSinkWriteBehavior>> writeBehavior;
 

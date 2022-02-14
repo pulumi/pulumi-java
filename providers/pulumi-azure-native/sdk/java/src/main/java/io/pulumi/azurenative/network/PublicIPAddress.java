@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.PublicIPAddressArgs;
 import io.pulumi.azurenative.network.outputs.DdosSettingsResponse;
 import io.pulumi.azurenative.network.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.network.outputs.IPConfigurationResponse;
@@ -25,147 +24,560 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Public IP address resource.
+API Version: 2020-11-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create public IP address DNS
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var publicIPAddress = new AzureNative.Network.PublicIPAddress("publicIPAddress", new AzureNative.Network.PublicIPAddressArgs
+        {
+            DnsSettings = new AzureNative.Network.Inputs.PublicIPAddressDnsSettingsArgs
+            {
+                DomainNameLabel = "dnslbl",
+            },
+            Location = "eastus",
+            PublicIpAddressName = "test-ip",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewPublicIPAddress(ctx, "publicIPAddress", &network.PublicIPAddressArgs{
+			DnsSettings: &network.PublicIPAddressDnsSettingsArgs{
+				DomainNameLabel: pulumi.String("dnslbl"),
+			},
+			Location:            pulumi.String("eastus"),
+			PublicIpAddressName: pulumi.String("test-ip"),
+			ResourceGroupName:   pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const publicIPAddress = new azure_native.network.PublicIPAddress("publicIPAddress", {
+    dnsSettings: {
+        domainNameLabel: "dnslbl",
+    },
+    location: "eastus",
+    publicIpAddressName: "test-ip",
+    resourceGroupName: "rg1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+public_ip_address = azure_native.network.PublicIPAddress("publicIPAddress",
+    dns_settings=azure_native.network.PublicIPAddressDnsSettingsArgs(
+        domain_name_label="dnslbl",
+    ),
+    location="eastus",
+    public_ip_address_name="test-ip",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create public IP address allocation method
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var publicIPAddress = new AzureNative.Network.PublicIPAddress("publicIPAddress", new AzureNative.Network.PublicIPAddressArgs
+        {
+            IdleTimeoutInMinutes = 10,
+            Location = "eastus",
+            PublicIPAddressVersion = "IPv4",
+            PublicIPAllocationMethod = "Static",
+            PublicIpAddressName = "test-ip",
+            ResourceGroupName = "rg1",
+            Sku = new AzureNative.Network.Inputs.PublicIPAddressSkuArgs
+            {
+                Name = "Standard",
+                Tier = "Global",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewPublicIPAddress(ctx, "publicIPAddress", &network.PublicIPAddressArgs{
+			IdleTimeoutInMinutes:     pulumi.Int(10),
+			Location:                 pulumi.String("eastus"),
+			PublicIPAddressVersion:   pulumi.String("IPv4"),
+			PublicIPAllocationMethod: pulumi.String("Static"),
+			PublicIpAddressName:      pulumi.String("test-ip"),
+			ResourceGroupName:        pulumi.String("rg1"),
+			Sku: &network.PublicIPAddressSkuArgs{
+				Name: pulumi.String("Standard"),
+				Tier: pulumi.String("Global"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const publicIPAddress = new azure_native.network.PublicIPAddress("publicIPAddress", {
+    idleTimeoutInMinutes: 10,
+    location: "eastus",
+    publicIPAddressVersion: "IPv4",
+    publicIPAllocationMethod: "Static",
+    publicIpAddressName: "test-ip",
+    resourceGroupName: "rg1",
+    sku: {
+        name: "Standard",
+        tier: "Global",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+public_ip_address = azure_native.network.PublicIPAddress("publicIPAddress",
+    idle_timeout_in_minutes=10,
+    location="eastus",
+    public_ip_address_version="IPv4",
+    public_ip_allocation_method="Static",
+    public_ip_address_name="test-ip",
+    resource_group_name="rg1",
+    sku=azure_native.network.PublicIPAddressSkuArgs(
+        name="Standard",
+        tier="Global",
+    ))
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create public IP address defaults
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var publicIPAddress = new AzureNative.Network.PublicIPAddress("publicIPAddress", new AzureNative.Network.PublicIPAddressArgs
+        {
+            Location = "eastus",
+            PublicIpAddressName = "test-ip",
+            ResourceGroupName = "rg1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewPublicIPAddress(ctx, "publicIPAddress", &network.PublicIPAddressArgs{
+			Location:            pulumi.String("eastus"),
+			PublicIpAddressName: pulumi.String("test-ip"),
+			ResourceGroupName:   pulumi.String("rg1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const publicIPAddress = new azure_native.network.PublicIPAddress("publicIPAddress", {
+    location: "eastus",
+    publicIpAddressName: "test-ip",
+    resourceGroupName: "rg1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+public_ip_address = azure_native.network.PublicIPAddress("publicIPAddress",
+    location="eastus",
+    public_ip_address_name="test-ip",
+    resource_group_name="rg1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:PublicIPAddress testDNS-ip /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/publicIPAddresses/test-ip 
+```
+
+ */
 @ResourceType(type="azure-native:network:PublicIPAddress")
 public class PublicIPAddress extends io.pulumi.resources.CustomResource {
+    /**
+     * The DDoS protection custom policy associated with the public IP address.
+     */
     @OutputExport(name="ddosSettings", type=DdosSettingsResponse.class, parameters={})
     private Output</* @Nullable */ DdosSettingsResponse> ddosSettings;
 
+    /**
+     * @return The DDoS protection custom policy associated with the public IP address.
+     */
     public Output</* @Nullable */ DdosSettingsResponse> getDdosSettings() {
         return this.ddosSettings;
     }
+    /**
+     * The FQDN of the DNS record associated with the public IP address.
+     */
     @OutputExport(name="dnsSettings", type=PublicIPAddressDnsSettingsResponse.class, parameters={})
     private Output</* @Nullable */ PublicIPAddressDnsSettingsResponse> dnsSettings;
 
+    /**
+     * @return The FQDN of the DNS record associated with the public IP address.
+     */
     public Output</* @Nullable */ PublicIPAddressDnsSettingsResponse> getDnsSettings() {
         return this.dnsSettings;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * The extended location of the public ip address.
+     */
     @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
+    /**
+     * @return The extended location of the public ip address.
+     */
     public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
         return this.extendedLocation;
     }
+    /**
+     * The idle timeout of the public IP address.
+     */
     @OutputExport(name="idleTimeoutInMinutes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> idleTimeoutInMinutes;
 
+    /**
+     * @return The idle timeout of the public IP address.
+     */
     public Output</* @Nullable */ Integer> getIdleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes;
     }
+    /**
+     * The IP address associated with the public IP address resource.
+     */
     @OutputExport(name="ipAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipAddress;
 
+    /**
+     * @return The IP address associated with the public IP address resource.
+     */
     public Output</* @Nullable */ String> getIpAddress() {
         return this.ipAddress;
     }
+    /**
+     * The IP configuration associated with the public IP address.
+     */
     @OutputExport(name="ipConfiguration", type=IPConfigurationResponse.class, parameters={})
     private Output<IPConfigurationResponse> ipConfiguration;
 
+    /**
+     * @return The IP configuration associated with the public IP address.
+     */
     public Output<IPConfigurationResponse> getIpConfiguration() {
         return this.ipConfiguration;
     }
+    /**
+     * The list of tags associated with the public IP address.
+     */
     @OutputExport(name="ipTags", type=List.class, parameters={IpTagResponse.class})
     private Output</* @Nullable */ List<IpTagResponse>> ipTags;
 
+    /**
+     * @return The list of tags associated with the public IP address.
+     */
     public Output</* @Nullable */ List<IpTagResponse>> getIpTags() {
         return this.ipTags;
     }
+    /**
+     * The linked public IP address of the public IP address resource.
+     */
     @OutputExport(name="linkedPublicIPAddress", type=PublicIPAddressResponse.class, parameters={})
     private Output</* @Nullable */ PublicIPAddressResponse> linkedPublicIPAddress;
 
+    /**
+     * @return The linked public IP address of the public IP address resource.
+     */
     public Output</* @Nullable */ PublicIPAddressResponse> getLinkedPublicIPAddress() {
         return this.linkedPublicIPAddress;
     }
+    /**
+     * Resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
+    /**
+     * @return Resource location.
+     */
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
+    /**
+     * Migration phase of Public IP Address.
+     */
     @OutputExport(name="migrationPhase", type=String.class, parameters={})
     private Output</* @Nullable */ String> migrationPhase;
 
+    /**
+     * @return Migration phase of Public IP Address.
+     */
     public Output</* @Nullable */ String> getMigrationPhase() {
         return this.migrationPhase;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The NatGateway for the Public IP address.
+     */
     @OutputExport(name="natGateway", type=NatGatewayResponse.class, parameters={})
     private Output</* @Nullable */ NatGatewayResponse> natGateway;
 
+    /**
+     * @return The NatGateway for the Public IP address.
+     */
     public Output</* @Nullable */ NatGatewayResponse> getNatGateway() {
         return this.natGateway;
     }
+    /**
+     * The provisioning state of the public IP address resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the public IP address resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * The public IP address version.
+     */
     @OutputExport(name="publicIPAddressVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicIPAddressVersion;
 
+    /**
+     * @return The public IP address version.
+     */
     public Output</* @Nullable */ String> getPublicIPAddressVersion() {
         return this.publicIPAddressVersion;
     }
+    /**
+     * The public IP address allocation method.
+     */
     @OutputExport(name="publicIPAllocationMethod", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicIPAllocationMethod;
 
+    /**
+     * @return The public IP address allocation method.
+     */
     public Output</* @Nullable */ String> getPublicIPAllocationMethod() {
         return this.publicIPAllocationMethod;
     }
+    /**
+     * The Public IP Prefix this Public IP Address should be allocated from.
+     */
     @OutputExport(name="publicIPPrefix", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> publicIPPrefix;
 
+    /**
+     * @return The Public IP Prefix this Public IP Address should be allocated from.
+     */
     public Output</* @Nullable */ SubResourceResponse> getPublicIPPrefix() {
         return this.publicIPPrefix;
     }
+    /**
+     * The resource GUID property of the public IP address resource.
+     */
     @OutputExport(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
+    /**
+     * @return The resource GUID property of the public IP address resource.
+     */
     public Output<String> getResourceGuid() {
         return this.resourceGuid;
     }
+    /**
+     * The service public IP address of the public IP address resource.
+     */
     @OutputExport(name="servicePublicIPAddress", type=PublicIPAddressResponse.class, parameters={})
     private Output</* @Nullable */ PublicIPAddressResponse> servicePublicIPAddress;
 
+    /**
+     * @return The service public IP address of the public IP address resource.
+     */
     public Output</* @Nullable */ PublicIPAddressResponse> getServicePublicIPAddress() {
         return this.servicePublicIPAddress;
     }
+    /**
+     * The public IP address SKU.
+     */
     @OutputExport(name="sku", type=PublicIPAddressSkuResponse.class, parameters={})
     private Output</* @Nullable */ PublicIPAddressSkuResponse> sku;
 
+    /**
+     * @return The public IP address SKU.
+     */
     public Output</* @Nullable */ PublicIPAddressSkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * A list of availability zones denoting the IP allocated for the resource needs to come from.
+     */
     @OutputExport(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
+    /**
+     * @return A list of availability zones denoting the IP allocated for the resource needs to come from.
+     */
     public Output</* @Nullable */ List<String>> getZones() {
         return this.zones;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public PublicIPAddress(String name, PublicIPAddressArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:PublicIPAddress", name, args == null ? PublicIPAddressArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -222,6 +634,14 @@ public class PublicIPAddress extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static PublicIPAddress get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PublicIPAddress(name, id, options);
     }

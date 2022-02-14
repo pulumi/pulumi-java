@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Enable migration input properties.
+ */
 public final class EnableMigrationInputPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EnableMigrationInputPropertiesArgs Empty = new EnableMigrationInputPropertiesArgs();
 
+    /**
+     * The policy Id.
+     */
     @InputImport(name="policyId", required=true)
     private final Input<String> policyId;
 
@@ -21,6 +27,9 @@ public final class EnableMigrationInputPropertiesArgs extends io.pulumi.resource
         return this.policyId;
     }
 
+    /**
+     * The provider specific details.
+     */
     @InputImport(name="providerSpecificDetails", required=true)
     private final Input<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails;
 

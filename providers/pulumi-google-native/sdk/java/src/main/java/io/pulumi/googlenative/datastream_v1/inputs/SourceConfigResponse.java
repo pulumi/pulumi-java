@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The configuration of the stream source.
+ */
 public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SourceConfigResponse Empty = new SourceConfigResponse();
 
+    /**
+     * MySQL data source configuration
+     */
     @InputImport(name="mysqlSourceConfig", required=true)
     private final MysqlSourceConfigResponse mysqlSourceConfig;
 
@@ -21,6 +27,9 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.mysqlSourceConfig;
     }
 
+    /**
+     * Oracle data source configuration
+     */
     @InputImport(name="oracleSourceConfig", required=true)
     private final OracleSourceConfigResponse oracleSourceConfig;
 
@@ -28,6 +37,9 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
         return this.oracleSourceConfig;
     }
 
+    /**
+     * Source connection profile resoource. Format: `projects/{project}/locations/{location}/connectionProfiles/{name}`
+     */
     @InputImport(name="sourceConnectionProfile", required=true)
     private final String sourceConnectionProfile;
 

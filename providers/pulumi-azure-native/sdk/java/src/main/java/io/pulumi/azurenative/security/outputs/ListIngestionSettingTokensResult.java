@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListIngestionSettingTokensResult {
+/**
+ * The token is used for correlating security data and logs with the resources in the subscription.
+ */
     private final String token;
 
     @OutputCustomType.Constructor({"token"})
@@ -16,6 +19,9 @@ public final class ListIngestionSettingTokensResult {
         this.token = Objects.requireNonNull(token);
     }
 
+/**
+ * The token is used for correlating security data and logs with the resources in the subscription.
+ */
     public String getToken() {
         return this.token;
     }

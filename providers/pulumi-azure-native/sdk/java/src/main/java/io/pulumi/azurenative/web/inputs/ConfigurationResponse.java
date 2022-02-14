@@ -14,10 +14,17 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Non versioned Container App configuration properties that define the mutable settings of a Container app
+ */
 public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfigurationResponse Empty = new ConfigurationResponse();
 
+    /**
+     * ActiveRevisionsMode controls how active revisions are handled for the Container app:
+<list><item>Multiple: multiple revisions can be active. If no value if provided, this is the default</item><item>Single: Only one revision can be active at a time. Revision weights can not be used in this mode</item></list>
+     */
     @InputImport(name="activeRevisionsMode")
     private final @Nullable String activeRevisionsMode;
 
@@ -25,6 +32,9 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
         return this.activeRevisionsMode == null ? Optional.empty() : Optional.ofNullable(this.activeRevisionsMode);
     }
 
+    /**
+     * Ingress configurations.
+     */
     @InputImport(name="ingress")
     private final @Nullable IngressResponse ingress;
 
@@ -32,6 +42,9 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
         return this.ingress == null ? Optional.empty() : Optional.ofNullable(this.ingress);
     }
 
+    /**
+     * Collection of private container registry credentials for containers used by the Container app
+     */
     @InputImport(name="registries")
     private final @Nullable List<RegistryCredentialsResponse> registries;
 
@@ -39,6 +52,9 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
         return this.registries == null ? List.of() : this.registries;
     }
 
+    /**
+     * Collection of secrets used by a Container app
+     */
     @InputImport(name="secrets")
     private final @Nullable List<SecretResponse> secrets;
 

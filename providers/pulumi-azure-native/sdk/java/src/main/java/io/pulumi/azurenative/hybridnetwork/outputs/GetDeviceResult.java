@@ -13,14 +13,41 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetDeviceResult {
+/**
+ * The type of the device.
+ */
     private final String deviceType;
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     private final String id;
+/**
+ * The geo-location where the resource lives
+ */
     private final String location;
+/**
+ * The name of the resource
+ */
     private final String name;
+/**
+ * The list of network functions deployed on the device.
+ */
     private final List<SubResourceResponse> networkFunctions;
+/**
+ * The provisioning state of the device resource.
+ */
     private final String provisioningState;
+/**
+ * The current device status.
+ */
     private final String status;
+/**
+ * Resource tags.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"deviceType","id","location","name","networkFunctions","provisioningState","status","tags","type"})
@@ -45,30 +72,57 @@ public final class GetDeviceResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The type of the device.
+ */
     public String getDeviceType() {
         return this.deviceType;
     }
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The geo-location where the resource lives
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * The name of the resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The list of network functions deployed on the device.
+ */
     public List<SubResourceResponse> getNetworkFunctions() {
         return this.networkFunctions;
     }
+/**
+ * The provisioning state of the device resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * The current device status.
+ */
     public String getStatus() {
         return this.status;
     }
+/**
+ * Resource tags.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     public String getType() {
         return this.type;
     }

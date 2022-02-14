@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Active Directory admin credentials used to join the HPC Cache to a domain.
+ */
 public final class CacheActiveDirectorySettingsCredentialsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CacheActiveDirectorySettingsCredentialsArgs Empty = new CacheActiveDirectorySettingsCredentialsArgs();
 
+    /**
+     * Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
+     */
     @InputImport(name="password", required=true)
     private final Input<String> password;
 
@@ -20,6 +26,9 @@ public final class CacheActiveDirectorySettingsCredentialsArgs extends io.pulumi
         return this.password;
     }
 
+    /**
+     * Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
+     */
     @InputImport(name="username", required=true)
     private final Input<String> username;
 

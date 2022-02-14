@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Managed pipeline mode.
+ */
     @EnumType
     public enum ManagedPipelineMode {
+/**
+ * 
+ */
         Integrated("Integrated"),
+/**
+ * 
+ */
         Classic("Classic");
 
         private final String value;

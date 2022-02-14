@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListEffectiveConnectivityConfiguration {
+/**
+ * Result of the request to list networkManagerEffectiveConnectivityConfiguration. It contains a list of groups and a skiptoken to get the next set of results.
+API Version: 2021-02-01-preview.
+ *
+ * Result of the request to list networkManagerEffectiveConnectivityConfiguration. It contains a list of groups and a skiptoken to get the next set of results.
+ */
     public static CompletableFuture<ListEffectiveConnectivityConfigurationResult> invokeAsync(ListEffectiveConnectivityConfigurationArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:listEffectiveConnectivityConfiguration", TypeShape.of(ListEffectiveConnectivityConfigurationResult.class), args == null ? ListEffectiveConnectivityConfigurationArgs.Empty : args, Utilities.withVersion(options));
     }

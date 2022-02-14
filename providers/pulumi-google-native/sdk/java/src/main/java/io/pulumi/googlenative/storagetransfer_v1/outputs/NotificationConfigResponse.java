@@ -10,8 +10,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NotificationConfigResponse {
+/**
+ * Event types for which a notification is desired. If empty, send notifications for all event types.
+ */
     private final List<String> eventTypes;
+/**
+ * The desired format of the notification message payloads.
+ */
     private final String payloadFormat;
+/**
+ * The `Topic.name` of the Pub/Sub topic to which to publish notifications. Must be of the format: `projects/{project}/topics/{topic}`. Not matching this format results in an INVALID_ARGUMENT error.
+ */
     private final String pubsubTopic;
 
     @OutputCustomType.Constructor({"eventTypes","payloadFormat","pubsubTopic"})
@@ -24,12 +33,21 @@ public final class NotificationConfigResponse {
         this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
     }
 
+/**
+ * Event types for which a notification is desired. If empty, send notifications for all event types.
+ */
     public List<String> getEventTypes() {
         return this.eventTypes;
     }
+/**
+ * The desired format of the notification message payloads.
+ */
     public String getPayloadFormat() {
         return this.payloadFormat;
     }
+/**
+ * The `Topic.name` of the Pub/Sub topic to which to publish notifications. Must be of the format: `projects/{project}/topics/{topic}`. Not matching this format results in an INVALID_ARGUMENT error.
+ */
     public String getPubsubTopic() {
         return this.pubsubTopic;
     }

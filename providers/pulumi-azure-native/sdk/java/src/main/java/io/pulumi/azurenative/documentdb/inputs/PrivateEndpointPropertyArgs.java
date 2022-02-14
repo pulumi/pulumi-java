@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Private endpoint which the connection belongs to.
+ */
 public final class PrivateEndpointPropertyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PrivateEndpointPropertyArgs Empty = new PrivateEndpointPropertyArgs();
 
+    /**
+     * Resource id of the private endpoint.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 

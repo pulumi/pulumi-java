@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Required for cards with vertical orientation. The height of the media within a rich card with a vertical layout. For a standalone card with horizontal layout, height is not customizable, and this field is ignored.
+ */
     @EnumType
     public enum GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight {
+/**
+ * Not specified.
+ */
         HeightUnspecified("HEIGHT_UNSPECIFIED"),
+/**
+ * 112 DP.
+ */
         Short("SHORT"),
+/**
+ * 168 DP.
+ */
         Medium("MEDIUM"),
+/**
+ * 264 DP. Not available for rich card carousels when the card width is set to small.
+ */
         Tall("TALL");
 
         private final String value;

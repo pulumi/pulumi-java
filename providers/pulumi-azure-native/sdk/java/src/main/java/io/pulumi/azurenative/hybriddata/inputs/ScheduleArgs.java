@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Schedule for the job run.
+ */
 public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScheduleArgs Empty = new ScheduleArgs();
 
+    /**
+     * Name of the schedule.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -22,6 +28,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * A list of repetition intervals in ISO 8601 format.
+     */
     @InputImport(name="policyList")
     private final @Nullable Input<List<String>> policyList;
 

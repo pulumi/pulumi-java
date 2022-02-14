@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResourceTypeEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceTypeEndpointArgs Empty = new ResourceTypeEndpointArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="apiVersions")
     private final @Nullable Input<List<String>> apiVersions;
 
@@ -25,6 +31,9 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
         return this.apiVersions == null ? Input.empty() : this.apiVersions;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -32,6 +41,9 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="extensions")
     private final @Nullable Input<List<ResourceTypeExtensionArgs>> extensions;
 
@@ -39,6 +51,9 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
         return this.extensions == null ? Input.empty() : this.extensions;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="featuresRule")
     private final @Nullable Input<ResourceTypeEndpointFeaturesRuleArgs> featuresRule;
 
@@ -46,6 +61,9 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
         return this.featuresRule == null ? Input.empty() : this.featuresRule;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="locations")
     private final @Nullable Input<List<String>> locations;
 
@@ -53,6 +71,9 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
         return this.locations == null ? Input.empty() : this.locations;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requiredFeatures")
     private final @Nullable Input<List<String>> requiredFeatures;
 
@@ -60,6 +81,9 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
         return this.requiredFeatures == null ? Input.empty() : this.requiredFeatures;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="timeout")
     private final @Nullable Input<String> timeout;
 

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * State of the job definition.
+ */
     @EnumType
     public enum State {
+/**
+ * 
+ */
         Disabled("Disabled"),
+/**
+ * 
+ */
         Enabled("Enabled"),
+/**
+ * 
+ */
         Supported("Supported");
 
         private final String value;

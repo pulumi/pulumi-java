@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The properties of a storage account for a machine learning team account.
+ */
 public final class StorageAccountPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StorageAccountPropertiesResponse Empty = new StorageAccountPropertiesResponse();
 
+    /**
+     * The access key to the storage account.
+     */
     @InputImport(name="accessKey", required=true)
     private final String accessKey;
 
@@ -19,6 +25,9 @@ public final class StorageAccountPropertiesResponse extends io.pulumi.resources.
         return this.accessKey;
     }
 
+    /**
+     * The fully qualified arm Id of the storage account.
+     */
     @InputImport(name="storageAccountId", required=true)
     private final String storageAccountId;
 

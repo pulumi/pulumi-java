@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ReportDeliveryInfoResponse {
+/**
+ * Has destination for the report being delivered.
+ */
     private final ReportDeliveryDestinationResponse destination;
 
     @OutputCustomType.Constructor({"destination"})
@@ -16,6 +19,9 @@ public final class ReportDeliveryInfoResponse {
         this.destination = Objects.requireNonNull(destination);
     }
 
+/**
+ * Has destination for the report being delivered.
+ */
     public ReportDeliveryDestinationResponse getDestination() {
         return this.destination;
     }

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Defines the type of insights that you want the service to generate. The allowed values are 'AudioInsightsOnly', 'VideoInsightsOnly', and 'AllInsights'. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.
+ */
     @EnumType
     public enum InsightsType {
+/**
+ * Generate audio only insights. Ignore video even if present. Fails if no audio is present.
+ */
         AudioInsightsOnly("AudioInsightsOnly"),
+/**
+ * Generate video only insights. Ignore audio if present. Fails if no video is present.
+ */
         VideoInsightsOnly("VideoInsightsOnly"),
+/**
+ * Generate both audio and video insights. Fails if either audio or video Insights fail.
+ */
         AllInsights("AllInsights");
 
         private final String value;

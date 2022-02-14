@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Diagnostics settings for Geneva.
+ */
 public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureInternalMonitoringPipelineSinkDescriptionResponse Empty = new AzureInternalMonitoringPipelineSinkDescriptionResponse();
 
+    /**
+     * Azure Internal monitoring pipeline account.
+     */
     @InputImport(name="accountName")
     private final @Nullable String accountName;
 
@@ -22,6 +28,9 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
     }
 
+    /**
+     * Azure Internal monitoring pipeline autokey associated with the certificate.
+     */
     @InputImport(name="autoKeyConfigUrl")
     private final @Nullable String autoKeyConfigUrl;
 
@@ -29,6 +38,9 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
         return this.autoKeyConfigUrl == null ? Optional.empty() : Optional.ofNullable(this.autoKeyConfigUrl);
     }
 
+    /**
+     * A description of the sink.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -36,6 +48,9 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Azure Internal monitoring agent fluentd configuration.
+     */
     @InputImport(name="fluentdConfigUrl")
     private final @Nullable Object fluentdConfigUrl;
 
@@ -43,6 +58,10 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
         return this.fluentdConfigUrl == null ? Optional.empty() : Optional.ofNullable(this.fluentdConfigUrl);
     }
 
+    /**
+     * The kind of DiagnosticsSink.
+Expected value is 'AzureInternalMonitoringPipeline'.
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -50,6 +69,9 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
         return this.kind;
     }
 
+    /**
+     * Azure Internal monitoring agent configuration.
+     */
     @InputImport(name="maConfigUrl")
     private final @Nullable String maConfigUrl;
 
@@ -57,6 +79,9 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
         return this.maConfigUrl == null ? Optional.empty() : Optional.ofNullable(this.maConfigUrl);
     }
 
+    /**
+     * Name of the sink. This value is referenced by DiagnosticsReferenceDescription
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -64,6 +89,9 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Azure Internal monitoring pipeline account namespace.
+     */
     @InputImport(name="namespace")
     private final @Nullable String namespace;
 

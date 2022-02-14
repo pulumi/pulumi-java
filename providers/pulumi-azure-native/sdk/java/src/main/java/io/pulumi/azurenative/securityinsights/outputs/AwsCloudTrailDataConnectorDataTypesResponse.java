@@ -3,7 +3,6 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.azurenative.securityinsights.outputs.AwsCloudTrailDataConnectorDataTypesResponseLogs;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
@@ -11,6 +10,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AwsCloudTrailDataConnectorDataTypesResponse {
+/**
+ * Logs data type.
+ */
     private final @Nullable AwsCloudTrailDataConnectorDataTypesResponseLogs logs;
 
     @OutputCustomType.Constructor({"logs"})
@@ -18,6 +20,9 @@ public final class AwsCloudTrailDataConnectorDataTypesResponse {
         this.logs = logs;
     }
 
+/**
+ * Logs data type.
+ */
     public Optional<AwsCloudTrailDataConnectorDataTypesResponseLogs> getLogs() {
         return Optional.ofNullable(this.logs);
     }

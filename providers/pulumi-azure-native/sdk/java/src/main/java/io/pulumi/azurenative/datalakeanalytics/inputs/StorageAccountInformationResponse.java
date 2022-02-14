@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Azure Storage account information.
+ */
 public final class StorageAccountInformationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StorageAccountInformationResponse Empty = new StorageAccountInformationResponse();
 
+    /**
+     * The resource identifier.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -19,6 +25,9 @@ public final class StorageAccountInformationResponse extends io.pulumi.resources
         return this.id;
     }
 
+    /**
+     * The resource name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +35,9 @@ public final class StorageAccountInformationResponse extends io.pulumi.resources
         return this.name;
     }
 
+    /**
+     * The optional suffix for the storage account.
+     */
     @InputImport(name="suffix", required=true)
     private final String suffix;
 
@@ -33,6 +45,9 @@ public final class StorageAccountInformationResponse extends io.pulumi.resources
         return this.suffix;
     }
 
+    /**
+     * The resource type.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

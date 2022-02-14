@@ -14,6 +14,12 @@ import javax.annotation.Nullable;
 
 @Deprecated /* Please use one of the variants: ScheduledSynchronizationSetting. */
 public class GetSynchronizationSetting {
+/**
+ * A Synchronization Setting data transfer object.
+API Version: 2020-09-01.
+ *
+ * A Synchronization Setting data transfer object.
+ */
     public static CompletableFuture<GetSynchronizationSettingResult> invokeAsync(GetSynchronizationSettingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:datashare:getSynchronizationSetting", TypeShape.of(GetSynchronizationSettingResult.class), args == null ? GetSynchronizationSettingArgs.Empty : args, Utilities.withVersion(options));
     }

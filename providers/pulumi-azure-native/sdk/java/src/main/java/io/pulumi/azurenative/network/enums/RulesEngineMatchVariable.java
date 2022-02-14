@@ -8,19 +8,58 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Match Variable
+ */
     @EnumType
     public enum RulesEngineMatchVariable {
+/**
+ * 
+ */
         IsMobile("IsMobile"),
+/**
+ * 
+ */
         RemoteAddr("RemoteAddr"),
+/**
+ * 
+ */
         RequestMethod("RequestMethod"),
+/**
+ * 
+ */
         QueryString("QueryString"),
+/**
+ * 
+ */
         PostArgs("PostArgs"),
+/**
+ * 
+ */
         RequestUri("RequestUri"),
+/**
+ * 
+ */
         RequestPath("RequestPath"),
+/**
+ * 
+ */
         RequestFilename("RequestFilename"),
+/**
+ * 
+ */
         RequestFilenameExtension("RequestFilenameExtension"),
+/**
+ * 
+ */
         RequestHeader("RequestHeader"),
+/**
+ * 
+ */
         RequestBody("RequestBody"),
+/**
+ * 
+ */
         RequestScheme("RequestScheme");
 
         private final String value;

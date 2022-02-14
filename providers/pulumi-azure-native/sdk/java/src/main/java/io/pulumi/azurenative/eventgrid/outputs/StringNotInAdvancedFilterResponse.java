@@ -12,8 +12,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class StringNotInAdvancedFilterResponse {
+/**
+ * The field/property in the event based on which you want to filter.
+ */
     private final @Nullable String key;
+/**
+ * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+Expected value is 'StringNotIn'.
+ */
     private final String operatorType;
+/**
+ * The set of filter values.
+ */
     private final @Nullable List<String> values;
 
     @OutputCustomType.Constructor({"key","operatorType","values"})
@@ -26,12 +36,22 @@ public final class StringNotInAdvancedFilterResponse {
         this.values = values;
     }
 
+/**
+ * The field/property in the event based on which you want to filter.
+ */
     public Optional<String> getKey() {
         return Optional.ofNullable(this.key);
     }
+/**
+ * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+Expected value is 'StringNotIn'.
+ */
     public String getOperatorType() {
         return this.operatorType;
     }
+/**
+ * The set of filter values.
+ */
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
     }

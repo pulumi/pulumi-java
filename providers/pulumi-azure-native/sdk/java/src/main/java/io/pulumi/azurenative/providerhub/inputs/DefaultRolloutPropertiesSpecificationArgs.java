@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DefaultRolloutPropertiesSpecificationArgs Empty = new DefaultRolloutPropertiesSpecificationArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="canary")
     private final @Nullable Input<DefaultRolloutSpecificationCanaryArgs> canary;
 
@@ -29,6 +35,9 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
         return this.canary == null ? Input.empty() : this.canary;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="highTraffic")
     private final @Nullable Input<DefaultRolloutSpecificationHighTrafficArgs> highTraffic;
 
@@ -36,6 +45,9 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
         return this.highTraffic == null ? Input.empty() : this.highTraffic;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="lowTraffic")
     private final @Nullable Input<DefaultRolloutSpecificationLowTrafficArgs> lowTraffic;
 
@@ -43,6 +55,9 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
         return this.lowTraffic == null ? Input.empty() : this.lowTraffic;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="mediumTraffic")
     private final @Nullable Input<DefaultRolloutSpecificationMediumTrafficArgs> mediumTraffic;
 
@@ -50,6 +65,9 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
         return this.mediumTraffic == null ? Input.empty() : this.mediumTraffic;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="providerRegistration")
     private final @Nullable Input<DefaultRolloutSpecificationProviderRegistrationArgs> providerRegistration;
 
@@ -57,6 +75,9 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
         return this.providerRegistration == null ? Input.empty() : this.providerRegistration;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="resourceTypeRegistrations")
     private final @Nullable Input<List<ResourceTypeRegistrationArgs>> resourceTypeRegistrations;
 
@@ -64,6 +85,9 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
         return this.resourceTypeRegistrations == null ? Input.empty() : this.resourceTypeRegistrations;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="restOfTheWorldGroupOne")
     private final @Nullable Input<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs> restOfTheWorldGroupOne;
 
@@ -71,6 +95,9 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
         return this.restOfTheWorldGroupOne == null ? Input.empty() : this.restOfTheWorldGroupOne;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="restOfTheWorldGroupTwo")
     private final @Nullable Input<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> restOfTheWorldGroupTwo;
 

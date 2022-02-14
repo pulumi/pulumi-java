@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The network rule set for a container registry.
+ */
 public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkRuleSetArgs Empty = new NetworkRuleSetArgs();
 
+    /**
+     * The default action of allow or deny when no other rules match.
+     */
     @InputImport(name="defaultAction", required=true)
     private final Input<Either<String,DefaultAction>> defaultAction;
 
@@ -26,6 +32,9 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.defaultAction;
     }
 
+    /**
+     * The IP ACL rules.
+     */
     @InputImport(name="ipRules")
     private final @Nullable Input<List<IPRuleArgs>> ipRules;
 
@@ -33,6 +42,9 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.ipRules == null ? Input.empty() : this.ipRules;
     }
 
+    /**
+     * The virtual network rules.
+     */
     @InputImport(name="virtualNetworkRules")
     private final @Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
 

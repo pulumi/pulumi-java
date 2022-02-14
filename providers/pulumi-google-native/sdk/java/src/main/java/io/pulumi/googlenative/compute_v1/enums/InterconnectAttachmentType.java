@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of interconnect attachment this is, which can take one of the following values: - DEDICATED: an attachment to a Dedicated Interconnect. - PARTNER: an attachment to a Partner Interconnect, created by the customer. - PARTNER_PROVIDER: an attachment to a Partner Interconnect, created by the partner. 
+ */
     @EnumType
     public enum InterconnectAttachmentType {
+/**
+ * Attachment to a dedicated interconnect.
+ */
         Dedicated("DEDICATED"),
+/**
+ * Attachment to a partner interconnect, created by the customer.
+ */
         Partner("PARTNER"),
+/**
+ * Attachment to a partner interconnect, created by the partner.
+ */
         PartnerProvider("PARTNER_PROVIDER");
 
         private final String value;

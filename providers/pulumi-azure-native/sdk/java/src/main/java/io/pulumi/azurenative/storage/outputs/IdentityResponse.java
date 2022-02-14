@@ -12,9 +12,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class IdentityResponse {
+/**
+ * The principal ID of resource identity.
+ */
     private final String principalId;
+/**
+ * The tenant ID of resource.
+ */
     private final String tenantId;
+/**
+ * The identity type.
+ */
     private final String type;
+/**
+ * Gets or sets a list of key value pairs that describe the set of User Assigned identities that will be used with this storage account. The key is the ARM resource identifier of the identity. Only 1 User Assigned identity is permitted here.
+ */
     private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 
     @OutputCustomType.Constructor({"principalId","tenantId","type","userAssignedIdentities"})
@@ -29,15 +41,27 @@ public final class IdentityResponse {
         this.userAssignedIdentities = userAssignedIdentities;
     }
 
+/**
+ * The principal ID of resource identity.
+ */
     public String getPrincipalId() {
         return this.principalId;
     }
+/**
+ * The tenant ID of resource.
+ */
     public String getTenantId() {
         return this.tenantId;
     }
+/**
+ * The identity type.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Gets or sets a list of key value pairs that describe the set of User Assigned identities that will be used with this storage account. The key is the ARM resource identifier of the identity. Only 1 User Assigned identity is permitted here.
+ */
     public Map<String,UserAssignedIdentityResponse> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

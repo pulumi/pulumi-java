@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.compute.AvailabilitySetArgs;
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
 import io.pulumi.azurenative.compute.outputs.SkuResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
@@ -19,69 +18,230 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Manage the availability of virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-manage-availability?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json). <br><br> For more information on Azure planned maintenance, see [Planned maintenance for virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-planned-maintenance?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> Currently, a VM can only be added to availability set at creation time. An existing VM cannot be added to an availability set.
+API Version: 2020-12-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create an availability set.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var availabilitySet = new AzureNative.Compute.AvailabilitySet("availabilitySet", new AzureNative.Compute.AvailabilitySetArgs
+        {
+            AvailabilitySetName = "myAvailabilitySet",
+            Location = "westus",
+            PlatformFaultDomainCount = 2,
+            PlatformUpdateDomainCount = 20,
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-native/sdk/go/azure/compute"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewAvailabilitySet(ctx, "availabilitySet", &compute.AvailabilitySetArgs{
+			AvailabilitySetName:       pulumi.String("myAvailabilitySet"),
+			Location:                  pulumi.String("westus"),
+			PlatformFaultDomainCount:  pulumi.Int(2),
+			PlatformUpdateDomainCount: pulumi.Int(20),
+			ResourceGroupName:         pulumi.String("myResourceGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const availabilitySet = new azure_native.compute.AvailabilitySet("availabilitySet", {
+    availabilitySetName: "myAvailabilitySet",
+    location: "westus",
+    platformFaultDomainCount: 2,
+    platformUpdateDomainCount: 20,
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+availability_set = azure_native.compute.AvailabilitySet("availabilitySet",
+    availability_set_name="myAvailabilitySet",
+    location="westus",
+    platform_fault_domain_count=2,
+    platform_update_domain_count=20,
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:compute:AvailabilitySet myAvailabilitySet /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/availabilitySets/myAvailabilitySet 
+```
+
+ */
 @ResourceType(type="azure-native:compute:AvailabilitySet")
 public class AvailabilitySet extends io.pulumi.resources.CustomResource {
+    /**
+     * Resource location
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Fault Domain count.
+     */
     @OutputExport(name="platformFaultDomainCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> platformFaultDomainCount;
 
+    /**
+     * @return Fault Domain count.
+     */
     public Output</* @Nullable */ Integer> getPlatformFaultDomainCount() {
         return this.platformFaultDomainCount;
     }
+    /**
+     * Update Domain count.
+     */
     @OutputExport(name="platformUpdateDomainCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> platformUpdateDomainCount;
 
+    /**
+     * @return Update Domain count.
+     */
     public Output</* @Nullable */ Integer> getPlatformUpdateDomainCount() {
         return this.platformUpdateDomainCount;
     }
+    /**
+     * Specifies information about the proximity placement group that the availability set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
+     */
     @OutputExport(name="proximityPlacementGroup", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> proximityPlacementGroup;
 
+    /**
+     * @return Specifies information about the proximity placement group that the availability set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
+     */
     public Output</* @Nullable */ SubResourceResponse> getProximityPlacementGroup() {
         return this.proximityPlacementGroup;
     }
+    /**
+     * Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use 'Aligned' for virtual machines with managed disks and 'Classic' for virtual machines with unmanaged disks. Default value is 'Classic'.
+     */
     @OutputExport(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
+    /**
+     * @return Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use 'Aligned' for virtual machines with managed disks and 'Classic' for virtual machines with unmanaged disks. Default value is 'Classic'.
+     */
     public Output</* @Nullable */ SkuResponse> getSku() {
         return this.sku;
     }
+    /**
+     * The resource status information.
+     */
     @OutputExport(name="statuses", type=List.class, parameters={InstanceViewStatusResponse.class})
     private Output<List<InstanceViewStatusResponse>> statuses;
 
+    /**
+     * @return The resource status information.
+     */
     public Output<List<InstanceViewStatusResponse>> getStatuses() {
         return this.statuses;
     }
+    /**
+     * Resource tags
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * A list of references to all virtual machines in the availability set.
+     */
     @OutputExport(name="virtualMachines", type=List.class, parameters={SubResourceResponse.class})
     private Output</* @Nullable */ List<SubResourceResponse>> virtualMachines;
 
+    /**
+     * @return A list of references to all virtual machines in the availability set.
+     */
     public Output</* @Nullable */ List<SubResourceResponse>> getVirtualMachines() {
         return this.virtualMachines;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AvailabilitySet(String name, AvailabilitySetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:compute:AvailabilitySet", name, args == null ? AvailabilitySetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -116,6 +276,14 @@ public class AvailabilitySet extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AvailabilitySet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AvailabilitySet(name, id, options);
     }

@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HttpRequestArgs Empty = new HttpRequestArgs();
 
+    /**
+     * Gets or sets the authentication method of the request.
+     */
     @InputImport(name="authentication")
     private final @Nullable Input<Object> authentication;
 
@@ -26,6 +32,9 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
         return this.authentication == null ? Input.empty() : this.authentication;
     }
 
+    /**
+     * Gets or sets the request body.
+     */
     @InputImport(name="body")
     private final @Nullable Input<String> body;
 
@@ -33,6 +42,9 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
         return this.body == null ? Input.empty() : this.body;
     }
 
+    /**
+     * Gets or sets the headers.
+     */
     @InputImport(name="headers")
     private final @Nullable Input<Map<String,String>> headers;
 
@@ -40,6 +52,9 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
         return this.headers == null ? Input.empty() : this.headers;
     }
 
+    /**
+     * Gets or sets the method of the request.
+     */
     @InputImport(name="method")
     private final @Nullable Input<String> method;
 
@@ -47,6 +62,9 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
         return this.method == null ? Input.empty() : this.method;
     }
 
+    /**
+     * Gets or sets the URI of the request.
+     */
     @InputImport(name="uri")
     private final @Nullable Input<String> uri;
 

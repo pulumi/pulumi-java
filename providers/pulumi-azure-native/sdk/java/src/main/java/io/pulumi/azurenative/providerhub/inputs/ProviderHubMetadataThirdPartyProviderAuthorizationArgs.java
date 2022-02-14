@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ProviderHubMetadataThirdPartyProviderAuthorizationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProviderHubMetadataThirdPartyProviderAuthorizationArgs Empty = new ProviderHubMetadataThirdPartyProviderAuthorizationArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="authorizations")
     private final @Nullable Input<List<LightHouseAuthorizationArgs>> authorizations;
 
@@ -23,6 +29,9 @@ public final class ProviderHubMetadataThirdPartyProviderAuthorizationArgs extend
         return this.authorizations == null ? Input.empty() : this.authorizations;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="managedByTenantId")
     private final @Nullable Input<String> managedByTenantId;
 

@@ -12,10 +12,25 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class HelmReleasePropertiesDefinitionResponse {
+/**
+ * Total number of times that the HelmRelease failed to install or upgrade
+ */
     private final @Nullable Double failureCount;
+/**
+ * The reference to the HelmChart object used as the source to this HelmRelease
+ */
     private final @Nullable ObjectReferenceDefinitionResponse helmChartRef;
+/**
+ * Number of times that the HelmRelease failed to install
+ */
     private final @Nullable Double installFailureCount;
+/**
+ * The revision number of the last released object change
+ */
     private final @Nullable Double lastRevisionApplied;
+/**
+ * Number of times that the HelmRelease failed to upgrade
+ */
     private final @Nullable Double upgradeFailureCount;
 
     @OutputCustomType.Constructor({"failureCount","helmChartRef","installFailureCount","lastRevisionApplied","upgradeFailureCount"})
@@ -32,18 +47,33 @@ public final class HelmReleasePropertiesDefinitionResponse {
         this.upgradeFailureCount = upgradeFailureCount;
     }
 
+/**
+ * Total number of times that the HelmRelease failed to install or upgrade
+ */
     public Optional<Double> getFailureCount() {
         return Optional.ofNullable(this.failureCount);
     }
+/**
+ * The reference to the HelmChart object used as the source to this HelmRelease
+ */
     public Optional<ObjectReferenceDefinitionResponse> getHelmChartRef() {
         return Optional.ofNullable(this.helmChartRef);
     }
+/**
+ * Number of times that the HelmRelease failed to install
+ */
     public Optional<Double> getInstallFailureCount() {
         return Optional.ofNullable(this.installFailureCount);
     }
+/**
+ * The revision number of the last released object change
+ */
     public Optional<Double> getLastRevisionApplied() {
         return Optional.ofNullable(this.lastRevisionApplied);
     }
+/**
+ * Number of times that the HelmRelease failed to upgrade
+ */
     public Optional<Double> getUpgradeFailureCount() {
         return Optional.ofNullable(this.upgradeFailureCount);
     }

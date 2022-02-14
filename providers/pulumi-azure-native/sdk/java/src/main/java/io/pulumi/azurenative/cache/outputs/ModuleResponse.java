@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ModuleResponse {
+/**
+ * Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.
+ */
     private final @Nullable String args;
+/**
+ * The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'
+ */
     private final String name;
+/**
+ * The version of the module, e.g. '1.0'.
+ */
     private final String version;
 
     @OutputCustomType.Constructor({"args","name","version"})
@@ -25,12 +34,21 @@ public final class ModuleResponse {
         this.version = Objects.requireNonNull(version);
     }
 
+/**
+ * Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.
+ */
     public Optional<String> getArgs() {
         return Optional.ofNullable(this.args);
     }
+/**
+ * The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The version of the module, e.g. '1.0'.
+ */
     public String getVersion() {
         return this.version;
     }

@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetInspectTemplate {
+/**
+ * Gets an InspectTemplate. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
+ */
     public static CompletableFuture<GetInspectTemplateResult> invokeAsync(GetInspectTemplateArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dlp/v2:getInspectTemplate", TypeShape.of(GetInspectTemplateResult.class), args == null ? GetInspectTemplateArgs.Empty : args, Utilities.withVersion(options));
     }

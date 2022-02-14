@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetEventChannel {
+/**
+ * Event Channel.
+API Version: 2021-06-01-preview.
+ *
+ * Event Channel.
+ */
     public static CompletableFuture<GetEventChannelResult> invokeAsync(GetEventChannelArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:eventgrid:getEventChannel", TypeShape.of(GetEventChannelResult.class), args == null ? GetEventChannelArgs.Empty : args, Utilities.withVersion(options));
     }

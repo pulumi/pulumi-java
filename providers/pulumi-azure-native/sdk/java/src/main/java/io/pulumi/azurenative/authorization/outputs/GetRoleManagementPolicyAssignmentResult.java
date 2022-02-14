@@ -12,12 +12,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetRoleManagementPolicyAssignmentResult {
+/**
+ * The role management policy Id.
+ */
     private final String id;
+/**
+ * The role management policy name.
+ */
     private final String name;
+/**
+ * Additional properties of scope, role definition and policy
+ */
     private final PolicyAssignmentPropertiesResponse policyAssignmentProperties;
+/**
+ * The policy id role management policy assignment.
+ */
     private final @Nullable String policyId;
+/**
+ * The role definition of management policy assignment.
+ */
     private final @Nullable String roleDefinitionId;
+/**
+ * The role management policy scope.
+ */
     private final @Nullable String scope;
+/**
+ * The role management policy type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"id","name","policyAssignmentProperties","policyId","roleDefinitionId","scope","type"})
@@ -38,24 +59,45 @@ public final class GetRoleManagementPolicyAssignmentResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The role management policy Id.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The role management policy name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Additional properties of scope, role definition and policy
+ */
     public PolicyAssignmentPropertiesResponse getPolicyAssignmentProperties() {
         return this.policyAssignmentProperties;
     }
+/**
+ * The policy id role management policy assignment.
+ */
     public Optional<String> getPolicyId() {
         return Optional.ofNullable(this.policyId);
     }
+/**
+ * The role definition of management policy assignment.
+ */
     public Optional<String> getRoleDefinitionId() {
         return Optional.ofNullable(this.roleDefinitionId);
     }
+/**
+ * The role management policy scope.
+ */
     public Optional<String> getScope() {
         return Optional.ofNullable(this.scope);
     }
+/**
+ * The role management policy type.
+ */
     public String getType() {
         return this.type;
     }

@@ -12,11 +12,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SubnetOverrideResponse {
+/**
+ * The name given to the subnet within the lab.
+ */
     private final @Nullable String labSubnetName;
+/**
+ * The resource ID of the subnet.
+ */
     private final @Nullable String resourceId;
+/**
+ * Properties that virtual machines on this subnet will share.
+ */
     private final @Nullable SubnetSharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration;
+/**
+ * Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).
+ */
     private final @Nullable String useInVmCreationPermission;
+/**
+ * Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).
+ */
     private final @Nullable String usePublicIpAddressPermission;
+/**
+ * The virtual network pool associated with this subnet.
+ */
     private final @Nullable String virtualNetworkPoolName;
 
     @OutputCustomType.Constructor({"labSubnetName","resourceId","sharedPublicIpAddressConfiguration","useInVmCreationPermission","usePublicIpAddressPermission","virtualNetworkPoolName"})
@@ -35,21 +53,39 @@ public final class SubnetOverrideResponse {
         this.virtualNetworkPoolName = virtualNetworkPoolName;
     }
 
+/**
+ * The name given to the subnet within the lab.
+ */
     public Optional<String> getLabSubnetName() {
         return Optional.ofNullable(this.labSubnetName);
     }
+/**
+ * The resource ID of the subnet.
+ */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }
+/**
+ * Properties that virtual machines on this subnet will share.
+ */
     public Optional<SubnetSharedPublicIpAddressConfigurationResponse> getSharedPublicIpAddressConfiguration() {
         return Optional.ofNullable(this.sharedPublicIpAddressConfiguration);
     }
+/**
+ * Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny).
+ */
     public Optional<String> getUseInVmCreationPermission() {
         return Optional.ofNullable(this.useInVmCreationPermission);
     }
+/**
+ * Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny).
+ */
     public Optional<String> getUsePublicIpAddressPermission() {
         return Optional.ofNullable(this.usePublicIpAddressPermission);
     }
+/**
+ * The virtual network pool associated with this subnet.
+ */
     public Optional<String> getVirtualNetworkPoolName() {
         return Optional.ofNullable(this.virtualNetworkPoolName);
     }

@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of the volume.
+ */
 public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VolumeArgs Empty = new VolumeArgs();
 
+    /**
+     * The Azure File volume.
+     */
     @InputImport(name="azureFile")
     private final @Nullable Input<AzureFileVolumeArgs> azureFile;
 
@@ -25,6 +31,9 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.azureFile == null ? Input.empty() : this.azureFile;
     }
 
+    /**
+     * The empty directory volume.
+     */
     @InputImport(name="emptyDir")
     private final @Nullable Input<Object> emptyDir;
 
@@ -32,6 +41,9 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.emptyDir == null ? Input.empty() : this.emptyDir;
     }
 
+    /**
+     * The git repo volume.
+     */
     @InputImport(name="gitRepo")
     private final @Nullable Input<GitRepoVolumeArgs> gitRepo;
 
@@ -39,6 +51,9 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.gitRepo == null ? Input.empty() : this.gitRepo;
     }
 
+    /**
+     * The name of the volume.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -46,6 +61,9 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * The secret volume.
+     */
     @InputImport(name="secret")
     private final @Nullable Input<Map<String,String>> secret;
 

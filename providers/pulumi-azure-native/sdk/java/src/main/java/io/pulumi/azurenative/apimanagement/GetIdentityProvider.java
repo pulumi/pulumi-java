@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetIdentityProvider {
+/**
+ * Identity Provider details.
+API Version: 2020-12-01.
+ *
+ * Identity Provider details.
+ */
     public static CompletableFuture<GetIdentityProviderResult> invokeAsync(GetIdentityProviderArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:apimanagement:getIdentityProvider", TypeShape.of(GetIdentityProviderResult.class), args == null ? GetIdentityProviderArgs.Empty : args, Utilities.withVersion(options));
     }

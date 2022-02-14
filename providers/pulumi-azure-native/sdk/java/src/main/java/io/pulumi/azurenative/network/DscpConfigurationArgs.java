@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DscpConfigurationArgs Empty = new DscpConfigurationArgs();
 
+    /**
+     * Destination IP ranges.
+     */
     @InputImport(name="destinationIpRanges")
     private final @Nullable Input<List<QosIpRangeArgs>> destinationIpRanges;
 
@@ -28,6 +34,9 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.destinationIpRanges == null ? Input.empty() : this.destinationIpRanges;
     }
 
+    /**
+     * Destination port ranges.
+     */
     @InputImport(name="destinationPortRanges")
     private final @Nullable Input<List<QosPortRangeArgs>> destinationPortRanges;
 
@@ -35,6 +44,9 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.destinationPortRanges == null ? Input.empty() : this.destinationPortRanges;
     }
 
+    /**
+     * The name of the resource.
+     */
     @InputImport(name="dscpConfigurationName")
     private final @Nullable Input<String> dscpConfigurationName;
 
@@ -42,6 +54,9 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.dscpConfigurationName == null ? Input.empty() : this.dscpConfigurationName;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -49,6 +64,9 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * Resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -56,6 +74,9 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * List of markings to be used in the configuration.
+     */
     @InputImport(name="markings")
     private final @Nullable Input<List<Integer>> markings;
 
@@ -63,6 +84,9 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.markings == null ? Input.empty() : this.markings;
     }
 
+    /**
+     * RNM supported protocol types.
+     */
     @InputImport(name="protocol")
     private final @Nullable Input<Either<String,ProtocolType>> protocol;
 
@@ -70,6 +94,9 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.protocol == null ? Input.empty() : this.protocol;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -77,6 +104,9 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.resourceGroupName;
     }
 
+    /**
+     * Source IP ranges.
+     */
     @InputImport(name="sourceIpRanges")
     private final @Nullable Input<List<QosIpRangeArgs>> sourceIpRanges;
 
@@ -84,6 +114,9 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.sourceIpRanges == null ? Input.empty() : this.sourceIpRanges;
     }
 
+    /**
+     * Sources port ranges.
+     */
     @InputImport(name="sourcePortRanges")
     private final @Nullable Input<List<QosPortRangeArgs>> sourcePortRanges;
 
@@ -91,6 +124,9 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
         return this.sourcePortRanges == null ? Input.empty() : this.sourcePortRanges;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

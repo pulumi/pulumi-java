@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure SKU definition.
+ */
 public final class AzureSkuResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureSkuResponse Empty = new AzureSkuResponse();
 
+    /**
+     * The number of instances of the cluster.
+     */
     @InputImport(name="capacity")
     private final @Nullable Integer capacity;
 
@@ -22,6 +28,9 @@ public final class AzureSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
     }
 
+    /**
+     * SKU name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -29,6 +38,9 @@ public final class AzureSkuResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * SKU tier.
+     */
     @InputImport(name="tier", required=true)
     private final String tier;
 

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum ExecutionConfigUsagesItem {
+/**
+ * Default value. This value is unused.
+ */
         ExecutionEnvironmentUsageUnspecified("EXECUTION_ENVIRONMENT_USAGE_UNSPECIFIED"),
+/**
+ * Use for rendering.
+ */
         Render("RENDER"),
+/**
+ * Use for deploying and deployment hooks.
+ */
         Deploy("DEPLOY");
 
         private final String value;

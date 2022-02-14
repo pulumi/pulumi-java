@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Subscription key parameter names details.
+ */
 public final class SubscriptionKeyParameterNamesContractResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubscriptionKeyParameterNamesContractResponse Empty = new SubscriptionKeyParameterNamesContractResponse();
 
+    /**
+     * Subscription key header name.
+     */
     @InputImport(name="header")
     private final @Nullable String header;
 
@@ -21,6 +27,9 @@ public final class SubscriptionKeyParameterNamesContractResponse extends io.pulu
         return this.header == null ? Optional.empty() : Optional.ofNullable(this.header);
     }
 
+    /**
+     * Subscription key query string parameter name.
+     */
     @InputImport(name="query")
     private final @Nullable String query;
 

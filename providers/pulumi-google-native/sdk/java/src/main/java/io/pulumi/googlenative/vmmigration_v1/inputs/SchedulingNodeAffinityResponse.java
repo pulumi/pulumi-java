@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Node Affinity: the configuration of desired nodes onto which this Instance could be scheduled. Based on https://cloud.google.com/compute/docs/reference/rest/v1/instances/setScheduling
+ */
 public final class SchedulingNodeAffinityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SchedulingNodeAffinityResponse Empty = new SchedulingNodeAffinityResponse();
 
+    /**
+     * The label key of Node resource to reference.
+     */
     @InputImport(name="key", required=true)
     private final String key;
 
@@ -20,6 +26,9 @@ public final class SchedulingNodeAffinityResponse extends io.pulumi.resources.In
         return this.key;
     }
 
+    /**
+     * The operator to use for the node resources specified in the `values` parameter.
+     */
     @InputImport(name="operator", required=true)
     private final String operator;
 
@@ -27,6 +36,9 @@ public final class SchedulingNodeAffinityResponse extends io.pulumi.resources.In
         return this.operator;
     }
 
+    /**
+     * Corresponds to the label values of Node resource.
+     */
     @InputImport(name="values", required=true)
     private final List<String> values;
 

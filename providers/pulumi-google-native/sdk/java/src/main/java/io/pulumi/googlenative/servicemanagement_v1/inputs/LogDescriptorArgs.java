@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A description of a log type. Example in YAML format: - name: library.googleapis.com/activity_history description: The history of borrowing and returning library items. display_name: Activity labels: - key: /customer_id description: Identifier of a library customer
+ */
 public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LogDescriptorArgs Empty = new LogDescriptorArgs();
 
+    /**
+     * A human-readable description of this log. This information appears in the documentation and can contain details.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -23,6 +29,9 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The human-readable name for this log. This information appears on the user interface and should be concise.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -30,6 +39,9 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The set of labels that are available to describe a specific log entry. Runtime requests that contain labels not specified here are considered invalid.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<List<LabelDescriptorArgs>> labels;
 
@@ -37,6 +49,9 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The name of the log. It must be less than 512 characters long and can include the following characters: upper- and lower-case alphanumeric characters [A-Za-z0-9], and punctuation characters including slash, underscore, hyphen, period [/_-.].
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 

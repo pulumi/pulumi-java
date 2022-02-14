@@ -14,12 +14,33 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class XyChartResponse {
+/**
+ * Display options for the chart.
+ */
     private final ChartOptionsResponse chartOptions;
+/**
+ * The data displayed in this chart.
+ */
     private final List<DataSetResponse> dataSets;
+/**
+ * Threshold lines drawn horizontally across the chart.
+ */
     private final List<ThresholdResponse> thresholds;
+/**
+ * The duration used to display a comparison chart. A comparison chart simultaneously shows values from two similar-length time periods (e.g., week-over-week metrics). The duration must be positive, and it can only be applied to charts with data sets of LINE plot type.
+ */
     private final String timeshiftDuration;
+/**
+ * The properties applied to the X axis.
+ */
     private final AxisResponse xAxis;
+/**
+ * The properties applied to the Y2 axis.
+ */
     private final AxisResponse y2Axis;
+/**
+ * The properties applied to the Y axis.
+ */
     private final AxisResponse yAxis;
 
     @OutputCustomType.Constructor({"chartOptions","dataSets","thresholds","timeshiftDuration","xAxis","y2Axis","yAxis"})
@@ -40,24 +61,45 @@ public final class XyChartResponse {
         this.yAxis = Objects.requireNonNull(yAxis);
     }
 
+/**
+ * Display options for the chart.
+ */
     public ChartOptionsResponse getChartOptions() {
         return this.chartOptions;
     }
+/**
+ * The data displayed in this chart.
+ */
     public List<DataSetResponse> getDataSets() {
         return this.dataSets;
     }
+/**
+ * Threshold lines drawn horizontally across the chart.
+ */
     public List<ThresholdResponse> getThresholds() {
         return this.thresholds;
     }
+/**
+ * The duration used to display a comparison chart. A comparison chart simultaneously shows values from two similar-length time periods (e.g., week-over-week metrics). The duration must be positive, and it can only be applied to charts with data sets of LINE plot type.
+ */
     public String getTimeshiftDuration() {
         return this.timeshiftDuration;
     }
+/**
+ * The properties applied to the X axis.
+ */
     public AxisResponse getXAxis() {
         return this.xAxis;
     }
+/**
+ * The properties applied to the Y2 axis.
+ */
     public AxisResponse getY2Axis() {
         return this.y2Axis;
     }
+/**
+ * The properties applied to the Y axis.
+ */
     public AxisResponse getYAxis() {
         return this.yAxis;
     }

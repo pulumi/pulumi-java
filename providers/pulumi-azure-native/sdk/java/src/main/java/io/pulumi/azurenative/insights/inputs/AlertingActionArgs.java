@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specify action need to be taken when rule type is Alert
+ */
 public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AlertingActionArgs Empty = new AlertingActionArgs();
 
+    /**
+     * Azure action group reference.
+     */
     @InputImport(name="aznsAction")
     private final @Nullable Input<AzNsActionGroupArgs> aznsAction;
 
@@ -26,6 +32,10 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
         return this.aznsAction == null ? Input.empty() : this.aznsAction;
     }
 
+    /**
+     * Specifies the action. Supported values - AlertingAction, LogToMetricAction
+Expected value is 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction'.
+     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 
@@ -33,6 +43,9 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
         return this.odataType;
     }
 
+    /**
+     * Severity of the alert
+     */
     @InputImport(name="severity", required=true)
     private final Input<Either<String,AlertSeverity>> severity;
 
@@ -40,6 +53,9 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
         return this.severity;
     }
 
+    /**
+     * time (in minutes) for which Alerts should be throttled or suppressed.
+     */
     @InputImport(name="throttlingInMin")
     private final @Nullable Input<Integer> throttlingInMin;
 
@@ -47,6 +63,9 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
         return this.throttlingInMin == null ? Input.empty() : this.throttlingInMin;
     }
 
+    /**
+     * The trigger condition that results in the alert rule being.
+     */
     @InputImport(name="trigger", required=true)
     private final Input<TriggerConditionArgs> trigger;
 

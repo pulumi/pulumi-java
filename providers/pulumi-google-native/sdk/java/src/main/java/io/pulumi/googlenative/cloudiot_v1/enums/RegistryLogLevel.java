@@ -8,12 +8,30 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * **Beta Feature** The default logging verbosity for activity from devices in this registry. The verbosity level can be overridden by Device.log_level.
+ */
     @EnumType
     public enum RegistryLogLevel {
+/**
+ * No logging specified. If not specified, logging will be disabled.
+ */
         LogLevelUnspecified("LOG_LEVEL_UNSPECIFIED"),
+/**
+ * Disables logging.
+ */
         None("NONE"),
+/**
+ * Error events will be logged.
+ */
         Error("ERROR"),
+/**
+ * Informational events will be logged, such as connections and disconnections.
+ */
         Info("INFO"),
+/**
+ * All events will be logged.
+ */
         Debug("DEBUG");
 
         private final String value;

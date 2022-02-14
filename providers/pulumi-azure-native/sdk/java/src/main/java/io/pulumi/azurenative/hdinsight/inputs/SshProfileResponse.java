@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The list of SSH public keys.
+ */
 public final class SshProfileResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SshProfileResponse Empty = new SshProfileResponse();
 
+    /**
+     * The list of SSH public keys.
+     */
     @InputImport(name="publicKeys")
     private final @Nullable List<SshPublicKeyResponse> publicKeys;
 

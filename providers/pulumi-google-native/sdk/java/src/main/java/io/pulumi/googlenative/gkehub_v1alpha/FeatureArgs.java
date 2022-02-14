@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FeatureArgs Empty = new FeatureArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="featureId")
     private final @Nullable Input<String> featureId;
 
@@ -23,6 +29,9 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
         return this.featureId == null ? Input.empty() : this.featureId;
     }
 
+    /**
+     * GCP labels for this Feature.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -30,6 +39,9 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -37,6 +49,9 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} WILL match the Feature's project. {p} will always be returned as the project number, but the project ID is also accepted during input. If the same Membership is specified in the map twice (using the project ID form, and the project number form), exactly ONE of the entries will be saved, with no guarantees as to which. For this reason, it is recommended the same format be used for all entries when mutating a Feature.
+     */
     @InputImport(name="membershipSpecs")
     private final @Nullable Input<Map<String,String>> membershipSpecs;
 
@@ -44,6 +59,9 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
         return this.membershipSpecs == null ? Input.empty() : this.membershipSpecs;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -51,6 +69,9 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -58,6 +79,9 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
+     */
     @InputImport(name="spec")
     private final @Nullable Input<CommonFeatureSpecArgs> spec;
 

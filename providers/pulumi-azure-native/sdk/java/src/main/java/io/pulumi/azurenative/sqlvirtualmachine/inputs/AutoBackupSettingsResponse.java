@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configure backups for databases in your SQL virtual machine.
+ */
 public final class AutoBackupSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AutoBackupSettingsResponse Empty = new AutoBackupSettingsResponse();
 
+    /**
+     * Backup schedule type.
+     */
     @InputImport(name="backupScheduleType")
     private final @Nullable String backupScheduleType;
 
@@ -23,6 +29,9 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
         return this.backupScheduleType == null ? Optional.empty() : Optional.ofNullable(this.backupScheduleType);
     }
 
+    /**
+     * Include or exclude system databases from auto backup.
+     */
     @InputImport(name="backupSystemDbs")
     private final @Nullable Boolean backupSystemDbs;
 
@@ -30,6 +39,9 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
         return this.backupSystemDbs == null ? Optional.empty() : Optional.ofNullable(this.backupSystemDbs);
     }
 
+    /**
+     * Enable or disable autobackup on SQL virtual machine.
+     */
     @InputImport(name="enable")
     private final @Nullable Boolean enable;
 
@@ -37,6 +49,9 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
         return this.enable == null ? Optional.empty() : Optional.ofNullable(this.enable);
     }
 
+    /**
+     * Enable or disable encryption for backup on SQL virtual machine.
+     */
     @InputImport(name="enableEncryption")
     private final @Nullable Boolean enableEncryption;
 
@@ -44,6 +59,9 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
         return this.enableEncryption == null ? Optional.empty() : Optional.ofNullable(this.enableEncryption);
     }
 
+    /**
+     * Frequency of full backups. In both cases, full backups begin during the next scheduled time window.
+     */
     @InputImport(name="fullBackupFrequency")
     private final @Nullable String fullBackupFrequency;
 
@@ -51,6 +69,9 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
         return this.fullBackupFrequency == null ? Optional.empty() : Optional.ofNullable(this.fullBackupFrequency);
     }
 
+    /**
+     * Start time of a given day during which full backups can take place. 0-23 hours.
+     */
     @InputImport(name="fullBackupStartTime")
     private final @Nullable Integer fullBackupStartTime;
 
@@ -58,6 +79,9 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
         return this.fullBackupStartTime == null ? Optional.empty() : Optional.ofNullable(this.fullBackupStartTime);
     }
 
+    /**
+     * Duration of the time window of a given day during which full backups can take place. 1-23 hours.
+     */
     @InputImport(name="fullBackupWindowHours")
     private final @Nullable Integer fullBackupWindowHours;
 
@@ -65,6 +89,9 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
         return this.fullBackupWindowHours == null ? Optional.empty() : Optional.ofNullable(this.fullBackupWindowHours);
     }
 
+    /**
+     * Frequency of log backups. 5-60 minutes.
+     */
     @InputImport(name="logBackupFrequency")
     private final @Nullable Integer logBackupFrequency;
 
@@ -72,6 +99,9 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
         return this.logBackupFrequency == null ? Optional.empty() : Optional.ofNullable(this.logBackupFrequency);
     }
 
+    /**
+     * Retention period of backup: 1-30 days.
+     */
     @InputImport(name="retentionPeriod")
     private final @Nullable Integer retentionPeriod;
 
@@ -79,6 +109,9 @@ public final class AutoBackupSettingsResponse extends io.pulumi.resources.Invoke
         return this.retentionPeriod == null ? Optional.empty() : Optional.ofNullable(this.retentionPeriod);
     }
 
+    /**
+     * Storage account url where backup will be taken to.
+     */
     @InputImport(name="storageAccountUrl")
     private final @Nullable String storageAccountUrl;
 

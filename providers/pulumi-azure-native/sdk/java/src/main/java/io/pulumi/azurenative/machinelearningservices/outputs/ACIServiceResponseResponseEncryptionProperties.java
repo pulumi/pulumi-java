@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ACIServiceResponseResponseEncryptionProperties {
+/**
+ * Encryption Key name
+ */
     private final String keyName;
+/**
+ * Encryption Key Version
+ */
     private final String keyVersion;
+/**
+ * vault base Url
+ */
     private final String vaultBaseUrl;
 
     @OutputCustomType.Constructor({"keyName","keyVersion","vaultBaseUrl"})
@@ -23,12 +32,21 @@ public final class ACIServiceResponseResponseEncryptionProperties {
         this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
     }
 
+/**
+ * Encryption Key name
+ */
     public String getKeyName() {
         return this.keyName;
     }
+/**
+ * Encryption Key Version
+ */
     public String getKeyVersion() {
         return this.keyVersion;
     }
+/**
+ * vault base Url
+ */
     public String getVaultBaseUrl() {
         return this.vaultBaseUrl;
     }

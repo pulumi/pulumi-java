@@ -11,8 +11,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MetadataAuthorResponse {
+/**
+ * Email of author contact
+ */
     private final @Nullable String email;
+/**
+ * Link for author/vendor page
+ */
     private final @Nullable String link;
+/**
+ * Name of the author. Company or person.
+ */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"email","link","name"})
@@ -25,12 +34,21 @@ public final class MetadataAuthorResponse {
         this.name = name;
     }
 
+/**
+ * Email of author contact
+ */
     public Optional<String> getEmail() {
         return Optional.ofNullable(this.email);
     }
+/**
+ * Link for author/vendor page
+ */
     public Optional<String> getLink() {
         return Optional.ofNullable(this.link);
     }
+/**
+ * Name of the author. Company or person.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

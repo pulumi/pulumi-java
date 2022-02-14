@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Trigger that allows the referenced pipeline to depend on other pipeline runs based on runDimension Name/Value pairs. Upstream pipelines should declare the same runDimension Name and their runs should have the values for those runDimensions. The referenced pipeline run would be triggered if the values for the runDimension match for all upstream pipeline runs.
+ */
 public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ChainingTriggerResponse Empty = new ChainingTriggerResponse();
 
+    /**
+     * List of tags that can be used for describing the trigger.
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -25,6 +31,9 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * Upstream Pipelines.
+     */
     @InputImport(name="dependsOn", required=true)
     private final List<PipelineReferenceResponse> dependsOn;
 
@@ -32,6 +41,9 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
         return this.dependsOn;
     }
 
+    /**
+     * Trigger description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -39,6 +51,9 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Pipeline for which runs are created when all upstream pipelines complete successfully.
+     */
     @InputImport(name="pipeline", required=true)
     private final TriggerPipelineReferenceResponse pipeline;
 
@@ -46,6 +61,9 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
         return this.pipeline;
     }
 
+    /**
+     * Run Dimension property that needs to be emitted by upstream pipelines.
+     */
     @InputImport(name="runDimension", required=true)
     private final String runDimension;
 
@@ -53,6 +71,9 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
         return this.runDimension;
     }
 
+    /**
+     * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+     */
     @InputImport(name="runtimeState", required=true)
     private final String runtimeState;
 
@@ -60,6 +81,10 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
         return this.runtimeState;
     }
 
+    /**
+     * Trigger type.
+Expected value is 'ChainingTrigger'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

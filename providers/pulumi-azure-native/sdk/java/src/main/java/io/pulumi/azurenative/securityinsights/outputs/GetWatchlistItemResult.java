@@ -15,20 +15,65 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetWatchlistItemResult {
+/**
+ * The time the watchlist item was created
+ */
     private final @Nullable String created;
+/**
+ * Describes a user that created the watchlist item
+ */
     private final @Nullable WatchlistUserInfoResponse createdBy;
+/**
+ * key-value pairs for a watchlist item entity mapping
+ */
     private final @Nullable Object entityMapping;
+/**
+ * Etag of the azure resource
+ */
     private final @Nullable String etag;
+/**
+ * Azure resource Id
+ */
     private final String id;
+/**
+ * A flag that indicates if the watchlist item is deleted or not
+ */
     private final @Nullable Boolean isDeleted;
+/**
+ * key-value pairs for a watchlist item
+ */
     private final Object itemsKeyValue;
+/**
+ * Azure resource name
+ */
     private final String name;
+/**
+ * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+ */
     private final SystemDataResponse systemData;
+/**
+ * The tenantId to which the watchlist item belongs to
+ */
     private final @Nullable String tenantId;
+/**
+ * Azure resource type
+ */
     private final String type;
+/**
+ * The last time the watchlist item was updated
+ */
     private final @Nullable String updated;
+/**
+ * Describes a user that updated the watchlist item
+ */
     private final @Nullable WatchlistUserInfoResponse updatedBy;
+/**
+ * The id (a Guid) of the watchlist item
+ */
     private final @Nullable String watchlistItemId;
+/**
+ * The type of the watchlist item
+ */
     private final @Nullable String watchlistItemType;
 
     @OutputCustomType.Constructor({"created","createdBy","entityMapping","etag","id","isDeleted","itemsKeyValue","name","systemData","tenantId","type","updated","updatedBy","watchlistItemId","watchlistItemType"})
@@ -65,48 +110,93 @@ public final class GetWatchlistItemResult {
         this.watchlistItemType = watchlistItemType;
     }
 
+/**
+ * The time the watchlist item was created
+ */
     public Optional<String> getCreated() {
         return Optional.ofNullable(this.created);
     }
+/**
+ * Describes a user that created the watchlist item
+ */
     public Optional<WatchlistUserInfoResponse> getCreatedBy() {
         return Optional.ofNullable(this.createdBy);
     }
+/**
+ * key-value pairs for a watchlist item entity mapping
+ */
     public Optional<Object> getEntityMapping() {
         return Optional.ofNullable(this.entityMapping);
     }
+/**
+ * Etag of the azure resource
+ */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+/**
+ * Azure resource Id
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * A flag that indicates if the watchlist item is deleted or not
+ */
     public Optional<Boolean> getIsDeleted() {
         return Optional.ofNullable(this.isDeleted);
     }
+/**
+ * key-value pairs for a watchlist item
+ */
     public Object getItemsKeyValue() {
         return this.itemsKeyValue;
     }
+/**
+ * Azure resource name
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * The tenantId to which the watchlist item belongs to
+ */
     public Optional<String> getTenantId() {
         return Optional.ofNullable(this.tenantId);
     }
+/**
+ * Azure resource type
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * The last time the watchlist item was updated
+ */
     public Optional<String> getUpdated() {
         return Optional.ofNullable(this.updated);
     }
+/**
+ * Describes a user that updated the watchlist item
+ */
     public Optional<WatchlistUserInfoResponse> getUpdatedBy() {
         return Optional.ofNullable(this.updatedBy);
     }
+/**
+ * The id (a Guid) of the watchlist item
+ */
     public Optional<String> getWatchlistItemId() {
         return Optional.ofNullable(this.watchlistItemId);
     }
+/**
+ * The type of the watchlist item
+ */
     public Optional<String> getWatchlistItemType() {
         return Optional.ofNullable(this.watchlistItemType);
     }

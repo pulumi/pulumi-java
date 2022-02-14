@@ -8,10 +8,16 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * Options that affect all certificates issued by a CertificateAuthority.
+ */
 public final class IssuingOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IssuingOptionsResponse Empty = new IssuingOptionsResponse();
 
+    /**
+     * When true, includes a URL to the issuing CA certificate in the "authority information access" X.509 extension.
+     */
     @InputImport(name="includeCaCertUrl", required=true)
     private final Boolean includeCaCertUrl;
 
@@ -19,6 +25,9 @@ public final class IssuingOptionsResponse extends io.pulumi.resources.InvokeArgs
         return this.includeCaCertUrl;
     }
 
+    /**
+     * When true, includes a URL to the CRL corresponding to certificates issued from a CertificateAuthority. CRLs will expire 7 days from their creation. However, we will rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
+     */
     @InputImport(name="includeCrlAccessUrl", required=true)
     private final Boolean includeCrlAccessUrl;
 

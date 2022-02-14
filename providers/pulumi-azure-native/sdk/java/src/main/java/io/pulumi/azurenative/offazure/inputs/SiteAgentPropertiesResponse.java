@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Class for site agent properties.
+ */
 public final class SiteAgentPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SiteAgentPropertiesResponse Empty = new SiteAgentPropertiesResponse();
 
+    /**
+     * ID of the agent.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -21,6 +27,9 @@ public final class SiteAgentPropertiesResponse extends io.pulumi.resources.Invok
         return this.id;
     }
 
+    /**
+     * Key vault ARM Id.
+     */
     @InputImport(name="keyVaultId")
     private final @Nullable String keyVaultId;
 
@@ -28,6 +37,9 @@ public final class SiteAgentPropertiesResponse extends io.pulumi.resources.Invok
         return this.keyVaultId == null ? Optional.empty() : Optional.ofNullable(this.keyVaultId);
     }
 
+    /**
+     * Key vault URI.
+     */
     @InputImport(name="keyVaultUri")
     private final @Nullable String keyVaultUri;
 
@@ -35,6 +47,9 @@ public final class SiteAgentPropertiesResponse extends io.pulumi.resources.Invok
         return this.keyVaultUri == null ? Optional.empty() : Optional.ofNullable(this.keyVaultUri);
     }
 
+    /**
+     * Last heartbeat time of the agent in UTC.
+     */
     @InputImport(name="lastHeartBeatUtc", required=true)
     private final String lastHeartBeatUtc;
 
@@ -42,6 +57,9 @@ public final class SiteAgentPropertiesResponse extends io.pulumi.resources.Invok
         return this.lastHeartBeatUtc;
     }
 
+    /**
+     * Version of the agent.
+     */
     @InputImport(name="version", required=true)
     private final String version;
 

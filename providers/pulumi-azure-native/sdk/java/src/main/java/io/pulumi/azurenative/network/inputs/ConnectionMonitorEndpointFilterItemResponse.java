@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Describes the connection monitor endpoint filter item.
+ */
 public final class ConnectionMonitorEndpointFilterItemResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ConnectionMonitorEndpointFilterItemResponse Empty = new ConnectionMonitorEndpointFilterItemResponse();
 
+    /**
+     * The address of the filter item.
+     */
     @InputImport(name="address")
     private final @Nullable String address;
 
@@ -21,6 +27,9 @@ public final class ConnectionMonitorEndpointFilterItemResponse extends io.pulumi
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
     }
 
+    /**
+     * The type of item included in the filter. Currently only 'AgentAddress' is supported.
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

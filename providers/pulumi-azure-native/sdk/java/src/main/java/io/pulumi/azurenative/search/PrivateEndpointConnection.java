@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.search;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.search.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.search.outputs.PrivateEndpointConnectionPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,27 +14,164 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Describes an existing Private Endpoint connection to the Azure Cognitive Search service.
+API Version: 2020-08-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### PrivateEndpointConnectionUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateEndpointConnection = new AzureNative.Search.PrivateEndpointConnection("privateEndpointConnection", new AzureNative.Search.PrivateEndpointConnectionArgs
+        {
+            PrivateEndpointConnectionName = "testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546",
+            Properties = new AzureNative.Search.Inputs.PrivateEndpointConnectionPropertiesArgs
+            {
+                PrivateLinkServiceConnectionState = new AzureNative.Search.Inputs.PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs
+                {
+                    Description = "Rejected for some reason",
+                    Status = "Rejected",
+                },
+            },
+            ResourceGroupName = "rg1",
+            SearchServiceName = "mysearchservice",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	search "github.com/pulumi/pulumi-azure-native/sdk/go/azure/search"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := search.NewPrivateEndpointConnection(ctx, "privateEndpointConnection", &search.PrivateEndpointConnectionArgs{
+			PrivateEndpointConnectionName: pulumi.String("testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546"),
+			Properties: &search.PrivateEndpointConnectionPropertiesArgs{
+				PrivateLinkServiceConnectionState: &search.PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs{
+					Description: pulumi.String("Rejected for some reason"),
+					Status:      "Rejected",
+				},
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			SearchServiceName: pulumi.String("mysearchservice"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const privateEndpointConnection = new azure_native.search.PrivateEndpointConnection("privateEndpointConnection", {
+    privateEndpointConnectionName: "testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546",
+    properties: {
+        privateLinkServiceConnectionState: {
+            description: "Rejected for some reason",
+            status: "Rejected",
+        },
+    },
+    resourceGroupName: "rg1",
+    searchServiceName: "mysearchservice",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+private_endpoint_connection = azure_native.search.PrivateEndpointConnection("privateEndpointConnection",
+    private_endpoint_connection_name="testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546",
+    properties=azure_native.search.PrivateEndpointConnectionPropertiesArgs(
+        private_link_service_connection_state=azure_native.search.PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs(
+            description="Rejected for some reason",
+            status="Rejected",
+        ),
+    ),
+    resource_group_name="rg1",
+    search_service_name="mysearchservice")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:search:PrivateEndpointConnection testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Search/searchServices/mysearchservice/privateEndpointConnections/testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546 
+```
+
+ */
 @ResourceType(type="azure-native:search:PrivateEndpointConnection")
 public class PrivateEndpointConnection extends io.pulumi.resources.CustomResource {
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Describes the properties of an existing Private Endpoint connection to the Azure Cognitive Search service.
+     */
     @OutputExport(name="properties", type=PrivateEndpointConnectionPropertiesResponse.class, parameters={})
     private Output<PrivateEndpointConnectionPropertiesResponse> properties;
 
+    /**
+     * @return Describes the properties of an existing Private Endpoint connection to the Azure Cognitive Search service.
+     */
     public Output<PrivateEndpointConnectionPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public PrivateEndpointConnection(String name, PrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:search:PrivateEndpointConnection", name, args == null ? PrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -58,6 +194,14 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static PrivateEndpointConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateEndpointConnection(name, id, options);
     }

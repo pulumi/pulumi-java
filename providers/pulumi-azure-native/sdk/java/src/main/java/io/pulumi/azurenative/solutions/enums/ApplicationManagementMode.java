@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The managed application management mode.
+ */
     @EnumType
     public enum ApplicationManagementMode {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         Unmanaged("Unmanaged"),
+/**
+ * 
+ */
         Managed("Managed");
 
         private final String value;

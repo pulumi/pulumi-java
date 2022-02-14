@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class HttpResponse {
+/**
+ * When set to true, URL path parameters will be fully URI-decoded except in cases of single segment matches in reserved expansion, where "%2F" will be left encoded. The default behavior is to not decode RFC 6570 reserved characters in multi segment matches.
+ */
     private final Boolean fullyDecodeReservedExpansion;
+/**
+ * A list of HTTP configuration rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
+ */
     private final List<HttpRuleResponse> rules;
 
     @OutputCustomType.Constructor({"fullyDecodeReservedExpansion","rules"})
@@ -22,9 +28,15 @@ public final class HttpResponse {
         this.rules = Objects.requireNonNull(rules);
     }
 
+/**
+ * When set to true, URL path parameters will be fully URI-decoded except in cases of single segment matches in reserved expansion, where "%2F" will be left encoded. The default behavior is to not decode RFC 6570 reserved characters in multi segment matches.
+ */
     public Boolean getFullyDecodeReservedExpansion() {
         return this.fullyDecodeReservedExpansion;
     }
+/**
+ * A list of HTTP configuration rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
+ */
     public List<HttpRuleResponse> getRules() {
         return this.rules;
     }

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information about a Linux OS.
+ */
 public final class LinuxOsInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LinuxOsInfoResponse Empty = new LinuxOsInfoResponse();
 
+    /**
+     * The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
+     */
     @InputImport(name="linuxOsState")
     private final @Nullable String linuxOsState;
 

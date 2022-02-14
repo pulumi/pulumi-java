@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Managed service identity (either system assigned, or none)
+ */
 public final class SystemAssignedServiceIdentityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SystemAssignedServiceIdentityResponse Empty = new SystemAssignedServiceIdentityResponse();
 
+    /**
+     * The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -19,6 +25,9 @@ public final class SystemAssignedServiceIdentityResponse extends io.pulumi.resou
         return this.principalId;
     }
 
+    /**
+     * The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+     */
     @InputImport(name="tenantId", required=true)
     private final String tenantId;
 
@@ -26,6 +35,9 @@ public final class SystemAssignedServiceIdentityResponse extends io.pulumi.resou
         return this.tenantId;
     }
 
+    /**
+     * Type of managed service identity (either system assigned, or none).
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

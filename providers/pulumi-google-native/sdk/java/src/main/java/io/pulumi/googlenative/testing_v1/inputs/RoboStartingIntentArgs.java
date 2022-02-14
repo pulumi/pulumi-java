@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Message for specifying the start activities to crawl.
+ */
 public final class RoboStartingIntentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RoboStartingIntentArgs Empty = new RoboStartingIntentArgs();
 
+    /**
+     * An intent that starts the main launcher activity.
+     */
     @InputImport(name="launcherActivity")
     private final @Nullable Input<LauncherActivityIntentArgs> launcherActivity;
 
@@ -23,6 +29,9 @@ public final class RoboStartingIntentArgs extends io.pulumi.resources.ResourceAr
         return this.launcherActivity == null ? Input.empty() : this.launcherActivity;
     }
 
+    /**
+     * An intent that starts an activity with specific details.
+     */
     @InputImport(name="startActivity")
     private final @Nullable Input<StartActivityIntentArgs> startActivity;
 
@@ -30,6 +39,9 @@ public final class RoboStartingIntentArgs extends io.pulumi.resources.ResourceAr
         return this.startActivity == null ? Input.empty() : this.startActivity;
     }
 
+    /**
+     * Timeout in seconds for each intent.
+     */
     @InputImport(name="timeout")
     private final @Nullable Input<String> timeout;
 

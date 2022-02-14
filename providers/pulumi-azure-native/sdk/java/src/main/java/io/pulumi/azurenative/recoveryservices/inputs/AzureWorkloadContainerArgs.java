@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Container for the workloads running inside Azure Compute or Classic Compute.
+ */
 public final class AzureWorkloadContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureWorkloadContainerArgs Empty = new AzureWorkloadContainerArgs();
 
+    /**
+     * Type of backup management for the container.
+     */
     @InputImport(name="backupManagementType")
     private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
@@ -26,6 +32,13 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
     }
 
+    /**
+     * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+Backup is VMAppContainer
+Expected value is 'AzureWorkloadContainer'.
+     */
     @InputImport(name="containerType", required=true)
     private final Input<String> containerType;
 
@@ -33,6 +46,9 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
         return this.containerType;
     }
 
+    /**
+     * Additional details of a workload container.
+     */
     @InputImport(name="extendedInfo")
     private final @Nullable Input<AzureWorkloadContainerExtendedInfoArgs> extendedInfo;
 
@@ -40,6 +56,9 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
         return this.extendedInfo == null ? Input.empty() : this.extendedInfo;
     }
 
+    /**
+     * Friendly name of the container.
+     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -47,6 +66,9 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
+    /**
+     * Status of health of the container.
+     */
     @InputImport(name="healthStatus")
     private final @Nullable Input<String> healthStatus;
 
@@ -54,6 +76,9 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
         return this.healthStatus == null ? Input.empty() : this.healthStatus;
     }
 
+    /**
+     * Time stamp when this container was updated.
+     */
     @InputImport(name="lastUpdatedTime")
     private final @Nullable Input<String> lastUpdatedTime;
 
@@ -61,6 +86,9 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
         return this.lastUpdatedTime == null ? Input.empty() : this.lastUpdatedTime;
     }
 
+    /**
+     * Re-Do Operation
+     */
     @InputImport(name="operationType")
     private final @Nullable Input<Either<String,OperationType>> operationType;
 
@@ -68,6 +96,9 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
         return this.operationType == null ? Input.empty() : this.operationType;
     }
 
+    /**
+     * Status of registration of the container with the Recovery Services Vault.
+     */
     @InputImport(name="registrationStatus")
     private final @Nullable Input<String> registrationStatus;
 
@@ -75,6 +106,9 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
         return this.registrationStatus == null ? Input.empty() : this.registrationStatus;
     }
 
+    /**
+     * ARM ID of the virtual machine represented by this Azure Workload Container
+     */
     @InputImport(name="sourceResourceId")
     private final @Nullable Input<String> sourceResourceId;
 
@@ -82,6 +116,9 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
         return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
     }
 
+    /**
+     * Workload type for which registration was sent.
+     */
     @InputImport(name="workloadType")
     private final @Nullable Input<Either<String,WorkloadType>> workloadType;
 

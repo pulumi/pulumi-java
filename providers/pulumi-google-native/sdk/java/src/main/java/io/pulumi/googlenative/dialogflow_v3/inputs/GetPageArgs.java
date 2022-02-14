@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetPageArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPageArgs Empty = new GetPageArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="agentId", required=true)
     private final String agentId;
 
@@ -21,6 +27,9 @@ public final class GetPageArgs extends io.pulumi.resources.InvokeArgs {
         return this.agentId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="flowId", required=true)
     private final String flowId;
 
@@ -28,6 +37,9 @@ public final class GetPageArgs extends io.pulumi.resources.InvokeArgs {
         return this.flowId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="languageCode")
     private final @Nullable String languageCode;
 
@@ -35,6 +47,9 @@ public final class GetPageArgs extends io.pulumi.resources.InvokeArgs {
         return this.languageCode == null ? Optional.empty() : Optional.ofNullable(this.languageCode);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -42,6 +57,9 @@ public final class GetPageArgs extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="pageId", required=true)
     private final String pageId;
 
@@ -49,6 +67,9 @@ public final class GetPageArgs extends io.pulumi.resources.InvokeArgs {
         return this.pageId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

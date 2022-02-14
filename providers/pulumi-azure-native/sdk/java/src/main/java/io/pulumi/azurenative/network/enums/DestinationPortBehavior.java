@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Destination port behavior.
+ */
     @EnumType
     public enum DestinationPortBehavior {
+/**
+ * 
+ */
         None("None"),
+/**
+ * 
+ */
         ListenIfAvailable("ListenIfAvailable");
 
         private final String value;

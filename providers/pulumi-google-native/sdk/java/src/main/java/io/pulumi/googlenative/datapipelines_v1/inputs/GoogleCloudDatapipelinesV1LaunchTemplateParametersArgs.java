@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Parameters to provide to the template being launched.
+ */
 public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs Empty = new GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs();
 
+    /**
+     * The runtime environment for the job.
+     */
     @InputImport(name="environment")
     private final @Nullable Input<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> environment;
 
@@ -24,6 +30,9 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
         return this.environment == null ? Input.empty() : this.environment;
     }
 
+    /**
+     * The job name to use for the created job.
+     */
     @InputImport(name="jobName", required=true)
     private final Input<String> jobName;
 
@@ -31,6 +40,9 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
         return this.jobName;
     }
 
+    /**
+     * The runtime parameters to pass to the job.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,String>> parameters;
 
@@ -38,6 +50,9 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job. Only applicable when updating a pipeline.
+     */
     @InputImport(name="transformNameMapping")
     private final @Nullable Input<Map<String,String>> transformNameMapping;
 
@@ -45,6 +60,9 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
         return this.transformNameMapping == null ? Input.empty() : this.transformNameMapping;
     }
 
+    /**
+     * If set, replace the existing pipeline with the name specified by jobName with this pipeline, preserving state.
+     */
     @InputImport(name="update")
     private final @Nullable Input<Boolean> update;
 

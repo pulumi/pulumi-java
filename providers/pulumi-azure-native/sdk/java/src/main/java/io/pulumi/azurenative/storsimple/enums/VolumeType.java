@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of the volume.
+ */
     @EnumType
     public enum VolumeType {
+/**
+ * 
+ */
         Tiered("Tiered"),
+/**
+ * 
+ */
         Archival("Archival"),
+/**
+ * 
+ */
         LocallyPinned("LocallyPinned");
 
         private final String value;

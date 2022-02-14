@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class DynamicGroupStatusResponse {
+/**
+ * Status of the dynamic group.
+ */
     private final String status;
+/**
+ * The latest time at which the dynamic group is guaranteed to be in the given status. If status is `UP_TO_DATE`, the latest time at which the dynamic group was confirmed to be up-to-date. If status is `UPDATING_MEMBERSHIPS`, the time at which dynamic group was created.
+ */
     private final String statusTime;
 
     @OutputCustomType.Constructor({"status","statusTime"})
@@ -20,9 +26,15 @@ public final class DynamicGroupStatusResponse {
         this.statusTime = Objects.requireNonNull(statusTime);
     }
 
+/**
+ * Status of the dynamic group.
+ */
     public String getStatus() {
         return this.status;
     }
+/**
+ * The latest time at which the dynamic group is guaranteed to be in the given status. If status is `UP_TO_DATE`, the latest time at which the dynamic group was confirmed to be up-to-date. If status is `UPDATING_MEMBERSHIPS`, the time at which dynamic group was created.
+ */
     public String getStatusTime() {
         return this.statusTime;
     }

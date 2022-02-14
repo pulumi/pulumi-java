@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The Google Cloud Storage location for the input content.
+ */
 public final class GcsSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GcsSourceArgs Empty = new GcsSourceArgs();
 
+    /**
+     * Source data URI. For example, `gs://my_bucket/my_object`.
+     */
     @InputImport(name="inputUri", required=true)
     private final Input<String> inputUri;
 

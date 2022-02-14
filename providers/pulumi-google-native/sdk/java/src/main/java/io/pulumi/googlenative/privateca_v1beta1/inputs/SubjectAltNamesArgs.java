@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SubjectAltNames corresponds to a more modern way of listing what the asserted identity is in a certificate (i.e., compared to the "common name" in the distinguished name).
+ */
 public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubjectAltNamesArgs Empty = new SubjectAltNamesArgs();
 
+    /**
+     * Contains additional subject alternative name values.
+     */
     @InputImport(name="customSans")
     private final @Nullable Input<List<X509ExtensionArgs>> customSans;
 
@@ -23,6 +29,9 @@ public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs 
         return this.customSans == null ? Input.empty() : this.customSans;
     }
 
+    /**
+     * Contains only valid, fully-qualified host names.
+     */
     @InputImport(name="dnsNames")
     private final @Nullable Input<List<String>> dnsNames;
 
@@ -30,6 +39,9 @@ public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs 
         return this.dnsNames == null ? Input.empty() : this.dnsNames;
     }
 
+    /**
+     * Contains only valid RFC 2822 E-mail addresses.
+     */
     @InputImport(name="emailAddresses")
     private final @Nullable Input<List<String>> emailAddresses;
 
@@ -37,6 +49,9 @@ public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs 
         return this.emailAddresses == null ? Input.empty() : this.emailAddresses;
     }
 
+    /**
+     * Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
+     */
     @InputImport(name="ipAddresses")
     private final @Nullable Input<List<String>> ipAddresses;
 
@@ -44,6 +59,9 @@ public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs 
         return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
     }
 
+    /**
+     * Contains only valid RFC 3986 URIs.
+     */
     @InputImport(name="uris")
     private final @Nullable Input<List<String>> uris;
 

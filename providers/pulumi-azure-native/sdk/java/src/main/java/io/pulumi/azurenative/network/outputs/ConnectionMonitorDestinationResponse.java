@@ -12,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ConnectionMonitorDestinationResponse {
+/**
+ * Address of the connection monitor destination (IP or domain name).
+ */
     private final @Nullable String address;
+/**
+ * The destination port used by connection monitor.
+ */
     private final @Nullable Integer port;
+/**
+ * The ID of the resource used as the destination by connection monitor.
+ */
     private final @Nullable String resourceId;
 
     @OutputCustomType.Constructor({"address","port","resourceId"})
@@ -26,12 +35,21 @@ public final class ConnectionMonitorDestinationResponse {
         this.resourceId = resourceId;
     }
 
+/**
+ * Address of the connection monitor destination (IP or domain name).
+ */
     public Optional<String> getAddress() {
         return Optional.ofNullable(this.address);
     }
+/**
+ * The destination port used by connection monitor.
+ */
     public Optional<Integer> getPort() {
         return Optional.ofNullable(this.port);
     }
+/**
+ * The ID of the resource used as the destination by connection monitor.
+ */
     public Optional<String> getResourceId() {
         return Optional.ofNullable(this.resourceId);
     }

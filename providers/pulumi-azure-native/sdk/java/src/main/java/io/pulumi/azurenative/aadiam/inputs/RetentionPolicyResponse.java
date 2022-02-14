@@ -9,10 +9,16 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Specifies the retention policy for the log.
+ */
 public final class RetentionPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RetentionPolicyResponse Empty = new RetentionPolicyResponse();
 
+    /**
+     * The number of days for the retention in days. A value of 0 will retain the events indefinitely.
+     */
     @InputImport(name="days", required=true)
     private final Integer days;
 
@@ -20,6 +26,9 @@ public final class RetentionPolicyResponse extends io.pulumi.resources.InvokeArg
         return this.days;
     }
 
+    /**
+     * A value indicating whether the retention policy is enabled.
+     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 

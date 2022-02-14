@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Message representing a set of files in Cloud Storage.
+ */
 public final class GooglePrivacyDlpV2CloudStorageFileSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GooglePrivacyDlpV2CloudStorageFileSetArgs Empty = new GooglePrivacyDlpV2CloudStorageFileSetArgs();
 
+    /**
+     * The url, in the format `gs:///`. Trailing wildcard in the path is allowed.
+     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * VPN client root certificate of P2SVpnServerConfiguration.
+ */
 public final class P2SVpnServerConfigVpnClientRootCertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final P2SVpnServerConfigVpnClientRootCertificateArgs Empty = new P2SVpnServerConfigVpnClientRootCertificateArgs();
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @InputImport(name="etag")
     private final @Nullable Input<String> etag;
 
@@ -21,6 +27,9 @@ public final class P2SVpnServerConfigVpnClientRootCertificateArgs extends io.pul
         return this.etag == null ? Input.empty() : this.etag;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -28,6 +37,9 @@ public final class P2SVpnServerConfigVpnClientRootCertificateArgs extends io.pul
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -35,6 +47,9 @@ public final class P2SVpnServerConfigVpnClientRootCertificateArgs extends io.pul
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The certificate public data.
+     */
     @InputImport(name="publicCertData", required=true)
     private final Input<String> publicCertData;
 

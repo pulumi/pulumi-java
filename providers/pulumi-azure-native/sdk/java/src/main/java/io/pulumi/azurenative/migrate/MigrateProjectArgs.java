@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MigrateProjectArgs Empty = new MigrateProjectArgs();
 
+    /**
+     * Gets or sets the eTag for concurrency control.
+     */
     @InputImport(name="eTag")
     private final @Nullable Input<String> eTag;
 
@@ -23,6 +29,9 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.eTag == null ? Input.empty() : this.eTag;
     }
 
+    /**
+     * Gets or sets the Azure location in which migrate project is created.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -30,6 +39,9 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of the Azure Migrate project.
+     */
     @InputImport(name="migrateProjectName")
     private final @Nullable Input<String> migrateProjectName;
 
@@ -37,6 +49,9 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.migrateProjectName == null ? Input.empty() : this.migrateProjectName;
     }
 
+    /**
+     * Gets or sets the nested properties.
+     */
     @InputImport(name="properties")
     private final @Nullable Input<MigrateProjectPropertiesArgs> properties;
 
@@ -44,6 +59,9 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * Name of the Azure Resource Group that migrate project is part of.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -51,6 +69,9 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Gets or sets the tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<MigrateProjectTagsArgs> tags;
 

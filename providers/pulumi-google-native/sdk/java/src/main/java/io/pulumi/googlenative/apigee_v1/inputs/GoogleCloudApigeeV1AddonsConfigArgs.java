@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Add-on configurations for the Apigee organization.
+ */
 public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudApigeeV1AddonsConfigArgs Empty = new GoogleCloudApigeeV1AddonsConfigArgs();
 
+    /**
+     * Configuration for the Advanced API Ops add-on.
+     */
     @InputImport(name="advancedApiOpsConfig")
     private final @Nullable Input<GoogleCloudApigeeV1AdvancedApiOpsConfigArgs> advancedApiOpsConfig;
 
@@ -24,6 +30,9 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
         return this.advancedApiOpsConfig == null ? Input.empty() : this.advancedApiOpsConfig;
     }
 
+    /**
+     * Configuration for the Connectors Platform add-on.
+     */
     @InputImport(name="connectorsPlatformConfig")
     private final @Nullable Input<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs> connectorsPlatformConfig;
 
@@ -31,6 +40,9 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
         return this.connectorsPlatformConfig == null ? Input.empty() : this.connectorsPlatformConfig;
     }
 
+    /**
+     * Configuration for the Integration add-on.
+     */
     @InputImport(name="integrationConfig")
     private final @Nullable Input<GoogleCloudApigeeV1IntegrationConfigArgs> integrationConfig;
 
@@ -38,6 +50,9 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
         return this.integrationConfig == null ? Input.empty() : this.integrationConfig;
     }
 
+    /**
+     * Configuration for the Monetization add-on.
+     */
     @InputImport(name="monetizationConfig")
     private final @Nullable Input<GoogleCloudApigeeV1MonetizationConfigArgs> monetizationConfig;
 

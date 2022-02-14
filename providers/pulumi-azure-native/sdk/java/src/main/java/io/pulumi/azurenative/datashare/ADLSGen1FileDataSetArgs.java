@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ADLSGen1FileDataSetArgs Empty = new ADLSGen1FileDataSetArgs();
 
+    /**
+     * The ADLS account name.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -21,6 +27,9 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
         return this.accountName;
     }
 
+    /**
+     * The name of the dataSet.
+     */
     @InputImport(name="dataSetName")
     private final @Nullable Input<String> dataSetName;
 
@@ -28,6 +37,9 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
         return this.dataSetName == null ? Input.empty() : this.dataSetName;
     }
 
+    /**
+     * The file name in the ADLS account.
+     */
     @InputImport(name="fileName", required=true)
     private final Input<String> fileName;
 
@@ -35,6 +47,9 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
         return this.fileName;
     }
 
+    /**
+     * The folder path within the ADLS account.
+     */
     @InputImport(name="folderPath", required=true)
     private final Input<String> folderPath;
 
@@ -42,6 +57,10 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
         return this.folderPath;
     }
 
+    /**
+     * Kind of data set.
+Expected value is 'AdlsGen1File'.
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -49,6 +68,9 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
         return this.kind;
     }
 
+    /**
+     * Resource group of ADLS account.
+     */
     @InputImport(name="resourceGroup", required=true)
     private final Input<String> resourceGroup;
 
@@ -56,6 +78,9 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroup;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -63,6 +88,9 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the share to add the data set to.
+     */
     @InputImport(name="shareName", required=true)
     private final Input<String> shareName;
 
@@ -70,6 +98,9 @@ public final class ADLSGen1FileDataSetArgs extends io.pulumi.resources.ResourceA
         return this.shareName;
     }
 
+    /**
+     * Subscription id of ADLS account.
+     */
     @InputImport(name="subscriptionId", required=true)
     private final Input<String> subscriptionId;
 

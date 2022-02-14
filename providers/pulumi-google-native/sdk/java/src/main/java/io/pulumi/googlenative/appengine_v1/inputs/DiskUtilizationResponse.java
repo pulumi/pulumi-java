@@ -8,10 +8,16 @@ import java.lang.Integer;
 import java.util.Objects;
 
 
+/**
+ * Target scaling by disk usage. Only applicable in the App Engine flexible environment.
+ */
 public final class DiskUtilizationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DiskUtilizationResponse Empty = new DiskUtilizationResponse();
 
+    /**
+     * Target bytes read per second.
+     */
     @InputImport(name="targetReadBytesPerSecond", required=true)
     private final Integer targetReadBytesPerSecond;
 
@@ -19,6 +25,9 @@ public final class DiskUtilizationResponse extends io.pulumi.resources.InvokeArg
         return this.targetReadBytesPerSecond;
     }
 
+    /**
+     * Target ops read per seconds.
+     */
     @InputImport(name="targetReadOpsPerSecond", required=true)
     private final Integer targetReadOpsPerSecond;
 
@@ -26,6 +35,9 @@ public final class DiskUtilizationResponse extends io.pulumi.resources.InvokeArg
         return this.targetReadOpsPerSecond;
     }
 
+    /**
+     * Target bytes written per second.
+     */
     @InputImport(name="targetWriteBytesPerSecond", required=true)
     private final Integer targetWriteBytesPerSecond;
 
@@ -33,6 +45,9 @@ public final class DiskUtilizationResponse extends io.pulumi.resources.InvokeArg
         return this.targetWriteBytesPerSecond;
     }
 
+    /**
+     * Target ops written per second.
+     */
     @InputImport(name="targetWriteOpsPerSecond", required=true)
     private final Integer targetWriteOpsPerSecond;
 

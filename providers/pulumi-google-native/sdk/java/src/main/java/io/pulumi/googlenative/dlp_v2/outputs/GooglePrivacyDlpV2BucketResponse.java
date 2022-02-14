@@ -9,8 +9,17 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2BucketResponse {
+/**
+ * Upper bound of the range, exclusive; type must match min.
+ */
     private final GooglePrivacyDlpV2ValueResponse max;
+/**
+ * Lower bound of the range, inclusive. Type should be the same as max if used.
+ */
     private final GooglePrivacyDlpV2ValueResponse min;
+/**
+ * Replacement value for this bucket.
+ */
     private final GooglePrivacyDlpV2ValueResponse replacementValue;
 
     @OutputCustomType.Constructor({"max","min","replacementValue"})
@@ -23,12 +32,21 @@ public final class GooglePrivacyDlpV2BucketResponse {
         this.replacementValue = Objects.requireNonNull(replacementValue);
     }
 
+/**
+ * Upper bound of the range, exclusive; type must match min.
+ */
     public GooglePrivacyDlpV2ValueResponse getMax() {
         return this.max;
     }
+/**
+ * Lower bound of the range, inclusive. Type should be the same as max if used.
+ */
     public GooglePrivacyDlpV2ValueResponse getMin() {
         return this.min;
     }
+/**
+ * Replacement value for this bucket.
+ */
     public GooglePrivacyDlpV2ValueResponse getReplacementValue() {
         return this.replacementValue;
     }

@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class X12MessageIdentifierResponse {
+/**
+ * The message id.
+ */
     private final String messageId;
 
     @OutputCustomType.Constructor({"messageId"})
@@ -16,6 +19,9 @@ public final class X12MessageIdentifierResponse {
         this.messageId = Objects.requireNonNull(messageId);
     }
 
+/**
+ * The message id.
+ */
     public String getMessageId() {
         return this.messageId;
     }

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.VpnGatewayArgs;
 import io.pulumi.azurenative.network.outputs.BgpSettingsResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VpnConnectionResponse;
@@ -22,87 +21,516 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * VpnGateway Resource.
+API Version: 2020-11-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### VpnGatewayPut
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vpnGateway = new AzureNative.Network.VpnGateway("vpnGateway", new AzureNative.Network.VpnGatewayArgs
+        {
+            BgpSettings = new AzureNative.Network.Inputs.BgpSettingsArgs
+            {
+                Asn = 65515,
+                BgpPeeringAddresses = 
+                {
+                    new AzureNative.Network.Inputs.IPConfigurationBgpPeeringAddressArgs
+                    {
+                        CustomBgpIpAddresses = 
+                        {
+                            "169.254.21.5",
+                        },
+                        IpconfigurationId = "Instance0",
+                    },
+                    new AzureNative.Network.Inputs.IPConfigurationBgpPeeringAddressArgs
+                    {
+                        CustomBgpIpAddresses = 
+                        {
+                            "169.254.21.10",
+                        },
+                        IpconfigurationId = "Instance1",
+                    },
+                },
+                PeerWeight = 0,
+            },
+            Connections = 
+            {
+                new AzureNative.Network.Inputs.VpnConnectionArgs
+                {
+                    Name = "vpnConnection1",
+                    RemoteVpnSite = new AzureNative.Network.Inputs.SubResourceArgs
+                    {
+                        Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1",
+                    },
+                    VpnLinkConnections = 
+                    {
+                        new AzureNative.Network.Inputs.VpnSiteLinkConnectionArgs
+                        {
+                            ConnectionBandwidth = 200,
+                            EgressNatRules = 
+                            {
+                                new AzureNative.Network.Inputs.SubResourceArgs
+                                {
+                                    Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1/natRules/nat03",
+                                },
+                            },
+                            Name = "Connection-Link1",
+                            SharedKey = "key",
+                            VpnConnectionProtocolType = "IKEv2",
+                            VpnSiteLink = new AzureNative.Network.Inputs.SubResourceArgs
+                            {
+                                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1/vpnSiteLinks/siteLink1",
+                            },
+                        },
+                    },
+                },
+            },
+            GatewayName = "gateway1",
+            IsRoutingPreferenceInternet = false,
+            Location = "westcentralus",
+            NatRules = 
+            {
+                new AzureNative.Network.Inputs.VpnGatewayNatRuleArgs
+                {
+                    ExternalMappings = 
+                    {
+                        new AzureNative.Network.Inputs.VpnNatRuleMappingArgs
+                        {
+                            AddressSpace = "192.168.0.0/26",
+                        },
+                    },
+                    InternalMappings = 
+                    {
+                        new AzureNative.Network.Inputs.VpnNatRuleMappingArgs
+                        {
+                            AddressSpace = "0.0.0.0/26",
+                        },
+                    },
+                    IpConfigurationId = "",
+                    Mode = "EgressSnat",
+                    Name = "nat03",
+                    Type = "Static",
+                },
+            },
+            ResourceGroupName = "rg1",
+            Tags = 
+            {
+                { "key1", "value1" },
+            },
+            VirtualHub = new AzureNative.Network.Inputs.SubResourceArgs
+            {
+                Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewVpnGateway(ctx, "vpnGateway", &network.VpnGatewayArgs{
+			BgpSettings: &network.BgpSettingsArgs{
+				Asn: pulumi.Float64(65515),
+				BgpPeeringAddresses: network.IPConfigurationBgpPeeringAddressArray{
+					&network.IPConfigurationBgpPeeringAddressArgs{
+						CustomBgpIpAddresses: pulumi.StringArray{
+							pulumi.String("169.254.21.5"),
+						},
+						IpconfigurationId: pulumi.String("Instance0"),
+					},
+					&network.IPConfigurationBgpPeeringAddressArgs{
+						CustomBgpIpAddresses: pulumi.StringArray{
+							pulumi.String("169.254.21.10"),
+						},
+						IpconfigurationId: pulumi.String("Instance1"),
+					},
+				},
+				PeerWeight: pulumi.Int(0),
+			},
+			Connections: []network.VpnConnectionArgs{
+				&network.VpnConnectionArgs{
+					Name: pulumi.String("vpnConnection1"),
+					RemoteVpnSite: &network.SubResourceArgs{
+						Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1"),
+					},
+					VpnLinkConnections: network.VpnSiteLinkConnectionArray{
+						&network.VpnSiteLinkConnectionArgs{
+							ConnectionBandwidth: pulumi.Int(200),
+							EgressNatRules: network.SubResourceArray{
+								&network.SubResourceArgs{
+									Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1/natRules/nat03"),
+								},
+							},
+							Name:                      pulumi.String("Connection-Link1"),
+							SharedKey:                 pulumi.String("key"),
+							VpnConnectionProtocolType: pulumi.String("IKEv2"),
+							VpnSiteLink: &network.SubResourceArgs{
+								Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1/vpnSiteLinks/siteLink1"),
+							},
+						},
+					},
+				},
+			},
+			GatewayName:                 pulumi.String("gateway1"),
+			IsRoutingPreferenceInternet: pulumi.Bool(false),
+			Location:                    pulumi.String("westcentralus"),
+			NatRules: []network.VpnGatewayNatRuleArgs{
+				&network.VpnGatewayNatRuleArgs{
+					ExternalMappings: network.VpnNatRuleMappingArray{
+						&network.VpnNatRuleMappingArgs{
+							AddressSpace: pulumi.String("192.168.0.0/26"),
+						},
+					},
+					InternalMappings: network.VpnNatRuleMappingArray{
+						&network.VpnNatRuleMappingArgs{
+							AddressSpace: pulumi.String("0.0.0.0/26"),
+						},
+					},
+					IpConfigurationId: pulumi.String(""),
+					Mode:              pulumi.String("EgressSnat"),
+					Name:              pulumi.String("nat03"),
+					Type:              pulumi.String("Static"),
+				},
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			Tags: pulumi.StringMap{
+				"key1": pulumi.String("value1"),
+			},
+			VirtualHub: &network.SubResourceArgs{
+				Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const vpnGateway = new azure_native.network.VpnGateway("vpnGateway", {
+    bgpSettings: {
+        asn: 65515,
+        bgpPeeringAddresses: [
+            {
+                customBgpIpAddresses: ["169.254.21.5"],
+                ipconfigurationId: "Instance0",
+            },
+            {
+                customBgpIpAddresses: ["169.254.21.10"],
+                ipconfigurationId: "Instance1",
+            },
+        ],
+        peerWeight: 0,
+    },
+    connections: [{
+        name: "vpnConnection1",
+        remoteVpnSite: {
+            id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1",
+        },
+        vpnLinkConnections: [{
+            connectionBandwidth: 200,
+            egressNatRules: [{
+                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1/natRules/nat03",
+            }],
+            name: "Connection-Link1",
+            sharedKey: "key",
+            vpnConnectionProtocolType: "IKEv2",
+            vpnSiteLink: {
+                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1/vpnSiteLinks/siteLink1",
+            },
+        }],
+    }],
+    gatewayName: "gateway1",
+    isRoutingPreferenceInternet: false,
+    location: "westcentralus",
+    natRules: [{
+        externalMappings: [{
+            addressSpace: "192.168.0.0/26",
+        }],
+        internalMappings: [{
+            addressSpace: "0.0.0.0/26",
+        }],
+        ipConfigurationId: "",
+        mode: "EgressSnat",
+        name: "nat03",
+        type: "Static",
+    }],
+    resourceGroupName: "rg1",
+    tags: {
+        key1: "value1",
+    },
+    virtualHub: {
+        id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+vpn_gateway = azure_native.network.VpnGateway("vpnGateway",
+    bgp_settings=azure_native.network.BgpSettingsArgs(
+        asn=65515,
+        bgp_peering_addresses=[
+            azure_native.network.IPConfigurationBgpPeeringAddressArgs(
+                custom_bgp_ip_addresses=["169.254.21.5"],
+                ipconfiguration_id="Instance0",
+            ),
+            azure_native.network.IPConfigurationBgpPeeringAddressArgs(
+                custom_bgp_ip_addresses=["169.254.21.10"],
+                ipconfiguration_id="Instance1",
+            ),
+        ],
+        peer_weight=0,
+    ),
+    connections=[azure_native.network.VpnConnectionArgs(
+        name="vpnConnection1",
+        remote_vpn_site=azure_native.network.SubResourceArgs(
+            id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1",
+        ),
+        vpn_link_connections=[azure_native.network.VpnSiteLinkConnectionArgs(
+            connection_bandwidth=200,
+            egress_nat_rules=[azure_native.network.SubResourceArgs(
+                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1/natRules/nat03",
+            )],
+            name="Connection-Link1",
+            shared_key="key",
+            vpn_connection_protocol_type="IKEv2",
+            vpn_site_link=azure_native.network.SubResourceArgs(
+                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1/vpnSiteLinks/siteLink1",
+            ),
+        )],
+    )],
+    gateway_name="gateway1",
+    is_routing_preference_internet=False,
+    location="westcentralus",
+    nat_rules=[azure_native.network.VpnGatewayNatRuleArgs(
+        external_mappings=[azure_native.network.VpnNatRuleMappingArgs(
+            address_space="192.168.0.0/26",
+        )],
+        internal_mappings=[azure_native.network.VpnNatRuleMappingArgs(
+            address_space="0.0.0.0/26",
+        )],
+        ip_configuration_id="",
+        mode="EgressSnat",
+        name="nat03",
+        type="Static",
+    )],
+    resource_group_name="rg1",
+    tags={
+        "key1": "value1",
+    },
+    virtual_hub=azure_native.network.SubResourceArgs(
+        id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1",
+    ))
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:VpnGateway gateway1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1 
+```
+
+ */
 @ResourceType(type="azure-native:network:VpnGateway")
 public class VpnGateway extends io.pulumi.resources.CustomResource {
+    /**
+     * Local network gateway's BGP speaker settings.
+     */
     @OutputExport(name="bgpSettings", type=BgpSettingsResponse.class, parameters={})
     private Output</* @Nullable */ BgpSettingsResponse> bgpSettings;
 
+    /**
+     * @return Local network gateway's BGP speaker settings.
+     */
     public Output</* @Nullable */ BgpSettingsResponse> getBgpSettings() {
         return this.bgpSettings;
     }
+    /**
+     * List of all vpn connections to the gateway.
+     */
     @OutputExport(name="connections", type=List.class, parameters={VpnConnectionResponse.class})
     private Output</* @Nullable */ List<VpnConnectionResponse>> connections;
 
+    /**
+     * @return List of all vpn connections to the gateway.
+     */
     public Output</* @Nullable */ List<VpnConnectionResponse>> getConnections() {
         return this.connections;
     }
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * List of all IPs configured on the gateway.
+     */
     @OutputExport(name="ipConfigurations", type=List.class, parameters={VpnGatewayIpConfigurationResponse.class})
     private Output<List<VpnGatewayIpConfigurationResponse>> ipConfigurations;
 
+    /**
+     * @return List of all IPs configured on the gateway.
+     */
     public Output<List<VpnGatewayIpConfigurationResponse>> getIpConfigurations() {
         return this.ipConfigurations;
     }
+    /**
+     * Enable Routing Preference property for the Public IP Interface of the VpnGateway.
+     */
     @OutputExport(name="isRoutingPreferenceInternet", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isRoutingPreferenceInternet;
 
+    /**
+     * @return Enable Routing Preference property for the Public IP Interface of the VpnGateway.
+     */
     public Output</* @Nullable */ Boolean> getIsRoutingPreferenceInternet() {
         return this.isRoutingPreferenceInternet;
     }
+    /**
+     * Resource location.
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location.
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * List of all the nat Rules associated with the gateway.
+     */
     @OutputExport(name="natRules", type=List.class, parameters={VpnGatewayNatRuleResponse.class})
     private Output</* @Nullable */ List<VpnGatewayNatRuleResponse>> natRules;
 
+    /**
+     * @return List of all the nat Rules associated with the gateway.
+     */
     public Output</* @Nullable */ List<VpnGatewayNatRuleResponse>> getNatRules() {
         return this.natRules;
     }
+    /**
+     * The provisioning state of the VPN gateway resource.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The provisioning state of the VPN gateway resource.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * The VirtualHub to which the gateway belongs.
+     */
     @OutputExport(name="virtualHub", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> virtualHub;
 
+    /**
+     * @return The VirtualHub to which the gateway belongs.
+     */
     public Output</* @Nullable */ SubResourceResponse> getVirtualHub() {
         return this.virtualHub;
     }
+    /**
+     * The scale unit for this vpn gateway.
+     */
     @OutputExport(name="vpnGatewayScaleUnit", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> vpnGatewayScaleUnit;
 
+    /**
+     * @return The scale unit for this vpn gateway.
+     */
     public Output</* @Nullable */ Integer> getVpnGatewayScaleUnit() {
         return this.vpnGatewayScaleUnit;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public VpnGateway(String name, VpnGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:VpnGateway", name, args == null ? VpnGatewayArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -145,6 +573,14 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static VpnGateway get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VpnGateway(name, id, options);
     }

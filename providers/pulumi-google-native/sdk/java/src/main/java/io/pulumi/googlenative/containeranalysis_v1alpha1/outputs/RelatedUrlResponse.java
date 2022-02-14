@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RelatedUrlResponse {
+/**
+ * Label to describe usage of the URL
+ */
     private final String label;
+/**
+ * Specific URL to associate with the note
+ */
     private final String url;
 
     @OutputCustomType.Constructor({"label","url"})
@@ -20,9 +26,15 @@ public final class RelatedUrlResponse {
         this.url = Objects.requireNonNull(url);
     }
 
+/**
+ * Label to describe usage of the URL
+ */
     public String getLabel() {
         return this.label;
     }
+/**
+ * Specific URL to associate with the note
+ */
     public String getUrl() {
         return this.url;
     }

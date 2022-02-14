@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkloadNetworkSegmentArgs Empty = new WorkloadNetworkSegmentArgs();
 
+    /**
+     * Gateway which to connect segment to.
+     */
     @InputImport(name="connectedGateway")
     private final @Nullable Input<String> connectedGateway;
 
@@ -23,6 +29,9 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
         return this.connectedGateway == null ? Input.empty() : this.connectedGateway;
     }
 
+    /**
+     * Display name of the segment.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -30,6 +39,9 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Name of the private cloud
+     */
     @InputImport(name="privateCloudName", required=true)
     private final Input<String> privateCloudName;
 
@@ -37,6 +49,9 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
         return this.privateCloudName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +59,9 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
         return this.resourceGroupName;
     }
 
+    /**
+     * NSX revision number.
+     */
     @InputImport(name="revision")
     private final @Nullable Input<Double> revision;
 
@@ -51,6 +69,9 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
         return this.revision == null ? Input.empty() : this.revision;
     }
 
+    /**
+     * NSX Segment identifier. Generally the same as the Segment's display name
+     */
     @InputImport(name="segmentId")
     private final @Nullable Input<String> segmentId;
 
@@ -58,6 +79,9 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
         return this.segmentId == null ? Input.empty() : this.segmentId;
     }
 
+    /**
+     * Subnet which to connect segment to.
+     */
     @InputImport(name="subnet")
     private final @Nullable Input<WorkloadNetworkSegmentSubnetArgs> subnet;
 

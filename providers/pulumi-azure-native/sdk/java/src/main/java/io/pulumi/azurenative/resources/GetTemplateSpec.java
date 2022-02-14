@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetTemplateSpec {
+/**
+ * Template Spec object.
+API Version: 2021-05-01.
+ *
+ * Template Spec object.
+ */
     public static CompletableFuture<GetTemplateSpecResult> invokeAsync(GetTemplateSpecArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:resources:getTemplateSpec", TypeShape.of(GetTemplateSpecResult.class), args == null ? GetTemplateSpecArgs.Empty : args, Utilities.withVersion(options));
     }

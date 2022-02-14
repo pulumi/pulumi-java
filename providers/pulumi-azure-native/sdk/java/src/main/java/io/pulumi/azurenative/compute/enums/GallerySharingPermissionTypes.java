@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**
+ */
     @EnumType
     public enum GallerySharingPermissionTypes {
+/**
+ * 
+ */
         Private("Private"),
+/**
+ * 
+ */
         Groups("Groups");
 
         private final String value;

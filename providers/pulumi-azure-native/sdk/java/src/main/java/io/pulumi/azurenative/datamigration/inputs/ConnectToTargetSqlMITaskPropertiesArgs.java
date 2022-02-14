@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties for the task that validates connection to Azure SQL Database Managed Instance
+ */
 public final class ConnectToTargetSqlMITaskPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectToTargetSqlMITaskPropertiesArgs Empty = new ConnectToTargetSqlMITaskPropertiesArgs();
 
+    /**
+     * Task input
+     */
     @InputImport(name="input")
     private final @Nullable Input<ConnectToTargetSqlMITaskInputArgs> input;
 
@@ -22,6 +28,10 @@ public final class ConnectToTargetSqlMITaskPropertiesArgs extends io.pulumi.reso
         return this.input == null ? Input.empty() : this.input;
     }
 
+    /**
+     * Task type.
+Expected value is 'ConnectToTarget.AzureSqlDbMI'.
+     */
     @InputImport(name="taskType", required=true)
     private final Input<String> taskType;
 

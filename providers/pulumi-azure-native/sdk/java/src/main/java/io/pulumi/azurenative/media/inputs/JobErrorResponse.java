@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Details of JobOutput errors.
+ */
 public final class JobErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JobErrorResponse Empty = new JobErrorResponse();
 
+    /**
+     * Helps with categorization of errors.
+     */
     @InputImport(name="category", required=true)
     private final String category;
 
@@ -21,6 +27,9 @@ public final class JobErrorResponse extends io.pulumi.resources.InvokeArgs {
         return this.category;
     }
 
+    /**
+     * Error code describing the error.
+     */
     @InputImport(name="code", required=true)
     private final String code;
 
@@ -28,6 +37,9 @@ public final class JobErrorResponse extends io.pulumi.resources.InvokeArgs {
         return this.code;
     }
 
+    /**
+     * An array of details about specific errors that led to this reported error.
+     */
     @InputImport(name="details", required=true)
     private final List<JobErrorDetailResponse> details;
 
@@ -35,6 +47,9 @@ public final class JobErrorResponse extends io.pulumi.resources.InvokeArgs {
         return this.details;
     }
 
+    /**
+     * A human-readable language-dependent representation of the error.
+     */
     @InputImport(name="message", required=true)
     private final String message;
 
@@ -42,6 +57,9 @@ public final class JobErrorResponse extends io.pulumi.resources.InvokeArgs {
         return this.message;
     }
 
+    /**
+     * Indicates that it may be possible to retry the Job. If retry is unsuccessful, please contact Azure support via Azure Portal.
+     */
     @InputImport(name="retry", required=true)
     private final String retry;
 

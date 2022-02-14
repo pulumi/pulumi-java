@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetKeyRing {
+/**
+ * Returns metadata for a given KeyRing.
+ */
     public static CompletableFuture<GetKeyRingResult> invokeAsync(GetKeyRingArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:cloudkms/v1:getKeyRing", TypeShape.of(GetKeyRingResult.class), args == null ? GetKeyRingArgs.Empty : args, Utilities.withVersion(options));
     }

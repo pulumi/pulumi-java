@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * GetInsights Query Errors.
+ */
 public final class GetInsightsErrorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GetInsightsErrorResponse Empty = new GetInsightsErrorResponse();
 
+    /**
+     * the error message
+     */
     @InputImport(name="errorMessage", required=true)
     private final String errorMessage;
 
@@ -21,6 +27,9 @@ public final class GetInsightsErrorResponse extends io.pulumi.resources.InvokeAr
         return this.errorMessage;
     }
 
+    /**
+     * the query kind
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -28,6 +37,9 @@ public final class GetInsightsErrorResponse extends io.pulumi.resources.InvokeAr
         return this.kind;
     }
 
+    /**
+     * the query id
+     */
     @InputImport(name="queryId")
     private final @Nullable String queryId;
 

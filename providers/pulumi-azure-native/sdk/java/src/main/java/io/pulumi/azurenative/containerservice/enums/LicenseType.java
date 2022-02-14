@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The licenseType to use for Windows VMs. Windows_Server is used to enable Azure Hybrid User Benefits for Windows VMs.
+ */
     @EnumType
     public enum LicenseType {
+/**
+ * 
+ */
         None("None"),
+/**
+ * 
+ */
         Windows_Server("Windows_Server");
 
         private final String value;

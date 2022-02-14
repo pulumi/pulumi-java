@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class KnowledgeBaseResponse {
+/**
+ * The KB name (generally of the form KB[0-9]+ i.e. KB123456).
+ */
     private final String name;
+/**
+ * A link to the KB in the Windows update catalog - https://www.catalog.update.microsoft.com/
+ */
     private final String url;
 
     @OutputCustomType.Constructor({"name","url"})
@@ -20,9 +26,15 @@ public final class KnowledgeBaseResponse {
         this.url = Objects.requireNonNull(url);
     }
 
+/**
+ * The KB name (generally of the form KB[0-9]+ i.e. KB123456).
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * A link to the KB in the Windows update catalog - https://www.catalog.update.microsoft.com/
+ */
     public String getUrl() {
         return this.url;
     }

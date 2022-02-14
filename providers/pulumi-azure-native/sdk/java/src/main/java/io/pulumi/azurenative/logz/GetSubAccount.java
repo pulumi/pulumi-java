@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetSubAccount {
+/**
+ * 
+API Version: 2020-10-01.
+ */
     public static CompletableFuture<GetSubAccountResult> invokeAsync(GetSubAccountArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:logz:getSubAccount", TypeShape.of(GetSubAccountResult.class), args == null ? GetSubAccountArgs.Empty : args, Utilities.withVersion(options));
     }

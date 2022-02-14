@@ -13,10 +13,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Trigger that schedules pipeline reruns for all fixed time interval windows from a requested start time to requested end time.
+ */
 public final class RerunTumblingWindowTriggerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RerunTumblingWindowTriggerResponse Empty = new RerunTumblingWindowTriggerResponse();
 
+    /**
+     * List of tags that can be used for describing the trigger.
+     */
     @InputImport(name="annotations")
     private final @Nullable List<Object> annotations;
 
@@ -24,6 +30,9 @@ public final class RerunTumblingWindowTriggerResponse extends io.pulumi.resource
         return this.annotations == null ? List.of() : this.annotations;
     }
 
+    /**
+     * Trigger description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -31,6 +40,9 @@ public final class RerunTumblingWindowTriggerResponse extends io.pulumi.resource
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The parent trigger reference.
+     */
     @InputImport(name="parentTrigger", required=true)
     private final Object parentTrigger;
 
@@ -38,6 +50,9 @@ public final class RerunTumblingWindowTriggerResponse extends io.pulumi.resource
         return this.parentTrigger;
     }
 
+    /**
+     * The end time for the time period for which restatement is initiated. Only UTC time is currently supported.
+     */
     @InputImport(name="requestedEndTime", required=true)
     private final String requestedEndTime;
 
@@ -45,6 +60,9 @@ public final class RerunTumblingWindowTriggerResponse extends io.pulumi.resource
         return this.requestedEndTime;
     }
 
+    /**
+     * The start time for the time period for which restatement is initiated. Only UTC time is currently supported.
+     */
     @InputImport(name="requestedStartTime", required=true)
     private final String requestedStartTime;
 
@@ -52,6 +70,9 @@ public final class RerunTumblingWindowTriggerResponse extends io.pulumi.resource
         return this.requestedStartTime;
     }
 
+    /**
+     * The max number of parallel time windows (ready for execution) for which a rerun is triggered.
+     */
     @InputImport(name="rerunConcurrency", required=true)
     private final Integer rerunConcurrency;
 
@@ -59,6 +80,9 @@ public final class RerunTumblingWindowTriggerResponse extends io.pulumi.resource
         return this.rerunConcurrency;
     }
 
+    /**
+     * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+     */
     @InputImport(name="runtimeState", required=true)
     private final String runtimeState;
 
@@ -66,6 +90,10 @@ public final class RerunTumblingWindowTriggerResponse extends io.pulumi.resource
         return this.runtimeState;
     }
 
+    /**
+     * Trigger type.
+Expected value is 'RerunTumblingWindowTrigger'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

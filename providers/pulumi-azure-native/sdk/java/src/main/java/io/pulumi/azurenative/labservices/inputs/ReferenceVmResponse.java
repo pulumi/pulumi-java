@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details of a Reference Vm
+ */
 public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReferenceVmResponse Empty = new ReferenceVmResponse();
 
+    /**
+     * The password of the virtual machine. This will be set to null in GET resource API
+     */
     @InputImport(name="password")
     private final @Nullable String password;
 
@@ -22,6 +28,9 @@ public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
+    /**
+     * The username of the virtual machine
+     */
     @InputImport(name="userName", required=true)
     private final String userName;
 
@@ -29,6 +38,9 @@ public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
         return this.userName;
     }
 
+    /**
+     * VM resource Id for the environment
+     */
     @InputImport(name="vmResourceId", required=true)
     private final String vmResourceId;
 
@@ -36,6 +48,9 @@ public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
         return this.vmResourceId;
     }
 
+    /**
+     * The state details for the reference virtual machine.
+     */
     @InputImport(name="vmStateDetails", required=true)
     private final VmStateDetailsResponse vmStateDetails;
 

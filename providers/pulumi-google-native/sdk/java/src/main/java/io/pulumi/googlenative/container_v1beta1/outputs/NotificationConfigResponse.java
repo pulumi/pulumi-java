@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class NotificationConfigResponse {
+/**
+ * Notification config for Pub/Sub.
+ */
     private final PubSubResponse pubsub;
 
     @OutputCustomType.Constructor({"pubsub"})
@@ -16,6 +19,9 @@ public final class NotificationConfigResponse {
         this.pubsub = Objects.requireNonNull(pubsub);
     }
 
+/**
+ * Notification config for Pub/Sub.
+ */
     public PubSubResponse getPubsub() {
         return this.pubsub;
     }

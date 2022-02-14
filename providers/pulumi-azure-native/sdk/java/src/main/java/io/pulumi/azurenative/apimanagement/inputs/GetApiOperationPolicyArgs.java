@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetApiOperationPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApiOperationPolicyArgs Empty = new GetApiOperationPolicyArgs();
 
+    /**
+     * API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
+     */
     @InputImport(name="apiId", required=true)
     private final String apiId;
 
@@ -21,6 +27,9 @@ public final class GetApiOperationPolicyArgs extends io.pulumi.resources.InvokeA
         return this.apiId;
     }
 
+    /**
+     * Policy Export Format.
+     */
     @InputImport(name="format")
     private final @Nullable String format;
 
@@ -28,6 +37,9 @@ public final class GetApiOperationPolicyArgs extends io.pulumi.resources.InvokeA
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
     }
 
+    /**
+     * Operation identifier within an API. Must be unique in the current API Management service instance.
+     */
     @InputImport(name="operationId", required=true)
     private final String operationId;
 
@@ -35,6 +47,9 @@ public final class GetApiOperationPolicyArgs extends io.pulumi.resources.InvokeA
         return this.operationId;
     }
 
+    /**
+     * The identifier of the Policy.
+     */
     @InputImport(name="policyId", required=true)
     private final String policyId;
 
@@ -42,6 +57,9 @@ public final class GetApiOperationPolicyArgs extends io.pulumi.resources.InvokeA
         return this.policyId;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -49,6 +67,9 @@ public final class GetApiOperationPolicyArgs extends io.pulumi.resources.InvokeA
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

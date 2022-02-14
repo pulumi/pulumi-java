@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * DNS settings of a network interface.
+ */
 public final class NetworkInterfaceDnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NetworkInterfaceDnsSettingsArgs Empty = new NetworkInterfaceDnsSettingsArgs();
 
+    /**
+     * List of DNS servers IP addresses. Use 'AzureProvidedDNS' to switch to azure provided DNS resolution. 'AzureProvidedDNS' value cannot be combined with other IPs, it must be the only value in dnsServers collection.
+     */
     @InputImport(name="dnsServers")
     private final @Nullable Input<List<String>> dnsServers;
 
@@ -22,6 +28,9 @@ public final class NetworkInterfaceDnsSettingsArgs extends io.pulumi.resources.R
         return this.dnsServers == null ? Input.empty() : this.dnsServers;
     }
 
+    /**
+     * Relative DNS name for this NIC used for internal communications between VMs in the same virtual network.
+     */
     @InputImport(name="internalDnsNameLabel")
     private final @Nullable Input<String> internalDnsNameLabel;
 

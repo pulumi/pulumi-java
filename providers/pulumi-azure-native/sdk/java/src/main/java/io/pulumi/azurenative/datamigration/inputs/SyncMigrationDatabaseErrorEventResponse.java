@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Database migration errors for online migration
+ */
 public final class SyncMigrationDatabaseErrorEventResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SyncMigrationDatabaseErrorEventResponse Empty = new SyncMigrationDatabaseErrorEventResponse();
 
+    /**
+     * Event text.
+     */
     @InputImport(name="eventText", required=true)
     private final String eventText;
 
@@ -19,6 +25,9 @@ public final class SyncMigrationDatabaseErrorEventResponse extends io.pulumi.res
         return this.eventText;
     }
 
+    /**
+     * Event type.
+     */
     @InputImport(name="eventTypeString", required=true)
     private final String eventTypeString;
 
@@ -26,6 +35,9 @@ public final class SyncMigrationDatabaseErrorEventResponse extends io.pulumi.res
         return this.eventTypeString;
     }
 
+    /**
+     * String value of timestamp.
+     */
     @InputImport(name="timestampString", required=true)
     private final String timestampString;
 

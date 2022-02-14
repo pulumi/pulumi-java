@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetManagedDatabaseSensitivityLabelArgs Empty = new GetManagedDatabaseSensitivityLabelArgs();
 
+    /**
+     * The name of the column.
+     */
     @InputImport(name="columnName", required=true)
     private final String columnName;
 
@@ -19,6 +25,9 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.reso
         return this.columnName;
     }
 
+    /**
+     * The name of the database.
+     */
     @InputImport(name="databaseName", required=true)
     private final String databaseName;
 
@@ -26,6 +35,9 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.reso
         return this.databaseName;
     }
 
+    /**
+     * The name of the managed instance.
+     */
     @InputImport(name="managedInstanceName", required=true)
     private final String managedInstanceName;
 
@@ -33,6 +45,9 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.reso
         return this.managedInstanceName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -40,6 +55,9 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.reso
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the schema.
+     */
     @InputImport(name="schemaName", required=true)
     private final String schemaName;
 
@@ -47,6 +65,9 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.reso
         return this.schemaName;
     }
 
+    /**
+     * The source of the sensitivity label.
+     */
     @InputImport(name="sensitivityLabelSource", required=true)
     private final String sensitivityLabelSource;
 
@@ -54,6 +75,9 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.reso
         return this.sensitivityLabelSource;
     }
 
+    /**
+     * The name of the table.
+     */
     @InputImport(name="tableName", required=true)
     private final String tableName;
 

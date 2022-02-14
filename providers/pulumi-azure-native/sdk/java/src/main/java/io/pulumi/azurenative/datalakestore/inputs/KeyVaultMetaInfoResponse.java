@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Metadata information used by account encryption.
+ */
 public final class KeyVaultMetaInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final KeyVaultMetaInfoResponse Empty = new KeyVaultMetaInfoResponse();
 
+    /**
+     * The name of the user managed encryption key.
+     */
     @InputImport(name="encryptionKeyName", required=true)
     private final String encryptionKeyName;
 
@@ -19,6 +25,9 @@ public final class KeyVaultMetaInfoResponse extends io.pulumi.resources.InvokeAr
         return this.encryptionKeyName;
     }
 
+    /**
+     * The version of the user managed encryption key.
+     */
     @InputImport(name="encryptionKeyVersion", required=true)
     private final String encryptionKeyVersion;
 
@@ -26,6 +35,9 @@ public final class KeyVaultMetaInfoResponse extends io.pulumi.resources.InvokeAr
         return this.encryptionKeyVersion;
     }
 
+    /**
+     * The resource identifier for the user managed Key Vault being used to encrypt.
+     */
     @InputImport(name="keyVaultResourceId", required=true)
     private final String keyVaultResourceId;
 

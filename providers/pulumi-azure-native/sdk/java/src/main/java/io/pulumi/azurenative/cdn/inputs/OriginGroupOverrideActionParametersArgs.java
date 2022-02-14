@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines the parameters for the origin group override action.
+ */
 public final class OriginGroupOverrideActionParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OriginGroupOverrideActionParametersArgs Empty = new OriginGroupOverrideActionParametersArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="odataType", required=true)
     private final Input<String> odataType;
 
@@ -21,6 +27,9 @@ public final class OriginGroupOverrideActionParametersArgs extends io.pulumi.res
         return this.odataType;
     }
 
+    /**
+     * defines the OriginGroup that would override the DefaultOriginGroup.
+     */
     @InputImport(name="originGroup", required=true)
     private final Input<ResourceReferenceArgs> originGroup;
 

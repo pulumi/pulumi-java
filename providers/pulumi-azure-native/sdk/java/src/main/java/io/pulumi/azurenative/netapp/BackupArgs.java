@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackupArgs Empty = new BackupArgs();
 
+    /**
+     * The name of the NetApp account
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -21,6 +27,9 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the backup
+     */
     @InputImport(name="backupName")
     private final @Nullable Input<String> backupName;
 
@@ -28,6 +37,9 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.backupName == null ? Input.empty() : this.backupName;
     }
 
+    /**
+     * Label for backup
+     */
     @InputImport(name="label")
     private final @Nullable Input<String> label;
 
@@ -35,6 +47,9 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.label == null ? Input.empty() : this.label;
     }
 
+    /**
+     * Resource location
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -42,6 +57,9 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the capacity pool
+     */
     @InputImport(name="poolName", required=true)
     private final Input<String> poolName;
 
@@ -49,6 +67,9 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.poolName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -56,6 +77,9 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the volume
+     */
     @InputImport(name="volumeName", required=true)
     private final Input<String> volumeName;
 

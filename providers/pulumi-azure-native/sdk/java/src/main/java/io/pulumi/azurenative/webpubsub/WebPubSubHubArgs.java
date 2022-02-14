@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebPubSubHubArgs Empty = new WebPubSubHubArgs();
 
+    /**
+     * The hub name.
+     */
     @InputImport(name="hubName")
     private final @Nullable Input<String> hubName;
 
@@ -22,6 +28,9 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.hubName == null ? Input.empty() : this.hubName;
     }
 
+    /**
+     * Properties of a hub.
+     */
     @InputImport(name="properties", required=true)
     private final Input<WebPubSubHubPropertiesArgs> properties;
 
@@ -29,6 +38,9 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,9 @@ public final class WebPubSubHubArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the resource.
+     */
     @InputImport(name="resourceName", required=true)
     private final Input<String> resourceName;
 

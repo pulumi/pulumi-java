@@ -11,10 +11,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Autoscaling config for an Agones fleet.
+ */
 public final class ScalingConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ScalingConfigResponse Empty = new ScalingConfigResponse();
 
+    /**
+     * Agones fleet autoscaler spec. Example spec: https://agones.dev/site/docs/reference/fleetautoscaler/
+     */
     @InputImport(name="fleetAutoscalerSpec", required=true)
     private final String fleetAutoscalerSpec;
 
@@ -22,6 +28,9 @@ public final class ScalingConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.fleetAutoscalerSpec;
     }
 
+    /**
+     * The name of the Scaling Config
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -29,6 +38,9 @@ public final class ScalingConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.name;
     }
 
+    /**
+     * The schedules to which this Scaling Config applies.
+     */
     @InputImport(name="schedules", required=true)
     private final List<ScheduleResponse> schedules;
 
@@ -36,6 +48,9 @@ public final class ScalingConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.schedules;
     }
 
+    /**
+     * Labels used to identify the game server clusters to which this Agones scaling config applies. A game server cluster is subject to this Agones scaling config if its labels match any of the selector entries.
+     */
     @InputImport(name="selectors", required=true)
     private final List<LabelSelectorResponse> selectors;
 

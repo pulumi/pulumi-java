@@ -16,10 +16,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An action that can be taken as part of installing or updating a recipe.
+ */
 public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SoftwareRecipeStepArgs Empty = new SoftwareRecipeStepArgs();
 
+    /**
+     * Extracts an archive into the specified directory.
+     */
     @InputImport(name="archiveExtraction")
     private final @Nullable Input<SoftwareRecipeStepExtractArchiveArgs> archiveExtraction;
 
@@ -27,6 +33,9 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
         return this.archiveExtraction == null ? Input.empty() : this.archiveExtraction;
     }
 
+    /**
+     * Installs a deb file via dpkg.
+     */
     @InputImport(name="dpkgInstallation")
     private final @Nullable Input<SoftwareRecipeStepInstallDpkgArgs> dpkgInstallation;
 
@@ -34,6 +43,9 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
         return this.dpkgInstallation == null ? Input.empty() : this.dpkgInstallation;
     }
 
+    /**
+     * Copies a file onto the instance.
+     */
     @InputImport(name="fileCopy")
     private final @Nullable Input<SoftwareRecipeStepCopyFileArgs> fileCopy;
 
@@ -41,6 +53,9 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
         return this.fileCopy == null ? Input.empty() : this.fileCopy;
     }
 
+    /**
+     * Executes an artifact or local file.
+     */
     @InputImport(name="fileExec")
     private final @Nullable Input<SoftwareRecipeStepExecFileArgs> fileExec;
 
@@ -48,6 +63,9 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
         return this.fileExec == null ? Input.empty() : this.fileExec;
     }
 
+    /**
+     * Installs an MSI file.
+     */
     @InputImport(name="msiInstallation")
     private final @Nullable Input<SoftwareRecipeStepInstallMsiArgs> msiInstallation;
 
@@ -55,6 +73,9 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
         return this.msiInstallation == null ? Input.empty() : this.msiInstallation;
     }
 
+    /**
+     * Installs an rpm file via the rpm utility.
+     */
     @InputImport(name="rpmInstallation")
     private final @Nullable Input<SoftwareRecipeStepInstallRpmArgs> rpmInstallation;
 
@@ -62,6 +83,9 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
         return this.rpmInstallation == null ? Input.empty() : this.rpmInstallation;
     }
 
+    /**
+     * Runs commands in a shell.
+     */
     @InputImport(name="scriptRun")
     private final @Nullable Input<SoftwareRecipeStepRunScriptArgs> scriptRun;
 

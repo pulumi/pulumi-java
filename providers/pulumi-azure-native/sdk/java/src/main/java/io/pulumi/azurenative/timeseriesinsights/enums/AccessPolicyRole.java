@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * A role defining the data plane operations that a principal can perform on a Time Series Insights client.
+ */
     @EnumType
     public enum AccessPolicyRole {
+/**
+ * 
+ */
         Reader("Reader"),
+/**
+ * 
+ */
         Contributor("Contributor");
 
         private final String value;

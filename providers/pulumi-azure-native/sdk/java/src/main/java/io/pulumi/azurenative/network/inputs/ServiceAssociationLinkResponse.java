@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * ServiceAssociationLink resource.
+ */
 public final class ServiceAssociationLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ServiceAssociationLinkResponse Empty = new ServiceAssociationLinkResponse();
 
+    /**
+     * If true, the resource can be deleted.
+     */
     @InputImport(name="allowDelete")
     private final @Nullable Boolean allowDelete;
 
@@ -23,6 +29,9 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
         return this.allowDelete == null ? Optional.empty() : Optional.ofNullable(this.allowDelete);
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -30,6 +39,9 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
         return this.etag;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -37,6 +49,9 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * Link to the external resource.
+     */
     @InputImport(name="link")
     private final @Nullable String link;
 
@@ -44,6 +59,9 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
         return this.link == null ? Optional.empty() : Optional.ofNullable(this.link);
     }
 
+    /**
+     * Resource type of the linked resource.
+     */
     @InputImport(name="linkedResourceType")
     private final @Nullable String linkedResourceType;
 
@@ -51,6 +69,9 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
         return this.linkedResourceType == null ? Optional.empty() : Optional.ofNullable(this.linkedResourceType);
     }
 
+    /**
+     * A list of locations.
+     */
     @InputImport(name="locations")
     private final @Nullable List<String> locations;
 
@@ -58,6 +79,9 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
         return this.locations == null ? List.of() : this.locations;
     }
 
+    /**
+     * Name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -65,6 +89,9 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The provisioning state of the service association link resource.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -72,6 +99,9 @@ public final class ServiceAssociationLinkResponse extends io.pulumi.resources.In
         return this.provisioningState;
     }
 
+    /**
+     * Resource type.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

@@ -17,10 +17,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * DatabricksSparkJar activity.
+ */
 public final class DatabricksSparkJarActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final DatabricksSparkJarActivityResponse Empty = new DatabricksSparkJarActivityResponse();
 
+    /**
+     * Activity depends on condition.
+     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -28,6 +34,9 @@ public final class DatabricksSparkJarActivityResponse extends io.pulumi.resource
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -35,6 +44,9 @@ public final class DatabricksSparkJarActivityResponse extends io.pulumi.resource
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * A list of libraries to be installed on the cluster that will execute the job.
+     */
     @InputImport(name="libraries")
     private final @Nullable List<Map<String,Object>> libraries;
 
@@ -42,6 +54,9 @@ public final class DatabricksSparkJarActivityResponse extends io.pulumi.resource
         return this.libraries == null ? List.of() : this.libraries;
     }
 
+    /**
+     * Linked service reference.
+     */
     @InputImport(name="linkedServiceName")
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
@@ -49,6 +64,9 @@ public final class DatabricksSparkJarActivityResponse extends io.pulumi.resource
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
     }
 
+    /**
+     * The full name of the class containing the main method to be executed. This class must be contained in a JAR provided as a library. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="mainClassName", required=true)
     private final Object mainClassName;
 
@@ -56,6 +74,9 @@ public final class DatabricksSparkJarActivityResponse extends io.pulumi.resource
         return this.mainClassName;
     }
 
+    /**
+     * Activity name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -63,6 +84,9 @@ public final class DatabricksSparkJarActivityResponse extends io.pulumi.resource
         return this.name;
     }
 
+    /**
+     * Parameters that will be passed to the main method.
+     */
     @InputImport(name="parameters")
     private final @Nullable List<Object> parameters;
 
@@ -70,6 +94,9 @@ public final class DatabricksSparkJarActivityResponse extends io.pulumi.resource
         return this.parameters == null ? List.of() : this.parameters;
     }
 
+    /**
+     * Activity policy.
+     */
     @InputImport(name="policy")
     private final @Nullable ActivityPolicyResponse policy;
 
@@ -77,6 +104,10 @@ public final class DatabricksSparkJarActivityResponse extends io.pulumi.resource
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
+    /**
+     * Type of activity.
+Expected value is 'DatabricksSparkJar'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -84,6 +115,9 @@ public final class DatabricksSparkJarActivityResponse extends io.pulumi.resource
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

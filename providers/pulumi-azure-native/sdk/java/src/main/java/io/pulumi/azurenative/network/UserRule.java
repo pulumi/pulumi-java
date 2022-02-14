@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.network.UserRuleArgs;
 import io.pulumi.azurenative.network.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,40 +14,259 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Network base rule.
+API Version: 2021-02-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create a default user rule
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var userRule = new AzureNative.Network.UserRule("userRule", new AzureNative.Network.UserRuleArgs
+        {
+            ConfigurationName = "myTestSecurityConfig",
+            Kind = "Default",
+            NetworkManagerName = "testNetworkManager",
+            ResourceGroupName = "rg1",
+            RuleCollectionName = "testRuleCollection",
+            RuleName = "SampleDefaultUserRule",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewUserRule(ctx, "userRule", &network.UserRuleArgs{
+			ConfigurationName:  pulumi.String("myTestSecurityConfig"),
+			Kind:               pulumi.String("Default"),
+			NetworkManagerName: pulumi.String("testNetworkManager"),
+			ResourceGroupName:  pulumi.String("rg1"),
+			RuleCollectionName: pulumi.String("testRuleCollection"),
+			RuleName:           pulumi.String("SampleDefaultUserRule"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const userRule = new azure_native.network.UserRule("userRule", {
+    configurationName: "myTestSecurityConfig",
+    kind: "Default",
+    networkManagerName: "testNetworkManager",
+    resourceGroupName: "rg1",
+    ruleCollectionName: "testRuleCollection",
+    ruleName: "SampleDefaultUserRule",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+user_rule = azure_native.network.UserRule("userRule",
+    configuration_name="myTestSecurityConfig",
+    kind="Default",
+    network_manager_name="testNetworkManager",
+    resource_group_name="rg1",
+    rule_collection_name="testRuleCollection",
+    rule_name="SampleDefaultUserRule")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create a user rule
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var userRule = new AzureNative.Network.UserRule("userRule", new AzureNative.Network.UserRuleArgs
+        {
+            ConfigurationName = "myTestSecurityConfig",
+            Kind = "Custom",
+            NetworkManagerName = "testNetworkManager",
+            ResourceGroupName = "rg1",
+            RuleCollectionName = "testRuleCollection",
+            RuleName = "SampleUserRule",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	network "github.com/pulumi/pulumi-azure-native/sdk/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := network.NewUserRule(ctx, "userRule", &network.UserRuleArgs{
+			ConfigurationName:  pulumi.String("myTestSecurityConfig"),
+			Kind:               pulumi.String("Custom"),
+			NetworkManagerName: pulumi.String("testNetworkManager"),
+			ResourceGroupName:  pulumi.String("rg1"),
+			RuleCollectionName: pulumi.String("testRuleCollection"),
+			RuleName:           pulumi.String("SampleUserRule"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const userRule = new azure_native.network.UserRule("userRule", {
+    configurationName: "myTestSecurityConfig",
+    kind: "Custom",
+    networkManagerName: "testNetworkManager",
+    resourceGroupName: "rg1",
+    ruleCollectionName: "testRuleCollection",
+    ruleName: "SampleUserRule",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+user_rule = azure_native.network.UserRule("userRule",
+    configuration_name="myTestSecurityConfig",
+    kind="Custom",
+    network_manager_name="testNetworkManager",
+    resource_group_name="rg1",
+    rule_collection_name="testRuleCollection",
+    rule_name="SampleUserRule")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:network:UserRule SampleUserRule /subscriptions/subId/resourceGroups/rg1/providers/Microsoft.Network/networkManagers/testNetworkManager/securityUserConfigurations/myTestSecurityConfig/ruleCollections/testRuleCollection/rules/SampleUserRule 
+```
+
+ * @deprecated
+ * Please use one of the variants: DefaultUserRule, UserRule.
+ */
 @Deprecated /* Please use one of the variants: DefaultUserRule, UserRule. */
 @ResourceType(type="azure-native:network:UserRule")
 public class UserRule extends io.pulumi.resources.CustomResource {
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @OutputExport(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     */
     public Output<String> getEtag() {
         return this.etag;
     }
+    /**
+     * Whether the rule is custom or default.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return Whether the rule is custom or default.
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The system metadata related to this resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return The system metadata related to this resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public UserRule(String name, UserRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:UserRule", name, args == null ? UserRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -68,6 +286,14 @@ public class UserRule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static UserRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new UserRule(name, id, options);
     }

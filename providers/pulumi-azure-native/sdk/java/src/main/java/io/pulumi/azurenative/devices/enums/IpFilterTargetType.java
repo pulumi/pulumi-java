@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Target for requests captured by this rule.
+ */
     @EnumType
     public enum IpFilterTargetType {
+/**
+ * 
+ */
         All("all"),
+/**
+ * 
+ */
         ServiceApi("serviceApi"),
+/**
+ * 
+ */
         DeviceApi("deviceApi");
 
         private final String value;

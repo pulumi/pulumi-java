@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A set of instance tags.
+ */
 public final class TagsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TagsArgs Empty = new TagsArgs();
 
+    /**
+     * An array of tags. Each tag must be 1-63 characters long, and comply with RFC1035.
+     */
     @InputImport(name="items")
     private final @Nullable Input<List<String>> items;
 

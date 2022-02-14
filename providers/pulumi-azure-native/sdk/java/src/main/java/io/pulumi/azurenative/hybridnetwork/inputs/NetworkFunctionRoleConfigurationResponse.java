@@ -16,10 +16,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network function role configuration.
+ */
 public final class NetworkFunctionRoleConfigurationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkFunctionRoleConfigurationResponse Empty = new NetworkFunctionRoleConfigurationResponse();
 
+    /**
+     * Specifies the custom settings for the virtual machine.
+     */
     @InputImport(name="customProfile")
     private final @Nullable CustomProfileResponse customProfile;
 
@@ -27,6 +33,9 @@ public final class NetworkFunctionRoleConfigurationResponse extends io.pulumi.re
         return this.customProfile == null ? Optional.empty() : Optional.ofNullable(this.customProfile);
     }
 
+    /**
+     * The network interface configurations.
+     */
     @InputImport(name="networkInterfaces")
     private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
 
@@ -34,6 +43,9 @@ public final class NetworkFunctionRoleConfigurationResponse extends io.pulumi.re
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }
 
+    /**
+     * Specifies the operating system settings for the role instance. This value can be updated during the deployment of network function.
+     */
     @InputImport(name="osProfile")
     private final @Nullable OsProfileResponse osProfile;
 
@@ -41,6 +53,9 @@ public final class NetworkFunctionRoleConfigurationResponse extends io.pulumi.re
         return this.osProfile == null ? Optional.empty() : Optional.ofNullable(this.osProfile);
     }
 
+    /**
+     * The name of the network function role.
+     */
     @InputImport(name="roleName")
     private final @Nullable String roleName;
 
@@ -48,6 +63,9 @@ public final class NetworkFunctionRoleConfigurationResponse extends io.pulumi.re
         return this.roleName == null ? Optional.empty() : Optional.ofNullable(this.roleName);
     }
 
+    /**
+     * Role type.
+     */
     @InputImport(name="roleType")
     private final @Nullable String roleType;
 
@@ -55,6 +73,9 @@ public final class NetworkFunctionRoleConfigurationResponse extends io.pulumi.re
         return this.roleType == null ? Optional.empty() : Optional.ofNullable(this.roleType);
     }
 
+    /**
+     * Specifies the storage settings for the virtual machine disks.
+     */
     @InputImport(name="storageProfile")
     private final @Nullable StorageProfileResponse storageProfile;
 
@@ -62,6 +83,9 @@ public final class NetworkFunctionRoleConfigurationResponse extends io.pulumi.re
         return this.storageProfile == null ? Optional.empty() : Optional.ofNullable(this.storageProfile);
     }
 
+    /**
+     * The user parameters for customers. The format of user data parameters has to be matched with the provided user data template.
+     */
     @InputImport(name="userDataParameters")
     private final @Nullable Object userDataParameters;
 
@@ -69,6 +93,9 @@ public final class NetworkFunctionRoleConfigurationResponse extends io.pulumi.re
         return this.userDataParameters == null ? Optional.empty() : Optional.ofNullable(this.userDataParameters);
     }
 
+    /**
+     * The user data template for customers. This is a json schema template describing the format and data type of user data parameters.
+     */
     @InputImport(name="userDataTemplate")
     private final @Nullable Object userDataTemplate;
 
@@ -76,6 +103,9 @@ public final class NetworkFunctionRoleConfigurationResponse extends io.pulumi.re
         return this.userDataTemplate == null ? Optional.empty() : Optional.ofNullable(this.userDataTemplate);
     }
 
+    /**
+     * The size of the virtual machine.
+     */
     @InputImport(name="virtualMachineSize")
     private final @Nullable String virtualMachineSize;
 

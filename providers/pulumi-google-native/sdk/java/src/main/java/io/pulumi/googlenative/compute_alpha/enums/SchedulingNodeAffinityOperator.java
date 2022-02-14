@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for anti-affinity.
+ */
     @EnumType
     public enum SchedulingNodeAffinityOperator {
+/**
+ * Requires Compute Engine to seek for matched nodes.
+ */
         In("IN"),
+/**
+ * Requires Compute Engine to avoid certain nodes.
+ */
         NotIn("NOT_IN"),
+/**
+ * 
+ */
         OperatorUnspecified("OPERATOR_UNSPECIFIED");
 
         private final String value;

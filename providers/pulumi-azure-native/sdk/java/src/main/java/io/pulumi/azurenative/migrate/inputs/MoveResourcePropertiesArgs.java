@@ -26,10 +26,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the move resource properties.
+ */
 public final class MoveResourcePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MoveResourcePropertiesArgs Empty = new MoveResourcePropertiesArgs();
 
+    /**
+     * Gets or sets the move resource dependencies overrides.
+     */
     @InputImport(name="dependsOnOverrides")
     private final @Nullable Input<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides;
 
@@ -37,6 +43,9 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
         return this.dependsOnOverrides == null ? Input.empty() : this.dependsOnOverrides;
     }
 
+    /**
+     * Gets or sets the existing target ARM Id of the resource.
+     */
     @InputImport(name="existingTargetId")
     private final @Nullable Input<String> existingTargetId;
 
@@ -44,6 +53,9 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
         return this.existingTargetId == null ? Input.empty() : this.existingTargetId;
     }
 
+    /**
+     * Gets or sets the resource settings.
+     */
     @InputImport(name="resourceSettings")
     private final @Nullable Input<Object> resourceSettings;
 
@@ -51,6 +63,9 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
         return this.resourceSettings == null ? Input.empty() : this.resourceSettings;
     }
 
+    /**
+     * Gets or sets the Source ARM Id of the resource.
+     */
     @InputImport(name="sourceId", required=true)
     private final Input<String> sourceId;
 

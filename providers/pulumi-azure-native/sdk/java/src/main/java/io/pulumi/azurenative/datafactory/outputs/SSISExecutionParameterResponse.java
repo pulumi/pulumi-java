@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SSISExecutionParameterResponse {
+/**
+ * SSIS package execution parameter value. Type: string (or Expression with resultType string).
+ */
     private final Object value;
 
     @OutputCustomType.Constructor({"value"})
@@ -16,6 +19,9 @@ public final class SSISExecutionParameterResponse {
         this.value = Objects.requireNonNull(value);
     }
 
+/**
+ * SSIS package execution parameter value. Type: string (or Expression with resultType string).
+ */
     public Object getValue() {
         return this.value;
     }

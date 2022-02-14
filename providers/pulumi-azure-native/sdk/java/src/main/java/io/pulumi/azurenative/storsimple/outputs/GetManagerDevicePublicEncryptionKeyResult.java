@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetManagerDevicePublicEncryptionKeyResult {
+/**
+ * The key.
+ */
     private final String key;
 
     @OutputCustomType.Constructor({"key"})
@@ -16,6 +19,9 @@ public final class GetManagerDevicePublicEncryptionKeyResult {
         this.key = Objects.requireNonNull(key);
     }
 
+/**
+ * The key.
+ */
     public String getKey() {
         return this.key;
     }

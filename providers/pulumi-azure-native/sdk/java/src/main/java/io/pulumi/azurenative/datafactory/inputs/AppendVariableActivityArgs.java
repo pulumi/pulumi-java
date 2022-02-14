@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Append value for a Variable of type Array.
+ */
 public final class AppendVariableActivityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppendVariableActivityArgs Empty = new AppendVariableActivityArgs();
 
+    /**
+     * Activity depends on condition.
+     */
     @InputImport(name="dependsOn")
     private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
@@ -25,6 +31,9 @@ public final class AppendVariableActivityArgs extends io.pulumi.resources.Resour
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -32,6 +41,9 @@ public final class AppendVariableActivityArgs extends io.pulumi.resources.Resour
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Activity name.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -39,6 +51,10 @@ public final class AppendVariableActivityArgs extends io.pulumi.resources.Resour
         return this.name;
     }
 
+    /**
+     * Type of activity.
+Expected value is 'AppendVariable'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -46,6 +62,9 @@ public final class AppendVariableActivityArgs extends io.pulumi.resources.Resour
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     */
     @InputImport(name="userProperties")
     private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
@@ -53,6 +72,9 @@ public final class AppendVariableActivityArgs extends io.pulumi.resources.Resour
         return this.userProperties == null ? Input.empty() : this.userProperties;
     }
 
+    /**
+     * Value to be appended. Could be a static value or Expression
+     */
     @InputImport(name="value")
     private final @Nullable Input<Object> value;
 
@@ -60,6 +82,9 @@ public final class AppendVariableActivityArgs extends io.pulumi.resources.Resour
         return this.value == null ? Input.empty() : this.value;
     }
 
+    /**
+     * Name of the variable whose value needs to be appended to.
+     */
     @InputImport(name="variableName")
     private final @Nullable Input<String> variableName;
 

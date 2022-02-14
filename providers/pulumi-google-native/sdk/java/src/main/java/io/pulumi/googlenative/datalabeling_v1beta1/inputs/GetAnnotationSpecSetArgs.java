@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetAnnotationSpecSetArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAnnotationSpecSetArgs Empty = new GetAnnotationSpecSetArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="annotationSpecSetId", required=true)
     private final String annotationSpecSetId;
 
@@ -21,6 +27,9 @@ public final class GetAnnotationSpecSetArgs extends io.pulumi.resources.InvokeAr
         return this.annotationSpecSetId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

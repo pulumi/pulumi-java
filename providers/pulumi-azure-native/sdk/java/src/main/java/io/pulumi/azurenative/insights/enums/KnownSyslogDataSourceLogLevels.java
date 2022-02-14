@@ -8,16 +8,46 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum KnownSyslogDataSourceLogLevels {
+/**
+ * 
+ */
         Debug("Debug"),
+/**
+ * 
+ */
         Info("Info"),
+/**
+ * 
+ */
         Notice("Notice"),
+/**
+ * 
+ */
         Warning("Warning"),
+/**
+ * 
+ */
         Error("Error"),
+/**
+ * 
+ */
         Critical("Critical"),
+/**
+ * 
+ */
         Alert("Alert"),
+/**
+ * 
+ */
         Emergency("Emergency"),
+/**
+ * 
+ */
         Asterisk("*");
 
         private final String value;

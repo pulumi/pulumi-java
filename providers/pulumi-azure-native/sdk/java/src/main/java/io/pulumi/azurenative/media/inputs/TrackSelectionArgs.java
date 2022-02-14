@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Class to select a track
+ */
 public final class TrackSelectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TrackSelectionArgs Empty = new TrackSelectionArgs();
 
+    /**
+     * TrackSelections is a track property condition list which can specify track(s)
+     */
     @InputImport(name="trackSelections")
     private final @Nullable Input<List<TrackPropertyConditionArgs>> trackSelections;
 

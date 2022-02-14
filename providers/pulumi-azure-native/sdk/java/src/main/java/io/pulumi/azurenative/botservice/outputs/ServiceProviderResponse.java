@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ServiceProviderResponse {
+/**
+ * The Properties of a Service Provider Object
+ */
     private final @Nullable ServiceProviderPropertiesResponse properties;
 
     @OutputCustomType.Constructor({"properties"})
@@ -18,6 +21,9 @@ public final class ServiceProviderResponse {
         this.properties = properties;
     }
 
+/**
+ * The Properties of a Service Provider Object
+ */
     public Optional<ServiceProviderPropertiesResponse> getProperties() {
         return Optional.ofNullable(this.properties);
     }

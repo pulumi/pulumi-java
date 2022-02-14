@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class StorageAccountCredentialArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageAccountCredentialArgs Empty = new StorageAccountCredentialArgs();
 
+    /**
+     * Encrypted storage key.
+     */
     @InputImport(name="accountKey")
     private final @Nullable Input<AsymmetricEncryptedSecretArgs> accountKey;
 
@@ -25,6 +31,9 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
         return this.accountKey == null ? Input.empty() : this.accountKey;
     }
 
+    /**
+     * Type of storage accessed on the storage account.
+     */
     @InputImport(name="accountType", required=true)
     private final Input<Either<String,AccountType>> accountType;
 
@@ -32,6 +41,9 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
         return this.accountType;
     }
 
+    /**
+     * Alias for the storage account.
+     */
     @InputImport(name="alias", required=true)
     private final Input<String> alias;
 
@@ -39,6 +51,9 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
         return this.alias;
     }
 
+    /**
+     * Blob end point for private clouds.
+     */
     @InputImport(name="blobDomainName")
     private final @Nullable Input<String> blobDomainName;
 
@@ -46,6 +61,9 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
         return this.blobDomainName == null ? Input.empty() : this.blobDomainName;
     }
 
+    /**
+     * Connection string for the storage account. Use this string if username and account key are not specified.
+     */
     @InputImport(name="connectionString")
     private final @Nullable Input<String> connectionString;
 
@@ -53,6 +71,9 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
         return this.connectionString == null ? Input.empty() : this.connectionString;
     }
 
+    /**
+     * The device name.
+     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -60,6 +81,9 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
         return this.deviceName;
     }
 
+    /**
+     * The storage account credential name.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -67,6 +91,9 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -74,6 +101,9 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
         return this.resourceGroupName;
     }
 
+    /**
+     * Signifies whether SSL needs to be enabled or not.
+     */
     @InputImport(name="sslStatus", required=true)
     private final Input<Either<String,SSLStatus>> sslStatus;
 
@@ -81,6 +111,9 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
         return this.sslStatus;
     }
 
+    /**
+     * Id of the storage account.
+     */
     @InputImport(name="storageAccountId")
     private final @Nullable Input<String> storageAccountId;
 
@@ -88,6 +121,9 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
         return this.storageAccountId == null ? Input.empty() : this.storageAccountId;
     }
 
+    /**
+     * Username for the storage account.
+     */
     @InputImport(name="userName")
     private final @Nullable Input<String> userName;
 

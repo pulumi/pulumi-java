@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A private endpoint connection class.
+ */
 public final class PrivateEndpointConnectionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PrivateEndpointConnectionResponse Empty = new PrivateEndpointConnectionResponse();
 
+    /**
+     * Gets or sets the identifier.
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -23,6 +29,9 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.id;
     }
 
+    /**
+     * Gets or sets the name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -30,6 +39,9 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.name;
     }
 
+    /**
+     * The private endpoint information.
+     */
     @InputImport(name="privateEndpoint")
     private final @Nullable PrivateEndpointResponse privateEndpoint;
 
@@ -37,6 +49,9 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
     }
 
+    /**
+     * The private link service connection state.
+     */
     @InputImport(name="privateLinkServiceConnectionState")
     private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
@@ -44,6 +59,9 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
+    /**
+     * The provisioning state.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -51,6 +69,9 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
         return this.provisioningState;
     }
 
+    /**
+     * Gets or sets the type.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

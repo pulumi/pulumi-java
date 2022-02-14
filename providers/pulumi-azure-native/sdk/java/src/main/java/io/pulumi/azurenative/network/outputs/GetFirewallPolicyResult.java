@@ -22,25 +22,85 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetFirewallPolicyResult {
+/**
+ * The parent firewall policy from which rules are inherited.
+ */
     private final @Nullable SubResourceResponse basePolicy;
+/**
+ * List of references to Child Firewall Policies.
+ */
     private final List<SubResourceResponse> childPolicies;
+/**
+ * DNS Proxy Settings definition.
+ */
     private final @Nullable DnsSettingsResponse dnsSettings;
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     private final String etag;
+/**
+ * List of references to Azure Firewalls that this Firewall Policy is associated with.
+ */
     private final List<SubResourceResponse> firewalls;
+/**
+ * Resource ID.
+ */
     private final @Nullable String id;
+/**
+ * The identity of the firewall policy.
+ */
     private final @Nullable ManagedServiceIdentityResponse identity;
+/**
+ * Insights on Firewall Policy.
+ */
     private final @Nullable FirewallPolicyInsightsResponse insights;
+/**
+ * The configuration for Intrusion detection.
+ */
     private final @Nullable FirewallPolicyIntrusionDetectionResponse intrusionDetection;
+/**
+ * Resource location.
+ */
     private final @Nullable String location;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * The provisioning state of the firewall policy resource.
+ */
     private final String provisioningState;
+/**
+ * List of references to FirewallPolicyRuleCollectionGroups.
+ */
     private final List<SubResourceResponse> ruleCollectionGroups;
+/**
+ * The Firewall Policy SKU.
+ */
     private final @Nullable FirewallPolicySkuResponse sku;
+/**
+ * The private IP addresses/IP ranges to which traffic will not be SNAT.
+ */
     private final @Nullable FirewallPolicySNATResponse snat;
+/**
+ * Resource tags.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * The operation mode for Threat Intelligence.
+ */
     private final @Nullable String threatIntelMode;
+/**
+ * ThreatIntel Whitelist for Firewall Policy.
+ */
     private final @Nullable FirewallPolicyThreatIntelWhitelistResponse threatIntelWhitelist;
+/**
+ * TLS Configuration definition.
+ */
     private final @Nullable FirewallPolicyTransportSecurityResponse transportSecurity;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"basePolicy","childPolicies","dnsSettings","etag","firewalls","id","identity","insights","intrusionDetection","location","name","provisioningState","ruleCollectionGroups","sku","snat","tags","threatIntelMode","threatIntelWhitelist","transportSecurity","type"})
@@ -87,63 +147,123 @@ public final class GetFirewallPolicyResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The parent firewall policy from which rules are inherited.
+ */
     public Optional<SubResourceResponse> getBasePolicy() {
         return Optional.ofNullable(this.basePolicy);
     }
+/**
+ * List of references to Child Firewall Policies.
+ */
     public List<SubResourceResponse> getChildPolicies() {
         return this.childPolicies;
     }
+/**
+ * DNS Proxy Settings definition.
+ */
     public Optional<DnsSettingsResponse> getDnsSettings() {
         return Optional.ofNullable(this.dnsSettings);
     }
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * List of references to Azure Firewalls that this Firewall Policy is associated with.
+ */
     public List<SubResourceResponse> getFirewalls() {
         return this.firewalls;
     }
+/**
+ * Resource ID.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * The identity of the firewall policy.
+ */
     public Optional<ManagedServiceIdentityResponse> getIdentity() {
         return Optional.ofNullable(this.identity);
     }
+/**
+ * Insights on Firewall Policy.
+ */
     public Optional<FirewallPolicyInsightsResponse> getInsights() {
         return Optional.ofNullable(this.insights);
     }
+/**
+ * The configuration for Intrusion detection.
+ */
     public Optional<FirewallPolicyIntrusionDetectionResponse> getIntrusionDetection() {
         return Optional.ofNullable(this.intrusionDetection);
     }
+/**
+ * Resource location.
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The provisioning state of the firewall policy resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * List of references to FirewallPolicyRuleCollectionGroups.
+ */
     public List<SubResourceResponse> getRuleCollectionGroups() {
         return this.ruleCollectionGroups;
     }
+/**
+ * The Firewall Policy SKU.
+ */
     public Optional<FirewallPolicySkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
+/**
+ * The private IP addresses/IP ranges to which traffic will not be SNAT.
+ */
     public Optional<FirewallPolicySNATResponse> getSnat() {
         return Optional.ofNullable(this.snat);
     }
+/**
+ * Resource tags.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * The operation mode for Threat Intelligence.
+ */
     public Optional<String> getThreatIntelMode() {
         return Optional.ofNullable(this.threatIntelMode);
     }
+/**
+ * ThreatIntel Whitelist for Firewall Policy.
+ */
     public Optional<FirewallPolicyThreatIntelWhitelistResponse> getThreatIntelWhitelist() {
         return Optional.ofNullable(this.threatIntelWhitelist);
     }
+/**
+ * TLS Configuration definition.
+ */
     public Optional<FirewallPolicyTransportSecurityResponse> getTransportSecurity() {
         return Optional.ofNullable(this.transportSecurity);
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

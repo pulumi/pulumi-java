@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Details of the backing virtual machine.
+ */
 public final class VirtualMachineDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineDetailsResponse Empty = new VirtualMachineDetailsResponse();
 
+    /**
+     * Last known compute power state captured in DTL
+     */
     @InputImport(name="lastKnownPowerState", required=true)
     private final String lastKnownPowerState;
 
@@ -19,6 +25,9 @@ public final class VirtualMachineDetailsResponse extends io.pulumi.resources.Inv
         return this.lastKnownPowerState;
     }
 
+    /**
+     * PrivateIp address of the compute VM
+     */
     @InputImport(name="privateIpAddress", required=true)
     private final String privateIpAddress;
 
@@ -26,6 +35,9 @@ public final class VirtualMachineDetailsResponse extends io.pulumi.resources.Inv
         return this.privateIpAddress;
     }
 
+    /**
+     * Provisioning state of the Dtl VM
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -33,6 +45,9 @@ public final class VirtualMachineDetailsResponse extends io.pulumi.resources.Inv
         return this.provisioningState;
     }
 
+    /**
+     * Connection information for Windows
+     */
     @InputImport(name="rdpAuthority", required=true)
     private final String rdpAuthority;
 
@@ -40,6 +55,9 @@ public final class VirtualMachineDetailsResponse extends io.pulumi.resources.Inv
         return this.rdpAuthority;
     }
 
+    /**
+     * Connection information for Linux
+     */
     @InputImport(name="sshAuthority", required=true)
     private final String sshAuthority;
 
@@ -47,6 +65,9 @@ public final class VirtualMachineDetailsResponse extends io.pulumi.resources.Inv
         return this.sshAuthority;
     }
 
+    /**
+     * Compute VM login user name
+     */
     @InputImport(name="userName", required=true)
     private final String userName;
 

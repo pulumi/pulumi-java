@@ -11,10 +11,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ManagedZonePrivateVisibilityConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ManagedZonePrivateVisibilityConfigResponse Empty = new ManagedZonePrivateVisibilityConfigResponse();
 
+    /**
+     * The list of Google Kubernetes Engine clusters that can see this zone.
+     */
     @InputImport(name="gkeClusters", required=true)
     private final List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> gkeClusters;
 
@@ -22,6 +28,9 @@ public final class ManagedZonePrivateVisibilityConfigResponse extends io.pulumi.
         return this.gkeClusters;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="kind", required=true)
     private final String kind;
 
@@ -29,6 +38,9 @@ public final class ManagedZonePrivateVisibilityConfigResponse extends io.pulumi.
         return this.kind;
     }
 
+    /**
+     * The list of VPC networks that can see this zone.
+     */
     @InputImport(name="networks", required=true)
     private final List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
 

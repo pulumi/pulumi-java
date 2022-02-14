@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The list of messages or conditional cases to activate for this case.
+ */
 public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs Empty = new GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs();
 
+    /**
+     * Additional cases to be evaluated.
+     */
     @InputImport(name="additionalCases")
     private final @Nullable Input<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs> additionalCases;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseC
         return this.additionalCases == null ? Input.empty() : this.additionalCases;
     }
 
+    /**
+     * Returned message.
+     */
     @InputImport(name="message")
     private final @Nullable Input<GoogleCloudDialogflowCxV3ResponseMessageArgs> message;
 

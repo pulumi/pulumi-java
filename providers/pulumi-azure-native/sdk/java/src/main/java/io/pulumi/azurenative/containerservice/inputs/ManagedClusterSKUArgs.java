@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ManagedClusterSKUArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ManagedClusterSKUArgs Empty = new ManagedClusterSKUArgs();
 
+    /**
+     * Name of a managed cluster SKU.
+     */
     @InputImport(name="name")
     private final @Nullable Input<Either<String,ManagedClusterSKUName>> name;
 
@@ -24,6 +30,9 @@ public final class ManagedClusterSKUArgs extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Tier of a managed cluster SKU.
+     */
     @InputImport(name="tier")
     private final @Nullable Input<Either<String,ManagedClusterSKUTier>> tier;
 

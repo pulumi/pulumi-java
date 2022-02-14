@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetDscConfigurationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDscConfigurationArgs Empty = new GetDscConfigurationArgs();
 
+    /**
+     * The name of the automation account.
+     */
     @InputImport(name="automationAccountName", required=true)
     private final String automationAccountName;
 
@@ -19,6 +25,9 @@ public final class GetDscConfigurationArgs extends io.pulumi.resources.InvokeArg
         return this.automationAccountName;
     }
 
+    /**
+     * The configuration name.
+     */
     @InputImport(name="configurationName", required=true)
     private final String configurationName;
 
@@ -26,6 +35,9 @@ public final class GetDscConfigurationArgs extends io.pulumi.resources.InvokeArg
         return this.configurationName;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

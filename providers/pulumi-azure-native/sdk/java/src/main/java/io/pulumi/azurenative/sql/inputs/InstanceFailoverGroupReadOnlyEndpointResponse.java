@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Read-only endpoint of the failover group instance.
+ */
 public final class InstanceFailoverGroupReadOnlyEndpointResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InstanceFailoverGroupReadOnlyEndpointResponse Empty = new InstanceFailoverGroupReadOnlyEndpointResponse();
 
+    /**
+     * Failover policy of the read-only endpoint for the failover group.
+     */
     @InputImport(name="failoverPolicy")
     private final @Nullable String failoverPolicy;
 

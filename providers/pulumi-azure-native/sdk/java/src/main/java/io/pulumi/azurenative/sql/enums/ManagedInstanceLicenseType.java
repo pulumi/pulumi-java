@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).
+ */
     @EnumType
     public enum ManagedInstanceLicenseType {
+/**
+ * 
+ */
         LicenseIncluded("LicenseIncluded"),
+/**
+ * 
+ */
         BasePrice("BasePrice");
 
         private final String value;

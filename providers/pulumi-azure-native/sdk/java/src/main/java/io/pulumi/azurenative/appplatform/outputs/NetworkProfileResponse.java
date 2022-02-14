@@ -3,7 +3,6 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.azurenative.appplatform.outputs.NetworkProfileResponseOutboundIPs;
 import io.pulumi.azurenative.appplatform.outputs.RequiredTrafficResponse;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.String;
@@ -14,12 +13,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NetworkProfileResponse {
+/**
+ * Name of the resource group containing network resources of Azure Spring Cloud Apps
+ */
     private final @Nullable String appNetworkResourceGroup;
+/**
+ * Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps
+ */
     private final @Nullable String appSubnetId;
+/**
+ * Desired outbound IP resources for Azure Spring Cloud instance.
+ */
     private final NetworkProfileResponseOutboundIPs outboundIPs;
+/**
+ * Required inbound or outbound traffics for Azure Spring Cloud instance.
+ */
     private final List<RequiredTrafficResponse> requiredTraffics;
+/**
+ * Azure Spring Cloud service reserved CIDR
+ */
     private final @Nullable String serviceCidr;
+/**
+ * Name of the resource group containing network resources of Azure Spring Cloud Service Runtime
+ */
     private final @Nullable String serviceRuntimeNetworkResourceGroup;
+/**
+ * Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime
+ */
     private final @Nullable String serviceRuntimeSubnetId;
 
     @OutputCustomType.Constructor({"appNetworkResourceGroup","appSubnetId","outboundIPs","requiredTraffics","serviceCidr","serviceRuntimeNetworkResourceGroup","serviceRuntimeSubnetId"})
@@ -40,24 +60,45 @@ public final class NetworkProfileResponse {
         this.serviceRuntimeSubnetId = serviceRuntimeSubnetId;
     }
 
+/**
+ * Name of the resource group containing network resources of Azure Spring Cloud Apps
+ */
     public Optional<String> getAppNetworkResourceGroup() {
         return Optional.ofNullable(this.appNetworkResourceGroup);
     }
+/**
+ * Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps
+ */
     public Optional<String> getAppSubnetId() {
         return Optional.ofNullable(this.appSubnetId);
     }
+/**
+ * Desired outbound IP resources for Azure Spring Cloud instance.
+ */
     public NetworkProfileResponseOutboundIPs getOutboundIPs() {
         return this.outboundIPs;
     }
+/**
+ * Required inbound or outbound traffics for Azure Spring Cloud instance.
+ */
     public List<RequiredTrafficResponse> getRequiredTraffics() {
         return this.requiredTraffics;
     }
+/**
+ * Azure Spring Cloud service reserved CIDR
+ */
     public Optional<String> getServiceCidr() {
         return Optional.ofNullable(this.serviceCidr);
     }
+/**
+ * Name of the resource group containing network resources of Azure Spring Cloud Service Runtime
+ */
     public Optional<String> getServiceRuntimeNetworkResourceGroup() {
         return Optional.ofNullable(this.serviceRuntimeNetworkResourceGroup);
     }
+/**
+ * Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime
+ */
     public Optional<String> getServiceRuntimeSubnetId() {
         return Optional.ofNullable(this.serviceRuntimeSubnetId);
     }

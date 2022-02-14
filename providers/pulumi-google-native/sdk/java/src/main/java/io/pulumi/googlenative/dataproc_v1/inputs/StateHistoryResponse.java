@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Historical state information.
+ */
 public final class StateHistoryResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StateHistoryResponse Empty = new StateHistoryResponse();
 
+    /**
+     * The state of the batch at this point in history.
+     */
     @InputImport(name="state", required=true)
     private final String state;
 
@@ -19,6 +25,9 @@ public final class StateHistoryResponse extends io.pulumi.resources.InvokeArgs {
         return this.state;
     }
 
+    /**
+     * Details about the state at this point in history.
+     */
     @InputImport(name="stateMessage", required=true)
     private final String stateMessage;
 
@@ -26,6 +35,9 @@ public final class StateHistoryResponse extends io.pulumi.resources.InvokeArgs {
         return this.stateMessage;
     }
 
+    /**
+     * The time when the batch entered the historical state.
+     */
     @InputImport(name="stateStartTime", required=true)
     private final String stateStartTime;
 

@@ -14,11 +14,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class BackendServiceFabricClusterPropertiesResponse {
+/**
+ * The client certificate id for the management endpoint.
+ */
     private final @Nullable String clientCertificateId;
+/**
+ * The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided
+ */
     private final @Nullable String clientCertificatethumbprint;
+/**
+ * The cluster management endpoint.
+ */
     private final List<String> managementEndpoints;
+/**
+ * Maximum number of retries while attempting resolve the partition.
+ */
     private final @Nullable Integer maxPartitionResolutionRetries;
+/**
+ * Thumbprints of certificates cluster management service uses for tls communication
+ */
     private final @Nullable List<String> serverCertificateThumbprints;
+/**
+ * Server X509 Certificate Names Collection
+ */
     private final @Nullable List<X509CertificateNameResponse> serverX509Names;
 
     @OutputCustomType.Constructor({"clientCertificateId","clientCertificatethumbprint","managementEndpoints","maxPartitionResolutionRetries","serverCertificateThumbprints","serverX509Names"})
@@ -37,21 +55,39 @@ public final class BackendServiceFabricClusterPropertiesResponse {
         this.serverX509Names = serverX509Names;
     }
 
+/**
+ * The client certificate id for the management endpoint.
+ */
     public Optional<String> getClientCertificateId() {
         return Optional.ofNullable(this.clientCertificateId);
     }
+/**
+ * The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided
+ */
     public Optional<String> getClientCertificatethumbprint() {
         return Optional.ofNullable(this.clientCertificatethumbprint);
     }
+/**
+ * The cluster management endpoint.
+ */
     public List<String> getManagementEndpoints() {
         return this.managementEndpoints;
     }
+/**
+ * Maximum number of retries while attempting resolve the partition.
+ */
     public Optional<Integer> getMaxPartitionResolutionRetries() {
         return Optional.ofNullable(this.maxPartitionResolutionRetries);
     }
+/**
+ * Thumbprints of certificates cluster management service uses for tls communication
+ */
     public List<String> getServerCertificateThumbprints() {
         return this.serverCertificateThumbprints == null ? List.of() : this.serverCertificateThumbprints;
     }
+/**
+ * Server X509 Certificate Names Collection
+ */
     public List<X509CertificateNameResponse> getServerX509Names() {
         return this.serverX509Names == null ? List.of() : this.serverX509Names;
     }

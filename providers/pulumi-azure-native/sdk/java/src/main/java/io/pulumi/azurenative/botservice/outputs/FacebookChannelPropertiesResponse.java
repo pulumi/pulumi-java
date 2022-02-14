@@ -14,11 +14,29 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class FacebookChannelPropertiesResponse {
+/**
+ * Facebook application id
+ */
     private final String appId;
+/**
+ * Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.
+ */
     private final @Nullable String appSecret;
+/**
+ * Callback Url
+ */
     private final String callbackUrl;
+/**
+ * Whether this channel is enabled for the bot
+ */
     private final Boolean isEnabled;
+/**
+ * The list of Facebook pages
+ */
     private final @Nullable List<FacebookPageResponse> pages;
+/**
+ * Verify token. Value only returned through POST to the action Channel List API, otherwise empty.
+ */
     private final String verifyToken;
 
     @OutputCustomType.Constructor({"appId","appSecret","callbackUrl","isEnabled","pages","verifyToken"})
@@ -37,21 +55,39 @@ public final class FacebookChannelPropertiesResponse {
         this.verifyToken = Objects.requireNonNull(verifyToken);
     }
 
+/**
+ * Facebook application id
+ */
     public String getAppId() {
         return this.appId;
     }
+/**
+ * Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.
+ */
     public Optional<String> getAppSecret() {
         return Optional.ofNullable(this.appSecret);
     }
+/**
+ * Callback Url
+ */
     public String getCallbackUrl() {
         return this.callbackUrl;
     }
+/**
+ * Whether this channel is enabled for the bot
+ */
     public Boolean getIsEnabled() {
         return this.isEnabled;
     }
+/**
+ * The list of Facebook pages
+ */
     public List<FacebookPageResponse> getPages() {
         return this.pages == null ? List.of() : this.pages;
     }
+/**
+ * Verify token. Value only returned through POST to the action Channel List API, otherwise empty.
+ */
     public String getVerifyToken() {
         return this.verifyToken;
     }

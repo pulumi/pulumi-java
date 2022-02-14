@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class CaseClassificationResponse {
+/**
+ * The display name of the classification.
+ */
     private final String displayName;
 
     @OutputCustomType.Constructor({"displayName"})
@@ -16,6 +19,9 @@ public final class CaseClassificationResponse {
         this.displayName = Objects.requireNonNull(displayName);
     }
 
+/**
+ * The display name of the classification.
+ */
     public String getDisplayName() {
         return this.displayName;
     }

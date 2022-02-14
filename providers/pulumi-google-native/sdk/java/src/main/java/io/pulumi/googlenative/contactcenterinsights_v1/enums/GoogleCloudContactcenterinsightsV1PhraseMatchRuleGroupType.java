@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Required. The type of this phrase match rule group.
+ */
     @EnumType
     public enum GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType {
+/**
+ * Unspecified.
+ */
         PhraseMatchRuleGroupTypeUnspecified("PHRASE_MATCH_RULE_GROUP_TYPE_UNSPECIFIED"),
+/**
+ * Must meet all phrase match rules or there is no match.
+ */
         AllOf("ALL_OF"),
+/**
+ * If any of the phrase match rules are met, there is a match.
+ */
         AnyOf("ANY_OF");
 
         private final String value;

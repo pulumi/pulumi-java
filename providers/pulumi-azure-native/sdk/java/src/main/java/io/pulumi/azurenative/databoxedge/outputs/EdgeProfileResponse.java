@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EdgeProfileResponse {
+/**
+ * Edge Profile Subscription
+ */
     private final @Nullable EdgeProfileSubscriptionResponse subscription;
 
     @OutputCustomType.Constructor({"subscription"})
@@ -18,6 +21,9 @@ public final class EdgeProfileResponse {
         this.subscription = subscription;
     }
 
+/**
+ * Edge Profile Subscription
+ */
     public Optional<EdgeProfileSubscriptionResponse> getSubscription() {
         return Optional.ofNullable(this.subscription);
     }

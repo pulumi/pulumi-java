@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetBatchAccountArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBatchAccountArgs Empty = new GetBatchAccountArgs();
 
+    /**
+     * The name of the Batch account.
+     */
     @InputImport(name="accountName", required=true)
     private final String accountName;
 
@@ -19,6 +25,9 @@ public final class GetBatchAccountArgs extends io.pulumi.resources.InvokeArgs {
         return this.accountName;
     }
 
+    /**
+     * The name of the resource group that contains the Batch account.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomApiArgs Empty = new CustomApiArgs();
 
+    /**
+     * API name
+     */
     @InputImport(name="apiName")
     private final @Nullable Input<String> apiName;
 
@@ -23,6 +29,9 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
         return this.apiName == null ? Input.empty() : this.apiName;
     }
 
+    /**
+     * Resource location
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -30,6 +39,9 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Custom API properties
+     */
     @InputImport(name="properties")
     private final @Nullable Input<CustomApiPropertiesDefinitionArgs> properties;
 
@@ -37,6 +49,9 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
         return this.properties == null ? Input.empty() : this.properties;
     }
 
+    /**
+     * The resource group
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +59,9 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * Subscription Id
+     */
     @InputImport(name="subscriptionId")
     private final @Nullable Input<String> subscriptionId;
 
@@ -51,6 +69,9 @@ public final class CustomApiArgs extends io.pulumi.resources.ResourceArgs {
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
     }
 
+    /**
+     * Resource tags
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

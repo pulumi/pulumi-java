@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ComplianceOccurrenceResponse {
+/**
+ * 
+ */
     private final String nonComplianceReason;
+/**
+ * 
+ */
     private final List<NonCompliantFileResponse> nonCompliantFiles;
 
     @OutputCustomType.Constructor({"nonComplianceReason","nonCompliantFiles"})
@@ -22,9 +28,15 @@ public final class ComplianceOccurrenceResponse {
         this.nonCompliantFiles = Objects.requireNonNull(nonCompliantFiles);
     }
 
+/**
+ * 
+ */
     public String getNonComplianceReason() {
         return this.nonComplianceReason;
     }
+/**
+ * 
+ */
     public List<NonCompliantFileResponse> getNonCompliantFiles() {
         return this.nonCompliantFiles;
     }

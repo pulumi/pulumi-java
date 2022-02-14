@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetLoadBalancerBackendAddressPool {
+/**
+ * Pool of backend IP addresses.
+API Version: 2020-11-01.
+ *
+ * Pool of backend IP addresses.
+ */
     public static CompletableFuture<GetLoadBalancerBackendAddressPoolResult> invokeAsync(GetLoadBalancerBackendAddressPoolArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getLoadBalancerBackendAddressPool", TypeShape.of(GetLoadBalancerBackendAddressPoolResult.class), args == null ? GetLoadBalancerBackendAddressPoolArgs.Empty : args, Utilities.withVersion(options));
     }

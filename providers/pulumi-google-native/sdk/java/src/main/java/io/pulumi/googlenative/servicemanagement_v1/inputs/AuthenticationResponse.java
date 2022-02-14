@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * `Authentication` defines the authentication configuration for API methods provided by an API service. Example: name: calendar.googleapis.com authentication: providers: - id: google_calendar_auth jwks_uri: https://www.googleapis.com/oauth2/v1/certs issuer: https://securetoken.google.com rules: - selector: "*" requirements: provider_id: google_calendar_auth - selector: google.calendar.Delegate oauth: canonical_scopes: https://www.googleapis.com/auth/calendar.read
+ */
 public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AuthenticationResponse Empty = new AuthenticationResponse();
 
+    /**
+     * Defines a set of authentication providers that a service supports.
+     */
     @InputImport(name="providers", required=true)
     private final List<AuthProviderResponse> providers;
 
@@ -21,6 +27,9 @@ public final class AuthenticationResponse extends io.pulumi.resources.InvokeArgs
         return this.providers;
     }
 
+    /**
+     * A list of authentication rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
+     */
     @InputImport(name="rules", required=true)
     private final List<AuthenticationRuleResponse> rules;
 

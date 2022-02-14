@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Represents a schema, for example, a BigQuery, GoogleSQL, or Avro schema.
+ */
 public final class GoogleCloudDatacatalogV1SchemaResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDatacatalogV1SchemaResponse Empty = new GoogleCloudDatacatalogV1SchemaResponse();
 
+    /**
+     * The unified GoogleSQL-like schema of columns. The overall maximum number of columns and nested columns is 10,000. The maximum nested depth is 15 levels.
+     */
     @InputImport(name="columns", required=true)
     private final List<GoogleCloudDatacatalogV1ColumnSchemaResponse> columns;
 

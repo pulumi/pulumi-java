@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs {
+/**
+ * Desired number of outbound IP created/managed by Azure for the cluster load balancer. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. 
+ */
     private final @Nullable Integer count;
 
     @OutputCustomType.Constructor({"count"})
@@ -18,6 +21,9 @@ public final class ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs {
         this.count = count;
     }
 
+/**
+ * Desired number of outbound IP created/managed by Azure for the cluster load balancer. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. 
+ */
     public Optional<Integer> getCount() {
         return Optional.ofNullable(this.count);
     }

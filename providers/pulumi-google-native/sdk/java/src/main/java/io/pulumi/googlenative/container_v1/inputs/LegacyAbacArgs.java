@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Configuration for the legacy Attribute Based Access Control authorization mode.
+ */
 public final class LegacyAbacArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LegacyAbacArgs Empty = new LegacyAbacArgs();
 
+    /**
+     * Whether the ABAC authorizer is enabled for this cluster. When enabled, identities in the system, including service accounts, nodes, and controllers, will have statically granted permissions beyond those provided by the RBAC configuration or IAM.
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 

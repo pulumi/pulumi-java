@@ -19,10 +19,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Custom API properties
+ */
 public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CustomApiPropertiesDefinitionArgs Empty = new CustomApiPropertiesDefinitionArgs();
 
+    /**
+     * API Definitions
+     */
     @InputImport(name="apiDefinitions")
     private final @Nullable Input<ApiResourceDefinitionsArgs> apiDefinitions;
 
@@ -30,6 +36,9 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
         return this.apiDefinitions == null ? Input.empty() : this.apiDefinitions;
     }
 
+    /**
+     * The API type
+     */
     @InputImport(name="apiType")
     private final @Nullable Input<Either<String,ApiType>> apiType;
 
@@ -37,6 +46,9 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
         return this.apiType == null ? Input.empty() : this.apiType;
     }
 
+    /**
+     * The API backend service
+     */
     @InputImport(name="backendService")
     private final @Nullable Input<ApiResourceBackendServiceArgs> backendService;
 
@@ -44,6 +56,9 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
         return this.backendService == null ? Input.empty() : this.backendService;
     }
 
+    /**
+     * Brand color
+     */
     @InputImport(name="brandColor")
     private final @Nullable Input<String> brandColor;
 
@@ -51,6 +66,9 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
         return this.brandColor == null ? Input.empty() : this.brandColor;
     }
 
+    /**
+     * The custom API capabilities
+     */
     @InputImport(name="capabilities")
     private final @Nullable Input<List<String>> capabilities;
 
@@ -58,6 +76,9 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
         return this.capabilities == null ? Input.empty() : this.capabilities;
     }
 
+    /**
+     * Connection parameters
+     */
     @InputImport(name="connectionParameters")
     private final @Nullable Input<Map<String,ConnectionParameterArgs>> connectionParameters;
 
@@ -65,6 +86,9 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
         return this.connectionParameters == null ? Input.empty() : this.connectionParameters;
     }
 
+    /**
+     * The custom API description
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -72,6 +96,9 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The display name
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -79,6 +106,9 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * The icon URI
+     */
     @InputImport(name="iconUri")
     private final @Nullable Input<String> iconUri;
 
@@ -86,6 +116,9 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
         return this.iconUri == null ? Input.empty() : this.iconUri;
     }
 
+    /**
+     * Runtime URLs
+     */
     @InputImport(name="runtimeUrls")
     private final @Nullable Input<List<String>> runtimeUrls;
 
@@ -93,6 +126,9 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
         return this.runtimeUrls == null ? Input.empty() : this.runtimeUrls;
     }
 
+    /**
+     * The JSON representation of the swagger
+     */
     @InputImport(name="swagger")
     private final @Nullable Input<Object> swagger;
 
@@ -100,6 +136,9 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
         return this.swagger == null ? Input.empty() : this.swagger;
     }
 
+    /**
+     * The WSDL definition
+     */
     @InputImport(name="wsdlDefinition")
     private final @Nullable Input<WsdlDefinitionArgs> wsdlDefinition;
 

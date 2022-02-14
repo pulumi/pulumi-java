@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * An X509Parameters is used to describe certain fields of an X.509 certificate, such as the key usage fields, fields specific to CA certificates, certificate policy extensions and custom extensions.
+ */
 public final class X509ParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final X509ParametersArgs Empty = new X509ParametersArgs();
 
+    /**
+     * Optional. Describes custom X.509 extensions.
+     */
     @InputImport(name="additionalExtensions")
     private final @Nullable Input<List<X509ExtensionArgs>> additionalExtensions;
 
@@ -26,6 +32,9 @@ public final class X509ParametersArgs extends io.pulumi.resources.ResourceArgs {
         return this.additionalExtensions == null ? Input.empty() : this.additionalExtensions;
     }
 
+    /**
+     * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.
+     */
     @InputImport(name="aiaOcspServers")
     private final @Nullable Input<List<String>> aiaOcspServers;
 
@@ -33,6 +42,9 @@ public final class X509ParametersArgs extends io.pulumi.resources.ResourceArgs {
         return this.aiaOcspServers == null ? Input.empty() : this.aiaOcspServers;
     }
 
+    /**
+     * Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
+     */
     @InputImport(name="caOptions")
     private final @Nullable Input<CaOptionsArgs> caOptions;
 
@@ -40,6 +52,9 @@ public final class X509ParametersArgs extends io.pulumi.resources.ResourceArgs {
         return this.caOptions == null ? Input.empty() : this.caOptions;
     }
 
+    /**
+     * Optional. Indicates the intended use for keys that correspond to a certificate.
+     */
     @InputImport(name="keyUsage")
     private final @Nullable Input<KeyUsageArgs> keyUsage;
 
@@ -47,6 +62,9 @@ public final class X509ParametersArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyUsage == null ? Input.empty() : this.keyUsage;
     }
 
+    /**
+     * Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
+     */
     @InputImport(name="policyIds")
     private final @Nullable Input<List<ObjectIdArgs>> policyIds;
 

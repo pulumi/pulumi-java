@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Container Account Description
+ */
 public final class ContainerAccountResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ContainerAccountResponse Empty = new ContainerAccountResponse();
 
+    /**
+     * The account name
+     */
     @InputImport(name="accountName")
     private final @Nullable String accountName;
 
@@ -21,6 +27,9 @@ public final class ContainerAccountResponse extends io.pulumi.resources.InvokeAr
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
     }
 
+    /**
+     * The account password
+     */
     @InputImport(name="password")
     private final @Nullable String password;
 
@@ -28,6 +37,9 @@ public final class ContainerAccountResponse extends io.pulumi.resources.InvokeAr
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
+    /**
+     * The account spn
+     */
     @InputImport(name="spn")
     private final @Nullable String spn;
 

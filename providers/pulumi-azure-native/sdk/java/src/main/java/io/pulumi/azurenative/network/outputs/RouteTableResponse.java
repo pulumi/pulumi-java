@@ -16,16 +16,49 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class RouteTableResponse {
+/**
+ * Whether to disable the routes learned by BGP on that route table. True means disable.
+ */
     private final @Nullable Boolean disableBgpRoutePropagation;
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     private final String etag;
+/**
+ * Resource ID.
+ */
     private final @Nullable String id;
+/**
+ * Resource location.
+ */
     private final @Nullable String location;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * The provisioning state of the route table resource.
+ */
     private final String provisioningState;
+/**
+ * The resource GUID property of the route table.
+ */
     private final String resourceGuid;
+/**
+ * Collection of routes contained within a route table.
+ */
     private final @Nullable List<RouteResponse> routes;
+/**
+ * A collection of references to subnets.
+ */
     private final List<SubnetResponse> subnets;
+/**
+ * Resource tags.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Resource type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"disableBgpRoutePropagation","etag","id","location","name","provisioningState","resourceGuid","routes","subnets","tags","type"})
@@ -54,36 +87,69 @@ public final class RouteTableResponse {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Whether to disable the routes learned by BGP on that route table. True means disable.
+ */
     public Optional<Boolean> getDisableBgpRoutePropagation() {
         return Optional.ofNullable(this.disableBgpRoutePropagation);
     }
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * Resource ID.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * Resource location.
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The provisioning state of the route table resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * The resource GUID property of the route table.
+ */
     public String getResourceGuid() {
         return this.resourceGuid;
     }
+/**
+ * Collection of routes contained within a route table.
+ */
     public List<RouteResponse> getRoutes() {
         return this.routes == null ? List.of() : this.routes;
     }
+/**
+ * A collection of references to subnets.
+ */
     public List<SubnetResponse> getSubnets() {
         return this.subnets;
     }
+/**
+ * Resource tags.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }

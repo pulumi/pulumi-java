@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Datadog organization properties
+ */
 public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatadogOrganizationPropertiesArgs Empty = new DatadogOrganizationPropertiesArgs();
 
+    /**
+     * Api key associated to the Datadog organization.
+     */
     @InputImport(name="apiKey")
     private final @Nullable Input<String> apiKey;
 
@@ -21,6 +27,9 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
         return this.apiKey == null ? Input.empty() : this.apiKey;
     }
 
+    /**
+     * Application key associated to the Datadog organization.
+     */
     @InputImport(name="applicationKey")
     private final @Nullable Input<String> applicationKey;
 
@@ -28,6 +37,9 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
         return this.applicationKey == null ? Input.empty() : this.applicationKey;
     }
 
+    /**
+     * The Id of the Enterprise App used for Single sign on.
+     */
     @InputImport(name="enterpriseAppId")
     private final @Nullable Input<String> enterpriseAppId;
 
@@ -35,6 +47,9 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
         return this.enterpriseAppId == null ? Input.empty() : this.enterpriseAppId;
     }
 
+    /**
+     * The auth code used to linking to an existing datadog organization.
+     */
     @InputImport(name="linkingAuthCode")
     private final @Nullable Input<String> linkingAuthCode;
 
@@ -42,6 +57,9 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
         return this.linkingAuthCode == null ? Input.empty() : this.linkingAuthCode;
     }
 
+    /**
+     * The client_id from an existing in exchange for an auth token to link organization.
+     */
     @InputImport(name="linkingClientId")
     private final @Nullable Input<String> linkingClientId;
 
@@ -49,6 +67,9 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
         return this.linkingClientId == null ? Input.empty() : this.linkingClientId;
     }
 
+    /**
+     * The redirect uri for linking.
+     */
     @InputImport(name="redirectUri")
     private final @Nullable Input<String> redirectUri;
 

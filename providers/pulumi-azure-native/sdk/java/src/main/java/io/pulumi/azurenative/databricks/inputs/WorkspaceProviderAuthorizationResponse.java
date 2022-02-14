@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The workspace provider authorization.
+ */
 public final class WorkspaceProviderAuthorizationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkspaceProviderAuthorizationResponse Empty = new WorkspaceProviderAuthorizationResponse();
 
+    /**
+     * The provider's principal identifier. This is the identity that the provider will use to call ARM to manage the workspace resources.
+     */
     @InputImport(name="principalId", required=true)
     private final String principalId;
 
@@ -19,6 +25,9 @@ public final class WorkspaceProviderAuthorizationResponse extends io.pulumi.reso
         return this.principalId;
     }
 
+    /**
+     * The provider's role definition identifier. This role will define all the permissions that the provider must have on the workspace's container resource group. This role definition cannot have permission to delete the resource group.
+     */
     @InputImport(name="roleDefinitionId", required=true)
     private final String roleDefinitionId;
 

@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IdentityProviderArgs Empty = new IdentityProviderArgs();
 
+    /**
+     * List of Allowed Tenants when configuring Azure Active Directory login.
+     */
     @InputImport(name="allowedTenants")
     private final @Nullable Input<List<String>> allowedTenants;
 
@@ -24,6 +30,9 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
         return this.allowedTenants == null ? Input.empty() : this.allowedTenants;
     }
 
+    /**
+     * OpenID Connect discovery endpoint hostname for AAD or AAD B2C.
+     */
     @InputImport(name="authority")
     private final @Nullable Input<String> authority;
 
@@ -31,6 +40,9 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
         return this.authority == null ? Input.empty() : this.authority;
     }
 
+    /**
+     * Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.
+     */
     @InputImport(name="clientId", required=true)
     private final Input<String> clientId;
 
@@ -38,6 +50,9 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
         return this.clientId;
     }
 
+    /**
+     * Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
+     */
     @InputImport(name="clientSecret", required=true)
     private final Input<String> clientSecret;
 
@@ -45,6 +60,9 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
         return this.clientSecret;
     }
 
+    /**
+     * Identity Provider Type identifier.
+     */
     @InputImport(name="identityProviderName")
     private final @Nullable Input<String> identityProviderName;
 
@@ -52,6 +70,9 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
         return this.identityProviderName == null ? Input.empty() : this.identityProviderName;
     }
 
+    /**
+     * Password Reset Policy Name. Only applies to AAD B2C Identity Provider.
+     */
     @InputImport(name="passwordResetPolicyName")
     private final @Nullable Input<String> passwordResetPolicyName;
 
@@ -59,6 +80,9 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
         return this.passwordResetPolicyName == null ? Input.empty() : this.passwordResetPolicyName;
     }
 
+    /**
+     * Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.
+     */
     @InputImport(name="profileEditingPolicyName")
     private final @Nullable Input<String> profileEditingPolicyName;
 
@@ -66,6 +90,9 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
         return this.profileEditingPolicyName == null ? Input.empty() : this.profileEditingPolicyName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -73,6 +100,9 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the API Management service.
+     */
     @InputImport(name="serviceName", required=true)
     private final Input<String> serviceName;
 
@@ -80,6 +110,9 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
         return this.serviceName;
     }
 
+    /**
+     * Signin Policy Name. Only applies to AAD B2C Identity Provider.
+     */
     @InputImport(name="signinPolicyName")
     private final @Nullable Input<String> signinPolicyName;
 
@@ -87,6 +120,9 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
         return this.signinPolicyName == null ? Input.empty() : this.signinPolicyName;
     }
 
+    /**
+     * The TenantId to use instead of Common when logging into Active Directory
+     */
     @InputImport(name="signinTenant")
     private final @Nullable Input<String> signinTenant;
 
@@ -94,6 +130,9 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
         return this.signinTenant == null ? Input.empty() : this.signinTenant;
     }
 
+    /**
+     * Signup Policy Name. Only applies to AAD B2C Identity Provider.
+     */
     @InputImport(name="signupPolicyName")
     private final @Nullable Input<String> signupPolicyName;
 
@@ -101,6 +140,9 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
         return this.signupPolicyName == null ? Input.empty() : this.signupPolicyName;
     }
 
+    /**
+     * Identity Provider Type identifier.
+     */
     @InputImport(name="type")
     private final @Nullable Input<Either<String,IdentityProviderType>> type;
 

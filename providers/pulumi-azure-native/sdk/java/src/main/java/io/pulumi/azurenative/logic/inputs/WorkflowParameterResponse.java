@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The workflow parameters.
+ */
 public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WorkflowParameterResponse Empty = new WorkflowParameterResponse();
 
+    /**
+     * The description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -22,6 +28,9 @@ public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeA
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * The metadata.
+     */
     @InputImport(name="metadata")
     private final @Nullable Object metadata;
 
@@ -29,6 +38,9 @@ public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeA
         return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
     }
 
+    /**
+     * The type.
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 
@@ -36,6 +48,9 @@ public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeA
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
+    /**
+     * The value.
+     */
     @InputImport(name="value")
     private final @Nullable Object value;
 

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * User information that made some action
+ */
 public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UserInfoResponse Empty = new UserInfoResponse();
 
+    /**
+     * The email of the user.
+     */
     @InputImport(name="email", required=true)
     private final String email;
 
@@ -21,6 +27,9 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.email;
     }
 
+    /**
+     * The name of the user.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -28,6 +37,9 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
         return this.name;
     }
 
+    /**
+     * The object id of the user.
+     */
     @InputImport(name="objectId")
     private final @Nullable String objectId;
 

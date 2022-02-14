@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Represents a GKE destination.
+ */
 public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GKEArgs Empty = new GKEArgs();
 
+    /**
+     * The name of the cluster the GKE service is running in. The cluster must be running in the same project as the trigger being created.
+     */
     @InputImport(name="cluster", required=true)
     private final Input<String> cluster;
 
@@ -21,6 +27,9 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
         return this.cluster;
     }
 
+    /**
+     * The name of the Google Compute Engine in which the cluster resides, which can either be compute zone (for example, us-central1-a) for the zonal clusters or region (for example, us-central1) for regional clusters.
+     */
     @InputImport(name="location", required=true)
     private final Input<String> location;
 
@@ -28,6 +37,9 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
         return this.location;
     }
 
+    /**
+     * The namespace the GKE service is running in.
+     */
     @InputImport(name="namespace", required=true)
     private final Input<String> namespace;
 
@@ -35,6 +47,9 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
         return this.namespace;
     }
 
+    /**
+     * Optional. The relative path on the GKE service the events should be sent to. The value must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: "/route", "route", "route/subroute".
+     */
     @InputImport(name="path")
     private final @Nullable Input<String> path;
 
@@ -42,6 +57,9 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
         return this.path == null ? Input.empty() : this.path;
     }
 
+    /**
+     * Name of the GKE service.
+     */
     @InputImport(name="service", required=true)
     private final Input<String> service;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Health Monitor Description
+ */
 public final class HealthMonitorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final HealthMonitorResponse Empty = new HealthMonitorResponse();
 
+    /**
+     * Health Monitor Details
+     */
     @InputImport(name="details", required=true)
     private final String details;
 
@@ -19,6 +25,9 @@ public final class HealthMonitorResponse extends io.pulumi.resources.InvokeArgs 
         return this.details;
     }
 
+    /**
+     * Health Monitor Id
+     */
     @InputImport(name="id", required=true)
     private final String id;
 
@@ -26,6 +35,9 @@ public final class HealthMonitorResponse extends io.pulumi.resources.InvokeArgs 
         return this.id;
     }
 
+    /**
+     * Health Monitor Name
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

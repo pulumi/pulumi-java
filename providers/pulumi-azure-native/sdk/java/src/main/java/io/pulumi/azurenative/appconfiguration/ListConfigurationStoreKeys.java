@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListConfigurationStoreKeys {
+/**
+ * The result of a request to list API keys.
+API Version: 2020-06-01.
+ *
+ * The result of a request to list API keys.
+ */
     public static CompletableFuture<ListConfigurationStoreKeysResult> invokeAsync(ListConfigurationStoreKeysArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:appconfiguration:listConfigurationStoreKeys", TypeShape.of(ListConfigurationStoreKeysResult.class), args == null ? ListConfigurationStoreKeysArgs.Empty : args, Utilities.withVersion(options));
     }

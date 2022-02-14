@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Metadata for any related URL information
+ */
 public final class RelatedUrlResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RelatedUrlResponse Empty = new RelatedUrlResponse();
 
+    /**
+     * Label to describe usage of the URL
+     */
     @InputImport(name="label", required=true)
     private final String label;
 
@@ -19,6 +25,9 @@ public final class RelatedUrlResponse extends io.pulumi.resources.InvokeArgs {
         return this.label;
     }
 
+    /**
+     * Specific URL to associate with the note
+     */
     @InputImport(name="url", required=true)
     private final String url;
 

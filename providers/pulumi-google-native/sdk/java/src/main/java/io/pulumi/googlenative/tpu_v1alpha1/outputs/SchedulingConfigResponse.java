@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SchedulingConfigResponse {
+/**
+ * Defines whether the node is preemptible.
+ */
     private final Boolean preemptible;
+/**
+ * Whether the node is created under a reservation.
+ */
     private final Boolean reserved;
 
     @OutputCustomType.Constructor({"preemptible","reserved"})
@@ -20,9 +26,15 @@ public final class SchedulingConfigResponse {
         this.reserved = Objects.requireNonNull(reserved);
     }
 
+/**
+ * Defines whether the node is preemptible.
+ */
     public Boolean getPreemptible() {
         return this.preemptible;
     }
+/**
+ * Whether the node is created under a reservation.
+ */
     public Boolean getReserved() {
         return this.reserved;
     }

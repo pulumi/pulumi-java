@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class FlowDistinguisherMethod {
+/**
+ * `type` is the type of flow distinguisher method The supported types are "ByUser" and "ByNamespace". Required.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"type"})
@@ -16,6 +19,9 @@ public final class FlowDistinguisherMethod {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * `type` is the type of flow distinguisher method The supported types are "ByUser" and "ByNamespace". Required.
+ */
     public String getType() {
         return this.type;
     }

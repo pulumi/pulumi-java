@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A deb package file. dpkg packages only support INSTALLED state.
+ */
 public final class OSPolicyResourcePackageResourceDebArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OSPolicyResourcePackageResourceDebArgs Empty = new OSPolicyResourcePackageResourceDebArgs();
 
+    /**
+     * Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update && apt-get -y install package.deb`
+     */
     @InputImport(name="pullDeps")
     private final @Nullable Input<Boolean> pullDeps;
 
@@ -22,6 +28,9 @@ public final class OSPolicyResourcePackageResourceDebArgs extends io.pulumi.reso
         return this.pullDeps == null ? Input.empty() : this.pullDeps;
     }
 
+    /**
+     * A deb package.
+     */
     @InputImport(name="source", required=true)
     private final Input<OSPolicyResourceFileArgs> source;
 

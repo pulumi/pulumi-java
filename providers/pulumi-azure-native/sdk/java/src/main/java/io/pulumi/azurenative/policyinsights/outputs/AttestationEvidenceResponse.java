@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AttestationEvidenceResponse {
+/**
+ * The description for this piece of evidence.
+ */
     private final @Nullable String description;
+/**
+ * The URI location of the evidence.
+ */
     private final @Nullable String sourceUri;
 
     @OutputCustomType.Constructor({"description","sourceUri"})
@@ -22,9 +28,15 @@ public final class AttestationEvidenceResponse {
         this.sourceUri = sourceUri;
     }
 
+/**
+ * The description for this piece of evidence.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * The URI location of the evidence.
+ */
     public Optional<String> getSourceUri() {
         return Optional.ofNullable(this.sourceUri);
     }

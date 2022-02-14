@@ -14,17 +14,53 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetVolumeContainerResult {
+/**
+ * The bandwidth-rate set on the volume container.
+ */
     private final @Nullable Integer bandWidthRateInMbps;
+/**
+ * The ID of the bandwidth setting associated with the volume container.
+ */
     private final @Nullable String bandwidthSettingId;
+/**
+ * The key used to encrypt data in the volume container. It is required when property 'EncryptionStatus' is "Enabled".
+ */
     private final @Nullable AsymmetricEncryptedSecretResponse encryptionKey;
+/**
+ * The flag to denote whether encryption is enabled or not.
+ */
     private final String encryptionStatus;
+/**
+ * The path ID that uniquely identifies the object.
+ */
     private final String id;
+/**
+ * The Kind of the object. Currently only Series8000 is supported
+ */
     private final @Nullable String kind;
+/**
+ * The name of the object.
+ */
     private final String name;
+/**
+ * The owner ship status of the volume container. Only when the status is "NotOwned", the delete operation on the volume container is permitted.
+ */
     private final String ownerShipStatus;
+/**
+ * The path ID of storage account associated with the volume container.
+ */
     private final String storageAccountCredentialId;
+/**
+ * The total cloud storage for the volume container.
+ */
     private final Double totalCloudStorageUsageInBytes;
+/**
+ * The hierarchical type of the object.
+ */
     private final String type;
+/**
+ * The number of volumes in the volume Container.
+ */
     private final Integer volumeCount;
 
     @OutputCustomType.Constructor({"bandWidthRateInMbps","bandwidthSettingId","encryptionKey","encryptionStatus","id","kind","name","ownerShipStatus","storageAccountCredentialId","totalCloudStorageUsageInBytes","type","volumeCount"})
@@ -55,39 +91,75 @@ public final class GetVolumeContainerResult {
         this.volumeCount = Objects.requireNonNull(volumeCount);
     }
 
+/**
+ * The bandwidth-rate set on the volume container.
+ */
     public Optional<Integer> getBandWidthRateInMbps() {
         return Optional.ofNullable(this.bandWidthRateInMbps);
     }
+/**
+ * The ID of the bandwidth setting associated with the volume container.
+ */
     public Optional<String> getBandwidthSettingId() {
         return Optional.ofNullable(this.bandwidthSettingId);
     }
+/**
+ * The key used to encrypt data in the volume container. It is required when property 'EncryptionStatus' is "Enabled".
+ */
     public Optional<AsymmetricEncryptedSecretResponse> getEncryptionKey() {
         return Optional.ofNullable(this.encryptionKey);
     }
+/**
+ * The flag to denote whether encryption is enabled or not.
+ */
     public String getEncryptionStatus() {
         return this.encryptionStatus;
     }
+/**
+ * The path ID that uniquely identifies the object.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The Kind of the object. Currently only Series8000 is supported
+ */
     public Optional<String> getKind() {
         return Optional.ofNullable(this.kind);
     }
+/**
+ * The name of the object.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The owner ship status of the volume container. Only when the status is "NotOwned", the delete operation on the volume container is permitted.
+ */
     public String getOwnerShipStatus() {
         return this.ownerShipStatus;
     }
+/**
+ * The path ID of storage account associated with the volume container.
+ */
     public String getStorageAccountCredentialId() {
         return this.storageAccountCredentialId;
     }
+/**
+ * The total cloud storage for the volume container.
+ */
     public Double getTotalCloudStorageUsageInBytes() {
         return this.totalCloudStorageUsageInBytes;
     }
+/**
+ * The hierarchical type of the object.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * The number of volumes in the volume Container.
+ */
     public Integer getVolumeCount() {
         return this.volumeCount;
     }

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class RGitHubPackageResponseResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RGitHubPackageResponseResponse Empty = new RGitHubPackageResponseResponse();
 
+    /**
+     * Repository address in the format username/repo[/subdir][@ref|#pull].
+     */
     @InputImport(name="repository")
     private final @Nullable String repository;
 

@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum ExportData {
+/**
+ * Agent raw events
+ */
         RawEvents("RawEvents");
 
         private final String value;

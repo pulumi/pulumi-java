@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CatalogItemArgs Empty = new CatalogItemArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="catalogId", required=true)
     private final Input<String> catalogId;
 
@@ -25,6 +31,9 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.catalogId;
     }
 
+    /**
+     * Catalog item categories. This field is repeated for supporting one catalog item belonging to several parallel category hierarchies. For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categoryHierarchies": [ { "categories": ["Shoes & Accessories", "Shoes"]}, { "categories": ["Sports & Fitness", "Athletic Clothing", "Shoes"] } ]
+     */
     @InputImport(name="categoryHierarchies", required=true)
     private final Input<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies;
 
@@ -32,6 +41,9 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.categoryHierarchies;
     }
 
+    /**
+     * Optional. Catalog item description. UTF-8 encoded string with a length limit of 5 KiB.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,6 +51,9 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Catalog item identifier. UTF-8 encoded string with a length limit of 128 bytes. This id must be unique among all catalog items within the same catalog. It should also be used when logging user events in order for the user events to be joined with the Catalog.
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 
@@ -46,6 +61,9 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.id;
     }
 
+    /**
+     * Optional. Highly encouraged. Extra catalog item attributes to be included in the recommendation model. For example, for retail products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the item attributes here.
+     */
     @InputImport(name="itemAttributes")
     private final @Nullable Input<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes;
 
@@ -53,6 +71,9 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.itemAttributes == null ? Input.empty() : this.itemAttributes;
     }
 
+    /**
+     * Optional. Variant group identifier for prediction results. UTF-8 encoded string with a length limit of 128 bytes. This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).
+     */
     @InputImport(name="itemGroupId")
     private final @Nullable Input<String> itemGroupId;
 
@@ -60,6 +81,9 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.itemGroupId == null ? Input.empty() : this.itemGroupId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -67,6 +91,9 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Optional. Metadata specific to retail products.
+     */
     @InputImport(name="productMetadata")
     private final @Nullable Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata;
 
@@ -74,6 +101,9 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.productMetadata == null ? Input.empty() : this.productMetadata;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -81,6 +111,9 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Optional. Filtering tags associated with the catalog item. Each tag should be a UTF-8 encoded string with a length limit of 1 KiB. This tag can be used for filtering recommendation results by passing the tag as part of the predict request filter.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<List<String>> tags;
 
@@ -88,6 +121,9 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * Catalog item title. UTF-8 encoded string with a length limit of 1 KiB.
+     */
     @InputImport(name="title", required=true)
     private final Input<String> title;
 

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The field parity for de-interlacing, defaults to Auto.
+ */
     @EnumType
     public enum DeinterlaceParity {
+/**
+ * Automatically detect the order of fields
+ */
         Auto("Auto"),
+/**
+ * Apply top field first processing of input video.
+ */
         TopFieldFirst("TopFieldFirst"),
+/**
+ * Apply bottom field first processing of input video.
+ */
         BottomFieldFirst("BottomFieldFirst");
 
         private final String value;

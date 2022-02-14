@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetDocument {
+/**
+ * Retrieves the specified document.
+ */
     public static CompletableFuture<GetDocumentResult> invokeAsync(GetDocumentArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dialogflow/v2:getDocument", TypeShape.of(GetDocumentResult.class), args == null ? GetDocumentArgs.Empty : args, Utilities.withVersion(options));
     }

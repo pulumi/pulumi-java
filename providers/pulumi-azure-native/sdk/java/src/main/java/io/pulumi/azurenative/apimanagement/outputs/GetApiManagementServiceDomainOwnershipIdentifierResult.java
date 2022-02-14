@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetApiManagementServiceDomainOwnershipIdentifierResult {
+/**
+ * The domain ownership identifier value.
+ */
     private final String domainOwnershipIdentifier;
 
     @OutputCustomType.Constructor({"domainOwnershipIdentifier"})
@@ -16,6 +19,9 @@ public final class GetApiManagementServiceDomainOwnershipIdentifierResult {
         this.domainOwnershipIdentifier = Objects.requireNonNull(domainOwnershipIdentifier);
     }
 
+/**
+ * The domain ownership identifier value.
+ */
     public String getDomainOwnershipIdentifier() {
         return this.domainOwnershipIdentifier;
     }

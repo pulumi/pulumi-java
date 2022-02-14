@@ -14,9 +14,21 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class RecoveryPlanActionResponse {
+/**
+ * The action name.
+ */
     private final String actionName;
+/**
+ * The custom details.
+ */
     private final Object customDetails;
+/**
+ * The list of failover directions.
+ */
     private final List<String> failoverDirections;
+/**
+ * The list of failover types.
+ */
     private final List<String> failoverTypes;
 
     @OutputCustomType.Constructor({"actionName","customDetails","failoverDirections","failoverTypes"})
@@ -31,15 +43,27 @@ public final class RecoveryPlanActionResponse {
         this.failoverTypes = Objects.requireNonNull(failoverTypes);
     }
 
+/**
+ * The action name.
+ */
     public String getActionName() {
         return this.actionName;
     }
+/**
+ * The custom details.
+ */
     public Object getCustomDetails() {
         return this.customDetails;
     }
+/**
+ * The list of failover directions.
+ */
     public List<String> getFailoverDirections() {
         return this.failoverDirections;
     }
+/**
+ * The list of failover types.
+ */
     public List<String> getFailoverTypes() {
         return this.failoverTypes;
     }

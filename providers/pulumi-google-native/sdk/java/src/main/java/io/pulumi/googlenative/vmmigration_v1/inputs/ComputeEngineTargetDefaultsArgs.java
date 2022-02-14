@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * ComputeEngineTargetDefaults is a collection of details for creating a VM in a target Compute Engine project.
+ */
 public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ComputeEngineTargetDefaultsArgs Empty = new ComputeEngineTargetDefaultsArgs();
 
+    /**
+     * Additional licenses to assign to the VM.
+     */
     @InputImport(name="additionalLicenses")
     private final @Nullable Input<List<String>> additionalLicenses;
 
@@ -28,6 +34,9 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
         return this.additionalLicenses == null ? Input.empty() : this.additionalLicenses;
     }
 
+    /**
+     * Compute instance scheduling information (if empty default is used).
+     */
     @InputImport(name="computeScheduling")
     private final @Nullable Input<ComputeSchedulingArgs> computeScheduling;
 
@@ -35,6 +44,9 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
         return this.computeScheduling == null ? Input.empty() : this.computeScheduling;
     }
 
+    /**
+     * The disk type to use in the VM.
+     */
     @InputImport(name="diskType")
     private final @Nullable Input<ComputeEngineTargetDefaultsDiskType> diskType;
 
@@ -42,6 +54,9 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
         return this.diskType == null ? Input.empty() : this.diskType;
     }
 
+    /**
+     * A map of labels to associate with the VM.
+     */
     @InputImport(name="labels")
     private final @Nullable Input<Map<String,String>> labels;
 
@@ -49,6 +64,9 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
         return this.labels == null ? Input.empty() : this.labels;
     }
 
+    /**
+     * The license type to use in OS adaptation.
+     */
     @InputImport(name="licenseType")
     private final @Nullable Input<ComputeEngineTargetDefaultsLicenseType> licenseType;
 
@@ -56,6 +74,9 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
         return this.licenseType == null ? Input.empty() : this.licenseType;
     }
 
+    /**
+     * The machine type to create the VM with.
+     */
     @InputImport(name="machineType")
     private final @Nullable Input<String> machineType;
 
@@ -63,6 +84,9 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
         return this.machineType == null ? Input.empty() : this.machineType;
     }
 
+    /**
+     * The machine type series to create the VM with.
+     */
     @InputImport(name="machineTypeSeries")
     private final @Nullable Input<String> machineTypeSeries;
 
@@ -70,6 +94,9 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
         return this.machineTypeSeries == null ? Input.empty() : this.machineTypeSeries;
     }
 
+    /**
+     * The metadata key/value pairs to assign to the VM.
+     */
     @InputImport(name="metadata")
     private final @Nullable Input<Map<String,String>> metadata;
 
@@ -77,6 +104,9 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
+    /**
+     * List of NICs connected to this VM.
+     */
     @InputImport(name="networkInterfaces")
     private final @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
 
@@ -84,6 +114,9 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
         return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
     }
 
+    /**
+     * A map of network tags to associate with the VM.
+     */
     @InputImport(name="networkTags")
     private final @Nullable Input<List<String>> networkTags;
 
@@ -91,6 +124,9 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
         return this.networkTags == null ? Input.empty() : this.networkTags;
     }
 
+    /**
+     * Defines whether the instance has Secure Boot enabled. This can be set to true only if the vm boot option is EFI.
+     */
     @InputImport(name="secureBoot")
     private final @Nullable Input<Boolean> secureBoot;
 
@@ -98,6 +134,9 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
         return this.secureBoot == null ? Input.empty() : this.secureBoot;
     }
 
+    /**
+     * The service account to associate the VM with.
+     */
     @InputImport(name="serviceAccount")
     private final @Nullable Input<String> serviceAccount;
 
@@ -105,6 +144,9 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
+    /**
+     * The full path of the resource of type TargetProject which represents the Compute Engine project in which to create this VM.
+     */
     @InputImport(name="targetProject")
     private final @Nullable Input<String> targetProject;
 
@@ -112,6 +154,9 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
         return this.targetProject == null ? Input.empty() : this.targetProject;
     }
 
+    /**
+     * The name of the VM to create.
+     */
     @InputImport(name="vmName")
     private final @Nullable Input<String> vmName;
 
@@ -119,6 +164,9 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
         return this.vmName == null ? Input.empty() : this.vmName;
     }
 
+    /**
+     * The zone in which to create the VM.
+     */
     @InputImport(name="zone")
     private final @Nullable Input<String> zone;
 

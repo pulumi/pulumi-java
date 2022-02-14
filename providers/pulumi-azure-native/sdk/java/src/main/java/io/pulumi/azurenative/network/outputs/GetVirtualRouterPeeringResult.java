@@ -12,12 +12,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetVirtualRouterPeeringResult {
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     private final String etag;
+/**
+ * Resource ID.
+ */
     private final @Nullable String id;
+/**
+ * Name of the virtual router peering that is unique within a virtual router.
+ */
     private final @Nullable String name;
+/**
+ * Peer ASN.
+ */
     private final @Nullable Double peerAsn;
+/**
+ * Peer IP.
+ */
     private final @Nullable String peerIp;
+/**
+ * The provisioning state of the resource.
+ */
     private final String provisioningState;
+/**
+ * Peering type.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"etag","id","name","peerAsn","peerIp","provisioningState","type"})
@@ -38,24 +59,45 @@ public final class GetVirtualRouterPeeringResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * A unique read-only string that changes whenever the resource is updated.
+ */
     public String getEtag() {
         return this.etag;
     }
+/**
+ * Resource ID.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }
+/**
+ * Name of the virtual router peering that is unique within a virtual router.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * Peer ASN.
+ */
     public Optional<Double> getPeerAsn() {
         return Optional.ofNullable(this.peerAsn);
     }
+/**
+ * Peer IP.
+ */
     public Optional<String> getPeerIp() {
         return Optional.ofNullable(this.peerIp);
     }
+/**
+ * The provisioning state of the resource.
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Peering type.
+ */
     public String getType() {
         return this.type;
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * MembershipState describes the state of a Membership resource.
+ */
 public final class MembershipStateResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MembershipStateResponse Empty = new MembershipStateResponse();
 
+    /**
+     * The current state of the Membership resource.
+     */
     @InputImport(name="code", required=true)
     private final String code;
 

@@ -11,10 +11,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class EtwProviderConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EtwProviderConfigurationArgs Empty = new EtwProviderConfigurationArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="events", required=true)
     private final Input<List<EtwEventConfigurationArgs>> events;
 
@@ -22,6 +28,9 @@ public final class EtwProviderConfigurationArgs extends io.pulumi.resources.Reso
         return this.events;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 

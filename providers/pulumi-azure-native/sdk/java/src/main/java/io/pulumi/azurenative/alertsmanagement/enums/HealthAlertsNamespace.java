@@ -8,8 +8,14 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * specifies the type of the alert criterion.
+ */
     @EnumType
     public enum HealthAlertsNamespace {
+/**
+ * 
+ */
         GuestVmHealth("GuestVmHealth");
 
         private final String value;

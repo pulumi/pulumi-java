@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PacketMirroringForwardingRuleInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PacketMirroringForwardingRuleInfoArgs Empty = new PacketMirroringForwardingRuleInfoArgs();
 
+    /**
+     * Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.
+     */
     @InputImport(name="url")
     private final @Nullable Input<String> url;
 

@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions Empty = new ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions();
 
+    /**
+     * 
+     */
     @InputImport(name="preflightOptions")
     private final @Nullable List<String> preflightOptions;
 
@@ -23,6 +29,9 @@ public final class ResourceProviderManifestPropertiesResponseTemplateDeploymentO
         return this.preflightOptions == null ? List.of() : this.preflightOptions;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="preflightSupported")
     private final @Nullable Boolean preflightSupported;
 

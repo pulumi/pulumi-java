@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The object representing periodic mode backup policy.
+ */
 public final class PeriodicModeBackupPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PeriodicModeBackupPolicyResponse Empty = new PeriodicModeBackupPolicyResponse();
 
+    /**
+     * Configuration values for periodic mode backup
+     */
     @InputImport(name="periodicModeProperties")
     private final @Nullable PeriodicModePropertiesResponse periodicModeProperties;
 
@@ -22,6 +28,10 @@ public final class PeriodicModeBackupPolicyResponse extends io.pulumi.resources.
         return this.periodicModeProperties == null ? Optional.empty() : Optional.ofNullable(this.periodicModeProperties);
     }
 
+    /**
+     * Describes the mode of backups.
+Expected value is 'Periodic'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

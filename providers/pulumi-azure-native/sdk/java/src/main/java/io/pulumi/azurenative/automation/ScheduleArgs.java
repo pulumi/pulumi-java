@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ScheduleArgs Empty = new ScheduleArgs();
 
+    /**
+     * Gets or sets the AdvancedSchedule.
+     */
     @InputImport(name="advancedSchedule")
     private final @Nullable Input<AdvancedScheduleArgs> advancedSchedule;
 
@@ -25,6 +31,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.advancedSchedule == null ? Input.empty() : this.advancedSchedule;
     }
 
+    /**
+     * The name of the automation account.
+     */
     @InputImport(name="automationAccountName", required=true)
     private final Input<String> automationAccountName;
 
@@ -32,6 +41,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.automationAccountName;
     }
 
+    /**
+     * Gets or sets the description of the schedule.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -39,6 +51,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * Gets or sets the end time of the schedule.
+     */
     @InputImport(name="expiryTime")
     private final @Nullable Input<String> expiryTime;
 
@@ -46,6 +61,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.expiryTime == null ? Input.empty() : this.expiryTime;
     }
 
+    /**
+     * Gets or sets the frequency of the schedule.
+     */
     @InputImport(name="frequency", required=true)
     private final Input<Either<String,ScheduleFrequency>> frequency;
 
@@ -53,6 +71,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.frequency;
     }
 
+    /**
+     * Gets or sets the interval of the schedule.
+     */
     @InputImport(name="interval")
     private final @Nullable Input<Object> interval;
 
@@ -60,6 +81,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.interval == null ? Input.empty() : this.interval;
     }
 
+    /**
+     * Gets or sets the name of the Schedule.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -67,6 +91,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.name;
     }
 
+    /**
+     * Name of an Azure Resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -74,6 +101,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The schedule name.
+     */
     @InputImport(name="scheduleName")
     private final @Nullable Input<String> scheduleName;
 
@@ -81,6 +111,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.scheduleName == null ? Input.empty() : this.scheduleName;
     }
 
+    /**
+     * Gets or sets the start time of the schedule.
+     */
     @InputImport(name="startTime", required=true)
     private final Input<String> startTime;
 
@@ -88,6 +121,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
         return this.startTime;
     }
 
+    /**
+     * Gets or sets the time zone of the schedule.
+     */
     @InputImport(name="timeZone")
     private final @Nullable Input<String> timeZone;
 

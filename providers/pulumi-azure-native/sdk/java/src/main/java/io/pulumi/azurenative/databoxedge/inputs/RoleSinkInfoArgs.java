@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Compute role against which events will be raised.
+ */
 public final class RoleSinkInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RoleSinkInfoArgs Empty = new RoleSinkInfoArgs();
 
+    /**
+     * Compute role ID.
+     */
     @InputImport(name="roleId", required=true)
     private final Input<String> roleId;
 

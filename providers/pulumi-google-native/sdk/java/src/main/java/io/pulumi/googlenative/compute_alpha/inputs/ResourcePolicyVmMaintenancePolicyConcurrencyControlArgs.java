@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * A concurrency control configuration. Defines a group config that, when attached to an instance, recognizes that instance as part of a group of instances where only up the concurrency_limit of instances in that group can undergo simultaneous maintenance. For more information: go/concurrency-control-design-doc
+ */
 public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs Empty = new ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="concurrencyLimit")
     private final @Nullable Input<Integer> concurrencyLimit;
 

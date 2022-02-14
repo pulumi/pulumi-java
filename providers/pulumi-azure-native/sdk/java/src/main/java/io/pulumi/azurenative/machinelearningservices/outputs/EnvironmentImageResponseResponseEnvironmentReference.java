@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EnvironmentImageResponseResponseEnvironmentReference {
+/**
+ * Name of the environment.
+ */
     private final @Nullable String name;
+/**
+ * Version of the environment.
+ */
     private final @Nullable String version;
 
     @OutputCustomType.Constructor({"name","version"})
@@ -22,9 +28,15 @@ public final class EnvironmentImageResponseResponseEnvironmentReference {
         this.version = version;
     }
 
+/**
+ * Name of the environment.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * Version of the environment.
+ */
     public Optional<String> getVersion() {
         return Optional.ofNullable(this.version);
     }

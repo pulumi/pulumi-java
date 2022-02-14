@@ -16,10 +16,18 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Environment specification version details.
+<see href="https://repo2docker.readthedocs.io/en/latest/specification.html" />
+ */
 public final class EnvironmentSpecificationVersionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvironmentSpecificationVersionResponse Empty = new EnvironmentSpecificationVersionResponse();
 
+    /**
+     * Standard configuration file used by Conda that lets you install any kind of package, including Python, R, and C/C++ packages.
+<see href="https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment" />
+     */
     @InputImport(name="condaFile")
     private final @Nullable String condaFile;
 
@@ -27,6 +35,9 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
         return this.condaFile == null ? Optional.empty() : Optional.ofNullable(this.condaFile);
     }
 
+    /**
+     * The asset description text.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -34,6 +45,9 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Configuration settings for Docker.
+     */
     @InputImport(name="docker")
     private final @Nullable Either<DockerBuildResponse,DockerImageResponse> docker;
 
@@ -41,6 +55,10 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
         return this.docker == null ? null : this.docker;
     }
 
+    /**
+     * Environment specification is either user managed or curated by the Azure ML service
+<see href="https://docs.microsoft.com/en-us/azure/machine-learning/resource-curated-environments" />
+     */
     @InputImport(name="environmentSpecificationType", required=true)
     private final String environmentSpecificationType;
 
@@ -48,6 +66,9 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
         return this.environmentSpecificationType;
     }
 
+    /**
+     * Defines configuration specific to inference.
+     */
     @InputImport(name="inferenceContainerProperties")
     private final @Nullable InferenceContainerPropertiesResponse inferenceContainerProperties;
 
@@ -55,6 +76,9 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
         return this.inferenceContainerProperties == null ? Optional.empty() : Optional.ofNullable(this.inferenceContainerProperties);
     }
 
+    /**
+     * If the name version are system generated (anonymous registration).
+     */
     @InputImport(name="isAnonymous")
     private final @Nullable Boolean isAnonymous;
 
@@ -62,6 +86,9 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
         return this.isAnonymous == null ? Optional.empty() : Optional.ofNullable(this.isAnonymous);
     }
 
+    /**
+     * The asset property dictionary.
+     */
     @InputImport(name="properties")
     private final @Nullable Map<String,String> properties;
 
@@ -69,6 +96,9 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
         return this.properties == null ? Map.of() : this.properties;
     }
 
+    /**
+     * Tag dictionary. Tags can be added, removed, and updated.
+     */
     @InputImport(name="tags")
     private final @Nullable Map<String,String> tags;
 

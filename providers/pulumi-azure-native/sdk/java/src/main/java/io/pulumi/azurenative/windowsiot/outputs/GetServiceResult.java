@@ -13,16 +13,49 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetServiceResult {
+/**
+ * Windows IoT Device Service OEM AAD domain
+ */
     private final @Nullable String adminDomainName;
+/**
+ * Windows IoT Device Service ODM AAD domain
+ */
     private final @Nullable String billingDomainName;
+/**
+ * The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
+ */
     private final @Nullable String etag;
+/**
+ * Fully qualified resource Id for the resource
+ */
     private final String id;
+/**
+ * The Azure Region where the resource lives
+ */
     private final @Nullable String location;
+/**
+ * The name of the resource
+ */
     private final String name;
+/**
+ * Windows IoT Device Service notes.
+ */
     private final @Nullable String notes;
+/**
+ * Windows IoT Device Service device allocation,
+ */
     private final @Nullable Double quantity;
+/**
+ * Windows IoT Device Service start date,
+ */
     private final String startDate;
+/**
+ * Resource tags.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * The type of the resource.
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"adminDomainName","billingDomainName","etag","id","location","name","notes","quantity","startDate","tags","type"})
@@ -51,36 +84,69 @@ public final class GetServiceResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Windows IoT Device Service OEM AAD domain
+ */
     public Optional<String> getAdminDomainName() {
         return Optional.ofNullable(this.adminDomainName);
     }
+/**
+ * Windows IoT Device Service ODM AAD domain
+ */
     public Optional<String> getBillingDomainName() {
         return Optional.ofNullable(this.billingDomainName);
     }
+/**
+ * The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
+ */
     public Optional<String> getEtag() {
         return Optional.ofNullable(this.etag);
     }
+/**
+ * Fully qualified resource Id for the resource
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The Azure Region where the resource lives
+ */
     public Optional<String> getLocation() {
         return Optional.ofNullable(this.location);
     }
+/**
+ * The name of the resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Windows IoT Device Service notes.
+ */
     public Optional<String> getNotes() {
         return Optional.ofNullable(this.notes);
     }
+/**
+ * Windows IoT Device Service device allocation,
+ */
     public Optional<Double> getQuantity() {
         return Optional.ofNullable(this.quantity);
     }
+/**
+ * Windows IoT Device Service start date,
+ */
     public String getStartDate() {
         return this.startDate;
     }
+/**
+ * Resource tags.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * The type of the resource.
+ */
     public String getType() {
         return this.type;
     }

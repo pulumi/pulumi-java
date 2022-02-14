@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ListNotebookWorkspaceConnectionInfoResult {
+/**
+ * Specifies auth token used for connecting to Notebook server (uses token-based auth).
+ */
     private final String authToken;
+/**
+ * Specifies the endpoint of Notebook server.
+ */
     private final String notebookServerEndpoint;
 
     @OutputCustomType.Constructor({"authToken","notebookServerEndpoint"})
@@ -20,9 +26,15 @@ public final class ListNotebookWorkspaceConnectionInfoResult {
         this.notebookServerEndpoint = Objects.requireNonNull(notebookServerEndpoint);
     }
 
+/**
+ * Specifies auth token used for connecting to Notebook server (uses token-based auth).
+ */
     public String getAuthToken() {
         return this.authToken;
     }
+/**
+ * Specifies the endpoint of Notebook server.
+ */
     public String getNotebookServerEndpoint() {
         return this.notebookServerEndpoint;
     }

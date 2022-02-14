@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Type of access to be allowed for the user.
+ */
     @EnumType
     public enum ShareAccessType {
+/**
+ * 
+ */
         Change("Change"),
+/**
+ * 
+ */
         Read("Read"),
+/**
+ * 
+ */
         Custom("Custom");
 
         private final String value;

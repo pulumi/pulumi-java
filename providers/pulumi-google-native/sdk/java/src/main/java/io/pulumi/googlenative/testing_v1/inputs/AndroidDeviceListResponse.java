@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * A list of Android device configurations in which the test is to be executed.
+ */
 public final class AndroidDeviceListResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AndroidDeviceListResponse Empty = new AndroidDeviceListResponse();
 
+    /**
+     * A list of Android devices.
+     */
     @InputImport(name="androidDevices", required=true)
     private final List<AndroidDeviceResponse> androidDevices;
 

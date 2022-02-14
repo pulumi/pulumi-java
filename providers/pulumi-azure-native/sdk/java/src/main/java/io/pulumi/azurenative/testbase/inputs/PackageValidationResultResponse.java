@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * The validation results. There's validation on package when it's created or updated.
+ */
 public final class PackageValidationResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PackageValidationResultResponse Empty = new PackageValidationResultResponse();
 
+    /**
+     * Error information.
+     */
     @InputImport(name="errors", required=true)
     private final List<String> errors;
 
@@ -21,6 +27,9 @@ public final class PackageValidationResultResponse extends io.pulumi.resources.I
         return this.errors;
     }
 
+    /**
+     * Indicates whether the package passed the validation.
+     */
     @InputImport(name="isValid", required=true)
     private final Boolean isValid;
 
@@ -28,6 +37,9 @@ public final class PackageValidationResultResponse extends io.pulumi.resources.I
         return this.isValid;
     }
 
+    /**
+     * Validation name.
+     */
     @InputImport(name="validationName", required=true)
     private final String validationName;
 

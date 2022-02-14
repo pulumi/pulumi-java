@@ -16,12 +16,33 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse {
+/**
+ * SAS URI of Azure Storage Account Container to be used for storing backup files.
+ */
     private final BlobShareResponse backupBlobShare;
+/**
+ * Backup file share information for all selected databases.
+ */
     private final @Nullable FileShareResponse backupFileShare;
+/**
+ * Backup Mode to specify whether to use existing backup or create new backup.
+ */
     private final @Nullable String backupMode;
+/**
+ * Databases to migrate
+ */
     private final List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
+/**
+ * Logins to migrate
+ */
     private final @Nullable List<String> selectedLogins;
+/**
+ * Information for connecting to source
+ */
     private final SqlConnectionInfoResponse sourceConnectionInfo;
+/**
+ * Information for connecting to target
+ */
     private final SqlConnectionInfoResponse targetConnectionInfo;
 
     @OutputCustomType.Constructor({"backupBlobShare","backupFileShare","backupMode","selectedDatabases","selectedLogins","sourceConnectionInfo","targetConnectionInfo"})
@@ -42,24 +63,45 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse {
         this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
     }
 
+/**
+ * SAS URI of Azure Storage Account Container to be used for storing backup files.
+ */
     public BlobShareResponse getBackupBlobShare() {
         return this.backupBlobShare;
     }
+/**
+ * Backup file share information for all selected databases.
+ */
     public Optional<FileShareResponse> getBackupFileShare() {
         return Optional.ofNullable(this.backupFileShare);
     }
+/**
+ * Backup Mode to specify whether to use existing backup or create new backup.
+ */
     public Optional<String> getBackupMode() {
         return Optional.ofNullable(this.backupMode);
     }
+/**
+ * Databases to migrate
+ */
     public List<MigrateSqlServerSqlMIDatabaseInputResponse> getSelectedDatabases() {
         return this.selectedDatabases;
     }
+/**
+ * Logins to migrate
+ */
     public List<String> getSelectedLogins() {
         return this.selectedLogins == null ? List.of() : this.selectedLogins;
     }
+/**
+ * Information for connecting to source
+ */
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
+/**
+ * Information for connecting to target
+ */
     public SqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
     }

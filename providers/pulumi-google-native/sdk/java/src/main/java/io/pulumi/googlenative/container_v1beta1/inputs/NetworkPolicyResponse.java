@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Configuration options for the NetworkPolicy feature. https://kubernetes.io/docs/concepts/services-networking/networkpolicies/
+ */
 public final class NetworkPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkPolicyResponse Empty = new NetworkPolicyResponse();
 
+    /**
+     * Whether network policy is enabled on the cluster.
+     */
     @InputImport(name="enabled", required=true)
     private final Boolean enabled;
 
@@ -20,6 +26,9 @@ public final class NetworkPolicyResponse extends io.pulumi.resources.InvokeArgs 
         return this.enabled;
     }
 
+    /**
+     * The selected network policy provider.
+     */
     @InputImport(name="provider", required=true)
     private final String provider;
 

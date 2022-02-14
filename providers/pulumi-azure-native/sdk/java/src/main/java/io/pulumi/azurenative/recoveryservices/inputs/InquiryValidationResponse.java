@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Validation for inquired protectable items under a given container.
+ */
 public final class InquiryValidationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InquiryValidationResponse Empty = new InquiryValidationResponse();
 
+    /**
+     * Error Additional Detail in case the status is non-success.
+     */
     @InputImport(name="additionalDetail", required=true)
     private final String additionalDetail;
 
@@ -22,6 +28,9 @@ public final class InquiryValidationResponse extends io.pulumi.resources.InvokeA
         return this.additionalDetail;
     }
 
+    /**
+     * Error Detail in case the status is non-success.
+     */
     @InputImport(name="errorDetail")
     private final @Nullable ErrorDetailResponse errorDetail;
 
@@ -29,6 +38,9 @@ public final class InquiryValidationResponse extends io.pulumi.resources.InvokeA
         return this.errorDetail == null ? Optional.empty() : Optional.ofNullable(this.errorDetail);
     }
 
+    /**
+     * Status for the Inquiry Validation.
+     */
     @InputImport(name="status")
     private final @Nullable String status;
 

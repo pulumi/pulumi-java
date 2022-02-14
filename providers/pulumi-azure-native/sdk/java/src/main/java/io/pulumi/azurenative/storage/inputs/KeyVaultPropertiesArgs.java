@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of key vault.
+ */
 public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyVaultPropertiesArgs Empty = new KeyVaultPropertiesArgs();
 
+    /**
+     * The name of KeyVault key.
+     */
     @InputImport(name="keyName")
     private final @Nullable Input<String> keyName;
 
@@ -21,6 +27,9 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.keyName == null ? Input.empty() : this.keyName;
     }
 
+    /**
+     * The Uri of KeyVault.
+     */
     @InputImport(name="keyVaultUri")
     private final @Nullable Input<String> keyVaultUri;
 
@@ -28,6 +37,9 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
         return this.keyVaultUri == null ? Input.empty() : this.keyVaultUri;
     }
 
+    /**
+     * The version of KeyVault key.
+     */
     @InputImport(name="keyVersion")
     private final @Nullable Input<String> keyVersion;
 

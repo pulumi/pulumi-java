@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DiagnosticArgs Empty = new DiagnosticArgs();
 
+    /**
+     * JsonPath expression on the resource that if non empty, indicates that this field needs to be extracted as a diagnostic.
+     */
     @InputImport(name="field")
     private final @Nullable Input<String> field;
 
@@ -22,6 +28,9 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
         return this.field == null ? Input.empty() : this.field;
     }
 
+    /**
+     * Level to record this diagnostic.
+     */
     @InputImport(name="level")
     private final @Nullable Input<DiagnosticLevel> level;
 

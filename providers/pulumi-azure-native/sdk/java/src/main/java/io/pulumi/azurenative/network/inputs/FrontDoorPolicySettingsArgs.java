@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines top-level WebApplicationFirewallPolicy configuration settings.
+ */
 public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FrontDoorPolicySettingsArgs Empty = new FrontDoorPolicySettingsArgs();
 
+    /**
+     * If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
+     */
     @InputImport(name="customBlockResponseBody")
     private final @Nullable Input<String> customBlockResponseBody;
 
@@ -26,6 +32,9 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
         return this.customBlockResponseBody == null ? Input.empty() : this.customBlockResponseBody;
     }
 
+    /**
+     * If the action type is block, customer can override the response status code.
+     */
     @InputImport(name="customBlockResponseStatusCode")
     private final @Nullable Input<Integer> customBlockResponseStatusCode;
 
@@ -33,6 +42,9 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
         return this.customBlockResponseStatusCode == null ? Input.empty() : this.customBlockResponseStatusCode;
     }
 
+    /**
+     * Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.
+     */
     @InputImport(name="enabledState")
     private final @Nullable Input<Either<String,PolicyEnabledState>> enabledState;
 
@@ -40,6 +52,9 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
         return this.enabledState == null ? Input.empty() : this.enabledState;
     }
 
+    /**
+     * Describes if it is in detection mode or prevention mode at policy level.
+     */
     @InputImport(name="mode")
     private final @Nullable Input<Either<String,PolicyMode>> mode;
 
@@ -47,6 +62,9 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
         return this.mode == null ? Input.empty() : this.mode;
     }
 
+    /**
+     * If action type is redirect, this field represents redirect URL for the client.
+     */
     @InputImport(name="redirectUrl")
     private final @Nullable Input<String> redirectUrl;
 
@@ -54,6 +72,9 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
         return this.redirectUrl == null ? Input.empty() : this.redirectUrl;
     }
 
+    /**
+     * Describes if policy managed rules will inspect the request body content.
+     */
     @InputImport(name="requestBodyCheck")
     private final @Nullable Input<Either<String,PolicyRequestBodyCheck>> requestBodyCheck;
 

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetWorkloadNetworkDnsZoneArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWorkloadNetworkDnsZoneArgs Empty = new GetWorkloadNetworkDnsZoneArgs();
 
+    /**
+     * NSX DNS Zone identifier. Generally the same as the DNS Zone's display name
+     */
     @InputImport(name="dnsZoneId", required=true)
     private final String dnsZoneId;
 
@@ -19,6 +25,9 @@ public final class GetWorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Inv
         return this.dnsZoneId;
     }
 
+    /**
+     * Name of the private cloud
+     */
     @InputImport(name="privateCloudName", required=true)
     private final String privateCloudName;
 
@@ -26,6 +35,9 @@ public final class GetWorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Inv
         return this.privateCloudName;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

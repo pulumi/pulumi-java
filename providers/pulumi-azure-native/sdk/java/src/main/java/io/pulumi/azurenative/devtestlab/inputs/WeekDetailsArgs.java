@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of a weekly schedule.
+ */
 public final class WeekDetailsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WeekDetailsArgs Empty = new WeekDetailsArgs();
 
+    /**
+     * The time of the day the schedule will occur.
+     */
     @InputImport(name="time")
     private final @Nullable Input<String> time;
 
@@ -22,6 +28,9 @@ public final class WeekDetailsArgs extends io.pulumi.resources.ResourceArgs {
         return this.time == null ? Input.empty() : this.time;
     }
 
+    /**
+     * The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).
+     */
     @InputImport(name="weekdays")
     private final @Nullable Input<List<String>> weekdays;
 

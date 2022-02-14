@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of the rollout.
+ */
 public final class DefaultRolloutPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DefaultRolloutPropertiesArgs Empty = new DefaultRolloutPropertiesArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="provisioningState")
     private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
 
@@ -25,6 +31,9 @@ public final class DefaultRolloutPropertiesArgs extends io.pulumi.resources.Reso
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="specification")
     private final @Nullable Input<DefaultRolloutPropertiesSpecificationArgs> specification;
 
@@ -32,6 +41,9 @@ public final class DefaultRolloutPropertiesArgs extends io.pulumi.resources.Reso
         return this.specification == null ? Input.empty() : this.specification;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="status")
     private final @Nullable Input<DefaultRolloutPropertiesStatusArgs> status;
 

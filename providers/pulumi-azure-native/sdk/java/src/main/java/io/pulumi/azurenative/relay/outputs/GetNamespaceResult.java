@@ -13,16 +13,49 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetNamespaceResult {
+/**
+ * The time the namespace was created.
+ */
     private final String createdAt;
+/**
+ * Resource ID.
+ */
     private final String id;
+/**
+ * Resource location.
+ */
     private final String location;
+/**
+ * Identifier for Azure Insights metrics.
+ */
     private final String metricId;
+/**
+ * Resource name.
+ */
     private final String name;
+/**
+ * 
+ */
     private final String provisioningState;
+/**
+ * Endpoint you can use to perform Service Bus operations.
+ */
     private final String serviceBusEndpoint;
+/**
+ * SKU of the namespace.
+ */
     private final @Nullable SkuResponse sku;
+/**
+ * Resource tags.
+ */
     private final @Nullable Map<String,String> tags;
+/**
+ * Resource type.
+ */
     private final String type;
+/**
+ * The time the namespace was updated.
+ */
     private final String updatedAt;
 
     @OutputCustomType.Constructor({"createdAt","id","location","metricId","name","provisioningState","serviceBusEndpoint","sku","tags","type","updatedAt"})
@@ -51,36 +84,69 @@ public final class GetNamespaceResult {
         this.updatedAt = Objects.requireNonNull(updatedAt);
     }
 
+/**
+ * The time the namespace was created.
+ */
     public String getCreatedAt() {
         return this.createdAt;
     }
+/**
+ * Resource ID.
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Resource location.
+ */
     public String getLocation() {
         return this.location;
     }
+/**
+ * Identifier for Azure Insights metrics.
+ */
     public String getMetricId() {
         return this.metricId;
     }
+/**
+ * Resource name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * 
+ */
     public String getProvisioningState() {
         return this.provisioningState;
     }
+/**
+ * Endpoint you can use to perform Service Bus operations.
+ */
     public String getServiceBusEndpoint() {
         return this.serviceBusEndpoint;
     }
+/**
+ * SKU of the namespace.
+ */
     public Optional<SkuResponse> getSku() {
         return Optional.ofNullable(this.sku);
     }
+/**
+ * Resource tags.
+ */
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
+/**
+ * Resource type.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * The time the namespace was updated.
+ */
     public String getUpdatedAt() {
         return this.updatedAt;
     }

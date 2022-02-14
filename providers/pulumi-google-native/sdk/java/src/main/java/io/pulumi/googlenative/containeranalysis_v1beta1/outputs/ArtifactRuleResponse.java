@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ArtifactRuleResponse {
+/**
+ * 
+ */
     private final List<String> artifactRule;
 
     @OutputCustomType.Constructor({"artifactRule"})
@@ -17,6 +20,9 @@ public final class ArtifactRuleResponse {
         this.artifactRule = Objects.requireNonNull(artifactRule);
     }
 
+/**
+ * 
+ */
     public List<String> getArtifactRule() {
         return this.artifactRule;
     }

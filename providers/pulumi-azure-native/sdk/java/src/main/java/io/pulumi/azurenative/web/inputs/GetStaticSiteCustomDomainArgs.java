@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetStaticSiteCustomDomainArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetStaticSiteCustomDomainArgs Empty = new GetStaticSiteCustomDomainArgs();
 
+    /**
+     * The custom domain name.
+     */
     @InputImport(name="domainName", required=true)
     private final String domainName;
 
@@ -19,6 +25,9 @@ public final class GetStaticSiteCustomDomainArgs extends io.pulumi.resources.Inv
         return this.domainName;
     }
 
+    /**
+     * Name of the static site resource to search in.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +35,9 @@ public final class GetStaticSiteCustomDomainArgs extends io.pulumi.resources.Inv
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

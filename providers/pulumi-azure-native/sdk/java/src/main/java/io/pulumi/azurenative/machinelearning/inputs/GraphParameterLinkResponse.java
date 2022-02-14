@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Association link for a graph global parameter to a node in the graph.
+ */
 public final class GraphParameterLinkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GraphParameterLinkResponse Empty = new GraphParameterLinkResponse();
 
+    /**
+     * The graph node's identifier
+     */
     @InputImport(name="nodeId", required=true)
     private final String nodeId;
 
@@ -19,6 +25,9 @@ public final class GraphParameterLinkResponse extends io.pulumi.resources.Invoke
         return this.nodeId;
     }
 
+    /**
+     * The identifier of the node parameter that the global parameter maps to.
+     */
     @InputImport(name="parameterKey", required=true)
     private final String parameterKey;
 

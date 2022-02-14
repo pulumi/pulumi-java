@@ -15,10 +15,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Autoscale profile.
+ */
 public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AutoscaleProfileArgs Empty = new AutoscaleProfileArgs();
 
+    /**
+     * the number of instances that can be used during this profile.
+     */
     @InputImport(name="capacity", required=true)
     private final Input<ScaleCapacityArgs> capacity;
 
@@ -26,6 +32,9 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
         return this.capacity;
     }
 
+    /**
+     * the specific date-time for the profile. This element is not used if the Recurrence element is used.
+     */
     @InputImport(name="fixedDate")
     private final @Nullable Input<TimeWindowArgs> fixedDate;
 
@@ -33,6 +42,9 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
         return this.fixedDate == null ? Input.empty() : this.fixedDate;
     }
 
+    /**
+     * the name of the profile.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -40,6 +52,9 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
         return this.name;
     }
 
+    /**
+     * the repeating times at which this profile begins. This element is not used if the FixedDate element is used.
+     */
     @InputImport(name="recurrence")
     private final @Nullable Input<RecurrenceArgs> recurrence;
 
@@ -47,6 +62,9 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
         return this.recurrence == null ? Input.empty() : this.recurrence;
     }
 
+    /**
+     * the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules can be specified.
+     */
     @InputImport(name="rules", required=true)
     private final Input<List<ScaleRuleArgs>> rules;
 

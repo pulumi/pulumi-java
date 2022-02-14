@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServerAzureADOnlyAuthenticationArgs Empty = new ServerAzureADOnlyAuthenticationArgs();
 
+    /**
+     * The name of server azure active directory only authentication.
+     */
     @InputImport(name="authenticationName")
     private final @Nullable Input<String> authenticationName;
 
@@ -22,6 +28,9 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
         return this.authenticationName == null ? Input.empty() : this.authenticationName;
     }
 
+    /**
+     * Azure Active Directory only Authentication enabled.
+     */
     @InputImport(name="azureADOnlyAuthentication", required=true)
     private final Input<Boolean> azureADOnlyAuthentication;
 
@@ -29,6 +38,9 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
         return this.azureADOnlyAuthentication;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -36,6 +48,9 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the server.
+     */
     @InputImport(name="serverName", required=true)
     private final Input<String> serverName;
 

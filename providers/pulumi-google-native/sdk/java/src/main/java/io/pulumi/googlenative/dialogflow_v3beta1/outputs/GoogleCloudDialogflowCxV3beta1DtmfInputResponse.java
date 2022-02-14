@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3beta1DtmfInputResponse {
+/**
+ * The dtmf digits.
+ */
     private final String digits;
+/**
+ * The finish digit (if any).
+ */
     private final String finishDigit;
 
     @OutputCustomType.Constructor({"digits","finishDigit"})
@@ -20,9 +26,15 @@ public final class GoogleCloudDialogflowCxV3beta1DtmfInputResponse {
         this.finishDigit = Objects.requireNonNull(finishDigit);
     }
 
+/**
+ * The dtmf digits.
+ */
     public String getDigits() {
         return this.digits;
     }
+/**
+ * The finish digit (if any).
+ */
     public String getFinishDigit() {
         return this.finishDigit;
     }

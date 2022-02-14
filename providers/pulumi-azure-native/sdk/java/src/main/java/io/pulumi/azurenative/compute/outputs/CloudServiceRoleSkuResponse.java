@@ -12,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CloudServiceRoleSkuResponse {
+/**
+ * Specifies the number of role instances in the cloud service.
+ */
     private final @Nullable Double capacity;
+/**
+ * The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.
+ */
     private final @Nullable String name;
+/**
+ * Specifies the tier of the cloud service. Possible Values are <br /><br /> **Standard** <br /><br /> **Basic**
+ */
     private final @Nullable String tier;
 
     @OutputCustomType.Constructor({"capacity","name","tier"})
@@ -26,12 +35,21 @@ public final class CloudServiceRoleSkuResponse {
         this.tier = tier;
     }
 
+/**
+ * Specifies the number of role instances in the cloud service.
+ */
     public Optional<Double> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
+/**
+ * The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }
+/**
+ * Specifies the tier of the cloud service. Possible Values are <br /><br /> **Standard** <br /><br /> **Basic**
+ */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }

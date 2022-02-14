@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetWebAppPremierAddOnArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWebAppPremierAddOnArgs Empty = new GetWebAppPremierAddOnArgs();
 
+    /**
+     * Name of the app.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class GetWebAppPremierAddOnArgs extends io.pulumi.resources.InvokeA
         return this.name;
     }
 
+    /**
+     * Add-on name.
+     */
     @InputImport(name="premierAddOnName", required=true)
     private final String premierAddOnName;
 
@@ -26,6 +35,9 @@ public final class GetWebAppPremierAddOnArgs extends io.pulumi.resources.InvokeA
         return this.premierAddOnName;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

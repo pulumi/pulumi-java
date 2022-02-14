@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A reference to a test case. Test case references are canonically ordered lexicographically by these three factors: * First, by test_suite_name. * Second, by class_name. * Third, by name.
+ */
 public final class TestCaseReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TestCaseReferenceResponse Empty = new TestCaseReferenceResponse();
 
+    /**
+     * The name of the class.
+     */
     @InputImport(name="className", required=true)
     private final String className;
 
@@ -19,6 +25,9 @@ public final class TestCaseReferenceResponse extends io.pulumi.resources.InvokeA
         return this.className;
     }
 
+    /**
+     * The name of the test case. Required.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +35,9 @@ public final class TestCaseReferenceResponse extends io.pulumi.resources.InvokeA
         return this.name;
     }
 
+    /**
+     * The name of the test suite to which this test case belongs.
+     */
     @InputImport(name="testSuiteName", required=true)
     private final String testSuiteName;
 

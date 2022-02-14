@@ -8,15 +8,42 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The current state of the CryptoKeyVersion.
+ */
     @EnumType
     public enum CryptoKeyVersionState {
+/**
+ * Not specified.
+ */
         CryptoKeyVersionStateUnspecified("CRYPTO_KEY_VERSION_STATE_UNSPECIFIED"),
+/**
+ * This version is still being generated. It may not be used, enabled, disabled, or destroyed yet. Cloud KMS will automatically mark this version ENABLED as soon as the version is ready.
+ */
         PendingGeneration("PENDING_GENERATION"),
+/**
+ * This version may be used for cryptographic operations.
+ */
         Enabled("ENABLED"),
+/**
+ * This version may not be used, but the key material is still available, and the version can be placed back into the ENABLED state.
+ */
         Disabled("DISABLED"),
+/**
+ * This version is destroyed, and the key material is no longer stored. This version may only become ENABLED again if this version is reimport_eligible and the original key material is reimported with a call to KeyManagementService.ImportCryptoKeyVersion.
+ */
         Destroyed("DESTROYED"),
+/**
+ * This version is scheduled for destruction, and will be destroyed soon. Call RestoreCryptoKeyVersion to put it back into the DISABLED state.
+ */
         DestroyScheduled("DESTROY_SCHEDULED"),
+/**
+ * This version is still being imported. It may not be used, enabled, disabled, or destroyed yet. Cloud KMS will automatically mark this version ENABLED as soon as the version is ready.
+ */
         PendingImport("PENDING_IMPORT"),
+/**
+ * This version was not imported successfully. It may not be used, enabled, disabled, or destroyed. The submitted key material has been discarded. Additional details can be found in CryptoKeyVersion.import_failure_reason.
+ */
         ImportFailed("IMPORT_FAILED");
 
         private final String value;

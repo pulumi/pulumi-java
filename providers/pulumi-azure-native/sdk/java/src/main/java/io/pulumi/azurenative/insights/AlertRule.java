@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.insights.AlertRuleArgs;
 import io.pulumi.azurenative.insights.outputs.LocationThresholdRuleConditionResponse;
 import io.pulumi.azurenative.insights.outputs.ManagementEventRuleConditionResponse;
 import io.pulumi.azurenative.insights.outputs.RuleEmailActionResponse;
@@ -23,75 +22,304 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * The alert rule resource.
+API Version: 2016-03-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create or update an alert rule
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var alertRule = new AzureNative.Insights.AlertRule("alertRule", new AzureNative.Insights.AlertRuleArgs
+        {
+            Actions = {},
+            Condition = new AzureNative.Insights.Inputs.ThresholdRuleConditionArgs
+            {
+                DataSource = new AzureNative.Insights.Inputs.RuleMetricDataSourceArgs
+                {
+                    MetricName = "Requests",
+                    OdataType = "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
+                    ResourceUri = "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.Web/sites/leoalerttest",
+                },
+                OdataType = "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
+                Operator = "GreaterThan",
+                Threshold = 3,
+                TimeAggregation = "Total",
+                WindowSize = "PT5M",
+            },
+            Description = "Pura Vida",
+            IsEnabled = true,
+            Location = "West US",
+            Name = "chiricutin",
+            ResourceGroupName = "Rac46PostSwapRG",
+            RuleName = "chiricutin",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	insights "github.com/pulumi/pulumi-azure-native/sdk/go/azure/insights"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := insights.NewAlertRule(ctx, "alertRule", &insights.AlertRuleArgs{
+			Actions: pulumi.AnyArray{},
+			Condition: insights.ThresholdRuleCondition{
+				DataSource: insights.RuleMetricDataSource{
+					MetricName:  "Requests",
+					OdataType:   "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
+					ResourceUri: "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.Web/sites/leoalerttest",
+				},
+				OdataType:       "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
+				Operator:        "GreaterThan",
+				Threshold:       3,
+				TimeAggregation: "Total",
+				WindowSize:      "PT5M",
+			},
+			Description:       pulumi.String("Pura Vida"),
+			IsEnabled:         pulumi.Bool(true),
+			Location:          pulumi.String("West US"),
+			Name:              pulumi.String("chiricutin"),
+			ResourceGroupName: pulumi.String("Rac46PostSwapRG"),
+			RuleName:          pulumi.String("chiricutin"),
+			Tags:              nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const alertRule = new azure_native.insights.AlertRule("alertRule", {
+    actions: [],
+    condition: {
+        dataSource: {
+            metricName: "Requests",
+            odataType: "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
+            resourceUri: "/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.Web/sites/leoalerttest",
+        },
+        odataType: "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
+        operator: "GreaterThan",
+        threshold: 3,
+        timeAggregation: "Total",
+        windowSize: "PT5M",
+    },
+    description: "Pura Vida",
+    isEnabled: true,
+    location: "West US",
+    name: "chiricutin",
+    resourceGroupName: "Rac46PostSwapRG",
+    ruleName: "chiricutin",
+    tags: {},
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+alert_rule = azure_native.insights.AlertRule("alertRule",
+    actions=[],
+    condition=azure_native.insights.ThresholdRuleConditionArgs(
+        data_source=azure_native.insights.RuleMetricDataSourceArgs(
+            metric_name="Requests",
+            odata_type="Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
+            resource_uri="/subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/Microsoft.Web/sites/leoalerttest",
+        ),
+        odata_type="Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
+        operator="GreaterThan",
+        threshold=3,
+        time_aggregation="Total",
+        window_size="PT5M",
+    ),
+    description="Pura Vida",
+    is_enabled=True,
+    location="West US",
+    name="chiricutin",
+    resource_group_name="Rac46PostSwapRG",
+    rule_name="chiricutin",
+    tags={})
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:insights:AlertRule chiricutin /subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/alertrules/chiricutin 
+```
+
+ */
 @ResourceType(type="azure-native:insights:AlertRule")
 public class AlertRule extends io.pulumi.resources.CustomResource {
+    /**
+     * action that is performed when the alert rule becomes active, and when an alert condition is resolved.
+     */
     @OutputExport(name="action", type=Either.class, parameters={RuleEmailActionResponse.class, RuleWebhookActionResponse.class})
     private Output</* @Nullable */ Either<RuleEmailActionResponse,RuleWebhookActionResponse>> action;
 
+    /**
+     * @return action that is performed when the alert rule becomes active, and when an alert condition is resolved.
+     */
     public Output</* @Nullable */ Either<RuleEmailActionResponse,RuleWebhookActionResponse>> getAction() {
         return this.action;
     }
+    /**
+     * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+     */
     @OutputExport(name="actions", type=List.class, parameters={Either.class})
     private Output</* @Nullable */ List<Either<RuleEmailActionResponse,RuleWebhookActionResponse>>> actions;
 
+    /**
+     * @return the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+     */
     public Output</* @Nullable */ List<Either<RuleEmailActionResponse,RuleWebhookActionResponse>>> getActions() {
         return this.actions;
     }
+    /**
+     * the condition that results in the alert rule being activated.
+     */
     @OutputExport(name="condition", type=Object.class, parameters={})
     private Output<Object> condition;
 
+    /**
+     * @return the condition that results in the alert rule being activated.
+     */
     public Output<Object> getCondition() {
         return this.condition;
     }
+    /**
+     * the description of the alert rule that will be included in the alert email.
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return the description of the alert rule that will be included in the alert email.
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * the flag that indicates whether the alert rule is enabled.
+     */
     @OutputExport(name="isEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> isEnabled;
 
+    /**
+     * @return the flag that indicates whether the alert rule is enabled.
+     */
     public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
+    /**
+     * Last time the rule was updated in ISO8601 format.
+     */
     @OutputExport(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
+    /**
+     * @return Last time the rule was updated in ISO8601 format.
+     */
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
+    /**
+     * Resource location
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return Resource location
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Azure resource name
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Azure resource name
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * the provisioning state.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
+    /**
+     * @return the provisioning state.
+     */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource tags
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * Azure resource type
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Azure resource type
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AlertRule(String name, AlertRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:AlertRule", name, args == null ? AlertRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -111,6 +339,14 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AlertRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AlertRule(name, id, options);
     }

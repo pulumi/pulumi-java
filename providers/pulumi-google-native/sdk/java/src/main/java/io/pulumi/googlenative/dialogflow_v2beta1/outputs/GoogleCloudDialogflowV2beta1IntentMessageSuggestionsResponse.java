@@ -10,6 +10,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse {
+/**
+ * The list of suggested replies.
+ */
     private final List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse> suggestions;
 
     @OutputCustomType.Constructor({"suggestions"})
@@ -17,6 +20,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse 
         this.suggestions = Objects.requireNonNull(suggestions);
     }
 
+/**
+ * The list of suggested replies.
+ */
     public List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse> getSuggestions() {
         return this.suggestions;
     }

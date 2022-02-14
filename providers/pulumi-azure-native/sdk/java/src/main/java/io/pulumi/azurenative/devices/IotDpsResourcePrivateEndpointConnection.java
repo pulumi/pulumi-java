@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.devices;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.devices.IotDpsResourcePrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.devices.outputs.PrivateEndpointConnectionPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,27 +14,164 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * The private endpoint connection of a provisioning service
+API Version: 2020-03-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### PrivateEndpointConnection_CreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var iotDpsResourcePrivateEndpointConnection = new AzureNative.Devices.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection", new AzureNative.Devices.IotDpsResourcePrivateEndpointConnectionArgs
+        {
+            PrivateEndpointConnectionName = "myPrivateEndpointConnection",
+            Properties = new AzureNative.Devices.Inputs.PrivateEndpointConnectionPropertiesArgs
+            {
+                PrivateLinkServiceConnectionState = new AzureNative.Devices.Inputs.PrivateLinkServiceConnectionStateArgs
+                {
+                    Description = "Approved by johndoe@contoso.com",
+                    Status = "Approved",
+                },
+            },
+            ResourceGroupName = "myResourceGroup",
+            ResourceName = "myFirstProvisioningService",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	devices "github.com/pulumi/pulumi-azure-native/sdk/go/azure/devices"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := devices.NewIotDpsResourcePrivateEndpointConnection(ctx, "iotDpsResourcePrivateEndpointConnection", &devices.IotDpsResourcePrivateEndpointConnectionArgs{
+			PrivateEndpointConnectionName: pulumi.String("myPrivateEndpointConnection"),
+			Properties: &devices.PrivateEndpointConnectionPropertiesArgs{
+				PrivateLinkServiceConnectionState: &devices.PrivateLinkServiceConnectionStateArgs{
+					Description: pulumi.String("Approved by johndoe@contoso.com"),
+					Status:      pulumi.String("Approved"),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			ResourceName:      pulumi.String("myFirstProvisioningService"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const iotDpsResourcePrivateEndpointConnection = new azure_native.devices.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection", {
+    privateEndpointConnectionName: "myPrivateEndpointConnection",
+    properties: {
+        privateLinkServiceConnectionState: {
+            description: "Approved by johndoe@contoso.com",
+            status: "Approved",
+        },
+    },
+    resourceGroupName: "myResourceGroup",
+    resourceName: "myFirstProvisioningService",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+iot_dps_resource_private_endpoint_connection = azure_native.devices.IotDpsResourcePrivateEndpointConnection("iotDpsResourcePrivateEndpointConnection",
+    private_endpoint_connection_name="myPrivateEndpointConnection",
+    properties=azure_native.devices.PrivateEndpointConnectionPropertiesArgs(
+        private_link_service_connection_state=azure_native.devices.PrivateLinkServiceConnectionStateArgs(
+            description="Approved by johndoe@contoso.com",
+            status="Approved",
+        ),
+    ),
+    resource_group_name="myResourceGroup",
+    resource_name="myFirstProvisioningService")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:devices:IotDpsResourcePrivateEndpointConnection myPrivateEndpointConnection /subscriptions/91d12660-3dec-467a-be2a-213b5544ddc0/resourceGroups/myResourceGroup/providers/Microsoft.Devices/ProvisioningServices/myFirstProvisioningService/PrivateEndpointConnections/myPrivateEndpointConnection 
+```
+
+ */
 @ResourceType(type="azure-native:devices:IotDpsResourcePrivateEndpointConnection")
 public class IotDpsResourcePrivateEndpointConnection extends io.pulumi.resources.CustomResource {
+    /**
+     * The resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * The properties of a private endpoint connection
+     */
     @OutputExport(name="properties", type=PrivateEndpointConnectionPropertiesResponse.class, parameters={})
     private Output<PrivateEndpointConnectionPropertiesResponse> properties;
 
+    /**
+     * @return The properties of a private endpoint connection
+     */
     public Output<PrivateEndpointConnectionPropertiesResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * The resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public IotDpsResourcePrivateEndpointConnection(String name, IotDpsResourcePrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:devices:IotDpsResourcePrivateEndpointConnection", name, args == null ? IotDpsResourcePrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -56,6 +192,14 @@ public class IotDpsResourcePrivateEndpointConnection extends io.pulumi.resources
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static IotDpsResourcePrivateEndpointConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IotDpsResourcePrivateEndpointConnection(name, id, options);
     }

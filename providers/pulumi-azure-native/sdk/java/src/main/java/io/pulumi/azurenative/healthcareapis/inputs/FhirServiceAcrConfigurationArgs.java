@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure container registry configuration information
+ */
 public final class FhirServiceAcrConfigurationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FhirServiceAcrConfigurationArgs Empty = new FhirServiceAcrConfigurationArgs();
 
+    /**
+     * The list of the Azure container registry login servers.
+     */
     @InputImport(name="loginServers")
     private final @Nullable Input<List<String>> loginServers;
 

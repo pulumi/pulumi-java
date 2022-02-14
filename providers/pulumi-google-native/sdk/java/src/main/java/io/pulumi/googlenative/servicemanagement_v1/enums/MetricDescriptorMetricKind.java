@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Whether the metric records instantaneous values, changes to a value, etc. Some combinations of `metric_kind` and `value_type` might not be supported.
+ */
     @EnumType
     public enum MetricDescriptorMetricKind {
+/**
+ * Do not use this default value.
+ */
         MetricKindUnspecified("METRIC_KIND_UNSPECIFIED"),
+/**
+ * An instantaneous measurement of a value.
+ */
         Gauge("GAUGE"),
+/**
+ * The change in a value during a time interval.
+ */
         Delta("DELTA"),
+/**
+ * A value accumulated over a time interval. Cumulative measurements in a time series should have the same start time and increasing end times, until an event resets the cumulative value to zero and sets a new start time for the following points.
+ */
         Cumulative("CUMULATIVE");
 
         private final String value;

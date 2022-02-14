@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Contains the versioned name and the URL for one SearchParameter.
+ */
 public final class SearchParameterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SearchParameterArgs Empty = new SearchParameterArgs();
 
+    /**
+     * The canonical url of the search parameter resource.
+     */
     @InputImport(name="canonicalUrl")
     private final @Nullable Input<String> canonicalUrl;
 
@@ -21,6 +27,9 @@ public final class SearchParameterArgs extends io.pulumi.resources.ResourceArgs 
         return this.canonicalUrl == null ? Input.empty() : this.canonicalUrl;
     }
 
+    /**
+     * The versioned name of the search parameter resource. The format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter/{resource-id}/_history/{version-id} For fhir stores with disable_resource_versioning=true, the format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter/{resource-id}/
+     */
     @InputImport(name="parameter")
     private final @Nullable Input<String> parameter;
 

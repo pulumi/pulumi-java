@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Virtual Machine image for Windows AML Compute
+ */
 public final class VirtualMachineImageResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final VirtualMachineImageResponse Empty = new VirtualMachineImageResponse();
 
+    /**
+     * Virtual Machine image path
+     */
     @InputImport(name="id", required=true)
     private final String id;
 

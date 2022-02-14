@@ -12,10 +12,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Activity dependency information.
+ */
 public final class ActivityDependencyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ActivityDependencyArgs Empty = new ActivityDependencyArgs();
 
+    /**
+     * Activity name.
+     */
     @InputImport(name="activity", required=true)
     private final Input<String> activity;
 
@@ -23,6 +29,9 @@ public final class ActivityDependencyArgs extends io.pulumi.resources.ResourceAr
         return this.activity;
     }
 
+    /**
+     * Match-Condition for the dependency.
+     */
     @InputImport(name="dependencyConditions", required=true)
     private final Input<List<Either<String,DependencyCondition>>> dependencyConditions;
 

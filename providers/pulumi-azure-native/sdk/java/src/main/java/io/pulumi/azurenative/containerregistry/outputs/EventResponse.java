@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.EventRequestMessageResponse;
-import io.pulumi.azurenative.containerregistry.outputs.EventResponseMessageResponse;
 import io.pulumi.core.internal.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
@@ -13,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class EventResponse {
+/**
+ * The event request message sent to the service URI.
+ */
     private final @Nullable EventRequestMessageResponse eventRequestMessage;
+/**
+ * The event response message received from the service URI.
+ */
     private final @Nullable EventResponseMessageResponse eventResponseMessage;
+/**
+ * The event ID.
+ */
     private final @Nullable String id;
 
     @OutputCustomType.Constructor({"eventRequestMessage","eventResponseMessage","id"})
@@ -27,12 +35,21 @@ public final class EventResponse {
         this.id = id;
     }
 
+/**
+ * The event request message sent to the service URI.
+ */
     public Optional<EventRequestMessageResponse> getEventRequestMessage() {
         return Optional.ofNullable(this.eventRequestMessage);
     }
+/**
+ * The event response message received from the service URI.
+ */
     public Optional<EventResponseMessageResponse> getEventResponseMessage() {
         return Optional.ofNullable(this.eventResponseMessage);
     }
+/**
+ * The event ID.
+ */
     public Optional<String> getId() {
         return Optional.ofNullable(this.id);
     }

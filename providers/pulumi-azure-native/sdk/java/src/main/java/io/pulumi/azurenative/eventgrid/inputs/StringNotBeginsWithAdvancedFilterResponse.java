@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * StringNotBeginsWith Advanced Filter.
+ */
 public final class StringNotBeginsWithAdvancedFilterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final StringNotBeginsWithAdvancedFilterResponse Empty = new StringNotBeginsWithAdvancedFilterResponse();
 
+    /**
+     * The field/property in the event based on which you want to filter.
+     */
     @InputImport(name="key")
     private final @Nullable String key;
 
@@ -22,6 +28,10 @@ public final class StringNotBeginsWithAdvancedFilterResponse extends io.pulumi.r
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
+    /**
+     * The operator type used for filtering, e.g., NumberIn, StringContains, BoolEquals and others.
+Expected value is 'StringNotBeginsWith'.
+     */
     @InputImport(name="operatorType", required=true)
     private final String operatorType;
 
@@ -29,6 +39,9 @@ public final class StringNotBeginsWithAdvancedFilterResponse extends io.pulumi.r
         return this.operatorType;
     }
 
+    /**
+     * The set of filter values.
+     */
     @InputImport(name="values")
     private final @Nullable List<String> values;
 

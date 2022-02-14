@@ -12,8 +12,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class CapacitySkuResponse {
+/**
+ * The capacity of the SKU.
+ */
     private final @Nullable Integer capacity;
+/**
+ * Name of the SKU level.
+ */
     private final String name;
+/**
+ * The name of the Azure pricing tier to which the SKU applies.
+ */
     private final @Nullable String tier;
 
     @OutputCustomType.Constructor({"capacity","name","tier"})
@@ -26,12 +35,21 @@ public final class CapacitySkuResponse {
         this.tier = tier;
     }
 
+/**
+ * The capacity of the SKU.
+ */
     public Optional<Integer> getCapacity() {
         return Optional.ofNullable(this.capacity);
     }
+/**
+ * Name of the SKU level.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The name of the Azure pricing tier to which the SKU applies.
+ */
     public Optional<String> getTier() {
         return Optional.ofNullable(this.tier);
     }

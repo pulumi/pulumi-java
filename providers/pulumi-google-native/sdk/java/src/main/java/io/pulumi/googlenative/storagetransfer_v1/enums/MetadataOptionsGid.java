@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Specifies how each file's GID attribute should be handled by the transfer. If unspecified, the default behavior is the same as GID_SKIP when the source is a POSIX file system.
+ */
     @EnumType
     public enum MetadataOptionsGid {
+/**
+ * GID behavior is unspecified.
+ */
         GidUnspecified("GID_UNSPECIFIED"),
+/**
+ * Skip GID during a transfer job.
+ */
         GidSkip("GID_SKIP"),
+/**
+ * Preserve GID during a transfer job.
+ */
         GidNumber("GID_NUMBER");
 
         private final String value;

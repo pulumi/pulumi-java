@@ -14,10 +14,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BandwidthScheduleArgs Empty = new BandwidthScheduleArgs();
 
+    /**
+     * The days of the week when this schedule is applicable.
+     */
     @InputImport(name="days", required=true)
     private final Input<List<Either<String,DayOfWeek>>> days;
 
@@ -25,6 +31,9 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
         return this.days;
     }
 
+    /**
+     * The device name.
+     */
     @InputImport(name="deviceName", required=true)
     private final Input<String> deviceName;
 
@@ -32,6 +41,9 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
         return this.deviceName;
     }
 
+    /**
+     * The bandwidth schedule name which needs to be added/updated.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -39,6 +51,9 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * The bandwidth rate in Mbps.
+     */
     @InputImport(name="rateInMbps", required=true)
     private final Input<Integer> rateInMbps;
 
@@ -46,6 +61,9 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
         return this.rateInMbps;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -53,6 +71,9 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
         return this.resourceGroupName;
     }
 
+    /**
+     * The start time of the schedule in UTC.
+     */
     @InputImport(name="start", required=true)
     private final Input<String> start;
 
@@ -60,6 +81,9 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
         return this.start;
     }
 
+    /**
+     * The stop time of the schedule in UTC.
+     */
     @InputImport(name="stop", required=true)
     private final Input<String> stop;
 

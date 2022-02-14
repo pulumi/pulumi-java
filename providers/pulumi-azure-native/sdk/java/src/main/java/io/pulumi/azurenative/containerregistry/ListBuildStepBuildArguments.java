@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class ListBuildStepBuildArguments {
+/**
+ * The list of build arguments for a build step.
+API Version: 2018-02-01-preview.
+ *
+ * The list of build arguments for a build step.
+ */
     public static CompletableFuture<ListBuildStepBuildArgumentsResult> invokeAsync(ListBuildStepBuildArgumentsArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:containerregistry:listBuildStepBuildArguments", TypeShape.of(ListBuildStepBuildArgumentsResult.class), args == null ? ListBuildStepBuildArgumentsArgs.Empty : args, Utilities.withVersion(options));
     }

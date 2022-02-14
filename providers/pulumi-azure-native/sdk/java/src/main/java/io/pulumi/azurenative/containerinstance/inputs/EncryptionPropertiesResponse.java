@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The container group encryption properties.
+ */
 public final class EncryptionPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EncryptionPropertiesResponse Empty = new EncryptionPropertiesResponse();
 
+    /**
+     * The encryption key name.
+     */
     @InputImport(name="keyName", required=true)
     private final String keyName;
 
@@ -19,6 +25,9 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
         return this.keyName;
     }
 
+    /**
+     * The encryption key version.
+     */
     @InputImport(name="keyVersion", required=true)
     private final String keyVersion;
 
@@ -26,6 +35,9 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
         return this.keyVersion;
     }
 
+    /**
+     * The keyvault base url.
+     */
     @InputImport(name="vaultBaseUrl", required=true)
     private final String vaultBaseUrl;
 

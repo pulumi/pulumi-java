@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger's webhook URL.
+ */
 public final class WebhookConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final WebhookConfigResponse Empty = new WebhookConfigResponse();
 
+    /**
+     * Resource name for the secret required as a URL parameter.
+     */
     @InputImport(name="secret", required=true)
     private final String secret;
 
@@ -19,6 +25,9 @@ public final class WebhookConfigResponse extends io.pulumi.resources.InvokeArgs 
         return this.secret;
     }
 
+    /**
+     * Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
+     */
     @InputImport(name="state", required=true)
     private final String state;
 

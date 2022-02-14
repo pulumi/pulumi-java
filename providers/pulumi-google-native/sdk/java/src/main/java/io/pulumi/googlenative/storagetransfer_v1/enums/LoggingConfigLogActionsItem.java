@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum LoggingConfigLogActionsItem {
+/**
+ * Default value. This value is unused.
+ */
         LoggableActionUnspecified("LOGGABLE_ACTION_UNSPECIFIED"),
+/**
+ * Listing objects in a bucket.
+ */
         Find("FIND"),
+/**
+ * Deleting objects at the source or the destination.
+ */
         Delete("DELETE"),
+/**
+ * Copying objects to Google Cloud Storage.
+ */
         Copy("COPY");
 
         private final String value;

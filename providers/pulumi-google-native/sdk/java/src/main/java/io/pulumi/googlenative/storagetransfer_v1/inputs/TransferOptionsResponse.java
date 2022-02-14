@@ -9,10 +9,16 @@ import java.lang.Boolean;
 import java.util.Objects;
 
 
+/**
+ * TransferOptions define the actions to be performed on objects in a transfer.
+ */
 public final class TransferOptionsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TransferOptionsResponse Empty = new TransferOptionsResponse();
 
+    /**
+     * Whether objects should be deleted from the source after they are transferred to the sink. **Note:** This option and delete_objects_unique_in_sink are mutually exclusive.
+     */
     @InputImport(name="deleteObjectsFromSourceAfterTransfer", required=true)
     private final Boolean deleteObjectsFromSourceAfterTransfer;
 
@@ -20,6 +26,9 @@ public final class TransferOptionsResponse extends io.pulumi.resources.InvokeArg
         return this.deleteObjectsFromSourceAfterTransfer;
     }
 
+    /**
+     * Whether objects that exist only in the sink should be deleted. **Note:** This option and delete_objects_from_source_after_transfer are mutually exclusive.
+     */
     @InputImport(name="deleteObjectsUniqueInSink", required=true)
     private final Boolean deleteObjectsUniqueInSink;
 
@@ -27,6 +36,9 @@ public final class TransferOptionsResponse extends io.pulumi.resources.InvokeArg
         return this.deleteObjectsUniqueInSink;
     }
 
+    /**
+     * Represents the selected metadata options for a transfer job.
+     */
     @InputImport(name="metadataOptions", required=true)
     private final MetadataOptionsResponse metadataOptions;
 
@@ -34,6 +46,9 @@ public final class TransferOptionsResponse extends io.pulumi.resources.InvokeArg
         return this.metadataOptions;
     }
 
+    /**
+     * When to overwrite objects that already exist in the sink. The default is that only objects that are different from the source are ovewritten. If true, all objects in the sink whose name matches an object in the source are overwritten with the source object.
+     */
     @InputImport(name="overwriteObjectsAlreadyExistingInSink", required=true)
     private final Boolean overwriteObjectsAlreadyExistingInSink;
 

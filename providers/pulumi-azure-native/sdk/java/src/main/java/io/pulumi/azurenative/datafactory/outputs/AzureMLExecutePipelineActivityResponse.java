@@ -17,20 +17,66 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureMLExecutePipelineActivityResponse {
+/**
+ * Whether to continue execution of other steps in the PipelineRun if a step fails. This information will be passed in the continueOnStepFailure property of the published pipeline execution request. Type: boolean (or Expression with resultType boolean).
+ */
     private final @Nullable Object continueOnStepFailure;
+/**
+ * Dictionary used for changing data path assignments without retraining. Values will be passed in the dataPathAssignments property of the published pipeline execution request. Type: object with key value pairs (or Expression with resultType object).
+ */
     private final @Nullable Object dataPathAssignments;
+/**
+ * Activity depends on condition.
+ */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
+/**
+ * Activity description.
+ */
     private final @Nullable String description;
+/**
+ * Run history experiment name of the pipeline run. This information will be passed in the ExperimentName property of the published pipeline execution request. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object experimentName;
+/**
+ * Linked service reference.
+ */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+/**
+ * The parent Azure ML Service pipeline run id. This information will be passed in the ParentRunId property of the published pipeline execution request. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object mlParentRunId;
+/**
+ * ID of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object mlPipelineEndpointId;
+/**
+ * ID of the published Azure ML pipeline. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object mlPipelineId;
+/**
+ * Key,Value pairs to be passed to the published Azure ML pipeline endpoint. Keys must match the names of pipeline parameters defined in the published pipeline. Values will be passed in the ParameterAssignments property of the published pipeline execution request. Type: object with key value pairs (or Expression with resultType object).
+ */
     private final @Nullable Object mlPipelineParameters;
+/**
+ * Activity name.
+ */
     private final String name;
+/**
+ * Activity policy.
+ */
     private final @Nullable ActivityPolicyResponse policy;
+/**
+ * Type of activity.
+Expected value is 'AzureMLExecutePipeline'.
+ */
     private final String type;
+/**
+ * Activity user properties.
+ */
     private final @Nullable List<UserPropertyResponse> userProperties;
+/**
+ * Version of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).
+ */
     private final @Nullable Object version;
 
     @OutputCustomType.Constructor({"continueOnStepFailure","dataPathAssignments","dependsOn","description","experimentName","linkedServiceName","mlParentRunId","mlPipelineEndpointId","mlPipelineId","mlPipelineParameters","name","policy","type","userProperties","version"})
@@ -67,48 +113,94 @@ public final class AzureMLExecutePipelineActivityResponse {
         this.version = version;
     }
 
+/**
+ * Whether to continue execution of other steps in the PipelineRun if a step fails. This information will be passed in the continueOnStepFailure property of the published pipeline execution request. Type: boolean (or Expression with resultType boolean).
+ */
     public Optional<Object> getContinueOnStepFailure() {
         return Optional.ofNullable(this.continueOnStepFailure);
     }
+/**
+ * Dictionary used for changing data path assignments without retraining. Values will be passed in the dataPathAssignments property of the published pipeline execution request. Type: object with key value pairs (or Expression with resultType object).
+ */
     public Optional<Object> getDataPathAssignments() {
         return Optional.ofNullable(this.dataPathAssignments);
     }
+/**
+ * Activity depends on condition.
+ */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
+/**
+ * Activity description.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * Run history experiment name of the pipeline run. This information will be passed in the ExperimentName property of the published pipeline execution request. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getExperimentName() {
         return Optional.ofNullable(this.experimentName);
     }
+/**
+ * Linked service reference.
+ */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
+/**
+ * The parent Azure ML Service pipeline run id. This information will be passed in the ParentRunId property of the published pipeline execution request. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getMlParentRunId() {
         return Optional.ofNullable(this.mlParentRunId);
     }
+/**
+ * ID of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getMlPipelineEndpointId() {
         return Optional.ofNullable(this.mlPipelineEndpointId);
     }
+/**
+ * ID of the published Azure ML pipeline. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getMlPipelineId() {
         return Optional.ofNullable(this.mlPipelineId);
     }
+/**
+ * Key,Value pairs to be passed to the published Azure ML pipeline endpoint. Keys must match the names of pipeline parameters defined in the published pipeline. Values will be passed in the ParameterAssignments property of the published pipeline execution request. Type: object with key value pairs (or Expression with resultType object).
+ */
     public Optional<Object> getMlPipelineParameters() {
         return Optional.ofNullable(this.mlPipelineParameters);
     }
+/**
+ * Activity name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Activity policy.
+ */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
+/**
+ * Type of activity.
+Expected value is 'AzureMLExecutePipeline'.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Activity user properties.
+ */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
+/**
+ * Version of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).
+ */
     public Optional<Object> getVersion() {
         return Optional.ofNullable(this.version);
     }

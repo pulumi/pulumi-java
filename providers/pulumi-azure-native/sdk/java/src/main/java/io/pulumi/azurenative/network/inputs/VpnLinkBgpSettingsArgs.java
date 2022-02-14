@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * BGP settings details for a link.
+ */
 public final class VpnLinkBgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VpnLinkBgpSettingsArgs Empty = new VpnLinkBgpSettingsArgs();
 
+    /**
+     * The BGP speaker's ASN.
+     */
     @InputImport(name="asn")
     private final @Nullable Input<Double> asn;
 
@@ -22,6 +28,9 @@ public final class VpnLinkBgpSettingsArgs extends io.pulumi.resources.ResourceAr
         return this.asn == null ? Input.empty() : this.asn;
     }
 
+    /**
+     * The BGP peering address and BGP identifier of this BGP speaker.
+     */
     @InputImport(name="bgpPeeringAddress")
     private final @Nullable Input<String> bgpPeeringAddress;
 

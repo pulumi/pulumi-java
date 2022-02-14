@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAutoscalingPolicy {
+/**
+ * Retrieves autoscaling policy.
+ */
     public static CompletableFuture<GetAutoscalingPolicyResult> invokeAsync(GetAutoscalingPolicyArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:dataproc/v1beta2:getAutoscalingPolicy", TypeShape.of(GetAutoscalingPolicyResult.class), args == null ? GetAutoscalingPolicyArgs.Empty : args, Utilities.withVersion(options));
     }

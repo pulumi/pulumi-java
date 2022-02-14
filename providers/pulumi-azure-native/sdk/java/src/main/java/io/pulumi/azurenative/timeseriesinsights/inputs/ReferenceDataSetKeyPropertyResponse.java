@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A key property for the reference data set. A reference data set can have multiple key properties.
+ */
 public final class ReferenceDataSetKeyPropertyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReferenceDataSetKeyPropertyResponse Empty = new ReferenceDataSetKeyPropertyResponse();
 
+    /**
+     * The name of the key property.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -21,6 +27,9 @@ public final class ReferenceDataSetKeyPropertyResponse extends io.pulumi.resourc
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The type of the key property.
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

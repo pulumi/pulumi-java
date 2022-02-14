@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Filter and return results from input array based on the conditions.
+ */
 public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FilterActivityResponse Empty = new FilterActivityResponse();
 
+    /**
+     * Condition to be used for filtering the input.
+     */
     @InputImport(name="condition", required=true)
     private final ExpressionResponse condition;
 
@@ -25,6 +31,9 @@ public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.condition;
     }
 
+    /**
+     * Activity depends on condition.
+     */
     @InputImport(name="dependsOn")
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
@@ -32,6 +41,9 @@ public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
 
+    /**
+     * Activity description.
+     */
     @InputImport(name="description")
     private final @Nullable String description;
 
@@ -39,6 +51,9 @@ public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
+    /**
+     * Input array on which filter should be applied.
+     */
     @InputImport(name="items", required=true)
     private final ExpressionResponse items;
 
@@ -46,6 +61,9 @@ public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.items;
     }
 
+    /**
+     * Activity name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -53,6 +71,10 @@ public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.name;
     }
 
+    /**
+     * Type of activity.
+Expected value is 'Filter'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -60,6 +82,9 @@ public final class FilterActivityResponse extends io.pulumi.resources.InvokeArgs
         return this.type;
     }
 
+    /**
+     * Activity user properties.
+     */
     @InputImport(name="userProperties")
     private final @Nullable List<UserPropertyResponse> userProperties;
 

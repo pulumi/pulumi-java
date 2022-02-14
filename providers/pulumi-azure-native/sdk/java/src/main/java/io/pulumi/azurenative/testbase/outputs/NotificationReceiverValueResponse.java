@@ -13,8 +13,17 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class NotificationReceiverValueResponse {
+/**
+ * The user object receiver value.
+ */
     private final @Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue;
+/**
+ * The user object receiver value.
+ */
     private final @Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue;
+/**
+ * The user object receiver value.
+ */
     private final @Nullable UserObjectReceiverValueResponse userObjectReceiverValue;
 
     @OutputCustomType.Constructor({"distributionGroupListReceiverValue","subscriptionReceiverValue","userObjectReceiverValue"})
@@ -27,12 +36,21 @@ public final class NotificationReceiverValueResponse {
         this.userObjectReceiverValue = userObjectReceiverValue;
     }
 
+/**
+ * The user object receiver value.
+ */
     public Optional<DistributionGroupListReceiverValueResponse> getDistributionGroupListReceiverValue() {
         return Optional.ofNullable(this.distributionGroupListReceiverValue);
     }
+/**
+ * The user object receiver value.
+ */
     public Optional<SubscriptionReceiverValueResponse> getSubscriptionReceiverValue() {
         return Optional.ofNullable(this.subscriptionReceiverValue);
     }
+/**
+ * The user object receiver value.
+ */
     public Optional<UserObjectReceiverValueResponse> getUserObjectReceiverValue() {
         return Optional.ofNullable(this.userObjectReceiverValue);
     }

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Single sign-on related configuration
+ */
 public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SsoPropertiesArgs Empty = new SsoPropertiesArgs();
 
+    /**
+     * The public identifier for the application
+     */
     @InputImport(name="clientId")
     private final @Nullable Input<String> clientId;
 
@@ -22,6 +28,9 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientId == null ? Input.empty() : this.clientId;
     }
 
+    /**
+     * The secret known only to the application and the authorization server
+     */
     @InputImport(name="clientSecret")
     private final @Nullable Input<String> clientSecret;
 
@@ -29,6 +38,9 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
     }
 
+    /**
+     * The URI of Issuer Identifier
+     */
     @InputImport(name="issuerUri")
     private final @Nullable Input<String> issuerUri;
 
@@ -36,6 +48,9 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         return this.issuerUri == null ? Input.empty() : this.issuerUri;
     }
 
+    /**
+     * It defines the specific actions applications can be allowed to do on a user's behalf
+     */
     @InputImport(name="scope")
     private final @Nullable Input<List<String>> scope;
 

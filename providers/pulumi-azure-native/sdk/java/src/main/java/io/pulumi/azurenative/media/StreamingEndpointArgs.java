@@ -17,10 +17,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StreamingEndpointArgs Empty = new StreamingEndpointArgs();
 
+    /**
+     * The access control definition of the streaming endpoint.
+     */
     @InputImport(name="accessControl")
     private final @Nullable Input<StreamingEndpointAccessControlArgs> accessControl;
 
@@ -28,6 +34,9 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
         return this.accessControl == null ? Input.empty() : this.accessControl;
     }
 
+    /**
+     * The Media Services account name.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -35,6 +44,9 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
         return this.accountName;
     }
 
+    /**
+     * The flag indicates if the resource should be automatically started on creation.
+     */
     @InputImport(name="autoStart")
     private final @Nullable Input<Boolean> autoStart;
 
@@ -42,6 +54,9 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
         return this.autoStart == null ? Input.empty() : this.autoStart;
     }
 
+    /**
+     * This feature is deprecated, do not set a value for this property.
+     */
     @InputImport(name="availabilitySetName")
     private final @Nullable Input<String> availabilitySetName;
 
@@ -49,6 +64,9 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
         return this.availabilitySetName == null ? Input.empty() : this.availabilitySetName;
     }
 
+    /**
+     * The CDN enabled flag.
+     */
     @InputImport(name="cdnEnabled")
     private final @Nullable Input<Boolean> cdnEnabled;
 
@@ -56,6 +74,9 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
         return this.cdnEnabled == null ? Input.empty() : this.cdnEnabled;
     }
 
+    /**
+     * The CDN profile name.
+     */
     @InputImport(name="cdnProfile")
     private final @Nullable Input<String> cdnProfile;
 
@@ -63,6 +84,9 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
         return this.cdnProfile == null ? Input.empty() : this.cdnProfile;
     }
 
+    /**
+     * The CDN provider name.
+     */
     @InputImport(name="cdnProvider")
     private final @Nullable Input<String> cdnProvider;
 
@@ -70,6 +94,9 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
         return this.cdnProvider == null ? Input.empty() : this.cdnProvider;
     }
 
+    /**
+     * The streaming endpoint access policies.
+     */
     @InputImport(name="crossSiteAccessPolicies")
     private final @Nullable Input<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
 
@@ -77,6 +104,9 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
         return this.crossSiteAccessPolicies == null ? Input.empty() : this.crossSiteAccessPolicies;
     }
 
+    /**
+     * The custom host names of the streaming endpoint
+     */
     @InputImport(name="customHostNames")
     private final @Nullable Input<List<String>> customHostNames;
 
@@ -84,6 +114,9 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
         return this.customHostNames == null ? Input.empty() : this.customHostNames;
     }
 
+    /**
+     * The streaming endpoint description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -91,6 +124,9 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The geo-location where the resource lives
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -98,6 +134,9 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Max cache age
+     */
     @InputImport(name="maxCacheAge")
     private final @Nullable Input<Double> maxCacheAge;
 
@@ -105,6 +144,9 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
         return this.maxCacheAge == null ? Input.empty() : this.maxCacheAge;
     }
 
+    /**
+     * The name of the resource group within the Azure subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -112,6 +154,9 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
         return this.resourceGroupName;
     }
 
+    /**
+     * The number of scale units. Use the Scale operation to adjust this value.
+     */
     @InputImport(name="scaleUnits", required=true)
     private final Input<Integer> scaleUnits;
 
@@ -119,6 +164,9 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
         return this.scaleUnits;
     }
 
+    /**
+     * The name of the streaming endpoint, maximum length is 24.
+     */
     @InputImport(name="streamingEndpointName")
     private final @Nullable Input<String> streamingEndpointName;
 
@@ -126,6 +174,9 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
         return this.streamingEndpointName == null ? Input.empty() : this.streamingEndpointName;
     }
 
+    /**
+     * Resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

@@ -18,10 +18,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * SAP Business Warehouse Linked Service.
+ */
 public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SapBWLinkedServiceArgs Empty = new SapBWLinkedServiceArgs();
 
+    /**
+     * List of tags that can be used for describing the linked service.
+     */
     @InputImport(name="annotations")
     private final @Nullable Input<List<Object>> annotations;
 
@@ -29,6 +35,9 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
         return this.annotations == null ? Input.empty() : this.annotations;
     }
 
+    /**
+     * Client ID of the client on the BW system. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
+     */
     @InputImport(name="clientId", required=true)
     private final Input<Object> clientId;
 
@@ -36,6 +45,9 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
         return this.clientId;
     }
 
+    /**
+     * The integration runtime reference.
+     */
     @InputImport(name="connectVia")
     private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
@@ -43,6 +55,9 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
         return this.connectVia == null ? Input.empty() : this.connectVia;
     }
 
+    /**
+     * Linked service description.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -50,6 +65,9 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="encryptedCredential")
     private final @Nullable Input<Object> encryptedCredential;
 
@@ -57,6 +75,9 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
     }
 
+    /**
+     * Parameters for linked service.
+     */
     @InputImport(name="parameters")
     private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
@@ -64,6 +85,9 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
         return this.parameters == null ? Input.empty() : this.parameters;
     }
 
+    /**
+     * Password to access the SAP BW server.
+     */
     @InputImport(name="password")
     private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
@@ -71,6 +95,9 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
         return this.password == null ? Input.empty() : this.password;
     }
 
+    /**
+     * Host name of the SAP BW instance. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="server", required=true)
     private final Input<Object> server;
 
@@ -78,6 +105,9 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
         return this.server;
     }
 
+    /**
+     * System number of the BW system. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
+     */
     @InputImport(name="systemNumber", required=true)
     private final Input<Object> systemNumber;
 
@@ -85,6 +115,10 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
         return this.systemNumber;
     }
 
+    /**
+     * Type of linked service.
+Expected value is 'SapBW'.
+     */
     @InputImport(name="type", required=true)
     private final Input<String> type;
 
@@ -92,6 +126,9 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
         return this.type;
     }
 
+    /**
+     * Username to access the SAP BW server. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="userName")
     private final @Nullable Input<Object> userName;
 

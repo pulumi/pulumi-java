@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetTaskRunArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTaskRunArgs Empty = new GetTaskRunArgs();
 
+    /**
+     * The name of the container registry.
+     */
     @InputImport(name="registryName", required=true)
     private final String registryName;
 
@@ -19,6 +25,9 @@ public final class GetTaskRunArgs extends io.pulumi.resources.InvokeArgs {
         return this.registryName;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetTaskRunArgs extends io.pulumi.resources.InvokeArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the task run.
+     */
     @InputImport(name="taskRunName", required=true)
     private final String taskRunName;
 

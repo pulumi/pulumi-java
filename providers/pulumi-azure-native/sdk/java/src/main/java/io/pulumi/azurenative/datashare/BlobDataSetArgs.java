@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class BlobDataSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BlobDataSetArgs Empty = new BlobDataSetArgs();
 
+    /**
+     * The name of the share account.
+     */
     @InputImport(name="accountName", required=true)
     private final Input<String> accountName;
 
@@ -21,6 +27,9 @@ public final class BlobDataSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.accountName;
     }
 
+    /**
+     * Container that has the file path.
+     */
     @InputImport(name="containerName", required=true)
     private final Input<String> containerName;
 
@@ -28,6 +37,9 @@ public final class BlobDataSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.containerName;
     }
 
+    /**
+     * The name of the dataSet.
+     */
     @InputImport(name="dataSetName")
     private final @Nullable Input<String> dataSetName;
 
@@ -35,6 +47,9 @@ public final class BlobDataSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.dataSetName == null ? Input.empty() : this.dataSetName;
     }
 
+    /**
+     * File path within the source data set
+     */
     @InputImport(name="filePath", required=true)
     private final Input<String> filePath;
 
@@ -42,6 +57,10 @@ public final class BlobDataSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.filePath;
     }
 
+    /**
+     * Kind of data set.
+Expected value is 'Blob'.
+     */
     @InputImport(name="kind", required=true)
     private final Input<String> kind;
 
@@ -49,6 +68,9 @@ public final class BlobDataSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.kind;
     }
 
+    /**
+     * Resource group of storage account
+     */
     @InputImport(name="resourceGroup", required=true)
     private final Input<String> resourceGroup;
 
@@ -56,6 +78,9 @@ public final class BlobDataSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroup;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -63,6 +88,9 @@ public final class BlobDataSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the share to add the data set to.
+     */
     @InputImport(name="shareName", required=true)
     private final Input<String> shareName;
 
@@ -70,6 +98,9 @@ public final class BlobDataSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.shareName;
     }
 
+    /**
+     * Storage account name of the source data set
+     */
     @InputImport(name="storageAccountName", required=true)
     private final Input<String> storageAccountName;
 
@@ -77,6 +108,9 @@ public final class BlobDataSetArgs extends io.pulumi.resources.ResourceArgs {
         return this.storageAccountName;
     }
 
+    /**
+     * Subscription id of storage account
+     */
     @InputImport(name="subscriptionId", required=true)
     private final Input<String> subscriptionId;
 

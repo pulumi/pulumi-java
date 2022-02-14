@@ -11,7 +11,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class VirtualNetworkRuleResponse {
+/**
+ * The action of virtual network rule.
+ */
     private final @Nullable String action;
+/**
+ * Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
+ */
     private final String virtualNetworkResourceId;
 
     @OutputCustomType.Constructor({"action","virtualNetworkResourceId"})
@@ -22,9 +28,15 @@ public final class VirtualNetworkRuleResponse {
         this.virtualNetworkResourceId = Objects.requireNonNull(virtualNetworkResourceId);
     }
 
+/**
+ * The action of virtual network rule.
+ */
     public Optional<String> getAction() {
         return Optional.ofNullable(this.action);
     }
+/**
+ * Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
+ */
     public String getVirtualNetworkResourceId() {
         return this.virtualNetworkResourceId;
     }

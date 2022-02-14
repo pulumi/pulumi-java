@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetGameServerCluster {
+/**
+ * Gets details of a single game server cluster.
+ */
     public static CompletableFuture<GetGameServerClusterResult> invokeAsync(GetGameServerClusterArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:gameservices/v1:getGameServerCluster", TypeShape.of(GetGameServerClusterResult.class), args == null ? GetGameServerClusterArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2SaveFindingsResponse {
+/**
+ * Location to store findings outside of DLP.
+ */
     private final GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig;
 
     @OutputCustomType.Constructor({"outputConfig"})
@@ -16,6 +19,9 @@ public final class GooglePrivacyDlpV2SaveFindingsResponse {
         this.outputConfig = Objects.requireNonNull(outputConfig);
     }
 
+/**
+ * Location to store findings outside of DLP.
+ */
     public GooglePrivacyDlpV2OutputStorageConfigResponse getOutputConfig() {
         return this.outputConfig;
     }

@@ -12,6 +12,11 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetClientConfig {
+/**
+ * Use this function to access the current configuration of the native Azure provider.
+ *
+ * Configuration values returned by getClientConfig.
+ */
     public static CompletableFuture<GetClientConfigResult> invokeAsync(@Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:authorization:getClientConfig", TypeShape.of(GetClientConfigResult.class), io.pulumi.resources.InvokeArgs.Empty, Utilities.withVersion(options));
     }

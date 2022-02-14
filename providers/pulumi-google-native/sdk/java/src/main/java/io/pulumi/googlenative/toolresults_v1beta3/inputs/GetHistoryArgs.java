@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetHistoryArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetHistoryArgs Empty = new GetHistoryArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="historyId", required=true)
     private final String historyId;
 
@@ -21,6 +27,9 @@ public final class GetHistoryArgs extends io.pulumi.resources.InvokeArgs {
         return this.historyId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

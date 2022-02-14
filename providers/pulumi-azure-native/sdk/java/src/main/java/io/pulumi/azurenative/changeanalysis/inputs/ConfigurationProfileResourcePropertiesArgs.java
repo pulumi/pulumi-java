@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The properties of a configuration profile.
+ */
 public final class ConfigurationProfileResourcePropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfigurationProfileResourcePropertiesArgs Empty = new ConfigurationProfileResourcePropertiesArgs();
 
+    /**
+     * Settings of change notification configuration for a subscription.
+     */
     @InputImport(name="notifications")
     private final @Nullable Input<NotificationSettingsArgs> notifications;
 

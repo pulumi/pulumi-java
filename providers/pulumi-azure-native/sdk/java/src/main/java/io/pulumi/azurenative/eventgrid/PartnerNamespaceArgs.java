@@ -16,10 +16,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PartnerNamespaceArgs Empty = new PartnerNamespaceArgs();
 
+    /**
+     * This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only AAD token will be used to authenticate if user is allowed to publish to the partner namespace.
+     */
     @InputImport(name="disableLocalAuth")
     private final @Nullable Input<Boolean> disableLocalAuth;
 
@@ -27,6 +33,9 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
         return this.disableLocalAuth == null ? Input.empty() : this.disableLocalAuth;
     }
 
+    /**
+     * This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
+     */
     @InputImport(name="inboundIpRules")
     private final @Nullable Input<List<InboundIpRuleArgs>> inboundIpRules;
 
@@ -34,6 +43,9 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
         return this.inboundIpRules == null ? Input.empty() : this.inboundIpRules;
     }
 
+    /**
+     * Location of the resource.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -41,6 +53,9 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Name of the partner namespace.
+     */
     @InputImport(name="partnerNamespaceName")
     private final @Nullable Input<String> partnerNamespaceName;
 
@@ -48,6 +63,10 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
         return this.partnerNamespaceName == null ? Input.empty() : this.partnerNamespaceName;
     }
 
+    /**
+     * The fully qualified ARM Id of the partner registration that should be associated with this partner namespace. This takes the following format:
+/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/partnerRegistrations/{partnerRegistrationName}.
+     */
     @InputImport(name="partnerRegistrationFullyQualifiedId")
     private final @Nullable Input<String> partnerRegistrationFullyQualifiedId;
 
@@ -55,6 +74,10 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
         return this.partnerRegistrationFullyQualifiedId == null ? Input.empty() : this.partnerRegistrationFullyQualifiedId;
     }
 
+    /**
+     * This determines if traffic is allowed over public network. By default it is enabled.
+You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules" />
+     */
     @InputImport(name="publicNetworkAccess")
     private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
@@ -62,6 +85,9 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
     }
 
+    /**
+     * The name of the resource group within the user's subscription.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -69,6 +95,9 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
         return this.resourceGroupName;
     }
 
+    /**
+     * Tags of the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

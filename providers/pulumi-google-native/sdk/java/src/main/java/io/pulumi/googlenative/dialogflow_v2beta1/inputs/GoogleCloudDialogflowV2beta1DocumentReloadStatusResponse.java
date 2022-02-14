@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The status of a reload attempt.
+ */
 public final class GoogleCloudDialogflowV2beta1DocumentReloadStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowV2beta1DocumentReloadStatusResponse Empty = new GoogleCloudDialogflowV2beta1DocumentReloadStatusResponse();
 
+    /**
+     * The status of a reload attempt or the initial load.
+     */
     @InputImport(name="status", required=true)
     private final GoogleRpcStatusResponse status;
 
@@ -20,6 +26,9 @@ public final class GoogleCloudDialogflowV2beta1DocumentReloadStatusResponse exte
         return this.status;
     }
 
+    /**
+     * The time of a reload attempt. This reload may have been triggered automatically or manually and may not have succeeded.
+     */
     @InputImport(name="time", required=true)
     private final String time;
 

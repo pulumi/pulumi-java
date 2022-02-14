@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of data that can be assigned to the label.
+ */
     @EnumType
     public enum LabelDescriptorValueType {
+/**
+ * A variable-length string. This is the default.
+ */
         String("STRING"),
+/**
+ * Boolean; true or false.
+ */
         Bool("BOOL"),
+/**
+ * A 64-bit signed integer.
+ */
         Int64("INT64");
 
         private final String value;

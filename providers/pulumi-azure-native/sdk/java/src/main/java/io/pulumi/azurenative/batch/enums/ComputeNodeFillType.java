@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum ComputeNodeFillType {
+/**
+ * Tasks should be assigned evenly across all nodes in the pool.
+ */
         Spread("Spread"),
+/**
+ * As many tasks as possible (taskSlotsPerNode) should be assigned to each node in the pool before any tasks are assigned to the next node in the pool.
+ */
         Pack("Pack");
 
         private final String value;

@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetMetadataImportArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMetadataImportArgs Empty = new GetMetadataImportArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -21,6 +27,9 @@ public final class GetMetadataImportArgs extends io.pulumi.resources.InvokeArgs 
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="metadataImportId", required=true)
     private final String metadataImportId;
 
@@ -28,6 +37,9 @@ public final class GetMetadataImportArgs extends io.pulumi.resources.InvokeArgs 
         return this.metadataImportId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 
@@ -35,6 +47,9 @@ public final class GetMetadataImportArgs extends io.pulumi.resources.InvokeArgs 
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="serviceId", required=true)
     private final String serviceId;
 

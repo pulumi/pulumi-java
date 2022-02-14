@@ -9,7 +9,6 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
-import io.pulumi.kubernetes.helm.sh_v3.ReleaseArgs;
 import io.pulumi.kubernetes.helm.sh_v3.outputs.ReleaseStatus;
 import io.pulumi.kubernetes.helm.sh_v3.outputs.RepositoryOpts;
 import java.lang.Boolean;
@@ -20,213 +19,1179 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A `Release` is an instance of a chart running in a Kubernetes cluster. A `Chart` is a Helm package. It contains all the
+resource definitions necessary to run an application, tool, or service inside a Kubernetes cluster.
+
+This resource models a Helm Release as if it were created by the Helm CLI. The underlying implementation embeds Helm as
+a library to perform the orchestration of the resources. As a result, the full spectrum of Helm features are supported
+natively.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Local Chart Directory
+
+```typescript
+import * as k8s from "@pulumi/kubernetes";
+
+const nginxIngress = new k8s.helm.v3.Release("nginx-ingress", {
+    chart: "./nginx-ingress",
+});
+```
+```python
+from pulumi_kubernetes.helm.v3 import Release, ReleaseArgs
+
+nginx_ingress = Release(
+    "nginx-ingress",
+    ReleaseArgs(
+        chart="./nginx-ingress",
+    ),
+)
+```
+```csharp
+using Pulumi;
+using Pulumi.Kubernetes.Types.Inputs.Helm.V3;
+using Pulumi.Kubernetes.Helm.V3;
+
+class HelmStack : Stack
+{
+    public HelmStack()
+    {
+        var nginx = new Release("nginx-ingress", new ReleaseArgs
+        {
+            Chart = "./nginx-ingress",
+        });
+
+    }
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/helm/v3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := helm.NewRelease(ctx, "nginx-ingress", helm.ReleaseArgs{
+			Chart: pulumi.String("./nginx-ingress"),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+```
+{{% /example %}}
+{{% example %}}
+### Remote Chart
+
+```typescript
+import * as k8s from "@pulumi/kubernetes";
+
+const nginxIngress = new k8s.helm.v3.Release("nginx-ingress", {
+    chart: "nginx-ingress",
+    version: "1.24.4",
+    repositoryOpts: {
+        repo: "https://charts.helm.sh/stable",
+    },
+});
+```
+```python
+from pulumi_kubernetes.helm.v3 import Release, ReleaseArgs, RepositoryOptsArgs
+
+nginx_ingress = Release(
+    "nginx-ingress",
+    ReleaseArgs(
+        chart="nginx-ingress",
+        version="1.24.4",
+        repository_opts=RepositoryOptsArgs(
+            repo="https://charts.helm.sh/stable",
+        ),
+    ),
+)
+```
+```csharp
+using Pulumi;
+using Pulumi.Kubernetes.Types.Inputs.Helm.V3;
+using Pulumi.Kubernetes.Helm.V3;
+
+class HelmStack : Stack
+{
+    public HelmStack()
+    {
+        var nginx = new Release("nginx-ingress", new ReleaseArgs
+        {
+            Chart = "nginx-ingress",
+            Version = "1.24.4",
+            RepositoryOpts = new RepositoryOptsArgs
+            {
+                Repo = "https://charts.helm.sh/stable"
+            }
+        });
+
+    }
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/helm/v3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := helm.NewRelease(ctx, "nginx-ingress", helm.ReleaseArgs{
+			Chart:   pulumi.String("nginx-ingress"),
+			Version: pulumi.String("1.24.4"),
+			RepositoryOpts: helm.RepositoryOptsArgs{
+				Repo: pulumi.String("https://charts.helm.sh/stable"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+```
+{{% /example %}}
+{{% example %}}
+### Set Chart Values
+
+```typescript
+import * as k8s from "@pulumi/kubernetes";
+
+const nginxIngress = new k8s.helm.v3.Release("nginx-ingress", {
+    chart: "nginx-ingress",
+    version: "1.24.4",
+    repositoryOpts: {
+        repo: "https://charts.helm.sh/stable",
+    },
+    values: {
+        controller: {
+            metrics: {
+                enabled: true,
+            }
+        }
+    },
+});
+```
+```python
+from pulumi_kubernetes.helm.v3 import Release, ReleaseArgs, RepositoryOptsArgs
+
+nginx_ingress = Release(
+    "nginx-ingress",
+    ReleaseArgs(
+        chart="nginx-ingress",
+        version="1.24.4",
+        repository_opts=RepositoryOptsArgs(
+            repo="https://charts.helm.sh/stable",
+        ),
+        values={
+            "controller": {
+                "metrics": {
+                    "enabled": True,
+                },
+            },
+        },
+    ),
+)
+```
+```csharp
+using System.Collections.Generic;
+using Pulumi;
+using Pulumi.Kubernetes.Types.Inputs.Helm.V3;
+using Pulumi.Kubernetes.Helm.V3;
+
+class HelmStack : Stack
+{
+    public HelmStack()
+    {
+        var values = new Dictionary<string, object>
+        {
+            ["controller"] = new Dictionary<string, object>
+            {
+                ["metrics"] = new Dictionary<string, object>
+                {
+                    ["enabled"] = true
+                }
+            },
+        };
+
+        var nginx = new Release("nginx-ingress", new ReleaseArgs
+        {
+            Chart = "nginx-ingress",
+            Version = "1.24.4",
+            RepositoryOpts = new RepositoryOptsArgs
+            {
+                Repo = "https://charts.helm.sh/stable"
+            },
+            Values = values,
+        });
+
+    }
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/helm/v3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := helm.NewRelease(ctx, "nginx-ingress", helm.ReleaseArgs{
+			Chart:   pulumi.String("nginx-ingress"),
+			Version: pulumi.String("1.24.4"),
+			RepositoryOpts: helm.RepositoryOptsArgs{
+				Repo: pulumi.String("https://charts.helm.sh/stable"),
+			},
+			Values: pulumi.Map{
+				"controller": pulumi.Map{
+					"metrics": pulumi.Map{
+						"enabled": pulumi.Bool(true),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+```
+{{% /example %}}
+{{% example %}}
+### Deploy Chart into Namespace
+
+```typescript
+import * as k8s from "@pulumi/kubernetes";
+
+const nginxIngress = new k8s.helm.v3.Release("nginx-ingress", {
+    chart: "nginx-ingress",
+    version: "1.24.4",
+    namespace: "test-namespace",
+    repositoryOpts: {
+        repo: "https://charts.helm.sh/stable",
+    },
+});
+```
+```python
+from pulumi_kubernetes.helm.v3 import Release, ReleaseArgs, RepositoryOptsArgs
+
+nginx_ingress = Release(
+    "nginx-ingress",
+    ReleaseArgs(
+        chart="nginx-ingress",
+        version="1.24.4",
+        namespace="test-namespace",
+        repository_opts=RepositoryOptsArgs(
+            repo="https://charts.helm.sh/stable",
+        ),
+    ),
+)
+```
+```csharp
+using Pulumi;
+using Pulumi.Kubernetes.Types.Inputs.Helm.V3;
+using Pulumi.Kubernetes.Helm.V3;
+
+class HelmStack : Stack
+{
+    public HelmStack()
+    {
+        var nginx = new Release("nginx-ingress", new ReleaseArgs
+        {
+            Chart = "nginx-ingress",
+            Version = "1.24.4",
+            Namespace = "test-namespace",
+            RepositoryOpts = new RepositoryOptsArgs
+            {
+                Repo = "https://charts.helm.sh/stable"
+            },
+        });
+
+    }
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/helm/v3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := helm.NewRelease(ctx, "nginx-ingress", helm.ReleaseArgs{
+			Chart:     pulumi.String("nginx-ingress"),
+			Version:   pulumi.String("1.24.4"),
+			Namespace: pulumi.String("test-namespace"),
+			RepositoryOpts: helm.RepositoryOptsArgs{
+				Repo: pulumi.String("https://charts.helm.sh/stable"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+```
+{{% /example %}}
+ {{% example %}}
+
+### Depend on a Chart resource
+
+```typescript
+import * as k8s from "@pulumi/kubernetes";
+
+const nginxIngress = new k8s.helm.v3.Release("nginx-ingress", {
+    chart: "nginx-ingress",
+    version: "1.24.4",
+    namespace: "test-namespace",
+    repositoryOpts: {
+        repo: "https://charts.helm.sh/stable",
+    },
+    skipAwait: false,
+});
+
+// Create a ConfigMap depending on the Chart. The ConfigMap will not be created until after all of the Chart
+// resources are ready. Notice skipAwait is set to false above. This is the default and will cause Helm
+// to await the underlying resources to be available. Setting it to true will make the ConfigMap available right away.
+new k8s.core.v1.ConfigMap("foo", {
+    metadata: {namespace: namespaceName},
+    data: {foo: "bar"}
+}, {dependsOn: nginxIngress})
+```
+```python
+import pulumi
+from pulumi_kubernetes.core.v1 import ConfigMap, ConfigMapInitArgs
+from pulumi_kubernetes.helm.v3 import Release, ReleaseArgs, RepositoryOptsArgs
+
+nginx_ingress = Release(
+    "nginx-ingress",
+    ReleaseArgs(
+        chart="nginx-ingress",
+        version="1.24.4",
+        namespace="test-namespace",
+        repository_opts=RepositoryOptsArgs(
+            repo="https://charts.helm.sh/stable",
+        ),
+        skip_await=False,
+    ),
+)
+
+# Create a ConfigMap depending on the Chart. The ConfigMap will not be created until after all of the Chart
+# resources are ready. Notice skip_await is set to false above. This is the default and will cause Helm
+# to await the underlying resources to be available. Setting it to true will make the ConfigMap available right away.
+ConfigMap("foo", ConfigMapInitArgs(data={"foo": "bar"}), opts=pulumi.ResourceOptions(depends_on=nginx_ingress))
+```
+```csharp
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Kubernetes.Core.V1;
+using Pulumi.Kubernetes.Types.Inputs.Helm.V3;
+using Pulumi.Kubernetes.Helm.V3;
+
+class HelmStack : Stack
+{
+    public HelmStack()
+    {
+        var nginx = new Release("nginx-ingress", new ReleaseArgs
+        {
+            Chart = "nginx-ingress",
+            Version = "1.24.4",
+            Namespace = "test-namespace",
+            RepositoryOpts = new RepositoryOptsArgs
+            {
+                Repo = "https://charts.helm.sh/stable"
+            },
+            SkipAwait = false,
+        });
+
+        // Create a ConfigMap depending on the Chart. The ConfigMap will not be created until after all of the Chart
+        // resources are ready. Notice SkipAwait is set to false above. This is the default and will cause Helm
+        // to await the underlying resources to be available. Setting it to true will make the ConfigMap available right away.
+        new ConfigMap("foo", new Pulumi.Kubernetes.Types.Inputs.Core.V1.ConfigMapArgs
+        {
+            Data = new InputMap<string>
+            {
+                {"foo", "bar"}
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = nginx,
+        });
+
+    }
+}
+```
+```go
+package main
+
+import (
+	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
+	"github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/helm/v3"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		release, err := helm.NewRelease(ctx, "nginx-ingress", helm.ReleaseArgs{
+			Chart:     pulumi.String("nginx-ingress"),
+			Version:   pulumi.String("1.24.4"),
+			Namespace: pulumi.String("test-namespace"),
+			RepositoryOpts: helm.RepositoryOptsArgs{
+				Repo: pulumi.String("https://charts.helm.sh/stable"),
+			},
+			SkipAwait: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+
+		// Create a ConfigMap depending on the Chart. The ConfigMap will not be created until after all of the Chart
+		// resources are ready. Notice SkipAwait is set to false above. This is the default and will cause Helm
+		// to await the underlying resources to be available. Setting it to true will make the ConfigMap available right away.
+		_, err = corev1.NewConfigMap(ctx, "cm", &corev1.ConfigMapArgs{
+			Data: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
+		}, pulumi.DependsOnInputs(release))
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+```
+{{% /example %}}
+{{% example %}}
+### Specify Helm Chart Values in File and Code
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as k8s from "@pulumi/kubernetes";
+import {FileAsset} from "@pulumi/pulumi/asset";
+
+const release = new k8s.helm.v3.Release("redis", {
+    chart: "redis",
+    repositoryOpts: {
+        repo: "https://charts.bitnami.com/bitnami",
+    },
+    valueYamlFiles: [new FileAsset("./metrics.yml")],
+    values: {
+        cluster: {
+            enabled: true,
+        },
+        rbac: {
+            create: true,
+        }
+    },
+});
+
+// -- Contents of metrics.yml --
+// metrics:
+//     enabled: true
+```
+```python
+import pulumi
+from pulumi_kubernetes.helm.v3 import Release, ReleaseArgs, RepositoryOptsArgs
+
+nginx_ingress = Release(
+    "redis",
+    ReleaseArgs(
+        chart="redis",
+        repository_opts=RepositoryOptsArgs(
+            repo="https://charts.bitnami.com/bitnami",
+        ),
+        value_yaml_files=pulumi.FileAsset("./metrics.yml"),
+        values={
+            cluster: {
+                enabled: true,
+            },
+            rbac: {
+                create: true,
+            }
+        },
+    ),
+)
+
+# -- Contents of metrics.yml --
+# metrics:
+#     enabled: true
+```
+```csharp
+using System.Collections.Generic;
+using Pulumi;
+using Pulumi.Kubernetes.Types.Inputs.Helm.V3;
+using Pulumi.Kubernetes.Helm.V3;
+
+class HelmStack : Stack
+{
+    public HelmStack()
+    {
+        var nginx = new Release("redis", new ReleaseArgs
+        {
+            Chart = "redis",
+            RepositoryOpts = new RepositoryOptsArgs
+            {
+                Repo = "https://charts.bitnami.com/bitnami"
+            },
+            ValueYamlFiles = new FileAsset("./metrics.yml");
+            Values = new InputMap<object>
+            {
+                ["cluster"] = new Dictionary<string,object>
+                {
+                    ["enabled"] = true,
+                },
+                ["rbac"] = new Dictionary<string,object>
+                {
+                    ["create"] = true,
+                }
+            },
+        });
+    }
+}
+
+// -- Contents of metrics.yml --
+// metrics:
+//     enabled: true
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/helm/v3"
+	"github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/yaml"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := helm.NewRelease(ctx, "redis", helm.ReleaseArgs{
+			Chart:   pulumi.String("redis"),
+			RepositoryOpts: helm.RepositoryOptsArgs{
+				Repo: pulumi.String("https://charts.helm.sh/stable"),
+			},
+			ValueYamlFiles: pulumi.NewFileAsset("./metrics.yml"),
+			Value: pulumi.Map{
+				"cluster": pulumi.Map{
+					"enabled": pulumi.Bool(true),
+				},
+				"rbac": pulumi.Map{
+					"create": pulumi.Bool(true),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+
+// -- Contents of metrics.yml --
+// metrics:
+//     enabled: true
+```
+{{% /example %}}
+{{% example %}}
+### Query Kubernetes Resource Installed By Helm Chart
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as k8s from "@pulumi/kubernetes";
+import {FileAsset} from "@pulumi/pulumi/asset";
+
+const redis = new k8s.helm.v3.Release("redis", {
+    chart: "redis",
+    repositoryOpts: {
+        repo: "https://charts.bitnami.com/bitnami",
+    },
+    values: {
+        cluster: {
+            enabled: true,
+        },
+        rbac: {
+            create: true,
+        }
+    },
+});
+
+// srv will only resolve after the redis chart is installed.
+const srv = k8s.core.v1.Service.get("redis-master-svc", pulumi.interpolate`${redis.status.namespace}/${redis.status.name}-master`);
+export const redisMasterClusterIP = srv.spec.clusterIP;
+```
+```python
+from pulumi import Output
+from pulumi_kubernetes.core.v1 import Service
+from pulumi_kubernetes.helm.v3 import Release, ReleaseArgs, RepositoryOptsArgs
+
+redis = Release(
+    "redis",
+    ReleaseArgs(
+        chart="redis",
+        repository_opts=RepositoryOptsArgs(
+            repo="https://charts.bitnami.com/bitnami",
+        ),
+        values={
+            "cluster": {
+                "enabled": True,
+            },
+            "rbac": {
+                "create": True,
+            }
+        },
+    ),
+)
+
+# srv will only resolve after the redis chart is installed.
+srv = Service.get("redis-master-svc", Output.concat(redis.status.namespace, "/", redis.status.name, "-master"))
+pulumi.export("redisMasterClusterIP", srv.spec.cluster_ip)
+```
+```csharp
+using System.Collections.Generic;
+using Pulumi;
+using Pulumi.Kubernetes.Types.Inputs.Helm.V3;
+using Pulumi.Kubernetes.Helm.V3;
+
+class HelmStack : Stack
+{
+    public HelmStack()
+    {
+        var redis = new Release("redis", new ReleaseArgs
+        {
+            Chart = "redis",
+            RepositoryOpts = new RepositoryOptsArgs
+            {
+                Repo = "https://charts.bitnami.com/bitnami"
+            },
+            Values = new InputMap<object>
+            {
+                ["cluster"] = new Dictionary<string,object>
+                {
+                    ["enabled"] = true,
+                },
+                ["rbac"] = new Dictionary<string,object>
+                {
+                    ["create"] = true,
+                }
+            },
+        });
+
+        var status = redis.Status;
+        // srv will only resolve after the redis chart is installed.
+        var srv = Service.Get("redist-master-svc", Output.All(status).Apply(
+            s => $"{s[0].Namespace}/{s[0].Name}-master"));
+        this.RedisMasterClusterIP = srv.Spec.Apply(spec => spec.ClusterIP);
+    }
+
+    [Output]
+    public Output<string> RedisMasterClusterIP { get; set; }
+}
+```
+```go
+package main
+
+import (
+	"fmt"
+
+	corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
+	"github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/helm/v3"
+	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		rel, err := helm.NewRelease(ctx, "redis", &helm.ReleaseArgs{
+			Chart: pulumi.String("redis"),
+			RepositoryOpts: helm.RepositoryOptsArgs{
+				Repo: pulumi.String("https://charts.bitnami.com/bitnami"),
+			},
+			Values: pulumi.Map{
+				"cluster": pulumi.Map{
+					"enabled": pulumi.Bool(true),
+				},
+				"rbac": pulumi.BoolMap{
+					"create": pulumi.Bool(true),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+
+		// srv will only resolve after the redis chart is installed.
+		srv := pulumi.All(rel.Status.Namespace(), rel.Status.Name()).
+			ApplyT(func(r interface{}) (interface{}, error) {
+				arr := r.([]interface{})
+				namespace := arr[0].(*string)
+				name := arr[1].(*string)
+				svc, err := corev1.GetService(ctx,
+					"redis-master-svc",
+					pulumi.ID(fmt.Sprintf("%s/%s-master", *namespace, *name)),
+					nil,
+				)
+				if err != nil {
+					return "", nil
+				}
+				return svc.Spec.ClusterIP(), nil
+			})
+		ctx.Export("redisMasterClusterIP", srv)
+
+		return nil
+	})
+}
+```
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing Helm Release resource can be imported using its `type token`, `name` and identifier, e.g.
+
+```sh
+$ pulumi import kubernetes:helm.sh/v3:Release myRelease <namespace>/<releaseName>
+```
+
+ */
 @ResourceType(type="kubernetes:helm.sh/v3:Release")
 public class Release extends io.pulumi.resources.CustomResource {
+    /**
+     * If set, installation process purges chart on fail. `skipAwait` will be disabled automatically if atomic is used.
+     */
     @OutputExport(name="atomic", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> atomic;
 
+    /**
+     * @return If set, installation process purges chart on fail. `skipAwait` will be disabled automatically if atomic is used.
+     */
     public Output</* @Nullable */ Boolean> getAtomic() {
         return this.atomic;
     }
+    /**
+     * Chart name to be installed. A path may be used.
+     */
     @OutputExport(name="chart", type=String.class, parameters={})
     private Output<String> chart;
 
+    /**
+     * @return Chart name to be installed. A path may be used.
+     */
     public Output<String> getChart() {
         return this.chart;
     }
+    /**
+     * Allow deletion of new resources created in this upgrade when upgrade fails.
+     */
     @OutputExport(name="cleanupOnFail", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> cleanupOnFail;
 
+    /**
+     * @return Allow deletion of new resources created in this upgrade when upgrade fails.
+     */
     public Output</* @Nullable */ Boolean> getCleanupOnFail() {
         return this.cleanupOnFail;
     }
+    /**
+     * Create the namespace if it does not exist.
+     */
     @OutputExport(name="createNamespace", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> createNamespace;
 
+    /**
+     * @return Create the namespace if it does not exist.
+     */
     public Output</* @Nullable */ Boolean> getCreateNamespace() {
         return this.createNamespace;
     }
+    /**
+     * Run helm dependency update before installing the chart.
+     */
     @OutputExport(name="dependencyUpdate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> dependencyUpdate;
 
+    /**
+     * @return Run helm dependency update before installing the chart.
+     */
     public Output</* @Nullable */ Boolean> getDependencyUpdate() {
         return this.dependencyUpdate;
     }
+    /**
+     * Add a custom description
+     */
     @OutputExport(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
+    /**
+     * @return Add a custom description
+     */
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
+    /**
+     * Use chart development versions, too. Equivalent to version '>0.0.0-0'. If `version` is set, this is ignored.
+     */
     @OutputExport(name="devel", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> devel;
 
+    /**
+     * @return Use chart development versions, too. Equivalent to version '>0.0.0-0'. If `version` is set, this is ignored.
+     */
     public Output</* @Nullable */ Boolean> getDevel() {
         return this.devel;
     }
+    /**
+     * Prevent CRD hooks from, running, but run other hooks.  See helm install --no-crd-hook
+     */
     @OutputExport(name="disableCRDHooks", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableCRDHooks;
 
+    /**
+     * @return Prevent CRD hooks from, running, but run other hooks.  See helm install --no-crd-hook
+     */
     public Output</* @Nullable */ Boolean> getDisableCRDHooks() {
         return this.disableCRDHooks;
     }
+    /**
+     * If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema
+     */
     @OutputExport(name="disableOpenapiValidation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableOpenapiValidation;
 
+    /**
+     * @return If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema
+     */
     public Output</* @Nullable */ Boolean> getDisableOpenapiValidation() {
         return this.disableOpenapiValidation;
     }
+    /**
+     * Prevent hooks from running.
+     */
     @OutputExport(name="disableWebhooks", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableWebhooks;
 
+    /**
+     * @return Prevent hooks from running.
+     */
     public Output</* @Nullable */ Boolean> getDisableWebhooks() {
         return this.disableWebhooks;
     }
+    /**
+     * Force resource update through delete/recreate if needed.
+     */
     @OutputExport(name="forceUpdate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceUpdate;
 
+    /**
+     * @return Force resource update through delete/recreate if needed.
+     */
     public Output</* @Nullable */ Boolean> getForceUpdate() {
         return this.forceUpdate;
     }
+    /**
+     * Location of public keys used for verification. Used only if `verify` is true
+     */
     @OutputExport(name="keyring", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyring;
 
+    /**
+     * @return Location of public keys used for verification. Used only if `verify` is true
+     */
     public Output</* @Nullable */ String> getKeyring() {
         return this.keyring;
     }
+    /**
+     * Run helm lint when planning.
+     */
     @OutputExport(name="lint", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> lint;
 
+    /**
+     * @return Run helm lint when planning.
+     */
     public Output</* @Nullable */ Boolean> getLint() {
         return this.lint;
     }
+    /**
+     * The rendered manifests as JSON. Not yet supported.
+     */
     @OutputExport(name="manifest", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> manifest;
 
+    /**
+     * @return The rendered manifests as JSON. Not yet supported.
+     */
     public Output</* @Nullable */ Map<String,Object>> getManifest() {
         return this.manifest;
     }
+    /**
+     * Limit the maximum number of revisions saved per release. Use 0 for no limit.
+     */
     @OutputExport(name="maxHistory", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxHistory;
 
+    /**
+     * @return Limit the maximum number of revisions saved per release. Use 0 for no limit.
+     */
     public Output</* @Nullable */ Integer> getMaxHistory() {
         return this.maxHistory;
     }
+    /**
+     * Release name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
+    /**
+     * @return Release name.
+     */
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
+    /**
+     * Namespace to install the release into.
+     */
     @OutputExport(name="namespace", type=String.class, parameters={})
     private Output</* @Nullable */ String> namespace;
 
+    /**
+     * @return Namespace to install the release into.
+     */
     public Output</* @Nullable */ String> getNamespace() {
         return this.namespace;
     }
+    /**
+     * Postrender command to run.
+     */
     @OutputExport(name="postrender", type=String.class, parameters={})
     private Output</* @Nullable */ String> postrender;
 
+    /**
+     * @return Postrender command to run.
+     */
     public Output</* @Nullable */ String> getPostrender() {
         return this.postrender;
     }
+    /**
+     * Perform pods restart during upgrade/rollback.
+     */
     @OutputExport(name="recreatePods", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> recreatePods;
 
+    /**
+     * @return Perform pods restart during upgrade/rollback.
+     */
     public Output</* @Nullable */ Boolean> getRecreatePods() {
         return this.recreatePods;
     }
+    /**
+     * If set, render subchart notes along with the parent.
+     */
     @OutputExport(name="renderSubchartNotes", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> renderSubchartNotes;
 
+    /**
+     * @return If set, render subchart notes along with the parent.
+     */
     public Output</* @Nullable */ Boolean> getRenderSubchartNotes() {
         return this.renderSubchartNotes;
     }
+    /**
+     * Re-use the given name, even if that name is already used. This is unsafe in production
+     */
     @OutputExport(name="replace", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> replace;
 
+    /**
+     * @return Re-use the given name, even if that name is already used. This is unsafe in production
+     */
     public Output</* @Nullable */ Boolean> getReplace() {
         return this.replace;
     }
+    /**
+     * Specification defining the Helm chart repository to use.
+     */
     @OutputExport(name="repositoryOpts", type=RepositoryOpts.class, parameters={})
     private Output</* @Nullable */ RepositoryOpts> repositoryOpts;
 
+    /**
+     * @return Specification defining the Helm chart repository to use.
+     */
     public Output</* @Nullable */ RepositoryOpts> getRepositoryOpts() {
         return this.repositoryOpts;
     }
+    /**
+     * When upgrading, reset the values to the ones built into the chart.
+     */
     @OutputExport(name="resetValues", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> resetValues;
 
+    /**
+     * @return When upgrading, reset the values to the ones built into the chart.
+     */
     public Output</* @Nullable */ Boolean> getResetValues() {
         return this.resetValues;
     }
+    /**
+     * Names of resources created by the release grouped by "kind/version".
+     */
     @OutputExport(name="resourceNames", type=Map.class, parameters={String.class, List.class})
     private Output</* @Nullable */ Map<String,List<String>>> resourceNames;
 
+    /**
+     * @return Names of resources created by the release grouped by "kind/version".
+     */
     public Output</* @Nullable */ Map<String,List<String>>> getResourceNames() {
         return this.resourceNames;
     }
+    /**
+     * When upgrading, reuse the last release's values and merge in any overrides. If 'resetValues' is specified, this is ignored
+     */
     @OutputExport(name="reuseValues", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> reuseValues;
 
+    /**
+     * @return When upgrading, reuse the last release's values and merge in any overrides. If 'resetValues' is specified, this is ignored
+     */
     public Output</* @Nullable */ Boolean> getReuseValues() {
         return this.reuseValues;
     }
+    /**
+     * By default, the provider waits until all resources are in a ready state before marking the release as successful. Setting this to true will skip such await logic.
+     */
     @OutputExport(name="skipAwait", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> skipAwait;
 
+    /**
+     * @return By default, the provider waits until all resources are in a ready state before marking the release as successful. Setting this to true will skip such await logic.
+     */
     public Output</* @Nullable */ Boolean> getSkipAwait() {
         return this.skipAwait;
     }
+    /**
+     * If set, no CRDs will be installed. By default, CRDs are installed if not already present.
+     */
     @OutputExport(name="skipCrds", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> skipCrds;
 
+    /**
+     * @return If set, no CRDs will be installed. By default, CRDs are installed if not already present.
+     */
     public Output</* @Nullable */ Boolean> getSkipCrds() {
         return this.skipCrds;
     }
+    /**
+     * Status of the deployed release.
+     */
     @OutputExport(name="status", type=ReleaseStatus.class, parameters={})
     private Output<ReleaseStatus> status;
 
+    /**
+     * @return Status of the deployed release.
+     */
     public Output<ReleaseStatus> getStatus() {
         return this.status;
     }
+    /**
+     * Time in seconds to wait for any individual kubernetes operation.
+     */
     @OutputExport(name="timeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> timeout;
 
+    /**
+     * @return Time in seconds to wait for any individual kubernetes operation.
+     */
     public Output</* @Nullable */ Integer> getTimeout() {
         return this.timeout;
     }
+    /**
+     * List of assets (raw yaml files). Content is read and merged with values (with values taking precedence).
+     */
     @OutputExport(name="valueYamlFiles", type=List.class, parameters={AssetOrArchive.class})
     private Output</* @Nullable */ List<AssetOrArchive>> valueYamlFiles;
 
+    /**
+     * @return List of assets (raw yaml files). Content is read and merged with values (with values taking precedence).
+     */
     public Output</* @Nullable */ List<AssetOrArchive>> getValueYamlFiles() {
         return this.valueYamlFiles;
     }
+    /**
+     * Custom values set for the release.
+     */
     @OutputExport(name="values", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> values;
 
+    /**
+     * @return Custom values set for the release.
+     */
     public Output</* @Nullable */ Map<String,Object>> getValues() {
         return this.values;
     }
+    /**
+     * Verify the package before installing it.
+     */
     @OutputExport(name="verify", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> verify;
 
+    /**
+     * @return Verify the package before installing it.
+     */
     public Output</* @Nullable */ Boolean> getVerify() {
         return this.verify;
     }
+    /**
+     * Specify the exact chart version to install. If this is not specified, the latest version is installed.
+     */
     @OutputExport(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
+    /**
+     * @return Specify the exact chart version to install. If this is not specified, the latest version is installed.
+     */
     public Output</* @Nullable */ String> getVersion() {
         return this.version;
     }
+    /**
+     * Will wait until all Jobs have been completed before marking the release as successful. This is ignored if `skipAwait` is enabled.
+     */
     @OutputExport(name="waitForJobs", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> waitForJobs;
 
+    /**
+     * @return Will wait until all Jobs have been completed before marking the release as successful. This is ignored if `skipAwait` is enabled.
+     */
     public Output</* @Nullable */ Boolean> getWaitForJobs() {
         return this.waitForJobs;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Release(String name, ReleaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("kubernetes:helm.sh/v3:Release", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -249,6 +1214,14 @@ public class Release extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Release get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Release(name, id, options);
     }

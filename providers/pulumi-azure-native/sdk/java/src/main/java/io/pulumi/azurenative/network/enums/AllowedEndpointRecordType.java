@@ -8,11 +8,26 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The allowed type DNS record types for this profile.
+ */
     @EnumType
     public enum AllowedEndpointRecordType {
+/**
+ * 
+ */
         DomainName("DomainName"),
+/**
+ * 
+ */
         IPv4Address("IPv4Address"),
+/**
+ * 
+ */
         IPv6Address("IPv6Address"),
+/**
+ * 
+ */
         Any("Any");
 
         private final String value;

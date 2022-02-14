@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The CORS policy for the Cosmos DB database account.
+ */
 public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CorsPolicyArgs Empty = new CorsPolicyArgs();
 
+    /**
+     * The request headers that the origin domain may specify on the CORS request.
+     */
     @InputImport(name="allowedHeaders")
     private final @Nullable Input<String> allowedHeaders;
 
@@ -22,6 +28,9 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowedHeaders == null ? Input.empty() : this.allowedHeaders;
     }
 
+    /**
+     * The methods (HTTP request verbs) that the origin domain may use for a CORS request.
+     */
     @InputImport(name="allowedMethods")
     private final @Nullable Input<String> allowedMethods;
 
@@ -29,6 +38,9 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowedMethods == null ? Input.empty() : this.allowedMethods;
     }
 
+    /**
+     * The origin domains that are permitted to make a request against the service via CORS.
+     */
     @InputImport(name="allowedOrigins", required=true)
     private final Input<String> allowedOrigins;
 
@@ -36,6 +48,9 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.allowedOrigins;
     }
 
+    /**
+     * The response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer.
+     */
     @InputImport(name="exposedHeaders")
     private final @Nullable Input<String> exposedHeaders;
 
@@ -43,6 +58,9 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
         return this.exposedHeaders == null ? Input.empty() : this.exposedHeaders;
     }
 
+    /**
+     * The maximum amount time that a browser should cache the preflight OPTIONS request.
+     */
     @InputImport(name="maxAgeInSeconds")
     private final @Nullable Input<Double> maxAgeInSeconds;
 

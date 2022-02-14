@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Describes destination endpoint for routing traffic.
+ */
 public final class GatewayDestinationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GatewayDestinationResponse Empty = new GatewayDestinationResponse();
 
+    /**
+     * Name of the service fabric Mesh application.
+     */
     @InputImport(name="applicationName", required=true)
     private final String applicationName;
 
@@ -19,6 +25,9 @@ public final class GatewayDestinationResponse extends io.pulumi.resources.Invoke
         return this.applicationName;
     }
 
+    /**
+     * name of the endpoint in the service.
+     */
     @InputImport(name="endpointName", required=true)
     private final String endpointName;
 
@@ -26,6 +35,9 @@ public final class GatewayDestinationResponse extends io.pulumi.resources.Invoke
         return this.endpointName;
     }
 
+    /**
+     * service that contains the endpoint.
+     */
     @InputImport(name="serviceName", required=true)
     private final String serviceName;
 

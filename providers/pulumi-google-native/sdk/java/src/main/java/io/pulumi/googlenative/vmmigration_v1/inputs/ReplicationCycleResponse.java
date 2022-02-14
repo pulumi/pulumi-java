@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * ReplicationCycle contains information about the current replication cycle status.
+ */
 public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReplicationCycleResponse Empty = new ReplicationCycleResponse();
 
+    /**
+     * The current progress in percentage of this cycle.
+     */
     @InputImport(name="progressPercent", required=true)
     private final Integer progressPercent;
 
@@ -20,6 +26,9 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
         return this.progressPercent;
     }
 
+    /**
+     * The time the replication cycle has started.
+     */
     @InputImport(name="startTime", required=true)
     private final String startTime;
 

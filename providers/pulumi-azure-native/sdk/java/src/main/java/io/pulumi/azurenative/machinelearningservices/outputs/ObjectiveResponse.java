@@ -9,7 +9,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ObjectiveResponse {
+/**
+ * Defines supported metric goals for hyperparameter tuning
+ */
     private final String goal;
+/**
+ * Name of the metric to optimize.
+ */
     private final String primaryMetric;
 
     @OutputCustomType.Constructor({"goal","primaryMetric"})
@@ -20,9 +26,15 @@ public final class ObjectiveResponse {
         this.primaryMetric = Objects.requireNonNull(primaryMetric);
     }
 
+/**
+ * Defines supported metric goals for hyperparameter tuning
+ */
     public String getGoal() {
         return this.goal;
     }
+/**
+ * Name of the metric to optimize.
+ */
     public String getPrimaryMetric() {
         return this.primaryMetric;
     }

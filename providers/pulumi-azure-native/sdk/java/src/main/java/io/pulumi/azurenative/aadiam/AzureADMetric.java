@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.aadiam;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.aadiam.AzureADMetricArgs;
 import io.pulumi.azurenative.aadiam.outputs.AzureADMetricsPropertiesFormatResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,39 +15,163 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * AzureADMetrics resource.
+API Version: 2020-07-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### azureADMetricsCreate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var azureADMetric = new AzureNative.AadIam.AzureADMetric("azureADMetric", new AzureNative.AadIam.AzureADMetricArgs
+        {
+            AzureADMetricsName = "ddb1",
+            Location = "West US",
+            ResourceGroupName = "rg1",
+            Tags = ,
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	aadiam "github.com/pulumi/pulumi-azure-native/sdk/go/azure/aadiam"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := aadiam.NewazureADMetric(ctx, "azureADMetric", &aadiam.azureADMetricArgs{
+			AzureADMetricsName: pulumi.String("ddb1"),
+			Location:           pulumi.String("West US"),
+			ResourceGroupName:  pulumi.String("rg1"),
+			Tags:               nil,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const azureADMetric = new azure_native.aadiam.AzureADMetric("azureADMetric", {
+    azureADMetricsName: "ddb1",
+    location: "West US",
+    resourceGroupName: "rg1",
+    tags: {},
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+azure_ad_metric = azure_native.aadiam.AzureADMetric("azureADMetric",
+    azure_ad_metrics_name="ddb1",
+    location="West US",
+    resource_group_name="rg1",
+    tags={})
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:aadiam:azureADMetric ddb1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/rg1/providers/Microsoft.Aadiam/azureADMetrics/ddb1 
+```
+
+ */
 @ResourceType(type="azure-native:aadiam:azureADMetric")
 public class AzureADMetric extends io.pulumi.resources.CustomResource {
+    /**
+     * The geo-location where the resource lives
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * 
+     */
     @OutputExport(name="properties", type=AzureADMetricsPropertiesFormatResponse.class, parameters={})
     private Output<AzureADMetricsPropertiesFormatResponse> properties;
 
     public Output<AzureADMetricsPropertiesFormatResponse> getProperties() {
         return this.properties;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public AzureADMetric(String name, AzureADMetricArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:aadiam:azureADMetric", name, args == null ? AzureADMetricArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -67,6 +190,14 @@ public class AzureADMetric extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static AzureADMetric get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AzureADMetric(name, id, options);
     }

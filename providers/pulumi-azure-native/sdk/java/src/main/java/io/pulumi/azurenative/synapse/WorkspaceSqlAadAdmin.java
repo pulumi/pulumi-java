@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.synapse;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.synapse.WorkspaceSqlAadAdminArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
@@ -14,45 +13,188 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Workspace active directory administrator
+API Version: 2021-03-01.
+
+Note: SQL AAD Admin is configured automatically during workspace creation and assigned to the current user. One can't add more admins with this resource unless you manually delete the current SQL AAD Admin.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create or update workspace active directory admin
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workspaceSqlAadAdmin = new AzureNative.Synapse.WorkspaceSqlAadAdmin("workspaceSqlAadAdmin", new AzureNative.Synapse.WorkspaceSqlAadAdminArgs
+        {
+            AdministratorType = "ActiveDirectory",
+            Login = "bob@contoso.com",
+            ResourceGroupName = "resourceGroup1",
+            Sid = "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+            TenantId = "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+            WorkspaceName = "workspace1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	synapse "github.com/pulumi/pulumi-azure-native/sdk/go/azure/synapse"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := synapse.NewWorkspaceSqlAadAdmin(ctx, "workspaceSqlAadAdmin", &synapse.WorkspaceSqlAadAdminArgs{
+			AdministratorType: pulumi.String("ActiveDirectory"),
+			Login:             pulumi.String("bob@contoso.com"),
+			ResourceGroupName: pulumi.String("resourceGroup1"),
+			Sid:               pulumi.String("c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c"),
+			TenantId:          pulumi.String("c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c"),
+			WorkspaceName:     pulumi.String("workspace1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const workspaceSqlAadAdmin = new azure_native.synapse.WorkspaceSqlAadAdmin("workspaceSqlAadAdmin", {
+    administratorType: "ActiveDirectory",
+    login: "bob@contoso.com",
+    resourceGroupName: "resourceGroup1",
+    sid: "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+    tenantId: "c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+    workspaceName: "workspace1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+workspace_sql_aad_admin = azure_native.synapse.WorkspaceSqlAadAdmin("workspaceSqlAadAdmin",
+    administrator_type="ActiveDirectory",
+    login="bob@contoso.com",
+    resource_group_name="resourceGroup1",
+    sid="c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+    tenant_id="c6b82b90-a647-49cb-8a62-0d2d3cb7ac7c",
+    workspace_name="workspace1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:synapse:WorkspaceSqlAadAdmin activeDirectory /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.Synapse/workspaces/workspace1/administrators/activeDirectory 
+```
+
+ */
 @ResourceType(type="azure-native:synapse:WorkspaceSqlAadAdmin")
 public class WorkspaceSqlAadAdmin extends io.pulumi.resources.CustomResource {
+    /**
+     * Workspace active directory administrator type
+     */
     @OutputExport(name="administratorType", type=String.class, parameters={})
     private Output</* @Nullable */ String> administratorType;
 
+    /**
+     * @return Workspace active directory administrator type
+     */
     public Output</* @Nullable */ String> getAdministratorType() {
         return this.administratorType;
     }
+    /**
+     * Login of the workspace active directory administrator
+     */
     @OutputExport(name="login", type=String.class, parameters={})
     private Output</* @Nullable */ String> login;
 
+    /**
+     * @return Login of the workspace active directory administrator
+     */
     public Output</* @Nullable */ String> getLogin() {
         return this.login;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Object ID of the workspace active directory administrator
+     */
     @OutputExport(name="sid", type=String.class, parameters={})
     private Output</* @Nullable */ String> sid;
 
+    /**
+     * @return Object ID of the workspace active directory administrator
+     */
     public Output</* @Nullable */ String> getSid() {
         return this.sid;
     }
+    /**
+     * Tenant ID of the workspace active directory administrator
+     */
     @OutputExport(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
+    /**
+     * @return Tenant ID of the workspace active directory administrator
+     */
     public Output</* @Nullable */ String> getTenantId() {
         return this.tenantId;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public WorkspaceSqlAadAdmin(String name, WorkspaceSqlAadAdminArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:synapse:WorkspaceSqlAadAdmin", name, args == null ? WorkspaceSqlAadAdminArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -77,6 +219,14 @@ public class WorkspaceSqlAadAdmin extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static WorkspaceSqlAadAdmin get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WorkspaceSqlAadAdmin(name, id, options);
     }

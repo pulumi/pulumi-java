@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * An **entity entry** for an associated entity type.
+ */
 public final class GoogleCloudDialogflowV2EntityTypeEntityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2EntityTypeEntityArgs Empty = new GoogleCloudDialogflowV2EntityTypeEntityArgs();
 
+    /**
+     * A collection of value synonyms. For example, if the entity type is *vegetable*, and `value` is *scallions*, a synonym could be *green onions*. For `KIND_LIST` entity types: * This collection must contain exactly one synonym equal to `value`.
+     */
     @InputImport(name="synonyms", required=true)
     private final Input<List<String>> synonyms;
 
@@ -21,6 +27,9 @@ public final class GoogleCloudDialogflowV2EntityTypeEntityArgs extends io.pulumi
         return this.synonyms;
     }
 
+    /**
+     * The primary value associated with this entity entry. For example, if the entity type is *vegetable*, the value could be *scallions*. For `KIND_MAP` entity types: * A reference value to be used in place of synonyms. For `KIND_LIST` entity types: * A string that can contain references to other entity types (with or without aliases).
+     */
     @InputImport(name="value", required=true)
     private final Input<String> value;
 

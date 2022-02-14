@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StudyArgs Empty = new StudyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -22,6 +28,9 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -29,6 +38,9 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * Configuration of the study.
+     */
     @InputImport(name="studyConfig", required=true)
     private final Input<GoogleCloudMlV1__StudyConfigArgs> studyConfig;
 
@@ -36,6 +48,9 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
         return this.studyConfig;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="studyId", required=true)
     private final Input<String> studyId;
 

@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * By changing the type to DIST, the patching is performed using `apt-get dist-upgrade` instead.
+ */
     @EnumType
     public enum AptSettingsType {
+/**
+ * By default, upgrade will be performed.
+ */
         TypeUnspecified("TYPE_UNSPECIFIED"),
+/**
+ * Runs `apt-get dist-upgrade`.
+ */
         Dist("DIST"),
+/**
+ * Runs `apt-get upgrade`.
+ */
         Upgrade("UPGRADE");
 
         private final String value;

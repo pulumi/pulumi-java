@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetVirtualNetworkGatewayConnection {
+/**
+ * A common class for general resource information.
+API Version: 2020-11-01.
+ *
+ * A common class for general resource information.
+ */
     public static CompletableFuture<GetVirtualNetworkGatewayConnectionResult> invokeAsync(GetVirtualNetworkGatewayConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getVirtualNetworkGatewayConnection", TypeShape.of(GetVirtualNetworkGatewayConnectionResult.class), args == null ? GetVirtualNetworkGatewayConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

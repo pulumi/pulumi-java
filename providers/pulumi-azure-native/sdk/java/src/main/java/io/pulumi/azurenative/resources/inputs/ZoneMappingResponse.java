@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ZoneMappingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ZoneMappingResponse Empty = new ZoneMappingResponse();
 
+    /**
+     * The location of the zone mapping.
+     */
     @InputImport(name="location")
     private final @Nullable String location;
 
@@ -22,6 +28,9 @@ public final class ZoneMappingResponse extends io.pulumi.resources.InvokeArgs {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="zones")
     private final @Nullable List<String> zones;
 

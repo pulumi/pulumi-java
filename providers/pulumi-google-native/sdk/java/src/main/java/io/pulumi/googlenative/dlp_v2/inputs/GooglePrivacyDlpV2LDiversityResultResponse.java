@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Result of the l-diversity computation.
+ */
 public final class GooglePrivacyDlpV2LDiversityResultResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GooglePrivacyDlpV2LDiversityResultResponse Empty = new GooglePrivacyDlpV2LDiversityResultResponse();
 
+    /**
+     * Histogram of l-diversity equivalence class sensitive value frequencies.
+     */
     @InputImport(name="sensitiveValueFrequencyHistogramBuckets", required=true)
     private final List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> sensitiveValueFrequencyHistogramBuckets;
 

@@ -21,10 +21,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * IaaS VM workload-specific backup item representing the Classic Compute VM.
+ */
 public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AzureIaaSClassicComputeVMProtectedItemArgs Empty = new AzureIaaSClassicComputeVMProtectedItemArgs();
 
+    /**
+     * Type of backup management for the backed up item.
+     */
     @InputImport(name="backupManagementType")
     private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
@@ -32,6 +38,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
     }
 
+    /**
+     * Name of the backup set the backup item belongs to
+     */
     @InputImport(name="backupSetName")
     private final @Nullable Input<String> backupSetName;
 
@@ -39,6 +48,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.backupSetName == null ? Input.empty() : this.backupSetName;
     }
 
+    /**
+     * Unique name of container
+     */
     @InputImport(name="containerName")
     private final @Nullable Input<String> containerName;
 
@@ -46,6 +58,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.containerName == null ? Input.empty() : this.containerName;
     }
 
+    /**
+     * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
+     */
     @InputImport(name="createMode")
     private final @Nullable Input<Either<String,CreateMode>> createMode;
 
@@ -53,6 +68,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.createMode == null ? Input.empty() : this.createMode;
     }
 
+    /**
+     * Time for deferred deletion in UTC
+     */
     @InputImport(name="deferredDeleteTimeInUTC")
     private final @Nullable Input<String> deferredDeleteTimeInUTC;
 
@@ -60,6 +78,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.deferredDeleteTimeInUTC == null ? Input.empty() : this.deferredDeleteTimeInUTC;
     }
 
+    /**
+     * Time remaining before the DS marked for deferred delete is permanently deleted
+     */
     @InputImport(name="deferredDeleteTimeRemaining")
     private final @Nullable Input<String> deferredDeleteTimeRemaining;
 
@@ -67,6 +88,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.deferredDeleteTimeRemaining == null ? Input.empty() : this.deferredDeleteTimeRemaining;
     }
 
+    /**
+     * Additional information for this backup item.
+     */
     @InputImport(name="extendedInfo")
     private final @Nullable Input<AzureIaaSVMProtectedItemExtendedInfoArgs> extendedInfo;
 
@@ -74,6 +98,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.extendedInfo == null ? Input.empty() : this.extendedInfo;
     }
 
+    /**
+     * Extended Properties for Azure IaasVM Backup.
+     */
     @InputImport(name="extendedProperties")
     private final @Nullable Input<ExtendedPropertiesArgs> extendedProperties;
 
@@ -81,6 +108,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.extendedProperties == null ? Input.empty() : this.extendedProperties;
     }
 
+    /**
+     * Friendly name of the VM represented by this backup item.
+     */
     @InputImport(name="friendlyName")
     private final @Nullable Input<String> friendlyName;
 
@@ -88,6 +118,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
+    /**
+     * Health status of protected item.
+     */
     @InputImport(name="healthStatus")
     private final @Nullable Input<Either<String,HealthStatus>> healthStatus;
 
@@ -95,6 +128,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.healthStatus == null ? Input.empty() : this.healthStatus;
     }
 
+    /**
+     * Flag to identify whether the deferred deleted DS is to be purged soon
+     */
     @InputImport(name="isDeferredDeleteScheduleUpcoming")
     private final @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming;
 
@@ -102,6 +138,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.isDeferredDeleteScheduleUpcoming == null ? Input.empty() : this.isDeferredDeleteScheduleUpcoming;
     }
 
+    /**
+     * Flag to identify that deferred deleted DS is to be moved into Pause state
+     */
     @InputImport(name="isRehydrate")
     private final @Nullable Input<Boolean> isRehydrate;
 
@@ -109,6 +148,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.isRehydrate == null ? Input.empty() : this.isRehydrate;
     }
 
+    /**
+     * Flag to identify whether the DS is scheduled for deferred delete
+     */
     @InputImport(name="isScheduledForDeferredDelete")
     private final @Nullable Input<Boolean> isScheduledForDeferredDelete;
 
@@ -116,6 +158,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.isScheduledForDeferredDelete == null ? Input.empty() : this.isScheduledForDeferredDelete;
     }
 
+    /**
+     * Health details of different KPIs
+     */
     @InputImport(name="kpisHealths")
     private final @Nullable Input<Map<String,KPIResourceHealthDetailsArgs>> kpisHealths;
 
@@ -123,6 +168,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.kpisHealths == null ? Input.empty() : this.kpisHealths;
     }
 
+    /**
+     * Last backup operation status.
+     */
     @InputImport(name="lastBackupStatus")
     private final @Nullable Input<String> lastBackupStatus;
 
@@ -130,6 +178,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.lastBackupStatus == null ? Input.empty() : this.lastBackupStatus;
     }
 
+    /**
+     * Timestamp of the last backup operation on this backup item.
+     */
     @InputImport(name="lastBackupTime")
     private final @Nullable Input<String> lastBackupTime;
 
@@ -137,6 +188,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.lastBackupTime == null ? Input.empty() : this.lastBackupTime;
     }
 
+    /**
+     * Timestamp when the last (latest) backup copy was created for this backup item.
+     */
     @InputImport(name="lastRecoveryPoint")
     private final @Nullable Input<String> lastRecoveryPoint;
 
@@ -144,6 +198,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.lastRecoveryPoint == null ? Input.empty() : this.lastRecoveryPoint;
     }
 
+    /**
+     * ID of the backup policy with which this item is backed up.
+     */
     @InputImport(name="policyId")
     private final @Nullable Input<String> policyId;
 
@@ -151,6 +208,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.policyId == null ? Input.empty() : this.policyId;
     }
 
+    /**
+     * Data ID of the protected item.
+     */
     @InputImport(name="protectedItemDataId")
     private final @Nullable Input<String> protectedItemDataId;
 
@@ -158,6 +218,10 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.protectedItemDataId == null ? Input.empty() : this.protectedItemDataId;
     }
 
+    /**
+     * backup item type.
+Expected value is 'Microsoft.ClassicCompute/virtualMachines'.
+     */
     @InputImport(name="protectedItemType", required=true)
     private final Input<String> protectedItemType;
 
@@ -165,6 +229,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.protectedItemType;
     }
 
+    /**
+     * Backup state of this backup item.
+     */
     @InputImport(name="protectionState")
     private final @Nullable Input<Either<String,ProtectionState>> protectionState;
 
@@ -172,6 +239,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.protectionState == null ? Input.empty() : this.protectionState;
     }
 
+    /**
+     * Backup status of this backup item.
+     */
     @InputImport(name="protectionStatus")
     private final @Nullable Input<String> protectionStatus;
 
@@ -179,6 +249,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.protectionStatus == null ? Input.empty() : this.protectionStatus;
     }
 
+    /**
+     * ARM ID of the resource to be backed up.
+     */
     @InputImport(name="sourceResourceId")
     private final @Nullable Input<String> sourceResourceId;
 
@@ -186,6 +259,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
     }
 
+    /**
+     * Fully qualified ARM ID of the virtual machine represented by this item.
+     */
     @InputImport(name="virtualMachineId")
     private final @Nullable Input<String> virtualMachineId;
 
@@ -193,6 +269,9 @@ public final class AzureIaaSClassicComputeVMProtectedItemArgs extends io.pulumi.
         return this.virtualMachineId == null ? Input.empty() : this.virtualMachineId;
     }
 
+    /**
+     * Type of workload this item represents.
+     */
     @InputImport(name="workloadType")
     private final @Nullable Input<Either<String,DataSourceType>> workloadType;
 

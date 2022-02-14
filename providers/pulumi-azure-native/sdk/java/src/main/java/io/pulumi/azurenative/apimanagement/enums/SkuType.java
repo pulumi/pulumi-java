@@ -8,13 +8,34 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Name of the Sku.
+ */
     @EnumType
     public enum SkuType {
+/**
+ * Developer SKU of Api Management.
+ */
         Developer("Developer"),
+/**
+ * Standard SKU of Api Management.
+ */
         Standard("Standard"),
+/**
+ * Premium SKU of Api Management.
+ */
         Premium("Premium"),
+/**
+ * Basic SKU of Api Management.
+ */
         Basic("Basic"),
+/**
+ * Consumption SKU of Api Management.
+ */
         Consumption("Consumption"),
+/**
+ * Isolated SKU of Api Management.
+ */
         Isolated("Isolated");
 
         private final String value;

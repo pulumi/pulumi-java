@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IntegrationServiceEnvironmentManagedApiArgs Empty = new IntegrationServiceEnvironmentManagedApiArgs();
 
+    /**
+     * The api name.
+     */
     @InputImport(name="apiName")
     private final @Nullable Input<String> apiName;
 
@@ -24,6 +30,9 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
         return this.apiName == null ? Input.empty() : this.apiName;
     }
 
+    /**
+     * The integration service environment managed api deployment parameters.
+     */
     @InputImport(name="deploymentParameters")
     private final @Nullable Input<IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs> deploymentParameters;
 
@@ -31,6 +40,9 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
         return this.deploymentParameters == null ? Input.empty() : this.deploymentParameters;
     }
 
+    /**
+     * The integration service environment reference.
+     */
     @InputImport(name="integrationServiceEnvironment")
     private final @Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment;
 
@@ -38,6 +50,9 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
         return this.integrationServiceEnvironment == null ? Input.empty() : this.integrationServiceEnvironment;
     }
 
+    /**
+     * The integration service environment name.
+     */
     @InputImport(name="integrationServiceEnvironmentName", required=true)
     private final Input<String> integrationServiceEnvironmentName;
 
@@ -45,6 +60,9 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
         return this.integrationServiceEnvironmentName;
     }
 
+    /**
+     * The resource location.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -52,6 +70,9 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The resource group name.
+     */
     @InputImport(name="resourceGroup", required=true)
     private final Input<String> resourceGroup;
 
@@ -59,6 +80,9 @@ public final class IntegrationServiceEnvironmentManagedApiArgs extends io.pulumi
         return this.resourceGroup;
     }
 
+    /**
+     * The resource tags.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

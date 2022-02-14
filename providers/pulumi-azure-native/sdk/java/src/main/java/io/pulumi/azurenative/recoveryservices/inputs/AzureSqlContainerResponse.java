@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Azure Sql workload-specific container.
+ */
 public final class AzureSqlContainerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AzureSqlContainerResponse Empty = new AzureSqlContainerResponse();
 
+    /**
+     * Type of backup management for the container.
+     */
     @InputImport(name="backupManagementType")
     private final @Nullable String backupManagementType;
 
@@ -21,6 +27,13 @@ public final class AzureSqlContainerResponse extends io.pulumi.resources.InvokeA
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
     }
 
+    /**
+     * Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+Backup is VMAppContainer
+Expected value is 'AzureSqlContainer'.
+     */
     @InputImport(name="containerType", required=true)
     private final String containerType;
 
@@ -28,6 +41,9 @@ public final class AzureSqlContainerResponse extends io.pulumi.resources.InvokeA
         return this.containerType;
     }
 
+    /**
+     * Friendly name of the container.
+     */
     @InputImport(name="friendlyName")
     private final @Nullable String friendlyName;
 
@@ -35,6 +51,9 @@ public final class AzureSqlContainerResponse extends io.pulumi.resources.InvokeA
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
+    /**
+     * Status of health of the container.
+     */
     @InputImport(name="healthStatus")
     private final @Nullable String healthStatus;
 
@@ -42,6 +61,9 @@ public final class AzureSqlContainerResponse extends io.pulumi.resources.InvokeA
         return this.healthStatus == null ? Optional.empty() : Optional.ofNullable(this.healthStatus);
     }
 
+    /**
+     * Status of registration of the container with the Recovery Services Vault.
+     */
     @InputImport(name="registrationStatus")
     private final @Nullable String registrationStatus;
 

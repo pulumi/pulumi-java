@@ -8,17 +8,50 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Describes operator to be matched
+ */
     @EnumType
     public enum RequestBodyOperator {
+/**
+ * 
+ */
         Any("Any"),
+/**
+ * 
+ */
         Equal("Equal"),
+/**
+ * 
+ */
         Contains("Contains"),
+/**
+ * 
+ */
         BeginsWith("BeginsWith"),
+/**
+ * 
+ */
         EndsWith("EndsWith"),
+/**
+ * 
+ */
         LessThan("LessThan"),
+/**
+ * 
+ */
         LessThanOrEqual("LessThanOrEqual"),
+/**
+ * 
+ */
         GreaterThan("GreaterThan"),
+/**
+ * 
+ */
         GreaterThanOrEqual("GreaterThanOrEqual"),
+/**
+ * 
+ */
         RegEx("RegEx");
 
         private final String value;

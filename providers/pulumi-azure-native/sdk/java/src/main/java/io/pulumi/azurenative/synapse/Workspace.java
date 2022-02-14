@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.synapse;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.synapse.WorkspaceArgs;
 import io.pulumi.azurenative.synapse.outputs.DataLakeStorageAccountDetailsResponse;
 import io.pulumi.azurenative.synapse.outputs.EncryptionDetailsResponse;
 import io.pulumi.azurenative.synapse.outputs.ManagedIdentityResponse;
@@ -24,141 +23,540 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A workspace
+API Version: 2021-03-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create or update a workspace
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var workspace = new AzureNative.Synapse.Workspace("workspace", new AzureNative.Synapse.WorkspaceArgs
+        {
+            DefaultDataLakeStorage = new AzureNative.Synapse.Inputs.DataLakeStorageAccountDetailsArgs
+            {
+                AccountUrl = "https://accountname.dfs.core.windows.net",
+                Filesystem = "default",
+            },
+            Encryption = new AzureNative.Synapse.Inputs.EncryptionDetailsArgs
+            {
+                Cmk = new AzureNative.Synapse.Inputs.CustomerManagedKeyDetailsArgs
+                {
+                    Key = new AzureNative.Synapse.Inputs.WorkspaceKeyDetailsArgs
+                    {
+                        KeyVaultUrl = "https://vault.azure.net/keys/key1",
+                        Name = "default",
+                    },
+                },
+            },
+            Identity = new AzureNative.Synapse.Inputs.ManagedIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Location = "East US",
+            ManagedResourceGroupName = "workspaceManagedResourceGroupUnique",
+            ManagedVirtualNetwork = "default",
+            ManagedVirtualNetworkSettings = new AzureNative.Synapse.Inputs.ManagedVirtualNetworkSettingsArgs
+            {
+                AllowedAadTenantIdsForLinking = 
+                {
+                    "740239CE-A25B-485B-86A0-262F29F6EBDB",
+                },
+                LinkedAccessCheckOnTargetResource = false,
+                PreventDataExfiltration = false,
+            },
+            PublicNetworkAccess = "Enabled",
+            PurviewConfiguration = new AzureNative.Synapse.Inputs.PurviewConfigurationArgs
+            {
+                PurviewResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1",
+            },
+            ResourceGroupName = "resourceGroup1",
+            SqlAdministratorLogin = "login",
+            SqlAdministratorLoginPassword = "password",
+            Tags = 
+            {
+                { "key", "value" },
+            },
+            WorkspaceName = "workspace1",
+            WorkspaceRepositoryConfiguration = new AzureNative.Synapse.Inputs.WorkspaceRepositoryConfigurationArgs
+            {
+                AccountName = "mygithubaccount",
+                CollaborationBranch = "master",
+                HostName = "",
+                ProjectName = "myproject",
+                RepositoryName = "myrepository",
+                RootFolder = "/",
+                Type = "FactoryGitHubConfiguration",
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	synapse "github.com/pulumi/pulumi-azure-native/sdk/go/azure/synapse"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := synapse.NewWorkspace(ctx, "workspace", &synapse.WorkspaceArgs{
+			DefaultDataLakeStorage: &synapse.DataLakeStorageAccountDetailsArgs{
+				AccountUrl: pulumi.String("https://accountname.dfs.core.windows.net"),
+				Filesystem: pulumi.String("default"),
+			},
+			Encryption: &synapse.EncryptionDetailsArgs{
+				Cmk: &synapse.CustomerManagedKeyDetailsArgs{
+					Key: &synapse.WorkspaceKeyDetailsArgs{
+						KeyVaultUrl: pulumi.String("https://vault.azure.net/keys/key1"),
+						Name:        pulumi.String("default"),
+					},
+				},
+			},
+			Identity: &synapse.ManagedIdentityArgs{
+				Type: "SystemAssigned",
+			},
+			Location:                 pulumi.String("East US"),
+			ManagedResourceGroupName: pulumi.String("workspaceManagedResourceGroupUnique"),
+			ManagedVirtualNetwork:    pulumi.String("default"),
+			ManagedVirtualNetworkSettings: &synapse.ManagedVirtualNetworkSettingsArgs{
+				AllowedAadTenantIdsForLinking: pulumi.StringArray{
+					pulumi.String("740239CE-A25B-485B-86A0-262F29F6EBDB"),
+				},
+				LinkedAccessCheckOnTargetResource: pulumi.Bool(false),
+				PreventDataExfiltration:           pulumi.Bool(false),
+			},
+			PublicNetworkAccess: pulumi.String("Enabled"),
+			PurviewConfiguration: &synapse.PurviewConfigurationArgs{
+				PurviewResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1"),
+			},
+			ResourceGroupName:             pulumi.String("resourceGroup1"),
+			SqlAdministratorLogin:         pulumi.String("login"),
+			SqlAdministratorLoginPassword: pulumi.String("password"),
+			Tags: pulumi.StringMap{
+				"key": pulumi.String("value"),
+			},
+			WorkspaceName: pulumi.String("workspace1"),
+			WorkspaceRepositoryConfiguration: &synapse.WorkspaceRepositoryConfigurationArgs{
+				AccountName:         pulumi.String("mygithubaccount"),
+				CollaborationBranch: pulumi.String("master"),
+				HostName:            pulumi.String(""),
+				ProjectName:         pulumi.String("myproject"),
+				RepositoryName:      pulumi.String("myrepository"),
+				RootFolder:          pulumi.String("/"),
+				Type:                pulumi.String("FactoryGitHubConfiguration"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const workspace = new azure_native.synapse.Workspace("workspace", {
+    defaultDataLakeStorage: {
+        accountUrl: "https://accountname.dfs.core.windows.net",
+        filesystem: "default",
+    },
+    encryption: {
+        cmk: {
+            key: {
+                keyVaultUrl: "https://vault.azure.net/keys/key1",
+                name: "default",
+            },
+        },
+    },
+    identity: {
+        type: "SystemAssigned",
+    },
+    location: "East US",
+    managedResourceGroupName: "workspaceManagedResourceGroupUnique",
+    managedVirtualNetwork: "default",
+    managedVirtualNetworkSettings: {
+        allowedAadTenantIdsForLinking: ["740239CE-A25B-485B-86A0-262F29F6EBDB"],
+        linkedAccessCheckOnTargetResource: false,
+        preventDataExfiltration: false,
+    },
+    publicNetworkAccess: "Enabled",
+    purviewConfiguration: {
+        purviewResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1",
+    },
+    resourceGroupName: "resourceGroup1",
+    sqlAdministratorLogin: "login",
+    sqlAdministratorLoginPassword: "password",
+    tags: {
+        key: "value",
+    },
+    workspaceName: "workspace1",
+    workspaceRepositoryConfiguration: {
+        accountName: "mygithubaccount",
+        collaborationBranch: "master",
+        hostName: "",
+        projectName: "myproject",
+        repositoryName: "myrepository",
+        rootFolder: "/",
+        type: "FactoryGitHubConfiguration",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+workspace = azure_native.synapse.Workspace("workspace",
+    default_data_lake_storage=azure_native.synapse.DataLakeStorageAccountDetailsArgs(
+        account_url="https://accountname.dfs.core.windows.net",
+        filesystem="default",
+    ),
+    encryption=azure_native.synapse.EncryptionDetailsArgs(
+        cmk=azure_native.synapse.CustomerManagedKeyDetailsArgs(
+            key=azure_native.synapse.WorkspaceKeyDetailsArgs(
+                key_vault_url="https://vault.azure.net/keys/key1",
+                name="default",
+            ),
+        ),
+    ),
+    identity=azure_native.synapse.ManagedIdentityArgs(
+        type="SystemAssigned",
+    ),
+    location="East US",
+    managed_resource_group_name="workspaceManagedResourceGroupUnique",
+    managed_virtual_network="default",
+    managed_virtual_network_settings=azure_native.synapse.ManagedVirtualNetworkSettingsArgs(
+        allowed_aad_tenant_ids_for_linking=["740239CE-A25B-485B-86A0-262F29F6EBDB"],
+        linked_access_check_on_target_resource=False,
+        prevent_data_exfiltration=False,
+    ),
+    public_network_access="Enabled",
+    purview_configuration=azure_native.synapse.PurviewConfigurationArgs(
+        purview_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1",
+    ),
+    resource_group_name="resourceGroup1",
+    sql_administrator_login="login",
+    sql_administrator_login_password="password",
+    tags={
+        "key": "value",
+    },
+    workspace_name="workspace1",
+    workspace_repository_configuration=azure_native.synapse.WorkspaceRepositoryConfigurationArgs(
+        account_name="mygithubaccount",
+        collaboration_branch="master",
+        host_name="",
+        project_name="myproject",
+        repository_name="myrepository",
+        root_folder="/",
+        type="FactoryGitHubConfiguration",
+    ))
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:synapse:Workspace workspace1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.Synapse/workspaces/workspace1 
+```
+
+ */
 @ResourceType(type="azure-native:synapse:Workspace")
 public class Workspace extends io.pulumi.resources.CustomResource {
+    /**
+     * The ADLA resource ID.
+     */
     @OutputExport(name="adlaResourceId", type=String.class, parameters={})
     private Output<String> adlaResourceId;
 
+    /**
+     * @return The ADLA resource ID.
+     */
     public Output<String> getAdlaResourceId() {
         return this.adlaResourceId;
     }
+    /**
+     * Connectivity endpoints
+     */
     @OutputExport(name="connectivityEndpoints", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> connectivityEndpoints;
 
+    /**
+     * @return Connectivity endpoints
+     */
     public Output</* @Nullable */ Map<String,String>> getConnectivityEndpoints() {
         return this.connectivityEndpoints;
     }
+    /**
+     * Workspace default data lake storage account details
+     */
     @OutputExport(name="defaultDataLakeStorage", type=DataLakeStorageAccountDetailsResponse.class, parameters={})
     private Output</* @Nullable */ DataLakeStorageAccountDetailsResponse> defaultDataLakeStorage;
 
+    /**
+     * @return Workspace default data lake storage account details
+     */
     public Output</* @Nullable */ DataLakeStorageAccountDetailsResponse> getDefaultDataLakeStorage() {
         return this.defaultDataLakeStorage;
     }
+    /**
+     * The encryption details of the workspace
+     */
     @OutputExport(name="encryption", type=EncryptionDetailsResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionDetailsResponse> encryption;
 
+    /**
+     * @return The encryption details of the workspace
+     */
     public Output</* @Nullable */ EncryptionDetailsResponse> getEncryption() {
         return this.encryption;
     }
+    /**
+     * Workspace level configs and feature flags
+     */
     @OutputExport(name="extraProperties", type=Map.class, parameters={String.class, Object.class})
     private Output<Map<String,Object>> extraProperties;
 
+    /**
+     * @return Workspace level configs and feature flags
+     */
     public Output<Map<String,Object>> getExtraProperties() {
         return this.extraProperties;
     }
+    /**
+     * Identity of the workspace
+     */
     @OutputExport(name="identity", type=ManagedIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedIdentityResponse> identity;
 
+    /**
+     * @return Identity of the workspace
+     */
     public Output</* @Nullable */ ManagedIdentityResponse> getIdentity() {
         return this.identity;
     }
+    /**
+     * The geo-location where the resource lives
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * Workspace managed resource group. The resource group name uniquely identifies the resource group within the user subscriptionId. The resource group name must be no longer than 90 characters long, and must be alphanumeric characters (Char.IsLetterOrDigit()) and '-', '_', '(', ')' and'.'. Note that the name cannot end with '.'
+     */
     @OutputExport(name="managedResourceGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedResourceGroupName;
 
+    /**
+     * @return Workspace managed resource group. The resource group name uniquely identifies the resource group within the user subscriptionId. The resource group name must be no longer than 90 characters long, and must be alphanumeric characters (Char.IsLetterOrDigit()) and '-', '_', '(', ')' and'.'. Note that the name cannot end with '.'
+     */
     public Output</* @Nullable */ String> getManagedResourceGroupName() {
         return this.managedResourceGroupName;
     }
+    /**
+     * Setting this to 'default' will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.
+     */
     @OutputExport(name="managedVirtualNetwork", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedVirtualNetwork;
 
+    /**
+     * @return Setting this to 'default' will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.
+     */
     public Output</* @Nullable */ String> getManagedVirtualNetwork() {
         return this.managedVirtualNetwork;
     }
+    /**
+     * Managed Virtual Network Settings
+     */
     @OutputExport(name="managedVirtualNetworkSettings", type=ManagedVirtualNetworkSettingsResponse.class, parameters={})
     private Output</* @Nullable */ ManagedVirtualNetworkSettingsResponse> managedVirtualNetworkSettings;
 
+    /**
+     * @return Managed Virtual Network Settings
+     */
     public Output</* @Nullable */ ManagedVirtualNetworkSettingsResponse> getManagedVirtualNetworkSettings() {
         return this.managedVirtualNetworkSettings;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Private endpoint connections to the workspace
+     */
     @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
+    /**
+     * @return Private endpoint connections to the workspace
+     */
     public Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
+    /**
+     * Resource provisioning state
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Resource provisioning state
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Enable or Disable public network access to workspace
+     */
     @OutputExport(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
+    /**
+     * @return Enable or Disable public network access to workspace
+     */
     public Output</* @Nullable */ String> getPublicNetworkAccess() {
         return this.publicNetworkAccess;
     }
+    /**
+     * Purview Configuration
+     */
     @OutputExport(name="purviewConfiguration", type=PurviewConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ PurviewConfigurationResponse> purviewConfiguration;
 
+    /**
+     * @return Purview Configuration
+     */
     public Output</* @Nullable */ PurviewConfigurationResponse> getPurviewConfiguration() {
         return this.purviewConfiguration;
     }
+    /**
+     * Login for workspace SQL active directory administrator
+     */
     @OutputExport(name="sqlAdministratorLogin", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlAdministratorLogin;
 
+    /**
+     * @return Login for workspace SQL active directory administrator
+     */
     public Output</* @Nullable */ String> getSqlAdministratorLogin() {
         return this.sqlAdministratorLogin;
     }
+    /**
+     * SQL administrator login password
+     */
     @OutputExport(name="sqlAdministratorLoginPassword", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlAdministratorLoginPassword;
 
+    /**
+     * @return SQL administrator login password
+     */
     public Output</* @Nullable */ String> getSqlAdministratorLoginPassword() {
         return this.sqlAdministratorLoginPassword;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Virtual Network profile
+     */
     @OutputExport(name="virtualNetworkProfile", type=VirtualNetworkProfileResponse.class, parameters={})
     private Output</* @Nullable */ VirtualNetworkProfileResponse> virtualNetworkProfile;
 
+    /**
+     * @return Virtual Network profile
+     */
     public Output</* @Nullable */ VirtualNetworkProfileResponse> getVirtualNetworkProfile() {
         return this.virtualNetworkProfile;
     }
+    /**
+     * Git integration settings
+     */
     @OutputExport(name="workspaceRepositoryConfiguration", type=WorkspaceRepositoryConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ WorkspaceRepositoryConfigurationResponse> workspaceRepositoryConfiguration;
 
+    /**
+     * @return Git integration settings
+     */
     public Output</* @Nullable */ WorkspaceRepositoryConfigurationResponse> getWorkspaceRepositoryConfiguration() {
         return this.workspaceRepositoryConfiguration;
     }
+    /**
+     * The workspace unique identifier
+     */
     @OutputExport(name="workspaceUID", type=String.class, parameters={})
     private Output<String> workspaceUID;
 
+    /**
+     * @return The workspace unique identifier
+     */
     public Output<String> getWorkspaceUID() {
         return this.workspaceUID;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Workspace(String name, WorkspaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:synapse:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -183,6 +581,14 @@ public class Workspace extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Workspace get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Workspace(name, id, options);
     }

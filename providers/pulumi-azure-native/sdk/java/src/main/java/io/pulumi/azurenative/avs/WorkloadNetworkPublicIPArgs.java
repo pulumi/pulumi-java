@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WorkloadNetworkPublicIPArgs Empty = new WorkloadNetworkPublicIPArgs();
 
+    /**
+     * Display name of the Public IP Block.
+     */
     @InputImport(name="displayName")
     private final @Nullable Input<String> displayName;
 
@@ -22,6 +28,9 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
+    /**
+     * Number of Public IPs requested.
+     */
     @InputImport(name="numberOfPublicIPs")
     private final @Nullable Input<Double> numberOfPublicIPs;
 
@@ -29,6 +38,9 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
         return this.numberOfPublicIPs == null ? Input.empty() : this.numberOfPublicIPs;
     }
 
+    /**
+     * Name of the private cloud
+     */
     @InputImport(name="privateCloudName", required=true)
     private final Input<String> privateCloudName;
 
@@ -36,6 +48,9 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
         return this.privateCloudName;
     }
 
+    /**
+     * NSX Public IP Block identifier. Generally the same as the Public IP Block's display name
+     */
     @InputImport(name="publicIPId")
     private final @Nullable Input<String> publicIPId;
 
@@ -43,6 +58,9 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
         return this.publicIPId == null ? Input.empty() : this.publicIPId;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

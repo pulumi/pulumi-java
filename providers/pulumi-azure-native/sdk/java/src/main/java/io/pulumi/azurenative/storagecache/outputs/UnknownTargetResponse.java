@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class UnknownTargetResponse {
+/**
+ * Dictionary of string->string pairs containing information about the Storage Target.
+ */
     private final @Nullable Map<String,String> attributes;
 
     @OutputCustomType.Constructor({"attributes"})
@@ -18,6 +21,9 @@ public final class UnknownTargetResponse {
         this.attributes = attributes;
     }
 
+/**
+ * Dictionary of string->string pairs containing information about the Storage Target.
+ */
     public Map<String,String> getAttributes() {
         return this.attributes == null ? Map.of() : this.attributes;
     }

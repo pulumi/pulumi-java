@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class MetricAlertActionResponse {
+/**
+ * the id of the action group to use.
+ */
     private final @Nullable String actionGroupId;
+/**
+ * This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.
+ */
     private final @Nullable Map<String,String> webHookProperties;
 
     @OutputCustomType.Constructor({"actionGroupId","webHookProperties"})
@@ -23,9 +29,15 @@ public final class MetricAlertActionResponse {
         this.webHookProperties = webHookProperties;
     }
 
+/**
+ * the id of the action group to use.
+ */
     public Optional<String> getActionGroupId() {
         return Optional.ofNullable(this.actionGroupId);
     }
+/**
+ * This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.
+ */
     public Map<String,String> getWebHookProperties() {
         return this.webHookProperties == null ? Map.of() : this.webHookProperties;
     }

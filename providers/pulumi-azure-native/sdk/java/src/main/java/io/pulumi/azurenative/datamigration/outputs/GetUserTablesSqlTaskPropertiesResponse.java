@@ -18,11 +18,30 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetUserTablesSqlTaskPropertiesResponse {
+/**
+ * Array of command properties.
+ */
     private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
+/**
+ * Array of errors. This is ignored if submitted.
+ */
     private final List<ODataErrorResponse> errors;
+/**
+ * Task input
+ */
     private final @Nullable GetUserTablesSqlTaskInputResponse input;
+/**
+ * Task output. This is ignored if submitted.
+ */
     private final List<GetUserTablesSqlTaskOutputResponse> output;
+/**
+ * The state of the task. This is ignored if submitted.
+ */
     private final String state;
+/**
+ * Task type.
+Expected value is 'GetUserTables.Sql'.
+ */
     private final String taskType;
 
     @OutputCustomType.Constructor({"commands","errors","input","output","state","taskType"})
@@ -41,21 +60,40 @@ public final class GetUserTablesSqlTaskPropertiesResponse {
         this.taskType = Objects.requireNonNull(taskType);
     }
 
+/**
+ * Array of command properties.
+ */
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
         return this.commands;
     }
+/**
+ * Array of errors. This is ignored if submitted.
+ */
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
     }
+/**
+ * Task input
+ */
     public Optional<GetUserTablesSqlTaskInputResponse> getInput() {
         return Optional.ofNullable(this.input);
     }
+/**
+ * Task output. This is ignored if submitted.
+ */
     public List<GetUserTablesSqlTaskOutputResponse> getOutput() {
         return this.output;
     }
+/**
+ * The state of the task. This is ignored if submitted.
+ */
     public String getState() {
         return this.state;
     }
+/**
+ * Task type.
+Expected value is 'GetUserTables.Sql'.
+ */
     public String getTaskType() {
         return this.taskType;
     }

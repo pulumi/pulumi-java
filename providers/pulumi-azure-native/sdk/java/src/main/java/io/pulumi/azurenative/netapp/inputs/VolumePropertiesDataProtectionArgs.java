@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * DataProtection type volumes include an object containing details of the replication
+ */
 public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VolumePropertiesDataProtectionArgs Empty = new VolumePropertiesDataProtectionArgs();
 
+    /**
+     * Backup Properties
+     */
     @InputImport(name="backup")
     private final @Nullable Input<VolumeBackupPropertiesArgs> backup;
 
@@ -23,6 +29,9 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
         return this.backup == null ? Input.empty() : this.backup;
     }
 
+    /**
+     * Replication properties
+     */
     @InputImport(name="replication")
     private final @Nullable Input<ReplicationObjectArgs> replication;
 
@@ -30,6 +39,9 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
         return this.replication == null ? Input.empty() : this.replication;
     }
 
+    /**
+     * Snapshot properties.
+     */
     @InputImport(name="snapshot")
     private final @Nullable Input<VolumeSnapshotPropertiesArgs> snapshot;
 

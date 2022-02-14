@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.avs;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.avs.ScriptExecutionArgs;
 import io.pulumi.azurenative.avs.outputs.PSCredentialExecutionParameterResponse;
 import io.pulumi.azurenative.avs.outputs.ScriptSecureStringExecutionParameterResponse;
 import io.pulumi.azurenative.avs.outputs.ScriptStringExecutionParameterResponse;
@@ -19,111 +18,395 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * An instance of a script executed by a user - custom or AVS
+API Version: 2021-06-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### ScriptExecutions_CreateOrUpdate
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var scriptExecution = new AzureNative.AVS.ScriptExecution("scriptExecution", new AzureNative.AVS.ScriptExecutionArgs
+        {
+            HiddenParameters = 
+            {
+                new AzureNative.AVS.Inputs.ScriptSecureStringExecutionParameterArgs
+                {
+                    Name = "Password",
+                    SecureValue = "PlaceholderPassword",
+                    Type = "SecureValue",
+                },
+            },
+            Parameters = 
+            {
+                new AzureNative.AVS.Inputs.ScriptStringExecutionParameterArgs
+                {
+                    Name = "DomainName",
+                    Type = "Value",
+                    Value = "placeholderDomain.local",
+                },
+                new AzureNative.AVS.Inputs.ScriptStringExecutionParameterArgs
+                {
+                    Name = "BaseUserDN",
+                    Type = "Value",
+                    Value = "DC=placeholder, DC=placeholder",
+                },
+            },
+            PrivateCloudName = "cloud1",
+            ResourceGroupName = "group1",
+            Retention = "P0Y0M60DT0H60M60S",
+            ScriptCmdletId = "/subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/scriptPackages/AVS.PowerCommands@1.0.0/scriptCmdlets/New-SsoExternalIdentitySource",
+            ScriptExecutionName = "addSsoServer",
+            Timeout = "P0Y0M0DT0H60M60S",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	avs "github.com/pulumi/pulumi-azure-native/sdk/go/azure/avs"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := avs.NewScriptExecution(ctx, "scriptExecution", &avs.ScriptExecutionArgs{
+			HiddenParameters: pulumi.AnyArray{
+				avs.ScriptSecureStringExecutionParameter{
+					Name:        "Password",
+					SecureValue: "PlaceholderPassword",
+					Type:        "SecureValue",
+				},
+			},
+			Parameters: pulumi.AnyArray{
+				avs.ScriptStringExecutionParameter{
+					Name:  "DomainName",
+					Type:  "Value",
+					Value: "placeholderDomain.local",
+				},
+				avs.ScriptStringExecutionParameter{
+					Name:  "BaseUserDN",
+					Type:  "Value",
+					Value: "DC=placeholder, DC=placeholder",
+				},
+			},
+			PrivateCloudName:    pulumi.String("cloud1"),
+			ResourceGroupName:   pulumi.String("group1"),
+			Retention:           pulumi.String("P0Y0M60DT0H60M60S"),
+			ScriptCmdletId:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/scriptPackages/AVS.PowerCommands@1.0.0/scriptCmdlets/New-SsoExternalIdentitySource"),
+			ScriptExecutionName: pulumi.String("addSsoServer"),
+			Timeout:             pulumi.String("P0Y0M0DT0H60M60S"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const scriptExecution = new azure_native.avs.ScriptExecution("scriptExecution", {
+    hiddenParameters: [{
+        name: "Password",
+        secureValue: "PlaceholderPassword",
+        type: "SecureValue",
+    }],
+    parameters: [
+        {
+            name: "DomainName",
+            type: "Value",
+            value: "placeholderDomain.local",
+        },
+        {
+            name: "BaseUserDN",
+            type: "Value",
+            value: "DC=placeholder, DC=placeholder",
+        },
+    ],
+    privateCloudName: "cloud1",
+    resourceGroupName: "group1",
+    retention: "P0Y0M60DT0H60M60S",
+    scriptCmdletId: "/subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/scriptPackages/AVS.PowerCommands@1.0.0/scriptCmdlets/New-SsoExternalIdentitySource",
+    scriptExecutionName: "addSsoServer",
+    timeout: "P0Y0M0DT0H60M60S",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+script_execution = azure_native.avs.ScriptExecution("scriptExecution",
+    hidden_parameters=[azure_native.avs.ScriptSecureStringExecutionParameterArgs(
+        name="Password",
+        secure_value="PlaceholderPassword",
+        type="SecureValue",
+    )],
+    parameters=[
+        azure_native.avs.ScriptStringExecutionParameterArgs(
+            name="DomainName",
+            type="Value",
+            value="placeholderDomain.local",
+        ),
+        azure_native.avs.ScriptStringExecutionParameterArgs(
+            name="BaseUserDN",
+            type="Value",
+            value="DC=placeholder, DC=placeholder",
+        ),
+    ],
+    private_cloud_name="cloud1",
+    resource_group_name="group1",
+    retention="P0Y0M60DT0H60M60S",
+    script_cmdlet_id="/subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/scriptPackages/AVS.PowerCommands@1.0.0/scriptCmdlets/New-SsoExternalIdentitySource",
+    script_execution_name="addSsoServer",
+    timeout="P0Y0M0DT0H60M60S")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:avs:ScriptExecution addSsoServer /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/scriptExecutions/addSsoServer 
+```
+
+ */
 @ResourceType(type="azure-native:avs:ScriptExecution")
 public class ScriptExecution extends io.pulumi.resources.CustomResource {
+    /**
+     * Standard error output stream from the powershell execution
+     */
     @OutputExport(name="errors", type=List.class, parameters={String.class})
     private Output<List<String>> errors;
 
+    /**
+     * @return Standard error output stream from the powershell execution
+     */
     public Output<List<String>> getErrors() {
         return this.errors;
     }
+    /**
+     * Error message if the script was able to run, but if the script itself had errors or powershell threw an exception
+     */
     @OutputExport(name="failureReason", type=String.class, parameters={})
     private Output</* @Nullable */ String> failureReason;
 
+    /**
+     * @return Error message if the script was able to run, but if the script itself had errors or powershell threw an exception
+     */
     public Output</* @Nullable */ String> getFailureReason() {
         return this.failureReason;
     }
+    /**
+     * Time the script execution was finished
+     */
     @OutputExport(name="finishedAt", type=String.class, parameters={})
     private Output<String> finishedAt;
 
+    /**
+     * @return Time the script execution was finished
+     */
     public Output<String> getFinishedAt() {
         return this.finishedAt;
     }
+    /**
+     * Parameters that will be hidden/not visible to ARM, such as passwords and credentials
+     */
     @OutputExport(name="hiddenParameters", type=List.class, parameters={Object.class})
     private Output</* @Nullable */ List<Object>> hiddenParameters;
 
+    /**
+     * @return Parameters that will be hidden/not visible to ARM, such as passwords and credentials
+     */
     public Output</* @Nullable */ List<Object>> getHiddenParameters() {
         return this.hiddenParameters;
     }
+    /**
+     * Standard information out stream from the powershell execution
+     */
     @OutputExport(name="information", type=List.class, parameters={String.class})
     private Output<List<String>> information;
 
+    /**
+     * @return Standard information out stream from the powershell execution
+     */
     public Output<List<String>> getInformation() {
         return this.information;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * User-defined dictionary.
+     */
     @OutputExport(name="namedOutputs", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> namedOutputs;
 
+    /**
+     * @return User-defined dictionary.
+     */
     public Output</* @Nullable */ Map<String,Object>> getNamedOutputs() {
         return this.namedOutputs;
     }
+    /**
+     * Standard output stream from the powershell execution
+     */
     @OutputExport(name="output", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> output;
 
+    /**
+     * @return Standard output stream from the powershell execution
+     */
     public Output</* @Nullable */ List<String>> getOutput() {
         return this.output;
     }
+    /**
+     * Parameters the script will accept
+     */
     @OutputExport(name="parameters", type=List.class, parameters={Object.class})
     private Output</* @Nullable */ List<Object>> parameters;
 
+    /**
+     * @return Parameters the script will accept
+     */
     public Output</* @Nullable */ List<Object>> getParameters() {
         return this.parameters;
     }
+    /**
+     * The state of the script execution resource
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return The state of the script execution resource
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Time to live for the resource. If not provided, will be available for 60 days
+     */
     @OutputExport(name="retention", type=String.class, parameters={})
     private Output</* @Nullable */ String> retention;
 
+    /**
+     * @return Time to live for the resource. If not provided, will be available for 60 days
+     */
     public Output</* @Nullable */ String> getRetention() {
         return this.retention;
     }
+    /**
+     * A reference to the script cmdlet resource if user is running a AVS script
+     */
     @OutputExport(name="scriptCmdletId", type=String.class, parameters={})
     private Output</* @Nullable */ String> scriptCmdletId;
 
+    /**
+     * @return A reference to the script cmdlet resource if user is running a AVS script
+     */
     public Output</* @Nullable */ String> getScriptCmdletId() {
         return this.scriptCmdletId;
     }
+    /**
+     * Time the script execution was started
+     */
     @OutputExport(name="startedAt", type=String.class, parameters={})
     private Output<String> startedAt;
 
+    /**
+     * @return Time the script execution was started
+     */
     public Output<String> getStartedAt() {
         return this.startedAt;
     }
+    /**
+     * Time the script execution was submitted
+     */
     @OutputExport(name="submittedAt", type=String.class, parameters={})
     private Output<String> submittedAt;
 
+    /**
+     * @return Time the script execution was submitted
+     */
     public Output<String> getSubmittedAt() {
         return this.submittedAt;
     }
+    /**
+     * Time limit for execution
+     */
     @OutputExport(name="timeout", type=String.class, parameters={})
     private Output<String> timeout;
 
+    /**
+     * @return Time limit for execution
+     */
     public Output<String> getTimeout() {
         return this.timeout;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
+    /**
+     * Standard warning out stream from the powershell execution
+     */
     @OutputExport(name="warnings", type=List.class, parameters={String.class})
     private Output<List<String>> warnings;
 
+    /**
+     * @return Standard warning out stream from the powershell execution
+     */
     public Output<List<String>> getWarnings() {
         return this.warnings;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ScriptExecution(String name, ScriptExecutionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:avs:ScriptExecution", name, args == null ? ScriptExecutionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -143,6 +426,14 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ScriptExecution get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ScriptExecution(name, id, options);
     }

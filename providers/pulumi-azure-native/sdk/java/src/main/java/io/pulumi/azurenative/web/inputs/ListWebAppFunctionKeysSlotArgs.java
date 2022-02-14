@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class ListWebAppFunctionKeysSlotArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ListWebAppFunctionKeysSlotArgs Empty = new ListWebAppFunctionKeysSlotArgs();
 
+    /**
+     * Function name.
+     */
     @InputImport(name="functionName", required=true)
     private final String functionName;
 
@@ -19,6 +25,9 @@ public final class ListWebAppFunctionKeysSlotArgs extends io.pulumi.resources.In
         return this.functionName;
     }
 
+    /**
+     * Site name.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -26,6 +35,9 @@ public final class ListWebAppFunctionKeysSlotArgs extends io.pulumi.resources.In
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -33,6 +45,9 @@ public final class ListWebAppFunctionKeysSlotArgs extends io.pulumi.resources.In
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the deployment slot.
+     */
     @InputImport(name="slot", required=true)
     private final String slot;
 

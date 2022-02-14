@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * The version of the SDK used to run the job.
+ */
 public final class SdkVersionResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SdkVersionResponse Empty = new SdkVersionResponse();
 
+    /**
+     * The support status for this SDK version.
+     */
     @InputImport(name="sdkSupportStatus", required=true)
     private final String sdkSupportStatus;
 
@@ -19,6 +25,9 @@ public final class SdkVersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.sdkSupportStatus;
     }
 
+    /**
+     * The version of the SDK used to run the job.
+     */
     @InputImport(name="version", required=true)
     private final String version;
 
@@ -26,6 +35,9 @@ public final class SdkVersionResponse extends io.pulumi.resources.InvokeArgs {
         return this.version;
     }
 
+    /**
+     * A readable string describing the version of the SDK.
+     */
     @InputImport(name="versionDisplayName", required=true)
     private final String versionDisplayName;
 

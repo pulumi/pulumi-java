@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of resetting the token.
+ */
     @EnumType
     public enum RegistrationTokenOperation {
+/**
+ * 
+ */
         Delete("Delete"),
+/**
+ * 
+ */
         None("None"),
+/**
+ * 
+ */
         Update("Update");
 
         private final String value;

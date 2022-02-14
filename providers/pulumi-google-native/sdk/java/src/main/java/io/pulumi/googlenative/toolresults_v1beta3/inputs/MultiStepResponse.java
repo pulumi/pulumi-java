@@ -10,10 +10,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Details when multiple steps are run with the same configuration as a group.
+ */
 public final class MultiStepResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MultiStepResponse Empty = new MultiStepResponse();
 
+    /**
+     * Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
+     */
     @InputImport(name="multistepNumber", required=true)
     private final Integer multistepNumber;
 
@@ -21,6 +27,9 @@ public final class MultiStepResponse extends io.pulumi.resources.InvokeArgs {
         return this.multistepNumber;
     }
 
+    /**
+     * Present if it is a primary (original) step.
+     */
     @InputImport(name="primaryStep", required=true)
     private final PrimaryStepResponse primaryStep;
 
@@ -28,6 +37,9 @@ public final class MultiStepResponse extends io.pulumi.resources.InvokeArgs {
         return this.primaryStep;
     }
 
+    /**
+     * Step Id of the primary (original) step, which might be this step.
+     */
     @InputImport(name="primaryStepId", required=true)
     private final String primaryStepId;
 

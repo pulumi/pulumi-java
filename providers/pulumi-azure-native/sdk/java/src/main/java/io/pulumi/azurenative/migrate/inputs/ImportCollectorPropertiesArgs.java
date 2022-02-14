@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ImportCollectorPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImportCollectorPropertiesArgs Empty = new ImportCollectorPropertiesArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="discoverySiteId")
     private final @Nullable Input<String> discoverySiteId;
 

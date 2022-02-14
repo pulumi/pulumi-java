@@ -8,14 +8,38 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Gets or sets the day. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
+ */
     @EnumType
     public enum JobScheduleDay {
+/**
+ * 
+ */
         Monday("Monday"),
+/**
+ * 
+ */
         Tuesday("Tuesday"),
+/**
+ * 
+ */
         Wednesday("Wednesday"),
+/**
+ * 
+ */
         Thursday("Thursday"),
+/**
+ * 
+ */
         Friday("Friday"),
+/**
+ * 
+ */
         Saturday("Saturday"),
+/**
+ * 
+ */
         Sunday("Sunday");
 
         private final String value;

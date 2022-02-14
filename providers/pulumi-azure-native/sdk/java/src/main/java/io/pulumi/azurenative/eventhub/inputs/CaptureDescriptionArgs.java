@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties to configure capture description for eventhub
+ */
 public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CaptureDescriptionArgs Empty = new CaptureDescriptionArgs();
 
+    /**
+     * Properties of Destination where capture will be stored. (Storage Account, Blob Names)
+     */
     @InputImport(name="destination")
     private final @Nullable Input<DestinationArgs> destination;
 
@@ -24,6 +30,9 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
         return this.destination == null ? Input.empty() : this.destination;
     }
 
+    /**
+     * A value that indicates whether capture description is enabled. 
+     */
     @InputImport(name="enabled")
     private final @Nullable Input<Boolean> enabled;
 
@@ -31,6 +40,9 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
+    /**
+     * Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be deprecated in New API Version
+     */
     @InputImport(name="encoding")
     private final @Nullable Input<EncodingCaptureDescription> encoding;
 
@@ -38,6 +50,9 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
         return this.encoding == null ? Input.empty() : this.encoding;
     }
 
+    /**
+     * The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
+     */
     @InputImport(name="intervalInSeconds")
     private final @Nullable Input<Integer> intervalInSeconds;
 
@@ -45,6 +60,9 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
         return this.intervalInSeconds == null ? Input.empty() : this.intervalInSeconds;
     }
 
+    /**
+     * The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes
+     */
     @InputImport(name="sizeLimitInBytes")
     private final @Nullable Input<Integer> sizeLimitInBytes;
 
@@ -52,6 +70,9 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
         return this.sizeLimitInBytes == null ? Input.empty() : this.sizeLimitInBytes;
     }
 
+    /**
+     * A value that indicates whether to Skip Empty Archives
+     */
     @InputImport(name="skipEmptyArchives")
     private final @Nullable Input<Boolean> skipEmptyArchives;
 

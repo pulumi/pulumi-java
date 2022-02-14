@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetManagedInstanceAzureADOnlyAuthenticationArgs Empty = new GetManagedInstanceAzureADOnlyAuthenticationArgs();
 
+    /**
+     * The name of server azure active directory only authentication.
+     */
     @InputImport(name="authenticationName", required=true)
     private final String authenticationName;
 
@@ -19,6 +25,9 @@ public final class GetManagedInstanceAzureADOnlyAuthenticationArgs extends io.pu
         return this.authenticationName;
     }
 
+    /**
+     * The name of the managed instance.
+     */
     @InputImport(name="managedInstanceName", required=true)
     private final String managedInstanceName;
 
@@ -26,6 +35,9 @@ public final class GetManagedInstanceAzureADOnlyAuthenticationArgs extends io.pu
         return this.managedInstanceName;
     }
 
+    /**
+     * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

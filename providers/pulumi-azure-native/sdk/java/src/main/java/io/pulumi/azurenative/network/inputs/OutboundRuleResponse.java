@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Outbound rule of the load balancer.
+ */
 public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final OutboundRuleResponse Empty = new OutboundRuleResponse();
 
+    /**
+     * The number of outbound ports to be used for NAT.
+     */
     @InputImport(name="allocatedOutboundPorts")
     private final @Nullable Integer allocatedOutboundPorts;
 
@@ -25,6 +31,9 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.allocatedOutboundPorts == null ? Optional.empty() : Optional.ofNullable(this.allocatedOutboundPorts);
     }
 
+    /**
+     * A reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend IPs.
+     */
     @InputImport(name="backendAddressPool", required=true)
     private final SubResourceResponse backendAddressPool;
 
@@ -32,6 +41,9 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.backendAddressPool;
     }
 
+    /**
+     * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
+     */
     @InputImport(name="enableTcpReset")
     private final @Nullable Boolean enableTcpReset;
 
@@ -39,6 +51,9 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.enableTcpReset == null ? Optional.empty() : Optional.ofNullable(this.enableTcpReset);
     }
 
+    /**
+     * A unique read-only string that changes whenever the resource is updated.
+     */
     @InputImport(name="etag", required=true)
     private final String etag;
 
@@ -46,6 +61,9 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.etag;
     }
 
+    /**
+     * The Frontend IP addresses of the load balancer.
+     */
     @InputImport(name="frontendIPConfigurations", required=true)
     private final List<SubResourceResponse> frontendIPConfigurations;
 
@@ -53,6 +71,9 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.frontendIPConfigurations;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -60,6 +81,9 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The timeout for the TCP idle connection.
+     */
     @InputImport(name="idleTimeoutInMinutes")
     private final @Nullable Integer idleTimeoutInMinutes;
 
@@ -67,6 +91,9 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.idleTimeoutInMinutes == null ? Optional.empty() : Optional.ofNullable(this.idleTimeoutInMinutes);
     }
 
+    /**
+     * The name of the resource that is unique within the set of outbound rules used by the load balancer. This name can be used to access the resource.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -74,6 +101,9 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The protocol for the outbound rule in load balancer.
+     */
     @InputImport(name="protocol", required=true)
     private final String protocol;
 
@@ -81,6 +111,9 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.protocol;
     }
 
+    /**
+     * The provisioning state of the outbound rule resource.
+     */
     @InputImport(name="provisioningState", required=true)
     private final String provisioningState;
 
@@ -88,6 +121,9 @@ public final class OutboundRuleResponse extends io.pulumi.resources.InvokeArgs {
         return this.provisioningState;
     }
 
+    /**
+     * Type of the resource.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

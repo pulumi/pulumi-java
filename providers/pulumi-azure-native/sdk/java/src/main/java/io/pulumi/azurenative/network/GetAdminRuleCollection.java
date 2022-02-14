@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetAdminRuleCollection {
+/**
+ * Defines the rule collection.
+API Version: 2021-02-01-preview.
+ *
+ * Defines the rule collection.
+ */
     public static CompletableFuture<GetAdminRuleCollectionResult> invokeAsync(GetAdminRuleCollectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:network:getAdminRuleCollection", TypeShape.of(GetAdminRuleCollectionResult.class), args == null ? GetAdminRuleCollectionArgs.Empty : args, Utilities.withVersion(options));
     }

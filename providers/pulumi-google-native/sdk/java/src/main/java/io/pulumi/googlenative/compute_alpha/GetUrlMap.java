@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetUrlMap {
+/**
+ * Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
+ */
     public static CompletableFuture<GetUrlMapResult> invokeAsync(GetUrlMapArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getUrlMap", TypeShape.of(GetUrlMapResult.class), args == null ? GetUrlMapArgs.Empty : args, Utilities.withVersion(options));
     }

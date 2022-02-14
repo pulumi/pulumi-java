@@ -16,10 +16,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApplicationGatewayBackendHealthOnDemandArgs Empty = new GetApplicationGatewayBackendHealthOnDemandArgs();
 
+    /**
+     * The name of the application gateway.
+     */
     @InputImport(name="applicationGatewayName", required=true)
     private final String applicationGatewayName;
 
@@ -27,6 +33,9 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
         return this.applicationGatewayName;
     }
 
+    /**
+     * Reference to backend pool of application gateway to which probe request will be sent.
+     */
     @InputImport(name="backendAddressPool")
     private final @Nullable SubResource backendAddressPool;
 
@@ -34,6 +43,9 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
         return this.backendAddressPool == null ? Optional.empty() : Optional.ofNullable(this.backendAddressPool);
     }
 
+    /**
+     * Reference to backend http setting of application gateway to be used for test probe.
+     */
     @InputImport(name="backendHttpSettings")
     private final @Nullable SubResource backendHttpSettings;
 
@@ -41,6 +53,9 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
         return this.backendHttpSettings == null ? Optional.empty() : Optional.ofNullable(this.backendHttpSettings);
     }
 
+    /**
+     * Expands BackendAddressPool and BackendHttpSettings referenced in backend health.
+     */
     @InputImport(name="expand")
     private final @Nullable String expand;
 
@@ -48,6 +63,9 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
     }
 
+    /**
+     * Host name to send the probe to.
+     */
     @InputImport(name="host")
     private final @Nullable String host;
 
@@ -55,6 +73,9 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
         return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
     }
 
+    /**
+     * Criterion for classifying a healthy probe response.
+     */
     @InputImport(name="match")
     private final @Nullable ApplicationGatewayProbeHealthResponseMatch match;
 
@@ -62,6 +83,9 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
         return this.match == null ? Optional.empty() : Optional.ofNullable(this.match);
     }
 
+    /**
+     * Relative path of probe. Valid path starts from '/'. Probe is sent to <Protocol>://<host>:<port><path>.
+     */
     @InputImport(name="path")
     private final @Nullable String path;
 
@@ -69,6 +93,9 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
+    /**
+     * Whether the host header should be picked from the backend http settings. Default value is false.
+     */
     @InputImport(name="pickHostNameFromBackendHttpSettings")
     private final @Nullable Boolean pickHostNameFromBackendHttpSettings;
 
@@ -76,6 +103,9 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
         return this.pickHostNameFromBackendHttpSettings == null ? Optional.empty() : Optional.ofNullable(this.pickHostNameFromBackendHttpSettings);
     }
 
+    /**
+     * The protocol used for the probe.
+     */
     @InputImport(name="protocol")
     private final @Nullable Either<String,ApplicationGatewayProtocol> protocol;
 
@@ -83,6 +113,9 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
         return this.protocol == null ? null : this.protocol;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -90,6 +123,9 @@ public final class GetApplicationGatewayBackendHealthOnDemandArgs extends io.pul
         return this.resourceGroupName;
     }
 
+    /**
+     * The probe timeout in seconds. Probe marked as failed if valid response is not received with this timeout period. Acceptable values are from 1 second to 86400 seconds.
+     */
     @InputImport(name="timeout")
     private final @Nullable Integer timeout;
 

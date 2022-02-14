@@ -14,10 +14,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Information about the container service backing the cluster
+ */
 public final class AcsClusterPropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final AcsClusterPropertiesResponse Empty = new AcsClusterPropertiesResponse();
 
+    /**
+     * The number of agent nodes in the Container Service. This can be changed to scale the cluster.
+     */
     @InputImport(name="agentCount")
     private final @Nullable Integer agentCount;
 
@@ -25,6 +31,9 @@ public final class AcsClusterPropertiesResponse extends io.pulumi.resources.Invo
         return this.agentCount == null ? Optional.empty() : Optional.ofNullable(this.agentCount);
     }
 
+    /**
+     * The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.
+     */
     @InputImport(name="agentVmSize")
     private final @Nullable String agentVmSize;
 
@@ -32,6 +41,9 @@ public final class AcsClusterPropertiesResponse extends io.pulumi.resources.Invo
         return this.agentVmSize == null ? Optional.empty() : Optional.ofNullable(this.agentVmSize);
     }
 
+    /**
+     * The FQDN of the cluster. 
+     */
     @InputImport(name="clusterFqdn", required=true)
     private final String clusterFqdn;
 
@@ -39,6 +51,9 @@ public final class AcsClusterPropertiesResponse extends io.pulumi.resources.Invo
         return this.clusterFqdn;
     }
 
+    /**
+     * The number of master nodes in the container service.
+     */
     @InputImport(name="masterCount")
     private final @Nullable Integer masterCount;
 
@@ -46,6 +61,9 @@ public final class AcsClusterPropertiesResponse extends io.pulumi.resources.Invo
         return this.masterCount == null ? Optional.empty() : Optional.ofNullable(this.masterCount);
     }
 
+    /**
+     * Orchestrator specific properties
+     */
     @InputImport(name="orchestratorProperties")
     private final @Nullable KubernetesClusterPropertiesResponse orchestratorProperties;
 
@@ -53,6 +71,9 @@ public final class AcsClusterPropertiesResponse extends io.pulumi.resources.Invo
         return this.orchestratorProperties == null ? Optional.empty() : Optional.ofNullable(this.orchestratorProperties);
     }
 
+    /**
+     * Type of orchestrator. It cannot be changed once the cluster is created.
+     */
     @InputImport(name="orchestratorType", required=true)
     private final String orchestratorType;
 
@@ -60,6 +81,9 @@ public final class AcsClusterPropertiesResponse extends io.pulumi.resources.Invo
         return this.orchestratorType;
     }
 
+    /**
+     * The system services deployed to the cluster
+     */
     @InputImport(name="systemServices")
     private final @Nullable List<SystemServiceResponse> systemServices;
 

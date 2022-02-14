@@ -9,10 +9,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Cosmos DB table resource object
+ */
 public final class TableResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TableResourceArgs Empty = new TableResourceArgs();
 
+    /**
+     * Name of the Cosmos DB table
+     */
     @InputImport(name="id", required=true)
     private final Input<String> id;
 

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.features;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.features.SubscriptionFeatureRegistrationArgs;
 import io.pulumi.azurenative.features.outputs.SubscriptionFeatureRegistrationResponseProperties;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,27 +14,135 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * Subscription feature registration details
+API Version: 2021-07-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Creates a feature registration
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var subscriptionFeatureRegistration = new AzureNative.Features.SubscriptionFeatureRegistration("subscriptionFeatureRegistration", new AzureNative.Features.SubscriptionFeatureRegistrationArgs
+        {
+            FeatureName = "testFeature",
+            Properties = ,
+            ProviderNamespace = "subscriptionFeatureRegistrationGroupTestRG",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	features "github.com/pulumi/pulumi-azure-native/sdk/go/azure/features"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := features.NewSubscriptionFeatureRegistration(ctx, "subscriptionFeatureRegistration", &features.SubscriptionFeatureRegistrationArgs{
+			FeatureName:       pulumi.String("testFeature"),
+			Properties:        nil,
+			ProviderNamespace: pulumi.String("subscriptionFeatureRegistrationGroupTestRG"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const subscriptionFeatureRegistration = new azure_native.features.SubscriptionFeatureRegistration("subscriptionFeatureRegistration", {
+    featureName: "testFeature",
+    properties: {},
+    providerNamespace: "subscriptionFeatureRegistrationGroupTestRG",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+subscription_feature_registration = azure_native.features.SubscriptionFeatureRegistration("subscriptionFeatureRegistration",
+    feature_name="testFeature",
+    properties=azure_native.features.SubscriptionFeatureRegistrationPropertiesArgs(),
+    provider_namespace="subscriptionFeatureRegistrationGroupTestRG")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:features:SubscriptionFeatureRegistration testFeature /subscriptions/00000000-1111-2222-3333-444444444444/providers/Microsoft.Features/featureProviders/Microsoft.TestRP/subscriptionFeatureRegistrations/testFeature 
+```
+
+ */
 @ResourceType(type="azure-native:features:SubscriptionFeatureRegistration")
 public class SubscriptionFeatureRegistration extends io.pulumi.resources.CustomResource {
+    /**
+     * Azure resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Azure resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * 
+     */
     @OutputExport(name="properties", type=SubscriptionFeatureRegistrationResponseProperties.class, parameters={})
     private Output<SubscriptionFeatureRegistrationResponseProperties> properties;
 
     public Output<SubscriptionFeatureRegistrationResponseProperties> getProperties() {
         return this.properties;
     }
+    /**
+     * Azure resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Azure resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public SubscriptionFeatureRegistration(String name, SubscriptionFeatureRegistrationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:features:SubscriptionFeatureRegistration", name, args == null ? SubscriptionFeatureRegistrationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -54,6 +161,14 @@ public class SubscriptionFeatureRegistration extends io.pulumi.resources.CustomR
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static SubscriptionFeatureRegistration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SubscriptionFeatureRegistration(name, id, options);
     }

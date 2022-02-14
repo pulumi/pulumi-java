@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The type of backup which needs to be taken.
+ */
     @EnumType
     public enum BackupType {
+/**
+ * 
+ */
         LocalSnapshot("LocalSnapshot"),
+/**
+ * 
+ */
         CloudSnapshot("CloudSnapshot");
 
         private final String value;

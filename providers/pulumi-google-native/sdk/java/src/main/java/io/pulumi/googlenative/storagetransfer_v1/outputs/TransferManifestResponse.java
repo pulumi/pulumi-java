@@ -9,6 +9,9 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class TransferManifestResponse {
+/**
+ * Specifies the path to the manifest in Cloud Storage. The Google-managed service account for the transfer must have `storage.objects.get` permission for this object. An example path is `gs://bucket_name/path/manifest.csv`.
+ */
     private final String location;
 
     @OutputCustomType.Constructor({"location"})
@@ -16,6 +19,9 @@ public final class TransferManifestResponse {
         this.location = Objects.requireNonNull(location);
     }
 
+/**
+ * Specifies the path to the manifest in Cloud Storage. The Google-managed service account for the transfer must have `storage.objects.get` permission for this object. An example path is `gs://bucket_name/path/manifest.csv`.
+ */
     public String getLocation() {
         return this.location;
     }

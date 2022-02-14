@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Metadata for classification annotations.
+ */
 public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs Empty = new GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs();
 
+    /**
+     * Whether the classification task is multi-label or not.
+     */
     @InputImport(name="isMultiLabel")
     private final @Nullable Input<Boolean> isMultiLabel;
 

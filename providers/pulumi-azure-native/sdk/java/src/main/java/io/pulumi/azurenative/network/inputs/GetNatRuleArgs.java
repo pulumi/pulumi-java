@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetNatRuleArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNatRuleArgs Empty = new GetNatRuleArgs();
 
+    /**
+     * The name of the gateway.
+     */
     @InputImport(name="gatewayName", required=true)
     private final String gatewayName;
 
@@ -19,6 +25,9 @@ public final class GetNatRuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.gatewayName;
     }
 
+    /**
+     * The name of the nat rule.
+     */
     @InputImport(name="natRuleName", required=true)
     private final String natRuleName;
 
@@ -26,6 +35,9 @@ public final class GetNatRuleArgs extends io.pulumi.resources.InvokeArgs {
         return this.natRuleName;
     }
 
+    /**
+     * The resource group name of the VpnGateway.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 

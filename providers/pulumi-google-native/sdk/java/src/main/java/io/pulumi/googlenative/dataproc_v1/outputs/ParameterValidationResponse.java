@@ -10,7 +10,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ParameterValidationResponse {
+/**
+ * Validation based on regular expressions.
+ */
     private final RegexValidationResponse regex;
+/**
+ * Validation based on a list of allowed values.
+ */
     private final ValueValidationResponse values;
 
     @OutputCustomType.Constructor({"regex","values"})
@@ -21,9 +27,15 @@ public final class ParameterValidationResponse {
         this.values = Objects.requireNonNull(values);
     }
 
+/**
+ * Validation based on regular expressions.
+ */
     public RegexValidationResponse getRegex() {
         return this.regex;
     }
+/**
+ * Validation based on a list of allowed values.
+ */
     public ValueValidationResponse getValues() {
         return this.values;
     }

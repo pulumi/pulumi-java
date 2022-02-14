@@ -17,15 +17,46 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class AzureMLUpdateResourceActivityResponse {
+/**
+ * Activity depends on condition.
+ */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
+/**
+ * Activity description.
+ */
     private final @Nullable String description;
+/**
+ * Linked service reference.
+ */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+/**
+ * Activity name.
+ */
     private final String name;
+/**
+ * Activity policy.
+ */
     private final @Nullable ActivityPolicyResponse policy;
+/**
+ * The relative file path in trainedModelLinkedService to represent the .ilearner file that will be uploaded by the update operation.  Type: string (or Expression with resultType string).
+ */
     private final Object trainedModelFilePath;
+/**
+ * Name of Azure Storage linked service holding the .ilearner file that will be uploaded by the update operation.
+ */
     private final LinkedServiceReferenceResponse trainedModelLinkedServiceName;
+/**
+ * Name of the Trained Model module in the Web Service experiment to be updated. Type: string (or Expression with resultType string).
+ */
     private final Object trainedModelName;
+/**
+ * Type of activity.
+Expected value is 'AzureMLUpdateResource'.
+ */
     private final String type;
+/**
+ * Activity user properties.
+ */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
     @OutputCustomType.Constructor({"dependsOn","description","linkedServiceName","name","policy","trainedModelFilePath","trainedModelLinkedServiceName","trainedModelName","type","userProperties"})
@@ -52,33 +83,64 @@ public final class AzureMLUpdateResourceActivityResponse {
         this.userProperties = userProperties;
     }
 
+/**
+ * Activity depends on condition.
+ */
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
+/**
+ * Activity description.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * Linked service reference.
+ */
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
+/**
+ * Activity name.
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Activity policy.
+ */
     public Optional<ActivityPolicyResponse> getPolicy() {
         return Optional.ofNullable(this.policy);
     }
+/**
+ * The relative file path in trainedModelLinkedService to represent the .ilearner file that will be uploaded by the update operation.  Type: string (or Expression with resultType string).
+ */
     public Object getTrainedModelFilePath() {
         return this.trainedModelFilePath;
     }
+/**
+ * Name of Azure Storage linked service holding the .ilearner file that will be uploaded by the update operation.
+ */
     public LinkedServiceReferenceResponse getTrainedModelLinkedServiceName() {
         return this.trainedModelLinkedServiceName;
     }
+/**
+ * Name of the Trained Model module in the Web Service experiment to be updated. Type: string (or Expression with resultType string).
+ */
     public Object getTrainedModelName() {
         return this.trainedModelName;
     }
+/**
+ * Type of activity.
+Expected value is 'AzureMLUpdateResource'.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Activity user properties.
+ */
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

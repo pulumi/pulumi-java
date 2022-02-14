@@ -12,7 +12,13 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SizeAvailabilityResponse {
+/**
+ * Whether or not this size category is available
+ */
     private final @Nullable Boolean isAvailable;
+/**
+ * The category of the size (Basic, Standard, Performance).
+ */
     private final @Nullable String sizeCategory;
 
     @OutputCustomType.Constructor({"isAvailable","sizeCategory"})
@@ -23,9 +29,15 @@ public final class SizeAvailabilityResponse {
         this.sizeCategory = sizeCategory;
     }
 
+/**
+ * Whether or not this size category is available
+ */
     public Optional<Boolean> getIsAvailable() {
         return Optional.ofNullable(this.isAvailable);
     }
+/**
+ * The category of the size (Basic, Standard, Performance).
+ */
     public Optional<String> getSizeCategory() {
         return Optional.ofNullable(this.sizeCategory);
     }

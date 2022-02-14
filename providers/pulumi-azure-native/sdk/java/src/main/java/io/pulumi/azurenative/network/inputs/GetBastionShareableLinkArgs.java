@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetBastionShareableLinkArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBastionShareableLinkArgs Empty = new GetBastionShareableLinkArgs();
 
+    /**
+     * The name of the Bastion Host.
+     */
     @InputImport(name="bastionHostName", required=true)
     private final String bastionHostName;
 
@@ -23,6 +29,9 @@ public final class GetBastionShareableLinkArgs extends io.pulumi.resources.Invok
         return this.bastionHostName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -30,6 +39,9 @@ public final class GetBastionShareableLinkArgs extends io.pulumi.resources.Invok
         return this.resourceGroupName;
     }
 
+    /**
+     * List of VM references.
+     */
     @InputImport(name="vms")
     private final @Nullable List<BastionShareableLink> vms;
 

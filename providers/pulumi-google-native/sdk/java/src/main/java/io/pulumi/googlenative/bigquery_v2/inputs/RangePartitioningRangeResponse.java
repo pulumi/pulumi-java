@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * [TrustedTester] [Required] Defines the ranges for range partitioning.
+ */
 public final class RangePartitioningRangeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RangePartitioningRangeResponse Empty = new RangePartitioningRangeResponse();
 
+    /**
+     * [TrustedTester] [Required] The end of range partitioning, exclusive.
+     */
     @InputImport(name="end", required=true)
     private final String end;
 
@@ -19,6 +25,9 @@ public final class RangePartitioningRangeResponse extends io.pulumi.resources.In
         return this.end;
     }
 
+    /**
+     * [TrustedTester] [Required] The width of each interval.
+     */
     @InputImport(name="interval", required=true)
     private final String interval;
 
@@ -26,6 +35,9 @@ public final class RangePartitioningRangeResponse extends io.pulumi.resources.In
         return this.interval;
     }
 
+    /**
+     * [TrustedTester] [Required] The start of range partitioning, inclusive.
+     */
     @InputImport(name="start", required=true)
     private final String start;
 

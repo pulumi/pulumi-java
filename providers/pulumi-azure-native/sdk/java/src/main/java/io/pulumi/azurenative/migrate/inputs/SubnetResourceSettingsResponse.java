@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the virtual network subnets resource settings.
+ */
 public final class SubnetResourceSettingsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubnetResourceSettingsResponse Empty = new SubnetResourceSettingsResponse();
 
+    /**
+     * Gets or sets address prefix for the subnet.
+     */
     @InputImport(name="addressPrefix")
     private final @Nullable String addressPrefix;
 
@@ -22,6 +28,9 @@ public final class SubnetResourceSettingsResponse extends io.pulumi.resources.In
         return this.addressPrefix == null ? Optional.empty() : Optional.ofNullable(this.addressPrefix);
     }
 
+    /**
+     * Gets or sets the Subnet name.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -29,6 +38,9 @@ public final class SubnetResourceSettingsResponse extends io.pulumi.resources.In
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * Defines reference to NSG.
+     */
     @InputImport(name="networkSecurityGroup")
     private final @Nullable NsgReferenceResponse networkSecurityGroup;
 

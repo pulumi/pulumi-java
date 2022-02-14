@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetPrivateLinkScopedResourceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPrivateLinkScopedResourceArgs Empty = new GetPrivateLinkScopedResourceArgs();
 
+    /**
+     * The name of the scoped resource object.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 
@@ -19,6 +25,9 @@ public final class GetPrivateLinkScopedResourceArgs extends io.pulumi.resources.
         return this.name;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final String resourceGroupName;
 
@@ -26,6 +35,9 @@ public final class GetPrivateLinkScopedResourceArgs extends io.pulumi.resources.
         return this.resourceGroupName;
     }
 
+    /**
+     * The name of the Azure Arc PrivateLinkScope resource.
+     */
     @InputImport(name="scopeName", required=true)
     private final String scopeName;
 

@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.sql.JobTargetGroupArgs;
 import io.pulumi.azurenative.sql.outputs.JobTargetResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,27 +14,337 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * A group of job targets.
+API Version: 2020-11-01-preview.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create or update a target group with all properties.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var jobTargetGroup = new AzureNative.Sql.JobTargetGroup("jobTargetGroup", new AzureNative.Sql.JobTargetGroupArgs
+        {
+            JobAgentName = "agent1",
+            Members = 
+            {
+                new AzureNative.Sql.Inputs.JobTargetArgs
+                {
+                    DatabaseName = "database1",
+                    MembershipType = "Exclude",
+                    ServerName = "server1",
+                    Type = "SqlDatabase",
+                },
+                new AzureNative.Sql.Inputs.JobTargetArgs
+                {
+                    MembershipType = "Include",
+                    RefreshCredential = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
+                    ServerName = "server1",
+                    Type = "SqlServer",
+                },
+                new AzureNative.Sql.Inputs.JobTargetArgs
+                {
+                    ElasticPoolName = "pool1",
+                    MembershipType = "Include",
+                    RefreshCredential = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
+                    ServerName = "server2",
+                    Type = "SqlElasticPool",
+                },
+                new AzureNative.Sql.Inputs.JobTargetArgs
+                {
+                    MembershipType = "Include",
+                    RefreshCredential = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
+                    ServerName = "server3",
+                    ShardMapName = "shardMap1",
+                    Type = "SqlShardMap",
+                },
+            },
+            ResourceGroupName = "group1",
+            ServerName = "server1",
+            TargetGroupName = "targetGroup1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewJobTargetGroup(ctx, "jobTargetGroup", &sql.JobTargetGroupArgs{
+			JobAgentName: pulumi.String("agent1"),
+			Members: sql.JobTargetArray{
+				&sql.JobTargetArgs{
+					DatabaseName:   pulumi.String("database1"),
+					MembershipType: "Exclude",
+					ServerName:     pulumi.String("server1"),
+					Type:           pulumi.String("SqlDatabase"),
+				},
+				&sql.JobTargetArgs{
+					MembershipType:    "Include",
+					RefreshCredential: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential"),
+					ServerName:        pulumi.String("server1"),
+					Type:              pulumi.String("SqlServer"),
+				},
+				&sql.JobTargetArgs{
+					ElasticPoolName:   pulumi.String("pool1"),
+					MembershipType:    "Include",
+					RefreshCredential: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential"),
+					ServerName:        pulumi.String("server2"),
+					Type:              pulumi.String("SqlElasticPool"),
+				},
+				&sql.JobTargetArgs{
+					MembershipType:    "Include",
+					RefreshCredential: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential"),
+					ServerName:        pulumi.String("server3"),
+					ShardMapName:      pulumi.String("shardMap1"),
+					Type:              pulumi.String("SqlShardMap"),
+				},
+			},
+			ResourceGroupName: pulumi.String("group1"),
+			ServerName:        pulumi.String("server1"),
+			TargetGroupName:   pulumi.String("targetGroup1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const jobTargetGroup = new azure_native.sql.JobTargetGroup("jobTargetGroup", {
+    jobAgentName: "agent1",
+    members: [
+        {
+            databaseName: "database1",
+            membershipType: "Exclude",
+            serverName: "server1",
+            type: "SqlDatabase",
+        },
+        {
+            membershipType: "Include",
+            refreshCredential: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
+            serverName: "server1",
+            type: "SqlServer",
+        },
+        {
+            elasticPoolName: "pool1",
+            membershipType: "Include",
+            refreshCredential: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
+            serverName: "server2",
+            type: "SqlElasticPool",
+        },
+        {
+            membershipType: "Include",
+            refreshCredential: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
+            serverName: "server3",
+            shardMapName: "shardMap1",
+            type: "SqlShardMap",
+        },
+    ],
+    resourceGroupName: "group1",
+    serverName: "server1",
+    targetGroupName: "targetGroup1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+job_target_group = azure_native.sql.JobTargetGroup("jobTargetGroup",
+    job_agent_name="agent1",
+    members=[
+        azure_native.sql.JobTargetArgs(
+            database_name="database1",
+            membership_type="Exclude",
+            server_name="server1",
+            type="SqlDatabase",
+        ),
+        azure_native.sql.JobTargetArgs(
+            membership_type="Include",
+            refresh_credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
+            server_name="server1",
+            type="SqlServer",
+        ),
+        azure_native.sql.JobTargetArgs(
+            elastic_pool_name="pool1",
+            membership_type="Include",
+            refresh_credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
+            server_name="server2",
+            type="SqlElasticPool",
+        ),
+        azure_native.sql.JobTargetArgs(
+            membership_type="Include",
+            refresh_credential="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/credentials/testCredential",
+            server_name="server3",
+            shard_map_name="shardMap1",
+            type="SqlShardMap",
+        ),
+    ],
+    resource_group_name="group1",
+    server_name="server1",
+    target_group_name="targetGroup1")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### Create or update a target group with minimal properties.
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var jobTargetGroup = new AzureNative.Sql.JobTargetGroup("jobTargetGroup", new AzureNative.Sql.JobTargetGroupArgs
+        {
+            JobAgentName = "agent1",
+            Members = {},
+            ResourceGroupName = "group1",
+            ServerName = "server1",
+            TargetGroupName = "targetGroup1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	sql "github.com/pulumi/pulumi-azure-native/sdk/go/azure/sql"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sql.NewJobTargetGroup(ctx, "jobTargetGroup", &sql.JobTargetGroupArgs{
+			JobAgentName:      pulumi.String("agent1"),
+			Members:           sql.JobTargetArray{},
+			ResourceGroupName: pulumi.String("group1"),
+			ServerName:        pulumi.String("server1"),
+			TargetGroupName:   pulumi.String("targetGroup1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const jobTargetGroup = new azure_native.sql.JobTargetGroup("jobTargetGroup", {
+    jobAgentName: "agent1",
+    members: [],
+    resourceGroupName: "group1",
+    serverName: "server1",
+    targetGroupName: "targetGroup1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+job_target_group = azure_native.sql.JobTargetGroup("jobTargetGroup",
+    job_agent_name="agent1",
+    members=[],
+    resource_group_name="group1",
+    server_name="server1",
+    target_group_name="targetGroup1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:sql:JobTargetGroup targetGroup1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/group1/providers/Microsoft.Sql/servers/server1/jobAgents/agent1/targetGroups/targetGroup1 
+```
+
+ */
 @ResourceType(type="azure-native:sql:JobTargetGroup")
 public class JobTargetGroup extends io.pulumi.resources.CustomResource {
+    /**
+     * Members of the target group.
+     */
     @OutputExport(name="members", type=List.class, parameters={JobTargetResponse.class})
     private Output<List<JobTargetResponse>> members;
 
+    /**
+     * @return Members of the target group.
+     */
     public Output<List<JobTargetResponse>> getMembers() {
         return this.members;
     }
+    /**
+     * Resource name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Resource name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Resource type.
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Resource type.
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public JobTargetGroup(String name, JobTargetGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:JobTargetGroup", name, args == null ? JobTargetGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -60,6 +369,14 @@ public class JobTargetGroup extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static JobTargetGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new JobTargetGroup(name, id, options);
     }

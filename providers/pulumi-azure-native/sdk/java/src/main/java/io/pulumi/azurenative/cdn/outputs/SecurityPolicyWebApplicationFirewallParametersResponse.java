@@ -14,8 +14,18 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class SecurityPolicyWebApplicationFirewallParametersResponse {
+/**
+ * Waf associations
+ */
     private final @Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations;
+/**
+ * The type of the Security policy to create.
+Expected value is 'WebApplicationFirewall'.
+ */
     private final String type;
+/**
+ * Resource ID.
+ */
     private final @Nullable ResourceReferenceResponse wafPolicy;
 
     @OutputCustomType.Constructor({"associations","type","wafPolicy"})
@@ -28,12 +38,22 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse {
         this.wafPolicy = wafPolicy;
     }
 
+/**
+ * Waf associations
+ */
     public List<SecurityPolicyWebApplicationFirewallAssociationResponse> getAssociations() {
         return this.associations == null ? List.of() : this.associations;
     }
+/**
+ * The type of the Security policy to create.
+Expected value is 'WebApplicationFirewall'.
+ */
     public String getType() {
         return this.type;
     }
+/**
+ * Resource ID.
+ */
     public Optional<ResourceReferenceResponse> getWafPolicy() {
         return Optional.ofNullable(this.wafPolicy);
     }

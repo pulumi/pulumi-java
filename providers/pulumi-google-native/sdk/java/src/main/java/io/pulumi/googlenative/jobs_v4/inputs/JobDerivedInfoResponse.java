@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * Derived details about the job posting.
+ */
 public final class JobDerivedInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final JobDerivedInfoResponse Empty = new JobDerivedInfoResponse();
 
+    /**
+     * Job categories derived from Job.title and Job.description.
+     */
     @InputImport(name="jobCategories", required=true)
     private final List<String> jobCategories;
 
@@ -21,6 +27,9 @@ public final class JobDerivedInfoResponse extends io.pulumi.resources.InvokeArgs
         return this.jobCategories;
     }
 
+    /**
+     * Structured locations of the job, resolved from Job.addresses. locations are exactly matched to Job.addresses in the same order.
+     */
     @InputImport(name="locations", required=true)
     private final List<LocationResponse> locations;
 

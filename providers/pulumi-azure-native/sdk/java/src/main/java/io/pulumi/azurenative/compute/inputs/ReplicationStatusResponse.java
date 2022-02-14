@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * This is the replication status of the gallery image version.
+ */
 public final class ReplicationStatusResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ReplicationStatusResponse Empty = new ReplicationStatusResponse();
 
+    /**
+     * This is the aggregated replication status based on all the regional replication status flags.
+     */
     @InputImport(name="aggregatedState", required=true)
     private final String aggregatedState;
 
@@ -21,6 +27,9 @@ public final class ReplicationStatusResponse extends io.pulumi.resources.InvokeA
         return this.aggregatedState;
     }
 
+    /**
+     * This is a summary of replication status for each region.
+     */
     @InputImport(name="summary", required=true)
     private final List<RegionalReplicationStatusResponse> summary;
 

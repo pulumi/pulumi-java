@@ -6,6 +6,9 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 import java.util.Objects;
 
 
+/**
+ * One dimension of the matrix of different runs of a step.
+ */
 public final class MatrixDimensionDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MatrixDimensionDefinitionArgs Empty = new MatrixDimensionDefinitionArgs();

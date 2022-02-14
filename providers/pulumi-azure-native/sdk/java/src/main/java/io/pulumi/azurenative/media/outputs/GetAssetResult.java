@@ -12,17 +12,53 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class GetAssetResult {
+/**
+ * The alternate ID of the Asset.
+ */
     private final @Nullable String alternateId;
+/**
+ * The Asset ID.
+ */
     private final String assetId;
+/**
+ * The name of the asset blob container.
+ */
     private final @Nullable String container;
+/**
+ * The creation date of the Asset.
+ */
     private final String created;
+/**
+ * The Asset description.
+ */
     private final @Nullable String description;
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     private final String id;
+/**
+ * The last modified date of the Asset.
+ */
     private final String lastModified;
+/**
+ * The name of the resource
+ */
     private final String name;
+/**
+ * The name of the storage account.
+ */
     private final @Nullable String storageAccountName;
+/**
+ * The Asset encryption format. One of None or MediaStorageEncryption.
+ */
     private final String storageEncryptionFormat;
+/**
+ * The system metadata relating to this resource.
+ */
     private final SystemDataResponse systemData;
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"alternateId","assetId","container","created","description","id","lastModified","name","storageAccountName","storageEncryptionFormat","systemData","type"})
@@ -53,39 +89,75 @@ public final class GetAssetResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * The alternate ID of the Asset.
+ */
     public Optional<String> getAlternateId() {
         return Optional.ofNullable(this.alternateId);
     }
+/**
+ * The Asset ID.
+ */
     public String getAssetId() {
         return this.assetId;
     }
+/**
+ * The name of the asset blob container.
+ */
     public Optional<String> getContainer() {
         return Optional.ofNullable(this.container);
     }
+/**
+ * The creation date of the Asset.
+ */
     public String getCreated() {
         return this.created;
     }
+/**
+ * The Asset description.
+ */
     public Optional<String> getDescription() {
         return Optional.ofNullable(this.description);
     }
+/**
+ * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * The last modified date of the Asset.
+ */
     public String getLastModified() {
         return this.lastModified;
     }
+/**
+ * The name of the resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * The name of the storage account.
+ */
     public Optional<String> getStorageAccountName() {
         return Optional.ofNullable(this.storageAccountName);
     }
+/**
+ * The Asset encryption format. One of None or MediaStorageEncryption.
+ */
     public String getStorageEncryptionFormat() {
         return this.storageEncryptionFormat;
     }
+/**
+ * The system metadata relating to this resource.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+ */
     public String getType() {
         return this.type;
     }

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Ascending is the default sort order
+ */
     @EnumType
     public enum SortOptionsSortOrder {
+/**
+ * 
+ */
         Ascending("ASCENDING"),
+/**
+ * 
+ */
         Descending("DESCENDING");
 
         private final String value;

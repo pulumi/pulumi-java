@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetScanConfig {
+/**
+ * Gets a ScanConfig.
+ */
     public static CompletableFuture<GetScanConfigResult> invokeAsync(GetScanConfigArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:websecurityscanner/v1alpha:getScanConfig", TypeShape.of(GetScanConfigResult.class), args == null ? GetScanConfigArgs.Empty : args, Utilities.withVersion(options));
     }

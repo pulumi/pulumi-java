@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * A field of an index.
+ */
 public final class GoogleFirestoreAdminV1beta1IndexFieldResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleFirestoreAdminV1beta1IndexFieldResponse Empty = new GoogleFirestoreAdminV1beta1IndexFieldResponse();
 
+    /**
+     * The path of the field. Must match the field path specification described by google.firestore.v1beta1.Document.fields. Special field path `__name__` may be used by itself or at the end of a path. `__type__` may be used only at the end of path.
+     */
     @InputImport(name="fieldPath", required=true)
     private final String fieldPath;
 
@@ -19,6 +25,9 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldResponse extends io.pulu
         return this.fieldPath;
     }
 
+    /**
+     * The field's mode.
+     */
     @InputImport(name="mode", required=true)
     private final String mode;
 

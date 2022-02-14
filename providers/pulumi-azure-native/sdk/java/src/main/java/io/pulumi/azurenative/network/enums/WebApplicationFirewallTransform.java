@@ -8,13 +8,34 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Transforms applied before matching.
+ */
     @EnumType
     public enum WebApplicationFirewallTransform {
+/**
+ * 
+ */
         Lowercase("Lowercase"),
+/**
+ * 
+ */
         Trim("Trim"),
+/**
+ * 
+ */
         UrlDecode("UrlDecode"),
+/**
+ * 
+ */
         UrlEncode("UrlEncode"),
+/**
+ * 
+ */
         RemoveNulls("RemoveNulls"),
+/**
+ * 
+ */
         HtmlEntityDecode("HtmlEntityDecode");
 
         private final String value;

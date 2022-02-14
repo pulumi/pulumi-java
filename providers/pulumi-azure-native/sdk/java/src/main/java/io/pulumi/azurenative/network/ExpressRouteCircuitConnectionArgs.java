@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ExpressRouteCircuitConnectionArgs Empty = new ExpressRouteCircuitConnectionArgs();
 
+    /**
+     * /29 IP address space to carve out Customer addresses for tunnels.
+     */
     @InputImport(name="addressPrefix")
     private final @Nullable Input<String> addressPrefix;
 
@@ -23,6 +29,9 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
         return this.addressPrefix == null ? Input.empty() : this.addressPrefix;
     }
 
+    /**
+     * The authorization key.
+     */
     @InputImport(name="authorizationKey")
     private final @Nullable Input<String> authorizationKey;
 
@@ -30,6 +39,9 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
         return this.authorizationKey == null ? Input.empty() : this.authorizationKey;
     }
 
+    /**
+     * The name of the express route circuit.
+     */
     @InputImport(name="circuitName", required=true)
     private final Input<String> circuitName;
 
@@ -37,6 +49,9 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
         return this.circuitName;
     }
 
+    /**
+     * The name of the express route circuit connection.
+     */
     @InputImport(name="connectionName")
     private final @Nullable Input<String> connectionName;
 
@@ -44,6 +59,9 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
         return this.connectionName == null ? Input.empty() : this.connectionName;
     }
 
+    /**
+     * Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.
+     */
     @InputImport(name="expressRouteCircuitPeering")
     private final @Nullable Input<SubResourceArgs> expressRouteCircuitPeering;
 
@@ -51,6 +69,9 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
         return this.expressRouteCircuitPeering == null ? Input.empty() : this.expressRouteCircuitPeering;
     }
 
+    /**
+     * Resource ID.
+     */
     @InputImport(name="id")
     private final @Nullable Input<String> id;
 
@@ -58,6 +79,9 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
         return this.id == null ? Input.empty() : this.id;
     }
 
+    /**
+     * IPv6 Address PrefixProperties of the express route circuit connection.
+     */
     @InputImport(name="ipv6CircuitConnectionConfig")
     private final @Nullable Input<Ipv6CircuitConnectionConfigArgs> ipv6CircuitConnectionConfig;
 
@@ -65,6 +89,9 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
         return this.ipv6CircuitConnectionConfig == null ? Input.empty() : this.ipv6CircuitConnectionConfig;
     }
 
+    /**
+     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -72,6 +99,9 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * Reference to Express Route Circuit Private Peering Resource of the peered circuit.
+     */
     @InputImport(name="peerExpressRouteCircuitPeering")
     private final @Nullable Input<SubResourceArgs> peerExpressRouteCircuitPeering;
 
@@ -79,6 +109,9 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
         return this.peerExpressRouteCircuitPeering == null ? Input.empty() : this.peerExpressRouteCircuitPeering;
     }
 
+    /**
+     * The name of the peering.
+     */
     @InputImport(name="peeringName", required=true)
     private final Input<String> peeringName;
 
@@ -86,6 +119,9 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
         return this.peeringName;
     }
 
+    /**
+     * The name of the resource group.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 

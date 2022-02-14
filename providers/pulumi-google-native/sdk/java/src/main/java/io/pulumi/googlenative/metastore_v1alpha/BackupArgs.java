@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackupArgs Empty = new BackupArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="backupId", required=true)
     private final Input<String> backupId;
 
@@ -21,6 +27,9 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.backupId;
     }
 
+    /**
+     * The description of the backup.
+     */
     @InputImport(name="description")
     private final @Nullable Input<String> description;
 
@@ -28,6 +37,9 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.description == null ? Input.empty() : this.description;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -35,6 +47,9 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * Immutable. The relative resource name of the backup, in the following form:projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}
+     */
     @InputImport(name="name")
     private final @Nullable Input<String> name;
 
@@ -42,6 +57,9 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.name == null ? Input.empty() : this.name;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 
@@ -49,6 +67,9 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.project == null ? Input.empty() : this.project;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="requestId")
     private final @Nullable Input<String> requestId;
 
@@ -56,6 +77,9 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="serviceId", required=true)
     private final Input<String> serviceId;
 

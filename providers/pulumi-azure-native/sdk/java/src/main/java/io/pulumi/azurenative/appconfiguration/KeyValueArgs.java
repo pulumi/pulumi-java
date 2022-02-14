@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final KeyValueArgs Empty = new KeyValueArgs();
 
+    /**
+     * The name of the configuration store.
+     */
     @InputImport(name="configStoreName", required=true)
     private final Input<String> configStoreName;
 
@@ -22,6 +28,10 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.configStoreName;
     }
 
+    /**
+     * The content type of the key-value's value.
+Providing a proper content-type can enable transformations of values when they are retrieved by applications.
+     */
     @InputImport(name="contentType")
     private final @Nullable Input<String> contentType;
 
@@ -29,6 +39,9 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.contentType == null ? Input.empty() : this.contentType;
     }
 
+    /**
+     * Identifier of key and label combination. Key and label are joined by $ character. Label is optional.
+     */
     @InputImport(name="keyValueName")
     private final @Nullable Input<String> keyValueName;
 
@@ -36,6 +49,9 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.keyValueName == null ? Input.empty() : this.keyValueName;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +59,9 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * A dictionary of tags that can help identify what a key-value may be applicable for.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 
@@ -50,6 +69,9 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
+    /**
+     * The value of the key-value.
+     */
     @InputImport(name="value")
     private final @Nullable Input<String> value;
 

@@ -13,6 +13,9 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetRegionDisk {
+/**
+ * Returns a specified regional persistent disk.
+ */
     public static CompletableFuture<GetRegionDiskResult> invokeAsync(GetRegionDiskArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("google-native:compute/alpha:getRegionDisk", TypeShape.of(GetRegionDiskResult.class), args == null ? GetRegionDiskArgs.Empty : args, Utilities.withVersion(options));
     }

@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class GetManagementLockByScopeArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetManagementLockByScopeArgs Empty = new GetManagementLockByScopeArgs();
 
+    /**
+     * The name of lock.
+     */
     @InputImport(name="lockName", required=true)
     private final String lockName;
 
@@ -19,6 +25,9 @@ public final class GetManagementLockByScopeArgs extends io.pulumi.resources.Invo
         return this.lockName;
     }
 
+    /**
+     * The scope for the lock. 
+     */
     @InputImport(name="scope", required=true)
     private final String scope;
 

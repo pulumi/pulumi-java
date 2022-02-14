@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class GetAutoscalingPolicyIamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAutoscalingPolicyIamPolicyArgs Empty = new GetAutoscalingPolicyIamPolicyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="autoscalingPolicyId", required=true)
     private final String autoscalingPolicyId;
 
@@ -21,6 +27,9 @@ public final class GetAutoscalingPolicyIamPolicyArgs extends io.pulumi.resources
         return this.autoscalingPolicyId;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="location", required=true)
     private final String location;
 
@@ -28,6 +37,9 @@ public final class GetAutoscalingPolicyIamPolicyArgs extends io.pulumi.resources
         return this.location;
     }
 
+    /**
+     * 
+     */
     @InputImport(name="project")
     private final @Nullable String project;
 

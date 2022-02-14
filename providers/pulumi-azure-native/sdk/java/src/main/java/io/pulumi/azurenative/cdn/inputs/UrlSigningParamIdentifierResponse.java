@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Defines how to identify a parameter for a specific purpose e.g. expires
+ */
 public final class UrlSigningParamIdentifierResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final UrlSigningParamIdentifierResponse Empty = new UrlSigningParamIdentifierResponse();
 
+    /**
+     * Indicates the purpose of the parameter
+     */
     @InputImport(name="paramIndicator", required=true)
     private final String paramIndicator;
 
@@ -19,6 +25,9 @@ public final class UrlSigningParamIdentifierResponse extends io.pulumi.resources
         return this.paramIndicator;
     }
 
+    /**
+     * Parameter name
+     */
     @InputImport(name="paramName", required=true)
     private final String paramName;
 

@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * JSON file format configuration.
+ */
 public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JsonFileFormatArgs Empty = new JsonFileFormatArgs();
 
+    /**
+     * Compression of the loaded JSON file.
+     */
     @InputImport(name="compression")
     private final @Nullable Input<JsonFileFormatCompression> compression;
 
@@ -22,6 +28,9 @@ public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
         return this.compression == null ? Input.empty() : this.compression;
     }
 
+    /**
+     * The schema file format along JSON data files.
+     */
     @InputImport(name="schemaFileFormat")
     private final @Nullable Input<JsonFileFormatSchemaFileFormat> schemaFileFormat;
 

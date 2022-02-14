@@ -8,10 +8,16 @@ import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.DeploymentRespons
 import java.util.Objects;
 
 
+/**
+ * Details of a deployment occurrence.
+ */
 public final class GrafeasV1beta1DeploymentDetailsResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GrafeasV1beta1DeploymentDetailsResponse Empty = new GrafeasV1beta1DeploymentDetailsResponse();
 
+    /**
+     * Deployment history for the resource.
+     */
     @InputImport(name="deployment", required=true)
     private final DeploymentResponse deployment;
 

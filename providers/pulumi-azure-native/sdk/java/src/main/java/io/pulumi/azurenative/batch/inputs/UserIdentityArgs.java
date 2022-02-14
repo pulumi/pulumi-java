@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specify either the userName or autoUser property, but not both.
+ */
 public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserIdentityArgs Empty = new UserIdentityArgs();
 
+    /**
+     * The userName and autoUser properties are mutually exclusive; you must specify one but not both.
+     */
     @InputImport(name="autoUser")
     private final @Nullable Input<AutoUserSpecificationArgs> autoUser;
 
@@ -22,6 +28,9 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
         return this.autoUser == null ? Input.empty() : this.autoUser;
     }
 
+    /**
+     * The userName and autoUser properties are mutually exclusive; you must specify one but not both.
+     */
     @InputImport(name="userName")
     private final @Nullable Input<String> userName;
 

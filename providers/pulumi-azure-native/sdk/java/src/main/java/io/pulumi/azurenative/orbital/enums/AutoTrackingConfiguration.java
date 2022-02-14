@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * Auto track configuration.
+ */
     @EnumType
     public enum AutoTrackingConfiguration {
+/**
+ * 
+ */
         Disabled("disabled"),
+/**
+ * 
+ */
         XBand("xBand"),
+/**
+ * 
+ */
         SBand("sBand");
 
         private final String value;

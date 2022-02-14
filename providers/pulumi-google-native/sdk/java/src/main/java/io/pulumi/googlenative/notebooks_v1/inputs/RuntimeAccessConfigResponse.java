@@ -8,10 +8,16 @@ import java.lang.String;
 import java.util.Objects;
 
 
+/**
+ * Specifies the login configuration for Runtime
+ */
 public final class RuntimeAccessConfigResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RuntimeAccessConfigResponse Empty = new RuntimeAccessConfigResponse();
 
+    /**
+     * The type of access mode this instance.
+     */
     @InputImport(name="accessType", required=true)
     private final String accessType;
 
@@ -19,6 +25,9 @@ public final class RuntimeAccessConfigResponse extends io.pulumi.resources.Invok
         return this.accessType;
     }
 
+    /**
+     * The proxy endpoint that is used to access the runtime.
+     */
     @InputImport(name="proxyUri", required=true)
     private final String proxyUri;
 
@@ -26,6 +35,9 @@ public final class RuntimeAccessConfigResponse extends io.pulumi.resources.Invok
         return this.proxyUri;
     }
 
+    /**
+     * The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.
+     */
     @InputImport(name="runtimeOwner", required=true)
     private final String runtimeOwner;
 

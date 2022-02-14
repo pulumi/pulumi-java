@@ -13,10 +13,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageSyncServiceArgs Empty = new StorageSyncServiceArgs();
 
+    /**
+     * Incoming Traffic Policy
+     */
     @InputImport(name="incomingTrafficPolicy")
     private final @Nullable Input<Either<String,IncomingTrafficPolicy>> incomingTrafficPolicy;
 
@@ -24,6 +30,9 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
         return this.incomingTrafficPolicy == null ? Input.empty() : this.incomingTrafficPolicy;
     }
 
+    /**
+     * Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -31,6 +40,9 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the resource group. The name is case insensitive.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -38,6 +50,9 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of Storage Sync Service resource.
+     */
     @InputImport(name="storageSyncServiceName")
     private final @Nullable Input<String> storageSyncServiceName;
 
@@ -45,6 +60,9 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
         return this.storageSyncServiceName == null ? Input.empty() : this.storageSyncServiceName;
     }
 
+    /**
+     * Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

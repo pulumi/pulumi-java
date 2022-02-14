@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ModelReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModelReferenceArgs Empty = new ModelReferenceArgs();
 
+    /**
+     * [Required] The ID of the dataset containing this model.
+     */
     @InputImport(name="datasetId")
     private final @Nullable Input<String> datasetId;
 
@@ -21,6 +27,9 @@ public final class ModelReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.datasetId == null ? Input.empty() : this.datasetId;
     }
 
+    /**
+     * [Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
+     */
     @InputImport(name="modelId")
     private final @Nullable Input<String> modelId;
 
@@ -28,6 +37,9 @@ public final class ModelReferenceArgs extends io.pulumi.resources.ResourceArgs {
         return this.modelId == null ? Input.empty() : this.modelId;
     }
 
+    /**
+     * [Required] The ID of the project containing this model.
+     */
     @InputImport(name="project")
     private final @Nullable Input<String> project;
 

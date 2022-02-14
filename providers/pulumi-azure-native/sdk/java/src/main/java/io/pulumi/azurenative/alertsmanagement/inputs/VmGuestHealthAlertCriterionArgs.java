@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Specifies the health alert criteria to alert on.
+ */
 public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VmGuestHealthAlertCriterionArgs Empty = new VmGuestHealthAlertCriterionArgs();
 
+    /**
+     * Health states to alert on
+     */
     @InputImport(name="healthStates", required=true)
     private final Input<List<HealthStateArgs>> healthStates;
 
@@ -23,6 +29,9 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
         return this.healthStates;
     }
 
+    /**
+     * Names of health monitor on which to define alert
+     */
     @InputImport(name="monitorNames")
     private final @Nullable Input<List<String>> monitorNames;
 
@@ -30,6 +39,9 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
         return this.monitorNames == null ? Input.empty() : this.monitorNames;
     }
 
+    /**
+     * Names of health monitor type on which to define alert
+     */
     @InputImport(name="monitorTypes")
     private final @Nullable Input<List<String>> monitorTypes;
 
@@ -37,6 +49,10 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
         return this.monitorTypes == null ? Input.empty() : this.monitorTypes;
     }
 
+    /**
+     * specifies the type of the alert criterion.
+Expected value is 'GuestVmHealth'.
+     */
     @InputImport(name="namespace", required=true)
     private final Input<String> namespace;
 

@@ -12,10 +12,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * A copy activity snowflake sink.
+ */
 public final class SnowflakeSinkResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SnowflakeSinkResponse Empty = new SnowflakeSinkResponse();
 
+    /**
+     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     */
     @InputImport(name="disableMetricsCollection")
     private final @Nullable Object disableMetricsCollection;
 
@@ -23,6 +29,9 @@ public final class SnowflakeSinkResponse extends io.pulumi.resources.InvokeArgs 
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
     }
 
+    /**
+     * Snowflake import settings.
+     */
     @InputImport(name="importSettings")
     private final @Nullable SnowflakeImportCopyCommandResponse importSettings;
 
@@ -30,6 +39,9 @@ public final class SnowflakeSinkResponse extends io.pulumi.resources.InvokeArgs 
         return this.importSettings == null ? Optional.empty() : Optional.ofNullable(this.importSettings);
     }
 
+    /**
+     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="maxConcurrentConnections")
     private final @Nullable Object maxConcurrentConnections;
 
@@ -37,6 +49,9 @@ public final class SnowflakeSinkResponse extends io.pulumi.resources.InvokeArgs 
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
     }
 
+    /**
+     * SQL pre-copy script. Type: string (or Expression with resultType string).
+     */
     @InputImport(name="preCopyScript")
     private final @Nullable Object preCopyScript;
 
@@ -44,6 +59,9 @@ public final class SnowflakeSinkResponse extends io.pulumi.resources.InvokeArgs 
         return this.preCopyScript == null ? Optional.empty() : Optional.ofNullable(this.preCopyScript);
     }
 
+    /**
+     * Sink retry count. Type: integer (or Expression with resultType integer).
+     */
     @InputImport(name="sinkRetryCount")
     private final @Nullable Object sinkRetryCount;
 
@@ -51,6 +69,9 @@ public final class SnowflakeSinkResponse extends io.pulumi.resources.InvokeArgs 
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
     }
 
+    /**
+     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="sinkRetryWait")
     private final @Nullable Object sinkRetryWait;
 
@@ -58,6 +79,10 @@ public final class SnowflakeSinkResponse extends io.pulumi.resources.InvokeArgs 
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
     }
 
+    /**
+     * Copy sink type.
+Expected value is 'SnowflakeSink'.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 
@@ -65,6 +90,9 @@ public final class SnowflakeSinkResponse extends io.pulumi.resources.InvokeArgs 
         return this.type;
     }
 
+    /**
+     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     */
     @InputImport(name="writeBatchSize")
     private final @Nullable Object writeBatchSize;
 
@@ -72,6 +100,9 @@ public final class SnowflakeSinkResponse extends io.pulumi.resources.InvokeArgs 
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
     }
 
+    /**
+     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     */
     @InputImport(name="writeBatchTimeout")
     private final @Nullable Object writeBatchTimeout;
 

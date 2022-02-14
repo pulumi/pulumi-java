@@ -6,6 +6,9 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 import java.util.Objects;
 
 
+/**
+ * A Robo test for an iOS application.
+ */
 public final class IosRoboTestResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final IosRoboTestResponse Empty = new IosRoboTestResponse();

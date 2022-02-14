@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class QueryParameterTypeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final QueryParameterTypeResponse Empty = new QueryParameterTypeResponse();
 
+    /**
+     * [Optional] The type of the array's elements, if this is an array.
+     */
     @InputImport(name="arrayType", required=true)
     private final QueryParameterTypeResponse arrayType;
 
@@ -21,6 +27,9 @@ public final class QueryParameterTypeResponse extends io.pulumi.resources.Invoke
         return this.arrayType;
     }
 
+    /**
+     * [Optional] The types of the fields of this struct, in order, if this is a struct.
+     */
     @InputImport(name="structTypes", required=true)
     private final List<QueryParameterTypeStructTypesItemResponse> structTypes;
 
@@ -28,6 +37,9 @@ public final class QueryParameterTypeResponse extends io.pulumi.resources.Invoke
         return this.structTypes;
     }
 
+    /**
+     * [Required] The top level type of this field.
+     */
     @InputImport(name="type", required=true)
     private final String type;
 

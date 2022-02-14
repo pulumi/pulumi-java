@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppServicePlanRouteForVnetArgs Empty = new AppServicePlanRouteForVnetArgs();
 
+    /**
+     * The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
+     */
     @InputImport(name="endAddress")
     private final @Nullable Input<String> endAddress;
 
@@ -23,6 +29,9 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
         return this.endAddress == null ? Input.empty() : this.endAddress;
     }
 
+    /**
+     * Kind of resource.
+     */
     @InputImport(name="kind")
     private final @Nullable Input<String> kind;
 
@@ -30,6 +39,9 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
         return this.kind == null ? Input.empty() : this.kind;
     }
 
+    /**
+     * Name of the App Service plan.
+     */
     @InputImport(name="name", required=true)
     private final Input<String> name;
 
@@ -37,6 +49,9 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
         return this.name;
     }
 
+    /**
+     * Name of the resource group to which the resource belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -44,6 +59,9 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
         return this.resourceGroupName;
     }
 
+    /**
+     * Name of the Virtual Network route.
+     */
     @InputImport(name="routeName")
     private final @Nullable Input<String> routeName;
 
@@ -51,6 +69,14 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
         return this.routeName == null ? Input.empty() : this.routeName;
     }
 
+    /**
+     * The type of route this is:
+DEFAULT - By default, every app has routes to the local address ranges specified by RFC1918
+INHERITED - Routes inherited from the real Virtual Network routes
+STATIC - Static route set on the app only
+
+These values will be used for syncing an app's routes with those from a Virtual Network.
+     */
     @InputImport(name="routeType")
     private final @Nullable Input<Either<String,RouteType>> routeType;
 
@@ -58,6 +84,9 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
         return this.routeType == null ? Input.empty() : this.routeType;
     }
 
+    /**
+     * The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
+     */
     @InputImport(name="startAddress")
     private final @Nullable Input<String> startAddress;
 
@@ -65,6 +94,9 @@ public final class AppServicePlanRouteForVnetArgs extends io.pulumi.resources.Re
         return this.startAddress == null ? Input.empty() : this.startAddress;
     }
 
+    /**
+     * Name of the Virtual Network.
+     */
     @InputImport(name="vnetName", required=true)
     private final Input<String> vnetName;
 

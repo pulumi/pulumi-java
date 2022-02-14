@@ -8,10 +8,16 @@ import java.lang.Double;
 import java.util.Objects;
 
 
+/**
+ * A confidence interval is a range of possible values for the experiment objective you are trying to measure.
+ */
 public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse Empty = new GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse();
 
+    /**
+     * The confidence level used to construct the interval, i.e. there is X% chance that the true value is within this interval.
+     */
     @InputImport(name="confidenceLevel", required=true)
     private final Double confidenceLevel;
 
@@ -19,6 +25,9 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
         return this.confidenceLevel;
     }
 
+    /**
+     * Lower bound of the interval.
+     */
     @InputImport(name="lowerBound", required=true)
     private final Double lowerBound;
 
@@ -26,6 +35,9 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
         return this.lowerBound;
     }
 
+    /**
+     * The percent change between an experiment metric's value and the value for its control.
+     */
     @InputImport(name="ratio", required=true)
     private final Double ratio;
 
@@ -33,6 +45,9 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
         return this.ratio;
     }
 
+    /**
+     * Upper bound of the interval.
+     */
     @InputImport(name="upperBound", required=true)
     private final Double upperBound;
 

@@ -8,9 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * IP address version.
+ */
     @EnumType
     public enum IPVersion {
+/**
+ * 
+ */
         Unknown("Unknown"),
+/**
+ * 
+ */
         IPv4("IPv4");
 
         private final String value;

@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class InstanceGroupManagerStandbyPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceGroupManagerStandbyPolicyArgs Empty = new InstanceGroupManagerStandbyPolicyArgs();
 
+    /**
+     * 
+     */
     @InputImport(name="initialDelaySec")
     private final @Nullable Input<Integer> initialDelaySec;
 

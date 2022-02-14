@@ -11,10 +11,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Properties of a network interface.
+ */
 public final class NetworkInterfacePropertiesResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final NetworkInterfacePropertiesResponse Empty = new NetworkInterfacePropertiesResponse();
 
+    /**
+     * The DNS name.
+     */
     @InputImport(name="dnsName")
     private final @Nullable String dnsName;
 
@@ -22,6 +28,9 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
         return this.dnsName == null ? Optional.empty() : Optional.ofNullable(this.dnsName);
     }
 
+    /**
+     * The private IP address.
+     */
     @InputImport(name="privateIpAddress")
     private final @Nullable String privateIpAddress;
 
@@ -29,6 +38,9 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
         return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
     }
 
+    /**
+     * The public IP address.
+     */
     @InputImport(name="publicIpAddress")
     private final @Nullable String publicIpAddress;
 
@@ -36,6 +48,9 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
         return this.publicIpAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddress);
     }
 
+    /**
+     * The resource ID of the public IP address.
+     */
     @InputImport(name="publicIpAddressId")
     private final @Nullable String publicIpAddressId;
 
@@ -43,6 +58,9 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
         return this.publicIpAddressId == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddressId);
     }
 
+    /**
+     * The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
+     */
     @InputImport(name="rdpAuthority")
     private final @Nullable String rdpAuthority;
 
@@ -50,6 +68,9 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
         return this.rdpAuthority == null ? Optional.empty() : Optional.ofNullable(this.rdpAuthority);
     }
 
+    /**
+     * The configuration for sharing a public IP address across multiple virtual machines.
+     */
     @InputImport(name="sharedPublicIpAddressConfiguration")
     private final @Nullable SharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration;
 
@@ -57,6 +78,9 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
         return this.sharedPublicIpAddressConfiguration == null ? Optional.empty() : Optional.ofNullable(this.sharedPublicIpAddressConfiguration);
     }
 
+    /**
+     * The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
+     */
     @InputImport(name="sshAuthority")
     private final @Nullable String sshAuthority;
 
@@ -64,6 +88,9 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
         return this.sshAuthority == null ? Optional.empty() : Optional.ofNullable(this.sshAuthority);
     }
 
+    /**
+     * The resource ID of the sub net.
+     */
     @InputImport(name="subnetId")
     private final @Nullable String subnetId;
 
@@ -71,6 +98,9 @@ public final class NetworkInterfacePropertiesResponse extends io.pulumi.resource
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
     }
 
+    /**
+     * The resource ID of the virtual network.
+     */
     @InputImport(name="virtualNetworkId")
     private final @Nullable String virtualNetworkId;
 

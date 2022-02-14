@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicationArgs Empty = new ReplicationArgs();
 
+    /**
+     * The location of the resource. This cannot be changed after the resource is created.
+     */
     @InputImport(name="location")
     private final @Nullable Input<String> location;
 
@@ -22,6 +28,9 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.location == null ? Input.empty() : this.location;
     }
 
+    /**
+     * The name of the container registry.
+     */
     @InputImport(name="registryName", required=true)
     private final Input<String> registryName;
 
@@ -29,6 +38,9 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.registryName;
     }
 
+    /**
+     * The name of the replication.
+     */
     @InputImport(name="replicationName")
     private final @Nullable Input<String> replicationName;
 
@@ -36,6 +48,9 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.replicationName == null ? Input.empty() : this.replicationName;
     }
 
+    /**
+     * The name of the resource group to which the container registry belongs.
+     */
     @InputImport(name="resourceGroupName", required=true)
     private final Input<String> resourceGroupName;
 
@@ -43,6 +58,9 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
         return this.resourceGroupName;
     }
 
+    /**
+     * The tags of the resource.
+     */
     @InputImport(name="tags")
     private final @Nullable Input<Map<String,String>> tags;
 

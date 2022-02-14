@@ -8,7 +8,6 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
-import io.pulumi.googlenative.datastream_v1alpha1.StreamArgs;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.BackfillAllStrategyResponse;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.BackfillNoneStrategyResponse;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.DestinationConfigResponse;
@@ -19,81 +18,163 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * Use this method to create a stream.
+Auto-naming is currently not supported for this resource.
+ */
 @ResourceType(type="google-native:datastream/v1alpha1:Stream")
 public class Stream extends io.pulumi.resources.CustomResource {
+    /**
+     * Automatically backfill objects included in the stream source configuration. Specific objects can be excluded.
+     */
     @OutputExport(name="backfillAll", type=BackfillAllStrategyResponse.class, parameters={})
     private Output<BackfillAllStrategyResponse> backfillAll;
 
+    /**
+     * @return Automatically backfill objects included in the stream source configuration. Specific objects can be excluded.
+     */
     public Output<BackfillAllStrategyResponse> getBackfillAll() {
         return this.backfillAll;
     }
+    /**
+     * Do not automatically backfill any objects.
+     */
     @OutputExport(name="backfillNone", type=BackfillNoneStrategyResponse.class, parameters={})
     private Output<BackfillNoneStrategyResponse> backfillNone;
 
+    /**
+     * @return Do not automatically backfill any objects.
+     */
     public Output<BackfillNoneStrategyResponse> getBackfillNone() {
         return this.backfillNone;
     }
+    /**
+     * The creation time of the stream.
+     */
     @OutputExport(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
+    /**
+     * @return The creation time of the stream.
+     */
     public Output<String> getCreateTime() {
         return this.createTime;
     }
+    /**
+     * Immutable. A reference to a KMS encryption key. If provided, it will be used to encrypt the data. If left blank, data will be encrypted using an internal Stream-specific encryption key provisioned through KMS.
+     */
     @OutputExport(name="customerManagedEncryptionKey", type=String.class, parameters={})
     private Output<String> customerManagedEncryptionKey;
 
+    /**
+     * @return Immutable. A reference to a KMS encryption key. If provided, it will be used to encrypt the data. If left blank, data will be encrypted using an internal Stream-specific encryption key provisioned through KMS.
+     */
     public Output<String> getCustomerManagedEncryptionKey() {
         return this.customerManagedEncryptionKey;
     }
+    /**
+     * Destination connection profile configuration.
+     */
     @OutputExport(name="destinationConfig", type=DestinationConfigResponse.class, parameters={})
     private Output<DestinationConfigResponse> destinationConfig;
 
+    /**
+     * @return Destination connection profile configuration.
+     */
     public Output<DestinationConfigResponse> getDestinationConfig() {
         return this.destinationConfig;
     }
+    /**
+     * Display name.
+     */
     @OutputExport(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
+    /**
+     * @return Display name.
+     */
     public Output<String> getDisplayName() {
         return this.displayName;
     }
+    /**
+     * Errors on the Stream.
+     */
     @OutputExport(name="errors", type=List.class, parameters={ErrorResponse.class})
     private Output<List<ErrorResponse>> errors;
 
+    /**
+     * @return Errors on the Stream.
+     */
     public Output<List<ErrorResponse>> getErrors() {
         return this.errors;
     }
+    /**
+     * Labels.
+     */
     @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels.
+     */
     public Output<Map<String,String>> getLabels() {
         return this.labels;
     }
+    /**
+     * The stream's name.
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The stream's name.
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Source connection profile configuration.
+     */
     @OutputExport(name="sourceConfig", type=SourceConfigResponse.class, parameters={})
     private Output<SourceConfigResponse> sourceConfig;
 
+    /**
+     * @return Source connection profile configuration.
+     */
     public Output<SourceConfigResponse> getSourceConfig() {
         return this.sourceConfig;
     }
+    /**
+     * The state of the stream.
+     */
     @OutputExport(name="state", type=String.class, parameters={})
     private Output<String> state;
 
+    /**
+     * @return The state of the stream.
+     */
     public Output<String> getState() {
         return this.state;
     }
+    /**
+     * The last update time of the stream.
+     */
     @OutputExport(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
+    /**
+     * @return The last update time of the stream.
+     */
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public Stream(String name, StreamArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:datastream/v1alpha1:Stream", name, args == null ? StreamArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -109,6 +190,14 @@ public class Stream extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static Stream get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Stream(name, id, options);
     }

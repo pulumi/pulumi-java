@@ -11,10 +11,17 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Defines the certificate source parameters using CDN managed certificate for enabling SSL.
+ */
 public final class CdnManagedHttpsParametersResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final CdnManagedHttpsParametersResponse Empty = new CdnManagedHttpsParametersResponse();
 
+    /**
+     * Defines the source of the SSL certificate.
+Expected value is 'Cdn'.
+     */
     @InputImport(name="certificateSource", required=true)
     private final String certificateSource;
 
@@ -22,6 +29,9 @@ public final class CdnManagedHttpsParametersResponse extends io.pulumi.resources
         return this.certificateSource;
     }
 
+    /**
+     * Defines the certificate source parameters using CDN managed certificate for enabling SSL.
+     */
     @InputImport(name="certificateSourceParameters", required=true)
     private final CdnCertificateSourceParametersResponse certificateSourceParameters;
 
@@ -29,6 +39,9 @@ public final class CdnManagedHttpsParametersResponse extends io.pulumi.resources
         return this.certificateSourceParameters;
     }
 
+    /**
+     * TLS protocol version that will be used for Https
+     */
     @InputImport(name="minimumTlsVersion")
     private final @Nullable String minimumTlsVersion;
 
@@ -36,6 +49,9 @@ public final class CdnManagedHttpsParametersResponse extends io.pulumi.resources
         return this.minimumTlsVersion == null ? Optional.empty() : Optional.ofNullable(this.minimumTlsVersion);
     }
 
+    /**
+     * Defines the TLS extension protocol that is used for secure delivery.
+     */
     @InputImport(name="protocolType", required=true)
     private final String protocolType;
 

@@ -10,12 +10,34 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GetSynapseWorkspaceSqlPoolTableDataSetResult {
+/**
+ * Unique id for identifying a data set resource
+ */
     private final String dataSetId;
+/**
+ * The resource id of the azure resource
+ */
     private final String id;
+/**
+ * Kind of data set.
+Expected value is 'SynapseWorkspaceSqlPoolTable'.
+ */
     private final String kind;
+/**
+ * Name of the azure resource
+ */
     private final String name;
+/**
+ * Resource id of the Synapse Workspace SQL Pool Table
+ */
     private final String synapseWorkspaceSqlPoolTableResourceId;
+/**
+ * System Data of the Azure resource.
+ */
     private final SystemDataResponse systemData;
+/**
+ * Type of the azure resource
+ */
     private final String type;
 
     @OutputCustomType.Constructor({"dataSetId","id","kind","name","synapseWorkspaceSqlPoolTableResourceId","systemData","type"})
@@ -36,24 +58,46 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetResult {
         this.type = Objects.requireNonNull(type);
     }
 
+/**
+ * Unique id for identifying a data set resource
+ */
     public String getDataSetId() {
         return this.dataSetId;
     }
+/**
+ * The resource id of the azure resource
+ */
     public String getId() {
         return this.id;
     }
+/**
+ * Kind of data set.
+Expected value is 'SynapseWorkspaceSqlPoolTable'.
+ */
     public String getKind() {
         return this.kind;
     }
+/**
+ * Name of the azure resource
+ */
     public String getName() {
         return this.name;
     }
+/**
+ * Resource id of the Synapse Workspace SQL Pool Table
+ */
     public String getSynapseWorkspaceSqlPoolTableResourceId() {
         return this.synapseWorkspaceSqlPoolTableResourceId;
     }
+/**
+ * System Data of the Azure resource.
+ */
     public SystemDataResponse getSystemData() {
         return this.systemData;
     }
+/**
+ * Type of the azure resource
+ */
     public String getType() {
         return this.type;
     }

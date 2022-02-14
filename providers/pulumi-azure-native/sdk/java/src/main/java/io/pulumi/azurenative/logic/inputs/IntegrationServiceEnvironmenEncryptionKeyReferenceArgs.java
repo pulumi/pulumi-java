@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The encryption key details for the integration service environment.
+ */
 public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IntegrationServiceEnvironmenEncryptionKeyReferenceArgs Empty = new IntegrationServiceEnvironmenEncryptionKeyReferenceArgs();
 
+    /**
+     * Gets the key name in the Key Vault.
+     */
     @InputImport(name="keyName")
     private final @Nullable Input<String> keyName;
 
@@ -22,6 +28,9 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
         return this.keyName == null ? Input.empty() : this.keyName;
     }
 
+    /**
+     * The key vault reference.
+     */
     @InputImport(name="keyVault")
     private final @Nullable Input<ResourceReferenceArgs> keyVault;
 
@@ -29,6 +38,9 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceArgs extend
         return this.keyVault == null ? Input.empty() : this.keyVault;
     }
 
+    /**
+     * Gets the version of the key specified in the keyName property.
+     */
     @InputImport(name="keyVersion")
     private final @Nullable Input<String> keyVersion;
 

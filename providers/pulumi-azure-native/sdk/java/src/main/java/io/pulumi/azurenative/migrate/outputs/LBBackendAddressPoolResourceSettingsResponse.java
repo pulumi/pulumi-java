@@ -11,6 +11,9 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class LBBackendAddressPoolResourceSettingsResponse {
+/**
+ * Gets or sets the backend address pool name.
+ */
     private final @Nullable String name;
 
     @OutputCustomType.Constructor({"name"})
@@ -18,6 +21,9 @@ public final class LBBackendAddressPoolResourceSettingsResponse {
         this.name = name;
     }
 
+/**
+ * Gets or sets the backend address pool name.
+ */
     public Optional<String> getName() {
         return Optional.ofNullable(this.name);
     }

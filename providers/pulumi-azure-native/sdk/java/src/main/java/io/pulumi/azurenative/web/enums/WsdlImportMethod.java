@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * The WSDL import method
+ */
     @EnumType
     public enum WsdlImportMethod {
+/**
+ * 
+ */
         NotSpecified("NotSpecified"),
+/**
+ * 
+ */
         SoapToRest("SoapToRest"),
+/**
+ * 
+ */
         SoapPassThrough("SoapPassThrough");
 
         private final String value;

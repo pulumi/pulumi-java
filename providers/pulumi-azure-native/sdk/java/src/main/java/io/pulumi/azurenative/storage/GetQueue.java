@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetQueue {
+/**
+ * 
+API Version: 2021-02-01.
+ */
     public static CompletableFuture<GetQueueResult> invokeAsync(GetQueueArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:storage:getQueue", TypeShape.of(GetQueueResult.class), args == null ? GetQueueArgs.Empty : args, Utilities.withVersion(options));
     }

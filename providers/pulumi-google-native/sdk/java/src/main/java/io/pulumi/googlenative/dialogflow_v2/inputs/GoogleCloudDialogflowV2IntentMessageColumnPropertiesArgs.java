@@ -11,10 +11,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Column properties for TableCard.
+ */
 public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs Empty = new GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs();
 
+    /**
+     * Column heading.
+     */
     @InputImport(name="header", required=true)
     private final Input<String> header;
 
@@ -22,6 +28,9 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs exte
         return this.header;
     }
 
+    /**
+     * Optional. Defines text alignment for all cells in this column.
+     */
     @InputImport(name="horizontalAlignment")
     private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignment> horizontalAlignment;
 

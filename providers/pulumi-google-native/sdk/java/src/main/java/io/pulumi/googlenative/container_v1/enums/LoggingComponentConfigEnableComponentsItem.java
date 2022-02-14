@@ -8,10 +8,22 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.StringJoiner;
 
+/**
+ * 
+ */
     @EnumType
     public enum LoggingComponentConfigEnableComponentsItem {
+/**
+ * Default value. This shouldn't be used.
+ */
         ComponentUnspecified("COMPONENT_UNSPECIFIED"),
+/**
+ * system components
+ */
         SystemComponents("SYSTEM_COMPONENTS"),
+/**
+ * workloads
+ */
         Workloads("WORKLOADS");
 
         private final String value;

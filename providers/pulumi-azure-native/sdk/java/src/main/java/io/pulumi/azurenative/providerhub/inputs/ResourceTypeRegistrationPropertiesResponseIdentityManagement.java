@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * 
+ */
 public final class ResourceTypeRegistrationPropertiesResponseIdentityManagement extends io.pulumi.resources.InvokeArgs {
 
     public static final ResourceTypeRegistrationPropertiesResponseIdentityManagement Empty = new ResourceTypeRegistrationPropertiesResponseIdentityManagement();
 
+    /**
+     * 
+     */
     @InputImport(name="applicationId")
     private final @Nullable String applicationId;
 
@@ -21,6 +27,9 @@ public final class ResourceTypeRegistrationPropertiesResponseIdentityManagement 
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
     }
 
+    /**
+     * 
+     */
     @InputImport(name="type")
     private final @Nullable String type;
 

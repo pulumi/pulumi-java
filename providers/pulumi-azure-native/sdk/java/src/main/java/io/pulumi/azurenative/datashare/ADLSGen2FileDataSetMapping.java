@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.datashare;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.datashare.ADLSGen2FileDataSetMappingArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -15,87 +14,592 @@ import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
 
+/**
+ * An ADLS Gen2 file data set mapping.
+API Version: 2020-09-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### DataSetMappings_Create
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var adlsGen2FileDataSetMapping = new AzureNative.DataShare.ADLSGen2FileDataSetMapping("adlsGen2FileDataSetMapping", new AzureNative.DataShare.ADLSGen2FileDataSetMappingArgs
+        {
+            AccountName = "Account1",
+            DataSetMappingName = "DatasetMapping1",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareSubscriptionName = "ShareSubscription1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datashare.NewADLSGen2FileDataSetMapping(ctx, "adlsGen2FileDataSetMapping", &datashare.ADLSGen2FileDataSetMappingArgs{
+			AccountName:           pulumi.String("Account1"),
+			DataSetMappingName:    pulumi.String("DatasetMapping1"),
+			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
+			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const adlsGen2FileDataSetMapping = new azure_native.datashare.ADLSGen2FileDataSetMapping("adlsGen2FileDataSetMapping", {
+    accountName: "Account1",
+    dataSetMappingName: "DatasetMapping1",
+    resourceGroupName: "SampleResourceGroup",
+    shareSubscriptionName: "ShareSubscription1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+adls_gen2_file_data_set_mapping = azure_native.datashare.ADLSGen2FileDataSetMapping("adlsGen2FileDataSetMapping",
+    account_name="Account1",
+    data_set_mapping_name="DatasetMapping1",
+    resource_group_name="SampleResourceGroup",
+    share_subscription_name="ShareSubscription1")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### DataSetMappings_SqlDB_Create
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var adlsGen2FileDataSetMapping = new AzureNative.DataShare.ADLSGen2FileDataSetMapping("adlsGen2FileDataSetMapping", new AzureNative.DataShare.ADLSGen2FileDataSetMappingArgs
+        {
+            AccountName = "Account1",
+            DataSetMappingName = "DatasetMapping1",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareSubscriptionName = "ShareSubscription1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datashare.NewADLSGen2FileDataSetMapping(ctx, "adlsGen2FileDataSetMapping", &datashare.ADLSGen2FileDataSetMappingArgs{
+			AccountName:           pulumi.String("Account1"),
+			DataSetMappingName:    pulumi.String("DatasetMapping1"),
+			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
+			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const adlsGen2FileDataSetMapping = new azure_native.datashare.ADLSGen2FileDataSetMapping("adlsGen2FileDataSetMapping", {
+    accountName: "Account1",
+    dataSetMappingName: "DatasetMapping1",
+    resourceGroupName: "SampleResourceGroup",
+    shareSubscriptionName: "ShareSubscription1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+adls_gen2_file_data_set_mapping = azure_native.datashare.ADLSGen2FileDataSetMapping("adlsGen2FileDataSetMapping",
+    account_name="Account1",
+    data_set_mapping_name="DatasetMapping1",
+    resource_group_name="SampleResourceGroup",
+    share_subscription_name="ShareSubscription1")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### DataSetMappings_SqlDWDataSetToAdlsGen2File_Create
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var adlsGen2FileDataSetMapping = new AzureNative.DataShare.ADLSGen2FileDataSetMapping("adlsGen2FileDataSetMapping", new AzureNative.DataShare.ADLSGen2FileDataSetMappingArgs
+        {
+            AccountName = "Account1",
+            DataSetId = "a08f184b-0567-4b11-ba22-a1199336d226",
+            DataSetMappingName = "DatasetMapping1",
+            FilePath = "file21",
+            FileSystem = "fileSystem",
+            Kind = "AdlsGen2File",
+            OutputType = "Csv",
+            ResourceGroup = "SampleResourceGroup",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareSubscriptionName = "ShareSubscription1",
+            StorageAccountName = "storage2",
+            SubscriptionId = "433a8dfd-e5d5-4e77-ad86-90acdc75eb1a",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datashare.NewADLSGen2FileDataSetMapping(ctx, "adlsGen2FileDataSetMapping", &datashare.ADLSGen2FileDataSetMappingArgs{
+			AccountName:           pulumi.String("Account1"),
+			DataSetId:             pulumi.String("a08f184b-0567-4b11-ba22-a1199336d226"),
+			DataSetMappingName:    pulumi.String("DatasetMapping1"),
+			FilePath:              pulumi.String("file21"),
+			FileSystem:            pulumi.String("fileSystem"),
+			Kind:                  pulumi.String("AdlsGen2File"),
+			OutputType:            pulumi.String("Csv"),
+			ResourceGroup:         pulumi.String("SampleResourceGroup"),
+			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
+			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
+			StorageAccountName:    pulumi.String("storage2"),
+			SubscriptionId:        pulumi.String("433a8dfd-e5d5-4e77-ad86-90acdc75eb1a"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const adlsGen2FileDataSetMapping = new azure_native.datashare.ADLSGen2FileDataSetMapping("adlsGen2FileDataSetMapping", {
+    accountName: "Account1",
+    dataSetId: "a08f184b-0567-4b11-ba22-a1199336d226",
+    dataSetMappingName: "DatasetMapping1",
+    filePath: "file21",
+    fileSystem: "fileSystem",
+    kind: "AdlsGen2File",
+    outputType: "Csv",
+    resourceGroup: "SampleResourceGroup",
+    resourceGroupName: "SampleResourceGroup",
+    shareSubscriptionName: "ShareSubscription1",
+    storageAccountName: "storage2",
+    subscriptionId: "433a8dfd-e5d5-4e77-ad86-90acdc75eb1a",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+adls_gen2_file_data_set_mapping = azure_native.datashare.ADLSGen2FileDataSetMapping("adlsGen2FileDataSetMapping",
+    account_name="Account1",
+    data_set_id="a08f184b-0567-4b11-ba22-a1199336d226",
+    data_set_mapping_name="DatasetMapping1",
+    file_path="file21",
+    file_system="fileSystem",
+    kind="AdlsGen2File",
+    output_type="Csv",
+    resource_group="SampleResourceGroup",
+    resource_group_name="SampleResourceGroup",
+    share_subscription_name="ShareSubscription1",
+    storage_account_name="storage2",
+    subscription_id="433a8dfd-e5d5-4e77-ad86-90acdc75eb1a")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### DataSetMappings_SqlDW_Create
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var adlsGen2FileDataSetMapping = new AzureNative.DataShare.ADLSGen2FileDataSetMapping("adlsGen2FileDataSetMapping", new AzureNative.DataShare.ADLSGen2FileDataSetMappingArgs
+        {
+            AccountName = "Account1",
+            DataSetMappingName = "DatasetMapping1",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareSubscriptionName = "ShareSubscription1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datashare.NewADLSGen2FileDataSetMapping(ctx, "adlsGen2FileDataSetMapping", &datashare.ADLSGen2FileDataSetMappingArgs{
+			AccountName:           pulumi.String("Account1"),
+			DataSetMappingName:    pulumi.String("DatasetMapping1"),
+			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
+			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const adlsGen2FileDataSetMapping = new azure_native.datashare.ADLSGen2FileDataSetMapping("adlsGen2FileDataSetMapping", {
+    accountName: "Account1",
+    dataSetMappingName: "DatasetMapping1",
+    resourceGroupName: "SampleResourceGroup",
+    shareSubscriptionName: "ShareSubscription1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+adls_gen2_file_data_set_mapping = azure_native.datashare.ADLSGen2FileDataSetMapping("adlsGen2FileDataSetMapping",
+    account_name="Account1",
+    data_set_mapping_name="DatasetMapping1",
+    resource_group_name="SampleResourceGroup",
+    share_subscription_name="ShareSubscription1")
+
+```
+
+{{% /example %}}
+{{% example %}}
+### DataSetMappings_SynapseWorkspaceSqlPoolTable_Create
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var adlsGen2FileDataSetMapping = new AzureNative.DataShare.ADLSGen2FileDataSetMapping("adlsGen2FileDataSetMapping", new AzureNative.DataShare.ADLSGen2FileDataSetMappingArgs
+        {
+            AccountName = "consumerAccount",
+            DataSetMappingName = "datasetMappingName1",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareSubscriptionName = "ShareSubscription1",
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	datashare "github.com/pulumi/pulumi-azure-native/sdk/go/azure/datashare"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datashare.NewADLSGen2FileDataSetMapping(ctx, "adlsGen2FileDataSetMapping", &datashare.ADLSGen2FileDataSetMappingArgs{
+			AccountName:           pulumi.String("consumerAccount"),
+			DataSetMappingName:    pulumi.String("datasetMappingName1"),
+			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
+			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const adlsGen2FileDataSetMapping = new azure_native.datashare.ADLSGen2FileDataSetMapping("adlsGen2FileDataSetMapping", {
+    accountName: "consumerAccount",
+    dataSetMappingName: "datasetMappingName1",
+    resourceGroupName: "SampleResourceGroup",
+    shareSubscriptionName: "ShareSubscription1",
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+adls_gen2_file_data_set_mapping = azure_native.datashare.ADLSGen2FileDataSetMapping("adlsGen2FileDataSetMapping",
+    account_name="consumerAccount",
+    data_set_mapping_name="datasetMappingName1",
+    resource_group_name="SampleResourceGroup",
+    share_subscription_name="ShareSubscription1")
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:datashare:ADLSGen2FileDataSetMapping datasetMappingName1 /subscriptions/0f3dcfc3-18f8-4099-b381-8353e19d43a7/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/consumerAccount/shareSubscriptions/ShareSubscription1/dataSetMappings/datasetMappingName1 
+```
+
+ */
 @ResourceType(type="azure-native:datashare:ADLSGen2FileDataSetMapping")
 public class ADLSGen2FileDataSetMapping extends io.pulumi.resources.CustomResource {
+    /**
+     * The id of the source data set.
+     */
     @OutputExport(name="dataSetId", type=String.class, parameters={})
     private Output<String> dataSetId;
 
+    /**
+     * @return The id of the source data set.
+     */
     public Output<String> getDataSetId() {
         return this.dataSetId;
     }
+    /**
+     * Gets the status of the data set mapping.
+     */
     @OutputExport(name="dataSetMappingStatus", type=String.class, parameters={})
     private Output<String> dataSetMappingStatus;
 
+    /**
+     * @return Gets the status of the data set mapping.
+     */
     public Output<String> getDataSetMappingStatus() {
         return this.dataSetMappingStatus;
     }
+    /**
+     * File path within the file system.
+     */
     @OutputExport(name="filePath", type=String.class, parameters={})
     private Output<String> filePath;
 
+    /**
+     * @return File path within the file system.
+     */
     public Output<String> getFilePath() {
         return this.filePath;
     }
+    /**
+     * File system to which the file belongs.
+     */
     @OutputExport(name="fileSystem", type=String.class, parameters={})
     private Output<String> fileSystem;
 
+    /**
+     * @return File system to which the file belongs.
+     */
     public Output<String> getFileSystem() {
         return this.fileSystem;
     }
+    /**
+     * Kind of data set mapping.
+Expected value is 'AdlsGen2File'.
+     */
     @OutputExport(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
+    /**
+     * @return Kind of data set mapping.
+Expected value is 'AdlsGen2File'.
+     */
     public Output<String> getKind() {
         return this.kind;
     }
+    /**
+     * Name of the azure resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return Name of the azure resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * Type of output file
+     */
     @OutputExport(name="outputType", type=String.class, parameters={})
     private Output</* @Nullable */ String> outputType;
 
+    /**
+     * @return Type of output file
+     */
     public Output</* @Nullable */ String> getOutputType() {
         return this.outputType;
     }
+    /**
+     * Provisioning state of the data set mapping.
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state of the data set mapping.
+     */
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource group of storage account.
+     */
     @OutputExport(name="resourceGroup", type=String.class, parameters={})
     private Output<String> resourceGroup;
 
+    /**
+     * @return Resource group of storage account.
+     */
     public Output<String> getResourceGroup() {
         return this.resourceGroup;
     }
+    /**
+     * Storage account name of the source data set.
+     */
     @OutputExport(name="storageAccountName", type=String.class, parameters={})
     private Output<String> storageAccountName;
 
+    /**
+     * @return Storage account name of the source data set.
+     */
     public Output<String> getStorageAccountName() {
         return this.storageAccountName;
     }
+    /**
+     * Subscription id of storage account.
+     */
     @OutputExport(name="subscriptionId", type=String.class, parameters={})
     private Output<String> subscriptionId;
 
+    /**
+     * @return Subscription id of storage account.
+     */
     public Output<String> getSubscriptionId() {
         return this.subscriptionId;
     }
+    /**
+     * System Data of the Azure resource.
+     */
     @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
+    /**
+     * @return System Data of the Azure resource.
+     */
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
+    /**
+     * Type of the azure resource
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return Type of the azure resource
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public ADLSGen2FileDataSetMapping(String name, ADLSGen2FileDataSetMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datashare:ADLSGen2FileDataSetMapping", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
     }
@@ -125,6 +629,14 @@ public class ADLSGen2FileDataSetMapping extends io.pulumi.resources.CustomResour
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static ADLSGen2FileDataSetMapping get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ADLSGen2FileDataSetMapping(name, id, options);
     }

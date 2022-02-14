@@ -11,7 +11,13 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ColumnResponse {
+/**
+ * The relative weight of this column. The column weight is used to adjust the width of columns on the screen (relative to peers). Greater the weight, greater the width of the column on the screen. If omitted, a value of 1 is used while rendering.
+ */
     private final String weight;
+/**
+ * The display widgets arranged vertically in this column.
+ */
     private final List<WidgetResponse> widgets;
 
     @OutputCustomType.Constructor({"weight","widgets"})
@@ -22,9 +28,15 @@ public final class ColumnResponse {
         this.widgets = Objects.requireNonNull(widgets);
     }
 
+/**
+ * The relative weight of this column. The column weight is used to adjust the width of columns on the screen (relative to peers). Greater the weight, greater the width of the column on the screen. If omitted, a value of 1 is used while rendering.
+ */
     public String getWeight() {
         return this.weight;
     }
+/**
+ * The display widgets arranged vertically in this column.
+ */
     public List<WidgetResponse> getWidgets() {
         return this.widgets;
     }

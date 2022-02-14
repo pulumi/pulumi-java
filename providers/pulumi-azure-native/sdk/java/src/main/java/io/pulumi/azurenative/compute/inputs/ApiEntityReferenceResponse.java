@@ -10,10 +10,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * The API entity reference.
+ */
 public final class ApiEntityReferenceResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ApiEntityReferenceResponse Empty = new ApiEntityReferenceResponse();
 
+    /**
+     * The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 

@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * 
+ */
 public final class RouteAsPathResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final RouteAsPathResponse Empty = new RouteAsPathResponse();
 
+    /**
+     * The AS numbers of the AS Path.
+     */
     @InputImport(name="asLists", required=true)
     private final List<Integer> asLists;
 
@@ -21,6 +27,9 @@ public final class RouteAsPathResponse extends io.pulumi.resources.InvokeArgs {
         return this.asLists;
     }
 
+    /**
+     * The type of the AS Path, which can be one of the following values: - 'AS_SET': unordered set of autonomous systems that the route in has traversed - 'AS_SEQUENCE': ordered set of autonomous systems that the route has traversed - 'AS_CONFED_SEQUENCE': ordered set of Member Autonomous Systems in the local confederation that the route has traversed - 'AS_CONFED_SET': unordered set of Member Autonomous Systems in the local confederation that the route has traversed 
+     */
     @InputImport(name="pathSegmentType", required=true)
     private final String pathSegmentType;
 

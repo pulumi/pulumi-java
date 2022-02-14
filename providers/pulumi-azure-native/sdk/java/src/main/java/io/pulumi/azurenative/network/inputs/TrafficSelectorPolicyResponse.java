@@ -9,10 +9,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * An traffic selector policy for a virtual network gateway connection.
+ */
 public final class TrafficSelectorPolicyResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final TrafficSelectorPolicyResponse Empty = new TrafficSelectorPolicyResponse();
 
+    /**
+     * A collection of local address spaces in CIDR format.
+     */
     @InputImport(name="localAddressRanges", required=true)
     private final List<String> localAddressRanges;
 
@@ -20,6 +26,9 @@ public final class TrafficSelectorPolicyResponse extends io.pulumi.resources.Inv
         return this.localAddressRanges;
     }
 
+    /**
+     * A collection of remote address spaces in CIDR format.
+     */
     @InputImport(name="remoteAddressRanges", required=true)
     private final List<String> remoteAddressRanges;
 

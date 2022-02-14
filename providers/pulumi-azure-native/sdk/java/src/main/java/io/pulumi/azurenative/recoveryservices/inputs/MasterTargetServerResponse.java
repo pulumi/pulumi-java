@@ -16,10 +16,16 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 
+/**
+ * Details of a Master Target Server.
+ */
 public final class MasterTargetServerResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MasterTargetServerResponse Empty = new MasterTargetServerResponse();
 
+    /**
+     * Agent expiry date.
+     */
     @InputImport(name="agentExpiryDate")
     private final @Nullable String agentExpiryDate;
 
@@ -27,6 +33,9 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
         return this.agentExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.agentExpiryDate);
     }
 
+    /**
+     * The version of the scout component on the server.
+     */
     @InputImport(name="agentVersion")
     private final @Nullable String agentVersion;
 
@@ -34,6 +43,9 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
         return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
     }
 
+    /**
+     * Agent version details.
+     */
     @InputImport(name="agentVersionDetails")
     private final @Nullable VersionDetailsResponse agentVersionDetails;
 
@@ -41,6 +53,9 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
         return this.agentVersionDetails == null ? Optional.empty() : Optional.ofNullable(this.agentVersionDetails);
     }
 
+    /**
+     * The list of data stores in the fabric.
+     */
     @InputImport(name="dataStores")
     private final @Nullable List<DataStoreResponse> dataStores;
 
@@ -48,6 +63,9 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
         return this.dataStores == null ? List.of() : this.dataStores;
     }
 
+    /**
+     * Disk count of the master target.
+     */
     @InputImport(name="diskCount")
     private final @Nullable Integer diskCount;
 
@@ -55,6 +73,9 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
         return this.diskCount == null ? Optional.empty() : Optional.ofNullable(this.diskCount);
     }
 
+    /**
+     * Health errors.
+     */
     @InputImport(name="healthErrors")
     private final @Nullable List<HealthErrorResponse> healthErrors;
 
@@ -62,6 +83,9 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
         return this.healthErrors == null ? List.of() : this.healthErrors;
     }
 
+    /**
+     * The server Id.
+     */
     @InputImport(name="id")
     private final @Nullable String id;
 
@@ -69,6 +93,9 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
+    /**
+     * The IP address of the server.
+     */
     @InputImport(name="ipAddress")
     private final @Nullable String ipAddress;
 
@@ -76,6 +103,9 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
     }
 
+    /**
+     * The last heartbeat received from the server.
+     */
     @InputImport(name="lastHeartbeat")
     private final @Nullable String lastHeartbeat;
 
@@ -83,6 +113,9 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
         return this.lastHeartbeat == null ? Optional.empty() : Optional.ofNullable(this.lastHeartbeat);
     }
 
+    /**
+     * MARS agent expiry date.
+     */
     @InputImport(name="marsAgentExpiryDate")
     private final @Nullable String marsAgentExpiryDate;
 
@@ -90,6 +123,9 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
         return this.marsAgentExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.marsAgentExpiryDate);
     }
 
+    /**
+     * MARS agent version.
+     */
     @InputImport(name="marsAgentVersion")
     private final @Nullable String marsAgentVersion;
 
@@ -97,6 +133,9 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
         return this.marsAgentVersion == null ? Optional.empty() : Optional.ofNullable(this.marsAgentVersion);
     }
 
+    /**
+     * Mars agent version details.
+     */
     @InputImport(name="marsAgentVersionDetails")
     private final @Nullable VersionDetailsResponse marsAgentVersionDetails;
 
@@ -104,6 +143,9 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
         return this.marsAgentVersionDetails == null ? Optional.empty() : Optional.ofNullable(this.marsAgentVersionDetails);
     }
 
+    /**
+     * The server name.
+     */
     @InputImport(name="name")
     private final @Nullable String name;
 
@@ -111,6 +153,9 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
+    /**
+     * The OS type of the server.
+     */
     @InputImport(name="osType")
     private final @Nullable String osType;
 
@@ -118,6 +163,9 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
     }
 
+    /**
+     * OS Version of the master target.
+     */
     @InputImport(name="osVersion")
     private final @Nullable String osVersion;
 
@@ -125,6 +173,9 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
         return this.osVersion == null ? Optional.empty() : Optional.ofNullable(this.osVersion);
     }
 
+    /**
+     * The retention volumes of Master target Server.
+     */
     @InputImport(name="retentionVolumes")
     private final @Nullable List<RetentionVolumeResponse> retentionVolumes;
 
@@ -132,6 +183,9 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
         return this.retentionVolumes == null ? List.of() : this.retentionVolumes;
     }
 
+    /**
+     * Validation errors.
+     */
     @InputImport(name="validationErrors")
     private final @Nullable List<HealthErrorResponse> validationErrors;
 
@@ -139,6 +193,9 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
         return this.validationErrors == null ? List.of() : this.validationErrors;
     }
 
+    /**
+     * Version status
+     */
     @InputImport(name="versionStatus")
     private final @Nullable String versionStatus;
 

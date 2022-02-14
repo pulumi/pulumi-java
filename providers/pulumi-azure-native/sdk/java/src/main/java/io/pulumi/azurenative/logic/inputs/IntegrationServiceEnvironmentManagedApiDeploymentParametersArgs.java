@@ -10,10 +10,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * The integration service environment managed api deployment parameters.
+ */
 public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs Empty = new IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs();
 
+    /**
+     * The integration service environment managed api content link for deployment.
+     */
     @InputImport(name="contentLinkDefinition")
     private final @Nullable Input<ContentLinkArgs> contentLinkDefinition;
 

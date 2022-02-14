@@ -4,7 +4,6 @@
 package io.pulumi.azurenative.synapse;
 
 import io.pulumi.azurenative.Utilities;
-import io.pulumi.azurenative.synapse.PrivateLinkHubArgs;
 import io.pulumi.azurenative.synapse.outputs.PrivateEndpointConnectionForPrivateLinkHubBasicResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
@@ -16,45 +15,187 @@ import java.util.List;
 import java.util.Map;
 import javax.annotation.Nullable;
 
+/**
+ * A privateLinkHub
+API Version: 2021-03-01.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+### Create or update a privateLinkHub
+```csharp
+using Pulumi;
+using AzureNative = Pulumi.AzureNative;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var privateLinkHub = new AzureNative.Synapse.PrivateLinkHub("privateLinkHub", new AzureNative.Synapse.PrivateLinkHubArgs
+        {
+            Location = "East US",
+            PrivateLinkHubName = "privateLinkHub1",
+            ResourceGroupName = "resourceGroup1",
+            Tags = 
+            {
+                { "key", "value" },
+            },
+        });
+    }
+
+}
+
+```
+
+```go
+package main
+
+import (
+	synapse "github.com/pulumi/pulumi-azure-native/sdk/go/azure/synapse"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := synapse.NewPrivateLinkHub(ctx, "privateLinkHub", &synapse.PrivateLinkHubArgs{
+			Location:           pulumi.String("East US"),
+			PrivateLinkHubName: pulumi.String("privateLinkHub1"),
+			ResourceGroupName:  pulumi.String("resourceGroup1"),
+			Tags: pulumi.StringMap{
+				"key": pulumi.String("value"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_native from "@pulumi/azure-native";
+
+const privateLinkHub = new azure_native.synapse.PrivateLinkHub("privateLinkHub", {
+    location: "East US",
+    privateLinkHubName: "privateLinkHub1",
+    resourceGroupName: "resourceGroup1",
+    tags: {
+        key: "value",
+    },
+});
+
+```
+
+```python
+import pulumi
+import pulumi_azure_native as azure_native
+
+private_link_hub = azure_native.synapse.PrivateLinkHub("privateLinkHub",
+    location="East US",
+    private_link_hub_name="privateLinkHub1",
+    resource_group_name="resourceGroup1",
+    tags={
+        "key": "value",
+    })
+
+```
+
+{{% /example %}}
+{{% /examples %}}
+
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-native:synapse:PrivateLinkHub privateLinkHub1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.Synapse/privateLinkHubs/privateLinkHub1 
+```
+
+ */
 @ResourceType(type="azure-native:synapse:PrivateLinkHub")
 public class PrivateLinkHub extends io.pulumi.resources.CustomResource {
+    /**
+     * The geo-location where the resource lives
+     */
     @OutputExport(name="location", type=String.class, parameters={})
     private Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     */
     public Output<String> getLocation() {
         return this.location;
     }
+    /**
+     * The name of the resource
+     */
     @OutputExport(name="name", type=String.class, parameters={})
     private Output<String> name;
 
+    /**
+     * @return The name of the resource
+     */
     public Output<String> getName() {
         return this.name;
     }
+    /**
+     * List of private endpoint connections
+     */
     @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionForPrivateLinkHubBasicResponse.class})
     private Output<List<PrivateEndpointConnectionForPrivateLinkHubBasicResponse>> privateEndpointConnections;
 
+    /**
+     * @return List of private endpoint connections
+     */
     public Output<List<PrivateEndpointConnectionForPrivateLinkHubBasicResponse>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections;
     }
+    /**
+     * PrivateLinkHub provisioning state
+     */
     @OutputExport(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
+    /**
+     * @return PrivateLinkHub provisioning state
+     */
     public Output</* @Nullable */ String> getProvisioningState() {
         return this.provisioningState;
     }
+    /**
+     * Resource tags.
+     */
     @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     */
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
+    /**
+     * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     @OutputExport(name="type", type=String.class, parameters={})
     private Output<String> type;
 
+    /**
+     * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
+     */
     public Output<String> getType() {
         return this.type;
     }
 
+    /**
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param args The arguments to use to populate this resource's properties.
+     * @param options A bag of options that control this resource's behavior.
+     */
     public PrivateLinkHub(String name, PrivateLinkHubArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:synapse:PrivateLinkHub", name, args == null ? PrivateLinkHubArgs.Empty : args, makeResourceOptions(options, Input.empty()));
     }
@@ -79,6 +220,14 @@ public class PrivateLinkHub extends io.pulumi.resources.CustomResource {
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }
 
+    /**
+     * Get an existing Host resource's state with the given name, ID, and optional extra
+     * properties used to qualify the lookup.
+     *
+     * @param name The _unique_ name of the resulting resource.
+     * @param id The _unique_ provider ID of the resource to lookup.
+     * @param options Optional settings to control the behavior of the CustomResource.
+     */
     public static PrivateLinkHub get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PrivateLinkHub(name, id, options);
     }

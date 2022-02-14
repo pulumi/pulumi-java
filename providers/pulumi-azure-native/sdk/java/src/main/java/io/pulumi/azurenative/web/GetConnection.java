@@ -13,6 +13,12 @@ import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nullable;
 
 public class GetConnection {
+/**
+ * API connection
+API Version: 2016-06-01.
+ *
+ * API connection
+ */
     public static CompletableFuture<GetConnectionResult> invokeAsync(GetConnectionArgs args, @Nullable InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("azure-native:web:getConnection", TypeShape.of(GetConnectionResult.class), args == null ? GetConnectionArgs.Empty : args, Utilities.withVersion(options));
     }

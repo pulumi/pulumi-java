@@ -12,10 +12,16 @@ import java.util.Objects;
 import javax.annotation.Nullable;
 
 
+/**
+ * Network Profile for the cloud service.
+ */
 public final class CloudServiceNetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CloudServiceNetworkProfileArgs Empty = new CloudServiceNetworkProfileArgs();
 
+    /**
+     * List of Load balancer configurations. Cloud service can have up to two load balancer configurations, corresponding to a Public Load Balancer and an Internal Load Balancer.
+     */
     @InputImport(name="loadBalancerConfigurations")
     private final @Nullable Input<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
 
@@ -23,6 +29,9 @@ public final class CloudServiceNetworkProfileArgs extends io.pulumi.resources.Re
         return this.loadBalancerConfigurations == null ? Input.empty() : this.loadBalancerConfigurations;
     }
 
+    /**
+     * The id reference of the cloud service containing the target IP with which the subject cloud service can perform a swap. This property cannot be updated once it is set. The swappable cloud service referred by this id must be present otherwise an error will be thrown.
+     */
     @InputImport(name="swappableCloudService")
     private final @Nullable Input<SubResourceArgs> swappableCloudService;
 

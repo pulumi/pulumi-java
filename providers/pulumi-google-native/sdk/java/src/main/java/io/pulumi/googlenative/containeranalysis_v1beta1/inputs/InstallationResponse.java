@@ -10,10 +10,16 @@ import java.util.List;
 import java.util.Objects;
 
 
+/**
+ * This represents how a particular software package may be installed on a system.
+ */
 public final class InstallationResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final InstallationResponse Empty = new InstallationResponse();
 
+    /**
+     * All of the places within the filesystem versions of this package have been found.
+     */
     @InputImport(name="location", required=true)
     private final List<LocationResponse> location;
 
@@ -21,6 +27,9 @@ public final class InstallationResponse extends io.pulumi.resources.InvokeArgs {
         return this.location;
     }
 
+    /**
+     * The name of the installed package.
+     */
     @InputImport(name="name", required=true)
     private final String name;
 

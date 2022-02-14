@@ -9,10 +9,16 @@ import java.util.Map;
 import java.util.Objects;
 
 
+/**
+ * The label selector, used to group labels on the resources.
+ */
 public final class LabelSelectorResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final LabelSelectorResponse Empty = new LabelSelectorResponse();
 
+    /**
+     * Resource labels for this selector.
+     */
     @InputImport(name="labels", required=true)
     private final Map<String,String> labels;
 
